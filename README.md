@@ -1,8 +1,15 @@
-mobile-game
-===========
+Mobile Game
+==========
 
-Mobile game project 2013
+Mobile Game Project 2013
 
-members:
+==========
+
+Supervisor:
+Vincent Swart
+
+Members:
 Davey  van der Woert
 Jesse van Rheenen
+
+==========
