@@ -2,7 +2,7 @@ package
 {
 	import citrus.core.starling.StarlingCitrusEngine;
 	
-	[SWF(width="1136", height="640", frameRate="40", BackgroundColor="#ccccccc")]
+	[SWF(width="1136", height="640", BackgroundColor="#ccccccc")]
 	public class scenario1 extends StarlingCitrusEngine
 	{
 		public function scenario1()
