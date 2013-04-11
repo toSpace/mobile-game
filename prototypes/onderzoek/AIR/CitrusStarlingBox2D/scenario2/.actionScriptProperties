@@ -44,7 +44,7 @@
   <flashCatalyst validateFlashCatalystCompatibility="false"/>
   <buildTargets>
     <buildTarget buildTargetName="default">
-      <airSettings airCertificatePath="" airTimestamp="true" anePathSet="true" version="1">
+      <airSettings airCertificatePath="/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/AIR/certificate.p12" airTimestamp="true" anePathSet="true" version="1">
         <airExcludes/>
         <anePaths/>
       </airSettings>
