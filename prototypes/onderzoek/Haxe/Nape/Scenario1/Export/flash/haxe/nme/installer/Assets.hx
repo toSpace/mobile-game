@@ -41,6 +41,24 @@ class Assets {
 		
 		if (!initialized) {
 			
+			resourceClasses.set ("assets/8ball.png", NME_assets_8ball_png);
+			resourceTypes.set ("assets/8ball.png", "image");
+			resourceClasses.set ("assets/banaan.png", NME_assets_banaan_png);
+			resourceTypes.set ("assets/banaan.png", "image");
+			resourceClasses.set ("assets/bier.png", NME_assets_bier_png);
+			resourceTypes.set ("assets/bier.png", "image");
+			resourceClasses.set ("assets/greenleaf.png", NME_assets_greenleaf_png);
+			resourceTypes.set ("assets/greenleaf.png", "image");
+			resourceClasses.set ("assets/physicsassets.pes", NME_assets_physicsassets_pes);
+			resourceTypes.set ("assets/physicsassets.pes", "binary");
+			resourceClasses.set ("assets/pikachu.png", NME_assets_pikachu_png);
+			resourceTypes.set ("assets/pikachu.png", "image");
+			resourceClasses.set ("assets/redleaf.png", NME_assets_redleaf_png);
+			resourceTypes.set ("assets/redleaf.png", "image");
+			resourceClasses.set ("assets/rugby.png", NME_assets_rugby_png);
+			resourceTypes.set ("assets/rugby.png", "image");
+			resourceClasses.set ("assets/tennisbal.png", NME_assets_tennisbal_png);
+			resourceTypes.set ("assets/tennisbal.png", "image");
 			
 			
 			initialized = true;

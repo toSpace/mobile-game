@@ -97,6 +97,51 @@ class ApplicationMain {
 	public static function getAsset (inName:String):Dynamic {
 		
 		
+		if (inName=="assets/8ball.png")
+			 
+            return Assets.getBitmapData ("assets/8ball.png");
+         
+		
+		if (inName=="assets/banaan.png")
+			 
+            return Assets.getBitmapData ("assets/banaan.png");
+         
+		
+		if (inName=="assets/bier.png")
+			 
+            return Assets.getBitmapData ("assets/bier.png");
+         
+		
+		if (inName=="assets/greenleaf.png")
+			 
+            return Assets.getBitmapData ("assets/greenleaf.png");
+         
+		
+		if (inName=="assets/physicsassets.pes")
+			 
+            return Assets.getBytes ("assets/physicsassets.pes");
+         
+		
+		if (inName=="assets/pikachu.png")
+			 
+            return Assets.getBitmapData ("assets/pikachu.png");
+         
+		
+		if (inName=="assets/redleaf.png")
+			 
+            return Assets.getBitmapData ("assets/redleaf.png");
+         
+		
+		if (inName=="assets/rugby.png")
+			 
+            return Assets.getBitmapData ("assets/rugby.png");
+         
+		
+		if (inName=="assets/tennisbal.png")
+			 
+            return Assets.getBitmapData ("assets/tennisbal.png");
+         
+		
 		
 		return null;
 		
@@ -116,6 +161,15 @@ class ApplicationMain {
 	
 }
 
+class NME_assets_8ball_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_banaan_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_bier_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_greenleaf_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_physicsassets_pes extends nme.utils.ByteArray { }
+class NME_assets_pikachu_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_redleaf_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_rugby_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_tennisbal_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 
 
 #else
