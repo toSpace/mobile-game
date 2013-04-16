@@ -1,6 +1,7 @@
 -main ApplicationMain 
 -lib nme
 -lib actuate
+-lib nape
 -cp Source
 -cp /usr/lib/haxe/lib/nme/3,5,5/
 -D nme_install_tool
