@@ -30,6 +30,7 @@ const char *__hxcpp_all_files[] = {
 	"/usr/lib/haxe/std/haxe/io/Input.hx",
 	"/usr/lib/haxe/std/haxe/io/Output.hx",
 	"ApplicationMain.hx",
+	"FPS.hx",
 	"Main.hx",
 	"PhysicsData.hx",
 	"format/display/FrameLabel.hx",

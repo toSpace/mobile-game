@@ -6,6 +6,7 @@
 #endif
 
 #include <native/display/Sprite.h>
+HX_DECLARE_CLASS0(FPS)
 HX_DECLARE_CLASS0(Main)
 HX_DECLARE_CLASS2(nape,phys,Body)
 HX_DECLARE_CLASS2(nape,phys,Interactor)
@@ -63,8 +64,7 @@ class Main_obj : public ::native::display::Sprite_obj{
 		Dynamic initialise_dyn();
 
 		int particleIteration; /* REM */ 
-		int numObjs; /* REM */ 
-		::native::text::TextField FPStext; /* REM */ 
+		::FPS counter; /* REM */ 
 		::nape::space::Space space; /* REM */ 
 };
 

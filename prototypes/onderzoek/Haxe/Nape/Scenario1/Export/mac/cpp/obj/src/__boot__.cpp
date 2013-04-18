@@ -212,7 +212,6 @@
 #include <native/text/TextFormat.h>
 #include <native/text/TextFieldType.h>
 #include <native/text/TextFieldAutoSize.h>
-#include <native/text/TextField.h>
 #include <native/text/FontType.h>
 #include <native/text/FontStyle.h>
 #include <native/text/Font.h>
@@ -396,6 +395,12 @@
 #include <Main.h>
 #include <native/display/Sprite.h>
 #include <native/display/DisplayObjectContainer.h>
+#include <List.h>
+#include <IntIter.h>
+#include <IntHash.h>
+#include <Hash.h>
+#include <FPS.h>
+#include <native/text/TextField.h>
 #include <native/display/InteractiveObject.h>
 #include <native/display/DisplayObject.h>
 #include <Std.h>
@@ -410,10 +415,6 @@
 #include <native/display/IBitmapDrawable.h>
 #include <native/events/EventDispatcher.h>
 #include <native/events/IEventDispatcher.h>
-#include <List.h>
-#include <IntIter.h>
-#include <IntHash.h>
-#include <Hash.h>
 #include <Date.h>
 #include <ApplicationMain.h>
 
@@ -632,7 +633,6 @@ hx::RegisterResources( hx::GetResources() );
 ::native::text::TextFormat_obj::__register();
 ::native::text::TextFieldType_obj::__register();
 ::native::text::TextFieldAutoSize_obj::__register();
-::native::text::TextField_obj::__register();
 ::native::text::FontType_obj::__register();
 ::native::text::FontStyle_obj::__register();
 ::native::text::Font_obj::__register();
@@ -816,6 +816,12 @@ hx::RegisterResources( hx::GetResources() );
 ::Main_obj::__register();
 ::native::display::Sprite_obj::__register();
 ::native::display::DisplayObjectContainer_obj::__register();
+::List_obj::__register();
+::IntIter_obj::__register();
+::IntHash_obj::__register();
+::Hash_obj::__register();
+::FPS_obj::__register();
+::native::text::TextField_obj::__register();
 ::native::display::InteractiveObject_obj::__register();
 ::native::display::DisplayObject_obj::__register();
 ::Std_obj::__register();
@@ -830,10 +836,6 @@ hx::RegisterResources( hx::GetResources() );
 ::native::display::IBitmapDrawable_obj::__register();
 ::native::events::EventDispatcher_obj::__register();
 ::native::events::IEventDispatcher_obj::__register();
-::List_obj::__register();
-::IntIter_obj::__register();
-::IntHash_obj::__register();
-::Hash_obj::__register();
 ::Date_obj::__register();
 ::ApplicationMain_obj::__register();
 ::native::utils::ByteArray_obj::__init__();
@@ -845,10 +847,6 @@ hx::RegisterResources( hx::GetResources() );
 ::haxe::Log_obj::__boot();
 ::ApplicationMain_obj::__boot();
 ::Date_obj::__boot();
-::Hash_obj::__boot();
-::IntHash_obj::__boot();
-::IntIter_obj::__boot();
-::List_obj::__boot();
 ::native::events::IEventDispatcher_obj::__boot();
 ::native::events::EventDispatcher_obj::__boot();
 ::native::display::IBitmapDrawable_obj::__boot();
@@ -862,6 +860,12 @@ hx::RegisterResources( hx::GetResources() );
 ::Std_obj::__boot();
 ::native::display::DisplayObject_obj::__boot();
 ::native::display::InteractiveObject_obj::__boot();
+::native::text::TextField_obj::__boot();
+::FPS_obj::__boot();
+::Hash_obj::__boot();
+::IntHash_obj::__boot();
+::IntIter_obj::__boot();
+::List_obj::__boot();
 ::native::display::DisplayObjectContainer_obj::__boot();
 ::native::display::Sprite_obj::__boot();
 ::Main_obj::__boot();
@@ -1040,7 +1044,6 @@ hx::RegisterResources( hx::GetResources() );
 ::native::text::Font_obj::__boot();
 ::native::text::FontStyle_obj::__boot();
 ::native::text::FontType_obj::__boot();
-::native::text::TextField_obj::__boot();
 ::native::text::TextFieldAutoSize_obj::__boot();
 ::native::text::TextFieldType_obj::__boot();
 ::native::text::TextFormat_obj::__boot();

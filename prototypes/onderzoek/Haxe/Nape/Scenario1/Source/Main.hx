@@ -145,6 +145,7 @@ class Main extends Sprite {
 
         //add to world
         var asset = new Bitmap (Assets.getBitmapData ("assets/"+ name[0] +".png"));
+        asset.smoothing = true;
         var Particle = PhysicsData.createBody(name[0], asset);
         Particle.position.setxy(name[1], 0);
         Particle.space = space;

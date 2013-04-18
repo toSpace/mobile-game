@@ -54,6 +54,9 @@
 #ifndef INCLUDED_native_events_IEventDispatcher
 #include <native/events/IEventDispatcher.h>
 #endif
+#ifndef INCLUDED_native_text_Font
+#include <native/text/Font.h>
+#endif
 #ifndef INCLUDED_native_utils_ByteArray
 #include <native/utils/ByteArray.h>
 #endif
@@ -171,36 +174,41 @@ Dynamic ApplicationMain_obj::getAsset( ::String inName){
 		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/bier.png"),null());
 	}
 	HX_STACK_LINE(128)
-	if (((inName == HX_CSTRING("assets/greenleaf.png")))){
+	if (((inName == HX_CSTRING("assets/font.ttf")))){
 		HX_STACK_LINE(129)
-		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/greenleaf.png"),null());
+		return ::nme::installer::Assets_obj::getFont(HX_CSTRING("assets/font.ttf"));
 	}
 	HX_STACK_LINE(135)
-	if (((inName == HX_CSTRING("assets/physicsassets.pes")))){
+	if (((inName == HX_CSTRING("assets/greenleaf.png")))){
 		HX_STACK_LINE(136)
-		return ::nme::installer::Assets_obj::getBytes(HX_CSTRING("assets/physicsassets.pes"));
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/greenleaf.png"),null());
 	}
 	HX_STACK_LINE(142)
-	if (((inName == HX_CSTRING("assets/pikachu.png")))){
+	if (((inName == HX_CSTRING("assets/physicsassets.pes")))){
 		HX_STACK_LINE(143)
-		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/pikachu.png"),null());
+		return ::nme::installer::Assets_obj::getBytes(HX_CSTRING("assets/physicsassets.pes"));
 	}
 	HX_STACK_LINE(149)
-	if (((inName == HX_CSTRING("assets/redleaf.png")))){
+	if (((inName == HX_CSTRING("assets/pikachu.png")))){
 		HX_STACK_LINE(150)
-		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/redleaf.png"),null());
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/pikachu.png"),null());
 	}
 	HX_STACK_LINE(156)
-	if (((inName == HX_CSTRING("assets/rugby.png")))){
+	if (((inName == HX_CSTRING("assets/redleaf.png")))){
 		HX_STACK_LINE(157)
-		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/rugby.png"),null());
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/redleaf.png"),null());
 	}
 	HX_STACK_LINE(163)
-	if (((inName == HX_CSTRING("assets/tennisbal.png")))){
+	if (((inName == HX_CSTRING("assets/rugby.png")))){
 		HX_STACK_LINE(164)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/rugby.png"),null());
+	}
+	HX_STACK_LINE(170)
+	if (((inName == HX_CSTRING("assets/tennisbal.png")))){
+		HX_STACK_LINE(171)
 		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/tennisbal.png"),null());
 	}
-	HX_STACK_LINE(171)
+	HX_STACK_LINE(178)
 	return null();
 }
 

@@ -15,7 +15,14 @@ class FPS extends TextField
       x = inX;
       y = inY;
       selectable = false;
-      defaultTextFormat = new TextFormat("_sans", 12, 0, true);
+      // defaultTextFormat = new TextFormat("_sans", 12, 0, true);
+
+      var font = nme.Assets.getFont ("assets/font.ttf");
+      // var format = new TextFormat (font.fontName);
+      // var txt = new TextField ();
+      defaultTextFormat = new TextFormat (font.fontName);
+
+
       text = "FPS:";
       textColor = inCol;
       background = true;

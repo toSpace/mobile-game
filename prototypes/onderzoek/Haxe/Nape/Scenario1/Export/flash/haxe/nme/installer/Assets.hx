@@ -47,6 +47,8 @@ class Assets {
 			resourceTypes.set ("assets/banaan.png", "image");
 			resourceClasses.set ("assets/bier.png", NME_assets_bier_png);
 			resourceTypes.set ("assets/bier.png", "image");
+			resourceClasses.set ("assets/font.ttf", NME_assets_font_ttf);
+			resourceTypes.set ("assets/font.ttf", "font");
 			resourceClasses.set ("assets/greenleaf.png", NME_assets_greenleaf_png);
 			resourceTypes.set ("assets/greenleaf.png", "image");
 			resourceClasses.set ("assets/physicsassets.pes", NME_assets_physicsassets_pes);

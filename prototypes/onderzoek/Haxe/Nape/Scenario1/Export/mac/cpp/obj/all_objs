@@ -210,7 +210,6 @@ obj/darwin//src/native/ui/Keyboard.o
 obj/darwin//src/native/text/TextFormat.o
 obj/darwin//src/native/text/TextFieldType.o
 obj/darwin//src/native/text/TextFieldAutoSize.o
-obj/darwin//src/native/text/TextField.o
 obj/darwin//src/native/text/FontType.o
 obj/darwin//src/native/text/FontStyle.o
 obj/darwin//src/native/text/Font.o
@@ -394,6 +393,12 @@ obj/darwin//src/PhysicsData.o
 obj/darwin//src/Main.o
 obj/darwin//src/native/display/Sprite.o
 obj/darwin//src/native/display/DisplayObjectContainer.o
+obj/darwin//src/List.o
+obj/darwin//src/IntIter.o
+obj/darwin//src/IntHash.o
+obj/darwin//src/Hash.o
+obj/darwin//src/FPS.o
+obj/darwin//src/native/text/TextField.o
 obj/darwin//src/native/display/InteractiveObject.o
 obj/darwin//src/native/display/DisplayObject.o
 obj/darwin//src/Std.o
@@ -408,10 +413,6 @@ obj/darwin//src/native/Loader.o
 obj/darwin//src/native/display/IBitmapDrawable.o
 obj/darwin//src/native/events/EventDispatcher.o
 obj/darwin//src/native/events/IEventDispatcher.o
-obj/darwin//src/List.o
-obj/darwin//src/IntIter.o
-obj/darwin//src/IntHash.o
-obj/darwin//src/Hash.o
 obj/darwin//src/Date.o
 obj/darwin//src/ApplicationMain.o
 obj/darwin//src/__boot__.o

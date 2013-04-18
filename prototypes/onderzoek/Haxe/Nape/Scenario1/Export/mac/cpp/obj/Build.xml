@@ -2063,21 +2063,6 @@
   <file name="src/native/text/TextFieldAutoSize.cpp">
    <depend name="include/native/text/TextFieldAutoSize.h"/>
   </file>
-  <file name="src/native/text/TextField.cpp">
-   <depend name="include/StringTools.h"/>
-   <depend name="include/Type.h"/>
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/text/AntiAliasType.h"/>
-   <depend name="include/native/text/TextField.h"/>
-   <depend name="include/native/text/TextFieldAutoSize.h"/>
-   <depend name="include/native/text/TextFieldType.h"/>
-   <depend name="include/native/text/TextFormat.h"/>
-  </file>
   <file name="src/native/text/FontType.cpp">
    <depend name="include/native/text/FontType.h"/>
   </file>
@@ -3917,6 +3902,7 @@
    <depend name="include/zpp_nape/util/ZPP_ShapeList.h"/>
   </file>
   <file name="src/Main.cpp">
+   <depend name="include/FPS.h"/>
    <depend name="include/Main.h"/>
    <depend name="include/PhysicsData.h"/>
    <depend name="include/Std.h"/>
@@ -3988,6 +3974,58 @@
    <depend name="include/native/events/EventDispatcher.h"/>
    <depend name="include/native/events/IEventDispatcher.h"/>
    <depend name="include/native/geom/Point.h"/>
+  </file>
+  <file name="src/List.cpp">
+   <depend name="include/List.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/StringBuf.h"/>
+  </file>
+  <file name="src/IntIter.cpp">
+   <depend name="include/IntIter.h"/>
+  </file>
+  <file name="src/IntHash.cpp">
+   <depend name="include/IntHash.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/StringBuf.h"/>
+  </file>
+  <file name="src/Hash.cpp">
+   <depend name="include/Hash.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/StringBuf.h"/>
+  </file>
+  <file name="src/FPS.cpp">
+   <depend name="include/FPS.h"/>
+   <depend name="include/native/Lib.h"/>
+   <depend name="include/native/display/DisplayObject.h"/>
+   <depend name="include/native/display/DisplayObjectContainer.h"/>
+   <depend name="include/native/display/IBitmapDrawable.h"/>
+   <depend name="include/native/display/InteractiveObject.h"/>
+   <depend name="include/native/display/MovieClip.h"/>
+   <depend name="include/native/display/Sprite.h"/>
+   <depend name="include/native/display/Stage.h"/>
+   <depend name="include/native/events/Event.h"/>
+   <depend name="include/native/events/EventDispatcher.h"/>
+   <depend name="include/native/events/IEventDispatcher.h"/>
+   <depend name="include/native/text/Font.h"/>
+   <depend name="include/native/text/TextField.h"/>
+   <depend name="include/native/text/TextFormat.h"/>
+   <depend name="include/nme/Lib.h"/>
+   <depend name="include/nme/installer/Assets.h"/>
+  </file>
+  <file name="src/native/text/TextField.cpp">
+   <depend name="include/StringTools.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/native/Loader.h"/>
+   <depend name="include/native/display/DisplayObject.h"/>
+   <depend name="include/native/display/IBitmapDrawable.h"/>
+   <depend name="include/native/display/InteractiveObject.h"/>
+   <depend name="include/native/events/EventDispatcher.h"/>
+   <depend name="include/native/events/IEventDispatcher.h"/>
+   <depend name="include/native/text/AntiAliasType.h"/>
+   <depend name="include/native/text/TextField.h"/>
+   <depend name="include/native/text/TextFieldAutoSize.h"/>
+   <depend name="include/native/text/TextFieldType.h"/>
+   <depend name="include/native/text/TextFormat.h"/>
   </file>
   <file name="src/native/display/InteractiveObject.cpp">
    <depend name="include/native/Loader.h"/>
@@ -4099,24 +4137,6 @@
    <depend name="include/native/events/Event.h"/>
    <depend name="include/native/events/IEventDispatcher.h"/>
   </file>
-  <file name="src/List.cpp">
-   <depend name="include/List.h"/>
-   <depend name="include/Std.h"/>
-   <depend name="include/StringBuf.h"/>
-  </file>
-  <file name="src/IntIter.cpp">
-   <depend name="include/IntIter.h"/>
-  </file>
-  <file name="src/IntHash.cpp">
-   <depend name="include/IntHash.h"/>
-   <depend name="include/Std.h"/>
-   <depend name="include/StringBuf.h"/>
-  </file>
-  <file name="src/Hash.cpp">
-   <depend name="include/Hash.h"/>
-   <depend name="include/Std.h"/>
-   <depend name="include/StringBuf.h"/>
-  </file>
   <file name="src/Date.cpp">
    <depend name="include/Date.h"/>
    <depend name="include/Std.h"/>
@@ -4140,6 +4160,7 @@
    <depend name="include/native/display/StageScaleMode.h"/>
    <depend name="include/native/events/EventDispatcher.h"/>
    <depend name="include/native/events/IEventDispatcher.h"/>
+   <depend name="include/native/text/Font.h"/>
    <depend name="include/native/utils/ByteArray.h"/>
    <depend name="include/native/utils/IDataInput.h"/>
    <depend name="include/native/utils/IMemoryRange.h"/>

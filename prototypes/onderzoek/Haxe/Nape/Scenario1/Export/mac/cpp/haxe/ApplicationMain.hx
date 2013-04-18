@@ -125,6 +125,13 @@ class ApplicationMain
 			
 		}
 		
+		if (inName == "assets/font.ttf")
+		{
+			
+			return nme.Assets.getFont ("assets/font.ttf");
+			
+		}
+		
 		if (inName == "assets/greenleaf.png")
 		{
 			

@@ -112,6 +112,11 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/bier.png");
          
 		
+		if (inName=="assets/font.ttf")
+			 
+			 return Assets.getFont ("assets/font.ttf");
+		 
+		
 		if (inName=="assets/greenleaf.png")
 			 
             return Assets.getBitmapData ("assets/greenleaf.png");
@@ -164,6 +169,7 @@ class ApplicationMain {
 class NME_assets_8ball_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_banaan_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_bier_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_font_ttf extends nme.text.Font { }
 class NME_assets_greenleaf_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_physicsassets_pes extends nme.utils.ByteArray { }
 class NME_assets_pikachu_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
