@@ -8,7 +8,7 @@
 -D web
 -swf-version 11
 -swf9 Export/flash/bin/NapeScene1.swf
--swf-header 800:600:30:FFFFFF
+-swf-header 1024:768:60:FFFFFF
 -cp Export/flash/haxe
 --no-inline
 -debug

@@ -2,6 +2,8 @@
 
 //nme
 import nme.display.Sprite;
+import nme.display.StageScaleMode;
+import nme.display.StageAlign;
 import nme.events.Event;
 import nme.events.EventDispatcher;
 import nme.events.TimerEvent;
@@ -20,11 +22,6 @@ import nape.phys.BodyType;
 import nape.shape.Circle;
 import nape.shape.Polygon;
 import nape.space.Space;
-
-#if debug
-import nape.util.BitmapDebug;
-import nape.util.Debug;
-#end
 
 class Main extends Sprite {
 
@@ -61,6 +58,8 @@ class Main extends Sprite {
 	function initialise(ev:Event):Void {
 
         stage.frameRate = 60;
+        stage.scaleMode = StageScaleMode.NO_SCALE;
+        stage.align = StageAlign.TOP_LEFT; 
 
         if (ev != null) {
             removeEventListener(Event.ADDED_TO_STAGE, initialise);
@@ -71,15 +70,6 @@ class Main extends Sprite {
         //   when used as argument to Space constructor.
         var gravity = Vec2.weak(0, 600);
         space = new Space(gravity);
-
-        #if debug
-            // Create a new BitmapDebug screen matching stage dimensions and
-            // background colour.
-            //   The Debug object itself is not a DisplayObject, we add its
-            //   display property to the display list.
-            debug = new BitmapDebug(stage.stageWidth, stage.stageHeight, stage.color);
-            addChild(debug.display);
-        #end
 
         setUp();
 
@@ -180,16 +170,6 @@ class Main extends Sprite {
     function enterFrameHandler(ev:Event):Void {
 
         space.step(1 / stage.frameRate);
-
-        #if debug            
-            // Render Space to the debug draw.
-            //   We first clear the debug screen,
-            //   then draw the entire Space,
-            //   and finally flush the draw calls to the screen.
-            debug.clear();
-            debug.draw(space);
-            debug.flush();
-        #end
 
         //move particles
         space.liveBodies.foreach(updateGraphics);

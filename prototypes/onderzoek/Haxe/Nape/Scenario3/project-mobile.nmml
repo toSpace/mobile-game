@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="NapeScene1" package="com.gameproject.napescene1" version="1.0.0" company="toSpace" />
+	<app main="Main" path="Export" file="NapeScene1" />
+
+	<window width="0" height="0" fps="60" resizable="true" hardware="true" />
+	
+	<source path="Source" />
+	
+	<haxelib name="nme" />
+	<haxelib name="actuate" />
+	<haxelib name="nape" />
+	
+	<assets path="Assets" rename="assets" exclude="nme.svg" />
+	<icon path="Assets/nme.svg" />
+	
+</project>
