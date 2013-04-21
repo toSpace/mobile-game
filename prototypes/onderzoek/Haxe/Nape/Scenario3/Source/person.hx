@@ -35,8 +35,8 @@ class Person extends Sprite {
 
 		//properties
 		clip.loop = true;
-		clip.x = 300;
-		clip.y = 300;
+		clip.x = 0;
+		clip.y = 0;
 		clip.play();
 
 		//add to stage
@@ -57,6 +57,14 @@ class Person extends Sprite {
 
 	public function view():Sprite{
 		return layer.view;
+	}
+
+	public function getWidth():Float{
+		return clip.width;
+	}
+
+	public function getHeight():Float{
+		return clip.height;
 	}
 
 

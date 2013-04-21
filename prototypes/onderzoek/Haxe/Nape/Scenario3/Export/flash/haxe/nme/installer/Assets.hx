@@ -165,6 +165,12 @@ class Assets {
 			resourceTypes.set ("assets/sprites/TP-file.tps", "text");
 			resourceClasses.set ("assets/sprites/TP-file.xml", NME_assets_sprites_tp_file_xml);
 			resourceTypes.set ("assets/sprites/TP-file.xml", "text");
+			resourceClasses.set ("assets/sprites/TP-file2.png", NME_assets_sprites_tp_file2_png);
+			resourceTypes.set ("assets/sprites/TP-file2.png", "image");
+			resourceClasses.set ("assets/sprites/TP-file2.tps", NME_assets_sprites_tp_file2_tps);
+			resourceTypes.set ("assets/sprites/TP-file2.tps", "text");
+			resourceClasses.set ("assets/sprites/TP-file2.xml", NME_assets_sprites_tp_file2_xml);
+			resourceTypes.set ("assets/sprites/TP-file2.xml", "text");
 			resourceClasses.set ("assets/tennisbal.png", NME_assets_tennisbal_png);
 			resourceTypes.set ("assets/tennisbal.png", "image");
 			

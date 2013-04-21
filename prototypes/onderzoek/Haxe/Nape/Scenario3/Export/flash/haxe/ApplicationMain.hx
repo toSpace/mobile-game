@@ -407,6 +407,21 @@ class ApplicationMain {
 			 return Assets.getText ("assets/sprites/TP-file.xml");
          
 		
+		if (inName=="assets/sprites/TP-file2.png")
+			 
+            return Assets.getBitmapData ("assets/sprites/TP-file2.png");
+         
+		
+		if (inName=="assets/sprites/TP-file2.tps")
+			 
+			 return Assets.getText ("assets/sprites/TP-file2.tps");
+         
+		
+		if (inName=="assets/sprites/TP-file2.xml")
+			 
+			 return Assets.getText ("assets/sprites/TP-file2.xml");
+         
+		
 		if (inName=="assets/tennisbal.png")
 			 
             return Assets.getBitmapData ("assets/tennisbal.png");
@@ -493,6 +508,9 @@ class NME_assets_sprites_sprite_xml extends nme.utils.ByteArray { }
 class NME_assets_sprites_tp_file_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_sprites_tp_file_tps extends nme.utils.ByteArray { }
 class NME_assets_sprites_tp_file_xml extends nme.utils.ByteArray { }
+class NME_assets_sprites_tp_file2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_sprites_tp_file2_tps extends nme.utils.ByteArray { }
+class NME_assets_sprites_tp_file2_xml extends nme.utils.ByteArray { }
 class NME_assets_tennisbal_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 
 

@@ -21,7 +21,14 @@ import nape.phys.Body;
 import nape.phys.BodyType;
 import nape.shape.Circle;
 import nape.shape.Polygon;
+import nape.phys.Material;
 import nape.space.Space;
+
+#if debug
+//nape debug
+import nape.util.BitmapDebug;
+import nape.util.Debug;
+#end
 
 class Main extends Sprite {
 
@@ -71,6 +78,11 @@ class Main extends Sprite {
         var gravity = Vec2.weak(0, 600);
         space = new Space(gravity);
 
+        #if debug
+            debug = new BitmapDebug(stage.stageWidth, stage.stageHeight, stage.color);
+            addChild(debug.display);
+        #end
+
         setUp();
 
         stage.addEventListener(Event.ENTER_FRAME, enterFrameHandler);
@@ -83,13 +95,8 @@ class Main extends Sprite {
         createFloors(0, 0, 1, stage.stageHeight);
     	createFloors(stage.stageWidth, 0, 1, stage.stageHeight);
 
-    	//addParticle();
-
-        var person:Person = new Person();
-        addChild(person.view());
-
-        //var t = new haxe.Timer(3000); //run every 100ms
-        //t.run = function(){ addParticle(); };
+        var t = new haxe.Timer(3000); //run every 100ms
+        t.run = function(){ addPerson(); };
 
         // FPStext = new TextField();
         // FPStext.textColor = 0xFFFFFF;
@@ -126,6 +133,23 @@ class Main extends Sprite {
 		floorPhysicsBody.shapes.add(p);
 		floorPhysicsBody.space = space;
 
+    }
+
+    function addPerson():Void{
+        //create spritesheet animation
+        var person:Person = new Person();
+        var personSprite:Sprite = person.view();
+
+        //create physics body
+        var personPhysicsBody:Body = new Body(BodyType.DYNAMIC, new Vec2(getParticleType()[1], 10));
+        var material:Material = new Material(0.1, 1.0, 2.0, 5.0, 0.001);
+        personPhysicsBody.shapes.add(new Polygon( Polygon.box(person.getWidth(),person.getHeight()) , material));
+        space.bodies.add(personPhysicsBody);
+
+        //add to canvas
+        addChild(personSprite);
+        personPhysicsBody.userData.graphic = personSprite;
+        updateGraphics(personPhysicsBody);
     }
 
     function addParticle():Void{
@@ -177,18 +201,21 @@ class Main extends Sprite {
         //move particles
         space.liveBodies.foreach(updateGraphics);
 
-        //change framerate display
-        //FPStext.text = 'FPS: ' + Std.string(stage.frameRate) + '\nParticles: ' + Std.string(numObjs);
+        #if debug
+            debug.clear();
+            debug.draw(space);
+            debug.flush();
+        #end
 
     }
 
     //make particles move
     function updateGraphics(b:Body):Void {
         var graphic:DisplayObject = b.userData.graphic;
-        var pos = PhysicsData.graphicsPosition(b);
+        //var pos = PhysicsData.graphicsPosition(b);
         graphic.rotation = (b.rotation * 180 / Math.PI) % 360;  
-        graphic.x = pos.x;
-        graphic.y = pos.y;
+        graphic.x = b.position.x;
+        graphic.y = b.position.y;
     }
 	
 	
