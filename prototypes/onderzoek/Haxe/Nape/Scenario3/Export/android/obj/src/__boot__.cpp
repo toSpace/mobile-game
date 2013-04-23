@@ -253,7 +253,6 @@
 #include <native/errors/ArgumentError.h>
 #include <native/errors/Error.h>
 #include <native/display/TriangleCulling.h>
-#include <native/display/Tilesheet.h>
 #include <native/display/StageScaleMode.h>
 #include <native/display/StageQuality.h>
 #include <native/display/StageDisplayState.h>
@@ -376,6 +375,12 @@
 #include <nape/callbacks/BodyCallback.h>
 #include <nape/callbacks/Callback.h>
 #include <nape/Config.h>
+#include <haxe/xml/Fast.h>
+#include <haxe/xml/_Fast/NodeListAccess.h>
+#include <haxe/xml/_Fast/HasNodeAccess.h>
+#include <haxe/xml/_Fast/HasAttribAccess.h>
+#include <haxe/xml/_Fast/AttribAccess.h>
+#include <haxe/xml/_Fast/NodeAccess.h>
 #include <haxe/io/Output.h>
 #include <haxe/io/Input.h>
 #include <haxe/io/Error.h>
@@ -391,6 +396,18 @@
 #include <cpp/zip/Flush.h>
 #include <cpp/zip/Compress.h>
 #include <cpp/rtti/FieldNumericIntegerLookup.h>
+#include <aze/display/DrawList.h>
+#include <aze/display/TileLayer.h>
+#include <aze/display/TileGroup.h>
+#include <aze/display/TileClip.h>
+#include <aze/display/TileSprite.h>
+#include <aze/display/TileBase.h>
+#include <haxe/Public.h>
+#include <aze/display/SparrowTilesheet.h>
+#include <aze/display/TilesheetEx.h>
+#include <native/display/Tilesheet.h>
+#include <Xml.h>
+#include <XmlType.h>
 #include <Type.h>
 #include <ValueType.h>
 #include <Sys.h>
@@ -399,10 +416,12 @@
 #include <Std.h>
 #include <Reflect.h>
 #include <PhysicsData.h>
+#include <Person.h>
 #include <Main.h>
 #include <native/display/Sprite.h>
 #include <native/display/DisplayObjectContainer.h>
 #include <List.h>
+#include <Lambda.h>
 #include <IntIter.h>
 #include <IntHash.h>
 #include <Hash.h>
@@ -674,7 +693,6 @@ hx::RegisterResources( hx::GetResources() );
 ::native::errors::ArgumentError_obj::__register();
 ::native::errors::Error_obj::__register();
 ::native::display::TriangleCulling_obj::__register();
-::native::display::Tilesheet_obj::__register();
 ::native::display::StageScaleMode_obj::__register();
 ::native::display::StageQuality_obj::__register();
 ::native::display::StageDisplayState_obj::__register();
@@ -797,6 +815,12 @@ hx::RegisterResources( hx::GetResources() );
 ::nape::callbacks::BodyCallback_obj::__register();
 ::nape::callbacks::Callback_obj::__register();
 ::nape::Config_obj::__register();
+::haxe::xml::Fast_obj::__register();
+::haxe::xml::_Fast::NodeListAccess_obj::__register();
+::haxe::xml::_Fast::HasNodeAccess_obj::__register();
+::haxe::xml::_Fast::HasAttribAccess_obj::__register();
+::haxe::xml::_Fast::AttribAccess_obj::__register();
+::haxe::xml::_Fast::NodeAccess_obj::__register();
 ::haxe::io::Output_obj::__register();
 ::haxe::io::Input_obj::__register();
 ::haxe::io::Error_obj::__register();
@@ -812,6 +836,18 @@ hx::RegisterResources( hx::GetResources() );
 ::cpp::zip::Flush_obj::__register();
 ::cpp::zip::Compress_obj::__register();
 ::cpp::rtti::FieldNumericIntegerLookup_obj::__register();
+::aze::display::DrawList_obj::__register();
+::aze::display::TileLayer_obj::__register();
+::aze::display::TileGroup_obj::__register();
+::aze::display::TileClip_obj::__register();
+::aze::display::TileSprite_obj::__register();
+::aze::display::TileBase_obj::__register();
+::haxe::Public_obj::__register();
+::aze::display::SparrowTilesheet_obj::__register();
+::aze::display::TilesheetEx_obj::__register();
+::native::display::Tilesheet_obj::__register();
+::Xml_obj::__register();
+::XmlType_obj::__register();
 ::Type_obj::__register();
 ::ValueType_obj::__register();
 ::Sys_obj::__register();
@@ -820,10 +856,12 @@ hx::RegisterResources( hx::GetResources() );
 ::Std_obj::__register();
 ::Reflect_obj::__register();
 ::PhysicsData_obj::__register();
+::Person_obj::__register();
 ::Main_obj::__register();
 ::native::display::Sprite_obj::__register();
 ::native::display::DisplayObjectContainer_obj::__register();
 ::List_obj::__register();
+::Lambda_obj::__register();
 ::IntIter_obj::__register();
 ::IntHash_obj::__register();
 ::Hash_obj::__register();
@@ -838,8 +876,10 @@ hx::RegisterResources( hx::GetResources() );
 ::native::events::IEventDispatcher_obj::__register();
 ::Date_obj::__register();
 ::ApplicationMain_obj::__register();
+::Xml_obj::__init__();
 ::native::utils::ByteArray_obj::__init__();
 ::cpp::Lib_obj::__boot();
+::Xml_obj::__boot();
 ::cpp::rtti::FieldNumericIntegerLookup_obj::__boot();
 ::cpp::zip::Compress_obj::__boot();
 ::cpp::zip::Flush_obj::__boot();
@@ -858,10 +898,12 @@ hx::RegisterResources( hx::GetResources() );
 ::Hash_obj::__boot();
 ::IntHash_obj::__boot();
 ::IntIter_obj::__boot();
+::Lambda_obj::__boot();
 ::List_obj::__boot();
 ::native::display::DisplayObjectContainer_obj::__boot();
 ::native::display::Sprite_obj::__boot();
 ::Main_obj::__boot();
+::Person_obj::__boot();
 ::PhysicsData_obj::__boot();
 ::Reflect_obj::__boot();
 ::Std_obj::__boot();
@@ -870,6 +912,17 @@ hx::RegisterResources( hx::GetResources() );
 ::Sys_obj::__boot();
 ::ValueType_obj::__boot();
 ::Type_obj::__boot();
+::XmlType_obj::__boot();
+::native::display::Tilesheet_obj::__boot();
+::aze::display::TilesheetEx_obj::__boot();
+::aze::display::SparrowTilesheet_obj::__boot();
+::haxe::Public_obj::__boot();
+::aze::display::TileBase_obj::__boot();
+::aze::display::TileSprite_obj::__boot();
+::aze::display::TileClip_obj::__boot();
+::aze::display::TileGroup_obj::__boot();
+::aze::display::TileLayer_obj::__boot();
+::aze::display::DrawList_obj::__boot();
 ::format::display::FrameLabel_obj::__boot();
 ::format::display::MovieClip_obj::__boot();
 ::haxe::Timer_obj::__boot();
@@ -880,6 +933,12 @@ hx::RegisterResources( hx::GetResources() );
 ::haxe::io::Error_obj::__boot();
 ::haxe::io::Input_obj::__boot();
 ::haxe::io::Output_obj::__boot();
+::haxe::xml::_Fast::NodeAccess_obj::__boot();
+::haxe::xml::_Fast::AttribAccess_obj::__boot();
+::haxe::xml::_Fast::HasAttribAccess_obj::__boot();
+::haxe::xml::_Fast::HasNodeAccess_obj::__boot();
+::haxe::xml::_Fast::NodeListAccess_obj::__boot();
+::haxe::xml::Fast_obj::__boot();
 ::nape::Config_obj::__boot();
 ::nape::callbacks::Callback_obj::__boot();
 ::nape::callbacks::BodyCallback_obj::__boot();
@@ -1002,7 +1061,6 @@ hx::RegisterResources( hx::GetResources() );
 ::native::display::StageDisplayState_obj::__boot();
 ::native::display::StageQuality_obj::__boot();
 ::native::display::StageScaleMode_obj::__boot();
-::native::display::Tilesheet_obj::__boot();
 ::native::display::TriangleCulling_obj::__boot();
 ::native::errors::Error_obj::__boot();
 ::native::errors::ArgumentError_obj::__boot();

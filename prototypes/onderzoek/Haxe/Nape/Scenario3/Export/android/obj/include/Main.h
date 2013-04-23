@@ -54,6 +54,9 @@ class Main_obj : public ::native::display::Sprite_obj{
 		virtual Void addParticle( );
 		Dynamic addParticle_dyn();
 
+		virtual Void addPerson( );
+		Dynamic addPerson_dyn();
+
 		virtual Void createFloors( Float x,Float y,Float width,Float height);
 		Dynamic createFloors_dyn();
 

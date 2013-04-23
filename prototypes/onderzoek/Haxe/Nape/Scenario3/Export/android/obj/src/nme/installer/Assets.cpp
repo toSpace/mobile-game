@@ -133,10 +133,234 @@ Void Assets_obj::initialize( ){
 			HX_STACK_LINE(60)
 			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/rugby.png"),HX_CSTRING("image"));
 			HX_STACK_LINE(61)
-			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/tennisbal.png"),HX_CSTRING("assets_tennisbal_png"));
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/lopen_klein.png"),HX_CSTRING("assets_sprites_lopen_klein_png"));
 			HX_STACK_LINE(62)
-			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/tennisbal.png"),HX_CSTRING("image"));
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/lopen_klein.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(63)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/idle.png"),HX_CSTRING("assets_sprites_los_idle_png"));
+			HX_STACK_LINE(64)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/idle.png"),HX_CSTRING("image"));
 			HX_STACK_LINE(65)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00000.png"),HX_CSTRING("assets_sprites_los_jump_jump00000_png"));
+			HX_STACK_LINE(66)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00000.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(67)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00001.png"),HX_CSTRING("assets_sprites_los_jump_jump00001_png"));
+			HX_STACK_LINE(68)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00001.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(69)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00002.png"),HX_CSTRING("assets_sprites_los_jump_jump00002_png"));
+			HX_STACK_LINE(70)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00002.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(71)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00003.png"),HX_CSTRING("assets_sprites_los_jump_jump00003_png"));
+			HX_STACK_LINE(72)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00003.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(73)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00004.png"),HX_CSTRING("assets_sprites_los_jump_jump00004_png"));
+			HX_STACK_LINE(74)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00004.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(75)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00005.png"),HX_CSTRING("assets_sprites_los_jump_jump00005_png"));
+			HX_STACK_LINE(76)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00005.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(77)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00006.png"),HX_CSTRING("assets_sprites_los_jump_jump00006_png"));
+			HX_STACK_LINE(78)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00006.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(79)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00007.png"),HX_CSTRING("assets_sprites_los_jump_jump00007_png"));
+			HX_STACK_LINE(80)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00007.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(81)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00008.png"),HX_CSTRING("assets_sprites_los_jump_jump00008_png"));
+			HX_STACK_LINE(82)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00008.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(83)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00009.png"),HX_CSTRING("assets_sprites_los_jump_jump00009_png"));
+			HX_STACK_LINE(84)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00009.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(85)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00010.png"),HX_CSTRING("assets_sprites_los_jump_jump00010_png"));
+			HX_STACK_LINE(86)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00010.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(87)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00011.png"),HX_CSTRING("assets_sprites_los_jump_jump00011_png"));
+			HX_STACK_LINE(88)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00011.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(89)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00012.png"),HX_CSTRING("assets_sprites_los_jump_jump00012_png"));
+			HX_STACK_LINE(90)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00012.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(91)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00013.png"),HX_CSTRING("assets_sprites_los_jump_jump00013_png"));
+			HX_STACK_LINE(92)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00013.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(93)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00014.png"),HX_CSTRING("assets_sprites_los_jump_jump00014_png"));
+			HX_STACK_LINE(94)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00014.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(95)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00015.png"),HX_CSTRING("assets_sprites_los_jump_jump00015_png"));
+			HX_STACK_LINE(96)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00015.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(97)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00016.png"),HX_CSTRING("assets_sprites_los_jump_jump00016_png"));
+			HX_STACK_LINE(98)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00016.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(99)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00017.png"),HX_CSTRING("assets_sprites_los_jump_jump00017_png"));
+			HX_STACK_LINE(100)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00017.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(101)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00018.png"),HX_CSTRING("assets_sprites_los_jump_jump00018_png"));
+			HX_STACK_LINE(102)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00018.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(103)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00019.png"),HX_CSTRING("assets_sprites_los_jump_jump00019_png"));
+			HX_STACK_LINE(104)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00019.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(105)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00020.png"),HX_CSTRING("assets_sprites_los_jump_jump00020_png"));
+			HX_STACK_LINE(106)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00020.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(107)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00021.png"),HX_CSTRING("assets_sprites_los_jump_jump00021_png"));
+			HX_STACK_LINE(108)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00021.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(109)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00022.png"),HX_CSTRING("assets_sprites_los_jump_jump00022_png"));
+			HX_STACK_LINE(110)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00022.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(111)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00023.png"),HX_CSTRING("assets_sprites_los_jump_jump00023_png"));
+			HX_STACK_LINE(112)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00023.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(113)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00024.png"),HX_CSTRING("assets_sprites_los_jump_jump00024_png"));
+			HX_STACK_LINE(114)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00024.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(115)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00025.png"),HX_CSTRING("assets_sprites_los_jump_jump00025_png"));
+			HX_STACK_LINE(116)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00025.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(117)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00026.png"),HX_CSTRING("assets_sprites_los_jump_jump00026_png"));
+			HX_STACK_LINE(118)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00026.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(119)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/jump/jump00027.png"),HX_CSTRING("assets_sprites_los_jump_jump00027_png"));
+			HX_STACK_LINE(120)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/jump/jump00027.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(121)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/walk/walk00010.png"),HX_CSTRING("assets_sprites_los_walk_walk00010_png"));
+			HX_STACK_LINE(122)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/walk/walk00010.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(123)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/walk/walk00011.png"),HX_CSTRING("assets_sprites_los_walk_walk00011_png"));
+			HX_STACK_LINE(124)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/walk/walk00011.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(125)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/walk/walk00012.png"),HX_CSTRING("assets_sprites_los_walk_walk00012_png"));
+			HX_STACK_LINE(126)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/walk/walk00012.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(127)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/walk/walk00013.png"),HX_CSTRING("assets_sprites_los_walk_walk00013_png"));
+			HX_STACK_LINE(128)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/walk/walk00013.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(129)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/walk/walk00014.png"),HX_CSTRING("assets_sprites_los_walk_walk00014_png"));
+			HX_STACK_LINE(130)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/walk/walk00014.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(131)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/walk/walk00015.png"),HX_CSTRING("assets_sprites_los_walk_walk00015_png"));
+			HX_STACK_LINE(132)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/walk/walk00015.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(133)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/walk/walk00016.png"),HX_CSTRING("assets_sprites_los_walk_walk00016_png"));
+			HX_STACK_LINE(134)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/walk/walk00016.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(135)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/walk/walk00017.png"),HX_CSTRING("assets_sprites_los_walk_walk00017_png"));
+			HX_STACK_LINE(136)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/walk/walk00017.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(137)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/walk/walk00018.png"),HX_CSTRING("assets_sprites_los_walk_walk00018_png"));
+			HX_STACK_LINE(138)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/walk/walk00018.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(139)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/walk/walk00019.png"),HX_CSTRING("assets_sprites_los_walk_walk00019_png"));
+			HX_STACK_LINE(140)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/walk/walk00019.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(141)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/walk/walk00020.png"),HX_CSTRING("assets_sprites_los_walk_walk00020_png"));
+			HX_STACK_LINE(142)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/walk/walk00020.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(143)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/walk/walk00021.png"),HX_CSTRING("assets_sprites_los_walk_walk00021_png"));
+			HX_STACK_LINE(144)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/walk/walk00021.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(145)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/walk/walk00022.png"),HX_CSTRING("assets_sprites_los_walk_walk00022_png"));
+			HX_STACK_LINE(146)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/walk/walk00022.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(147)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/walk/walk00023.png"),HX_CSTRING("assets_sprites_los_walk_walk00023_png"));
+			HX_STACK_LINE(148)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/walk/walk00023.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(149)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/walk/walk00024.png"),HX_CSTRING("assets_sprites_los_walk_walk00024_png"));
+			HX_STACK_LINE(150)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/walk/walk00024.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(151)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/walk/walk00025.png"),HX_CSTRING("assets_sprites_los_walk_walk00025_png"));
+			HX_STACK_LINE(152)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/walk/walk00025.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(153)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/walk/walk00026.png"),HX_CSTRING("assets_sprites_los_walk_walk00026_png"));
+			HX_STACK_LINE(154)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/walk/walk00026.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(155)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/los/walk/walk00027.png"),HX_CSTRING("assets_sprites_los_walk_walk00027_png"));
+			HX_STACK_LINE(156)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/los/walk/walk00027.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(157)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/SPRITE.png"),HX_CSTRING("assets_sprites_sprite_png"));
+			HX_STACK_LINE(158)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/SPRITE.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(159)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/SPRITE.xml"),HX_CSTRING("assets_sprites_sprite_xml"));
+			HX_STACK_LINE(160)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/SPRITE.xml"),HX_CSTRING("text"));
+			HX_STACK_LINE(161)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/TP-file.png"),HX_CSTRING("assets_sprites_tp_file_png"));
+			HX_STACK_LINE(162)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/TP-file.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(163)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/TP-file.tps"),HX_CSTRING("assets_sprites_tp_file_tps"));
+			HX_STACK_LINE(164)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/TP-file.tps"),HX_CSTRING("text"));
+			HX_STACK_LINE(165)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/TP-file.xml"),HX_CSTRING("assets_sprites_tp_file_xml"));
+			HX_STACK_LINE(166)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/TP-file.xml"),HX_CSTRING("text"));
+			HX_STACK_LINE(167)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/TP-file2.png"),HX_CSTRING("assets_sprites_tp_file2_png"));
+			HX_STACK_LINE(168)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/TP-file2.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(169)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/TP-file2.tps"),HX_CSTRING("assets_sprites_tp_file2_tps"));
+			HX_STACK_LINE(170)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/TP-file2.tps"),HX_CSTRING("text"));
+			HX_STACK_LINE(171)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/sprites/TP-file2.xml"),HX_CSTRING("assets_sprites_tp_file2_xml"));
+			HX_STACK_LINE(172)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/sprites/TP-file2.xml"),HX_CSTRING("text"));
+			HX_STACK_LINE(173)
+			::nme::installer::Assets_obj::resourceNames->set(HX_CSTRING("assets/tennisbal.png"),HX_CSTRING("assets_tennisbal_png"));
+			HX_STACK_LINE(174)
+			::nme::installer::Assets_obj::resourceTypes->set(HX_CSTRING("assets/tennisbal.png"),HX_CSTRING("image"));
+			HX_STACK_LINE(177)
 			::nme::installer::Assets_obj::initialized = true;
 		}
 	}
@@ -148,52 +372,52 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(Assets_obj,initialize,(void))
 
 ::native::display::BitmapData Assets_obj::getBitmapData( ::String id,hx::Null< bool >  __o_useCache){
 bool useCache = __o_useCache.Default(true);
-	HX_STACK_PUSH("Assets::getBitmapData","nme/installer/Assets.hx",72);
+	HX_STACK_PUSH("Assets::getBitmapData","nme/installer/Assets.hx",184);
 	HX_STACK_ARG(id,"id");
 	HX_STACK_ARG(useCache,"useCache");
 {
-		HX_STACK_LINE(74)
+		HX_STACK_LINE(186)
 		::nme::installer::Assets_obj::initialize();
-		HX_STACK_LINE(76)
+		HX_STACK_LINE(188)
 		if (((bool(::nme::installer::Assets_obj::resourceTypes->exists(id)) && bool((::nme::installer::Assets_obj::resourceTypes->get(id)->__Field(HX_CSTRING("toLowerCase"),true)() == HX_CSTRING("image")))))){
-			HX_STACK_LINE(76)
+			HX_STACK_LINE(188)
 			if (((bool(useCache) && bool(::nme::installer::Assets_obj::cachedBitmapData->exists(id))))){
-				HX_STACK_LINE(78)
+				HX_STACK_LINE(190)
 				return ::nme::installer::Assets_obj::cachedBitmapData->get(id);
 			}
 			else{
-				HX_STACK_LINE(84)
+				HX_STACK_LINE(196)
 				::native::display::BitmapData data = ::native::display::BitmapData_obj::load(::nme::installer::Assets_obj::resourceNames->get(id),null());		HX_STACK_VAR(data,"data");
-				HX_STACK_LINE(86)
+				HX_STACK_LINE(198)
 				if ((useCache)){
-					HX_STACK_LINE(86)
+					HX_STACK_LINE(198)
 					::nme::installer::Assets_obj::cachedBitmapData->set(id,data);
 				}
-				HX_STACK_LINE(92)
+				HX_STACK_LINE(204)
 				return data;
 			}
 		}
 		else{
-			HX_STACK_LINE(96)
+			HX_STACK_LINE(208)
 			if (((id.indexOf(HX_CSTRING(":"),null()) > (int)-1))){
-				HX_STACK_LINE(98)
+				HX_STACK_LINE(210)
 				::String libraryName = id.substr((int)0,id.indexOf(HX_CSTRING(":"),null()));		HX_STACK_VAR(libraryName,"libraryName");
-				HX_STACK_LINE(99)
+				HX_STACK_LINE(211)
 				::String symbolName = id.substr((id.indexOf(HX_CSTRING(":"),null()) + (int)1),null());		HX_STACK_VAR(symbolName,"symbolName");
-				HX_STACK_LINE(101)
+				HX_STACK_LINE(213)
 				if ((::nme::installer::Assets_obj::libraryTypes->exists(libraryName))){
 				}
 				else{
-					HX_STACK_LINE(135)
-					::haxe::Log_obj::trace(((HX_CSTRING("[nme.Assets] There is no asset library named \"") + libraryName) + HX_CSTRING("\"")),hx::SourceInfo(HX_CSTRING("Assets.hx"),137,HX_CSTRING("nme.installer.Assets"),HX_CSTRING("getBitmapData")));
+					HX_STACK_LINE(247)
+					::haxe::Log_obj::trace(((HX_CSTRING("[nme.Assets] There is no asset library named \"") + libraryName) + HX_CSTRING("\"")),hx::SourceInfo(HX_CSTRING("Assets.hx"),249,HX_CSTRING("nme.installer.Assets"),HX_CSTRING("getBitmapData")));
 				}
 			}
 			else{
-				HX_STACK_LINE(141)
-				::haxe::Log_obj::trace(((HX_CSTRING("[nme.Assets] There is no BitmapData asset with an ID of \"") + id) + HX_CSTRING("\"")),hx::SourceInfo(HX_CSTRING("Assets.hx"),143,HX_CSTRING("nme.installer.Assets"),HX_CSTRING("getBitmapData")));
+				HX_STACK_LINE(253)
+				::haxe::Log_obj::trace(((HX_CSTRING("[nme.Assets] There is no BitmapData asset with an ID of \"") + id) + HX_CSTRING("\"")),hx::SourceInfo(HX_CSTRING("Assets.hx"),255,HX_CSTRING("nme.installer.Assets"),HX_CSTRING("getBitmapData")));
 			}
 		}
-		HX_STACK_LINE(147)
+		HX_STACK_LINE(259)
 		return null();
 	}
 }
@@ -202,22 +426,22 @@ bool useCache = __o_useCache.Default(true);
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(Assets_obj,getBitmapData,return )
 
 ::native::utils::ByteArray Assets_obj::getBytes( ::String id){
-	HX_STACK_PUSH("Assets::getBytes","nme/installer/Assets.hx",152);
+	HX_STACK_PUSH("Assets::getBytes","nme/installer/Assets.hx",264);
 	HX_STACK_ARG(id,"id");
-	HX_STACK_LINE(154)
+	HX_STACK_LINE(266)
 	::nme::installer::Assets_obj::initialize();
-	HX_STACK_LINE(156)
+	HX_STACK_LINE(268)
 	if ((::nme::installer::Assets_obj::resourceNames->exists(id))){
-		HX_STACK_LINE(156)
+		HX_STACK_LINE(268)
 		return ::native::utils::ByteArray_obj::readFile(::nme::installer::Assets_obj::resourceNames->get(id));
 	}
 	else{
-		HX_STACK_LINE(162)
-		::haxe::Log_obj::trace(((HX_CSTRING("[nme.Assets] There is no String or ByteArray asset with an ID of \"") + id) + HX_CSTRING("\"")),hx::SourceInfo(HX_CSTRING("Assets.hx"),162,HX_CSTRING("nme.installer.Assets"),HX_CSTRING("getBytes")));
-		HX_STACK_LINE(164)
+		HX_STACK_LINE(274)
+		::haxe::Log_obj::trace(((HX_CSTRING("[nme.Assets] There is no String or ByteArray asset with an ID of \"") + id) + HX_CSTRING("\"")),hx::SourceInfo(HX_CSTRING("Assets.hx"),274,HX_CSTRING("nme.installer.Assets"),HX_CSTRING("getBytes")));
+		HX_STACK_LINE(276)
 		return null();
 	}
-	HX_STACK_LINE(156)
+	HX_STACK_LINE(268)
 	return null();
 }
 
@@ -225,22 +449,22 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(Assets_obj,getBitmapData,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Assets_obj,getBytes,return )
 
 ::native::text::Font Assets_obj::getFont( ::String id){
-	HX_STACK_PUSH("Assets::getFont","nme/installer/Assets.hx",171);
+	HX_STACK_PUSH("Assets::getFont","nme/installer/Assets.hx",283);
 	HX_STACK_ARG(id,"id");
-	HX_STACK_LINE(173)
+	HX_STACK_LINE(285)
 	::nme::installer::Assets_obj::initialize();
-	HX_STACK_LINE(175)
+	HX_STACK_LINE(287)
 	if (((bool(::nme::installer::Assets_obj::resourceTypes->exists(id)) && bool((::nme::installer::Assets_obj::resourceTypes->get(id)->__Field(HX_CSTRING("toLowerCase"),true)() == HX_CSTRING("font")))))){
-		HX_STACK_LINE(175)
+		HX_STACK_LINE(287)
 		return ::native::text::Font_obj::__new(::nme::installer::Assets_obj::resourceNames->get(id));
 	}
 	else{
-		HX_STACK_LINE(181)
-		::haxe::Log_obj::trace(((HX_CSTRING("[nme.Assets] There is no Font asset with an ID of \"") + id) + HX_CSTRING("\"")),hx::SourceInfo(HX_CSTRING("Assets.hx"),181,HX_CSTRING("nme.installer.Assets"),HX_CSTRING("getFont")));
-		HX_STACK_LINE(183)
+		HX_STACK_LINE(293)
+		::haxe::Log_obj::trace(((HX_CSTRING("[nme.Assets] There is no Font asset with an ID of \"") + id) + HX_CSTRING("\"")),hx::SourceInfo(HX_CSTRING("Assets.hx"),293,HX_CSTRING("nme.installer.Assets"),HX_CSTRING("getFont")));
+		HX_STACK_LINE(295)
 		return null();
 	}
-	HX_STACK_LINE(175)
+	HX_STACK_LINE(287)
 	return null();
 }
 
@@ -248,22 +472,22 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Assets_obj,getBytes,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Assets_obj,getFont,return )
 
 ::format::display::MovieClip Assets_obj::getMovieClip( ::String id){
-	HX_STACK_PUSH("Assets::getMovieClip","nme/installer/Assets.hx",190);
+	HX_STACK_PUSH("Assets::getMovieClip","nme/installer/Assets.hx",302);
 	HX_STACK_ARG(id,"id");
-	HX_STACK_LINE(192)
+	HX_STACK_LINE(304)
 	::nme::installer::Assets_obj::initialize();
-	HX_STACK_LINE(194)
+	HX_STACK_LINE(306)
 	::String libraryName = id.substr((int)0,id.indexOf(HX_CSTRING(":"),null()));		HX_STACK_VAR(libraryName,"libraryName");
-	HX_STACK_LINE(195)
+	HX_STACK_LINE(307)
 	::String symbolName = id.substr((id.indexOf(HX_CSTRING(":"),null()) + (int)1),null());		HX_STACK_VAR(symbolName,"symbolName");
-	HX_STACK_LINE(197)
+	HX_STACK_LINE(309)
 	if ((::nme::installer::Assets_obj::libraryTypes->exists(libraryName))){
 	}
 	else{
-		HX_STACK_LINE(231)
-		::haxe::Log_obj::trace(((HX_CSTRING("[nme.Assets] There is no asset library named \"") + libraryName) + HX_CSTRING("\"")),hx::SourceInfo(HX_CSTRING("Assets.hx"),233,HX_CSTRING("nme.installer.Assets"),HX_CSTRING("getMovieClip")));
+		HX_STACK_LINE(343)
+		::haxe::Log_obj::trace(((HX_CSTRING("[nme.Assets] There is no asset library named \"") + libraryName) + HX_CSTRING("\"")),hx::SourceInfo(HX_CSTRING("Assets.hx"),345,HX_CSTRING("nme.installer.Assets"),HX_CSTRING("getMovieClip")));
 	}
-	HX_STACK_LINE(237)
+	HX_STACK_LINE(349)
 	return null();
 }
 
@@ -271,11 +495,11 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Assets_obj,getFont,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Assets_obj,getMovieClip,return )
 
 ::String Assets_obj::getResourceName( ::String id){
-	HX_STACK_PUSH("Assets::getResourceName","nme/installer/Assets.hx",242);
+	HX_STACK_PUSH("Assets::getResourceName","nme/installer/Assets.hx",354);
 	HX_STACK_ARG(id,"id");
-	HX_STACK_LINE(244)
+	HX_STACK_LINE(356)
 	::nme::installer::Assets_obj::initialize();
-	HX_STACK_LINE(246)
+	HX_STACK_LINE(358)
 	return ::nme::installer::Assets_obj::resourceNames->get(id);
 }
 
@@ -283,28 +507,28 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Assets_obj,getMovieClip,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Assets_obj,getResourceName,return )
 
 ::native::media::Sound Assets_obj::getSound( ::String id){
-	HX_STACK_PUSH("Assets::getSound","nme/installer/Assets.hx",251);
+	HX_STACK_PUSH("Assets::getSound","nme/installer/Assets.hx",363);
 	HX_STACK_ARG(id,"id");
-	HX_STACK_LINE(253)
+	HX_STACK_LINE(365)
 	::nme::installer::Assets_obj::initialize();
-	HX_STACK_LINE(255)
+	HX_STACK_LINE(367)
 	if ((::nme::installer::Assets_obj::resourceTypes->exists(id))){
-		HX_STACK_LINE(255)
+		HX_STACK_LINE(367)
 		if (((::nme::installer::Assets_obj::resourceTypes->get(id)->__Field(HX_CSTRING("toLowerCase"),true)() == HX_CSTRING("sound")))){
-			HX_STACK_LINE(257)
+			HX_STACK_LINE(369)
 			return ::native::media::Sound_obj::__new(::native::net::URLRequest_obj::__new(::nme::installer::Assets_obj::resourceNames->get(id)),null(),false);
 		}
 		else{
-			HX_STACK_LINE(261)
+			HX_STACK_LINE(373)
 			if (((::nme::installer::Assets_obj::resourceTypes->get(id)->__Field(HX_CSTRING("toLowerCase"),true)() == HX_CSTRING("music")))){
-				HX_STACK_LINE(261)
+				HX_STACK_LINE(373)
 				return ::native::media::Sound_obj::__new(::native::net::URLRequest_obj::__new(::nme::installer::Assets_obj::resourceNames->get(id)),null(),true);
 			}
 		}
 	}
-	HX_STACK_LINE(269)
-	::haxe::Log_obj::trace(((HX_CSTRING("[nme.Assets] There is no Sound asset with an ID of \"") + id) + HX_CSTRING("\"")),hx::SourceInfo(HX_CSTRING("Assets.hx"),269,HX_CSTRING("nme.installer.Assets"),HX_CSTRING("getSound")));
-	HX_STACK_LINE(271)
+	HX_STACK_LINE(381)
+	::haxe::Log_obj::trace(((HX_CSTRING("[nme.Assets] There is no Sound asset with an ID of \"") + id) + HX_CSTRING("\"")),hx::SourceInfo(HX_CSTRING("Assets.hx"),381,HX_CSTRING("nme.installer.Assets"),HX_CSTRING("getSound")));
+	HX_STACK_LINE(383)
 	return null();
 }
 
@@ -312,20 +536,20 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Assets_obj,getResourceName,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Assets_obj,getSound,return )
 
 ::String Assets_obj::getText( ::String id){
-	HX_STACK_PUSH("Assets::getText","nme/installer/Assets.hx",276);
+	HX_STACK_PUSH("Assets::getText","nme/installer/Assets.hx",388);
 	HX_STACK_ARG(id,"id");
-	HX_STACK_LINE(278)
+	HX_STACK_LINE(390)
 	::native::utils::ByteArray bytes = ::nme::installer::Assets_obj::getBytes(id);		HX_STACK_VAR(bytes,"bytes");
-	HX_STACK_LINE(280)
+	HX_STACK_LINE(392)
 	if (((bytes == null()))){
-		HX_STACK_LINE(280)
+		HX_STACK_LINE(392)
 		return null();
 	}
 	else{
-		HX_STACK_LINE(284)
+		HX_STACK_LINE(396)
 		return bytes->readUTFBytes(bytes->length);
 	}
-	HX_STACK_LINE(280)
+	HX_STACK_LINE(392)
 	return null();
 }
 

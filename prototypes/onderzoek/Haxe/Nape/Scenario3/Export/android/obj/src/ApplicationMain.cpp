@@ -147,7 +147,7 @@ Void ApplicationMain_obj::main( ){
 		HX_END_LOCAL_FUNC0((void))
 
 		HX_STACK_LINE(39)
-		::nme::Lib_obj::create( Dynamic(new _Function_1_1()),(int)1024,(int)768,(int)60,(int)16777215,(int((int((int((int((int((int((int((int((int((int(::nme::Lib_obj::HARDWARE) | int((int)0))) | int((int)0))) | int((int)0))) | int((int)0))) | int(::nme::Lib_obj::RESIZABLE))) | int((int)0))) | int((int)0))) | int(::nme::Lib_obj::FULLSCREEN))) | int((int)0))) | int((int)0)),HX_CSTRING("NapeScene1"),null());
+		::nme::Lib_obj::create( Dynamic(new _Function_1_1()),(int)640,(int)480,(int)30,(int)16777215,(int((int((int((int((int((int((int((int((int((int(::nme::Lib_obj::HARDWARE) | int((int)0))) | int((int)0))) | int((int)0))) | int((int)0))) | int(::nme::Lib_obj::RESIZABLE))) | int((int)0))) | int((int)0))) | int(::nme::Lib_obj::FULLSCREEN))) | int((int)0))) | int((int)0)),HX_CSTRING("NapeScene1"),null());
 	}
 return null();
 }
@@ -204,11 +204,291 @@ Dynamic ApplicationMain_obj::getAsset( ::String inName){
 		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/rugby.png"),null());
 	}
 	HX_STACK_LINE(170)
-	if (((inName == HX_CSTRING("assets/tennisbal.png")))){
+	if (((inName == HX_CSTRING("assets/sprites/lopen_klein.png")))){
 		HX_STACK_LINE(171)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/lopen_klein.png"),null());
+	}
+	HX_STACK_LINE(177)
+	if (((inName == HX_CSTRING("assets/sprites/los/idle.png")))){
+		HX_STACK_LINE(178)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/idle.png"),null());
+	}
+	HX_STACK_LINE(184)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00000.png")))){
+		HX_STACK_LINE(185)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00000.png"),null());
+	}
+	HX_STACK_LINE(191)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00001.png")))){
+		HX_STACK_LINE(192)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00001.png"),null());
+	}
+	HX_STACK_LINE(198)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00002.png")))){
+		HX_STACK_LINE(199)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00002.png"),null());
+	}
+	HX_STACK_LINE(205)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00003.png")))){
+		HX_STACK_LINE(206)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00003.png"),null());
+	}
+	HX_STACK_LINE(212)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00004.png")))){
+		HX_STACK_LINE(213)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00004.png"),null());
+	}
+	HX_STACK_LINE(219)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00005.png")))){
+		HX_STACK_LINE(220)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00005.png"),null());
+	}
+	HX_STACK_LINE(226)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00006.png")))){
+		HX_STACK_LINE(227)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00006.png"),null());
+	}
+	HX_STACK_LINE(233)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00007.png")))){
+		HX_STACK_LINE(234)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00007.png"),null());
+	}
+	HX_STACK_LINE(240)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00008.png")))){
+		HX_STACK_LINE(241)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00008.png"),null());
+	}
+	HX_STACK_LINE(247)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00009.png")))){
+		HX_STACK_LINE(248)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00009.png"),null());
+	}
+	HX_STACK_LINE(254)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00010.png")))){
+		HX_STACK_LINE(255)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00010.png"),null());
+	}
+	HX_STACK_LINE(261)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00011.png")))){
+		HX_STACK_LINE(262)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00011.png"),null());
+	}
+	HX_STACK_LINE(268)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00012.png")))){
+		HX_STACK_LINE(269)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00012.png"),null());
+	}
+	HX_STACK_LINE(275)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00013.png")))){
+		HX_STACK_LINE(276)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00013.png"),null());
+	}
+	HX_STACK_LINE(282)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00014.png")))){
+		HX_STACK_LINE(283)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00014.png"),null());
+	}
+	HX_STACK_LINE(289)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00015.png")))){
+		HX_STACK_LINE(290)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00015.png"),null());
+	}
+	HX_STACK_LINE(296)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00016.png")))){
+		HX_STACK_LINE(297)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00016.png"),null());
+	}
+	HX_STACK_LINE(303)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00017.png")))){
+		HX_STACK_LINE(304)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00017.png"),null());
+	}
+	HX_STACK_LINE(310)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00018.png")))){
+		HX_STACK_LINE(311)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00018.png"),null());
+	}
+	HX_STACK_LINE(317)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00019.png")))){
+		HX_STACK_LINE(318)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00019.png"),null());
+	}
+	HX_STACK_LINE(324)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00020.png")))){
+		HX_STACK_LINE(325)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00020.png"),null());
+	}
+	HX_STACK_LINE(331)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00021.png")))){
+		HX_STACK_LINE(332)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00021.png"),null());
+	}
+	HX_STACK_LINE(338)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00022.png")))){
+		HX_STACK_LINE(339)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00022.png"),null());
+	}
+	HX_STACK_LINE(345)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00023.png")))){
+		HX_STACK_LINE(346)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00023.png"),null());
+	}
+	HX_STACK_LINE(352)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00024.png")))){
+		HX_STACK_LINE(353)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00024.png"),null());
+	}
+	HX_STACK_LINE(359)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00025.png")))){
+		HX_STACK_LINE(360)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00025.png"),null());
+	}
+	HX_STACK_LINE(366)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00026.png")))){
+		HX_STACK_LINE(367)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00026.png"),null());
+	}
+	HX_STACK_LINE(373)
+	if (((inName == HX_CSTRING("assets/sprites/los/jump/jump00027.png")))){
+		HX_STACK_LINE(374)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/jump/jump00027.png"),null());
+	}
+	HX_STACK_LINE(380)
+	if (((inName == HX_CSTRING("assets/sprites/los/walk/walk00010.png")))){
+		HX_STACK_LINE(381)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/walk/walk00010.png"),null());
+	}
+	HX_STACK_LINE(387)
+	if (((inName == HX_CSTRING("assets/sprites/los/walk/walk00011.png")))){
+		HX_STACK_LINE(388)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/walk/walk00011.png"),null());
+	}
+	HX_STACK_LINE(394)
+	if (((inName == HX_CSTRING("assets/sprites/los/walk/walk00012.png")))){
+		HX_STACK_LINE(395)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/walk/walk00012.png"),null());
+	}
+	HX_STACK_LINE(401)
+	if (((inName == HX_CSTRING("assets/sprites/los/walk/walk00013.png")))){
+		HX_STACK_LINE(402)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/walk/walk00013.png"),null());
+	}
+	HX_STACK_LINE(408)
+	if (((inName == HX_CSTRING("assets/sprites/los/walk/walk00014.png")))){
+		HX_STACK_LINE(409)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/walk/walk00014.png"),null());
+	}
+	HX_STACK_LINE(415)
+	if (((inName == HX_CSTRING("assets/sprites/los/walk/walk00015.png")))){
+		HX_STACK_LINE(416)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/walk/walk00015.png"),null());
+	}
+	HX_STACK_LINE(422)
+	if (((inName == HX_CSTRING("assets/sprites/los/walk/walk00016.png")))){
+		HX_STACK_LINE(423)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/walk/walk00016.png"),null());
+	}
+	HX_STACK_LINE(429)
+	if (((inName == HX_CSTRING("assets/sprites/los/walk/walk00017.png")))){
+		HX_STACK_LINE(430)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/walk/walk00017.png"),null());
+	}
+	HX_STACK_LINE(436)
+	if (((inName == HX_CSTRING("assets/sprites/los/walk/walk00018.png")))){
+		HX_STACK_LINE(437)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/walk/walk00018.png"),null());
+	}
+	HX_STACK_LINE(443)
+	if (((inName == HX_CSTRING("assets/sprites/los/walk/walk00019.png")))){
+		HX_STACK_LINE(444)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/walk/walk00019.png"),null());
+	}
+	HX_STACK_LINE(450)
+	if (((inName == HX_CSTRING("assets/sprites/los/walk/walk00020.png")))){
+		HX_STACK_LINE(451)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/walk/walk00020.png"),null());
+	}
+	HX_STACK_LINE(457)
+	if (((inName == HX_CSTRING("assets/sprites/los/walk/walk00021.png")))){
+		HX_STACK_LINE(458)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/walk/walk00021.png"),null());
+	}
+	HX_STACK_LINE(464)
+	if (((inName == HX_CSTRING("assets/sprites/los/walk/walk00022.png")))){
+		HX_STACK_LINE(465)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/walk/walk00022.png"),null());
+	}
+	HX_STACK_LINE(471)
+	if (((inName == HX_CSTRING("assets/sprites/los/walk/walk00023.png")))){
+		HX_STACK_LINE(472)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/walk/walk00023.png"),null());
+	}
+	HX_STACK_LINE(478)
+	if (((inName == HX_CSTRING("assets/sprites/los/walk/walk00024.png")))){
+		HX_STACK_LINE(479)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/walk/walk00024.png"),null());
+	}
+	HX_STACK_LINE(485)
+	if (((inName == HX_CSTRING("assets/sprites/los/walk/walk00025.png")))){
+		HX_STACK_LINE(486)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/walk/walk00025.png"),null());
+	}
+	HX_STACK_LINE(492)
+	if (((inName == HX_CSTRING("assets/sprites/los/walk/walk00026.png")))){
+		HX_STACK_LINE(493)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/walk/walk00026.png"),null());
+	}
+	HX_STACK_LINE(499)
+	if (((inName == HX_CSTRING("assets/sprites/los/walk/walk00027.png")))){
+		HX_STACK_LINE(500)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/los/walk/walk00027.png"),null());
+	}
+	HX_STACK_LINE(506)
+	if (((inName == HX_CSTRING("assets/sprites/SPRITE.png")))){
+		HX_STACK_LINE(507)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/SPRITE.png"),null());
+	}
+	HX_STACK_LINE(513)
+	if (((inName == HX_CSTRING("assets/sprites/SPRITE.xml")))){
+		HX_STACK_LINE(514)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/sprites/SPRITE.xml"));
+	}
+	HX_STACK_LINE(520)
+	if (((inName == HX_CSTRING("assets/sprites/TP-file.png")))){
+		HX_STACK_LINE(521)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/TP-file.png"),null());
+	}
+	HX_STACK_LINE(527)
+	if (((inName == HX_CSTRING("assets/sprites/TP-file.tps")))){
+		HX_STACK_LINE(528)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/sprites/TP-file.tps"));
+	}
+	HX_STACK_LINE(534)
+	if (((inName == HX_CSTRING("assets/sprites/TP-file.xml")))){
+		HX_STACK_LINE(535)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/sprites/TP-file.xml"));
+	}
+	HX_STACK_LINE(541)
+	if (((inName == HX_CSTRING("assets/sprites/TP-file2.png")))){
+		HX_STACK_LINE(542)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/sprites/TP-file2.png"),null());
+	}
+	HX_STACK_LINE(548)
+	if (((inName == HX_CSTRING("assets/sprites/TP-file2.tps")))){
+		HX_STACK_LINE(549)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/sprites/TP-file2.tps"));
+	}
+	HX_STACK_LINE(555)
+	if (((inName == HX_CSTRING("assets/sprites/TP-file2.xml")))){
+		HX_STACK_LINE(556)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/sprites/TP-file2.xml"));
+	}
+	HX_STACK_LINE(562)
+	if (((inName == HX_CSTRING("assets/tennisbal.png")))){
+		HX_STACK_LINE(563)
 		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/tennisbal.png"),null());
 	}
-	HX_STACK_LINE(178)
+	HX_STACK_LINE(570)
 	return null();
 }
 
