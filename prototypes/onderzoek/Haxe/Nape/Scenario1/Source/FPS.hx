@@ -20,15 +20,15 @@ class FPS extends TextField
       var font = nme.Assets.getFont ("assets/font.ttf");
       // var format = new TextFormat (font.fontName);
       // var txt = new TextField ();
-      defaultTextFormat = new TextFormat (font.fontName);
+      defaultTextFormat = new TextFormat (font.fontName, 40);
 
 
       text = "FPS:";
       textColor = inCol;
       background = true;
       backgroundColor = 0x000000;
-      width = 80;
-      height = 40;
+      width = 240;
+      height = 120;
       times = [];
       addEventListener(Event.ENTER_FRAME, onEnter);
    }

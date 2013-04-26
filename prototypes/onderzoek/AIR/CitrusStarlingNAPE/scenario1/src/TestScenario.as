@@ -45,7 +45,7 @@ package
 			
 			//add timer
 			particleIteration = 0;
-			stepTimer = new Timer(3000);
+			stepTimer = new Timer(1000);
 			stepTimer.addEventListener(TimerEvent.TIMER, onTick);
 			stepTimer.start();
 

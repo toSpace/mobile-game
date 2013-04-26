@@ -1,9 +1,9 @@
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/android/bin/bin/classes.dex : \
-/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/android/bin/bin/classes/com/gameproject/napescene1/BuildConfig.class \
-/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/android/bin/bin/classes/com/gameproject/napescene1/MainActivity.class \
-/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/android/bin/bin/classes/com/gameproject/napescene1/R$attr.class \
-/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/android/bin/bin/classes/com/gameproject/napescene1/R$drawable.class \
-/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/android/bin/bin/classes/com/gameproject/napescene1/R.class \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/android/bin/bin/classes/com/gameproject/napescene3/BuildConfig.class \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/android/bin/bin/classes/com/gameproject/napescene3/MainActivity.class \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/android/bin/bin/classes/com/gameproject/napescene3/R$attr.class \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/android/bin/bin/classes/com/gameproject/napescene3/R$drawable.class \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/android/bin/bin/classes/com/gameproject/napescene3/R.class \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/android/bin/bin/classes/org/haxe/HXCPP.class \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/android/bin/bin/classes/org/haxe/nme/GameActivity$1.class \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/android/bin/bin/classes/org/haxe/nme/GameActivity.class \

@@ -12,7 +12,7 @@ class ApplicationMain
 	public static function main()
 	{
 		#if nme
-		nme.Lib.setPackage("toSpace", "NapeScene1", "com.gameproject.napescene1", "1.0.0");
+		nme.Lib.setPackage("toSpace", "NapeScene3", "com.gameproject.napescene3", "1.0.0");
 		
 		#end
 		
@@ -20,7 +20,7 @@ class ApplicationMain
 		wx.App.boot(function()
 		{
 			
-			frame = wx.Frame.create(null, null, "NapeScene1", null, { width: 640, height: 480 });
+			frame = wx.Frame.create(null, null, "NapeScene3", null, { width: 640, height: 480 });
 			
 			#if nme
 			var stage = wx.NMEStage.create(frame, null, null, { width: 640, height: 480 });
@@ -83,7 +83,7 @@ class ApplicationMain
 			(true ? nme.Lib.FULLSCREEN : 0) |
 			(0 == 4 ? nme.Lib.HW_AA_HIRES : 0) |
 			(0 == 2 ? nme.Lib.HW_AA : 0),
-			"NapeScene1"
+			"NapeScene3"
 			
 		);
 		#end
@@ -563,6 +563,20 @@ class ApplicationMain
 		{
 			
 			return nme.Assets.getBitmapData ("assets/tennisbal.png");
+			
+		}
+		
+		if (inName == "assets/walking.png")
+		{
+			
+			return nme.Assets.getBitmapData ("assets/walking.png");
+			
+		}
+		
+		if (inName == "assets/walking.xml")
+		{
+			
+			return nme.Assets.getText ("assets/walking.xml");
 			
 		}
 		

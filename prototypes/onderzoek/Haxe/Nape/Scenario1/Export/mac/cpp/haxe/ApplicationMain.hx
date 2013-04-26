@@ -20,10 +20,10 @@ class ApplicationMain
 		wx.App.boot(function()
 		{
 			
-			frame = wx.Frame.create(null, null, "NapeScene1", null, { width: 800, height: 600 });
+			frame = wx.Frame.create(null, null, "NapeScene1", null, { width: 640, height: 480 });
 			
 			#if nme
-			var stage = wx.NMEStage.create(frame, null, null, { width: 800, height: 600 });
+			var stage = wx.NMEStage.create(frame, null, null, { width: 640, height: 480 });
 			#end
 			
 			Main.main();
@@ -38,7 +38,7 @@ class ApplicationMain
 		
 		nme.Lib.create(function()
 			{ 
-				//if ((800 == 0 && 600 == 0) || false)
+				//if ((640 == 0 && 480 == 0) || true)
 				//{
 					nme.Lib.current.stage.align = nme.display.StageAlign.TOP_LEFT;
 					nme.Lib.current.stage.scaleMode = nme.display.StageScaleMode.NO_SCALE;
@@ -69,8 +69,8 @@ class ApplicationMain
 					#end
 				}
 			},
-			800, 600, 
-			30, 
+			640, 480, 
+			60, 
 			16777215,
 			(true ? nme.Lib.HARDWARE : 0) |
 			(false ? nme.Lib.ALLOW_SHADERS : 0) |
@@ -80,7 +80,7 @@ class ApplicationMain
 			(true ? nme.Lib.RESIZABLE : 0) |
 			(false ? nme.Lib.BORDERLESS : 0) |
 			(false ? nme.Lib.VSYNC : 0) |
-			(false ? nme.Lib.FULLSCREEN : 0) |
+			(true ? nme.Lib.FULLSCREEN : 0) |
 			(0 == 4 ? nme.Lib.HW_AA_HIRES : 0) |
 			(0 == 2 ? nme.Lib.HW_AA : 0),
 			"NapeScene1"

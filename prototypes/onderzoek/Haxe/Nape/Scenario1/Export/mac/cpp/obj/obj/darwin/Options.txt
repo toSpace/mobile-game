@@ -10,4 +10,4 @@ nme
 nme_install_tool
 sys
 true
-/usr/lib/haxe/lib/hxcpp/2,10,3/
+/usr/lib/haxe/lib/hxcpp/3,0,0/

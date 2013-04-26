@@ -26,21 +26,22 @@ class Person extends Sprite {
 		super();
 
 		// sprite sheet
-		var tilesheet = new SparrowTilesheet(Assets.getBitmapData("assets/sprites/TP-file.png"), Assets.getText("assets/sprites/TP-file.xml"));
+		var tilesheet = new SparrowTilesheet(Assets.getBitmapData("assets/walking.png"), Assets.getText("assets/walking.xml"));
 
 		// tile-layer
 		layer = new TileLayer(tilesheet); // optional flags: smoothing, additive blendmode
 
 		clip = new TileClip("walk",24);
+		layer.addChild(clip);
+		layer.useSmoothing = true;
 
 		//properties
 		clip.loop = true;
 		clip.x = 0;
 		clip.y = 0;
 		clip.play();
-
-		//add to stage
-		layer.addChild(clip);
+		
+		layer.render();
 
 		tLast = Lib.getTimer();
 		addEventListener(Event.ENTER_FRAME, onEnterFrame);

@@ -427,6 +427,16 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/tennisbal.png");
          
 		
+		if (inName=="assets/walking.png")
+			 
+            return Assets.getBitmapData ("assets/walking.png");
+         
+		
+		if (inName=="assets/walking.xml")
+			 
+			 return Assets.getText ("assets/walking.xml");
+         
+		
 		
 		return null;
 		
@@ -512,6 +522,8 @@ class NME_assets_sprites_tp_file2_png extends nme.display.BitmapData { public fu
 class NME_assets_sprites_tp_file2_tps extends nme.utils.ByteArray { }
 class NME_assets_sprites_tp_file2_xml extends nme.utils.ByteArray { }
 class NME_assets_tennisbal_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_walking_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_walking_xml extends nme.utils.ByteArray { }
 
 
 #else

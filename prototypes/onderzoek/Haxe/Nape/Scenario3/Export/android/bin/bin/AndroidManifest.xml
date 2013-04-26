@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="preferExternal" android:versionCode="16" android:versionName="1.0.0" package="com.gameproject.napescene1">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="preferExternal" android:versionCode="27" android:versionName="1.0.0" package="com.gameproject.napescene3">
 
-	<application android:label="NapeScene1" android:debuggable="true" android:icon="@drawable/icon">
+	<application android:label="NapeScene3" android:debuggable="true" android:icon="@drawable/icon">
 		
 		
 		
-		<activity android:name="MainActivity" android:label="NapeScene1" android:configChanges="keyboard|keyboardHidden|orientation">
+		<activity android:name="MainActivity" android:label="NapeScene3" android:configChanges="keyboard|keyboardHidden|orientation">
 			
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />

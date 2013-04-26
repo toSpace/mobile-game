@@ -150,6 +150,10 @@ class Main extends Sprite {
         addChild(personSprite);
         personPhysicsBody.userData.graphic = personSprite;
         updateGraphics(personPhysicsBody);
+
+        if(counter != null){
+            counter.add();
+        }        
     }
 
     function addParticle():Void{
@@ -179,7 +183,7 @@ class Main extends Sprite {
 
         //lists
         var particles:Array<String> = ['rugby','8ball','greenleaf','banaan','pikachu','bier','redleaf','tennisbal'];
-        var startPoints:Array<Float> = [0.75, 0.25, 0.5, 0.25, 0.5, 0.75, 0.5, 0.25];
+        var startPoints:Array<Float> = [0.1, 0.3, 0.5, 0.7, 0.9, 0.1, 0.3, 0.5];
         
         //reloop
         if(particleIteration == particles.length){ particleIteration = 0; }

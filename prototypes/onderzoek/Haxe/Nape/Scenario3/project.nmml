@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 	
-	<meta title="NapeScene1" package="com.gameproject.napescene1" version="1.0.0" company="toSpace" />
-	<app main="Main" path="Export" file="NapeScene1" />
+	<meta title="NapeScene3" package="com.gameproject.napescene3" version="1.0.0" company="toSpace" />
+	<app main="Main" path="Export" file="NapeScene3" />
 
 	<window width="1024" height="768" fps="60" resizable="true" hardware="true" unless="mobile" />
 	<window width="640" height="480" resizable="true"  />

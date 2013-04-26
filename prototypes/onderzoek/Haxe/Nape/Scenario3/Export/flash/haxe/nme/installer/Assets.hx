@@ -173,6 +173,10 @@ class Assets {
 			resourceTypes.set ("assets/sprites/TP-file2.xml", "text");
 			resourceClasses.set ("assets/tennisbal.png", NME_assets_tennisbal_png);
 			resourceTypes.set ("assets/tennisbal.png", "image");
+			resourceClasses.set ("assets/walking.png", NME_assets_walking_png);
+			resourceTypes.set ("assets/walking.png", "image");
+			resourceClasses.set ("assets/walking.xml", NME_assets_walking_xml);
+			resourceTypes.set ("assets/walking.xml", "text");
 			
 			
 			initialized = true;

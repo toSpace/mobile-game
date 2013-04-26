@@ -95,7 +95,7 @@ Void ApplicationMain_obj::main( ){
 {
 		HX_STACK_PUSH("ApplicationMain::main","ApplicationMain.hx",13);
 		HX_STACK_LINE(15)
-		::nme::Lib_obj::setPackage(HX_CSTRING("toSpace"),HX_CSTRING("NapeScene1"),HX_CSTRING("com.gameproject.napescene1"),HX_CSTRING("1.0.0"));
+		::nme::Lib_obj::setPackage(HX_CSTRING("toSpace"),HX_CSTRING("NapeScene3"),HX_CSTRING("com.gameproject.napescene3"),HX_CSTRING("1.0.0"));
 
 		HX_BEGIN_LOCAL_FUNC_S0(hx::LocalFunc,_Function_1_1)
 		Void run(){
@@ -147,7 +147,7 @@ Void ApplicationMain_obj::main( ){
 		HX_END_LOCAL_FUNC0((void))
 
 		HX_STACK_LINE(39)
-		::nme::Lib_obj::create( Dynamic(new _Function_1_1()),(int)640,(int)480,(int)30,(int)16777215,(int((int((int((int((int((int((int((int((int((int(::nme::Lib_obj::HARDWARE) | int((int)0))) | int((int)0))) | int((int)0))) | int((int)0))) | int(::nme::Lib_obj::RESIZABLE))) | int((int)0))) | int((int)0))) | int(::nme::Lib_obj::FULLSCREEN))) | int((int)0))) | int((int)0)),HX_CSTRING("NapeScene1"),null());
+		::nme::Lib_obj::create( Dynamic(new _Function_1_1()),(int)640,(int)480,(int)30,(int)16777215,(int((int((int((int((int((int((int((int((int((int(::nme::Lib_obj::HARDWARE) | int((int)0))) | int((int)0))) | int((int)0))) | int((int)0))) | int(::nme::Lib_obj::RESIZABLE))) | int((int)0))) | int((int)0))) | int(::nme::Lib_obj::FULLSCREEN))) | int((int)0))) | int((int)0)),HX_CSTRING("NapeScene3"),null());
 	}
 return null();
 }
@@ -488,7 +488,17 @@ Dynamic ApplicationMain_obj::getAsset( ::String inName){
 		HX_STACK_LINE(563)
 		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/tennisbal.png"),null());
 	}
-	HX_STACK_LINE(570)
+	HX_STACK_LINE(569)
+	if (((inName == HX_CSTRING("assets/walking.png")))){
+		HX_STACK_LINE(570)
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/walking.png"),null());
+	}
+	HX_STACK_LINE(576)
+	if (((inName == HX_CSTRING("assets/walking.xml")))){
+		HX_STACK_LINE(577)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/walking.xml"));
+	}
+	HX_STACK_LINE(584)
 	return null();
 }
 

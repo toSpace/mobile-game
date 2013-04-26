@@ -3930,6 +3930,8 @@
    <depend name="include/native/display/PixelSnapping.h"/>
    <depend name="include/native/display/Sprite.h"/>
    <depend name="include/native/display/Stage.h"/>
+   <depend name="include/native/display/StageAlign.h"/>
+   <depend name="include/native/display/StageScaleMode.h"/>
    <depend name="include/native/events/Event.h"/>
    <depend name="include/native/events/EventDispatcher.h"/>
    <depend name="include/native/events/IEventDispatcher.h"/>

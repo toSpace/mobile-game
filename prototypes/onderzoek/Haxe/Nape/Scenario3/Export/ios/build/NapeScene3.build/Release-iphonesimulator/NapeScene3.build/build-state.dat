@@ -1,0 +1,288 @@
+TNapeScene3
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/Info.plist NapeScene3/NapeScene3-Info.plist
+cCpResource NapeScene3/assets build/Release-iphonesimulator/NapeScene3.app/assets
+cCpResource NapeScene3/Icon.png build/Release-iphonesimulator/NapeScene3.app/Icon.png
+cCpResource NapeScene3/Icon@2x.png build/Release-iphonesimulator/NapeScene3.app/Icon@2x.png
+cCpResource NapeScene3/Icon-72.png build/Release-iphonesimulator/NapeScene3.app/Icon-72.png
+cCpResource NapeScene3/Icon-72@2x.png build/Release-iphonesimulator/NapeScene3.app/Icon-72@2x.png
+cProcessPCH++ /var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NapeScene3-Prefix-bqhvjujrttmyyjetnbohhiespwju/NapeScene3-Prefix.pch.pth NapeScene3/NapeScene3-Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/Objects-normal/i386/Main.o /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/Classes/Main.mm normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/NapeScene3 normal i386
+cGenerateDSYMFile /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app.dSYM /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/NapeScene3
+cTouch /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk
+c000000005151B2960000000000000110
+t1364308630
+s272
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AVFoundation.framework/AVFoundation
+c000000005135DD7A00000000001EB540
+t1362484602
+s2012480
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/AudioToolbox.framework/AudioToolbox
+c000000005135DD7800000000003D4DF0
+t1362484600
+s4017648
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreAudio.framework/CoreAudio
+c000000005135DD7B00000000000B5DA0
+t1362484603
+s744864
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000005135DD7D0000000000228FE0
+t1362484605
+s2265056
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000005135DD8100000000003DDFA0
+t1362484609
+s4054944
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000005135DD8000000000000015F7
+t1362484608
+s5623
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/OpenAL.framework/OpenAL
+c000000005135DD880000000000030EB0
+t1362484616
+s200368
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/OpenGLES.framework/OpenGLES
+c000000005135DD880000000000015400
+t1362484616
+s87040
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/QuartzCore.framework/QuartzCore
+c000000005135DD8900000000001D5750
+t1362484617
+s1922896
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000005135DD8A0000000000000E8D
+t1362484618
+s3725
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000005135DD8D0000000000AB6230
+t1362484621
+s11231792
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk/usr/include/Availability.h
+c000000005135DDA60000000000001B73
+t1362484646
+s7027
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/Classes/Main.mm
+c00000000517858F90000000000000357
+t1366841593
+s855
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/Icon-72.png
+c00000000517858DA0000000000000324
+t1366841562
+s804
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/Icon-72@2x.png
+c00000000517858DA00000000000004E0
+t1366841562
+s1248
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/Icon.png
+c00000000517858DA000000000000024C
+t1366841562
+s588
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/Icon@2x.png
+c00000000517858DA00000000000003A4
+t1366841562
+s932
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/NapeScene3-Prefix.pch
+c00000000517858DA0000000000000143
+t1366841562
+s323
+i<Availability.h>
+i<UIKit/UIKit.h>
+i<Foundation/Foundation.h>
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/assets
+c00000000517853FD000000000000094C
+t1366840317
+s2380
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/Objects-normal/i386/Main.o
+t1366840628
+s3228
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/Objects-normal/i386/NapeScene3.LinkFileList
+c000000005178553400000000000000C4
+t1366840628
+s196
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app
+t1366840631
+s340
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app.dSYM
+t1366840631
+s102
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/Icon-72.png
+t1366840628
+s804
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/Icon-72@2x.png
+t1366840628
+s1248
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/Icon.png
+t1366840628
+s588
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/Icon@2x.png
+t1366840628
+s932
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/Info.plist
+t1366840628
+s1084
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/NapeScene3
+t1366840630
+s11372064
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/PkgInfo
+t1366840628
+s8
+
+N/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/assets
+t1366840628
+s2380
+
+N/var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NapeScene3-Prefix-bqhvjujrttmyyjetnbohhiespwju/NapeScene3-Prefix.pch.pth
+t1366840628
+s143996
+
+NNapeScene3/NapeScene3-Info.plist
+c00000000517858DA000000000000067A
+t1366841562
+s1658
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies950b91799028b741^b4599d799028b741^---0#1#0#--18"Check dependencies36"5F598BF2-15C8-400C-BD68-7F0EF3A5F1EC-
+
+CCompileC build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/Objects-normal/i386/Main.o /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/Classes/Main.mm normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s388534394.105498
+e388534394.734830
+r1
+xCompileC
+xbuild/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/Objects-normal/i386/Main.o
+x/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/Classes/Main.mm
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection139"Compile /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/Classes/Main.mm944b1b7a9028b741^d21dbc7a9028b741^---0#0#0#-19%DVTDocumentLocation2@147"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/Classes/Main.mm0000000000000000^4338"CompileC build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/Objects-normal/i386/Main.o NapeScene3/Classes/Main.mm normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=gnu++11 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -mios-simulator-version-min=5 -iquote /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/NapeScene3-generated-files.hmap -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/NapeScene3-own-target-headers.hmap -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/NapeScene3-all-target-headers.hmap -iquote /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/NapeScene3-project-headers.hmap -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/DerivedSources/i386 -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/DerivedSources -F/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NapeScene3-Prefix-bqhvjujrttmyyjetnbohhiespwju/NapeScene3-Prefix.pch -MMD -MT dependencies -MF /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/Objects-normal/i386/Main.d --serialize-diagnostics /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/Objects-normal/i386/Main.dia -c /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/Classes/Main.mm -o /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/Objects-normal/i386/Main.o36"278B48BF-63EB-47A9-A884-80832EF66D5A-
+
+CCpResource NapeScene3/Icon-72.png build/Release-iphonesimulator/NapeScene3.app/Icon-72.png
+s388534393.718214
+e388534393.721034
+r1
+xCpResource
+xNapeScene3/Icon-72.png
+xbuild/Release-iphonesimulator/NapeScene3.app/Icon-72.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Copy build/Release-iphonesimulator/NapeScene3.app/Icon-72.pngf9f5b7799028b741^3596b8799028b741^---0#0#0#-19%DVTDocumentLocation2@177"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/Icon-72.png0000000000000000^963"CpResource NapeScene3/Icon-72.png build/Release-iphonesimulator/NapeScene3.app/Icon-72.png    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/Icon-72.png /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app36"EE17CDD2-CFCC-4F6B-A358-5FD8DD8B4C42-
+
+CCpResource NapeScene3/Icon-72@2x.png build/Release-iphonesimulator/NapeScene3.app/Icon-72@2x.png
+s388534393.718800
+e388534393.722555
+r1
+xCpResource
+xNapeScene3/Icon-72@2x.png
+xbuild/Release-iphonesimulator/NapeScene3.app/Icon-72@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection64"Copy build/Release-iphonesimulator/NapeScene3.app/Icon-72@2x.pngbd1ab8799028b741^40fcb8799028b741^---0#0#0#-19%DVTDocumentLocation2@180"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/Icon-72@2x.png0000000000000000^978"CpResource "NapeScene3/Icon-72@2x.png" "build/Release-iphonesimulator/NapeScene3.app/Icon-72@2x.png"    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/Icon-72@2x.png" /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app36"55D0C10B-ED5F-4458-90D4-FBD6738B9259-
+
+CCpResource NapeScene3/Icon.png build/Release-iphonesimulator/NapeScene3.app/Icon.png
+s388534393.633219
+e388534393.717041
+r1
+xCpResource
+xNapeScene3/Icon.png
+xbuild/Release-iphonesimulator/NapeScene3.app/Icon.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection58"Copy build/Release-iphonesimulator/NapeScene3.app/Icon.pngf033a2799028b741^c894b7799028b741^---0#0#0#-19%DVTDocumentLocation2@174"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/Icon.png0000000000000000^954"CpResource NapeScene3/Icon.png build/Release-iphonesimulator/NapeScene3.app/Icon.png    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/Icon.png /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app36"FAF60705-29CB-4442-BF08-CA709EC48F44-
+
+CCpResource NapeScene3/Icon@2x.png build/Release-iphonesimulator/NapeScene3.app/Icon@2x.png
+s388534393.634322
+e388534393.717851
+r1
+xCpResource
+xNapeScene3/Icon@2x.png
+xbuild/Release-iphonesimulator/NapeScene3.app/Icon@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection61"Copy build/Release-iphonesimulator/NapeScene3.app/Icon@2x.pnga377a2799028b741^7ac5b7799028b741^---0#0#0#-19%DVTDocumentLocation2@177"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/Icon@2x.png0000000000000000^969"CpResource "NapeScene3/Icon@2x.png" "build/Release-iphonesimulator/NapeScene3.app/Icon@2x.png"    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks "/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/Icon@2x.png" /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app36"5E0BA681-F66C-4FEE-80B3-5546B13D1B88-
+
+CCpResource NapeScene3/assets build/Release-iphonesimulator/NapeScene3.app/assets
+s388533428.227196
+e388533428.343616
+r1
+xCpResource
+xNapeScene3/assets
+xbuild/Release-iphonesimulator/NapeScene3.app/assets
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection56"Copy build/Release-iphonesimulator/NapeScene3.app/assetscb4b3ab48c28b741^341358b48c28b741^---0#0#0#-19%DVTDocumentLocation2@172"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/assets000000000080d041^948"CpResource NapeScene3/assets build/Release-iphonesimulator/NapeScene3.app/assets    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/assets /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app36"F32F2CCB-95F6-498C-B200-A24B93234687-
+
+CGenerateDSYMFile /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app.dSYM /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/NapeScene3
+s388534397.756546
+e388534398.684605
+r1
+xGenerateDSYMFile
+x/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app.dSYM
+x/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/NapeScene3
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection163"Generate /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app.dSYM3fc5c17d9028b741^344aaf7e9028b741^---0#0#0#-19%DVTDocumentLocation2@171"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app.dSYM/0000000000000000^898"GenerateDSYMFile build/Release-iphonesimulator/NapeScene3.app.dSYM build/Release-iphonesimulator/NapeScene3.app/NapeScene3    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/NapeScene3 -o /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app.dSYM36"0AC7106D-AB05-4878-9DED-D9972CA694CD-
+
+CLd /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/NapeScene3 normal i386
+s388534394.741762
+e388534397.749587
+r1
+xLd
+x/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/NapeScene3
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection165"Link /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/NapeScene33202be7a9028b741^32e5bf7d9028b741^---0#0#0#--1850"Ld build/Release-iphonesimulator/NapeScene3.app/NapeScene3 normal i386    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios    setenv IPHONEOS_DEPLOYMENT_TARGET 5    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -L/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator -L/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/lib/i386 -F/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator -filelist /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/Objects-normal/i386/NapeScene3.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -lstd -lregexp -lzlib -lnme -lcurl_ssl -lpng -ljpeg -lApplicationMain -Xlinker -no_implicit_dylibs -mios-simulator-version-min=5 -framework UIKit -framework OpenAL -framework OpenGLES -framework QuartzCore -framework CoreAudio -framework CoreGraphics -framework AudioToolbox -framework AVFoundation -framework Foundation -o /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/NapeScene336"A7A0C31B-B595-42F4-8CDE-6F7A91C16A1B-
+
+CProcessInfoPlistFile /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/Info.plist NapeScene3/NapeScene3-Info.plist
+s388534393.619924
+e388534393.625247
+r1
+xProcessInfoPlistFile
+x/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/Info.plist
+xNapeScene3/NapeScene3-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection40"Process NapeScene3/NapeScene3-Info.plistb3d09e799028b741^c710a0799028b741^---0#0#0#-19%DVTDocumentLocation2@153"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/NapeScene3-Info.plist0000000000000000^924"ProcessInfoPlistFile build/Release-iphonesimulator/NapeScene3.app/Info.plist NapeScene3/NapeScene3-Info.plist    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    builtin-infoPlistUtility NapeScene3/NapeScene3-Info.plist -genpkginfo /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app/Info.plist36"F3F13F1B-563F-4EA2-B9F5-AE41C10DF3FB-
+
+CProcessPCH++ /var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NapeScene3-Prefix-bqhvjujrttmyyjetnbohhiespwju/NapeScene3-Prefix.pch.pth NapeScene3/NapeScene3-Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s388534393.730527
+e388534394.098365
+r1
+xProcessPCH++
+x/var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NapeScene3-Prefix-bqhvjujrttmyyjetnbohhiespwju/NapeScene3-Prefix.pch.pth
+xNapeScene3/NapeScene3-Prefix.pch
+xnormal
+xi386
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection43"Precompile NapeScene3/NapeScene3-Prefix.pchb933bb799028b741^f12c197a9028b741^---0#0#0#-19%DVTDocumentLocation2@153"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/NapeScene3-Prefix.pch0000000000000000^4174"ProcessPCH++ /var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NapeScene3-Prefix-bqhvjujrttmyyjetnbohhiespwju/NapeScene3-Prefix.pch.pth NapeScene3/NapeScene3-Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch i386 -fmessage-length=0 -std=gnu++11 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -mios-simulator-version-min=5 -iquote /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/NapeScene3-generated-files.hmap -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/NapeScene3-own-target-headers.hmap -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/NapeScene3-all-target-headers.hmap -iquote /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/NapeScene3-project-headers.hmap -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/DerivedSources/i386 -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/NapeScene3.build/Release-iphonesimulator/NapeScene3.build/DerivedSources -F/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator -DNS_BLOCK_ASSERTIONS=1 --serialize-diagnostics /var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NapeScene3-Prefix-bqhvjujrttmyyjetnbohhiespwju/NapeScene3-Prefix.pch.dia -c /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/NapeScene3/NapeScene3-Prefix.pch -o /var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NapeScene3-Prefix-bqhvjujrttmyyjetnbohhiespwju/NapeScene3-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/NapeScene3-Prefix-bqhvjujrttmyyjetnbohhiespwju/NapeScene3-Prefix.pch.d36"A62B1D85-0380-49CA-A747-B43C65EB9D75-
+
+CTouch /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app
+s388534398.692658
+e388534398.700239
+r1
+xTouch
+x/Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection155"Touch /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.appcb67b17e9028b741^874eb37e9028b741^---0#0#0#--579"Touch build/Release-iphonesimulator/NapeScene3.app    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    /usr/bin/touch -c /Users/daveyvanderwoert/projects/toSpace/mobile-game/prototypes/onderzoek/Haxe/Nape/Scenario3/Export/ios/build/Release-iphonesimulator/NapeScene3.app36"654983F8-ADAE-4AF4-9B44-5D3D3673CA83-
+

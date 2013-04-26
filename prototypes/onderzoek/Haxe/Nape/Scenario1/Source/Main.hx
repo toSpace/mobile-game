@@ -85,7 +85,7 @@ class Main extends Sprite {
 
     	addParticle();
 
-        var t = new haxe.Timer(3000); //run every 100ms
+        var t = new haxe.Timer(500); //run every 100ms
         t.run = function(){ addParticle(); };
 
         // FPStext = new TextField();
@@ -140,7 +140,7 @@ class Main extends Sprite {
         Particle.position.setxy(name[1], 0);
         Particle.space = space;
 
-        addChild (asset);
+        addChildAt(asset,0);
         updateGraphics(Particle);
 
         if(counter != null){

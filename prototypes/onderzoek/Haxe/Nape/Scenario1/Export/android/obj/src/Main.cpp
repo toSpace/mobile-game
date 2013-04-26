@@ -633,7 +633,7 @@ Void Main_obj::addParticle( ){
 			}
 		}
 		HX_STACK_LINE(143)
-		this->addChild(asset);
+		this->addChildAt(asset,(int)0);
 		HX_STACK_LINE(144)
 		this->updateGraphics(Particle);
 		HX_STACK_LINE(146)
@@ -771,7 +771,7 @@ Void Main_obj::setUp( ){
 		HX_STACK_LINE(86)
 		this->addParticle();
 		HX_STACK_LINE(88)
-		::haxe::Timer t = ::haxe::Timer_obj::__new((int)3000);		HX_STACK_VAR(t,"t");
+		::haxe::Timer t = ::haxe::Timer_obj::__new((int)500);		HX_STACK_VAR(t,"t");
 
 		HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_1_1,Array< ::Main >,_g)
 		Void run(){

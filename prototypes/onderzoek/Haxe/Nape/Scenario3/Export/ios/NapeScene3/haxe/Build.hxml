@@ -1,0 +1,14 @@
+-main ApplicationMain 
+-lib nme
+-lib actuate
+-lib nape
+-lib tilelayer
+-cp ../../../../Source
+-cp /usr/lib/haxe/lib/nme/3,5,5/
+-D nme_install_tool
+-D ios
+-D mobile
+-D iphone
+-D ios
+--remap flash:nme
+--remap browser:native
