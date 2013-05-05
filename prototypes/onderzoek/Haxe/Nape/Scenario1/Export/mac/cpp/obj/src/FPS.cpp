@@ -72,7 +72,7 @@ int inCol = __o_inCol.Default(16777215);
 	HX_STACK_LINE(20)
 	::native::text::Font font = ::nme::installer::Assets_obj::getFont(HX_CSTRING("assets/font.ttf"));		HX_STACK_VAR(font,"font");
 	HX_STACK_LINE(23)
-	this->set_defaultTextFormat(::native::text::TextFormat_obj::__new(font->fontName,null(),null(),null(),null(),null(),null(),null(),null(),null(),null(),null(),null()));
+	this->set_defaultTextFormat(::native::text::TextFormat_obj::__new(font->fontName,(int)20,null(),null(),null(),null(),null(),null(),null(),null(),null(),null(),null()));
 	HX_STACK_LINE(26)
 	this->set_text(HX_CSTRING("FPS:"));
 	HX_STACK_LINE(27)
@@ -82,9 +82,9 @@ int inCol = __o_inCol.Default(16777215);
 	HX_STACK_LINE(29)
 	this->set_backgroundColor((int)0);
 	HX_STACK_LINE(30)
-	this->set_width((int)80);
+	this->set_width((int)120);
 	HX_STACK_LINE(31)
-	this->set_height((int)40);
+	this->set_height((int)60);
 	HX_STACK_LINE(32)
 	this->times = Array_obj< Float >::__new();
 	HX_STACK_LINE(33)

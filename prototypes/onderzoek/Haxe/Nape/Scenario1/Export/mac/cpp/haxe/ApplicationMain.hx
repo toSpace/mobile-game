@@ -38,7 +38,7 @@ class ApplicationMain
 		
 		nme.Lib.create(function()
 			{ 
-				//if ((640 == 0 && 480 == 0) || true)
+				//if ((640 == 0 && 480 == 0) || false)
 				//{
 					nme.Lib.current.stage.align = nme.display.StageAlign.TOP_LEFT;
 					nme.Lib.current.stage.scaleMode = nme.display.StageScaleMode.NO_SCALE;
@@ -80,7 +80,7 @@ class ApplicationMain
 			(true ? nme.Lib.RESIZABLE : 0) |
 			(false ? nme.Lib.BORDERLESS : 0) |
 			(false ? nme.Lib.VSYNC : 0) |
-			(true ? nme.Lib.FULLSCREEN : 0) |
+			(false ? nme.Lib.FULLSCREEN : 0) |
 			(0 == 4 ? nme.Lib.HW_AA_HIRES : 0) |
 			(0 == 2 ? nme.Lib.HW_AA : 0),
 			"NapeScene1"
