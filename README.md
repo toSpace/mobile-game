@@ -2,9 +2,9 @@
 
 ##techniques
 used in this project:
-Haxe : http://www.haxe.org
-NME : http://www.nme.io
-Nape : http://napephys.com/
+* Haxe : http://www.haxe.org
+* NME : http://www.nme.io
+* Nape : http://napephys.com/
 
 ##members
 ###Supervisor:
