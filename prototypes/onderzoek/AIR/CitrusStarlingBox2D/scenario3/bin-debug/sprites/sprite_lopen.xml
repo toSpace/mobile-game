@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with TexturePacker http://texturepacker.com-->
-<!-- $TexturePacker:SmartUpdate:68f112ead1f8584efa397db4f5f77ec7$ -->
-<TextureAtlas imagePath="sprite_lopen.png">
-    <SubTexture name="lopen_klein" x="2" y="2" width="1953" height="446" frameX="0" frameY="-1" frameWidth="1955" frameHeight="450"/>
-</TextureAtlas>
