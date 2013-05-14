@@ -73,31 +73,8 @@ class Main extends Sprite {
     function setUp():Void{
 
         //wanden aanmaken
-        createFloors(0, stage.stageHeight, stage.stageWidth, 1);
-        createFloors(0, 0, 1, stage.stageHeight);
-    	createFloors(stage.stageWidth, 0, 1, stage.stageHeight);
-
-
-    }
-
-    function createFloors(x,y,width,height):Void{
-
-    	//new body
-    	var floorPhysicsBody:Body = new Body(BodyType.STATIC);
-
-    	//shape
-    	var p:Polygon = new Polygon (
-		    Polygon.rect(
-		        x,        // x position
-		        y,        // y position
-		        width,    // width
-		        height    // height
-		    )
-		);
-
-		//add to space
-		floorPhysicsBody.shapes.add(p);
-		floorPhysicsBody.space = space;
+        var hill:Hills = new Hills();
+        addChild(hill);
 
     }
 
