@@ -88,10 +88,13 @@ class Main extends Sprite {
         var objIso:BitmapDataIso = new BitmapDataIso(asset.bitmapData);
         addChild(asset);
         var objBody:Body = IsoBody.run(objIso, objIso.bounds);
-        removeChild(asset);
+        objBody.userData.graphic = asset;
+        //removeChild(asset);
         objBody.position.setxy(300, 0);
         objBody.space = space;
         //removeChild(asset);
+
+        //bitmap.bitmapData.setPixel32(x,y,0x00);
 
     }
 
@@ -134,13 +137,16 @@ class Main extends Sprite {
 
     //make particles move
     function updateGraphics(b:Body):Void {
-        /*
-        var graphic:DisplayObject = b.userData.graphic;
-        var pos = PhysicsData.graphicsPosition(b);
-        graphic.rotation = (b.rotation * 180 / Math.PI) % 360;  
-        graphic.x = pos.x;
-        graphic.y = pos.y;
-        */
+
+        var graphic:Null<DisplayObject> = b.userData.graphic;
+        //if (graphic == null)
+
+        var graphicOffset:Vec2 = b.userData.graphicOffset;
+        var position:Vec2 = b.localPointToWorld(graphicOffset);
+        graphic.x = position.x;
+        graphic.y = position.y;
+        graphic.rotation = (b.rotation * 180/Math.PI) % 360;
+        position.dispose();
     }
 	
 	
