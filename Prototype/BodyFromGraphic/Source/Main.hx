@@ -70,6 +70,7 @@ class Main extends Sprite {
         var gravity = Vec2.weak(0, 600);
         space = new Space(gravity);
 
+        //nape debug graphics
         debug = new BitmapDebug(stage.stageWidth, stage.stageHeight, stage.color);
         addChild(debug.display);
 
@@ -80,6 +81,7 @@ class Main extends Sprite {
 
     function setUp():Void{
 
+        //ondergrond aanmaken
         createFloors(0, stage.stageHeight, stage.stageWidth, 1);
 
         var asset = new Bitmap(Assets.getBitmapData ("assets/hill.png"));
@@ -117,8 +119,10 @@ class Main extends Sprite {
     //the loop
     function enterFrameHandler(ev:Event):Void {
 
+        //nieuwe nape frame aanroepen
         space.step(1 / stage.frameRate);
 
+        //debug verversen
         debug.clear();
         debug.draw(space);
         debug.flush();
