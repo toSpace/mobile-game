@@ -5,11 +5,14 @@ import nme.display.StageScaleMode;
 import nme.display.StageAlign;
 import nme.events.Event;
 import nme.events.EventDispatcher;
+import nme.events.MouseEvent;
 import nme.display.DisplayObject;
 import nme.display.Bitmap;
 import nme.display.BitmapData;
 import nme.display.PixelSnapping;
 import nme.Assets;
+import nme.geom.Matrix;
+import nme.display.BlendMode;
 
 //nape
 import nape.geom.Vec2;
@@ -39,6 +42,10 @@ class Main extends Sprite {
 
     //debug
 	var debug:Debug;
+
+    var drawing=false;
+    var asset:Bitmap;
+    var canvas:Sprite;
 
     //Make class
 	public function new () {
@@ -83,7 +90,7 @@ class Main extends Sprite {
         //ondergrond aanmaken
         createFloors(0, stage.stageHeight, stage.stageWidth, 1);
 
-        var asset = new Bitmap(Assets.getBitmapData ("assets/hill.png"));
+        asset = new Bitmap(Assets.getBitmapData ("assets/hill.png"));
         var objIso:BitmapDataIso = new BitmapDataIso(asset.bitmapData);
         addChild(asset);
         var objBody:Body = IsoBody.run(objIso, objIso.bounds);
@@ -94,6 +101,10 @@ class Main extends Sprite {
         //removeChild(asset);
 
         //bitmap.bitmapData.setPixel32(x,y,0x00);
+
+        stage.addEventListener(MouseEvent.MOUSE_DOWN,mouse_pressed);
+        stage.addEventListener(MouseEvent.MOUSE_MOVE,mouse_moved);
+        stage.addEventListener(MouseEvent.MOUSE_UP,mouse_released);
 
     }
 
@@ -146,6 +157,36 @@ class Main extends Sprite {
         graphic.y = position.y;
         graphic.rotation = (b.rotation * 180/Math.PI) % 360;
         position.dispose();
+    }
+
+    public function mouse_pressed(e:MouseEvent):Void {
+        drawing=true;
+        canvas = new Sprite();
+        canvas.x = asset.x;
+        canvas.y = asset.y;
+        canvas.width = asset.width;
+        canvas.height = asset.height;
+        canvas.graphics.lineStyle(10,0xFF0000,1);
+        canvas.graphics.moveTo(e.localX,e.localY);
+        addChild(canvas);
+        //trace(e.localX, e.localY);
+    }
+    public function mouse_moved(e:MouseEvent):Void {
+        if (drawing) {
+            canvas.graphics.lineTo(e.localX,e.localY);
+            canvas.x = asset.x;
+            canvas.y = asset.y;
+            //trace(e.localX, e.localY);
+            //asset.bitmapData.setPixel32(Std.int(e.localX),Std.int(e.localY),0x00);
+        }
+    }
+    public function mouse_released(e:MouseEvent):Void {
+        drawing=false;
+
+        var matrix = new Matrix();
+        asset.bitmapData.draw(canvas,matrix,BlendMode.ERASE);
+
+        removeChild(canvas);
     }
 	
 	
