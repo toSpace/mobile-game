@@ -167,13 +167,13 @@ class Main extends Sprite {
         canvas.width = asset.width;
         canvas.height = asset.height;
         canvas.graphics.lineStyle(10,0xFF0000,1);
-        canvas.graphics.moveTo(e.localX,e.localY);
+        canvas.graphics.moveTo(e.stageX,e.stageY);
         addChild(canvas);
         //trace(e.localX, e.localY);
     }
     public function mouse_moved(e:MouseEvent):Void {
         if (drawing) {
-            canvas.graphics.lineTo(e.localX,e.localY);
+            canvas.graphics.lineTo(e.stageX,e.stageY);
             canvas.x = asset.x;
             canvas.y = asset.y;
             //trace(e.localX, e.localY);
