@@ -16,7 +16,7 @@ class Main
 	var canvas:Sprite;
 	var space:Space;
 
-    public function main() 
+    public function new() 
     {
     	//super();
 
@@ -34,7 +34,8 @@ class Main
         Lib.current.addChild( new FPS(0,0) );
 
         //make useless item
-        var useless = new GameObject('assets/test.xml', canvas, space); 
+        Path.setSizes();
+        var useless = new GameObject('test.xml', canvas, space); 
         Lib.current.add(useless);
 
     }

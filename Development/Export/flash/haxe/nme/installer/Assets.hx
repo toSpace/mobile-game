@@ -41,6 +41,8 @@ class Assets {
 		
 		if (!initialized) {
 			
+			resourceClasses.set ("assets/source/test.xml", NME_assets_source_test_xml);
+			resourceTypes.set ("assets/source/test.xml", "text");
 			
 			
 			initialized = true;

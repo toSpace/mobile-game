@@ -97,6 +97,11 @@ class ApplicationMain {
 	public static function getAsset (inName:String):Dynamic {
 		
 		
+		if (inName=="assets/source/test.xml")
+			 
+			 return Assets.getText ("assets/source/test.xml");
+         
+		
 		
 		return null;
 		
@@ -116,6 +121,7 @@ class ApplicationMain {
 	
 }
 
+class NME_assets_source_test_xml extends nme.utils.ByteArray { }
 
 
 #else

@@ -25,6 +25,20 @@ class GameObject {
 		canvas = stage;
 
 		//asset = new Bitmap(Assets.getBitmapData ("assets/hill.png"));
+		readXml(xmlUrl);
+		trace('read xml file');
+
+	}
+
+	private function readXml(url:String):String{
+		var xmlFile = Assets.getText(Path.xml + url);
+		var read = new haxe.xml.Fast( Xml.parse(xmlFile) );
+		//trace(xmlFile);
+
+		var asset = read.node.asset;
+		var img = Path.asset + asset.node.img.innerData;
+
+		return xmlFile;
 	}
 
 	public function render():Void{
