@@ -1,0 +1,3 @@
+test doc voor mapstructuur kijken.
+
+Github doet niet mee werken enzo met uploaden alleen mappen dus mss wel als er een bestand in staat
