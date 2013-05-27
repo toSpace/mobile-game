@@ -32,11 +32,11 @@ class Main
         //make canvas
         canvas = new Sprite();
         Lib.current.addChild( new FPS(0,0) );
+        Lib.current.addChild( canvas );
 
         //make useless item
         Path.setSizes();
         var useless = new GameObject('test.xml', canvas, space); 
-        Lib.current.add(useless);
 
     }
 

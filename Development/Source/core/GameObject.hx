@@ -24,21 +24,25 @@ class GameObject {
 		space = napeSpace;
 		canvas = stage;
 
-		//asset = new Bitmap(Assets.getBitmapData ("assets/hill.png"));
-		readXml(xmlUrl);
-		trace('read xml file');
+		var xml = readXml(xmlUrl);
+		var asset = new Bitmap( Assets.getBitmapData(xml.get('img')) );
+		stage.addChild(asset);
+		trace(stage);
 
 	}
 
-	private function readXml(url:String):String{
+	private function readXml(url:String):Hash<Dynamic>{
+		var p = new Hash<Dynamic>();
 		var xmlFile = Assets.getText(Path.xml + url);
 		var read = new haxe.xml.Fast( Xml.parse(xmlFile) );
 		//trace(xmlFile);
 
 		var asset = read.node.asset;
-		var img = Path.asset + asset.node.img.innerData;
+		p.set('img', Path.asset + asset.node.img.innerData);
+		p.set('x', asset.node.pos.att.x);
+		p.set('y', asset.node.pos.att.y);
 
-		return xmlFile;
+		return p;
 	}
 
 	public function render():Void{
