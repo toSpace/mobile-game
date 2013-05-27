@@ -1,0 +1,6 @@
+<asset>
+	<name>Test</name>
+	<img size="mobile-ldpi">assets/test1.png</img>
+	<img size="mobile-hdpi">assets/test1.png</img>
+	<img size="tablet-hdpi">assets/test1.png</img>
+</asset>

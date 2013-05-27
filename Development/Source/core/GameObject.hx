@@ -9,24 +9,22 @@ import nme.display.BitmapData;
 
 //nape
 import nape.phys.Body;
+import nape.space.Space;
+import nape.geom.Vec2;
 
 class GameObject {
 
-	public var body(get,set):Body;
-	public var space(get,null):Space;
-	public var canvas(get,null):DisplayObject;
-	public var asset(get,null):Bitmap;
+	public var body:Body;
+	public var space:Space;
+	public var canvas:Sprite;
+	public var asset:Bitmap;
 
-	public function new(){
-		super();
-	}
-
-	public function setup(xmlUrl:String, stage:DisplayObject, napeSpace:Space):Void{
+	public function new(xmlUrl:String, stage:Sprite, napeSpace:Space):Void{
 		//setting correct stages
 		space = napeSpace;
 		canvas = stage;
 
-		asset = new Bitmap(Assets.getBitmapData ("assets/hill.png"));
+		//asset = new Bitmap(Assets.getBitmapData ("assets/hill.png"));
 	}
 
 	public function render():Void{
@@ -41,7 +39,14 @@ class GameObject {
 	}
 
 	public function remove():Void{
+		//remove from render loop
+		hide();
 
+		//remove from stage
+		canvas.removeChild(asset);
+
+		//remove from NAPE
+		//?
 	}
 
 	public function hide():Void{
@@ -49,26 +54,7 @@ class GameObject {
 	}
 
 	public function setXY(x:Int, y:Int){
-		objBody.position.setxy(x, y);
-	}
-
-	//get properties
-	private function get_body():Body {
-    	return body;
-   	}
-   	private function get_space():Space {
-    	return space;
-   	}
-   	private function get_canvas():DisplayObject {
-    	return canvas;
-   	}
-   	private function get_asset():DisplayObject {
-    	return asset;
-   	}
-
-   	//set properties
-   	private function set_body( obj : Body ):Body {
-    	return body = obj;
+		body.position.setxy(x, y);
 	}	
 
 

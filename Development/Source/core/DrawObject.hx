@@ -1,14 +1,20 @@
+//nme
 import nme.display.Sprite;
 import nme.Assets;
 import nme.events.Event;
 import nme.events.EventDispatcher;
-import nme.display.DisplayObject;
+import nme.display.Sprite;
 import nme.display.Bitmap;
 import nme.display.BitmapData;
 
-class DrawObject extends GameObject{
+//nape
+import nape.space.Space;
+import nape.phys.Body;
 
-	public function new(){
+class DrawObject extends GameObject{
+// class DrawObject {
+
+	public function new():Void{
 		super();
 	}
 
