@@ -18,34 +18,52 @@ class GameObject {
 	public var space:Space;
 	public var canvas:Sprite;
 	public var asset:Bitmap;
+	public var xml:Hash<Dynamic>;
 
-	public function new(xmlUrl:String, stage:Sprite, napeSpace:Space):Void{
+	public function new(xmlUrl:String){
+
 		//setting correct stages
-		space = napeSpace;
-		canvas = stage;
+		space = Main.space;
+		canvas = Main.canvas;
 
-		var xml = readXml(xmlUrl);
-		var asset = new Bitmap( Assets.getBitmapData(xml.get('img')) );
-		stage.addChild(asset);
-		trace(stage);
+		//read xml
+		xml = readXml(xmlUrl);
+		asset = new Bitmap( Assets.getBitmapData(xml.get('img')) );
+		canvas.addChild(asset);
 
+		//make physics object
+		physicsObject(xml.get('physics'));
+
+		//add to render manager
+		RenderManager.add(this);
+
+		return this;
 	}
 
 	private function readXml(url:String):Hash<Dynamic>{
 		var p = new Hash<Dynamic>();
 		var xmlFile = Assets.getText(Path.xml + url);
 		var read = new haxe.xml.Fast( Xml.parse(xmlFile) );
-		//trace(xmlFile);
 
 		var asset = read.node.asset;
 		p.set('img', Path.asset + asset.node.img.innerData);
 		p.set('x', asset.node.pos.att.x);
 		p.set('y', asset.node.pos.att.y);
-
+		p.set('rotation', asset.node.pos.att.rotation);
+		p.set('physics', asset.node.physics.innerData);
+		//todo material
 		return p;
 	}
 
+	public function physicsObject(physic:String){
+
+	}
+
 	public function render():Void{
+		renderPhysics();
+	}
+
+	private function renderPhysics():Void{
 		//render this object
 		var graphic:Null<DisplayObject> = body.userData.graphic;
         var graphicOffset:Vec2 = body.userData.graphicOffset;
@@ -71,8 +89,17 @@ class GameObject {
 		//remove from render loop
 	}
 
-	public function setXY(x:Int, y:Int){
+	public function setXY(x:Float, y:Float, ?offset:Bool){
+		var bodyOffset:Vec2 = body.userData.graphicOffset;
+		if(offset){
+			x -= bodyOffset.x;
+			y -= bodyOffset.y;
+		}
 		body.position.setxy(x, y);
+	}
+
+	public function rotation(rotation:Int){
+
 	}	
 
 
