@@ -19,16 +19,18 @@ class DrawObject extends GameObject{
 
     var drawing:Bool = false;
     var drawingCanvas:Sprite;
+    var physicType:String;
 
 	public function new(xmlUrl:String):Void{
 		super(xmlUrl);
 	}
 
 	public override function physicsObject(physic:String){
+        physicType = physic;
 		convert(physic,xml.get('x'),xml.get('y'), xml.get('rotation'));
 	}
 
-	public function convert(bodyT:String, x:Int, y:Int, rotation:Int):Void{
+	public function convert(bodyT:String, x:Float, y:Float, rotation:Float):Void{
 
 		//create iso
         var objIso:BitmapDataIso = new BitmapDataIso(asset.bitmapData);
@@ -58,7 +60,8 @@ class DrawObject extends GameObject{
 	}
 
 	public function updateBody():Void{
-		//convert();
+		Main.space.bodies.remove(body);
+        convert(physicType,asset.x,asset.y, xml.get('rotation'));
 	}
 
     public override function render():Void{
@@ -101,10 +104,11 @@ class DrawObject extends GameObject{
     private function stopDrawing():Void{
         drawing=false;
 
-        //var matrix = new Matrix();
         asset.bitmapData.draw( drawingCanvas, new Matrix(), BlendMode.ERASE );
         Main.canvas.removeChild(drawingCanvas);
 
+        //convert again
+        updateBody();
     }
 
     private function draw():Void{
