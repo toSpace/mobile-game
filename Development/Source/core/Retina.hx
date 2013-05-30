@@ -1,6 +1,6 @@
 import nme.system.Capabilities;
 
-class Path {
+class Retina {
 
 	public static var asset:String;
 	public static var xml:String;
@@ -21,6 +21,10 @@ class Path {
 			screenDensity = 2;
 			asset = "assets/mobile-2x/";	
 		}
+	}
+
+	static public function sizeAdjustment():Float{
+		return screenDensity;
 	}
 
 }

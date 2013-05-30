@@ -22,6 +22,7 @@ class Main
 	public static var canvas:Sprite;
 	public static var space:Space;
 	public static var debug:Debug;
+    public static var activeLevel:Dynamic;
 
     public function new() 
     {
@@ -43,18 +44,18 @@ class Main
         canvas.addChild( debug.display );
 
         //Initialize toold
-        Path.setSizes();
+        Retina.setSizes();
         Drawing.init();
-
-        //add items
-        var pika = new DrawObject('test2.xml');
-        var useless = new DrawObject('test.xml');
         
         //start rendering
         stage.addEventListener(Event.ENTER_FRAME, enterFrameHandler);
 
+        //load first level
+        Level.load('World1Level1');
+        //var level = new World1Level1();
+
         //FPS
-        //canvas.addChild( new FPS(0,0) );
+        stage.addChild( new FPS(0,0) );
     }
 
     public function startPhysics(stage:Stage){

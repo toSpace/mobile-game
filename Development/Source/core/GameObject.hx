@@ -42,11 +42,11 @@ class GameObject {
 
 	private function readXml(url:String):Hash<Dynamic>{
 		var p = new Hash<Dynamic>();
-		var xmlFile = Assets.getText(Path.xml + url);
+		var xmlFile = Assets.getText(Retina.xml + url);
 		var read = new haxe.xml.Fast( Xml.parse(xmlFile) );
 
 		var asset = read.node.asset;
-		p.set('img', Path.asset + asset.node.img.innerData);
+		p.set('img', Retina.asset + asset.node.img.innerData);
 		p.set('x', asset.node.pos.att.x);
 		p.set('y', asset.node.pos.att.y);
 		p.set('rotation', asset.node.pos.att.rotation);

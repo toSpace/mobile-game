@@ -10,6 +10,7 @@
 	
 	<source path="Source" />
 	<source path="Source/core" />
+	<source path="Source/levels" />
 	
 	<haxelib name="nme" />
 	<haxelib name="actuate" />
