@@ -34,6 +34,7 @@ class Camera
 	public static function getPosition():Point{
 		return new Point( Math.abs(Main.canvas.x) , Math.abs(Main.canvas.y) );
 	}
+	
 	public static function setSpeed(speed:Float){
 		if(speed == 0) speed = 5;
 
