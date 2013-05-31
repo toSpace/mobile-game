@@ -8,6 +8,7 @@ import nme.display.Sprite;
 import nme.display.Bitmap;
 import nme.display.BitmapData;
 import nme.geom.Matrix;
+import nme.geom.Point;
 import nme.display.BlendMode;
 
 //nape
@@ -70,7 +71,8 @@ class DrawObject extends GameObject{
 
         //only if drawing - todo only if on screen
         if(Drawing.drawing){
-            var checkActive = Drawing.checkActive(body);
+            //var checkActive = Drawing.checkActive(body);
+            var checkActive = Drawing.mouseOver(asset);
 
             if( checkActive && !drawing){
                 startDrawing();
@@ -97,9 +99,13 @@ class DrawObject extends GameObject{
         drawingCanvas.height = asset.height;
 
         //start drawing
-        Main.canvas.addChild(drawingCanvas);
-        drawingCanvas.graphics.lineStyle(20,0xFF0000, 1, true);
-        drawingCanvas.graphics.moveTo(Drawing.x, Drawing.y);
+        drawingCanvas.graphics.lineStyle(30,0xFF0000, 1, true);
+
+        //make point
+        var point:Point = asset.globalToLocal( new Point(Drawing.x, Drawing.y) );
+        drawingCanvas.graphics.moveTo(point.x, point.y);
+        
+        //Main.canvas.addChild(drawingCanvas);
     }
 
     private function stopDrawing():Void{
@@ -110,14 +116,18 @@ class DrawObject extends GameObject{
 
         //erease some bitmap thingies
         asset.bitmapData.draw( drawingCanvas, new Matrix(), BlendMode.ERASE );
-        Main.canvas.removeChild(drawingCanvas);
+        //Main.canvas.removeChild(drawingCanvas);
 
         //convert again
         updateBody();
+
+        //REMOVE THIS
+        Camera.move(400,400);
     }
 
     private function draw():Void{
-        drawingCanvas.graphics.lineTo(Drawing.x, Drawing.y);
+        var point:Point = asset.globalToLocal( new Point(Drawing.x, Drawing.y) );
+        drawingCanvas.graphics.lineTo(point.x, point.y);
         drawingCanvas.x = asset.x;
         drawingCanvas.y = asset.y;
     }

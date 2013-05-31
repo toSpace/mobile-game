@@ -2,7 +2,7 @@
 
 	<name>Test</name>
 	<img>test1.png</img>
-	<pos x="0" y="0" rotation="0"></pos>
+	<pos x="200" y="200" rotation="0"></pos>
 	<physics>static</physics>
 
 </asset>

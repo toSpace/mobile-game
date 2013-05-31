@@ -21,6 +21,9 @@ class Level{
 		//add to render engine
 		RenderManager.add(this);
 
+		//reset camera
+		Camera.reload();
+
 		Main.activeLevel = this;
 
 	}
@@ -36,6 +39,8 @@ class Level{
 		//start level again
 		RenderManager.start();
 	}
+
+	public function addToNightmare(point:Int):Void{}
 
 	public function loadLevel():Void{}
 	public function render():Void{}

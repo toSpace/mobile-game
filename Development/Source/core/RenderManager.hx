@@ -26,14 +26,19 @@ class RenderManager{
 		//nieuwe nape frame aanroepen
         Main.space.step(1 / Main.canvas.stage.frameRate);
 
-        //debug verversen
+        //debug rendering
         Main.debug.clear();
         Main.debug.draw(Main.space);
         Main.debug.flush();
 
+        //camera updaten
+        Camera.render();
+
+        //objecten renderen
         for(object in renderList){
         	object.render();
         }
+
 	}
 
 	static public function pause(){

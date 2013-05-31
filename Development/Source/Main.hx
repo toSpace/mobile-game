@@ -31,8 +31,6 @@ class Main
         stage.scaleMode = StageScaleMode.NO_SCALE;
         stage.align = StageAlign.TOP_LEFT;
 
-        //Lib.current.addChild(new SamePhysics());
-
         //start nape
         startPhysics(stage);
 
@@ -52,13 +50,12 @@ class Main
 
         //load first level
         Level.load('World1Level1');
-        //var level = new World1Level1();
 
         //FPS
         stage.addChild( new FPS(0,0) );
     }
 
-    public function startPhysics(stage:Stage){
+    private function startPhysics(stage:Stage){
     	// Create a new simulation Space.
         var gravity = Vec2.weak(0, 600);
         space = new Space(gravity);
@@ -74,7 +71,3 @@ class Main
     }
 
 }
-
-//mouseover
-//var mp = new Vec2(mouseX, mouseY);
-//var b:Body = space.bodiesUnderPoint(mp).at(0);

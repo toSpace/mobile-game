@@ -52,4 +52,10 @@ class Drawing{
 		return active;
 	}
 
+	static public function mouseOver(asset:Dynamic):Bool{
+		var pointX = x - Main.canvas.x;
+		var pointY = y - Main.canvas.y;
+		return asset.hitTestPoint(pointX, pointY);
+	}
+
 }
