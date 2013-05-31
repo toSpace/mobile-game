@@ -32,7 +32,9 @@ class IsoBody {
         if (granularity==null) granularity = Vec2.weak(8, 8);
         var polys = MarchingSquares.run(iso, bounds, granularity, quality);
         for (p in polys) {
-            var qolys = p.simplify(simplification).convexDecomposition(true);
+            var qolys = p.convexDecomposition(true);
+            //no simplification no errors...
+            //var qolys = p.simplify(simplification).convexDecomposition(true);
             for (q in qolys) {
                 body.shapes.add(new Polygon(q));
 

@@ -14,6 +14,7 @@ import nme.display.BlendMode;
 import nape.space.Space;
 import nape.phys.Body;
 import nape.phys.BodyType;
+import nape.geom.Vec2;
 
 class DrawObject extends GameObject{
 
@@ -97,7 +98,7 @@ class DrawObject extends GameObject{
 
         //start drawing
         Main.canvas.addChild(drawingCanvas);
-        drawingCanvas.graphics.lineStyle(20,0xFF0000,1);
+        drawingCanvas.graphics.lineStyle(20,0xFF0000, 1, true);
         drawingCanvas.graphics.moveTo(Drawing.x, Drawing.y);
     }
 
