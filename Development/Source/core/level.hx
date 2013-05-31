@@ -12,6 +12,7 @@ class Level{
 		//clear from previous levels
 		RenderManager.clear();
 		RenderManager.pause();
+		Garbage.clean();
 		clear();
 
 		//load levelspecifick things

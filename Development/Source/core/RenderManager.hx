@@ -7,6 +7,7 @@ class RenderManager{
 	
 	static public function add(object:Dynamic){
 		renderList.push(object);
+		Garbage.add(object);
 	}
 
 	static public function remove(object:Dynamic){
