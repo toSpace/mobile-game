@@ -60,7 +60,7 @@ class DrawObject extends GameObject{
 	}
 
 	public function updateBody():Void{
-		Main.space.bodies.remove(body);
+        //convert again on asset position
         convert(physicType,asset.x,asset.y, xml.get('rotation'));
 	}
 
@@ -104,6 +104,10 @@ class DrawObject extends GameObject{
     private function stopDrawing():Void{
         drawing=false;
 
+        //remove body
+        Main.space.bodies.remove(body);
+
+        //erease some bitmap thingies
         asset.bitmapData.draw( drawingCanvas, new Matrix(), BlendMode.ERASE );
         Main.canvas.removeChild(drawingCanvas);
 

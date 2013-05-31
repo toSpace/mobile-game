@@ -3,10 +3,8 @@ import World1Level1;
 
 class Level{
 
-	static public function load(level:String){
-		var loadThis = Type.createInstance(Type.resolveClass(level),[]);
-
-		//current = level;
+	static public function load(level:String):Dynamic{
+		return Type.createInstance(Type.resolveClass(level),[]);
 	}
 
 	public function new(){
