@@ -237,6 +237,11 @@ class ApplicationMain {
 			 return Assets.getText ("assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md");
          
 		
+		if (inName=="assets/source/bg.xml")
+			 
+			 return Assets.getText ("assets/source/bg.xml");
+         
+		
 		if (inName=="assets/source/General/Enemies/empty.md")
 			 
 			 return Assets.getText ("assets/source/General/Enemies/empty.md");
@@ -529,6 +534,7 @@ class NME_assets_mobile_2x_specific_level2_environment_foreground_empty_md exten
 class NME_assets_mobile_2x_specific_level3_enemies_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_2x_specific_level3_environment_background_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_2x_specific_level3_environment_foreground_empty_md extends nme.utils.ByteArray { }
+class NME_assets_source_bg_xml extends nme.utils.ByteArray { }
 class NME_assets_source_general_enemies_empty_md extends nme.utils.ByteArray { }
 class NME_assets_source_general_environment_background_empty_md extends nme.utils.ByteArray { }
 class NME_assets_source_general_environment_foreground_empty_md extends nme.utils.ByteArray { }

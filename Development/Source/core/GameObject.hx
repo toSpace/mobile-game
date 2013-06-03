@@ -20,7 +20,7 @@ class GameObject {
 	public var asset:Bitmap;
 	public var xml:Hash<Dynamic>;
 
-	public function new(xmlUrl:String){
+	public function new(xmlUrl:String):Void{
 
 		//setting correct stages
 		space = Main.space;
@@ -28,16 +28,15 @@ class GameObject {
 
 		//read xml
 		xml = readXml(xmlUrl);
-		asset = new Bitmap( Assets.getBitmapData(xml.get('img')) );
+		asset = new Bitmap( Assets.getBitmapData( xml.get('img') ) );
 		canvas.addChild(asset);
 
 		//make physics object
-		physicsObject(xml.get('physics'));
+		physicsObject( xml.get('physics') );
 
 		//add to render manager
 		RenderManager.add(this);
 
-		return this;
 	}
 
 	private function readXml(url:String):Hash<Dynamic>{
@@ -89,7 +88,7 @@ class GameObject {
 		//remove from render loop
 	}
 
-	public function setXY(x:Float, y:Float, ?offset:Bool){
+	public function setXY(x:Float, y:Float, offset:Bool=false){
 		var bodyOffset:Vec2 = body.userData.graphicOffset;
 		if(offset){
 			x -= bodyOffset.x;
@@ -98,9 +97,7 @@ class GameObject {
 		body.position.setxy(x, y);
 	}
 
-	public function rotation(rotation:Int){
-
-	}	
+	//public function rotation(rotation:Int){}	
 
 
 }

@@ -25,7 +25,7 @@ import nme.display.DisplayObject;
 import nme.display.Sprite;
 import nme.display.StageQuality;
 
-class BitmapDataIso implements IsoFunction {
+class BitmapDataIso #if flash implements IsoFunction #end {
     public var bitmap:BitmapData;
     public var alphaThreshold:Float;
     public var bounds:AABB;

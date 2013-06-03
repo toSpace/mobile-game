@@ -7,6 +7,7 @@ package;
  *
  * Using MarchingSquares to generate Nape bodies
  * from both a BitmapData and a standard DisplayObject.
+ * https://github.com/deltaluca/nape/blob/master/cx-src/nape/geom/IsoFunction.cx
  *
  */
 

@@ -1,0 +1,14 @@
+<asset>
+
+	<name>Pichachu</name>
+	<img>test2.png</img>
+	<pos x="0" y="0" rotation="0"></pos>
+	<physics>dynamic</physics>
+	<material
+		elasticity = "0"
+		dynamicFriction = "0"
+		staticFriction = "2"
+		density = "1"
+		rollingFriction = "0.001"
+	></material>
+</asset>

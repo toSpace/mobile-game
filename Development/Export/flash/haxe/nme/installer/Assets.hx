@@ -97,6 +97,8 @@ class Assets {
 			resourceTypes.set ("assets/mobile-2x/Specific/Level3/Environment/Background/empty.md", "text");
 			resourceClasses.set ("assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md", NME_assets_mobile_2x_specific_level3_environment_foreground_empty_md);
 			resourceTypes.set ("assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md", "text");
+			resourceClasses.set ("assets/source/bg.xml", NME_assets_source_bg_xml);
+			resourceTypes.set ("assets/source/bg.xml", "text");
 			resourceClasses.set ("assets/source/General/Enemies/empty.md", NME_assets_source_general_enemies_empty_md);
 			resourceTypes.set ("assets/source/General/Enemies/empty.md", "text");
 			resourceClasses.set ("assets/source/General/Environment/Background/empty.md", NME_assets_source_general_environment_background_empty_md);

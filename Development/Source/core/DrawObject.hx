@@ -38,7 +38,7 @@ class DrawObject extends GameObject{
         var objIso:BitmapDataIso = new BitmapDataIso(asset.bitmapData);
 
         //make body
-        body = IsoBody.run(objIso, objIso.bounds);
+        body = IsoBody.run(#if flash objIso #else objIso.iso #end, objIso.bounds);
         body.userData.graphic = asset;
 
         //position
@@ -70,7 +70,7 @@ class DrawObject extends GameObject{
         renderPhysics();
 
         //only if drawing - todo only if on screen
-        if(Drawing.drawing){
+        if(Drawing.drawing && Drawing.ereasing){
             //var checkActive = Drawing.checkActive(body);
             var checkActive = Drawing.mouseOver(asset);
 
@@ -93,6 +93,8 @@ class DrawObject extends GameObject{
 
         //make sprite
         drawingCanvas = new Sprite();
+        Main.canvas.addChild(drawingCanvas);
+
         drawingCanvas.x = asset.x;
         drawingCanvas.y = asset.y;
         drawingCanvas.width = asset.width;
@@ -105,7 +107,6 @@ class DrawObject extends GameObject{
         var point:Point = asset.globalToLocal( new Point(Drawing.x, Drawing.y) );
         drawingCanvas.graphics.moveTo(point.x, point.y);
         
-        //Main.canvas.addChild(drawingCanvas);
     }
 
     private function stopDrawing():Void{
@@ -122,7 +123,7 @@ class DrawObject extends GameObject{
         updateBody();
 
         //REMOVE THIS
-        Camera.move(400,400);
+        Camera.move(200,200);
     }
 
     private function draw():Void{

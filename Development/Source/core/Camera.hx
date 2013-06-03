@@ -45,8 +45,6 @@ class Camera
 		var newX:Float = currentX;
 		var newY:Float = currentY;
 
-		trace(Main.canvas.x + ' | ' + targetX);
-
 		//x
 		if( Math.abs(targetX - Main.canvas.x) < cameraSpeed ){
 			newX = targetX;
@@ -71,6 +69,7 @@ class Camera
 		currentY = newY;
 		Main.canvas.x = smooth(newX, currentX);
 		Main.canvas.y = smooth(newX, currentY);
+		
 	}
 
 	private static function smooth(data:Float, previous:Float):Float{

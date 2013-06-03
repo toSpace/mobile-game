@@ -27,9 +27,11 @@ class RenderManager{
         Main.space.step(1 / Main.canvas.stage.frameRate);
 
         //debug rendering
+        #if (flash && debug)
         Main.debug.clear();
         Main.debug.draw(Main.space);
         Main.debug.flush();
+        #end
 
         //camera updaten
         Camera.render();

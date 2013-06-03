@@ -13,16 +13,22 @@ import nme.Lib;
 //nape
 import nape.space.Space;
 import nape.geom.Vec2;
+
+#if (flash && debug)
 import nape.util.Debug;
 import nape.util.BitmapDebug;
+#end
 
 class Main 
 {
 
 	public static var canvas:Sprite;
 	public static var space:Space;
-	public static var debug:Debug;
     public static var activeLevel:Dynamic;
+
+    #if (flash && debug)
+	   public static var debug:Debug;
+    #end
 
     public function new() 
     {
@@ -39,7 +45,9 @@ class Main
         Lib.current.addChild( canvas );
 
         //add debugtools
+        #if (flash && debug)
         canvas.addChild( debug.display );
+        #end
 
         //Initialize toold
         Retina.setSizes();
@@ -61,7 +69,9 @@ class Main
         space = new Space(gravity);
 
         //nape debug graphics
+        #if (flash && debug)
         debug = new BitmapDebug(stage.stageWidth, stage.stageHeight, stage.color);
+        #end
     }
 
     function enterFrameHandler(ev:Event):Void {

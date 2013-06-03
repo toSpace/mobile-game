@@ -1,0 +1,16 @@
+{
+    "arduino_root": "/Applications/Arduino.app", 
+    "baudrate": "9600", 
+    "board": "Arduino Uno", 
+    "extra_flags": "", 
+    "full_compilation": false, 
+    "global_setting": false, 
+    "language": "English", 
+    "platform": "Arduino AVR Boards", 
+    "pre_setting_folder_path": "/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/mac/cpp/obj/src", 
+    "programmer": "AVRISP mkII", 
+    "serial_port": "/dev/cu.Bluetooth-PDA-Sync", 
+    "show_arduino_menu": true, 
+    "show_serial_monitor_menu": "", 
+    "sketchbook_root": "/Users/daveyvanderwoert/Documents/Arduino"
+}

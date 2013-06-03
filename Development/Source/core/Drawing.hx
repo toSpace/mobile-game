@@ -2,6 +2,7 @@
 import nme.events.Event;
 import nme.events.EventDispatcher;
 import nme.events.MouseEvent;
+import nme.geom.Point;
 
 //nape
 import nape.space.Space;
@@ -12,6 +13,7 @@ import nape.geom.Vec2;
 class Drawing{
 
 	public static var drawing:Bool = false;
+	public static var ereasing:Bool = true;
 	public static var x:Float;
 	public static var y:Float;
 
@@ -30,13 +32,15 @@ class Drawing{
 	}
 
 	static private function checkDraw(e:MouseEvent):Void{
-		x = e.localX;
-		y = e.localY;
+		// convert to global
+		var point:Point = Main.canvas.localToGlobal( new Point(e.localX, e.localY) );
+		x = point.x;
+		y = point.y;
 	}
 
 	static public function checkActive(b:Body):Bool{
 		var active:Bool = false;
-		var mp = new Vec2(x, y);
+		var mp = new Vec2(x, y); //not sure?
 		var bodies:BodyList = Main.space.bodiesUnderPoint(mp);
 
 		if (bodies.length>0) {
@@ -53,9 +57,7 @@ class Drawing{
 	}
 
 	static public function mouseOver(asset:Dynamic):Bool{
-		var pointX = x - Main.canvas.x;
-		var pointY = y - Main.canvas.y;
-		return asset.hitTestPoint(pointX, pointY);
+		return asset.hitTestPoint(x, y);
 	}
 
 }
