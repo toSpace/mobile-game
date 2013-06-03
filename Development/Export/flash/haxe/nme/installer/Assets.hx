@@ -41,6 +41,8 @@ class Assets {
 		
 		if (!initialized) {
 			
+			resourceClasses.set ("assets/mobile-1x/button.png", NME_assets_mobile_1x_button_png);
+			resourceTypes.set ("assets/mobile-1x/button.png", "image");
 			resourceClasses.set ("assets/mobile-1x/General/Enemies/empty.md", NME_assets_mobile_1x_general_enemies_empty_md);
 			resourceTypes.set ("assets/mobile-1x/General/Enemies/empty.md", "text");
 			resourceClasses.set ("assets/mobile-1x/General/Environment/Background/empty.md", NME_assets_mobile_1x_general_environment_background_empty_md);

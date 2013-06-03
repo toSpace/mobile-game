@@ -24,6 +24,9 @@ class Level{
 		//reset camera
 		Camera.reload();
 
+		//add drawing button
+		var drawingButton = new DrawButton();
+
 		Main.activeLevel = this;
 
 	}
