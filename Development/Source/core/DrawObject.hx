@@ -123,7 +123,7 @@ class DrawObject extends GameObject{
         updateBody();
 
         //REMOVE THIS
-        Camera.move(200,200);
+        Camera.move(200,0);
     }
 
     private function draw():Void{

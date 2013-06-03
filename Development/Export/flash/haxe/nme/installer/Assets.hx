@@ -71,6 +71,8 @@ class Assets {
 			resourceTypes.set ("assets/mobile-1x/test1.png", "image");
 			resourceClasses.set ("assets/mobile-1x/test2.png", NME_assets_mobile_1x_test2_png);
 			resourceTypes.set ("assets/mobile-1x/test2.png", "image");
+			resourceClasses.set ("assets/mobile-1x/test3bg.png", NME_assets_mobile_1x_test3bg_png);
+			resourceTypes.set ("assets/mobile-1x/test3bg.png", "image");
 			resourceClasses.set ("assets/mobile-2x/General/Enemies/empty.md", NME_assets_mobile_2x_general_enemies_empty_md);
 			resourceTypes.set ("assets/mobile-2x/General/Enemies/empty.md", "text");
 			resourceClasses.set ("assets/mobile-2x/General/Environment/Background/empty.md", NME_assets_mobile_2x_general_environment_background_empty_md);

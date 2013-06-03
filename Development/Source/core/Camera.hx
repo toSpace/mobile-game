@@ -1,4 +1,7 @@
 import nme.geom.Point;
+import nme.events.Event;
+import nme.events.EventDispatcher;
+import nme.events.KeyboardEvent;
 
 class Camera
 {
@@ -20,6 +23,15 @@ class Camera
 	}
 
 	public static function move(x:Float, y:Float, ?direct:Bool=false){
+
+		//check
+		if(x < 0){
+			x = 0;
+		}
+		if(y < 0){
+			y = 0;
+		}
+
 		if(direct){
 			Main.canvas.x = x * -1;
 			Main.canvas.y = y * -1;
@@ -59,18 +71,35 @@ class Camera
 		if( Math.abs(targetY - Main.canvas.y) < cameraSpeed ){
 			newY = targetY;
 		}
-		else if(targetX > Main.canvas.y){
+		else if(targetY > Main.canvas.y){
 			newY += cameraSpeed;
 		} else {
 			newY -= cameraSpeed;
 		}
 
+		//Main.canvas.x = smooth(newX, currentX);
+		//Main.canvas.y = smooth(newX, currentY);
+		Main.canvas.x = newX;
+		Main.canvas.y = newY;
+		
 		currentX = newX;
 		currentY = newY;
-		Main.canvas.x = smooth(newX, currentX);
-		Main.canvas.y = smooth(newX, currentY);
-		
 	}
+
+	#if debug
+
+	public static function keyboard(e:KeyboardEvent){
+
+		switch (e.keyCode) {
+			case 37:
+				move( getPosition().x - 100 , getPosition().y);
+			case 39:
+				move( getPosition().x + 100 , getPosition().y);
+		}
+
+	}
+
+	#end
 
 	private static function smooth(data:Float, previous:Float):Float{
 		return (data * (1 - smoothing)) + (previous  *  smoothing);

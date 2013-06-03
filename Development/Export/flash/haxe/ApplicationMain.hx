@@ -172,6 +172,11 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/mobile-1x/test2.png");
          
 		
+		if (inName=="assets/mobile-1x/test3bg.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/test3bg.png");
+         
+		
 		if (inName=="assets/mobile-2x/General/Enemies/empty.md")
 			 
 			 return Assets.getText ("assets/mobile-2x/General/Enemies/empty.md");
@@ -521,6 +526,7 @@ class NME_assets_mobile_1x_specific_level3_environment_background_empty_md exten
 class NME_assets_mobile_1x_specific_level3_environment_foreground_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_1x_test1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_1x_test2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_test3bg_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_2x_general_enemies_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_2x_general_environment_background_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_2x_general_environment_foreground_empty_md extends nme.utils.ByteArray { }

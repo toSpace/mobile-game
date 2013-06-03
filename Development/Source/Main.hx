@@ -8,6 +8,7 @@ import nme.display.Sprite;
 import nme.events.Event;
 import nme.events.EventDispatcher;
 import nme.events.MouseEvent;
+import nme.events.KeyboardEvent;
 import nme.Lib;
 
 //nape
@@ -22,6 +23,7 @@ import nape.util.BitmapDebug;
 class Main 
 {
 
+    public static var stage:Stage;
 	public static var canvas:Sprite;
 	public static var space:Space;
     public static var activeLevel:Dynamic;
@@ -33,9 +35,10 @@ class Main
     public function new() 
     {
 
-        var stage = Lib.current.stage;
+        stage = Lib.current.stage;
         stage.scaleMode = StageScaleMode.NO_SCALE;
         stage.align = StageAlign.TOP_LEFT;
+        stage.addEventListener (Event.RESIZE, onResize);
 
         //start nape
         startPhysics(stage);
@@ -46,11 +49,12 @@ class Main
 
         //add debugtools
         #if (flash && debug)
-        canvas.addChild( debug.display );
+            canvas.addChild( debug.display );
+            stage.addEventListener(KeyboardEvent.KEY_DOWN, Camera.keyboard);
         #end
 
         //Initialize toold
-        Retina.setSizes();
+        Mobile.setSizes();
         Drawing.init();
         
         //start rendering
@@ -61,6 +65,7 @@ class Main
 
         //FPS
         stage.addChild( new FPS(0,0) );
+
     }
 
     private function startPhysics(stage:Stage){
@@ -78,6 +83,10 @@ class Main
 
         RenderManager.render();
 
+    }
+
+    function onResize(ev:Event):Void{
+        Mobile.setSizes();
     }
 
 }

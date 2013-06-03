@@ -1,7 +1,7 @@
 <asset>
 
 	<name>BG</name>
-	<img>test2.png</img>
+	<img>test3bg.png</img>
 	<paralax startX="0" endX="400">0.7</paralax>
 	<blendmode>none</blendmode>
 	<pos x="0" y="0"></pos>
