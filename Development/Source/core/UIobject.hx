@@ -25,30 +25,24 @@ class UIobject {
 		parent = new Sprite();
 
 		parent.addChild(asset);
-		canvas.addChild(asset);
+		canvas.addChild(parent);
+
+		//add events - MAKE THIS WORK
+		parent.addEventListener(Event.ADDED_TO_STAGE, onAdded);
+		parent.addEventListener(MouseEvent.CLICK, mouseClick);
+		parent.addEventListener(MouseEvent.MOUSE_OVER, mouseOver);
+		parent.addEventListener(MouseEvent.MOUSE_OUT, mouseOut);
 
 		//set parent
 		parent.x = x;
 		parent.y = Mobile.getY(asset) - y;
-		parent.width = asset.width;
-		parent.height = asset.height;
-
-		//set bitmap
-		asset.x = parent.x;
-		asset.y = parent.y;
-
-		//add events
-		parent.addEventListener(MouseEvent.CLICK, click);
-		parent.addEventListener(MouseEvent.MOUSE_OVER, mouseOVER);
-		parent.addEventListener(MouseEvent.MOUSE_OUT, mouseOUT);
-
-		RenderManager.add(this);
 
 	}
 
-	public function click(ev:MouseEvent){}
-	public function mouseOVER(ev:MouseEvent){}
-	public function mouseOUT(ev:MouseEvent){}
+	public function onAdded(ev:Event){}
+	public function mouseClick(ev:MouseEvent){}
+	public function mouseOver(ev:MouseEvent){}
+	public function mouseOut(ev:MouseEvent){}
 
 	public function render(){}
 

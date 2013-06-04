@@ -102,6 +102,11 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/mobile-1x/button.png");
          
 		
+		if (inName=="assets/mobile-1x/button2.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/button2.png");
+         
+		
 		if (inName=="assets/mobile-1x/General/Enemies/empty.md")
 			 
 			 return Assets.getText ("assets/mobile-1x/General/Enemies/empty.md");
@@ -517,6 +522,7 @@ class ApplicationMain {
 }
 
 class NME_assets_mobile_1x_button_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_button2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_1x_general_enemies_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_1x_general_environment_background_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_1x_general_environment_foreground_empty_md extends nme.utils.ByteArray { }

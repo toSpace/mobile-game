@@ -13,7 +13,7 @@ import nape.geom.Vec2;
 class Drawing{
 
 	public static var drawing:Bool = false;
-	public static var ereasing:Bool = true;
+	public static var erasing:Bool = true;
 	public static var x:Float;
 	public static var y:Float;
 

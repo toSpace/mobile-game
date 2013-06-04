@@ -70,7 +70,7 @@ class DrawObject extends GameObject{
         renderPhysics();
 
         //only if drawing - todo only if on screen
-        if(Drawing.drawing && Drawing.ereasing){
+        if(Drawing.drawing && Drawing.erasing){
             //var checkActive = Drawing.checkActive(body);
             var checkActive = Drawing.mouseOver(asset);
 
