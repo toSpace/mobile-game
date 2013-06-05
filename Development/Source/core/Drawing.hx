@@ -1,4 +1,5 @@
 //nme
+import nme.display.Sprite;
 import nme.events.Event;
 import nme.events.EventDispatcher;
 import nme.events.MouseEvent;
@@ -25,6 +26,11 @@ class Drawing{
 
 	static private function startDraw(e:MouseEvent):Void{
 		drawing = true;
+
+		//draw
+		if(!erasing){
+			var newDrawing = new LineDrawing(e.localX, e.localY);
+		}
 	}
 
 	static private function stopDraw(e:MouseEvent):Void{

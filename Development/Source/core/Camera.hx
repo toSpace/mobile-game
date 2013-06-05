@@ -86,7 +86,7 @@ class Camera
 		currentY = newY;
 	}
 
-	#if debug
+	#if (debug || tools)
 
 	public static function keyboard(e:KeyboardEvent){
 

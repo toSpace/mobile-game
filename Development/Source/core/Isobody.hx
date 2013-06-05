@@ -53,7 +53,7 @@ class IsoBody {
 
         // Align body with its centre of mass.
         // Keeping track of our required graphic offset.
-        var pivot = body.localCOM.mul(-1);
+        var pivot:Vec2 = body.localCOM.mul(-1);
         body.translateShapes(pivot);
 
         body.userData.graphicOffset = pivot;

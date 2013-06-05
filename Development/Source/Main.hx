@@ -48,7 +48,7 @@ class Main
         Lib.current.addChild( canvas );
 
         //add debugtools
-        #if (flash && debug)
+        #if (debug || tools)
             canvas.addChild( debug.display );
             stage.addEventListener(KeyboardEvent.KEY_DOWN, Camera.keyboard);
         #end

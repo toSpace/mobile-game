@@ -23,13 +23,41 @@ class DrawObject extends GameObject{
     var drawingCanvas:Sprite;
     var physicType:String;
 
-	public function new(xmlUrl:String):Void{
-		super(xmlUrl);
+	public function new(xmlUrl:Dynamic):Void{
+        if(Std.is(xmlUrl, String)){
+            super(xmlUrl);
+        } else {
+            loadBitmap(xmlUrl);
+        }
 	}
+
+    public function loadBitmap(bitmap:Bitmap, ?physics:String='static'){
+
+        //setting correct stages
+        space = Main.space;
+        canvas = Main.canvas;
+        asset = bitmap;
+
+        //read xml
+        canvas.addChild(bitmap);
+        var p = new Hash<Dynamic>();
+        p.set('x', bitmap.x);
+        p.set('y', bitmap.y);
+        p.set('rotation', bitmap.rotation);
+        p.set('physics', physics);
+        xml = p;
+
+        //make physics object
+        physicsObject(physics);
+
+        //add to render manager
+        RenderManager.add(this);
+
+    }
 
 	public override function physicsObject(physic:String){
         physicType = physic;
-		convert(physic,xml.get('x'),xml.get('y'), xml.get('rotation'));
+        convert(physic,xml.get('x'),xml.get('y'), xml.get('rotation'));
 	}
 
 	public function convert(bodyT:String, x:Float, y:Float, rotation:Float):Void{
@@ -50,7 +78,7 @@ class DrawObject extends GameObject{
         		body.type = BodyType.STATIC;		
         	case 'dynamic':
         		body.type = BodyType.DYNAMIC;
-    		case 'KINEMATIC':
+    		case 'kinematic':
     			body.type = BodyType.KINEMATIC;
 			default:
 				body.type = BodyType.STATIC;
@@ -93,10 +121,9 @@ class DrawObject extends GameObject{
 
         //make sprite
         drawingCanvas = new Sprite();
-        Main.canvas.addChild(drawingCanvas);
 
-        drawingCanvas.x = asset.x;
-        drawingCanvas.y = asset.y;
+        //drawingCanvas.x = asset.x;
+        //drawingCanvas.y = asset.y;
         drawingCanvas.width = asset.width;
         drawingCanvas.height = asset.height;
 
@@ -107,6 +134,7 @@ class DrawObject extends GameObject{
         var point:Point = asset.globalToLocal( new Point(Drawing.x, Drawing.y) );
         drawingCanvas.graphics.moveTo(point.x, point.y);
         
+        Main.canvas.addChild(drawingCanvas);
     }
 
     private function stopDrawing():Void{
@@ -123,14 +151,14 @@ class DrawObject extends GameObject{
         updateBody();
 
         //REMOVE THIS
-        Camera.move(200,0);
+        Camera.move(500,0);
     }
 
     private function draw():Void{
         var point:Point = asset.globalToLocal( new Point(Drawing.x, Drawing.y) );
         drawingCanvas.graphics.lineTo(point.x, point.y);
-        drawingCanvas.x = asset.x;
-        drawingCanvas.y = asset.y;
+        //drawingCanvas.x = asset.x;
+        //drawingCanvas.y = asset.y;
     }
 
 }
