@@ -29,7 +29,7 @@ class GameObject {
 		//read xml
 		xml = readXml(xmlUrl);
 		asset = new Bitmap( Assets.getBitmapData( xml.get('img') ) );
-		canvas.addChild(asset);
+		xml.set('y', Mobile.getY(asset) - xml.get('y') );
 
 		//make physics object
 		physicsObject( xml.get('physics') );
@@ -37,6 +37,7 @@ class GameObject {
 		//add to render manager
 		RenderManager.add(this);
 
+		canvas.addChild(asset);
 	}
 
 	private function readXml(url:String):Hash<Dynamic>{

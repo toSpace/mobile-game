@@ -47,9 +47,10 @@ class Main
         canvas = new Sprite();
         Lib.current.addChild( canvas );
 
-        //Initialize toold
+        //Initialize tools
         Mobile.setSizes();
         Drawing.init();
+        Settings.load();
         
         //start rendering
         stage.addEventListener(Event.ENTER_FRAME, enterFrameHandler);

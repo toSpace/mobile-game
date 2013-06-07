@@ -11,11 +11,11 @@ class Character{
 	public function render():Void{}
 
 	public function walk(body:Body, speed:Float, velocity:Float){
-		impulse = new Vec2(speed, 0);
+		var impulse = new Vec2(speed, 0);
 		body.applyImpulse(impulse);
         
         if (body.velocity.x < velocity) {
-               lbody.velocity.x = velocity;
+               body.velocity.x = velocity;
         }
 	}
 

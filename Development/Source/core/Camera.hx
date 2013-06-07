@@ -1,7 +1,11 @@
+//nme
 import nme.geom.Point;
 import nme.events.Event;
 import nme.events.EventDispatcher;
 import nme.events.KeyboardEvent;
+
+//nape
+import nape.phys.Body;
 
 class Camera
 {
@@ -41,6 +45,10 @@ class Camera
 			currentX = Main.canvas.x;
 			currentY = Main.canvas.y;
 		}
+	}
+
+	public static function follow(body:Body):Void{
+		
 	}
 
 	public static function getPosition():Point{

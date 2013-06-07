@@ -11,7 +11,7 @@ class Mobile {
 	static public function setSizes():Void{
 		
 		//load right mobile assets
-		xml = 'assets/source/';
+		xml = 'assets/xml/';
 		var dpi = Capabilities.screenDPI;
 		
 		if (dpi < 200) {

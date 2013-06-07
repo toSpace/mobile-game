@@ -1,0 +1,23 @@
+//nme
+import nme.Assets;
+
+class Settings{
+
+	public static var brushSize:Float;
+	public static var flockSpeed:Float;
+	public static var flockVelocity:Float;
+	
+	static public function load():Void{
+		//load from xml
+		var xmlFile = Assets.getText(Mobile.xml + 'settings.xml');
+		var read = new haxe.xml.Fast( Xml.parse(xmlFile) );
+
+		var settings = read.node.settings;
+
+		brushSize = Std.parseFloat(settings.node.brushsize.innerData);
+		flockSpeed = Std.parseFloat(settings.node.flockspeed.innerData);
+		flockVelocity = Std.parseFloat(settings.node.flockvelocity.innerData);
+
+	}
+
+}

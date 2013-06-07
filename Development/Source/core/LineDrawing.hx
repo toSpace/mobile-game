@@ -22,7 +22,7 @@ class LineDrawing {
 		drawing = new Sprite();
 
 	    //start drawing
-	    drawing.graphics.lineStyle(30,0x000000, 1, true);
+	    drawing.graphics.lineStyle(Settings.brushSize,0x000000, 1, true);
 	    drawing.graphics.moveTo(x, y);
 
 		Main.canvas.addChild(drawing);
@@ -53,10 +53,6 @@ class LineDrawing {
 		stopped = true;
 
 		var bounds:Rectangle = drawing.getBounds(Main.canvas);
-
-		trace(bounds.x + bounds.width);
-		trace(bounds.y + bounds.height);
-		trace(bounds);
 
 		//make body
 		var matrix = new Matrix();

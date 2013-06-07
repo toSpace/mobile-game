@@ -267,11 +267,6 @@ class ApplicationMain {
 			 return Assets.getText ("assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md");
          
 		
-		if (inName=="assets/source/bg.xml")
-			 
-			 return Assets.getText ("assets/source/bg.xml");
-         
-		
 		if (inName=="assets/source/General/Enemies/walking.xml")
 			 
 			 return Assets.getText ("assets/source/General/Enemies/walking.xml");
@@ -375,16 +370,6 @@ class ApplicationMain {
 		if (inName=="assets/source/Specific/Level3/Sound/Music/empty.md")
 			 
 			 return Assets.getText ("assets/source/Specific/Level3/Sound/Music/empty.md");
-         
-		
-		if (inName=="assets/source/test.xml")
-			 
-			 return Assets.getText ("assets/source/test.xml");
-         
-		
-		if (inName=="assets/source/test2.xml")
-			 
-			 return Assets.getText ("assets/source/test2.xml");
          
 		
 		if (inName=="assets/source/walking.xml")
@@ -522,6 +507,31 @@ class ApplicationMain {
 			 return Assets.getText ("assets/tablet-2x/Specific/Level3/Environment/Foreground/empty.md");
          
 		
+		if (inName=="assets/xml/bg.xml")
+			 
+			 return Assets.getText ("assets/xml/bg.xml");
+         
+		
+		if (inName=="assets/xml/settings.xml")
+			 
+			 return Assets.getText ("assets/xml/settings.xml");
+         
+		
+		if (inName=="assets/xml/test.xml")
+			 
+			 return Assets.getText ("assets/xml/test.xml");
+         
+		
+		if (inName=="assets/xml/test2.xml")
+			 
+			 return Assets.getText ("assets/xml/test2.xml");
+         
+		
+		if (inName=="assets/xml/walking.xml")
+			 
+			 return Assets.getText ("assets/xml/walking.xml");
+         
+		
 		
 		return null;
 		
@@ -575,7 +585,6 @@ class NME_assets_mobile_2x_specific_level2_environment_foreground_empty_md exten
 class NME_assets_mobile_2x_specific_level3_enemies_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_2x_specific_level3_environment_background_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_2x_specific_level3_environment_foreground_empty_md extends nme.utils.ByteArray { }
-class NME_assets_source_bg_xml extends nme.utils.ByteArray { }
 class NME_assets_source_general_enemies_walking_xml extends nme.utils.ByteArray { }
 class NME_assets_source_general_environment_background_empty_md extends nme.utils.ByteArray { }
 class NME_assets_source_general_environment_foreground_empty_md extends nme.utils.ByteArray { }
@@ -597,8 +606,6 @@ class NME_assets_source_specific_level3_environment_background_empty_md extends 
 class NME_assets_source_specific_level3_environment_foreground_empty_md extends nme.utils.ByteArray { }
 class NME_assets_source_specific_level3_sound_effects_empty_md extends nme.utils.ByteArray { }
 class NME_assets_source_specific_level3_sound_music_empty_md extends nme.utils.ByteArray { }
-class NME_assets_source_test_xml extends nme.utils.ByteArray { }
-class NME_assets_source_test2_xml extends nme.utils.ByteArray { }
 class NME_assets_source_walking_xml extends nme.utils.ByteArray { }
 class NME_assets_tablet_1x_general_enemies_empty_md extends nme.utils.ByteArray { }
 class NME_assets_tablet_1x_general_environment_background_empty_md extends nme.utils.ByteArray { }
@@ -626,6 +633,11 @@ class NME_assets_tablet_2x_specific_level2_environment_foreground_empty_md exten
 class NME_assets_tablet_2x_specific_level3_enemies_empty_md extends nme.utils.ByteArray { }
 class NME_assets_tablet_2x_specific_level3_environment_background_empty_md extends nme.utils.ByteArray { }
 class NME_assets_tablet_2x_specific_level3_environment_foreground_empty_md extends nme.utils.ByteArray { }
+class NME_assets_xml_bg_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_settings_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_test_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_test2_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_walking_xml extends nme.utils.ByteArray { }
 
 
 #else

@@ -4,7 +4,6 @@ import nape.geom.Vec2;
 class Lucy extends Character {
 
 	var lucy:SpriteObject;
-	var impulse:Vec2;
 	
 	public function new():Void{
 		super();
@@ -13,7 +12,7 @@ class Lucy extends Character {
 	}
 
 	override public function render():Void{
-		walk(lucy.body, 30, 350);
+		walk(lucy.body, Settings.flockSpeed, Settings.flockVelocity);
 	}
 
 	//todo collisions

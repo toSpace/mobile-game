@@ -57,7 +57,7 @@ class DrawObject extends GameObject{
 
 	public override function physicsObject(physic:String){
         physicType = physic;
-        convert(physic,xml.get('x'),xml.get('y'), xml.get('rotation'));
+        convert( physic,xml.get('x') , xml.get('y') , xml.get('rotation') );
 	}
 
 	public function convert(bodyT:String, x:Float, y:Float, rotation:Float):Void{
@@ -128,7 +128,7 @@ class DrawObject extends GameObject{
         drawingCanvas.height = asset.height;
 
         //start drawing
-        drawingCanvas.graphics.lineStyle(30,0xFF0000, 1, true);
+        drawingCanvas.graphics.lineStyle(Settings.brushSize,0xFF0000, 1, true);
 
         //make point
         var point:Point = asset.globalToLocal( new Point(Drawing.x, Drawing.y) );
@@ -149,9 +149,7 @@ class DrawObject extends GameObject{
 
         //convert again
         updateBody();
-
-        //REMOVE THIS
-        Camera.move(500,0);
+        
     }
 
     private function draw():Void{

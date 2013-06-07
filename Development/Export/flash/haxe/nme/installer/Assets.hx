@@ -109,8 +109,6 @@ class Assets {
 			resourceTypes.set ("assets/mobile-2x/Specific/Level3/Environment/Background/empty.md", "text");
 			resourceClasses.set ("assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md", NME_assets_mobile_2x_specific_level3_environment_foreground_empty_md);
 			resourceTypes.set ("assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md", "text");
-			resourceClasses.set ("assets/source/bg.xml", NME_assets_source_bg_xml);
-			resourceTypes.set ("assets/source/bg.xml", "text");
 			resourceClasses.set ("assets/source/General/Enemies/walking.xml", NME_assets_source_general_enemies_walking_xml);
 			resourceTypes.set ("assets/source/General/Enemies/walking.xml", "text");
 			resourceClasses.set ("assets/source/General/Environment/Background/empty.md", NME_assets_source_general_environment_background_empty_md);
@@ -153,10 +151,6 @@ class Assets {
 			resourceTypes.set ("assets/source/Specific/Level3/Sound/Effects/empty.md", "text");
 			resourceClasses.set ("assets/source/Specific/Level3/Sound/Music/empty.md", NME_assets_source_specific_level3_sound_music_empty_md);
 			resourceTypes.set ("assets/source/Specific/Level3/Sound/Music/empty.md", "text");
-			resourceClasses.set ("assets/source/test.xml", NME_assets_source_test_xml);
-			resourceTypes.set ("assets/source/test.xml", "text");
-			resourceClasses.set ("assets/source/test2.xml", NME_assets_source_test2_xml);
-			resourceTypes.set ("assets/source/test2.xml", "text");
 			resourceClasses.set ("assets/source/walking.xml", NME_assets_source_walking_xml);
 			resourceTypes.set ("assets/source/walking.xml", "text");
 			resourceClasses.set ("assets/tablet-1x/General/Enemies/empty.md", NME_assets_tablet_1x_general_enemies_empty_md);
@@ -211,6 +205,16 @@ class Assets {
 			resourceTypes.set ("assets/tablet-2x/Specific/Level3/Environment/Background/empty.md", "text");
 			resourceClasses.set ("assets/tablet-2x/Specific/Level3/Environment/Foreground/empty.md", NME_assets_tablet_2x_specific_level3_environment_foreground_empty_md);
 			resourceTypes.set ("assets/tablet-2x/Specific/Level3/Environment/Foreground/empty.md", "text");
+			resourceClasses.set ("assets/xml/bg.xml", NME_assets_xml_bg_xml);
+			resourceTypes.set ("assets/xml/bg.xml", "text");
+			resourceClasses.set ("assets/xml/settings.xml", NME_assets_xml_settings_xml);
+			resourceTypes.set ("assets/xml/settings.xml", "text");
+			resourceClasses.set ("assets/xml/test.xml", NME_assets_xml_test_xml);
+			resourceTypes.set ("assets/xml/test.xml", "text");
+			resourceClasses.set ("assets/xml/test2.xml", NME_assets_xml_test2_xml);
+			resourceTypes.set ("assets/xml/test2.xml", "text");
+			resourceClasses.set ("assets/xml/walking.xml", NME_assets_xml_walking_xml);
+			resourceTypes.set ("assets/xml/walking.xml", "text");
 			
 			
 			initialized = true;

@@ -88,6 +88,7 @@ class SpriteObject{
 	public function makePhysics(x: Float, y:Float){
 
 		//create physics body
+		y = Mobile.getY(layer.view) - y;
         body = new Body(BodyType.DYNAMIC, new Vec2(x,y) );
         var material:Material = new Material(0.1, 1.0, 2.0, 5.0, 0.001);
         body.shapes.add(new Polygon( Polygon.box(clip.width , clip.height) , material));
@@ -124,6 +125,7 @@ class SpriteObject{
 	}
 
 	public function setXY(x:Float, y:Float, offset:Bool=false){
+		y = Mobile.getY(layer.view) - y;
 		var bodyOffset:Vec2 = body.userData.graphicOffset;
 		if(offset){
 			x -= bodyOffset.x;
