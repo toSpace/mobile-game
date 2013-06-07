@@ -47,12 +47,6 @@ class Main
         canvas = new Sprite();
         Lib.current.addChild( canvas );
 
-        //add debugtools
-        #if (debug || tools)
-            canvas.addChild( debug.display );
-            stage.addEventListener(KeyboardEvent.KEY_DOWN, Camera.keyboard);
-        #end
-
         //Initialize toold
         Mobile.setSizes();
         Drawing.init();
@@ -60,8 +54,15 @@ class Main
         //start rendering
         stage.addEventListener(Event.ENTER_FRAME, enterFrameHandler);
 
+        //add debugtools
+        #if (debug || tools)
+            canvas.addChild( debug.display );
+            stage.addEventListener(KeyboardEvent.KEY_DOWN, Camera.keyboard);
+        #end
+        
         //load first level
         Level.load('World1Level1');
+
 
         //FPS
         stage.addChild( new FPS(0,0) );

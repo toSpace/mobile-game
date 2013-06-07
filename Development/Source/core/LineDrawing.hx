@@ -52,7 +52,6 @@ class LineDrawing {
 	public function end():Void{
 		stopped = true;
 
-		trace('end');
 		var bounds:Rectangle = drawing.getBounds(Main.canvas);
 
 		trace(bounds.x + bounds.width);
@@ -72,7 +71,6 @@ class LineDrawing {
     	//Main.canvas.addChild(bitmap);
     	Main.canvas.removeChild(drawing);
     	var object = new DrawObject(bitmap);
-    	trace('made drawobject?');
 	}
 
 }

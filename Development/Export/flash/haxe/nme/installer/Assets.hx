@@ -45,8 +45,10 @@ class Assets {
 			resourceTypes.set ("assets/mobile-1x/button.png", "image");
 			resourceClasses.set ("assets/mobile-1x/button2.png", NME_assets_mobile_1x_button2_png);
 			resourceTypes.set ("assets/mobile-1x/button2.png", "image");
-			resourceClasses.set ("assets/mobile-1x/General/Enemies/empty.md", NME_assets_mobile_1x_general_enemies_empty_md);
-			resourceTypes.set ("assets/mobile-1x/General/Enemies/empty.md", "text");
+			resourceClasses.set ("assets/mobile-1x/General/Enemies/walking-sparrow.xml", NME_assets_mobile_1x_general_enemies_walking_sparrow_xml);
+			resourceTypes.set ("assets/mobile-1x/General/Enemies/walking-sparrow.xml", "text");
+			resourceClasses.set ("assets/mobile-1x/General/Enemies/walking.png", NME_assets_mobile_1x_general_enemies_walking_png);
+			resourceTypes.set ("assets/mobile-1x/General/Enemies/walking.png", "image");
 			resourceClasses.set ("assets/mobile-1x/General/Environment/Background/empty.md", NME_assets_mobile_1x_general_environment_background_empty_md);
 			resourceTypes.set ("assets/mobile-1x/General/Environment/Background/empty.md", "text");
 			resourceClasses.set ("assets/mobile-1x/General/Environment/Foreground/empty.md", NME_assets_mobile_1x_general_environment_foreground_empty_md);
@@ -77,6 +79,10 @@ class Assets {
 			resourceTypes.set ("assets/mobile-1x/test2.png", "image");
 			resourceClasses.set ("assets/mobile-1x/test3bg.png", NME_assets_mobile_1x_test3bg_png);
 			resourceTypes.set ("assets/mobile-1x/test3bg.png", "image");
+			resourceClasses.set ("assets/mobile-1x/walking-sparrow.xml", NME_assets_mobile_1x_walking_sparrow_xml);
+			resourceTypes.set ("assets/mobile-1x/walking-sparrow.xml", "text");
+			resourceClasses.set ("assets/mobile-1x/walking.png", NME_assets_mobile_1x_walking_png);
+			resourceTypes.set ("assets/mobile-1x/walking.png", "image");
 			resourceClasses.set ("assets/mobile-2x/General/Enemies/empty.md", NME_assets_mobile_2x_general_enemies_empty_md);
 			resourceTypes.set ("assets/mobile-2x/General/Enemies/empty.md", "text");
 			resourceClasses.set ("assets/mobile-2x/General/Environment/Background/empty.md", NME_assets_mobile_2x_general_environment_background_empty_md);
@@ -105,8 +111,8 @@ class Assets {
 			resourceTypes.set ("assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md", "text");
 			resourceClasses.set ("assets/source/bg.xml", NME_assets_source_bg_xml);
 			resourceTypes.set ("assets/source/bg.xml", "text");
-			resourceClasses.set ("assets/source/General/Enemies/empty.md", NME_assets_source_general_enemies_empty_md);
-			resourceTypes.set ("assets/source/General/Enemies/empty.md", "text");
+			resourceClasses.set ("assets/source/General/Enemies/walking.xml", NME_assets_source_general_enemies_walking_xml);
+			resourceTypes.set ("assets/source/General/Enemies/walking.xml", "text");
 			resourceClasses.set ("assets/source/General/Environment/Background/empty.md", NME_assets_source_general_environment_background_empty_md);
 			resourceTypes.set ("assets/source/General/Environment/Background/empty.md", "text");
 			resourceClasses.set ("assets/source/General/Environment/Foreground/empty.md", NME_assets_source_general_environment_foreground_empty_md);
@@ -151,6 +157,8 @@ class Assets {
 			resourceTypes.set ("assets/source/test.xml", "text");
 			resourceClasses.set ("assets/source/test2.xml", NME_assets_source_test2_xml);
 			resourceTypes.set ("assets/source/test2.xml", "text");
+			resourceClasses.set ("assets/source/walking.xml", NME_assets_source_walking_xml);
+			resourceTypes.set ("assets/source/walking.xml", "text");
 			resourceClasses.set ("assets/tablet-1x/General/Enemies/empty.md", NME_assets_tablet_1x_general_enemies_empty_md);
 			resourceTypes.set ("assets/tablet-1x/General/Enemies/empty.md", "text");
 			resourceClasses.set ("assets/tablet-1x/General/Environment/Background/empty.md", NME_assets_tablet_1x_general_environment_background_empty_md);

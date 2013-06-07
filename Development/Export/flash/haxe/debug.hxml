@@ -2,6 +2,7 @@
 -lib nme
 -lib actuate
 -lib nape
+-lib tilelayer
 -cp Source
 -cp Source/core
 -cp Source/levels
