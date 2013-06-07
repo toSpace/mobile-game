@@ -1,5 +1,6 @@
 //nape
 import nape.geom.Vec2;
+import nape.phys.Body;
 
 class Character{
 	
