@@ -108,7 +108,9 @@ class BackgroundObject{
 			case 'screen':
 			asset.blendMode = BlendMode.SCREEN;
 			case 'shader':
+			#if (flash)
 			asset.blendMode = BlendMode.SHADER;
+			#end
 			case 'subtract':
 			asset.blendMode = BlendMode.SUBTRACT;
 		}

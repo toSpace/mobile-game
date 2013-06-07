@@ -33,7 +33,7 @@ class Drawing_obj : public hx::Object{
 		::String __ToString() const { return HX_CSTRING("Drawing"); }
 
 		static bool drawing; /* REM */ 
-		static bool ereasing; /* REM */ 
+		static bool erasing; /* REM */ 
 		static Float x; /* REM */ 
 		static Float y; /* REM */ 
 		static Void init( );

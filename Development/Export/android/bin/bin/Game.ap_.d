@@ -1,5 +1,9 @@
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/bin/Game.ap_ \
- : /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_1x_general_enemies_empty_md \
+ : /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_1x_button2_png \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_1x_button_png \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_1x_general_enemies_empty_md \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_1x_general_enemies_walking_png \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_1x_general_enemies_walking_sparrow_xml \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_1x_general_environment_background_empty_md \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_1x_general_environment_foreground_empty_md \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_1x_general_worldmap_empty_md \
@@ -14,6 +18,11 @@
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_1x_specific_level3_environment_foreground_empty_md \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_1x_test1_png \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_1x_test2_png \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_1x_test3bg_png \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_1x_walking_png \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_1x_walking_sparrow_xml \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_2x_button2_png \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_2x_button_png \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_2x_general_enemies_empty_md \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_2x_general_environment_background_empty_md \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_2x_general_environment_foreground_empty_md \
@@ -27,9 +36,15 @@
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_2x_specific_level3_enemies_empty_md \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_2x_specific_level3_environment_background_empty_md \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_2x_specific_level3_environment_foreground_empty_md \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_2x_test1_png \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_2x_test2_png \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_2x_test3bg_png \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_2x_walking_png \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_mobile_2x_walking_sparrow_xml \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_nme_ai \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_source_bg_xml \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_source_general_enemies_empty_md \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_source_general_enemies_walking_xml \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_source_general_environment_background_empty_md \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_source_general_environment_foreground_empty_md \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_source_general_sound_effects_empty_md \
@@ -52,6 +67,7 @@
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_source_specific_level3_sound_music_empty_md \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_source_test2_xml \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_source_test_xml \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_source_walking_xml \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_tablet_1x_general_enemies_empty_md \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_tablet_1x_general_environment_background_empty_md \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_tablet_1x_general_environment_foreground_empty_md \
@@ -78,4 +94,9 @@
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_tablet_2x_specific_level3_enemies_empty_md \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_tablet_2x_specific_level3_environment_background_empty_md \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_tablet_2x_specific_level3_environment_foreground_empty_md \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_xml_bg_xml \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_xml_settings_xml \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_xml_test2_xml \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_xml_test_xml \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/assets/assets_xml_walking_xml \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/bin/AndroidManifest.xml \

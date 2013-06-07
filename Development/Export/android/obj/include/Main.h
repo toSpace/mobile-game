@@ -38,12 +38,22 @@ class Main_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("Main"); }
 
+		virtual Void activate( ::native::events::Event ev);
+		Dynamic activate_dyn();
+
+		virtual Void deactivate( ::native::events::Event ev);
+		Dynamic deactivate_dyn();
+
+		virtual Void onResize( ::native::events::Event ev);
+		Dynamic onResize_dyn();
+
 		virtual Void enterFrameHandler( ::native::events::Event ev);
 		Dynamic enterFrameHandler_dyn();
 
 		virtual Void startPhysics( ::native::display::Stage stage);
 		Dynamic startPhysics_dyn();
 
+		static ::native::display::Stage stage; /* REM */ 
 		static ::native::display::Sprite canvas; /* REM */ 
 		static ::nape::space::Space space; /* REM */ 
 		static Dynamic activeLevel; /* REM */ 

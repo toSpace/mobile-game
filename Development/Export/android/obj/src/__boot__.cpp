@@ -254,7 +254,6 @@
 #include <native/errors/ArgumentError.h>
 #include <native/errors/Error.h>
 #include <native/display/TriangleCulling.h>
-#include <native/display/Tilesheet.h>
 #include <native/display/StageScaleMode.h>
 #include <native/display/StageQuality.h>
 #include <native/display/StageDisplayState.h>
@@ -397,7 +396,6 @@
 #include <native/display/DisplayObjectContainer.h>
 #include <native/display/InteractiveObject.h>
 #include <native/display/DisplayObject.h>
-#include <native/Loader.h>
 #include <native/display/IBitmapDrawable.h>
 #include <native/events/EventDispatcher.h>
 #include <native/events/IEventDispatcher.h>
@@ -406,6 +404,17 @@
 #include <cpp/zip/Flush.h>
 #include <cpp/zip/Compress.h>
 #include <cpp/rtti/FieldNumericIntegerLookup.h>
+#include <aze/display/DrawList.h>
+#include <aze/display/TileLayer.h>
+#include <aze/display/TileGroup.h>
+#include <aze/display/TileClip.h>
+#include <aze/display/TileSprite.h>
+#include <aze/display/TileBase.h>
+#include <haxe/Public.h>
+#include <aze/display/SparrowTilesheet.h>
+#include <aze/display/TilesheetEx.h>
+#include <native/display/Tilesheet.h>
+#include <native/Loader.h>
 #include <Xml.h>
 #include <XmlType.h>
 #include <World1Level1.h>
@@ -416,12 +425,17 @@
 #include <StringTools.h>
 #include <StringBuf.h>
 #include <Std.h>
-#include <Retina.h>
+#include <SpriteObject.h>
+#include <Settings.h>
 #include <RenderManager.h>
 #include <Reflect.h>
+#include <Mobile.h>
 #include <Main.h>
+#include <Lucy.h>
 #include <List.h>
+#include <LineDrawing.h>
 #include <Level.h>
+#include <Lambda.h>
 #include <IsoBody.h>
 #include <IntIter.h>
 #include <IntHash.h>
@@ -430,9 +444,13 @@
 #include <Drawing.h>
 #include <DrawObject.h>
 #include <GameObject.h>
+#include <DrawButton.h>
+#include <UIobject.h>
 #include <Date.h>
+#include <Character.h>
 #include <Camera.h>
 #include <BitmapDataIso.h>
+#include <BackgroundObject.h>
 #include <ApplicationMain.h>
 
 void __boot_all()
@@ -692,7 +710,6 @@ hx::RegisterResources( hx::GetResources() );
 ::native::errors::ArgumentError_obj::__register();
 ::native::errors::Error_obj::__register();
 ::native::display::TriangleCulling_obj::__register();
-::native::display::Tilesheet_obj::__register();
 ::native::display::StageScaleMode_obj::__register();
 ::native::display::StageQuality_obj::__register();
 ::native::display::StageDisplayState_obj::__register();
@@ -835,7 +852,6 @@ hx::RegisterResources( hx::GetResources() );
 ::native::display::DisplayObjectContainer_obj::__register();
 ::native::display::InteractiveObject_obj::__register();
 ::native::display::DisplayObject_obj::__register();
-::native::Loader_obj::__register();
 ::native::display::IBitmapDrawable_obj::__register();
 ::native::events::EventDispatcher_obj::__register();
 ::native::events::IEventDispatcher_obj::__register();
@@ -844,6 +860,17 @@ hx::RegisterResources( hx::GetResources() );
 ::cpp::zip::Flush_obj::__register();
 ::cpp::zip::Compress_obj::__register();
 ::cpp::rtti::FieldNumericIntegerLookup_obj::__register();
+::aze::display::DrawList_obj::__register();
+::aze::display::TileLayer_obj::__register();
+::aze::display::TileGroup_obj::__register();
+::aze::display::TileClip_obj::__register();
+::aze::display::TileSprite_obj::__register();
+::aze::display::TileBase_obj::__register();
+::haxe::Public_obj::__register();
+::aze::display::SparrowTilesheet_obj::__register();
+::aze::display::TilesheetEx_obj::__register();
+::native::display::Tilesheet_obj::__register();
+::native::Loader_obj::__register();
 ::Xml_obj::__register();
 ::XmlType_obj::__register();
 ::World1Level1_obj::__register();
@@ -854,12 +881,17 @@ hx::RegisterResources( hx::GetResources() );
 ::StringTools_obj::__register();
 ::StringBuf_obj::__register();
 ::Std_obj::__register();
-::Retina_obj::__register();
+::SpriteObject_obj::__register();
+::Settings_obj::__register();
 ::RenderManager_obj::__register();
 ::Reflect_obj::__register();
+::Mobile_obj::__register();
 ::Main_obj::__register();
+::Lucy_obj::__register();
 ::List_obj::__register();
+::LineDrawing_obj::__register();
 ::Level_obj::__register();
+::Lambda_obj::__register();
 ::IsoBody_obj::__register();
 ::IntIter_obj::__register();
 ::IntHash_obj::__register();
@@ -868,9 +900,13 @@ hx::RegisterResources( hx::GetResources() );
 ::Drawing_obj::__register();
 ::DrawObject_obj::__register();
 ::GameObject_obj::__register();
+::DrawButton_obj::__register();
+::UIobject_obj::__register();
 ::Date_obj::__register();
+::Character_obj::__register();
 ::Camera_obj::__register();
 ::BitmapDataIso_obj::__register();
+::BackgroundObject_obj::__register();
 ::ApplicationMain_obj::__register();
 ::Xml_obj::__init__();
 ::native::utils::ByteArray_obj::__init__();
@@ -882,9 +918,13 @@ hx::RegisterResources( hx::GetResources() );
 ::cpp::zip::Uncompress_obj::__boot();
 ::haxe::Log_obj::__boot();
 ::ApplicationMain_obj::__boot();
+::BackgroundObject_obj::__boot();
 ::BitmapDataIso_obj::__boot();
 ::Camera_obj::__boot();
+::Character_obj::__boot();
 ::Date_obj::__boot();
+::UIobject_obj::__boot();
+::DrawButton_obj::__boot();
 ::GameObject_obj::__boot();
 ::DrawObject_obj::__boot();
 ::Drawing_obj::__boot();
@@ -893,12 +933,17 @@ hx::RegisterResources( hx::GetResources() );
 ::IntHash_obj::__boot();
 ::IntIter_obj::__boot();
 ::IsoBody_obj::__boot();
+::Lambda_obj::__boot();
 ::Level_obj::__boot();
+::LineDrawing_obj::__boot();
 ::List_obj::__boot();
+::Lucy_obj::__boot();
 ::Main_obj::__boot();
+::Mobile_obj::__boot();
 ::Reflect_obj::__boot();
 ::RenderManager_obj::__boot();
-::Retina_obj::__boot();
+::Settings_obj::__boot();
+::SpriteObject_obj::__boot();
 ::Std_obj::__boot();
 ::StringBuf_obj::__boot();
 ::StringTools_obj::__boot();
@@ -907,11 +952,21 @@ hx::RegisterResources( hx::GetResources() );
 ::Type_obj::__boot();
 ::World1Level1_obj::__boot();
 ::XmlType_obj::__boot();
+::native::Loader_obj::__boot();
+::native::display::Tilesheet_obj::__boot();
+::aze::display::TilesheetEx_obj::__boot();
+::aze::display::SparrowTilesheet_obj::__boot();
+::haxe::Public_obj::__boot();
+::aze::display::TileBase_obj::__boot();
+::aze::display::TileSprite_obj::__boot();
+::aze::display::TileClip_obj::__boot();
+::aze::display::TileGroup_obj::__boot();
+::aze::display::TileLayer_obj::__boot();
+::aze::display::DrawList_obj::__boot();
 ::format::display::FrameLabel_obj::__boot();
 ::native::events::IEventDispatcher_obj::__boot();
 ::native::events::EventDispatcher_obj::__boot();
 ::native::display::IBitmapDrawable_obj::__boot();
-::native::Loader_obj::__boot();
 ::native::display::DisplayObject_obj::__boot();
 ::native::display::InteractiveObject_obj::__boot();
 ::native::display::DisplayObjectContainer_obj::__boot();
@@ -1053,7 +1108,6 @@ hx::RegisterResources( hx::GetResources() );
 ::native::display::StageDisplayState_obj::__boot();
 ::native::display::StageQuality_obj::__boot();
 ::native::display::StageScaleMode_obj::__boot();
-::native::display::Tilesheet_obj::__boot();
 ::native::display::TriangleCulling_obj::__boot();
 ::native::errors::Error_obj::__boot();
 ::native::errors::ArgumentError_obj::__boot();

@@ -1,0 +1,8 @@
+<settings>
+
+	<brushsize>30</brushsize>
+	<cameraoverflow>200</cameraoverflow>
+	<flockspeed>7</flockspeed>
+	<flockvelocity>75</flockvelocity>
+
+</settings>

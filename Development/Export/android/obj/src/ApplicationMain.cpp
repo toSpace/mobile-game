@@ -144,396 +144,476 @@ Dynamic ApplicationMain_obj::getAsset( ::String inName){
 	HX_STACK_PUSH("ApplicationMain::getAsset","ApplicationMain.hx",104);
 	HX_STACK_ARG(inName,"inName");
 	HX_STACK_LINE(107)
-	if (((inName == HX_CSTRING("assets/mobile-1x/General/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/button.png")))){
 		HX_STACK_LINE(108)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/General/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/mobile-1x/button.png"),null());
 	}
 	HX_STACK_LINE(114)
-	if (((inName == HX_CSTRING("assets/mobile-1x/General/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/button2.png")))){
 		HX_STACK_LINE(115)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/General/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/mobile-1x/button2.png"),null());
 	}
 	HX_STACK_LINE(121)
-	if (((inName == HX_CSTRING("assets/mobile-1x/General/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/General/Enemies/walking-sparrow.xml")))){
 		HX_STACK_LINE(122)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/General/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/General/Enemies/walking-sparrow.xml"));
 	}
 	HX_STACK_LINE(128)
-	if (((inName == HX_CSTRING("assets/mobile-1x/General/Worldmap/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/General/Enemies/walking.png")))){
 		HX_STACK_LINE(129)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/General/Worldmap/empty.md"));
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/mobile-1x/General/Enemies/walking.png"),null());
 	}
 	HX_STACK_LINE(135)
-	if (((inName == HX_CSTRING("assets/mobile-1x/Specific/Level1/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/General/Environment/Background/empty.md")))){
 		HX_STACK_LINE(136)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/Specific/Level1/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/General/Environment/Background/empty.md"));
 	}
 	HX_STACK_LINE(142)
-	if (((inName == HX_CSTRING("assets/mobile-1x/Specific/Level1/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/General/Environment/Foreground/empty.md")))){
 		HX_STACK_LINE(143)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/Specific/Level1/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/General/Environment/Foreground/empty.md"));
 	}
 	HX_STACK_LINE(149)
-	if (((inName == HX_CSTRING("assets/mobile-1x/Specific/Level1/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/General/Worldmap/empty.md")))){
 		HX_STACK_LINE(150)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/Specific/Level1/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/General/Worldmap/empty.md"));
 	}
 	HX_STACK_LINE(156)
-	if (((inName == HX_CSTRING("assets/mobile-1x/Specific/Level2/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/Specific/Level1/Enemies/empty.md")))){
 		HX_STACK_LINE(157)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/Specific/Level2/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/Specific/Level1/Enemies/empty.md"));
 	}
 	HX_STACK_LINE(163)
-	if (((inName == HX_CSTRING("assets/mobile-1x/Specific/Level2/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/Specific/Level1/Environment/Background/empty.md")))){
 		HX_STACK_LINE(164)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/Specific/Level2/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/Specific/Level1/Environment/Background/empty.md"));
 	}
 	HX_STACK_LINE(170)
-	if (((inName == HX_CSTRING("assets/mobile-1x/Specific/Level2/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/Specific/Level1/Environment/Foreground/empty.md")))){
 		HX_STACK_LINE(171)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/Specific/Level2/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/Specific/Level1/Environment/Foreground/empty.md"));
 	}
 	HX_STACK_LINE(177)
-	if (((inName == HX_CSTRING("assets/mobile-1x/Specific/Level3/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/Specific/Level2/Enemies/empty.md")))){
 		HX_STACK_LINE(178)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/Specific/Level3/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/Specific/Level2/Enemies/empty.md"));
 	}
 	HX_STACK_LINE(184)
-	if (((inName == HX_CSTRING("assets/mobile-1x/Specific/Level3/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/Specific/Level2/Environment/Background/empty.md")))){
 		HX_STACK_LINE(185)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/Specific/Level3/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/Specific/Level2/Environment/Background/empty.md"));
 	}
 	HX_STACK_LINE(191)
-	if (((inName == HX_CSTRING("assets/mobile-1x/Specific/Level3/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/Specific/Level2/Environment/Foreground/empty.md")))){
 		HX_STACK_LINE(192)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/Specific/Level3/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/Specific/Level2/Environment/Foreground/empty.md"));
 	}
 	HX_STACK_LINE(198)
-	if (((inName == HX_CSTRING("assets/mobile-1x/test1.png")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/Specific/Level3/Enemies/empty.md")))){
 		HX_STACK_LINE(199)
-		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/mobile-1x/test1.png"),null());
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/Specific/Level3/Enemies/empty.md"));
 	}
 	HX_STACK_LINE(205)
-	if (((inName == HX_CSTRING("assets/mobile-1x/test2.png")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/Specific/Level3/Environment/Background/empty.md")))){
 		HX_STACK_LINE(206)
-		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/mobile-1x/test2.png"),null());
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/Specific/Level3/Environment/Background/empty.md"));
 	}
 	HX_STACK_LINE(212)
-	if (((inName == HX_CSTRING("assets/mobile-2x/General/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/Specific/Level3/Environment/Foreground/empty.md")))){
 		HX_STACK_LINE(213)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/General/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/Specific/Level3/Environment/Foreground/empty.md"));
 	}
 	HX_STACK_LINE(219)
-	if (((inName == HX_CSTRING("assets/mobile-2x/General/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/test1.png")))){
 		HX_STACK_LINE(220)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/General/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/mobile-1x/test1.png"),null());
 	}
 	HX_STACK_LINE(226)
-	if (((inName == HX_CSTRING("assets/mobile-2x/General/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/test2.png")))){
 		HX_STACK_LINE(227)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/General/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/mobile-1x/test2.png"),null());
 	}
 	HX_STACK_LINE(233)
-	if (((inName == HX_CSTRING("assets/mobile-2x/General/Worldmap/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/test3bg.png")))){
 		HX_STACK_LINE(234)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/General/Worldmap/empty.md"));
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/mobile-1x/test3bg.png"),null());
 	}
 	HX_STACK_LINE(240)
-	if (((inName == HX_CSTRING("assets/mobile-2x/Specific/Level1/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/walking-sparrow.xml")))){
 		HX_STACK_LINE(241)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/Specific/Level1/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-1x/walking-sparrow.xml"));
 	}
 	HX_STACK_LINE(247)
-	if (((inName == HX_CSTRING("assets/mobile-2x/Specific/Level1/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-1x/walking.png")))){
 		HX_STACK_LINE(248)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/Specific/Level1/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/mobile-1x/walking.png"),null());
 	}
 	HX_STACK_LINE(254)
-	if (((inName == HX_CSTRING("assets/mobile-2x/Specific/Level1/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/button.png")))){
 		HX_STACK_LINE(255)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/Specific/Level1/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/mobile-2x/button.png"),null());
 	}
 	HX_STACK_LINE(261)
-	if (((inName == HX_CSTRING("assets/mobile-2x/Specific/Level2/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/button2.png")))){
 		HX_STACK_LINE(262)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/Specific/Level2/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/mobile-2x/button2.png"),null());
 	}
 	HX_STACK_LINE(268)
-	if (((inName == HX_CSTRING("assets/mobile-2x/Specific/Level2/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/General/Enemies/empty.md")))){
 		HX_STACK_LINE(269)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/Specific/Level2/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/General/Enemies/empty.md"));
 	}
 	HX_STACK_LINE(275)
-	if (((inName == HX_CSTRING("assets/mobile-2x/Specific/Level2/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/General/Environment/Background/empty.md")))){
 		HX_STACK_LINE(276)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/Specific/Level2/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/General/Environment/Background/empty.md"));
 	}
 	HX_STACK_LINE(282)
-	if (((inName == HX_CSTRING("assets/mobile-2x/Specific/Level3/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/General/Environment/Foreground/empty.md")))){
 		HX_STACK_LINE(283)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/Specific/Level3/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/General/Environment/Foreground/empty.md"));
 	}
 	HX_STACK_LINE(289)
-	if (((inName == HX_CSTRING("assets/mobile-2x/Specific/Level3/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/General/Worldmap/empty.md")))){
 		HX_STACK_LINE(290)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/Specific/Level3/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/General/Worldmap/empty.md"));
 	}
 	HX_STACK_LINE(296)
-	if (((inName == HX_CSTRING("assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/Specific/Level1/Enemies/empty.md")))){
 		HX_STACK_LINE(297)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/Specific/Level1/Enemies/empty.md"));
 	}
 	HX_STACK_LINE(303)
-	if (((inName == HX_CSTRING("assets/source/bg.xml")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/Specific/Level1/Environment/Background/empty.md")))){
 		HX_STACK_LINE(304)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/bg.xml"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/Specific/Level1/Environment/Background/empty.md"));
 	}
 	HX_STACK_LINE(310)
-	if (((inName == HX_CSTRING("assets/source/General/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/Specific/Level1/Environment/Foreground/empty.md")))){
 		HX_STACK_LINE(311)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/General/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/Specific/Level1/Environment/Foreground/empty.md"));
 	}
 	HX_STACK_LINE(317)
-	if (((inName == HX_CSTRING("assets/source/General/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/Specific/Level2/Enemies/empty.md")))){
 		HX_STACK_LINE(318)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/General/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/Specific/Level2/Enemies/empty.md"));
 	}
 	HX_STACK_LINE(324)
-	if (((inName == HX_CSTRING("assets/source/General/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/Specific/Level2/Environment/Background/empty.md")))){
 		HX_STACK_LINE(325)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/General/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/Specific/Level2/Environment/Background/empty.md"));
 	}
 	HX_STACK_LINE(331)
-	if (((inName == HX_CSTRING("assets/source/General/Sound/Effects/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/Specific/Level2/Environment/Foreground/empty.md")))){
 		HX_STACK_LINE(332)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/General/Sound/Effects/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/Specific/Level2/Environment/Foreground/empty.md"));
 	}
 	HX_STACK_LINE(338)
-	if (((inName == HX_CSTRING("assets/source/General/Sound/Music/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/Specific/Level3/Enemies/empty.md")))){
 		HX_STACK_LINE(339)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/General/Sound/Music/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/Specific/Level3/Enemies/empty.md"));
 	}
 	HX_STACK_LINE(345)
-	if (((inName == HX_CSTRING("assets/source/General/Worldmap/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/Specific/Level3/Environment/Background/empty.md")))){
 		HX_STACK_LINE(346)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/General/Worldmap/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/Specific/Level3/Environment/Background/empty.md"));
 	}
 	HX_STACK_LINE(352)
-	if (((inName == HX_CSTRING("assets/source/Specific/Level1/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md")))){
 		HX_STACK_LINE(353)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level1/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md"));
 	}
 	HX_STACK_LINE(359)
-	if (((inName == HX_CSTRING("assets/source/Specific/Level1/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/test1.png")))){
 		HX_STACK_LINE(360)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level1/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/mobile-2x/test1.png"),null());
 	}
 	HX_STACK_LINE(366)
-	if (((inName == HX_CSTRING("assets/source/Specific/Level1/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/test2.png")))){
 		HX_STACK_LINE(367)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level1/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/mobile-2x/test2.png"),null());
 	}
 	HX_STACK_LINE(373)
-	if (((inName == HX_CSTRING("assets/source/Specific/Level1/Sound/Effects/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/test3bg.png")))){
 		HX_STACK_LINE(374)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level1/Sound/Effects/empty.md"));
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/mobile-2x/test3bg.png"),null());
 	}
 	HX_STACK_LINE(380)
-	if (((inName == HX_CSTRING("assets/source/Specific/Level1/Sound/Music/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/walking-sparrow.xml")))){
 		HX_STACK_LINE(381)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level1/Sound/Music/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/mobile-2x/walking-sparrow.xml"));
 	}
 	HX_STACK_LINE(387)
-	if (((inName == HX_CSTRING("assets/source/Specific/Level2/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/mobile-2x/walking.png")))){
 		HX_STACK_LINE(388)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level2/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getBitmapData(HX_CSTRING("assets/mobile-2x/walking.png"),null());
 	}
 	HX_STACK_LINE(394)
-	if (((inName == HX_CSTRING("assets/source/Specific/Level2/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/General/Enemies/walking.xml")))){
 		HX_STACK_LINE(395)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level2/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/General/Enemies/walking.xml"));
 	}
 	HX_STACK_LINE(401)
-	if (((inName == HX_CSTRING("assets/source/Specific/Level2/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/General/Environment/Background/empty.md")))){
 		HX_STACK_LINE(402)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level2/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/General/Environment/Background/empty.md"));
 	}
 	HX_STACK_LINE(408)
-	if (((inName == HX_CSTRING("assets/source/Specific/Level2/Sound/Effects/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/General/Environment/Foreground/empty.md")))){
 		HX_STACK_LINE(409)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level2/Sound/Effects/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/General/Environment/Foreground/empty.md"));
 	}
 	HX_STACK_LINE(415)
-	if (((inName == HX_CSTRING("assets/source/Specific/Level2/Sound/Music/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/General/Sound/Effects/empty.md")))){
 		HX_STACK_LINE(416)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level2/Sound/Music/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/General/Sound/Effects/empty.md"));
 	}
 	HX_STACK_LINE(422)
-	if (((inName == HX_CSTRING("assets/source/Specific/Level3/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/General/Sound/Music/empty.md")))){
 		HX_STACK_LINE(423)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level3/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/General/Sound/Music/empty.md"));
 	}
 	HX_STACK_LINE(429)
-	if (((inName == HX_CSTRING("assets/source/Specific/Level3/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/General/Worldmap/empty.md")))){
 		HX_STACK_LINE(430)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level3/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/General/Worldmap/empty.md"));
 	}
 	HX_STACK_LINE(436)
-	if (((inName == HX_CSTRING("assets/source/Specific/Level3/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/Specific/Level1/Enemies/empty.md")))){
 		HX_STACK_LINE(437)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level3/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level1/Enemies/empty.md"));
 	}
 	HX_STACK_LINE(443)
-	if (((inName == HX_CSTRING("assets/source/Specific/Level3/Sound/Effects/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/Specific/Level1/Environment/Background/empty.md")))){
 		HX_STACK_LINE(444)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level3/Sound/Effects/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level1/Environment/Background/empty.md"));
 	}
 	HX_STACK_LINE(450)
-	if (((inName == HX_CSTRING("assets/source/Specific/Level3/Sound/Music/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/Specific/Level1/Environment/Foreground/empty.md")))){
 		HX_STACK_LINE(451)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level3/Sound/Music/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level1/Environment/Foreground/empty.md"));
 	}
 	HX_STACK_LINE(457)
-	if (((inName == HX_CSTRING("assets/source/test.xml")))){
+	if (((inName == HX_CSTRING("assets/source/Specific/Level1/Sound/Effects/empty.md")))){
 		HX_STACK_LINE(458)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/test.xml"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level1/Sound/Effects/empty.md"));
 	}
 	HX_STACK_LINE(464)
-	if (((inName == HX_CSTRING("assets/source/test2.xml")))){
+	if (((inName == HX_CSTRING("assets/source/Specific/Level1/Sound/Music/empty.md")))){
 		HX_STACK_LINE(465)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/test2.xml"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level1/Sound/Music/empty.md"));
 	}
 	HX_STACK_LINE(471)
-	if (((inName == HX_CSTRING("assets/tablet-1x/General/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/Specific/Level2/Enemies/empty.md")))){
 		HX_STACK_LINE(472)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/General/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level2/Enemies/empty.md"));
 	}
 	HX_STACK_LINE(478)
-	if (((inName == HX_CSTRING("assets/tablet-1x/General/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/Specific/Level2/Environment/Background/empty.md")))){
 		HX_STACK_LINE(479)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/General/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level2/Environment/Background/empty.md"));
 	}
 	HX_STACK_LINE(485)
-	if (((inName == HX_CSTRING("assets/tablet-1x/General/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/Specific/Level2/Environment/Foreground/empty.md")))){
 		HX_STACK_LINE(486)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/General/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level2/Environment/Foreground/empty.md"));
 	}
 	HX_STACK_LINE(492)
-	if (((inName == HX_CSTRING("assets/tablet-1x/General/Worldmap/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/Specific/Level2/Sound/Effects/empty.md")))){
 		HX_STACK_LINE(493)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/General/Worldmap/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level2/Sound/Effects/empty.md"));
 	}
 	HX_STACK_LINE(499)
-	if (((inName == HX_CSTRING("assets/tablet-1x/Specific/Level1/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/Specific/Level2/Sound/Music/empty.md")))){
 		HX_STACK_LINE(500)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/Specific/Level1/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level2/Sound/Music/empty.md"));
 	}
 	HX_STACK_LINE(506)
-	if (((inName == HX_CSTRING("assets/tablet-1x/Specific/Level1/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/Specific/Level3/Enemies/empty.md")))){
 		HX_STACK_LINE(507)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/Specific/Level1/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level3/Enemies/empty.md"));
 	}
 	HX_STACK_LINE(513)
-	if (((inName == HX_CSTRING("assets/tablet-1x/Specific/Level1/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/Specific/Level3/Environment/Background/empty.md")))){
 		HX_STACK_LINE(514)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/Specific/Level1/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level3/Environment/Background/empty.md"));
 	}
 	HX_STACK_LINE(520)
-	if (((inName == HX_CSTRING("assets/tablet-1x/Specific/Level2/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/Specific/Level3/Environment/Foreground/empty.md")))){
 		HX_STACK_LINE(521)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/Specific/Level2/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level3/Environment/Foreground/empty.md"));
 	}
 	HX_STACK_LINE(527)
-	if (((inName == HX_CSTRING("assets/tablet-1x/Specific/Level2/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/Specific/Level3/Sound/Effects/empty.md")))){
 		HX_STACK_LINE(528)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/Specific/Level2/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level3/Sound/Effects/empty.md"));
 	}
 	HX_STACK_LINE(534)
-	if (((inName == HX_CSTRING("assets/tablet-1x/Specific/Level2/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/Specific/Level3/Sound/Music/empty.md")))){
 		HX_STACK_LINE(535)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/Specific/Level2/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/Specific/Level3/Sound/Music/empty.md"));
 	}
 	HX_STACK_LINE(541)
-	if (((inName == HX_CSTRING("assets/tablet-1x/Specific/Level3/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/source/walking.xml")))){
 		HX_STACK_LINE(542)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/Specific/Level3/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/source/walking.xml"));
 	}
 	HX_STACK_LINE(548)
-	if (((inName == HX_CSTRING("assets/tablet-1x/Specific/Level3/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/tablet-1x/General/Enemies/empty.md")))){
 		HX_STACK_LINE(549)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/Specific/Level3/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/General/Enemies/empty.md"));
 	}
 	HX_STACK_LINE(555)
-	if (((inName == HX_CSTRING("assets/tablet-1x/Specific/Level3/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/tablet-1x/General/Environment/Background/empty.md")))){
 		HX_STACK_LINE(556)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/Specific/Level3/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/General/Environment/Background/empty.md"));
 	}
 	HX_STACK_LINE(562)
-	if (((inName == HX_CSTRING("assets/tablet-2x/General/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/tablet-1x/General/Environment/Foreground/empty.md")))){
 		HX_STACK_LINE(563)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/General/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/General/Environment/Foreground/empty.md"));
 	}
 	HX_STACK_LINE(569)
-	if (((inName == HX_CSTRING("assets/tablet-2x/General/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/tablet-1x/General/Worldmap/empty.md")))){
 		HX_STACK_LINE(570)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/General/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/General/Worldmap/empty.md"));
 	}
 	HX_STACK_LINE(576)
-	if (((inName == HX_CSTRING("assets/tablet-2x/General/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/tablet-1x/Specific/Level1/Enemies/empty.md")))){
 		HX_STACK_LINE(577)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/General/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/Specific/Level1/Enemies/empty.md"));
 	}
 	HX_STACK_LINE(583)
-	if (((inName == HX_CSTRING("assets/tablet-2x/General/Worldmap/empty.md")))){
+	if (((inName == HX_CSTRING("assets/tablet-1x/Specific/Level1/Environment/Background/empty.md")))){
 		HX_STACK_LINE(584)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/General/Worldmap/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/Specific/Level1/Environment/Background/empty.md"));
 	}
 	HX_STACK_LINE(590)
-	if (((inName == HX_CSTRING("assets/tablet-2x/Specific/Level1/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/tablet-1x/Specific/Level1/Environment/Foreground/empty.md")))){
 		HX_STACK_LINE(591)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/Specific/Level1/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/Specific/Level1/Environment/Foreground/empty.md"));
 	}
 	HX_STACK_LINE(597)
-	if (((inName == HX_CSTRING("assets/tablet-2x/Specific/Level1/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/tablet-1x/Specific/Level2/Enemies/empty.md")))){
 		HX_STACK_LINE(598)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/Specific/Level1/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/Specific/Level2/Enemies/empty.md"));
 	}
 	HX_STACK_LINE(604)
-	if (((inName == HX_CSTRING("assets/tablet-2x/Specific/Level1/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/tablet-1x/Specific/Level2/Environment/Background/empty.md")))){
 		HX_STACK_LINE(605)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/Specific/Level1/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/Specific/Level2/Environment/Background/empty.md"));
 	}
 	HX_STACK_LINE(611)
-	if (((inName == HX_CSTRING("assets/tablet-2x/Specific/Level2/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/tablet-1x/Specific/Level2/Environment/Foreground/empty.md")))){
 		HX_STACK_LINE(612)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/Specific/Level2/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/Specific/Level2/Environment/Foreground/empty.md"));
 	}
 	HX_STACK_LINE(618)
-	if (((inName == HX_CSTRING("assets/tablet-2x/Specific/Level2/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/tablet-1x/Specific/Level3/Enemies/empty.md")))){
 		HX_STACK_LINE(619)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/Specific/Level2/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/Specific/Level3/Enemies/empty.md"));
 	}
 	HX_STACK_LINE(625)
-	if (((inName == HX_CSTRING("assets/tablet-2x/Specific/Level2/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/tablet-1x/Specific/Level3/Environment/Background/empty.md")))){
 		HX_STACK_LINE(626)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/Specific/Level2/Environment/Foreground/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/Specific/Level3/Environment/Background/empty.md"));
 	}
 	HX_STACK_LINE(632)
-	if (((inName == HX_CSTRING("assets/tablet-2x/Specific/Level3/Enemies/empty.md")))){
+	if (((inName == HX_CSTRING("assets/tablet-1x/Specific/Level3/Environment/Foreground/empty.md")))){
 		HX_STACK_LINE(633)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/Specific/Level3/Enemies/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-1x/Specific/Level3/Environment/Foreground/empty.md"));
 	}
 	HX_STACK_LINE(639)
-	if (((inName == HX_CSTRING("assets/tablet-2x/Specific/Level3/Environment/Background/empty.md")))){
+	if (((inName == HX_CSTRING("assets/tablet-2x/General/Enemies/empty.md")))){
 		HX_STACK_LINE(640)
-		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/Specific/Level3/Environment/Background/empty.md"));
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/General/Enemies/empty.md"));
 	}
 	HX_STACK_LINE(646)
-	if (((inName == HX_CSTRING("assets/tablet-2x/Specific/Level3/Environment/Foreground/empty.md")))){
+	if (((inName == HX_CSTRING("assets/tablet-2x/General/Environment/Background/empty.md")))){
 		HX_STACK_LINE(647)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/General/Environment/Background/empty.md"));
+	}
+	HX_STACK_LINE(653)
+	if (((inName == HX_CSTRING("assets/tablet-2x/General/Environment/Foreground/empty.md")))){
+		HX_STACK_LINE(654)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/General/Environment/Foreground/empty.md"));
+	}
+	HX_STACK_LINE(660)
+	if (((inName == HX_CSTRING("assets/tablet-2x/General/Worldmap/empty.md")))){
+		HX_STACK_LINE(661)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/General/Worldmap/empty.md"));
+	}
+	HX_STACK_LINE(667)
+	if (((inName == HX_CSTRING("assets/tablet-2x/Specific/Level1/Enemies/empty.md")))){
+		HX_STACK_LINE(668)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/Specific/Level1/Enemies/empty.md"));
+	}
+	HX_STACK_LINE(674)
+	if (((inName == HX_CSTRING("assets/tablet-2x/Specific/Level1/Environment/Background/empty.md")))){
+		HX_STACK_LINE(675)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/Specific/Level1/Environment/Background/empty.md"));
+	}
+	HX_STACK_LINE(681)
+	if (((inName == HX_CSTRING("assets/tablet-2x/Specific/Level1/Environment/Foreground/empty.md")))){
+		HX_STACK_LINE(682)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/Specific/Level1/Environment/Foreground/empty.md"));
+	}
+	HX_STACK_LINE(688)
+	if (((inName == HX_CSTRING("assets/tablet-2x/Specific/Level2/Enemies/empty.md")))){
+		HX_STACK_LINE(689)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/Specific/Level2/Enemies/empty.md"));
+	}
+	HX_STACK_LINE(695)
+	if (((inName == HX_CSTRING("assets/tablet-2x/Specific/Level2/Environment/Background/empty.md")))){
+		HX_STACK_LINE(696)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/Specific/Level2/Environment/Background/empty.md"));
+	}
+	HX_STACK_LINE(702)
+	if (((inName == HX_CSTRING("assets/tablet-2x/Specific/Level2/Environment/Foreground/empty.md")))){
+		HX_STACK_LINE(703)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/Specific/Level2/Environment/Foreground/empty.md"));
+	}
+	HX_STACK_LINE(709)
+	if (((inName == HX_CSTRING("assets/tablet-2x/Specific/Level3/Enemies/empty.md")))){
+		HX_STACK_LINE(710)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/Specific/Level3/Enemies/empty.md"));
+	}
+	HX_STACK_LINE(716)
+	if (((inName == HX_CSTRING("assets/tablet-2x/Specific/Level3/Environment/Background/empty.md")))){
+		HX_STACK_LINE(717)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/Specific/Level3/Environment/Background/empty.md"));
+	}
+	HX_STACK_LINE(723)
+	if (((inName == HX_CSTRING("assets/tablet-2x/Specific/Level3/Environment/Foreground/empty.md")))){
+		HX_STACK_LINE(724)
 		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/tablet-2x/Specific/Level3/Environment/Foreground/empty.md"));
 	}
-	HX_STACK_LINE(654)
+	HX_STACK_LINE(730)
+	if (((inName == HX_CSTRING("assets/xml/bg.xml")))){
+		HX_STACK_LINE(731)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/xml/bg.xml"));
+	}
+	HX_STACK_LINE(737)
+	if (((inName == HX_CSTRING("assets/xml/settings.xml")))){
+		HX_STACK_LINE(738)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/xml/settings.xml"));
+	}
+	HX_STACK_LINE(744)
+	if (((inName == HX_CSTRING("assets/xml/test.xml")))){
+		HX_STACK_LINE(745)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/xml/test.xml"));
+	}
+	HX_STACK_LINE(751)
+	if (((inName == HX_CSTRING("assets/xml/test2.xml")))){
+		HX_STACK_LINE(752)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/xml/test2.xml"));
+	}
+	HX_STACK_LINE(758)
+	if (((inName == HX_CSTRING("assets/xml/walking.xml")))){
+		HX_STACK_LINE(759)
+		return ::nme::installer::Assets_obj::getText(HX_CSTRING("assets/xml/walking.xml"));
+	}
+	HX_STACK_LINE(766)
 	return null();
 }
 

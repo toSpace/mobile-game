@@ -1,5 +1,11 @@
 #include <hxcpp.h>
 
+#ifndef INCLUDED_BackgroundObject
+#include <BackgroundObject.h>
+#endif
+#ifndef INCLUDED_Character
+#include <Character.h>
+#endif
 #ifndef INCLUDED_DrawObject
 #include <DrawObject.h>
 #endif
@@ -8,6 +14,9 @@
 #endif
 #ifndef INCLUDED_Level
 #include <Level.h>
+#endif
+#ifndef INCLUDED_Lucy
+#include <Lucy.h>
 #endif
 #ifndef INCLUDED_World1Level1
 #include <World1Level1.h>
@@ -41,11 +50,15 @@ Void World1Level1_obj::loadLevel( ){
 {
 		HX_STACK_PUSH("World1Level1::loadLevel","World1Level1.hx",3);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(6)
-		::DrawObject pika = ::DrawObject_obj::__new(HX_CSTRING("test2.xml"));		HX_STACK_VAR(pika,"pika");
 		HX_STACK_LINE(7)
+		::BackgroundObject bg1 = ::BackgroundObject_obj::__new(HX_CSTRING("bg.xml"));		HX_STACK_VAR(bg1,"bg1");
+		HX_STACK_LINE(11)
+		::DrawObject pika = ::DrawObject_obj::__new(HX_CSTRING("test2.xml"));		HX_STACK_VAR(pika,"pika");
+		HX_STACK_LINE(12)
 		::DrawObject useless = ::DrawObject_obj::__new(HX_CSTRING("test.xml"));		HX_STACK_VAR(useless,"useless");
-		HX_STACK_LINE(10)
+		HX_STACK_LINE(13)
+		::Lucy lucy = ::Lucy_obj::__new();		HX_STACK_VAR(lucy,"lucy");
+		HX_STACK_LINE(16)
 		this->start();
 	}
 return null();

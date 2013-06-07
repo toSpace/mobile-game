@@ -3,6 +3,9 @@
 #ifndef INCLUDED_Drawing
 #include <Drawing.h>
 #endif
+#ifndef INCLUDED_LineDrawing
+#include <LineDrawing.h>
+#endif
 #ifndef INCLUDED_Main
 #include <Main.h>
 #endif
@@ -81,7 +84,7 @@ Dynamic Drawing_obj::__Create(hx::DynamicArray inArgs)
 
 bool Drawing_obj::drawing;
 
-bool Drawing_obj::ereasing;
+bool Drawing_obj::erasing;
 
 Float Drawing_obj::x;
 
@@ -89,12 +92,12 @@ Float Drawing_obj::y;
 
 Void Drawing_obj::init( ){
 {
-		HX_STACK_PUSH("Drawing::init","Drawing.hx",20);
-		HX_STACK_LINE(21)
-		::Main_obj::canvas->addEventListener(::native::events::MouseEvent_obj::MOUSE_DOWN,::Drawing_obj::startDraw_dyn(),null(),null(),null());
+		HX_STACK_PUSH("Drawing::init","Drawing.hx",21);
 		HX_STACK_LINE(22)
-		::Main_obj::canvas->addEventListener(::native::events::MouseEvent_obj::MOUSE_MOVE,::Drawing_obj::checkDraw_dyn(),null(),null(),null());
+		::Main_obj::canvas->addEventListener(::native::events::MouseEvent_obj::MOUSE_DOWN,::Drawing_obj::startDraw_dyn(),null(),null(),null());
 		HX_STACK_LINE(23)
+		::Main_obj::canvas->addEventListener(::native::events::MouseEvent_obj::MOUSE_MOVE,::Drawing_obj::checkDraw_dyn(),null(),null(),null());
+		HX_STACK_LINE(24)
 		::Main_obj::canvas->addEventListener(::native::events::MouseEvent_obj::MOUSE_UP,::Drawing_obj::stopDraw_dyn(),null(),null(),null());
 	}
 return null();
@@ -105,10 +108,15 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(Drawing_obj,init,(void))
 
 Void Drawing_obj::startDraw( ::native::events::MouseEvent e){
 {
-		HX_STACK_PUSH("Drawing::startDraw","Drawing.hx",26);
+		HX_STACK_PUSH("Drawing::startDraw","Drawing.hx",27);
 		HX_STACK_ARG(e,"e");
-		HX_STACK_LINE(26)
+		HX_STACK_LINE(28)
 		::Drawing_obj::drawing = true;
+		HX_STACK_LINE(31)
+		if ((!(::Drawing_obj::erasing))){
+			HX_STACK_LINE(31)
+			::LineDrawing newDrawing = ::LineDrawing_obj::__new(e->localX,e->localY);		HX_STACK_VAR(newDrawing,"newDrawing");
+		}
 	}
 return null();
 }
@@ -118,9 +126,9 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Drawing_obj,startDraw,(void))
 
 Void Drawing_obj::stopDraw( ::native::events::MouseEvent e){
 {
-		HX_STACK_PUSH("Drawing::stopDraw","Drawing.hx",30);
+		HX_STACK_PUSH("Drawing::stopDraw","Drawing.hx",36);
 		HX_STACK_ARG(e,"e");
-		HX_STACK_LINE(30)
+		HX_STACK_LINE(36)
 		::Drawing_obj::drawing = false;
 	}
 return null();
@@ -131,13 +139,13 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Drawing_obj,stopDraw,(void))
 
 Void Drawing_obj::checkDraw( ::native::events::MouseEvent e){
 {
-		HX_STACK_PUSH("Drawing::checkDraw","Drawing.hx",34);
+		HX_STACK_PUSH("Drawing::checkDraw","Drawing.hx",40);
 		HX_STACK_ARG(e,"e");
-		HX_STACK_LINE(36)
+		HX_STACK_LINE(42)
 		::native::geom::Point point = ::Main_obj::canvas->localToGlobal(::native::geom::Point_obj::__new(e->localX,e->localY));		HX_STACK_VAR(point,"point");
-		HX_STACK_LINE(37)
+		HX_STACK_LINE(43)
 		::Drawing_obj::x = point->x;
-		HX_STACK_LINE(38)
+		HX_STACK_LINE(44)
 		::Drawing_obj::y = point->y;
 	}
 return null();
@@ -147,71 +155,71 @@ return null();
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Drawing_obj,checkDraw,(void))
 
 bool Drawing_obj::checkActive( ::nape::phys::Body b){
-	HX_STACK_PUSH("Drawing::checkActive","Drawing.hx",41);
+	HX_STACK_PUSH("Drawing::checkActive","Drawing.hx",47);
 	HX_STACK_ARG(b,"b");
-	HX_STACK_LINE(42)
+	HX_STACK_LINE(48)
 	bool active = false;		HX_STACK_VAR(active,"active");
-	HX_STACK_LINE(43)
+	HX_STACK_LINE(49)
 	::nape::geom::Vec2 mp = ::nape::geom::Vec2_obj::__new(::Drawing_obj::x,::Drawing_obj::y);		HX_STACK_VAR(mp,"mp");
-	HX_STACK_LINE(44)
+	HX_STACK_LINE(50)
 	::nape::phys::BodyList bodies = ::Main_obj::space->bodiesUnderPoint(mp,null(),null());		HX_STACK_VAR(bodies,"bodies");
 	struct _Function_1_1{
 		inline static int Block( ::nape::phys::BodyList &bodies){
-			HX_STACK_PUSH("*::closure","Drawing.hx",46);
+			HX_STACK_PUSH("*::closure","Drawing.hx",52);
 			{
-				HX_STACK_LINE(46)
+				HX_STACK_LINE(52)
 				bodies->zpp_inner->valmod();
-				HX_STACK_LINE(46)
+				HX_STACK_LINE(52)
 				if ((bodies->zpp_inner->zip_length)){
-					HX_STACK_LINE(46)
+					HX_STACK_LINE(52)
 					bodies->zpp_inner->zip_length = false;
-					HX_STACK_LINE(46)
+					HX_STACK_LINE(52)
 					bodies->zpp_inner->user_length = bodies->zpp_inner->inner->length;
 				}
-				HX_STACK_LINE(46)
+				HX_STACK_LINE(52)
 				return bodies->zpp_inner->user_length;
 			}
 			return null();
 		}
 	};
-	HX_STACK_LINE(46)
+	HX_STACK_LINE(52)
 	if (((_Function_1_1::Block(bodies) > (int)0))){
 		struct _Function_2_1{
 			inline static int Block( ::nape::phys::BodyList &bodies){
-				HX_STACK_PUSH("*::closure","Drawing.hx",47);
+				HX_STACK_PUSH("*::closure","Drawing.hx",53);
 				{
-					HX_STACK_LINE(47)
+					HX_STACK_LINE(53)
 					bodies->zpp_inner->valmod();
-					HX_STACK_LINE(47)
+					HX_STACK_LINE(53)
 					if ((bodies->zpp_inner->zip_length)){
-						HX_STACK_LINE(47)
+						HX_STACK_LINE(53)
 						bodies->zpp_inner->zip_length = false;
-						HX_STACK_LINE(47)
+						HX_STACK_LINE(53)
 						bodies->zpp_inner->user_length = bodies->zpp_inner->inner->length;
 					}
-					HX_STACK_LINE(47)
+					HX_STACK_LINE(53)
 					return bodies->zpp_inner->user_length;
 				}
 				return null();
 			}
 		};
-		HX_STACK_LINE(47)
+		HX_STACK_LINE(53)
 		int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
 		int _g = _Function_2_1::Block(bodies);		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(47)
+		HX_STACK_LINE(53)
 		while(((_g1 < _g))){
-			HX_STACK_LINE(47)
+			HX_STACK_LINE(53)
 			int i = (_g1)++;		HX_STACK_VAR(i,"i");
-			HX_STACK_LINE(49)
+			HX_STACK_LINE(55)
 			::nape::phys::Body body = bodies->at(i);		HX_STACK_VAR(body,"body");
-			HX_STACK_LINE(50)
+			HX_STACK_LINE(56)
 			if (((body == b))){
-				HX_STACK_LINE(50)
+				HX_STACK_LINE(56)
 				active = true;
 			}
 		}
 	}
-	HX_STACK_LINE(56)
+	HX_STACK_LINE(62)
 	return active;
 }
 
@@ -219,9 +227,9 @@ bool Drawing_obj::checkActive( ::nape::phys::Body b){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Drawing_obj,checkActive,return )
 
 bool Drawing_obj::mouseOver( Dynamic asset){
-	HX_STACK_PUSH("Drawing::mouseOver","Drawing.hx",59);
+	HX_STACK_PUSH("Drawing::mouseOver","Drawing.hx",65);
 	HX_STACK_ARG(asset,"asset");
-	HX_STACK_LINE(59)
+	HX_STACK_LINE(65)
 	return asset->__Field(HX_CSTRING("hitTestPoint"),true)(::Drawing_obj::x,::Drawing_obj::y);
 }
 
@@ -255,9 +263,9 @@ Dynamic Drawing_obj::__Field(const ::String &inName,bool inCallProp)
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"drawing") ) { return drawing; }
+		if (HX_FIELD_EQ(inName,"erasing") ) { return erasing; }
 		break;
 	case 8:
-		if (HX_FIELD_EQ(inName,"ereasing") ) { return ereasing; }
 		if (HX_FIELD_EQ(inName,"stopDraw") ) { return stopDraw_dyn(); }
 		break;
 	case 9:
@@ -280,9 +288,7 @@ Dynamic Drawing_obj::__SetField(const ::String &inName,const Dynamic &inValue,bo
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"drawing") ) { drawing=inValue.Cast< bool >(); return inValue; }
-		break;
-	case 8:
-		if (HX_FIELD_EQ(inName,"ereasing") ) { ereasing=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"erasing") ) { erasing=inValue.Cast< bool >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -294,7 +300,7 @@ void Drawing_obj::__GetFields(Array< ::String> &outFields)
 
 static ::String sStaticFields[] = {
 	HX_CSTRING("drawing"),
-	HX_CSTRING("ereasing"),
+	HX_CSTRING("erasing"),
 	HX_CSTRING("x"),
 	HX_CSTRING("y"),
 	HX_CSTRING("init"),
@@ -311,7 +317,7 @@ static ::String sMemberFields[] = {
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(Drawing_obj::__mClass,"__mClass");
 	HX_MARK_MEMBER_NAME(Drawing_obj::drawing,"drawing");
-	HX_MARK_MEMBER_NAME(Drawing_obj::ereasing,"ereasing");
+	HX_MARK_MEMBER_NAME(Drawing_obj::erasing,"erasing");
 	HX_MARK_MEMBER_NAME(Drawing_obj::x,"x");
 	HX_MARK_MEMBER_NAME(Drawing_obj::y,"y");
 };
@@ -319,7 +325,7 @@ static void sMarkStatics(HX_MARK_PARAMS) {
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(Drawing_obj::__mClass,"__mClass");
 	HX_VISIT_MEMBER_NAME(Drawing_obj::drawing,"drawing");
-	HX_VISIT_MEMBER_NAME(Drawing_obj::ereasing,"ereasing");
+	HX_VISIT_MEMBER_NAME(Drawing_obj::erasing,"erasing");
 	HX_VISIT_MEMBER_NAME(Drawing_obj::x,"x");
 	HX_VISIT_MEMBER_NAME(Drawing_obj::y,"y");
 };
@@ -336,6 +342,6 @@ void Drawing_obj::__register()
 void Drawing_obj::__boot()
 {
 	drawing= false;
-	ereasing= true;
+	erasing= true;
 }
 
