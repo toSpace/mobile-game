@@ -68,7 +68,9 @@ class GameObject {
 	}
 
 	public function physicsObject(physic:String){
-
+		// body = PhysicsData.createBody(physic, asset);
+  //       body.position.setxy( xml.get('x') , xml.get('y') );
+  //       body.space = space;
 	}
 
 	private function makeMaterial():Material{

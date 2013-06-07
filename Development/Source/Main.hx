@@ -54,6 +54,8 @@ class Main
         
         //start rendering
         stage.addEventListener(Event.ENTER_FRAME, enterFrameHandler);
+        stage.addEventListener(Event.ACTIVATE, activate);
+        stage.addEventListener(Event.DEACTIVATE, deactivate);
 
         //add debugtools
         #if (debug || tools)
@@ -88,6 +90,15 @@ class Main
 
     function onResize(ev:Event):Void{
         Mobile.setSizes();
+    }
+
+    //pause game when lost focus
+    function deactivate(ev:Event):Void{
+        RenderManager.pause();
+    }
+    //start game when gained focus
+    function activate(ev:Event):Void{
+        RenderManager.start();
     }
 
 }
