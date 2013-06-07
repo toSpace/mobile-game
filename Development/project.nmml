@@ -12,6 +12,7 @@
 	<source path="Source/core" />
 	<source path="Source/levels" />
 	<source path="Source/GUI" />
+	<source path="Source/characters" />
 	
 	<haxelib name="nme" />
 	<haxelib name="actuate" />

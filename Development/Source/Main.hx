@@ -59,10 +59,9 @@ class Main
             canvas.addChild( debug.display );
             stage.addEventListener(KeyboardEvent.KEY_DOWN, Camera.keyboard);
         #end
-        
+
         //load first level
         Level.load('World1Level1');
-
 
         //FPS
         stage.addChild( new FPS(0,0) );

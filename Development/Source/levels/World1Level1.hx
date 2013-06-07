@@ -10,7 +10,7 @@ class World1Level1 extends Level {
 		//add items
         var pika = new DrawObject('test2.xml');
         var useless = new DrawObject('test.xml');
-        var lucy = new SpriteObject('walking.xml', 'walking-sparrow.xml');
+        var lucy = new Lucy();
 
         //start again
         start();

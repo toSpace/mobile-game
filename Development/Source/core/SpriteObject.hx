@@ -21,7 +21,7 @@ class SpriteObject{
 	var tLast:Float;
 	var layer:TileLayer;
 	var xml:Hash<Dynamic>;
-	var body:Body;
+	public var body:Body;
 	var clip:TileClip;
 	
 	public function new(xmlUrl:String, sparrowXml:String){
