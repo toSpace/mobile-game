@@ -6,9 +6,11 @@ import nme.events.EventDispatcher;
 import nme.display.DisplayObject;
 import nme.display.Bitmap;
 import nme.display.BitmapData;
+import nme.geom.Point;
 
 //nape
 import nape.phys.Body;
+import nape.phys.Material;
 import nape.space.Space;
 import nape.geom.Vec2;
 
@@ -33,6 +35,7 @@ class GameObject {
 
 		//make physics object
 		physicsObject( xml.get('physics') );
+		body.setShapeMaterials( makeMaterial() );
 
 		//add to render manager
 		RenderManager.add(this);
@@ -47,11 +50,20 @@ class GameObject {
 
 		var asset = read.node.asset;
 		p.set('img', Mobile.asset + asset.node.img.innerData);
+
+		//position
 		p.set('x', asset.node.pos.att.x);
 		p.set('y', asset.node.pos.att.y);
 		p.set('rotation', asset.node.pos.att.rotation);
+
+		//physics
 		p.set('physics', asset.node.physics.innerData);
-		//todo material
+		p.set('elasticity', asset.node.material.att.elasticity);
+		p.set('dynamicFriction', asset.node.material.att.dynamicFriction);
+		p.set('staticFriction', asset.node.material.att.staticFriction);
+		p.set('density', asset.node.material.att.density);
+		p.set('rollingFriction', asset.node.material.att.rollingFriction);
+
 		return p;
 	}
 
@@ -59,8 +71,18 @@ class GameObject {
 
 	}
 
+	private function makeMaterial():Material{
+		return new Material(
+			xml.get('elasticity'), 
+			xml.get('dynamicFriction'), 
+			xml.get('staticFriction'), 
+			xml.get('density'),
+			xml.get('rollingFriction')
+		);
+	}
+
 	public function render():Void{
-		renderPhysics();
+		if(inView()) renderPhysics();
 	}
 
 	private function renderPhysics():Void{
@@ -83,6 +105,20 @@ class GameObject {
 
 		//remove from NAPE
 		//?
+	}
+
+	public function inView():Bool{
+		var toReturn:Bool = false;
+		var camera:Point = Camera.getPosition();
+		var bodyPos:Vec2 = body.position;
+		if(
+			bodyPos.x > camera.x - Settings.cameraOverflow && bodyPos.x < camera.x + Mobile.screenWidth + Settings.cameraOverflow && 
+			bodyPos.y > camera.y - Settings.cameraOverflow && bodyPos.y < camera.y + Mobile.screenHeight + Settings.cameraOverflow
+		){
+			toReturn = true;
+		}
+
+		return toReturn;
 	}
 
 	public function hide():Void{

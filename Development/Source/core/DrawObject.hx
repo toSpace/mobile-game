@@ -95,24 +95,30 @@ class DrawObject extends GameObject{
 	}
 
     public override function render():Void{
-        renderPhysics();
+        //only if in view
+        if(inView()){
 
-        //only if drawing - todo only if on screen
-        if(Drawing.drawing && Drawing.erasing){
-            //var checkActive = Drawing.checkActive(body);
-            var checkActive = Drawing.mouseOver(asset);
+            //do the physics stuff
+            renderPhysics();
 
-            if( checkActive && !drawing){
-                startDrawing();
-            } 
-            else if (checkActive && drawing){
-                draw();
+            //only if drawing - todo only if on screen
+            if(Drawing.drawing && Drawing.erasing){
+                //var checkActive = Drawing.checkActive(body);
+                var checkActive = Drawing.mouseOver(asset);
+
+                if( checkActive && !drawing){
+                    startDrawing();
+                } 
+                else if (checkActive && drawing){
+                    draw();
+                }
+
+            } else{
+                if(drawing == true){
+                    stopDrawing();
+                }
             }
-
-        } else{
-            if(drawing == true){
-                stopDrawing();
-            }
+            
         }
     }
 
