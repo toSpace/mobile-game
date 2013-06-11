@@ -76,22 +76,22 @@ t1362484646
 s7027
 
 N/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/Classes/Main.mm
-c0000000051AC6B6B0000000000000357
-t1370254187
+c0000000051B741E50000000000000357
+t1370964453
 s855
 
 N/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/Game-Prefix.pch
-c0000000051AC6B420000000000000137
-t1370254146
+c0000000051B741150000000000000137
+t1370964245
 s311
 i<Availability.h>
 i<UIKit/UIKit.h>
 i<Foundation/Foundation.h>
 
 N/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/assets
-c0000000051ABC5BC0000000000000AA0
-t1370211772
-s2720
+c0000000051B741170000000000000D6A
+t1370964247
+s3434
 
 N/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Objects-normal/i386/Game.LinkFileList
 c0000000051AC6B6C000000000000009B
@@ -99,49 +99,49 @@ t1370254188
 s155
 
 N/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Objects-normal/i386/Main.o
-t2
-s0
+t1370254188
+s3128
 
 N/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app
-t2
-s0
+t1370254193
+s204
 
 N/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app.dSYM
-t2
-s0
+t1370254193
+s102
 
 N/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/Game
-t2
-s0
+t1370254192
+s10867332
 
 N/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/Info.plist
-t2
-s0
+t1370254188
+s1007
 
 N/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/PkgInfo
-t2
-s0
+t1370254188
+s8
 
 N/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/assets
-t2
-s0
+t1370254188
+s2720
 
 N/var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Game-Prefix-eyhfhisqsdlrxeeqkjlknrnvclgg/Game-Prefix.pch.pth
-t2
-s0
+t1370254188
+s143592
 
 NGame/Game-Info.plist
-c0000000051AC6B4200000000000005E7
-t1370254146
-s1511
+c0000000051B74115000000000000057F
+t1370964245
+s1407
 
 CCheck dependencies
 r0
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies3d6052eca25cb741^fa4161eca25cb741^---0#1#0#--18"Check dependencies36"09C97C98-CDEB-4C4C-B4E5-32C6FDD29C14-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies39463a657967b741^4a5f54657967b741^---0#1#0#--18"Check dependencies36"DA97369C-2A02-4132-8E77-964A5990B3D9-
 
 CCompileC build/Game.build/Release-iphonesimulator/Game.build/Objects-normal/i386/Main.o /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/Classes/Main.mm normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391946988.741802
-e391946988.785580
+s392657253.709526
+e392657253.752254
 r1
 xCompileC
 xbuild/Game.build/Release-iphonesimulator/Game.build/Objects-normal/i386/Main.o
@@ -150,48 +150,48 @@ xnormal
 xi386
 xc++
 xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Compile /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/Classes/Main.mmca15beeca25cb741^d61bc9eca25cb741^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/Classes/Main.mm0000000000000000^3793"CompileC build/Game.build/Release-iphonesimulator/Game.build/Objects-normal/i386/Main.o Game/Classes/Main.mm normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=gnu++11 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -mios-simulator-version-min=5 -iquote /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Game-generated-files.hmap -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Game-own-target-headers.hmap -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Game-all-target-headers.hmap -iquote /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Game-project-headers.hmap -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/DerivedSources/i386 -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/DerivedSources -F/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Game-Prefix-eyhfhisqsdlrxeeqkjlknrnvclgg/Game-Prefix.pch -MMD -MT dependencies -MF /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Objects-normal/i386/Main.d --serialize-diagnostics /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Objects-normal/i386/Main.dia -c /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/Classes/Main.mm -o /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Objects-normal/i386/Main.o36"249201B6-6BCB-4754-AF9B-CC6E96EEEE9C-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Compile /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/Classes/Main.mm9acfb5657967b741^d195c0657967b741^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/Classes/Main.mm0000000000000000^3793"CompileC build/Game.build/Release-iphonesimulator/Game.build/Objects-normal/i386/Main.o Game/Classes/Main.mm normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch i386 -fmessage-length=0 -std=gnu++11 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -mios-simulator-version-min=5 -iquote /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Game-generated-files.hmap -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Game-own-target-headers.hmap -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Game-all-target-headers.hmap -iquote /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Game-project-headers.hmap -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/DerivedSources/i386 -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/DerivedSources -F/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator -DNS_BLOCK_ASSERTIONS=1 -include /var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Game-Prefix-eyhfhisqsdlrxeeqkjlknrnvclgg/Game-Prefix.pch -MMD -MT dependencies -MF /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Objects-normal/i386/Main.d --serialize-diagnostics /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Objects-normal/i386/Main.dia -c /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/Classes/Main.mm -o /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Objects-normal/i386/Main.o36"2B92A0B0-688E-4170-82B8-2C1AF954202B-
 
 CCpResource Game/assets build/Release-iphonesimulator/Game.app/assets
-s391946988.460151
-e391946988.660452
+s392657253.349153
+e392657253.568282
 r1
 xCpResource
 xGame/assets
 xbuild/Release-iphonesimulator/Game.app/assets
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Copy build/Release-iphonesimulator/Game.app/assets0bec75eca25cb741^2b14a9eca25cb741^---0#0#0#-19%DVTDocumentLocation2@137"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/assets000000000080d041^837"CpResource Game/assets build/Release-iphonesimulator/Game.app/assets    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/assets /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app36"03950642-0ECE-46B4-A6D4-9959BD77D709-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection50"Copy build/Release-iphonesimulator/Game.app/assetsb28459657967b741^d97b91657967b741^---0#0#0#-19%DVTDocumentLocation2@138"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/assets/0000000000000000^837"CpResource Game/assets build/Release-iphonesimulator/Game.app/assets    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/assets /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app36"77314270-2719-41A9-8EA8-A7B30B87E276-
 
 CGenerateDSYMFile /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app.dSYM /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/Game
-s391946992.706130
-e391946993.250029
+s392657256.638768
+e392657257.136563
 r1
 xGenerateDSYMFile
 x/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app.dSYM
 x/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/Game
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection128"Generate /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app.dSYM7fdeb4f0a25cb741^c90040f1a25cb741^---0#0#0#-19%DVTDocumentLocation2@135"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app.dSYM000000000080d041^775"GenerateDSYMFile build/Release-iphonesimulator/Game.app.dSYM build/Release-iphonesimulator/Game.app/Game    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/Game -o /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app.dSYM36"4625A5A9-75C6-4B85-B841-B03274892C30-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection128"Generate /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app.dSYMa4c3a3687967b741^1ff622697967b741^---0#0#0#-19%DVTDocumentLocation2@136"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app.dSYM/0000000000000000^775"GenerateDSYMFile build/Release-iphonesimulator/Game.app.dSYM build/Release-iphonesimulator/Game.app/Game    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/dsymutil /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/Game -o /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app.dSYM36"BF5111A1-8A07-4C0A-982A-31664D88ED62-
 
 CLd /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/Game normal i386
-s391946988.792477
-e391946992.698972
+s392657253.759321
+e392657256.631667
 r1
 xLd
 x/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/Game
 xnormal
 xi386
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection124"Link /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/Gamed2fbcaeca25cb741^3128b3f0a25cb741^---0#0#0#--1628"Ld build/Release-iphonesimulator/Game.app/Game normal i386    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios    setenv IPHONEOS_DEPLOYMENT_TARGET 5    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -L/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator -L/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/lib/i386 -F/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator -filelist /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Objects-normal/i386/Game.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -lstd -lregexp -lzlib -lnme -lcurl_ssl -lpng -ljpeg -lApplicationMain -Xlinker -no_implicit_dylibs -mios-simulator-version-min=5 -framework UIKit -framework OpenAL -framework OpenGLES -framework QuartzCore -framework CoreAudio -framework CoreGraphics -framework AudioToolbox -framework AVFoundation -framework Foundation -o /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/Game36"42B144F8-9E51-4E80-9C39-76820F4F8436-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection124"Link /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/Game3cc1c2657967b741^74b5a1687967b741^---0#0#0#--1628"Ld build/Release-iphonesimulator/Game.app/Game normal i386    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios    setenv IPHONEOS_DEPLOYMENT_TARGET 5    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch i386 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -L/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator -L/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/lib/i386 -F/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator -filelist /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Objects-normal/i386/Game.LinkFileList -Xlinker -objc_abi_version -Xlinker 2 -lstd -lregexp -lzlib -lnme -lcurl_ssl -lpng -ljpeg -lApplicationMain -Xlinker -no_implicit_dylibs -mios-simulator-version-min=5 -framework UIKit -framework OpenAL -framework OpenGLES -framework QuartzCore -framework CoreAudio -framework CoreGraphics -framework AudioToolbox -framework AVFoundation -framework Foundation -o /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/Game36"3303E2E7-9A5A-4A4D-AB07-D695584A2A36-
 
 CProcessInfoPlistFile /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/Info.plist Game/Game-Info.plist
-s391946988.385182
-e391946988.451557
+s392657253.335258
+e392657253.340866
 r1
 xProcessInfoPlistFile
 x/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/Info.plist
 xGame/Game-Info.plist
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection28"Process Game/Game-Info.plistf2b662eca25cb741^c3b873eca25cb741^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/Game-Info.plist0000000000000000^795"ProcessInfoPlistFile build/Release-iphonesimulator/Game.app/Info.plist Game/Game-Info.plist    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    builtin-infoPlistUtility Game/Game-Info.plist -genpkginfo /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/Info.plist36"A57174C9-F82A-4684-A3A7-7E8FBD4A383E-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection28"Process Game/Game-Info.plist99f255657967b741^d94357657967b741^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/Game-Info.plist0000000000000000^795"ProcessInfoPlistFile build/Release-iphonesimulator/Game.app/Info.plist Game/Game-Info.plist    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    builtin-infoPlistUtility Game/Game-Info.plist -genpkginfo /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app/Info.plist36"AE8F9984-5D44-47DC-930A-38D3AE32237E-
 
 CProcessPCH++ /var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Game-Prefix-eyhfhisqsdlrxeeqkjlknrnvclgg/Game-Prefix.pch.pth Game/Game-Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s391946988.668657
-e391946988.734768
+s392657253.576704
+e392657253.702670
 r1
 xProcessPCH++
 x/var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Game-Prefix-eyhfhisqsdlrxeeqkjlknrnvclgg/Game-Prefix.pch.pth
@@ -200,13 +200,13 @@ xnormal
 xi386
 xc++
 xcom.apple.compilers.llvm.clang.1_0.compiler
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Precompile Game/Game-Prefix.pch5951abeca25cb741^6118bceca25cb741^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/Game-Prefix.pch0000000000000000^3716"ProcessPCH++ /var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Game-Prefix-eyhfhisqsdlrxeeqkjlknrnvclgg/Game-Prefix.pch.pth Game/Game-Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch i386 -fmessage-length=0 -std=gnu++11 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -mios-simulator-version-min=5 -iquote /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Game-generated-files.hmap -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Game-own-target-headers.hmap -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Game-all-target-headers.hmap -iquote /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Game-project-headers.hmap -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/DerivedSources/i386 -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/DerivedSources -F/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator -DNS_BLOCK_ASSERTIONS=1 --serialize-diagnostics /var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Game-Prefix-eyhfhisqsdlrxeeqkjlknrnvclgg/Game-Prefix.pch.dia -c /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/Game-Prefix.pch -o /var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Game-Prefix-eyhfhisqsdlrxeeqkjlknrnvclgg/Game-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Game-Prefix-eyhfhisqsdlrxeeqkjlknrnvclgg/Game-Prefix.pch.d36"EDF6120D-4D9D-47BB-9992-D145224886C3-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection31"Precompile Game/Game-Prefix.pch3fc793657967b741^cee0b3657967b741^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/Game-Prefix.pch0000000000000000^3716"ProcessPCH++ /var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Game-Prefix-eyhfhisqsdlrxeeqkjlknrnvclgg/Game-Prefix.pch.pth Game/Game-Prefix.pch normal i386 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios    setenv LANG en_US.US-ASCII    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++-header -arch i386 -fmessage-length=0 -std=gnu++11 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wreturn-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wno-empty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator6.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -fvisibility=hidden -fvisibility-inlines-hidden -Wno-sign-conversion -mios-simulator-version-min=5 -iquote /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Game-generated-files.hmap -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Game-own-target-headers.hmap -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Game-all-target-headers.hmap -iquote /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/Game-project-headers.hmap -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/DerivedSources/i386 -I/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Game.build/Release-iphonesimulator/Game.build/DerivedSources -F/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator -DNS_BLOCK_ASSERTIONS=1 --serialize-diagnostics /var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Game-Prefix-eyhfhisqsdlrxeeqkjlknrnvclgg/Game-Prefix.pch.dia -c /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/Game/Game-Prefix.pch -o /var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Game-Prefix-eyhfhisqsdlrxeeqkjlknrnvclgg/Game-Prefix.pch.pth -MMD -MT dependencies -MF /var/folders/7t/11175x7539jblbk2brj88r5h0000gn/C/com.apple.Xcode.501/SharedPrecompiledHeaders/Game-Prefix-eyhfhisqsdlrxeeqkjlknrnvclgg/Game-Prefix.pch.d36"E036B62A-F49B-4586-B705-264D34349014-
 
 CTouch /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app
-s391946993.258646
-e391946993.267766
+s392657257.145139
+e392657257.154801
 r1
 xTouch
 x/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app
-lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Touch /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app766e42f1a25cb741^658b44f1a25cb741^---0#0#0#--509"Touch build/Release-iphonesimulator/Game.app    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    /usr/bin/touch -c /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app36"2D459DA4-E600-45A5-805A-0BB3E7A2FA53-
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Touch /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app8d5e25697967b741^73a027697967b741^---0#0#0#--509"Touch build/Release-iphonesimulator/Game.app    cd /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Applications/acquia-drupal/drush"    /usr/bin/touch -c /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/ios/build/Release-iphonesimulator/Game.app36"B0F78732-3308-44C9-912E-26EFFE1BB2CC-
 

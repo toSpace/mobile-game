@@ -40,8 +40,14 @@ class Assets {
 		
 		if (!initialized) {
 			
-			resourceNames.set ("assets/mobile-1x/General/Enemies/empty.md", "assets_mobile_1x_general_enemies_empty_md");
-			resourceTypes.set ("assets/mobile-1x/General/Enemies/empty.md", "text");
+			resourceNames.set ("assets/mobile-1x/button.png", "assets_mobile_1x_button_png");
+			resourceTypes.set ("assets/mobile-1x/button.png", "image");
+			resourceNames.set ("assets/mobile-1x/button2.png", "assets_mobile_1x_button2_png");
+			resourceTypes.set ("assets/mobile-1x/button2.png", "image");
+			resourceNames.set ("assets/mobile-1x/General/Enemies/walking-sparrow.xml", "assets_mobile_1x_general_enemies_walking_sparrow_xml");
+			resourceTypes.set ("assets/mobile-1x/General/Enemies/walking-sparrow.xml", "text");
+			resourceNames.set ("assets/mobile-1x/General/Enemies/walking.png", "assets_mobile_1x_general_enemies_walking_png");
+			resourceTypes.set ("assets/mobile-1x/General/Enemies/walking.png", "image");
 			resourceNames.set ("assets/mobile-1x/General/Environment/Background/empty.md", "assets_mobile_1x_general_environment_background_empty_md");
 			resourceTypes.set ("assets/mobile-1x/General/Environment/Background/empty.md", "text");
 			resourceNames.set ("assets/mobile-1x/General/Environment/Foreground/empty.md", "assets_mobile_1x_general_environment_foreground_empty_md");
@@ -70,6 +76,16 @@ class Assets {
 			resourceTypes.set ("assets/mobile-1x/test1.png", "image");
 			resourceNames.set ("assets/mobile-1x/test2.png", "assets_mobile_1x_test2_png");
 			resourceTypes.set ("assets/mobile-1x/test2.png", "image");
+			resourceNames.set ("assets/mobile-1x/test3bg.png", "assets_mobile_1x_test3bg_png");
+			resourceTypes.set ("assets/mobile-1x/test3bg.png", "image");
+			resourceNames.set ("assets/mobile-1x/walking-sparrow.xml", "assets_mobile_1x_walking_sparrow_xml");
+			resourceTypes.set ("assets/mobile-1x/walking-sparrow.xml", "text");
+			resourceNames.set ("assets/mobile-1x/walking.png", "assets_mobile_1x_walking_png");
+			resourceTypes.set ("assets/mobile-1x/walking.png", "image");
+			resourceNames.set ("assets/mobile-2x/button.png", "assets_mobile_2x_button_png");
+			resourceTypes.set ("assets/mobile-2x/button.png", "image");
+			resourceNames.set ("assets/mobile-2x/button2.png", "assets_mobile_2x_button2_png");
+			resourceTypes.set ("assets/mobile-2x/button2.png", "image");
 			resourceNames.set ("assets/mobile-2x/General/Enemies/empty.md", "assets_mobile_2x_general_enemies_empty_md");
 			resourceTypes.set ("assets/mobile-2x/General/Enemies/empty.md", "text");
 			resourceNames.set ("assets/mobile-2x/General/Environment/Background/empty.md", "assets_mobile_2x_general_environment_background_empty_md");
@@ -96,10 +112,18 @@ class Assets {
 			resourceTypes.set ("assets/mobile-2x/Specific/Level3/Environment/Background/empty.md", "text");
 			resourceNames.set ("assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md", "assets_mobile_2x_specific_level3_environment_foreground_empty_md");
 			resourceTypes.set ("assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md", "text");
-			resourceNames.set ("assets/source/bg.xml", "assets_source_bg_xml");
-			resourceTypes.set ("assets/source/bg.xml", "text");
-			resourceNames.set ("assets/source/General/Enemies/empty.md", "assets_source_general_enemies_empty_md");
-			resourceTypes.set ("assets/source/General/Enemies/empty.md", "text");
+			resourceNames.set ("assets/mobile-2x/test1.png", "assets_mobile_2x_test1_png");
+			resourceTypes.set ("assets/mobile-2x/test1.png", "image");
+			resourceNames.set ("assets/mobile-2x/test2.png", "assets_mobile_2x_test2_png");
+			resourceTypes.set ("assets/mobile-2x/test2.png", "image");
+			resourceNames.set ("assets/mobile-2x/test3bg.png", "assets_mobile_2x_test3bg_png");
+			resourceTypes.set ("assets/mobile-2x/test3bg.png", "image");
+			resourceNames.set ("assets/mobile-2x/walking-sparrow.xml", "assets_mobile_2x_walking_sparrow_xml");
+			resourceTypes.set ("assets/mobile-2x/walking-sparrow.xml", "text");
+			resourceNames.set ("assets/mobile-2x/walking.png", "assets_mobile_2x_walking_png");
+			resourceTypes.set ("assets/mobile-2x/walking.png", "image");
+			resourceNames.set ("assets/source/General/Enemies/walking.xml", "assets_source_general_enemies_walking_xml");
+			resourceTypes.set ("assets/source/General/Enemies/walking.xml", "text");
 			resourceNames.set ("assets/source/General/Environment/Background/empty.md", "assets_source_general_environment_background_empty_md");
 			resourceTypes.set ("assets/source/General/Environment/Background/empty.md", "text");
 			resourceNames.set ("assets/source/General/Environment/Foreground/empty.md", "assets_source_general_environment_foreground_empty_md");
@@ -140,10 +164,8 @@ class Assets {
 			resourceTypes.set ("assets/source/Specific/Level3/Sound/Effects/empty.md", "text");
 			resourceNames.set ("assets/source/Specific/Level3/Sound/Music/empty.md", "assets_source_specific_level3_sound_music_empty_md");
 			resourceTypes.set ("assets/source/Specific/Level3/Sound/Music/empty.md", "text");
-			resourceNames.set ("assets/source/test.xml", "assets_source_test_xml");
-			resourceTypes.set ("assets/source/test.xml", "text");
-			resourceNames.set ("assets/source/test2.xml", "assets_source_test2_xml");
-			resourceTypes.set ("assets/source/test2.xml", "text");
+			resourceNames.set ("assets/source/walking.xml", "assets_source_walking_xml");
+			resourceTypes.set ("assets/source/walking.xml", "text");
 			resourceNames.set ("assets/tablet-1x/General/Enemies/empty.md", "assets_tablet_1x_general_enemies_empty_md");
 			resourceTypes.set ("assets/tablet-1x/General/Enemies/empty.md", "text");
 			resourceNames.set ("assets/tablet-1x/General/Environment/Background/empty.md", "assets_tablet_1x_general_environment_background_empty_md");
@@ -196,6 +218,16 @@ class Assets {
 			resourceTypes.set ("assets/tablet-2x/Specific/Level3/Environment/Background/empty.md", "text");
 			resourceNames.set ("assets/tablet-2x/Specific/Level3/Environment/Foreground/empty.md", "assets_tablet_2x_specific_level3_environment_foreground_empty_md");
 			resourceTypes.set ("assets/tablet-2x/Specific/Level3/Environment/Foreground/empty.md", "text");
+			resourceNames.set ("assets/xml/bg.xml", "assets_xml_bg_xml");
+			resourceTypes.set ("assets/xml/bg.xml", "text");
+			resourceNames.set ("assets/xml/settings.xml", "assets_xml_settings_xml");
+			resourceTypes.set ("assets/xml/settings.xml", "text");
+			resourceNames.set ("assets/xml/test.xml", "assets_xml_test_xml");
+			resourceTypes.set ("assets/xml/test.xml", "text");
+			resourceNames.set ("assets/xml/test2.xml", "assets_xml_test2_xml");
+			resourceTypes.set ("assets/xml/test2.xml", "text");
+			resourceNames.set ("assets/xml/walking.xml", "assets_xml_walking_xml");
+			resourceTypes.set ("assets/xml/walking.xml", "text");
 			
 			
 			initialized = true;

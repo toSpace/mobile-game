@@ -22,6 +22,7 @@ class DrawObject extends GameObject{
     var drawing:Bool = false;
     var drawingCanvas:Sprite;
     var physicType:String;
+    var mass:Float = -1;
 
 	public function new(xmlUrl:Dynamic):Void{
         if(Std.is(xmlUrl, String)){
@@ -48,6 +49,7 @@ class DrawObject extends GameObject{
         xml = p;
 
         //make physics object
+        mass = 0;
         physicsObject(physics);
 
         //add to render manager
@@ -61,6 +63,9 @@ class DrawObject extends GameObject{
 	}
 
 	public function convert(bodyT:String, x:Float, y:Float, rotation:Float):Void{
+
+        //save mass
+        if(body != null) { mass = body.mass; }
 
 		//create iso
         var objIso:BitmapDataIso = new BitmapDataIso(asset.bitmapData);
@@ -86,6 +91,11 @@ class DrawObject extends GameObject{
 
         //add to space
         body.space = space;
+
+        //measure change in mass
+        if(mass >= 0) { 
+            Main.activeLevel.addToNightmare( Math.abs(body.mass - mass) ); 
+        }
 
 	}
 
@@ -141,6 +151,7 @@ class DrawObject extends GameObject{
         drawingCanvas.graphics.moveTo(point.x, point.y);
         
         Main.canvas.addChild(drawingCanvas);
+
     }
 
     private function stopDrawing():Void{

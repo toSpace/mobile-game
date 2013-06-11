@@ -83,6 +83,10 @@ class Assets {
 			resourceTypes.set ("assets/mobile-1x/walking-sparrow.xml", "text");
 			resourceClasses.set ("assets/mobile-1x/walking.png", NME_assets_mobile_1x_walking_png);
 			resourceTypes.set ("assets/mobile-1x/walking.png", "image");
+			resourceClasses.set ("assets/mobile-2x/button.png", NME_assets_mobile_2x_button_png);
+			resourceTypes.set ("assets/mobile-2x/button.png", "image");
+			resourceClasses.set ("assets/mobile-2x/button2.png", NME_assets_mobile_2x_button2_png);
+			resourceTypes.set ("assets/mobile-2x/button2.png", "image");
 			resourceClasses.set ("assets/mobile-2x/General/Enemies/empty.md", NME_assets_mobile_2x_general_enemies_empty_md);
 			resourceTypes.set ("assets/mobile-2x/General/Enemies/empty.md", "text");
 			resourceClasses.set ("assets/mobile-2x/General/Environment/Background/empty.md", NME_assets_mobile_2x_general_environment_background_empty_md);
@@ -109,6 +113,16 @@ class Assets {
 			resourceTypes.set ("assets/mobile-2x/Specific/Level3/Environment/Background/empty.md", "text");
 			resourceClasses.set ("assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md", NME_assets_mobile_2x_specific_level3_environment_foreground_empty_md);
 			resourceTypes.set ("assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md", "text");
+			resourceClasses.set ("assets/mobile-2x/test1.png", NME_assets_mobile_2x_test1_png);
+			resourceTypes.set ("assets/mobile-2x/test1.png", "image");
+			resourceClasses.set ("assets/mobile-2x/test2.png", NME_assets_mobile_2x_test2_png);
+			resourceTypes.set ("assets/mobile-2x/test2.png", "image");
+			resourceClasses.set ("assets/mobile-2x/test3bg.png", NME_assets_mobile_2x_test3bg_png);
+			resourceTypes.set ("assets/mobile-2x/test3bg.png", "image");
+			resourceClasses.set ("assets/mobile-2x/walking-sparrow.xml", NME_assets_mobile_2x_walking_sparrow_xml);
+			resourceTypes.set ("assets/mobile-2x/walking-sparrow.xml", "text");
+			resourceClasses.set ("assets/mobile-2x/walking.png", NME_assets_mobile_2x_walking_png);
+			resourceTypes.set ("assets/mobile-2x/walking.png", "image");
 			resourceClasses.set ("assets/source/General/Enemies/walking.xml", NME_assets_source_general_enemies_walking_xml);
 			resourceTypes.set ("assets/source/General/Enemies/walking.xml", "text");
 			resourceClasses.set ("assets/source/General/Environment/Background/empty.md", NME_assets_source_general_environment_background_empty_md);

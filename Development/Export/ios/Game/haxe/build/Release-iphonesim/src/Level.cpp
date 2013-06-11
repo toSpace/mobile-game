@@ -3,6 +3,9 @@
 #ifndef INCLUDED_Camera
 #include <Camera.h>
 #endif
+#ifndef INCLUDED_DrawButton
+#include <DrawButton.h>
+#endif
 #ifndef INCLUDED_Garbage
 #include <Garbage.h>
 #endif
@@ -17,6 +20,9 @@
 #endif
 #ifndef INCLUDED_Type
 #include <Type.h>
+#endif
+#ifndef INCLUDED_UIobject
+#include <UIobject.h>
 #endif
 #ifndef INCLUDED_native_display_DisplayObject
 #include <native/display/DisplayObject.h>
@@ -58,7 +64,9 @@ HX_STACK_PUSH("Level::new","Level.hx",10);
 	::RenderManager_obj::add(hx::ObjectPtr<OBJ_>(this));
 	HX_STACK_LINE(25)
 	::Camera_obj::reload();
-	HX_STACK_LINE(27)
+	HX_STACK_LINE(28)
+	::DrawButton drawingButton = ::DrawButton_obj::__new();		HX_STACK_VAR(drawingButton,"drawingButton");
+	HX_STACK_LINE(30)
 	::Main_obj::activeLevel = hx::ObjectPtr<OBJ_>(this);
 }
 ;
@@ -80,7 +88,7 @@ Dynamic Level_obj::__Create(hx::DynamicArray inArgs)
 
 Void Level_obj::render( ){
 {
-		HX_STACK_PUSH("Level::render","Level.hx",46);
+		HX_STACK_PUSH("Level::render","Level.hx",49);
 		HX_STACK_THIS(this);
 	}
 return null();
@@ -91,7 +99,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Level_obj,render,(void))
 
 Void Level_obj::loadLevel( ){
 {
-		HX_STACK_PUSH("Level::loadLevel","Level.hx",45);
+		HX_STACK_PUSH("Level::loadLevel","Level.hx",48);
 		HX_STACK_THIS(this);
 	}
 return null();
@@ -102,7 +110,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Level_obj,loadLevel,(void))
 
 Void Level_obj::addToNightmare( int point){
 {
-		HX_STACK_PUSH("Level::addToNightmare","Level.hx",43);
+		HX_STACK_PUSH("Level::addToNightmare","Level.hx",46);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(point,"point");
 	}
@@ -114,9 +122,9 @@ HX_DEFINE_DYNAMIC_FUNC1(Level_obj,addToNightmare,(void))
 
 Void Level_obj::start( ){
 {
-		HX_STACK_PUSH("Level::start","Level.hx",38);
+		HX_STACK_PUSH("Level::start","Level.hx",41);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(38)
+		HX_STACK_LINE(41)
 		::RenderManager_obj::start();
 	}
 return null();
@@ -127,16 +135,16 @@ HX_DEFINE_DYNAMIC_FUNC0(Level_obj,start,(void))
 
 Void Level_obj::clear( ){
 {
-		HX_STACK_PUSH("Level::clear","Level.hx",31);
+		HX_STACK_PUSH("Level::clear","Level.hx",34);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(33)
+		HX_STACK_LINE(36)
 		int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
 		int _g = (::Main_obj::canvas->get_numChildren() - (int)1);		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(33)
+		HX_STACK_LINE(36)
 		while(((_g1 < _g))){
-			HX_STACK_LINE(33)
+			HX_STACK_LINE(36)
 			int nr = (_g1)++;		HX_STACK_VAR(nr,"nr");
-			HX_STACK_LINE(34)
+			HX_STACK_LINE(37)
 			::Main_obj::canvas->removeChildAt(nr);
 		}
 	}

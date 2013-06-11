@@ -13,5 +13,6 @@ nme
 nme_install_tool
 simulator
 sys
+tilelayer
 true
 /usr/lib/haxe/lib/hxcpp/3,0,0/

@@ -3,6 +3,9 @@ import World1Level1;
 
 class Level{
 
+	public var nightmare:Float = 0;
+	public var nightmareTolerance = 100;
+
 	static public function load(level:String):Dynamic{
 		return Type.createInstance(Type.resolveClass(level),[]);
 	}
@@ -29,6 +32,9 @@ class Level{
 
 		Main.activeLevel = this;
 
+		//reset nightmare after been loaded
+		resetNightmare();
+
 	}
 
 	public function clear():Void{
@@ -43,7 +49,19 @@ class Level{
 		RenderManager.start();
 	}
 
-	public function addToNightmare(point:Int):Void{}
+	public function addToNightmare(point:Float):Void{
+		nightmare += point;
+
+		trace( getNightmare() );
+	}
+
+	public function getNightmare():Float{
+		return nightmare / nightmareTolerance;
+	}
+
+	public function resetNightmare():Void{
+		nightmare = 0;
+	}
 
 	public function loadLevel():Void{}
 	public function render():Void{}

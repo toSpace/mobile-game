@@ -1,0 +1,16 @@
+<asset>
+
+	<name>Test</name>
+	<img>test1.png</img>
+	<pos x="50" y="0" rotation="0"></pos>
+	<physics>static</physics>
+
+	<material
+		elasticity = "0"
+		dynamicFriction = "0"
+		staticFriction = "2"
+		density = "1"
+		rollingFriction = "0.001"
+	></material>
+
+</asset>

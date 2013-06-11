@@ -9,6 +9,7 @@ HX_DECLARE_CLASS0(GameObject)
 HX_DECLARE_CLASS0(Hash)
 HX_DECLARE_CLASS2(nape,phys,Body)
 HX_DECLARE_CLASS2(nape,phys,Interactor)
+HX_DECLARE_CLASS2(nape,phys,Material)
 HX_DECLARE_CLASS2(nape,space,Space)
 HX_DECLARE_CLASS2(native,display,Bitmap)
 HX_DECLARE_CLASS2(native,display,DisplayObject)
@@ -46,6 +47,9 @@ class GameObject_obj : public hx::Object{
 		virtual Void hide( );
 		Dynamic hide_dyn();
 
+		virtual bool inView( );
+		Dynamic inView_dyn();
+
 		virtual Void remove( );
 		Dynamic remove_dyn();
 
@@ -54,6 +58,9 @@ class GameObject_obj : public hx::Object{
 
 		virtual Void render( );
 		Dynamic render_dyn();
+
+		virtual ::nape::phys::Material makeMaterial( );
+		Dynamic makeMaterial_dyn();
 
 		virtual Void physicsObject( ::String physic);
 		Dynamic physicsObject_dyn();

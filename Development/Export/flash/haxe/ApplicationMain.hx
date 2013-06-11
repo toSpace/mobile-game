@@ -202,6 +202,16 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/mobile-1x/walking.png");
          
 		
+		if (inName=="assets/mobile-2x/button.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-2x/button.png");
+         
+		
+		if (inName=="assets/mobile-2x/button2.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-2x/button2.png");
+         
+		
 		if (inName=="assets/mobile-2x/General/Enemies/empty.md")
 			 
 			 return Assets.getText ("assets/mobile-2x/General/Enemies/empty.md");
@@ -265,6 +275,31 @@ class ApplicationMain {
 		if (inName=="assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md")
 			 
 			 return Assets.getText ("assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md");
+         
+		
+		if (inName=="assets/mobile-2x/test1.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-2x/test1.png");
+         
+		
+		if (inName=="assets/mobile-2x/test2.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-2x/test2.png");
+         
+		
+		if (inName=="assets/mobile-2x/test3bg.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-2x/test3bg.png");
+         
+		
+		if (inName=="assets/mobile-2x/walking-sparrow.xml")
+			 
+			 return Assets.getText ("assets/mobile-2x/walking-sparrow.xml");
+         
+		
+		if (inName=="assets/mobile-2x/walking.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-2x/walking.png");
          
 		
 		if (inName=="assets/source/General/Enemies/walking.xml")
@@ -572,6 +607,8 @@ class NME_assets_mobile_1x_test2_png extends nme.display.BitmapData { public fun
 class NME_assets_mobile_1x_test3bg_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_1x_walking_sparrow_xml extends nme.utils.ByteArray { }
 class NME_assets_mobile_1x_walking_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_2x_button_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_2x_button2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_2x_general_enemies_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_2x_general_environment_background_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_2x_general_environment_foreground_empty_md extends nme.utils.ByteArray { }
@@ -585,6 +622,11 @@ class NME_assets_mobile_2x_specific_level2_environment_foreground_empty_md exten
 class NME_assets_mobile_2x_specific_level3_enemies_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_2x_specific_level3_environment_background_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_2x_specific_level3_environment_foreground_empty_md extends nme.utils.ByteArray { }
+class NME_assets_mobile_2x_test1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_2x_test2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_2x_test3bg_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_2x_walking_sparrow_xml extends nme.utils.ByteArray { }
+class NME_assets_mobile_2x_walking_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_source_general_enemies_walking_xml extends nme.utils.ByteArray { }
 class NME_assets_source_general_environment_background_empty_md extends nme.utils.ByteArray { }
 class NME_assets_source_general_environment_foreground_empty_md extends nme.utils.ByteArray { }
