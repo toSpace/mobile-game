@@ -1,3 +1,6 @@
+//nme
+import nme.feedback.Haptic;
+
 //importing all levels
 import World1Level1;
 
@@ -49,6 +52,7 @@ class Level{
 		RenderManager.start();
 	}
 
+	//nightmare
 	public function addToNightmare(point:Float):Void{
 		nightmare += point;
 
@@ -61,6 +65,10 @@ class Level{
 
 	public function resetNightmare():Void{
 		nightmare = 0;
+	}
+
+	public function snort():Void{
+		
 	}
 
 	public function loadLevel():Void{}
