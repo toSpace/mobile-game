@@ -124,7 +124,8 @@ class GameObject {
 			toReturn = true;
 		}
 
-		return toReturn;
+		// return toReturn;
+		return true;
 	}
 
 	public function hide():Void{
