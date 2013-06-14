@@ -142,9 +142,49 @@ class ApplicationMain {
 			 return Assets.getText ("assets/mobile-1x/Specific/Level1/Environment/Background/empty.md");
          
 		
-		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/empty.md")
+		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/FG1.psd")
 			 
-			 return Assets.getText ("assets/mobile-1x/Specific/Level1/Environment/Foreground/empty.md");
+            return Assets.getBytes ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/FG1.psd");
+         
+		
+		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_1.gif")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_1.gif");
+         
+		
+		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_2.gif")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_2.gif");
+         
+		
+		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_3.gif")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_3.gif");
+         
+		
+		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_4.gif")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_4.gif");
+         
+		
+		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_5.gif")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_5.gif");
+         
+		
+		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_6.gif")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_6.gif");
+         
+		
+		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_7.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_7.png");
+         
+		
+		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_8.gif")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_8.gif");
          
 		
 		if (inName=="assets/mobile-1x/Specific/Level2/Enemies/empty.md")
@@ -307,9 +347,34 @@ class ApplicationMain {
 			 return Assets.getText ("assets/source/General/Enemies/walking.xml");
          
 		
-		if (inName=="assets/source/General/Environment/Background/empty.md")
+		if (inName=="assets/source/General/Environment/Background/fog_large.png")
 			 
-			 return Assets.getText ("assets/source/General/Environment/Background/empty.md");
+            return Assets.getBitmapData ("assets/source/General/Environment/Background/fog_large.png");
+         
+		
+		if (inName=="assets/source/General/Environment/Background/fog_large.psd")
+			 
+            return Assets.getBytes ("assets/source/General/Environment/Background/fog_large.psd");
+         
+		
+		if (inName=="assets/source/General/Environment/Background/fog_medium.png")
+			 
+            return Assets.getBitmapData ("assets/source/General/Environment/Background/fog_medium.png");
+         
+		
+		if (inName=="assets/source/General/Environment/Background/fog_medium.psd")
+			 
+            return Assets.getBytes ("assets/source/General/Environment/Background/fog_medium.psd");
+         
+		
+		if (inName=="assets/source/General/Environment/Background/fog_small.png")
+			 
+            return Assets.getBitmapData ("assets/source/General/Environment/Background/fog_small.png");
+         
+		
+		if (inName=="assets/source/General/Environment/Background/fog_small.psd")
+			 
+            return Assets.getBytes ("assets/source/General/Environment/Background/fog_small.psd");
          
 		
 		if (inName=="assets/source/General/Environment/Foreground/empty.md")
@@ -332,19 +397,469 @@ class ApplicationMain {
 			 return Assets.getText ("assets/source/General/Worldmap/empty.md");
          
 		
-		if (inName=="assets/source/Specific/Level1/Enemies/empty.md")
+		if (inName=="assets/source/Specific/Level1/Characters/Enemies/empty.md")
 			 
-			 return Assets.getText ("assets/source/Specific/Level1/Enemies/empty.md");
+			 return Assets.getText ("assets/source/Specific/Level1/Characters/Enemies/empty.md");
          
 		
-		if (inName=="assets/source/Specific/Level1/Environment/Background/empty.md")
+		if (inName=="assets/source/Specific/Level1/Characters/Player/Kutje.png")
 			 
-			 return Assets.getText ("assets/source/Specific/Level1/Environment/Background/empty.md");
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Characters/Player/Kutje.png");
          
 		
-		if (inName=="assets/source/Specific/Level1/Environment/Foreground/empty.md")
+		if (inName=="assets/source/Specific/Level1/Characters/Player/Kutje.psd")
 			 
-			 return Assets.getText ("assets/source/Specific/Level1/Environment/Foreground/empty.md");
+            return Assets.getBytes ("assets/source/Specific/Level1/Characters/Player/Kutje.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG1/hills/hill1.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG1/hills/hill1.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG1/hills/hill1.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG1/hills/hill1.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG1/hills/hill2.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG1/hills/hill2.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG1/hills/hill2.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG1/hills/hill2.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG1/hills/hill3.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG1/hills/hill3.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG1/hills/hill3.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG1/hills/hill3.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG1/hills/hill4.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG1/hills/hill4.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG1/hills/hill4.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG1/hills/hill4.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG2/trees/tree1.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG2/trees/tree1.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG2/trees/tree1.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG2/trees/tree1.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG2/trees/tree2.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG2/trees/tree2.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG2/trees/tree2.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG2/trees/tree2.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG2/trees/tree3.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG2/trees/tree3.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG2/trees/tree3.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG2/trees/tree3.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG2/trees/tree4.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG2/trees/tree4.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG2/trees/tree4.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG2/trees/tree4.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree1.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree1.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree1.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree1.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree10.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree10.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree10.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree10.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree2.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree2.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree2.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree2.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree3.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree3.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree3.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree3.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree4.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree4.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree4.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree4.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree5.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree5.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree5.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree5.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree6.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree6.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree6.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree6.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree7.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree7.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree7.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree7.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree8.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree8.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree8.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree8.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree9.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree9.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG3/trees/tree9.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG3/trees/tree9.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG4/hills/hill1.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG4/hills/hill1.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG4/hills/hill1.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG4/hills/hill1.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG4/hills/hill2.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG4/hills/hill2.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG4/hills/hill2.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG4/hills/hill2.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG4/hills/hill3.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG4/hills/hill3.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG4/hills/hill3.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG4/hills/hill3.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG4/trees/tree1.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG4/trees/tree1.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG4/trees/tree1.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG4/trees/tree1.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG4/trees/tree2.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG4/trees/tree2.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG4/trees/tree2.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG4/trees/tree2.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG4/trees/tree3.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG4/trees/tree3.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG4/trees/tree3.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG4/trees/tree3.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG4/trees/tree4.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG4/trees/tree4.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG4/trees/tree4.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG4/trees/tree4.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG4/trees/tree5.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG4/trees/tree5.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG4/trees/tree5.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG4/trees/tree5.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG4/trees/tree6.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG4/trees/tree6.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG4/trees/tree6.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG4/trees/tree6.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG5/trees/tree1.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG5/trees/tree1.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG5/trees/tree1.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG5/trees/tree1.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG5/trees/tree2.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG5/trees/tree2.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG5/trees/tree2.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG5/trees/tree2.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG5/trees/tree3.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG5/trees/tree3.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG5/trees/tree3.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG5/trees/tree3.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG5/trees/tree4.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG5/trees/tree4.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG5/trees/tree4.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG5/trees/tree4.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG5/trees/tree5.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG5/trees/tree5.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG5/trees/tree5.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG5/trees/tree5.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG6/background.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG6/background.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG6/background.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG6/background.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG6/background02.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG6/background02.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG6/star.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG6/star.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG6/star.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG6/star.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG6/sun.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Background/BG6/sun.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Background/BG6/sun.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Background/BG6/sun.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/FG1.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Foreground/FG1/FG1.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_1.gif")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_1.gif");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_2.gif")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_2.gif");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_3.gif")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_3.gif");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_4.gif")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_4.gif");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_5.gif")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_5.gif");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_6.gif")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_6.gif");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_7.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_7.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_8.gif")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_8.gif");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG2/trees/tree1.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG2/trees/tree1.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG2/trees/tree1.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Foreground/FG2/trees/tree1.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG2/trees/tree2.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG2/trees/tree2.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG2/trees/tree2.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Foreground/FG2/trees/tree2.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG2/trees/tree3.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG2/trees/tree3.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG2/trees/tree3.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Foreground/FG2/trees/tree3.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG2/trees/tree4.png")
+			 
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG2/trees/tree4.png");
+         
+		
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG2/trees/tree4.psd")
+			 
+            return Assets.getBytes ("assets/source/Specific/Level1/Environment/Foreground/FG2/trees/tree4.psd");
+         
+		
+		if (inName=="assets/source/Specific/Level1/level_1-forrest-jesse.ai")
+			 
+			 return Assets.getText ("assets/source/Specific/Level1/level_1-forrest-jesse.ai");
+         
+		
+		if (inName=="assets/source/Specific/Level1/level_1-forrest-jesse.pdf")
+			 
+			 return Assets.getText ("assets/source/Specific/Level1/level_1-forrest-jesse.pdf");
          
 		
 		if (inName=="assets/source/Specific/Level1/Sound/Effects/empty.md")
@@ -547,6 +1062,36 @@ class ApplicationMain {
 			 return Assets.getText ("assets/xml/bg.xml");
          
 		
+		if (inName=="assets/xml/Levels/bg.xml")
+			 
+			 return Assets.getText ("assets/xml/Levels/bg.xml");
+         
+		
+		if (inName=="assets/xml/Levels/Specific/Level1/Environment/Foreground/FG1/fg1_1.xml")
+			 
+			 return Assets.getText ("assets/xml/Levels/Specific/Level1/Environment/Foreground/FG1/fg1_1.xml");
+         
+		
+		if (inName=="assets/xml/Levels/Specific/Level1/Environment/Foreground/FG1/fg1_2.xml")
+			 
+			 return Assets.getText ("assets/xml/Levels/Specific/Level1/Environment/Foreground/FG1/fg1_2.xml");
+         
+		
+		if (inName=="assets/xml/Levels/Specific/Level1/Environment/Foreground/FG1/fg1_3.xml")
+			 
+			 return Assets.getText ("assets/xml/Levels/Specific/Level1/Environment/Foreground/FG1/fg1_3.xml");
+         
+		
+		if (inName=="assets/xml/Levels/Specific/Level1/Environment/Foreground/FG1/fg1_4.xml")
+			 
+			 return Assets.getText ("assets/xml/Levels/Specific/Level1/Environment/Foreground/FG1/fg1_4.xml");
+         
+		
+		if (inName=="assets/xml/New Text Document.txt")
+			 
+			 return Assets.getText ("assets/xml/New Text Document.txt");
+         
+		
 		if (inName=="assets/xml/settings.xml")
 			 
 			 return Assets.getText ("assets/xml/settings.xml");
@@ -595,7 +1140,15 @@ class NME_assets_mobile_1x_general_environment_foreground_empty_md extends nme.u
 class NME_assets_mobile_1x_general_worldmap_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_1x_specific_level1_enemies_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_1x_specific_level1_environment_background_empty_md extends nme.utils.ByteArray { }
-class NME_assets_mobile_1x_specific_level1_environment_foreground_empty_md extends nme.utils.ByteArray { }
+class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_psd extends nme.utils.ByteArray { }
+class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_1_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_2_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_3_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_4_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_5_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_6_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_7_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_8_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_1x_specific_level2_enemies_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_1x_specific_level2_environment_background_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_1x_specific_level2_environment_foreground_empty_md extends nme.utils.ByteArray { }
@@ -628,14 +1181,109 @@ class NME_assets_mobile_2x_test3bg_png extends nme.display.BitmapData { public f
 class NME_assets_mobile_2x_walking_sparrow_xml extends nme.utils.ByteArray { }
 class NME_assets_mobile_2x_walking_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_source_general_enemies_walking_xml extends nme.utils.ByteArray { }
-class NME_assets_source_general_environment_background_empty_md extends nme.utils.ByteArray { }
+class NME_assets_source_general_environment_background_fog_large_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_general_environment_background_fog_large_psd extends nme.utils.ByteArray { }
+class NME_assets_source_general_environment_background_fog_medium_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_general_environment_background_fog_medium_psd extends nme.utils.ByteArray { }
+class NME_assets_source_general_environment_background_fog_small_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_general_environment_background_fog_small_psd extends nme.utils.ByteArray { }
 class NME_assets_source_general_environment_foreground_empty_md extends nme.utils.ByteArray { }
 class NME_assets_source_general_sound_effects_empty_md extends nme.utils.ByteArray { }
 class NME_assets_source_general_sound_music_empty_md extends nme.utils.ByteArray { }
 class NME_assets_source_general_worldmap_empty_md extends nme.utils.ByteArray { }
-class NME_assets_source_specific_level1_enemies_empty_md extends nme.utils.ByteArray { }
-class NME_assets_source_specific_level1_environment_background_empty_md extends nme.utils.ByteArray { }
-class NME_assets_source_specific_level1_environment_foreground_empty_md extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_characters_enemies_empty_md extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_characters_player_kutje_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_characters_player_kutje_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg1_hills_hill1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg1_hills_hill1_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg1_hills_hill2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg1_hills_hill2_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg1_hills_hill3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg1_hills_hill3_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg1_hills_hill4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg1_hills_hill4_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg2_trees_tree1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg2_trees_tree1_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg2_trees_tree2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg2_trees_tree2_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg2_trees_tree3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg2_trees_tree3_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg2_trees_tree4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg2_trees_tree4_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree1_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree10_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree10_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree2_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree3_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree4_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree5_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree5_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree6_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree6_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree7_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree7_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree8_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree8_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree9_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg3_trees_tree9_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg4_hills_hill1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg4_hills_hill1_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg4_hills_hill2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg4_hills_hill2_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg4_hills_hill3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg4_hills_hill3_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg4_trees_tree1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg4_trees_tree1_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg4_trees_tree2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg4_trees_tree2_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg4_trees_tree3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg4_trees_tree3_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg4_trees_tree4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg4_trees_tree4_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg4_trees_tree5_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg4_trees_tree5_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg4_trees_tree6_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg4_trees_tree6_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg5_trees_tree1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg5_trees_tree1_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg5_trees_tree2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg5_trees_tree2_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg5_trees_tree3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg5_trees_tree3_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg5_trees_tree4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg5_trees_tree4_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg5_trees_tree5_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg5_trees_tree5_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg6_background_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg6_background_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg6_background02_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg6_star_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg6_star_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_background_bg6_sun_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_background_bg6_sun_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_1_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_2_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_3_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_4_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_5_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_6_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_7_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_8_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg2_trees_tree1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg2_trees_tree1_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_foreground_fg2_trees_tree2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg2_trees_tree2_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_foreground_fg2_trees_tree3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg2_trees_tree3_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_environment_foreground_fg2_trees_tree4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg2_trees_tree4_psd extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_level_1_forrest_jesse_ai extends nme.utils.ByteArray { }
+class NME_assets_source_specific_level1_level_1_forrest_jesse_pdf extends nme.utils.ByteArray { }
 class NME_assets_source_specific_level1_sound_effects_empty_md extends nme.utils.ByteArray { }
 class NME_assets_source_specific_level1_sound_music_empty_md extends nme.utils.ByteArray { }
 class NME_assets_source_specific_level2_enemies_empty_md extends nme.utils.ByteArray { }
@@ -676,6 +1324,12 @@ class NME_assets_tablet_2x_specific_level3_enemies_empty_md extends nme.utils.By
 class NME_assets_tablet_2x_specific_level3_environment_background_empty_md extends nme.utils.ByteArray { }
 class NME_assets_tablet_2x_specific_level3_environment_foreground_empty_md extends nme.utils.ByteArray { }
 class NME_assets_xml_bg_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_levels_bg_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_levels_specific_level1_environment_foreground_fg1_fg1_1_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_levels_specific_level1_environment_foreground_fg1_fg1_2_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_levels_specific_level1_environment_foreground_fg1_fg1_3_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_levels_specific_level1_environment_foreground_fg1_fg1_4_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_new_text_document_txt extends nme.utils.ByteArray { }
 class NME_assets_xml_settings_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_test_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_test2_xml extends nme.utils.ByteArray { }
