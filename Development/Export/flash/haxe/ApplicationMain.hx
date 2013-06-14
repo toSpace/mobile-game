@@ -147,34 +147,34 @@ class ApplicationMain {
             return Assets.getBytes ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/FG1.psd");
          
 		
-		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_1.gif")
+		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_1.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_1.gif");
+            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_1.png");
          
 		
-		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_2.gif")
+		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_2.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_2.gif");
+            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_2.png");
          
 		
-		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_3.gif")
+		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_3.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_3.gif");
+            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_3.png");
          
 		
-		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_4.gif")
+		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_4.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_4.gif");
+            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_4.png");
          
 		
-		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_5.gif")
+		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_5.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_5.gif");
+            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_5.png");
          
 		
-		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_6.gif")
+		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_6.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_6.gif");
+            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_6.png");
          
 		
 		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_7.png")
@@ -182,9 +182,9 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_7.png");
          
 		
-		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_8.gif")
+		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_8.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_8.gif");
+            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_8.png");
          
 		
 		if (inName=="assets/mobile-1x/Specific/Level2/Enemies/empty.md")
@@ -772,44 +772,44 @@ class ApplicationMain {
             return Assets.getBytes ("assets/source/Specific/Level1/Environment/Foreground/FG1/FG1.psd");
          
 		
-		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_1.gif")
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/FG1_01.png")
 			 
-            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_1.gif");
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/FG1_01.png");
          
 		
-		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_2.gif")
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/FG1_02.png")
 			 
-            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_2.gif");
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/FG1_02.png");
          
 		
-		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_3.gif")
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/FG1_03.png")
 			 
-            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_3.gif");
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/FG1_03.png");
          
 		
-		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_4.gif")
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/FG1_04.png")
 			 
-            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_4.gif");
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/FG1_04.png");
          
 		
-		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_5.gif")
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/FG1_05.png")
 			 
-            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_5.gif");
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/FG1_05.png");
          
 		
-		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_6.gif")
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/FG1_06.png")
 			 
-            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_6.gif");
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/FG1_06.png");
          
 		
-		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_7.png")
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/FG1_07.png")
 			 
-            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_7.png");
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/FG1_07.png");
          
 		
-		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_8.gif")
+		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG1/FG1_08.png")
 			 
-            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/fg1_8.gif");
+            return Assets.getBitmapData ("assets/source/Specific/Level1/Environment/Foreground/FG1/FG1_08.png");
          
 		
 		if (inName=="assets/source/Specific/Level1/Environment/Foreground/FG2/trees/tree1.png")
@@ -1062,39 +1062,34 @@ class ApplicationMain {
 			 return Assets.getText ("assets/xml/bg.xml");
          
 		
-		if (inName=="assets/xml/Levels/bg.xml")
-			 
-			 return Assets.getText ("assets/xml/Levels/bg.xml");
-         
-		
-		if (inName=="assets/xml/Levels/Specific/Level1/Environment/Foreground/FG1/fg1_1.xml")
-			 
-			 return Assets.getText ("assets/xml/Levels/Specific/Level1/Environment/Foreground/FG1/fg1_1.xml");
-         
-		
-		if (inName=="assets/xml/Levels/Specific/Level1/Environment/Foreground/FG1/fg1_2.xml")
-			 
-			 return Assets.getText ("assets/xml/Levels/Specific/Level1/Environment/Foreground/FG1/fg1_2.xml");
-         
-		
-		if (inName=="assets/xml/Levels/Specific/Level1/Environment/Foreground/FG1/fg1_3.xml")
-			 
-			 return Assets.getText ("assets/xml/Levels/Specific/Level1/Environment/Foreground/FG1/fg1_3.xml");
-         
-		
-		if (inName=="assets/xml/Levels/Specific/Level1/Environment/Foreground/FG1/fg1_4.xml")
-			 
-			 return Assets.getText ("assets/xml/Levels/Specific/Level1/Environment/Foreground/FG1/fg1_4.xml");
-         
-		
-		if (inName=="assets/xml/New Text Document.txt")
-			 
-			 return Assets.getText ("assets/xml/New Text Document.txt");
-         
-		
 		if (inName=="assets/xml/settings.xml")
 			 
 			 return Assets.getText ("assets/xml/settings.xml");
+         
+		
+		if (inName=="assets/xml/Specific/Level1/bg.xml")
+			 
+			 return Assets.getText ("assets/xml/Specific/Level1/bg.xml");
+         
+		
+		if (inName=="assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_1.xml")
+			 
+			 return Assets.getText ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_1.xml");
+         
+		
+		if (inName=="assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_2.xml")
+			 
+			 return Assets.getText ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_2.xml");
+         
+		
+		if (inName=="assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_3.xml")
+			 
+			 return Assets.getText ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_3.xml");
+         
+		
+		if (inName=="assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_4.xml")
+			 
+			 return Assets.getText ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_4.xml");
          
 		
 		if (inName=="assets/xml/test.xml")
@@ -1141,14 +1136,14 @@ class NME_assets_mobile_1x_general_worldmap_empty_md extends nme.utils.ByteArray
 class NME_assets_mobile_1x_specific_level1_enemies_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_1x_specific_level1_environment_background_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_psd extends nme.utils.ByteArray { }
-class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_1_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_2_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_3_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_4_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_5_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_6_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_5_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_6_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_7_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_8_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_8_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_1x_specific_level2_enemies_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_1x_specific_level2_environment_background_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_1x_specific_level2_environment_foreground_empty_md extends nme.utils.ByteArray { }
@@ -1266,14 +1261,14 @@ class NME_assets_source_specific_level1_environment_background_bg6_star_psd exte
 class NME_assets_source_specific_level1_environment_background_bg6_sun_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_source_specific_level1_environment_background_bg6_sun_psd extends nme.utils.ByteArray { }
 class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_psd extends nme.utils.ByteArray { }
-class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_1_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_2_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_3_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_4_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_5_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_6_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_7_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_8_gif extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_01_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_02_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_03_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_04_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_05_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_06_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_07_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_specific_level1_environment_foreground_fg1_fg1_08_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_source_specific_level1_environment_foreground_fg2_trees_tree1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_source_specific_level1_environment_foreground_fg2_trees_tree1_psd extends nme.utils.ByteArray { }
 class NME_assets_source_specific_level1_environment_foreground_fg2_trees_tree2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
@@ -1324,13 +1319,12 @@ class NME_assets_tablet_2x_specific_level3_enemies_empty_md extends nme.utils.By
 class NME_assets_tablet_2x_specific_level3_environment_background_empty_md extends nme.utils.ByteArray { }
 class NME_assets_tablet_2x_specific_level3_environment_foreground_empty_md extends nme.utils.ByteArray { }
 class NME_assets_xml_bg_xml extends nme.utils.ByteArray { }
-class NME_assets_xml_levels_bg_xml extends nme.utils.ByteArray { }
-class NME_assets_xml_levels_specific_level1_environment_foreground_fg1_fg1_1_xml extends nme.utils.ByteArray { }
-class NME_assets_xml_levels_specific_level1_environment_foreground_fg1_fg1_2_xml extends nme.utils.ByteArray { }
-class NME_assets_xml_levels_specific_level1_environment_foreground_fg1_fg1_3_xml extends nme.utils.ByteArray { }
-class NME_assets_xml_levels_specific_level1_environment_foreground_fg1_fg1_4_xml extends nme.utils.ByteArray { }
-class NME_assets_xml_new_text_document_txt extends nme.utils.ByteArray { }
 class NME_assets_xml_settings_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_specific_level1_bg_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_1_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_2_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_3_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_4_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_test_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_test2_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_walking_xml extends nme.utils.ByteArray { }
