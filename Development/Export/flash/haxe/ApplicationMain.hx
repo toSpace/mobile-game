@@ -1062,6 +1062,11 @@ class ApplicationMain {
 			 return Assets.getText ("assets/xml/bg.xml");
          
 		
+		if (inName=="assets/xml/bg2.xml")
+			 
+			 return Assets.getText ("assets/xml/bg2.xml");
+         
+		
 		if (inName=="assets/xml/settings.xml")
 			 
 			 return Assets.getText ("assets/xml/settings.xml");
@@ -1090,6 +1095,26 @@ class ApplicationMain {
 		if (inName=="assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_4.xml")
 			 
 			 return Assets.getText ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_4.xml");
+         
+		
+		if (inName=="assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_5.xml")
+			 
+			 return Assets.getText ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_5.xml");
+         
+		
+		if (inName=="assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_6.xml")
+			 
+			 return Assets.getText ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_6.xml");
+         
+		
+		if (inName=="assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_7.xml")
+			 
+			 return Assets.getText ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_7.xml");
+         
+		
+		if (inName=="assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_8.xml")
+			 
+			 return Assets.getText ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_8.xml");
          
 		
 		if (inName=="assets/xml/test.xml")
@@ -1319,12 +1344,17 @@ class NME_assets_tablet_2x_specific_level3_enemies_empty_md extends nme.utils.By
 class NME_assets_tablet_2x_specific_level3_environment_background_empty_md extends nme.utils.ByteArray { }
 class NME_assets_tablet_2x_specific_level3_environment_foreground_empty_md extends nme.utils.ByteArray { }
 class NME_assets_xml_bg_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_bg2_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_settings_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_specific_level1_bg_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_1_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_2_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_3_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_4_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_5_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_6_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_7_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_8_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_test_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_test2_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_walking_xml extends nme.utils.ByteArray { }

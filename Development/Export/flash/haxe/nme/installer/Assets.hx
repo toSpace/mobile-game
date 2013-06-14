@@ -427,6 +427,8 @@ class Assets {
 			resourceTypes.set ("assets/tablet-2x/Specific/Level3/Environment/Foreground/empty.md", "text");
 			resourceClasses.set ("assets/xml/bg.xml", NME_assets_xml_bg_xml);
 			resourceTypes.set ("assets/xml/bg.xml", "text");
+			resourceClasses.set ("assets/xml/bg2.xml", NME_assets_xml_bg2_xml);
+			resourceTypes.set ("assets/xml/bg2.xml", "text");
 			resourceClasses.set ("assets/xml/settings.xml", NME_assets_xml_settings_xml);
 			resourceTypes.set ("assets/xml/settings.xml", "text");
 			resourceClasses.set ("assets/xml/Specific/Level1/bg.xml", NME_assets_xml_specific_level1_bg_xml);
@@ -439,6 +441,14 @@ class Assets {
 			resourceTypes.set ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_3.xml", "text");
 			resourceClasses.set ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_4.xml", NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_4_xml);
 			resourceTypes.set ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_4.xml", "text");
+			resourceClasses.set ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_5.xml", NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_5_xml);
+			resourceTypes.set ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_5.xml", "text");
+			resourceClasses.set ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_6.xml", NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_6_xml);
+			resourceTypes.set ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_6.xml", "text");
+			resourceClasses.set ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_7.xml", NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_7_xml);
+			resourceTypes.set ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_7.xml", "text");
+			resourceClasses.set ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_8.xml", NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_8_xml);
+			resourceTypes.set ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_8.xml", "text");
 			resourceClasses.set ("assets/xml/test.xml", NME_assets_xml_test_xml);
 			resourceTypes.set ("assets/xml/test.xml", "text");
 			resourceClasses.set ("assets/xml/test2.xml", NME_assets_xml_test2_xml);

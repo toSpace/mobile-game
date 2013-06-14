@@ -13,6 +13,7 @@ import nape.phys.Body;
 import nape.phys.Material;
 import nape.space.Space;
 import nape.geom.Vec2;
+import nape.geom.AABB;
 
 class GameObject {
 
@@ -113,9 +114,12 @@ class GameObject {
 		var toReturn:Bool = false;
 		var camera:Point = Camera.getPosition();
 		var bodyPos:Vec2 = body.position;
+		var bodyBounds:AABB = body.bounds;
+
 		if(
-			bodyPos.x > camera.x - Settings.cameraOverflow && bodyPos.x < camera.x + Mobile.screenWidth + Settings.cameraOverflow && 
-			bodyPos.y > camera.y - Settings.cameraOverflow && bodyPos.y < camera.y + Mobile.screenHeight + Settings.cameraOverflow
+			(bodyPos.x - bodyBounds.width > camera.x - Settings.cameraOverflow && bodyPos.x - bodyBounds.width < camera.x + Mobile.screenWidth + Settings.cameraOverflow)
+			|| 
+			(bodyPos.x + bodyBounds.width > camera.x - Settings.cameraOverflow && bodyPos.x + bodyBounds.width < camera.x + Mobile.screenWidth + Settings.cameraOverflow) 	
 		){
 			toReturn = true;
 		}
