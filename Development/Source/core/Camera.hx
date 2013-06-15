@@ -32,8 +32,8 @@ class Camera
 		if(x < 0){
 			x = 0;
 		}
-		if(y < 0){
-			y = 0;
+		if(y > Mobile.screenHeight){
+			y = Mobile.screenHeight;
 		}
 
 		if(direct){
@@ -48,7 +48,7 @@ class Camera
 	}
 
 	public static function follow(body:Body):Void{
-		
+		move(body.position.x - Mobile.screenWidth/2, body.position.y - Mobile.screenHeight/2);
 	}
 
 	public static function getPosition():Point{

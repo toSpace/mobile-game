@@ -13,6 +13,7 @@ class Lucy extends Character {
 
 	override public function render():Void{
 		walk(lucy.body, Settings.flockSpeed, Settings.flockVelocity);
+		Camera.follow(lucy.body);
 	}
 
 	//todo collisions

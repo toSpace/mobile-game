@@ -91,7 +91,7 @@ class SpriteObject{
 		y = Mobile.getY(layer.view) - y;
         body = new Body(BodyType.DYNAMIC, new Vec2(x,y) );
         var material:Material = new Material(0.1, 1.0, 2.0, 5.0, 0.001);
-        body.shapes.add(new Polygon( Polygon.box(clip.width , clip.height) , material));
+        body.shapes.add(new Polygon( Polygon.box(clip.width / 2 , clip.height) , material));
         Main.space.bodies.add(body);
 
         //add to canvas
