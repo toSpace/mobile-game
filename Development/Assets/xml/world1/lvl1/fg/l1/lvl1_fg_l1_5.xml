@@ -1,8 +1,8 @@
 <asset>
 
-	<name>fg1_7</name>
-	<img>Specific/Level1/Environment/Foreground/FG1/fg1_7.png</img>
-	<pos x="3600" y="0" rotation="0"></pos>
+	<name>lvl1_fg1_l1_5</name>
+	<img>world1\lvl1\fg\l1\lvl1_fg1_l1_5.png</img>
+	<pos x="2400" y="0" rotation="0"></pos>
 	<physics>static</physics>
 
 	<material
