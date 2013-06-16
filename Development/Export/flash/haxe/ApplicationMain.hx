@@ -107,114 +107,24 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/mobile-1x/button2.png");
          
 		
-		if (inName=="assets/mobile-1x/General/Enemies/walking-sparrow.xml")
+		if (inName=="assets/mobile-1x/General/bg/empty.md")
 			 
-			 return Assets.getText ("assets/mobile-1x/General/Enemies/walking-sparrow.xml");
+			 return Assets.getText ("assets/mobile-1x/General/bg/empty.md");
          
 		
-		if (inName=="assets/mobile-1x/General/Enemies/walking.png")
+		if (inName=="assets/mobile-1x/General/characters/walking-sparrow.xml")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/General/Enemies/walking.png");
+			 return Assets.getText ("assets/mobile-1x/General/characters/walking-sparrow.xml");
          
 		
-		if (inName=="assets/mobile-1x/General/Environment/Background/empty.md")
+		if (inName=="assets/mobile-1x/General/characters/walking.png")
 			 
-			 return Assets.getText ("assets/mobile-1x/General/Environment/Background/empty.md");
+            return Assets.getBitmapData ("assets/mobile-1x/General/characters/walking.png");
          
 		
-		if (inName=="assets/mobile-1x/General/Environment/Foreground/empty.md")
+		if (inName=="assets/mobile-1x/General/fg/empty.md")
 			 
-			 return Assets.getText ("assets/mobile-1x/General/Environment/Foreground/empty.md");
-         
-		
-		if (inName=="assets/mobile-1x/General/Worldmap/empty.md")
-			 
-			 return Assets.getText ("assets/mobile-1x/General/Worldmap/empty.md");
-         
-		
-		if (inName=="assets/mobile-1x/Specific/Level1/Enemies/empty.md")
-			 
-			 return Assets.getText ("assets/mobile-1x/Specific/Level1/Enemies/empty.md");
-         
-		
-		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Background/empty.md")
-			 
-			 return Assets.getText ("assets/mobile-1x/Specific/Level1/Environment/Background/empty.md");
-         
-		
-		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/FG1.psd")
-			 
-            return Assets.getBytes ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/FG1.psd");
-         
-		
-		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_1.png")
-			 
-            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_1.png");
-         
-		
-		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_2.png")
-			 
-            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_2.png");
-         
-		
-		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_3.png")
-			 
-            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_3.png");
-         
-		
-		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_4.png")
-			 
-            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_4.png");
-         
-		
-		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_5.png")
-			 
-            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_5.png");
-         
-		
-		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_6.png")
-			 
-            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_6.png");
-         
-		
-		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_7.png")
-			 
-            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_7.png");
-         
-		
-		if (inName=="assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_8.png")
-			 
-            return Assets.getBitmapData ("assets/mobile-1x/Specific/Level1/Environment/Foreground/FG1/fg1_8.png");
-         
-		
-		if (inName=="assets/mobile-1x/Specific/Level2/Enemies/empty.md")
-			 
-			 return Assets.getText ("assets/mobile-1x/Specific/Level2/Enemies/empty.md");
-         
-		
-		if (inName=="assets/mobile-1x/Specific/Level2/Environment/Background/empty.md")
-			 
-			 return Assets.getText ("assets/mobile-1x/Specific/Level2/Environment/Background/empty.md");
-         
-		
-		if (inName=="assets/mobile-1x/Specific/Level2/Environment/Foreground/empty.md")
-			 
-			 return Assets.getText ("assets/mobile-1x/Specific/Level2/Environment/Foreground/empty.md");
-         
-		
-		if (inName=="assets/mobile-1x/Specific/Level3/Enemies/empty.md")
-			 
-			 return Assets.getText ("assets/mobile-1x/Specific/Level3/Enemies/empty.md");
-         
-		
-		if (inName=="assets/mobile-1x/Specific/Level3/Environment/Background/empty.md")
-			 
-			 return Assets.getText ("assets/mobile-1x/Specific/Level3/Environment/Background/empty.md");
-         
-		
-		if (inName=="assets/mobile-1x/Specific/Level3/Environment/Foreground/empty.md")
-			 
-			 return Assets.getText ("assets/mobile-1x/Specific/Level3/Environment/Foreground/empty.md");
+			 return Assets.getText ("assets/mobile-1x/General/fg/empty.md");
          
 		
 		if (inName=="assets/mobile-1x/test1.png")
@@ -240,6 +150,86 @@ class ApplicationMain {
 		if (inName=="assets/mobile-1x/walking.png")
 			 
             return Assets.getBitmapData ("assets/mobile-1x/walking.png");
+         
+		
+		if (inName=="assets/mobile-1x/world1/lvl1/bg/l1/empty.md")
+			 
+			 return Assets.getText ("assets/mobile-1x/world1/lvl1/bg/l1/empty.md");
+         
+		
+		if (inName=="assets/mobile-1x/world1/lvl1/bg/l2/empty.md")
+			 
+			 return Assets.getText ("assets/mobile-1x/world1/lvl1/bg/l2/empty.md");
+         
+		
+		if (inName=="assets/mobile-1x/world1/lvl1/bg/l3/empty.md")
+			 
+			 return Assets.getText ("assets/mobile-1x/world1/lvl1/bg/l3/empty.md");
+         
+		
+		if (inName=="assets/mobile-1x/world1/lvl1/bg/l4/empty.md")
+			 
+			 return Assets.getText ("assets/mobile-1x/world1/lvl1/bg/l4/empty.md");
+         
+		
+		if (inName=="assets/mobile-1x/world1/lvl1/bg/l5/empty.md")
+			 
+			 return Assets.getText ("assets/mobile-1x/world1/lvl1/bg/l5/empty.md");
+         
+		
+		if (inName=="assets/mobile-1x/world1/lvl1/bg/l6/empty.md")
+			 
+			 return Assets.getText ("assets/mobile-1x/world1/lvl1/bg/l6/empty.md");
+         
+		
+		if (inName=="assets/mobile-1x/world1/lvl1/fg/l1/FG1.psd")
+			 
+            return Assets.getBytes ("assets/mobile-1x/world1/lvl1/fg/l1/FG1.psd");
+         
+		
+		if (inName=="assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg1_l1_1.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg1_l1_1.png");
+         
+		
+		if (inName=="assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg1_l1_2.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg1_l1_2.png");
+         
+		
+		if (inName=="assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg1_l1_3.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg1_l1_3.png");
+         
+		
+		if (inName=="assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg1_l1_4.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg1_l1_4.png");
+         
+		
+		if (inName=="assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg1_l1_5.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg1_l1_5.png");
+         
+		
+		if (inName=="assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg1_l1_6.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg1_l1_6.png");
+         
+		
+		if (inName=="assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg1_l1_7.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg1_l1_7.png");
+         
+		
+		if (inName=="assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg1_l1_8.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg1_l1_8.png");
+         
+		
+		if (inName=="assets/mobile-1x/world1/lvl1/fg/l2/empty.md")
+			 
+			 return Assets.getText ("assets/mobile-1x/world1/lvl1/fg/l2/empty.md");
          
 		
 		if (inName=="assets/mobile-2x/button.png")
@@ -1067,54 +1057,24 @@ class ApplicationMain {
 			 return Assets.getText ("assets/xml/bg2.xml");
          
 		
+		if (inName=="assets/xml/general/bg/empty.md")
+			 
+			 return Assets.getText ("assets/xml/general/bg/empty.md");
+         
+		
+		if (inName=="assets/xml/general/characters/empty.md")
+			 
+			 return Assets.getText ("assets/xml/general/characters/empty.md");
+         
+		
+		if (inName=="assets/xml/general/fg/empty.md")
+			 
+			 return Assets.getText ("assets/xml/general/fg/empty.md");
+         
+		
 		if (inName=="assets/xml/settings.xml")
 			 
 			 return Assets.getText ("assets/xml/settings.xml");
-         
-		
-		if (inName=="assets/xml/Specific/Level1/bg.xml")
-			 
-			 return Assets.getText ("assets/xml/Specific/Level1/bg.xml");
-         
-		
-		if (inName=="assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_1.xml")
-			 
-			 return Assets.getText ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_1.xml");
-         
-		
-		if (inName=="assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_2.xml")
-			 
-			 return Assets.getText ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_2.xml");
-         
-		
-		if (inName=="assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_3.xml")
-			 
-			 return Assets.getText ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_3.xml");
-         
-		
-		if (inName=="assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_4.xml")
-			 
-			 return Assets.getText ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_4.xml");
-         
-		
-		if (inName=="assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_5.xml")
-			 
-			 return Assets.getText ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_5.xml");
-         
-		
-		if (inName=="assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_6.xml")
-			 
-			 return Assets.getText ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_6.xml");
-         
-		
-		if (inName=="assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_7.xml")
-			 
-			 return Assets.getText ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_7.xml");
-         
-		
-		if (inName=="assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_8.xml")
-			 
-			 return Assets.getText ("assets/xml/Specific/Level1/Environment/Foreground/FG1/fg1_8.xml");
          
 		
 		if (inName=="assets/xml/test.xml")
@@ -1130,6 +1090,96 @@ class ApplicationMain {
 		if (inName=="assets/xml/walking.xml")
 			 
 			 return Assets.getText ("assets/xml/walking.xml");
+         
+		
+		if (inName=="assets/xml/world1/general/empty.md")
+			 
+			 return Assets.getText ("assets/xml/world1/general/empty.md");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l1/empty.md")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l1/empty.md");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l2/empty.md")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l2/empty.md");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l3/empty.md")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l3/empty.md");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l4/empty.md")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l4/empty.md");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l5/empty.md")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l5/empty.md");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l6/empty.md")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l6/empty.md");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_1.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_1.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_2.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_2.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_3.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_3.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_4.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_4.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_5.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_5.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_6.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_6.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_7.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_7.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_8.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_8.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/fg/l2/empty.md")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/fg/l2/empty.md");
+         
+		
+		if (inName=="assets/xml/world1/lvl2/bg.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl2/bg.xml");
          
 		
 		
@@ -1153,33 +1203,31 @@ class ApplicationMain {
 
 class NME_assets_mobile_1x_button_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_1x_button2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_general_enemies_walking_sparrow_xml extends nme.utils.ByteArray { }
-class NME_assets_mobile_1x_general_enemies_walking_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_general_environment_background_empty_md extends nme.utils.ByteArray { }
-class NME_assets_mobile_1x_general_environment_foreground_empty_md extends nme.utils.ByteArray { }
-class NME_assets_mobile_1x_general_worldmap_empty_md extends nme.utils.ByteArray { }
-class NME_assets_mobile_1x_specific_level1_enemies_empty_md extends nme.utils.ByteArray { }
-class NME_assets_mobile_1x_specific_level1_environment_background_empty_md extends nme.utils.ByteArray { }
-class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_psd extends nme.utils.ByteArray { }
-class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_5_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_6_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_7_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_specific_level1_environment_foreground_fg1_fg1_8_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_specific_level2_enemies_empty_md extends nme.utils.ByteArray { }
-class NME_assets_mobile_1x_specific_level2_environment_background_empty_md extends nme.utils.ByteArray { }
-class NME_assets_mobile_1x_specific_level2_environment_foreground_empty_md extends nme.utils.ByteArray { }
-class NME_assets_mobile_1x_specific_level3_enemies_empty_md extends nme.utils.ByteArray { }
-class NME_assets_mobile_1x_specific_level3_environment_background_empty_md extends nme.utils.ByteArray { }
-class NME_assets_mobile_1x_specific_level3_environment_foreground_empty_md extends nme.utils.ByteArray { }
+class NME_assets_mobile_1x_general_bg_empty_md extends nme.utils.ByteArray { }
+class NME_assets_mobile_1x_general_characters_walking_sparrow_xml extends nme.utils.ByteArray { }
+class NME_assets_mobile_1x_general_characters_walking_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_general_fg_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_1x_test1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_1x_test2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_1x_test3bg_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_1x_walking_sparrow_xml extends nme.utils.ByteArray { }
 class NME_assets_mobile_1x_walking_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_lvl1_bg_l1_empty_md extends nme.utils.ByteArray { }
+class NME_assets_mobile_1x_world1_lvl1_bg_l2_empty_md extends nme.utils.ByteArray { }
+class NME_assets_mobile_1x_world1_lvl1_bg_l3_empty_md extends nme.utils.ByteArray { }
+class NME_assets_mobile_1x_world1_lvl1_bg_l4_empty_md extends nme.utils.ByteArray { }
+class NME_assets_mobile_1x_world1_lvl1_bg_l5_empty_md extends nme.utils.ByteArray { }
+class NME_assets_mobile_1x_world1_lvl1_bg_l6_empty_md extends nme.utils.ByteArray { }
+class NME_assets_mobile_1x_world1_lvl1_fg_l1_fg1_psd extends nme.utils.ByteArray { }
+class NME_assets_mobile_1x_world1_lvl1_fg_l1_lvl1_fg1_l1_1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_lvl1_fg_l1_lvl1_fg1_l1_2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_lvl1_fg_l1_lvl1_fg1_l1_3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_lvl1_fg_l1_lvl1_fg1_l1_4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_lvl1_fg_l1_lvl1_fg1_l1_5_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_lvl1_fg_l1_lvl1_fg1_l1_6_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_lvl1_fg_l1_lvl1_fg1_l1_7_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_lvl1_fg_l1_lvl1_fg1_l1_8_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_lvl1_fg_l2_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_2x_button_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_2x_button2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_2x_general_enemies_empty_md extends nme.utils.ByteArray { }
@@ -1345,19 +1393,31 @@ class NME_assets_tablet_2x_specific_level3_environment_background_empty_md exten
 class NME_assets_tablet_2x_specific_level3_environment_foreground_empty_md extends nme.utils.ByteArray { }
 class NME_assets_xml_bg_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_bg2_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_general_bg_empty_md extends nme.utils.ByteArray { }
+class NME_assets_xml_general_characters_empty_md extends nme.utils.ByteArray { }
+class NME_assets_xml_general_fg_empty_md extends nme.utils.ByteArray { }
 class NME_assets_xml_settings_xml extends nme.utils.ByteArray { }
-class NME_assets_xml_specific_level1_bg_xml extends nme.utils.ByteArray { }
-class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_1_xml extends nme.utils.ByteArray { }
-class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_2_xml extends nme.utils.ByteArray { }
-class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_3_xml extends nme.utils.ByteArray { }
-class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_4_xml extends nme.utils.ByteArray { }
-class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_5_xml extends nme.utils.ByteArray { }
-class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_6_xml extends nme.utils.ByteArray { }
-class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_7_xml extends nme.utils.ByteArray { }
-class NME_assets_xml_specific_level1_environment_foreground_fg1_fg1_8_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_test_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_test2_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_walking_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_general_empty_md extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l1_empty_md extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l2_empty_md extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l3_empty_md extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l4_empty_md extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l5_empty_md extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l6_empty_md extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_fg_l1_lvl1_fg_l1_1_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_fg_l1_lvl1_fg_l1_2_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_fg_l1_lvl1_fg_l1_3_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_fg_l1_lvl1_fg_l1_4_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_fg_l1_lvl1_fg_l1_5_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_fg_l1_lvl1_fg_l1_6_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_fg_l1_lvl1_fg_l1_7_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_fg_l1_lvl1_fg_l1_8_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_fg_l2_empty_md extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl2_bg_xml extends nme.utils.ByteArray { }
 
 
 #else
