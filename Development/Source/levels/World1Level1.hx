@@ -8,23 +8,14 @@ class World1Level1 extends Level {
 		#end
 
 		//add items
-		var fg1_1 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_1.xml');
-		var fg1_2 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_2.xml');
-		var fg1_3 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_3.xml');
-		var fg1_4 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_4.xml');
-		var fg1_5 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_5.xml');
-		var fg1_6 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_6.xml');
-		var fg1_7 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_7.xml');
-		var fg1_8 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_8.xml');
-
-		var fg1_1 = new DrawObject('Specific/Level1/Environment/Foreground/FG1/fg1_1.xml');
-		var fg1_2 = new DrawObject('Specific/Level1/Environment/Foreground/FG1/fg1_2.xml');
-		var fg1_3 = new DrawObject('Specific/Level1/Environment/Foreground/FG1/fg1_3.xml');
-		var fg1_4 = new DrawObject('Specific/Level1/Environment/Foreground/FG1/fg1_4.xml');
-		var fg1_5 = new DrawObject('Specific/Level1/Environment/Foreground/FG1/fg1_5.xml');
-		var fg1_6 = new DrawObject('Specific/Level1/Environment/Foreground/FG1/fg1_6.xml');
-		var fg1_7 = new DrawObject('Specific/Level1/Environment/Foreground/FG1/fg1_7.xml');
-		var fg1_8 = new DrawObject('Specific/Level1/Environment/Foreground/FG1/fg1_8.xml');
+		var lvl1_fg_l1__1 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_1.xml');
+		var lvl1_fg_l1__2 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_2.xml');
+		var lvl1_fg_l1__3 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_3.xml');
+		var lvl1_fg_l1__4 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_4.xml');
+		var lvl1_fg_l1__5 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_5.xml');
+		var lvl1_fg_l1__6 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_6.xml');
+		var lvl1_fg_l1__7 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_7.xml');
+		var lvl1_fg_l1__8 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_8.xml');
 
         //var pika = new DrawObject('test2.xml');
         // var useless = new DrawObject('test.xml');
