@@ -1,7 +1,7 @@
 <asset>
 
 	<name>lvl1_fg_l1_6</name>
-	<img>world1\lvl1\fg\l1\lvl1_fg1_l1_6.png</img>
+	<img>world1/lvl1/fg/l1/lvl1_fg_l1_6.png</img>
 	<pos x="3000" y="0" rotation="0"></pos>
 	<physics>static</physics>
 
