@@ -703,7 +703,7 @@ Void SpriteObject_obj::makePhysics( Float x,Float y){
 			};
 			HX_STACK_LINE(94)
 			::nape::shape::ShapeList _this = this->body->zpp_inner->wrap_shapes;		HX_STACK_VAR(_this,"_this");
-			::nape::shape::Shape obj = ::nape::shape::Polygon_obj::__new(::nape::shape::Polygon_obj::box(_Function_2_1::Block(this),_Function_2_2::Block(this),null()),material,null());		HX_STACK_VAR(obj,"obj");
+			::nape::shape::Shape obj = ::nape::shape::Polygon_obj::__new(::nape::shape::Polygon_obj::box((Float(_Function_2_1::Block(this)) / Float((int)2)),_Function_2_2::Block(this),null()),material,null());		HX_STACK_VAR(obj,"obj");
 			HX_STACK_LINE(94)
 			if ((_this->zpp_inner->reverse_flag)){
 				HX_STACK_LINE(94)

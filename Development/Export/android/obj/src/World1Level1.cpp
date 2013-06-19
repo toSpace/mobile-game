@@ -1,8 +1,5 @@
 #include <hxcpp.h>
 
-#ifndef INCLUDED_BackgroundObject
-#include <BackgroundObject.h>
-#endif
 #ifndef INCLUDED_Character
 #include <Character.h>
 #endif
@@ -50,15 +47,25 @@ Void World1Level1_obj::loadLevel( ){
 {
 		HX_STACK_PUSH("World1Level1::loadLevel","World1Level1.hx",3);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(7)
-		::BackgroundObject bg1 = ::BackgroundObject_obj::__new(HX_CSTRING("bg.xml"));		HX_STACK_VAR(bg1,"bg1");
 		HX_STACK_LINE(11)
-		::DrawObject pika = ::DrawObject_obj::__new(HX_CSTRING("test2.xml"));		HX_STACK_VAR(pika,"pika");
+		::DrawObject lvl1_fg_l1_1 = ::DrawObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l1/lvl1_fg_l1_1.xml"));		HX_STACK_VAR(lvl1_fg_l1_1,"lvl1_fg_l1_1");
 		HX_STACK_LINE(12)
-		::DrawObject useless = ::DrawObject_obj::__new(HX_CSTRING("test.xml"));		HX_STACK_VAR(useless,"useless");
+		::DrawObject lvl1_fg_l1_2 = ::DrawObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l1/lvl1_fg_l1_2.xml"));		HX_STACK_VAR(lvl1_fg_l1_2,"lvl1_fg_l1_2");
 		HX_STACK_LINE(13)
-		::Lucy lucy = ::Lucy_obj::__new();		HX_STACK_VAR(lucy,"lucy");
+		::DrawObject lvl1_fg_l1_3 = ::DrawObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l1/lvl1_fg_l1_3.xml"));		HX_STACK_VAR(lvl1_fg_l1_3,"lvl1_fg_l1_3");
+		HX_STACK_LINE(14)
+		::DrawObject lvl1_fg_l1_4 = ::DrawObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l1/lvl1_fg_l1_4.xml"));		HX_STACK_VAR(lvl1_fg_l1_4,"lvl1_fg_l1_4");
+		HX_STACK_LINE(15)
+		::DrawObject lvl1_fg_l1_5 = ::DrawObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l1/lvl1_fg_l1_5.xml"));		HX_STACK_VAR(lvl1_fg_l1_5,"lvl1_fg_l1_5");
 		HX_STACK_LINE(16)
+		::DrawObject lvl1_fg_l1_6 = ::DrawObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l1/lvl1_fg_l1_6.xml"));		HX_STACK_VAR(lvl1_fg_l1_6,"lvl1_fg_l1_6");
+		HX_STACK_LINE(17)
+		::DrawObject lvl1_fg_l1_7 = ::DrawObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l1/lvl1_fg_l1_7.xml"));		HX_STACK_VAR(lvl1_fg_l1_7,"lvl1_fg_l1_7");
+		HX_STACK_LINE(18)
+		::DrawObject lvl1_fg_l1_8 = ::DrawObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l1/lvl1_fg_l1_8.xml"));		HX_STACK_VAR(lvl1_fg_l1_8,"lvl1_fg_l1_8");
+		HX_STACK_LINE(23)
+		::Lucy lucy = ::Lucy_obj::__new();		HX_STACK_VAR(lucy,"lucy");
+		HX_STACK_LINE(27)
 		this->start();
 	}
 return null();

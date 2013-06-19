@@ -238,6 +238,7 @@
 #include <native/geom/Matrix.h>
 #include <native/geom/ColorTransform.h>
 #include <native/filters/BitmapFilter.h>
+#include <native/feedback/Haptic.h>
 #include <native/events/SampleDataEvent.h>
 #include <native/events/ProgressEvent.h>
 #include <native/events/KeyboardEvent.h>
@@ -450,7 +451,6 @@
 #include <Character.h>
 #include <Camera.h>
 #include <BitmapDataIso.h>
-#include <BackgroundObject.h>
 #include <ApplicationMain.h>
 
 void __boot_all()
@@ -694,6 +694,7 @@ hx::RegisterResources( hx::GetResources() );
 ::native::geom::Matrix_obj::__register();
 ::native::geom::ColorTransform_obj::__register();
 ::native::filters::BitmapFilter_obj::__register();
+::native::feedback::Haptic_obj::__register();
 ::native::events::SampleDataEvent_obj::__register();
 ::native::events::ProgressEvent_obj::__register();
 ::native::events::KeyboardEvent_obj::__register();
@@ -906,7 +907,6 @@ hx::RegisterResources( hx::GetResources() );
 ::Character_obj::__register();
 ::Camera_obj::__register();
 ::BitmapDataIso_obj::__register();
-::BackgroundObject_obj::__register();
 ::ApplicationMain_obj::__register();
 ::Xml_obj::__init__();
 ::native::utils::ByteArray_obj::__init__();
@@ -918,7 +918,6 @@ hx::RegisterResources( hx::GetResources() );
 ::cpp::zip::Uncompress_obj::__boot();
 ::haxe::Log_obj::__boot();
 ::ApplicationMain_obj::__boot();
-::BackgroundObject_obj::__boot();
 ::BitmapDataIso_obj::__boot();
 ::Camera_obj::__boot();
 ::Character_obj::__boot();
@@ -1124,6 +1123,7 @@ hx::RegisterResources( hx::GetResources() );
 ::native::events::KeyboardEvent_obj::__boot();
 ::native::events::ProgressEvent_obj::__boot();
 ::native::events::SampleDataEvent_obj::__boot();
+::native::feedback::Haptic_obj::__boot();
 ::native::filters::BitmapFilter_obj::__boot();
 ::native::geom::ColorTransform_obj::__boot();
 ::native::geom::Matrix_obj::__boot();

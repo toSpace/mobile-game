@@ -17,11 +17,7 @@ class World1Level1 extends Level {
 		var lvl1_fg_l1_7 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_7.xml');
 		var lvl1_fg_l1_8 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_8.xml');
 
-        //var pika = new DrawObject('test2.xml');
-        // var useless = new DrawObject('test.xml');
-        #if !debug 
-        	var lucy = new Lucy();
-        #end
+    	var lucy = new Lucy();
 
         //start again
         start();

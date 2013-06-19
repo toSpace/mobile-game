@@ -104,115 +104,45 @@ class ApplicationMain
 	{
 		#if nme
 		
-		if (inName == "assets/mobile-1x/button.png")
+		if (inName == "assets/mobile-1x/General/bg/empty.md")
 		{
 			
-			return nme.Assets.getBitmapData ("assets/mobile-1x/button.png");
+			return nme.Assets.getText ("assets/mobile-1x/General/bg/empty.md");
 			
 		}
 		
-		if (inName == "assets/mobile-1x/button2.png")
+		if (inName == "assets/mobile-1x/General/characters/walking-sparrow.xml")
 		{
 			
-			return nme.Assets.getBitmapData ("assets/mobile-1x/button2.png");
+			return nme.Assets.getText ("assets/mobile-1x/General/characters/walking-sparrow.xml");
 			
 		}
 		
-		if (inName == "assets/mobile-1x/General/Enemies/walking-sparrow.xml")
+		if (inName == "assets/mobile-1x/General/characters/walking.png")
 		{
 			
-			return nme.Assets.getText ("assets/mobile-1x/General/Enemies/walking-sparrow.xml");
+			return nme.Assets.getBitmapData ("assets/mobile-1x/General/characters/walking.png");
 			
 		}
 		
-		if (inName == "assets/mobile-1x/General/Enemies/walking.png")
+		if (inName == "assets/mobile-1x/General/fg/empty.md")
 		{
 			
-			return nme.Assets.getBitmapData ("assets/mobile-1x/General/Enemies/walking.png");
+			return nme.Assets.getText ("assets/mobile-1x/General/fg/empty.md");
 			
 		}
 		
-		if (inName == "assets/mobile-1x/General/Environment/Background/empty.md")
+		if (inName == "assets/mobile-1x/General/gui/button.png")
 		{
 			
-			return nme.Assets.getText ("assets/mobile-1x/General/Environment/Background/empty.md");
+			return nme.Assets.getBitmapData ("assets/mobile-1x/General/gui/button.png");
 			
 		}
 		
-		if (inName == "assets/mobile-1x/General/Environment/Foreground/empty.md")
+		if (inName == "assets/mobile-1x/General/gui/button2.png")
 		{
 			
-			return nme.Assets.getText ("assets/mobile-1x/General/Environment/Foreground/empty.md");
-			
-		}
-		
-		if (inName == "assets/mobile-1x/General/Worldmap/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/mobile-1x/General/Worldmap/empty.md");
-			
-		}
-		
-		if (inName == "assets/mobile-1x/Specific/Level1/Enemies/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/mobile-1x/Specific/Level1/Enemies/empty.md");
-			
-		}
-		
-		if (inName == "assets/mobile-1x/Specific/Level1/Environment/Background/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/mobile-1x/Specific/Level1/Environment/Background/empty.md");
-			
-		}
-		
-		if (inName == "assets/mobile-1x/Specific/Level1/Environment/Foreground/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/mobile-1x/Specific/Level1/Environment/Foreground/empty.md");
-			
-		}
-		
-		if (inName == "assets/mobile-1x/Specific/Level2/Enemies/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/mobile-1x/Specific/Level2/Enemies/empty.md");
-			
-		}
-		
-		if (inName == "assets/mobile-1x/Specific/Level2/Environment/Background/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/mobile-1x/Specific/Level2/Environment/Background/empty.md");
-			
-		}
-		
-		if (inName == "assets/mobile-1x/Specific/Level2/Environment/Foreground/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/mobile-1x/Specific/Level2/Environment/Foreground/empty.md");
-			
-		}
-		
-		if (inName == "assets/mobile-1x/Specific/Level3/Enemies/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/mobile-1x/Specific/Level3/Enemies/empty.md");
-			
-		}
-		
-		if (inName == "assets/mobile-1x/Specific/Level3/Environment/Background/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/mobile-1x/Specific/Level3/Environment/Background/empty.md");
-			
-		}
-		
-		if (inName == "assets/mobile-1x/Specific/Level3/Environment/Foreground/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/mobile-1x/Specific/Level3/Environment/Foreground/empty.md");
+			return nme.Assets.getBitmapData ("assets/mobile-1x/General/gui/button2.png");
 			
 		}
 		
@@ -251,479 +181,304 @@ class ApplicationMain
 			
 		}
 		
-		if (inName == "assets/mobile-2x/button.png")
+		if (inName == "assets/mobile-1x/world1/lvl1/bg/l1/empty.md")
 		{
 			
-			return nme.Assets.getBitmapData ("assets/mobile-2x/button.png");
+			return nme.Assets.getText ("assets/mobile-1x/world1/lvl1/bg/l1/empty.md");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/button2.png")
+		if (inName == "assets/mobile-1x/world1/lvl1/bg/l2/empty.md")
 		{
 			
-			return nme.Assets.getBitmapData ("assets/mobile-2x/button2.png");
+			return nme.Assets.getText ("assets/mobile-1x/world1/lvl1/bg/l2/empty.md");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/General/Enemies/empty.md")
+		if (inName == "assets/mobile-1x/world1/lvl1/bg/l3/empty.md")
 		{
 			
-			return nme.Assets.getText ("assets/mobile-2x/General/Enemies/empty.md");
+			return nme.Assets.getText ("assets/mobile-1x/world1/lvl1/bg/l3/empty.md");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/General/Environment/Background/empty.md")
+		if (inName == "assets/mobile-1x/world1/lvl1/bg/l4/empty.md")
 		{
 			
-			return nme.Assets.getText ("assets/mobile-2x/General/Environment/Background/empty.md");
+			return nme.Assets.getText ("assets/mobile-1x/world1/lvl1/bg/l4/empty.md");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/General/Environment/Foreground/empty.md")
+		if (inName == "assets/mobile-1x/world1/lvl1/bg/l5/empty.md")
 		{
 			
-			return nme.Assets.getText ("assets/mobile-2x/General/Environment/Foreground/empty.md");
+			return nme.Assets.getText ("assets/mobile-1x/world1/lvl1/bg/l5/empty.md");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/General/Worldmap/empty.md")
+		if (inName == "assets/mobile-1x/world1/lvl1/bg/l6/empty.md")
 		{
 			
-			return nme.Assets.getText ("assets/mobile-2x/General/Worldmap/empty.md");
+			return nme.Assets.getText ("assets/mobile-1x/world1/lvl1/bg/l6/empty.md");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/Specific/Level1/Enemies/empty.md")
+		if (inName == "assets/mobile-1x/world1/lvl1/fg/l1/FG1.psd")
 		{
 			
-			return nme.Assets.getText ("assets/mobile-2x/Specific/Level1/Enemies/empty.md");
+			return nme.Assets.getBytes ("assets/mobile-1x/world1/lvl1/fg/l1/FG1.psd");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/Specific/Level1/Environment/Background/empty.md")
+		if (inName == "assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg_l1_1.png")
 		{
 			
-			return nme.Assets.getText ("assets/mobile-2x/Specific/Level1/Environment/Background/empty.md");
+			return nme.Assets.getBitmapData ("assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg_l1_1.png");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/Specific/Level1/Environment/Foreground/empty.md")
+		if (inName == "assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg_l1_2.png")
 		{
 			
-			return nme.Assets.getText ("assets/mobile-2x/Specific/Level1/Environment/Foreground/empty.md");
+			return nme.Assets.getBitmapData ("assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg_l1_2.png");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/Specific/Level2/Enemies/empty.md")
+		if (inName == "assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg_l1_3.png")
 		{
 			
-			return nme.Assets.getText ("assets/mobile-2x/Specific/Level2/Enemies/empty.md");
+			return nme.Assets.getBitmapData ("assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg_l1_3.png");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/Specific/Level2/Environment/Background/empty.md")
+		if (inName == "assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg_l1_4.png")
 		{
 			
-			return nme.Assets.getText ("assets/mobile-2x/Specific/Level2/Environment/Background/empty.md");
+			return nme.Assets.getBitmapData ("assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg_l1_4.png");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/Specific/Level2/Environment/Foreground/empty.md")
+		if (inName == "assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg_l1_5.png")
 		{
 			
-			return nme.Assets.getText ("assets/mobile-2x/Specific/Level2/Environment/Foreground/empty.md");
+			return nme.Assets.getBitmapData ("assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg_l1_5.png");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/Specific/Level3/Enemies/empty.md")
+		if (inName == "assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg_l1_6.png")
 		{
 			
-			return nme.Assets.getText ("assets/mobile-2x/Specific/Level3/Enemies/empty.md");
+			return nme.Assets.getBitmapData ("assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg_l1_6.png");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/Specific/Level3/Environment/Background/empty.md")
+		if (inName == "assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg_l1_7.png")
 		{
 			
-			return nme.Assets.getText ("assets/mobile-2x/Specific/Level3/Environment/Background/empty.md");
+			return nme.Assets.getBitmapData ("assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg_l1_7.png");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md")
+		if (inName == "assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg_l1_8.png")
 		{
 			
-			return nme.Assets.getText ("assets/mobile-2x/Specific/Level3/Environment/Foreground/empty.md");
+			return nme.Assets.getBitmapData ("assets/mobile-1x/world1/lvl1/fg/l1/lvl1_fg_l1_8.png");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/test1.png")
+		if (inName == "assets/mobile-1x/world1/lvl1/fg/l2/empty.md")
 		{
 			
-			return nme.Assets.getBitmapData ("assets/mobile-2x/test1.png");
+			return nme.Assets.getText ("assets/mobile-1x/world1/lvl1/fg/l2/empty.md");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/test2.png")
+		if (inName == "assets/source/button.png")
 		{
 			
-			return nme.Assets.getBitmapData ("assets/mobile-2x/test2.png");
+			return nme.Assets.getBitmapData ("assets/source/button.png");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/test3bg.png")
+		if (inName == "assets/source/button2.png")
 		{
 			
-			return nme.Assets.getBitmapData ("assets/mobile-2x/test3bg.png");
+			return nme.Assets.getBitmapData ("assets/source/button2.png");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/walking-sparrow.xml")
+		if (inName == "assets/source/General/bg/empty.md")
 		{
 			
-			return nme.Assets.getText ("assets/mobile-2x/walking-sparrow.xml");
+			return nme.Assets.getText ("assets/source/General/bg/empty.md");
 			
 		}
 		
-		if (inName == "assets/mobile-2x/walking.png")
+		if (inName == "assets/source/General/characters/walking-sparrow.xml")
 		{
 			
-			return nme.Assets.getBitmapData ("assets/mobile-2x/walking.png");
+			return nme.Assets.getText ("assets/source/General/characters/walking-sparrow.xml");
 			
 		}
 		
-		if (inName == "assets/source/General/Enemies/walking.xml")
+		if (inName == "assets/source/General/characters/walking.png")
 		{
 			
-			return nme.Assets.getText ("assets/source/General/Enemies/walking.xml");
+			return nme.Assets.getBitmapData ("assets/source/General/characters/walking.png");
 			
 		}
 		
-		if (inName == "assets/source/General/Environment/Background/empty.md")
+		if (inName == "assets/source/General/fg/empty.md")
 		{
 			
-			return nme.Assets.getText ("assets/source/General/Environment/Background/empty.md");
+			return nme.Assets.getText ("assets/source/General/fg/empty.md");
 			
 		}
 		
-		if (inName == "assets/source/General/Environment/Foreground/empty.md")
+		if (inName == "assets/source/test1.png")
 		{
 			
-			return nme.Assets.getText ("assets/source/General/Environment/Foreground/empty.md");
+			return nme.Assets.getBitmapData ("assets/source/test1.png");
 			
 		}
 		
-		if (inName == "assets/source/General/Sound/Effects/empty.md")
+		if (inName == "assets/source/test2.png")
 		{
 			
-			return nme.Assets.getText ("assets/source/General/Sound/Effects/empty.md");
+			return nme.Assets.getBitmapData ("assets/source/test2.png");
 			
 		}
 		
-		if (inName == "assets/source/General/Sound/Music/empty.md")
+		if (inName == "assets/source/test3bg.png")
 		{
 			
-			return nme.Assets.getText ("assets/source/General/Sound/Music/empty.md");
+			return nme.Assets.getBitmapData ("assets/source/test3bg.png");
 			
 		}
 		
-		if (inName == "assets/source/General/Worldmap/empty.md")
+		if (inName == "assets/source/walking-sparrow.xml")
 		{
 			
-			return nme.Assets.getText ("assets/source/General/Worldmap/empty.md");
+			return nme.Assets.getText ("assets/source/walking-sparrow.xml");
 			
 		}
 		
-		if (inName == "assets/source/Specific/Level1/Enemies/empty.md")
+		if (inName == "assets/source/walking.png")
 		{
 			
-			return nme.Assets.getText ("assets/source/Specific/Level1/Enemies/empty.md");
+			return nme.Assets.getBitmapData ("assets/source/walking.png");
 			
 		}
 		
-		if (inName == "assets/source/Specific/Level1/Environment/Background/empty.md")
+		if (inName == "assets/source/world1/lvl1/bg/l1/empty.md")
 		{
 			
-			return nme.Assets.getText ("assets/source/Specific/Level1/Environment/Background/empty.md");
+			return nme.Assets.getText ("assets/source/world1/lvl1/bg/l1/empty.md");
 			
 		}
 		
-		if (inName == "assets/source/Specific/Level1/Environment/Foreground/empty.md")
+		if (inName == "assets/source/world1/lvl1/bg/l2/empty.md")
 		{
 			
-			return nme.Assets.getText ("assets/source/Specific/Level1/Environment/Foreground/empty.md");
+			return nme.Assets.getText ("assets/source/world1/lvl1/bg/l2/empty.md");
 			
 		}
 		
-		if (inName == "assets/source/Specific/Level1/Sound/Effects/empty.md")
+		if (inName == "assets/source/world1/lvl1/bg/l3/empty.md")
 		{
 			
-			return nme.Assets.getText ("assets/source/Specific/Level1/Sound/Effects/empty.md");
+			return nme.Assets.getText ("assets/source/world1/lvl1/bg/l3/empty.md");
 			
 		}
 		
-		if (inName == "assets/source/Specific/Level1/Sound/Music/empty.md")
+		if (inName == "assets/source/world1/lvl1/bg/l4/empty.md")
 		{
 			
-			return nme.Assets.getText ("assets/source/Specific/Level1/Sound/Music/empty.md");
+			return nme.Assets.getText ("assets/source/world1/lvl1/bg/l4/empty.md");
 			
 		}
 		
-		if (inName == "assets/source/Specific/Level2/Enemies/empty.md")
+		if (inName == "assets/source/world1/lvl1/bg/l5/empty.md")
 		{
 			
-			return nme.Assets.getText ("assets/source/Specific/Level2/Enemies/empty.md");
+			return nme.Assets.getText ("assets/source/world1/lvl1/bg/l5/empty.md");
 			
 		}
 		
-		if (inName == "assets/source/Specific/Level2/Environment/Background/empty.md")
+		if (inName == "assets/source/world1/lvl1/bg/l6/empty.md")
 		{
 			
-			return nme.Assets.getText ("assets/source/Specific/Level2/Environment/Background/empty.md");
+			return nme.Assets.getText ("assets/source/world1/lvl1/bg/l6/empty.md");
 			
 		}
 		
-		if (inName == "assets/source/Specific/Level2/Environment/Foreground/empty.md")
+		if (inName == "assets/source/world1/lvl1/fg/l1/FG1.psd")
 		{
 			
-			return nme.Assets.getText ("assets/source/Specific/Level2/Environment/Foreground/empty.md");
+			return nme.Assets.getBytes ("assets/source/world1/lvl1/fg/l1/FG1.psd");
 			
 		}
 		
-		if (inName == "assets/source/Specific/Level2/Sound/Effects/empty.md")
+		if (inName == "assets/source/world1/lvl1/fg/l1/lvl1_fg1_l1_1.png")
 		{
 			
-			return nme.Assets.getText ("assets/source/Specific/Level2/Sound/Effects/empty.md");
+			return nme.Assets.getBitmapData ("assets/source/world1/lvl1/fg/l1/lvl1_fg1_l1_1.png");
 			
 		}
 		
-		if (inName == "assets/source/Specific/Level2/Sound/Music/empty.md")
+		if (inName == "assets/source/world1/lvl1/fg/l1/lvl1_fg1_l1_2.png")
 		{
 			
-			return nme.Assets.getText ("assets/source/Specific/Level2/Sound/Music/empty.md");
+			return nme.Assets.getBitmapData ("assets/source/world1/lvl1/fg/l1/lvl1_fg1_l1_2.png");
 			
 		}
 		
-		if (inName == "assets/source/Specific/Level3/Enemies/empty.md")
+		if (inName == "assets/source/world1/lvl1/fg/l1/lvl1_fg1_l1_3.png")
 		{
 			
-			return nme.Assets.getText ("assets/source/Specific/Level3/Enemies/empty.md");
+			return nme.Assets.getBitmapData ("assets/source/world1/lvl1/fg/l1/lvl1_fg1_l1_3.png");
 			
 		}
 		
-		if (inName == "assets/source/Specific/Level3/Environment/Background/empty.md")
+		if (inName == "assets/source/world1/lvl1/fg/l1/lvl1_fg1_l1_4.png")
 		{
 			
-			return nme.Assets.getText ("assets/source/Specific/Level3/Environment/Background/empty.md");
+			return nme.Assets.getBitmapData ("assets/source/world1/lvl1/fg/l1/lvl1_fg1_l1_4.png");
 			
 		}
 		
-		if (inName == "assets/source/Specific/Level3/Environment/Foreground/empty.md")
+		if (inName == "assets/source/world1/lvl1/fg/l1/lvl1_fg1_l1_5.png")
 		{
 			
-			return nme.Assets.getText ("assets/source/Specific/Level3/Environment/Foreground/empty.md");
+			return nme.Assets.getBitmapData ("assets/source/world1/lvl1/fg/l1/lvl1_fg1_l1_5.png");
 			
 		}
 		
-		if (inName == "assets/source/Specific/Level3/Sound/Effects/empty.md")
+		if (inName == "assets/source/world1/lvl1/fg/l1/lvl1_fg1_l1_6.png")
 		{
 			
-			return nme.Assets.getText ("assets/source/Specific/Level3/Sound/Effects/empty.md");
+			return nme.Assets.getBitmapData ("assets/source/world1/lvl1/fg/l1/lvl1_fg1_l1_6.png");
 			
 		}
 		
-		if (inName == "assets/source/Specific/Level3/Sound/Music/empty.md")
+		if (inName == "assets/source/world1/lvl1/fg/l1/lvl1_fg1_l1_7.png")
 		{
 			
-			return nme.Assets.getText ("assets/source/Specific/Level3/Sound/Music/empty.md");
+			return nme.Assets.getBitmapData ("assets/source/world1/lvl1/fg/l1/lvl1_fg1_l1_7.png");
 			
 		}
 		
-		if (inName == "assets/source/walking.xml")
+		if (inName == "assets/source/world1/lvl1/fg/l1/lvl1_fg1_l1_8.png")
 		{
 			
-			return nme.Assets.getText ("assets/source/walking.xml");
+			return nme.Assets.getBitmapData ("assets/source/world1/lvl1/fg/l1/lvl1_fg1_l1_8.png");
 			
 		}
 		
-		if (inName == "assets/tablet-1x/General/Enemies/empty.md")
+		if (inName == "assets/source/world1/lvl1/fg/l2/empty.md")
 		{
 			
-			return nme.Assets.getText ("assets/tablet-1x/General/Enemies/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-1x/General/Environment/Background/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-1x/General/Environment/Background/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-1x/General/Environment/Foreground/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-1x/General/Environment/Foreground/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-1x/General/Worldmap/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-1x/General/Worldmap/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-1x/Specific/Level1/Enemies/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-1x/Specific/Level1/Enemies/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-1x/Specific/Level1/Environment/Background/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-1x/Specific/Level1/Environment/Background/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-1x/Specific/Level1/Environment/Foreground/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-1x/Specific/Level1/Environment/Foreground/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-1x/Specific/Level2/Enemies/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-1x/Specific/Level2/Enemies/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-1x/Specific/Level2/Environment/Background/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-1x/Specific/Level2/Environment/Background/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-1x/Specific/Level2/Environment/Foreground/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-1x/Specific/Level2/Environment/Foreground/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-1x/Specific/Level3/Enemies/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-1x/Specific/Level3/Enemies/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-1x/Specific/Level3/Environment/Background/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-1x/Specific/Level3/Environment/Background/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-1x/Specific/Level3/Environment/Foreground/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-1x/Specific/Level3/Environment/Foreground/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-2x/General/Enemies/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-2x/General/Enemies/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-2x/General/Environment/Background/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-2x/General/Environment/Background/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-2x/General/Environment/Foreground/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-2x/General/Environment/Foreground/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-2x/General/Worldmap/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-2x/General/Worldmap/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-2x/Specific/Level1/Enemies/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-2x/Specific/Level1/Enemies/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-2x/Specific/Level1/Environment/Background/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-2x/Specific/Level1/Environment/Background/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-2x/Specific/Level1/Environment/Foreground/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-2x/Specific/Level1/Environment/Foreground/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-2x/Specific/Level2/Enemies/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-2x/Specific/Level2/Enemies/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-2x/Specific/Level2/Environment/Background/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-2x/Specific/Level2/Environment/Background/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-2x/Specific/Level2/Environment/Foreground/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-2x/Specific/Level2/Environment/Foreground/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-2x/Specific/Level3/Enemies/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-2x/Specific/Level3/Enemies/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-2x/Specific/Level3/Environment/Background/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-2x/Specific/Level3/Environment/Background/empty.md");
-			
-		}
-		
-		if (inName == "assets/tablet-2x/Specific/Level3/Environment/Foreground/empty.md")
-		{
-			
-			return nme.Assets.getText ("assets/tablet-2x/Specific/Level3/Environment/Foreground/empty.md");
+			return nme.Assets.getText ("assets/source/world1/lvl1/fg/l2/empty.md");
 			
 		}
 		
@@ -731,6 +486,34 @@ class ApplicationMain
 		{
 			
 			return nme.Assets.getText ("assets/xml/bg.xml");
+			
+		}
+		
+		if (inName == "assets/xml/bg2.xml")
+		{
+			
+			return nme.Assets.getText ("assets/xml/bg2.xml");
+			
+		}
+		
+		if (inName == "assets/xml/general/bg/empty.md")
+		{
+			
+			return nme.Assets.getText ("assets/xml/general/bg/empty.md");
+			
+		}
+		
+		if (inName == "assets/xml/general/characters/empty.md")
+		{
+			
+			return nme.Assets.getText ("assets/xml/general/characters/empty.md");
+			
+		}
+		
+		if (inName == "assets/xml/general/fg/empty.md")
+		{
+			
+			return nme.Assets.getText ("assets/xml/general/fg/empty.md");
 			
 		}
 		
@@ -759,6 +542,132 @@ class ApplicationMain
 		{
 			
 			return nme.Assets.getText ("assets/xml/walking.xml");
+			
+		}
+		
+		if (inName == "assets/xml/world1/general/empty.md")
+		{
+			
+			return nme.Assets.getText ("assets/xml/world1/general/empty.md");
+			
+		}
+		
+		if (inName == "assets/xml/world1/lvl1/bg/l1/empty.md")
+		{
+			
+			return nme.Assets.getText ("assets/xml/world1/lvl1/bg/l1/empty.md");
+			
+		}
+		
+		if (inName == "assets/xml/world1/lvl1/bg/l2/empty.md")
+		{
+			
+			return nme.Assets.getText ("assets/xml/world1/lvl1/bg/l2/empty.md");
+			
+		}
+		
+		if (inName == "assets/xml/world1/lvl1/bg/l3/empty.md")
+		{
+			
+			return nme.Assets.getText ("assets/xml/world1/lvl1/bg/l3/empty.md");
+			
+		}
+		
+		if (inName == "assets/xml/world1/lvl1/bg/l4/empty.md")
+		{
+			
+			return nme.Assets.getText ("assets/xml/world1/lvl1/bg/l4/empty.md");
+			
+		}
+		
+		if (inName == "assets/xml/world1/lvl1/bg/l5/empty.md")
+		{
+			
+			return nme.Assets.getText ("assets/xml/world1/lvl1/bg/l5/empty.md");
+			
+		}
+		
+		if (inName == "assets/xml/world1/lvl1/bg/l6/empty.md")
+		{
+			
+			return nme.Assets.getText ("assets/xml/world1/lvl1/bg/l6/empty.md");
+			
+		}
+		
+		if (inName == "assets/xml/world1/lvl1/bg.xml")
+		{
+			
+			return nme.Assets.getText ("assets/xml/world1/lvl1/bg.xml");
+			
+		}
+		
+		if (inName == "assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_1.xml")
+		{
+			
+			return nme.Assets.getText ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_1.xml");
+			
+		}
+		
+		if (inName == "assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_2.xml")
+		{
+			
+			return nme.Assets.getText ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_2.xml");
+			
+		}
+		
+		if (inName == "assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_3.xml")
+		{
+			
+			return nme.Assets.getText ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_3.xml");
+			
+		}
+		
+		if (inName == "assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_4.xml")
+		{
+			
+			return nme.Assets.getText ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_4.xml");
+			
+		}
+		
+		if (inName == "assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_5.xml")
+		{
+			
+			return nme.Assets.getText ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_5.xml");
+			
+		}
+		
+		if (inName == "assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_6.xml")
+		{
+			
+			return nme.Assets.getText ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_6.xml");
+			
+		}
+		
+		if (inName == "assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_7.xml")
+		{
+			
+			return nme.Assets.getText ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_7.xml");
+			
+		}
+		
+		if (inName == "assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_8.xml")
+		{
+			
+			return nme.Assets.getText ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_8.xml");
+			
+		}
+		
+		if (inName == "assets/xml/world1/lvl1/fg/l2/empty.md")
+		{
+			
+			return nme.Assets.getText ("assets/xml/world1/lvl1/fg/l2/empty.md");
+			
+		}
+		
+		if (inName == "assets/xml/world1/lvl2/bg.xml")
+		{
+			
+			return nme.Assets.getText ("assets/xml/world1/lvl2/bg.xml");
 			
 		}
 		

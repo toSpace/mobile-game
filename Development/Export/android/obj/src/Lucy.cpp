@@ -1,5 +1,8 @@
 #include <hxcpp.h>
 
+#ifndef INCLUDED_Camera
+#include <Camera.h>
+#endif
 #ifndef INCLUDED_Character
 #include <Character.h>
 #endif
@@ -49,8 +52,10 @@ Void Lucy_obj::render( ){
 {
 		HX_STACK_PUSH("Lucy::render","Lucy.hx",14);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(14)
+		HX_STACK_LINE(15)
 		this->walk(this->lucy->body,::Settings_obj::flockSpeed,::Settings_obj::flockVelocity);
+		HX_STACK_LINE(16)
+		::Camera_obj::follow(this->lucy->body);
 	}
 return null();
 }

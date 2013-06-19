@@ -36,6 +36,9 @@
 #ifndef INCLUDED_haxe_xml__Fast_NodeAccess
 #include <haxe/xml/_Fast/NodeAccess.h>
 #endif
+#ifndef INCLUDED_nape_geom_AABB
+#include <nape/geom/AABB.h>
+#endif
 #ifndef INCLUDED_nape_geom_Vec2
 #include <nape/geom/Vec2.h>
 #endif
@@ -87,6 +90,9 @@
 #ifndef INCLUDED_nme_installer_Assets
 #include <nme/installer/Assets.h>
 #endif
+#ifndef INCLUDED_zpp_nape_geom_ZPP_AABB
+#include <zpp_nape/geom/ZPP_AABB.h>
+#endif
 #ifndef INCLUDED_zpp_nape_geom_ZPP_Vec2
 #include <zpp_nape/geom/ZPP_Vec2.h>
 #endif
@@ -102,25 +108,25 @@
 
 Void GameObject_obj::__construct(::String xmlUrl)
 {
-HX_STACK_PUSH("GameObject::new","GameObject.hx",25);
+HX_STACK_PUSH("GameObject::new","GameObject.hx",26);
 {
-	HX_STACK_LINE(28)
-	this->space = ::Main_obj::space;
 	HX_STACK_LINE(29)
+	this->space = ::Main_obj::space;
+	HX_STACK_LINE(30)
 	this->canvas = ::Main_obj::canvas;
-	HX_STACK_LINE(32)
-	this->xml = this->readXml(xmlUrl);
 	HX_STACK_LINE(33)
-	this->asset = ::native::display::Bitmap_obj::__new(::nme::installer::Assets_obj::getBitmapData(this->xml->get(HX_CSTRING("img")),null()),null(),null());
+	this->xml = this->readXml(xmlUrl);
 	HX_STACK_LINE(34)
+	this->asset = ::native::display::Bitmap_obj::__new(::nme::installer::Assets_obj::getBitmapData(this->xml->get(HX_CSTRING("img")),null()),null(),null());
+	HX_STACK_LINE(35)
 	this->xml->set(HX_CSTRING("y"),(::Mobile_obj::getY(this->asset) - this->xml->get(HX_CSTRING("y"))));
-	HX_STACK_LINE(37)
-	this->physicsObject(this->xml->get(HX_CSTRING("physics")));
 	HX_STACK_LINE(38)
+	this->physicsObject(this->xml->get(HX_CSTRING("physics")));
+	HX_STACK_LINE(39)
 	this->body->setShapeMaterials(this->makeMaterial());
-	HX_STACK_LINE(41)
+	HX_STACK_LINE(42)
 	::RenderManager_obj::add(hx::ObjectPtr<OBJ_>(this));
-	HX_STACK_LINE(43)
+	HX_STACK_LINE(44)
 	this->canvas->addChild(this->asset);
 }
 ;
@@ -142,7 +148,7 @@ Dynamic GameObject_obj::__Create(hx::DynamicArray inArgs)
 
 Void GameObject_obj::setXY( Float x,Float y,hx::Null< bool >  __o_offset){
 bool offset = __o_offset.Default(false);
-	HX_STACK_PUSH("GameObject::setXY","GameObject.hx",130);
+	HX_STACK_PUSH("GameObject::setXY","GameObject.hx",135);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(x,"x");
 	HX_STACK_ARG(y,"y");
@@ -150,15 +156,15 @@ bool offset = __o_offset.Default(false);
 {
 		struct _Function_1_1{
 			inline static Dynamic Block( ::GameObject_obj *__this){
-				HX_STACK_PUSH("*::closure","GameObject.hx",131);
+				HX_STACK_PUSH("*::closure","GameObject.hx",136);
 				{
-					HX_STACK_LINE(131)
+					HX_STACK_LINE(136)
 					::nape::phys::Body _this = __this->body;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(131)
+					HX_STACK_LINE(136)
 					if (((_this->zpp_inner_i->userData == null()))){
 						struct _Function_3_1{
 							inline static Dynamic Block( ){
-								HX_STACK_PUSH("*::closure","GameObject.hx",131);
+								HX_STACK_PUSH("*::closure","GameObject.hx",136);
 								{
 									hx::Anon __result = hx::Anon_obj::Create();
 									return __result;
@@ -166,140 +172,140 @@ bool offset = __o_offset.Default(false);
 								return null();
 							}
 						};
-						HX_STACK_LINE(131)
+						HX_STACK_LINE(136)
 						_this->zpp_inner_i->userData = _Function_3_1::Block();
 					}
-					HX_STACK_LINE(131)
+					HX_STACK_LINE(136)
 					return _this->zpp_inner_i->userData;
 				}
 				return null();
 			}
 		};
-		HX_STACK_LINE(131)
+		HX_STACK_LINE(136)
 		::nape::geom::Vec2 bodyOffset = (_Function_1_1::Block(this))->__Field(HX_CSTRING("graphicOffset"),true);		HX_STACK_VAR(bodyOffset,"bodyOffset");
-		HX_STACK_LINE(132)
+		HX_STACK_LINE(137)
 		if ((offset)){
 			struct _Function_2_1{
 				inline static Float Block( ::nape::geom::Vec2 &bodyOffset){
-					HX_STACK_PUSH("*::closure","GameObject.hx",133);
+					HX_STACK_PUSH("*::closure","GameObject.hx",138);
 					{
-						HX_STACK_LINE(133)
+						HX_STACK_LINE(138)
 						if (((bool((bodyOffset != null())) && bool(bodyOffset->zpp_disp)))){
-							HX_STACK_LINE(133)
+							HX_STACK_LINE(138)
 							hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 						}
-						HX_STACK_LINE(133)
+						HX_STACK_LINE(138)
 						{
-							HX_STACK_LINE(133)
+							HX_STACK_LINE(138)
 							::zpp_nape::geom::ZPP_Vec2 _this = bodyOffset->zpp_inner;		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(133)
+							HX_STACK_LINE(138)
 							if (((_this->_validate_dyn() != null()))){
-								HX_STACK_LINE(133)
+								HX_STACK_LINE(138)
 								_this->_validate();
 							}
 						}
-						HX_STACK_LINE(133)
+						HX_STACK_LINE(138)
 						return bodyOffset->zpp_inner->x;
 					}
 					return null();
 				}
 			};
-			HX_STACK_LINE(133)
+			HX_STACK_LINE(138)
 			hx::SubEq(x,_Function_2_1::Block(bodyOffset));
 			struct _Function_2_2{
 				inline static Float Block( ::nape::geom::Vec2 &bodyOffset){
-					HX_STACK_PUSH("*::closure","GameObject.hx",134);
+					HX_STACK_PUSH("*::closure","GameObject.hx",139);
 					{
-						HX_STACK_LINE(134)
+						HX_STACK_LINE(139)
 						if (((bool((bodyOffset != null())) && bool(bodyOffset->zpp_disp)))){
-							HX_STACK_LINE(134)
+							HX_STACK_LINE(139)
 							hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 						}
-						HX_STACK_LINE(134)
+						HX_STACK_LINE(139)
 						{
-							HX_STACK_LINE(134)
+							HX_STACK_LINE(139)
 							::zpp_nape::geom::ZPP_Vec2 _this = bodyOffset->zpp_inner;		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(134)
+							HX_STACK_LINE(139)
 							if (((_this->_validate_dyn() != null()))){
-								HX_STACK_LINE(134)
+								HX_STACK_LINE(139)
 								_this->_validate();
 							}
 						}
-						HX_STACK_LINE(134)
+						HX_STACK_LINE(139)
 						return bodyOffset->zpp_inner->y;
 					}
 					return null();
 				}
 			};
-			HX_STACK_LINE(134)
+			HX_STACK_LINE(139)
 			hx::SubEq(y,_Function_2_2::Block(bodyOffset));
 		}
-		HX_STACK_LINE(136)
+		HX_STACK_LINE(141)
 		{
 			struct _Function_2_1{
 				inline static ::nape::geom::Vec2 Block( ::GameObject_obj *__this){
-					HX_STACK_PUSH("*::closure","GameObject.hx",136);
+					HX_STACK_PUSH("*::closure","GameObject.hx",141);
 					{
-						HX_STACK_LINE(136)
+						HX_STACK_LINE(141)
 						::nape::phys::Body _this = __this->body;		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(136)
+						HX_STACK_LINE(141)
 						if (((_this->zpp_inner->wrap_pos == null()))){
-							HX_STACK_LINE(136)
+							HX_STACK_LINE(141)
 							_this->zpp_inner->setupPosition();
 						}
-						HX_STACK_LINE(136)
+						HX_STACK_LINE(141)
 						return _this->zpp_inner->wrap_pos;
 					}
 					return null();
 				}
 			};
-			HX_STACK_LINE(136)
+			HX_STACK_LINE(141)
 			::nape::geom::Vec2 _this = _Function_2_1::Block(this);		HX_STACK_VAR(_this,"_this");
-			HX_STACK_LINE(136)
+			HX_STACK_LINE(141)
 			if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-				HX_STACK_LINE(136)
+				HX_STACK_LINE(141)
 				hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 			}
-			HX_STACK_LINE(136)
+			HX_STACK_LINE(141)
 			{
-				HX_STACK_LINE(136)
+				HX_STACK_LINE(141)
 				::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-				HX_STACK_LINE(136)
+				HX_STACK_LINE(141)
 				if ((_this1->_immutable)){
-					HX_STACK_LINE(136)
+					HX_STACK_LINE(141)
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
-				HX_STACK_LINE(136)
+				HX_STACK_LINE(141)
 				if (((_this1->_isimmutable_dyn() != null()))){
-					HX_STACK_LINE(136)
+					HX_STACK_LINE(141)
 					_this1->_isimmutable();
 				}
 			}
-			HX_STACK_LINE(136)
+			HX_STACK_LINE(141)
 			if (((bool((x != x)) || bool((y != y))))){
-				HX_STACK_LINE(136)
+				HX_STACK_LINE(141)
 				hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 			}
 			struct _Function_2_2{
 				inline static Float Block( ::nape::geom::Vec2 &_this){
-					HX_STACK_PUSH("*::closure","GameObject.hx",136);
+					HX_STACK_PUSH("*::closure","GameObject.hx",141);
 					{
-						HX_STACK_LINE(136)
+						HX_STACK_LINE(141)
 						if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-							HX_STACK_LINE(136)
+							HX_STACK_LINE(141)
 							hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 						}
-						HX_STACK_LINE(136)
+						HX_STACK_LINE(141)
 						{
-							HX_STACK_LINE(136)
+							HX_STACK_LINE(141)
 							::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-							HX_STACK_LINE(136)
+							HX_STACK_LINE(141)
 							if (((_this1->_validate_dyn() != null()))){
-								HX_STACK_LINE(136)
+								HX_STACK_LINE(141)
 								_this1->_validate();
 							}
 						}
-						HX_STACK_LINE(136)
+						HX_STACK_LINE(141)
 						return _this->zpp_inner->x;
 					}
 					return null();
@@ -307,56 +313,56 @@ bool offset = __o_offset.Default(false);
 			};
 			struct _Function_2_3{
 				inline static Float Block( ::nape::geom::Vec2 &_this){
-					HX_STACK_PUSH("*::closure","GameObject.hx",136);
+					HX_STACK_PUSH("*::closure","GameObject.hx",141);
 					{
-						HX_STACK_LINE(136)
+						HX_STACK_LINE(141)
 						if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-							HX_STACK_LINE(136)
+							HX_STACK_LINE(141)
 							hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 						}
-						HX_STACK_LINE(136)
+						HX_STACK_LINE(141)
 						{
-							HX_STACK_LINE(136)
+							HX_STACK_LINE(141)
 							::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-							HX_STACK_LINE(136)
+							HX_STACK_LINE(141)
 							if (((_this1->_validate_dyn() != null()))){
-								HX_STACK_LINE(136)
+								HX_STACK_LINE(141)
 								_this1->_validate();
 							}
 						}
-						HX_STACK_LINE(136)
+						HX_STACK_LINE(141)
 						return _this->zpp_inner->y;
 					}
 					return null();
 				}
 			};
-			HX_STACK_LINE(136)
+			HX_STACK_LINE(141)
 			if ((!(((bool((_Function_2_2::Block(_this) == x)) && bool((_Function_2_3::Block(_this) == y))))))){
-				HX_STACK_LINE(136)
+				HX_STACK_LINE(141)
 				{
-					HX_STACK_LINE(136)
+					HX_STACK_LINE(141)
 					_this->zpp_inner->x = x;
-					HX_STACK_LINE(136)
+					HX_STACK_LINE(141)
 					_this->zpp_inner->y = y;
-					HX_STACK_LINE(136)
+					HX_STACK_LINE(141)
 					{
 					}
-					HX_STACK_LINE(136)
+					HX_STACK_LINE(141)
 					{
 					}
 				}
-				HX_STACK_LINE(136)
+				HX_STACK_LINE(141)
 				{
-					HX_STACK_LINE(136)
+					HX_STACK_LINE(141)
 					::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-					HX_STACK_LINE(136)
+					HX_STACK_LINE(141)
 					if (((_this1->_invalidate_dyn() != null()))){
-						HX_STACK_LINE(136)
+						HX_STACK_LINE(141)
 						_this1->_invalidate(_this1);
 					}
 				}
 			}
-			HX_STACK_LINE(136)
+			HX_STACK_LINE(141)
 			_this;
 		}
 	}
@@ -368,7 +374,7 @@ HX_DEFINE_DYNAMIC_FUNC3(GameObject_obj,setXY,(void))
 
 Void GameObject_obj::hide( ){
 {
-		HX_STACK_PUSH("GameObject::hide","GameObject.hx",126);
+		HX_STACK_PUSH("GameObject::hide","GameObject.hx",131);
 		HX_STACK_THIS(this);
 	}
 return null();
@@ -378,138 +384,285 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC0(GameObject_obj,hide,(void))
 
 bool GameObject_obj::inView( ){
-	HX_STACK_PUSH("GameObject::inView","GameObject.hx",112);
+	HX_STACK_PUSH("GameObject::inView","GameObject.hx",113);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(113)
-	bool toReturn = false;		HX_STACK_VAR(toReturn,"toReturn");
 	HX_STACK_LINE(114)
+	bool toReturn = false;		HX_STACK_VAR(toReturn,"toReturn");
+	HX_STACK_LINE(115)
 	::native::geom::Point camera = ::Camera_obj::getPosition();		HX_STACK_VAR(camera,"camera");
 	struct _Function_1_1{
 		inline static ::nape::geom::Vec2 Block( ::GameObject_obj *__this){
-			HX_STACK_PUSH("*::closure","GameObject.hx",115);
+			HX_STACK_PUSH("*::closure","GameObject.hx",116);
 			{
-				HX_STACK_LINE(115)
+				HX_STACK_LINE(116)
 				::nape::phys::Body _this = __this->body;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(115)
+				HX_STACK_LINE(116)
 				if (((_this->zpp_inner->wrap_pos == null()))){
-					HX_STACK_LINE(115)
+					HX_STACK_LINE(116)
 					_this->zpp_inner->setupPosition();
 				}
-				HX_STACK_LINE(115)
+				HX_STACK_LINE(116)
 				return _this->zpp_inner->wrap_pos;
 			}
 			return null();
 		}
 	};
-	HX_STACK_LINE(115)
+	HX_STACK_LINE(116)
 	::nape::geom::Vec2 bodyPos = _Function_1_1::Block(this);		HX_STACK_VAR(bodyPos,"bodyPos");
 	struct _Function_1_2{
-		inline static Float Block( ::nape::geom::Vec2 &bodyPos){
+		inline static ::nape::geom::AABB Block( ::GameObject_obj *__this){
 			HX_STACK_PUSH("*::closure","GameObject.hx",117);
 			{
 				HX_STACK_LINE(117)
-				if (((bool((bodyPos != null())) && bool(bodyPos->zpp_disp)))){
+				::nape::phys::Body _this = __this->body;		HX_STACK_VAR(_this,"_this");
+				HX_STACK_LINE(117)
+				if ((_this->zpp_inner->world)){
 					HX_STACK_LINE(117)
-					hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
+					hx::Throw (HX_CSTRING("Error: Space::world has no bounds"));
 				}
 				HX_STACK_LINE(117)
-				{
-					HX_STACK_LINE(117)
-					::zpp_nape::geom::ZPP_Vec2 _this = bodyPos->zpp_inner;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(117)
-					if (((_this->_validate_dyn() != null()))){
-						HX_STACK_LINE(117)
-						_this->_validate();
-					}
-				}
-				HX_STACK_LINE(117)
-				return bodyPos->zpp_inner->x;
+				return _this->zpp_inner->aabb->wrapper();
 			}
 			return null();
 		}
 	};
+	HX_STACK_LINE(117)
+	::nape::geom::AABB bodyBounds = _Function_1_2::Block(this);		HX_STACK_VAR(bodyBounds,"bodyBounds");
 	struct _Function_1_3{
 		inline static Float Block( ::nape::geom::Vec2 &bodyPos){
-			HX_STACK_PUSH("*::closure","GameObject.hx",117);
+			HX_STACK_PUSH("*::closure","GameObject.hx",120);
 			{
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(120)
 				if (((bool((bodyPos != null())) && bool(bodyPos->zpp_disp)))){
-					HX_STACK_LINE(117)
+					HX_STACK_LINE(120)
 					hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 				}
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(120)
 				{
-					HX_STACK_LINE(117)
+					HX_STACK_LINE(120)
 					::zpp_nape::geom::ZPP_Vec2 _this = bodyPos->zpp_inner;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(117)
+					HX_STACK_LINE(120)
 					if (((_this->_validate_dyn() != null()))){
-						HX_STACK_LINE(117)
+						HX_STACK_LINE(120)
 						_this->_validate();
 					}
 				}
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(120)
 				return bodyPos->zpp_inner->x;
 			}
 			return null();
 		}
 	};
 	struct _Function_1_4{
-		inline static Float Block( ::nape::geom::Vec2 &bodyPos){
-			HX_STACK_PUSH("*::closure","GameObject.hx",118);
+		inline static Float Block( ::nape::geom::AABB &bodyBounds){
+			HX_STACK_PUSH("*::closure","GameObject.hx",120);
 			{
-				HX_STACK_LINE(118)
-				if (((bool((bodyPos != null())) && bool(bodyPos->zpp_disp)))){
-					HX_STACK_LINE(118)
-					hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-				}
-				HX_STACK_LINE(118)
+				HX_STACK_LINE(120)
 				{
-					HX_STACK_LINE(118)
-					::zpp_nape::geom::ZPP_Vec2 _this = bodyPos->zpp_inner;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(118)
+					HX_STACK_LINE(120)
+					::zpp_nape::geom::ZPP_AABB _this = bodyBounds->zpp_inner;		HX_STACK_VAR(_this,"_this");
+					HX_STACK_LINE(120)
 					if (((_this->_validate_dyn() != null()))){
-						HX_STACK_LINE(118)
+						HX_STACK_LINE(120)
 						_this->_validate();
 					}
 				}
-				HX_STACK_LINE(118)
-				return bodyPos->zpp_inner->y;
+				struct _Function_2_1{
+					inline static Float Block( ::nape::geom::AABB &bodyBounds){
+						HX_STACK_PUSH("*::closure","GameObject.hx",120);
+						{
+							HX_STACK_LINE(120)
+							::zpp_nape::geom::ZPP_AABB _this = bodyBounds->zpp_inner;		HX_STACK_VAR(_this,"_this");
+							HX_STACK_LINE(120)
+							return (_this->maxx - _this->minx);
+						}
+						return null();
+					}
+				};
+				HX_STACK_LINE(120)
+				return _Function_2_1::Block(bodyBounds);
 			}
 			return null();
 		}
 	};
 	struct _Function_1_5{
 		inline static Float Block( ::nape::geom::Vec2 &bodyPos){
-			HX_STACK_PUSH("*::closure","GameObject.hx",118);
+			HX_STACK_PUSH("*::closure","GameObject.hx",120);
 			{
-				HX_STACK_LINE(118)
+				HX_STACK_LINE(120)
 				if (((bool((bodyPos != null())) && bool(bodyPos->zpp_disp)))){
-					HX_STACK_LINE(118)
+					HX_STACK_LINE(120)
 					hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 				}
-				HX_STACK_LINE(118)
+				HX_STACK_LINE(120)
 				{
-					HX_STACK_LINE(118)
+					HX_STACK_LINE(120)
 					::zpp_nape::geom::ZPP_Vec2 _this = bodyPos->zpp_inner;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(118)
+					HX_STACK_LINE(120)
 					if (((_this->_validate_dyn() != null()))){
-						HX_STACK_LINE(118)
+						HX_STACK_LINE(120)
 						_this->_validate();
 					}
 				}
-				HX_STACK_LINE(118)
-				return bodyPos->zpp_inner->y;
+				HX_STACK_LINE(120)
+				return bodyPos->zpp_inner->x;
 			}
 			return null();
 		}
 	};
-	HX_STACK_LINE(116)
-	if (((bool((bool((bool((_Function_1_2::Block(bodyPos) > (camera->x - ::Settings_obj::cameraOverflow))) && bool((_Function_1_3::Block(bodyPos) < ((camera->x + ::Mobile_obj::screenWidth) + ::Settings_obj::cameraOverflow))))) && bool((_Function_1_4::Block(bodyPos) > (camera->y - ::Settings_obj::cameraOverflow))))) && bool((_Function_1_5::Block(bodyPos) < ((camera->y + ::Mobile_obj::screenHeight) + ::Settings_obj::cameraOverflow)))))){
-		HX_STACK_LINE(119)
+	struct _Function_1_6{
+		inline static Float Block( ::nape::geom::AABB &bodyBounds){
+			HX_STACK_PUSH("*::closure","GameObject.hx",120);
+			{
+				HX_STACK_LINE(120)
+				{
+					HX_STACK_LINE(120)
+					::zpp_nape::geom::ZPP_AABB _this = bodyBounds->zpp_inner;		HX_STACK_VAR(_this,"_this");
+					HX_STACK_LINE(120)
+					if (((_this->_validate_dyn() != null()))){
+						HX_STACK_LINE(120)
+						_this->_validate();
+					}
+				}
+				struct _Function_2_1{
+					inline static Float Block( ::nape::geom::AABB &bodyBounds){
+						HX_STACK_PUSH("*::closure","GameObject.hx",120);
+						{
+							HX_STACK_LINE(120)
+							::zpp_nape::geom::ZPP_AABB _this = bodyBounds->zpp_inner;		HX_STACK_VAR(_this,"_this");
+							HX_STACK_LINE(120)
+							return (_this->maxx - _this->minx);
+						}
+						return null();
+					}
+				};
+				HX_STACK_LINE(120)
+				return _Function_2_1::Block(bodyBounds);
+			}
+			return null();
+		}
+	};
+	struct _Function_1_7{
+		inline static Float Block( ::nape::geom::Vec2 &bodyPos){
+			HX_STACK_PUSH("*::closure","GameObject.hx",122);
+			{
+				HX_STACK_LINE(122)
+				if (((bool((bodyPos != null())) && bool(bodyPos->zpp_disp)))){
+					HX_STACK_LINE(122)
+					hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
+				}
+				HX_STACK_LINE(122)
+				{
+					HX_STACK_LINE(122)
+					::zpp_nape::geom::ZPP_Vec2 _this = bodyPos->zpp_inner;		HX_STACK_VAR(_this,"_this");
+					HX_STACK_LINE(122)
+					if (((_this->_validate_dyn() != null()))){
+						HX_STACK_LINE(122)
+						_this->_validate();
+					}
+				}
+				HX_STACK_LINE(122)
+				return bodyPos->zpp_inner->x;
+			}
+			return null();
+		}
+	};
+	struct _Function_1_8{
+		inline static Float Block( ::nape::geom::AABB &bodyBounds){
+			HX_STACK_PUSH("*::closure","GameObject.hx",122);
+			{
+				HX_STACK_LINE(122)
+				{
+					HX_STACK_LINE(122)
+					::zpp_nape::geom::ZPP_AABB _this = bodyBounds->zpp_inner;		HX_STACK_VAR(_this,"_this");
+					HX_STACK_LINE(122)
+					if (((_this->_validate_dyn() != null()))){
+						HX_STACK_LINE(122)
+						_this->_validate();
+					}
+				}
+				struct _Function_2_1{
+					inline static Float Block( ::nape::geom::AABB &bodyBounds){
+						HX_STACK_PUSH("*::closure","GameObject.hx",122);
+						{
+							HX_STACK_LINE(122)
+							::zpp_nape::geom::ZPP_AABB _this = bodyBounds->zpp_inner;		HX_STACK_VAR(_this,"_this");
+							HX_STACK_LINE(122)
+							return (_this->maxx - _this->minx);
+						}
+						return null();
+					}
+				};
+				HX_STACK_LINE(122)
+				return _Function_2_1::Block(bodyBounds);
+			}
+			return null();
+		}
+	};
+	struct _Function_1_9{
+		inline static Float Block( ::nape::geom::Vec2 &bodyPos){
+			HX_STACK_PUSH("*::closure","GameObject.hx",122);
+			{
+				HX_STACK_LINE(122)
+				if (((bool((bodyPos != null())) && bool(bodyPos->zpp_disp)))){
+					HX_STACK_LINE(122)
+					hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
+				}
+				HX_STACK_LINE(122)
+				{
+					HX_STACK_LINE(122)
+					::zpp_nape::geom::ZPP_Vec2 _this = bodyPos->zpp_inner;		HX_STACK_VAR(_this,"_this");
+					HX_STACK_LINE(122)
+					if (((_this->_validate_dyn() != null()))){
+						HX_STACK_LINE(122)
+						_this->_validate();
+					}
+				}
+				HX_STACK_LINE(122)
+				return bodyPos->zpp_inner->x;
+			}
+			return null();
+		}
+	};
+	struct _Function_1_10{
+		inline static Float Block( ::nape::geom::AABB &bodyBounds){
+			HX_STACK_PUSH("*::closure","GameObject.hx",122);
+			{
+				HX_STACK_LINE(122)
+				{
+					HX_STACK_LINE(122)
+					::zpp_nape::geom::ZPP_AABB _this = bodyBounds->zpp_inner;		HX_STACK_VAR(_this,"_this");
+					HX_STACK_LINE(122)
+					if (((_this->_validate_dyn() != null()))){
+						HX_STACK_LINE(122)
+						_this->_validate();
+					}
+				}
+				struct _Function_2_1{
+					inline static Float Block( ::nape::geom::AABB &bodyBounds){
+						HX_STACK_PUSH("*::closure","GameObject.hx",122);
+						{
+							HX_STACK_LINE(122)
+							::zpp_nape::geom::ZPP_AABB _this = bodyBounds->zpp_inner;		HX_STACK_VAR(_this,"_this");
+							HX_STACK_LINE(122)
+							return (_this->maxx - _this->minx);
+						}
+						return null();
+					}
+				};
+				HX_STACK_LINE(122)
+				return _Function_2_1::Block(bodyBounds);
+			}
+			return null();
+		}
+	};
+	HX_STACK_LINE(119)
+	if (((bool((bool(((_Function_1_3::Block(bodyPos) - _Function_1_4::Block(bodyBounds)) > (camera->x - ::Settings_obj::cameraOverflow))) && bool(((_Function_1_5::Block(bodyPos) - _Function_1_6::Block(bodyBounds)) < ((camera->x + ::Mobile_obj::screenWidth) + ::Settings_obj::cameraOverflow))))) || bool((bool(((_Function_1_7::Block(bodyPos) + _Function_1_8::Block(bodyBounds)) > (camera->x - ::Settings_obj::cameraOverflow))) && bool(((_Function_1_9::Block(bodyPos) + _Function_1_10::Block(bodyBounds)) < ((camera->x + ::Mobile_obj::screenWidth) + ::Settings_obj::cameraOverflow)))))))){
+		HX_STACK_LINE(123)
 		toReturn = true;
 	}
-	HX_STACK_LINE(123)
-	return toReturn;
+	HX_STACK_LINE(128)
+	return true;
 }
 
 
@@ -517,11 +670,11 @@ HX_DEFINE_DYNAMIC_FUNC0(GameObject_obj,inView,return )
 
 Void GameObject_obj::remove( ){
 {
-		HX_STACK_PUSH("GameObject::remove","GameObject.hx",101);
+		HX_STACK_PUSH("GameObject::remove","GameObject.hx",102);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(103)
+		HX_STACK_LINE(104)
 		this->hide();
-		HX_STACK_LINE(106)
+		HX_STACK_LINE(107)
 		this->canvas->removeChild(this->asset);
 	}
 return null();
@@ -532,38 +685,9 @@ HX_DEFINE_DYNAMIC_FUNC0(GameObject_obj,remove,(void))
 
 Void GameObject_obj::renderPhysics( ){
 {
-		HX_STACK_PUSH("GameObject::renderPhysics","GameObject.hx",90);
+		HX_STACK_PUSH("GameObject::renderPhysics","GameObject.hx",91);
 		HX_STACK_THIS(this);
 		struct _Function_1_1{
-			inline static Dynamic Block( ::GameObject_obj *__this){
-				HX_STACK_PUSH("*::closure","GameObject.hx",92);
-				{
-					HX_STACK_LINE(92)
-					::nape::phys::Body _this = __this->body;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(92)
-					if (((_this->zpp_inner_i->userData == null()))){
-						struct _Function_3_1{
-							inline static Dynamic Block( ){
-								HX_STACK_PUSH("*::closure","GameObject.hx",92);
-								{
-									hx::Anon __result = hx::Anon_obj::Create();
-									return __result;
-								}
-								return null();
-							}
-						};
-						HX_STACK_LINE(92)
-						_this->zpp_inner_i->userData = _Function_3_1::Block();
-					}
-					HX_STACK_LINE(92)
-					return _this->zpp_inner_i->userData;
-				}
-				return null();
-			}
-		};
-		HX_STACK_LINE(92)
-		::native::display::DisplayObject graphic = (_Function_1_1::Block(this))->__Field(HX_CSTRING("graphic"),true);		HX_STACK_VAR(graphic,"graphic");
-		struct _Function_1_2{
 			inline static Dynamic Block( ::GameObject_obj *__this){
 				HX_STACK_PUSH("*::closure","GameObject.hx",93);
 				{
@@ -591,37 +715,39 @@ Void GameObject_obj::renderPhysics( ){
 			}
 		};
 		HX_STACK_LINE(93)
-		::nape::geom::Vec2 graphicOffset = (_Function_1_2::Block(this))->__Field(HX_CSTRING("graphicOffset"),true);		HX_STACK_VAR(graphicOffset,"graphicOffset");
-		HX_STACK_LINE(94)
-		::nape::geom::Vec2 position = this->body->localPointToWorld(graphicOffset,null());		HX_STACK_VAR(position,"position");
-		struct _Function_1_3{
-			inline static Float Block( ::nape::geom::Vec2 &position){
-				HX_STACK_PUSH("*::closure","GameObject.hx",95);
+		::native::display::DisplayObject graphic = (_Function_1_1::Block(this))->__Field(HX_CSTRING("graphic"),true);		HX_STACK_VAR(graphic,"graphic");
+		struct _Function_1_2{
+			inline static Dynamic Block( ::GameObject_obj *__this){
+				HX_STACK_PUSH("*::closure","GameObject.hx",94);
 				{
-					HX_STACK_LINE(95)
-					if (((bool((position != null())) && bool(position->zpp_disp)))){
-						HX_STACK_LINE(95)
-						hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
+					HX_STACK_LINE(94)
+					::nape::phys::Body _this = __this->body;		HX_STACK_VAR(_this,"_this");
+					HX_STACK_LINE(94)
+					if (((_this->zpp_inner_i->userData == null()))){
+						struct _Function_3_1{
+							inline static Dynamic Block( ){
+								HX_STACK_PUSH("*::closure","GameObject.hx",94);
+								{
+									hx::Anon __result = hx::Anon_obj::Create();
+									return __result;
+								}
+								return null();
+							}
+						};
+						HX_STACK_LINE(94)
+						_this->zpp_inner_i->userData = _Function_3_1::Block();
 					}
-					HX_STACK_LINE(95)
-					{
-						HX_STACK_LINE(95)
-						::zpp_nape::geom::ZPP_Vec2 _this = position->zpp_inner;		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(95)
-						if (((_this->_validate_dyn() != null()))){
-							HX_STACK_LINE(95)
-							_this->_validate();
-						}
-					}
-					HX_STACK_LINE(95)
-					return position->zpp_inner->x;
+					HX_STACK_LINE(94)
+					return _this->zpp_inner_i->userData;
 				}
 				return null();
 			}
 		};
+		HX_STACK_LINE(94)
+		::nape::geom::Vec2 graphicOffset = (_Function_1_2::Block(this))->__Field(HX_CSTRING("graphicOffset"),true);		HX_STACK_VAR(graphicOffset,"graphicOffset");
 		HX_STACK_LINE(95)
-		graphic->set_x(_Function_1_3::Block(position));
-		struct _Function_1_4{
+		::nape::geom::Vec2 position = this->body->localPointToWorld(graphicOffset,null());		HX_STACK_VAR(position,"position");
+		struct _Function_1_3{
 			inline static Float Block( ::nape::geom::Vec2 &position){
 				HX_STACK_PUSH("*::closure","GameObject.hx",96);
 				{
@@ -641,97 +767,124 @@ Void GameObject_obj::renderPhysics( ){
 						}
 					}
 					HX_STACK_LINE(96)
-					return position->zpp_inner->y;
+					return position->zpp_inner->x;
 				}
 				return null();
 			}
 		};
 		HX_STACK_LINE(96)
-		graphic->set_y(_Function_1_4::Block(position));
+		graphic->set_x(_Function_1_3::Block(position));
+		struct _Function_1_4{
+			inline static Float Block( ::nape::geom::Vec2 &position){
+				HX_STACK_PUSH("*::closure","GameObject.hx",97);
+				{
+					HX_STACK_LINE(97)
+					if (((bool((position != null())) && bool(position->zpp_disp)))){
+						HX_STACK_LINE(97)
+						hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
+					}
+					HX_STACK_LINE(97)
+					{
+						HX_STACK_LINE(97)
+						::zpp_nape::geom::ZPP_Vec2 _this = position->zpp_inner;		HX_STACK_VAR(_this,"_this");
+						HX_STACK_LINE(97)
+						if (((_this->_validate_dyn() != null()))){
+							HX_STACK_LINE(97)
+							_this->_validate();
+						}
+					}
+					HX_STACK_LINE(97)
+					return position->zpp_inner->y;
+				}
+				return null();
+			}
+		};
 		HX_STACK_LINE(97)
-		graphic->set_rotation(hx::Mod((Float((this->body->zpp_inner->rot * (int)180)) / Float(::Math_obj::PI)),(int)360));
+		graphic->set_y(_Function_1_4::Block(position));
 		HX_STACK_LINE(98)
+		graphic->set_rotation(hx::Mod((Float((this->body->zpp_inner->rot * (int)180)) / Float(::Math_obj::PI)),(int)360));
+		HX_STACK_LINE(99)
 		{
-			HX_STACK_LINE(98)
+			HX_STACK_LINE(99)
 			if (((bool((position != null())) && bool(position->zpp_disp)))){
-				HX_STACK_LINE(98)
+				HX_STACK_LINE(99)
 				hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 			}
-			HX_STACK_LINE(98)
+			HX_STACK_LINE(99)
 			{
-				HX_STACK_LINE(98)
+				HX_STACK_LINE(99)
 				::zpp_nape::geom::ZPP_Vec2 _this = position->zpp_inner;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(98)
+				HX_STACK_LINE(99)
 				if ((_this->_immutable)){
-					HX_STACK_LINE(98)
+					HX_STACK_LINE(99)
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
-				HX_STACK_LINE(98)
+				HX_STACK_LINE(99)
 				if (((_this->_isimmutable_dyn() != null()))){
-					HX_STACK_LINE(98)
+					HX_STACK_LINE(99)
 					_this->_isimmutable();
 				}
 			}
-			HX_STACK_LINE(98)
+			HX_STACK_LINE(99)
 			if ((position->zpp_inner->_inuse)){
-				HX_STACK_LINE(98)
+				HX_STACK_LINE(99)
 				hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
 			}
-			HX_STACK_LINE(98)
+			HX_STACK_LINE(99)
 			::zpp_nape::geom::ZPP_Vec2 inner = position->zpp_inner;		HX_STACK_VAR(inner,"inner");
-			HX_STACK_LINE(98)
+			HX_STACK_LINE(99)
 			position->zpp_inner->outer = null();
-			HX_STACK_LINE(98)
+			HX_STACK_LINE(99)
 			position->zpp_inner = null();
-			HX_STACK_LINE(98)
+			HX_STACK_LINE(99)
 			{
-				HX_STACK_LINE(98)
+				HX_STACK_LINE(99)
 				::nape::geom::Vec2 o = position;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(98)
+				HX_STACK_LINE(99)
 				{
 				}
-				HX_STACK_LINE(98)
+				HX_STACK_LINE(99)
 				o->zpp_pool = null();
-				HX_STACK_LINE(98)
+				HX_STACK_LINE(99)
 				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-					HX_STACK_LINE(98)
+					HX_STACK_LINE(99)
 					::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o;
 				}
 				else{
-					HX_STACK_LINE(98)
+					HX_STACK_LINE(99)
 					::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o;
 				}
-				HX_STACK_LINE(98)
+				HX_STACK_LINE(99)
 				::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o;
-				HX_STACK_LINE(98)
+				HX_STACK_LINE(99)
 				o->zpp_disp = true;
 			}
-			HX_STACK_LINE(98)
+			HX_STACK_LINE(99)
 			{
-				HX_STACK_LINE(98)
+				HX_STACK_LINE(99)
 				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(98)
+				HX_STACK_LINE(99)
 				{
 				}
-				HX_STACK_LINE(98)
+				HX_STACK_LINE(99)
 				{
-					HX_STACK_LINE(98)
+					HX_STACK_LINE(99)
 					if (((o->outer != null()))){
-						HX_STACK_LINE(98)
+						HX_STACK_LINE(99)
 						o->outer->zpp_inner = null();
-						HX_STACK_LINE(98)
+						HX_STACK_LINE(99)
 						o->outer = null();
 					}
-					HX_STACK_LINE(98)
+					HX_STACK_LINE(99)
 					o->_isimmutable = null();
-					HX_STACK_LINE(98)
+					HX_STACK_LINE(99)
 					o->_validate = null();
-					HX_STACK_LINE(98)
+					HX_STACK_LINE(99)
 					o->_invalidate = null();
 				}
-				HX_STACK_LINE(98)
+				HX_STACK_LINE(99)
 				o->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-				HX_STACK_LINE(98)
+				HX_STACK_LINE(99)
 				::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o;
 			}
 		}
@@ -744,11 +897,11 @@ HX_DEFINE_DYNAMIC_FUNC0(GameObject_obj,renderPhysics,(void))
 
 Void GameObject_obj::render( ){
 {
-		HX_STACK_PUSH("GameObject::render","GameObject.hx",86);
+		HX_STACK_PUSH("GameObject::render","GameObject.hx",87);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(86)
+		HX_STACK_LINE(87)
 		if ((this->inView())){
-			HX_STACK_LINE(87)
+			HX_STACK_LINE(88)
 			this->renderPhysics();
 		}
 	}
@@ -759,9 +912,9 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC0(GameObject_obj,render,(void))
 
 ::nape::phys::Material GameObject_obj::makeMaterial( ){
-	HX_STACK_PUSH("GameObject::makeMaterial","GameObject.hx",76);
+	HX_STACK_PUSH("GameObject::makeMaterial","GameObject.hx",77);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(76)
+	HX_STACK_LINE(77)
 	return ::nape::phys::Material_obj::__new(this->xml->get(HX_CSTRING("elasticity")),this->xml->get(HX_CSTRING("dynamicFriction")),this->xml->get(HX_CSTRING("staticFriction")),this->xml->get(HX_CSTRING("density")),this->xml->get(HX_CSTRING("rollingFriction")));
 }
 
@@ -770,7 +923,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GameObject_obj,makeMaterial,return )
 
 Void GameObject_obj::physicsObject( ::String physic){
 {
-		HX_STACK_PUSH("GameObject::physicsObject","GameObject.hx",70);
+		HX_STACK_PUSH("GameObject::physicsObject","GameObject.hx",71);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(physic,"physic");
 	}
@@ -781,38 +934,38 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(GameObject_obj,physicsObject,(void))
 
 ::Hash GameObject_obj::readXml( ::String url){
-	HX_STACK_PUSH("GameObject::readXml","GameObject.hx",46);
+	HX_STACK_PUSH("GameObject::readXml","GameObject.hx",47);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(url,"url");
-	HX_STACK_LINE(47)
-	::Hash p = ::Hash_obj::__new();		HX_STACK_VAR(p,"p");
 	HX_STACK_LINE(48)
-	::String xmlFile = ::nme::installer::Assets_obj::getText((::Mobile_obj::xml + url));		HX_STACK_VAR(xmlFile,"xmlFile");
+	::Hash p = ::Hash_obj::__new();		HX_STACK_VAR(p,"p");
 	HX_STACK_LINE(49)
+	::String xmlFile = ::nme::installer::Assets_obj::getText((::Mobile_obj::xml + url));		HX_STACK_VAR(xmlFile,"xmlFile");
+	HX_STACK_LINE(50)
 	::haxe::xml::Fast read = ::haxe::xml::Fast_obj::__new(::Xml_obj::parse(xmlFile));		HX_STACK_VAR(read,"read");
-	HX_STACK_LINE(51)
-	::haxe::xml::Fast asset = read->node->resolve(HX_CSTRING("asset"));		HX_STACK_VAR(asset,"asset");
 	HX_STACK_LINE(52)
+	::haxe::xml::Fast asset = read->node->resolve(HX_CSTRING("asset"));		HX_STACK_VAR(asset,"asset");
+	HX_STACK_LINE(53)
 	p->set(HX_CSTRING("img"),(::Mobile_obj::asset + asset->node->resolve(HX_CSTRING("img"))->getInnerData()));
-	HX_STACK_LINE(55)
-	p->set(HX_CSTRING("x"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("x")));
 	HX_STACK_LINE(56)
-	p->set(HX_CSTRING("y"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("y")));
+	p->set(HX_CSTRING("x"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("x")));
 	HX_STACK_LINE(57)
+	p->set(HX_CSTRING("y"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("y")));
+	HX_STACK_LINE(58)
 	p->set(HX_CSTRING("rotation"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("rotation")));
-	HX_STACK_LINE(60)
-	p->set(HX_CSTRING("physics"),asset->node->resolve(HX_CSTRING("physics"))->getInnerData());
 	HX_STACK_LINE(61)
-	p->set(HX_CSTRING("elasticity"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("elasticity")));
+	p->set(HX_CSTRING("physics"),asset->node->resolve(HX_CSTRING("physics"))->getInnerData());
 	HX_STACK_LINE(62)
-	p->set(HX_CSTRING("dynamicFriction"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("dynamicFriction")));
+	p->set(HX_CSTRING("elasticity"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("elasticity")));
 	HX_STACK_LINE(63)
-	p->set(HX_CSTRING("staticFriction"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("staticFriction")));
+	p->set(HX_CSTRING("dynamicFriction"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("dynamicFriction")));
 	HX_STACK_LINE(64)
-	p->set(HX_CSTRING("density"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("density")));
+	p->set(HX_CSTRING("staticFriction"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("staticFriction")));
 	HX_STACK_LINE(65)
+	p->set(HX_CSTRING("density"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("density")));
+	HX_STACK_LINE(66)
 	p->set(HX_CSTRING("rollingFriction"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("rollingFriction")));
-	HX_STACK_LINE(67)
+	HX_STACK_LINE(68)
 	return p;
 }
 

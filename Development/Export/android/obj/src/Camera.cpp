@@ -9,6 +9,12 @@
 #ifndef INCLUDED_hxMath
 #include <hxMath.h>
 #endif
+#ifndef INCLUDED_Mobile
+#include <Mobile.h>
+#endif
+#ifndef INCLUDED_nape_geom_Vec2
+#include <nape/geom/Vec2.h>
+#endif
 #ifndef INCLUDED_nape_phys_Body
 #include <nape/phys/Body.h>
 #endif
@@ -38,6 +44,15 @@
 #endif
 #ifndef INCLUDED_native_geom_Point
 #include <native/geom/Point.h>
+#endif
+#ifndef INCLUDED_zpp_nape_geom_ZPP_Vec2
+#include <zpp_nape/geom/ZPP_Vec2.h>
+#endif
+#ifndef INCLUDED_zpp_nape_phys_ZPP_Body
+#include <zpp_nape/phys/ZPP_Body.h>
+#endif
+#ifndef INCLUDED_zpp_nape_phys_ZPP_Interactor
+#include <zpp_nape/phys/ZPP_Interactor.h>
 #endif
 
 Void Camera_obj::__construct()
@@ -99,9 +114,9 @@ Dynamic direct = __o_direct.Default(false);
 			x = (int)0;
 		}
 		HX_STACK_LINE(35)
-		if (((y < (int)0))){
+		if (((y > ::Mobile_obj::screenHeight))){
 			HX_STACK_LINE(35)
-			y = (int)0;
+			y = ::Mobile_obj::screenHeight;
 		}
 		HX_STACK_LINE(39)
 		if ((direct)){
@@ -131,6 +146,92 @@ Void Camera_obj::follow( ::nape::phys::Body body){
 {
 		HX_STACK_PUSH("Camera::follow","Camera.hx",50);
 		HX_STACK_ARG(body,"body");
+		struct _Function_1_1{
+			inline static Float Block( ::nape::phys::Body &body){
+				HX_STACK_PUSH("*::closure","Camera.hx",51);
+				{
+					struct _Function_2_1{
+						inline static ::nape::geom::Vec2 Block( ::nape::phys::Body &body){
+							HX_STACK_PUSH("*::closure","Camera.hx",51);
+							{
+								HX_STACK_LINE(51)
+								if (((body->zpp_inner->wrap_pos == null()))){
+									HX_STACK_LINE(51)
+									body->zpp_inner->setupPosition();
+								}
+								HX_STACK_LINE(51)
+								return body->zpp_inner->wrap_pos;
+							}
+							return null();
+						}
+					};
+					HX_STACK_LINE(51)
+					::nape::geom::Vec2 _this = _Function_2_1::Block(body);		HX_STACK_VAR(_this,"_this");
+					HX_STACK_LINE(51)
+					if (((bool((_this != null())) && bool(_this->zpp_disp)))){
+						HX_STACK_LINE(51)
+						hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
+					}
+					HX_STACK_LINE(51)
+					{
+						HX_STACK_LINE(51)
+						::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
+						HX_STACK_LINE(51)
+						if (((_this1->_validate_dyn() != null()))){
+							HX_STACK_LINE(51)
+							_this1->_validate();
+						}
+					}
+					HX_STACK_LINE(51)
+					return _this->zpp_inner->x;
+				}
+				return null();
+			}
+		};
+		struct _Function_1_2{
+			inline static Float Block( ::nape::phys::Body &body){
+				HX_STACK_PUSH("*::closure","Camera.hx",51);
+				{
+					struct _Function_2_1{
+						inline static ::nape::geom::Vec2 Block( ::nape::phys::Body &body){
+							HX_STACK_PUSH("*::closure","Camera.hx",51);
+							{
+								HX_STACK_LINE(51)
+								if (((body->zpp_inner->wrap_pos == null()))){
+									HX_STACK_LINE(51)
+									body->zpp_inner->setupPosition();
+								}
+								HX_STACK_LINE(51)
+								return body->zpp_inner->wrap_pos;
+							}
+							return null();
+						}
+					};
+					HX_STACK_LINE(51)
+					::nape::geom::Vec2 _this = _Function_2_1::Block(body);		HX_STACK_VAR(_this,"_this");
+					HX_STACK_LINE(51)
+					if (((bool((_this != null())) && bool(_this->zpp_disp)))){
+						HX_STACK_LINE(51)
+						hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
+					}
+					HX_STACK_LINE(51)
+					{
+						HX_STACK_LINE(51)
+						::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
+						HX_STACK_LINE(51)
+						if (((_this1->_validate_dyn() != null()))){
+							HX_STACK_LINE(51)
+							_this1->_validate();
+						}
+					}
+					HX_STACK_LINE(51)
+					return _this->zpp_inner->y;
+				}
+				return null();
+			}
+		};
+		HX_STACK_LINE(50)
+		::Camera_obj::move((_Function_1_1::Block(body) - (Float(::Mobile_obj::screenWidth) / Float((int)2))),(_Function_1_2::Block(body) - (Float(::Mobile_obj::screenHeight) / Float((int)2))),null());
 	}
 return null();
 }

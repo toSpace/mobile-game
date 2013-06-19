@@ -60,6 +60,7 @@ class DrawObject_obj : public ::GameObject_obj{
 		virtual Void loadBitmap( ::native::display::Bitmap bitmap,::String physics);
 		Dynamic loadBitmap_dyn();
 
+		Float mass; /* REM */ 
 		::String physicType; /* REM */ 
 		::native::display::Sprite drawingCanvas; /* REM */ 
 		bool drawing; /* REM */ 

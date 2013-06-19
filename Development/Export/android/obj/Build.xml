@@ -2243,6 +2243,10 @@
   <file name="src/native/filters/BitmapFilter.cpp">
    <depend name="include/native/filters/BitmapFilter.h"/>
   </file>
+  <file name="src/native/feedback/Haptic.cpp">
+   <depend name="include/native/Loader.h"/>
+   <depend name="include/native/feedback/Haptic.h"/>
+  </file>
   <file name="src/native/events/SampleDataEvent.cpp">
    <depend name="include/Std.h"/>
    <depend name="include/haxe/io/Bytes.h"/>
@@ -4133,7 +4137,6 @@
    <depend name="include/XmlType.h"/>
   </file>
   <file name="src/World1Level1.cpp">
-   <depend name="include/BackgroundObject.h"/>
    <depend name="include/Character.h"/>
    <depend name="include/DrawObject.h"/>
    <depend name="include/GameObject.h"/>
@@ -4289,6 +4292,7 @@
    <depend name="include/zpp_nape/util/ZPP_PubPool.h"/>
   </file>
   <file name="src/Lucy.cpp">
+   <depend name="include/Camera.h"/>
    <depend name="include/Character.h"/>
    <depend name="include/Lucy.h"/>
    <depend name="include/Settings.h"/>
@@ -4339,6 +4343,7 @@
    <depend name="include/RenderManager.h"/>
    <depend name="include/Type.h"/>
    <depend name="include/UIobject.h"/>
+   <depend name="include/haxe/Log.h"/>
    <depend name="include/native/display/DisplayObject.h"/>
    <depend name="include/native/display/DisplayObjectContainer.h"/>
    <depend name="include/native/display/IBitmapDrawable.h"/>
@@ -4454,6 +4459,8 @@
    <depend name="include/zpp_nape/phys/ZPP_Interactor.h"/>
    <depend name="include/zpp_nape/space/ZPP_Component.h"/>
    <depend name="include/zpp_nape/space/ZPP_Space.h"/>
+   <depend name="include/zpp_nape/util/ZNPList_ZPP_Shape.h"/>
+   <depend name="include/zpp_nape/util/ZNPNode_ZPP_Shape.h"/>
    <depend name="include/zpp_nape/util/ZPP_BodyList.h"/>
    <depend name="include/zpp_nape/util/ZPP_Flags.h"/>
   </file>
@@ -4469,6 +4476,7 @@
    <depend name="include/haxe/xml/Fast.h"/>
    <depend name="include/haxe/xml/_Fast/AttribAccess.h"/>
    <depend name="include/haxe/xml/_Fast/NodeAccess.h"/>
+   <depend name="include/nape/geom/AABB.h"/>
    <depend name="include/nape/geom/Vec2.h"/>
    <depend name="include/nape/phys/Body.h"/>
    <depend name="include/nape/phys/Interactor.h"/>
@@ -4486,6 +4494,7 @@
    <depend name="include/native/events/IEventDispatcher.h"/>
    <depend name="include/native/geom/Point.h"/>
    <depend name="include/nme/installer/Assets.h"/>
+   <depend name="include/zpp_nape/geom/ZPP_AABB.h"/>
    <depend name="include/zpp_nape/geom/ZPP_Vec2.h"/>
    <depend name="include/zpp_nape/phys/ZPP_Body.h"/>
    <depend name="include/zpp_nape/phys/ZPP_Interactor.h"/>
@@ -4546,6 +4555,8 @@
   <file name="src/Camera.cpp">
    <depend name="include/Camera.h"/>
    <depend name="include/Main.h"/>
+   <depend name="include/Mobile.h"/>
+   <depend name="include/nape/geom/Vec2.h"/>
    <depend name="include/nape/phys/Body.h"/>
    <depend name="include/nape/phys/Interactor.h"/>
    <depend name="include/native/display/DisplayObject.h"/>
@@ -4556,6 +4567,9 @@
    <depend name="include/native/events/EventDispatcher.h"/>
    <depend name="include/native/events/IEventDispatcher.h"/>
    <depend name="include/native/geom/Point.h"/>
+   <depend name="include/zpp_nape/geom/ZPP_Vec2.h"/>
+   <depend name="include/zpp_nape/phys/ZPP_Body.h"/>
+   <depend name="include/zpp_nape/phys/ZPP_Interactor.h"/>
   </file>
   <file name="src/BitmapDataIso.cpp">
    <depend name="include/BitmapDataIso.h"/>
@@ -4569,37 +4583,13 @@
    <depend name="include/native/events/EventDispatcher.h"/>
    <depend name="include/native/events/IEventDispatcher.h"/>
   </file>
-  <file name="src/BackgroundObject.cpp">
-   <depend name="include/BackgroundObject.h"/>
-   <depend name="include/Camera.h"/>
-   <depend name="include/Hash.h"/>
-   <depend name="include/Main.h"/>
-   <depend name="include/Mobile.h"/>
-   <depend name="include/RenderManager.h"/>
-   <depend name="include/Xml.h"/>
-   <depend name="include/haxe/xml/Fast.h"/>
-   <depend name="include/haxe/xml/_Fast/AttribAccess.h"/>
-   <depend name="include/haxe/xml/_Fast/NodeAccess.h"/>
-   <depend name="include/native/display/Bitmap.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/BlendMode.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/PixelSnapping.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/geom/Point.h"/>
-   <depend name="include/nme/installer/Assets.h"/>
-  </file>
   <file name="src/ApplicationMain.cpp">
    <depend name="include/ApplicationMain.h"/>
    <depend name="include/Main.h"/>
    <depend name="include/Reflect.h"/>
    <depend name="include/Std.h"/>
    <depend name="include/Type.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
    <depend name="include/native/display/BitmapData.h"/>
    <depend name="include/native/display/DisplayObject.h"/>
    <depend name="include/native/display/DisplayObjectContainer.h"/>
@@ -4612,6 +4602,9 @@
    <depend name="include/native/display/StageScaleMode.h"/>
    <depend name="include/native/events/EventDispatcher.h"/>
    <depend name="include/native/events/IEventDispatcher.h"/>
+   <depend name="include/native/utils/ByteArray.h"/>
+   <depend name="include/native/utils/IDataInput.h"/>
+   <depend name="include/native/utils/IMemoryRange.h"/>
    <depend name="include/nme/Lib.h"/>
    <depend name="include/nme/installer/Assets.h"/>
   </file>
