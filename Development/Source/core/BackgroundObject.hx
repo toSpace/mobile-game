@@ -28,7 +28,6 @@ class BackgroundObject{
 		asset = new Bitmap( Assets.getBitmapData(xml.get('img')) );
 		asset.x = xml.get('x');
 		x = asset.x;
-		trace(asset.x);
 		asset.y = Mobile.getY(asset) - xml.get('y');
 		setBlendmode( xml.get('blendmode') );
 		canvas.addChild(asset);
