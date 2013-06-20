@@ -2,7 +2,7 @@
 
 	<name>lvl1_bg_l1_hill3</name>
 	<img>world1/general/bg/hill3.png</img>
-	<paralax startX="1130" endX="3100">0.2</paralax>
+	<paralax startX="1130" endX="1930">0.7</paralax>
 	<blendmode>none</blendmode>
 	<pos x="1130" y="0"></pos>
 
