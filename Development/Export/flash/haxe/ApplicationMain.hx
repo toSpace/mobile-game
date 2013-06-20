@@ -97,49 +97,49 @@ class ApplicationMain {
 	public static function getAsset (inName:String):Dynamic {
 		
 		
-		if (inName=="assets/mobile-1x/General/bg/fog_large.png")
+		if (inName=="assets/mobile-1x/general/bg/fog_large.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/General/bg/fog_large.png");
+            return Assets.getBitmapData ("assets/mobile-1x/general/bg/fog_large.png");
          
 		
-		if (inName=="assets/mobile-1x/General/bg/fog_medium.png")
+		if (inName=="assets/mobile-1x/general/bg/fog_medium.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/General/bg/fog_medium.png");
+            return Assets.getBitmapData ("assets/mobile-1x/general/bg/fog_medium.png");
          
 		
-		if (inName=="assets/mobile-1x/General/bg/fog_small.png")
+		if (inName=="assets/mobile-1x/general/bg/fog_small.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/General/bg/fog_small.png");
+            return Assets.getBitmapData ("assets/mobile-1x/general/bg/fog_small.png");
          
 		
-		if (inName=="assets/mobile-1x/General/bg/star.png")
+		if (inName=="assets/mobile-1x/general/bg/star.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/General/bg/star.png");
+            return Assets.getBitmapData ("assets/mobile-1x/general/bg/star.png");
          
 		
-		if (inName=="assets/mobile-1x/General/characters/walking-sparrow.xml")
+		if (inName=="assets/mobile-1x/general/characters/walking-sparrow.xml")
 			 
-			 return Assets.getText ("assets/mobile-1x/General/characters/walking-sparrow.xml");
+			 return Assets.getText ("assets/mobile-1x/general/characters/walking-sparrow.xml");
          
 		
-		if (inName=="assets/mobile-1x/General/characters/walking.png")
+		if (inName=="assets/mobile-1x/general/characters/walking.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/General/characters/walking.png");
+            return Assets.getBitmapData ("assets/mobile-1x/general/characters/walking.png");
          
 		
-		if (inName=="assets/mobile-1x/General/fg/empty.md")
+		if (inName=="assets/mobile-1x/general/fg/empty.md")
 			 
-			 return Assets.getText ("assets/mobile-1x/General/fg/empty.md");
+			 return Assets.getText ("assets/mobile-1x/general/fg/empty.md");
          
 		
-		if (inName=="assets/mobile-1x/General/gui/button.png")
+		if (inName=="assets/mobile-1x/general/gui/button.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/General/gui/button.png");
+            return Assets.getBitmapData ("assets/mobile-1x/general/gui/button.png");
          
 		
-		if (inName=="assets/mobile-1x/General/gui/button2.png")
+		if (inName=="assets/mobile-1x/general/gui/button2.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/General/gui/button2.png");
+            return Assets.getBitmapData ("assets/mobile-1x/general/gui/button2.png");
          
 		
 		if (inName=="assets/mobile-1x/test1.png")
@@ -407,69 +407,69 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/mobile-1x/world1/lvl1/fg/l2/tree4.png");
          
 		
-		if (inName=="assets/source/General/bg/fog_large.png")
+		if (inName=="assets/source/general/bg/fog_large.png")
 			 
-            return Assets.getBitmapData ("assets/source/General/bg/fog_large.png");
+            return Assets.getBitmapData ("assets/source/general/bg/fog_large.png");
          
 		
-		if (inName=="assets/source/General/bg/fog_large.psd")
+		if (inName=="assets/source/general/bg/fog_large.psd")
 			 
-            return Assets.getBytes ("assets/source/General/bg/fog_large.psd");
+            return Assets.getBytes ("assets/source/general/bg/fog_large.psd");
          
 		
-		if (inName=="assets/source/General/bg/fog_medium.png")
+		if (inName=="assets/source/general/bg/fog_medium.png")
 			 
-            return Assets.getBitmapData ("assets/source/General/bg/fog_medium.png");
+            return Assets.getBitmapData ("assets/source/general/bg/fog_medium.png");
          
 		
-		if (inName=="assets/source/General/bg/fog_medium.psd")
+		if (inName=="assets/source/general/bg/fog_medium.psd")
 			 
-            return Assets.getBytes ("assets/source/General/bg/fog_medium.psd");
+            return Assets.getBytes ("assets/source/general/bg/fog_medium.psd");
          
 		
-		if (inName=="assets/source/General/bg/fog_small.png")
+		if (inName=="assets/source/general/bg/fog_small.png")
 			 
-            return Assets.getBitmapData ("assets/source/General/bg/fog_small.png");
+            return Assets.getBitmapData ("assets/source/general/bg/fog_small.png");
          
 		
-		if (inName=="assets/source/General/bg/fog_small.psd")
+		if (inName=="assets/source/general/bg/fog_small.psd")
 			 
-            return Assets.getBytes ("assets/source/General/bg/fog_small.psd");
+            return Assets.getBytes ("assets/source/general/bg/fog_small.psd");
          
 		
-		if (inName=="assets/source/General/bg/star.png")
+		if (inName=="assets/source/general/bg/star.png")
 			 
-            return Assets.getBitmapData ("assets/source/General/bg/star.png");
+            return Assets.getBitmapData ("assets/source/general/bg/star.png");
          
 		
-		if (inName=="assets/source/General/bg/star.psd")
+		if (inName=="assets/source/general/bg/star.psd")
 			 
-            return Assets.getBytes ("assets/source/General/bg/star.psd");
+            return Assets.getBytes ("assets/source/general/bg/star.psd");
          
 		
-		if (inName=="assets/source/General/characters/walking-sparrow.xml")
+		if (inName=="assets/source/general/characters/walking-sparrow.xml")
 			 
-			 return Assets.getText ("assets/source/General/characters/walking-sparrow.xml");
+			 return Assets.getText ("assets/source/general/characters/walking-sparrow.xml");
          
 		
-		if (inName=="assets/source/General/characters/walking.png")
+		if (inName=="assets/source/general/characters/walking.png")
 			 
-            return Assets.getBitmapData ("assets/source/General/characters/walking.png");
+            return Assets.getBitmapData ("assets/source/general/characters/walking.png");
          
 		
-		if (inName=="assets/source/General/fg/empty.md")
+		if (inName=="assets/source/general/fg/empty.md")
 			 
-			 return Assets.getText ("assets/source/General/fg/empty.md");
+			 return Assets.getText ("assets/source/general/fg/empty.md");
          
 		
-		if (inName=="assets/source/General/gui/button.png")
+		if (inName=="assets/source/general/gui/button.png")
 			 
-            return Assets.getBitmapData ("assets/source/General/gui/button.png");
+            return Assets.getBitmapData ("assets/source/general/gui/button.png");
          
 		
-		if (inName=="assets/source/General/gui/button2.png")
+		if (inName=="assets/source/general/gui/button2.png")
 			 
-            return Assets.getBitmapData ("assets/source/General/gui/button2.png");
+            return Assets.getBitmapData ("assets/source/general/gui/button2.png");
          
 		
 		if (inName=="assets/source/level_1-forrest-jesse.ai")
@@ -992,11 +992,6 @@ class ApplicationMain {
 			 return Assets.getText ("assets/xml/world1/general/empty.md");
          
 		
-		if (inName=="assets/xml/world1/lvl1/bg/l1/empty.md")
-			 
-			 return Assets.getText ("assets/xml/world1/lvl1/bg/l1/empty.md");
-         
-		
 		if (inName=="assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill1.xml")
 			 
 			 return Assets.getText ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill1.xml");
@@ -1017,14 +1012,39 @@ class ApplicationMain {
 			 return Assets.getText ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill4.xml");
          
 		
-		if (inName=="assets/xml/world1/lvl1/bg/l2/empty.md")
+		if (inName=="assets/xml/world1/lvl1/bg/l2/lvl1_bg_l2_tree1.xml")
 			 
-			 return Assets.getText ("assets/xml/world1/lvl1/bg/l2/empty.md");
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l2/lvl1_bg_l2_tree1.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l2/lvl1_bg_l2_tree2.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l2/lvl1_bg_l2_tree2.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l2/lvl1_bg_l2_tree3.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l2/lvl1_bg_l2_tree3.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l2/lvl1_bg_l2_tree4.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l2/lvl1_bg_l2_tree4.xml");
          
 		
 		if (inName=="assets/xml/world1/lvl1/bg/l3/empty.md")
 			 
 			 return Assets.getText ("assets/xml/world1/lvl1/bg/l3/empty.md");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree1.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree1.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree2.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree2.xml");
          
 		
 		if (inName=="assets/xml/world1/lvl1/bg/l4/empty.md")
@@ -1295,13 +1315,17 @@ class NME_assets_xml_test_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_test2_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_walking_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_general_empty_md extends nme.utils.ByteArray { }
-class NME_assets_xml_world1_lvl1_bg_l1_empty_md extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l1_lvl1_bg_l1_hill1_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l1_lvl1_bg_l1_hill2_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l1_lvl1_bg_l1_hill3_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l1_lvl1_bg_l1_hill4_xml extends nme.utils.ByteArray { }
-class NME_assets_xml_world1_lvl1_bg_l2_empty_md extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l2_lvl1_bg_l2_tree1_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l2_lvl1_bg_l2_tree2_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l2_lvl1_bg_l2_tree3_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l2_lvl1_bg_l2_tree4_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l3_empty_md extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l3_lvl1_bg_l3_tree1_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l3_lvl1_bg_l3_tree2_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l4_empty_md extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l5_empty_md extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l6_empty_md extends nme.utils.ByteArray { }

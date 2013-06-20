@@ -8,11 +8,19 @@ class World1Level1 extends Level {
 		// var bg1 = new BackgroundObject('bg.xml');
 		#end
 
+		var lvl1_bg_l3_tree1 = new BackgroundObject('world1/lvl1/bg/l3/lvl1_bg_l3_tree1.xml');
+		var lvl1_bg_l3_tree2 = new BackgroundObject('world1/lvl1/bg/l3/lvl1_bg_l3_tree2.xml');
+
+		var lvl1_bg_l2_tree1 = new BackgroundObject('world1/lvl1/bg/l2/lvl1_bg_l2_tree1.xml');
+		var lvl1_bg_l2_tree2 = new BackgroundObject('world1/lvl1/bg/l2/lvl1_bg_l2_tree2.xml');
+		var lvl1_bg_l2_tree3 = new BackgroundObject('world1/lvl1/bg/l2/lvl1_bg_l2_tree3.xml');
+		var lvl1_bg_l2_tree4 = new BackgroundObject('world1/lvl1/bg/l2/lvl1_bg_l2_tree4.xml');
+
 		//bg layer 1
 		var lvl1_bg_l1_hill1 = new BackgroundObject('world1/lvl1/bg/l1/lvl1_bg_l1_hill1.xml');
+		var lvl1_bg_l1_hill2 = new BackgroundObject('world1/lvl1/bg/l1/lvl1_bg_l1_hill2.xml');
 		var lvl1_bg_l1_hill3 = new BackgroundObject('world1/lvl1/bg/l1/lvl1_bg_l1_hill3.xml');
 		var lvl1_bg_l1_hill4 = new BackgroundObject('world1/lvl1/bg/l1/lvl1_bg_l1_hill4.xml');
-		var lvl1_bg_l1_hill2 = new BackgroundObject('world1/lvl1/bg/l1/lvl1_bg_l1_hill2.xml');
 
 		//bg layer 2
 		// var lvl1_bg_l2_xxx = new BackgroundObject('world1/lvl1/bg/l2/lvl1_bg_l2_xxx.xml');
