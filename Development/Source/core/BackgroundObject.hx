@@ -68,11 +68,9 @@ class BackgroundObject{
 		var cameraPos:Float = Camera.getPosition().x;
 		var delta:Float;
 
-		if(cameraPos < startX){
-			delta = 0;
-		} else {
-			delta = (startX - cameraPos) * speed;	
-		}
+		delta = x - cameraPos;
+		delta *= speed;
+
 		asset.x = x - delta;
 	}
 

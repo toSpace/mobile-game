@@ -7,6 +7,7 @@ class Settings{
 	public static var flockSpeed:Float;
 	public static var flockVelocity:Float;
 	public static var cameraOverflow:Float;
+	public static var paralaxDepth:Float;
 	
 	static public function load():Void{
 		//load from xml
@@ -19,6 +20,7 @@ class Settings{
 		cameraOverflow = Std.parseFloat(settings.node.cameraoverflow.innerData);
 		flockSpeed = Std.parseFloat(settings.node.flockspeed.innerData);
 		flockVelocity = Std.parseFloat(settings.node.flockvelocity.innerData);
+		paralaxDepth = Std.parseFloat(settings.node.paralaxDepth.innerData);
 
 	}
 

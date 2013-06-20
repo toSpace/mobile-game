@@ -4,5 +4,6 @@
 	<cameraoverflow>200</cameraoverflow>
 	<flockspeed>7</flockspeed>
 	<flockvelocity>40</flockvelocity>
+	<paralaxDepth>2</paralaxDepth>
 
 </settings>
