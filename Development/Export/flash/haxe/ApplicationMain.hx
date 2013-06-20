@@ -167,164 +167,169 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/mobile-1x/walking.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/hill1.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/hill1.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/hill1.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/hill1.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/hill2.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/hill2.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/hill2.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/hill2.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/hill3.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/hill3.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/hill3.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/hill3.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/hill4.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/hill4.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/hill4.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/hill4.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/hill5.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/hill5.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/hill5.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/hill5.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/hill6.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/hill6.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/hill6.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/hill6.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/hill7.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/hill7.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/hill7.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/hill7.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree1.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree1.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree1.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree1.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree10.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree10.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree10.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree10.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree11.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree11.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree11.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree11.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree12.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree12.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree12.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree12.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree13.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree13.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree13.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree13.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree14.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree14.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree14.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree14.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree15.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree15.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree15.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree15.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree16.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree16.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree16.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree16.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree17.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree17.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree17.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree17.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree18.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree18.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree18.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree18.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree19.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree19.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree19.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree19.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree2.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree2.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree2.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree2.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree20.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree20.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree20.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree20.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree21.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree21.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree21.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree21.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree22.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree22.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree22.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree22.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree23.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree23.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree23.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree23.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree24.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree24.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree24.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree24.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree25.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree25.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree25.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree25.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree3.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree3.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree3.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree3.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree4.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree4.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree4.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree4.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree5.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree5.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree5.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree5.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree6.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree6.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree6.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree6.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree7.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree7.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree7.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree7.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree8.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree8.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree8.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree8.png");
          
 		
-		if (inName=="assets/mobile-1x/world1/general/tree9.png")
+		if (inName=="assets/mobile-1x/world1/general/bg/tree9.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/world1/general/tree9.png");
+            return Assets.getBitmapData ("assets/mobile-1x/world1/general/bg/tree9.png");
+         
+		
+		if (inName=="assets/mobile-1x/world1/general/fg/empty.md")
+			 
+			 return Assets.getText ("assets/mobile-1x/world1/general/fg/empty.md");
          
 		
 		if (inName=="assets/mobile-1x/world1/lvl1/bg/background.png")
@@ -502,324 +507,329 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/source/walking.png");
          
 		
-		if (inName=="assets/source/world1/general/hill1.png")
+		if (inName=="assets/source/world1/general/bg/hill1.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/hill1.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/hill1.png");
          
 		
-		if (inName=="assets/source/world1/general/hill1.psd")
+		if (inName=="assets/source/world1/general/bg/hill1.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/hill1.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/hill1.psd");
          
 		
-		if (inName=="assets/source/world1/general/hill2.png")
+		if (inName=="assets/source/world1/general/bg/hill2.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/hill2.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/hill2.png");
          
 		
-		if (inName=="assets/source/world1/general/hill2.psd")
+		if (inName=="assets/source/world1/general/bg/hill2.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/hill2.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/hill2.psd");
          
 		
-		if (inName=="assets/source/world1/general/hill3.png")
+		if (inName=="assets/source/world1/general/bg/hill3.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/hill3.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/hill3.png");
          
 		
-		if (inName=="assets/source/world1/general/hill3.psd")
+		if (inName=="assets/source/world1/general/bg/hill3.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/hill3.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/hill3.psd");
          
 		
-		if (inName=="assets/source/world1/general/hill4.png")
+		if (inName=="assets/source/world1/general/bg/hill4.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/hill4.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/hill4.png");
          
 		
-		if (inName=="assets/source/world1/general/hill4.psd")
+		if (inName=="assets/source/world1/general/bg/hill4.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/hill4.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/hill4.psd");
          
 		
-		if (inName=="assets/source/world1/general/hill5.png")
+		if (inName=="assets/source/world1/general/bg/hill5.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/hill5.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/hill5.png");
          
 		
-		if (inName=="assets/source/world1/general/hill5.psd")
+		if (inName=="assets/source/world1/general/bg/hill5.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/hill5.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/hill5.psd");
          
 		
-		if (inName=="assets/source/world1/general/hill6.png")
+		if (inName=="assets/source/world1/general/bg/hill6.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/hill6.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/hill6.png");
          
 		
-		if (inName=="assets/source/world1/general/hill6.psd")
+		if (inName=="assets/source/world1/general/bg/hill6.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/hill6.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/hill6.psd");
          
 		
-		if (inName=="assets/source/world1/general/hill7.png")
+		if (inName=="assets/source/world1/general/bg/hill7.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/hill7.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/hill7.png");
          
 		
-		if (inName=="assets/source/world1/general/hill7.psd")
+		if (inName=="assets/source/world1/general/bg/hill7.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/hill7.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/hill7.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree1.png")
+		if (inName=="assets/source/world1/general/bg/tree1.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree1.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree1.png");
          
 		
-		if (inName=="assets/source/world1/general/tree1.psd")
+		if (inName=="assets/source/world1/general/bg/tree1.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree1.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree1.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree10.png")
+		if (inName=="assets/source/world1/general/bg/tree10.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree10.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree10.png");
          
 		
-		if (inName=="assets/source/world1/general/tree10.psd")
+		if (inName=="assets/source/world1/general/bg/tree10.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree10.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree10.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree11.png")
+		if (inName=="assets/source/world1/general/bg/tree11.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree11.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree11.png");
          
 		
-		if (inName=="assets/source/world1/general/tree11.psd")
+		if (inName=="assets/source/world1/general/bg/tree11.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree11.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree11.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree12.png")
+		if (inName=="assets/source/world1/general/bg/tree12.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree12.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree12.png");
          
 		
-		if (inName=="assets/source/world1/general/tree12.psd")
+		if (inName=="assets/source/world1/general/bg/tree12.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree12.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree12.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree13.png")
+		if (inName=="assets/source/world1/general/bg/tree13.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree13.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree13.png");
          
 		
-		if (inName=="assets/source/world1/general/tree13.psd")
+		if (inName=="assets/source/world1/general/bg/tree13.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree13.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree13.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree14.png")
+		if (inName=="assets/source/world1/general/bg/tree14.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree14.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree14.png");
          
 		
-		if (inName=="assets/source/world1/general/tree14.psd")
+		if (inName=="assets/source/world1/general/bg/tree14.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree14.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree14.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree15.png")
+		if (inName=="assets/source/world1/general/bg/tree15.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree15.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree15.png");
          
 		
-		if (inName=="assets/source/world1/general/tree15.psd")
+		if (inName=="assets/source/world1/general/bg/tree15.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree15.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree15.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree16.png")
+		if (inName=="assets/source/world1/general/bg/tree16.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree16.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree16.png");
          
 		
-		if (inName=="assets/source/world1/general/tree16.psd")
+		if (inName=="assets/source/world1/general/bg/tree16.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree16.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree16.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree17.png")
+		if (inName=="assets/source/world1/general/bg/tree17.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree17.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree17.png");
          
 		
-		if (inName=="assets/source/world1/general/tree17.psd")
+		if (inName=="assets/source/world1/general/bg/tree17.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree17.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree17.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree18.png")
+		if (inName=="assets/source/world1/general/bg/tree18.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree18.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree18.png");
          
 		
-		if (inName=="assets/source/world1/general/tree18.psd")
+		if (inName=="assets/source/world1/general/bg/tree18.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree18.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree18.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree19.png")
+		if (inName=="assets/source/world1/general/bg/tree19.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree19.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree19.png");
          
 		
-		if (inName=="assets/source/world1/general/tree19.psd")
+		if (inName=="assets/source/world1/general/bg/tree19.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree19.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree19.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree2.png")
+		if (inName=="assets/source/world1/general/bg/tree2.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree2.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree2.png");
          
 		
-		if (inName=="assets/source/world1/general/tree2.psd")
+		if (inName=="assets/source/world1/general/bg/tree2.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree2.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree2.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree20.png")
+		if (inName=="assets/source/world1/general/bg/tree20.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree20.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree20.png");
          
 		
-		if (inName=="assets/source/world1/general/tree20.psd")
+		if (inName=="assets/source/world1/general/bg/tree20.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree20.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree20.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree21.png")
+		if (inName=="assets/source/world1/general/bg/tree21.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree21.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree21.png");
          
 		
-		if (inName=="assets/source/world1/general/tree21.psd")
+		if (inName=="assets/source/world1/general/bg/tree21.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree21.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree21.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree22.png")
+		if (inName=="assets/source/world1/general/bg/tree22.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree22.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree22.png");
          
 		
-		if (inName=="assets/source/world1/general/tree22.psd")
+		if (inName=="assets/source/world1/general/bg/tree22.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree22.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree22.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree23.png")
+		if (inName=="assets/source/world1/general/bg/tree23.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree23.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree23.png");
          
 		
-		if (inName=="assets/source/world1/general/tree23.psd")
+		if (inName=="assets/source/world1/general/bg/tree23.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree23.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree23.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree24.png")
+		if (inName=="assets/source/world1/general/bg/tree24.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree24.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree24.png");
          
 		
-		if (inName=="assets/source/world1/general/tree24.psd")
+		if (inName=="assets/source/world1/general/bg/tree24.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree24.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree24.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree25.png")
+		if (inName=="assets/source/world1/general/bg/tree25.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree25.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree25.png");
          
 		
-		if (inName=="assets/source/world1/general/tree25.psd")
+		if (inName=="assets/source/world1/general/bg/tree25.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree25.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree25.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree3.png")
+		if (inName=="assets/source/world1/general/bg/tree3.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree3.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree3.png");
          
 		
-		if (inName=="assets/source/world1/general/tree3.psd")
+		if (inName=="assets/source/world1/general/bg/tree3.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree3.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree3.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree4.png")
+		if (inName=="assets/source/world1/general/bg/tree4.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree4.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree4.png");
          
 		
-		if (inName=="assets/source/world1/general/tree4.psd")
+		if (inName=="assets/source/world1/general/bg/tree4.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree4.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree4.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree5.png")
+		if (inName=="assets/source/world1/general/bg/tree5.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree5.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree5.png");
          
 		
-		if (inName=="assets/source/world1/general/tree5.psd")
+		if (inName=="assets/source/world1/general/bg/tree5.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree5.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree5.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree6.png")
+		if (inName=="assets/source/world1/general/bg/tree6.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree6.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree6.png");
          
 		
-		if (inName=="assets/source/world1/general/tree6.psd")
+		if (inName=="assets/source/world1/general/bg/tree6.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree6.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree6.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree7.png")
+		if (inName=="assets/source/world1/general/bg/tree7.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree7.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree7.png");
          
 		
-		if (inName=="assets/source/world1/general/tree7.psd")
+		if (inName=="assets/source/world1/general/bg/tree7.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree7.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree7.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree8.png")
+		if (inName=="assets/source/world1/general/bg/tree8.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree8.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree8.png");
          
 		
-		if (inName=="assets/source/world1/general/tree8.psd")
+		if (inName=="assets/source/world1/general/bg/tree8.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree8.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree8.psd");
          
 		
-		if (inName=="assets/source/world1/general/tree9.png")
+		if (inName=="assets/source/world1/general/bg/tree9.png")
 			 
-            return Assets.getBitmapData ("assets/source/world1/general/tree9.png");
+            return Assets.getBitmapData ("assets/source/world1/general/bg/tree9.png");
          
 		
-		if (inName=="assets/source/world1/general/tree9.psd")
+		if (inName=="assets/source/world1/general/bg/tree9.psd")
 			 
-            return Assets.getBytes ("assets/source/world1/general/tree9.psd");
+            return Assets.getBytes ("assets/source/world1/general/bg/tree9.psd");
+         
+		
+		if (inName=="assets/source/world1/general/fg/empty.md")
+			 
+			 return Assets.getText ("assets/source/world1/general/fg/empty.md");
          
 		
 		if (inName=="assets/source/world1/lvl1/bg/background.png")
@@ -987,6 +997,11 @@ class ApplicationMain {
 			 return Assets.getText ("assets/xml/world1/lvl1/bg/l1/empty.md");
          
 		
+		if (inName=="assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill1.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill1.xml");
+         
+		
 		if (inName=="assets/xml/world1/lvl1/bg/l2/empty.md")
 			 
 			 return Assets.getText ("assets/xml/world1/lvl1/bg/l2/empty.md");
@@ -1100,38 +1115,39 @@ class NME_assets_mobile_1x_test2_png extends nme.display.BitmapData { public fun
 class NME_assets_mobile_1x_test3bg_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_1x_walking_sparrow_xml extends nme.utils.ByteArray { }
 class NME_assets_mobile_1x_walking_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_hill1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_hill2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_hill3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_hill4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_hill5_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_hill6_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_hill7_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree10_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree11_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree12_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree13_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree14_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree15_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree16_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree17_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree18_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree19_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree20_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree21_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree22_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree23_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree24_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree25_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree5_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree6_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree7_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree8_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_world1_general_tree9_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_hill1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_hill2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_hill3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_hill4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_hill5_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_hill6_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_hill7_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree10_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree11_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree12_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree13_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree14_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree15_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree16_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree17_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree18_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree19_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree20_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree21_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree22_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree23_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree24_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree25_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree5_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree6_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree7_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree8_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_bg_tree9_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_world1_general_fg_empty_md extends nme.utils.ByteArray { }
 class NME_assets_mobile_1x_world1_lvl1_bg_background_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_1x_world1_lvl1_bg_background02_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_1x_world1_lvl1_bg_sun_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
@@ -1167,70 +1183,71 @@ class NME_assets_source_test2_png extends nme.display.BitmapData { public functi
 class NME_assets_source_test3bg_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_source_walking_sparrow_xml extends nme.utils.ByteArray { }
 class NME_assets_source_walking_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_hill1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_hill1_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_hill2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_hill2_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_hill3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_hill3_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_hill4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_hill4_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_hill5_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_hill5_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_hill6_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_hill6_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_hill7_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_hill7_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree1_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree10_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree10_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree11_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree11_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree12_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree12_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree13_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree13_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree14_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree14_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree15_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree15_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree16_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree16_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree17_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree17_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree18_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree18_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree19_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree19_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree2_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree20_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree20_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree21_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree21_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree22_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree22_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree23_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree23_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree24_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree24_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree25_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree25_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree3_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree4_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree5_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree5_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree6_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree6_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree7_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree7_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree8_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree8_psd extends nme.utils.ByteArray { }
-class NME_assets_source_world1_general_tree9_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_world1_general_tree9_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_hill1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_hill1_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_hill2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_hill2_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_hill3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_hill3_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_hill4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_hill4_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_hill5_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_hill5_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_hill6_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_hill6_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_hill7_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_hill7_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree1_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree10_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree10_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree11_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree11_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree12_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree12_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree13_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree13_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree14_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree14_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree15_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree15_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree16_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree16_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree17_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree17_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree18_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree18_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree19_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree19_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree2_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree20_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree20_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree21_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree21_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree22_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree22_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree23_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree23_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree24_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree24_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree25_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree25_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree3_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree4_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree5_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree5_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree6_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree6_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree7_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree7_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree8_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree8_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_bg_tree9_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_world1_general_bg_tree9_psd extends nme.utils.ByteArray { }
+class NME_assets_source_world1_general_fg_empty_md extends nme.utils.ByteArray { }
 class NME_assets_source_world1_lvl1_bg_background_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_source_world1_lvl1_bg_background_psd extends nme.utils.ByteArray { }
 class NME_assets_source_world1_lvl1_bg_background02_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
@@ -1264,6 +1281,7 @@ class NME_assets_xml_test2_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_walking_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_general_empty_md extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l1_empty_md extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l1_lvl1_bg_l1_hill1_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l2_empty_md extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l3_empty_md extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l4_empty_md extends nme.utils.ByteArray { }

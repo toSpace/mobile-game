@@ -4,6 +4,7 @@ class World1Level1 extends Level {
 
 		//load background
 		#if !debug
+		var lvl1_bg_l1_hill1 = new BackgroundObject('world1/lvl1/bg/l1/lvl1_bg_l1_hill1.xml')
 		// var bg1 = new BackgroundObject('bg.xml');
 		#end
 
@@ -16,6 +17,7 @@ class World1Level1 extends Level {
 		var lvl1_fg_l1_6 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_6.xml');
 		var lvl1_fg_l1_7 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_7.xml');
 		var lvl1_fg_l1_8 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_8.xml');
+
 
     	//var lucy = new Lucy();
 
