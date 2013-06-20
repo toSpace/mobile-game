@@ -1042,6 +1042,11 @@ class ApplicationMain {
 			 return Assets.getText ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree1.xml");
          
 		
+		if (inName=="assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree10.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree10.xml");
+         
+		
 		if (inName=="assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree2.xml")
 			 
 			 return Assets.getText ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree2.xml");
@@ -1062,9 +1067,59 @@ class ApplicationMain {
 			 return Assets.getText ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree5.xml");
          
 		
+		if (inName=="assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree6.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree6.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree7.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree7.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree8.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree8.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree9.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree9.xml");
+         
+		
 		if (inName=="assets/xml/world1/lvl1/bg/l4/empty.md")
 			 
 			 return Assets.getText ("assets/xml/world1/lvl1/bg/l4/empty.md");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_tree1.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_tree1.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_tree2.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_tree2.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_tree3.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_tree3.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_tree4.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_tree4.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_tree5.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_tree5.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_tree6.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_tree6.xml");
          
 		
 		if (inName=="assets/xml/world1/lvl1/bg/l5/empty.md")
@@ -1340,11 +1395,22 @@ class NME_assets_xml_world1_lvl1_bg_l2_lvl1_bg_l2_tree3_xml extends nme.utils.By
 class NME_assets_xml_world1_lvl1_bg_l2_lvl1_bg_l2_tree4_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l3_empty_md extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l3_lvl1_bg_l3_tree1_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l3_lvl1_bg_l3_tree10_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l3_lvl1_bg_l3_tree2_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l3_lvl1_bg_l3_tree3_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l3_lvl1_bg_l3_tree4_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l3_lvl1_bg_l3_tree5_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l3_lvl1_bg_l3_tree6_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l3_lvl1_bg_l3_tree7_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l3_lvl1_bg_l3_tree8_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l3_lvl1_bg_l3_tree9_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l4_empty_md extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l4_lvl1_bg_l4_tree1_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l4_lvl1_bg_l4_tree2_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l4_lvl1_bg_l4_tree3_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l4_lvl1_bg_l4_tree4_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l4_lvl1_bg_l4_tree5_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_bg_l4_lvl1_bg_l4_tree6_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l5_empty_md extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_l6_empty_md extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_bg_xml extends nme.utils.ByteArray { }

@@ -1,0 +1,9 @@
+<asset>
+
+	<name>lvl1_bg_l4_tree1</name>
+	<img>world1/general/bg/tree15.png</img>
+	<paralax startX="520" endX="2500">0.75</paralax>
+	<blendmode>none</blendmode>
+	<pos x="520" y="150"></pos>
+
+</asset>

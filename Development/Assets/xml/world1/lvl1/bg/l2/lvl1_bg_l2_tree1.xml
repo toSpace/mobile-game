@@ -2,7 +2,7 @@
 
 	<name>lvl1_bg_l2_tree1</name>
 	<img>world1/general/bg/tree1.png</img>
-	<paralax startX="400" endX="1200">0.6</paralax>
+	<paralax startX="400" endX="1200">0.2</paralax>
 	<blendmode>none</blendmode>
 	<pos x="400" y="0"></pos>
 </asset>

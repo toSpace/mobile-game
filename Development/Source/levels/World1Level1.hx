@@ -8,13 +8,25 @@ class World1Level1 extends Level {
 		// var bg1 = new BackgroundObject('bg.xml');
 		#end
 
+		//bg layer 4
+		var lvl1_bg_l4_tree1 = new BackgroundObject('world1/lvl1/bg/l4/lvl1_bg_l4_tree1.xml');
+		var lvl1_bg_l4_tree2 = new BackgroundObject('world1/lvl1/bg/l4/lvl1_bg_l4_tree2.xml');
+		var lvl1_bg_l4_tree3 = new BackgroundObject('world1/lvl1/bg/l4/lvl1_bg_l4_tree3.xml');
+		var lvl1_bg_l4_tree4 = new BackgroundObject('world1/lvl1/bg/l4/lvl1_bg_l4_tree4.xml');
+		var lvl1_bg_l4_tree5 = new BackgroundObject('world1/lvl1/bg/l4/lvl1_bg_l4_tree5.xml');
+		var lvl1_bg_l4_tree6 = new BackgroundObject('world1/lvl1/bg/l4/lvl1_bg_l4_tree6.xml');
 		//bg layer 3
 		var lvl1_bg_l3_tree1 = new BackgroundObject('world1/lvl1/bg/l3/lvl1_bg_l3_tree1.xml');
 		var lvl1_bg_l3_tree2 = new BackgroundObject('world1/lvl1/bg/l3/lvl1_bg_l3_tree2.xml');
-		var lvl1_bg_l3_tree2 = new BackgroundObject('world1/lvl1/bg/l3/lvl1_bg_l3_tree3.xml');
-		var lvl1_bg_l3_tree2 = new BackgroundObject('world1/lvl1/bg/l3/lvl1_bg_l3_tree4.xml');
-		var lvl1_bg_l3_tree2 = new BackgroundObject('world1/lvl1/bg/l3/lvl1_bg_l3_tree5.xml');
-
+		var lvl1_bg_l3_tree3 = new BackgroundObject('world1/lvl1/bg/l3/lvl1_bg_l3_tree3.xml');
+		var lvl1_bg_l3_tree4 = new BackgroundObject('world1/lvl1/bg/l3/lvl1_bg_l3_tree4.xml');
+		var lvl1_bg_l3_tree5 = new BackgroundObject('world1/lvl1/bg/l3/lvl1_bg_l3_tree5.xml');
+		var lvl1_bg_l3_tree6 = new BackgroundObject('world1/lvl1/bg/l3/lvl1_bg_l3_tree6.xml');
+		var lvl1_bg_l3_tree7 = new BackgroundObject('world1/lvl1/bg/l3/lvl1_bg_l3_tree7.xml');
+		var lvl1_bg_l3_tree8 = new BackgroundObject('world1/lvl1/bg/l3/lvl1_bg_l3_tree8.xml');
+		var lvl1_bg_l3_tree9 = new BackgroundObject('world1/lvl1/bg/l3/lvl1_bg_l3_tree9.xml');
+		var lvl1_bg_l3_tree10 = new BackgroundObject('world1/lvl1/bg/l3/lvl1_bg_l3_tree10.xml');
+		
 		//bg layer 2
 		var lvl1_bg_l2_tree1 = new BackgroundObject('world1/lvl1/bg/l2/lvl1_bg_l2_tree1.xml');
 		var lvl1_bg_l2_tree2 = new BackgroundObject('world1/lvl1/bg/l2/lvl1_bg_l2_tree2.xml');
