@@ -1,0 +1,9 @@
+<asset>
+
+	<name>lvl1_bg_l4_hill3</name>
+	<img>world1/general/bg/hill7.png</img>
+	<paralax startX="2600" endX="3400">0.75</paralax>
+	<blendmode>none</blendmode>
+	<pos x="2600" y="10"></pos>
+
+</asset>

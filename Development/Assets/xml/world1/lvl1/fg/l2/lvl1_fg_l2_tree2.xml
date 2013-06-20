@@ -1,0 +1,9 @@
+<asset>
+
+	<name>lvl1_fg_l2_tree2</name>
+	<img>world1/lvl1/fg/l2/tree1.png</img>
+	<paralax startX="1228" endX="2000">0</paralax>
+	<blendmode>none</blendmode>
+	<pos x="1228" y="0"></pos>
+	
+</asset>
