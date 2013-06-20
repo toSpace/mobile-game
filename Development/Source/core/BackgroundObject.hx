@@ -13,9 +13,9 @@ class BackgroundObject{
 	public var canvas:Sprite;
 	public var asset:Bitmap;
 	public var xml:Hash<Dynamic>;
-	static public var startX:Float;
-	static public var speed:Float;
-	static public var x:Float;
+	public var startX:Float;
+	public var speed:Float;
+	private var x:Float;
 	
 	public function new(xmlUrl:String){
 		//setting correct stages
@@ -28,6 +28,7 @@ class BackgroundObject{
 		asset = new Bitmap( Assets.getBitmapData(xml.get('img')) );
 		asset.x = xml.get('x');
 		x = asset.x;
+		trace(asset.x);
 		asset.y = Mobile.getY(asset) - xml.get('y');
 		setBlendmode( xml.get('blendmode') );
 		canvas.addChild(asset);

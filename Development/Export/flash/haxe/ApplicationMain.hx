@@ -97,49 +97,49 @@ class ApplicationMain {
 	public static function getAsset (inName:String):Dynamic {
 		
 		
-		if (inName=="assets/mobile-1x/general/bg/fog_large.png")
+		if (inName=="assets/mobile-1x/General/bg/fog_large.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/general/bg/fog_large.png");
+            return Assets.getBitmapData ("assets/mobile-1x/General/bg/fog_large.png");
          
 		
-		if (inName=="assets/mobile-1x/general/bg/fog_medium.png")
+		if (inName=="assets/mobile-1x/General/bg/fog_medium.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/general/bg/fog_medium.png");
+            return Assets.getBitmapData ("assets/mobile-1x/General/bg/fog_medium.png");
          
 		
-		if (inName=="assets/mobile-1x/general/bg/fog_small.png")
+		if (inName=="assets/mobile-1x/General/bg/fog_small.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/general/bg/fog_small.png");
+            return Assets.getBitmapData ("assets/mobile-1x/General/bg/fog_small.png");
          
 		
-		if (inName=="assets/mobile-1x/general/bg/star.png")
+		if (inName=="assets/mobile-1x/General/bg/star.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/general/bg/star.png");
+            return Assets.getBitmapData ("assets/mobile-1x/General/bg/star.png");
          
 		
-		if (inName=="assets/mobile-1x/general/characters/walking-sparrow.xml")
+		if (inName=="assets/mobile-1x/General/characters/walking-sparrow.xml")
 			 
-			 return Assets.getText ("assets/mobile-1x/general/characters/walking-sparrow.xml");
+			 return Assets.getText ("assets/mobile-1x/General/characters/walking-sparrow.xml");
          
 		
-		if (inName=="assets/mobile-1x/general/characters/walking.png")
+		if (inName=="assets/mobile-1x/General/characters/walking.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/general/characters/walking.png");
+            return Assets.getBitmapData ("assets/mobile-1x/General/characters/walking.png");
          
 		
-		if (inName=="assets/mobile-1x/general/fg/empty.md")
+		if (inName=="assets/mobile-1x/General/fg/empty.md")
 			 
-			 return Assets.getText ("assets/mobile-1x/general/fg/empty.md");
+			 return Assets.getText ("assets/mobile-1x/General/fg/empty.md");
          
 		
-		if (inName=="assets/mobile-1x/general/gui/button.png")
+		if (inName=="assets/mobile-1x/General/gui/button.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/general/gui/button.png");
+            return Assets.getBitmapData ("assets/mobile-1x/General/gui/button.png");
          
 		
-		if (inName=="assets/mobile-1x/general/gui/button2.png")
+		if (inName=="assets/mobile-1x/General/gui/button2.png")
 			 
-            return Assets.getBitmapData ("assets/mobile-1x/general/gui/button2.png");
+            return Assets.getBitmapData ("assets/mobile-1x/General/gui/button2.png");
          
 		
 		if (inName=="assets/mobile-1x/test1.png")
@@ -407,69 +407,69 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/mobile-1x/world1/lvl1/fg/l2/tree4.png");
          
 		
-		if (inName=="assets/source/general/bg/fog_large.png")
+		if (inName=="assets/source/General/bg/fog_large.png")
 			 
-            return Assets.getBitmapData ("assets/source/general/bg/fog_large.png");
+            return Assets.getBitmapData ("assets/source/General/bg/fog_large.png");
          
 		
-		if (inName=="assets/source/general/bg/fog_large.psd")
+		if (inName=="assets/source/General/bg/fog_large.psd")
 			 
-            return Assets.getBytes ("assets/source/general/bg/fog_large.psd");
+            return Assets.getBytes ("assets/source/General/bg/fog_large.psd");
          
 		
-		if (inName=="assets/source/general/bg/fog_medium.png")
+		if (inName=="assets/source/General/bg/fog_medium.png")
 			 
-            return Assets.getBitmapData ("assets/source/general/bg/fog_medium.png");
+            return Assets.getBitmapData ("assets/source/General/bg/fog_medium.png");
          
 		
-		if (inName=="assets/source/general/bg/fog_medium.psd")
+		if (inName=="assets/source/General/bg/fog_medium.psd")
 			 
-            return Assets.getBytes ("assets/source/general/bg/fog_medium.psd");
+            return Assets.getBytes ("assets/source/General/bg/fog_medium.psd");
          
 		
-		if (inName=="assets/source/general/bg/fog_small.png")
+		if (inName=="assets/source/General/bg/fog_small.png")
 			 
-            return Assets.getBitmapData ("assets/source/general/bg/fog_small.png");
+            return Assets.getBitmapData ("assets/source/General/bg/fog_small.png");
          
 		
-		if (inName=="assets/source/general/bg/fog_small.psd")
+		if (inName=="assets/source/General/bg/fog_small.psd")
 			 
-            return Assets.getBytes ("assets/source/general/bg/fog_small.psd");
+            return Assets.getBytes ("assets/source/General/bg/fog_small.psd");
          
 		
-		if (inName=="assets/source/general/bg/star.png")
+		if (inName=="assets/source/General/bg/star.png")
 			 
-            return Assets.getBitmapData ("assets/source/general/bg/star.png");
+            return Assets.getBitmapData ("assets/source/General/bg/star.png");
          
 		
-		if (inName=="assets/source/general/bg/star.psd")
+		if (inName=="assets/source/General/bg/star.psd")
 			 
-            return Assets.getBytes ("assets/source/general/bg/star.psd");
+            return Assets.getBytes ("assets/source/General/bg/star.psd");
          
 		
-		if (inName=="assets/source/general/characters/walking-sparrow.xml")
+		if (inName=="assets/source/General/characters/walking-sparrow.xml")
 			 
-			 return Assets.getText ("assets/source/general/characters/walking-sparrow.xml");
+			 return Assets.getText ("assets/source/General/characters/walking-sparrow.xml");
          
 		
-		if (inName=="assets/source/general/characters/walking.png")
+		if (inName=="assets/source/General/characters/walking.png")
 			 
-            return Assets.getBitmapData ("assets/source/general/characters/walking.png");
+            return Assets.getBitmapData ("assets/source/General/characters/walking.png");
          
 		
-		if (inName=="assets/source/general/fg/empty.md")
+		if (inName=="assets/source/General/fg/empty.md")
 			 
-			 return Assets.getText ("assets/source/general/fg/empty.md");
+			 return Assets.getText ("assets/source/General/fg/empty.md");
          
 		
-		if (inName=="assets/source/general/gui/button.png")
+		if (inName=="assets/source/General/gui/button.png")
 			 
-            return Assets.getBitmapData ("assets/source/general/gui/button.png");
+            return Assets.getBitmapData ("assets/source/General/gui/button.png");
          
 		
-		if (inName=="assets/source/general/gui/button2.png")
+		if (inName=="assets/source/General/gui/button2.png")
 			 
-            return Assets.getBitmapData ("assets/source/general/gui/button2.png");
+            return Assets.getBitmapData ("assets/source/General/gui/button2.png");
          
 		
 		if (inName=="assets/source/level_1-forrest-jesse.ai")
