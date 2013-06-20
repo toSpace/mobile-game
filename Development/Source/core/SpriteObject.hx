@@ -22,7 +22,7 @@ class SpriteObject{
 	var layer:TileLayer;
 	var xml:Hash<Dynamic>;
 	public var body:Body;
-	var clip:TileClip;
+	public var clip:TileClip;
 	
 	public function new(xmlUrl:String, sparrowXml:String){
 

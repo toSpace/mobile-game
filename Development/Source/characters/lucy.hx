@@ -12,9 +12,15 @@ class Lucy extends Character {
 	}
 
 	override public function render():Void{
+
+		//stop when drawing
 		if(!Drawing.drawing){
 			walk(lucy.body, Settings.flockSpeed, Settings.flockVelocity);
 		}
+
+		// if(lucy.body.velocity.x < 1){
+		// 	//lucy.clip.stop();
+		// }
 
 		Camera.follow(lucy.body);
 	}
