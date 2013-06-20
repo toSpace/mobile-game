@@ -9,9 +9,9 @@ class DrawButton extends UIobject{
 	private var asset_out:Bitmap;
 
 	public function new(){
-		super('General/gui/button.png', Mobile.screenWidth - 44 - 10, 10, true);
+		super('general/gui/button.png', Mobile.screenWidth - 44 - 10, 10, true);
 
-		asset_over = new Bitmap( Assets.getBitmapData( Mobile.asset + 'General/gui/button2.png') );
+		asset_over = new Bitmap( Assets.getBitmapData( Mobile.asset + 'general/gui/button2.png') );
 	}
 	
 	public override function mouseClick(ev:MouseEvent){
