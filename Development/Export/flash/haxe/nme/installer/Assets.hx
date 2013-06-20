@@ -403,6 +403,12 @@ class Assets {
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l1/empty.md", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill1.xml", NME_assets_xml_world1_lvl1_bg_l1_lvl1_bg_l1_hill1_xml);
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill1.xml", "text");
+			resourceClasses.set ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill2.xml", NME_assets_xml_world1_lvl1_bg_l1_lvl1_bg_l1_hill2_xml);
+			resourceTypes.set ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill2.xml", "text");
+			resourceClasses.set ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill3.xml", NME_assets_xml_world1_lvl1_bg_l1_lvl1_bg_l1_hill3_xml);
+			resourceTypes.set ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill3.xml", "text");
+			resourceClasses.set ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill4.xml", NME_assets_xml_world1_lvl1_bg_l1_lvl1_bg_l1_hill4_xml);
+			resourceTypes.set ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill4.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l2/empty.md", NME_assets_xml_world1_lvl1_bg_l2_empty_md);
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l2/empty.md", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l3/empty.md", NME_assets_xml_world1_lvl1_bg_l3_empty_md);
