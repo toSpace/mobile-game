@@ -10,7 +10,7 @@
     "pre_setting_folder_path": "/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/mac/cpp/obj/src", 
     "programmer": "AVRISP mkII", 
     "serial_port": "/dev/cu.Bluetooth-PDA-Sync", 
-    "show_arduino_menu": true, 
+    "show_arduino_menu": false, 
     "show_serial_monitor_menu": "", 
     "sketchbook_root": "/Users/daveyvanderwoert/Documents/Arduino"
 }

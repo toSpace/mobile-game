@@ -8,6 +8,7 @@
 #include <GameObject.h>
 HX_DECLARE_CLASS0(DrawObject)
 HX_DECLARE_CLASS0(GameObject)
+HX_DECLARE_CLASS2(native,display,Bitmap)
 HX_DECLARE_CLASS2(native,display,DisplayObject)
 HX_DECLARE_CLASS2(native,display,DisplayObjectContainer)
 HX_DECLARE_CLASS2(native,display,IBitmapDrawable)
@@ -22,10 +23,10 @@ class DrawObject_obj : public ::GameObject_obj{
 		typedef ::GameObject_obj super;
 		typedef DrawObject_obj OBJ_;
 		DrawObject_obj();
-		Void __construct(::String xmlUrl);
+		Void __construct(Dynamic xmlUrl);
 
 	public:
-		static hx::ObjectPtr< DrawObject_obj > __new(::String xmlUrl);
+		static hx::ObjectPtr< DrawObject_obj > __new(Dynamic xmlUrl);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		~DrawObject_obj();
@@ -56,6 +57,10 @@ class DrawObject_obj : public ::GameObject_obj{
 
 		virtual Void physicsObject( ::String physic);
 
+		virtual Void loadBitmap( ::native::display::Bitmap bitmap,::String physics);
+		Dynamic loadBitmap_dyn();
+
+		Float mass; /* REM */ 
 		::String physicType; /* REM */ 
 		::native::display::Sprite drawingCanvas; /* REM */ 
 		bool drawing; /* REM */ 

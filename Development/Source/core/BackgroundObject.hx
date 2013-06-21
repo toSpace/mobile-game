@@ -38,8 +38,6 @@ class BackgroundObject{
 
 		//add to render manager
 		RenderManager.add(this);
-
-		return this;
 	}
 
 	private function readXml(url:String):Hash<Dynamic>{
@@ -59,12 +57,12 @@ class BackgroundObject{
 		return p;
 	}
 
-	public function render(){
+	public function render():Void{
 		//paralax effect
 		paralax();
 	}
 
-	public function paralax(){
+	public function paralax():Void{
 		var cameraPos:Float = Camera.getPosition().x;
 		var delta:Float;
 

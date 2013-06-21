@@ -235,6 +235,7 @@
 #include <native/geom/Matrix.h>
 #include <native/geom/ColorTransform.h>
 #include <native/filters/BitmapFilter.h>
+#include <native/feedback/Haptic.h>
 #include <native/events/SampleDataEvent.h>
 #include <native/events/ProgressEvent.h>
 #include <native/events/KeyboardEvent.h>
@@ -251,7 +252,6 @@
 #include <native/errors/ArgumentError.h>
 #include <native/errors/Error.h>
 #include <native/display/TriangleCulling.h>
-#include <native/display/Tilesheet.h>
 #include <native/display/StageScaleMode.h>
 #include <native/display/StageQuality.h>
 #include <native/display/StageDisplayState.h>
@@ -277,6 +277,7 @@
 #include <native/display/BlendMode.h>
 #include <native/display/OptimizedPerlin.h>
 #include <native/display/BitmapData.h>
+#include <native/display/Bitmap.h>
 #include <native/Lib.h>
 #include <nape/util/ShapeDebug.h>
 #include <nape/util/Debug.h>
@@ -373,6 +374,12 @@
 #include <nape/callbacks/BodyCallback.h>
 #include <nape/callbacks/Callback.h>
 #include <nape/Config.h>
+#include <haxe/xml/Fast.h>
+#include <haxe/xml/_Fast/NodeListAccess.h>
+#include <haxe/xml/_Fast/HasNodeAccess.h>
+#include <haxe/xml/_Fast/HasAttribAccess.h>
+#include <haxe/xml/_Fast/AttribAccess.h>
+#include <haxe/xml/_Fast/NodeAccess.h>
 #include <haxe/io/Error.h>
 #include <haxe/io/Eof.h>
 #include <haxe/io/BytesBuffer.h>
@@ -384,13 +391,6 @@
 #include <native/display/DisplayObjectContainer.h>
 #include <native/display/InteractiveObject.h>
 #include <native/display/DisplayObject.h>
-#include <sys/io/_Process/Stdout.h>
-#include <haxe/io/Input.h>
-#include <haxe/io/Bytes.h>
-#include <sys/io/_Process/Stdin.h>
-#include <haxe/io/Output.h>
-#include <sys/io/Process.h>
-#include <native/Loader.h>
 #include <native/display/IBitmapDrawable.h>
 #include <native/events/EventDispatcher.h>
 #include <native/events/IEventDispatcher.h>
@@ -399,6 +399,25 @@
 #include <cpp/zip/Flush.h>
 #include <cpp/zip/Compress.h>
 #include <cpp/rtti/FieldNumericIntegerLookup.h>
+#include <aze/display/DrawList.h>
+#include <aze/display/TileLayer.h>
+#include <aze/display/TileGroup.h>
+#include <aze/display/TileClip.h>
+#include <aze/display/TileSprite.h>
+#include <aze/display/TileBase.h>
+#include <haxe/Public.h>
+#include <aze/display/SparrowTilesheet.h>
+#include <aze/display/TilesheetEx.h>
+#include <native/display/Tilesheet.h>
+#include <sys/io/_Process/Stdout.h>
+#include <haxe/io/Input.h>
+#include <haxe/io/Bytes.h>
+#include <sys/io/_Process/Stdin.h>
+#include <haxe/io/Output.h>
+#include <sys/io/Process.h>
+#include <native/Loader.h>
+#include <Xml.h>
+#include <XmlType.h>
 #include <World1Level1.h>
 #include <Type.h>
 #include <ValueType.h>
@@ -407,19 +426,32 @@
 #include <StringTools.h>
 #include <StringBuf.h>
 #include <Std.h>
-#include <Retina.h>
+#include <SpriteObject.h>
+#include <Settings.h>
 #include <RenderManager.h>
 #include <Reflect.h>
+#include <Mobile.h>
 #include <Main.h>
+#include <Lucy.h>
 #include <List.h>
+#include <LineDrawing.h>
 #include <Level.h>
+#include <Lambda.h>
+#include <IsoBody.h>
 #include <IntIter.h>
 #include <IntHash.h>
 #include <Hash.h>
 #include <Garbage.h>
 #include <Drawing.h>
+#include <DrawObject.h>
+#include <GameObject.h>
+#include <DrawButton.h>
+#include <UIobject.h>
 #include <Date.h>
+#include <Character.h>
 #include <Camera.h>
+#include <BitmapDataIso.h>
+#include <BackgroundObject.h>
 #include <ApplicationMain.h>
 
 void __boot_all()
@@ -660,6 +692,7 @@ hx::RegisterResources( hx::GetResources() );
 ::native::geom::Matrix_obj::__register();
 ::native::geom::ColorTransform_obj::__register();
 ::native::filters::BitmapFilter_obj::__register();
+::native::feedback::Haptic_obj::__register();
 ::native::events::SampleDataEvent_obj::__register();
 ::native::events::ProgressEvent_obj::__register();
 ::native::events::KeyboardEvent_obj::__register();
@@ -676,7 +709,6 @@ hx::RegisterResources( hx::GetResources() );
 ::native::errors::ArgumentError_obj::__register();
 ::native::errors::Error_obj::__register();
 ::native::display::TriangleCulling_obj::__register();
-::native::display::Tilesheet_obj::__register();
 ::native::display::StageScaleMode_obj::__register();
 ::native::display::StageQuality_obj::__register();
 ::native::display::StageDisplayState_obj::__register();
@@ -702,6 +734,7 @@ hx::RegisterResources( hx::GetResources() );
 ::native::display::BlendMode_obj::__register();
 ::native::display::OptimizedPerlin_obj::__register();
 ::native::display::BitmapData_obj::__register();
+::native::display::Bitmap_obj::__register();
 ::native::Lib_obj::__register();
 ::nape::util::ShapeDebug_obj::__register();
 ::nape::util::Debug_obj::__register();
@@ -798,6 +831,12 @@ hx::RegisterResources( hx::GetResources() );
 ::nape::callbacks::BodyCallback_obj::__register();
 ::nape::callbacks::Callback_obj::__register();
 ::nape::Config_obj::__register();
+::haxe::xml::Fast_obj::__register();
+::haxe::xml::_Fast::NodeListAccess_obj::__register();
+::haxe::xml::_Fast::HasNodeAccess_obj::__register();
+::haxe::xml::_Fast::HasAttribAccess_obj::__register();
+::haxe::xml::_Fast::AttribAccess_obj::__register();
+::haxe::xml::_Fast::NodeAccess_obj::__register();
 ::haxe::io::Error_obj::__register();
 ::haxe::io::Eof_obj::__register();
 ::haxe::io::BytesBuffer_obj::__register();
@@ -809,13 +848,6 @@ hx::RegisterResources( hx::GetResources() );
 ::native::display::DisplayObjectContainer_obj::__register();
 ::native::display::InteractiveObject_obj::__register();
 ::native::display::DisplayObject_obj::__register();
-::sys::io::_Process::Stdout_obj::__register();
-::haxe::io::Input_obj::__register();
-::haxe::io::Bytes_obj::__register();
-::sys::io::_Process::Stdin_obj::__register();
-::haxe::io::Output_obj::__register();
-::sys::io::Process_obj::__register();
-::native::Loader_obj::__register();
 ::native::display::IBitmapDrawable_obj::__register();
 ::native::events::EventDispatcher_obj::__register();
 ::native::events::IEventDispatcher_obj::__register();
@@ -824,6 +856,25 @@ hx::RegisterResources( hx::GetResources() );
 ::cpp::zip::Flush_obj::__register();
 ::cpp::zip::Compress_obj::__register();
 ::cpp::rtti::FieldNumericIntegerLookup_obj::__register();
+::aze::display::DrawList_obj::__register();
+::aze::display::TileLayer_obj::__register();
+::aze::display::TileGroup_obj::__register();
+::aze::display::TileClip_obj::__register();
+::aze::display::TileSprite_obj::__register();
+::aze::display::TileBase_obj::__register();
+::haxe::Public_obj::__register();
+::aze::display::SparrowTilesheet_obj::__register();
+::aze::display::TilesheetEx_obj::__register();
+::native::display::Tilesheet_obj::__register();
+::sys::io::_Process::Stdout_obj::__register();
+::haxe::io::Input_obj::__register();
+::haxe::io::Bytes_obj::__register();
+::sys::io::_Process::Stdin_obj::__register();
+::haxe::io::Output_obj::__register();
+::sys::io::Process_obj::__register();
+::native::Loader_obj::__register();
+::Xml_obj::__register();
+::XmlType_obj::__register();
 ::World1Level1_obj::__register();
 ::Type_obj::__register();
 ::ValueType_obj::__register();
@@ -832,41 +883,69 @@ hx::RegisterResources( hx::GetResources() );
 ::StringTools_obj::__register();
 ::StringBuf_obj::__register();
 ::Std_obj::__register();
-::Retina_obj::__register();
+::SpriteObject_obj::__register();
+::Settings_obj::__register();
 ::RenderManager_obj::__register();
 ::Reflect_obj::__register();
+::Mobile_obj::__register();
 ::Main_obj::__register();
+::Lucy_obj::__register();
 ::List_obj::__register();
+::LineDrawing_obj::__register();
 ::Level_obj::__register();
+::Lambda_obj::__register();
+::IsoBody_obj::__register();
 ::IntIter_obj::__register();
 ::IntHash_obj::__register();
 ::Hash_obj::__register();
 ::Garbage_obj::__register();
 ::Drawing_obj::__register();
+::DrawObject_obj::__register();
+::GameObject_obj::__register();
+::DrawButton_obj::__register();
+::UIobject_obj::__register();
 ::Date_obj::__register();
+::Character_obj::__register();
 ::Camera_obj::__register();
+::BitmapDataIso_obj::__register();
+::BackgroundObject_obj::__register();
 ::ApplicationMain_obj::__register();
+::Xml_obj::__init__();
 ::native::utils::ByteArray_obj::__init__();
 ::cpp::Lib_obj::__boot();
+::Xml_obj::__boot();
 ::cpp::rtti::FieldNumericIntegerLookup_obj::__boot();
 ::cpp::zip::Compress_obj::__boot();
 ::cpp::zip::Flush_obj::__boot();
 ::cpp::zip::Uncompress_obj::__boot();
 ::haxe::Log_obj::__boot();
 ::ApplicationMain_obj::__boot();
+::BackgroundObject_obj::__boot();
+::BitmapDataIso_obj::__boot();
 ::Camera_obj::__boot();
+::Character_obj::__boot();
 ::Date_obj::__boot();
+::UIobject_obj::__boot();
+::DrawButton_obj::__boot();
+::GameObject_obj::__boot();
+::DrawObject_obj::__boot();
 ::Drawing_obj::__boot();
 ::Garbage_obj::__boot();
 ::Hash_obj::__boot();
 ::IntHash_obj::__boot();
 ::IntIter_obj::__boot();
+::IsoBody_obj::__boot();
+::Lambda_obj::__boot();
 ::Level_obj::__boot();
+::LineDrawing_obj::__boot();
 ::List_obj::__boot();
+::Lucy_obj::__boot();
 ::Main_obj::__boot();
+::Mobile_obj::__boot();
 ::Reflect_obj::__boot();
 ::RenderManager_obj::__boot();
-::Retina_obj::__boot();
+::Settings_obj::__boot();
+::SpriteObject_obj::__boot();
 ::Std_obj::__boot();
 ::StringBuf_obj::__boot();
 ::StringTools_obj::__boot();
@@ -874,10 +953,7 @@ hx::RegisterResources( hx::GetResources() );
 ::ValueType_obj::__boot();
 ::Type_obj::__boot();
 ::World1Level1_obj::__boot();
-::format::display::FrameLabel_obj::__boot();
-::native::events::IEventDispatcher_obj::__boot();
-::native::events::EventDispatcher_obj::__boot();
-::native::display::IBitmapDrawable_obj::__boot();
+::XmlType_obj::__boot();
 ::native::Loader_obj::__boot();
 ::sys::io::Process_obj::__boot();
 ::haxe::io::Output_obj::__boot();
@@ -885,6 +961,20 @@ hx::RegisterResources( hx::GetResources() );
 ::haxe::io::Bytes_obj::__boot();
 ::haxe::io::Input_obj::__boot();
 ::sys::io::_Process::Stdout_obj::__boot();
+::native::display::Tilesheet_obj::__boot();
+::aze::display::TilesheetEx_obj::__boot();
+::aze::display::SparrowTilesheet_obj::__boot();
+::haxe::Public_obj::__boot();
+::aze::display::TileBase_obj::__boot();
+::aze::display::TileSprite_obj::__boot();
+::aze::display::TileClip_obj::__boot();
+::aze::display::TileGroup_obj::__boot();
+::aze::display::TileLayer_obj::__boot();
+::aze::display::DrawList_obj::__boot();
+::format::display::FrameLabel_obj::__boot();
+::native::events::IEventDispatcher_obj::__boot();
+::native::events::EventDispatcher_obj::__boot();
+::native::display::IBitmapDrawable_obj::__boot();
 ::native::display::DisplayObject_obj::__boot();
 ::native::display::InteractiveObject_obj::__boot();
 ::native::display::DisplayObjectContainer_obj::__boot();
@@ -895,6 +985,12 @@ hx::RegisterResources( hx::GetResources() );
 ::haxe::io::BytesBuffer_obj::__boot();
 ::haxe::io::Eof_obj::__boot();
 ::haxe::io::Error_obj::__boot();
+::haxe::xml::_Fast::NodeAccess_obj::__boot();
+::haxe::xml::_Fast::AttribAccess_obj::__boot();
+::haxe::xml::_Fast::HasAttribAccess_obj::__boot();
+::haxe::xml::_Fast::HasNodeAccess_obj::__boot();
+::haxe::xml::_Fast::NodeListAccess_obj::__boot();
+::haxe::xml::Fast_obj::__boot();
 ::nape::Config_obj::__boot();
 ::nape::callbacks::Callback_obj::__boot();
 ::nape::callbacks::BodyCallback_obj::__boot();
@@ -991,6 +1087,7 @@ hx::RegisterResources( hx::GetResources() );
 ::nape::util::Debug_obj::__boot();
 ::nape::util::ShapeDebug_obj::__boot();
 ::native::Lib_obj::__boot();
+::native::display::Bitmap_obj::__boot();
 ::native::display::BitmapData_obj::__boot();
 ::native::display::OptimizedPerlin_obj::__boot();
 ::native::display::BlendMode_obj::__boot();
@@ -1016,7 +1113,6 @@ hx::RegisterResources( hx::GetResources() );
 ::native::display::StageDisplayState_obj::__boot();
 ::native::display::StageQuality_obj::__boot();
 ::native::display::StageScaleMode_obj::__boot();
-::native::display::Tilesheet_obj::__boot();
 ::native::display::TriangleCulling_obj::__boot();
 ::native::errors::Error_obj::__boot();
 ::native::errors::ArgumentError_obj::__boot();
@@ -1033,6 +1129,7 @@ hx::RegisterResources( hx::GetResources() );
 ::native::events::KeyboardEvent_obj::__boot();
 ::native::events::ProgressEvent_obj::__boot();
 ::native::events::SampleDataEvent_obj::__boot();
+::native::feedback::Haptic_obj::__boot();
 ::native::filters::BitmapFilter_obj::__boot();
 ::native::geom::ColorTransform_obj::__boot();
 ::native::geom::Matrix_obj::__boot();

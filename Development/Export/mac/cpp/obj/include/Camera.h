@@ -6,6 +6,8 @@
 #endif
 
 HX_DECLARE_CLASS0(Camera)
+HX_DECLARE_CLASS2(nape,phys,Body)
+HX_DECLARE_CLASS2(nape,phys,Interactor)
 HX_DECLARE_CLASS2(native,geom,Point)
 
 
@@ -40,6 +42,9 @@ class Camera_obj : public hx::Object{
 
 		static Void move( Float x,Float y,Dynamic direct);
 		static Dynamic move_dyn();
+
+		static Void follow( ::nape::phys::Body body);
+		static Dynamic follow_dyn();
 
 		static ::native::geom::Point getPosition( );
 		static Dynamic getPosition_dyn();

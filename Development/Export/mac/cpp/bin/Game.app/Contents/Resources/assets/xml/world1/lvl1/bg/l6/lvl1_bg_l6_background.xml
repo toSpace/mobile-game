@@ -1,0 +1,9 @@
+<asset>
+
+	<name>lvl1_bg_l6_background</name>
+	<img>world1/lvl1/bg/background02.png</img>
+	<paralax startX="0" endX="4700">1</paralax>
+	<blendmode>none</blendmode>
+	<pos x="0" y="0"></pos>
+
+</asset>

@@ -449,6 +449,7 @@ obj/android/src/Date.obj
 obj/android/src/Character.obj
 obj/android/src/Camera.obj
 obj/android/src/BitmapDataIso.obj
+obj/android/src/BackgroundObject.obj
 obj/android/src/ApplicationMain.obj
 obj/android/src/__boot__.obj
 obj/android/src/__files__.obj

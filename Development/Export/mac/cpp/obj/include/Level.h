@@ -34,7 +34,16 @@ class Level_obj : public hx::Object{
 		virtual Void loadLevel( );
 		Dynamic loadLevel_dyn();
 
-		virtual Void addToNightmare( int point);
+		virtual Void snort( );
+		Dynamic snort_dyn();
+
+		virtual Void resetNightmare( );
+		Dynamic resetNightmare_dyn();
+
+		virtual Float getNightmare( );
+		Dynamic getNightmare_dyn();
+
+		virtual Void addToNightmare( Float point);
 		Dynamic addToNightmare_dyn();
 
 		virtual Void start( );
@@ -43,6 +52,8 @@ class Level_obj : public hx::Object{
 		virtual Void clear( );
 		Dynamic clear_dyn();
 
+		int nightmareTolerance; /* REM */ 
+		Float nightmare; /* REM */ 
 		static Dynamic load( ::String level);
 		static Dynamic load_dyn();
 

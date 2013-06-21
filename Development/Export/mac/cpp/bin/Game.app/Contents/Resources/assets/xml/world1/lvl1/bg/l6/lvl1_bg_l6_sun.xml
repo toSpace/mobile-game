@@ -1,0 +1,9 @@
+<asset>
+
+	<name>lvl1_bg_l6_sun</name>
+	<img>world1/lvl1/bg/sun.png</img>
+	<paralax startX="300" endX="500">1</paralax>
+	<blendmode>none</blendmode>
+	<pos x="300" y="330"></pos>
+
+</asset>

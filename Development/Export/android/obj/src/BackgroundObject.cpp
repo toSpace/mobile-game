@@ -96,8 +96,6 @@ HX_STACK_PUSH("BackgroundObject::new","BackgroundObject.hx",20);
 	this->startX = this->xml->get(HX_CSTRING("startX"));
 	HX_STACK_LINE(40)
 	::RenderManager_obj::add(hx::ObjectPtr<OBJ_>(this));
-	HX_STACK_LINE(42)
-	return hx::ObjectPtr<OBJ_>(this);
 }
 ;
 	return null();
@@ -118,69 +116,69 @@ Dynamic BackgroundObject_obj::__Create(hx::DynamicArray inArgs)
 
 Void BackgroundObject_obj::setBlendmode( ::String mode){
 {
-		HX_STACK_PUSH("BackgroundObject::setBlendmode","BackgroundObject.hx",77);
+		HX_STACK_PUSH("BackgroundObject::setBlendmode","BackgroundObject.hx",75);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(mode,"mode");
-		HX_STACK_LINE(77)
+		HX_STACK_LINE(75)
 		::String _switch_1 = (mode);
 		if (  ( _switch_1==HX_CSTRING("none"))){
 		}
 		else if (  ( _switch_1==HX_CSTRING("add"))){
-			HX_STACK_LINE(82)
+			HX_STACK_LINE(80)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::ADD_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("alpha"))){
-			HX_STACK_LINE(84)
+			HX_STACK_LINE(82)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::ALPHA_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("darken"))){
-			HX_STACK_LINE(86)
+			HX_STACK_LINE(84)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::DARKEN_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("difference"))){
-			HX_STACK_LINE(88)
+			HX_STACK_LINE(86)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::DIFFERENCE_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("erase"))){
-			HX_STACK_LINE(90)
+			HX_STACK_LINE(88)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::ERASE_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("hardlight"))){
-			HX_STACK_LINE(92)
+			HX_STACK_LINE(90)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::HARDLIGHT_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("invert"))){
-			HX_STACK_LINE(94)
+			HX_STACK_LINE(92)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::INVERT_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("layer"))){
-			HX_STACK_LINE(96)
+			HX_STACK_LINE(94)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::LAYER_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("lighten"))){
-			HX_STACK_LINE(98)
+			HX_STACK_LINE(96)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::LIGHTEN_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("multiply"))){
-			HX_STACK_LINE(100)
+			HX_STACK_LINE(98)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::MULTIPLY_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("normal"))){
-			HX_STACK_LINE(102)
+			HX_STACK_LINE(100)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::NORMAL_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("overlay"))){
-			HX_STACK_LINE(104)
+			HX_STACK_LINE(102)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::OVERLAY_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("screen"))){
-			HX_STACK_LINE(106)
+			HX_STACK_LINE(104)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::SCREEN_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("shader"))){
 		}
 		else if (  ( _switch_1==HX_CSTRING("subtract"))){
-			HX_STACK_LINE(112)
+			HX_STACK_LINE(110)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::SUBTRACT_dyn());
 		}
 	}
@@ -192,17 +190,17 @@ HX_DEFINE_DYNAMIC_FUNC1(BackgroundObject_obj,setBlendmode,(void))
 
 Void BackgroundObject_obj::paralax( ){
 {
-		HX_STACK_PUSH("BackgroundObject::paralax","BackgroundObject.hx",67);
+		HX_STACK_PUSH("BackgroundObject::paralax","BackgroundObject.hx",65);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(68)
+		HX_STACK_LINE(66)
 		Float cameraPos = ::Camera_obj::getPosition()->x;		HX_STACK_VAR(cameraPos,"cameraPos");
-		HX_STACK_LINE(69)
+		HX_STACK_LINE(67)
 		Float delta;		HX_STACK_VAR(delta,"delta");
-		HX_STACK_LINE(71)
+		HX_STACK_LINE(69)
 		delta = (this->x - cameraPos);
-		HX_STACK_LINE(72)
+		HX_STACK_LINE(70)
 		hx::MultEq(delta,this->speed);
-		HX_STACK_LINE(74)
+		HX_STACK_LINE(72)
 		this->asset->set_x((this->x - delta));
 	}
 return null();
@@ -213,9 +211,9 @@ HX_DEFINE_DYNAMIC_FUNC0(BackgroundObject_obj,paralax,(void))
 
 Void BackgroundObject_obj::render( ){
 {
-		HX_STACK_PUSH("BackgroundObject::render","BackgroundObject.hx",62);
+		HX_STACK_PUSH("BackgroundObject::render","BackgroundObject.hx",60);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(62)
+		HX_STACK_LINE(60)
 		this->paralax();
 	}
 return null();
@@ -225,32 +223,32 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC0(BackgroundObject_obj,render,(void))
 
 ::Hash BackgroundObject_obj::readXml( ::String url){
-	HX_STACK_PUSH("BackgroundObject::readXml","BackgroundObject.hx",45);
+	HX_STACK_PUSH("BackgroundObject::readXml","BackgroundObject.hx",43);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(url,"url");
-	HX_STACK_LINE(46)
+	HX_STACK_LINE(44)
 	::Hash p = ::Hash_obj::__new();		HX_STACK_VAR(p,"p");
-	HX_STACK_LINE(47)
+	HX_STACK_LINE(45)
 	::String xmlFile = ::nme::installer::Assets_obj::getText((::Mobile_obj::xml + url));		HX_STACK_VAR(xmlFile,"xmlFile");
-	HX_STACK_LINE(48)
+	HX_STACK_LINE(46)
 	::haxe::xml::Fast read = ::haxe::xml::Fast_obj::__new(::Xml_obj::parse(xmlFile));		HX_STACK_VAR(read,"read");
-	HX_STACK_LINE(50)
+	HX_STACK_LINE(48)
 	::haxe::xml::Fast asset = read->node->resolve(HX_CSTRING("asset"));		HX_STACK_VAR(asset,"asset");
-	HX_STACK_LINE(51)
+	HX_STACK_LINE(49)
 	p->set(HX_CSTRING("img"),(::Mobile_obj::asset + asset->node->resolve(HX_CSTRING("img"))->getInnerData()));
-	HX_STACK_LINE(52)
+	HX_STACK_LINE(50)
 	p->set(HX_CSTRING("x"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("x")));
-	HX_STACK_LINE(53)
+	HX_STACK_LINE(51)
 	p->set(HX_CSTRING("y"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("y")));
-	HX_STACK_LINE(54)
+	HX_STACK_LINE(52)
 	p->set(HX_CSTRING("blendmode"),asset->node->resolve(HX_CSTRING("blendmode"))->getInnerData());
-	HX_STACK_LINE(55)
+	HX_STACK_LINE(53)
 	p->set(HX_CSTRING("speed"),asset->node->resolve(HX_CSTRING("paralax"))->getInnerData());
-	HX_STACK_LINE(56)
+	HX_STACK_LINE(54)
 	p->set(HX_CSTRING("startX"),asset->node->resolve(HX_CSTRING("paralax"))->att->resolve(HX_CSTRING("startX")));
-	HX_STACK_LINE(57)
+	HX_STACK_LINE(55)
 	p->set(HX_CSTRING("endX"),asset->node->resolve(HX_CSTRING("paralax"))->att->resolve(HX_CSTRING("endX")));
-	HX_STACK_LINE(59)
+	HX_STACK_LINE(57)
 	return p;
 }
 

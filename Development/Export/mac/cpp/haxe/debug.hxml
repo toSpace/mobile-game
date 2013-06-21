@@ -2,9 +2,12 @@
 -lib nme
 -lib actuate
 -lib nape
+-lib tilelayer
 -cp Source
 -cp Source/core
 -cp Source/levels
+-cp Source/GUI
+-cp Source/characters
 -cp /usr/lib/haxe/lib/nme/3,5,5/
 -D nme_install_tool
 -D mac
