@@ -437,6 +437,8 @@ class Assets {
 			resourceTypes.set ("assets/xml/walking.xml", "text");
 			resourceClasses.set ("assets/xml/world1/general/empty.md", NME_assets_xml_world1_general_empty_md);
 			resourceTypes.set ("assets/xml/world1/general/empty.md", "text");
+			resourceClasses.set ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_fog1.xml", NME_assets_xml_world1_lvl1_bg_l1_lvl1_bg_l1_fog1_xml);
+			resourceTypes.set ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_fog1.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill1.xml", NME_assets_xml_world1_lvl1_bg_l1_lvl1_bg_l1_hill1_xml);
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill1.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill2.xml", NME_assets_xml_world1_lvl1_bg_l1_lvl1_bg_l1_hill2_xml);
@@ -445,6 +447,8 @@ class Assets {
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill3.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill4.xml", NME_assets_xml_world1_lvl1_bg_l1_lvl1_bg_l1_hill4_xml);
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l1/lvl1_bg_l1_hill4.xml", "text");
+			resourceClasses.set ("assets/xml/world1/lvl1/bg/l2/lvl1_bg_l2_fog1.xml", NME_assets_xml_world1_lvl1_bg_l2_lvl1_bg_l2_fog1_xml);
+			resourceTypes.set ("assets/xml/world1/lvl1/bg/l2/lvl1_bg_l2_fog1.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l2/lvl1_bg_l2_tree1.xml", NME_assets_xml_world1_lvl1_bg_l2_lvl1_bg_l2_tree1_xml);
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l2/lvl1_bg_l2_tree1.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l2/lvl1_bg_l2_tree2.xml", NME_assets_xml_world1_lvl1_bg_l2_lvl1_bg_l2_tree2_xml);
@@ -453,12 +457,14 @@ class Assets {
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l2/lvl1_bg_l2_tree3.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l2/lvl1_bg_l2_tree4.xml", NME_assets_xml_world1_lvl1_bg_l2_lvl1_bg_l2_tree4_xml);
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l2/lvl1_bg_l2_tree4.xml", "text");
-			resourceClasses.set ("assets/xml/world1/lvl1/bg/l3/empty.md", NME_assets_xml_world1_lvl1_bg_l3_empty_md);
-			resourceTypes.set ("assets/xml/world1/lvl1/bg/l3/empty.md", "text");
+			resourceClasses.set ("assets/xml/world1/lvl1/bg/l2/lvl1_bg_l2_tree5.xml", NME_assets_xml_world1_lvl1_bg_l2_lvl1_bg_l2_tree5_xml);
+			resourceTypes.set ("assets/xml/world1/lvl1/bg/l2/lvl1_bg_l2_tree5.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree1.xml", NME_assets_xml_world1_lvl1_bg_l3_lvl1_bg_l3_tree1_xml);
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree1.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree10.xml", NME_assets_xml_world1_lvl1_bg_l3_lvl1_bg_l3_tree10_xml);
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree10.xml", "text");
+			resourceClasses.set ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree11.xml", NME_assets_xml_world1_lvl1_bg_l3_lvl1_bg_l3_tree11_xml);
+			resourceTypes.set ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree11.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree2.xml", NME_assets_xml_world1_lvl1_bg_l3_lvl1_bg_l3_tree2_xml);
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree2.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree3.xml", NME_assets_xml_world1_lvl1_bg_l3_lvl1_bg_l3_tree3_xml);
@@ -475,8 +481,8 @@ class Assets {
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree8.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree9.xml", NME_assets_xml_world1_lvl1_bg_l3_lvl1_bg_l3_tree9_xml);
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l3/lvl1_bg_l3_tree9.xml", "text");
-			resourceClasses.set ("assets/xml/world1/lvl1/bg/l4/empty.md", NME_assets_xml_world1_lvl1_bg_l4_empty_md);
-			resourceTypes.set ("assets/xml/world1/lvl1/bg/l4/empty.md", "text");
+			resourceClasses.set ("assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_fog1.xml", NME_assets_xml_world1_lvl1_bg_l4_lvl1_bg_l4_fog1_xml);
+			resourceTypes.set ("assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_fog1.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_hill1.xml", NME_assets_xml_world1_lvl1_bg_l4_lvl1_bg_l4_hill1_xml);
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_hill1.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_hill2.xml", NME_assets_xml_world1_lvl1_bg_l4_lvl1_bg_l4_hill2_xml);
@@ -495,8 +501,8 @@ class Assets {
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_tree5.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_tree6.xml", NME_assets_xml_world1_lvl1_bg_l4_lvl1_bg_l4_tree6_xml);
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_tree6.xml", "text");
-			resourceClasses.set ("assets/xml/world1/lvl1/bg/l5/empty.md", NME_assets_xml_world1_lvl1_bg_l5_empty_md);
-			resourceTypes.set ("assets/xml/world1/lvl1/bg/l5/empty.md", "text");
+			resourceClasses.set ("assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_tree7.xml", NME_assets_xml_world1_lvl1_bg_l4_lvl1_bg_l4_tree7_xml);
+			resourceTypes.set ("assets/xml/world1/lvl1/bg/l4/lvl1_bg_l4_tree7.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l5/lvl1_bg_l5_tree1.xml", NME_assets_xml_world1_lvl1_bg_l5_lvl1_bg_l5_tree1_xml);
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l5/lvl1_bg_l5_tree1.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l5/lvl1_bg_l5_tree2.xml", NME_assets_xml_world1_lvl1_bg_l5_lvl1_bg_l5_tree2_xml);
@@ -507,8 +513,8 @@ class Assets {
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l5/lvl1_bg_l5_tree4.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l5/lvl1_bg_l5_tree5.xml", NME_assets_xml_world1_lvl1_bg_l5_lvl1_bg_l5_tree5_xml);
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l5/lvl1_bg_l5_tree5.xml", "text");
-			resourceClasses.set ("assets/xml/world1/lvl1/bg/l6/empty.md", NME_assets_xml_world1_lvl1_bg_l6_empty_md);
-			resourceTypes.set ("assets/xml/world1/lvl1/bg/l6/empty.md", "text");
+			resourceClasses.set ("assets/xml/world1/lvl1/bg/l5/lvl1_bg_l5_tree6.xml", NME_assets_xml_world1_lvl1_bg_l5_lvl1_bg_l5_tree6_xml);
+			resourceTypes.set ("assets/xml/world1/lvl1/bg/l5/lvl1_bg_l5_tree6.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l6/lvl1_bg_l6_background.xml", NME_assets_xml_world1_lvl1_bg_l6_lvl1_bg_l6_background_xml);
 			resourceTypes.set ("assets/xml/world1/lvl1/bg/l6/lvl1_bg_l6_background.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/bg/l6/lvl1_bg_l6_sun.xml", NME_assets_xml_world1_lvl1_bg_l6_lvl1_bg_l6_sun_xml);
@@ -531,8 +537,6 @@ class Assets {
 			resourceTypes.set ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_7.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_8.xml", NME_assets_xml_world1_lvl1_fg_l1_lvl1_fg_l1_8_xml);
 			resourceTypes.set ("assets/xml/world1/lvl1/fg/l1/lvl1_fg_l1_8.xml", "text");
-			resourceClasses.set ("assets/xml/world1/lvl1/fg/l2/empty.md", NME_assets_xml_world1_lvl1_fg_l2_empty_md);
-			resourceTypes.set ("assets/xml/world1/lvl1/fg/l2/empty.md", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_grass1.xml", NME_assets_xml_world1_lvl1_fg_l2_lvl1_fg_l2_grass1_xml);
 			resourceTypes.set ("assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_grass1.xml", "text");
 			resourceClasses.set ("assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_grass2.xml", NME_assets_xml_world1_lvl1_fg_l2_lvl1_fg_l2_grass2_xml);
