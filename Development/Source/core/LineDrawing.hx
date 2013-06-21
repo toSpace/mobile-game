@@ -36,8 +36,8 @@ class LineDrawing {
 		if(!Drawing.erasing){
 			//draw
 			if(Drawing.drawing){
-				var point:Point = Main.canvas.globalToLocal( new Point(Drawing.x, Drawing.y) );
-				drawing.graphics.lineTo(point.x, point.y);
+				//var point:Point = Main.canvas.globalToLocal( new Point(Drawing.x, Drawing.y) );
+				drawing.graphics.lineTo(Drawing.x, Drawing.y);
 			} 
 			//stop draw
 			else {

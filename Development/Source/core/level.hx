@@ -56,7 +56,7 @@ class Level{
 	public function addToNightmare(point:Float):Void{
 		nightmare += point;
 
-		trace( getNightmare() );
+		//trace( getNightmare() );
 	}
 
 	public function getNightmare():Float{

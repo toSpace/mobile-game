@@ -75,9 +75,6 @@
 #ifndef INCLUDED_native_geom_Matrix
 #include <native/geom/Matrix.h>
 #endif
-#ifndef INCLUDED_native_geom_Point
-#include <native/geom/Point.h>
-#endif
 #ifndef INCLUDED_native_geom_Rectangle
 #include <native/geom/Rectangle.h>
 #endif
@@ -159,10 +156,8 @@ Void LineDrawing_obj::render( ){
 		if ((!(::Drawing_obj::erasing))){
 			HX_STACK_LINE(36)
 			if ((::Drawing_obj::drawing)){
-				HX_STACK_LINE(39)
-				::native::geom::Point point = ::Main_obj::canvas->globalToLocal(::native::geom::Point_obj::__new(::Drawing_obj::x,::Drawing_obj::y));		HX_STACK_VAR(point,"point");
-				HX_STACK_LINE(40)
-				this->drawing->get_graphics()->lineTo(point->x,point->y);
+				HX_STACK_LINE(38)
+				this->drawing->get_graphics()->lineTo(::Drawing_obj::x,::Drawing_obj::y);
 			}
 			else{
 				HX_STACK_LINE(43)

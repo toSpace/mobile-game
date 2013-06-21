@@ -4342,7 +4342,6 @@
    <depend name="include/native/events/IEventDispatcher.h"/>
    <depend name="include/native/geom/ColorTransform.h"/>
    <depend name="include/native/geom/Matrix.h"/>
-   <depend name="include/native/geom/Point.h"/>
    <depend name="include/native/geom/Rectangle.h"/>
   </file>
   <file name="src/Level.cpp">
@@ -4354,7 +4353,6 @@
    <depend name="include/RenderManager.h"/>
    <depend name="include/Type.h"/>
    <depend name="include/UIobject.h"/>
-   <depend name="include/haxe/Log.h"/>
    <depend name="include/native/display/DisplayObject.h"/>
    <depend name="include/native/display/DisplayObjectContainer.h"/>
    <depend name="include/native/display/IBitmapDrawable.h"/>
@@ -4425,7 +4423,6 @@
    <depend name="include/native/events/EventDispatcher.h"/>
    <depend name="include/native/events/IEventDispatcher.h"/>
    <depend name="include/native/events/MouseEvent.h"/>
-   <depend name="include/native/geom/Point.h"/>
    <depend name="include/zpp_nape/util/ZNPList_ZPP_Body.h"/>
    <depend name="include/zpp_nape/util/ZPP_BodyList.h"/>
   </file>
@@ -4463,7 +4460,6 @@
    <depend name="include/native/events/IEventDispatcher.h"/>
    <depend name="include/native/geom/ColorTransform.h"/>
    <depend name="include/native/geom/Matrix.h"/>
-   <depend name="include/native/geom/Point.h"/>
    <depend name="include/native/geom/Rectangle.h"/>
    <depend name="include/zpp_nape/phys/ZPP_Body.h"/>
    <depend name="include/zpp_nape/phys/ZPP_Compound.h"/>

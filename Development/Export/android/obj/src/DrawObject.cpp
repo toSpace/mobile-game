@@ -102,9 +102,6 @@
 #ifndef INCLUDED_native_geom_Matrix
 #include <native/geom/Matrix.h>
 #endif
-#ifndef INCLUDED_native_geom_Point
-#include <native/geom/Point.h>
-#endif
 #ifndef INCLUDED_native_geom_Rectangle
 #include <native/geom/Rectangle.h>
 #endif
@@ -138,19 +135,19 @@
 
 Void DrawObject_obj::__construct(Dynamic xmlUrl)
 {
-HX_STACK_PUSH("DrawObject::new","DrawObject.hx",20);
+HX_STACK_PUSH("DrawObject::new","DrawObject.hx",22);
 {
-	HX_STACK_LINE(25)
-	this->mass = (int)-1;
-	HX_STACK_LINE(22)
-	this->drawing = false;
 	HX_STACK_LINE(27)
+	this->mass = (int)-1;
+	HX_STACK_LINE(24)
+	this->drawing = false;
+	HX_STACK_LINE(29)
 	if ((::Std_obj::is(xmlUrl,hx::ClassOf< ::String >()))){
-		HX_STACK_LINE(28)
+		HX_STACK_LINE(30)
 		super::__construct(xmlUrl);
 	}
 	else{
-		HX_STACK_LINE(30)
+		HX_STACK_LINE(32)
 		this->loadBitmap(xmlUrl,null());
 	}
 }
@@ -173,12 +170,10 @@ Dynamic DrawObject_obj::__Create(hx::DynamicArray inArgs)
 
 Void DrawObject_obj::draw( ){
 {
-		HX_STACK_PUSH("DrawObject::draw","DrawObject.hx",172);
+		HX_STACK_PUSH("DrawObject::draw","DrawObject.hx",185);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(173)
-		::native::geom::Point point = this->asset->globalToLocal(::native::geom::Point_obj::__new(::Drawing_obj::x,::Drawing_obj::y));		HX_STACK_VAR(point,"point");
-		HX_STACK_LINE(174)
-		this->drawingCanvas->get_graphics()->lineTo(point->x,point->y);
+		HX_STACK_LINE(185)
+		this->drawingCanvas->get_graphics()->lineTo(::Drawing_obj::x,::Drawing_obj::y);
 	}
 return null();
 }
@@ -188,15 +183,29 @@ HX_DEFINE_DYNAMIC_FUNC0(DrawObject_obj,draw,(void))
 
 Void DrawObject_obj::stopDrawing( ){
 {
-		HX_STACK_PUSH("DrawObject::stopDrawing","DrawObject.hx",157);
+		HX_STACK_PUSH("DrawObject::stopDrawing","DrawObject.hx",160);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(158)
-		this->drawing = false;
 		HX_STACK_LINE(161)
-		::Main_obj::space->zpp_inner->wrap_bodies->remove(this->body);
+		this->drawing = false;
 		HX_STACK_LINE(164)
-		this->asset->bitmapData->draw(this->drawingCanvas,::native::geom::Matrix_obj::__new(null(),null(),null(),null(),null(),null()),null(),::native::display::BlendMode_obj::ERASE_dyn(),null(),null());
+		::Main_obj::space->zpp_inner->wrap_bodies->remove(this->body);
+		HX_STACK_LINE(167)
+		::native::geom::Rectangle bounds = this->drawingCanvas->getBounds(::Main_obj::canvas);		HX_STACK_VAR(bounds,"bounds");
 		HX_STACK_LINE(168)
+		::native::geom::Matrix matrix = ::native::geom::Matrix_obj::__new(null(),null(),null(),null(),null(),null());		HX_STACK_VAR(matrix,"matrix");
+		HX_STACK_LINE(169)
+		matrix->tx = ((int)0 - this->asset->get_x());
+		HX_STACK_LINE(170)
+		matrix->ty = ((int)0 - this->asset->get_y());
+		HX_STACK_LINE(173)
+		::native::geom::ColorTransform color = ::native::geom::ColorTransform_obj::__new(null(),null(),null(),null(),null(),null(),null(),null());		HX_STACK_VAR(color,"color");
+		HX_STACK_LINE(174)
+		color->alphaMultiplier = (int)1;
+		HX_STACK_LINE(177)
+		this->asset->bitmapData->draw(this->drawingCanvas,matrix,color,::native::display::BlendMode_obj::ERASE_dyn(),null(),null());
+		HX_STACK_LINE(178)
+		::Main_obj::canvas->removeChild(this->drawingCanvas);
+		HX_STACK_LINE(181)
 		this->updateBody();
 	}
 return null();
@@ -207,23 +216,17 @@ HX_DEFINE_DYNAMIC_FUNC0(DrawObject_obj,stopDrawing,(void))
 
 Void DrawObject_obj::startDrawing( ){
 {
-		HX_STACK_PUSH("DrawObject::startDrawing","DrawObject.hx",135);
+		HX_STACK_PUSH("DrawObject::startDrawing","DrawObject.hx",138);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(136)
-		this->drawing = true;
 		HX_STACK_LINE(139)
+		this->drawing = true;
+		HX_STACK_LINE(142)
 		this->drawingCanvas = ::native::display::Sprite_obj::__new();
-		HX_STACK_LINE(143)
-		this->drawingCanvas->set_width(this->asset->get_width());
-		HX_STACK_LINE(144)
-		this->drawingCanvas->set_height(this->asset->get_height());
-		HX_STACK_LINE(147)
-		this->drawingCanvas->get_graphics()->lineStyle(::Settings_obj::brushSize,(int)16711680,(int)1,true,null(),null(),null(),null());
 		HX_STACK_LINE(150)
-		::native::geom::Point point = this->asset->globalToLocal(::native::geom::Point_obj::__new(::Drawing_obj::x,::Drawing_obj::y));		HX_STACK_VAR(point,"point");
-		HX_STACK_LINE(151)
-		this->drawingCanvas->get_graphics()->moveTo(point->x,point->y);
-		HX_STACK_LINE(153)
+		this->drawingCanvas->get_graphics()->lineStyle(::Settings_obj::brushSize,(int)16711680,(int)1,true,null(),null(),null(),null());
+		HX_STACK_LINE(154)
+		this->drawingCanvas->get_graphics()->moveTo(::Drawing_obj::x,::Drawing_obj::y);
+		HX_STACK_LINE(156)
 		::Main_obj::canvas->addChild(this->drawingCanvas);
 	}
 return null();
@@ -234,33 +237,33 @@ HX_DEFINE_DYNAMIC_FUNC0(DrawObject_obj,startDrawing,(void))
 
 Void DrawObject_obj::render( ){
 {
-		HX_STACK_PUSH("DrawObject::render","DrawObject.hx",107);
+		HX_STACK_PUSH("DrawObject::render","DrawObject.hx",109);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(107)
+		HX_STACK_LINE(109)
 		if ((this->inView())){
-			HX_STACK_LINE(112)
+			HX_STACK_LINE(114)
 			this->renderPhysics();
-			HX_STACK_LINE(115)
+			HX_STACK_LINE(117)
 			if (((bool(::Drawing_obj::drawing) && bool(::Drawing_obj::erasing)))){
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(120)
 				bool checkActive = ::Drawing_obj::mouseOver(this->asset);		HX_STACK_VAR(checkActive,"checkActive");
-				HX_STACK_LINE(119)
+				HX_STACK_LINE(122)
 				if (((bool(checkActive) && bool(!(this->drawing))))){
-					HX_STACK_LINE(119)
+					HX_STACK_LINE(122)
 					this->startDrawing();
 				}
 				else{
-					HX_STACK_LINE(122)
+					HX_STACK_LINE(125)
 					if (((bool(checkActive) && bool(this->drawing)))){
-						HX_STACK_LINE(122)
+						HX_STACK_LINE(125)
 						this->draw();
 					}
 				}
 			}
 			else{
-				HX_STACK_LINE(126)
+				HX_STACK_LINE(129)
 				if (((this->drawing == true))){
-					HX_STACK_LINE(127)
+					HX_STACK_LINE(130)
 					this->stopDrawing();
 				}
 			}
@@ -272,9 +275,9 @@ return null();
 
 Void DrawObject_obj::updateBody( ){
 {
-		HX_STACK_PUSH("DrawObject::updateBody","DrawObject.hx",102);
+		HX_STACK_PUSH("DrawObject::updateBody","DrawObject.hx",104);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(102)
+		HX_STACK_LINE(104)
 		this->convert(this->physicType,this->asset->get_x(),this->asset->get_y(),this->xml->get(HX_CSTRING("rotation")));
 	}
 return null();
@@ -285,56 +288,56 @@ HX_DEFINE_DYNAMIC_FUNC0(DrawObject_obj,updateBody,(void))
 
 Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 {
-		HX_STACK_PUSH("DrawObject::convert","DrawObject.hx",65);
+		HX_STACK_PUSH("DrawObject::convert","DrawObject.hx",67);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(bodyT,"bodyT");
 		HX_STACK_ARG(x,"x");
 		HX_STACK_ARG(y,"y");
 		HX_STACK_ARG(rotation,"rotation");
-		HX_STACK_LINE(68)
+		HX_STACK_LINE(70)
 		if (((this->body != null()))){
 			struct _Function_2_1{
 				inline static Float Block( ::DrawObject_obj *__this){
-					HX_STACK_PUSH("*::closure","DrawObject.hx",68);
+					HX_STACK_PUSH("*::closure","DrawObject.hx",70);
 					{
-						HX_STACK_LINE(68)
+						HX_STACK_LINE(70)
 						::nape::phys::Body _this = __this->body;		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(68)
+						HX_STACK_LINE(70)
 						if ((_this->zpp_inner->world)){
-							HX_STACK_LINE(68)
+							HX_STACK_LINE(70)
 							hx::Throw (HX_CSTRING("Error: Space::world has no mass"));
 						}
-						HX_STACK_LINE(68)
+						HX_STACK_LINE(70)
 						_this->zpp_inner->validate_mass();
-						HX_STACK_LINE(68)
+						HX_STACK_LINE(70)
 						if (((bool((_this->zpp_inner->massMode == ::zpp_nape::util::ZPP_Flags_obj::id_MassMode_DEFAULT)) && bool((_this->zpp_inner->shapes->head == null()))))){
-							HX_STACK_LINE(68)
+							HX_STACK_LINE(70)
 							hx::Throw (HX_CSTRING("Error: Given current mass mode, Body::mass only makes sense if it contains shapes"));
 						}
-						HX_STACK_LINE(68)
+						HX_STACK_LINE(70)
 						return _this->zpp_inner->cmass;
 					}
 					return null();
 				}
 			};
-			HX_STACK_LINE(68)
+			HX_STACK_LINE(70)
 			this->mass = _Function_2_1::Block(this);
 		}
-		HX_STACK_LINE(71)
+		HX_STACK_LINE(73)
 		::BitmapDataIso objIso = ::BitmapDataIso_obj::__new(this->asset->bitmapData,null());		HX_STACK_VAR(objIso,"objIso");
-		HX_STACK_LINE(74)
+		HX_STACK_LINE(76)
 		this->body = ::IsoBody_obj::run(objIso->iso_dyn(),objIso->bounds,null(),null(),null());
 		struct _Function_1_1{
 			inline static Dynamic Block( ::DrawObject_obj *__this){
-				HX_STACK_PUSH("*::closure","DrawObject.hx",75);
+				HX_STACK_PUSH("*::closure","DrawObject.hx",77);
 				{
-					HX_STACK_LINE(75)
+					HX_STACK_LINE(77)
 					::nape::phys::Body _this = __this->body;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(75)
+					HX_STACK_LINE(77)
 					if (((_this->zpp_inner_i->userData == null()))){
 						struct _Function_3_1{
 							inline static Dynamic Block( ){
-								HX_STACK_PUSH("*::closure","DrawObject.hx",75);
+								HX_STACK_PUSH("*::closure","DrawObject.hx",77);
 								{
 									hx::Anon __result = hx::Anon_obj::Create();
 									return __result;
@@ -342,67 +345,67 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 								return null();
 							}
 						};
-						HX_STACK_LINE(75)
+						HX_STACK_LINE(77)
 						_this->zpp_inner_i->userData = _Function_3_1::Block();
 					}
-					HX_STACK_LINE(75)
+					HX_STACK_LINE(77)
 					return _this->zpp_inner_i->userData;
 				}
 				return null();
 			}
 		};
-		HX_STACK_LINE(75)
+		HX_STACK_LINE(77)
 		(_Function_1_1::Block(this))->__FieldRef(HX_CSTRING("graphic")) = this->asset;
-		HX_STACK_LINE(78)
+		HX_STACK_LINE(80)
 		this->setXY(x,y,true);
-		HX_STACK_LINE(81)
+		HX_STACK_LINE(83)
 		::String _switch_1 = (bodyT);
 		if (  ( _switch_1==HX_CSTRING("static"))){
 			struct _Function_2_1{
 				inline static ::nape::phys::BodyType Block( ){
-					HX_STACK_PUSH("*::closure","DrawObject.hx",83);
+					HX_STACK_PUSH("*::closure","DrawObject.hx",85);
 					{
-						HX_STACK_LINE(83)
+						HX_STACK_LINE(85)
 						if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC == null()))){
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							::zpp_nape::util::ZPP_Flags_obj::internal = true;
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC = ::nape::phys::BodyType_obj::__new();
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							::zpp_nape::util::ZPP_Flags_obj::internal = false;
 						}
-						HX_STACK_LINE(83)
+						HX_STACK_LINE(85)
 						return ::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC;
 					}
 					return null();
 				}
 			};
-			HX_STACK_LINE(83)
+			HX_STACK_LINE(85)
 			::nape::phys::Body _this = this->body;		HX_STACK_VAR(_this,"_this");
 			::nape::phys::BodyType type = _Function_2_1::Block();		HX_STACK_VAR(type,"type");
-			HX_STACK_LINE(83)
+			HX_STACK_LINE(85)
 			{
-				HX_STACK_LINE(83)
+				HX_STACK_LINE(85)
 				_this->zpp_inner->immutable_midstep(HX_CSTRING("Body::type"));
-				HX_STACK_LINE(83)
+				HX_STACK_LINE(85)
 				if ((_this->zpp_inner->world)){
-					HX_STACK_LINE(83)
+					HX_STACK_LINE(85)
 					hx::Throw (HX_CSTRING("Error: Space::world is immutable"));
 				}
 				struct _Function_3_1{
 					inline static ::nape::phys::BodyType Block( ){
-						HX_STACK_PUSH("*::closure","DrawObject.hx",83);
+						HX_STACK_PUSH("*::closure","DrawObject.hx",85);
 						{
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC == null()))){
-								HX_STACK_LINE(83)
+								HX_STACK_LINE(85)
 								::zpp_nape::util::ZPP_Flags_obj::internal = true;
-								HX_STACK_LINE(83)
+								HX_STACK_LINE(85)
 								::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC = ::nape::phys::BodyType_obj::__new();
-								HX_STACK_LINE(83)
+								HX_STACK_LINE(85)
 								::zpp_nape::util::ZPP_Flags_obj::internal = false;
 							}
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							return ::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC;
 						}
 						return null();
@@ -410,18 +413,18 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 				};
 				struct _Function_3_2{
 					inline static ::nape::phys::BodyType Block( ){
-						HX_STACK_PUSH("*::closure","DrawObject.hx",83);
+						HX_STACK_PUSH("*::closure","DrawObject.hx",85);
 						{
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC == null()))){
-								HX_STACK_LINE(83)
+								HX_STACK_LINE(85)
 								::zpp_nape::util::ZPP_Flags_obj::internal = true;
-								HX_STACK_LINE(83)
+								HX_STACK_LINE(85)
 								::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC = ::nape::phys::BodyType_obj::__new();
-								HX_STACK_LINE(83)
+								HX_STACK_LINE(85)
 								::zpp_nape::util::ZPP_Flags_obj::internal = false;
 							}
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							return ::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC;
 						}
 						return null();
@@ -429,44 +432,44 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 				};
 				struct _Function_3_3{
 					inline static ::nape::phys::BodyType Block( ){
-						HX_STACK_PUSH("*::closure","DrawObject.hx",83);
+						HX_STACK_PUSH("*::closure","DrawObject.hx",85);
 						{
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC == null()))){
-								HX_STACK_LINE(83)
+								HX_STACK_LINE(85)
 								::zpp_nape::util::ZPP_Flags_obj::internal = true;
-								HX_STACK_LINE(83)
+								HX_STACK_LINE(85)
 								::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC = ::nape::phys::BodyType_obj::__new();
-								HX_STACK_LINE(83)
+								HX_STACK_LINE(85)
 								::zpp_nape::util::ZPP_Flags_obj::internal = false;
 							}
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							return ::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC;
 						}
 						return null();
 					}
 				};
-				HX_STACK_LINE(83)
+				HX_STACK_LINE(85)
 				if (((Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_3_1::Block()).Add(_Function_3_2::Block()).Add(_Function_3_3::Block())->__get(_this->zpp_inner->type) != type))){
-					HX_STACK_LINE(83)
+					HX_STACK_LINE(85)
 					if (((type == null()))){
-						HX_STACK_LINE(83)
+						HX_STACK_LINE(85)
 						hx::Throw (HX_CSTRING("Error: Cannot use null BodyType"));
 					}
 					struct _Function_4_1{
 						inline static ::nape::phys::BodyType Block( ){
-							HX_STACK_PUSH("*::closure","DrawObject.hx",83);
+							HX_STACK_PUSH("*::closure","DrawObject.hx",85);
 							{
-								HX_STACK_LINE(83)
+								HX_STACK_LINE(85)
 								if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC == null()))){
-									HX_STACK_LINE(83)
+									HX_STACK_LINE(85)
 									::zpp_nape::util::ZPP_Flags_obj::internal = true;
-									HX_STACK_LINE(83)
+									HX_STACK_LINE(85)
 									::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC = ::nape::phys::BodyType_obj::__new();
-									HX_STACK_LINE(83)
+									HX_STACK_LINE(85)
 									::zpp_nape::util::ZPP_Flags_obj::internal = false;
 								}
-								HX_STACK_LINE(83)
+								HX_STACK_LINE(85)
 								return ::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC;
 							}
 							return null();
@@ -474,70 +477,70 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 					};
 					struct _Function_4_2{
 						inline static ::nape::phys::BodyType Block( ){
-							HX_STACK_PUSH("*::closure","DrawObject.hx",83);
+							HX_STACK_PUSH("*::closure","DrawObject.hx",85);
 							{
-								HX_STACK_LINE(83)
+								HX_STACK_LINE(85)
 								if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC == null()))){
-									HX_STACK_LINE(83)
+									HX_STACK_LINE(85)
 									::zpp_nape::util::ZPP_Flags_obj::internal = true;
-									HX_STACK_LINE(83)
+									HX_STACK_LINE(85)
 									::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC = ::nape::phys::BodyType_obj::__new();
-									HX_STACK_LINE(83)
+									HX_STACK_LINE(85)
 									::zpp_nape::util::ZPP_Flags_obj::internal = false;
 								}
-								HX_STACK_LINE(83)
+								HX_STACK_LINE(85)
 								return ::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC;
 							}
 							return null();
 						}
 					};
-					HX_STACK_LINE(83)
+					HX_STACK_LINE(85)
 					int ntype = (  (((type == _Function_4_1::Block()))) ? int(::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC) : int((  (((type == _Function_4_2::Block()))) ? int(::zpp_nape::util::ZPP_Flags_obj::id_BodyType_KINEMATIC) : int(::zpp_nape::util::ZPP_Flags_obj::id_BodyType_STATIC) )) );		HX_STACK_VAR(ntype,"ntype");
-					HX_STACK_LINE(83)
+					HX_STACK_LINE(85)
 					if (((bool((ntype == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_STATIC)) && bool((_this->zpp_inner->space != null()))))){
-						HX_STACK_LINE(83)
+						HX_STACK_LINE(85)
 						{
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							_this->zpp_inner->velx = (int)0;
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							_this->zpp_inner->vely = (int)0;
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							{
 							}
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							{
 							}
 						}
-						HX_STACK_LINE(83)
+						HX_STACK_LINE(85)
 						_this->zpp_inner->angvel = (int)0;
 					}
-					HX_STACK_LINE(83)
+					HX_STACK_LINE(85)
 					_this->zpp_inner->invalidate_type();
-					HX_STACK_LINE(83)
+					HX_STACK_LINE(85)
 					if (((_this->zpp_inner->space != null()))){
-						HX_STACK_LINE(83)
+						HX_STACK_LINE(85)
 						_this->zpp_inner->space->transmitType(_this->zpp_inner,ntype);
 					}
 					else{
-						HX_STACK_LINE(83)
+						HX_STACK_LINE(85)
 						_this->zpp_inner->type = ntype;
 					}
 				}
 			}
 			struct _Function_2_2{
 				inline static ::nape::phys::BodyType Block( ){
-					HX_STACK_PUSH("*::closure","DrawObject.hx",83);
+					HX_STACK_PUSH("*::closure","DrawObject.hx",85);
 					{
-						HX_STACK_LINE(83)
+						HX_STACK_LINE(85)
 						if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC == null()))){
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							::zpp_nape::util::ZPP_Flags_obj::internal = true;
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC = ::nape::phys::BodyType_obj::__new();
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							::zpp_nape::util::ZPP_Flags_obj::internal = false;
 						}
-						HX_STACK_LINE(83)
+						HX_STACK_LINE(85)
 						return ::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC;
 					}
 					return null();
@@ -545,18 +548,18 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 			};
 			struct _Function_2_3{
 				inline static ::nape::phys::BodyType Block( ){
-					HX_STACK_PUSH("*::closure","DrawObject.hx",83);
+					HX_STACK_PUSH("*::closure","DrawObject.hx",85);
 					{
-						HX_STACK_LINE(83)
+						HX_STACK_LINE(85)
 						if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC == null()))){
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							::zpp_nape::util::ZPP_Flags_obj::internal = true;
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC = ::nape::phys::BodyType_obj::__new();
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							::zpp_nape::util::ZPP_Flags_obj::internal = false;
 						}
-						HX_STACK_LINE(83)
+						HX_STACK_LINE(85)
 						return ::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC;
 					}
 					return null();
@@ -564,72 +567,72 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 			};
 			struct _Function_2_4{
 				inline static ::nape::phys::BodyType Block( ){
-					HX_STACK_PUSH("*::closure","DrawObject.hx",83);
+					HX_STACK_PUSH("*::closure","DrawObject.hx",85);
 					{
-						HX_STACK_LINE(83)
+						HX_STACK_LINE(85)
 						if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC == null()))){
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							::zpp_nape::util::ZPP_Flags_obj::internal = true;
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC = ::nape::phys::BodyType_obj::__new();
-							HX_STACK_LINE(83)
+							HX_STACK_LINE(85)
 							::zpp_nape::util::ZPP_Flags_obj::internal = false;
 						}
-						HX_STACK_LINE(83)
+						HX_STACK_LINE(85)
 						return ::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC;
 					}
 					return null();
 				}
 			};
-			HX_STACK_LINE(83)
+			HX_STACK_LINE(85)
 			Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_2_2::Block()).Add(_Function_2_3::Block()).Add(_Function_2_4::Block())->__get(_this->zpp_inner->type);
 		}
 		else if (  ( _switch_1==HX_CSTRING("dynamic"))){
 			struct _Function_2_1{
 				inline static ::nape::phys::BodyType Block( ){
-					HX_STACK_PUSH("*::closure","DrawObject.hx",85);
+					HX_STACK_PUSH("*::closure","DrawObject.hx",87);
 					{
-						HX_STACK_LINE(85)
+						HX_STACK_LINE(87)
 						if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC == null()))){
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							::zpp_nape::util::ZPP_Flags_obj::internal = true;
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC = ::nape::phys::BodyType_obj::__new();
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							::zpp_nape::util::ZPP_Flags_obj::internal = false;
 						}
-						HX_STACK_LINE(85)
+						HX_STACK_LINE(87)
 						return ::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC;
 					}
 					return null();
 				}
 			};
-			HX_STACK_LINE(85)
+			HX_STACK_LINE(87)
 			::nape::phys::Body _this = this->body;		HX_STACK_VAR(_this,"_this");
 			::nape::phys::BodyType type = _Function_2_1::Block();		HX_STACK_VAR(type,"type");
-			HX_STACK_LINE(85)
+			HX_STACK_LINE(87)
 			{
-				HX_STACK_LINE(85)
+				HX_STACK_LINE(87)
 				_this->zpp_inner->immutable_midstep(HX_CSTRING("Body::type"));
-				HX_STACK_LINE(85)
+				HX_STACK_LINE(87)
 				if ((_this->zpp_inner->world)){
-					HX_STACK_LINE(85)
+					HX_STACK_LINE(87)
 					hx::Throw (HX_CSTRING("Error: Space::world is immutable"));
 				}
 				struct _Function_3_1{
 					inline static ::nape::phys::BodyType Block( ){
-						HX_STACK_PUSH("*::closure","DrawObject.hx",85);
+						HX_STACK_PUSH("*::closure","DrawObject.hx",87);
 						{
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC == null()))){
-								HX_STACK_LINE(85)
+								HX_STACK_LINE(87)
 								::zpp_nape::util::ZPP_Flags_obj::internal = true;
-								HX_STACK_LINE(85)
+								HX_STACK_LINE(87)
 								::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC = ::nape::phys::BodyType_obj::__new();
-								HX_STACK_LINE(85)
+								HX_STACK_LINE(87)
 								::zpp_nape::util::ZPP_Flags_obj::internal = false;
 							}
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							return ::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC;
 						}
 						return null();
@@ -637,18 +640,18 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 				};
 				struct _Function_3_2{
 					inline static ::nape::phys::BodyType Block( ){
-						HX_STACK_PUSH("*::closure","DrawObject.hx",85);
+						HX_STACK_PUSH("*::closure","DrawObject.hx",87);
 						{
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC == null()))){
-								HX_STACK_LINE(85)
+								HX_STACK_LINE(87)
 								::zpp_nape::util::ZPP_Flags_obj::internal = true;
-								HX_STACK_LINE(85)
+								HX_STACK_LINE(87)
 								::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC = ::nape::phys::BodyType_obj::__new();
-								HX_STACK_LINE(85)
+								HX_STACK_LINE(87)
 								::zpp_nape::util::ZPP_Flags_obj::internal = false;
 							}
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							return ::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC;
 						}
 						return null();
@@ -656,44 +659,44 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 				};
 				struct _Function_3_3{
 					inline static ::nape::phys::BodyType Block( ){
-						HX_STACK_PUSH("*::closure","DrawObject.hx",85);
+						HX_STACK_PUSH("*::closure","DrawObject.hx",87);
 						{
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC == null()))){
-								HX_STACK_LINE(85)
+								HX_STACK_LINE(87)
 								::zpp_nape::util::ZPP_Flags_obj::internal = true;
-								HX_STACK_LINE(85)
+								HX_STACK_LINE(87)
 								::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC = ::nape::phys::BodyType_obj::__new();
-								HX_STACK_LINE(85)
+								HX_STACK_LINE(87)
 								::zpp_nape::util::ZPP_Flags_obj::internal = false;
 							}
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							return ::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC;
 						}
 						return null();
 					}
 				};
-				HX_STACK_LINE(85)
+				HX_STACK_LINE(87)
 				if (((Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_3_1::Block()).Add(_Function_3_2::Block()).Add(_Function_3_3::Block())->__get(_this->zpp_inner->type) != type))){
-					HX_STACK_LINE(85)
+					HX_STACK_LINE(87)
 					if (((type == null()))){
-						HX_STACK_LINE(85)
+						HX_STACK_LINE(87)
 						hx::Throw (HX_CSTRING("Error: Cannot use null BodyType"));
 					}
 					struct _Function_4_1{
 						inline static ::nape::phys::BodyType Block( ){
-							HX_STACK_PUSH("*::closure","DrawObject.hx",85);
+							HX_STACK_PUSH("*::closure","DrawObject.hx",87);
 							{
-								HX_STACK_LINE(85)
+								HX_STACK_LINE(87)
 								if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC == null()))){
-									HX_STACK_LINE(85)
+									HX_STACK_LINE(87)
 									::zpp_nape::util::ZPP_Flags_obj::internal = true;
-									HX_STACK_LINE(85)
+									HX_STACK_LINE(87)
 									::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC = ::nape::phys::BodyType_obj::__new();
-									HX_STACK_LINE(85)
+									HX_STACK_LINE(87)
 									::zpp_nape::util::ZPP_Flags_obj::internal = false;
 								}
-								HX_STACK_LINE(85)
+								HX_STACK_LINE(87)
 								return ::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC;
 							}
 							return null();
@@ -701,70 +704,70 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 					};
 					struct _Function_4_2{
 						inline static ::nape::phys::BodyType Block( ){
-							HX_STACK_PUSH("*::closure","DrawObject.hx",85);
+							HX_STACK_PUSH("*::closure","DrawObject.hx",87);
 							{
-								HX_STACK_LINE(85)
+								HX_STACK_LINE(87)
 								if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC == null()))){
-									HX_STACK_LINE(85)
+									HX_STACK_LINE(87)
 									::zpp_nape::util::ZPP_Flags_obj::internal = true;
-									HX_STACK_LINE(85)
+									HX_STACK_LINE(87)
 									::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC = ::nape::phys::BodyType_obj::__new();
-									HX_STACK_LINE(85)
+									HX_STACK_LINE(87)
 									::zpp_nape::util::ZPP_Flags_obj::internal = false;
 								}
-								HX_STACK_LINE(85)
+								HX_STACK_LINE(87)
 								return ::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC;
 							}
 							return null();
 						}
 					};
-					HX_STACK_LINE(85)
+					HX_STACK_LINE(87)
 					int ntype = (  (((type == _Function_4_1::Block()))) ? int(::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC) : int((  (((type == _Function_4_2::Block()))) ? int(::zpp_nape::util::ZPP_Flags_obj::id_BodyType_KINEMATIC) : int(::zpp_nape::util::ZPP_Flags_obj::id_BodyType_STATIC) )) );		HX_STACK_VAR(ntype,"ntype");
-					HX_STACK_LINE(85)
+					HX_STACK_LINE(87)
 					if (((bool((ntype == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_STATIC)) && bool((_this->zpp_inner->space != null()))))){
-						HX_STACK_LINE(85)
+						HX_STACK_LINE(87)
 						{
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							_this->zpp_inner->velx = (int)0;
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							_this->zpp_inner->vely = (int)0;
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							{
 							}
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							{
 							}
 						}
-						HX_STACK_LINE(85)
+						HX_STACK_LINE(87)
 						_this->zpp_inner->angvel = (int)0;
 					}
-					HX_STACK_LINE(85)
+					HX_STACK_LINE(87)
 					_this->zpp_inner->invalidate_type();
-					HX_STACK_LINE(85)
+					HX_STACK_LINE(87)
 					if (((_this->zpp_inner->space != null()))){
-						HX_STACK_LINE(85)
+						HX_STACK_LINE(87)
 						_this->zpp_inner->space->transmitType(_this->zpp_inner,ntype);
 					}
 					else{
-						HX_STACK_LINE(85)
+						HX_STACK_LINE(87)
 						_this->zpp_inner->type = ntype;
 					}
 				}
 			}
 			struct _Function_2_2{
 				inline static ::nape::phys::BodyType Block( ){
-					HX_STACK_PUSH("*::closure","DrawObject.hx",85);
+					HX_STACK_PUSH("*::closure","DrawObject.hx",87);
 					{
-						HX_STACK_LINE(85)
+						HX_STACK_LINE(87)
 						if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC == null()))){
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							::zpp_nape::util::ZPP_Flags_obj::internal = true;
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC = ::nape::phys::BodyType_obj::__new();
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							::zpp_nape::util::ZPP_Flags_obj::internal = false;
 						}
-						HX_STACK_LINE(85)
+						HX_STACK_LINE(87)
 						return ::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC;
 					}
 					return null();
@@ -772,18 +775,18 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 			};
 			struct _Function_2_3{
 				inline static ::nape::phys::BodyType Block( ){
-					HX_STACK_PUSH("*::closure","DrawObject.hx",85);
+					HX_STACK_PUSH("*::closure","DrawObject.hx",87);
 					{
-						HX_STACK_LINE(85)
+						HX_STACK_LINE(87)
 						if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC == null()))){
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							::zpp_nape::util::ZPP_Flags_obj::internal = true;
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC = ::nape::phys::BodyType_obj::__new();
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							::zpp_nape::util::ZPP_Flags_obj::internal = false;
 						}
-						HX_STACK_LINE(85)
+						HX_STACK_LINE(87)
 						return ::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC;
 					}
 					return null();
@@ -791,72 +794,72 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 			};
 			struct _Function_2_4{
 				inline static ::nape::phys::BodyType Block( ){
-					HX_STACK_PUSH("*::closure","DrawObject.hx",85);
+					HX_STACK_PUSH("*::closure","DrawObject.hx",87);
 					{
-						HX_STACK_LINE(85)
+						HX_STACK_LINE(87)
 						if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC == null()))){
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							::zpp_nape::util::ZPP_Flags_obj::internal = true;
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC = ::nape::phys::BodyType_obj::__new();
-							HX_STACK_LINE(85)
+							HX_STACK_LINE(87)
 							::zpp_nape::util::ZPP_Flags_obj::internal = false;
 						}
-						HX_STACK_LINE(85)
+						HX_STACK_LINE(87)
 						return ::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC;
 					}
 					return null();
 				}
 			};
-			HX_STACK_LINE(85)
+			HX_STACK_LINE(87)
 			Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_2_2::Block()).Add(_Function_2_3::Block()).Add(_Function_2_4::Block())->__get(_this->zpp_inner->type);
 		}
 		else if (  ( _switch_1==HX_CSTRING("kinematic"))){
 			struct _Function_2_1{
 				inline static ::nape::phys::BodyType Block( ){
-					HX_STACK_PUSH("*::closure","DrawObject.hx",87);
+					HX_STACK_PUSH("*::closure","DrawObject.hx",89);
 					{
-						HX_STACK_LINE(87)
+						HX_STACK_LINE(89)
 						if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC == null()))){
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							::zpp_nape::util::ZPP_Flags_obj::internal = true;
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC = ::nape::phys::BodyType_obj::__new();
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							::zpp_nape::util::ZPP_Flags_obj::internal = false;
 						}
-						HX_STACK_LINE(87)
+						HX_STACK_LINE(89)
 						return ::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC;
 					}
 					return null();
 				}
 			};
-			HX_STACK_LINE(87)
+			HX_STACK_LINE(89)
 			::nape::phys::Body _this = this->body;		HX_STACK_VAR(_this,"_this");
 			::nape::phys::BodyType type = _Function_2_1::Block();		HX_STACK_VAR(type,"type");
-			HX_STACK_LINE(87)
+			HX_STACK_LINE(89)
 			{
-				HX_STACK_LINE(87)
+				HX_STACK_LINE(89)
 				_this->zpp_inner->immutable_midstep(HX_CSTRING("Body::type"));
-				HX_STACK_LINE(87)
+				HX_STACK_LINE(89)
 				if ((_this->zpp_inner->world)){
-					HX_STACK_LINE(87)
+					HX_STACK_LINE(89)
 					hx::Throw (HX_CSTRING("Error: Space::world is immutable"));
 				}
 				struct _Function_3_1{
 					inline static ::nape::phys::BodyType Block( ){
-						HX_STACK_PUSH("*::closure","DrawObject.hx",87);
+						HX_STACK_PUSH("*::closure","DrawObject.hx",89);
 						{
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC == null()))){
-								HX_STACK_LINE(87)
+								HX_STACK_LINE(89)
 								::zpp_nape::util::ZPP_Flags_obj::internal = true;
-								HX_STACK_LINE(87)
+								HX_STACK_LINE(89)
 								::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC = ::nape::phys::BodyType_obj::__new();
-								HX_STACK_LINE(87)
+								HX_STACK_LINE(89)
 								::zpp_nape::util::ZPP_Flags_obj::internal = false;
 							}
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							return ::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC;
 						}
 						return null();
@@ -864,18 +867,18 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 				};
 				struct _Function_3_2{
 					inline static ::nape::phys::BodyType Block( ){
-						HX_STACK_PUSH("*::closure","DrawObject.hx",87);
+						HX_STACK_PUSH("*::closure","DrawObject.hx",89);
 						{
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC == null()))){
-								HX_STACK_LINE(87)
+								HX_STACK_LINE(89)
 								::zpp_nape::util::ZPP_Flags_obj::internal = true;
-								HX_STACK_LINE(87)
+								HX_STACK_LINE(89)
 								::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC = ::nape::phys::BodyType_obj::__new();
-								HX_STACK_LINE(87)
+								HX_STACK_LINE(89)
 								::zpp_nape::util::ZPP_Flags_obj::internal = false;
 							}
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							return ::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC;
 						}
 						return null();
@@ -883,44 +886,44 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 				};
 				struct _Function_3_3{
 					inline static ::nape::phys::BodyType Block( ){
-						HX_STACK_PUSH("*::closure","DrawObject.hx",87);
+						HX_STACK_PUSH("*::closure","DrawObject.hx",89);
 						{
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC == null()))){
-								HX_STACK_LINE(87)
+								HX_STACK_LINE(89)
 								::zpp_nape::util::ZPP_Flags_obj::internal = true;
-								HX_STACK_LINE(87)
+								HX_STACK_LINE(89)
 								::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC = ::nape::phys::BodyType_obj::__new();
-								HX_STACK_LINE(87)
+								HX_STACK_LINE(89)
 								::zpp_nape::util::ZPP_Flags_obj::internal = false;
 							}
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							return ::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC;
 						}
 						return null();
 					}
 				};
-				HX_STACK_LINE(87)
+				HX_STACK_LINE(89)
 				if (((Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_3_1::Block()).Add(_Function_3_2::Block()).Add(_Function_3_3::Block())->__get(_this->zpp_inner->type) != type))){
-					HX_STACK_LINE(87)
+					HX_STACK_LINE(89)
 					if (((type == null()))){
-						HX_STACK_LINE(87)
+						HX_STACK_LINE(89)
 						hx::Throw (HX_CSTRING("Error: Cannot use null BodyType"));
 					}
 					struct _Function_4_1{
 						inline static ::nape::phys::BodyType Block( ){
-							HX_STACK_PUSH("*::closure","DrawObject.hx",87);
+							HX_STACK_PUSH("*::closure","DrawObject.hx",89);
 							{
-								HX_STACK_LINE(87)
+								HX_STACK_LINE(89)
 								if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC == null()))){
-									HX_STACK_LINE(87)
+									HX_STACK_LINE(89)
 									::zpp_nape::util::ZPP_Flags_obj::internal = true;
-									HX_STACK_LINE(87)
+									HX_STACK_LINE(89)
 									::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC = ::nape::phys::BodyType_obj::__new();
-									HX_STACK_LINE(87)
+									HX_STACK_LINE(89)
 									::zpp_nape::util::ZPP_Flags_obj::internal = false;
 								}
-								HX_STACK_LINE(87)
+								HX_STACK_LINE(89)
 								return ::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC;
 							}
 							return null();
@@ -928,70 +931,70 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 					};
 					struct _Function_4_2{
 						inline static ::nape::phys::BodyType Block( ){
-							HX_STACK_PUSH("*::closure","DrawObject.hx",87);
+							HX_STACK_PUSH("*::closure","DrawObject.hx",89);
 							{
-								HX_STACK_LINE(87)
+								HX_STACK_LINE(89)
 								if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC == null()))){
-									HX_STACK_LINE(87)
+									HX_STACK_LINE(89)
 									::zpp_nape::util::ZPP_Flags_obj::internal = true;
-									HX_STACK_LINE(87)
+									HX_STACK_LINE(89)
 									::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC = ::nape::phys::BodyType_obj::__new();
-									HX_STACK_LINE(87)
+									HX_STACK_LINE(89)
 									::zpp_nape::util::ZPP_Flags_obj::internal = false;
 								}
-								HX_STACK_LINE(87)
+								HX_STACK_LINE(89)
 								return ::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC;
 							}
 							return null();
 						}
 					};
-					HX_STACK_LINE(87)
+					HX_STACK_LINE(89)
 					int ntype = (  (((type == _Function_4_1::Block()))) ? int(::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC) : int((  (((type == _Function_4_2::Block()))) ? int(::zpp_nape::util::ZPP_Flags_obj::id_BodyType_KINEMATIC) : int(::zpp_nape::util::ZPP_Flags_obj::id_BodyType_STATIC) )) );		HX_STACK_VAR(ntype,"ntype");
-					HX_STACK_LINE(87)
+					HX_STACK_LINE(89)
 					if (((bool((ntype == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_STATIC)) && bool((_this->zpp_inner->space != null()))))){
-						HX_STACK_LINE(87)
+						HX_STACK_LINE(89)
 						{
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							_this->zpp_inner->velx = (int)0;
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							_this->zpp_inner->vely = (int)0;
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							{
 							}
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							{
 							}
 						}
-						HX_STACK_LINE(87)
+						HX_STACK_LINE(89)
 						_this->zpp_inner->angvel = (int)0;
 					}
-					HX_STACK_LINE(87)
+					HX_STACK_LINE(89)
 					_this->zpp_inner->invalidate_type();
-					HX_STACK_LINE(87)
+					HX_STACK_LINE(89)
 					if (((_this->zpp_inner->space != null()))){
-						HX_STACK_LINE(87)
+						HX_STACK_LINE(89)
 						_this->zpp_inner->space->transmitType(_this->zpp_inner,ntype);
 					}
 					else{
-						HX_STACK_LINE(87)
+						HX_STACK_LINE(89)
 						_this->zpp_inner->type = ntype;
 					}
 				}
 			}
 			struct _Function_2_2{
 				inline static ::nape::phys::BodyType Block( ){
-					HX_STACK_PUSH("*::closure","DrawObject.hx",87);
+					HX_STACK_PUSH("*::closure","DrawObject.hx",89);
 					{
-						HX_STACK_LINE(87)
+						HX_STACK_LINE(89)
 						if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC == null()))){
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							::zpp_nape::util::ZPP_Flags_obj::internal = true;
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC = ::nape::phys::BodyType_obj::__new();
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							::zpp_nape::util::ZPP_Flags_obj::internal = false;
 						}
-						HX_STACK_LINE(87)
+						HX_STACK_LINE(89)
 						return ::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC;
 					}
 					return null();
@@ -999,18 +1002,18 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 			};
 			struct _Function_2_3{
 				inline static ::nape::phys::BodyType Block( ){
-					HX_STACK_PUSH("*::closure","DrawObject.hx",87);
+					HX_STACK_PUSH("*::closure","DrawObject.hx",89);
 					{
-						HX_STACK_LINE(87)
+						HX_STACK_LINE(89)
 						if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC == null()))){
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							::zpp_nape::util::ZPP_Flags_obj::internal = true;
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC = ::nape::phys::BodyType_obj::__new();
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							::zpp_nape::util::ZPP_Flags_obj::internal = false;
 						}
-						HX_STACK_LINE(87)
+						HX_STACK_LINE(89)
 						return ::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC;
 					}
 					return null();
@@ -1018,72 +1021,72 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 			};
 			struct _Function_2_4{
 				inline static ::nape::phys::BodyType Block( ){
-					HX_STACK_PUSH("*::closure","DrawObject.hx",87);
+					HX_STACK_PUSH("*::closure","DrawObject.hx",89);
 					{
-						HX_STACK_LINE(87)
+						HX_STACK_LINE(89)
 						if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC == null()))){
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							::zpp_nape::util::ZPP_Flags_obj::internal = true;
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC = ::nape::phys::BodyType_obj::__new();
-							HX_STACK_LINE(87)
+							HX_STACK_LINE(89)
 							::zpp_nape::util::ZPP_Flags_obj::internal = false;
 						}
-						HX_STACK_LINE(87)
+						HX_STACK_LINE(89)
 						return ::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC;
 					}
 					return null();
 				}
 			};
-			HX_STACK_LINE(87)
+			HX_STACK_LINE(89)
 			Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_2_2::Block()).Add(_Function_2_3::Block()).Add(_Function_2_4::Block())->__get(_this->zpp_inner->type);
 		}
 		else  {
 			struct _Function_2_1{
 				inline static ::nape::phys::BodyType Block( ){
-					HX_STACK_PUSH("*::closure","DrawObject.hx",89);
+					HX_STACK_PUSH("*::closure","DrawObject.hx",91);
 					{
-						HX_STACK_LINE(89)
+						HX_STACK_LINE(91)
 						if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC == null()))){
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							::zpp_nape::util::ZPP_Flags_obj::internal = true;
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC = ::nape::phys::BodyType_obj::__new();
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							::zpp_nape::util::ZPP_Flags_obj::internal = false;
 						}
-						HX_STACK_LINE(89)
+						HX_STACK_LINE(91)
 						return ::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC;
 					}
 					return null();
 				}
 			};
-			HX_STACK_LINE(89)
+			HX_STACK_LINE(91)
 			::nape::phys::Body _this = this->body;		HX_STACK_VAR(_this,"_this");
 			::nape::phys::BodyType type = _Function_2_1::Block();		HX_STACK_VAR(type,"type");
-			HX_STACK_LINE(89)
+			HX_STACK_LINE(91)
 			{
-				HX_STACK_LINE(89)
+				HX_STACK_LINE(91)
 				_this->zpp_inner->immutable_midstep(HX_CSTRING("Body::type"));
-				HX_STACK_LINE(89)
+				HX_STACK_LINE(91)
 				if ((_this->zpp_inner->world)){
-					HX_STACK_LINE(89)
+					HX_STACK_LINE(91)
 					hx::Throw (HX_CSTRING("Error: Space::world is immutable"));
 				}
 				struct _Function_3_1{
 					inline static ::nape::phys::BodyType Block( ){
-						HX_STACK_PUSH("*::closure","DrawObject.hx",89);
+						HX_STACK_PUSH("*::closure","DrawObject.hx",91);
 						{
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC == null()))){
-								HX_STACK_LINE(89)
+								HX_STACK_LINE(91)
 								::zpp_nape::util::ZPP_Flags_obj::internal = true;
-								HX_STACK_LINE(89)
+								HX_STACK_LINE(91)
 								::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC = ::nape::phys::BodyType_obj::__new();
-								HX_STACK_LINE(89)
+								HX_STACK_LINE(91)
 								::zpp_nape::util::ZPP_Flags_obj::internal = false;
 							}
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							return ::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC;
 						}
 						return null();
@@ -1091,18 +1094,18 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 				};
 				struct _Function_3_2{
 					inline static ::nape::phys::BodyType Block( ){
-						HX_STACK_PUSH("*::closure","DrawObject.hx",89);
+						HX_STACK_PUSH("*::closure","DrawObject.hx",91);
 						{
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC == null()))){
-								HX_STACK_LINE(89)
+								HX_STACK_LINE(91)
 								::zpp_nape::util::ZPP_Flags_obj::internal = true;
-								HX_STACK_LINE(89)
+								HX_STACK_LINE(91)
 								::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC = ::nape::phys::BodyType_obj::__new();
-								HX_STACK_LINE(89)
+								HX_STACK_LINE(91)
 								::zpp_nape::util::ZPP_Flags_obj::internal = false;
 							}
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							return ::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC;
 						}
 						return null();
@@ -1110,44 +1113,44 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 				};
 				struct _Function_3_3{
 					inline static ::nape::phys::BodyType Block( ){
-						HX_STACK_PUSH("*::closure","DrawObject.hx",89);
+						HX_STACK_PUSH("*::closure","DrawObject.hx",91);
 						{
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC == null()))){
-								HX_STACK_LINE(89)
+								HX_STACK_LINE(91)
 								::zpp_nape::util::ZPP_Flags_obj::internal = true;
-								HX_STACK_LINE(89)
+								HX_STACK_LINE(91)
 								::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC = ::nape::phys::BodyType_obj::__new();
-								HX_STACK_LINE(89)
+								HX_STACK_LINE(91)
 								::zpp_nape::util::ZPP_Flags_obj::internal = false;
 							}
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							return ::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC;
 						}
 						return null();
 					}
 				};
-				HX_STACK_LINE(89)
+				HX_STACK_LINE(91)
 				if (((Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_3_1::Block()).Add(_Function_3_2::Block()).Add(_Function_3_3::Block())->__get(_this->zpp_inner->type) != type))){
-					HX_STACK_LINE(89)
+					HX_STACK_LINE(91)
 					if (((type == null()))){
-						HX_STACK_LINE(89)
+						HX_STACK_LINE(91)
 						hx::Throw (HX_CSTRING("Error: Cannot use null BodyType"));
 					}
 					struct _Function_4_1{
 						inline static ::nape::phys::BodyType Block( ){
-							HX_STACK_PUSH("*::closure","DrawObject.hx",89);
+							HX_STACK_PUSH("*::closure","DrawObject.hx",91);
 							{
-								HX_STACK_LINE(89)
+								HX_STACK_LINE(91)
 								if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC == null()))){
-									HX_STACK_LINE(89)
+									HX_STACK_LINE(91)
 									::zpp_nape::util::ZPP_Flags_obj::internal = true;
-									HX_STACK_LINE(89)
+									HX_STACK_LINE(91)
 									::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC = ::nape::phys::BodyType_obj::__new();
-									HX_STACK_LINE(89)
+									HX_STACK_LINE(91)
 									::zpp_nape::util::ZPP_Flags_obj::internal = false;
 								}
-								HX_STACK_LINE(89)
+								HX_STACK_LINE(91)
 								return ::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC;
 							}
 							return null();
@@ -1155,70 +1158,70 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 					};
 					struct _Function_4_2{
 						inline static ::nape::phys::BodyType Block( ){
-							HX_STACK_PUSH("*::closure","DrawObject.hx",89);
+							HX_STACK_PUSH("*::closure","DrawObject.hx",91);
 							{
-								HX_STACK_LINE(89)
+								HX_STACK_LINE(91)
 								if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC == null()))){
-									HX_STACK_LINE(89)
+									HX_STACK_LINE(91)
 									::zpp_nape::util::ZPP_Flags_obj::internal = true;
-									HX_STACK_LINE(89)
+									HX_STACK_LINE(91)
 									::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC = ::nape::phys::BodyType_obj::__new();
-									HX_STACK_LINE(89)
+									HX_STACK_LINE(91)
 									::zpp_nape::util::ZPP_Flags_obj::internal = false;
 								}
-								HX_STACK_LINE(89)
+								HX_STACK_LINE(91)
 								return ::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC;
 							}
 							return null();
 						}
 					};
-					HX_STACK_LINE(89)
+					HX_STACK_LINE(91)
 					int ntype = (  (((type == _Function_4_1::Block()))) ? int(::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC) : int((  (((type == _Function_4_2::Block()))) ? int(::zpp_nape::util::ZPP_Flags_obj::id_BodyType_KINEMATIC) : int(::zpp_nape::util::ZPP_Flags_obj::id_BodyType_STATIC) )) );		HX_STACK_VAR(ntype,"ntype");
-					HX_STACK_LINE(89)
+					HX_STACK_LINE(91)
 					if (((bool((ntype == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_STATIC)) && bool((_this->zpp_inner->space != null()))))){
-						HX_STACK_LINE(89)
+						HX_STACK_LINE(91)
 						{
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							_this->zpp_inner->velx = (int)0;
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							_this->zpp_inner->vely = (int)0;
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							{
 							}
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							{
 							}
 						}
-						HX_STACK_LINE(89)
+						HX_STACK_LINE(91)
 						_this->zpp_inner->angvel = (int)0;
 					}
-					HX_STACK_LINE(89)
+					HX_STACK_LINE(91)
 					_this->zpp_inner->invalidate_type();
-					HX_STACK_LINE(89)
+					HX_STACK_LINE(91)
 					if (((_this->zpp_inner->space != null()))){
-						HX_STACK_LINE(89)
+						HX_STACK_LINE(91)
 						_this->zpp_inner->space->transmitType(_this->zpp_inner,ntype);
 					}
 					else{
-						HX_STACK_LINE(89)
+						HX_STACK_LINE(91)
 						_this->zpp_inner->type = ntype;
 					}
 				}
 			}
 			struct _Function_2_2{
 				inline static ::nape::phys::BodyType Block( ){
-					HX_STACK_PUSH("*::closure","DrawObject.hx",89);
+					HX_STACK_PUSH("*::closure","DrawObject.hx",91);
 					{
-						HX_STACK_LINE(89)
+						HX_STACK_LINE(91)
 						if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC == null()))){
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							::zpp_nape::util::ZPP_Flags_obj::internal = true;
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC = ::nape::phys::BodyType_obj::__new();
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							::zpp_nape::util::ZPP_Flags_obj::internal = false;
 						}
-						HX_STACK_LINE(89)
+						HX_STACK_LINE(91)
 						return ::zpp_nape::util::ZPP_Flags_obj::BodyType_STATIC;
 					}
 					return null();
@@ -1226,18 +1229,18 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 			};
 			struct _Function_2_3{
 				inline static ::nape::phys::BodyType Block( ){
-					HX_STACK_PUSH("*::closure","DrawObject.hx",89);
+					HX_STACK_PUSH("*::closure","DrawObject.hx",91);
 					{
-						HX_STACK_LINE(89)
+						HX_STACK_LINE(91)
 						if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC == null()))){
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							::zpp_nape::util::ZPP_Flags_obj::internal = true;
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC = ::nape::phys::BodyType_obj::__new();
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							::zpp_nape::util::ZPP_Flags_obj::internal = false;
 						}
-						HX_STACK_LINE(89)
+						HX_STACK_LINE(91)
 						return ::zpp_nape::util::ZPP_Flags_obj::BodyType_DYNAMIC;
 					}
 					return null();
@@ -1245,112 +1248,112 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 			};
 			struct _Function_2_4{
 				inline static ::nape::phys::BodyType Block( ){
-					HX_STACK_PUSH("*::closure","DrawObject.hx",89);
+					HX_STACK_PUSH("*::closure","DrawObject.hx",91);
 					{
-						HX_STACK_LINE(89)
+						HX_STACK_LINE(91)
 						if (((::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC == null()))){
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							::zpp_nape::util::ZPP_Flags_obj::internal = true;
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC = ::nape::phys::BodyType_obj::__new();
-							HX_STACK_LINE(89)
+							HX_STACK_LINE(91)
 							::zpp_nape::util::ZPP_Flags_obj::internal = false;
 						}
-						HX_STACK_LINE(89)
+						HX_STACK_LINE(91)
 						return ::zpp_nape::util::ZPP_Flags_obj::BodyType_KINEMATIC;
 					}
 					return null();
 				}
 			};
-			HX_STACK_LINE(89)
+			HX_STACK_LINE(91)
 			Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_2_2::Block()).Add(_Function_2_3::Block()).Add(_Function_2_4::Block())->__get(_this->zpp_inner->type);
 		}
 ;
 ;
-		HX_STACK_LINE(93)
+		HX_STACK_LINE(95)
 		{
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(95)
 			::nape::phys::Body _this = this->body;		HX_STACK_VAR(_this,"_this");
 			::nape::space::Space space = this->space;		HX_STACK_VAR(space,"space");
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(95)
 			{
-				HX_STACK_LINE(93)
+				HX_STACK_LINE(95)
 				if (((_this->zpp_inner->compound != null()))){
-					HX_STACK_LINE(93)
+					HX_STACK_LINE(95)
 					hx::Throw (HX_CSTRING("Error: Cannot set the space of a Body belonging to a Compound, only the root Compound space can be set"));
 				}
-				HX_STACK_LINE(93)
+				HX_STACK_LINE(95)
 				_this->zpp_inner->immutable_midstep(HX_CSTRING("Body::space"));
-				HX_STACK_LINE(93)
+				HX_STACK_LINE(95)
 				if ((_this->zpp_inner->world)){
-					HX_STACK_LINE(93)
+					HX_STACK_LINE(95)
 					hx::Throw (HX_CSTRING("Error: Space::world is immutable"));
 				}
-				HX_STACK_LINE(93)
+				HX_STACK_LINE(95)
 				if (((((  (((_this->zpp_inner->space == null()))) ? ::nape::space::Space(null()) : ::nape::space::Space(_this->zpp_inner->space->outer) )) != space))){
-					HX_STACK_LINE(93)
+					HX_STACK_LINE(95)
 					if (((((  (((_this->zpp_inner->space == null()))) ? ::nape::space::Space(null()) : ::nape::space::Space(_this->zpp_inner->space->outer) )) != null()))){
-						HX_STACK_LINE(93)
+						HX_STACK_LINE(95)
 						_this->zpp_inner->component->woken = false;
 					}
-					HX_STACK_LINE(93)
+					HX_STACK_LINE(95)
 					if (((((  (((_this->zpp_inner->space == null()))) ? ::nape::space::Space(null()) : ::nape::space::Space(_this->zpp_inner->space->outer) )) != null()))){
-						HX_STACK_LINE(93)
+						HX_STACK_LINE(95)
 						((  (((_this->zpp_inner->space == null()))) ? ::nape::space::Space(null()) : ::nape::space::Space(_this->zpp_inner->space->outer) ))->zpp_inner->wrap_bodies->remove(_this);
 					}
-					HX_STACK_LINE(93)
+					HX_STACK_LINE(95)
 					if (((space != null()))){
-						HX_STACK_LINE(93)
+						HX_STACK_LINE(95)
 						::nape::phys::BodyList _this1 = space->zpp_inner->wrap_bodies;		HX_STACK_VAR(_this1,"_this1");
-						HX_STACK_LINE(93)
+						HX_STACK_LINE(95)
 						if ((_this1->zpp_inner->reverse_flag)){
-							HX_STACK_LINE(93)
+							HX_STACK_LINE(95)
 							_this1->push(_this);
 						}
 						else{
-							HX_STACK_LINE(93)
+							HX_STACK_LINE(95)
 							_this1->unshift(_this);
 						}
 					}
 				}
 			}
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(95)
 			if (((_this->zpp_inner->space == null()))){
-				HX_STACK_LINE(93)
+				HX_STACK_LINE(95)
 				Dynamic();
 			}
 			else{
-				HX_STACK_LINE(93)
+				HX_STACK_LINE(95)
 				_this->zpp_inner->space->outer;
 			}
 		}
-		HX_STACK_LINE(96)
+		HX_STACK_LINE(98)
 		if (((this->mass >= (int)0))){
 			struct _Function_2_1{
 				inline static Float Block( ::DrawObject_obj *__this){
-					HX_STACK_PUSH("*::closure","DrawObject.hx",97);
+					HX_STACK_PUSH("*::closure","DrawObject.hx",99);
 					{
-						HX_STACK_LINE(97)
+						HX_STACK_LINE(99)
 						::nape::phys::Body _this = __this->body;		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(97)
+						HX_STACK_LINE(99)
 						if ((_this->zpp_inner->world)){
-							HX_STACK_LINE(97)
+							HX_STACK_LINE(99)
 							hx::Throw (HX_CSTRING("Error: Space::world has no mass"));
 						}
-						HX_STACK_LINE(97)
+						HX_STACK_LINE(99)
 						_this->zpp_inner->validate_mass();
-						HX_STACK_LINE(97)
+						HX_STACK_LINE(99)
 						if (((bool((_this->zpp_inner->massMode == ::zpp_nape::util::ZPP_Flags_obj::id_MassMode_DEFAULT)) && bool((_this->zpp_inner->shapes->head == null()))))){
-							HX_STACK_LINE(97)
+							HX_STACK_LINE(99)
 							hx::Throw (HX_CSTRING("Error: Given current mass mode, Body::mass only makes sense if it contains shapes"));
 						}
-						HX_STACK_LINE(97)
+						HX_STACK_LINE(99)
 						return _this->zpp_inner->cmass;
 					}
 					return null();
 				}
 			};
-			HX_STACK_LINE(96)
+			HX_STACK_LINE(98)
 			::Main_obj::activeLevel->__Field(HX_CSTRING("addToNightmare"),true)(::Math_obj::abs((_Function_2_1::Block(this) - this->mass)));
 		}
 	}
@@ -1362,12 +1365,12 @@ HX_DEFINE_DYNAMIC_FUNC4(DrawObject_obj,convert,(void))
 
 Void DrawObject_obj::physicsObject( ::String physic){
 {
-		HX_STACK_PUSH("DrawObject::physicsObject","DrawObject.hx",60);
+		HX_STACK_PUSH("DrawObject::physicsObject","DrawObject.hx",62);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(physic,"physic");
-		HX_STACK_LINE(61)
+		HX_STACK_LINE(63)
 		this->physicType = physic;
-		HX_STACK_LINE(62)
+		HX_STACK_LINE(64)
 		this->convert(physic,this->xml->get(HX_CSTRING("x")),this->xml->get(HX_CSTRING("y")),this->xml->get(HX_CSTRING("rotation")));
 	}
 return null();
@@ -1376,36 +1379,36 @@ return null();
 
 Void DrawObject_obj::loadBitmap( ::native::display::Bitmap bitmap,::String __o_physics){
 ::String physics = __o_physics.Default(HX_CSTRING("static"));
-	HX_STACK_PUSH("DrawObject::loadBitmap","DrawObject.hx",35);
+	HX_STACK_PUSH("DrawObject::loadBitmap","DrawObject.hx",37);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(bitmap,"bitmap");
 	HX_STACK_ARG(physics,"physics");
 {
-		HX_STACK_LINE(38)
-		this->space = ::Main_obj::space;
-		HX_STACK_LINE(39)
-		this->canvas = ::Main_obj::canvas;
 		HX_STACK_LINE(40)
+		this->space = ::Main_obj::space;
+		HX_STACK_LINE(41)
+		this->canvas = ::Main_obj::canvas;
+		HX_STACK_LINE(42)
 		this->asset = bitmap;
-		HX_STACK_LINE(43)
-		this->canvas->addChild(bitmap);
-		HX_STACK_LINE(44)
-		::Hash p = ::Hash_obj::__new();		HX_STACK_VAR(p,"p");
 		HX_STACK_LINE(45)
-		p->set(HX_CSTRING("x"),bitmap->get_x());
+		this->canvas->addChild(bitmap);
 		HX_STACK_LINE(46)
-		p->set(HX_CSTRING("y"),bitmap->get_y());
+		::Hash p = ::Hash_obj::__new();		HX_STACK_VAR(p,"p");
 		HX_STACK_LINE(47)
-		p->set(HX_CSTRING("rotation"),bitmap->get_rotation());
+		p->set(HX_CSTRING("x"),bitmap->get_x());
 		HX_STACK_LINE(48)
-		p->set(HX_CSTRING("physics"),physics);
+		p->set(HX_CSTRING("y"),bitmap->get_y());
 		HX_STACK_LINE(49)
+		p->set(HX_CSTRING("rotation"),bitmap->get_rotation());
+		HX_STACK_LINE(50)
+		p->set(HX_CSTRING("physics"),physics);
+		HX_STACK_LINE(51)
 		this->xml = p;
-		HX_STACK_LINE(52)
+		HX_STACK_LINE(54)
 		this->mass = (int)0;
-		HX_STACK_LINE(53)
+		HX_STACK_LINE(55)
 		this->physicsObject(physics);
-		HX_STACK_LINE(56)
+		HX_STACK_LINE(58)
 		::RenderManager_obj::add(hx::ObjectPtr<OBJ_>(this));
 	}
 return null();

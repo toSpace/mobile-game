@@ -24,9 +24,6 @@
 #ifndef INCLUDED_UIobject
 #include <UIobject.h>
 #endif
-#ifndef INCLUDED_haxe_Log
-#include <haxe/Log.h>
-#endif
 #ifndef INCLUDED_native_display_DisplayObject
 #include <native/display/DisplayObject.h>
 #endif
@@ -156,10 +153,8 @@ Void Level_obj::addToNightmare( Float point){
 		HX_STACK_PUSH("Level::addToNightmare","Level.hx",56);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(point,"point");
-		HX_STACK_LINE(57)
+		HX_STACK_LINE(56)
 		hx::AddEq(this->nightmare,point);
-		HX_STACK_LINE(59)
-		::haxe::Log_obj::trace(this->getNightmare(),hx::SourceInfo(HX_CSTRING("Level.hx"),59,HX_CSTRING("Level"),HX_CSTRING("addToNightmare")));
 	}
 return null();
 }

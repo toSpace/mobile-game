@@ -15,6 +15,7 @@ class Drawing{
 
 	public static var drawing:Bool = false;
 	public static var erasing:Bool = true;
+	public static var locked:Bool = false;
 	public static var x:Float;
 	public static var y:Float;
 
@@ -39,9 +40,12 @@ class Drawing{
 
 	static private function checkDraw(e:MouseEvent):Void{
 		// convert to global
-		var point:Point = Main.canvas.localToGlobal( new Point(e.localX, e.localY) );
-		x = point.x;
-		y = point.y;
+		// var point:Point = Main.canvas.localToGlobal( new Point(e.localX, e.localY) );
+		// x = point.x;
+		// y = point.y;
+
+		x = e.localX;
+		y = e.localY;
 	}
 
 	static public function checkActive(b:Body):Bool{

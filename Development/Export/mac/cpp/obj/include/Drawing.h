@@ -34,6 +34,7 @@ class Drawing_obj : public hx::Object{
 
 		static bool drawing; /* REM */ 
 		static bool erasing; /* REM */ 
+		static bool locked; /* REM */ 
 		static Float x; /* REM */ 
 		static Float y; /* REM */ 
 		static Void init( );

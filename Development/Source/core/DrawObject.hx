@@ -9,7 +9,9 @@ import nme.display.Bitmap;
 import nme.display.BitmapData;
 import nme.geom.Matrix;
 import nme.geom.Point;
+import nme.geom.Rectangle;
 import nme.display.BlendMode;
+import nme.geom.ColorTransform;
 
 //nape
 import nape.space.Space;
@@ -114,7 +116,8 @@ class DrawObject extends GameObject{
             //only if drawing - todo only if on screen
             if(Drawing.drawing && Drawing.erasing){
                 //var checkActive = Drawing.checkActive(body);
-                var checkActive = Drawing.mouseOver(asset);
+                //TODO make bounds bigger!
+                var checkActive = Drawing.mouseOver(asset); 
 
                 if( checkActive && !drawing){
                     startDrawing();
@@ -140,15 +143,15 @@ class DrawObject extends GameObject{
 
         //drawingCanvas.x = asset.x;
         //drawingCanvas.y = asset.y;
-        drawingCanvas.width = asset.width;
-        drawingCanvas.height = asset.height;
+        //drawingCanvas.width = asset.width;
+        //drawingCanvas.height = asset.height;
 
         //start drawing
         drawingCanvas.graphics.lineStyle(Settings.brushSize,0xFF0000, 1, true);
 
         //make point
-        var point:Point = asset.globalToLocal( new Point(Drawing.x, Drawing.y) );
-        drawingCanvas.graphics.moveTo(point.x, point.y);
+        //var point:Point = asset.globalToLocal( new Point(Drawing.x, Drawing.y) );
+        drawingCanvas.graphics.moveTo(Drawing.x, Drawing.y);
         
         Main.canvas.addChild(drawingCanvas);
 
@@ -160,9 +163,19 @@ class DrawObject extends GameObject{
         //remove body
         Main.space.bodies.remove(body);
 
+        //make matrix
+        var bounds:Rectangle = drawingCanvas.getBounds(Main.canvas);
+        var matrix = new Matrix();
+        matrix.tx = 0-asset.x;
+        matrix.ty = 0-asset.y;
+
+        //color
+        var color = new ColorTransform();
+        color.alphaMultiplier = 1;
+
         //erease some bitmap thingies
-        asset.bitmapData.draw( drawingCanvas, new Matrix(), BlendMode.ERASE );
-        //Main.canvas.removeChild(drawingCanvas);
+        asset.bitmapData.draw( drawingCanvas, matrix, color, BlendMode.ERASE);
+        Main.canvas.removeChild(drawingCanvas);
 
         //convert again
         updateBody();
@@ -170,8 +183,8 @@ class DrawObject extends GameObject{
     }
 
     private function draw():Void{
-        var point:Point = asset.globalToLocal( new Point(Drawing.x, Drawing.y) );
-        drawingCanvas.graphics.lineTo(point.x, point.y);
+        //var point:Point = asset.globalToLocal( new Point(Drawing.x, Drawing.y) );
+        drawingCanvas.graphics.lineTo(Drawing.x, Drawing.y);
         //drawingCanvas.x = asset.x;
         //drawingCanvas.y = asset.y;
     }
