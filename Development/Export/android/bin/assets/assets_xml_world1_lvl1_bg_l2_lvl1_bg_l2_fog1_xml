@@ -1,0 +1,8 @@
+<asset>
+
+	<name>lvl1_bg_l2_fog1</name>
+	<img>general/bg/fog_medium.png</img>
+	<paralax startX="3500" endX="6000">0.2</paralax>
+	<blendmode>none</blendmode>
+	<pos x="3500" y="50"></pos>
+</asset>

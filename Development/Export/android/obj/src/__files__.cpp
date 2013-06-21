@@ -33,6 +33,7 @@ const char *__hxcpp_all_files[] = {
 	"/usr/lib/haxe/std/haxe/io/Output.hx",
 	"/usr/lib/haxe/std/haxe/xml/Fast.hx",
 	"ApplicationMain.hx",
+	"BackgroundObject.hx",
 	"BitmapDataIso.hx",
 	"Camera.hx",
 	"Character.hx",

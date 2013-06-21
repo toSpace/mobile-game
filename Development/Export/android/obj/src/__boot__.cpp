@@ -451,6 +451,7 @@
 #include <Character.h>
 #include <Camera.h>
 #include <BitmapDataIso.h>
+#include <BackgroundObject.h>
 #include <ApplicationMain.h>
 
 void __boot_all()
@@ -907,6 +908,7 @@ hx::RegisterResources( hx::GetResources() );
 ::Character_obj::__register();
 ::Camera_obj::__register();
 ::BitmapDataIso_obj::__register();
+::BackgroundObject_obj::__register();
 ::ApplicationMain_obj::__register();
 ::Xml_obj::__init__();
 ::native::utils::ByteArray_obj::__init__();
@@ -918,6 +920,7 @@ hx::RegisterResources( hx::GetResources() );
 ::cpp::zip::Uncompress_obj::__boot();
 ::haxe::Log_obj::__boot();
 ::ApplicationMain_obj::__boot();
+::BackgroundObject_obj::__boot();
 ::BitmapDataIso_obj::__boot();
 ::Camera_obj::__boot();
 ::Character_obj::__boot();

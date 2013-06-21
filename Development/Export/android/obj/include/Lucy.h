@@ -33,6 +33,8 @@ class Lucy_obj : public ::Character_obj{
 
 		virtual Void render( );
 
+		bool stopped; /* REM */ 
+		Float prevX; /* REM */ 
 		::SpriteObject lucy; /* REM */ 
 };
 

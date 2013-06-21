@@ -32,6 +32,7 @@ class Settings_obj : public hx::Object{
 		static Float flockSpeed; /* REM */ 
 		static Float flockVelocity; /* REM */ 
 		static Float cameraOverflow; /* REM */ 
+		static Float paralaxDepth; /* REM */ 
 		static Void load( );
 		static Dynamic load_dyn();
 

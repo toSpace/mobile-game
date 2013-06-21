@@ -1,0 +1,9 @@
+<asset>
+
+	<name>lvl1_bg_l3_tree2</name>
+	<img>world1/general/bg/tree6.png</img>
+	<paralax startX="350" endX="1150">0.4</paralax>
+	<blendmode>none</blendmode>
+	<pos x="350" y="0"></pos>
+
+</asset>

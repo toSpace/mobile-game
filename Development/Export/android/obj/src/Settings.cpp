@@ -48,23 +48,27 @@ Float Settings_obj::flockVelocity;
 
 Float Settings_obj::cameraOverflow;
 
+Float Settings_obj::paralaxDepth;
+
 Void Settings_obj::load( ){
 {
-		HX_STACK_PUSH("Settings::load","Settings.hx",11);
-		HX_STACK_LINE(13)
-		::String xmlFile = ::nme::installer::Assets_obj::getText((::Mobile_obj::xml + HX_CSTRING("settings.xml")));		HX_STACK_VAR(xmlFile,"xmlFile");
+		HX_STACK_PUSH("Settings::load","Settings.hx",12);
 		HX_STACK_LINE(14)
+		::String xmlFile = ::nme::installer::Assets_obj::getText((::Mobile_obj::xml + HX_CSTRING("settings.xml")));		HX_STACK_VAR(xmlFile,"xmlFile");
+		HX_STACK_LINE(15)
 		::haxe::xml::Fast read = ::haxe::xml::Fast_obj::__new(::Xml_obj::parse(xmlFile));		HX_STACK_VAR(read,"read");
-		HX_STACK_LINE(16)
+		HX_STACK_LINE(17)
 		::haxe::xml::Fast settings = read->node->resolve(HX_CSTRING("settings"));		HX_STACK_VAR(settings,"settings");
-		HX_STACK_LINE(18)
-		::Settings_obj::brushSize = ::Std_obj::parseFloat(settings->node->resolve(HX_CSTRING("brushsize"))->getInnerData());
 		HX_STACK_LINE(19)
-		::Settings_obj::cameraOverflow = ::Std_obj::parseFloat(settings->node->resolve(HX_CSTRING("cameraoverflow"))->getInnerData());
+		::Settings_obj::brushSize = ::Std_obj::parseFloat(settings->node->resolve(HX_CSTRING("brushsize"))->getInnerData());
 		HX_STACK_LINE(20)
-		::Settings_obj::flockSpeed = ::Std_obj::parseFloat(settings->node->resolve(HX_CSTRING("flockspeed"))->getInnerData());
+		::Settings_obj::cameraOverflow = ::Std_obj::parseFloat(settings->node->resolve(HX_CSTRING("cameraoverflow"))->getInnerData());
 		HX_STACK_LINE(21)
+		::Settings_obj::flockSpeed = ::Std_obj::parseFloat(settings->node->resolve(HX_CSTRING("flockspeed"))->getInnerData());
+		HX_STACK_LINE(22)
 		::Settings_obj::flockVelocity = ::Std_obj::parseFloat(settings->node->resolve(HX_CSTRING("flockvelocity"))->getInnerData());
+		HX_STACK_LINE(23)
+		::Settings_obj::paralaxDepth = ::Std_obj::parseFloat(settings->node->resolve(HX_CSTRING("paralaxDepth"))->getInnerData());
 	}
 return null();
 }
@@ -99,6 +103,9 @@ Dynamic Settings_obj::__Field(const ::String &inName,bool inCallProp)
 	case 10:
 		if (HX_FIELD_EQ(inName,"flockSpeed") ) { return flockSpeed; }
 		break;
+	case 12:
+		if (HX_FIELD_EQ(inName,"paralaxDepth") ) { return paralaxDepth; }
+		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"flockVelocity") ) { return flockVelocity; }
 		break;
@@ -116,6 +123,9 @@ Dynamic Settings_obj::__SetField(const ::String &inName,const Dynamic &inValue,b
 		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"flockSpeed") ) { flockSpeed=inValue.Cast< Float >(); return inValue; }
+		break;
+	case 12:
+		if (HX_FIELD_EQ(inName,"paralaxDepth") ) { paralaxDepth=inValue.Cast< Float >(); return inValue; }
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"flockVelocity") ) { flockVelocity=inValue.Cast< Float >(); return inValue; }
@@ -136,6 +146,7 @@ static ::String sStaticFields[] = {
 	HX_CSTRING("flockSpeed"),
 	HX_CSTRING("flockVelocity"),
 	HX_CSTRING("cameraOverflow"),
+	HX_CSTRING("paralaxDepth"),
 	HX_CSTRING("load"),
 	String(null()) };
 
@@ -148,6 +159,7 @@ static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(Settings_obj::flockSpeed,"flockSpeed");
 	HX_MARK_MEMBER_NAME(Settings_obj::flockVelocity,"flockVelocity");
 	HX_MARK_MEMBER_NAME(Settings_obj::cameraOverflow,"cameraOverflow");
+	HX_MARK_MEMBER_NAME(Settings_obj::paralaxDepth,"paralaxDepth");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
@@ -156,6 +168,7 @@ static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(Settings_obj::flockSpeed,"flockSpeed");
 	HX_VISIT_MEMBER_NAME(Settings_obj::flockVelocity,"flockVelocity");
 	HX_VISIT_MEMBER_NAME(Settings_obj::cameraOverflow,"cameraOverflow");
+	HX_VISIT_MEMBER_NAME(Settings_obj::paralaxDepth,"paralaxDepth");
 };
 
 Class Settings_obj::__mClass;

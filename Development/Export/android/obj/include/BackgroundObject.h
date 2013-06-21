@@ -49,12 +49,12 @@ class BackgroundObject_obj : public hx::Object{
 		virtual ::Hash readXml( ::String url);
 		Dynamic readXml_dyn();
 
+		Float x; /* REM */ 
+		Float speed; /* REM */ 
+		Float startX; /* REM */ 
 		::Hash xml; /* REM */ 
 		::native::display::Bitmap asset; /* REM */ 
 		::native::display::Sprite canvas; /* REM */ 
-		static Float startX; /* REM */ 
-		static Float speed; /* REM */ 
-		static Float x; /* REM */ 
 };
 
 

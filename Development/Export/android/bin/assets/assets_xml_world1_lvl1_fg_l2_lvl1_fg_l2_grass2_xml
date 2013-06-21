@@ -1,0 +1,9 @@
+<asset>
+
+	<name>lvl1_fg_l2_grass2</name>
+	<img>general/fg/grass2.png</img>
+	<paralax startX="0" endX="800">0</paralax>
+	<blendmode>none</blendmode>
+	<pos x="945" y="157"></pos>
+	
+</asset>

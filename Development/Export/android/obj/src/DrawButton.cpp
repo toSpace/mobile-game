@@ -57,9 +57,9 @@ Void DrawButton_obj::__construct()
 HX_STACK_PUSH("DrawButton::new","DrawButton.hx",11);
 {
 	HX_STACK_LINE(12)
-	super::__construct(HX_CSTRING("General/gui/button.png"),((::Mobile_obj::screenWidth - (int)44) - (int)10),(int)10,true);
+	super::__construct(HX_CSTRING("general/gui/button.png"),((::Mobile_obj::screenWidth - (int)44) - (int)10),(int)10,true);
 	HX_STACK_LINE(14)
-	this->asset_over = ::native::display::Bitmap_obj::__new(::nme::installer::Assets_obj::getBitmapData((::Mobile_obj::asset + HX_CSTRING("General/gui/button2.png")),null()),null(),null());
+	this->asset_over = ::native::display::Bitmap_obj::__new(::nme::installer::Assets_obj::getBitmapData((::Mobile_obj::asset + HX_CSTRING("general/gui/button2.png")),null()),null(),null());
 }
 ;
 	return null();

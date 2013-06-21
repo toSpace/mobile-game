@@ -83,7 +83,7 @@ HX_STACK_PUSH("BackgroundObject::new","BackgroundObject.hx",20);
 	HX_STACK_LINE(29)
 	this->asset->set_x(this->xml->get(HX_CSTRING("x")));
 	HX_STACK_LINE(30)
-	::BackgroundObject_obj::x = this->asset->get_x();
+	this->x = this->asset->get_x();
 	HX_STACK_LINE(31)
 	this->asset->set_y((::Mobile_obj::getY(this->asset) - this->xml->get(HX_CSTRING("y"))));
 	HX_STACK_LINE(32)
@@ -91,9 +91,9 @@ HX_STACK_PUSH("BackgroundObject::new","BackgroundObject.hx",20);
 	HX_STACK_LINE(33)
 	this->canvas->addChild(this->asset);
 	HX_STACK_LINE(36)
-	::BackgroundObject_obj::speed = this->xml->get(HX_CSTRING("speed"));
+	this->speed = this->xml->get(HX_CSTRING("speed"));
 	HX_STACK_LINE(37)
-	::BackgroundObject_obj::startX = this->xml->get(HX_CSTRING("startX"));
+	this->startX = this->xml->get(HX_CSTRING("startX"));
 	HX_STACK_LINE(40)
 	::RenderManager_obj::add(hx::ObjectPtr<OBJ_>(this));
 	HX_STACK_LINE(42)
@@ -118,69 +118,69 @@ Dynamic BackgroundObject_obj::__Create(hx::DynamicArray inArgs)
 
 Void BackgroundObject_obj::setBlendmode( ::String mode){
 {
-		HX_STACK_PUSH("BackgroundObject::setBlendmode","BackgroundObject.hx",79);
+		HX_STACK_PUSH("BackgroundObject::setBlendmode","BackgroundObject.hx",77);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(mode,"mode");
-		HX_STACK_LINE(79)
+		HX_STACK_LINE(77)
 		::String _switch_1 = (mode);
 		if (  ( _switch_1==HX_CSTRING("none"))){
 		}
 		else if (  ( _switch_1==HX_CSTRING("add"))){
-			HX_STACK_LINE(84)
+			HX_STACK_LINE(82)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::ADD_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("alpha"))){
-			HX_STACK_LINE(86)
+			HX_STACK_LINE(84)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::ALPHA_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("darken"))){
-			HX_STACK_LINE(88)
+			HX_STACK_LINE(86)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::DARKEN_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("difference"))){
-			HX_STACK_LINE(90)
+			HX_STACK_LINE(88)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::DIFFERENCE_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("erase"))){
-			HX_STACK_LINE(92)
+			HX_STACK_LINE(90)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::ERASE_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("hardlight"))){
-			HX_STACK_LINE(94)
+			HX_STACK_LINE(92)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::HARDLIGHT_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("invert"))){
-			HX_STACK_LINE(96)
+			HX_STACK_LINE(94)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::INVERT_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("layer"))){
-			HX_STACK_LINE(98)
+			HX_STACK_LINE(96)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::LAYER_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("lighten"))){
-			HX_STACK_LINE(100)
+			HX_STACK_LINE(98)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::LIGHTEN_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("multiply"))){
-			HX_STACK_LINE(102)
+			HX_STACK_LINE(100)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::MULTIPLY_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("normal"))){
-			HX_STACK_LINE(104)
+			HX_STACK_LINE(102)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::NORMAL_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("overlay"))){
-			HX_STACK_LINE(106)
+			HX_STACK_LINE(104)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::OVERLAY_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("screen"))){
-			HX_STACK_LINE(108)
+			HX_STACK_LINE(106)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::SCREEN_dyn());
 		}
 		else if (  ( _switch_1==HX_CSTRING("shader"))){
 		}
 		else if (  ( _switch_1==HX_CSTRING("subtract"))){
-			HX_STACK_LINE(114)
+			HX_STACK_LINE(112)
 			this->asset->set_blendMode(::native::display::BlendMode_obj::SUBTRACT_dyn());
 		}
 	}
@@ -199,16 +199,11 @@ Void BackgroundObject_obj::paralax( ){
 		HX_STACK_LINE(69)
 		Float delta;		HX_STACK_VAR(delta,"delta");
 		HX_STACK_LINE(71)
-		if (((cameraPos < ::BackgroundObject_obj::startX))){
-			HX_STACK_LINE(71)
-			delta = (int)0;
-		}
-		else{
-			HX_STACK_LINE(73)
-			delta = (((::BackgroundObject_obj::startX - cameraPos)) * ::BackgroundObject_obj::speed);
-		}
-		HX_STACK_LINE(76)
-		this->asset->set_x((::BackgroundObject_obj::x - delta));
+		delta = (this->x - cameraPos);
+		HX_STACK_LINE(72)
+		hx::MultEq(delta,this->speed);
+		HX_STACK_LINE(74)
+		this->asset->set_x((this->x - delta));
 	}
 return null();
 }
@@ -262,12 +257,6 @@ HX_DEFINE_DYNAMIC_FUNC0(BackgroundObject_obj,render,(void))
 
 HX_DEFINE_DYNAMIC_FUNC1(BackgroundObject_obj,readXml,return )
 
-Float BackgroundObject_obj::startX;
-
-Float BackgroundObject_obj::speed;
-
-Float BackgroundObject_obj::x;
-
 
 BackgroundObject_obj::BackgroundObject_obj()
 {
@@ -276,6 +265,9 @@ BackgroundObject_obj::BackgroundObject_obj()
 void BackgroundObject_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(BackgroundObject);
+	HX_MARK_MEMBER_NAME(x,"x");
+	HX_MARK_MEMBER_NAME(speed,"speed");
+	HX_MARK_MEMBER_NAME(startX,"startX");
 	HX_MARK_MEMBER_NAME(xml,"xml");
 	HX_MARK_MEMBER_NAME(asset,"asset");
 	HX_MARK_MEMBER_NAME(canvas,"canvas");
@@ -284,6 +276,9 @@ void BackgroundObject_obj::__Mark(HX_MARK_PARAMS)
 
 void BackgroundObject_obj::__Visit(HX_VISIT_PARAMS)
 {
+	HX_VISIT_MEMBER_NAME(x,"x");
+	HX_VISIT_MEMBER_NAME(speed,"speed");
+	HX_VISIT_MEMBER_NAME(startX,"startX");
 	HX_VISIT_MEMBER_NAME(xml,"xml");
 	HX_VISIT_MEMBER_NAME(asset,"asset");
 	HX_VISIT_MEMBER_NAME(canvas,"canvas");
@@ -303,8 +298,8 @@ Dynamic BackgroundObject_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"asset") ) { return asset; }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"startX") ) { return startX; }
 		if (HX_FIELD_EQ(inName,"render") ) { return render_dyn(); }
+		if (HX_FIELD_EQ(inName,"startX") ) { return startX; }
 		if (HX_FIELD_EQ(inName,"canvas") ) { return canvas; }
 		break;
 	case 7:
@@ -339,6 +334,9 @@ Dynamic BackgroundObject_obj::__SetField(const ::String &inName,const Dynamic &i
 
 void BackgroundObject_obj::__GetFields(Array< ::String> &outFields)
 {
+	outFields->push(HX_CSTRING("x"));
+	outFields->push(HX_CSTRING("speed"));
+	outFields->push(HX_CSTRING("startX"));
 	outFields->push(HX_CSTRING("xml"));
 	outFields->push(HX_CSTRING("asset"));
 	outFields->push(HX_CSTRING("canvas"));
@@ -346,9 +344,6 @@ void BackgroundObject_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("startX"),
-	HX_CSTRING("speed"),
-	HX_CSTRING("x"),
 	String(null()) };
 
 static ::String sMemberFields[] = {
@@ -356,6 +351,9 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("paralax"),
 	HX_CSTRING("render"),
 	HX_CSTRING("readXml"),
+	HX_CSTRING("x"),
+	HX_CSTRING("speed"),
+	HX_CSTRING("startX"),
 	HX_CSTRING("xml"),
 	HX_CSTRING("asset"),
 	HX_CSTRING("canvas"),
@@ -363,16 +361,10 @@ static ::String sMemberFields[] = {
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(BackgroundObject_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(BackgroundObject_obj::startX,"startX");
-	HX_MARK_MEMBER_NAME(BackgroundObject_obj::speed,"speed");
-	HX_MARK_MEMBER_NAME(BackgroundObject_obj::x,"x");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(BackgroundObject_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(BackgroundObject_obj::startX,"startX");
-	HX_VISIT_MEMBER_NAME(BackgroundObject_obj::speed,"speed");
-	HX_VISIT_MEMBER_NAME(BackgroundObject_obj::x,"x");
 };
 
 Class BackgroundObject_obj::__mClass;
