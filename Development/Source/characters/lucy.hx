@@ -4,11 +4,14 @@ import nape.geom.Vec2;
 class Lucy extends Character {
 
 	var lucy:SpriteObject;
+	var prevX:Float;
+	var stopped:Bool = false;
 	
 	public function new():Void{
 		super();
 
 		lucy = new SpriteObject('walking.xml', 'walking-sparrow.xml');
+		prevX = lucy.body.position.x;
 	}
 
 	override public function render():Void{
@@ -18,9 +21,17 @@ class Lucy extends Character {
 			walk(lucy.body, Settings.flockSpeed, Settings.flockVelocity);
 		}
 
-		// if(lucy.body.velocity.x < 1){
-		// 	//lucy.clip.stop();
-		// }
+		//stop walking when not moving
+		if(prevX == lucy.body.position.x){
+			lucy.clip.stop();
+			stopped = true;
+		}
+		//start walking again
+		if(prevX != lucy.body.position.x && stopped == true){
+			lucy.clip.play();
+		}
+		//save position
+		prevX = lucy.body.position.x;
 
 		Camera.follow(lucy.body);
 	}
