@@ -1,7 +1,7 @@
 <asset>
 
 	<name>lvl1_bg_l3_tree9</name>
-	<img>world1/general/bg/tree11.png</img>
+	<img>world1/general/bg/tree14.png</img>
 	<paralax startX="2720" endX="2500">0.4</paralax>
 	<blendmode>none</blendmode>
 	<pos x="3100" y="0"></pos>

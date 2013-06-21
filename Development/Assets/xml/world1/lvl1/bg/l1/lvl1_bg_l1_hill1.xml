@@ -4,6 +4,6 @@
 	<img>world1/general/bg/hill1.png</img>
 	<paralax startX="0" endX="800">0.1</paralax>
 	<blendmode>none</blendmode>
-	<pos x="-200" y="0"></pos>
+	<pos x="-200" y="-80"></pos>
 	
 </asset>

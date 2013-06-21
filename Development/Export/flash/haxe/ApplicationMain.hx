@@ -127,9 +127,39 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/mobile-1x/general/characters/walking.png");
          
 		
-		if (inName=="assets/mobile-1x/general/fg/empty.md")
+		if (inName=="assets/mobile-1x/general/fg/grass1.png")
 			 
-			 return Assets.getText ("assets/mobile-1x/general/fg/empty.md");
+            return Assets.getBitmapData ("assets/mobile-1x/general/fg/grass1.png");
+         
+		
+		if (inName=="assets/mobile-1x/general/fg/grass2.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/general/fg/grass2.png");
+         
+		
+		if (inName=="assets/mobile-1x/general/fg/grass3.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/general/fg/grass3.png");
+         
+		
+		if (inName=="assets/mobile-1x/general/fg/grass4.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/general/fg/grass4.png");
+         
+		
+		if (inName=="assets/mobile-1x/general/fg/grass5.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/general/fg/grass5.png");
+         
+		
+		if (inName=="assets/mobile-1x/general/fg/grass6.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/general/fg/grass6.png");
+         
+		
+		if (inName=="assets/mobile-1x/general/fg/grass7.png")
+			 
+            return Assets.getBitmapData ("assets/mobile-1x/general/fg/grass7.png");
          
 		
 		if (inName=="assets/mobile-1x/general/gui/button.png")
@@ -457,9 +487,74 @@ class ApplicationMain {
             return Assets.getBitmapData ("assets/source/general/characters/walking.png");
          
 		
-		if (inName=="assets/source/general/fg/empty.md")
+		if (inName=="assets/source/general/fg/grass1.png")
 			 
-			 return Assets.getText ("assets/source/general/fg/empty.md");
+            return Assets.getBitmapData ("assets/source/general/fg/grass1.png");
+         
+		
+		if (inName=="assets/source/general/fg/grass1.psd")
+			 
+            return Assets.getBytes ("assets/source/general/fg/grass1.psd");
+         
+		
+		if (inName=="assets/source/general/fg/grass2.png")
+			 
+            return Assets.getBitmapData ("assets/source/general/fg/grass2.png");
+         
+		
+		if (inName=="assets/source/general/fg/grass2.psd")
+			 
+            return Assets.getBytes ("assets/source/general/fg/grass2.psd");
+         
+		
+		if (inName=="assets/source/general/fg/grass3.png")
+			 
+            return Assets.getBitmapData ("assets/source/general/fg/grass3.png");
+         
+		
+		if (inName=="assets/source/general/fg/grass3.psd")
+			 
+            return Assets.getBytes ("assets/source/general/fg/grass3.psd");
+         
+		
+		if (inName=="assets/source/general/fg/grass4.png")
+			 
+            return Assets.getBitmapData ("assets/source/general/fg/grass4.png");
+         
+		
+		if (inName=="assets/source/general/fg/grass4.psd")
+			 
+            return Assets.getBytes ("assets/source/general/fg/grass4.psd");
+         
+		
+		if (inName=="assets/source/general/fg/grass5.png")
+			 
+            return Assets.getBitmapData ("assets/source/general/fg/grass5.png");
+         
+		
+		if (inName=="assets/source/general/fg/grass5.psd")
+			 
+            return Assets.getBytes ("assets/source/general/fg/grass5.psd");
+         
+		
+		if (inName=="assets/source/general/fg/grass6.png")
+			 
+            return Assets.getBitmapData ("assets/source/general/fg/grass6.png");
+         
+		
+		if (inName=="assets/source/general/fg/grass6.psd")
+			 
+            return Assets.getBytes ("assets/source/general/fg/grass6.psd");
+         
+		
+		if (inName=="assets/source/general/fg/grass7.png")
+			 
+            return Assets.getBitmapData ("assets/source/general/fg/grass7.png");
+         
+		
+		if (inName=="assets/source/general/fg/grass7.psd")
+			 
+            return Assets.getBytes ("assets/source/general/fg/grass7.psd");
          
 		
 		if (inName=="assets/source/general/gui/button.png")
@@ -1232,6 +1327,41 @@ class ApplicationMain {
 			 return Assets.getText ("assets/xml/world1/lvl1/fg/l2/empty.md");
          
 		
+		if (inName=="assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_grass1.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_grass1.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_grass2.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_grass2.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_grass3.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_grass3.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_grass4.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_grass4.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_grass5.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_grass5.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_grass6.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_grass6.xml");
+         
+		
+		if (inName=="assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_grass7.xml")
+			 
+			 return Assets.getText ("assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_grass7.xml");
+         
+		
 		if (inName=="assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_tree1.xml")
 			 
 			 return Assets.getText ("assets/xml/world1/lvl1/fg/l2/lvl1_fg_l2_tree1.xml");
@@ -1282,7 +1412,13 @@ class NME_assets_mobile_1x_general_bg_fog_small_png extends nme.display.BitmapDa
 class NME_assets_mobile_1x_general_bg_star_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_1x_general_characters_walking_sparrow_xml extends nme.utils.ByteArray { }
 class NME_assets_mobile_1x_general_characters_walking_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_mobile_1x_general_fg_empty_md extends nme.utils.ByteArray { }
+class NME_assets_mobile_1x_general_fg_grass1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_general_fg_grass2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_general_fg_grass3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_general_fg_grass4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_general_fg_grass5_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_general_fg_grass6_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_mobile_1x_general_fg_grass7_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_1x_general_gui_button_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_1x_general_gui_button2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_mobile_1x_test1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
@@ -1348,7 +1484,20 @@ class NME_assets_source_general_bg_star_png extends nme.display.BitmapData { pub
 class NME_assets_source_general_bg_star_psd extends nme.utils.ByteArray { }
 class NME_assets_source_general_characters_walking_sparrow_xml extends nme.utils.ByteArray { }
 class NME_assets_source_general_characters_walking_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
-class NME_assets_source_general_fg_empty_md extends nme.utils.ByteArray { }
+class NME_assets_source_general_fg_grass1_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_general_fg_grass1_psd extends nme.utils.ByteArray { }
+class NME_assets_source_general_fg_grass2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_general_fg_grass2_psd extends nme.utils.ByteArray { }
+class NME_assets_source_general_fg_grass3_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_general_fg_grass3_psd extends nme.utils.ByteArray { }
+class NME_assets_source_general_fg_grass4_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_general_fg_grass4_psd extends nme.utils.ByteArray { }
+class NME_assets_source_general_fg_grass5_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_general_fg_grass5_psd extends nme.utils.ByteArray { }
+class NME_assets_source_general_fg_grass6_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_general_fg_grass6_psd extends nme.utils.ByteArray { }
+class NME_assets_source_general_fg_grass7_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
+class NME_assets_source_general_fg_grass7_psd extends nme.utils.ByteArray { }
 class NME_assets_source_general_gui_button_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_source_general_gui_button2_png extends nme.display.BitmapData { public function new () { super (0, 0); } }
 class NME_assets_source_level_1_forrest_jesse_ai extends nme.utils.ByteArray { }
@@ -1503,6 +1652,13 @@ class NME_assets_xml_world1_lvl1_fg_l1_lvl1_fg_l1_6_xml extends nme.utils.ByteAr
 class NME_assets_xml_world1_lvl1_fg_l1_lvl1_fg_l1_7_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_fg_l1_lvl1_fg_l1_8_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_fg_l2_empty_md extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_fg_l2_lvl1_fg_l2_grass1_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_fg_l2_lvl1_fg_l2_grass2_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_fg_l2_lvl1_fg_l2_grass3_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_fg_l2_lvl1_fg_l2_grass4_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_fg_l2_lvl1_fg_l2_grass5_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_fg_l2_lvl1_fg_l2_grass6_xml extends nme.utils.ByteArray { }
+class NME_assets_xml_world1_lvl1_fg_l2_lvl1_fg_l2_grass7_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_fg_l2_lvl1_fg_l2_tree1_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_fg_l2_lvl1_fg_l2_tree2_xml extends nme.utils.ByteArray { }
 class NME_assets_xml_world1_lvl1_fg_l2_lvl1_fg_l2_tree3_xml extends nme.utils.ByteArray { }
