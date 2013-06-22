@@ -4236,6 +4236,7 @@
   </file>
   <file name="src/RenderManager.cpp">
    <depend name="include/Camera.h"/>
+   <depend name="include/Drawing.h"/>
    <depend name="include/Garbage.h"/>
    <depend name="include/Main.h"/>
    <depend name="include/RenderManager.h"/>
@@ -4295,7 +4296,6 @@
   <file name="src/Lucy.cpp">
    <depend name="include/Camera.h"/>
    <depend name="include/Character.h"/>
-   <depend name="include/Drawing.h"/>
    <depend name="include/Lucy.h"/>
    <depend name="include/Settings.h"/>
    <depend name="include/SpriteObject.h"/>

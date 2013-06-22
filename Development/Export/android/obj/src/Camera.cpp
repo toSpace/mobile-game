@@ -113,26 +113,26 @@ Dynamic direct = __o_direct.Default(false);
 			HX_STACK_LINE(32)
 			x = (int)0;
 		}
-		HX_STACK_LINE(35)
-		if (((y > ::Mobile_obj::screenHeight))){
-			HX_STACK_LINE(35)
-			y = ::Mobile_obj::screenHeight;
+		HX_STACK_LINE(36)
+		if (((y > (int)0))){
+			HX_STACK_LINE(36)
+			y = (int)0;
 		}
-		HX_STACK_LINE(39)
+		HX_STACK_LINE(40)
 		if ((direct)){
-			HX_STACK_LINE(40)
-			::Main_obj::canvas->set_x((x * (int)-1));
 			HX_STACK_LINE(41)
+			::Main_obj::canvas->set_x((x * (int)-1));
+			HX_STACK_LINE(42)
 			::Main_obj::canvas->set_y((y * (int)-1));
 		}
 		else{
-			HX_STACK_LINE(43)
-			::Camera_obj::targetX = (x * (int)-1);
 			HX_STACK_LINE(44)
-			::Camera_obj::targetY = (y * (int)-1);
+			::Camera_obj::targetX = (x * (int)-1);
 			HX_STACK_LINE(45)
-			::Camera_obj::currentX = ::Main_obj::canvas->get_x();
+			::Camera_obj::targetY = (y * (int)-1);
 			HX_STACK_LINE(46)
+			::Camera_obj::currentX = ::Main_obj::canvas->get_x();
+			HX_STACK_LINE(47)
 			::Camera_obj::currentY = ::Main_obj::canvas->get_y();
 		}
 	}
@@ -144,45 +144,45 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC3(Camera_obj,move,(void))
 
 Void Camera_obj::follow( ::nape::phys::Body body){
 {
-		HX_STACK_PUSH("Camera::follow","Camera.hx",50);
+		HX_STACK_PUSH("Camera::follow","Camera.hx",51);
 		HX_STACK_ARG(body,"body");
 		struct _Function_1_1{
 			inline static Float Block( ::nape::phys::Body &body){
-				HX_STACK_PUSH("*::closure","Camera.hx",51);
+				HX_STACK_PUSH("*::closure","Camera.hx",52);
 				{
 					struct _Function_2_1{
 						inline static ::nape::geom::Vec2 Block( ::nape::phys::Body &body){
-							HX_STACK_PUSH("*::closure","Camera.hx",51);
+							HX_STACK_PUSH("*::closure","Camera.hx",52);
 							{
-								HX_STACK_LINE(51)
+								HX_STACK_LINE(52)
 								if (((body->zpp_inner->wrap_pos == null()))){
-									HX_STACK_LINE(51)
+									HX_STACK_LINE(52)
 									body->zpp_inner->setupPosition();
 								}
-								HX_STACK_LINE(51)
+								HX_STACK_LINE(52)
 								return body->zpp_inner->wrap_pos;
 							}
 							return null();
 						}
 					};
-					HX_STACK_LINE(51)
+					HX_STACK_LINE(52)
 					::nape::geom::Vec2 _this = _Function_2_1::Block(body);		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(51)
+					HX_STACK_LINE(52)
 					if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-						HX_STACK_LINE(51)
+						HX_STACK_LINE(52)
 						hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 					}
-					HX_STACK_LINE(51)
+					HX_STACK_LINE(52)
 					{
-						HX_STACK_LINE(51)
+						HX_STACK_LINE(52)
 						::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-						HX_STACK_LINE(51)
+						HX_STACK_LINE(52)
 						if (((_this1->_validate_dyn() != null()))){
-							HX_STACK_LINE(51)
+							HX_STACK_LINE(52)
 							_this1->_validate();
 						}
 					}
-					HX_STACK_LINE(51)
+					HX_STACK_LINE(52)
 					return _this->zpp_inner->x;
 				}
 				return null();
@@ -190,47 +190,47 @@ Void Camera_obj::follow( ::nape::phys::Body body){
 		};
 		struct _Function_1_2{
 			inline static Float Block( ::nape::phys::Body &body){
-				HX_STACK_PUSH("*::closure","Camera.hx",51);
+				HX_STACK_PUSH("*::closure","Camera.hx",52);
 				{
 					struct _Function_2_1{
 						inline static ::nape::geom::Vec2 Block( ::nape::phys::Body &body){
-							HX_STACK_PUSH("*::closure","Camera.hx",51);
+							HX_STACK_PUSH("*::closure","Camera.hx",52);
 							{
-								HX_STACK_LINE(51)
+								HX_STACK_LINE(52)
 								if (((body->zpp_inner->wrap_pos == null()))){
-									HX_STACK_LINE(51)
+									HX_STACK_LINE(52)
 									body->zpp_inner->setupPosition();
 								}
-								HX_STACK_LINE(51)
+								HX_STACK_LINE(52)
 								return body->zpp_inner->wrap_pos;
 							}
 							return null();
 						}
 					};
-					HX_STACK_LINE(51)
+					HX_STACK_LINE(52)
 					::nape::geom::Vec2 _this = _Function_2_1::Block(body);		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(51)
+					HX_STACK_LINE(52)
 					if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-						HX_STACK_LINE(51)
+						HX_STACK_LINE(52)
 						hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 					}
-					HX_STACK_LINE(51)
+					HX_STACK_LINE(52)
 					{
-						HX_STACK_LINE(51)
+						HX_STACK_LINE(52)
 						::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-						HX_STACK_LINE(51)
+						HX_STACK_LINE(52)
 						if (((_this1->_validate_dyn() != null()))){
-							HX_STACK_LINE(51)
+							HX_STACK_LINE(52)
 							_this1->_validate();
 						}
 					}
-					HX_STACK_LINE(51)
+					HX_STACK_LINE(52)
 					return _this->zpp_inner->y;
 				}
 				return null();
 			}
 		};
-		HX_STACK_LINE(50)
+		HX_STACK_LINE(51)
 		::Camera_obj::move((_Function_1_1::Block(body) - (Float(::Mobile_obj::screenWidth) / Float((int)2))),(_Function_1_2::Block(body) - (Float(::Mobile_obj::screenHeight) / Float((int)2))),null());
 	}
 return null();
@@ -240,8 +240,8 @@ return null();
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Camera_obj,follow,(void))
 
 ::native::geom::Point Camera_obj::getPosition( ){
-	HX_STACK_PUSH("Camera::getPosition","Camera.hx",54);
-	HX_STACK_LINE(54)
+	HX_STACK_PUSH("Camera::getPosition","Camera.hx",55);
+	HX_STACK_LINE(55)
 	return ::native::geom::Point_obj::__new(::Math_obj::abs(::Main_obj::canvas->get_x()),::Math_obj::abs(::Main_obj::canvas->get_y()));
 }
 
@@ -250,14 +250,14 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(Camera_obj,getPosition,return )
 
 Void Camera_obj::setSpeed( Float speed){
 {
-		HX_STACK_PUSH("Camera::setSpeed","Camera.hx",58);
+		HX_STACK_PUSH("Camera::setSpeed","Camera.hx",59);
 		HX_STACK_ARG(speed,"speed");
-		HX_STACK_LINE(59)
+		HX_STACK_LINE(60)
 		if (((speed == (int)0))){
-			HX_STACK_LINE(59)
+			HX_STACK_LINE(60)
 			speed = (int)5;
 		}
-		HX_STACK_LINE(61)
+		HX_STACK_LINE(62)
 		::Camera_obj::cameraSpeed = speed;
 	}
 return null();
@@ -268,50 +268,50 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Camera_obj,setSpeed,(void))
 
 Void Camera_obj::render( ){
 {
-		HX_STACK_PUSH("Camera::render","Camera.hx",64);
-		HX_STACK_LINE(65)
-		Float newX = ::Camera_obj::currentX;		HX_STACK_VAR(newX,"newX");
+		HX_STACK_PUSH("Camera::render","Camera.hx",65);
 		HX_STACK_LINE(66)
+		Float newX = ::Camera_obj::currentX;		HX_STACK_VAR(newX,"newX");
+		HX_STACK_LINE(67)
 		Float newY = ::Camera_obj::currentY;		HX_STACK_VAR(newY,"newY");
-		HX_STACK_LINE(69)
+		HX_STACK_LINE(70)
 		if (((::Math_obj::abs((::Camera_obj::targetX - ::Main_obj::canvas->get_x())) < ::Camera_obj::cameraSpeed))){
-			HX_STACK_LINE(69)
+			HX_STACK_LINE(70)
 			newX = ::Camera_obj::targetX;
 		}
 		else{
-			HX_STACK_LINE(72)
+			HX_STACK_LINE(73)
 			if (((::Camera_obj::targetX > ::Main_obj::canvas->get_x()))){
-				HX_STACK_LINE(72)
+				HX_STACK_LINE(73)
 				hx::AddEq(newX,::Camera_obj::cameraSpeed);
 			}
 			else{
-				HX_STACK_LINE(74)
+				HX_STACK_LINE(75)
 				hx::SubEq(newX,::Camera_obj::cameraSpeed);
 			}
 		}
-		HX_STACK_LINE(79)
+		HX_STACK_LINE(80)
 		if (((::Math_obj::abs((::Camera_obj::targetY - ::Main_obj::canvas->get_y())) < ::Camera_obj::cameraSpeed))){
-			HX_STACK_LINE(79)
+			HX_STACK_LINE(80)
 			newY = ::Camera_obj::targetY;
 		}
 		else{
-			HX_STACK_LINE(82)
+			HX_STACK_LINE(83)
 			if (((::Camera_obj::targetY > ::Main_obj::canvas->get_y()))){
-				HX_STACK_LINE(82)
+				HX_STACK_LINE(83)
 				hx::AddEq(newY,::Camera_obj::cameraSpeed);
 			}
 			else{
-				HX_STACK_LINE(84)
+				HX_STACK_LINE(85)
 				hx::SubEq(newY,::Camera_obj::cameraSpeed);
 			}
 		}
-		HX_STACK_LINE(90)
-		::Main_obj::canvas->set_x(newX);
 		HX_STACK_LINE(91)
+		::Main_obj::canvas->set_x(newX);
+		HX_STACK_LINE(92)
 		::Main_obj::canvas->set_y(newY);
-		HX_STACK_LINE(93)
-		::Camera_obj::currentX = newX;
 		HX_STACK_LINE(94)
+		::Camera_obj::currentX = newX;
+		HX_STACK_LINE(95)
 		::Camera_obj::currentY = newY;
 	}
 return null();
@@ -321,10 +321,10 @@ return null();
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Camera_obj,render,(void))
 
 Float Camera_obj::smooth( Float data,Float previous){
-	HX_STACK_PUSH("Camera::smooth","Camera.hx",112);
+	HX_STACK_PUSH("Camera::smooth","Camera.hx",113);
 	HX_STACK_ARG(data,"data");
 	HX_STACK_ARG(previous,"previous");
-	HX_STACK_LINE(112)
+	HX_STACK_LINE(113)
 	return ((data * (((int)1 - ::Camera_obj::smoothing))) + (previous * ::Camera_obj::smoothing));
 }
 

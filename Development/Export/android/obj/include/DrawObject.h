@@ -41,6 +41,9 @@ class DrawObject_obj : public ::GameObject_obj{
 		virtual Void draw( );
 		Dynamic draw_dyn();
 
+		virtual Void erase( ::native::display::Sprite erase);
+		Dynamic erase_dyn();
+
 		virtual Void stopDrawing( );
 		Dynamic stopDrawing_dyn();
 
