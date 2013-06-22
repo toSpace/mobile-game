@@ -3,6 +3,9 @@
 #ifndef INCLUDED_Camera
 #include <Camera.h>
 #endif
+#ifndef INCLUDED_Drawing
+#include <Drawing.h>
+#endif
 #ifndef INCLUDED_Garbage
 #include <Garbage.h>
 #endif
@@ -111,21 +114,24 @@ Void RenderManager_obj::render( ){
 			return null();
 		}
 		HX_STACK_LINE(27)
-		::Main_obj::space->step((Float((int)1) / Float(::Main_obj::canvas->get_stage()->frameRate)),null(),null());
-		HX_STACK_LINE(37)
+		if ((!(::Drawing_obj::drawing))){
+			HX_STACK_LINE(27)
+			::Main_obj::space->step((Float((int)1) / Float(::Main_obj::canvas->get_stage()->frameRate)),null(),null());
+		}
+		HX_STACK_LINE(39)
 		::Camera_obj::render();
-		HX_STACK_LINE(40)
+		HX_STACK_LINE(42)
 		{
-			HX_STACK_LINE(40)
+			HX_STACK_LINE(42)
 			int _g = (int)0;		HX_STACK_VAR(_g,"_g");
 			Dynamic _g1 = ::RenderManager_obj::renderList;		HX_STACK_VAR(_g1,"_g1");
-			HX_STACK_LINE(40)
+			HX_STACK_LINE(42)
 			while(((_g < _g1->__Field(HX_CSTRING("length"),true)))){
-				HX_STACK_LINE(40)
+				HX_STACK_LINE(42)
 				Dynamic object = _g1->__GetItem(_g);		HX_STACK_VAR(object,"object");
-				HX_STACK_LINE(40)
+				HX_STACK_LINE(42)
 				++(_g);
-				HX_STACK_LINE(41)
+				HX_STACK_LINE(43)
 				object->__Field(HX_CSTRING("render"),true)();
 			}
 		}
@@ -138,8 +144,8 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(RenderManager_obj,render,(void))
 
 Void RenderManager_obj::pause( ){
 {
-		HX_STACK_PUSH("RenderManager::pause","RenderManager.hx",46);
-		HX_STACK_LINE(46)
+		HX_STACK_PUSH("RenderManager::pause","RenderManager.hx",48);
+		HX_STACK_LINE(48)
 		::RenderManager_obj::running = false;
 	}
 return null();
@@ -150,8 +156,8 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(RenderManager_obj,pause,(void))
 
 Void RenderManager_obj::start( ){
 {
-		HX_STACK_PUSH("RenderManager::start","RenderManager.hx",50);
-		HX_STACK_LINE(50)
+		HX_STACK_PUSH("RenderManager::start","RenderManager.hx",52);
+		HX_STACK_LINE(52)
 		::RenderManager_obj::running = true;
 	}
 return null();

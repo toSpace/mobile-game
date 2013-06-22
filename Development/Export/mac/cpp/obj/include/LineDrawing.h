@@ -35,6 +35,12 @@ class LineDrawing_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("LineDrawing"); }
 
+		virtual Void erase( );
+		Dynamic erase_dyn();
+
+		virtual Void draw( );
+		Dynamic draw_dyn();
+
 		virtual Void end( );
 		Dynamic end_dyn();
 

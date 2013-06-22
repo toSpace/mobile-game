@@ -18,6 +18,7 @@ class Drawing{
 	public static var locked:Bool = false;
 	public static var x:Float;
 	public static var y:Float;
+	public static var drawList = new Array<Dynamic>();
 
 	public static function init():Void{
 		Main.canvas.addEventListener(MouseEvent.MOUSE_DOWN,startDraw);
@@ -29,7 +30,7 @@ class Drawing{
 		drawing = true;
 
 		//draw
-		if(!erasing){
+		if(!Drawing.locked){
 			var newDrawing = new LineDrawing(e.localX, e.localY);
 		}
 	}
@@ -68,6 +69,10 @@ class Drawing{
 
 	static public function mouseOver(asset:Dynamic):Bool{
 		return asset.hitTestPoint(x, y);
+	}
+
+	static public function addDrawObject(asset:Dynamic):Void{
+		drawList.push(asset);
 	}
 
 }

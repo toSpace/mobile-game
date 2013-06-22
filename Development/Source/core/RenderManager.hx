@@ -24,7 +24,9 @@ class RenderManager{
 		if(!running){ return; }
 
 		//nieuwe nape frame aanroepen
-        Main.space.step(1 / Main.canvas.stage.frameRate);
+		if(!Drawing.drawing){
+       		Main.space.step(1 / Main.canvas.stage.frameRate);
+		}
 
         //debug rendering
         #if (flash && debug)

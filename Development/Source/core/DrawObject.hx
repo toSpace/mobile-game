@@ -32,6 +32,9 @@ class DrawObject extends GameObject{
         } else {
             loadBitmap(xmlUrl);
         }
+
+        //add to drawlist
+        Drawing.addDrawObject(this);
 	}
 
     public function loadBitmap(bitmap:Bitmap, ?physics:String='static'){
@@ -120,15 +123,15 @@ class DrawObject extends GameObject{
                 var checkActive = Drawing.mouseOver(asset); 
 
                 if( checkActive && !drawing){
-                    startDrawing();
+                    //startDrawing();
                 } 
-                else if (checkActive && drawing){
-                    draw();
+                else if (drawing){
+                    //draw();
                 }
 
             } else{
                 if(drawing == true){
-                    stopDrawing();
+                    //stopDrawing();
                 }
             }
             
@@ -160,26 +163,36 @@ class DrawObject extends GameObject{
     private function stopDrawing():Void{
         drawing=false;
 
+        erase(drawingCanvas);
+
+        
+    }
+
+    public function erase(erase:Sprite):Void{
         //remove body
         Main.space.bodies.remove(body);
 
         //make matrix
-        var bounds:Rectangle = drawingCanvas.getBounds(Main.canvas);
+        var bounds:Rectangle = erase.getBounds(Main.canvas);
         var matrix = new Matrix();
-        matrix.tx = 0-asset.x;
-        matrix.ty = 0-asset.y;
+        //var point:Point = asset.localToGlobal( new Point(0,0) );
+        //var point2:Point = Main.canvas.globalToLocal(point);
+
+        matrix.tx = 0 - asset.x;
+        matrix.ty = 0 - asset.y;
 
         //color
         var color = new ColorTransform();
         color.alphaMultiplier = 1;
 
+        //transform drawing to bitmap
+        //invert pixels
+
         //erease some bitmap thingies
-        asset.bitmapData.draw( drawingCanvas, matrix, color, BlendMode.ERASE);
-        Main.canvas.removeChild(drawingCanvas);
+        asset.bitmapData.draw( erase, matrix, color, BlendMode.ERASE);
 
         //convert again
         updateBody();
-        
     }
 
     private function draw():Void{

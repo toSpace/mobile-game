@@ -37,6 +37,7 @@ class Drawing_obj : public hx::Object{
 		static bool locked; /* REM */ 
 		static Float x; /* REM */ 
 		static Float y; /* REM */ 
+		static Dynamic drawList; /* REM */ 
 		static Void init( );
 		static Dynamic init_dyn();
 
@@ -54,6 +55,9 @@ class Drawing_obj : public hx::Object{
 
 		static bool mouseOver( Dynamic asset);
 		static Dynamic mouseOver_dyn();
+
+		static Void addDrawObject( Dynamic asset);
+		static Dynamic addDrawObject_dyn();
 
 };
 

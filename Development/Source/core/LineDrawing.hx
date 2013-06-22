@@ -5,6 +5,7 @@ import nme.display.BitmapData;
 import nme.display.Bitmap;
 import nme.geom.Rectangle;
 import nme.geom.Matrix;
+import nme.geom.ColorTransform;
 
 //nape
 
@@ -17,12 +18,17 @@ class LineDrawing {
 	public function new(x, y){
 
 		stopped = false;
+		Drawing.locked = true;
 
 		//make
 		drawing = new Sprite();
 
 	    //start drawing
-	    drawing.graphics.lineStyle(Settings.brushSize,0x000000, 1, true);
+	    if(Drawing.erasing){
+	    	drawing.graphics.lineStyle(Settings.brushSize,0xFF0000, 1, true);
+	    } else {
+	    	drawing.graphics.lineStyle(Settings.brushSize,0x000000, 0.5, true);
+	    }
 	    drawing.graphics.moveTo(x, y);
 
 		Main.canvas.addChild(drawing);
@@ -32,18 +38,15 @@ class LineDrawing {
 
 	public function render():Void{
 
-		//drawing
-		if(!Drawing.erasing){
-			//draw
-			if(Drawing.drawing){
-				//var point:Point = Main.canvas.globalToLocal( new Point(Drawing.x, Drawing.y) );
-				drawing.graphics.lineTo(Drawing.x, Drawing.y);
-			} 
-			//stop draw
-			else {
-				if (!stopped){
-					end();
-				}
+		//draw
+		if(Drawing.drawing){
+			//var point:Point = Main.canvas.globalToLocal( new Point(Drawing.x, Drawing.y) );
+			drawing.graphics.lineTo(Drawing.x, Drawing.y);
+		} 
+		//stop draw
+		else {
+			if (!stopped){
+				end();
 			}
 		}
 
@@ -51,6 +54,18 @@ class LineDrawing {
 
 	public function end():Void{
 		stopped = true;
+
+		if(!Drawing.erasing){
+			draw();
+		} else {
+			erase();
+		}
+
+		//remove from render canvas [TODO]
+    	Drawing.locked = false;
+	}
+
+	private function draw(){
 
 		var bounds:Rectangle = drawing.getBounds(Main.canvas);
 
@@ -62,11 +77,24 @@ class LineDrawing {
     	bitmap.x = bounds.x;
     	bitmap.y = bounds.y;
 
-    	bitmap.bitmapData.draw(drawing, matrix);
+    	var color = new ColorTransform();
+    	color.alphaOffset = 255;
+
+    	bitmap.bitmapData.draw(drawing, matrix, color);
 
     	//Main.canvas.addChild(bitmap);
     	Main.canvas.removeChild(drawing);
     	var object = new DrawObject(bitmap);
+
 	}
+
+	private function erase(){
+
+		for(object in Drawing.drawList){
+			if(object.inView()) object.erase(drawing);
+        }
+
+        Main.canvas.removeChild(drawing);
+	}	
 
 }

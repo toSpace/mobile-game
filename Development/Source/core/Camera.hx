@@ -28,12 +28,13 @@ class Camera
 
 	public static function move(x:Float, y:Float, ?direct:Bool=false){
 
-		//check
+		//check for overflow
 		if(x < 0){
 			x = 0;
 		}
-		if(y > Mobile.screenHeight){
-			y = Mobile.screenHeight;
+
+		if(y > 0){
+			y = 0;
 		}
 
 		if(direct){
