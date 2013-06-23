@@ -69,7 +69,7 @@ class BackgroundObject{
 		delta = x - cameraPos;
 		delta *= speed;
 
-		asset.x = x - delta;
+		asset.x = Math.ceil(x - delta);
 	}
 
 	public function setBlendmode(mode:String):Void{
