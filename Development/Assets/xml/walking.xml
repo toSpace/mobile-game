@@ -7,8 +7,8 @@
 	<clip>walk</clip>
 	<material
 		elasticity = "0"
-		dynamicFriction = "0"
-		staticFriction = "1"
+		dynamicFriction = "0.77"
+		staticFriction = "1.2"
 		density = "1"
 		rollingFriction = "0.001"
 	></material>

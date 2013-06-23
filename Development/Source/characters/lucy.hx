@@ -35,4 +35,8 @@ class Lucy extends Character {
 
 	//todo collisions
 
+	//walking
+	//http://deltaluca.me.uk/forum/index.php/m/655/969b52bea8a80fa8d8d6b52ed8d8f6be/
+	//return new Vec2(acceleration, 0).rotate(_combinedGroundAngle);
+
 }
