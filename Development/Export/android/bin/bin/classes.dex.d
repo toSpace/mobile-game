@@ -1,6 +1,9 @@
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/bin/classes.dex : \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/bin/classes/com/tospace/game/BuildConfig.class \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/bin/classes/com/tospace/game/MainActivity.class \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/bin/classes/com/tospace/game/R$attr.class \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/bin/classes/com/tospace/game/R$drawable.class \
+/Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/bin/classes/com/tospace/game/R.class \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/bin/classes/org/haxe/HXCPP.class \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/bin/classes/org/haxe/nme/GameActivity$1.class \
 /Users/daveyvanderwoert/projects/toSpace/mobile-game/Development/Export/android/bin/bin/classes/org/haxe/nme/GameActivity.class \

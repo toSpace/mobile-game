@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <project>
 	
-	<meta title="Heuvels" package="com.tospace.game" version="1.0.0" company="toSpace" />
+	<meta title="Game" package="com.tospace.game" version="1.0.0" company="toSpace" />
 	<app main="Main" path="Export" file="Game" />
 
 	<window width="1024" height="768" fps="60" resizable="true" hardware="true" unless="mobile" />
@@ -22,5 +22,7 @@
 	
 	<assets path="Assets" rename="assets" exclude="nme.svg" />
 	<icon path="Assets/nme.svg" />
+
+	<template path="template/AndroidManifest.xml" if="android" rename="AndroidManifest.xml"></template>
 	
 </project>

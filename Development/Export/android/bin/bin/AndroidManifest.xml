@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="preferExternal" android:versionCode="58" android:versionName="1.0.0" package="com.tospace.game">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="internalOnly" android:versionCode="66" android:versionName="1.0.0" package="com.tospace.game">
 
-	<application android:label="Heuvels" android:debuggable="true">
+	<application android:label="Game" android:debuggable="true" android:icon="@drawable/icon">
 		
 		
 		
-		<activity android:name="MainActivity" android:label="Heuvels" android:configChanges="keyboard|keyboardHidden|orientation" android:screenOrientation="landscape">
+		<activity android:name="MainActivity" android:label="Game" android:configChanges="keyboard|keyboardHidden|orientation" android:screenOrientation="landscape">
 			
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />

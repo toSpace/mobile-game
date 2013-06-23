@@ -3,6 +3,7 @@
 	<brushsize>30</brushsize>
 	<cameraoverflow>200</cameraoverflow>
 	<flockspeed>7</flockspeed>
-	<flockvelocity>75</flockvelocity>
+	<flockvelocity>40</flockvelocity>
+	<paralaxDepth>2</paralaxDepth>
 
 </settings>

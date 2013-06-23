@@ -20,7 +20,7 @@ class ApplicationMain
 		wx.App.boot(function()
 		{
 			
-			frame = wx.Frame.create(null, null, "Heuvels", null, { width: 640, height: 480 });
+			frame = wx.Frame.create(null, null, "Game", null, { width: 640, height: 480 });
 			
 			#if nme
 			var stage = wx.NMEStage.create(frame, null, null, { width: 640, height: 480 });
@@ -83,7 +83,7 @@ class ApplicationMain
 			(true ? nme.Lib.FULLSCREEN : 0) |
 			(0 == 4 ? nme.Lib.HW_AA_HIRES : 0) |
 			(0 == 2 ? nme.Lib.HW_AA : 0),
-			"Heuvels"
+			"Game"
 			
 		);
 		#end
