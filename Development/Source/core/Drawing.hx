@@ -29,9 +29,12 @@ class Drawing{
 	static private function startDraw(e:MouseEvent):Void{
 		drawing = true;
 
+		x = e.localX;
+		y = e.localY;
+
 		//draw
 		if(!Drawing.locked){
-			var newDrawing = new LineDrawing(e.localX, e.localY);
+			var newDrawing = new LineDrawing(x, y);
 		}
 	}
 
