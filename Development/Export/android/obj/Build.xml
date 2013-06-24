@@ -4299,6 +4299,7 @@
    <depend name="include/Lucy.h"/>
    <depend name="include/Settings.h"/>
    <depend name="include/SpriteObject.h"/>
+   <depend name="include/Std.h"/>
    <depend name="include/aze/display/TileBase.h"/>
    <depend name="include/aze/display/TileClip.h"/>
    <depend name="include/aze/display/TileSprite.h"/>

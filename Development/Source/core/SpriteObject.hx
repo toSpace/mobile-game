@@ -19,8 +19,8 @@ import nape.phys.BodyType;
 class SpriteObject{
 
 	var tLast:Float;
-	var layer:TileLayer;
-	var xml:Hash<Dynamic>;
+	public var layer:TileLayer;
+	public var xml:Hash<Dynamic>;
 	public var body:Body;
 	public var clip:TileClip;
 	

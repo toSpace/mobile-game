@@ -9,6 +9,7 @@
 HX_DECLARE_CLASS0(DrawObject)
 HX_DECLARE_CLASS0(GameObject)
 HX_DECLARE_CLASS2(native,display,Bitmap)
+HX_DECLARE_CLASS2(native,display,BitmapData)
 HX_DECLARE_CLASS2(native,display,DisplayObject)
 HX_DECLARE_CLASS2(native,display,DisplayObjectContainer)
 HX_DECLARE_CLASS2(native,display,IBitmapDrawable)
@@ -37,6 +38,9 @@ class DrawObject_obj : public ::GameObject_obj{
 		void __Mark(HX_MARK_PARAMS);
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("DrawObject"); }
+
+		virtual ::native::display::BitmapData invert( ::native::display::BitmapData image);
+		Dynamic invert_dyn();
 
 		virtual Void draw( );
 		Dynamic draw_dyn();

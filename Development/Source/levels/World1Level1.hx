@@ -5,9 +5,6 @@ class World1Level1 extends Level {
 		//load background
 		#if !debug
 
-		// var bg1 = new BackgroundObject('bg.xml');
-		#end
-
 		//layer 6
 		//sterren (fixer?)
 		//zon (fixex?)
@@ -58,14 +55,14 @@ class World1Level1 extends Level {
 		var lvl1_bg_l2_tree5 = new BackgroundObject('world1/lvl1/bg/l2/lvl1_bg_l2_tree5.xml');
 		var lvl1_bg_l2_fog1 = new BackgroundObject('world1/lvl1/bg/l2/lvl1_bg_l2_fog1.xml');
 		
-
-		
 		//bg layer 1
 		var lvl1_bg_l1_hill1 = new BackgroundObject('world1/lvl1/bg/l1/lvl1_bg_l1_hill1.xml');
 		var lvl1_bg_l1_hill2 = new BackgroundObject('world1/lvl1/bg/l1/lvl1_bg_l1_hill2.xml');
 		var lvl1_bg_l1_hill3 = new BackgroundObject('world1/lvl1/bg/l1/lvl1_bg_l1_hill3.xml');
 		var lvl1_bg_l1_hill4 = new BackgroundObject('world1/lvl1/bg/l1/lvl1_bg_l1_hill4.xml');
 		var lvl1_bg_l1_fog1 = new BackgroundObject('world1/lvl1/bg/l1/lvl1_bg_l1_fog1.xml');
+
+		#end
 		
 		//fg layer 1 (erasable)
 		var lvl1_fg_l1_1 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_1.xml');
@@ -89,6 +86,7 @@ class World1Level1 extends Level {
 		var lvl1_fg_l2_tree2 = new BackgroundObject('world1/lvl1/fg/l2/lvl1_fg_l2_tree2.xml');
 		var lvl1_fg_l2_tree3 = new BackgroundObject('world1/lvl1/fg/l2/lvl1_fg_l2_tree3.xml');
 		var lvl1_fg_l2_tree4 = new BackgroundObject('world1/lvl1/fg/l2/lvl1_fg_l2_tree4.xml');
+
 
     	var lucy = new Lucy();
 

@@ -15,6 +15,9 @@
 #ifndef INCLUDED_SpriteObject
 #include <SpriteObject.h>
 #endif
+#ifndef INCLUDED_Std
+#include <Std.h>
+#endif
 #ifndef INCLUDED_aze_display_TileBase
 #include <aze/display/TileBase.h>
 #endif
@@ -102,6 +105,25 @@ HX_STACK_PUSH("Lucy::new","Lucy.hx",4);
 	};
 	HX_STACK_LINE(14)
 	this->prevX = _Function_1_1::Block(this);
+	HX_STACK_LINE(15)
+	{
+		HX_STACK_LINE(15)
+		::nape::phys::Body _this = this->lucy->body;		HX_STACK_VAR(_this,"_this");
+		HX_STACK_LINE(15)
+		{
+			HX_STACK_LINE(15)
+			_this->zpp_inner->immutable_midstep((HX_CSTRING("Body::") + ::Std_obj::string(false)));
+			HX_STACK_LINE(15)
+			if (((!(_this->zpp_inner->norotate) != false))){
+				HX_STACK_LINE(15)
+				_this->zpp_inner->norotate = true;
+				HX_STACK_LINE(15)
+				_this->zpp_inner->invalidate_inertia();
+			}
+		}
+		HX_STACK_LINE(15)
+		!(_this->zpp_inner->norotate);
+	}
 }
 ;
 	return null();
@@ -122,157 +144,157 @@ Dynamic Lucy_obj::__Create(hx::DynamicArray inArgs)
 
 Void Lucy_obj::render( ){
 {
-		HX_STACK_PUSH("Lucy::render","Lucy.hx",17);
+		HX_STACK_PUSH("Lucy::render","Lucy.hx",18);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(19)
+		HX_STACK_LINE(20)
 		this->walk(this->lucy->body,::Settings_obj::flockSpeed,::Settings_obj::flockVelocity);
 		struct _Function_1_1{
 			inline static Float Block( ::Lucy_obj *__this){
-				HX_STACK_PUSH("*::closure","Lucy.hx",22);
+				HX_STACK_PUSH("*::closure","Lucy.hx",23);
 				{
 					struct _Function_2_1{
 						inline static ::nape::geom::Vec2 Block( ::Lucy_obj *__this){
-							HX_STACK_PUSH("*::closure","Lucy.hx",22);
+							HX_STACK_PUSH("*::closure","Lucy.hx",23);
 							{
-								HX_STACK_LINE(22)
+								HX_STACK_LINE(23)
 								::nape::phys::Body _this = __this->lucy->body;		HX_STACK_VAR(_this,"_this");
-								HX_STACK_LINE(22)
+								HX_STACK_LINE(23)
 								if (((_this->zpp_inner->wrap_pos == null()))){
-									HX_STACK_LINE(22)
+									HX_STACK_LINE(23)
 									_this->zpp_inner->setupPosition();
 								}
-								HX_STACK_LINE(22)
+								HX_STACK_LINE(23)
 								return _this->zpp_inner->wrap_pos;
 							}
 							return null();
 						}
 					};
-					HX_STACK_LINE(22)
+					HX_STACK_LINE(23)
 					::nape::geom::Vec2 _this = _Function_2_1::Block(__this);		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(22)
+					HX_STACK_LINE(23)
 					if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-						HX_STACK_LINE(22)
+						HX_STACK_LINE(23)
 						hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 					}
-					HX_STACK_LINE(22)
+					HX_STACK_LINE(23)
 					{
-						HX_STACK_LINE(22)
+						HX_STACK_LINE(23)
 						::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-						HX_STACK_LINE(22)
+						HX_STACK_LINE(23)
 						if (((_this1->_validate_dyn() != null()))){
-							HX_STACK_LINE(22)
+							HX_STACK_LINE(23)
 							_this1->_validate();
 						}
 					}
-					HX_STACK_LINE(22)
+					HX_STACK_LINE(23)
 					return _this->zpp_inner->x;
 				}
 				return null();
 			}
 		};
-		HX_STACK_LINE(22)
+		HX_STACK_LINE(23)
 		if (((this->prevX == _Function_1_1::Block(this)))){
-			HX_STACK_LINE(23)
-			this->lucy->clip->stop();
 			HX_STACK_LINE(24)
+			this->lucy->clip->stop();
+			HX_STACK_LINE(25)
 			this->stopped = true;
 		}
 		struct _Function_1_2{
 			inline static Float Block( ::Lucy_obj *__this){
-				HX_STACK_PUSH("*::closure","Lucy.hx",27);
+				HX_STACK_PUSH("*::closure","Lucy.hx",28);
 				{
 					struct _Function_2_1{
 						inline static ::nape::geom::Vec2 Block( ::Lucy_obj *__this){
-							HX_STACK_PUSH("*::closure","Lucy.hx",27);
+							HX_STACK_PUSH("*::closure","Lucy.hx",28);
 							{
-								HX_STACK_LINE(27)
+								HX_STACK_LINE(28)
 								::nape::phys::Body _this = __this->lucy->body;		HX_STACK_VAR(_this,"_this");
-								HX_STACK_LINE(27)
+								HX_STACK_LINE(28)
 								if (((_this->zpp_inner->wrap_pos == null()))){
-									HX_STACK_LINE(27)
+									HX_STACK_LINE(28)
 									_this->zpp_inner->setupPosition();
 								}
-								HX_STACK_LINE(27)
+								HX_STACK_LINE(28)
 								return _this->zpp_inner->wrap_pos;
 							}
 							return null();
 						}
 					};
-					HX_STACK_LINE(27)
+					HX_STACK_LINE(28)
 					::nape::geom::Vec2 _this = _Function_2_1::Block(__this);		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(27)
+					HX_STACK_LINE(28)
 					if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-						HX_STACK_LINE(27)
+						HX_STACK_LINE(28)
 						hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 					}
-					HX_STACK_LINE(27)
+					HX_STACK_LINE(28)
 					{
-						HX_STACK_LINE(27)
+						HX_STACK_LINE(28)
 						::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-						HX_STACK_LINE(27)
+						HX_STACK_LINE(28)
 						if (((_this1->_validate_dyn() != null()))){
-							HX_STACK_LINE(27)
+							HX_STACK_LINE(28)
 							_this1->_validate();
 						}
 					}
-					HX_STACK_LINE(27)
+					HX_STACK_LINE(28)
 					return _this->zpp_inner->x;
 				}
 				return null();
 			}
 		};
-		HX_STACK_LINE(27)
+		HX_STACK_LINE(28)
 		if (((bool((this->prevX != _Function_1_2::Block(this))) && bool((this->stopped == true))))){
-			HX_STACK_LINE(27)
+			HX_STACK_LINE(28)
 			this->lucy->clip->play();
 		}
 		struct _Function_1_3{
 			inline static Float Block( ::Lucy_obj *__this){
-				HX_STACK_PUSH("*::closure","Lucy.hx",31);
+				HX_STACK_PUSH("*::closure","Lucy.hx",32);
 				{
 					struct _Function_2_1{
 						inline static ::nape::geom::Vec2 Block( ::Lucy_obj *__this){
-							HX_STACK_PUSH("*::closure","Lucy.hx",31);
+							HX_STACK_PUSH("*::closure","Lucy.hx",32);
 							{
-								HX_STACK_LINE(31)
+								HX_STACK_LINE(32)
 								::nape::phys::Body _this = __this->lucy->body;		HX_STACK_VAR(_this,"_this");
-								HX_STACK_LINE(31)
+								HX_STACK_LINE(32)
 								if (((_this->zpp_inner->wrap_pos == null()))){
-									HX_STACK_LINE(31)
+									HX_STACK_LINE(32)
 									_this->zpp_inner->setupPosition();
 								}
-								HX_STACK_LINE(31)
+								HX_STACK_LINE(32)
 								return _this->zpp_inner->wrap_pos;
 							}
 							return null();
 						}
 					};
-					HX_STACK_LINE(31)
+					HX_STACK_LINE(32)
 					::nape::geom::Vec2 _this = _Function_2_1::Block(__this);		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(31)
+					HX_STACK_LINE(32)
 					if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-						HX_STACK_LINE(31)
+						HX_STACK_LINE(32)
 						hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 					}
-					HX_STACK_LINE(31)
+					HX_STACK_LINE(32)
 					{
-						HX_STACK_LINE(31)
+						HX_STACK_LINE(32)
 						::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-						HX_STACK_LINE(31)
+						HX_STACK_LINE(32)
 						if (((_this1->_validate_dyn() != null()))){
-							HX_STACK_LINE(31)
+							HX_STACK_LINE(32)
 							_this1->_validate();
 						}
 					}
-					HX_STACK_LINE(31)
+					HX_STACK_LINE(32)
 					return _this->zpp_inner->x;
 				}
 				return null();
 			}
 		};
-		HX_STACK_LINE(31)
+		HX_STACK_LINE(32)
 		this->prevX = _Function_1_3::Block(this);
-		HX_STACK_LINE(33)
+		HX_STACK_LINE(34)
 		::Camera_obj::follow(this->lucy->body);
 	}
 return null();

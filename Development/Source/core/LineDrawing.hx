@@ -56,16 +56,17 @@ class LineDrawing {
 		stopped = true;
 
 		if(!Drawing.erasing){
-			draw();
+			draw(false);
 		} else {
-			erase();
+			//erase();
+			draw(true);
 		}
 
 		//remove from render canvas [TODO]
     	Drawing.locked = false;
 	}
 
-	private function draw(){
+	private function draw(erasing:Bool):Void{
 
 		var bounds:Rectangle = drawing.getBounds(Main.canvas);
 
@@ -78,20 +79,28 @@ class LineDrawing {
     	bitmap.y = bounds.y;
 
     	var color = new ColorTransform();
-    	color.alphaOffset = 255;
+    	if(!erasing){
+			color.alphaOffset = 255;
+    	} else {
+    		//color.alphaMultiplier = -1;
+    	}
 
     	bitmap.bitmapData.draw(drawing, matrix, color);
 
     	//Main.canvas.addChild(bitmap);
-    	Main.canvas.removeChild(drawing);
-    	var object = new DrawObject(bitmap);
+    	if(!erasing){	
+	    	Main.canvas.removeChild(drawing);
+	    	var object = new DrawObject(bitmap);
+    	} else {
+    		erase(bitmap);
+    	}
 
 	}
 
-	private function erase(){
+	private function erase(bitmap:Bitmap):Void{
 
 		for(object in Drawing.drawList){
-			if(object.inView()) object.erase(drawing);
+			if(object.inView()) object.erase(drawing, bitmap);
         }
 
         Main.canvas.removeChild(drawing);

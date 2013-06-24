@@ -12,6 +12,8 @@ import nme.geom.Point;
 import nme.geom.Rectangle;
 import nme.display.BlendMode;
 import nme.geom.ColorTransform;
+import nme.Vector;
+import nme.display.BitmapDataChannel;
 
 //nape
 import nape.space.Space;
@@ -163,12 +165,12 @@ class DrawObject extends GameObject{
     private function stopDrawing():Void{
         drawing=false;
 
-        erase(drawingCanvas);
+        //erase(drawingCanvas);
 
         
     }
 
-    public function erase(erase:Sprite):Void{
+    public function erase(erase:Sprite, bitmap:Bitmap):Void{
         //remove body
         Main.space.bodies.remove(body);
 
@@ -183,12 +185,14 @@ class DrawObject extends GameObject{
 
         //color
         var color = new ColorTransform();
-        color.alphaMultiplier = 1;
+        //color.alphaMultiplier = 1;
 
         //transform drawing to bitmap
-        //invert pixels
+        //asset.bitmapData.copyPixels(asset.bitmapData, new Rectangle(0, 0, asset.width, asset.height), new Point(0,0), bitmap.bitmapData,  new Point(-asset.x,-asset.y), true);
+        //asset.bitmapData.copyChannel(bitmap.bitmapData, new Rectangle(0, 0, bitmap.width, bitmap.height), new Point(-asset.x,-asset.y), BitmapDataChannel.ALPHA, BitmapDataChannel.ALPHA);
 
         //erease some bitmap thingies
+        asset.blendMode = BlendMode.LAYER;
         asset.bitmapData.draw( erase, matrix, color, BlendMode.ERASE);
 
         //convert again
@@ -200,6 +204,36 @@ class DrawObject extends GameObject{
         drawingCanvas.graphics.lineTo(Drawing.x, Drawing.y);
         //drawingCanvas.x = asset.x;
         //drawingCanvas.y = asset.y;
+    }
+
+    private function invert(image:BitmapData):BitmapData{
+        var pixels = new Vector();
+        for(y in 0 ... image.height){
+            for(x in 0 ... image.width){
+
+                //(r<<16 | g<<8 | b)
+                //image.setPixel32(x, y, (255 - (image.getPixel32(x,y)>>>24) | image.getPixel(x,y));
+
+                var pixel:Int = image.getPixel32(x,y);
+                var a:Int = 255 - image.getPixel32(x,y)>>>24;
+                var r:Int = pixel >>> 16;
+                var g:Int = pixel >>> 8 & 0xFF;
+                var b:Int = pixel & 0xFF;
+
+                var i =
+                    ((a & 255) << 24) |
+                    ((r & 255) << 16) |
+                    ((g & 255) << 8) |
+                    (b & 255);
+
+                pixels.push(i);
+                
+            }
+        }
+
+        image.setVector(new Rectangle(0,0, image.width, image.height), pixels);
+
+        return image;
     }
 
 }

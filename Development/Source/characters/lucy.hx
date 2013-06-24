@@ -1,5 +1,12 @@
 //nape
 import nape.geom.Vec2;
+import nape.space.Space;
+import nape.phys.Body;
+import nape.phys.BodyType;
+import nape.phys.Material;
+import nape.shape.Circle;
+import nape.shape.Polygon;
+import nape.constraint.PivotJoint;
 
 class Lucy extends Character {
 
@@ -11,7 +18,9 @@ class Lucy extends Character {
 		super();
 
 		lucy = new SpriteObject('walking.xml', 'walking-sparrow.xml');
+		lucy.body = generateBody( lucy.xml.get('x'), lucy.xml.get('y') );
 		prevX = lucy.body.position.x;
+		//lucy.body.allowRotation = false;
 	}
 
 	override public function render():Void{
@@ -31,6 +40,33 @@ class Lucy extends Character {
 		prevX = lucy.body.position.x;
 
 		Camera.follow(lucy.body);
+	}
+
+	private function generateBody(x: Float, y:Float):Body{
+		var body = new Body();
+		var _body = lucy.body;
+		var circle = new Circle(lucy.clip.width/5);
+		var box = new Polygon( Polygon.box(lucy.clip.width/2.5, lucy.clip.height - (lucy.clip.width/4) ) ); 
+
+		body.shapes.add(circle);
+		body.shapes.add(box);
+		body.space = Main.space;
+		body.position.setxy(x, y);
+		circle.localCOM = new Vec2(0, circle.bounds.height/3);
+
+		lucy.body = body;
+		body.space = Main.space;
+
+		body.userData.graphic = lucy.layer.view;
+        var pivot:Vec2 = new Vec2(0,0);
+        body.userData.graphicOffset = pivot;
+
+        body.allowRotation = false;
+        body.setShapeMaterials(new Material(0.1, 1.0, 2.0, 5.0, 0.001));
+
+        _body.space = null;
+
+        return body;
 	}
 
 	//todo collisions

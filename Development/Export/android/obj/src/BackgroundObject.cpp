@@ -12,6 +12,9 @@
 #ifndef INCLUDED_Main
 #include <Main.h>
 #endif
+#ifndef INCLUDED_hxMath
+#include <hxMath.h>
+#endif
 #ifndef INCLUDED_Mobile
 #include <Mobile.h>
 #endif
@@ -201,7 +204,7 @@ Void BackgroundObject_obj::paralax( ){
 		HX_STACK_LINE(70)
 		hx::MultEq(delta,this->speed);
 		HX_STACK_LINE(72)
-		this->asset->set_x((this->x - delta));
+		this->asset->set_x(::Math_obj::ceil((this->x - delta)));
 	}
 return null();
 }
