@@ -42,17 +42,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(StringTools_obj,urlEncode,return )
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(StringTools_obj,urlDecode,return )
 
-bool StringTools_obj::startsWith( ::String s,::String start){
-	HX_STACK_PUSH("StringTools::startsWith","/usr/lib/haxe/std/StringTools.hx",124);
-	HX_STACK_ARG(s,"s");
-	HX_STACK_ARG(start,"start");
-	HX_STACK_LINE(124)
-	return (bool((s.length >= start.length)) && bool((s.substr((int)0,start.length) == start)));
-}
-
-
-STATIC_HX_DEFINE_DYNAMIC_FUNC2(StringTools_obj,startsWith,return )
-
 bool StringTools_obj::isSpace( ::String s,int pos){
 	HX_STACK_PUSH("StringTools::isSpace","/usr/lib/haxe/std/StringTools.hx",162);
 	HX_STACK_ARG(s,"s");
@@ -210,9 +199,6 @@ Dynamic StringTools_obj::__Field(const ::String &inName,bool inCallProp)
 	case 9:
 		if (HX_FIELD_EQ(inName,"urlEncode") ) { return urlEncode_dyn(); }
 		if (HX_FIELD_EQ(inName,"urlDecode") ) { return urlDecode_dyn(); }
-		break;
-	case 10:
-		if (HX_FIELD_EQ(inName,"startsWith") ) { return startsWith_dyn(); }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -230,7 +216,6 @@ void StringTools_obj::__GetFields(Array< ::String> &outFields)
 static ::String sStaticFields[] = {
 	HX_CSTRING("urlEncode"),
 	HX_CSTRING("urlDecode"),
-	HX_CSTRING("startsWith"),
 	HX_CSTRING("isSpace"),
 	HX_CSTRING("ltrim"),
 	HX_CSTRING("rtrim"),

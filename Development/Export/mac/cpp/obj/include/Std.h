@@ -37,9 +37,6 @@ class HXCPP_CLASS_ATTRIBUTES  Std_obj : public hx::Object{
 		static int _int( Float x);
 		static Dynamic _int_dyn();
 
-		static Dynamic parseInt( ::String x);
-		static Dynamic parseInt_dyn();
-
 		static Float parseFloat( ::String x);
 		static Dynamic parseFloat_dyn();
 

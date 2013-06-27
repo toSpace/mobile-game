@@ -100,39 +100,6 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC1(Xml_obj,addChild,(void))
 
-::Xml Xml_obj::firstElement( ){
-	HX_STACK_PUSH("Xml::firstElement","/usr/lib/haxe/std/cpp/_std/Xml.hx",311);
-	HX_STACK_THIS(this);
-	HX_STACK_LINE(312)
-	if (((this->_children == null()))){
-		HX_STACK_LINE(313)
-		hx::Throw (HX_CSTRING("bad nodetype"));
-	}
-	HX_STACK_LINE(314)
-	{
-		HX_STACK_LINE(314)
-		int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
-		int _g = this->_children->length;		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(314)
-		while(((_g1 < _g))){
-			HX_STACK_LINE(314)
-			int cur = (_g1)++;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(315)
-			::Xml n = this->_children->__get(cur).StaticCast< ::Xml >();		HX_STACK_VAR(n,"n");
-			HX_STACK_LINE(316)
-			if (((n->nodeType == ::Xml_obj::Element))){
-				HX_STACK_LINE(317)
-				return n;
-			}
-		}
-	}
-	HX_STACK_LINE(319)
-	return null();
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(Xml_obj,firstElement,return )
-
 Dynamic Xml_obj::elementsNamed( ::String name){
 	HX_STACK_PUSH("Xml::elementsNamed","/usr/lib/haxe/std/cpp/_std/Xml.hx",271);
 	HX_STACK_THIS(this);
@@ -242,22 +209,6 @@ Dynamic Xml_obj::iterator( ){
 
 
 HX_DEFINE_DYNAMIC_FUNC0(Xml_obj,iterator,return )
-
-bool Xml_obj::exists( ::String att){
-	HX_STACK_PUSH("Xml::exists","/usr/lib/haxe/std/cpp/_std/Xml.hx",219);
-	HX_STACK_THIS(this);
-	HX_STACK_ARG(att,"att");
-	HX_STACK_LINE(220)
-	if (((this->nodeType != ::Xml_obj::Element))){
-		HX_STACK_LINE(221)
-		hx::Throw (HX_CSTRING("bad nodeType"));
-	}
-	HX_STACK_LINE(222)
-	return ::Reflect_obj::hasField(this->_attributes,att);
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(Xml_obj,exists,return )
 
 ::String Xml_obj::get( ::String att){
 	HX_STACK_PUSH("Xml::get","/usr/lib/haxe/std/cpp/_std/Xml.hx",197);
@@ -548,7 +499,6 @@ Dynamic Xml_obj::__Field(const ::String &inName,bool inCallProp)
 	case 6:
 		if (HX_FIELD_EQ(inName,"PCData") ) { return PCData; }
 		if (HX_FIELD_EQ(inName,"_parse") ) { return _parse; }
-		if (HX_FIELD_EQ(inName,"exists") ) { return exists_dyn(); }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"Element") ) { return Element; }
@@ -573,7 +523,6 @@ Dynamic Xml_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"_attributes") ) { return _attributes; }
 		break;
 	case 12:
-		if (HX_FIELD_EQ(inName,"firstElement") ) { return firstElement_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_nodeName") ) { return get_nodeName_dyn(); }
 		break;
 	case 13:
@@ -647,10 +596,8 @@ static ::String sStaticFields[] = {
 
 static ::String sMemberFields[] = {
 	HX_CSTRING("addChild"),
-	HX_CSTRING("firstElement"),
 	HX_CSTRING("elementsNamed"),
 	HX_CSTRING("iterator"),
-	HX_CSTRING("exists"),
 	HX_CSTRING("get"),
 	HX_CSTRING("get_nodeValue"),
 	HX_CSTRING("get_nodeName"),

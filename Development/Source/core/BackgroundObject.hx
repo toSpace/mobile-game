@@ -12,48 +12,62 @@ class BackgroundObject{
 
 	public var canvas:Sprite;
 	public var asset:Bitmap;
-	public var xml:Map<String, Dynamic>;
+	//public var xml:Map<String, Dynamic>;
 	public var startX:Float;
 	public var speed:Float;
 	private var x:Float;
 
+	//xml vars
+	public var _imgPath:String;
+	public var _x:Float;
+	public var _y:Float;
+	public var _blendmode:String;
+	public var _speed:Float;
+	public var _startX:Float;
+	public var _endX:Float;
 	
 	public function new(xmlUrl:String):Void{
 		//setting correct stages
 		canvas = Main.canvas;
 
 		//read xml
-		readXml(xmlUrl);
+		if(xmlUrl != null || xmlUrl != ''){
+			readXml(xmlUrl);
+			init();
+		}
 
+	}
+
+	public function init(){
 		//get image
-		asset = new Bitmap( Assets.getBitmapData(xml.get('img')) );
-		asset.x = xml.get('x');
+		asset = new Bitmap( Assets.getBitmapData(_imgPath) );
+		asset.x = _x;
 		x = asset.x;
-		asset.y = Mobile.getY(asset) - xml.get('y');
-		setBlendmode( xml.get('blendmode') );
+		asset.y = Mobile.getY(asset) - _y ;
+		setBlendmode( _blendmode );
 		canvas.addChild(asset);
 
 		//paralax properties
-		speed = xml.get('speed');
-		startX = xml.get('startX');
+		speed = _speed;
+		startX = _startX;
 
 		//add to render manager
-		RenderManager.add(this);
+		RenderManager.add(this);	
 	}
 
-	private function readXml(url:String):Void{
+	public function readXml(url:String):Void{
 		//var p = new Map<String>();
 		var xmlFile = Assets.getText(Mobile.xml + url);
 		var read = new haxe.xml.Fast( Xml.parse(xmlFile) );
 
 		var asset = read.node.asset;
-		xml.set('img', Mobile.asset + asset.node.img.innerData);
-		xml.set('x', asset.node.pos.att.x);
-		xml.set('y', asset.node.pos.att.y);
-		xml.set('blendmode', asset.node.blendmode.innerData);
-		xml.set('speed', asset.node.paralax.innerData);
-		xml.set('startX', asset.node.paralax.att.startX);
-		xml.set('endX', asset.node.paralax.att.endX);
+		_imgPath =  Mobile.asset + asset.node.img.innerData;
+		_x = Std.parseFloat(asset.node.pos.att.x);
+		_y = Std.parseFloat(asset.node.pos.att.y);
+		_blendmode =  asset.node.blendmode.innerData;
+		_speed = Std.parseFloat(asset.node.paralax.innerData);
+		_startX = Std.parseFloat(asset.node.paralax.att.startX);
+		_endX = Std.parseFloat(asset.node.paralax.att.endX);
 
 		//return p;
 	}

@@ -2,7 +2,7 @@
 class World1Level1 extends Level {
 	
 	public override function loadLevel(){
-		/*
+		
 		//load background
 		#if !debug
 
@@ -64,6 +64,8 @@ class World1Level1 extends Level {
 		var lvl1_bg_l1_fog1 = new BackgroundObject('world1/lvl1/bg/l1/lvl1_bg_l1_fog1.xml');
 
 		#end
+
+		/*
 		
 		//fg layer 1 (erasable)
 		var lvl1_fg_l1_1 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_1.xml');

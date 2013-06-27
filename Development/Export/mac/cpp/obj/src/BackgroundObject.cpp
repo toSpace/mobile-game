@@ -6,9 +6,6 @@
 #ifndef INCLUDED_Camera
 #include <Camera.h>
 #endif
-#ifndef INCLUDED_IMap
-#include <IMap.h>
-#endif
 #ifndef INCLUDED_Main
 #include <Main.h>
 #endif
@@ -17,6 +14,9 @@
 #endif
 #ifndef INCLUDED_RenderManager
 #include <RenderManager.h>
+#endif
+#ifndef INCLUDED_Std
+#include <Std.h>
 #endif
 #ifndef INCLUDED_Xml
 #include <Xml.h>
@@ -57,9 +57,6 @@
 #ifndef INCLUDED_flash_geom_Point
 #include <flash/geom/Point.h>
 #endif
-#ifndef INCLUDED_haxe_ds_StringMap
-#include <haxe/ds/StringMap.h>
-#endif
 #ifndef INCLUDED_haxe_xml_Fast
 #include <haxe/xml/Fast.h>
 #endif
@@ -78,29 +75,29 @@
 
 Void BackgroundObject_obj::__construct(::String xmlUrl)
 {
-HX_STACK_PUSH("BackgroundObject::new","BackgroundObject.hx",21);
+HX_STACK_PUSH("BackgroundObject::new","BackgroundObject.hx",29);
 {
-	HX_STACK_LINE(23)
-	this->canvas = ::Main_obj::canvas;
-	HX_STACK_LINE(26)
-	this->readXml(xmlUrl);
-	HX_STACK_LINE(29)
-	this->asset = ::flash::display::Bitmap_obj::__new(::openfl::Assets_obj::getBitmapData(this->xml->get(HX_CSTRING("img")),null()),null(),null());
-	HX_STACK_LINE(30)
-	this->asset->set_x(this->xml->get(HX_CSTRING("x")));
 	HX_STACK_LINE(31)
-	this->x = this->asset->get_x();
-	HX_STACK_LINE(32)
-	this->asset->set_y((::Mobile_obj::getY(this->asset) - this->xml->get(HX_CSTRING("y"))));
-	HX_STACK_LINE(33)
-	this->setBlendmode(this->xml->get(HX_CSTRING("blendmode")));
+	this->canvas = ::Main_obj::canvas;
 	HX_STACK_LINE(34)
-	this->canvas->addChild(this->asset);
+	this->readXml(xmlUrl);
 	HX_STACK_LINE(37)
-	this->speed = this->xml->get(HX_CSTRING("speed"));
+	this->asset = ::flash::display::Bitmap_obj::__new(::openfl::Assets_obj::getBitmapData(this->_imgPath,null()),null(),null());
 	HX_STACK_LINE(38)
-	this->startX = this->xml->get(HX_CSTRING("startX"));
+	this->asset->set_x(this->_x);
+	HX_STACK_LINE(39)
+	this->x = this->asset->get_x();
+	HX_STACK_LINE(40)
+	this->asset->set_y((::Mobile_obj::getY(this->asset) - this->_y));
 	HX_STACK_LINE(41)
+	this->setBlendmode(this->_blendmode);
+	HX_STACK_LINE(42)
+	this->canvas->addChild(this->asset);
+	HX_STACK_LINE(45)
+	this->speed = this->_speed;
+	HX_STACK_LINE(46)
+	this->startX = this->_startX;
+	HX_STACK_LINE(49)
 	::RenderManager_obj::add(hx::ObjectPtr<OBJ_>(this));
 }
 ;
@@ -122,69 +119,69 @@ Dynamic BackgroundObject_obj::__Create(hx::DynamicArray inArgs)
 
 Void BackgroundObject_obj::setBlendmode( ::String mode){
 {
-		HX_STACK_PUSH("BackgroundObject::setBlendmode","BackgroundObject.hx",76);
+		HX_STACK_PUSH("BackgroundObject::setBlendmode","BackgroundObject.hx",84);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(mode,"mode");
-		HX_STACK_LINE(76)
+		HX_STACK_LINE(84)
 		::String _switch_1 = (mode);
 		if (  ( _switch_1==HX_CSTRING("none"))){
 		}
 		else if (  ( _switch_1==HX_CSTRING("add"))){
-			HX_STACK_LINE(81)
+			HX_STACK_LINE(89)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::ADD);
 		}
 		else if (  ( _switch_1==HX_CSTRING("alpha"))){
-			HX_STACK_LINE(83)
+			HX_STACK_LINE(91)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::ALPHA);
 		}
 		else if (  ( _switch_1==HX_CSTRING("darken"))){
-			HX_STACK_LINE(85)
+			HX_STACK_LINE(93)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::DARKEN);
 		}
 		else if (  ( _switch_1==HX_CSTRING("difference"))){
-			HX_STACK_LINE(87)
+			HX_STACK_LINE(95)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::DIFFERENCE);
 		}
 		else if (  ( _switch_1==HX_CSTRING("erase"))){
-			HX_STACK_LINE(89)
+			HX_STACK_LINE(97)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::ERASE);
 		}
 		else if (  ( _switch_1==HX_CSTRING("hardlight"))){
-			HX_STACK_LINE(91)
+			HX_STACK_LINE(99)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::HARDLIGHT);
 		}
 		else if (  ( _switch_1==HX_CSTRING("invert"))){
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(101)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::INVERT);
 		}
 		else if (  ( _switch_1==HX_CSTRING("layer"))){
-			HX_STACK_LINE(95)
+			HX_STACK_LINE(103)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::LAYER);
 		}
 		else if (  ( _switch_1==HX_CSTRING("lighten"))){
-			HX_STACK_LINE(97)
+			HX_STACK_LINE(105)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::LIGHTEN);
 		}
 		else if (  ( _switch_1==HX_CSTRING("multiply"))){
-			HX_STACK_LINE(99)
+			HX_STACK_LINE(107)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::MULTIPLY);
 		}
 		else if (  ( _switch_1==HX_CSTRING("normal"))){
-			HX_STACK_LINE(101)
+			HX_STACK_LINE(109)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::NORMAL);
 		}
 		else if (  ( _switch_1==HX_CSTRING("overlay"))){
-			HX_STACK_LINE(103)
+			HX_STACK_LINE(111)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::OVERLAY);
 		}
 		else if (  ( _switch_1==HX_CSTRING("screen"))){
-			HX_STACK_LINE(105)
+			HX_STACK_LINE(113)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::SCREEN);
 		}
 		else if (  ( _switch_1==HX_CSTRING("shader"))){
 		}
 		else if (  ( _switch_1==HX_CSTRING("subtract"))){
-			HX_STACK_LINE(111)
+			HX_STACK_LINE(119)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::SUBTRACT);
 		}
 	}
@@ -196,17 +193,17 @@ HX_DEFINE_DYNAMIC_FUNC1(BackgroundObject_obj,setBlendmode,(void))
 
 Void BackgroundObject_obj::paralax( ){
 {
-		HX_STACK_PUSH("BackgroundObject::paralax","BackgroundObject.hx",66);
+		HX_STACK_PUSH("BackgroundObject::paralax","BackgroundObject.hx",74);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(67)
+		HX_STACK_LINE(75)
 		Float cameraPos = ::Camera_obj::getPosition()->x;		HX_STACK_VAR(cameraPos,"cameraPos");
-		HX_STACK_LINE(68)
+		HX_STACK_LINE(76)
 		Float delta;		HX_STACK_VAR(delta,"delta");
-		HX_STACK_LINE(70)
+		HX_STACK_LINE(78)
 		delta = (this->x - cameraPos);
-		HX_STACK_LINE(71)
+		HX_STACK_LINE(79)
 		hx::MultEq(delta,this->speed);
-		HX_STACK_LINE(73)
+		HX_STACK_LINE(81)
 		this->asset->set_x(::Math_obj::ceil((this->x - delta)));
 	}
 return null();
@@ -217,9 +214,9 @@ HX_DEFINE_DYNAMIC_FUNC0(BackgroundObject_obj,paralax,(void))
 
 Void BackgroundObject_obj::render( ){
 {
-		HX_STACK_PUSH("BackgroundObject::render","BackgroundObject.hx",61);
+		HX_STACK_PUSH("BackgroundObject::render","BackgroundObject.hx",69);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(61)
+		HX_STACK_LINE(69)
 		this->paralax();
 	}
 return null();
@@ -230,29 +227,29 @@ HX_DEFINE_DYNAMIC_FUNC0(BackgroundObject_obj,render,(void))
 
 Void BackgroundObject_obj::readXml( ::String url){
 {
-		HX_STACK_PUSH("BackgroundObject::readXml","BackgroundObject.hx",44);
+		HX_STACK_PUSH("BackgroundObject::readXml","BackgroundObject.hx",52);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(url,"url");
-		HX_STACK_LINE(46)
-		::String xmlFile = ::openfl::Assets_obj::getText((::Mobile_obj::xml + url));		HX_STACK_VAR(xmlFile,"xmlFile");
-		HX_STACK_LINE(47)
-		::haxe::xml::Fast read = ::haxe::xml::Fast_obj::__new(::Xml_obj::parse(xmlFile));		HX_STACK_VAR(read,"read");
-		HX_STACK_LINE(49)
-		::haxe::xml::Fast asset = read->node->resolve(HX_CSTRING("asset"));		HX_STACK_VAR(asset,"asset");
-		HX_STACK_LINE(50)
-		this->xml->set(HX_CSTRING("img"),(::Mobile_obj::asset + asset->node->resolve(HX_CSTRING("img"))->get_innerData()));
-		HX_STACK_LINE(51)
-		this->xml->set(HX_CSTRING("x"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("x")));
-		HX_STACK_LINE(52)
-		this->xml->set(HX_CSTRING("y"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("y")));
-		HX_STACK_LINE(53)
-		this->xml->set(HX_CSTRING("blendmode"),asset->node->resolve(HX_CSTRING("blendmode"))->get_innerData());
 		HX_STACK_LINE(54)
-		this->xml->set(HX_CSTRING("speed"),asset->node->resolve(HX_CSTRING("paralax"))->get_innerData());
+		::String xmlFile = ::openfl::Assets_obj::getText((::Mobile_obj::xml + url));		HX_STACK_VAR(xmlFile,"xmlFile");
 		HX_STACK_LINE(55)
-		this->xml->set(HX_CSTRING("startX"),asset->node->resolve(HX_CSTRING("paralax"))->att->resolve(HX_CSTRING("startX")));
-		HX_STACK_LINE(56)
-		this->xml->set(HX_CSTRING("endX"),asset->node->resolve(HX_CSTRING("paralax"))->att->resolve(HX_CSTRING("endX")));
+		::haxe::xml::Fast read = ::haxe::xml::Fast_obj::__new(::Xml_obj::parse(xmlFile));		HX_STACK_VAR(read,"read");
+		HX_STACK_LINE(57)
+		::haxe::xml::Fast asset = read->node->resolve(HX_CSTRING("asset"));		HX_STACK_VAR(asset,"asset");
+		HX_STACK_LINE(58)
+		this->_imgPath = (::Mobile_obj::asset + asset->node->resolve(HX_CSTRING("img"))->get_innerData());
+		HX_STACK_LINE(59)
+		this->_x = ::Std_obj::parseFloat(asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("x")));
+		HX_STACK_LINE(60)
+		this->_y = ::Std_obj::parseFloat(asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("y")));
+		HX_STACK_LINE(61)
+		this->_blendmode = asset->node->resolve(HX_CSTRING("blendmode"))->get_innerData();
+		HX_STACK_LINE(62)
+		this->_speed = ::Std_obj::parseFloat(asset->node->resolve(HX_CSTRING("paralax"))->get_innerData());
+		HX_STACK_LINE(63)
+		this->_startX = ::Std_obj::parseFloat(asset->node->resolve(HX_CSTRING("paralax"))->att->resolve(HX_CSTRING("startX")));
+		HX_STACK_LINE(64)
+		this->_endX = ::Std_obj::parseFloat(asset->node->resolve(HX_CSTRING("paralax"))->att->resolve(HX_CSTRING("endX")));
 	}
 return null();
 }
@@ -268,10 +265,16 @@ BackgroundObject_obj::BackgroundObject_obj()
 void BackgroundObject_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(BackgroundObject);
+	HX_MARK_MEMBER_NAME(_endX,"_endX");
+	HX_MARK_MEMBER_NAME(_startX,"_startX");
+	HX_MARK_MEMBER_NAME(_speed,"_speed");
+	HX_MARK_MEMBER_NAME(_blendmode,"_blendmode");
+	HX_MARK_MEMBER_NAME(_y,"_y");
+	HX_MARK_MEMBER_NAME(_x,"_x");
+	HX_MARK_MEMBER_NAME(_imgPath,"_imgPath");
 	HX_MARK_MEMBER_NAME(x,"x");
 	HX_MARK_MEMBER_NAME(speed,"speed");
 	HX_MARK_MEMBER_NAME(startX,"startX");
-	HX_MARK_MEMBER_NAME(xml,"xml");
 	HX_MARK_MEMBER_NAME(asset,"asset");
 	HX_MARK_MEMBER_NAME(canvas,"canvas");
 	HX_MARK_END_CLASS();
@@ -279,10 +282,16 @@ void BackgroundObject_obj::__Mark(HX_MARK_PARAMS)
 
 void BackgroundObject_obj::__Visit(HX_VISIT_PARAMS)
 {
+	HX_VISIT_MEMBER_NAME(_endX,"_endX");
+	HX_VISIT_MEMBER_NAME(_startX,"_startX");
+	HX_VISIT_MEMBER_NAME(_speed,"_speed");
+	HX_VISIT_MEMBER_NAME(_blendmode,"_blendmode");
+	HX_VISIT_MEMBER_NAME(_y,"_y");
+	HX_VISIT_MEMBER_NAME(_x,"_x");
+	HX_VISIT_MEMBER_NAME(_imgPath,"_imgPath");
 	HX_VISIT_MEMBER_NAME(x,"x");
 	HX_VISIT_MEMBER_NAME(speed,"speed");
 	HX_VISIT_MEMBER_NAME(startX,"startX");
-	HX_VISIT_MEMBER_NAME(xml,"xml");
 	HX_VISIT_MEMBER_NAME(asset,"asset");
 	HX_VISIT_MEMBER_NAME(canvas,"canvas");
 }
@@ -293,21 +302,31 @@ Dynamic BackgroundObject_obj::__Field(const ::String &inName,bool inCallProp)
 	case 1:
 		if (HX_FIELD_EQ(inName,"x") ) { return x; }
 		break;
-	case 3:
-		if (HX_FIELD_EQ(inName,"xml") ) { return xml; }
+	case 2:
+		if (HX_FIELD_EQ(inName,"_y") ) { return _y; }
+		if (HX_FIELD_EQ(inName,"_x") ) { return _x; }
 		break;
 	case 5:
+		if (HX_FIELD_EQ(inName,"_endX") ) { return _endX; }
 		if (HX_FIELD_EQ(inName,"speed") ) { return speed; }
 		if (HX_FIELD_EQ(inName,"asset") ) { return asset; }
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"render") ) { return render_dyn(); }
+		if (HX_FIELD_EQ(inName,"_speed") ) { return _speed; }
 		if (HX_FIELD_EQ(inName,"startX") ) { return startX; }
 		if (HX_FIELD_EQ(inName,"canvas") ) { return canvas; }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"paralax") ) { return paralax_dyn(); }
 		if (HX_FIELD_EQ(inName,"readXml") ) { return readXml_dyn(); }
+		if (HX_FIELD_EQ(inName,"_startX") ) { return _startX; }
+		break;
+	case 8:
+		if (HX_FIELD_EQ(inName,"_imgPath") ) { return _imgPath; }
+		break;
+	case 10:
+		if (HX_FIELD_EQ(inName,"_blendmode") ) { return _blendmode; }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"setBlendmode") ) { return setBlendmode_dyn(); }
@@ -321,26 +340,44 @@ Dynamic BackgroundObject_obj::__SetField(const ::String &inName,const Dynamic &i
 	case 1:
 		if (HX_FIELD_EQ(inName,"x") ) { x=inValue.Cast< Float >(); return inValue; }
 		break;
-	case 3:
-		if (HX_FIELD_EQ(inName,"xml") ) { xml=inValue.Cast< ::haxe::ds::StringMap >(); return inValue; }
+	case 2:
+		if (HX_FIELD_EQ(inName,"_y") ) { _y=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"_x") ) { _x=inValue.Cast< Float >(); return inValue; }
 		break;
 	case 5:
+		if (HX_FIELD_EQ(inName,"_endX") ) { _endX=inValue.Cast< Float >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"speed") ) { speed=inValue.Cast< Float >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"asset") ) { asset=inValue.Cast< ::flash::display::Bitmap >(); return inValue; }
 		break;
 	case 6:
+		if (HX_FIELD_EQ(inName,"_speed") ) { _speed=inValue.Cast< Float >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"startX") ) { startX=inValue.Cast< Float >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"canvas") ) { canvas=inValue.Cast< ::flash::display::Sprite >(); return inValue; }
+		break;
+	case 7:
+		if (HX_FIELD_EQ(inName,"_startX") ) { _startX=inValue.Cast< Float >(); return inValue; }
+		break;
+	case 8:
+		if (HX_FIELD_EQ(inName,"_imgPath") ) { _imgPath=inValue.Cast< ::String >(); return inValue; }
+		break;
+	case 10:
+		if (HX_FIELD_EQ(inName,"_blendmode") ) { _blendmode=inValue.Cast< ::String >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
 void BackgroundObject_obj::__GetFields(Array< ::String> &outFields)
 {
+	outFields->push(HX_CSTRING("_endX"));
+	outFields->push(HX_CSTRING("_startX"));
+	outFields->push(HX_CSTRING("_speed"));
+	outFields->push(HX_CSTRING("_blendmode"));
+	outFields->push(HX_CSTRING("_y"));
+	outFields->push(HX_CSTRING("_x"));
+	outFields->push(HX_CSTRING("_imgPath"));
 	outFields->push(HX_CSTRING("x"));
 	outFields->push(HX_CSTRING("speed"));
 	outFields->push(HX_CSTRING("startX"));
-	outFields->push(HX_CSTRING("xml"));
 	outFields->push(HX_CSTRING("asset"));
 	outFields->push(HX_CSTRING("canvas"));
 	super::__GetFields(outFields);
@@ -354,10 +391,16 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("paralax"),
 	HX_CSTRING("render"),
 	HX_CSTRING("readXml"),
+	HX_CSTRING("_endX"),
+	HX_CSTRING("_startX"),
+	HX_CSTRING("_speed"),
+	HX_CSTRING("_blendmode"),
+	HX_CSTRING("_y"),
+	HX_CSTRING("_x"),
+	HX_CSTRING("_imgPath"),
 	HX_CSTRING("x"),
 	HX_CSTRING("speed"),
 	HX_CSTRING("startX"),
-	HX_CSTRING("xml"),
 	HX_CSTRING("asset"),
 	HX_CSTRING("canvas"),
 	String(null()) };

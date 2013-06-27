@@ -6,7 +6,6 @@
 #endif
 
 HX_DECLARE_CLASS0(BackgroundObject)
-HX_DECLARE_CLASS0(IMap)
 HX_DECLARE_CLASS2(flash,display,Bitmap)
 HX_DECLARE_CLASS2(flash,display,DisplayObject)
 HX_DECLARE_CLASS2(flash,display,DisplayObjectContainer)
@@ -15,7 +14,6 @@ HX_DECLARE_CLASS2(flash,display,InteractiveObject)
 HX_DECLARE_CLASS2(flash,display,Sprite)
 HX_DECLARE_CLASS2(flash,events,EventDispatcher)
 HX_DECLARE_CLASS2(flash,events,IEventDispatcher)
-HX_DECLARE_CLASS2(haxe,ds,StringMap)
 
 
 class HXCPP_CLASS_ATTRIBUTES  BackgroundObject_obj : public hx::Object{
@@ -50,10 +48,16 @@ class HXCPP_CLASS_ATTRIBUTES  BackgroundObject_obj : public hx::Object{
 		virtual Void readXml( ::String url);
 		Dynamic readXml_dyn();
 
+		Float _endX;
+		Float _startX;
+		Float _speed;
+		::String _blendmode;
+		Float _y;
+		Float _x;
+		::String _imgPath;
 		Float x;
 		Float speed;
 		Float startX;
-		::haxe::ds::StringMap xml;
 		::flash::display::Bitmap asset;
 		::flash::display::Sprite canvas;
 };

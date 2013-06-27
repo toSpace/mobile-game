@@ -40,9 +40,6 @@ class HXCPP_CLASS_ATTRIBUTES  List_obj : public hx::Object{
 		virtual Void push( Dynamic item);
 		Dynamic push_dyn();
 
-		virtual Void add( Dynamic item);
-		Dynamic add_dyn();
-
 		int length;
 		Dynamic q;
 		Dynamic h;

@@ -53,16 +53,6 @@ int Std_obj::_int( Float x){
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Std_obj,_int,return )
 
-Dynamic Std_obj::parseInt( ::String x){
-	HX_STACK_PUSH("Std::parseInt","/usr/lib/haxe/std/cpp/_std/Std.hx",35);
-	HX_STACK_ARG(x,"x");
-	HX_STACK_LINE(35)
-	return ::__hxcpp_parse_int(x);
-}
-
-
-STATIC_HX_DEFINE_DYNAMIC_FUNC1(Std_obj,parseInt,return )
-
 Float Std_obj::parseFloat( ::String x){
 	HX_STACK_PUSH("Std::parseFloat","/usr/lib/haxe/std/cpp/_std/Std.hx",39);
 	HX_STACK_ARG(x,"x");
@@ -100,9 +90,6 @@ Dynamic Std_obj::__Field(const ::String &inName,bool inCallProp)
 	case 6:
 		if (HX_FIELD_EQ(inName,"string") ) { return string_dyn(); }
 		break;
-	case 8:
-		if (HX_FIELD_EQ(inName,"parseInt") ) { return parseInt_dyn(); }
-		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"parseFloat") ) { return parseFloat_dyn(); }
 	}
@@ -123,7 +110,6 @@ static ::String sStaticFields[] = {
 	HX_CSTRING("is"),
 	HX_CSTRING("string"),
 	HX_CSTRING("int"),
-	HX_CSTRING("parseInt"),
 	HX_CSTRING("parseFloat"),
 	String(null()) };
 

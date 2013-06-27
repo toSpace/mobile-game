@@ -192,6 +192,7 @@
 #include <openfl/utils/WeakRef.h>
 #include <openfl/events/SystemEvent.h>
 #include <openfl/events/JoystickEvent.h>
+#include <openfl/display/Tilesheet.h>
 #include <openfl/display/ManagedStage.h>
 #include <openfl/display/FPS.h>
 #include <openfl/LibraryType.h>
@@ -395,19 +396,6 @@
 #include <flash/events/IEventDispatcher.h>
 #include <flash/_Vector/Vector_Impl_.h>
 #include <flash/Memory.h>
-#include <cpp/zip/Uncompress.h>
-#include <cpp/zip/Flush.h>
-#include <cpp/zip/Compress.h>
-#include <cpp/rtti/FieldNumericIntegerLookup.h>
-#include <aze/display/DrawList.h>
-#include <aze/display/TileLayer.h>
-#include <aze/display/TileGroup.h>
-#include <aze/display/TileClip.h>
-#include <aze/display/TileSprite.h>
-#include <aze/display/TileBase.h>
-#include <aze/display/SparrowTilesheet.h>
-#include <aze/display/TilesheetEx.h>
-#include <openfl/display/Tilesheet.h>
 #include <flash/Lib.h>
 #include <sys/io/_Process/Stdout.h>
 #include <haxe/io/Input.h>
@@ -415,6 +403,10 @@
 #include <sys/io/_Process/Stdin.h>
 #include <haxe/io/Output.h>
 #include <sys/io/Process.h>
+#include <cpp/zip/Uncompress.h>
+#include <cpp/zip/Flush.h>
+#include <cpp/zip/Compress.h>
+#include <cpp/rtti/FieldNumericIntegerLookup.h>
 #include <Xml.h>
 #include <XmlType.h>
 #include <World1Level1.h>
@@ -424,17 +416,14 @@
 #include <StringTools.h>
 #include <StringBuf.h>
 #include <Std.h>
-#include <SpriteObject.h>
 #include <Settings.h>
 #include <RenderManager.h>
 #include <Reflect.h>
 #include <Mobile.h>
 #include <IMap.h>
-#include <Lucy.h>
 #include <List.h>
 #include <LineDrawing.h>
 #include <Level.h>
-#include <Lambda.h>
 #include <IsoBody.h>
 #include <Garbage.h>
 #include <Drawing.h>
@@ -442,9 +431,9 @@
 #include <GameObject.h>
 #include <DrawButton.h>
 #include <UIobject.h>
-#include <Character.h>
 #include <Camera.h>
 #include <BitmapDataIso.h>
+#include <BackgroundObject.h>
 #include <DocumentClass.h>
 #include <Main.h>
 #include <ApplicationMain.h>
@@ -644,6 +633,7 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::utils::WeakRef_obj::__register();
 ::openfl::events::SystemEvent_obj::__register();
 ::openfl::events::JoystickEvent_obj::__register();
+::openfl::display::Tilesheet_obj::__register();
 ::openfl::display::ManagedStage_obj::__register();
 ::openfl::display::FPS_obj::__register();
 ::openfl::LibraryType_obj::__register();
@@ -847,19 +837,6 @@ hx::RegisterResources( hx::GetResources() );
 ::flash::events::IEventDispatcher_obj::__register();
 ::flash::_Vector::Vector_Impl__obj::__register();
 ::flash::Memory_obj::__register();
-::cpp::zip::Uncompress_obj::__register();
-::cpp::zip::Flush_obj::__register();
-::cpp::zip::Compress_obj::__register();
-::cpp::rtti::FieldNumericIntegerLookup_obj::__register();
-::aze::display::DrawList_obj::__register();
-::aze::display::TileLayer_obj::__register();
-::aze::display::TileGroup_obj::__register();
-::aze::display::TileClip_obj::__register();
-::aze::display::TileSprite_obj::__register();
-::aze::display::TileBase_obj::__register();
-::aze::display::SparrowTilesheet_obj::__register();
-::aze::display::TilesheetEx_obj::__register();
-::openfl::display::Tilesheet_obj::__register();
 ::flash::Lib_obj::__register();
 ::sys::io::_Process::Stdout_obj::__register();
 ::haxe::io::Input_obj::__register();
@@ -867,6 +844,10 @@ hx::RegisterResources( hx::GetResources() );
 ::sys::io::_Process::Stdin_obj::__register();
 ::haxe::io::Output_obj::__register();
 ::sys::io::Process_obj::__register();
+::cpp::zip::Uncompress_obj::__register();
+::cpp::zip::Flush_obj::__register();
+::cpp::zip::Compress_obj::__register();
+::cpp::rtti::FieldNumericIntegerLookup_obj::__register();
 ::Xml_obj::__register();
 ::XmlType_obj::__register();
 ::World1Level1_obj::__register();
@@ -876,17 +857,14 @@ hx::RegisterResources( hx::GetResources() );
 ::StringTools_obj::__register();
 ::StringBuf_obj::__register();
 ::Std_obj::__register();
-::SpriteObject_obj::__register();
 ::Settings_obj::__register();
 ::RenderManager_obj::__register();
 ::Reflect_obj::__register();
 ::Mobile_obj::__register();
 ::IMap_obj::__register();
-::Lucy_obj::__register();
 ::List_obj::__register();
 ::LineDrawing_obj::__register();
 ::Level_obj::__register();
-::Lambda_obj::__register();
 ::IsoBody_obj::__register();
 ::Garbage_obj::__register();
 ::Drawing_obj::__register();
@@ -894,9 +872,9 @@ hx::RegisterResources( hx::GetResources() );
 ::GameObject_obj::__register();
 ::DrawButton_obj::__register();
 ::UIobject_obj::__register();
-::Character_obj::__register();
 ::Camera_obj::__register();
 ::BitmapDataIso_obj::__register();
+::BackgroundObject_obj::__register();
 ::DocumentClass_obj::__register();
 ::Main_obj::__register();
 ::ApplicationMain_obj::__register();
@@ -912,9 +890,9 @@ hx::RegisterResources( hx::GetResources() );
 ::ApplicationMain_obj::__boot();
 ::Main_obj::__boot();
 ::DocumentClass_obj::__boot();
+::BackgroundObject_obj::__boot();
 ::BitmapDataIso_obj::__boot();
 ::Camera_obj::__boot();
-::Character_obj::__boot();
 ::UIobject_obj::__boot();
 ::DrawButton_obj::__boot();
 ::GameObject_obj::__boot();
@@ -922,17 +900,14 @@ hx::RegisterResources( hx::GetResources() );
 ::Drawing_obj::__boot();
 ::Garbage_obj::__boot();
 ::IsoBody_obj::__boot();
-::Lambda_obj::__boot();
 ::Level_obj::__boot();
 ::LineDrawing_obj::__boot();
 ::List_obj::__boot();
-::Lucy_obj::__boot();
 ::IMap_obj::__boot();
 ::Mobile_obj::__boot();
 ::Reflect_obj::__boot();
 ::RenderManager_obj::__boot();
 ::Settings_obj::__boot();
-::SpriteObject_obj::__boot();
 ::Std_obj::__boot();
 ::StringBuf_obj::__boot();
 ::StringTools_obj::__boot();
@@ -947,15 +922,6 @@ hx::RegisterResources( hx::GetResources() );
 ::haxe::io::Input_obj::__boot();
 ::sys::io::_Process::Stdout_obj::__boot();
 ::flash::Lib_obj::__boot();
-::openfl::display::Tilesheet_obj::__boot();
-::aze::display::TilesheetEx_obj::__boot();
-::aze::display::SparrowTilesheet_obj::__boot();
-::aze::display::TileBase_obj::__boot();
-::aze::display::TileSprite_obj::__boot();
-::aze::display::TileClip_obj::__boot();
-::aze::display::TileGroup_obj::__boot();
-::aze::display::TileLayer_obj::__boot();
-::aze::display::DrawList_obj::__boot();
 ::flash::Memory_obj::__boot();
 ::flash::_Vector::Vector_Impl__obj::__boot();
 ::flash::events::IEventDispatcher_obj::__boot();
@@ -1158,6 +1124,7 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::LibraryType_obj::__boot();
 ::openfl::display::FPS_obj::__boot();
 ::openfl::display::ManagedStage_obj::__boot();
+::openfl::display::Tilesheet_obj::__boot();
 ::openfl::events::JoystickEvent_obj::__boot();
 ::openfl::events::SystemEvent_obj::__boot();
 ::openfl::utils::WeakRef_obj::__boot();

@@ -34,9 +34,6 @@ class HXCPP_CLASS_ATTRIBUTES  StringTools_obj : public hx::Object{
 		static ::String urlDecode( ::String s);
 		static Dynamic urlDecode_dyn();
 
-		static bool startsWith( ::String s,::String start);
-		static Dynamic startsWith_dyn();
-
 		static bool isSpace( ::String s,int pos);
 		static Dynamic isSpace_dyn();
 

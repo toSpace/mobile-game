@@ -33,9 +33,6 @@ class HXCPP_CLASS_ATTRIBUTES  HasAttribAccess_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("HasAttribAccess"); }
 
-		virtual bool resolve( ::String name);
-		Dynamic resolve_dyn();
-
 		::Xml __x;
 };
 

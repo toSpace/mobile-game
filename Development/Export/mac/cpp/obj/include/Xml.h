@@ -35,17 +35,11 @@ class HXCPP_CLASS_ATTRIBUTES  Xml_obj : public hx::Object{
 		virtual Void addChild( ::Xml x);
 		Dynamic addChild_dyn();
 
-		virtual ::Xml firstElement( );
-		Dynamic firstElement_dyn();
-
 		virtual Dynamic elementsNamed( ::String name);
 		Dynamic elementsNamed_dyn();
 
 		virtual Dynamic iterator( );
 		Dynamic iterator_dyn();
-
-		virtual bool exists( ::String att);
-		Dynamic exists_dyn();
 
 		virtual ::String get( ::String att);
 		Dynamic get_dyn();

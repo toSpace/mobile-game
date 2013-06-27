@@ -162,33 +162,6 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC1(List_obj,push,(void))
 
-Void List_obj::add( Dynamic item){
-{
-		HX_STACK_PUSH("List::add","/usr/lib/haxe/std/List.hx",49);
-		HX_STACK_THIS(this);
-		HX_STACK_ARG(item,"item");
-		HX_STACK_LINE(50)
-		Dynamic x = Dynamic( Array_obj<Dynamic>::__new().Add(item));		HX_STACK_VAR(x,"x");
-		HX_STACK_LINE(51)
-		if (((this->h == null()))){
-			HX_STACK_LINE(52)
-			this->h = x;
-		}
-		else{
-			HX_STACK_LINE(54)
-			hx::IndexRef((this->q).mPtr,(int)1) = x;
-		}
-		HX_STACK_LINE(55)
-		this->q = x;
-		HX_STACK_LINE(56)
-		(this->length)++;
-	}
-return null();
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(List_obj,add,(void))
-
 
 List_obj::List_obj()
 {
@@ -216,9 +189,6 @@ Dynamic List_obj::__Field(const ::String &inName,bool inCallProp)
 	case 1:
 		if (HX_FIELD_EQ(inName,"q") ) { return q; }
 		if (HX_FIELD_EQ(inName,"h") ) { return h; }
-		break;
-	case 3:
-		if (HX_FIELD_EQ(inName,"add") ) { return add_dyn(); }
 		break;
 	case 4:
 		if (HX_FIELD_EQ(inName,"push") ) { return push_dyn(); }
@@ -265,7 +235,6 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("remove"),
 	HX_CSTRING("isEmpty"),
 	HX_CSTRING("push"),
-	HX_CSTRING("add"),
 	HX_CSTRING("length"),
 	HX_CSTRING("q"),
 	HX_CSTRING("h"),
