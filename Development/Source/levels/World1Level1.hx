@@ -64,8 +64,6 @@ class World1Level1 extends Level {
 		var lvl1_bg_l1_fog1 = new BackgroundObject('world1/lvl1/bg/l1/lvl1_bg_l1_fog1.xml');
 
 		#end
-
-		/*
 		
 		//fg layer 1 (erasable)
 		var lvl1_fg_l1_1 = new DrawObject('world1/lvl1/fg/l1/lvl1_fg_l1_1.xml');
@@ -89,9 +87,6 @@ class World1Level1 extends Level {
 		var lvl1_fg_l2_tree2 = new BackgroundObject('world1/lvl1/fg/l2/lvl1_fg_l2_tree2.xml');
 		var lvl1_fg_l2_tree3 = new BackgroundObject('world1/lvl1/fg/l2/lvl1_fg_l2_tree3.xml');
 		var lvl1_fg_l2_tree4 = new BackgroundObject('world1/lvl1/fg/l2/lvl1_fg_l2_tree4.xml');
-		*/
-
-		trace(Main.canvas);
 
     	//var lucy = new Lucy();
 

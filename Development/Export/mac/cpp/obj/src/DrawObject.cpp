@@ -12,9 +12,6 @@
 #ifndef INCLUDED_GameObject
 #include <GameObject.h>
 #endif
-#ifndef INCLUDED_IMap
-#include <IMap.h>
-#endif
 #ifndef INCLUDED_IsoBody
 #include <IsoBody.h>
 #endif
@@ -83,9 +80,6 @@
 #endif
 #ifndef INCLUDED_flash_geom_Rectangle
 #include <flash/geom/Rectangle.h>
-#endif
-#ifndef INCLUDED_haxe_ds_StringMap
-#include <haxe/ds/StringMap.h>
 #endif
 #ifndef INCLUDED_hxMath
 #include <hxMath.h>
@@ -342,7 +336,7 @@ Void DrawObject_obj::updateBody( ){
 		HX_STACK_PUSH("DrawObject::updateBody","DrawObject.hx",107);
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(107)
-		this->convert(this->physicType,this->asset->get_x(),this->asset->get_y(),this->xml->get(HX_CSTRING("rotation")));
+		this->convert(this->physicType,this->asset->get_x(),this->asset->get_y(),this->asset->get_rotation());
 	}
 return null();
 }
@@ -1423,7 +1417,7 @@ Void DrawObject_obj::physicsObject( ::String physic){
 		HX_STACK_LINE(66)
 		this->physicType = physic;
 		HX_STACK_LINE(67)
-		this->convert(physic,this->xml->get(HX_CSTRING("x")),this->xml->get(HX_CSTRING("y")),this->xml->get(HX_CSTRING("rotation")));
+		this->convert(physic,this->_x,this->_y,this->_rotation);
 	}
 return null();
 }
@@ -1445,13 +1439,13 @@ Void DrawObject_obj::loadBitmap( ::flash::display::Bitmap bitmap,::String __o_ph
 		HX_STACK_LINE(50)
 		this->canvas->addChild(bitmap);
 		HX_STACK_LINE(51)
-		this->xml->set(HX_CSTRING("x"),bitmap->get_x());
+		this->_x = bitmap->get_x();
 		HX_STACK_LINE(52)
-		this->xml->set(HX_CSTRING("y"),bitmap->get_y());
+		this->_y = bitmap->get_y();
 		HX_STACK_LINE(53)
-		this->xml->set(HX_CSTRING("rotation"),bitmap->get_rotation());
+		this->_rotation = bitmap->get_rotation();
 		HX_STACK_LINE(54)
-		this->xml->set(HX_CSTRING("physics"),physics);
+		this->_physics = physics;
 		HX_STACK_LINE(57)
 		this->mass = (int)0;
 		HX_STACK_LINE(58)

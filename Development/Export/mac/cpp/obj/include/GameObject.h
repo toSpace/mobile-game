@@ -6,7 +6,6 @@
 #endif
 
 HX_DECLARE_CLASS0(GameObject)
-HX_DECLARE_CLASS0(IMap)
 HX_DECLARE_CLASS2(flash,display,Bitmap)
 HX_DECLARE_CLASS2(flash,display,DisplayObject)
 HX_DECLARE_CLASS2(flash,display,DisplayObjectContainer)
@@ -15,7 +14,6 @@ HX_DECLARE_CLASS2(flash,display,InteractiveObject)
 HX_DECLARE_CLASS2(flash,display,Sprite)
 HX_DECLARE_CLASS2(flash,events,EventDispatcher)
 HX_DECLARE_CLASS2(flash,events,IEventDispatcher)
-HX_DECLARE_CLASS2(haxe,ds,StringMap)
 HX_DECLARE_CLASS2(nape,phys,Body)
 HX_DECLARE_CLASS2(nape,phys,Interactor)
 HX_DECLARE_CLASS2(nape,phys,Material)
@@ -69,7 +67,19 @@ class HXCPP_CLASS_ATTRIBUTES  GameObject_obj : public hx::Object{
 		virtual Void readXml( ::String url);
 		Dynamic readXml_dyn();
 
-		::haxe::ds::StringMap xml;
+		virtual Void init( );
+		Dynamic init_dyn();
+
+		Float _rollingFriction;
+		Float _staticFriction;
+		Float _dynamicFriction;
+		Float _density;
+		Float _elasticity;
+		::String _physics;
+		Float _rotation;
+		Float _y;
+		Float _x;
+		::String _imgPath;
 		::flash::display::Bitmap asset;
 		::flash::display::Sprite canvas;
 		::nape::space::Space space;

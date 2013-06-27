@@ -80,25 +80,12 @@ HX_STACK_PUSH("BackgroundObject::new","BackgroundObject.hx",29);
 	HX_STACK_LINE(31)
 	this->canvas = ::Main_obj::canvas;
 	HX_STACK_LINE(34)
-	this->readXml(xmlUrl);
-	HX_STACK_LINE(37)
-	this->asset = ::flash::display::Bitmap_obj::__new(::openfl::Assets_obj::getBitmapData(this->_imgPath,null()),null(),null());
-	HX_STACK_LINE(38)
-	this->asset->set_x(this->_x);
-	HX_STACK_LINE(39)
-	this->x = this->asset->get_x();
-	HX_STACK_LINE(40)
-	this->asset->set_y((::Mobile_obj::getY(this->asset) - this->_y));
-	HX_STACK_LINE(41)
-	this->setBlendmode(this->_blendmode);
-	HX_STACK_LINE(42)
-	this->canvas->addChild(this->asset);
-	HX_STACK_LINE(45)
-	this->speed = this->_speed;
-	HX_STACK_LINE(46)
-	this->startX = this->_startX;
-	HX_STACK_LINE(49)
-	::RenderManager_obj::add(hx::ObjectPtr<OBJ_>(this));
+	if (((bool((xmlUrl != null())) || bool((xmlUrl != HX_CSTRING("")))))){
+		HX_STACK_LINE(35)
+		this->readXml(xmlUrl);
+		HX_STACK_LINE(36)
+		this->init();
+	}
 }
 ;
 	return null();
@@ -119,69 +106,69 @@ Dynamic BackgroundObject_obj::__Create(hx::DynamicArray inArgs)
 
 Void BackgroundObject_obj::setBlendmode( ::String mode){
 {
-		HX_STACK_PUSH("BackgroundObject::setBlendmode","BackgroundObject.hx",84);
+		HX_STACK_PUSH("BackgroundObject::setBlendmode","BackgroundObject.hx",90);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(mode,"mode");
-		HX_STACK_LINE(84)
+		HX_STACK_LINE(90)
 		::String _switch_1 = (mode);
 		if (  ( _switch_1==HX_CSTRING("none"))){
 		}
 		else if (  ( _switch_1==HX_CSTRING("add"))){
-			HX_STACK_LINE(89)
+			HX_STACK_LINE(95)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::ADD);
 		}
 		else if (  ( _switch_1==HX_CSTRING("alpha"))){
-			HX_STACK_LINE(91)
+			HX_STACK_LINE(97)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::ALPHA);
 		}
 		else if (  ( _switch_1==HX_CSTRING("darken"))){
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(99)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::DARKEN);
 		}
 		else if (  ( _switch_1==HX_CSTRING("difference"))){
-			HX_STACK_LINE(95)
+			HX_STACK_LINE(101)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::DIFFERENCE);
 		}
 		else if (  ( _switch_1==HX_CSTRING("erase"))){
-			HX_STACK_LINE(97)
+			HX_STACK_LINE(103)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::ERASE);
 		}
 		else if (  ( _switch_1==HX_CSTRING("hardlight"))){
-			HX_STACK_LINE(99)
+			HX_STACK_LINE(105)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::HARDLIGHT);
 		}
 		else if (  ( _switch_1==HX_CSTRING("invert"))){
-			HX_STACK_LINE(101)
+			HX_STACK_LINE(107)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::INVERT);
 		}
 		else if (  ( _switch_1==HX_CSTRING("layer"))){
-			HX_STACK_LINE(103)
+			HX_STACK_LINE(109)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::LAYER);
 		}
 		else if (  ( _switch_1==HX_CSTRING("lighten"))){
-			HX_STACK_LINE(105)
+			HX_STACK_LINE(111)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::LIGHTEN);
 		}
 		else if (  ( _switch_1==HX_CSTRING("multiply"))){
-			HX_STACK_LINE(107)
+			HX_STACK_LINE(113)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::MULTIPLY);
 		}
 		else if (  ( _switch_1==HX_CSTRING("normal"))){
-			HX_STACK_LINE(109)
+			HX_STACK_LINE(115)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::NORMAL);
 		}
 		else if (  ( _switch_1==HX_CSTRING("overlay"))){
-			HX_STACK_LINE(111)
+			HX_STACK_LINE(117)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::OVERLAY);
 		}
 		else if (  ( _switch_1==HX_CSTRING("screen"))){
-			HX_STACK_LINE(113)
+			HX_STACK_LINE(119)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::SCREEN);
 		}
 		else if (  ( _switch_1==HX_CSTRING("shader"))){
 		}
 		else if (  ( _switch_1==HX_CSTRING("subtract"))){
-			HX_STACK_LINE(119)
+			HX_STACK_LINE(125)
 			this->asset->set_blendMode(::flash::display::BlendMode_obj::SUBTRACT);
 		}
 	}
@@ -193,17 +180,17 @@ HX_DEFINE_DYNAMIC_FUNC1(BackgroundObject_obj,setBlendmode,(void))
 
 Void BackgroundObject_obj::paralax( ){
 {
-		HX_STACK_PUSH("BackgroundObject::paralax","BackgroundObject.hx",74);
+		HX_STACK_PUSH("BackgroundObject::paralax","BackgroundObject.hx",80);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(75)
-		Float cameraPos = ::Camera_obj::getPosition()->x;		HX_STACK_VAR(cameraPos,"cameraPos");
-		HX_STACK_LINE(76)
-		Float delta;		HX_STACK_VAR(delta,"delta");
-		HX_STACK_LINE(78)
-		delta = (this->x - cameraPos);
-		HX_STACK_LINE(79)
-		hx::MultEq(delta,this->speed);
 		HX_STACK_LINE(81)
+		Float cameraPos = ::Camera_obj::getPosition()->x;		HX_STACK_VAR(cameraPos,"cameraPos");
+		HX_STACK_LINE(82)
+		Float delta;		HX_STACK_VAR(delta,"delta");
+		HX_STACK_LINE(84)
+		delta = (this->x - cameraPos);
+		HX_STACK_LINE(85)
+		hx::MultEq(delta,this->speed);
+		HX_STACK_LINE(87)
 		this->asset->set_x(::Math_obj::ceil((this->x - delta)));
 	}
 return null();
@@ -214,9 +201,9 @@ HX_DEFINE_DYNAMIC_FUNC0(BackgroundObject_obj,paralax,(void))
 
 Void BackgroundObject_obj::render( ){
 {
-		HX_STACK_PUSH("BackgroundObject::render","BackgroundObject.hx",69);
+		HX_STACK_PUSH("BackgroundObject::render","BackgroundObject.hx",75);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(69)
+		HX_STACK_LINE(75)
 		this->paralax();
 	}
 return null();
@@ -227,28 +214,28 @@ HX_DEFINE_DYNAMIC_FUNC0(BackgroundObject_obj,render,(void))
 
 Void BackgroundObject_obj::readXml( ::String url){
 {
-		HX_STACK_PUSH("BackgroundObject::readXml","BackgroundObject.hx",52);
+		HX_STACK_PUSH("BackgroundObject::readXml","BackgroundObject.hx",58);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(url,"url");
-		HX_STACK_LINE(54)
-		::String xmlFile = ::openfl::Assets_obj::getText((::Mobile_obj::xml + url));		HX_STACK_VAR(xmlFile,"xmlFile");
-		HX_STACK_LINE(55)
-		::haxe::xml::Fast read = ::haxe::xml::Fast_obj::__new(::Xml_obj::parse(xmlFile));		HX_STACK_VAR(read,"read");
-		HX_STACK_LINE(57)
-		::haxe::xml::Fast asset = read->node->resolve(HX_CSTRING("asset"));		HX_STACK_VAR(asset,"asset");
-		HX_STACK_LINE(58)
-		this->_imgPath = (::Mobile_obj::asset + asset->node->resolve(HX_CSTRING("img"))->get_innerData());
-		HX_STACK_LINE(59)
-		this->_x = ::Std_obj::parseFloat(asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("x")));
 		HX_STACK_LINE(60)
-		this->_y = ::Std_obj::parseFloat(asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("y")));
+		::String xmlFile = ::openfl::Assets_obj::getText((::Mobile_obj::xml + url));		HX_STACK_VAR(xmlFile,"xmlFile");
 		HX_STACK_LINE(61)
-		this->_blendmode = asset->node->resolve(HX_CSTRING("blendmode"))->get_innerData();
-		HX_STACK_LINE(62)
-		this->_speed = ::Std_obj::parseFloat(asset->node->resolve(HX_CSTRING("paralax"))->get_innerData());
+		::haxe::xml::Fast read = ::haxe::xml::Fast_obj::__new(::Xml_obj::parse(xmlFile));		HX_STACK_VAR(read,"read");
 		HX_STACK_LINE(63)
-		this->_startX = ::Std_obj::parseFloat(asset->node->resolve(HX_CSTRING("paralax"))->att->resolve(HX_CSTRING("startX")));
+		::haxe::xml::Fast asset = read->node->resolve(HX_CSTRING("asset"));		HX_STACK_VAR(asset,"asset");
 		HX_STACK_LINE(64)
+		this->_imgPath = (::Mobile_obj::asset + asset->node->resolve(HX_CSTRING("img"))->get_innerData());
+		HX_STACK_LINE(65)
+		this->_x = ::Std_obj::parseFloat(asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("x")));
+		HX_STACK_LINE(66)
+		this->_y = ::Std_obj::parseFloat(asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("y")));
+		HX_STACK_LINE(67)
+		this->_blendmode = asset->node->resolve(HX_CSTRING("blendmode"))->get_innerData();
+		HX_STACK_LINE(68)
+		this->_speed = ::Std_obj::parseFloat(asset->node->resolve(HX_CSTRING("paralax"))->get_innerData());
+		HX_STACK_LINE(69)
+		this->_startX = ::Std_obj::parseFloat(asset->node->resolve(HX_CSTRING("paralax"))->att->resolve(HX_CSTRING("startX")));
+		HX_STACK_LINE(70)
 		this->_endX = ::Std_obj::parseFloat(asset->node->resolve(HX_CSTRING("paralax"))->att->resolve(HX_CSTRING("endX")));
 	}
 return null();
@@ -256,6 +243,35 @@ return null();
 
 
 HX_DEFINE_DYNAMIC_FUNC1(BackgroundObject_obj,readXml,(void))
+
+Void BackgroundObject_obj::init( ){
+{
+		HX_STACK_PUSH("BackgroundObject::init","BackgroundObject.hx",41);
+		HX_STACK_THIS(this);
+		HX_STACK_LINE(43)
+		this->asset = ::flash::display::Bitmap_obj::__new(::openfl::Assets_obj::getBitmapData(this->_imgPath,null()),null(),null());
+		HX_STACK_LINE(44)
+		this->asset->set_x(this->_x);
+		HX_STACK_LINE(45)
+		this->x = this->asset->get_x();
+		HX_STACK_LINE(46)
+		this->asset->set_y((::Mobile_obj::getY(this->asset) - this->_y));
+		HX_STACK_LINE(47)
+		this->setBlendmode(this->_blendmode);
+		HX_STACK_LINE(48)
+		this->canvas->addChild(this->asset);
+		HX_STACK_LINE(51)
+		this->speed = this->_speed;
+		HX_STACK_LINE(52)
+		this->startX = this->_startX;
+		HX_STACK_LINE(55)
+		::RenderManager_obj::add(hx::ObjectPtr<OBJ_>(this));
+	}
+return null();
+}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(BackgroundObject_obj,init,(void))
 
 
 BackgroundObject_obj::BackgroundObject_obj()
@@ -305,6 +321,9 @@ Dynamic BackgroundObject_obj::__Field(const ::String &inName,bool inCallProp)
 	case 2:
 		if (HX_FIELD_EQ(inName,"_y") ) { return _y; }
 		if (HX_FIELD_EQ(inName,"_x") ) { return _x; }
+		break;
+	case 4:
+		if (HX_FIELD_EQ(inName,"init") ) { return init_dyn(); }
 		break;
 	case 5:
 		if (HX_FIELD_EQ(inName,"_endX") ) { return _endX; }
@@ -391,6 +410,7 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("paralax"),
 	HX_CSTRING("render"),
 	HX_CSTRING("readXml"),
+	HX_CSTRING("init"),
 	HX_CSTRING("_endX"),
 	HX_CSTRING("_startX"),
 	HX_CSTRING("_speed"),

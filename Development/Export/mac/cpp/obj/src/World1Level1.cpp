@@ -3,38 +3,17 @@
 #ifndef INCLUDED_BackgroundObject
 #include <BackgroundObject.h>
 #endif
+#ifndef INCLUDED_DrawObject
+#include <DrawObject.h>
+#endif
+#ifndef INCLUDED_GameObject
+#include <GameObject.h>
+#endif
 #ifndef INCLUDED_Level
 #include <Level.h>
 #endif
-#ifndef INCLUDED_Main
-#include <Main.h>
-#endif
 #ifndef INCLUDED_World1Level1
 #include <World1Level1.h>
-#endif
-#ifndef INCLUDED_flash_display_DisplayObject
-#include <flash/display/DisplayObject.h>
-#endif
-#ifndef INCLUDED_flash_display_DisplayObjectContainer
-#include <flash/display/DisplayObjectContainer.h>
-#endif
-#ifndef INCLUDED_flash_display_IBitmapDrawable
-#include <flash/display/IBitmapDrawable.h>
-#endif
-#ifndef INCLUDED_flash_display_InteractiveObject
-#include <flash/display/InteractiveObject.h>
-#endif
-#ifndef INCLUDED_flash_display_Sprite
-#include <flash/display/Sprite.h>
-#endif
-#ifndef INCLUDED_flash_events_EventDispatcher
-#include <flash/events/EventDispatcher.h>
-#endif
-#ifndef INCLUDED_flash_events_IEventDispatcher
-#include <flash/events/IEventDispatcher.h>
-#endif
-#ifndef INCLUDED_haxe_Log
-#include <haxe/Log.h>
 #endif
 
 Void World1Level1_obj::__construct()
@@ -145,9 +124,45 @@ Void World1Level1_obj::loadLevel( ){
 		::BackgroundObject lvl1_bg_l1_hill4 = ::BackgroundObject_obj::__new(HX_CSTRING("world1/lvl1/bg/l1/lvl1_bg_l1_hill4.xml"));		HX_STACK_VAR(lvl1_bg_l1_hill4,"lvl1_bg_l1_hill4");
 		HX_STACK_LINE(64)
 		::BackgroundObject lvl1_bg_l1_fog1 = ::BackgroundObject_obj::__new(HX_CSTRING("world1/lvl1/bg/l1/lvl1_bg_l1_fog1.xml"));		HX_STACK_VAR(lvl1_bg_l1_fog1,"lvl1_bg_l1_fog1");
+		HX_STACK_LINE(69)
+		::DrawObject lvl1_fg_l1_1 = ::DrawObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l1/lvl1_fg_l1_1.xml"));		HX_STACK_VAR(lvl1_fg_l1_1,"lvl1_fg_l1_1");
+		HX_STACK_LINE(70)
+		::DrawObject lvl1_fg_l1_2 = ::DrawObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l1/lvl1_fg_l1_2.xml"));		HX_STACK_VAR(lvl1_fg_l1_2,"lvl1_fg_l1_2");
+		HX_STACK_LINE(71)
+		::DrawObject lvl1_fg_l1_3 = ::DrawObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l1/lvl1_fg_l1_3.xml"));		HX_STACK_VAR(lvl1_fg_l1_3,"lvl1_fg_l1_3");
+		HX_STACK_LINE(72)
+		::DrawObject lvl1_fg_l1_4 = ::DrawObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l1/lvl1_fg_l1_4.xml"));		HX_STACK_VAR(lvl1_fg_l1_4,"lvl1_fg_l1_4");
+		HX_STACK_LINE(73)
+		::DrawObject lvl1_fg_l1_5 = ::DrawObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l1/lvl1_fg_l1_5.xml"));		HX_STACK_VAR(lvl1_fg_l1_5,"lvl1_fg_l1_5");
+		HX_STACK_LINE(74)
+		::DrawObject lvl1_fg_l1_6 = ::DrawObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l1/lvl1_fg_l1_6.xml"));		HX_STACK_VAR(lvl1_fg_l1_6,"lvl1_fg_l1_6");
+		HX_STACK_LINE(75)
+		::DrawObject lvl1_fg_l1_7 = ::DrawObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l1/lvl1_fg_l1_7.xml"));		HX_STACK_VAR(lvl1_fg_l1_7,"lvl1_fg_l1_7");
+		HX_STACK_LINE(76)
+		::DrawObject lvl1_fg_l1_8 = ::DrawObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l1/lvl1_fg_l1_8.xml"));		HX_STACK_VAR(lvl1_fg_l1_8,"lvl1_fg_l1_8");
+		HX_STACK_LINE(79)
+		::BackgroundObject lvl1_fg_l2_grass1 = ::BackgroundObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l2/lvl1_fg_l2_grass1.xml"));		HX_STACK_VAR(lvl1_fg_l2_grass1,"lvl1_fg_l2_grass1");
+		HX_STACK_LINE(80)
+		::BackgroundObject lvl1_fg_l2_grass2 = ::BackgroundObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l2/lvl1_fg_l2_grass2.xml"));		HX_STACK_VAR(lvl1_fg_l2_grass2,"lvl1_fg_l2_grass2");
+		HX_STACK_LINE(81)
+		::BackgroundObject lvl1_fg_l2_grass3 = ::BackgroundObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l2/lvl1_fg_l2_grass3.xml"));		HX_STACK_VAR(lvl1_fg_l2_grass3,"lvl1_fg_l2_grass3");
+		HX_STACK_LINE(82)
+		::BackgroundObject lvl1_fg_l2_grass4 = ::BackgroundObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l2/lvl1_fg_l2_grass4.xml"));		HX_STACK_VAR(lvl1_fg_l2_grass4,"lvl1_fg_l2_grass4");
+		HX_STACK_LINE(83)
+		::BackgroundObject lvl1_fg_l2_grass5 = ::BackgroundObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l2/lvl1_fg_l2_grass5.xml"));		HX_STACK_VAR(lvl1_fg_l2_grass5,"lvl1_fg_l2_grass5");
+		HX_STACK_LINE(84)
+		::BackgroundObject lvl1_fg_l2_grass6 = ::BackgroundObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l2/lvl1_fg_l2_grass6.xml"));		HX_STACK_VAR(lvl1_fg_l2_grass6,"lvl1_fg_l2_grass6");
+		HX_STACK_LINE(85)
+		::BackgroundObject lvl1_fg_l2_grass7 = ::BackgroundObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l2/lvl1_fg_l2_grass7.xml"));		HX_STACK_VAR(lvl1_fg_l2_grass7,"lvl1_fg_l2_grass7");
+		HX_STACK_LINE(86)
+		::BackgroundObject lvl1_fg_l2_tree1 = ::BackgroundObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l2/lvl1_fg_l2_tree1.xml"));		HX_STACK_VAR(lvl1_fg_l2_tree1,"lvl1_fg_l2_tree1");
+		HX_STACK_LINE(87)
+		::BackgroundObject lvl1_fg_l2_tree2 = ::BackgroundObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l2/lvl1_fg_l2_tree2.xml"));		HX_STACK_VAR(lvl1_fg_l2_tree2,"lvl1_fg_l2_tree2");
+		HX_STACK_LINE(88)
+		::BackgroundObject lvl1_fg_l2_tree3 = ::BackgroundObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l2/lvl1_fg_l2_tree3.xml"));		HX_STACK_VAR(lvl1_fg_l2_tree3,"lvl1_fg_l2_tree3");
+		HX_STACK_LINE(89)
+		::BackgroundObject lvl1_fg_l2_tree4 = ::BackgroundObject_obj::__new(HX_CSTRING("world1/lvl1/fg/l2/lvl1_fg_l2_tree4.xml"));		HX_STACK_VAR(lvl1_fg_l2_tree4,"lvl1_fg_l2_tree4");
 		HX_STACK_LINE(94)
-		::haxe::Log_obj::trace(::Main_obj::canvas,hx::SourceInfo(HX_CSTRING("World1Level1.hx"),94,HX_CSTRING("World1Level1"),HX_CSTRING("loadLevel")));
-		HX_STACK_LINE(99)
 		this->start();
 	}
 return null();

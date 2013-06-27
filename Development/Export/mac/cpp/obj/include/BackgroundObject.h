@@ -48,6 +48,9 @@ class HXCPP_CLASS_ATTRIBUTES  BackgroundObject_obj : public hx::Object{
 		virtual Void readXml( ::String url);
 		Dynamic readXml_dyn();
 
+		virtual Void init( );
+		Dynamic init_dyn();
+
 		Float _endX;
 		Float _startX;
 		Float _speed;

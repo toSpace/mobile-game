@@ -48,10 +48,10 @@ class DrawObject extends GameObject{
 
         //read xml
         canvas.addChild(bitmap);
-        xml.set('x', bitmap.x);
-        xml.set('y', bitmap.y);
-        xml.set('rotation', bitmap.rotation);
-        xml.set('physics', physics);
+        _x = bitmap.x;
+        _y = bitmap.y;
+        _rotation = bitmap.rotation;
+        _physics = physics;
 
         //make physics object
         mass = 0;
@@ -64,7 +64,7 @@ class DrawObject extends GameObject{
 
 	public override function physicsObject(physic:String){
         physicType = physic;
-        convert( physic,xml.get('x') , xml.get('y') , xml.get('rotation') );
+        convert( physic, _x , _y , _rotation );
 	}
 
 	public function convert(bodyT:String, x:Float, y:Float, rotation:Float):Void{
@@ -106,7 +106,7 @@ class DrawObject extends GameObject{
 
 	public function updateBody():Void{
         //convert again on asset position
-        convert(physicType,asset.x,asset.y, xml.get('rotation'));
+        convert(physicType,asset.x,asset.y, asset.rotation);
 	}
 
     public override function render():Void{

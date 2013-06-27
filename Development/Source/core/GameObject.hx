@@ -21,7 +21,18 @@ class GameObject {
 	public var space:Space;
 	public var canvas:Sprite;
 	public var asset:Bitmap;
-	public var xml:Map<String, Dynamic>;
+	
+	//xml vars
+	public var _imgPath:String;
+	public var _x:Float;
+	public var _y:Float;
+	public var _rotation:Float;
+	public var _physics:String;
+	public var _elasticity:Float;
+	public var _density:Float;
+	public var _dynamicFriction:Float;
+	public var _staticFriction:Float;
+	public var _rollingFriction:Float;
 
 	public function new(xmlUrl:String):Void{
 
@@ -30,12 +41,18 @@ class GameObject {
 		canvas = Main.canvas;
 
 		//read xml
-		readXml(xmlUrl);
-		asset = new Bitmap( Assets.getBitmapData( xml.get('img') ) );
-		xml.set('y', Mobile.getY(asset) - xml.get('y') );
+		if(xmlUrl != null || xmlUrl !=''){
+			readXml(xmlUrl);
+			init();
+		}
+	}
+
+	public function init():Void{
+		asset = new Bitmap( Assets.getBitmapData(_imgPath) );
+		_y = Mobile.getY(asset) - _y;
 
 		//make physics object
-		physicsObject( xml.get('physics') );
+		physicsObject( _physics );
 		body.setShapeMaterials( makeMaterial() );
 
 		//add to render manager
@@ -44,27 +61,26 @@ class GameObject {
 		canvas.addChild(asset);
 	}
 
-	private function readXml(url:String):Void{
+	public function readXml(url:String):Void{
 
 		var xmlFile = Assets.getText(Mobile.xml + url);
 		var read = new haxe.xml.Fast( Xml.parse(xmlFile) );
 
 		var asset = read.node.asset;
-		xml.set('img', Mobile.asset + asset.node.img.innerData);
+		_imgPath = Mobile.asset + asset.node.img.innerData;
 
 		//position
-		xml.set('x', asset.node.pos.att.x);
-		xml.set('y', asset.node.pos.att.y);
-		xml.set('rotation', asset.node.pos.att.rotation);
+		_x = Std.parseFloat(asset.node.pos.att.x);
+		_y = Std.parseFloat(asset.node.pos.att.y);
+		_rotation = Std.parseFloat(asset.node.pos.att.rotation);
 
 		//physics
-		xml.set('physics', asset.node.physics.innerData);
-		xml.set('elasticity', asset.node.material.att.elasticity);
-		xml.set('dynamicFriction', asset.node.material.att.dynamicFriction);
-		xml.set('staticFriction', asset.node.material.att.staticFriction);
-		xml.set('density', asset.node.material.att.density);
-		xml.set('rollingFriction', asset.node.material.att.rollingFriction);
-
+		_physics = asset.node.physics.innerData;
+		_elasticity = Std.parseFloat(asset.node.material.att.elasticity);
+		_dynamicFriction = Std.parseFloat(asset.node.material.att.dynamicFriction);
+		_staticFriction = Std.parseFloat(asset.node.material.att.staticFriction);
+		_density = Std.parseFloat(asset.node.material.att.density);
+		_rollingFriction = Std.parseFloat(asset.node.material.att.rollingFriction);
 
 	}
 
@@ -76,11 +92,11 @@ class GameObject {
 
 	private function makeMaterial():Material{
 		return new Material(
-			xml.get('elasticity'), 
-			xml.get('dynamicFriction'), 
-			xml.get('staticFriction'), 
-			xml.get('density'),
-			xml.get('rollingFriction')
+			_elasticity, 
+			_dynamicFriction, 
+			_staticFriction, 
+			_density,
+			_rollingFriction
 		);
 	}
 
