@@ -176,7 +176,7 @@ Dynamic ConstraintListener_obj::set_handler( Dynamic handler){
 		this->zpp_inner_zn->handler = handler;
 	}
 	HX_STACK_LINE(220)
-	return this->zpp_inner_zn->handler_dyn();
+	return this->zpp_inner_zn->handler;
 }
 
 
@@ -186,7 +186,7 @@ Dynamic ConstraintListener_obj::get_handler( ){
 	HX_STACK_PUSH("ConstraintListener::get_handler","nape/callbacks/ConstraintListener.hx",208);
 	HX_STACK_THIS(this);
 	HX_STACK_LINE(208)
-	return this->zpp_inner_zn->handler_dyn();
+	return this->zpp_inner_zn->handler;
 }
 
 
@@ -223,8 +223,6 @@ ConstraintListener_obj::ConstraintListener_obj()
 void ConstraintListener_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(ConstraintListener);
-	HX_MARK_MEMBER_NAME(handler,"handler");
-	HX_MARK_MEMBER_NAME(options,"options");
 	HX_MARK_MEMBER_NAME(zpp_inner_zn,"zpp_inner_zn");
 	super::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
@@ -232,8 +230,6 @@ void ConstraintListener_obj::__Mark(HX_MARK_PARAMS)
 
 void ConstraintListener_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(handler,"handler");
-	HX_VISIT_MEMBER_NAME(options,"options");
 	HX_VISIT_MEMBER_NAME(zpp_inner_zn,"zpp_inner_zn");
 	super::__Visit(HX_VISIT_ARG);
 }
@@ -242,8 +238,8 @@ Dynamic ConstraintListener_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 7:
-		if (HX_FIELD_EQ(inName,"handler") ) { return inCallProp ? get_handler() : handler; }
-		if (HX_FIELD_EQ(inName,"options") ) { return inCallProp ? get_options() : options; }
+		if (HX_FIELD_EQ(inName,"handler") ) { return get_handler(); }
+		if (HX_FIELD_EQ(inName,"options") ) { return get_options(); }
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"set_handler") ) { return set_handler_dyn(); }
@@ -261,8 +257,8 @@ Dynamic ConstraintListener_obj::__SetField(const ::String &inName,const Dynamic 
 {
 	switch(inName.length) {
 	case 7:
-		if (HX_FIELD_EQ(inName,"handler") ) { if (inCallProp) return set_handler(inValue);handler=inValue.Cast< Dynamic >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"options") ) { if (inCallProp) return set_options(inValue);options=inValue.Cast< ::nape::callbacks::OptionType >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"handler") ) { return set_handler(inValue); }
+		if (HX_FIELD_EQ(inName,"options") ) { return set_options(inValue); }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"zpp_inner_zn") ) { zpp_inner_zn=inValue.Cast< ::zpp_nape::callbacks::ZPP_ConstraintListener >(); return inValue; }
@@ -283,10 +279,8 @@ static ::String sStaticFields[] = {
 static ::String sMemberFields[] = {
 	HX_CSTRING("set_handler"),
 	HX_CSTRING("get_handler"),
-	HX_CSTRING("handler"),
 	HX_CSTRING("set_options"),
 	HX_CSTRING("get_options"),
-	HX_CSTRING("options"),
 	HX_CSTRING("zpp_inner_zn"),
 	String(null()) };
 
@@ -302,7 +296,7 @@ Class ConstraintListener_obj::__mClass;
 
 void ConstraintListener_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.ConstraintListener"), hx::TCanCast< ConstraintListener_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.ConstraintListener"), hx::TCanCast< ConstraintListener_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

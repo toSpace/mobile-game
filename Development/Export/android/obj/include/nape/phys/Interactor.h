@@ -16,7 +16,7 @@ namespace nape{
 namespace phys{
 
 
-class Interactor_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Interactor_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Interactor_obj OBJ_;
@@ -42,26 +42,21 @@ class Interactor_obj : public hx::Object{
 		virtual ::nape::callbacks::CbTypeList get_cbTypes( );
 		Dynamic get_cbTypes_dyn();
 
-		::nape::callbacks::CbTypeList cbTypes; /* REM */ 
 		virtual ::nape::dynamics::InteractionGroup set_group( ::nape::dynamics::InteractionGroup group);
 		Dynamic set_group_dyn();
 
 		virtual ::nape::dynamics::InteractionGroup get_group( );
 		Dynamic get_group_dyn();
 
-		::nape::dynamics::InteractionGroup group; /* REM */ 
 		virtual ::nape::phys::Compound get_castCompound( );
 		Dynamic get_castCompound_dyn();
 
-		::nape::phys::Compound castCompound; /* REM */ 
 		virtual ::nape::phys::Body get_castBody( );
 		Dynamic get_castBody_dyn();
 
-		::nape::phys::Body castBody; /* REM */ 
 		virtual ::nape::shape::Shape get_castShape( );
 		Dynamic get_castShape_dyn();
 
-		::nape::shape::Shape castShape; /* REM */ 
 		virtual bool isCompound( );
 		Dynamic isCompound_dyn();
 
@@ -74,12 +69,10 @@ class Interactor_obj : public hx::Object{
 		virtual Dynamic get_userData( );
 		Dynamic get_userData_dyn();
 
-		Dynamic userData; /* REM */ 
 		virtual int get_id( );
 		Dynamic get_id_dyn();
 
-		int id; /* REM */ 
-		::zpp_nape::phys::ZPP_Interactor zpp_inner_i; /* REM */ 
+		::zpp_nape::phys::ZPP_Interactor zpp_inner_i;
 };
 
 } // end namespace nape

@@ -13,7 +13,7 @@ namespace nape{
 namespace geom{
 
 
-class ConvexResultList_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ConvexResultList_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ConvexResultList_obj OBJ_;
@@ -84,9 +84,8 @@ class ConvexResultList_obj : public hx::Object{
 		virtual int get_length( );
 		Dynamic get_length_dyn();
 
-		int length; /* REM */ 
-		::zpp_nape::util::ZPP_ConvexResultList zpp_inner; /* REM */ 
-		static ::nape::geom::ConvexResultList fromArray( Array< ::nape::geom::ConvexResult > array);
+		::zpp_nape::util::ZPP_ConvexResultList zpp_inner;
+		static ::nape::geom::ConvexResultList fromArray( Array< ::Dynamic > array);
 		static Dynamic fromArray_dyn();
 
 };

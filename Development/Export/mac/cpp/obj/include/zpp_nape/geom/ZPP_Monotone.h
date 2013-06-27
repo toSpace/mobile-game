@@ -16,7 +16,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_Monotone_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Monotone_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Monotone_obj OBJ_;
@@ -51,12 +51,12 @@ class ZPP_Monotone_obj : public hx::Object{
 		static bool isMonotone( ::zpp_nape::geom::ZPP_GeomVert P);
 		static Dynamic isMonotone_dyn();
 
-		static ::zpp_nape::geom::ZPP_PartitionedPoly sharedPPoly; /* REM */ 
+		static ::zpp_nape::geom::ZPP_PartitionedPoly sharedPPoly;
 		static ::zpp_nape::geom::ZPP_PartitionedPoly getShared( );
 		static Dynamic getShared_dyn();
 
-		static ::zpp_nape::util::ZNPList_ZPP_PartitionVertex queue; /* REM */ 
-		static ::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex edges; /* REM */ 
+		static ::zpp_nape::util::ZNPList_ZPP_PartitionVertex queue;
+		static ::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex edges;
 		static ::zpp_nape::geom::ZPP_PartitionedPoly decompose( ::zpp_nape::geom::ZPP_GeomVert P,::zpp_nape::geom::ZPP_PartitionedPoly poly);
 		static Dynamic decompose_dyn();
 

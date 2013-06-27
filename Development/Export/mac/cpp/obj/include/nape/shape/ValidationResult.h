@@ -10,7 +10,7 @@ namespace nape{
 namespace shape{
 
 
-class ValidationResult_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ValidationResult_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ValidationResult_obj OBJ_;
@@ -33,19 +33,15 @@ class ValidationResult_obj : public hx::Object{
 		virtual ::String toString( );
 		Dynamic toString_dyn();
 
-		static ::nape::shape::ValidationResult VALID; /* REM */ 
 		static ::nape::shape::ValidationResult get_VALID( );
 		static Dynamic get_VALID_dyn();
 
-		static ::nape::shape::ValidationResult DEGENERATE; /* REM */ 
 		static ::nape::shape::ValidationResult get_DEGENERATE( );
 		static Dynamic get_DEGENERATE_dyn();
 
-		static ::nape::shape::ValidationResult CONCAVE; /* REM */ 
 		static ::nape::shape::ValidationResult get_CONCAVE( );
 		static Dynamic get_CONCAVE_dyn();
 
-		static ::nape::shape::ValidationResult SELF_INTERSECTING; /* REM */ 
 		static ::nape::shape::ValidationResult get_SELF_INTERSECTING( );
 		static Dynamic get_SELF_INTERSECTING_dyn();
 

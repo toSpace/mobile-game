@@ -12,7 +12,7 @@ namespace nape{
 namespace geom{
 
 
-class RayResultIterator_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  RayResultIterator_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef RayResultIterator_obj OBJ_;
@@ -38,11 +38,11 @@ class RayResultIterator_obj : public hx::Object{
 		virtual bool hasNext( );
 		Dynamic hasNext_dyn();
 
-		::nape::geom::RayResultIterator zpp_next; /* REM */ 
-		bool zpp_critical; /* REM */ 
-		int zpp_i; /* REM */ 
-		::nape::geom::RayResultList zpp_inner; /* REM */ 
-		static ::nape::geom::RayResultIterator zpp_pool; /* REM */ 
+		::nape::geom::RayResultIterator zpp_next;
+		bool zpp_critical;
+		int zpp_i;
+		::nape::geom::RayResultList zpp_inner;
+		static ::nape::geom::RayResultIterator zpp_pool;
 		static ::nape::geom::RayResultIterator get( ::nape::geom::RayResultList list);
 		static Dynamic get_dyn();
 

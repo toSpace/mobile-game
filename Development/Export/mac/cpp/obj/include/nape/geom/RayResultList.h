@@ -13,7 +13,7 @@ namespace nape{
 namespace geom{
 
 
-class RayResultList_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  RayResultList_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef RayResultList_obj OBJ_;
@@ -84,9 +84,8 @@ class RayResultList_obj : public hx::Object{
 		virtual int get_length( );
 		Dynamic get_length_dyn();
 
-		int length; /* REM */ 
-		::zpp_nape::util::ZPP_RayResultList zpp_inner; /* REM */ 
-		static ::nape::geom::RayResultList fromArray( Array< ::nape::geom::RayResult > array);
+		::zpp_nape::util::ZPP_RayResultList zpp_inner;
+		static ::nape::geom::RayResultList fromArray( Array< ::Dynamic > array);
 		static Dynamic fromArray_dyn();
 
 };

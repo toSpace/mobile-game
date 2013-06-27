@@ -9,20 +9,19 @@
 HX_DECLARE_CLASS2(aze,display,TileBase)
 HX_DECLARE_CLASS2(aze,display,TileGroup)
 HX_DECLARE_CLASS2(aze,display,TileLayer)
-HX_DECLARE_CLASS1(haxe,Public)
 namespace aze{
 namespace display{
 
 
-class TileGroup_obj : public ::aze::display::TileBase_obj{
+class HXCPP_CLASS_ATTRIBUTES  TileGroup_obj : public ::aze::display::TileBase_obj{
 	public:
 		typedef ::aze::display::TileBase_obj super;
 		typedef TileGroup_obj OBJ_;
 		TileGroup_obj();
-		Void __construct();
+		Void __construct(::aze::display::TileLayer layer);
 
 	public:
-		static hx::ObjectPtr< TileGroup_obj > __new();
+		static hx::ObjectPtr< TileGroup_obj > __new(::aze::display::TileLayer layer);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		~TileGroup_obj();
@@ -37,22 +36,25 @@ class TileGroup_obj : public ::aze::display::TileBase_obj{
 		virtual Float get_width( );
 		Dynamic get_width_dyn();
 
-		Float width; /* REM */ 
+		Float width;
 		virtual Float get_height( );
 		Dynamic get_height_dyn();
 
-		Float height; /* REM */ 
+		Float height;
 		virtual int get_numChildren( );
 		Dynamic get_numChildren_dyn();
 
-		int numChildren; /* REM */ 
+		int numChildren;
 		virtual Dynamic iterator( );
 		Dynamic iterator_dyn();
+
+		virtual Void setChildIndex( ::aze::display::TileBase item,int index);
+		Dynamic setChildIndex_dyn();
 
 		virtual int getChildIndex( ::aze::display::TileBase item);
 		Dynamic getChildIndex_dyn();
 
-		virtual Array< ::aze::display::TileBase > removeAllChildren( );
+		virtual Array< ::Dynamic > removeAllChildren( );
 		Dynamic removeAllChildren_dyn();
 
 		virtual ::aze::display::TileBase removeChildAt( int index);
@@ -78,7 +80,7 @@ class TileGroup_obj : public ::aze::display::TileBase_obj{
 
 		virtual Void init( ::aze::display::TileLayer layer);
 
-		Array< ::aze::display::TileBase > children; /* REM */ 
+		Array< ::Dynamic > children;
 };
 
 } // end namespace aze

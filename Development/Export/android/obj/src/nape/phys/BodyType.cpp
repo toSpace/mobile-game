@@ -126,8 +126,6 @@ Dynamic BodyType_obj::__Create(hx::DynamicArray inArgs)
 
 HX_DEFINE_DYNAMIC_FUNC0(BodyType_obj,toString,return )
 
-::nape::phys::BodyType BodyType_obj::STATIC;
-
 ::nape::phys::BodyType BodyType_obj::get_STATIC( ){
 	HX_STACK_PUSH("BodyType::get_STATIC","nape/phys/BodyType.hx",203);
 	HX_STACK_LINE(204)
@@ -146,8 +144,6 @@ HX_DEFINE_DYNAMIC_FUNC0(BodyType_obj,toString,return )
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(BodyType_obj,get_STATIC,return )
 
-::nape::phys::BodyType BodyType_obj::DYNAMIC;
-
 ::nape::phys::BodyType BodyType_obj::get_DYNAMIC( ){
 	HX_STACK_PUSH("BodyType::get_DYNAMIC","nape/phys/BodyType.hx",217);
 	HX_STACK_LINE(218)
@@ -165,8 +161,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(BodyType_obj,get_STATIC,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(BodyType_obj,get_DYNAMIC,return )
-
-::nape::phys::BodyType BodyType_obj::KINEMATIC;
 
 ::nape::phys::BodyType BodyType_obj::get_KINEMATIC( ){
 	HX_STACK_PUSH("BodyType::get_KINEMATIC","nape/phys/BodyType.hx",232);
@@ -205,16 +199,16 @@ Dynamic BodyType_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 6:
-		if (HX_FIELD_EQ(inName,"STATIC") ) { return inCallProp ? get_STATIC() : STATIC; }
+		if (HX_FIELD_EQ(inName,"STATIC") ) { return get_STATIC(); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"DYNAMIC") ) { return inCallProp ? get_DYNAMIC() : DYNAMIC; }
+		if (HX_FIELD_EQ(inName,"DYNAMIC") ) { return get_DYNAMIC(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
 		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"KINEMATIC") ) { return inCallProp ? get_KINEMATIC() : KINEMATIC; }
+		if (HX_FIELD_EQ(inName,"KINEMATIC") ) { return get_KINEMATIC(); }
 		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"get_STATIC") ) { return get_STATIC_dyn(); }
@@ -230,16 +224,6 @@ Dynamic BodyType_obj::__Field(const ::String &inName,bool inCallProp)
 
 Dynamic BodyType_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 6:
-		if (HX_FIELD_EQ(inName,"STATIC") ) { STATIC=inValue.Cast< ::nape::phys::BodyType >(); return inValue; }
-		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"DYNAMIC") ) { DYNAMIC=inValue.Cast< ::nape::phys::BodyType >(); return inValue; }
-		break;
-	case 9:
-		if (HX_FIELD_EQ(inName,"KINEMATIC") ) { KINEMATIC=inValue.Cast< ::nape::phys::BodyType >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
@@ -249,11 +233,8 @@ void BodyType_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("STATIC"),
 	HX_CSTRING("get_STATIC"),
-	HX_CSTRING("DYNAMIC"),
 	HX_CSTRING("get_DYNAMIC"),
-	HX_CSTRING("KINEMATIC"),
 	HX_CSTRING("get_KINEMATIC"),
 	String(null()) };
 
@@ -263,23 +244,17 @@ static ::String sMemberFields[] = {
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(BodyType_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(BodyType_obj::STATIC,"STATIC");
-	HX_MARK_MEMBER_NAME(BodyType_obj::DYNAMIC,"DYNAMIC");
-	HX_MARK_MEMBER_NAME(BodyType_obj::KINEMATIC,"KINEMATIC");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(BodyType_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(BodyType_obj::STATIC,"STATIC");
-	HX_VISIT_MEMBER_NAME(BodyType_obj::DYNAMIC,"DYNAMIC");
-	HX_VISIT_MEMBER_NAME(BodyType_obj::KINEMATIC,"KINEMATIC");
 };
 
 Class BodyType_obj::__mClass;
 
 void BodyType_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.phys.BodyType"), hx::TCanCast< BodyType_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.phys.BodyType"), hx::TCanCast< BodyType_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

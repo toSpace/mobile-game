@@ -179,9 +179,6 @@ Void ZPP_ConstraintListener_obj::cbtype_change( ::zpp_nape::callbacks::ZPP_CbTyp
 					{
 						HX_STACK_LINE(315)
 						::zpp_nape::util::ZNPList_ZPP_CbType _this1 = _this->includes;		HX_STACK_VAR(_this1,"_this1");
-						HX_STACK_LINE(315)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &cb){
 								HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",315);
@@ -273,9 +270,6 @@ Void ZPP_ConstraintListener_obj::cbtype_change( ::zpp_nape::callbacks::ZPP_CbTyp
 					{
 						HX_STACK_LINE(315)
 						::zpp_nape::util::ZNPList_ZPP_CbType _this1 = _this->excludes;		HX_STACK_VAR(_this1,"_this1");
-						HX_STACK_LINE(315)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &cb){
 								HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",315);
@@ -406,9 +400,6 @@ Void ZPP_ConstraintListener_obj::addedToSpace( ){
 				{
 					HX_STACK_LINE(294)
 					{
-					}
-					HX_STACK_LINE(294)
-					{
 						HX_STACK_LINE(294)
 						::zpp_nape::util::ZNPNode_ZPP_ConstraintListener pre = null();		HX_STACK_VAR(pre,"pre");
 						HX_STACK_LINE(294)
@@ -437,9 +428,6 @@ Void ZPP_ConstraintListener_obj::addedToSpace( ){
 						{
 							HX_STACK_LINE(294)
 							::zpp_nape::util::ZNPList_ZPP_ConstraintListener _this = cb->conlisteners;		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(294)
-							{
-							}
 							struct _Function_6_1{
 								inline static ::zpp_nape::util::ZNPNode_ZPP_ConstraintListener Block( ::zpp_nape::callbacks::ZPP_ConstraintListener_obj *__this){
 									HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",294);
@@ -636,7 +624,7 @@ Class ZPP_ConstraintListener_obj::__mClass;
 
 void ZPP_ConstraintListener_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.callbacks.ZPP_ConstraintListener"), hx::TCanCast< ZPP_ConstraintListener_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.callbacks.ZPP_ConstraintListener"), hx::TCanCast< ZPP_ConstraintListener_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -12,7 +12,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_CutInt_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_CutInt_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_CutInt_obj OBJ_;
@@ -38,15 +38,15 @@ class ZPP_CutInt_obj : public hx::Object{
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
-		::zpp_nape::geom::ZPP_CutVert path1; /* REM */ 
-		::zpp_nape::geom::ZPP_GeomVert start; /* REM */ 
-		::zpp_nape::geom::ZPP_GeomVert end; /* REM */ 
-		::zpp_nape::geom::ZPP_CutVert path0; /* REM */ 
-		bool vertex; /* REM */ 
-		bool virtualint; /* REM */ 
-		Float time; /* REM */ 
-		::zpp_nape::geom::ZPP_CutInt next; /* REM */ 
-		static ::zpp_nape::geom::ZPP_CutInt zpp_pool; /* REM */ 
+		::zpp_nape::geom::ZPP_CutVert path1;
+		::zpp_nape::geom::ZPP_GeomVert start;
+		::zpp_nape::geom::ZPP_GeomVert end;
+		::zpp_nape::geom::ZPP_CutVert path0;
+		bool vertex;
+		bool virtualint;
+		Float time;
+		::zpp_nape::geom::ZPP_CutInt next;
+		static ::zpp_nape::geom::ZPP_CutInt zpp_pool;
 		static ::zpp_nape::geom::ZPP_CutInt get( Float time,::zpp_nape::geom::ZPP_GeomVert end,::zpp_nape::geom::ZPP_GeomVert start,::zpp_nape::geom::ZPP_CutVert path0,::zpp_nape::geom::ZPP_CutVert path1,hx::Null< bool >  virtualint,hx::Null< bool >  vertex);
 		static Dynamic get_dyn();
 

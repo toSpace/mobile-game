@@ -160,7 +160,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 									HX_STACK_LINE(307)
 									::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(307)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(307)
 										_this->_validate();
 									}
@@ -185,7 +185,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 									HX_STACK_LINE(307)
 									::zpp_nape::geom::ZPP_Vec3 _this = tmp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(307)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(307)
 										_this->_validate();
 									}
@@ -211,7 +211,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 						HX_STACK_LINE(307)
 						::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(307)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(307)
 							_this->_validate();
 						}
@@ -253,7 +253,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 									HX_STACK_LINE(308)
 									::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(308)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(308)
 										_this->_validate();
 									}
@@ -278,7 +278,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 									HX_STACK_LINE(308)
 									::zpp_nape::geom::ZPP_Vec3 _this = tmp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(308)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(308)
 										_this->_validate();
 									}
@@ -304,7 +304,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 						HX_STACK_LINE(308)
 						::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(308)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(308)
 							_this->_validate();
 						}
@@ -346,7 +346,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 									HX_STACK_LINE(309)
 									::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(309)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(309)
 										_this->_validate();
 									}
@@ -371,7 +371,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 									HX_STACK_LINE(309)
 									::zpp_nape::geom::ZPP_Vec3 _this = tmp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(309)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(309)
 										_this->_validate();
 									}
@@ -397,7 +397,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 						HX_STACK_LINE(309)
 						::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(309)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(309)
 							_this->_validate();
 						}
@@ -660,7 +660,7 @@ HX_DEFINE_DYNAMIC_FUNC0(FluidArbiter_obj,get_overlap,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(200)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(200)
 					_this1->_isimmutable();
 				}
@@ -671,7 +671,7 @@ HX_DEFINE_DYNAMIC_FUNC0(FluidArbiter_obj,get_overlap,return )
 				hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 			}
 			struct _Function_3_2{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &position,::nape::geom::Vec2 &_this){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &position,::nape::geom::Vec2 _this){
 					HX_STACK_PUSH("*::closure","nape/dynamics/FluidArbiter.hx",200);
 					{
 						struct _Function_4_1{
@@ -688,7 +688,7 @@ HX_DEFINE_DYNAMIC_FUNC0(FluidArbiter_obj,get_overlap,return )
 										HX_STACK_LINE(200)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = position->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(200)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(200)
 											_this1->_validate();
 										}
@@ -713,7 +713,7 @@ HX_DEFINE_DYNAMIC_FUNC0(FluidArbiter_obj,get_overlap,return )
 										HX_STACK_LINE(200)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = position->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(200)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(200)
 											_this1->_validate();
 										}
@@ -742,7 +742,7 @@ HX_DEFINE_DYNAMIC_FUNC0(FluidArbiter_obj,get_overlap,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(200)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(200)
 								_this1->_isimmutable();
 							}
@@ -753,7 +753,7 @@ HX_DEFINE_DYNAMIC_FUNC0(FluidArbiter_obj,get_overlap,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 						}
 						struct _Function_4_3{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/dynamics/FluidArbiter.hx",200);
 								{
 									HX_STACK_LINE(200)
@@ -766,7 +766,7 @@ HX_DEFINE_DYNAMIC_FUNC0(FluidArbiter_obj,get_overlap,return )
 										HX_STACK_LINE(200)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(200)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(200)
 											_this1->_validate();
 										}
@@ -778,7 +778,7 @@ HX_DEFINE_DYNAMIC_FUNC0(FluidArbiter_obj,get_overlap,return )
 							}
 						};
 						struct _Function_4_4{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/dynamics/FluidArbiter.hx",200);
 								{
 									HX_STACK_LINE(200)
@@ -791,7 +791,7 @@ HX_DEFINE_DYNAMIC_FUNC0(FluidArbiter_obj,get_overlap,return )
 										HX_STACK_LINE(200)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(200)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(200)
 											_this1->_validate();
 										}
@@ -813,16 +813,13 @@ HX_DEFINE_DYNAMIC_FUNC0(FluidArbiter_obj,get_overlap,return )
 								HX_STACK_LINE(200)
 								{
 								}
-								HX_STACK_LINE(200)
-								{
-								}
 							}
 							HX_STACK_LINE(200)
 							{
 								HX_STACK_LINE(200)
 								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(200)
-								if (((_this1->_invalidate_dyn() != null()))){
+								if (((_this1->_invalidate != null()))){
 									HX_STACK_LINE(200)
 									_this1->_invalidate(_this1);
 								}
@@ -855,7 +852,7 @@ HX_DEFINE_DYNAMIC_FUNC0(FluidArbiter_obj,get_overlap,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(200)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(200)
 							_this1->_isimmutable();
 						}
@@ -876,9 +873,6 @@ HX_DEFINE_DYNAMIC_FUNC0(FluidArbiter_obj,get_overlap,return )
 						HX_STACK_LINE(200)
 						::nape::geom::Vec2 o = position;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(200)
-						{
-						}
-						HX_STACK_LINE(200)
 						o->zpp_pool = null();
 						HX_STACK_LINE(200)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -898,9 +892,6 @@ HX_DEFINE_DYNAMIC_FUNC0(FluidArbiter_obj,get_overlap,return )
 					{
 						HX_STACK_LINE(200)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(200)
-						{
-						}
 						HX_STACK_LINE(200)
 						{
 							HX_STACK_LINE(200)
@@ -989,16 +980,12 @@ FluidArbiter_obj::FluidArbiter_obj()
 void FluidArbiter_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(FluidArbiter);
-	HX_MARK_MEMBER_NAME(overlap,"overlap");
-	HX_MARK_MEMBER_NAME(position,"position");
 	super::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
 }
 
 void FluidArbiter_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(overlap,"overlap");
-	HX_VISIT_MEMBER_NAME(position,"position");
 	super::__Visit(HX_VISIT_ARG);
 }
 
@@ -1006,10 +993,10 @@ Dynamic FluidArbiter_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 7:
-		if (HX_FIELD_EQ(inName,"overlap") ) { return inCallProp ? get_overlap() : overlap; }
+		if (HX_FIELD_EQ(inName,"overlap") ) { return get_overlap(); }
 		break;
 	case 8:
-		if (HX_FIELD_EQ(inName,"position") ) { return inCallProp ? get_position() : position; }
+		if (HX_FIELD_EQ(inName,"position") ) { return get_position(); }
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"dragImpulse") ) { return dragImpulse_dyn(); }
@@ -1031,10 +1018,10 @@ Dynamic FluidArbiter_obj::__SetField(const ::String &inName,const Dynamic &inVal
 {
 	switch(inName.length) {
 	case 7:
-		if (HX_FIELD_EQ(inName,"overlap") ) { if (inCallProp) return set_overlap(inValue);overlap=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"overlap") ) { return set_overlap(inValue); }
 		break;
 	case 8:
-		if (HX_FIELD_EQ(inName,"position") ) { if (inCallProp) return set_position(inValue);position=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"position") ) { return set_position(inValue); }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -1055,10 +1042,8 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("buoyancyImpulse"),
 	HX_CSTRING("set_overlap"),
 	HX_CSTRING("get_overlap"),
-	HX_CSTRING("overlap"),
 	HX_CSTRING("set_position"),
 	HX_CSTRING("get_position"),
-	HX_CSTRING("position"),
 	String(null()) };
 
 static void sMarkStatics(HX_MARK_PARAMS) {
@@ -1073,7 +1058,7 @@ Class FluidArbiter_obj::__mClass;
 
 void FluidArbiter_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.dynamics.FluidArbiter"), hx::TCanCast< FluidArbiter_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.dynamics.FluidArbiter"), hx::TCanCast< FluidArbiter_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

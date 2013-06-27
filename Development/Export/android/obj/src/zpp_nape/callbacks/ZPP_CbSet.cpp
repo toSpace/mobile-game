@@ -178,15 +178,6 @@ Void ZPP_CbSet_obj::free( ){
 {
 		HX_STACK_PUSH("ZPP_CbSet::free","zpp_nape/callbacks/CbSet.hx",471);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(472)
-		{
-		}
-		HX_STACK_LINE(480)
-		{
-		}
-		HX_STACK_LINE(488)
-		{
-		}
 		HX_STACK_LINE(497)
 		this->listeners->clear();
 		HX_STACK_LINE(498)
@@ -354,11 +345,8 @@ Void ZPP_CbSet_obj::realvalidate_conlisteners( ){
 							};
 							HX_STACK_LINE(385)
 							if (((bool((nite == null())) || bool(_Function_6_1::Block(nite,cx))))){
-								HX_STACK_LINE(386)
-								{
-								}
 								struct _Function_7_1{
-									inline static bool Block( ::zpp_nape::callbacks::ZPP_ConstraintListener &cx,::zpp_nape::callbacks::ZPP_CbSet_obj *__this){
+									inline static bool Block( ::zpp_nape::callbacks::ZPP_CbSet_obj *__this,::zpp_nape::callbacks::ZPP_ConstraintListener &cx){
 										HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",394);
 										{
 											HX_STACK_LINE(394)
@@ -370,16 +358,13 @@ Void ZPP_CbSet_obj::realvalidate_conlisteners( ){
 									}
 								};
 								HX_STACK_LINE(394)
-								if (((bool(!(_Function_7_1::Block(cx,this))) && bool((cx->space == this->manager->space))))){
+								if (((bool(!(_Function_7_1::Block(this,cx))) && bool((cx->space == this->manager->space))))){
 									struct _Function_8_1{
-										inline static ::zpp_nape::util::ZNPNode_ZPP_ConstraintListener Block( ::zpp_nape::callbacks::ZPP_CbSet_obj *__this,::zpp_nape::util::ZNPNode_ZPP_ConstraintListener &npre,::zpp_nape::callbacks::ZPP_ConstraintListener &cx){
+										inline static ::zpp_nape::util::ZNPNode_ZPP_ConstraintListener Block( ::zpp_nape::callbacks::ZPP_CbSet_obj *__this,::zpp_nape::callbacks::ZPP_ConstraintListener &cx,::zpp_nape::util::ZNPNode_ZPP_ConstraintListener &npre){
 											HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",396);
 											{
 												HX_STACK_LINE(396)
 												::zpp_nape::util::ZNPList_ZPP_ConstraintListener _this = __this->conlisteners;		HX_STACK_VAR(_this,"_this");
-												HX_STACK_LINE(396)
-												{
-												}
 												struct _Function_9_1{
 													inline static ::zpp_nape::util::ZNPNode_ZPP_ConstraintListener Block( ::zpp_nape::callbacks::ZPP_ConstraintListener &cx){
 														HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",396);
@@ -438,7 +423,7 @@ Void ZPP_CbSet_obj::realvalidate_conlisteners( ){
 										}
 									};
 									HX_STACK_LINE(395)
-									npre = _Function_8_1::Block(this,npre,cx);
+									npre = _Function_8_1::Block(this,cx,npre);
 								}
 								HX_STACK_LINE(398)
 								cite = cite->next;
@@ -544,11 +529,8 @@ Void ZPP_CbSet_obj::realvalidate_bodylisteners( ){
 							};
 							HX_STACK_LINE(326)
 							if (((bool((nite == null())) || bool(_Function_6_1::Block(nite,cx))))){
-								HX_STACK_LINE(327)
-								{
-								}
 								struct _Function_7_1{
-									inline static bool Block( ::zpp_nape::callbacks::ZPP_BodyListener &cx,::zpp_nape::callbacks::ZPP_CbSet_obj *__this){
+									inline static bool Block( ::zpp_nape::callbacks::ZPP_CbSet_obj *__this,::zpp_nape::callbacks::ZPP_BodyListener &cx){
 										HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",335);
 										{
 											HX_STACK_LINE(335)
@@ -560,16 +542,13 @@ Void ZPP_CbSet_obj::realvalidate_bodylisteners( ){
 									}
 								};
 								HX_STACK_LINE(335)
-								if (((bool(!(_Function_7_1::Block(cx,this))) && bool((cx->space == this->manager->space))))){
+								if (((bool(!(_Function_7_1::Block(this,cx))) && bool((cx->space == this->manager->space))))){
 									struct _Function_8_1{
-										inline static ::zpp_nape::util::ZNPNode_ZPP_BodyListener Block( ::zpp_nape::callbacks::ZPP_CbSet_obj *__this,::zpp_nape::util::ZNPNode_ZPP_BodyListener &npre,::zpp_nape::callbacks::ZPP_BodyListener &cx){
+										inline static ::zpp_nape::util::ZNPNode_ZPP_BodyListener Block( ::zpp_nape::callbacks::ZPP_CbSet_obj *__this,::zpp_nape::callbacks::ZPP_BodyListener &cx,::zpp_nape::util::ZNPNode_ZPP_BodyListener &npre){
 											HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",337);
 											{
 												HX_STACK_LINE(337)
 												::zpp_nape::util::ZNPList_ZPP_BodyListener _this = __this->bodylisteners;		HX_STACK_VAR(_this,"_this");
-												HX_STACK_LINE(337)
-												{
-												}
 												struct _Function_9_1{
 													inline static ::zpp_nape::util::ZNPNode_ZPP_BodyListener Block( ::zpp_nape::callbacks::ZPP_BodyListener &cx){
 														HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",337);
@@ -628,7 +607,7 @@ Void ZPP_CbSet_obj::realvalidate_bodylisteners( ){
 										}
 									};
 									HX_STACK_LINE(336)
-									npre = _Function_8_1::Block(this,npre,cx);
+									npre = _Function_8_1::Block(this,cx,npre);
 								}
 								HX_STACK_LINE(339)
 								cite = cite->next;
@@ -734,20 +713,14 @@ Void ZPP_CbSet_obj::realvalidate_listeners( ){
 							};
 							HX_STACK_LINE(267)
 							if (((bool((nite == null())) || bool(_Function_6_1::Block(nite,cx))))){
-								HX_STACK_LINE(268)
-								{
-								}
 								HX_STACK_LINE(276)
 								if (((cx->space == this->manager->space))){
 									struct _Function_8_1{
-										inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_CbSet_obj *__this,::zpp_nape::util::ZNPNode_ZPP_InteractionListener &npre,::zpp_nape::callbacks::ZPP_InteractionListener &cx){
+										inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_CbSet_obj *__this,::zpp_nape::callbacks::ZPP_InteractionListener &cx,::zpp_nape::util::ZNPNode_ZPP_InteractionListener &npre){
 											HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",278);
 											{
 												HX_STACK_LINE(278)
 												::zpp_nape::util::ZNPList_ZPP_InteractionListener _this = __this->listeners;		HX_STACK_VAR(_this,"_this");
-												HX_STACK_LINE(278)
-												{
-												}
 												struct _Function_9_1{
 													inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &cx){
 														HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",278);
@@ -806,7 +779,7 @@ Void ZPP_CbSet_obj::realvalidate_listeners( ){
 										}
 									};
 									HX_STACK_LINE(277)
-									npre = _Function_8_1::Block(this,npre,cx);
+									npre = _Function_8_1::Block(this,cx,npre);
 								}
 								HX_STACK_LINE(280)
 								cite = cite->next;
@@ -889,10 +862,7 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_CbSet_obj,invalidate_pairs,(void))
 bool ZPP_CbSet_obj::decrement( ){
 	HX_STACK_PUSH("ZPP_CbSet::decrement","zpp_nape/callbacks/CbSet.hx",212);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(213)
-	{
-	}
-	HX_STACK_LINE(221)
+	HX_STACK_LINE(212)
 	return (--(this->count) == (int)0);
 }
 
@@ -1072,115 +1042,102 @@ bool ZPP_CbSet_obj::empty_intersection( ::zpp_nape::callbacks::ZPP_CbSet a,::zpp
 	HX_STACK_ARG(a,"a");
 	HX_STACK_ARG(b,"b");
 	struct _Function_1_1{
-		inline static bool Block( ::zpp_nape::callbacks::ZPP_CbSet &a,::zpp_nape::callbacks::ZPP_CbSet &b){
+		inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &b,::zpp_nape::callbacks::ZPP_CbSet &a){
 			HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",586);
 			{
 				HX_STACK_LINE(586)
+				::zpp_nape::callbacks::ZPP_CbSetPair ret = null();		HX_STACK_VAR(ret,"ret");
+				HX_STACK_LINE(586)
+				::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((a->cbpairs->length < b->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(a->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(b->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
+				HX_STACK_LINE(586)
 				{
+					HX_STACK_LINE(586)
+					::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite = pairs->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+					HX_STACK_LINE(586)
+					while(((cx_ite != null()))){
+						HX_STACK_LINE(586)
+						::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite->elt;		HX_STACK_VAR(p,"p");
+						HX_STACK_LINE(586)
+						if (((bool((bool((p->a == a)) && bool((p->b == b)))) || bool((bool((p->a == b)) && bool((p->b == a))))))){
+							HX_STACK_LINE(586)
+							ret = p;
+							HX_STACK_LINE(586)
+							break;
+						}
+						HX_STACK_LINE(586)
+						cx_ite = cx_ite->next;
+					}
 				}
-				struct _Function_2_1{
-					inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &a,::zpp_nape::callbacks::ZPP_CbSet &b){
-						HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",586);
-						{
-							HX_STACK_LINE(586)
-							::zpp_nape::callbacks::ZPP_CbSetPair ret = null();		HX_STACK_VAR(ret,"ret");
-							HX_STACK_LINE(586)
-							::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((a->cbpairs->length < b->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(a->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(b->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
-							HX_STACK_LINE(586)
+				HX_STACK_LINE(586)
+				if (((ret == null()))){
+					struct _Function_3_1{
+						inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &b,::zpp_nape::callbacks::ZPP_CbSet &a){
+							HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",586);
 							{
 								HX_STACK_LINE(586)
-								::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite = pairs->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+								::zpp_nape::callbacks::ZPP_CbSetPair ret1;		HX_STACK_VAR(ret1,"ret1");
 								HX_STACK_LINE(586)
-								while(((cx_ite != null()))){
+								{
 									HX_STACK_LINE(586)
-									::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite->elt;		HX_STACK_VAR(p,"p");
-									HX_STACK_LINE(586)
-									if (((bool((bool((p->a == a)) && bool((p->b == b)))) || bool((bool((p->a == b)) && bool((p->b == a))))))){
+									if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
 										HX_STACK_LINE(586)
-										ret = p;
+										ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
+									}
+									else{
 										HX_STACK_LINE(586)
-										break;
+										ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
+										HX_STACK_LINE(586)
+										::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret1->next;
+										HX_STACK_LINE(586)
+										ret1->next = null();
 									}
 									HX_STACK_LINE(586)
-									cx_ite = cx_ite->next;
+									ret1->zip_listeners = true;
 								}
-							}
-							HX_STACK_LINE(586)
-							if (((ret == null()))){
-								struct _Function_4_1{
-									inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &a,::zpp_nape::callbacks::ZPP_CbSet &b){
-										HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",586);
-										{
-											HX_STACK_LINE(586)
-											::zpp_nape::callbacks::ZPP_CbSetPair ret1;		HX_STACK_VAR(ret1,"ret1");
-											HX_STACK_LINE(586)
-											{
-												HX_STACK_LINE(586)
-												if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
-													HX_STACK_LINE(586)
-													ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
-												}
-												else{
-													HX_STACK_LINE(586)
-													ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
-													HX_STACK_LINE(586)
-													::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret1->next;
-													HX_STACK_LINE(586)
-													ret1->next = null();
-												}
-												HX_STACK_LINE(586)
-												ret1->zip_listeners = true;
-											}
-											HX_STACK_LINE(586)
-											if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(a,b))){
-												HX_STACK_LINE(586)
-												ret1->a = a;
-												HX_STACK_LINE(586)
-												ret1->b = b;
-											}
-											else{
-												HX_STACK_LINE(586)
-												ret1->a = b;
-												HX_STACK_LINE(586)
-												ret1->b = a;
-											}
-											HX_STACK_LINE(586)
-											return ret1;
-										}
-										return null();
-									}
-								};
 								HX_STACK_LINE(586)
-								ret = _Function_4_1::Block(a,b);
-								HX_STACK_LINE(586)
-								a->cbpairs->add(ret);
-								HX_STACK_LINE(586)
-								if (((b != a))){
+								if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(a,b))){
 									HX_STACK_LINE(586)
-									b->cbpairs->add(ret);
+									ret1->a = a;
+									HX_STACK_LINE(586)
+									ret1->b = b;
 								}
-							}
-							HX_STACK_LINE(586)
-							if ((ret->zip_listeners)){
+								else{
+									HX_STACK_LINE(586)
+									ret1->a = b;
+									HX_STACK_LINE(586)
+									ret1->b = a;
+								}
 								HX_STACK_LINE(586)
-								ret->zip_listeners = false;
-								HX_STACK_LINE(586)
-								ret->__validate();
+								return ret1;
 							}
-							HX_STACK_LINE(586)
-							return ret;
+							return null();
 						}
-						return null();
+					};
+					HX_STACK_LINE(586)
+					ret = _Function_3_1::Block(b,a);
+					HX_STACK_LINE(586)
+					a->cbpairs->add(ret);
+					HX_STACK_LINE(586)
+					if (((b != a))){
+						HX_STACK_LINE(586)
+						b->cbpairs->add(ret);
 					}
-				};
+				}
 				HX_STACK_LINE(586)
-				return ((_Function_2_1::Block(a,b))->listeners->head == null());
+				if ((ret->zip_listeners)){
+					HX_STACK_LINE(586)
+					ret->zip_listeners = false;
+					HX_STACK_LINE(586)
+					ret->__validate();
+				}
+				HX_STACK_LINE(586)
+				return ret;
 			}
 			return null();
 		}
 	};
 	HX_STACK_LINE(585)
-	return _Function_1_1::Block(a,b);
+	return ((_Function_1_1::Block(b,a))->listeners->head == null());
 }
 
 
@@ -1192,14 +1149,11 @@ bool ZPP_CbSet_obj::single_intersection( ::zpp_nape::callbacks::ZPP_CbSet a,::zp
 	HX_STACK_ARG(b,"b");
 	HX_STACK_ARG(i,"i");
 	struct _Function_1_1{
-		inline static bool Block( ::zpp_nape::callbacks::ZPP_CbSet &b,::zpp_nape::callbacks::ZPP_CbSet &a,::zpp_nape::callbacks::ZPP_InteractionListener &i){
+		inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &i,::zpp_nape::callbacks::ZPP_CbSet &b,::zpp_nape::callbacks::ZPP_CbSet &a){
 			HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",589);
 			{
-				HX_STACK_LINE(589)
-				{
-				}
 				struct _Function_2_1{
-					inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &a,::zpp_nape::callbacks::ZPP_CbSet &b){
+					inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &b,::zpp_nape::callbacks::ZPP_CbSet &a){
 						HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",589);
 						{
 							HX_STACK_LINE(589)
@@ -1228,7 +1182,7 @@ bool ZPP_CbSet_obj::single_intersection( ::zpp_nape::callbacks::ZPP_CbSet a,::zp
 							HX_STACK_LINE(589)
 							if (((ret == null()))){
 								struct _Function_4_1{
-									inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &a,::zpp_nape::callbacks::ZPP_CbSet &b){
+									inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &b,::zpp_nape::callbacks::ZPP_CbSet &a){
 										HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",589);
 										{
 											HX_STACK_LINE(589)
@@ -1271,7 +1225,7 @@ bool ZPP_CbSet_obj::single_intersection( ::zpp_nape::callbacks::ZPP_CbSet a,::zp
 									}
 								};
 								HX_STACK_LINE(589)
-								ret = _Function_4_1::Block(a,b);
+								ret = _Function_4_1::Block(b,a);
 								HX_STACK_LINE(589)
 								a->cbpairs->add(ret);
 								HX_STACK_LINE(589)
@@ -1294,7 +1248,7 @@ bool ZPP_CbSet_obj::single_intersection( ::zpp_nape::callbacks::ZPP_CbSet a,::zp
 					}
 				};
 				HX_STACK_LINE(589)
-				::zpp_nape::util::ZNPNode_ZPP_InteractionListener ite = (_Function_2_1::Block(a,b))->listeners->head;		HX_STACK_VAR(ite,"ite");
+				::zpp_nape::util::ZNPNode_ZPP_InteractionListener ite = (_Function_2_1::Block(b,a))->listeners->head;		HX_STACK_VAR(ite,"ite");
 				HX_STACK_LINE(589)
 				return (bool((bool((ite != null())) && bool((ite->elt == i)))) && bool((ite->next == null())));
 			}
@@ -1302,7 +1256,7 @@ bool ZPP_CbSet_obj::single_intersection( ::zpp_nape::callbacks::ZPP_CbSet a,::zp
 		}
 	};
 	HX_STACK_LINE(588)
-	return _Function_1_1::Block(b,a,i);
+	return _Function_1_1::Block(i,b,a);
 }
 
 
@@ -1315,120 +1269,114 @@ Void ZPP_CbSet_obj::find_all( ::zpp_nape::callbacks::ZPP_CbSet a,::zpp_nape::cal
 		HX_STACK_ARG(b,"b");
 		HX_STACK_ARG(event,"event");
 		HX_STACK_ARG(cb,"cb");
-		HX_STACK_LINE(593)
-		{
-		}
-		HX_STACK_LINE(593)
-		{
-			struct _Function_2_1{
-				inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &a,::zpp_nape::callbacks::ZPP_CbSet &b){
-					HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",593);
+		struct _Function_1_1{
+			inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &b,::zpp_nape::callbacks::ZPP_CbSet &a){
+				HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",593);
+				{
+					HX_STACK_LINE(593)
+					::zpp_nape::callbacks::ZPP_CbSetPair ret = null();		HX_STACK_VAR(ret,"ret");
+					HX_STACK_LINE(593)
+					::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((a->cbpairs->length < b->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(a->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(b->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
+					HX_STACK_LINE(593)
 					{
 						HX_STACK_LINE(593)
-						::zpp_nape::callbacks::ZPP_CbSetPair ret = null();		HX_STACK_VAR(ret,"ret");
+						::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite = pairs->head;		HX_STACK_VAR(cx_ite,"cx_ite");
 						HX_STACK_LINE(593)
-						::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((a->cbpairs->length < b->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(a->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(b->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
-						HX_STACK_LINE(593)
-						{
+						while(((cx_ite != null()))){
 							HX_STACK_LINE(593)
-							::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite = pairs->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+							::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite->elt;		HX_STACK_VAR(p,"p");
 							HX_STACK_LINE(593)
-							while(((cx_ite != null()))){
+							if (((bool((bool((p->a == a)) && bool((p->b == b)))) || bool((bool((p->a == b)) && bool((p->b == a))))))){
 								HX_STACK_LINE(593)
-								::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite->elt;		HX_STACK_VAR(p,"p");
+								ret = p;
 								HX_STACK_LINE(593)
-								if (((bool((bool((p->a == a)) && bool((p->b == b)))) || bool((bool((p->a == b)) && bool((p->b == a))))))){
-									HX_STACK_LINE(593)
-									ret = p;
-									HX_STACK_LINE(593)
-									break;
-								}
-								HX_STACK_LINE(593)
-								cx_ite = cx_ite->next;
+								break;
 							}
+							HX_STACK_LINE(593)
+							cx_ite = cx_ite->next;
 						}
-						HX_STACK_LINE(593)
-						if (((ret == null()))){
-							struct _Function_4_1{
-								inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &a,::zpp_nape::callbacks::ZPP_CbSet &b){
-									HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",593);
+					}
+					HX_STACK_LINE(593)
+					if (((ret == null()))){
+						struct _Function_3_1{
+							inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &b,::zpp_nape::callbacks::ZPP_CbSet &a){
+								HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbSet.hx",593);
+								{
+									HX_STACK_LINE(593)
+									::zpp_nape::callbacks::ZPP_CbSetPair ret1;		HX_STACK_VAR(ret1,"ret1");
+									HX_STACK_LINE(593)
 									{
 										HX_STACK_LINE(593)
-										::zpp_nape::callbacks::ZPP_CbSetPair ret1;		HX_STACK_VAR(ret1,"ret1");
-										HX_STACK_LINE(593)
-										{
+										if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
 											HX_STACK_LINE(593)
-											if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
-												HX_STACK_LINE(593)
-												ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
-											}
-											else{
-												HX_STACK_LINE(593)
-												ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
-												HX_STACK_LINE(593)
-												::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret1->next;
-												HX_STACK_LINE(593)
-												ret1->next = null();
-											}
-											HX_STACK_LINE(593)
-											ret1->zip_listeners = true;
-										}
-										HX_STACK_LINE(593)
-										if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(a,b))){
-											HX_STACK_LINE(593)
-											ret1->a = a;
-											HX_STACK_LINE(593)
-											ret1->b = b;
+											ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
 										}
 										else{
 											HX_STACK_LINE(593)
-											ret1->a = b;
+											ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
 											HX_STACK_LINE(593)
-											ret1->b = a;
+											::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret1->next;
+											HX_STACK_LINE(593)
+											ret1->next = null();
 										}
 										HX_STACK_LINE(593)
-										return ret1;
+										ret1->zip_listeners = true;
 									}
-									return null();
+									HX_STACK_LINE(593)
+									if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(a,b))){
+										HX_STACK_LINE(593)
+										ret1->a = a;
+										HX_STACK_LINE(593)
+										ret1->b = b;
+									}
+									else{
+										HX_STACK_LINE(593)
+										ret1->a = b;
+										HX_STACK_LINE(593)
+										ret1->b = a;
+									}
+									HX_STACK_LINE(593)
+									return ret1;
 								}
-							};
-							HX_STACK_LINE(593)
-							ret = _Function_4_1::Block(a,b);
-							HX_STACK_LINE(593)
-							a->cbpairs->add(ret);
-							HX_STACK_LINE(593)
-							if (((b != a))){
-								HX_STACK_LINE(593)
-								b->cbpairs->add(ret);
+								return null();
 							}
-						}
+						};
 						HX_STACK_LINE(593)
-						if ((ret->zip_listeners)){
-							HX_STACK_LINE(593)
-							ret->zip_listeners = false;
-							HX_STACK_LINE(593)
-							ret->__validate();
-						}
+						ret = _Function_3_1::Block(b,a);
 						HX_STACK_LINE(593)
-						return ret;
+						a->cbpairs->add(ret);
+						HX_STACK_LINE(593)
+						if (((b != a))){
+							HX_STACK_LINE(593)
+							b->cbpairs->add(ret);
+						}
 					}
-					return null();
-				}
-			};
-			HX_STACK_LINE(593)
-			::zpp_nape::util::ZNPNode_ZPP_InteractionListener cx_ite = (_Function_2_1::Block(a,b))->listeners->head;		HX_STACK_VAR(cx_ite,"cx_ite");
-			HX_STACK_LINE(593)
-			while(((cx_ite != null()))){
-				HX_STACK_LINE(593)
-				::zpp_nape::callbacks::ZPP_InteractionListener x = cx_ite->elt;		HX_STACK_VAR(x,"x");
-				HX_STACK_LINE(593)
-				if (((x->event == event))){
 					HX_STACK_LINE(593)
-					cb(x).Cast< Void >();
+					if ((ret->zip_listeners)){
+						HX_STACK_LINE(593)
+						ret->zip_listeners = false;
+						HX_STACK_LINE(593)
+						ret->__validate();
+					}
+					HX_STACK_LINE(593)
+					return ret;
 				}
-				HX_STACK_LINE(593)
-				cx_ite = cx_ite->next;
+				return null();
 			}
+		};
+		HX_STACK_LINE(593)
+		::zpp_nape::util::ZNPNode_ZPP_InteractionListener cx_ite = (_Function_1_1::Block(b,a))->listeners->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+		HX_STACK_LINE(593)
+		while(((cx_ite != null()))){
+			HX_STACK_LINE(593)
+			::zpp_nape::callbacks::ZPP_InteractionListener x = cx_ite->elt;		HX_STACK_VAR(x,"x");
+			HX_STACK_LINE(593)
+			if (((x->event == event))){
+				HX_STACK_LINE(593)
+				cb(x).Cast< Void >();
+			}
+			HX_STACK_LINE(593)
+			cx_ite = cx_ite->next;
 		}
 	}
 return null();
@@ -1704,7 +1652,7 @@ Class ZPP_CbSet_obj::__mClass;
 
 void ZPP_CbSet_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.callbacks.ZPP_CbSet"), hx::TCanCast< ZPP_CbSet_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.callbacks.ZPP_CbSet"), hx::TCanCast< ZPP_CbSet_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

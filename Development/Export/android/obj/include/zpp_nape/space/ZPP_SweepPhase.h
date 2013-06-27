@@ -23,7 +23,7 @@ namespace zpp_nape{
 namespace space{
 
 
-class ZPP_SweepPhase_obj : public ::zpp_nape::space::ZPP_Broadphase_obj{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_SweepPhase_obj : public ::zpp_nape::space::ZPP_Broadphase_obj{
 	public:
 		typedef ::zpp_nape::space::ZPP_Broadphase_obj super;
 		typedef ZPP_SweepPhase_obj OBJ_;
@@ -57,7 +57,7 @@ class ZPP_SweepPhase_obj : public ::zpp_nape::space::ZPP_Broadphase_obj{
 
 		virtual ::nape::phys::BodyList bodiesInAABB( ::zpp_nape::geom::ZPP_AABB aabb,bool strict,bool containment,::zpp_nape::dynamics::ZPP_InteractionFilter filter,::nape::phys::BodyList output);
 
-		::nape::phys::BodyList failed; /* REM */ 
+		::nape::phys::BodyList failed;
 		virtual ::nape::shape::ShapeList shapesInAABB( ::zpp_nape::geom::ZPP_AABB aabb,bool strict,bool containment,::zpp_nape::dynamics::ZPP_InteractionFilter filter,::nape::shape::ShapeList output);
 
 		virtual ::nape::phys::BodyList bodiesUnderPoint( Float x,Float y,::zpp_nape::dynamics::ZPP_InteractionFilter filter,::nape::phys::BodyList output);
@@ -83,7 +83,7 @@ class ZPP_SweepPhase_obj : public ::zpp_nape::space::ZPP_Broadphase_obj{
 		virtual Void __insert( ::zpp_nape::shape::ZPP_Shape shape);
 		Dynamic __insert_dyn();
 
-		::zpp_nape::space::ZPP_SweepData list; /* REM */ 
+		::zpp_nape::space::ZPP_SweepData list;
 };
 
 } // end namespace zpp_nape

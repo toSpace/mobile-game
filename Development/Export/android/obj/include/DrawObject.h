@@ -8,18 +8,18 @@
 #include <GameObject.h>
 HX_DECLARE_CLASS0(DrawObject)
 HX_DECLARE_CLASS0(GameObject)
-HX_DECLARE_CLASS2(native,display,Bitmap)
-HX_DECLARE_CLASS2(native,display,BitmapData)
-HX_DECLARE_CLASS2(native,display,DisplayObject)
-HX_DECLARE_CLASS2(native,display,DisplayObjectContainer)
-HX_DECLARE_CLASS2(native,display,IBitmapDrawable)
-HX_DECLARE_CLASS2(native,display,InteractiveObject)
-HX_DECLARE_CLASS2(native,display,Sprite)
-HX_DECLARE_CLASS2(native,events,EventDispatcher)
-HX_DECLARE_CLASS2(native,events,IEventDispatcher)
+HX_DECLARE_CLASS2(flash,display,Bitmap)
+HX_DECLARE_CLASS2(flash,display,BitmapData)
+HX_DECLARE_CLASS2(flash,display,DisplayObject)
+HX_DECLARE_CLASS2(flash,display,DisplayObjectContainer)
+HX_DECLARE_CLASS2(flash,display,IBitmapDrawable)
+HX_DECLARE_CLASS2(flash,display,InteractiveObject)
+HX_DECLARE_CLASS2(flash,display,Sprite)
+HX_DECLARE_CLASS2(flash,events,EventDispatcher)
+HX_DECLARE_CLASS2(flash,events,IEventDispatcher)
 
 
-class DrawObject_obj : public ::GameObject_obj{
+class HXCPP_CLASS_ATTRIBUTES  DrawObject_obj : public ::GameObject_obj{
 	public:
 		typedef ::GameObject_obj super;
 		typedef DrawObject_obj OBJ_;
@@ -39,13 +39,13 @@ class DrawObject_obj : public ::GameObject_obj{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("DrawObject"); }
 
-		virtual ::native::display::BitmapData invert( ::native::display::BitmapData image);
+		virtual ::flash::display::BitmapData invert( ::flash::display::BitmapData image);
 		Dynamic invert_dyn();
 
 		virtual Void draw( );
 		Dynamic draw_dyn();
 
-		virtual Void erase( ::native::display::Sprite erase);
+		virtual Void erase( ::flash::display::Sprite erase,::flash::display::Bitmap bitmap);
 		Dynamic erase_dyn();
 
 		virtual Void stopDrawing( );
@@ -64,13 +64,13 @@ class DrawObject_obj : public ::GameObject_obj{
 
 		virtual Void physicsObject( ::String physic);
 
-		virtual Void loadBitmap( ::native::display::Bitmap bitmap,::String physics);
+		virtual Void loadBitmap( ::flash::display::Bitmap bitmap,::String physics);
 		Dynamic loadBitmap_dyn();
 
-		Float mass; /* REM */ 
-		::String physicType; /* REM */ 
-		::native::display::Sprite drawingCanvas; /* REM */ 
-		bool drawing; /* REM */ 
+		Float mass;
+		::String physicType;
+		::flash::display::Sprite drawingCanvas;
+		bool drawing;
 };
 
 

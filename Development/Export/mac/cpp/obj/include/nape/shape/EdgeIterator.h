@@ -12,7 +12,7 @@ namespace nape{
 namespace shape{
 
 
-class EdgeIterator_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  EdgeIterator_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef EdgeIterator_obj OBJ_;
@@ -38,11 +38,11 @@ class EdgeIterator_obj : public hx::Object{
 		virtual bool hasNext( );
 		Dynamic hasNext_dyn();
 
-		::nape::shape::EdgeIterator zpp_next; /* REM */ 
-		bool zpp_critical; /* REM */ 
-		int zpp_i; /* REM */ 
-		::nape::shape::EdgeList zpp_inner; /* REM */ 
-		static ::nape::shape::EdgeIterator zpp_pool; /* REM */ 
+		::nape::shape::EdgeIterator zpp_next;
+		bool zpp_critical;
+		int zpp_i;
+		::nape::shape::EdgeList zpp_inner;
+		static ::nape::shape::EdgeIterator zpp_pool;
 		static ::nape::shape::EdgeIterator get( ::nape::shape::EdgeList list);
 		static Dynamic get_dyn();
 

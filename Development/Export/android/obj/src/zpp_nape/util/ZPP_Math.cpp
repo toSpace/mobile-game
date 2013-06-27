@@ -30,10 +30,7 @@ Dynamic ZPP_Math_obj::__Create(hx::DynamicArray inArgs)
 Float ZPP_Math_obj::sqrt( Float x){
 	HX_STACK_PUSH("ZPP_Math::sqrt","zpp_nape/util/Math.hx",179);
 	HX_STACK_ARG(x,"x");
-	HX_STACK_LINE(180)
-	{
-	}
-	HX_STACK_LINE(189)
+	HX_STACK_LINE(179)
 	return ::Math_obj::sqrt(x);
 }
 
@@ -43,24 +40,8 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(ZPP_Math_obj,sqrt,return )
 Float ZPP_Math_obj::invsqrt( Float x){
 	HX_STACK_PUSH("ZPP_Math::invsqrt","zpp_nape/util/Math.hx",193);
 	HX_STACK_ARG(x,"x");
-	HX_STACK_LINE(194)
-	{
-	}
-	struct _Function_1_1{
-		inline static Float Block( Float &x){
-			HX_STACK_PUSH("*::closure","zpp_nape/util/Math.hx",206);
-			{
-				HX_STACK_LINE(206)
-				{
-				}
-				HX_STACK_LINE(206)
-				return ::Math_obj::sqrt(x);
-			}
-			return null();
-		}
-	};
-	HX_STACK_LINE(206)
-	return (Float(1.0) / Float(_Function_1_1::Block(x)));
+	HX_STACK_LINE(193)
+	return (Float(1.0) / Float(::Math_obj::sqrt(x)));
 }
 
 
@@ -69,10 +50,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(ZPP_Math_obj,invsqrt,return )
 Float ZPP_Math_obj::sqr( Float x){
 	HX_STACK_PUSH("ZPP_Math::sqr","zpp_nape/util/Math.hx",210);
 	HX_STACK_ARG(x,"x");
-	HX_STACK_LINE(211)
-	{
-	}
-	HX_STACK_LINE(219)
+	HX_STACK_LINE(210)
 	return (x * x);
 }
 
@@ -83,26 +61,20 @@ Float ZPP_Math_obj::clamp2( Float x,Float a){
 	HX_STACK_PUSH("ZPP_Math::clamp2","zpp_nape/util/Math.hx",222);
 	HX_STACK_ARG(x,"x");
 	HX_STACK_ARG(a,"a");
-	HX_STACK_LINE(223)
-	{
-	}
 	struct _Function_1_1{
-		inline static Float Block( Float &a,Float &x){
+		inline static Float Block( Float &x,Float &a){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Math.hx",231);
 			{
 				HX_STACK_LINE(231)
 				Float a1 = -(a);		HX_STACK_VAR(a1,"a1");
-				HX_STACK_LINE(231)
-				{
-				}
 				HX_STACK_LINE(231)
 				return (  (((x < a1))) ? Float(a1) : Float((  (((x > a))) ? Float(a) : Float(x) )) );
 			}
 			return null();
 		}
 	};
-	HX_STACK_LINE(231)
-	return _Function_1_1::Block(a,x);
+	HX_STACK_LINE(222)
+	return _Function_1_1::Block(x,a);
 }
 
 
@@ -113,10 +85,7 @@ Float ZPP_Math_obj::clamp( Float x,Float a,Float b){
 	HX_STACK_ARG(x,"x");
 	HX_STACK_ARG(a,"a");
 	HX_STACK_ARG(b,"b");
-	HX_STACK_LINE(235)
-	{
-	}
-	HX_STACK_LINE(243)
+	HX_STACK_LINE(234)
 	return (  (((x < a))) ? Float(a) : Float((  (((x > b))) ? Float(b) : Float(x) )) );
 }
 
@@ -192,7 +161,7 @@ Class ZPP_Math_obj::__mClass;
 
 void ZPP_Math_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_Math"), hx::TCanCast< ZPP_Math_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_Math"), hx::TCanCast< ZPP_Math_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

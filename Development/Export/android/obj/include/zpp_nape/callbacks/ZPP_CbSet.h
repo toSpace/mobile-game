@@ -24,7 +24,7 @@ namespace zpp_nape{
 namespace callbacks{
 
 
-class ZPP_CbSet_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_CbSet_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_CbSet_obj OBJ_;
@@ -62,10 +62,10 @@ class ZPP_CbSet_obj : public hx::Object{
 		virtual Void addConstraint( ::zpp_nape::constraint::ZPP_Constraint con);
 		Dynamic addConstraint_dyn();
 
-		::nape::constraint::ConstraintList wrap_constraints; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Constraint constraints; /* REM */ 
-		::nape::phys::InteractorList wrap_interactors; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Interactor interactors; /* REM */ 
+		::nape::constraint::ConstraintList wrap_constraints;
+		::zpp_nape::util::ZNPList_ZPP_Constraint constraints;
+		::nape::phys::InteractorList wrap_interactors;
+		::zpp_nape::util::ZNPList_ZPP_Interactor interactors;
 		virtual Void validate( );
 		Dynamic validate_dyn();
 
@@ -78,8 +78,8 @@ class ZPP_CbSet_obj : public hx::Object{
 		virtual Void invalidate_conlisteners( );
 		Dynamic invalidate_conlisteners_dyn();
 
-		bool zip_conlisteners; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_ConstraintListener conlisteners; /* REM */ 
+		bool zip_conlisteners;
+		::zpp_nape::util::ZNPList_ZPP_ConstraintListener conlisteners;
 		virtual Void realvalidate_bodylisteners( );
 		Dynamic realvalidate_bodylisteners_dyn();
 
@@ -89,8 +89,8 @@ class ZPP_CbSet_obj : public hx::Object{
 		virtual Void invalidate_bodylisteners( );
 		Dynamic invalidate_bodylisteners_dyn();
 
-		bool zip_bodylisteners; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_BodyListener bodylisteners; /* REM */ 
+		bool zip_bodylisteners;
+		::zpp_nape::util::ZNPList_ZPP_BodyListener bodylisteners;
 		virtual Void realvalidate_listeners( );
 		Dynamic realvalidate_listeners_dyn();
 
@@ -100,8 +100,8 @@ class ZPP_CbSet_obj : public hx::Object{
 		virtual Void invalidate_listeners( );
 		Dynamic invalidate_listeners_dyn();
 
-		bool zip_listeners; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_InteractionListener listeners; /* REM */ 
+		bool zip_listeners;
+		::zpp_nape::util::ZNPList_ZPP_InteractionListener listeners;
 		virtual Void invalidate_pairs( );
 		Dynamic invalidate_pairs_dyn();
 
@@ -111,13 +111,13 @@ class ZPP_CbSet_obj : public hx::Object{
 		virtual Void increment( );
 		Dynamic increment_dyn();
 
-		::zpp_nape::util::ZNPList_ZPP_CbSetPair cbpairs; /* REM */ 
-		::zpp_nape::space::ZPP_CbSetManager manager; /* REM */ 
-		int id; /* REM */ 
-		::zpp_nape::callbacks::ZPP_CbSet next; /* REM */ 
-		int count; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_CbType cbTypes; /* REM */ 
-		static ::zpp_nape::callbacks::ZPP_CbSet zpp_pool; /* REM */ 
+		::zpp_nape::util::ZNPList_ZPP_CbSetPair cbpairs;
+		::zpp_nape::space::ZPP_CbSetManager manager;
+		int id;
+		::zpp_nape::callbacks::ZPP_CbSet next;
+		int count;
+		::zpp_nape::util::ZNPList_ZPP_CbType cbTypes;
+		static ::zpp_nape::callbacks::ZPP_CbSet zpp_pool;
 		static bool setlt( ::zpp_nape::callbacks::ZPP_CbSet a,::zpp_nape::callbacks::ZPP_CbSet b);
 		static Dynamic setlt_dyn();
 

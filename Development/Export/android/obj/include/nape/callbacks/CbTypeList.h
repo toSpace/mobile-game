@@ -13,7 +13,7 @@ namespace nape{
 namespace callbacks{
 
 
-class CbTypeList_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  CbTypeList_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef CbTypeList_obj OBJ_;
@@ -84,9 +84,8 @@ class CbTypeList_obj : public hx::Object{
 		virtual int get_length( );
 		Dynamic get_length_dyn();
 
-		int length; /* REM */ 
-		::zpp_nape::util::ZPP_CbTypeList zpp_inner; /* REM */ 
-		static ::nape::callbacks::CbTypeList fromArray( Array< ::nape::callbacks::CbType > array);
+		::zpp_nape::util::ZPP_CbTypeList zpp_inner;
+		static ::nape::callbacks::CbTypeList fromArray( Array< ::Dynamic > array);
 		static Dynamic fromArray_dyn();
 
 };

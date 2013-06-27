@@ -46,9 +46,6 @@ Dynamic ZNPList_RayResult_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_PUSH("ZNPList_RayResult::at","zpp_nape/util/Lists.hx",14756);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(14757)
-	{
-	}
 	HX_STACK_LINE(14765)
 	::zpp_nape::util::ZNPNode_RayResult it = this->iterator_at(ind);		HX_STACK_VAR(it,"it");
 	HX_STACK_LINE(14766)
@@ -62,9 +59,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_RayResult_obj,at,return )
 	HX_STACK_PUSH("ZNPList_RayResult::iterator_at","zpp_nape/util/Lists.hx",14743);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(14744)
-	{
-	}
 	HX_STACK_LINE(14752)
 	::zpp_nape::util::ZNPNode_RayResult ret = this->head;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(14753)
@@ -114,9 +108,6 @@ bool ZNPList_RayResult_obj::inlined_has( ::nape::geom::RayResult obj){
 	HX_STACK_PUSH("ZNPList_RayResult::inlined_has","zpp_nape/util/Lists.hx",14701);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(14702)
-	{
-	}
 	HX_STACK_LINE(14710)
 	bool ret;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(14711)
@@ -158,9 +149,6 @@ bool ZNPList_RayResult_obj::has( ::nape::geom::RayResult obj){
 		inline static bool Block( ::zpp_nape::util::ZNPList_RayResult_obj *__this,::nape::geom::RayResult &obj){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",14697);
 			{
-				HX_STACK_LINE(14697)
-				{
-				}
 				HX_STACK_LINE(14697)
 				bool ret;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(14697)
@@ -259,22 +247,13 @@ Void ZNPList_RayResult_obj::inlined_clear( ){
 		HX_STACK_LINE(14669)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(14669)
-			{
-			}
-			HX_STACK_LINE(14669)
 			::zpp_nape::util::ZNPNode_RayResult ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(14669)
 			this->head = ret->next;
 			HX_STACK_LINE(14669)
 			{
-			}
-			HX_STACK_LINE(14669)
-			{
 				HX_STACK_LINE(14669)
 				::zpp_nape::util::ZNPNode_RayResult o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(14669)
-				{
-				}
 				HX_STACK_LINE(14669)
 				o->elt = null();
 				HX_STACK_LINE(14669)
@@ -308,22 +287,13 @@ Void ZNPList_RayResult_obj::clear( ){
 		HX_STACK_LINE(14663)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(14663)
-			{
-			}
-			HX_STACK_LINE(14663)
 			::zpp_nape::util::ZNPNode_RayResult ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(14663)
 			this->head = ret->next;
 			HX_STACK_LINE(14663)
 			{
-			}
-			HX_STACK_LINE(14663)
-			{
 				HX_STACK_LINE(14663)
 				::zpp_nape::util::ZNPNode_RayResult o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(14663)
-				{
-				}
 				HX_STACK_LINE(14663)
 				o->elt = null();
 				HX_STACK_LINE(14663)
@@ -371,9 +341,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_RayResult_obj,splice,return )
 	HX_STACK_PUSH("ZNPList_RayResult::inlined_erase","zpp_nape/util/Lists.hx",14612);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
-	HX_STACK_LINE(14613)
-	{
-	}
 	HX_STACK_LINE(14621)
 	::zpp_nape::util::ZNPNode_RayResult old;		HX_STACK_VAR(old,"old");
 	HX_STACK_LINE(14622)
@@ -405,16 +372,10 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_RayResult_obj,splice,return )
 			this->pushmod = true;
 		}
 	}
-	HX_STACK_LINE(14635)
-	{
-	}
 	HX_STACK_LINE(14636)
 	{
 		HX_STACK_LINE(14637)
 		::zpp_nape::util::ZNPNode_RayResult o = old;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(14638)
-		{
-		}
 		HX_STACK_LINE(14646)
 		o->elt = null();
 		HX_STACK_LINE(14647)
@@ -440,12 +401,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_RayResult_obj,inlined_erase,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
 	struct _Function_1_1{
-		inline static ::zpp_nape::util::ZNPNode_RayResult Block( ::zpp_nape::util::ZNPNode_RayResult &pre,::zpp_nape::util::ZNPList_RayResult_obj *__this){
+		inline static ::zpp_nape::util::ZNPNode_RayResult Block( ::zpp_nape::util::ZNPList_RayResult_obj *__this,::zpp_nape::util::ZNPNode_RayResult &pre){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",14608);
 			{
-				HX_STACK_LINE(14608)
-				{
-				}
 				HX_STACK_LINE(14608)
 				::zpp_nape::util::ZNPNode_RayResult old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(14608)
@@ -479,14 +437,8 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_RayResult_obj,inlined_erase,return )
 				}
 				HX_STACK_LINE(14608)
 				{
-				}
-				HX_STACK_LINE(14608)
-				{
 					HX_STACK_LINE(14608)
 					::zpp_nape::util::ZNPNode_RayResult o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(14608)
-					{
-					}
 					HX_STACK_LINE(14608)
 					o->elt = null();
 					HX_STACK_LINE(14608)
@@ -507,7 +459,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_RayResult_obj,inlined_erase,return )
 		}
 	};
 	HX_STACK_LINE(14607)
-	return _Function_1_1::Block(pre,this);
+	return _Function_1_1::Block(this,pre);
 }
 
 
@@ -517,9 +469,6 @@ bool ZNPList_RayResult_obj::inlined_try_remove( ::nape::geom::RayResult obj){
 	HX_STACK_PUSH("ZNPList_RayResult::inlined_try_remove","zpp_nape/util/Lists.hx",14584);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(14585)
-	{
-	}
 	HX_STACK_LINE(14593)
 	::zpp_nape::util::ZNPNode_RayResult pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(14594)
@@ -532,9 +481,6 @@ bool ZNPList_RayResult_obj::inlined_try_remove( ::nape::geom::RayResult obj){
 		if (((cur->elt == obj))){
 			HX_STACK_LINE(14598)
 			{
-				HX_STACK_LINE(14598)
-				{
-				}
 				HX_STACK_LINE(14598)
 				::zpp_nape::util::ZNPNode_RayResult old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(14598)
@@ -568,14 +514,8 @@ bool ZNPList_RayResult_obj::inlined_try_remove( ::nape::geom::RayResult obj){
 				}
 				HX_STACK_LINE(14598)
 				{
-				}
-				HX_STACK_LINE(14598)
-				{
 					HX_STACK_LINE(14598)
 					::zpp_nape::util::ZNPNode_RayResult o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(14598)
-					{
-					}
 					HX_STACK_LINE(14598)
 					o->elt = null();
 					HX_STACK_LINE(14598)
@@ -614,99 +554,81 @@ Void ZNPList_RayResult_obj::inlined_remove( ::nape::geom::RayResult obj){
 		HX_STACK_PUSH("ZNPList_RayResult::inlined_remove","zpp_nape/util/Lists.hx",14571);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(14572)
-		{
-		}
 		HX_STACK_LINE(14580)
-		{
+		::zpp_nape::util::ZNPNode_RayResult pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(14580)
+		::zpp_nape::util::ZNPNode_RayResult cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(14580)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(14580)
+		while(((cur != null()))){
 			HX_STACK_LINE(14580)
-			{
-			}
-			HX_STACK_LINE(14580)
-			::zpp_nape::util::ZNPNode_RayResult pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(14580)
-			::zpp_nape::util::ZNPNode_RayResult cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(14580)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(14580)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(14580)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(14580)
+					::zpp_nape::util::ZNPNode_RayResult old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(14580)
+					::zpp_nape::util::ZNPNode_RayResult ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(14580)
+					if (((pre == null()))){
+						HX_STACK_LINE(14580)
+						old = this->head;
+						HX_STACK_LINE(14580)
+						ret1 = old->next;
+						HX_STACK_LINE(14580)
+						this->head = ret1;
+						HX_STACK_LINE(14580)
+						if (((this->head == null()))){
+							HX_STACK_LINE(14580)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(14580)
+						old = pre->next;
+						HX_STACK_LINE(14580)
+						ret1 = old->next;
+						HX_STACK_LINE(14580)
+						pre->next = ret1;
+						HX_STACK_LINE(14580)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(14580)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(14580)
 					{
 						HX_STACK_LINE(14580)
-						{
-						}
+						::zpp_nape::util::ZNPNode_RayResult o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(14580)
-						::zpp_nape::util::ZNPNode_RayResult old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(14580)
-						::zpp_nape::util::ZNPNode_RayResult ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_RayResult_obj::zpp_pool;
 						HX_STACK_LINE(14580)
-						if (((pre == null()))){
-							HX_STACK_LINE(14580)
-							old = this->head;
-							HX_STACK_LINE(14580)
-							ret1 = old->next;
-							HX_STACK_LINE(14580)
-							this->head = ret1;
-							HX_STACK_LINE(14580)
-							if (((this->head == null()))){
-								HX_STACK_LINE(14580)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(14580)
-							old = pre->next;
-							HX_STACK_LINE(14580)
-							ret1 = old->next;
-							HX_STACK_LINE(14580)
-							pre->next = ret1;
-							HX_STACK_LINE(14580)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(14580)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(14580)
-						{
-						}
-						HX_STACK_LINE(14580)
-						{
-							HX_STACK_LINE(14580)
-							::zpp_nape::util::ZNPNode_RayResult o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(14580)
-							{
-							}
-							HX_STACK_LINE(14580)
-							o->elt = null();
-							HX_STACK_LINE(14580)
-							o->next = ::zpp_nape::util::ZNPNode_RayResult_obj::zpp_pool;
-							HX_STACK_LINE(14580)
-							::zpp_nape::util::ZNPNode_RayResult_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(14580)
-						this->modified = true;
-						HX_STACK_LINE(14580)
-						(this->length)--;
-						HX_STACK_LINE(14580)
-						this->pushmod = true;
-						HX_STACK_LINE(14580)
-						ret1;
+						::zpp_nape::util::ZNPNode_RayResult_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(14580)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(14580)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(14580)
+					this->pushmod = true;
+					HX_STACK_LINE(14580)
+					ret1;
 				}
 				HX_STACK_LINE(14580)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(14580)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(14580)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(14580)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(14580)
+		ret;
 	}
 return null();
 }
@@ -718,9 +640,6 @@ bool ZNPList_RayResult_obj::try_remove( ::nape::geom::RayResult obj){
 	HX_STACK_PUSH("ZNPList_RayResult::try_remove","zpp_nape/util/Lists.hx",14546);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(14547)
-	{
-	}
 	HX_STACK_LINE(14555)
 	::zpp_nape::util::ZNPNode_RayResult pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(14556)
@@ -755,99 +674,81 @@ Void ZNPList_RayResult_obj::remove( ::nape::geom::RayResult obj){
 		HX_STACK_PUSH("ZNPList_RayResult::remove","zpp_nape/util/Lists.hx",14535);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(14536)
-		{
-		}
 		HX_STACK_LINE(14544)
-		{
+		::zpp_nape::util::ZNPNode_RayResult pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(14544)
+		::zpp_nape::util::ZNPNode_RayResult cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(14544)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(14544)
+		while(((cur != null()))){
 			HX_STACK_LINE(14544)
-			{
-			}
-			HX_STACK_LINE(14544)
-			::zpp_nape::util::ZNPNode_RayResult pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(14544)
-			::zpp_nape::util::ZNPNode_RayResult cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(14544)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(14544)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(14544)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(14544)
+					::zpp_nape::util::ZNPNode_RayResult old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(14544)
+					::zpp_nape::util::ZNPNode_RayResult ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(14544)
+					if (((pre == null()))){
+						HX_STACK_LINE(14544)
+						old = this->head;
+						HX_STACK_LINE(14544)
+						ret1 = old->next;
+						HX_STACK_LINE(14544)
+						this->head = ret1;
+						HX_STACK_LINE(14544)
+						if (((this->head == null()))){
+							HX_STACK_LINE(14544)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(14544)
+						old = pre->next;
+						HX_STACK_LINE(14544)
+						ret1 = old->next;
+						HX_STACK_LINE(14544)
+						pre->next = ret1;
+						HX_STACK_LINE(14544)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(14544)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(14544)
 					{
 						HX_STACK_LINE(14544)
-						{
-						}
+						::zpp_nape::util::ZNPNode_RayResult o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(14544)
-						::zpp_nape::util::ZNPNode_RayResult old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(14544)
-						::zpp_nape::util::ZNPNode_RayResult ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_RayResult_obj::zpp_pool;
 						HX_STACK_LINE(14544)
-						if (((pre == null()))){
-							HX_STACK_LINE(14544)
-							old = this->head;
-							HX_STACK_LINE(14544)
-							ret1 = old->next;
-							HX_STACK_LINE(14544)
-							this->head = ret1;
-							HX_STACK_LINE(14544)
-							if (((this->head == null()))){
-								HX_STACK_LINE(14544)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(14544)
-							old = pre->next;
-							HX_STACK_LINE(14544)
-							ret1 = old->next;
-							HX_STACK_LINE(14544)
-							pre->next = ret1;
-							HX_STACK_LINE(14544)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(14544)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(14544)
-						{
-						}
-						HX_STACK_LINE(14544)
-						{
-							HX_STACK_LINE(14544)
-							::zpp_nape::util::ZNPNode_RayResult o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(14544)
-							{
-							}
-							HX_STACK_LINE(14544)
-							o->elt = null();
-							HX_STACK_LINE(14544)
-							o->next = ::zpp_nape::util::ZNPNode_RayResult_obj::zpp_pool;
-							HX_STACK_LINE(14544)
-							::zpp_nape::util::ZNPNode_RayResult_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(14544)
-						this->modified = true;
-						HX_STACK_LINE(14544)
-						(this->length)--;
-						HX_STACK_LINE(14544)
-						this->pushmod = true;
-						HX_STACK_LINE(14544)
-						ret1;
+						::zpp_nape::util::ZNPNode_RayResult_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(14544)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(14544)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(14544)
+					this->pushmod = true;
+					HX_STACK_LINE(14544)
+					ret1;
 				}
 				HX_STACK_LINE(14544)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(14544)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(14544)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(14544)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(14544)
+		ret;
 	}
 return null();
 }
@@ -858,9 +759,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_RayResult_obj,remove,(void))
 ::nape::geom::RayResult ZNPList_RayResult_obj::inlined_pop_unsafe( ){
 	HX_STACK_PUSH("ZNPList_RayResult::inlined_pop_unsafe","zpp_nape/util/Lists.hx",14522);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(14523)
-	{
-	}
 	HX_STACK_LINE(14531)
 	::nape::geom::RayResult ret = this->head->elt;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(14532)
@@ -879,9 +777,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_RayResult_obj,inlined_pop_unsafe,return )
 		inline static ::nape::geom::RayResult Block( ::zpp_nape::util::ZNPList_RayResult_obj *__this){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",14518);
 			{
-				HX_STACK_LINE(14518)
-				{
-				}
 				HX_STACK_LINE(14518)
 				::nape::geom::RayResult ret = __this->head->elt;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(14518)
@@ -903,23 +798,14 @@ Void ZNPList_RayResult_obj::inlined_pop( ){
 {
 		HX_STACK_PUSH("ZNPList_RayResult::inlined_pop","zpp_nape/util/Lists.hx",14484);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(14485)
-		{
-		}
 		HX_STACK_LINE(14493)
 		::zpp_nape::util::ZNPNode_RayResult ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(14494)
 		this->head = ret->next;
-		HX_STACK_LINE(14495)
-		{
-		}
 		HX_STACK_LINE(14496)
 		{
 			HX_STACK_LINE(14497)
 			::zpp_nape::util::ZNPNode_RayResult o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(14498)
-			{
-			}
 			HX_STACK_LINE(14506)
 			o->elt = null();
 			HX_STACK_LINE(14507)
@@ -948,22 +834,13 @@ Void ZNPList_RayResult_obj::pop( ){
 		HX_STACK_PUSH("ZNPList_RayResult::pop","zpp_nape/util/Lists.hx",14479);
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(14480)
-		{
-		}
-		HX_STACK_LINE(14480)
 		::zpp_nape::util::ZNPNode_RayResult ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(14480)
 		this->head = ret->next;
 		HX_STACK_LINE(14480)
 		{
-		}
-		HX_STACK_LINE(14480)
-		{
 			HX_STACK_LINE(14480)
 			::zpp_nape::util::ZNPNode_RayResult o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(14480)
-			{
-			}
 			HX_STACK_LINE(14480)
 			o->elt = null();
 			HX_STACK_LINE(14480)
@@ -992,9 +869,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_RayResult_obj,pop,(void))
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(14437)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_RayResult Block( ::nape::geom::RayResult &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",14445);
@@ -1062,9 +936,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_RayResult_obj,inlined_insert,return )
 		inline static ::zpp_nape::util::ZNPNode_RayResult Block( ::zpp_nape::util::ZNPList_RayResult_obj *__this,::nape::geom::RayResult &o,::zpp_nape::util::ZNPNode_RayResult &cur){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",14432);
 			{
-				HX_STACK_LINE(14432)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_RayResult Block( ::nape::geom::RayResult &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",14432);
@@ -1134,22 +1005,16 @@ Void ZNPList_RayResult_obj::addAll( ::zpp_nape::util::ZNPList_RayResult x){
 		HX_STACK_PUSH("ZNPList_RayResult::addAll","zpp_nape/util/Lists.hx",14413);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(14414)
-		{
-		}
-		HX_STACK_LINE(14422)
-		{
-			HX_STACK_LINE(14423)
-			::zpp_nape::util::ZNPNode_RayResult cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
-			HX_STACK_LINE(14424)
-			while(((cx_ite != null()))){
-				HX_STACK_LINE(14425)
-				::nape::geom::RayResult i = cx_ite->elt;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(14426)
-				this->add(i);
-				HX_STACK_LINE(14427)
-				cx_ite = cx_ite->next;
-			}
+		HX_STACK_LINE(14423)
+		::zpp_nape::util::ZNPNode_RayResult cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+		HX_STACK_LINE(14424)
+		while(((cx_ite != null()))){
+			HX_STACK_LINE(14425)
+			::nape::geom::RayResult i = cx_ite->elt;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(14426)
+			this->add(i);
+			HX_STACK_LINE(14427)
+			cx_ite = cx_ite->next;
 		}
 	}
 return null();
@@ -1162,9 +1027,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_RayResult_obj,addAll,(void))
 	HX_STACK_PUSH("ZNPList_RayResult::inlined_add","zpp_nape/util/Lists.hx",14376);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(14377)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_RayResult Block( ::nape::geom::RayResult &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",14385);
@@ -1219,12 +1081,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_RayResult_obj,inlined_add,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
 	struct _Function_1_1{
-		inline static ::nape::geom::RayResult Block( ::nape::geom::RayResult &o,::zpp_nape::util::ZNPList_RayResult_obj *__this){
+		inline static ::nape::geom::RayResult Block( ::zpp_nape::util::ZNPList_RayResult_obj *__this,::nape::geom::RayResult &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",14372);
 			{
-				HX_STACK_LINE(14372)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_RayResult Block( ::nape::geom::RayResult &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",14372);
@@ -1274,7 +1133,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_RayResult_obj,inlined_add,return )
 		}
 	};
 	HX_STACK_LINE(14371)
-	return _Function_1_1::Block(o,this);
+	return _Function_1_1::Block(this,o);
 }
 
 
@@ -1472,7 +1331,7 @@ Class ZNPList_RayResult_obj::__mClass;
 
 void ZNPList_RayResult_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_RayResult"), hx::TCanCast< ZNPList_RayResult_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_RayResult"), hx::TCanCast< ZNPList_RayResult_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

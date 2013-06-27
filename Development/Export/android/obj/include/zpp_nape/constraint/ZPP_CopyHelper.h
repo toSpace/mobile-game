@@ -12,7 +12,7 @@ namespace zpp_nape{
 namespace constraint{
 
 
-class ZPP_CopyHelper_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_CopyHelper_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_CopyHelper_obj OBJ_;
@@ -32,10 +32,10 @@ class ZPP_CopyHelper_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("ZPP_CopyHelper"); }
 
-		Dynamic cb; /* REM */ 
+		Dynamic cb;
 		Dynamic &cb_dyn() { return cb;}
-		::nape::phys::Body bc; /* REM */ 
-		int id; /* REM */ 
+		::nape::phys::Body bc;
+		int id;
 		static ::zpp_nape::constraint::ZPP_CopyHelper dict( int id,::nape::phys::Body bc);
 		static Dynamic dict_dyn();
 

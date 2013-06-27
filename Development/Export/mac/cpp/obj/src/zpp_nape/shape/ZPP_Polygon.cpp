@@ -251,9 +251,6 @@ Void ZPP_Polygon_obj::__rotate( Float ax,Float ay){
 						p->x = tempx;
 						HX_STACK_LINE(1885)
 						p->y = tempy;
-						HX_STACK_LINE(1886)
-						{
-						}
 						HX_STACK_LINE(1894)
 						{
 						}
@@ -324,9 +321,6 @@ Void ZPP_Polygon_obj::__translate( Float dx,Float dy){
 				{
 					HX_STACK_LINE(1840)
 					Float t = 1.0;		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(1841)
-					{
-					}
 					HX_STACK_LINE(1849)
 					hx::AddEq(p->x,(dx * t));
 					HX_STACK_LINE(1850)
@@ -423,9 +417,6 @@ Void ZPP_Polygon_obj::setupLocalCOM( ){
 										HX_STACK_LINE(1821)
 										{
 										}
-										HX_STACK_LINE(1821)
-										{
-										}
 									}
 									HX_STACK_LINE(1821)
 									return ret1;
@@ -454,7 +445,7 @@ Void ZPP_Polygon_obj::setupLocalCOM( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(1821)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(1821)
 								_this->_isimmutable();
 							}
@@ -478,7 +469,7 @@ Void ZPP_Polygon_obj::setupLocalCOM( ){
 										HX_STACK_LINE(1821)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1821)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1821)
 											_this->_validate();
 										}
@@ -503,7 +494,7 @@ Void ZPP_Polygon_obj::setupLocalCOM( ){
 										HX_STACK_LINE(1821)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1821)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1821)
 											_this->_validate();
 										}
@@ -525,16 +516,13 @@ Void ZPP_Polygon_obj::setupLocalCOM( ){
 								HX_STACK_LINE(1821)
 								{
 								}
-								HX_STACK_LINE(1821)
-								{
-								}
 							}
 							HX_STACK_LINE(1821)
 							{
 								HX_STACK_LINE(1821)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1821)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(1821)
 									_this->_invalidate(_this);
 								}
@@ -591,9 +579,6 @@ Void ZPP_Polygon_obj::localCOM_invalidate( ::zpp_nape::geom::ZPP_Vec2 x){
 					HX_STACK_LINE(1775)
 					_this->localCOMy = _this->lverts->next->y;
 					HX_STACK_LINE(1775)
-					{
-					}
-					HX_STACK_LINE(1775)
 					Dynamic();
 				}
 				else{
@@ -608,17 +593,11 @@ Void ZPP_Polygon_obj::localCOM_invalidate( ::zpp_nape::geom::ZPP_Vec2 x){
 							HX_STACK_LINE(1775)
 							{
 							}
-							HX_STACK_LINE(1775)
-							{
-							}
 						}
 						HX_STACK_LINE(1775)
 						{
 							HX_STACK_LINE(1775)
 							Float t = 1.0;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(1775)
-							{
-							}
 							HX_STACK_LINE(1775)
 							hx::AddEq(_this->localCOMx,(_this->lverts->next->next->x * t));
 							HX_STACK_LINE(1775)
@@ -628,9 +607,6 @@ Void ZPP_Polygon_obj::localCOM_invalidate( ::zpp_nape::geom::ZPP_Vec2 x){
 						{
 							HX_STACK_LINE(1775)
 							Float t = 0.5;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(1775)
-							{
-							}
 							HX_STACK_LINE(1775)
 							hx::MultEq(_this->localCOMx,t);
 							HX_STACK_LINE(1775)
@@ -644,9 +620,6 @@ Void ZPP_Polygon_obj::localCOM_invalidate( ::zpp_nape::geom::ZPP_Vec2 x){
 							_this->localCOMx = (int)0;
 							HX_STACK_LINE(1775)
 							_this->localCOMy = (int)0;
-							HX_STACK_LINE(1775)
-							{
-							}
 							HX_STACK_LINE(1775)
 							{
 							}
@@ -729,9 +702,6 @@ Void ZPP_Polygon_obj::localCOM_invalidate( ::zpp_nape::geom::ZPP_Vec2 x){
 							HX_STACK_LINE(1775)
 							Float t = area;		HX_STACK_VAR(t,"t");
 							HX_STACK_LINE(1775)
-							{
-							}
-							HX_STACK_LINE(1775)
 							hx::MultEq(_this->localCOMx,t);
 							HX_STACK_LINE(1775)
 							hx::MultEq(_this->localCOMy,t);
@@ -744,12 +714,6 @@ Void ZPP_Polygon_obj::localCOM_invalidate( ::zpp_nape::geom::ZPP_Vec2 x){
 		Float delx = (int)0;		HX_STACK_VAR(delx,"delx");
 		HX_STACK_LINE(1777)
 		Float dely = (int)0;		HX_STACK_VAR(dely,"dely");
-		HX_STACK_LINE(1778)
-		{
-		}
-		HX_STACK_LINE(1786)
-		{
-		}
 		HX_STACK_LINE(1794)
 		{
 			HX_STACK_LINE(1795)
@@ -769,9 +733,6 @@ Void ZPP_Polygon_obj::localCOM_invalidate( ::zpp_nape::geom::ZPP_Vec2 x){
 				{
 					HX_STACK_LINE(1803)
 					Float t = 1.0;		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(1804)
-					{
-					}
 					HX_STACK_LINE(1812)
 					hx::AddEq(p->x,(delx * t));
 					HX_STACK_LINE(1813)
@@ -819,9 +780,6 @@ Void ZPP_Polygon_obj::localCOM_validate( ){
 					HX_STACK_LINE(1772)
 					_this->localCOMy = _this->lverts->next->y;
 					HX_STACK_LINE(1772)
-					{
-					}
-					HX_STACK_LINE(1772)
 					Dynamic();
 				}
 				else{
@@ -836,17 +794,11 @@ Void ZPP_Polygon_obj::localCOM_validate( ){
 							HX_STACK_LINE(1772)
 							{
 							}
-							HX_STACK_LINE(1772)
-							{
-							}
 						}
 						HX_STACK_LINE(1772)
 						{
 							HX_STACK_LINE(1772)
 							Float t = 1.0;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(1772)
-							{
-							}
 							HX_STACK_LINE(1772)
 							hx::AddEq(_this->localCOMx,(_this->lverts->next->next->x * t));
 							HX_STACK_LINE(1772)
@@ -856,9 +808,6 @@ Void ZPP_Polygon_obj::localCOM_validate( ){
 						{
 							HX_STACK_LINE(1772)
 							Float t = 0.5;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(1772)
-							{
-							}
 							HX_STACK_LINE(1772)
 							hx::MultEq(_this->localCOMx,t);
 							HX_STACK_LINE(1772)
@@ -872,9 +821,6 @@ Void ZPP_Polygon_obj::localCOM_validate( ){
 							_this->localCOMx = (int)0;
 							HX_STACK_LINE(1772)
 							_this->localCOMy = (int)0;
-							HX_STACK_LINE(1772)
-							{
-							}
 							HX_STACK_LINE(1772)
 							{
 							}
@@ -957,9 +903,6 @@ Void ZPP_Polygon_obj::localCOM_validate( ){
 							HX_STACK_LINE(1772)
 							Float t = area;		HX_STACK_VAR(t,"t");
 							HX_STACK_LINE(1772)
-							{
-							}
-							HX_STACK_LINE(1772)
 							hx::MultEq(_this->localCOMx,t);
 							HX_STACK_LINE(1772)
 							hx::MultEq(_this->localCOMy,t);
@@ -990,9 +933,6 @@ Void ZPP_Polygon_obj::__validate_localCOM( ){
 			this->localCOMx = this->lverts->next->x;
 			HX_STACK_LINE(1627)
 			this->localCOMy = this->lverts->next->y;
-			HX_STACK_LINE(1628)
-			{
-			}
 			HX_STACK_LINE(1636)
 			{
 			}
@@ -1006,9 +946,6 @@ Void ZPP_Polygon_obj::__validate_localCOM( ){
 					this->localCOMx = this->lverts->next->x;
 					HX_STACK_LINE(1648)
 					this->localCOMy = this->lverts->next->y;
-					HX_STACK_LINE(1649)
-					{
-					}
 					HX_STACK_LINE(1657)
 					{
 					}
@@ -1017,9 +954,6 @@ Void ZPP_Polygon_obj::__validate_localCOM( ){
 				{
 					HX_STACK_LINE(1667)
 					Float t = 1.0;		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(1668)
-					{
-					}
 					HX_STACK_LINE(1676)
 					hx::AddEq(this->localCOMx,(this->lverts->next->next->x * t));
 					HX_STACK_LINE(1677)
@@ -1029,9 +963,6 @@ Void ZPP_Polygon_obj::__validate_localCOM( ){
 				{
 					HX_STACK_LINE(1680)
 					Float t = 0.5;		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(1681)
-					{
-					}
 					HX_STACK_LINE(1689)
 					hx::MultEq(this->localCOMx,t);
 					HX_STACK_LINE(1690)
@@ -1045,9 +976,6 @@ Void ZPP_Polygon_obj::__validate_localCOM( ){
 					this->localCOMx = (int)0;
 					HX_STACK_LINE(1696)
 					this->localCOMy = (int)0;
-					HX_STACK_LINE(1697)
-					{
-					}
 					HX_STACK_LINE(1705)
 					{
 					}
@@ -1129,9 +1057,6 @@ Void ZPP_Polygon_obj::__validate_localCOM( ){
 				{
 					HX_STACK_LINE(1754)
 					Float t = area;		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(1755)
-					{
-					}
 					HX_STACK_LINE(1763)
 					hx::MultEq(this->localCOMx,t);
 					HX_STACK_LINE(1764)
@@ -1216,9 +1141,6 @@ Void ZPP_Polygon_obj::__validate_angDrag( ){
 							cx = u->x;
 							HX_STACK_LINE(1427)
 							cy = u->y;
-							HX_STACK_LINE(1428)
-							{
-							}
 							HX_STACK_LINE(1436)
 							{
 							}
@@ -1227,9 +1149,6 @@ Void ZPP_Polygon_obj::__validate_angDrag( ){
 						{
 							HX_STACK_LINE(1446)
 							Float t1 = ta;		HX_STACK_VAR(t1,"t1");
-							HX_STACK_LINE(1447)
-							{
-							}
 							HX_STACK_LINE(1455)
 							hx::AddEq(cx,(dx * t1));
 							HX_STACK_LINE(1456)
@@ -1258,9 +1177,6 @@ Void ZPP_Polygon_obj::__validate_angDrag( ){
 							cx = u->x;
 							HX_STACK_LINE(1469)
 							cy = u->y;
-							HX_STACK_LINE(1470)
-							{
-							}
 							HX_STACK_LINE(1478)
 							{
 							}
@@ -1269,9 +1185,6 @@ Void ZPP_Polygon_obj::__validate_angDrag( ){
 						{
 							HX_STACK_LINE(1488)
 							Float t1 = tb;		HX_STACK_VAR(t1,"t1");
-							HX_STACK_LINE(1489)
-							{
-							}
 							HX_STACK_LINE(1497)
 							hx::AddEq(cx,(dx * t1));
 							HX_STACK_LINE(1498)
@@ -1342,9 +1255,6 @@ Void ZPP_Polygon_obj::__validate_angDrag( ){
 								cx = u->x;
 								HX_STACK_LINE(1534)
 								cy = u->y;
-								HX_STACK_LINE(1535)
-								{
-								}
 								HX_STACK_LINE(1543)
 								{
 								}
@@ -1353,9 +1263,6 @@ Void ZPP_Polygon_obj::__validate_angDrag( ){
 							{
 								HX_STACK_LINE(1553)
 								Float t1 = ta;		HX_STACK_VAR(t1,"t1");
-								HX_STACK_LINE(1554)
-								{
-								}
 								HX_STACK_LINE(1562)
 								hx::AddEq(cx,(dx * t1));
 								HX_STACK_LINE(1563)
@@ -1384,9 +1291,6 @@ Void ZPP_Polygon_obj::__validate_angDrag( ){
 								cx = u->x;
 								HX_STACK_LINE(1576)
 								cy = u->y;
-								HX_STACK_LINE(1577)
-								{
-								}
 								HX_STACK_LINE(1585)
 								{
 								}
@@ -1395,9 +1299,6 @@ Void ZPP_Polygon_obj::__validate_angDrag( ){
 							{
 								HX_STACK_LINE(1595)
 								Float t1 = tb;		HX_STACK_VAR(t1,"t1");
-								HX_STACK_LINE(1596)
-								{
-								}
 								HX_STACK_LINE(1604)
 								hx::AddEq(cx,(dx * t1));
 								HX_STACK_LINE(1605)
@@ -1633,9 +1534,6 @@ Void ZPP_Polygon_obj::_force_validate_aabb( ){
 			this->aabb->minx = p0->x;
 			HX_STACK_LINE(1244)
 			this->aabb->miny = p0->y;
-			HX_STACK_LINE(1245)
-			{
-			}
 			HX_STACK_LINE(1253)
 			{
 			}
@@ -1646,9 +1544,6 @@ Void ZPP_Polygon_obj::_force_validate_aabb( ){
 			this->aabb->maxx = p0->x;
 			HX_STACK_LINE(1264)
 			this->aabb->maxy = p0->y;
-			HX_STACK_LINE(1265)
-			{
-			}
 			HX_STACK_LINE(1273)
 			{
 			}
@@ -1733,9 +1628,6 @@ Void ZPP_Polygon_obj::__validate_aabb( ){
 							HX_STACK_LINE(1172)
 							_this->axisy = ::Math_obj::cos(_this->rot);
 							HX_STACK_LINE(1172)
-							{
-							}
-							HX_STACK_LINE(1172)
 							Dynamic();
 						}
 					}
@@ -1783,9 +1675,6 @@ Void ZPP_Polygon_obj::__validate_aabb( ){
 			this->aabb->minx = p0->x;
 			HX_STACK_LINE(1179)
 			this->aabb->miny = p0->y;
-			HX_STACK_LINE(1180)
-			{
-			}
 			HX_STACK_LINE(1188)
 			{
 			}
@@ -1796,9 +1685,6 @@ Void ZPP_Polygon_obj::__validate_aabb( ){
 			this->aabb->maxx = p0->x;
 			HX_STACK_LINE(1199)
 			this->aabb->maxy = p0->y;
-			HX_STACK_LINE(1200)
-			{
-			}
 			HX_STACK_LINE(1208)
 			{
 			}
@@ -1872,9 +1758,6 @@ Void ZPP_Polygon_obj::validate_gaxi( ){
 							HX_STACK_LINE(1086)
 							_this->axisy = ::Math_obj::cos(_this->rot);
 							HX_STACK_LINE(1086)
-							{
-							}
-							HX_STACK_LINE(1086)
 							Dynamic();
 						}
 					}
@@ -1901,9 +1784,6 @@ Void ZPP_Polygon_obj::validate_gaxi( ){
 									_this->axisx = ::Math_obj::sin(_this->rot);
 									HX_STACK_LINE(1087)
 									_this->axisy = ::Math_obj::cos(_this->rot);
-									HX_STACK_LINE(1087)
-									{
-									}
 									HX_STACK_LINE(1087)
 									Dynamic();
 								}
@@ -1978,9 +1858,6 @@ Void ZPP_Polygon_obj::validate_gaxi( ){
 								e->wrap_gnorm->zpp_inner->x = e->gnormx;
 								HX_STACK_LINE(1107)
 								e->wrap_gnorm->zpp_inner->y = e->gnormy;
-								HX_STACK_LINE(1108)
-								{
-								}
 								HX_STACK_LINE(1116)
 								{
 								}
@@ -2022,9 +1899,6 @@ Void ZPP_Polygon_obj::validate_gaxi( ){
 							e->wrap_gnorm->zpp_inner->x = e->gnormx;
 							HX_STACK_LINE(1144)
 							e->wrap_gnorm->zpp_inner->y = e->gnormy;
-							HX_STACK_LINE(1145)
-							{
-							}
 							HX_STACK_LINE(1153)
 							{
 							}
@@ -2070,9 +1944,6 @@ Void ZPP_Polygon_obj::validate_gverts( ){
 							_this->axisx = ::Math_obj::sin(_this->rot);
 							HX_STACK_LINE(1060)
 							_this->axisy = ::Math_obj::cos(_this->rot);
-							HX_STACK_LINE(1060)
-							{
-							}
 							HX_STACK_LINE(1060)
 							Dynamic();
 						}
@@ -2168,9 +2039,6 @@ Void ZPP_Polygon_obj::validate_laxi( ){
 						{
 							HX_STACK_LINE(914)
 							Float t = (Float(1.0) / Float(l));		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(915)
-							{
-							}
 							HX_STACK_LINE(923)
 							hx::MultEq(dx,t);
 							HX_STACK_LINE(924)
@@ -2193,9 +2061,6 @@ Void ZPP_Polygon_obj::validate_laxi( ){
 							edge->lnormx = dx;
 							HX_STACK_LINE(934)
 							edge->lnormy = dy;
-							HX_STACK_LINE(935)
-							{
-							}
 							HX_STACK_LINE(943)
 							{
 							}
@@ -2206,9 +2071,6 @@ Void ZPP_Polygon_obj::validate_laxi( ){
 							edge->wrap_lnorm->zpp_inner->x = dx;
 							HX_STACK_LINE(954)
 							edge->wrap_lnorm->zpp_inner->y = dy;
-							HX_STACK_LINE(955)
-							{
-							}
 							HX_STACK_LINE(963)
 							{
 							}
@@ -2250,9 +2112,6 @@ Void ZPP_Polygon_obj::validate_laxi( ){
 					{
 						HX_STACK_LINE(991)
 						Float t = (Float(1.0) / Float(l));		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(992)
-						{
-						}
 						HX_STACK_LINE(1000)
 						hx::MultEq(dx,t);
 						HX_STACK_LINE(1001)
@@ -2275,9 +2134,6 @@ Void ZPP_Polygon_obj::validate_laxi( ){
 						edge->lnormx = dx;
 						HX_STACK_LINE(1011)
 						edge->lnormy = dy;
-						HX_STACK_LINE(1012)
-						{
-						}
 						HX_STACK_LINE(1020)
 						{
 						}
@@ -2288,9 +2144,6 @@ Void ZPP_Polygon_obj::validate_laxi( ){
 						edge->wrap_lnorm->zpp_inner->x = dx;
 						HX_STACK_LINE(1031)
 						edge->wrap_lnorm->zpp_inner->y = dy;
-						HX_STACK_LINE(1032)
-						{
-						}
 						HX_STACK_LINE(1040)
 						{
 						}
@@ -2377,7 +2230,7 @@ Void ZPP_Polygon_obj::splice_collinear_real( ){
 			HX_STACK_LINE(830)
 			::zpp_nape::geom::ZPP_Vec2 v = nxt;		HX_STACK_VAR(v,"v");
 			struct _Function_2_1{
-				inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &u,::zpp_nape::geom::ZPP_Vec2 &v){
+				inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &u){
 					HX_STACK_PUSH("*::closure","zpp_nape/shape/Polygon.hx",831);
 					{
 						HX_STACK_LINE(831)
@@ -2398,7 +2251,7 @@ Void ZPP_Polygon_obj::splice_collinear_real( ){
 				}
 			};
 			HX_STACK_LINE(831)
-			if (((_Function_2_1::Block(u,v) < (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))){
+			if (((_Function_2_1::Block(v,u) < (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))){
 				HX_STACK_LINE(832)
 				this->cleanup_lvert(cur);
 				HX_STACK_LINE(833)
@@ -2543,9 +2396,6 @@ Void ZPP_Polygon_obj::cleanup_lvert( ::zpp_nape::geom::ZPP_Vec2 x){
 		{
 			HX_STACK_LINE(734)
 			::zpp_nape::geom::ZPP_Vec2 o = rem;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(735)
-			{
-			}
 			HX_STACK_LINE(743)
 			{
 				HX_STACK_LINE(743)
@@ -2575,9 +2425,6 @@ Void ZPP_Polygon_obj::cleanup_lvert( ::zpp_nape::geom::ZPP_Vec2 x){
 			{
 				HX_STACK_LINE(753)
 				::zpp_nape::shape::ZPP_Edge o = rem1;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(754)
-				{
-				}
 				HX_STACK_LINE(762)
 				o->polygon = null();
 				HX_STACK_LINE(763)
@@ -2591,9 +2438,6 @@ Void ZPP_Polygon_obj::cleanup_lvert( ::zpp_nape::geom::ZPP_Vec2 x){
 			{
 				HX_STACK_LINE(771)
 				::zpp_nape::shape::ZPP_Edge o = rem1;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(772)
-				{
-				}
 				HX_STACK_LINE(780)
 				o->polygon = null();
 				HX_STACK_LINE(781)
@@ -2615,9 +2459,6 @@ Void ZPP_Polygon_obj::cleanup_lvert( ::zpp_nape::geom::ZPP_Vec2 x){
 				{
 					HX_STACK_LINE(793)
 					::zpp_nape::shape::ZPP_Edge o = rem1;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(794)
-					{
-					}
 					HX_STACK_LINE(802)
 					o->polygon = null();
 					HX_STACK_LINE(803)
@@ -3589,9 +3430,6 @@ Void ZPP_Polygon_obj::gverts_validate( ){
 							HX_STACK_LINE(310)
 							_this->axisy = ::Math_obj::cos(_this->rot);
 							HX_STACK_LINE(310)
-							{
-							}
-							HX_STACK_LINE(310)
 							Dynamic();
 						}
 					}
@@ -3763,9 +3601,6 @@ Void ZPP_Polygon_obj::lverts_post_adder( ::nape::geom::Vec2 x){
 						HX_STACK_LINE(220)
 						{
 						}
-						HX_STACK_LINE(220)
-						{
-						}
 					}
 					HX_STACK_LINE(220)
 					return ret;
@@ -3901,9 +3736,6 @@ Void ZPP_Polygon_obj::gverts_pa_validate( ){
 							_this->axisx = ::Math_obj::sin(_this->rot);
 							HX_STACK_LINE(197)
 							_this->axisy = ::Math_obj::cos(_this->rot);
-							HX_STACK_LINE(197)
-							{
-							}
 							HX_STACK_LINE(197)
 							Dynamic();
 						}
@@ -4273,7 +4105,7 @@ Class ZPP_Polygon_obj::__mClass;
 
 void ZPP_Polygon_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.shape.ZPP_Polygon"), hx::TCanCast< ZPP_Polygon_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.shape.ZPP_Polygon"), hx::TCanCast< ZPP_Polygon_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

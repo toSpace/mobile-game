@@ -100,8 +100,6 @@ Dynamic ShapeType_obj::__Create(hx::DynamicArray inArgs)
 
 HX_DEFINE_DYNAMIC_FUNC0(ShapeType_obj,toString,return )
 
-::nape::shape::ShapeType ShapeType_obj::CIRCLE;
-
 ::nape::shape::ShapeType ShapeType_obj::get_CIRCLE( ){
 	HX_STACK_PUSH("ShapeType::get_CIRCLE","nape/shape/ShapeType.hx",201);
 	HX_STACK_LINE(202)
@@ -119,8 +117,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ShapeType_obj,toString,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(ShapeType_obj,get_CIRCLE,return )
-
-::nape::shape::ShapeType ShapeType_obj::POLYGON;
 
 ::nape::shape::ShapeType ShapeType_obj::get_POLYGON( ){
 	HX_STACK_PUSH("ShapeType::get_POLYGON","nape/shape/ShapeType.hx",214);
@@ -159,10 +155,10 @@ Dynamic ShapeType_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 6:
-		if (HX_FIELD_EQ(inName,"CIRCLE") ) { return inCallProp ? get_CIRCLE() : CIRCLE; }
+		if (HX_FIELD_EQ(inName,"CIRCLE") ) { return get_CIRCLE(); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"POLYGON") ) { return inCallProp ? get_POLYGON() : POLYGON; }
+		if (HX_FIELD_EQ(inName,"POLYGON") ) { return get_POLYGON(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
@@ -178,13 +174,6 @@ Dynamic ShapeType_obj::__Field(const ::String &inName,bool inCallProp)
 
 Dynamic ShapeType_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 6:
-		if (HX_FIELD_EQ(inName,"CIRCLE") ) { CIRCLE=inValue.Cast< ::nape::shape::ShapeType >(); return inValue; }
-		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"POLYGON") ) { POLYGON=inValue.Cast< ::nape::shape::ShapeType >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
@@ -194,9 +183,7 @@ void ShapeType_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("CIRCLE"),
 	HX_CSTRING("get_CIRCLE"),
-	HX_CSTRING("POLYGON"),
 	HX_CSTRING("get_POLYGON"),
 	String(null()) };
 
@@ -206,21 +193,17 @@ static ::String sMemberFields[] = {
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(ShapeType_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(ShapeType_obj::CIRCLE,"CIRCLE");
-	HX_MARK_MEMBER_NAME(ShapeType_obj::POLYGON,"POLYGON");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(ShapeType_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(ShapeType_obj::CIRCLE,"CIRCLE");
-	HX_VISIT_MEMBER_NAME(ShapeType_obj::POLYGON,"POLYGON");
 };
 
 Class ShapeType_obj::__mClass;
 
 void ShapeType_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.shape.ShapeType"), hx::TCanCast< ShapeType_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.shape.ShapeType"), hx::TCanCast< ShapeType_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -131,18 +131,6 @@ Void ZPP_Arbiter_obj::sup_retire( ){
 {
 		HX_STACK_PUSH("ZPP_Arbiter::sup_retire","zpp_nape/dynamics/Arbiter.hx",308);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(309)
-		{
-		}
-		HX_STACK_LINE(317)
-		{
-		}
-		HX_STACK_LINE(325)
-		{
-		}
-		HX_STACK_LINE(333)
-		{
-		}
 		HX_STACK_LINE(341)
 		if ((!(this->cleared))){
 			HX_STACK_LINE(342)
@@ -151,12 +139,6 @@ Void ZPP_Arbiter_obj::sup_retire( ){
 				::zpp_nape::util::ZNPList_ZPP_Arbiter _this = this->b1->arbiters;		HX_STACK_VAR(_this,"_this");
 				HX_STACK_LINE(342)
 				{
-				}
-				HX_STACK_LINE(342)
-				{
-					HX_STACK_LINE(342)
-					{
-					}
 					HX_STACK_LINE(342)
 					::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 					HX_STACK_LINE(342)
@@ -169,9 +151,6 @@ Void ZPP_Arbiter_obj::sup_retire( ){
 						if (((cur->elt == hx::ObjectPtr<OBJ_>(this)))){
 							HX_STACK_LINE(342)
 							{
-								HX_STACK_LINE(342)
-								{
-								}
 								HX_STACK_LINE(342)
 								::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 								HX_STACK_LINE(342)
@@ -205,14 +184,8 @@ Void ZPP_Arbiter_obj::sup_retire( ){
 								}
 								HX_STACK_LINE(342)
 								{
-								}
-								HX_STACK_LINE(342)
-								{
 									HX_STACK_LINE(342)
 									::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(342)
-									{
-									}
 									HX_STACK_LINE(342)
 									o->elt = null();
 									HX_STACK_LINE(342)
@@ -249,12 +222,6 @@ Void ZPP_Arbiter_obj::sup_retire( ){
 				::zpp_nape::util::ZNPList_ZPP_Arbiter _this = this->b2->arbiters;		HX_STACK_VAR(_this,"_this");
 				HX_STACK_LINE(343)
 				{
-				}
-				HX_STACK_LINE(343)
-				{
-					HX_STACK_LINE(343)
-					{
-					}
 					HX_STACK_LINE(343)
 					::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 					HX_STACK_LINE(343)
@@ -267,9 +234,6 @@ Void ZPP_Arbiter_obj::sup_retire( ){
 						if (((cur->elt == hx::ObjectPtr<OBJ_>(this)))){
 							HX_STACK_LINE(343)
 							{
-								HX_STACK_LINE(343)
-								{
-								}
 								HX_STACK_LINE(343)
 								::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 								HX_STACK_LINE(343)
@@ -303,14 +267,8 @@ Void ZPP_Arbiter_obj::sup_retire( ){
 								}
 								HX_STACK_LINE(343)
 								{
-								}
-								HX_STACK_LINE(343)
-								{
 									HX_STACK_LINE(343)
 									::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(343)
-									{
-									}
 									HX_STACK_LINE(343)
 									o->elt = null();
 									HX_STACK_LINE(343)
@@ -386,9 +344,6 @@ Void ZPP_Arbiter_obj::sup_assign( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::sh
 		{
 			HX_STACK_LINE(297)
 			::zpp_nape::util::ZNPList_ZPP_Arbiter _this = this->b1->arbiters;		HX_STACK_VAR(_this,"_this");
-			HX_STACK_LINE(297)
-			{
-			}
 			struct _Function_2_1{
 				inline static ::zpp_nape::util::ZNPNode_ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_Arbiter_obj *__this){
 					HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",297);
@@ -438,9 +393,6 @@ Void ZPP_Arbiter_obj::sup_assign( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::sh
 		{
 			HX_STACK_LINE(298)
 			::zpp_nape::util::ZNPList_ZPP_Arbiter _this = this->b2->arbiters;		HX_STACK_VAR(_this,"_this");
-			HX_STACK_LINE(298)
-			{
-			}
 			struct _Function_2_1{
 				inline static ::zpp_nape::util::ZNPNode_ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_Arbiter_obj *__this){
 					HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",298);
@@ -511,9 +463,6 @@ Void ZPP_Arbiter_obj::lazyRetire( ::zpp_nape::space::ZPP_Space s,::zpp_nape::phy
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(s,"s");
 		HX_STACK_ARG(b,"b");
-		HX_STACK_LINE(270)
-		{
-		}
 		HX_STACK_LINE(278)
 		this->cleared = true;
 		HX_STACK_LINE(279)
@@ -522,12 +471,6 @@ Void ZPP_Arbiter_obj::lazyRetire( ::zpp_nape::space::ZPP_Space s,::zpp_nape::phy
 			::zpp_nape::util::ZNPList_ZPP_Arbiter _this = this->b1->arbiters;		HX_STACK_VAR(_this,"_this");
 			HX_STACK_LINE(279)
 			{
-			}
-			HX_STACK_LINE(279)
-			{
-				HX_STACK_LINE(279)
-				{
-				}
 				HX_STACK_LINE(279)
 				::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 				HX_STACK_LINE(279)
@@ -540,9 +483,6 @@ Void ZPP_Arbiter_obj::lazyRetire( ::zpp_nape::space::ZPP_Space s,::zpp_nape::phy
 					if (((cur->elt == hx::ObjectPtr<OBJ_>(this)))){
 						HX_STACK_LINE(279)
 						{
-							HX_STACK_LINE(279)
-							{
-							}
 							HX_STACK_LINE(279)
 							::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 							HX_STACK_LINE(279)
@@ -576,14 +516,8 @@ Void ZPP_Arbiter_obj::lazyRetire( ::zpp_nape::space::ZPP_Space s,::zpp_nape::phy
 							}
 							HX_STACK_LINE(279)
 							{
-							}
-							HX_STACK_LINE(279)
-							{
 								HX_STACK_LINE(279)
 								::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(279)
-								{
-								}
 								HX_STACK_LINE(279)
 								o->elt = null();
 								HX_STACK_LINE(279)
@@ -620,12 +554,6 @@ Void ZPP_Arbiter_obj::lazyRetire( ::zpp_nape::space::ZPP_Space s,::zpp_nape::phy
 			::zpp_nape::util::ZNPList_ZPP_Arbiter _this = this->b2->arbiters;		HX_STACK_VAR(_this,"_this");
 			HX_STACK_LINE(280)
 			{
-			}
-			HX_STACK_LINE(280)
-			{
-				HX_STACK_LINE(280)
-				{
-				}
 				HX_STACK_LINE(280)
 				::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 				HX_STACK_LINE(280)
@@ -638,9 +566,6 @@ Void ZPP_Arbiter_obj::lazyRetire( ::zpp_nape::space::ZPP_Space s,::zpp_nape::phy
 					if (((cur->elt == hx::ObjectPtr<OBJ_>(this)))){
 						HX_STACK_LINE(280)
 						{
-							HX_STACK_LINE(280)
-							{
-							}
 							HX_STACK_LINE(280)
 							::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 							HX_STACK_LINE(280)
@@ -674,14 +599,8 @@ Void ZPP_Arbiter_obj::lazyRetire( ::zpp_nape::space::ZPP_Space s,::zpp_nape::phy
 							}
 							HX_STACK_LINE(280)
 							{
-							}
-							HX_STACK_LINE(280)
-							{
 								HX_STACK_LINE(280)
 								::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(280)
-								{
-								}
 								HX_STACK_LINE(280)
 								o->elt = null();
 								HX_STACK_LINE(280)
@@ -734,9 +653,6 @@ Void ZPP_Arbiter_obj::swap_features( ){
 {
 		HX_STACK_PUSH("ZPP_Arbiter::swap_features","zpp_nape/dynamics/Arbiter.hx",235);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(236)
-		{
-		}
 		HX_STACK_LINE(244)
 		{
 			HX_STACK_LINE(245)
@@ -1130,7 +1046,7 @@ Class ZPP_Arbiter_obj::__mClass;
 
 void ZPP_Arbiter_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.dynamics.ZPP_Arbiter"), hx::TCanCast< ZPP_Arbiter_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.dynamics.ZPP_Arbiter"), hx::TCanCast< ZPP_Arbiter_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

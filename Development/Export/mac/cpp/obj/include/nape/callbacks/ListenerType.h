@@ -10,7 +10,7 @@ namespace nape{
 namespace callbacks{
 
 
-class ListenerType_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ListenerType_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ListenerType_obj OBJ_;
@@ -33,19 +33,15 @@ class ListenerType_obj : public hx::Object{
 		virtual ::String toString( );
 		Dynamic toString_dyn();
 
-		static ::nape::callbacks::ListenerType BODY; /* REM */ 
 		static ::nape::callbacks::ListenerType get_BODY( );
 		static Dynamic get_BODY_dyn();
 
-		static ::nape::callbacks::ListenerType CONSTRAINT; /* REM */ 
 		static ::nape::callbacks::ListenerType get_CONSTRAINT( );
 		static Dynamic get_CONSTRAINT_dyn();
 
-		static ::nape::callbacks::ListenerType INTERACTION; /* REM */ 
 		static ::nape::callbacks::ListenerType get_INTERACTION( );
 		static Dynamic get_INTERACTION_dyn();
 
-		static ::nape::callbacks::ListenerType PRE; /* REM */ 
 		static ::nape::callbacks::ListenerType get_PRE( );
 		static Dynamic get_PRE_dyn();
 

@@ -6,19 +6,19 @@
 #endif
 
 HX_DECLARE_CLASS0(Main)
+HX_DECLARE_CLASS2(flash,display,DisplayObject)
+HX_DECLARE_CLASS2(flash,display,DisplayObjectContainer)
+HX_DECLARE_CLASS2(flash,display,IBitmapDrawable)
+HX_DECLARE_CLASS2(flash,display,InteractiveObject)
+HX_DECLARE_CLASS2(flash,display,Sprite)
+HX_DECLARE_CLASS2(flash,display,Stage)
+HX_DECLARE_CLASS2(flash,events,Event)
+HX_DECLARE_CLASS2(flash,events,EventDispatcher)
+HX_DECLARE_CLASS2(flash,events,IEventDispatcher)
 HX_DECLARE_CLASS2(nape,space,Space)
-HX_DECLARE_CLASS2(native,display,DisplayObject)
-HX_DECLARE_CLASS2(native,display,DisplayObjectContainer)
-HX_DECLARE_CLASS2(native,display,IBitmapDrawable)
-HX_DECLARE_CLASS2(native,display,InteractiveObject)
-HX_DECLARE_CLASS2(native,display,Sprite)
-HX_DECLARE_CLASS2(native,display,Stage)
-HX_DECLARE_CLASS2(native,events,Event)
-HX_DECLARE_CLASS2(native,events,EventDispatcher)
-HX_DECLARE_CLASS2(native,events,IEventDispatcher)
 
 
-class Main_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Main_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Main_obj OBJ_;
@@ -38,25 +38,25 @@ class Main_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("Main"); }
 
-		virtual Void activate( ::native::events::Event ev);
+		virtual Void activate( ::flash::events::Event ev);
 		Dynamic activate_dyn();
 
-		virtual Void deactivate( ::native::events::Event ev);
+		virtual Void deactivate( ::flash::events::Event ev);
 		Dynamic deactivate_dyn();
 
-		virtual Void onResize( ::native::events::Event ev);
+		virtual Void onResize( ::flash::events::Event ev);
 		Dynamic onResize_dyn();
 
-		virtual Void enterFrameHandler( ::native::events::Event ev);
+		virtual Void enterFrameHandler( ::flash::events::Event ev);
 		Dynamic enterFrameHandler_dyn();
 
-		virtual Void startPhysics( ::native::display::Stage stage);
+		virtual Void startPhysics( ::flash::display::Stage stage);
 		Dynamic startPhysics_dyn();
 
-		static ::native::display::Stage stage; /* REM */ 
-		static ::native::display::Sprite canvas; /* REM */ 
-		static ::nape::space::Space space; /* REM */ 
-		static Dynamic activeLevel; /* REM */ 
+		static ::flash::display::Stage stage;
+		static ::flash::display::Sprite canvas;
+		static ::nape::space::Space space;
+		static Dynamic activeLevel;
 };
 
 

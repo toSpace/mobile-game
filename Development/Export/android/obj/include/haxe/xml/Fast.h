@@ -16,7 +16,7 @@ namespace haxe{
 namespace xml{
 
 
-class Fast_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Fast_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Fast_obj OBJ_;
@@ -36,28 +36,18 @@ class Fast_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("Fast"); }
 
-		virtual Dynamic getElements( );
-		Dynamic getElements_dyn();
+		virtual ::String get_innerData( );
+		Dynamic get_innerData_dyn();
 
-		virtual ::String getInnerHTML( );
-		Dynamic getInnerHTML_dyn();
+		virtual ::String get_name( );
+		Dynamic get_name_dyn();
 
-		virtual ::String getInnerData( );
-		Dynamic getInnerData_dyn();
-
-		virtual ::String getName( );
-		Dynamic getName_dyn();
-
-		Dynamic elements; /* REM */ 
-		::haxe::xml::_Fast::HasNodeAccess hasNode; /* REM */ 
-		::haxe::xml::_Fast::HasAttribAccess has; /* REM */ 
-		::haxe::xml::_Fast::AttribAccess att; /* REM */ 
-		::haxe::xml::_Fast::NodeListAccess nodes; /* REM */ 
-		::haxe::xml::_Fast::NodeAccess node; /* REM */ 
-		::String innerHTML; /* REM */ 
-		::String innerData; /* REM */ 
-		::String name; /* REM */ 
-		::Xml x; /* REM */ 
+		::haxe::xml::_Fast::HasNodeAccess hasNode;
+		::haxe::xml::_Fast::HasAttribAccess has;
+		::haxe::xml::_Fast::AttribAccess att;
+		::haxe::xml::_Fast::NodeListAccess nodes;
+		::haxe::xml::_Fast::NodeAccess node;
+		::Xml x;
 };
 
 } // end namespace haxe

@@ -1,6 +1,5 @@
 -main ApplicationMain 
--lib nme
--lib actuate
+-lib openfl-native
 -lib nape
 -lib tilelayer
 -cp Source
@@ -8,13 +7,14 @@
 -cp Source/levels
 -cp Source/GUI
 -cp Source/characters
--cp /usr/lib/haxe/lib/nme/3,5,5/
--D nme_install_tool
+-cp /usr/lib/haxe/lib/openfl-native/1,0,1/
+-D tools=1
+-D openfl_ver=1.0.4
+-D openfl
 -D android
 -D mobile
 -cp Export/android/haxe
 -cpp Export/android/obj
 -D android
 -debug
---remap flash:nme
---remap browser:native
+--macro allowPackage("flash")

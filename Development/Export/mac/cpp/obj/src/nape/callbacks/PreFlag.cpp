@@ -152,8 +152,6 @@ Dynamic PreFlag_obj::__Create(hx::DynamicArray inArgs)
 
 HX_DEFINE_DYNAMIC_FUNC0(PreFlag_obj,toString,return )
 
-::nape::callbacks::PreFlag PreFlag_obj::ACCEPT;
-
 ::nape::callbacks::PreFlag PreFlag_obj::get_ACCEPT( ){
 	HX_STACK_PUSH("PreFlag::get_ACCEPT","nape/callbacks/PreFlag.hx",204);
 	HX_STACK_LINE(205)
@@ -171,8 +169,6 @@ HX_DEFINE_DYNAMIC_FUNC0(PreFlag_obj,toString,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(PreFlag_obj,get_ACCEPT,return )
-
-::nape::callbacks::PreFlag PreFlag_obj::IGNORE;
 
 ::nape::callbacks::PreFlag PreFlag_obj::get_IGNORE( ){
 	HX_STACK_PUSH("PreFlag::get_IGNORE","nape/callbacks/PreFlag.hx",217);
@@ -192,8 +188,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(PreFlag_obj,get_ACCEPT,return )
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(PreFlag_obj,get_IGNORE,return )
 
-::nape::callbacks::PreFlag PreFlag_obj::ACCEPT_ONCE;
-
 ::nape::callbacks::PreFlag PreFlag_obj::get_ACCEPT_ONCE( ){
 	HX_STACK_PUSH("PreFlag::get_ACCEPT_ONCE","nape/callbacks/PreFlag.hx",231);
 	HX_STACK_LINE(232)
@@ -211,8 +205,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(PreFlag_obj,get_IGNORE,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(PreFlag_obj,get_ACCEPT_ONCE,return )
-
-::nape::callbacks::PreFlag PreFlag_obj::IGNORE_ONCE;
 
 ::nape::callbacks::PreFlag PreFlag_obj::get_IGNORE_ONCE( ){
 	HX_STACK_PUSH("PreFlag::get_IGNORE_ONCE","nape/callbacks/PreFlag.hx",245);
@@ -251,8 +243,8 @@ Dynamic PreFlag_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 6:
-		if (HX_FIELD_EQ(inName,"ACCEPT") ) { return inCallProp ? get_ACCEPT() : ACCEPT; }
-		if (HX_FIELD_EQ(inName,"IGNORE") ) { return inCallProp ? get_IGNORE() : IGNORE; }
+		if (HX_FIELD_EQ(inName,"ACCEPT") ) { return get_ACCEPT(); }
+		if (HX_FIELD_EQ(inName,"IGNORE") ) { return get_IGNORE(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
@@ -262,8 +254,8 @@ Dynamic PreFlag_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"get_IGNORE") ) { return get_IGNORE_dyn(); }
 		break;
 	case 11:
-		if (HX_FIELD_EQ(inName,"ACCEPT_ONCE") ) { return inCallProp ? get_ACCEPT_ONCE() : ACCEPT_ONCE; }
-		if (HX_FIELD_EQ(inName,"IGNORE_ONCE") ) { return inCallProp ? get_IGNORE_ONCE() : IGNORE_ONCE; }
+		if (HX_FIELD_EQ(inName,"ACCEPT_ONCE") ) { return get_ACCEPT_ONCE(); }
+		if (HX_FIELD_EQ(inName,"IGNORE_ONCE") ) { return get_IGNORE_ONCE(); }
 		break;
 	case 15:
 		if (HX_FIELD_EQ(inName,"get_ACCEPT_ONCE") ) { return get_ACCEPT_ONCE_dyn(); }
@@ -274,15 +266,6 @@ Dynamic PreFlag_obj::__Field(const ::String &inName,bool inCallProp)
 
 Dynamic PreFlag_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 6:
-		if (HX_FIELD_EQ(inName,"ACCEPT") ) { ACCEPT=inValue.Cast< ::nape::callbacks::PreFlag >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"IGNORE") ) { IGNORE=inValue.Cast< ::nape::callbacks::PreFlag >(); return inValue; }
-		break;
-	case 11:
-		if (HX_FIELD_EQ(inName,"ACCEPT_ONCE") ) { ACCEPT_ONCE=inValue.Cast< ::nape::callbacks::PreFlag >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"IGNORE_ONCE") ) { IGNORE_ONCE=inValue.Cast< ::nape::callbacks::PreFlag >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
@@ -292,13 +275,9 @@ void PreFlag_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("ACCEPT"),
 	HX_CSTRING("get_ACCEPT"),
-	HX_CSTRING("IGNORE"),
 	HX_CSTRING("get_IGNORE"),
-	HX_CSTRING("ACCEPT_ONCE"),
 	HX_CSTRING("get_ACCEPT_ONCE"),
-	HX_CSTRING("IGNORE_ONCE"),
 	HX_CSTRING("get_IGNORE_ONCE"),
 	String(null()) };
 
@@ -308,25 +287,17 @@ static ::String sMemberFields[] = {
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(PreFlag_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(PreFlag_obj::ACCEPT,"ACCEPT");
-	HX_MARK_MEMBER_NAME(PreFlag_obj::IGNORE,"IGNORE");
-	HX_MARK_MEMBER_NAME(PreFlag_obj::ACCEPT_ONCE,"ACCEPT_ONCE");
-	HX_MARK_MEMBER_NAME(PreFlag_obj::IGNORE_ONCE,"IGNORE_ONCE");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(PreFlag_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(PreFlag_obj::ACCEPT,"ACCEPT");
-	HX_VISIT_MEMBER_NAME(PreFlag_obj::IGNORE,"IGNORE");
-	HX_VISIT_MEMBER_NAME(PreFlag_obj::ACCEPT_ONCE,"ACCEPT_ONCE");
-	HX_VISIT_MEMBER_NAME(PreFlag_obj::IGNORE_ONCE,"IGNORE_ONCE");
 };
 
 Class PreFlag_obj::__mClass;
 
 void PreFlag_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.PreFlag"), hx::TCanCast< PreFlag_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.PreFlag"), hx::TCanCast< PreFlag_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -19,7 +19,7 @@ namespace nape{
 namespace dynamics{
 
 
-class Arbiter_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Arbiter_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Arbiter_obj OBJ_;
@@ -48,31 +48,24 @@ class Arbiter_obj : public hx::Object{
 		virtual ::nape::callbacks::PreFlag get_state( );
 		Dynamic get_state_dyn();
 
-		::nape::callbacks::PreFlag state; /* REM */ 
 		virtual ::nape::phys::Body get_body2( );
 		Dynamic get_body2_dyn();
 
-		::nape::phys::Body body2; /* REM */ 
 		virtual ::nape::phys::Body get_body1( );
 		Dynamic get_body1_dyn();
 
-		::nape::phys::Body body1; /* REM */ 
 		virtual ::nape::shape::Shape get_shape2( );
 		Dynamic get_shape2_dyn();
 
-		::nape::shape::Shape shape2; /* REM */ 
 		virtual ::nape::shape::Shape get_shape1( );
 		Dynamic get_shape1_dyn();
 
-		::nape::shape::Shape shape1; /* REM */ 
 		virtual ::nape::dynamics::FluidArbiter get_fluidArbiter( );
 		Dynamic get_fluidArbiter_dyn();
 
-		::nape::dynamics::FluidArbiter fluidArbiter; /* REM */ 
 		virtual ::nape::dynamics::CollisionArbiter get_collisionArbiter( );
 		Dynamic get_collisionArbiter_dyn();
 
-		::nape::dynamics::CollisionArbiter collisionArbiter; /* REM */ 
 		virtual bool isSensorArbiter( );
 		Dynamic isSensorArbiter_dyn();
 
@@ -85,12 +78,10 @@ class Arbiter_obj : public hx::Object{
 		virtual ::nape::dynamics::ArbiterType get_type( );
 		Dynamic get_type_dyn();
 
-		::nape::dynamics::ArbiterType type; /* REM */ 
 		virtual bool get_isSleeping( );
 		Dynamic get_isSleeping_dyn();
 
-		bool isSleeping; /* REM */ 
-		::zpp_nape::dynamics::ZPP_Arbiter zpp_inner; /* REM */ 
+		::zpp_nape::dynamics::ZPP_Arbiter zpp_inner;
 };
 
 } // end namespace nape

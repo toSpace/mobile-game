@@ -65,7 +65,7 @@ Dynamic GeomVertexIterator_obj::__Create(hx::DynamicArray inArgs)
 				HX_STACK_LINE(243)
 				if (((_this->wrap == null()))){
 					struct _Function_3_1{
-						inline static ::nape::geom::Vec2 Block( ::zpp_nape::geom::ZPP_GeomVert &_this){
+						inline static ::nape::geom::Vec2 Block( ::zpp_nape::geom::ZPP_GeomVert _this){
 							HX_STACK_PUSH("*::closure","nape/geom/GeomVertexIterator.hx",243);
 							{
 								HX_STACK_LINE(243)
@@ -138,9 +138,6 @@ Dynamic GeomVertexIterator_obj::__Create(hx::DynamicArray inArgs)
 													HX_STACK_LINE(243)
 													{
 													}
-													HX_STACK_LINE(243)
-													{
-													}
 												}
 												HX_STACK_LINE(243)
 												return ret1;
@@ -169,7 +166,7 @@ Dynamic GeomVertexIterator_obj::__Create(hx::DynamicArray inArgs)
 											hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 										}
 										HX_STACK_LINE(243)
-										if (((_this1->_isimmutable_dyn() != null()))){
+										if (((_this1->_isimmutable != null()))){
 											HX_STACK_LINE(243)
 											_this1->_isimmutable();
 										}
@@ -193,7 +190,7 @@ Dynamic GeomVertexIterator_obj::__Create(hx::DynamicArray inArgs)
 													HX_STACK_LINE(243)
 													::zpp_nape::geom::ZPP_Vec2 _this1 = ret->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 													HX_STACK_LINE(243)
-													if (((_this1->_validate_dyn() != null()))){
+													if (((_this1->_validate != null()))){
 														HX_STACK_LINE(243)
 														_this1->_validate();
 													}
@@ -218,7 +215,7 @@ Dynamic GeomVertexIterator_obj::__Create(hx::DynamicArray inArgs)
 													HX_STACK_LINE(243)
 													::zpp_nape::geom::ZPP_Vec2 _this1 = ret->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 													HX_STACK_LINE(243)
-													if (((_this1->_validate_dyn() != null()))){
+													if (((_this1->_validate != null()))){
 														HX_STACK_LINE(243)
 														_this1->_validate();
 													}
@@ -240,16 +237,13 @@ Dynamic GeomVertexIterator_obj::__Create(hx::DynamicArray inArgs)
 											HX_STACK_LINE(243)
 											{
 											}
-											HX_STACK_LINE(243)
-											{
-											}
 										}
 										HX_STACK_LINE(243)
 										{
 											HX_STACK_LINE(243)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = ret->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(243)
-											if (((_this1->_invalidate_dyn() != null()))){
+											if (((_this1->_invalidate != null()))){
 												HX_STACK_LINE(243)
 												_this1->_invalidate(_this1);
 											}
@@ -308,9 +302,6 @@ bool GeomVertexIterator_obj::hasNext( ){
 	if ((!(ret))){
 		HX_STACK_LINE(210)
 		::zpp_nape::geom::ZPP_GeomVertexIterator o = this->zpp_inner;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(211)
-		{
-		}
 		HX_STACK_LINE(219)
 		{
 			HX_STACK_LINE(219)
@@ -398,7 +389,7 @@ Class GeomVertexIterator_obj::__mClass;
 
 void GeomVertexIterator_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.GeomVertexIterator"), hx::TCanCast< GeomVertexIterator_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.GeomVertexIterator"), hx::TCanCast< GeomVertexIterator_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

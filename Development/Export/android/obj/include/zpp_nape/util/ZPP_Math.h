@@ -10,7 +10,7 @@ namespace zpp_nape{
 namespace util{
 
 
-class ZPP_Math_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Math_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Math_obj OBJ_;

@@ -13,7 +13,7 @@ namespace zpp_nape{
 namespace util{
 
 
-class ZPP_PubPool_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_PubPool_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_PubPool_obj OBJ_;
@@ -33,12 +33,12 @@ class ZPP_PubPool_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("ZPP_PubPool"); }
 
-		static ::nape::geom::GeomPoly poolGeomPoly; /* REM */ 
-		static ::nape::geom::GeomPoly nextGeomPoly; /* REM */ 
-		static ::nape::geom::Vec2 poolVec2; /* REM */ 
-		static ::nape::geom::Vec2 nextVec2; /* REM */ 
-		static ::nape::geom::Vec3 poolVec3; /* REM */ 
-		static ::nape::geom::Vec3 nextVec3; /* REM */ 
+		static ::nape::geom::GeomPoly poolGeomPoly;
+		static ::nape::geom::GeomPoly nextGeomPoly;
+		static ::nape::geom::Vec2 poolVec2;
+		static ::nape::geom::Vec2 nextVec2;
+		static ::nape::geom::Vec3 poolVec3;
+		static ::nape::geom::Vec3 nextVec3;
 };
 
 } // end namespace zpp_nape

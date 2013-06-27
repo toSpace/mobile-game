@@ -74,16 +74,16 @@ Dynamic __Create_Error_obj() { return new Error_obj; }
 void Error_obj::__register()
 {
 
-Static(__mClass) = hx::RegisterClass(HX_CSTRING("haxe.io.Error"), hx::TCanCast< Error_obj >,sStaticFields,sMemberFields,
+hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("haxe.io.Error"), hx::TCanCast< Error_obj >,sStaticFields,sMemberFields,
 	&__Create_Error_obj, &__Create,
 	&super::__SGetClass(), &CreateError_obj, sMarkStatics, sVisitStatic);
 }
 
 void Error_obj::__boot()
 {
-Static(Blocked) = hx::CreateEnum< Error_obj >(HX_CSTRING("Blocked"),0);
-Static(OutsideBounds) = hx::CreateEnum< Error_obj >(HX_CSTRING("OutsideBounds"),2);
-Static(Overflow) = hx::CreateEnum< Error_obj >(HX_CSTRING("Overflow"),1);
+hx::Static(Blocked) = hx::CreateEnum< Error_obj >(HX_CSTRING("Blocked"),0);
+hx::Static(OutsideBounds) = hx::CreateEnum< Error_obj >(HX_CSTRING("OutsideBounds"),2);
+hx::Static(Overflow) = hx::CreateEnum< Error_obj >(HX_CSTRING("Overflow"),1);
 }
 
 

@@ -131,7 +131,7 @@ Dynamic ZPP_AABBTree_obj::__Create(hx::DynamicArray inArgs)
 					_this->maxy = (  (((a1->maxy > b1->maxy))) ? Float(a1->maxy) : Float(b1->maxy) );
 				}
 				struct _Function_4_1{
-					inline static int Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &g){
+					inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &b){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",612);
 						{
 							HX_STACK_LINE(613)
@@ -145,9 +145,9 @@ Dynamic ZPP_AABBTree_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				HX_STACK_LINE(612)
-				a->height = ((int)1 + _Function_4_1::Block(b,g));
+				a->height = ((int)1 + _Function_4_1::Block(g,b));
 				struct _Function_4_2{
-					inline static int Block( ::zpp_nape::space::ZPP_AABBNode &a,::zpp_nape::space::ZPP_AABBNode &f){
+					inline static int Block( ::zpp_nape::space::ZPP_AABBNode &f,::zpp_nape::space::ZPP_AABBNode &a){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",617);
 						{
 							HX_STACK_LINE(618)
@@ -161,7 +161,7 @@ Dynamic ZPP_AABBTree_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				HX_STACK_LINE(617)
-				c->height = ((int)1 + _Function_4_2::Block(a,f));
+				c->height = ((int)1 + _Function_4_2::Block(f,a));
 			}
 			else{
 				HX_STACK_LINE(624)
@@ -217,7 +217,7 @@ Dynamic ZPP_AABBTree_obj::__Create(hx::DynamicArray inArgs)
 				HX_STACK_LINE(629)
 				a->height = ((int)1 + _Function_4_1::Block(b,f));
 				struct _Function_4_2{
-					inline static int Block( ::zpp_nape::space::ZPP_AABBNode &a,::zpp_nape::space::ZPP_AABBNode &g){
+					inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &a){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",634);
 						{
 							HX_STACK_LINE(635)
@@ -231,7 +231,7 @@ Dynamic ZPP_AABBTree_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				HX_STACK_LINE(634)
-				c->height = ((int)1 + _Function_4_2::Block(a,g));
+				c->height = ((int)1 + _Function_4_2::Block(g,a));
 			}
 			HX_STACK_LINE(640)
 			return c;
@@ -320,7 +320,7 @@ Dynamic ZPP_AABBTree_obj::__Create(hx::DynamicArray inArgs)
 					HX_STACK_LINE(659)
 					a->height = ((int)1 + _Function_5_1::Block(c,g));
 					struct _Function_5_2{
-						inline static int Block( ::zpp_nape::space::ZPP_AABBNode &a,::zpp_nape::space::ZPP_AABBNode &f){
+						inline static int Block( ::zpp_nape::space::ZPP_AABBNode &f,::zpp_nape::space::ZPP_AABBNode &a){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",664);
 							{
 								HX_STACK_LINE(665)
@@ -334,7 +334,7 @@ Dynamic ZPP_AABBTree_obj::__Create(hx::DynamicArray inArgs)
 						}
 					};
 					HX_STACK_LINE(664)
-					b->height = ((int)1 + _Function_5_2::Block(a,f));
+					b->height = ((int)1 + _Function_5_2::Block(f,a));
 				}
 				else{
 					HX_STACK_LINE(671)
@@ -390,7 +390,7 @@ Dynamic ZPP_AABBTree_obj::__Create(hx::DynamicArray inArgs)
 					HX_STACK_LINE(676)
 					a->height = ((int)1 + _Function_5_1::Block(c,f));
 					struct _Function_5_2{
-						inline static int Block( ::zpp_nape::space::ZPP_AABBNode &a,::zpp_nape::space::ZPP_AABBNode &g){
+						inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &a){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",681);
 							{
 								HX_STACK_LINE(682)
@@ -404,7 +404,7 @@ Dynamic ZPP_AABBTree_obj::__Create(hx::DynamicArray inArgs)
 						}
 					};
 					HX_STACK_LINE(681)
-					b->height = ((int)1 + _Function_5_2::Block(a,g));
+					b->height = ((int)1 + _Function_5_2::Block(g,a));
 				}
 				HX_STACK_LINE(687)
 				return b;
@@ -458,9 +458,6 @@ Void ZPP_AABBTree_obj::inlined_removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 				{
 					HX_STACK_LINE(534)
 					::zpp_nape::space::ZPP_AABBNode o = parent;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(535)
-					{
-					}
 					HX_STACK_LINE(543)
 					{
 						HX_STACK_LINE(543)
@@ -469,9 +466,6 @@ Void ZPP_AABBTree_obj::inlined_removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 						{
 							HX_STACK_LINE(543)
 							::zpp_nape::geom::ZPP_AABB o1 = o->aabb;		HX_STACK_VAR(o1,"o1");
-							HX_STACK_LINE(543)
-							{
-							}
 							HX_STACK_LINE(543)
 							{
 								HX_STACK_LINE(543)
@@ -512,7 +506,7 @@ Void ZPP_AABBTree_obj::inlined_removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 				HX_STACK_LINE(551)
 				while(((node != null()))){
 					struct _Function_4_1{
-						inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBTree_obj *__this){
+						inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &node){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",552);
 							{
 								HX_STACK_LINE(552)
@@ -522,7 +516,7 @@ Void ZPP_AABBTree_obj::inlined_removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 								HX_STACK_LINE(552)
 								int balance = (c->height - b->height);		HX_STACK_VAR(balance,"balance");
 								struct _Function_5_1{
-									inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &c){
+									inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &b){
 										HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",552);
 										{
 											HX_STACK_LINE(552)
@@ -590,7 +584,7 @@ Void ZPP_AABBTree_obj::inlined_removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 													_this->maxy = (  (((a->maxy > b1->maxy))) ? Float(a->maxy) : Float(b1->maxy) );
 												}
 												struct _Function_7_1{
-													inline static int Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &g){
+													inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &b){
 														HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",552);
 														{
 															HX_STACK_LINE(552)
@@ -604,7 +598,7 @@ Void ZPP_AABBTree_obj::inlined_removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 													}
 												};
 												HX_STACK_LINE(552)
-												node->height = ((int)1 + _Function_7_1::Block(b,g));
+												node->height = ((int)1 + _Function_7_1::Block(g,b));
 												struct _Function_7_2{
 													inline static int Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &f){
 														HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",552);
@@ -676,7 +670,7 @@ Void ZPP_AABBTree_obj::inlined_removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 												HX_STACK_LINE(552)
 												node->height = ((int)1 + _Function_7_1::Block(b,f));
 												struct _Function_7_2{
-													inline static int Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &g){
+													inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &node){
 														HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",552);
 														{
 															HX_STACK_LINE(552)
@@ -690,7 +684,7 @@ Void ZPP_AABBTree_obj::inlined_removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 													}
 												};
 												HX_STACK_LINE(552)
-												c->height = ((int)1 + _Function_7_2::Block(node,g));
+												c->height = ((int)1 + _Function_7_2::Block(g,node));
 											}
 											HX_STACK_LINE(552)
 											return c;
@@ -699,7 +693,7 @@ Void ZPP_AABBTree_obj::inlined_removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 									}
 								};
 								struct _Function_5_2{
-									inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &c){
+									inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &b){
 										HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",552);
 										{
 											HX_STACK_LINE(552)
@@ -853,7 +847,7 @@ Void ZPP_AABBTree_obj::inlined_removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 												HX_STACK_LINE(552)
 												node->height = ((int)1 + _Function_7_1::Block(c,f));
 												struct _Function_7_2{
-													inline static int Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &g){
+													inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &node){
 														HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",552);
 														{
 															HX_STACK_LINE(552)
@@ -867,7 +861,7 @@ Void ZPP_AABBTree_obj::inlined_removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 													}
 												};
 												HX_STACK_LINE(552)
-												b->height = ((int)1 + _Function_7_2::Block(node,g));
+												b->height = ((int)1 + _Function_7_2::Block(g,node));
 											}
 											HX_STACK_LINE(552)
 											return b;
@@ -876,13 +870,13 @@ Void ZPP_AABBTree_obj::inlined_removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 									}
 								};
 								HX_STACK_LINE(552)
-								return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_5_1::Block(node,__this,b,c)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_5_2::Block(b,node,__this,c)) : ::zpp_nape::space::ZPP_AABBNode(node) )) );
+								return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_5_1::Block(c,__this,node,b)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_5_2::Block(__this,c,node,b)) : ::zpp_nape::space::ZPP_AABBNode(node) )) );
 							}
 							return null();
 						}
 					};
 					HX_STACK_LINE(552)
-					node = (  (((bool((node->child1 == null())) || bool((node->height < (int)2))))) ? ::zpp_nape::space::ZPP_AABBNode(node) : ::zpp_nape::space::ZPP_AABBNode(_Function_4_1::Block(node,this)) );
+					node = (  (((bool((node->child1 == null())) || bool((node->height < (int)2))))) ? ::zpp_nape::space::ZPP_AABBNode(node) : ::zpp_nape::space::ZPP_AABBNode(_Function_4_1::Block(this,node)) );
 					HX_STACK_LINE(553)
 					::zpp_nape::space::ZPP_AABBNode child1 = node->child1;		HX_STACK_VAR(child1,"child1");
 					HX_STACK_LINE(554)
@@ -931,9 +925,6 @@ Void ZPP_AABBTree_obj::inlined_removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 				{
 					HX_STACK_LINE(568)
 					::zpp_nape::space::ZPP_AABBNode o = parent;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(569)
-					{
-					}
 					HX_STACK_LINE(577)
 					{
 						HX_STACK_LINE(577)
@@ -942,9 +933,6 @@ Void ZPP_AABBTree_obj::inlined_removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 						{
 							HX_STACK_LINE(577)
 							::zpp_nape::geom::ZPP_AABB o1 = o->aabb;		HX_STACK_VAR(o1,"o1");
-							HX_STACK_LINE(577)
-							{
-							}
 							HX_STACK_LINE(577)
 							{
 								HX_STACK_LINE(577)
@@ -1027,18 +1015,12 @@ Void ZPP_AABBTree_obj::removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 					::zpp_nape::space::ZPP_AABBNode o = parent;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(516)
 					{
-					}
-					HX_STACK_LINE(516)
-					{
 						HX_STACK_LINE(516)
 						o->height = (int)-1;
 						HX_STACK_LINE(516)
 						{
 							HX_STACK_LINE(516)
 							::zpp_nape::geom::ZPP_AABB o1 = o->aabb;		HX_STACK_VAR(o1,"o1");
-							HX_STACK_LINE(516)
-							{
-							}
 							HX_STACK_LINE(516)
 							{
 								HX_STACK_LINE(516)
@@ -1079,7 +1061,7 @@ Void ZPP_AABBTree_obj::removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 				HX_STACK_LINE(516)
 				while(((node != null()))){
 					struct _Function_4_1{
-						inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBTree_obj *__this){
+						inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &node){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",516);
 							{
 								HX_STACK_LINE(516)
@@ -1089,7 +1071,7 @@ Void ZPP_AABBTree_obj::removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 								HX_STACK_LINE(516)
 								int balance = (c->height - b->height);		HX_STACK_VAR(balance,"balance");
 								struct _Function_5_1{
-									inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &c){
+									inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &b){
 										HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",516);
 										{
 											HX_STACK_LINE(516)
@@ -1157,7 +1139,7 @@ Void ZPP_AABBTree_obj::removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 													_this->maxy = (  (((a->maxy > b1->maxy))) ? Float(a->maxy) : Float(b1->maxy) );
 												}
 												struct _Function_7_1{
-													inline static int Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &g){
+													inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &b){
 														HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",516);
 														{
 															HX_STACK_LINE(516)
@@ -1171,7 +1153,7 @@ Void ZPP_AABBTree_obj::removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 													}
 												};
 												HX_STACK_LINE(516)
-												node->height = ((int)1 + _Function_7_1::Block(b,g));
+												node->height = ((int)1 + _Function_7_1::Block(g,b));
 												struct _Function_7_2{
 													inline static int Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &f){
 														HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",516);
@@ -1243,7 +1225,7 @@ Void ZPP_AABBTree_obj::removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 												HX_STACK_LINE(516)
 												node->height = ((int)1 + _Function_7_1::Block(b,f));
 												struct _Function_7_2{
-													inline static int Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &g){
+													inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &node){
 														HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",516);
 														{
 															HX_STACK_LINE(516)
@@ -1257,7 +1239,7 @@ Void ZPP_AABBTree_obj::removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 													}
 												};
 												HX_STACK_LINE(516)
-												c->height = ((int)1 + _Function_7_2::Block(node,g));
+												c->height = ((int)1 + _Function_7_2::Block(g,node));
 											}
 											HX_STACK_LINE(516)
 											return c;
@@ -1266,7 +1248,7 @@ Void ZPP_AABBTree_obj::removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 									}
 								};
 								struct _Function_5_2{
-									inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &c){
+									inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &b){
 										HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",516);
 										{
 											HX_STACK_LINE(516)
@@ -1420,7 +1402,7 @@ Void ZPP_AABBTree_obj::removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 												HX_STACK_LINE(516)
 												node->height = ((int)1 + _Function_7_1::Block(c,f));
 												struct _Function_7_2{
-													inline static int Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &g){
+													inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &node){
 														HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",516);
 														{
 															HX_STACK_LINE(516)
@@ -1434,7 +1416,7 @@ Void ZPP_AABBTree_obj::removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 													}
 												};
 												HX_STACK_LINE(516)
-												b->height = ((int)1 + _Function_7_2::Block(node,g));
+												b->height = ((int)1 + _Function_7_2::Block(g,node));
 											}
 											HX_STACK_LINE(516)
 											return b;
@@ -1443,13 +1425,13 @@ Void ZPP_AABBTree_obj::removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 									}
 								};
 								HX_STACK_LINE(516)
-								return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_5_1::Block(node,__this,b,c)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_5_2::Block(b,node,__this,c)) : ::zpp_nape::space::ZPP_AABBNode(node) )) );
+								return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_5_1::Block(c,__this,node,b)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_5_2::Block(__this,c,node,b)) : ::zpp_nape::space::ZPP_AABBNode(node) )) );
 							}
 							return null();
 						}
 					};
 					HX_STACK_LINE(516)
-					node = (  (((bool((node->child1 == null())) || bool((node->height < (int)2))))) ? ::zpp_nape::space::ZPP_AABBNode(node) : ::zpp_nape::space::ZPP_AABBNode(_Function_4_1::Block(node,this)) );
+					node = (  (((bool((node->child1 == null())) || bool((node->height < (int)2))))) ? ::zpp_nape::space::ZPP_AABBNode(node) : ::zpp_nape::space::ZPP_AABBNode(_Function_4_1::Block(this,node)) );
 					HX_STACK_LINE(516)
 					::zpp_nape::space::ZPP_AABBNode child1 = node->child1;		HX_STACK_VAR(child1,"child1");
 					HX_STACK_LINE(516)
@@ -1500,18 +1482,12 @@ Void ZPP_AABBTree_obj::removeLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 					::zpp_nape::space::ZPP_AABBNode o = parent;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(516)
 					{
-					}
-					HX_STACK_LINE(516)
-					{
 						HX_STACK_LINE(516)
 						o->height = (int)-1;
 						HX_STACK_LINE(516)
 						{
 							HX_STACK_LINE(516)
 							::zpp_nape::geom::ZPP_AABB o1 = o->aabb;		HX_STACK_VAR(o1,"o1");
-							HX_STACK_LINE(516)
-							{
-							}
 							HX_STACK_LINE(516)
 							{
 								HX_STACK_LINE(516)
@@ -1626,7 +1602,7 @@ Void ZPP_AABBTree_obj::inlined_insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 				HX_STACK_LINE(440)
 				Float icost = ((int)2 * ((carea - area)));		HX_STACK_VAR(icost,"icost");
 				struct _Function_3_3{
-					inline static Float Block( ::zpp_nape::geom::ZPP_AABB &leafaabb,::zpp_nape::space::ZPP_AABBNode &child1,Float &icost){
+					inline static Float Block( ::zpp_nape::space::ZPP_AABBNode &child1,::zpp_nape::geom::ZPP_AABB &leafaabb,Float &icost){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",441);
 						{
 							HX_STACK_LINE(442)
@@ -1700,9 +1676,9 @@ Void ZPP_AABBTree_obj::inlined_insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 					}
 				};
 				HX_STACK_LINE(441)
-				Float cost1 = _Function_3_3::Block(leafaabb,child1,icost);		HX_STACK_VAR(cost1,"cost1");
+				Float cost1 = _Function_3_3::Block(child1,leafaabb,icost);		HX_STACK_VAR(cost1,"cost1");
 				struct _Function_3_4{
-					inline static Float Block( ::zpp_nape::space::ZPP_AABBNode &child2,::zpp_nape::geom::ZPP_AABB &leafaabb,Float &icost){
+					inline static Float Block( ::zpp_nape::geom::ZPP_AABB &leafaabb,Float &icost,::zpp_nape::space::ZPP_AABBNode &child2){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",450);
 						{
 							HX_STACK_LINE(451)
@@ -1732,7 +1708,7 @@ Void ZPP_AABBTree_obj::inlined_insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 								}
 							};
 							struct _Function_4_2{
-								inline static Float Block( ::zpp_nape::space::ZPP_AABBNode &child2,Float &icost){
+								inline static Float Block( Float &icost,::zpp_nape::space::ZPP_AABBNode &child2){
 									HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",453);
 									{
 										struct _Function_5_1{
@@ -1770,13 +1746,13 @@ Void ZPP_AABBTree_obj::inlined_insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 								}
 							};
 							HX_STACK_LINE(452)
-							return (  (((child2->child1 == null()))) ? Float((_Function_4_1::Block() + icost)) : Float(_Function_4_2::Block(child2,icost)) );
+							return (  (((child2->child1 == null()))) ? Float((_Function_4_1::Block() + icost)) : Float(_Function_4_2::Block(icost,child2)) );
 						}
 						return null();
 					}
 				};
 				HX_STACK_LINE(450)
-				Float cost2 = _Function_3_4::Block(child2,leafaabb,icost);		HX_STACK_VAR(cost2,"cost2");
+				Float cost2 = _Function_3_4::Block(leafaabb,icost,child2);		HX_STACK_VAR(cost2,"cost2");
 				HX_STACK_LINE(459)
 				if (((bool((cost < cost1)) && bool((cost < cost2))))){
 					HX_STACK_LINE(459)
@@ -1891,7 +1867,7 @@ Void ZPP_AABBTree_obj::inlined_insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 			HX_STACK_LINE(501)
 			while(((node != null()))){
 				struct _Function_3_1{
-					inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBTree_obj *__this){
+					inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &node){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",502);
 						{
 							HX_STACK_LINE(502)
@@ -1901,7 +1877,7 @@ Void ZPP_AABBTree_obj::inlined_insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 							HX_STACK_LINE(502)
 							int balance = (c->height - b->height);		HX_STACK_VAR(balance,"balance");
 							struct _Function_4_1{
-								inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &c){
+								inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &b){
 									HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",502);
 									{
 										HX_STACK_LINE(502)
@@ -1969,7 +1945,7 @@ Void ZPP_AABBTree_obj::inlined_insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 												_this->maxy = (  (((a->maxy > b1->maxy))) ? Float(a->maxy) : Float(b1->maxy) );
 											}
 											struct _Function_6_1{
-												inline static int Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &g){
+												inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &b){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",502);
 													{
 														HX_STACK_LINE(502)
@@ -1983,7 +1959,7 @@ Void ZPP_AABBTree_obj::inlined_insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 												}
 											};
 											HX_STACK_LINE(502)
-											node->height = ((int)1 + _Function_6_1::Block(b,g));
+											node->height = ((int)1 + _Function_6_1::Block(g,b));
 											struct _Function_6_2{
 												inline static int Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &f){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",502);
@@ -2055,7 +2031,7 @@ Void ZPP_AABBTree_obj::inlined_insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 											HX_STACK_LINE(502)
 											node->height = ((int)1 + _Function_6_1::Block(b,f));
 											struct _Function_6_2{
-												inline static int Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &g){
+												inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &node){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",502);
 													{
 														HX_STACK_LINE(502)
@@ -2069,7 +2045,7 @@ Void ZPP_AABBTree_obj::inlined_insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 												}
 											};
 											HX_STACK_LINE(502)
-											c->height = ((int)1 + _Function_6_2::Block(node,g));
+											c->height = ((int)1 + _Function_6_2::Block(g,node));
 										}
 										HX_STACK_LINE(502)
 										return c;
@@ -2078,7 +2054,7 @@ Void ZPP_AABBTree_obj::inlined_insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 								}
 							};
 							struct _Function_4_2{
-								inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &c){
+								inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &b){
 									HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",502);
 									{
 										HX_STACK_LINE(502)
@@ -2232,7 +2208,7 @@ Void ZPP_AABBTree_obj::inlined_insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 											HX_STACK_LINE(502)
 											node->height = ((int)1 + _Function_6_1::Block(c,f));
 											struct _Function_6_2{
-												inline static int Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &g){
+												inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &node){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",502);
 													{
 														HX_STACK_LINE(502)
@@ -2246,7 +2222,7 @@ Void ZPP_AABBTree_obj::inlined_insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 												}
 											};
 											HX_STACK_LINE(502)
-											b->height = ((int)1 + _Function_6_2::Block(node,g));
+											b->height = ((int)1 + _Function_6_2::Block(g,node));
 										}
 										HX_STACK_LINE(502)
 										return b;
@@ -2255,13 +2231,13 @@ Void ZPP_AABBTree_obj::inlined_insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf)
 								}
 							};
 							HX_STACK_LINE(502)
-							return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_4_1::Block(node,__this,b,c)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_4_2::Block(b,node,__this,c)) : ::zpp_nape::space::ZPP_AABBNode(node) )) );
+							return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_4_1::Block(c,__this,node,b)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_4_2::Block(__this,c,node,b)) : ::zpp_nape::space::ZPP_AABBNode(node) )) );
 						}
 						return null();
 					}
 				};
 				HX_STACK_LINE(502)
-				node = (  (((bool((node->child1 == null())) || bool((node->height < (int)2))))) ? ::zpp_nape::space::ZPP_AABBNode(node) : ::zpp_nape::space::ZPP_AABBNode(_Function_3_1::Block(node,this)) );
+				node = (  (((bool((node->child1 == null())) || bool((node->height < (int)2))))) ? ::zpp_nape::space::ZPP_AABBNode(node) : ::zpp_nape::space::ZPP_AABBNode(_Function_3_1::Block(this,node)) );
 				HX_STACK_LINE(503)
 				::zpp_nape::space::ZPP_AABBNode child1 = node->child1;		HX_STACK_VAR(child1,"child1");
 				HX_STACK_LINE(504)
@@ -2378,7 +2354,7 @@ Void ZPP_AABBTree_obj::insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 				HX_STACK_LINE(421)
 				Float icost = ((int)2 * ((carea - area)));		HX_STACK_VAR(icost,"icost");
 				struct _Function_3_3{
-					inline static Float Block( ::zpp_nape::geom::ZPP_AABB &leafaabb,::zpp_nape::space::ZPP_AABBNode &child1,Float &icost){
+					inline static Float Block( ::zpp_nape::space::ZPP_AABBNode &child1,::zpp_nape::geom::ZPP_AABB &leafaabb,Float &icost){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",421);
 						{
 							HX_STACK_LINE(421)
@@ -2452,9 +2428,9 @@ Void ZPP_AABBTree_obj::insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 					}
 				};
 				HX_STACK_LINE(421)
-				Float cost1 = _Function_3_3::Block(leafaabb,child1,icost);		HX_STACK_VAR(cost1,"cost1");
+				Float cost1 = _Function_3_3::Block(child1,leafaabb,icost);		HX_STACK_VAR(cost1,"cost1");
 				struct _Function_3_4{
-					inline static Float Block( ::zpp_nape::space::ZPP_AABBNode &child2,::zpp_nape::geom::ZPP_AABB &leafaabb,Float &icost){
+					inline static Float Block( ::zpp_nape::geom::ZPP_AABB &leafaabb,Float &icost,::zpp_nape::space::ZPP_AABBNode &child2){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",421);
 						{
 							HX_STACK_LINE(421)
@@ -2484,7 +2460,7 @@ Void ZPP_AABBTree_obj::insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 								}
 							};
 							struct _Function_4_2{
-								inline static Float Block( ::zpp_nape::space::ZPP_AABBNode &child2,Float &icost){
+								inline static Float Block( Float &icost,::zpp_nape::space::ZPP_AABBNode &child2){
 									HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",421);
 									{
 										struct _Function_5_1{
@@ -2522,13 +2498,13 @@ Void ZPP_AABBTree_obj::insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 								}
 							};
 							HX_STACK_LINE(421)
-							return (  (((child2->child1 == null()))) ? Float((_Function_4_1::Block() + icost)) : Float(_Function_4_2::Block(child2,icost)) );
+							return (  (((child2->child1 == null()))) ? Float((_Function_4_1::Block() + icost)) : Float(_Function_4_2::Block(icost,child2)) );
 						}
 						return null();
 					}
 				};
 				HX_STACK_LINE(421)
-				Float cost2 = _Function_3_4::Block(child2,leafaabb,icost);		HX_STACK_VAR(cost2,"cost2");
+				Float cost2 = _Function_3_4::Block(leafaabb,icost,child2);		HX_STACK_VAR(cost2,"cost2");
 				HX_STACK_LINE(421)
 				if (((bool((cost < cost1)) && bool((cost < cost2))))){
 					HX_STACK_LINE(421)
@@ -2643,7 +2619,7 @@ Void ZPP_AABBTree_obj::insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 			HX_STACK_LINE(421)
 			while(((node != null()))){
 				struct _Function_3_1{
-					inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBTree_obj *__this){
+					inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &node){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",421);
 						{
 							HX_STACK_LINE(421)
@@ -2653,7 +2629,7 @@ Void ZPP_AABBTree_obj::insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 							HX_STACK_LINE(421)
 							int balance = (c->height - b->height);		HX_STACK_VAR(balance,"balance");
 							struct _Function_4_1{
-								inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &c){
+								inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &b){
 									HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",421);
 									{
 										HX_STACK_LINE(421)
@@ -2721,7 +2697,7 @@ Void ZPP_AABBTree_obj::insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 												_this->maxy = (  (((a->maxy > b1->maxy))) ? Float(a->maxy) : Float(b1->maxy) );
 											}
 											struct _Function_6_1{
-												inline static int Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &g){
+												inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &b){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",421);
 													{
 														HX_STACK_LINE(421)
@@ -2735,7 +2711,7 @@ Void ZPP_AABBTree_obj::insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 												}
 											};
 											HX_STACK_LINE(421)
-											node->height = ((int)1 + _Function_6_1::Block(b,g));
+											node->height = ((int)1 + _Function_6_1::Block(g,b));
 											struct _Function_6_2{
 												inline static int Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &f){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",421);
@@ -2807,7 +2783,7 @@ Void ZPP_AABBTree_obj::insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 											HX_STACK_LINE(421)
 											node->height = ((int)1 + _Function_6_1::Block(b,f));
 											struct _Function_6_2{
-												inline static int Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &g){
+												inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &node){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",421);
 													{
 														HX_STACK_LINE(421)
@@ -2821,7 +2797,7 @@ Void ZPP_AABBTree_obj::insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 												}
 											};
 											HX_STACK_LINE(421)
-											c->height = ((int)1 + _Function_6_2::Block(node,g));
+											c->height = ((int)1 + _Function_6_2::Block(g,node));
 										}
 										HX_STACK_LINE(421)
 										return c;
@@ -2830,7 +2806,7 @@ Void ZPP_AABBTree_obj::insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 								}
 							};
 							struct _Function_4_2{
-								inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &c){
+								inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBTree_obj *__this,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &b){
 									HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",421);
 									{
 										HX_STACK_LINE(421)
@@ -2984,7 +2960,7 @@ Void ZPP_AABBTree_obj::insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 											HX_STACK_LINE(421)
 											node->height = ((int)1 + _Function_6_1::Block(c,f));
 											struct _Function_6_2{
-												inline static int Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::space::ZPP_AABBNode &g){
+												inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &node){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",421);
 													{
 														HX_STACK_LINE(421)
@@ -2998,7 +2974,7 @@ Void ZPP_AABBTree_obj::insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 												}
 											};
 											HX_STACK_LINE(421)
-											b->height = ((int)1 + _Function_6_2::Block(node,g));
+											b->height = ((int)1 + _Function_6_2::Block(g,node));
 										}
 										HX_STACK_LINE(421)
 										return b;
@@ -3007,13 +2983,13 @@ Void ZPP_AABBTree_obj::insertLeaf( ::zpp_nape::space::ZPP_AABBNode leaf){
 								}
 							};
 							HX_STACK_LINE(421)
-							return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_4_1::Block(node,__this,b,c)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_4_2::Block(b,node,__this,c)) : ::zpp_nape::space::ZPP_AABBNode(node) )) );
+							return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_4_1::Block(c,__this,node,b)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_4_2::Block(__this,c,node,b)) : ::zpp_nape::space::ZPP_AABBNode(node) )) );
 						}
 						return null();
 					}
 				};
 				HX_STACK_LINE(421)
-				node = (  (((bool((node->child1 == null())) || bool((node->height < (int)2))))) ? ::zpp_nape::space::ZPP_AABBNode(node) : ::zpp_nape::space::ZPP_AABBNode(_Function_3_1::Block(node,this)) );
+				node = (  (((bool((node->child1 == null())) || bool((node->height < (int)2))))) ? ::zpp_nape::space::ZPP_AABBNode(node) : ::zpp_nape::space::ZPP_AABBNode(_Function_3_1::Block(this,node)) );
 				HX_STACK_LINE(421)
 				::zpp_nape::space::ZPP_AABBNode child1 = node->child1;		HX_STACK_VAR(child1,"child1");
 				HX_STACK_LINE(421)
@@ -3073,9 +3049,6 @@ Void ZPP_AABBTree_obj::clear( ){
 		::zpp_nape::space::ZPP_AABBNode stack = null();		HX_STACK_VAR(stack,"stack");
 		HX_STACK_LINE(341)
 		{
-			HX_STACK_LINE(342)
-			{
-			}
 			HX_STACK_LINE(350)
 			this->root->next = stack;
 			HX_STACK_LINE(351)
@@ -3087,9 +3060,6 @@ Void ZPP_AABBTree_obj::clear( ){
 				inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &stack){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",354);
 					{
-						HX_STACK_LINE(355)
-						{
-						}
 						HX_STACK_LINE(363)
 						::zpp_nape::space::ZPP_AABBNode ret = stack;		HX_STACK_VAR(ret,"ret");
 						HX_STACK_LINE(364)
@@ -3116,9 +3086,6 @@ Void ZPP_AABBTree_obj::clear( ){
 			else{
 				HX_STACK_LINE(374)
 				if (((node->child1 != null()))){
-					HX_STACK_LINE(375)
-					{
-					}
 					HX_STACK_LINE(383)
 					node->child1->next = stack;
 					HX_STACK_LINE(384)
@@ -3126,9 +3093,6 @@ Void ZPP_AABBTree_obj::clear( ){
 				}
 				HX_STACK_LINE(386)
 				if (((node->child2 != null()))){
-					HX_STACK_LINE(387)
-					{
-					}
 					HX_STACK_LINE(395)
 					node->child2->next = stack;
 					HX_STACK_LINE(396)
@@ -3139,9 +3103,6 @@ Void ZPP_AABBTree_obj::clear( ){
 			{
 				HX_STACK_LINE(400)
 				::zpp_nape::space::ZPP_AABBNode o = node;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(401)
-				{
-				}
 				HX_STACK_LINE(409)
 				{
 					HX_STACK_LINE(409)
@@ -3150,9 +3111,6 @@ Void ZPP_AABBTree_obj::clear( ){
 					{
 						HX_STACK_LINE(409)
 						::zpp_nape::geom::ZPP_AABB o1 = o->aabb;		HX_STACK_VAR(o1,"o1");
-						HX_STACK_LINE(409)
-						{
-						}
 						HX_STACK_LINE(409)
 						{
 							HX_STACK_LINE(409)
@@ -3287,7 +3245,7 @@ Class ZPP_AABBTree_obj::__mClass;
 
 void ZPP_AABBTree_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_AABBTree"), hx::TCanCast< ZPP_AABBTree_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_AABBTree"), hx::TCanCast< ZPP_AABBTree_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -140,7 +140,7 @@ Class ZPP_MatMN_obj::__mClass;
 
 void ZPP_MatMN_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_MatMN"), hx::TCanCast< ZPP_MatMN_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_MatMN"), hx::TCanCast< ZPP_MatMN_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

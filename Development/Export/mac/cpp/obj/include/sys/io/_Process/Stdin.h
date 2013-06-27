@@ -14,7 +14,7 @@ namespace io{
 namespace _Process{
 
 
-class Stdin_obj : public ::haxe::io::Output_obj{
+class HXCPP_CLASS_ATTRIBUTES  Stdin_obj : public ::haxe::io::Output_obj{
 	public:
 		typedef ::haxe::io::Output_obj super;
 		typedef Stdin_obj OBJ_;
@@ -34,18 +34,8 @@ class Stdin_obj : public ::haxe::io::Output_obj{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("Stdin"); }
 
-		virtual int writeBytes( ::haxe::io::Bytes buf,int pos,int len);
-
-		virtual Void writeByte( int c);
-
-		virtual Void close( );
-
-		::haxe::io::Bytes buf; /* REM */ 
-		Dynamic p; /* REM */ 
-		static Dynamic _stdin_write; /* REM */ 
-		static Dynamic &_stdin_write_dyn() { return _stdin_write;}
-		static Dynamic _stdin_close; /* REM */ 
-		static Dynamic &_stdin_close_dyn() { return _stdin_close;}
+		::haxe::io::Bytes buf;
+		Dynamic p;
 };
 
 } // end namespace sys

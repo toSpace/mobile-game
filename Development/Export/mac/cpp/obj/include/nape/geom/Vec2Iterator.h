@@ -12,7 +12,7 @@ namespace nape{
 namespace geom{
 
 
-class Vec2Iterator_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Vec2Iterator_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Vec2Iterator_obj OBJ_;
@@ -38,11 +38,11 @@ class Vec2Iterator_obj : public hx::Object{
 		virtual bool hasNext( );
 		Dynamic hasNext_dyn();
 
-		::nape::geom::Vec2Iterator zpp_next; /* REM */ 
-		bool zpp_critical; /* REM */ 
-		int zpp_i; /* REM */ 
-		::nape::geom::Vec2List zpp_inner; /* REM */ 
-		static ::nape::geom::Vec2Iterator zpp_pool; /* REM */ 
+		::nape::geom::Vec2Iterator zpp_next;
+		bool zpp_critical;
+		int zpp_i;
+		::nape::geom::Vec2List zpp_inner;
+		static ::nape::geom::Vec2Iterator zpp_pool;
 		static ::nape::geom::Vec2Iterator get( ::nape::geom::Vec2List list);
 		static Dynamic get_dyn();
 

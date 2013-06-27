@@ -12,7 +12,7 @@ namespace nape{
 namespace callbacks{
 
 
-class ListenerIterator_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ListenerIterator_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ListenerIterator_obj OBJ_;
@@ -38,11 +38,11 @@ class ListenerIterator_obj : public hx::Object{
 		virtual bool hasNext( );
 		Dynamic hasNext_dyn();
 
-		::nape::callbacks::ListenerIterator zpp_next; /* REM */ 
-		bool zpp_critical; /* REM */ 
-		int zpp_i; /* REM */ 
-		::nape::callbacks::ListenerList zpp_inner; /* REM */ 
-		static ::nape::callbacks::ListenerIterator zpp_pool; /* REM */ 
+		::nape::callbacks::ListenerIterator zpp_next;
+		bool zpp_critical;
+		int zpp_i;
+		::nape::callbacks::ListenerList zpp_inner;
+		static ::nape::callbacks::ListenerIterator zpp_pool;
 		static ::nape::callbacks::ListenerIterator get( ::nape::callbacks::ListenerList list);
 		static Dynamic get_dyn();
 

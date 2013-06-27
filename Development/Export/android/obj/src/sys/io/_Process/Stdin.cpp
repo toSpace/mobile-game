@@ -1,13 +1,7 @@
 #include <hxcpp.h>
 
-#ifndef INCLUDED_cpp_Lib
-#include <cpp/Lib.h>
-#endif
 #ifndef INCLUDED_haxe_io_Bytes
 #include <haxe/io/Bytes.h>
-#endif
-#ifndef INCLUDED_haxe_io_Eof
-#include <haxe/io/Eof.h>
 #endif
 #ifndef INCLUDED_haxe_io_Output
 #include <haxe/io/Output.h>
@@ -21,11 +15,11 @@ namespace _Process{
 
 Void Stdin_obj::__construct(Dynamic p)
 {
-HX_STACK_PUSH("Stdin::new","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",32);
+HX_STACK_PUSH("Stdin::new","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",29);
 {
-	HX_STACK_LINE(33)
+	HX_STACK_LINE(30)
 	this->p = p;
-	HX_STACK_LINE(34)
+	HX_STACK_LINE(31)
 	this->buf = ::haxe::io::Bytes_obj::alloc((int)1);
 }
 ;
@@ -44,61 +38,6 @@ Dynamic Stdin_obj::__Create(hx::DynamicArray inArgs)
 {  hx::ObjectPtr< Stdin_obj > result = new Stdin_obj();
 	result->__construct(inArgs[0]);
 	return result;}
-
-int Stdin_obj::writeBytes( ::haxe::io::Bytes buf,int pos,int len){
-	HX_STACK_PUSH("Stdin::writeBytes","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",47);
-	HX_STACK_THIS(this);
-	HX_STACK_ARG(buf,"buf");
-	HX_STACK_ARG(pos,"pos");
-	HX_STACK_ARG(len,"len");
-	HX_STACK_LINE(48)
-	try{
-		HX_STACK_LINE(48)
-		return ::sys::io::_Process::Stdin_obj::_stdin_write(this->p,buf->b,pos,len);
-	}
-	catch(Dynamic __e){
-		{
-			Dynamic e = __e;{
-				HX_STACK_LINE(50)
-				hx::Throw (::haxe::io::Eof_obj::__new());
-			}
-		}
-	}
-	HX_STACK_LINE(53)
-	return (int)0;
-}
-
-
-Void Stdin_obj::writeByte( int c){
-{
-		HX_STACK_PUSH("Stdin::writeByte","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",42);
-		HX_STACK_THIS(this);
-		HX_STACK_ARG(c,"c");
-		HX_STACK_LINE(43)
-		this->buf->b[(int)0] = c;
-		HX_STACK_LINE(44)
-		this->writeBytes(this->buf,(int)0,(int)1);
-	}
-return null();
-}
-
-
-Void Stdin_obj::close( ){
-{
-		HX_STACK_PUSH("Stdin::close","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",37);
-		HX_STACK_THIS(this);
-		HX_STACK_LINE(38)
-		this->super::close();
-		HX_STACK_LINE(39)
-		::sys::io::_Process::Stdin_obj::_stdin_close(this->p);
-	}
-return null();
-}
-
-
-Dynamic Stdin_obj::_stdin_write;
-
-Dynamic Stdin_obj::_stdin_close;
 
 
 Stdin_obj::Stdin_obj()
@@ -129,19 +68,6 @@ Dynamic Stdin_obj::__Field(const ::String &inName,bool inCallProp)
 		break;
 	case 3:
 		if (HX_FIELD_EQ(inName,"buf") ) { return buf; }
-		break;
-	case 5:
-		if (HX_FIELD_EQ(inName,"close") ) { return close_dyn(); }
-		break;
-	case 9:
-		if (HX_FIELD_EQ(inName,"writeByte") ) { return writeByte_dyn(); }
-		break;
-	case 10:
-		if (HX_FIELD_EQ(inName,"writeBytes") ) { return writeBytes_dyn(); }
-		break;
-	case 12:
-		if (HX_FIELD_EQ(inName,"_stdin_write") ) { return _stdin_write; }
-		if (HX_FIELD_EQ(inName,"_stdin_close") ) { return _stdin_close; }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -154,10 +80,6 @@ Dynamic Stdin_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool
 		break;
 	case 3:
 		if (HX_FIELD_EQ(inName,"buf") ) { buf=inValue.Cast< ::haxe::io::Bytes >(); return inValue; }
-		break;
-	case 12:
-		if (HX_FIELD_EQ(inName,"_stdin_write") ) { _stdin_write=inValue.Cast< Dynamic >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"_stdin_close") ) { _stdin_close=inValue.Cast< Dynamic >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -170,43 +92,32 @@ void Stdin_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("_stdin_write"),
-	HX_CSTRING("_stdin_close"),
 	String(null()) };
 
 static ::String sMemberFields[] = {
-	HX_CSTRING("writeBytes"),
-	HX_CSTRING("writeByte"),
-	HX_CSTRING("close"),
 	HX_CSTRING("buf"),
 	HX_CSTRING("p"),
 	String(null()) };
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(Stdin_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(Stdin_obj::_stdin_write,"_stdin_write");
-	HX_MARK_MEMBER_NAME(Stdin_obj::_stdin_close,"_stdin_close");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(Stdin_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(Stdin_obj::_stdin_write,"_stdin_write");
-	HX_VISIT_MEMBER_NAME(Stdin_obj::_stdin_close,"_stdin_close");
 };
 
 Class Stdin_obj::__mClass;
 
 void Stdin_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("sys.io._Process.Stdin"), hx::TCanCast< Stdin_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("sys.io._Process.Stdin"), hx::TCanCast< Stdin_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }
 
 void Stdin_obj::__boot()
 {
-	_stdin_write= ::cpp::Lib_obj::load(HX_CSTRING("std"),HX_CSTRING("process_stdin_write"),(int)4);
-	_stdin_close= ::cpp::Lib_obj::load(HX_CSTRING("std"),HX_CSTRING("process_stdin_close"),(int)1);
 }
 
 } // end namespace sys

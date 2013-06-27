@@ -22,7 +22,7 @@ namespace zpp_nape{
 namespace dynamics{
 
 
-class ZPP_ColArbiter_obj : public ::zpp_nape::dynamics::ZPP_Arbiter_obj{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_ColArbiter_obj : public ::zpp_nape::dynamics::ZPP_Arbiter_obj{
 	public:
 		typedef ::zpp_nape::dynamics::ZPP_Arbiter_obj super;
 		typedef ZPP_ColArbiter_obj OBJ_;
@@ -54,7 +54,7 @@ class ZPP_ColArbiter_obj : public ::zpp_nape::dynamics::ZPP_Arbiter_obj{
 		virtual bool preStep( Float dt);
 		Dynamic preStep_dyn();
 
-		Float pre_dt; /* REM */ 
+		Float pre_dt;
 		virtual bool cleanupContacts( );
 		Dynamic cleanupContacts_dyn();
 
@@ -73,7 +73,7 @@ class ZPP_ColArbiter_obj : public ::zpp_nape::dynamics::ZPP_Arbiter_obj{
 		virtual Void makemutable( );
 		Dynamic makemutable_dyn();
 
-		bool _mutable; /* REM */ 
+		bool _mutable;
 		virtual Void retire( );
 		Dynamic retire_dyn();
 
@@ -89,79 +89,76 @@ class ZPP_ColArbiter_obj : public ::zpp_nape::dynamics::ZPP_Arbiter_obj{
 		virtual ::zpp_nape::dynamics::ZPP_Contact injectContact( Float px,Float py,Float nx,Float ny,Float dist,int hash,hx::Null< bool >  posOnly);
 		Dynamic injectContact_dyn();
 
-		bool stat; /* REM */ 
+		bool stat;
 		virtual Void free( );
 		Dynamic free_dyn();
 
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
-		::zpp_nape::dynamics::ZPP_ColArbiter next; /* REM */ 
-		bool hpc2; /* REM */ 
-		bool hc2; /* REM */ 
-		::zpp_nape::dynamics::ZPP_Contact oc2; /* REM */ 
-		::zpp_nape::dynamics::ZPP_IContact c2; /* REM */ 
-		::zpp_nape::dynamics::ZPP_Contact oc1; /* REM */ 
-		::zpp_nape::dynamics::ZPP_IContact c1; /* REM */ 
-		int __ref_vertex; /* REM */ 
-		::zpp_nape::shape::ZPP_Edge __ref_edge2; /* REM */ 
-		::zpp_nape::shape::ZPP_Edge __ref_edge1; /* REM */ 
-		Float biasCoef; /* REM */ 
-		bool rev; /* REM */ 
-		Float radius; /* REM */ 
-		Float lproj; /* REM */ 
-		Float lnormy; /* REM */ 
-		Float lnormx; /* REM */ 
-		int ptype; /* REM */ 
-		Float surfacey; /* REM */ 
-		Float surfacex; /* REM */ 
-		Float k2y; /* REM */ 
-		Float k2x; /* REM */ 
-		Float k1y; /* REM */ 
-		Float k1x; /* REM */ 
-		Float rt2b; /* REM */ 
-		Float rn2b; /* REM */ 
-		Float rt2a; /* REM */ 
-		Float rn2a; /* REM */ 
-		Float rt1b; /* REM */ 
-		Float rn1b; /* REM */ 
-		Float rt1a; /* REM */ 
-		Float rn1a; /* REM */ 
-		Float jrAcc; /* REM */ 
-		Float rMass; /* REM */ 
-		Float Kc; /* REM */ 
-		Float Kb; /* REM */ 
-		Float Ka; /* REM */ 
-		Float kMassc; /* REM */ 
-		Float kMassb; /* REM */ 
-		Float kMassa; /* REM */ 
+		::zpp_nape::dynamics::ZPP_ColArbiter next;
+		bool hpc2;
+		bool hc2;
+		::zpp_nape::dynamics::ZPP_Contact oc2;
+		::zpp_nape::dynamics::ZPP_IContact c2;
+		::zpp_nape::dynamics::ZPP_Contact oc1;
+		::zpp_nape::dynamics::ZPP_IContact c1;
+		int __ref_vertex;
+		::zpp_nape::shape::ZPP_Edge __ref_edge2;
+		::zpp_nape::shape::ZPP_Edge __ref_edge1;
+		Float biasCoef;
+		bool rev;
+		Float radius;
+		Float lproj;
+		Float lnormy;
+		Float lnormx;
+		int ptype;
+		Float surfacey;
+		Float surfacex;
+		Float k2y;
+		Float k2x;
+		Float k1y;
+		Float k1x;
+		Float rt2b;
+		Float rn2b;
+		Float rt2a;
+		Float rn2a;
+		Float rt1b;
+		Float rn1b;
+		Float rt1a;
+		Float rn1a;
+		Float jrAcc;
+		Float rMass;
+		Float Kc;
+		Float Kb;
+		Float Ka;
+		Float kMassc;
+		Float kMassb;
+		Float kMassa;
 		virtual Void getnormal( );
 		Dynamic getnormal_dyn();
 
-		::nape::geom::Vec2 wrap_normal; /* REM */ 
+		::nape::geom::Vec2 wrap_normal;
 		virtual Void normal_validate( );
 		Dynamic normal_validate_dyn();
 
-		Float ny; /* REM */ 
-		Float nx; /* REM */ 
-		::zpp_nape::dynamics::ZPP_IContact innards; /* REM */ 
-		::nape::dynamics::ContactList wrap_contacts; /* REM */ 
-		::zpp_nape::dynamics::ZPP_Contact contacts; /* REM */ 
-		::zpp_nape::shape::ZPP_Shape s2; /* REM */ 
-		::zpp_nape::shape::ZPP_Shape s1; /* REM */ 
-		bool userdef_rfric; /* REM */ 
-		bool userdef_restitution; /* REM */ 
-		bool userdef_stat_fric; /* REM */ 
-		bool userdef_dyn_fric; /* REM */ 
-		Float rfric; /* REM */ 
-		Float restitution; /* REM */ 
-		Float stat_fric; /* REM */ 
-		Float dyn_fric; /* REM */ 
-		::nape::dynamics::CollisionArbiter outer_zn; /* REM */ 
-		static int FACE1; /* REM */ 
-		static int FACE2; /* REM */ 
-		static int CIRCLE; /* REM */ 
-		static ::zpp_nape::dynamics::ZPP_ColArbiter zpp_pool; /* REM */ 
+		Float ny;
+		Float nx;
+		::zpp_nape::dynamics::ZPP_IContact innards;
+		::nape::dynamics::ContactList wrap_contacts;
+		::zpp_nape::dynamics::ZPP_Contact contacts;
+		::zpp_nape::shape::ZPP_Shape s2;
+		::zpp_nape::shape::ZPP_Shape s1;
+		bool userdef_rfric;
+		bool userdef_restitution;
+		bool userdef_stat_fric;
+		bool userdef_dyn_fric;
+		Float rfric;
+		Float restitution;
+		Float stat_fric;
+		Float dyn_fric;
+		::nape::dynamics::CollisionArbiter outer_zn;
+		static ::zpp_nape::dynamics::ZPP_ColArbiter zpp_pool;
 };
 
 } // end namespace zpp_nape

@@ -11,11 +11,11 @@ namespace util{
 
 Void ZNPNode_ZPP_InteractionGroup_obj::__construct()
 {
-HX_STACK_PUSH("ZNPNode_ZPP_InteractionGroup::new","zpp_nape/util/Lists.hx",16104);
+HX_STACK_PUSH("ZNPNode_ZPP_InteractionGroup::new","zpp_nape/util/Lists.hx",16061);
 {
-	HX_STACK_LINE(16138)
+	HX_STACK_LINE(16095)
 	this->elt = null();
-	HX_STACK_LINE(16129)
+	HX_STACK_LINE(16086)
 	this->next = null();
 }
 ;
@@ -36,9 +36,9 @@ Dynamic ZNPNode_ZPP_InteractionGroup_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 ::zpp_nape::dynamics::ZPP_InteractionGroup ZNPNode_ZPP_InteractionGroup_obj::elem( ){
-	HX_STACK_PUSH("ZNPNode_ZPP_InteractionGroup::elem","zpp_nape/util/Lists.hx",16142);
+	HX_STACK_PUSH("ZNPNode_ZPP_InteractionGroup::elem","zpp_nape/util/Lists.hx",16099);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(16142)
+	HX_STACK_LINE(16099)
 	return this->elt;
 }
 
@@ -47,9 +47,9 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPNode_ZPP_InteractionGroup_obj,elem,return )
 
 Void ZNPNode_ZPP_InteractionGroup_obj::free( ){
 {
-		HX_STACK_PUSH("ZNPNode_ZPP_InteractionGroup::free","zpp_nape/util/Lists.hx",16135);
+		HX_STACK_PUSH("ZNPNode_ZPP_InteractionGroup::free","zpp_nape/util/Lists.hx",16092);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(16135)
+		HX_STACK_LINE(16092)
 		this->elt = null();
 	}
 return null();
@@ -60,7 +60,7 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPNode_ZPP_InteractionGroup_obj,free,(void))
 
 Void ZNPNode_ZPP_InteractionGroup_obj::alloc( ){
 {
-		HX_STACK_PUSH("ZNPNode_ZPP_InteractionGroup::alloc","zpp_nape/util/Lists.hx",16132);
+		HX_STACK_PUSH("ZNPNode_ZPP_InteractionGroup::alloc","zpp_nape/util/Lists.hx",16089);
 		HX_STACK_THIS(this);
 	}
 return null();
@@ -158,7 +158,7 @@ Class ZNPNode_ZPP_InteractionGroup_obj::__mClass;
 
 void ZNPNode_ZPP_InteractionGroup_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPNode_ZPP_InteractionGroup"), hx::TCanCast< ZNPNode_ZPP_InteractionGroup_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPNode_ZPP_InteractionGroup"), hx::TCanCast< ZNPNode_ZPP_InteractionGroup_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

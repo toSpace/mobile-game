@@ -32,7 +32,7 @@ namespace nape{
 namespace phys{
 
 
-class Body_obj : public ::nape::phys::Interactor_obj{
+class HXCPP_CLASS_ATTRIBUTES  Body_obj : public ::nape::phys::Interactor_obj{
 	public:
 		typedef ::nape::phys::Interactor_obj super;
 		typedef Body_obj OBJ_;
@@ -87,11 +87,9 @@ class Body_obj : public ::nape::phys::Interactor_obj{
 		virtual ::nape::geom::Vec2 get_worldCOM( );
 		Dynamic get_worldCOM_dyn();
 
-		::nape::geom::Vec2 worldCOM; /* REM */ 
 		virtual ::nape::geom::Vec2 get_localCOM( );
 		Dynamic get_localCOM_dyn();
 
-		::nape::geom::Vec2 localCOM; /* REM */ 
 		virtual ::nape::phys::Body setShapeFluidProperties( ::nape::phys::FluidProperties fluidProperties);
 		Dynamic setShapeFluidProperties_dyn();
 
@@ -152,128 +150,108 @@ class Body_obj : public ::nape::phys::Interactor_obj{
 		virtual Float get_inertia( );
 		Dynamic get_inertia_dyn();
 
-		Float inertia; /* REM */ 
 		virtual Float get_constraintInertia( );
 		Dynamic get_constraintInertia_dyn();
 
-		Float constraintInertia; /* REM */ 
 		virtual ::nape::phys::InertiaMode set_inertiaMode( ::nape::phys::InertiaMode inertiaMode);
 		Dynamic set_inertiaMode_dyn();
 
 		virtual ::nape::phys::InertiaMode get_inertiaMode( );
 		Dynamic get_inertiaMode_dyn();
 
-		::nape::phys::InertiaMode inertiaMode; /* REM */ 
 		virtual Float set_gravMassScale( Float gravMassScale);
 		Dynamic set_gravMassScale_dyn();
 
 		virtual Float get_gravMassScale( );
 		Dynamic get_gravMassScale_dyn();
 
-		Float gravMassScale; /* REM */ 
 		virtual Float set_gravMass( Float gravMass);
 		Dynamic set_gravMass_dyn();
 
 		virtual Float get_gravMass( );
 		Dynamic get_gravMass_dyn();
 
-		Float gravMass; /* REM */ 
 		virtual ::nape::phys::GravMassMode set_gravMassMode( ::nape::phys::GravMassMode gravMassMode);
 		Dynamic set_gravMassMode_dyn();
 
 		virtual ::nape::phys::GravMassMode get_gravMassMode( );
 		Dynamic get_gravMassMode_dyn();
 
-		::nape::phys::GravMassMode gravMassMode; /* REM */ 
 		virtual Float set_mass( Float mass);
 		Dynamic set_mass_dyn();
 
 		virtual Float get_mass( );
 		Dynamic get_mass_dyn();
 
-		Float mass; /* REM */ 
 		virtual Float get_constraintMass( );
 		Dynamic get_constraintMass_dyn();
 
-		Float constraintMass; /* REM */ 
 		virtual ::nape::phys::MassMode set_massMode( ::nape::phys::MassMode massMode);
 		Dynamic set_massMode_dyn();
 
 		virtual ::nape::phys::MassMode get_massMode( );
 		Dynamic get_massMode_dyn();
 
-		::nape::phys::MassMode massMode; /* REM */ 
 		virtual bool set_allowRotation( bool allowRotation);
 		Dynamic set_allowRotation_dyn();
 
 		virtual bool get_allowRotation( );
 		Dynamic get_allowRotation_dyn();
 
-		bool allowRotation; /* REM */ 
 		virtual bool set_allowMovement( bool allowMovement);
 		Dynamic set_allowMovement_dyn();
 
 		virtual bool get_allowMovement( );
 		Dynamic get_allowMovement_dyn();
 
-		bool allowMovement; /* REM */ 
 		virtual ::nape::geom::AABB get_bounds( );
 		Dynamic get_bounds_dyn();
 
-		::nape::geom::AABB bounds; /* REM */ 
 		virtual Float set_torque( Float torque);
 		Dynamic set_torque_dyn();
 
 		virtual Float get_torque( );
 		Dynamic get_torque_dyn();
 
-		Float torque; /* REM */ 
 		virtual Float set_kinAngVel( Float kinAngVel);
 		Dynamic set_kinAngVel_dyn();
 
 		virtual Float get_kinAngVel( );
 		Dynamic get_kinAngVel_dyn();
 
-		Float kinAngVel; /* REM */ 
 		virtual Float set_angularVel( Float angularVel);
 		Dynamic set_angularVel_dyn();
 
 		virtual Float get_angularVel( );
 		Dynamic get_angularVel_dyn();
 
-		Float angularVel; /* REM */ 
 		virtual Float set_rotation( Float rotation);
 		Dynamic set_rotation_dyn();
 
 		virtual Float get_rotation( );
 		Dynamic get_rotation_dyn();
 
-		Float rotation; /* REM */ 
 		virtual ::nape::geom::Vec3 get_constraintVelocity( );
 		Dynamic get_constraintVelocity_dyn();
 
-		::nape::geom::Vec3 constraintVelocity; /* REM */ 
 		virtual ::nape::geom::Vec2 set_force( ::nape::geom::Vec2 force);
 		Dynamic set_force_dyn();
 
 		virtual ::nape::geom::Vec2 get_force( );
 		Dynamic get_force_dyn();
 
-		::nape::geom::Vec2 force; /* REM */ 
 		virtual ::nape::geom::Vec2 set_surfaceVel( ::nape::geom::Vec2 surfaceVel);
 		Dynamic set_surfaceVel_dyn();
 
 		virtual ::nape::geom::Vec2 get_surfaceVel( );
 		Dynamic get_surfaceVel_dyn();
 
-		::nape::geom::Vec2 surfaceVel; /* REM */ 
 		virtual ::nape::geom::Vec2 set_kinematicVel( ::nape::geom::Vec2 kinematicVel);
 		Dynamic set_kinematicVel_dyn();
 
 		virtual ::nape::geom::Vec2 get_kinematicVel( );
 		Dynamic get_kinematicVel_dyn();
 
-		::nape::geom::Vec2 kinematicVel; /* REM */ 
 		virtual ::nape::phys::Body setVelocityFromTarget( ::nape::geom::Vec2 targetPosition,Float targetRotation,Float deltaTime);
 		Dynamic setVelocityFromTarget_dyn();
 
@@ -283,47 +261,39 @@ class Body_obj : public ::nape::phys::Interactor_obj{
 		virtual ::nape::geom::Vec2 get_velocity( );
 		Dynamic get_velocity_dyn();
 
-		::nape::geom::Vec2 velocity; /* REM */ 
 		virtual ::nape::geom::Vec2 set_position( ::nape::geom::Vec2 position);
 		Dynamic set_position_dyn();
 
 		virtual ::nape::geom::Vec2 get_position( );
 		Dynamic get_position_dyn();
 
-		::nape::geom::Vec2 position; /* REM */ 
 		virtual ::nape::phys::Body copy( );
 		Dynamic copy_dyn();
 
 		virtual ::nape::constraint::ConstraintList get_constraints( );
 		Dynamic get_constraints_dyn();
 
-		::nape::constraint::ConstraintList constraints; /* REM */ 
 		virtual bool get_isSleeping( );
 		Dynamic get_isSleeping_dyn();
 
-		bool isSleeping; /* REM */ 
 		virtual ::nape::dynamics::ArbiterList get_arbiters( );
 		Dynamic get_arbiters_dyn();
 
-		::nape::dynamics::ArbiterList arbiters; /* REM */ 
 		virtual ::nape::space::Space set_space( ::nape::space::Space space);
 		Dynamic set_space_dyn();
 
 		virtual ::nape::space::Space get_space( );
 		Dynamic get_space_dyn();
 
-		::nape::space::Space space; /* REM */ 
 		virtual ::nape::phys::Compound set_compound( ::nape::phys::Compound compound);
 		Dynamic set_compound_dyn();
 
 		virtual ::nape::phys::Compound get_compound( );
 		Dynamic get_compound_dyn();
 
-		::nape::phys::Compound compound; /* REM */ 
 		virtual ::nape::shape::ShapeList get_shapes( );
 		Dynamic get_shapes_dyn();
 
-		::nape::shape::ShapeList shapes; /* REM */ 
 		virtual bool isKinematic( );
 		Dynamic isKinematic_dyn();
 
@@ -342,23 +312,20 @@ class Body_obj : public ::nape::phys::Interactor_obj{
 		virtual bool get_disableCCD( );
 		Dynamic get_disableCCD_dyn();
 
-		bool disableCCD; /* REM */ 
 		virtual bool set_isBullet( bool isBullet);
 		Dynamic set_isBullet_dyn();
 
 		virtual bool get_isBullet( );
 		Dynamic get_isBullet_dyn();
 
-		bool isBullet; /* REM */ 
 		virtual ::nape::phys::BodyType set_type( ::nape::phys::BodyType type);
 		Dynamic set_type_dyn();
 
 		virtual ::nape::phys::BodyType get_type( );
 		Dynamic get_type_dyn();
 
-		::nape::phys::BodyType type; /* REM */ 
-		bool debugDraw; /* REM */ 
-		::zpp_nape::phys::ZPP_Body zpp_inner; /* REM */ 
+		bool debugDraw;
+		::zpp_nape::phys::ZPP_Body zpp_inner;
 };
 
 } // end namespace nape

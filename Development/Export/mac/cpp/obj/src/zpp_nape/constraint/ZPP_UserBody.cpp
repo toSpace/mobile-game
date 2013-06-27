@@ -112,7 +112,7 @@ Class ZPP_UserBody_obj::__mClass;
 
 void ZPP_UserBody_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.constraint.ZPP_UserBody"), hx::TCanCast< ZPP_UserBody_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.constraint.ZPP_UserBody"), hx::TCanCast< ZPP_UserBody_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

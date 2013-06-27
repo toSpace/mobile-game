@@ -1,10 +1,10 @@
 #include <hxcpp.h>
 
-#ifndef INCLUDED_hxMath
-#include <hxMath.h>
-#endif
 #ifndef INCLUDED_Std
 #include <Std.h>
+#endif
+#ifndef INCLUDED_hxMath
+#include <hxMath.h>
 #endif
 #ifndef INCLUDED_nape_callbacks_CbType
 #include <nape/callbacks/CbType.h>
@@ -195,6 +195,7 @@ HX_STACK_PUSH("Body::new","nape/phys/Body.hx",177);
 	}
 	catch(Dynamic __e){
 		{
+			HX_STACK_BEGIN_CATCH
 			Dynamic e = __e;{
 			}
 		}
@@ -230,7 +231,7 @@ HX_STACK_PUSH("Body::new","nape/phys/Body.hx",177);
 							HX_STACK_LINE(478)
 							::zpp_nape::geom::ZPP_Vec2 _this = position->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(478)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(478)
 								_this->_validate();
 							}
@@ -257,7 +258,7 @@ HX_STACK_PUSH("Body::new","nape/phys/Body.hx",177);
 							HX_STACK_LINE(479)
 							::zpp_nape::geom::ZPP_Vec2 _this = position->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(479)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(479)
 								_this->_validate();
 							}
@@ -270,9 +271,6 @@ HX_STACK_PUSH("Body::new","nape/phys/Body.hx",177);
 			};
 			HX_STACK_LINE(479)
 			this->zpp_inner->posy = _Function_3_2::Block(position);
-			HX_STACK_LINE(480)
-			{
-			}
 			HX_STACK_LINE(488)
 			{
 			}
@@ -283,9 +281,6 @@ HX_STACK_PUSH("Body::new","nape/phys/Body.hx",177);
 		this->zpp_inner->posx = (int)0;
 		HX_STACK_LINE(500)
 		this->zpp_inner->posy = (int)0;
-		HX_STACK_LINE(501)
-		{
-		}
 		HX_STACK_LINE(509)
 		{
 		}
@@ -380,7 +375,7 @@ HX_STACK_PUSH("Body::new","nape/phys/Body.hx",177);
 				}
 			};
 			HX_STACK_LINE(518)
-			if (((Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_3_1::Block()).Add(_Function_3_2::Block()).Add(_Function_3_3::Block())->__get(this->zpp_inner->type) != type1))){
+			if (((Array_obj< ::Dynamic >::__new().Add(null()).Add(_Function_3_1::Block()).Add(_Function_3_2::Block()).Add(_Function_3_3::Block())->__get(this->zpp_inner->type).StaticCast< ::nape::phys::BodyType >() != type1))){
 				HX_STACK_LINE(518)
 				if (((type1 == null()))){
 					HX_STACK_LINE(518)
@@ -434,9 +429,6 @@ HX_STACK_PUSH("Body::new","nape/phys/Body.hx",177);
 						this->zpp_inner->velx = (int)0;
 						HX_STACK_LINE(518)
 						this->zpp_inner->vely = (int)0;
-						HX_STACK_LINE(518)
-						{
-						}
 						HX_STACK_LINE(518)
 						{
 						}
@@ -515,7 +507,7 @@ HX_STACK_PUSH("Body::new","nape/phys/Body.hx",177);
 			}
 		};
 		HX_STACK_LINE(518)
-		Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_2_2::Block()).Add(_Function_2_3::Block()).Add(_Function_2_4::Block())->__get(this->zpp_inner->type);
+		Array_obj< ::Dynamic >::__new().Add(null()).Add(_Function_2_2::Block()).Add(_Function_2_3::Block()).Add(_Function_2_4::Block())->__get(this->zpp_inner->type).StaticCast< ::nape::phys::BodyType >();
 	}
 	HX_STACK_LINE(519)
 	if (((position != null()))){
@@ -538,7 +530,7 @@ HX_STACK_PUSH("Body::new","nape/phys/Body.hx",177);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(523)
-					if (((_this->_isimmutable_dyn() != null()))){
+					if (((_this->_isimmutable != null()))){
 						HX_STACK_LINE(523)
 						_this->_isimmutable();
 					}
@@ -559,9 +551,6 @@ HX_STACK_PUSH("Body::new","nape/phys/Body.hx",177);
 					HX_STACK_LINE(523)
 					::nape::geom::Vec2 o = position;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(523)
-					{
-					}
-					HX_STACK_LINE(523)
 					o->zpp_pool = null();
 					HX_STACK_LINE(523)
 					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -581,9 +570,6 @@ HX_STACK_PUSH("Body::new","nape/phys/Body.hx",177);
 				{
 					HX_STACK_LINE(523)
 					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(523)
-					{
-					}
 					HX_STACK_LINE(523)
 					{
 						HX_STACK_LINE(523)
@@ -707,7 +693,7 @@ bool Body_obj::contains( ::nape::geom::Vec2 point){
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(2525)
-				if (((_this->_isimmutable_dyn() != null()))){
+				if (((_this->_isimmutable != null()))){
 					HX_STACK_LINE(2525)
 					_this->_isimmutable();
 				}
@@ -728,9 +714,6 @@ bool Body_obj::contains( ::nape::geom::Vec2 point){
 				HX_STACK_LINE(2525)
 				::nape::geom::Vec2 o = point;		HX_STACK_VAR(o,"o");
 				HX_STACK_LINE(2525)
-				{
-				}
-				HX_STACK_LINE(2525)
 				o->zpp_pool = null();
 				HX_STACK_LINE(2525)
 				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -750,9 +733,6 @@ bool Body_obj::contains( ::nape::geom::Vec2 point){
 			{
 				HX_STACK_LINE(2525)
 				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2525)
-				{
-				}
 				HX_STACK_LINE(2525)
 				{
 					HX_STACK_LINE(2525)
@@ -800,12 +780,6 @@ bool freshOnly = __o_freshOnly.Default(false);
 		Float retx = (int)0;		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(2409)
 		Float rety = (int)0;		HX_STACK_VAR(rety,"rety");
-		HX_STACK_LINE(2410)
-		{
-		}
-		HX_STACK_LINE(2418)
-		{
-		}
 		HX_STACK_LINE(2426)
 		Float retz = (int)0;		HX_STACK_VAR(retz,"retz");
 		HX_STACK_LINE(2427)
@@ -851,9 +825,6 @@ bool freshOnly = __o_freshOnly.Default(false);
 					{
 						HX_STACK_LINE(2436)
 						int t1 = t;		HX_STACK_VAR(t1,"t1");
-						HX_STACK_LINE(2437)
-						{
-						}
 						struct _Function_4_1{
 							inline static Float Block( ::nape::geom::Vec3 &imp){
 								HX_STACK_PUSH("*::closure","nape/phys/Body.hx",2445);
@@ -868,7 +839,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 										HX_STACK_LINE(2445)
 										::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(2445)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(2445)
 											_this->_validate();
 										}
@@ -895,7 +866,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 										HX_STACK_LINE(2446)
 										::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(2446)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(2446)
 											_this->_validate();
 										}
@@ -923,7 +894,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 									HX_STACK_LINE(2448)
 									::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(2448)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(2448)
 										_this->_validate();
 									}
@@ -962,9 +933,6 @@ bool freshOnly = __o_freshOnly.Default(false);
 						{
 							HX_STACK_LINE(2462)
 							int t1 = t;		HX_STACK_VAR(t1,"t1");
-							HX_STACK_LINE(2463)
-							{
-							}
 							struct _Function_6_1{
 								inline static Float Block( ::nape::geom::Vec3 &imp){
 									HX_STACK_PUSH("*::closure","nape/phys/Body.hx",2471);
@@ -979,7 +947,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 											HX_STACK_LINE(2471)
 											::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(2471)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(2471)
 												_this->_validate();
 											}
@@ -1006,7 +974,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 											HX_STACK_LINE(2472)
 											::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(2472)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(2472)
 												_this->_validate();
 											}
@@ -1034,7 +1002,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 										HX_STACK_LINE(2474)
 										::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(2474)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(2474)
 											_this->_validate();
 										}
@@ -1070,12 +1038,6 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,totalImpulse,return )
 	Float retx = (int)0;		HX_STACK_VAR(retx,"retx");
 	HX_STACK_LINE(2343)
 	Float rety = (int)0;		HX_STACK_VAR(rety,"rety");
-	HX_STACK_LINE(2344)
-	{
-	}
-	HX_STACK_LINE(2352)
-	{
-	}
 	HX_STACK_LINE(2360)
 	Float retz = (int)0;		HX_STACK_VAR(retz,"retz");
 	HX_STACK_LINE(2361)
@@ -1098,9 +1060,6 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,totalImpulse,return )
 					{
 						HX_STACK_LINE(2370)
 						int t1 = t;		HX_STACK_VAR(t1,"t1");
-						HX_STACK_LINE(2371)
-						{
-						}
 						struct _Function_6_1{
 							inline static Float Block( ::nape::geom::Vec3 &imp){
 								HX_STACK_PUSH("*::closure","nape/phys/Body.hx",2379);
@@ -1115,7 +1074,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,totalImpulse,return )
 										HX_STACK_LINE(2379)
 										::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(2379)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(2379)
 											_this->_validate();
 										}
@@ -1142,7 +1101,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,totalImpulse,return )
 										HX_STACK_LINE(2380)
 										::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(2380)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(2380)
 											_this->_validate();
 										}
@@ -1170,7 +1129,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,totalImpulse,return )
 									HX_STACK_LINE(2382)
 									::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(2382)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(2382)
 										_this->_validate();
 									}
@@ -1206,12 +1165,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,constraintsImpulse,return )
 	Float retx = (int)0;		HX_STACK_VAR(retx,"retx");
 	HX_STACK_LINE(2286)
 	Float rety = (int)0;		HX_STACK_VAR(rety,"rety");
-	HX_STACK_LINE(2287)
-	{
-	}
-	HX_STACK_LINE(2295)
-	{
-	}
 	HX_STACK_LINE(2303)
 	Float retz = (int)0;		HX_STACK_VAR(retz,"retz");
 	HX_STACK_LINE(2304)
@@ -1273,9 +1226,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,constraintsImpulse,return )
 						{
 							HX_STACK_LINE(2315)
 							int t1 = t;		HX_STACK_VAR(t1,"t1");
-							HX_STACK_LINE(2316)
-							{
-							}
 							struct _Function_6_1{
 								inline static Float Block( ::nape::geom::Vec3 &imp){
 									HX_STACK_PUSH("*::closure","nape/phys/Body.hx",2324);
@@ -1290,7 +1240,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,constraintsImpulse,return )
 											HX_STACK_LINE(2324)
 											::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(2324)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(2324)
 												_this->_validate();
 											}
@@ -1317,7 +1267,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,constraintsImpulse,return )
 											HX_STACK_LINE(2325)
 											::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(2325)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(2325)
 												_this->_validate();
 											}
@@ -1345,7 +1295,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,constraintsImpulse,return )
 										HX_STACK_LINE(2327)
 										::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(2327)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(2327)
 											_this->_validate();
 										}
@@ -1381,12 +1331,6 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,totalFluidImpulse,return )
 	Float retx = (int)0;		HX_STACK_VAR(retx,"retx");
 	HX_STACK_LINE(2224)
 	Float rety = (int)0;		HX_STACK_VAR(rety,"rety");
-	HX_STACK_LINE(2225)
-	{
-	}
-	HX_STACK_LINE(2233)
-	{
-	}
 	HX_STACK_LINE(2241)
 	Float retz = (int)0;		HX_STACK_VAR(retz,"retz");
 	HX_STACK_LINE(2242)
@@ -1448,9 +1392,6 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,totalFluidImpulse,return )
 						{
 							HX_STACK_LINE(2253)
 							int t1 = t;		HX_STACK_VAR(t1,"t1");
-							HX_STACK_LINE(2254)
-							{
-							}
 							struct _Function_6_1{
 								inline static Float Block( ::nape::geom::Vec3 &imp){
 									HX_STACK_PUSH("*::closure","nape/phys/Body.hx",2262);
@@ -1465,7 +1406,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,totalFluidImpulse,return )
 											HX_STACK_LINE(2262)
 											::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(2262)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(2262)
 												_this->_validate();
 											}
@@ -1492,7 +1433,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,totalFluidImpulse,return )
 											HX_STACK_LINE(2263)
 											::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(2263)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(2263)
 												_this->_validate();
 											}
@@ -1520,7 +1461,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,totalFluidImpulse,return )
 										HX_STACK_LINE(2265)
 										::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(2265)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(2265)
 											_this->_validate();
 										}
@@ -1556,12 +1497,6 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,dragImpulse,return )
 	Float retx = (int)0;		HX_STACK_VAR(retx,"retx");
 	HX_STACK_LINE(2162)
 	Float rety = (int)0;		HX_STACK_VAR(rety,"rety");
-	HX_STACK_LINE(2163)
-	{
-	}
-	HX_STACK_LINE(2171)
-	{
-	}
 	HX_STACK_LINE(2179)
 	Float retz = (int)0;		HX_STACK_VAR(retz,"retz");
 	HX_STACK_LINE(2180)
@@ -1623,9 +1558,6 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,dragImpulse,return )
 						{
 							HX_STACK_LINE(2191)
 							int t1 = t;		HX_STACK_VAR(t1,"t1");
-							HX_STACK_LINE(2192)
-							{
-							}
 							struct _Function_6_1{
 								inline static Float Block( ::nape::geom::Vec3 &imp){
 									HX_STACK_PUSH("*::closure","nape/phys/Body.hx",2200);
@@ -1640,7 +1572,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,dragImpulse,return )
 											HX_STACK_LINE(2200)
 											::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(2200)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(2200)
 												_this->_validate();
 											}
@@ -1667,7 +1599,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,dragImpulse,return )
 											HX_STACK_LINE(2201)
 											::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(2201)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(2201)
 												_this->_validate();
 											}
@@ -1695,7 +1627,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,dragImpulse,return )
 										HX_STACK_LINE(2203)
 										::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(2203)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(2203)
 											_this->_validate();
 										}
@@ -1804,12 +1736,6 @@ bool freshOnly = __o_freshOnly.Default(false);
 		Float retx = (int)0;		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(2072)
 		Float rety = (int)0;		HX_STACK_VAR(rety,"rety");
-		HX_STACK_LINE(2073)
-		{
-		}
-		HX_STACK_LINE(2081)
-		{
-		}
 		HX_STACK_LINE(2089)
 		Float retz = (int)0;		HX_STACK_VAR(retz,"retz");
 		HX_STACK_LINE(2090)
@@ -1871,9 +1797,6 @@ bool freshOnly = __o_freshOnly.Default(false);
 							{
 								HX_STACK_LINE(2101)
 								int t1 = t;		HX_STACK_VAR(t1,"t1");
-								HX_STACK_LINE(2102)
-								{
-								}
 								struct _Function_6_1{
 									inline static Float Block( ::nape::geom::Vec3 &imp){
 										HX_STACK_PUSH("*::closure","nape/phys/Body.hx",2110);
@@ -1888,7 +1811,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 												HX_STACK_LINE(2110)
 												::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(2110)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(2110)
 													_this->_validate();
 												}
@@ -1915,7 +1838,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 												HX_STACK_LINE(2111)
 												::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(2111)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(2111)
 													_this->_validate();
 												}
@@ -1943,7 +1866,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 											HX_STACK_LINE(2113)
 											::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(2113)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(2113)
 												_this->_validate();
 											}
@@ -1983,12 +1906,6 @@ bool freshOnly = __o_freshOnly.Default(false);
 		Float retx = (int)0;		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(2008)
 		Float rety = (int)0;		HX_STACK_VAR(rety,"rety");
-		HX_STACK_LINE(2009)
-		{
-		}
-		HX_STACK_LINE(2017)
-		{
-		}
 		HX_STACK_LINE(2025)
 		Float retz = (int)0;		HX_STACK_VAR(retz,"retz");
 		HX_STACK_LINE(2026)
@@ -2050,9 +1967,6 @@ bool freshOnly = __o_freshOnly.Default(false);
 							{
 								HX_STACK_LINE(2037)
 								int t1 = t;		HX_STACK_VAR(t1,"t1");
-								HX_STACK_LINE(2038)
-								{
-								}
 								struct _Function_6_1{
 									inline static Float Block( ::nape::geom::Vec3 &imp){
 										HX_STACK_PUSH("*::closure","nape/phys/Body.hx",2046);
@@ -2067,7 +1981,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 												HX_STACK_LINE(2046)
 												::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(2046)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(2046)
 													_this->_validate();
 												}
@@ -2094,7 +2008,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 												HX_STACK_LINE(2047)
 												::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(2047)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(2047)
 													_this->_validate();
 												}
@@ -2122,7 +2036,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 											HX_STACK_LINE(2049)
 											::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(2049)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(2049)
 												_this->_validate();
 											}
@@ -2162,12 +2076,6 @@ bool freshOnly = __o_freshOnly.Default(false);
 		Float retx = (int)0;		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(1944)
 		Float rety = (int)0;		HX_STACK_VAR(rety,"rety");
-		HX_STACK_LINE(1945)
-		{
-		}
-		HX_STACK_LINE(1953)
-		{
-		}
 		HX_STACK_LINE(1961)
 		Float retz = (int)0;		HX_STACK_VAR(retz,"retz");
 		HX_STACK_LINE(1962)
@@ -2229,9 +2137,6 @@ bool freshOnly = __o_freshOnly.Default(false);
 							{
 								HX_STACK_LINE(1973)
 								int t1 = t;		HX_STACK_VAR(t1,"t1");
-								HX_STACK_LINE(1974)
-								{
-								}
 								struct _Function_6_1{
 									inline static Float Block( ::nape::geom::Vec3 &imp){
 										HX_STACK_PUSH("*::closure","nape/phys/Body.hx",1982);
@@ -2246,7 +2151,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 												HX_STACK_LINE(1982)
 												::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(1982)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(1982)
 													_this->_validate();
 												}
@@ -2273,7 +2178,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 												HX_STACK_LINE(1983)
 												::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(1983)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(1983)
 													_this->_validate();
 												}
@@ -2301,7 +2206,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 											HX_STACK_LINE(1985)
 											::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(1985)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(1985)
 												_this->_validate();
 											}
@@ -2414,9 +2319,6 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,normalImpulse,return )
 										HX_STACK_LINE(1922)
 										{
 										}
-										HX_STACK_LINE(1922)
-										{
-										}
 									}
 									HX_STACK_LINE(1922)
 									return ret1;
@@ -2445,7 +2347,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,normalImpulse,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(1922)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(1922)
 								_this->_isimmutable();
 							}
@@ -2469,7 +2371,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,normalImpulse,return )
 										HX_STACK_LINE(1922)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1922)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1922)
 											_this->_validate();
 										}
@@ -2494,7 +2396,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,normalImpulse,return )
 										HX_STACK_LINE(1922)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1922)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1922)
 											_this->_validate();
 										}
@@ -2516,16 +2418,13 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,normalImpulse,return )
 								HX_STACK_LINE(1922)
 								{
 								}
-								HX_STACK_LINE(1922)
-								{
-								}
 							}
 							HX_STACK_LINE(1922)
 							{
 								HX_STACK_LINE(1922)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1922)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(1922)
 									_this->_invalidate(_this);
 								}
@@ -2642,9 +2541,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_worldCOM,return )
 										HX_STACK_LINE(1900)
 										{
 										}
-										HX_STACK_LINE(1900)
-										{
-										}
 									}
 									HX_STACK_LINE(1900)
 									return ret1;
@@ -2673,7 +2569,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_worldCOM,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(1900)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(1900)
 								_this->_isimmutable();
 							}
@@ -2697,7 +2593,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_worldCOM,return )
 										HX_STACK_LINE(1900)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1900)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1900)
 											_this->_validate();
 										}
@@ -2722,7 +2618,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_worldCOM,return )
 										HX_STACK_LINE(1900)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1900)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1900)
 											_this->_validate();
 										}
@@ -2744,16 +2640,13 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_worldCOM,return )
 								HX_STACK_LINE(1900)
 								{
 								}
-								HX_STACK_LINE(1900)
-								{
-								}
 							}
 							HX_STACK_LINE(1900)
 							{
 								HX_STACK_LINE(1900)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1900)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(1900)
 									_this->_invalidate(_this);
 								}
@@ -3039,7 +2932,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(1796)
-					if (((_this1->_isimmutable_dyn() != null()))){
+					if (((_this1->_isimmutable != null()))){
 						HX_STACK_LINE(1796)
 						_this1->_isimmutable();
 					}
@@ -3050,7 +2943,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 					hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 				}
 				struct _Function_4_2{
-					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &position,::nape::geom::Vec2 &_this){
+					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &position,::nape::geom::Vec2 _this){
 						HX_STACK_PUSH("*::closure","nape/phys/Body.hx",1796);
 						{
 							struct _Function_5_1{
@@ -3067,7 +2960,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 											HX_STACK_LINE(1796)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = position->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(1796)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(1796)
 												_this1->_validate();
 											}
@@ -3092,7 +2985,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 											HX_STACK_LINE(1796)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = position->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(1796)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(1796)
 												_this1->_validate();
 											}
@@ -3121,7 +3014,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(1796)
-								if (((_this1->_isimmutable_dyn() != null()))){
+								if (((_this1->_isimmutable != null()))){
 									HX_STACK_LINE(1796)
 									_this1->_isimmutable();
 								}
@@ -3132,7 +3025,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 							}
 							struct _Function_5_3{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/phys/Body.hx",1796);
 									{
 										HX_STACK_LINE(1796)
@@ -3145,7 +3038,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 											HX_STACK_LINE(1796)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(1796)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(1796)
 												_this1->_validate();
 											}
@@ -3157,7 +3050,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 								}
 							};
 							struct _Function_5_4{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/phys/Body.hx",1796);
 									{
 										HX_STACK_LINE(1796)
@@ -3170,7 +3063,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 											HX_STACK_LINE(1796)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(1796)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(1796)
 												_this1->_validate();
 											}
@@ -3192,16 +3085,13 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 									HX_STACK_LINE(1796)
 									{
 									}
-									HX_STACK_LINE(1796)
-									{
-									}
 								}
 								HX_STACK_LINE(1796)
 								{
 									HX_STACK_LINE(1796)
 									::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 									HX_STACK_LINE(1796)
-									if (((_this1->_invalidate_dyn() != null()))){
+									if (((_this1->_invalidate != null()))){
 										HX_STACK_LINE(1796)
 										_this1->_invalidate(_this1);
 									}
@@ -3234,7 +3124,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(1796)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(1796)
 								_this1->_isimmutable();
 							}
@@ -3255,9 +3145,6 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 							HX_STACK_LINE(1796)
 							::nape::geom::Vec2 o = position;		HX_STACK_VAR(o,"o");
 							HX_STACK_LINE(1796)
-							{
-							}
-							HX_STACK_LINE(1796)
 							o->zpp_pool = null();
 							HX_STACK_LINE(1796)
 							if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -3277,9 +3164,6 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 						{
 							HX_STACK_LINE(1796)
 							::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(1796)
-							{
-							}
 							HX_STACK_LINE(1796)
 							{
 								HX_STACK_LINE(1796)
@@ -3341,7 +3225,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 				hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 			}
 			HX_STACK_LINE(1797)
-			if (((_this->_isimmutable_dyn() != null()))){
+			if (((_this->_isimmutable != null()))){
 				HX_STACK_LINE(1797)
 				_this->_isimmutable();
 			}
@@ -3362,9 +3246,6 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 			HX_STACK_LINE(1797)
 			::nape::geom::Vec2 o = del;		HX_STACK_VAR(o,"o");
 			HX_STACK_LINE(1797)
-			{
-			}
-			HX_STACK_LINE(1797)
 			o->zpp_pool = null();
 			HX_STACK_LINE(1797)
 			if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -3384,9 +3265,6 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 		{
 			HX_STACK_LINE(1797)
 			::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(1797)
-			{
-			}
 			HX_STACK_LINE(1797)
 			{
 				HX_STACK_LINE(1797)
@@ -3502,7 +3380,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(1804)
-				if (((_this->_isimmutable_dyn() != null()))){
+				if (((_this->_isimmutable != null()))){
 					HX_STACK_LINE(1804)
 					_this->_isimmutable();
 				}
@@ -3523,9 +3401,6 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 				HX_STACK_LINE(1804)
 				::nape::geom::Vec2 o = centre;		HX_STACK_VAR(o,"o");
 				HX_STACK_LINE(1804)
-				{
-				}
-				HX_STACK_LINE(1804)
 				o->zpp_pool = null();
 				HX_STACK_LINE(1804)
 				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -3545,9 +3420,6 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,setShapeMaterials,return )
 			{
 				HX_STACK_LINE(1804)
 				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(1804)
-				{
-				}
 				HX_STACK_LINE(1804)
 				{
 					HX_STACK_LINE(1804)
@@ -3675,9 +3547,6 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,rotate,return )
 									HX_STACK_LINE(1746)
 									{
 									}
-									HX_STACK_LINE(1746)
-									{
-									}
 								}
 								HX_STACK_LINE(1746)
 								return ret1;
@@ -3706,7 +3575,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,rotate,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(1746)
-						if (((_this->_isimmutable_dyn() != null()))){
+						if (((_this->_isimmutable != null()))){
 							HX_STACK_LINE(1746)
 							_this->_isimmutable();
 						}
@@ -3730,7 +3599,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,rotate,return )
 									HX_STACK_LINE(1746)
 									::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(1746)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(1746)
 										_this->_validate();
 									}
@@ -3755,7 +3624,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,rotate,return )
 									HX_STACK_LINE(1746)
 									::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(1746)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(1746)
 										_this->_validate();
 									}
@@ -3777,16 +3646,13 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,rotate,return )
 							HX_STACK_LINE(1746)
 							{
 							}
-							HX_STACK_LINE(1746)
-							{
-							}
 						}
 						HX_STACK_LINE(1746)
 						{
 							HX_STACK_LINE(1746)
 							::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1746)
-							if (((_this->_invalidate_dyn() != null()))){
+							if (((_this->_invalidate != null()))){
 								HX_STACK_LINE(1746)
 								_this->_invalidate(_this);
 							}
@@ -3830,9 +3696,6 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,rotate,return )
 	if (((this->zpp_inner->pre_posx < ::Math_obj::POSITIVE_INFINITY))){
 		HX_STACK_LINE(1751)
 		Float t = 1.0;		HX_STACK_VAR(t,"t");
-		HX_STACK_LINE(1752)
-		{
-		}
 		struct _Function_2_1{
 			inline static Float Block( ::nape::geom::Vec2 &dx2){
 				HX_STACK_PUSH("*::closure","nape/phys/Body.hx",1760);
@@ -3847,7 +3710,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,rotate,return )
 						HX_STACK_LINE(1760)
 						::zpp_nape::geom::ZPP_Vec2 _this = dx2->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(1760)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(1760)
 							_this->_validate();
 						}
@@ -3874,7 +3737,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,rotate,return )
 						HX_STACK_LINE(1761)
 						::zpp_nape::geom::ZPP_Vec2 _this = dx2->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(1761)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(1761)
 							_this->_validate();
 						}
@@ -3905,7 +3768,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,rotate,return )
 				hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 			}
 			HX_STACK_LINE(1763)
-			if (((_this->_isimmutable_dyn() != null()))){
+			if (((_this->_isimmutable != null()))){
 				HX_STACK_LINE(1763)
 				_this->_isimmutable();
 			}
@@ -3926,9 +3789,6 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,rotate,return )
 			HX_STACK_LINE(1763)
 			::nape::geom::Vec2 o = dx;		HX_STACK_VAR(o,"o");
 			HX_STACK_LINE(1763)
-			{
-			}
-			HX_STACK_LINE(1763)
 			o->zpp_pool = null();
 			HX_STACK_LINE(1763)
 			if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -3948,9 +3808,6 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,rotate,return )
 		{
 			HX_STACK_LINE(1763)
 			::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(1763)
-			{
-			}
 			HX_STACK_LINE(1763)
 			{
 				HX_STACK_LINE(1763)
@@ -3990,7 +3847,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,rotate,return )
 				hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 			}
 			HX_STACK_LINE(1764)
-			if (((_this->_isimmutable_dyn() != null()))){
+			if (((_this->_isimmutable != null()))){
 				HX_STACK_LINE(1764)
 				_this->_isimmutable();
 			}
@@ -4011,9 +3868,6 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,rotate,return )
 			HX_STACK_LINE(1764)
 			::nape::geom::Vec2 o = dx2;		HX_STACK_VAR(o,"o");
 			HX_STACK_LINE(1764)
-			{
-			}
-			HX_STACK_LINE(1764)
 			o->zpp_pool = null();
 			HX_STACK_LINE(1764)
 			if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -4033,9 +3887,6 @@ HX_DEFINE_DYNAMIC_FUNC2(Body_obj,rotate,return )
 		{
 			HX_STACK_LINE(1764)
 			::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(1764)
-			{
-			}
 			HX_STACK_LINE(1764)
 			{
 				HX_STACK_LINE(1764)
@@ -4222,7 +4073,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,rotateShapes,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(1629)
-				if (((_this->_isimmutable_dyn() != null()))){
+				if (((_this->_isimmutable != null()))){
 					HX_STACK_LINE(1629)
 					_this->_isimmutable();
 				}
@@ -4243,9 +4094,6 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,rotateShapes,return )
 				HX_STACK_LINE(1629)
 				::nape::geom::Vec2 o = translation;		HX_STACK_VAR(o,"o");
 				HX_STACK_LINE(1629)
-				{
-				}
-				HX_STACK_LINE(1629)
 				o->zpp_pool = null();
 				HX_STACK_LINE(1629)
 				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -4265,9 +4113,6 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,rotateShapes,return )
 			{
 				HX_STACK_LINE(1629)
 				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(1629)
-				{
-				}
 				HX_STACK_LINE(1629)
 				{
 					HX_STACK_LINE(1629)
@@ -4420,7 +4265,7 @@ bool sleepable = __o_sleepable.Default(false);
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(1501)
-						if (((_this->_isimmutable_dyn() != null()))){
+						if (((_this->_isimmutable != null()))){
 							HX_STACK_LINE(1501)
 							_this->_isimmutable();
 						}
@@ -4441,9 +4286,6 @@ bool sleepable = __o_sleepable.Default(false);
 						HX_STACK_LINE(1501)
 						::nape::geom::Vec2 o = impulse;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(1501)
-						{
-						}
-						HX_STACK_LINE(1501)
 						o->zpp_pool = null();
 						HX_STACK_LINE(1501)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -4463,9 +4305,6 @@ bool sleepable = __o_sleepable.Default(false);
 					{
 						HX_STACK_LINE(1501)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(1501)
-						{
-						}
 						HX_STACK_LINE(1501)
 						{
 							HX_STACK_LINE(1501)
@@ -4504,9 +4343,6 @@ bool sleepable = __o_sleepable.Default(false);
 		{
 			HX_STACK_LINE(1512)
 			Float t = this->zpp_inner->imass;		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(1513)
-			{
-			}
 			struct _Function_2_1{
 				inline static Float Block( ::nape::geom::Vec2 &impulse){
 					HX_STACK_PUSH("*::closure","nape/phys/Body.hx",1521);
@@ -4521,7 +4357,7 @@ bool sleepable = __o_sleepable.Default(false);
 							HX_STACK_LINE(1521)
 							::zpp_nape::geom::ZPP_Vec2 _this = impulse->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1521)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(1521)
 								_this->_validate();
 							}
@@ -4548,7 +4384,7 @@ bool sleepable = __o_sleepable.Default(false);
 							HX_STACK_LINE(1522)
 							::zpp_nape::geom::ZPP_Vec2 _this = impulse->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1522)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(1522)
 								_this->_validate();
 							}
@@ -4584,7 +4420,7 @@ bool sleepable = __o_sleepable.Default(false);
 								HX_STACK_LINE(1528)
 								::zpp_nape::geom::ZPP_Vec2 _this = pos->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1528)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(1528)
 									_this->_validate();
 								}
@@ -4611,7 +4447,7 @@ bool sleepable = __o_sleepable.Default(false);
 								HX_STACK_LINE(1529)
 								::zpp_nape::geom::ZPP_Vec2 _this = pos->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1529)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(1529)
 									_this->_validate();
 								}
@@ -4641,7 +4477,7 @@ bool sleepable = __o_sleepable.Default(false);
 							HX_STACK_LINE(1532)
 							::zpp_nape::geom::ZPP_Vec2 _this = impulse->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1532)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(1532)
 								_this->_validate();
 							}
@@ -4666,7 +4502,7 @@ bool sleepable = __o_sleepable.Default(false);
 							HX_STACK_LINE(1532)
 							::zpp_nape::geom::ZPP_Vec2 _this = impulse->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1532)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(1532)
 								_this->_validate();
 							}
@@ -4698,7 +4534,7 @@ bool sleepable = __o_sleepable.Default(false);
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(1537)
-						if (((_this->_isimmutable_dyn() != null()))){
+						if (((_this->_isimmutable != null()))){
 							HX_STACK_LINE(1537)
 							_this->_isimmutable();
 						}
@@ -4719,9 +4555,6 @@ bool sleepable = __o_sleepable.Default(false);
 						HX_STACK_LINE(1537)
 						::nape::geom::Vec2 o = pos;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(1537)
-						{
-						}
-						HX_STACK_LINE(1537)
 						o->zpp_pool = null();
 						HX_STACK_LINE(1537)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -4741,9 +4574,6 @@ bool sleepable = __o_sleepable.Default(false);
 					{
 						HX_STACK_LINE(1537)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(1537)
-						{
-						}
 						HX_STACK_LINE(1537)
 						{
 							HX_STACK_LINE(1537)
@@ -4801,7 +4631,7 @@ bool sleepable = __o_sleepable.Default(false);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(1552)
-					if (((_this->_isimmutable_dyn() != null()))){
+					if (((_this->_isimmutable != null()))){
 						HX_STACK_LINE(1552)
 						_this->_isimmutable();
 					}
@@ -4822,9 +4652,6 @@ bool sleepable = __o_sleepable.Default(false);
 					HX_STACK_LINE(1552)
 					::nape::geom::Vec2 o = impulse;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(1552)
-					{
-					}
-					HX_STACK_LINE(1552)
 					o->zpp_pool = null();
 					HX_STACK_LINE(1552)
 					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -4844,9 +4671,6 @@ bool sleepable = __o_sleepable.Default(false);
 				{
 					HX_STACK_LINE(1552)
 					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(1552)
-					{
-					}
 					HX_STACK_LINE(1552)
 					{
 						HX_STACK_LINE(1552)
@@ -4916,9 +4740,6 @@ bool weak = __o_weak.Default(false);
 					HX_STACK_LINE(1438)
 					_this->axisy = ::Math_obj::cos(_this->rot);
 					HX_STACK_LINE(1438)
-					{
-					}
-					HX_STACK_LINE(1438)
 					Dynamic();
 				}
 			}
@@ -4943,7 +4764,7 @@ bool weak = __o_weak.Default(false);
 							HX_STACK_LINE(1442)
 							::zpp_nape::geom::ZPP_Vec2 _this = vector->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1442)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(1442)
 								_this->_validate();
 							}
@@ -4968,7 +4789,7 @@ bool weak = __o_weak.Default(false);
 							HX_STACK_LINE(1442)
 							::zpp_nape::geom::ZPP_Vec2 _this = vector->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1442)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(1442)
 								_this->_validate();
 							}
@@ -4995,7 +4816,7 @@ bool weak = __o_weak.Default(false);
 							HX_STACK_LINE(1443)
 							::zpp_nape::geom::ZPP_Vec2 _this = vector->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1443)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(1443)
 								_this->_validate();
 							}
@@ -5020,7 +4841,7 @@ bool weak = __o_weak.Default(false);
 							HX_STACK_LINE(1443)
 							::zpp_nape::geom::ZPP_Vec2 _this = vector->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1443)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(1443)
 								_this->_validate();
 							}
@@ -5053,7 +4874,7 @@ bool weak = __o_weak.Default(false);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(1449)
-					if (((_this->_isimmutable_dyn() != null()))){
+					if (((_this->_isimmutable != null()))){
 						HX_STACK_LINE(1449)
 						_this->_isimmutable();
 					}
@@ -5074,9 +4895,6 @@ bool weak = __o_weak.Default(false);
 					HX_STACK_LINE(1449)
 					::nape::geom::Vec2 o = vector;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(1449)
-					{
-					}
-					HX_STACK_LINE(1449)
 					o->zpp_pool = null();
 					HX_STACK_LINE(1449)
 					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -5096,9 +4914,6 @@ bool weak = __o_weak.Default(false);
 				{
 					HX_STACK_LINE(1449)
 					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(1449)
-					{
-					}
 					HX_STACK_LINE(1449)
 					{
 						HX_STACK_LINE(1449)
@@ -5129,7 +4944,7 @@ bool weak = __o_weak.Default(false);
 			false;
 		}
 		struct _Function_1_1{
-			inline static ::nape::geom::Vec2 Block( Float &tempy,bool &weak,Float &tempx){
+			inline static ::nape::geom::Vec2 Block( Float &tempy,Float &tempx,bool &weak){
 				HX_STACK_PUSH("*::closure","nape/phys/Body.hx",1456);
 				{
 					HX_STACK_LINE(1456)
@@ -5162,7 +4977,7 @@ bool weak = __o_weak.Default(false);
 					HX_STACK_LINE(1456)
 					if (((ret->zpp_inner == null()))){
 						struct _Function_3_1{
-							inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &tempx,Float &tempy){
+							inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &tempy,Float &tempx){
 								HX_STACK_PUSH("*::closure","nape/phys/Body.hx",1456);
 								{
 									HX_STACK_LINE(1456)
@@ -5198,9 +5013,6 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(1456)
 										{
 										}
-										HX_STACK_LINE(1456)
-										{
-										}
 									}
 									HX_STACK_LINE(1456)
 									return ret1;
@@ -5209,7 +5021,7 @@ bool weak = __o_weak.Default(false);
 							}
 						};
 						HX_STACK_LINE(1456)
-						ret->zpp_inner = _Function_3_1::Block(tempx,tempy);
+						ret->zpp_inner = _Function_3_1::Block(tempy,tempx);
 						HX_STACK_LINE(1456)
 						ret->zpp_inner->outer = ret;
 					}
@@ -5229,7 +5041,7 @@ bool weak = __o_weak.Default(false);
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(1456)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(1456)
 								_this->_isimmutable();
 							}
@@ -5253,7 +5065,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(1456)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1456)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1456)
 											_this->_validate();
 										}
@@ -5278,7 +5090,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(1456)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1456)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1456)
 											_this->_validate();
 										}
@@ -5300,16 +5112,13 @@ bool weak = __o_weak.Default(false);
 								HX_STACK_LINE(1456)
 								{
 								}
-								HX_STACK_LINE(1456)
-								{
-								}
 							}
 							HX_STACK_LINE(1456)
 							{
 								HX_STACK_LINE(1456)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1456)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(1456)
 									_this->_invalidate(_this);
 								}
@@ -5327,7 +5136,7 @@ bool weak = __o_weak.Default(false);
 			}
 		};
 		HX_STACK_LINE(1456)
-		return _Function_1_1::Block(tempy,weak,tempx);
+		return _Function_1_1::Block(tempy,tempx,weak);
 	}
 }
 
@@ -5366,9 +5175,6 @@ bool weak = __o_weak.Default(false);
 					HX_STACK_LINE(1397)
 					_this->axisy = ::Math_obj::cos(_this->rot);
 					HX_STACK_LINE(1397)
-					{
-					}
-					HX_STACK_LINE(1397)
 					Dynamic();
 				}
 			}
@@ -5393,7 +5199,7 @@ bool weak = __o_weak.Default(false);
 							HX_STACK_LINE(1401)
 							::zpp_nape::geom::ZPP_Vec2 _this = vector->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1401)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(1401)
 								_this->_validate();
 							}
@@ -5418,7 +5224,7 @@ bool weak = __o_weak.Default(false);
 							HX_STACK_LINE(1401)
 							::zpp_nape::geom::ZPP_Vec2 _this = vector->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1401)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(1401)
 								_this->_validate();
 							}
@@ -5445,7 +5251,7 @@ bool weak = __o_weak.Default(false);
 							HX_STACK_LINE(1402)
 							::zpp_nape::geom::ZPP_Vec2 _this = vector->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1402)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(1402)
 								_this->_validate();
 							}
@@ -5470,7 +5276,7 @@ bool weak = __o_weak.Default(false);
 							HX_STACK_LINE(1402)
 							::zpp_nape::geom::ZPP_Vec2 _this = vector->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1402)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(1402)
 								_this->_validate();
 							}
@@ -5503,7 +5309,7 @@ bool weak = __o_weak.Default(false);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(1408)
-					if (((_this->_isimmutable_dyn() != null()))){
+					if (((_this->_isimmutable != null()))){
 						HX_STACK_LINE(1408)
 						_this->_isimmutable();
 					}
@@ -5524,9 +5330,6 @@ bool weak = __o_weak.Default(false);
 					HX_STACK_LINE(1408)
 					::nape::geom::Vec2 o = vector;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(1408)
-					{
-					}
-					HX_STACK_LINE(1408)
 					o->zpp_pool = null();
 					HX_STACK_LINE(1408)
 					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -5546,9 +5349,6 @@ bool weak = __o_weak.Default(false);
 				{
 					HX_STACK_LINE(1408)
 					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(1408)
-					{
-					}
 					HX_STACK_LINE(1408)
 					{
 						HX_STACK_LINE(1408)
@@ -5579,7 +5379,7 @@ bool weak = __o_weak.Default(false);
 			false;
 		}
 		struct _Function_1_1{
-			inline static ::nape::geom::Vec2 Block( Float &tempy,bool &weak,Float &tempx){
+			inline static ::nape::geom::Vec2 Block( Float &tempy,Float &tempx,bool &weak){
 				HX_STACK_PUSH("*::closure","nape/phys/Body.hx",1415);
 				{
 					HX_STACK_LINE(1415)
@@ -5612,7 +5412,7 @@ bool weak = __o_weak.Default(false);
 					HX_STACK_LINE(1415)
 					if (((ret->zpp_inner == null()))){
 						struct _Function_3_1{
-							inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &tempx,Float &tempy){
+							inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &tempy,Float &tempx){
 								HX_STACK_PUSH("*::closure","nape/phys/Body.hx",1415);
 								{
 									HX_STACK_LINE(1415)
@@ -5648,9 +5448,6 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(1415)
 										{
 										}
-										HX_STACK_LINE(1415)
-										{
-										}
 									}
 									HX_STACK_LINE(1415)
 									return ret1;
@@ -5659,7 +5456,7 @@ bool weak = __o_weak.Default(false);
 							}
 						};
 						HX_STACK_LINE(1415)
-						ret->zpp_inner = _Function_3_1::Block(tempx,tempy);
+						ret->zpp_inner = _Function_3_1::Block(tempy,tempx);
 						HX_STACK_LINE(1415)
 						ret->zpp_inner->outer = ret;
 					}
@@ -5679,7 +5476,7 @@ bool weak = __o_weak.Default(false);
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(1415)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(1415)
 								_this->_isimmutable();
 							}
@@ -5703,7 +5500,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(1415)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1415)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1415)
 											_this->_validate();
 										}
@@ -5728,7 +5525,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(1415)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1415)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1415)
 											_this->_validate();
 										}
@@ -5750,16 +5547,13 @@ bool weak = __o_weak.Default(false);
 								HX_STACK_LINE(1415)
 								{
 								}
-								HX_STACK_LINE(1415)
-								{
-								}
 							}
 							HX_STACK_LINE(1415)
 							{
 								HX_STACK_LINE(1415)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1415)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(1415)
 									_this->_invalidate(_this);
 								}
@@ -5777,7 +5571,7 @@ bool weak = __o_weak.Default(false);
 			}
 		};
 		HX_STACK_LINE(1415)
-		return _Function_1_1::Block(tempy,weak,tempx);
+		return _Function_1_1::Block(tempy,tempx,weak);
 	}
 }
 
@@ -5816,9 +5610,6 @@ bool weak = __o_weak.Default(false);
 					HX_STACK_LINE(1350)
 					_this->axisy = ::Math_obj::cos(_this->rot);
 					HX_STACK_LINE(1350)
-					{
-					}
-					HX_STACK_LINE(1350)
 					Dynamic();
 				}
 			}
@@ -5847,7 +5638,7 @@ bool weak = __o_weak.Default(false);
 							HX_STACK_LINE(1356)
 							::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1356)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(1356)
 								_this->_validate();
 							}
@@ -5874,7 +5665,7 @@ bool weak = __o_weak.Default(false);
 							HX_STACK_LINE(1357)
 							::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1357)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(1357)
 								_this->_validate();
 							}
@@ -5914,7 +5705,7 @@ bool weak = __o_weak.Default(false);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(1367)
-					if (((_this->_isimmutable_dyn() != null()))){
+					if (((_this->_isimmutable != null()))){
 						HX_STACK_LINE(1367)
 						_this->_isimmutable();
 					}
@@ -5935,9 +5726,6 @@ bool weak = __o_weak.Default(false);
 					HX_STACK_LINE(1367)
 					::nape::geom::Vec2 o = point;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(1367)
-					{
-					}
-					HX_STACK_LINE(1367)
 					o->zpp_pool = null();
 					HX_STACK_LINE(1367)
 					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -5957,9 +5745,6 @@ bool weak = __o_weak.Default(false);
 				{
 					HX_STACK_LINE(1367)
 					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(1367)
-					{
-					}
 					HX_STACK_LINE(1367)
 					{
 						HX_STACK_LINE(1367)
@@ -5990,7 +5775,7 @@ bool weak = __o_weak.Default(false);
 			false;
 		}
 		struct _Function_1_1{
-			inline static ::nape::geom::Vec2 Block( Float &tempy,bool &weak,Float &tempx){
+			inline static ::nape::geom::Vec2 Block( Float &tempy,Float &tempx,bool &weak){
 				HX_STACK_PUSH("*::closure","nape/phys/Body.hx",1374);
 				{
 					HX_STACK_LINE(1374)
@@ -6023,7 +5808,7 @@ bool weak = __o_weak.Default(false);
 					HX_STACK_LINE(1374)
 					if (((ret->zpp_inner == null()))){
 						struct _Function_3_1{
-							inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &tempx,Float &tempy){
+							inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &tempy,Float &tempx){
 								HX_STACK_PUSH("*::closure","nape/phys/Body.hx",1374);
 								{
 									HX_STACK_LINE(1374)
@@ -6059,9 +5844,6 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(1374)
 										{
 										}
-										HX_STACK_LINE(1374)
-										{
-										}
 									}
 									HX_STACK_LINE(1374)
 									return ret1;
@@ -6070,7 +5852,7 @@ bool weak = __o_weak.Default(false);
 							}
 						};
 						HX_STACK_LINE(1374)
-						ret->zpp_inner = _Function_3_1::Block(tempx,tempy);
+						ret->zpp_inner = _Function_3_1::Block(tempy,tempx);
 						HX_STACK_LINE(1374)
 						ret->zpp_inner->outer = ret;
 					}
@@ -6090,7 +5872,7 @@ bool weak = __o_weak.Default(false);
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(1374)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(1374)
 								_this->_isimmutable();
 							}
@@ -6114,7 +5896,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(1374)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1374)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1374)
 											_this->_validate();
 										}
@@ -6139,7 +5921,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(1374)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1374)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1374)
 											_this->_validate();
 										}
@@ -6161,16 +5943,13 @@ bool weak = __o_weak.Default(false);
 								HX_STACK_LINE(1374)
 								{
 								}
-								HX_STACK_LINE(1374)
-								{
-								}
 							}
 							HX_STACK_LINE(1374)
 							{
 								HX_STACK_LINE(1374)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1374)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(1374)
 									_this->_invalidate(_this);
 								}
@@ -6188,7 +5967,7 @@ bool weak = __o_weak.Default(false);
 			}
 		};
 		HX_STACK_LINE(1374)
-		return _Function_1_1::Block(tempy,weak,tempx);
+		return _Function_1_1::Block(tempy,tempx,weak);
 	}
 }
 
@@ -6227,9 +6006,6 @@ bool weak = __o_weak.Default(false);
 					HX_STACK_LINE(1310)
 					_this->axisy = ::Math_obj::cos(_this->rot);
 					HX_STACK_LINE(1310)
-					{
-					}
-					HX_STACK_LINE(1310)
 					Dynamic();
 				}
 			}
@@ -6254,7 +6030,7 @@ bool weak = __o_weak.Default(false);
 							HX_STACK_LINE(1314)
 							::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1314)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(1314)
 								_this->_validate();
 							}
@@ -6279,7 +6055,7 @@ bool weak = __o_weak.Default(false);
 							HX_STACK_LINE(1314)
 							::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1314)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(1314)
 								_this->_validate();
 							}
@@ -6306,7 +6082,7 @@ bool weak = __o_weak.Default(false);
 							HX_STACK_LINE(1315)
 							::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1315)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(1315)
 								_this->_validate();
 							}
@@ -6331,7 +6107,7 @@ bool weak = __o_weak.Default(false);
 							HX_STACK_LINE(1315)
 							::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1315)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(1315)
 								_this->_validate();
 							}
@@ -6364,7 +6140,7 @@ bool weak = __o_weak.Default(false);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(1321)
-					if (((_this->_isimmutable_dyn() != null()))){
+					if (((_this->_isimmutable != null()))){
 						HX_STACK_LINE(1321)
 						_this->_isimmutable();
 					}
@@ -6385,9 +6161,6 @@ bool weak = __o_weak.Default(false);
 					HX_STACK_LINE(1321)
 					::nape::geom::Vec2 o = point;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(1321)
-					{
-					}
-					HX_STACK_LINE(1321)
 					o->zpp_pool = null();
 					HX_STACK_LINE(1321)
 					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -6407,9 +6180,6 @@ bool weak = __o_weak.Default(false);
 				{
 					HX_STACK_LINE(1321)
 					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(1321)
-					{
-					}
 					HX_STACK_LINE(1321)
 					{
 						HX_STACK_LINE(1321)
@@ -6440,7 +6210,7 @@ bool weak = __o_weak.Default(false);
 			false;
 		}
 		struct _Function_1_1{
-			inline static ::nape::geom::Vec2 Block( ::nape::phys::Body_obj *__this,Float &tempy,bool &weak,Float &tempx){
+			inline static ::nape::geom::Vec2 Block( ::nape::phys::Body_obj *__this,Float &tempy,Float &tempx,bool &weak){
 				HX_STACK_PUSH("*::closure","nape/phys/Body.hx",1328);
 				{
 					HX_STACK_LINE(1328)
@@ -6512,9 +6282,6 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(1328)
 										{
 										}
-										HX_STACK_LINE(1328)
-										{
-										}
 									}
 									HX_STACK_LINE(1328)
 									return ret1;
@@ -6543,7 +6310,7 @@ bool weak = __o_weak.Default(false);
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(1328)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(1328)
 								_this->_isimmutable();
 							}
@@ -6567,7 +6334,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(1328)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1328)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1328)
 											_this->_validate();
 										}
@@ -6592,7 +6359,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(1328)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1328)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1328)
 											_this->_validate();
 										}
@@ -6614,16 +6381,13 @@ bool weak = __o_weak.Default(false);
 								HX_STACK_LINE(1328)
 								{
 								}
-								HX_STACK_LINE(1328)
-								{
-								}
 							}
 							HX_STACK_LINE(1328)
 							{
 								HX_STACK_LINE(1328)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1328)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(1328)
 									_this->_invalidate(_this);
 								}
@@ -6641,7 +6405,7 @@ bool weak = __o_weak.Default(false);
 			}
 		};
 		HX_STACK_LINE(1328)
-		return _Function_1_1::Block(this,tempy,weak,tempx);
+		return _Function_1_1::Block(this,tempy,tempx,weak);
 	}
 }
 
@@ -6732,9 +6496,6 @@ Float Body_obj::crushFactor( ){
 									HX_STACK_LINE(1269)
 									{
 									}
-									HX_STACK_LINE(1269)
-									{
-									}
 								}
 								HX_STACK_LINE(1269)
 								return ret1;
@@ -6763,7 +6524,7 @@ Float Body_obj::crushFactor( ){
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(1269)
-						if (((_this->_isimmutable_dyn() != null()))){
+						if (((_this->_isimmutable != null()))){
 							HX_STACK_LINE(1269)
 							_this->_isimmutable();
 						}
@@ -6787,7 +6548,7 @@ Float Body_obj::crushFactor( ){
 									HX_STACK_LINE(1269)
 									::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(1269)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(1269)
 										_this->_validate();
 									}
@@ -6812,7 +6573,7 @@ Float Body_obj::crushFactor( ){
 									HX_STACK_LINE(1269)
 									::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(1269)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(1269)
 										_this->_validate();
 									}
@@ -6834,16 +6595,13 @@ Float Body_obj::crushFactor( ){
 							HX_STACK_LINE(1269)
 							{
 							}
-							HX_STACK_LINE(1269)
-							{
-							}
 						}
 						HX_STACK_LINE(1269)
 						{
 							HX_STACK_LINE(1269)
 							::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1269)
-							if (((_this->_invalidate_dyn() != null()))){
+							if (((_this->_invalidate != null()))){
 								HX_STACK_LINE(1269)
 								_this->_invalidate(_this);
 							}
@@ -6910,7 +6668,7 @@ Float Body_obj::crushFactor( ){
 										HX_STACK_LINE(1274)
 										::zpp_nape::geom::ZPP_Vec2 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1274)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1274)
 											_this->_validate();
 										}
@@ -6935,7 +6693,7 @@ Float Body_obj::crushFactor( ){
 										HX_STACK_LINE(1274)
 										::zpp_nape::geom::ZPP_Vec2 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1274)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1274)
 											_this->_validate();
 										}
@@ -6960,7 +6718,7 @@ Float Body_obj::crushFactor( ){
 										HX_STACK_LINE(1274)
 										::zpp_nape::geom::ZPP_Vec2 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1274)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1274)
 											_this->_validate();
 										}
@@ -6985,7 +6743,7 @@ Float Body_obj::crushFactor( ){
 										HX_STACK_LINE(1274)
 										::zpp_nape::geom::ZPP_Vec2 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1274)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1274)
 											_this->_validate();
 										}
@@ -7021,7 +6779,7 @@ Float Body_obj::crushFactor( ){
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(1275)
-					if (((_this->_isimmutable_dyn() != null()))){
+					if (((_this->_isimmutable != null()))){
 						HX_STACK_LINE(1275)
 						_this->_isimmutable();
 					}
@@ -7042,9 +6800,6 @@ Float Body_obj::crushFactor( ){
 					HX_STACK_LINE(1275)
 					::nape::geom::Vec2 o = imp;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(1275)
-					{
-					}
-					HX_STACK_LINE(1275)
 					o->zpp_pool = null();
 					HX_STACK_LINE(1275)
 					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -7064,9 +6819,6 @@ Float Body_obj::crushFactor( ){
 				{
 					HX_STACK_LINE(1275)
 					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(1275)
-					{
-					}
 					HX_STACK_LINE(1275)
 					{
 						HX_STACK_LINE(1275)
@@ -7156,7 +6908,7 @@ Float Body_obj::crushFactor( ){
 										HX_STACK_LINE(1282)
 										::zpp_nape::geom::ZPP_Vec2 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1282)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1282)
 											_this->_validate();
 										}
@@ -7181,7 +6933,7 @@ Float Body_obj::crushFactor( ){
 										HX_STACK_LINE(1282)
 										::zpp_nape::geom::ZPP_Vec2 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1282)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1282)
 											_this->_validate();
 										}
@@ -7206,7 +6958,7 @@ Float Body_obj::crushFactor( ){
 										HX_STACK_LINE(1282)
 										::zpp_nape::geom::ZPP_Vec2 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1282)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1282)
 											_this->_validate();
 										}
@@ -7231,7 +6983,7 @@ Float Body_obj::crushFactor( ){
 										HX_STACK_LINE(1282)
 										::zpp_nape::geom::ZPP_Vec2 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1282)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1282)
 											_this->_validate();
 										}
@@ -7267,7 +7019,7 @@ Float Body_obj::crushFactor( ){
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(1283)
-					if (((_this->_isimmutable_dyn() != null()))){
+					if (((_this->_isimmutable != null()))){
 						HX_STACK_LINE(1283)
 						_this->_isimmutable();
 					}
@@ -7288,9 +7040,6 @@ Float Body_obj::crushFactor( ){
 					HX_STACK_LINE(1283)
 					::nape::geom::Vec2 o = imp;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(1283)
-					{
-					}
-					HX_STACK_LINE(1283)
 					o->zpp_pool = null();
 					HX_STACK_LINE(1283)
 					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -7310,9 +7059,6 @@ Float Body_obj::crushFactor( ){
 				{
 					HX_STACK_LINE(1283)
 					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(1283)
-					{
-					}
 					HX_STACK_LINE(1283)
 					{
 						HX_STACK_LINE(1283)
@@ -7363,7 +7109,7 @@ Float Body_obj::crushFactor( ){
 								HX_STACK_LINE(1286)
 								::zpp_nape::geom::ZPP_Vec2 _this = jsum->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1286)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(1286)
 									_this->_validate();
 								}
@@ -7388,7 +7134,7 @@ Float Body_obj::crushFactor( ){
 								HX_STACK_LINE(1286)
 								::zpp_nape::geom::ZPP_Vec2 _this = jsum->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1286)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(1286)
 									_this->_validate();
 								}
@@ -7413,7 +7159,7 @@ Float Body_obj::crushFactor( ){
 								HX_STACK_LINE(1286)
 								::zpp_nape::geom::ZPP_Vec2 _this = jsum->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1286)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(1286)
 									_this->_validate();
 								}
@@ -7438,7 +7184,7 @@ Float Body_obj::crushFactor( ){
 								HX_STACK_LINE(1286)
 								::zpp_nape::geom::ZPP_Vec2 _this = jsum->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1286)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(1286)
 									_this->_validate();
 								}
@@ -7496,7 +7242,7 @@ Float Body_obj::crushFactor( ){
 				hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 			}
 			HX_STACK_LINE(1287)
-			if (((_this->_isimmutable_dyn() != null()))){
+			if (((_this->_isimmutable != null()))){
 				HX_STACK_LINE(1287)
 				_this->_isimmutable();
 			}
@@ -7517,9 +7263,6 @@ Float Body_obj::crushFactor( ){
 			HX_STACK_LINE(1287)
 			::nape::geom::Vec2 o = jsum;		HX_STACK_VAR(o,"o");
 			HX_STACK_LINE(1287)
-			{
-			}
-			HX_STACK_LINE(1287)
 			o->zpp_pool = null();
 			HX_STACK_LINE(1287)
 			if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -7539,9 +7282,6 @@ Float Body_obj::crushFactor( ){
 		{
 			HX_STACK_LINE(1287)
 			::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(1287)
-			{
-			}
 			HX_STACK_LINE(1287)
 			{
 				HX_STACK_LINE(1287)
@@ -7848,7 +7588,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_constraintInertia,return )
 		}
 	};
 	HX_STACK_LINE(1158)
-	return Array_obj< ::nape::phys::InertiaMode >::__new().Add(_Function_1_1::Block()).Add(_Function_1_2::Block())->__get(this->zpp_inner->inertiaMode);
+	return Array_obj< ::Dynamic >::__new().Add(_Function_1_1::Block()).Add(_Function_1_2::Block())->__get(this->zpp_inner->inertiaMode).StaticCast< ::nape::phys::InertiaMode >();
 }
 
 
@@ -7896,7 +7636,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,set_inertiaMode,return )
 		}
 	};
 	HX_STACK_LINE(1143)
-	return Array_obj< ::nape::phys::InertiaMode >::__new().Add(_Function_1_1::Block()).Add(_Function_1_2::Block())->__get(this->zpp_inner->inertiaMode);
+	return Array_obj< ::Dynamic >::__new().Add(_Function_1_1::Block()).Add(_Function_1_2::Block())->__get(this->zpp_inner->inertiaMode).StaticCast< ::nape::phys::InertiaMode >();
 }
 
 
@@ -8175,7 +7915,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_gravMass,return )
 		}
 	};
 	HX_STACK_LINE(1062)
-	return Array_obj< ::nape::phys::GravMassMode >::__new().Add(_Function_1_1::Block()).Add(_Function_1_2::Block()).Add(_Function_1_3::Block())->__get(this->zpp_inner->massMode);
+	return Array_obj< ::Dynamic >::__new().Add(_Function_1_1::Block()).Add(_Function_1_2::Block()).Add(_Function_1_3::Block())->__get(this->zpp_inner->massMode).StaticCast< ::nape::phys::GravMassMode >();
 }
 
 
@@ -8242,7 +7982,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,set_gravMassMode,return )
 		}
 	};
 	HX_STACK_LINE(1047)
-	return Array_obj< ::nape::phys::GravMassMode >::__new().Add(_Function_1_1::Block()).Add(_Function_1_2::Block()).Add(_Function_1_3::Block())->__get(this->zpp_inner->massMode);
+	return Array_obj< ::Dynamic >::__new().Add(_Function_1_1::Block()).Add(_Function_1_2::Block()).Add(_Function_1_3::Block())->__get(this->zpp_inner->massMode).StaticCast< ::nape::phys::GravMassMode >();
 }
 
 
@@ -8430,7 +8170,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_constraintMass,return )
 		}
 	};
 	HX_STACK_LINE(982)
-	return Array_obj< ::nape::phys::MassMode >::__new().Add(_Function_1_1::Block()).Add(_Function_1_2::Block())->__get(this->zpp_inner->massMode);
+	return Array_obj< ::Dynamic >::__new().Add(_Function_1_1::Block()).Add(_Function_1_2::Block())->__get(this->zpp_inner->massMode).StaticCast< ::nape::phys::MassMode >();
 }
 
 
@@ -8478,7 +8218,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,set_massMode,return )
 		}
 	};
 	HX_STACK_LINE(967)
-	return Array_obj< ::nape::phys::MassMode >::__new().Add(_Function_1_1::Block()).Add(_Function_1_2::Block())->__get(this->zpp_inner->massMode);
+	return Array_obj< ::Dynamic >::__new().Add(_Function_1_1::Block()).Add(_Function_1_2::Block())->__get(this->zpp_inner->massMode).StaticCast< ::nape::phys::MassMode >();
 }
 
 
@@ -8849,7 +8589,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_constraintVelocity,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(744)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(744)
 					_this1->_isimmutable();
 				}
@@ -8860,7 +8600,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_constraintVelocity,return )
 				hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 			}
 			struct _Function_3_2{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &force,::nape::geom::Vec2 &_this){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &force,::nape::geom::Vec2 _this){
 					HX_STACK_PUSH("*::closure","nape/phys/Body.hx",744);
 					{
 						struct _Function_4_1{
@@ -8877,7 +8617,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_constraintVelocity,return )
 										HX_STACK_LINE(744)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = force->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(744)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(744)
 											_this1->_validate();
 										}
@@ -8902,7 +8642,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_constraintVelocity,return )
 										HX_STACK_LINE(744)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = force->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(744)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(744)
 											_this1->_validate();
 										}
@@ -8931,7 +8671,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_constraintVelocity,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(744)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(744)
 								_this1->_isimmutable();
 							}
@@ -8942,7 +8682,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_constraintVelocity,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 						}
 						struct _Function_4_3{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/phys/Body.hx",744);
 								{
 									HX_STACK_LINE(744)
@@ -8955,7 +8695,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_constraintVelocity,return )
 										HX_STACK_LINE(744)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(744)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(744)
 											_this1->_validate();
 										}
@@ -8967,7 +8707,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_constraintVelocity,return )
 							}
 						};
 						struct _Function_4_4{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/phys/Body.hx",744);
 								{
 									HX_STACK_LINE(744)
@@ -8980,7 +8720,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_constraintVelocity,return )
 										HX_STACK_LINE(744)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(744)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(744)
 											_this1->_validate();
 										}
@@ -9002,16 +8742,13 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_constraintVelocity,return )
 								HX_STACK_LINE(744)
 								{
 								}
-								HX_STACK_LINE(744)
-								{
-								}
 							}
 							HX_STACK_LINE(744)
 							{
 								HX_STACK_LINE(744)
 								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(744)
-								if (((_this1->_invalidate_dyn() != null()))){
+								if (((_this1->_invalidate != null()))){
 									HX_STACK_LINE(744)
 									_this1->_invalidate(_this1);
 								}
@@ -9044,7 +8781,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_constraintVelocity,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(744)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(744)
 							_this1->_isimmutable();
 						}
@@ -9065,9 +8802,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_constraintVelocity,return )
 						HX_STACK_LINE(744)
 						::nape::geom::Vec2 o = force;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(744)
-						{
-						}
-						HX_STACK_LINE(744)
 						o->zpp_pool = null();
 						HX_STACK_LINE(744)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -9087,9 +8821,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_constraintVelocity,return )
 					{
 						HX_STACK_LINE(744)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(744)
-						{
-						}
 						HX_STACK_LINE(744)
 						{
 							HX_STACK_LINE(744)
@@ -9215,7 +8946,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_force,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(715)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(715)
 					_this1->_isimmutable();
 				}
@@ -9226,7 +8957,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_force,return )
 				hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 			}
 			struct _Function_3_2{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &surfaceVel,::nape::geom::Vec2 &_this){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &surfaceVel,::nape::geom::Vec2 _this){
 					HX_STACK_PUSH("*::closure","nape/phys/Body.hx",715);
 					{
 						struct _Function_4_1{
@@ -9243,7 +8974,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_force,return )
 										HX_STACK_LINE(715)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = surfaceVel->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(715)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(715)
 											_this1->_validate();
 										}
@@ -9268,7 +8999,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_force,return )
 										HX_STACK_LINE(715)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = surfaceVel->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(715)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(715)
 											_this1->_validate();
 										}
@@ -9297,7 +9028,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_force,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(715)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(715)
 								_this1->_isimmutable();
 							}
@@ -9308,7 +9039,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_force,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 						}
 						struct _Function_4_3{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/phys/Body.hx",715);
 								{
 									HX_STACK_LINE(715)
@@ -9321,7 +9052,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_force,return )
 										HX_STACK_LINE(715)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(715)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(715)
 											_this1->_validate();
 										}
@@ -9333,7 +9064,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_force,return )
 							}
 						};
 						struct _Function_4_4{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/phys/Body.hx",715);
 								{
 									HX_STACK_LINE(715)
@@ -9346,7 +9077,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_force,return )
 										HX_STACK_LINE(715)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(715)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(715)
 											_this1->_validate();
 										}
@@ -9368,16 +9099,13 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_force,return )
 								HX_STACK_LINE(715)
 								{
 								}
-								HX_STACK_LINE(715)
-								{
-								}
 							}
 							HX_STACK_LINE(715)
 							{
 								HX_STACK_LINE(715)
 								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(715)
-								if (((_this1->_invalidate_dyn() != null()))){
+								if (((_this1->_invalidate != null()))){
 									HX_STACK_LINE(715)
 									_this1->_invalidate(_this1);
 								}
@@ -9410,7 +9138,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_force,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(715)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(715)
 							_this1->_isimmutable();
 						}
@@ -9431,9 +9159,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_force,return )
 						HX_STACK_LINE(715)
 						::nape::geom::Vec2 o = surfaceVel;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(715)
-						{
-						}
-						HX_STACK_LINE(715)
 						o->zpp_pool = null();
 						HX_STACK_LINE(715)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -9453,9 +9178,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_force,return )
 					{
 						HX_STACK_LINE(715)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(715)
-						{
-						}
 						HX_STACK_LINE(715)
 						{
 							HX_STACK_LINE(715)
@@ -9581,7 +9303,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_surfaceVel,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(683)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(683)
 					_this1->_isimmutable();
 				}
@@ -9592,7 +9314,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_surfaceVel,return )
 				hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 			}
 			struct _Function_3_2{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &kinematicVel,::nape::geom::Vec2 &_this){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &kinematicVel,::nape::geom::Vec2 _this){
 					HX_STACK_PUSH("*::closure","nape/phys/Body.hx",683);
 					{
 						struct _Function_4_1{
@@ -9609,7 +9331,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_surfaceVel,return )
 										HX_STACK_LINE(683)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = kinematicVel->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(683)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(683)
 											_this1->_validate();
 										}
@@ -9634,7 +9356,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_surfaceVel,return )
 										HX_STACK_LINE(683)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = kinematicVel->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(683)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(683)
 											_this1->_validate();
 										}
@@ -9663,7 +9385,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_surfaceVel,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(683)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(683)
 								_this1->_isimmutable();
 							}
@@ -9674,7 +9396,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_surfaceVel,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 						}
 						struct _Function_4_3{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/phys/Body.hx",683);
 								{
 									HX_STACK_LINE(683)
@@ -9687,7 +9409,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_surfaceVel,return )
 										HX_STACK_LINE(683)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(683)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(683)
 											_this1->_validate();
 										}
@@ -9699,7 +9421,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_surfaceVel,return )
 							}
 						};
 						struct _Function_4_4{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/phys/Body.hx",683);
 								{
 									HX_STACK_LINE(683)
@@ -9712,7 +9434,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_surfaceVel,return )
 										HX_STACK_LINE(683)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(683)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(683)
 											_this1->_validate();
 										}
@@ -9734,16 +9456,13 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_surfaceVel,return )
 								HX_STACK_LINE(683)
 								{
 								}
-								HX_STACK_LINE(683)
-								{
-								}
 							}
 							HX_STACK_LINE(683)
 							{
 								HX_STACK_LINE(683)
 								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(683)
-								if (((_this1->_invalidate_dyn() != null()))){
+								if (((_this1->_invalidate != null()))){
 									HX_STACK_LINE(683)
 									_this1->_invalidate(_this1);
 								}
@@ -9776,7 +9495,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_surfaceVel,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(683)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(683)
 							_this1->_isimmutable();
 						}
@@ -9797,9 +9516,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_surfaceVel,return )
 						HX_STACK_LINE(683)
 						::nape::geom::Vec2 o = kinematicVel;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(683)
-						{
-						}
-						HX_STACK_LINE(683)
 						o->zpp_pool = null();
 						HX_STACK_LINE(683)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -9819,9 +9535,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_surfaceVel,return )
 					{
 						HX_STACK_LINE(683)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(683)
-						{
-						}
 						HX_STACK_LINE(683)
 						{
 							HX_STACK_LINE(683)
@@ -9970,7 +9683,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_kinematicVel,return )
 				hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 			}
 			HX_STACK_LINE(640)
-			if (((_this1->_isimmutable_dyn() != null()))){
+			if (((_this1->_isimmutable != null()))){
 				HX_STACK_LINE(640)
 				_this1->_isimmutable();
 			}
@@ -9981,7 +9694,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_kinematicVel,return )
 			hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 		}
 		struct _Function_2_3{
-			inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &vector,::nape::geom::Vec2 &_this){
+			inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &vector,::nape::geom::Vec2 _this){
 				HX_STACK_PUSH("*::closure","nape/phys/Body.hx",640);
 				{
 					struct _Function_3_1{
@@ -9998,7 +9711,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_kinematicVel,return )
 									HX_STACK_LINE(640)
 									::zpp_nape::geom::ZPP_Vec2 _this1 = vector->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 									HX_STACK_LINE(640)
-									if (((_this1->_validate_dyn() != null()))){
+									if (((_this1->_validate != null()))){
 										HX_STACK_LINE(640)
 										_this1->_validate();
 									}
@@ -10023,7 +9736,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_kinematicVel,return )
 									HX_STACK_LINE(640)
 									::zpp_nape::geom::ZPP_Vec2 _this1 = vector->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 									HX_STACK_LINE(640)
-									if (((_this1->_validate_dyn() != null()))){
+									if (((_this1->_validate != null()))){
 										HX_STACK_LINE(640)
 										_this1->_validate();
 									}
@@ -10052,7 +9765,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_kinematicVel,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(640)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(640)
 							_this1->_isimmutable();
 						}
@@ -10063,7 +9776,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_kinematicVel,return )
 						hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 					}
 					struct _Function_3_3{
-						inline static Float Block( ::nape::geom::Vec2 &_this){
+						inline static Float Block( ::nape::geom::Vec2 _this){
 							HX_STACK_PUSH("*::closure","nape/phys/Body.hx",640);
 							{
 								HX_STACK_LINE(640)
@@ -10076,7 +9789,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_kinematicVel,return )
 									HX_STACK_LINE(640)
 									::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 									HX_STACK_LINE(640)
-									if (((_this1->_validate_dyn() != null()))){
+									if (((_this1->_validate != null()))){
 										HX_STACK_LINE(640)
 										_this1->_validate();
 									}
@@ -10088,7 +9801,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_kinematicVel,return )
 						}
 					};
 					struct _Function_3_4{
-						inline static Float Block( ::nape::geom::Vec2 &_this){
+						inline static Float Block( ::nape::geom::Vec2 _this){
 							HX_STACK_PUSH("*::closure","nape/phys/Body.hx",640);
 							{
 								HX_STACK_LINE(640)
@@ -10101,7 +9814,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_kinematicVel,return )
 									HX_STACK_LINE(640)
 									::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 									HX_STACK_LINE(640)
-									if (((_this1->_validate_dyn() != null()))){
+									if (((_this1->_validate != null()))){
 										HX_STACK_LINE(640)
 										_this1->_validate();
 									}
@@ -10123,16 +9836,13 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_kinematicVel,return )
 							HX_STACK_LINE(640)
 							{
 							}
-							HX_STACK_LINE(640)
-							{
-							}
 						}
 						HX_STACK_LINE(640)
 						{
 							HX_STACK_LINE(640)
 							::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 							HX_STACK_LINE(640)
-							if (((_this1->_invalidate_dyn() != null()))){
+							if (((_this1->_invalidate != null()))){
 								HX_STACK_LINE(640)
 								_this1->_invalidate(_this1);
 							}
@@ -10165,7 +9875,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_kinematicVel,return )
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(640)
-					if (((_this1->_isimmutable_dyn() != null()))){
+					if (((_this1->_isimmutable != null()))){
 						HX_STACK_LINE(640)
 						_this1->_isimmutable();
 					}
@@ -10186,9 +9896,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_kinematicVel,return )
 					HX_STACK_LINE(640)
 					::nape::geom::Vec2 o = vector;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(640)
-					{
-					}
-					HX_STACK_LINE(640)
 					o->zpp_pool = null();
 					HX_STACK_LINE(640)
 					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -10208,9 +9915,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_kinematicVel,return )
 				{
 					HX_STACK_LINE(640)
 					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(640)
-					{
-					}
 					HX_STACK_LINE(640)
 					{
 						HX_STACK_LINE(640)
@@ -10294,7 +9998,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_kinematicVel,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(646)
-				if (((_this->_isimmutable_dyn() != null()))){
+				if (((_this->_isimmutable != null()))){
 					HX_STACK_LINE(646)
 					_this->_isimmutable();
 				}
@@ -10315,9 +10019,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_kinematicVel,return )
 				HX_STACK_LINE(646)
 				::nape::geom::Vec2 o = targetPosition;		HX_STACK_VAR(o,"o");
 				HX_STACK_LINE(646)
-				{
-				}
-				HX_STACK_LINE(646)
 				o->zpp_pool = null();
 				HX_STACK_LINE(646)
 				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -10337,9 +10038,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_kinematicVel,return )
 			{
 				HX_STACK_LINE(646)
 				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(646)
-				{
-				}
 				HX_STACK_LINE(646)
 				{
 					HX_STACK_LINE(646)
@@ -10431,7 +10129,7 @@ HX_DEFINE_DYNAMIC_FUNC3(Body_obj,setVelocityFromTarget,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(608)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(608)
 					_this1->_isimmutable();
 				}
@@ -10442,7 +10140,7 @@ HX_DEFINE_DYNAMIC_FUNC3(Body_obj,setVelocityFromTarget,return )
 				hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 			}
 			struct _Function_3_2{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &velocity,::nape::geom::Vec2 &_this){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &velocity,::nape::geom::Vec2 _this){
 					HX_STACK_PUSH("*::closure","nape/phys/Body.hx",608);
 					{
 						struct _Function_4_1{
@@ -10459,7 +10157,7 @@ HX_DEFINE_DYNAMIC_FUNC3(Body_obj,setVelocityFromTarget,return )
 										HX_STACK_LINE(608)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = velocity->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(608)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(608)
 											_this1->_validate();
 										}
@@ -10484,7 +10182,7 @@ HX_DEFINE_DYNAMIC_FUNC3(Body_obj,setVelocityFromTarget,return )
 										HX_STACK_LINE(608)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = velocity->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(608)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(608)
 											_this1->_validate();
 										}
@@ -10513,7 +10211,7 @@ HX_DEFINE_DYNAMIC_FUNC3(Body_obj,setVelocityFromTarget,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(608)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(608)
 								_this1->_isimmutable();
 							}
@@ -10524,7 +10222,7 @@ HX_DEFINE_DYNAMIC_FUNC3(Body_obj,setVelocityFromTarget,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 						}
 						struct _Function_4_3{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/phys/Body.hx",608);
 								{
 									HX_STACK_LINE(608)
@@ -10537,7 +10235,7 @@ HX_DEFINE_DYNAMIC_FUNC3(Body_obj,setVelocityFromTarget,return )
 										HX_STACK_LINE(608)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(608)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(608)
 											_this1->_validate();
 										}
@@ -10549,7 +10247,7 @@ HX_DEFINE_DYNAMIC_FUNC3(Body_obj,setVelocityFromTarget,return )
 							}
 						};
 						struct _Function_4_4{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/phys/Body.hx",608);
 								{
 									HX_STACK_LINE(608)
@@ -10562,7 +10260,7 @@ HX_DEFINE_DYNAMIC_FUNC3(Body_obj,setVelocityFromTarget,return )
 										HX_STACK_LINE(608)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(608)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(608)
 											_this1->_validate();
 										}
@@ -10584,16 +10282,13 @@ HX_DEFINE_DYNAMIC_FUNC3(Body_obj,setVelocityFromTarget,return )
 								HX_STACK_LINE(608)
 								{
 								}
-								HX_STACK_LINE(608)
-								{
-								}
 							}
 							HX_STACK_LINE(608)
 							{
 								HX_STACK_LINE(608)
 								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(608)
-								if (((_this1->_invalidate_dyn() != null()))){
+								if (((_this1->_invalidate != null()))){
 									HX_STACK_LINE(608)
 									_this1->_invalidate(_this1);
 								}
@@ -10626,7 +10321,7 @@ HX_DEFINE_DYNAMIC_FUNC3(Body_obj,setVelocityFromTarget,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(608)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(608)
 							_this1->_isimmutable();
 						}
@@ -10647,9 +10342,6 @@ HX_DEFINE_DYNAMIC_FUNC3(Body_obj,setVelocityFromTarget,return )
 						HX_STACK_LINE(608)
 						::nape::geom::Vec2 o = velocity;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(608)
-						{
-						}
-						HX_STACK_LINE(608)
 						o->zpp_pool = null();
 						HX_STACK_LINE(608)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -10669,9 +10361,6 @@ HX_DEFINE_DYNAMIC_FUNC3(Body_obj,setVelocityFromTarget,return )
 					{
 						HX_STACK_LINE(608)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(608)
-						{
-						}
 						HX_STACK_LINE(608)
 						{
 							HX_STACK_LINE(608)
@@ -10797,7 +10486,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_velocity,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(579)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(579)
 					_this1->_isimmutable();
 				}
@@ -10808,7 +10497,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_velocity,return )
 				hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 			}
 			struct _Function_3_2{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &position,::nape::geom::Vec2 &_this){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &position,::nape::geom::Vec2 _this){
 					HX_STACK_PUSH("*::closure","nape/phys/Body.hx",579);
 					{
 						struct _Function_4_1{
@@ -10825,7 +10514,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_velocity,return )
 										HX_STACK_LINE(579)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = position->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(579)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(579)
 											_this1->_validate();
 										}
@@ -10850,7 +10539,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_velocity,return )
 										HX_STACK_LINE(579)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = position->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(579)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(579)
 											_this1->_validate();
 										}
@@ -10879,7 +10568,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_velocity,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(579)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(579)
 								_this1->_isimmutable();
 							}
@@ -10890,7 +10579,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_velocity,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 						}
 						struct _Function_4_3{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/phys/Body.hx",579);
 								{
 									HX_STACK_LINE(579)
@@ -10903,7 +10592,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_velocity,return )
 										HX_STACK_LINE(579)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(579)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(579)
 											_this1->_validate();
 										}
@@ -10915,7 +10604,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_velocity,return )
 							}
 						};
 						struct _Function_4_4{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/phys/Body.hx",579);
 								{
 									HX_STACK_LINE(579)
@@ -10928,7 +10617,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_velocity,return )
 										HX_STACK_LINE(579)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(579)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(579)
 											_this1->_validate();
 										}
@@ -10950,16 +10639,13 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_velocity,return )
 								HX_STACK_LINE(579)
 								{
 								}
-								HX_STACK_LINE(579)
-								{
-								}
 							}
 							HX_STACK_LINE(579)
 							{
 								HX_STACK_LINE(579)
 								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(579)
-								if (((_this1->_invalidate_dyn() != null()))){
+								if (((_this1->_invalidate != null()))){
 									HX_STACK_LINE(579)
 									_this1->_invalidate(_this1);
 								}
@@ -10992,7 +10678,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_velocity,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(579)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(579)
 							_this1->_isimmutable();
 						}
@@ -11013,9 +10699,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_velocity,return )
 						HX_STACK_LINE(579)
 						::nape::geom::Vec2 o = position;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(579)
-						{
-						}
-						HX_STACK_LINE(579)
 						o->zpp_pool = null();
 						HX_STACK_LINE(579)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -11035,9 +10718,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_velocity,return )
 					{
 						HX_STACK_LINE(579)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(579)
-						{
-						}
 						HX_STACK_LINE(579)
 						{
 							HX_STACK_LINE(579)
@@ -11348,17 +11028,11 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,isStatic,return )
 		HX_STACK_LINE(307)
 		if (((delta != (int)0))){
 			HX_STACK_LINE(307)
-			{
-			}
-			HX_STACK_LINE(307)
 			cur->sweepTime = deltaTime;
 			HX_STACK_LINE(307)
 			{
 				HX_STACK_LINE(307)
 				Float t = delta;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(307)
-				{
-				}
 				HX_STACK_LINE(307)
 				hx::AddEq(cur->posx,(cur->velx * t));
 				HX_STACK_LINE(307)
@@ -11376,9 +11050,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,isStatic,return )
 					cur->axisx = ::Math_obj::sin(cur->rot);
 					HX_STACK_LINE(307)
 					cur->axisy = ::Math_obj::cos(cur->rot);
-					HX_STACK_LINE(307)
-					{
-					}
 					HX_STACK_LINE(307)
 					Dynamic();
 				}
@@ -11585,7 +11256,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_isBullet,return )
 			}
 		};
 		HX_STACK_LINE(206)
-		if (((Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_2_1::Block()).Add(_Function_2_2::Block()).Add(_Function_2_3::Block())->__get(this->zpp_inner->type) != type))){
+		if (((Array_obj< ::Dynamic >::__new().Add(null()).Add(_Function_2_1::Block()).Add(_Function_2_2::Block()).Add(_Function_2_3::Block())->__get(this->zpp_inner->type).StaticCast< ::nape::phys::BodyType >() != type))){
 			HX_STACK_LINE(208)
 			if (((type == null()))){
 				HX_STACK_LINE(208)
@@ -11639,9 +11310,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_isBullet,return )
 					this->zpp_inner->velx = (int)0;
 					HX_STACK_LINE(214)
 					this->zpp_inner->vely = (int)0;
-					HX_STACK_LINE(215)
-					{
-					}
 					HX_STACK_LINE(223)
 					{
 					}
@@ -11720,7 +11388,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Body_obj,get_isBullet,return )
 		}
 	};
 	HX_STACK_LINE(239)
-	return Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_1_1::Block()).Add(_Function_1_2::Block()).Add(_Function_1_3::Block())->__get(this->zpp_inner->type);
+	return Array_obj< ::Dynamic >::__new().Add(null()).Add(_Function_1_1::Block()).Add(_Function_1_2::Block()).Add(_Function_1_3::Block())->__get(this->zpp_inner->type).StaticCast< ::nape::phys::BodyType >();
 }
 
 
@@ -11787,7 +11455,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Body_obj,set_type,return )
 		}
 	};
 	HX_STACK_LINE(197)
-	return Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_1_1::Block()).Add(_Function_1_2::Block()).Add(_Function_1_3::Block())->__get(this->zpp_inner->type);
+	return Array_obj< ::Dynamic >::__new().Add(null()).Add(_Function_1_1::Block()).Add(_Function_1_2::Block()).Add(_Function_1_3::Block())->__get(this->zpp_inner->type).StaticCast< ::nape::phys::BodyType >();
 }
 
 
@@ -11801,39 +11469,6 @@ Body_obj::Body_obj()
 void Body_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(Body);
-	HX_MARK_MEMBER_NAME(worldCOM,"worldCOM");
-	HX_MARK_MEMBER_NAME(localCOM,"localCOM");
-	HX_MARK_MEMBER_NAME(inertia,"inertia");
-	HX_MARK_MEMBER_NAME(constraintInertia,"constraintInertia");
-	HX_MARK_MEMBER_NAME(inertiaMode,"inertiaMode");
-	HX_MARK_MEMBER_NAME(gravMassScale,"gravMassScale");
-	HX_MARK_MEMBER_NAME(gravMass,"gravMass");
-	HX_MARK_MEMBER_NAME(gravMassMode,"gravMassMode");
-	HX_MARK_MEMBER_NAME(mass,"mass");
-	HX_MARK_MEMBER_NAME(constraintMass,"constraintMass");
-	HX_MARK_MEMBER_NAME(massMode,"massMode");
-	HX_MARK_MEMBER_NAME(allowRotation,"allowRotation");
-	HX_MARK_MEMBER_NAME(allowMovement,"allowMovement");
-	HX_MARK_MEMBER_NAME(bounds,"bounds");
-	HX_MARK_MEMBER_NAME(torque,"torque");
-	HX_MARK_MEMBER_NAME(kinAngVel,"kinAngVel");
-	HX_MARK_MEMBER_NAME(angularVel,"angularVel");
-	HX_MARK_MEMBER_NAME(rotation,"rotation");
-	HX_MARK_MEMBER_NAME(constraintVelocity,"constraintVelocity");
-	HX_MARK_MEMBER_NAME(force,"force");
-	HX_MARK_MEMBER_NAME(surfaceVel,"surfaceVel");
-	HX_MARK_MEMBER_NAME(kinematicVel,"kinematicVel");
-	HX_MARK_MEMBER_NAME(velocity,"velocity");
-	HX_MARK_MEMBER_NAME(position,"position");
-	HX_MARK_MEMBER_NAME(constraints,"constraints");
-	HX_MARK_MEMBER_NAME(isSleeping,"isSleeping");
-	HX_MARK_MEMBER_NAME(arbiters,"arbiters");
-	HX_MARK_MEMBER_NAME(space,"space");
-	HX_MARK_MEMBER_NAME(compound,"compound");
-	HX_MARK_MEMBER_NAME(shapes,"shapes");
-	HX_MARK_MEMBER_NAME(disableCCD,"disableCCD");
-	HX_MARK_MEMBER_NAME(isBullet,"isBullet");
-	HX_MARK_MEMBER_NAME(type,"type");
 	HX_MARK_MEMBER_NAME(debugDraw,"debugDraw");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	super::__Mark(HX_MARK_ARG);
@@ -11842,39 +11477,6 @@ void Body_obj::__Mark(HX_MARK_PARAMS)
 
 void Body_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(worldCOM,"worldCOM");
-	HX_VISIT_MEMBER_NAME(localCOM,"localCOM");
-	HX_VISIT_MEMBER_NAME(inertia,"inertia");
-	HX_VISIT_MEMBER_NAME(constraintInertia,"constraintInertia");
-	HX_VISIT_MEMBER_NAME(inertiaMode,"inertiaMode");
-	HX_VISIT_MEMBER_NAME(gravMassScale,"gravMassScale");
-	HX_VISIT_MEMBER_NAME(gravMass,"gravMass");
-	HX_VISIT_MEMBER_NAME(gravMassMode,"gravMassMode");
-	HX_VISIT_MEMBER_NAME(mass,"mass");
-	HX_VISIT_MEMBER_NAME(constraintMass,"constraintMass");
-	HX_VISIT_MEMBER_NAME(massMode,"massMode");
-	HX_VISIT_MEMBER_NAME(allowRotation,"allowRotation");
-	HX_VISIT_MEMBER_NAME(allowMovement,"allowMovement");
-	HX_VISIT_MEMBER_NAME(bounds,"bounds");
-	HX_VISIT_MEMBER_NAME(torque,"torque");
-	HX_VISIT_MEMBER_NAME(kinAngVel,"kinAngVel");
-	HX_VISIT_MEMBER_NAME(angularVel,"angularVel");
-	HX_VISIT_MEMBER_NAME(rotation,"rotation");
-	HX_VISIT_MEMBER_NAME(constraintVelocity,"constraintVelocity");
-	HX_VISIT_MEMBER_NAME(force,"force");
-	HX_VISIT_MEMBER_NAME(surfaceVel,"surfaceVel");
-	HX_VISIT_MEMBER_NAME(kinematicVel,"kinematicVel");
-	HX_VISIT_MEMBER_NAME(velocity,"velocity");
-	HX_VISIT_MEMBER_NAME(position,"position");
-	HX_VISIT_MEMBER_NAME(constraints,"constraints");
-	HX_VISIT_MEMBER_NAME(isSleeping,"isSleeping");
-	HX_VISIT_MEMBER_NAME(arbiters,"arbiters");
-	HX_VISIT_MEMBER_NAME(space,"space");
-	HX_VISIT_MEMBER_NAME(compound,"compound");
-	HX_VISIT_MEMBER_NAME(shapes,"shapes");
-	HX_VISIT_MEMBER_NAME(disableCCD,"disableCCD");
-	HX_VISIT_MEMBER_NAME(isBullet,"isBullet");
-	HX_VISIT_MEMBER_NAME(type,"type");
 	HX_VISIT_MEMBER_NAME(debugDraw,"debugDraw");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 	super::__Visit(HX_VISIT_ARG);
@@ -11884,45 +11486,45 @@ Dynamic Body_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 4:
-		if (HX_FIELD_EQ(inName,"mass") ) { return inCallProp ? get_mass() : mass; }
+		if (HX_FIELD_EQ(inName,"mass") ) { return get_mass(); }
 		if (HX_FIELD_EQ(inName,"copy") ) { return copy_dyn(); }
-		if (HX_FIELD_EQ(inName,"type") ) { return inCallProp ? get_type() : type; }
+		if (HX_FIELD_EQ(inName,"type") ) { return get_type(); }
 		break;
 	case 5:
 		if (HX_FIELD_EQ(inName,"align") ) { return align_dyn(); }
-		if (HX_FIELD_EQ(inName,"force") ) { return inCallProp ? get_force() : force; }
-		if (HX_FIELD_EQ(inName,"space") ) { return inCallProp ? get_space() : space; }
+		if (HX_FIELD_EQ(inName,"force") ) { return get_force(); }
+		if (HX_FIELD_EQ(inName,"space") ) { return get_space(); }
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"rotate") ) { return rotate_dyn(); }
-		if (HX_FIELD_EQ(inName,"bounds") ) { return inCallProp ? get_bounds() : bounds; }
-		if (HX_FIELD_EQ(inName,"torque") ) { return inCallProp ? get_torque() : torque; }
-		if (HX_FIELD_EQ(inName,"shapes") ) { return inCallProp ? get_shapes() : shapes; }
+		if (HX_FIELD_EQ(inName,"bounds") ) { return get_bounds(); }
+		if (HX_FIELD_EQ(inName,"torque") ) { return get_torque(); }
+		if (HX_FIELD_EQ(inName,"shapes") ) { return get_shapes(); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"inertia") ) { return inCallProp ? get_inertia() : inertia; }
+		if (HX_FIELD_EQ(inName,"inertia") ) { return get_inertia(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
 		if (HX_FIELD_EQ(inName,"contains") ) { return contains_dyn(); }
-		if (HX_FIELD_EQ(inName,"worldCOM") ) { return inCallProp ? get_worldCOM() : worldCOM; }
-		if (HX_FIELD_EQ(inName,"localCOM") ) { return inCallProp ? get_localCOM() : localCOM; }
-		if (HX_FIELD_EQ(inName,"gravMass") ) { return inCallProp ? get_gravMass() : gravMass; }
+		if (HX_FIELD_EQ(inName,"worldCOM") ) { return get_worldCOM(); }
+		if (HX_FIELD_EQ(inName,"localCOM") ) { return get_localCOM(); }
+		if (HX_FIELD_EQ(inName,"gravMass") ) { return get_gravMass(); }
 		if (HX_FIELD_EQ(inName,"set_mass") ) { return set_mass_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_mass") ) { return get_mass_dyn(); }
-		if (HX_FIELD_EQ(inName,"massMode") ) { return inCallProp ? get_massMode() : massMode; }
-		if (HX_FIELD_EQ(inName,"rotation") ) { return inCallProp ? get_rotation() : rotation; }
-		if (HX_FIELD_EQ(inName,"velocity") ) { return inCallProp ? get_velocity() : velocity; }
-		if (HX_FIELD_EQ(inName,"position") ) { return inCallProp ? get_position() : position; }
-		if (HX_FIELD_EQ(inName,"arbiters") ) { return inCallProp ? get_arbiters() : arbiters; }
-		if (HX_FIELD_EQ(inName,"compound") ) { return inCallProp ? get_compound() : compound; }
+		if (HX_FIELD_EQ(inName,"massMode") ) { return get_massMode(); }
+		if (HX_FIELD_EQ(inName,"rotation") ) { return get_rotation(); }
+		if (HX_FIELD_EQ(inName,"velocity") ) { return get_velocity(); }
+		if (HX_FIELD_EQ(inName,"position") ) { return get_position(); }
+		if (HX_FIELD_EQ(inName,"arbiters") ) { return get_arbiters(); }
+		if (HX_FIELD_EQ(inName,"compound") ) { return get_compound(); }
 		if (HX_FIELD_EQ(inName,"isStatic") ) { return isStatic_dyn(); }
-		if (HX_FIELD_EQ(inName,"isBullet") ) { return inCallProp ? get_isBullet() : isBullet; }
+		if (HX_FIELD_EQ(inName,"isBullet") ) { return get_isBullet(); }
 		if (HX_FIELD_EQ(inName,"set_type") ) { return set_type_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_type") ) { return get_type_dyn(); }
 		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"kinAngVel") ) { return inCallProp ? get_kinAngVel() : kinAngVel; }
+		if (HX_FIELD_EQ(inName,"kinAngVel") ) { return get_kinAngVel(); }
 		if (HX_FIELD_EQ(inName,"set_force") ) { return set_force_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_force") ) { return get_force_dyn(); }
 		if (HX_FIELD_EQ(inName,"set_space") ) { return set_space_dyn(); }
@@ -11936,11 +11538,11 @@ Dynamic Body_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"get_bounds") ) { return get_bounds_dyn(); }
 		if (HX_FIELD_EQ(inName,"set_torque") ) { return set_torque_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_torque") ) { return get_torque_dyn(); }
-		if (HX_FIELD_EQ(inName,"angularVel") ) { return inCallProp ? get_angularVel() : angularVel; }
-		if (HX_FIELD_EQ(inName,"surfaceVel") ) { return inCallProp ? get_surfaceVel() : surfaceVel; }
-		if (HX_FIELD_EQ(inName,"isSleeping") ) { return inCallProp ? get_isSleeping() : isSleeping; }
+		if (HX_FIELD_EQ(inName,"angularVel") ) { return get_angularVel(); }
+		if (HX_FIELD_EQ(inName,"surfaceVel") ) { return get_surfaceVel(); }
+		if (HX_FIELD_EQ(inName,"isSleeping") ) { return get_isSleeping(); }
 		if (HX_FIELD_EQ(inName,"get_shapes") ) { return get_shapes_dyn(); }
-		if (HX_FIELD_EQ(inName,"disableCCD") ) { return inCallProp ? get_disableCCD() : disableCCD; }
+		if (HX_FIELD_EQ(inName,"disableCCD") ) { return get_disableCCD(); }
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"dragImpulse") ) { return dragImpulse_dyn(); }
@@ -11948,8 +11550,8 @@ Dynamic Body_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"crushFactor") ) { return crushFactor_dyn(); }
 		if (HX_FIELD_EQ(inName,"set_inertia") ) { return set_inertia_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_inertia") ) { return get_inertia_dyn(); }
-		if (HX_FIELD_EQ(inName,"inertiaMode") ) { return inCallProp ? get_inertiaMode() : inertiaMode; }
-		if (HX_FIELD_EQ(inName,"constraints") ) { return inCallProp ? get_constraints() : constraints; }
+		if (HX_FIELD_EQ(inName,"inertiaMode") ) { return get_inertiaMode(); }
+		if (HX_FIELD_EQ(inName,"constraints") ) { return get_constraints(); }
 		if (HX_FIELD_EQ(inName,"isKinematic") ) { return isKinematic_dyn(); }
 		break;
 	case 12:
@@ -11960,12 +11562,12 @@ Dynamic Body_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"applyImpulse") ) { return applyImpulse_dyn(); }
 		if (HX_FIELD_EQ(inName,"set_gravMass") ) { return set_gravMass_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_gravMass") ) { return get_gravMass_dyn(); }
-		if (HX_FIELD_EQ(inName,"gravMassMode") ) { return inCallProp ? get_gravMassMode() : gravMassMode; }
+		if (HX_FIELD_EQ(inName,"gravMassMode") ) { return get_gravMassMode(); }
 		if (HX_FIELD_EQ(inName,"set_massMode") ) { return set_massMode_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_massMode") ) { return get_massMode_dyn(); }
 		if (HX_FIELD_EQ(inName,"set_rotation") ) { return set_rotation_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_rotation") ) { return get_rotation_dyn(); }
-		if (HX_FIELD_EQ(inName,"kinematicVel") ) { return inCallProp ? get_kinematicVel() : kinematicVel; }
+		if (HX_FIELD_EQ(inName,"kinematicVel") ) { return get_kinematicVel(); }
 		if (HX_FIELD_EQ(inName,"set_velocity") ) { return set_velocity_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_velocity") ) { return get_velocity_dyn(); }
 		if (HX_FIELD_EQ(inName,"set_position") ) { return set_position_dyn(); }
@@ -11978,16 +11580,16 @@ Dynamic Body_obj::__Field(const ::String &inName,bool inCallProp)
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"normalImpulse") ) { return normalImpulse_dyn(); }
-		if (HX_FIELD_EQ(inName,"gravMassScale") ) { return inCallProp ? get_gravMassScale() : gravMassScale; }
-		if (HX_FIELD_EQ(inName,"allowRotation") ) { return inCallProp ? get_allowRotation() : allowRotation; }
-		if (HX_FIELD_EQ(inName,"allowMovement") ) { return inCallProp ? get_allowMovement() : allowMovement; }
+		if (HX_FIELD_EQ(inName,"gravMassScale") ) { return get_gravMassScale(); }
+		if (HX_FIELD_EQ(inName,"allowRotation") ) { return get_allowRotation(); }
+		if (HX_FIELD_EQ(inName,"allowMovement") ) { return get_allowMovement(); }
 		if (HX_FIELD_EQ(inName,"set_kinAngVel") ) { return set_kinAngVel_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_kinAngVel") ) { return get_kinAngVel_dyn(); }
 		break;
 	case 14:
 		if (HX_FIELD_EQ(inName,"rollingImpulse") ) { return rollingImpulse_dyn(); }
 		if (HX_FIELD_EQ(inName,"tangentImpulse") ) { return tangentImpulse_dyn(); }
-		if (HX_FIELD_EQ(inName,"constraintMass") ) { return inCallProp ? get_constraintMass() : constraintMass; }
+		if (HX_FIELD_EQ(inName,"constraintMass") ) { return get_constraintMass(); }
 		if (HX_FIELD_EQ(inName,"set_angularVel") ) { return set_angularVel_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_angularVel") ) { return get_angularVel_dyn(); }
 		if (HX_FIELD_EQ(inName,"set_surfaceVel") ) { return set_surfaceVel_dyn(); }
@@ -12018,7 +11620,7 @@ Dynamic Body_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"worldPointToLocal") ) { return worldPointToLocal_dyn(); }
 		if (HX_FIELD_EQ(inName,"localPointToWorld") ) { return localPointToWorld_dyn(); }
 		if (HX_FIELD_EQ(inName,"interactingBodies") ) { return interactingBodies_dyn(); }
-		if (HX_FIELD_EQ(inName,"constraintInertia") ) { return inCallProp ? get_constraintInertia() : constraintInertia; }
+		if (HX_FIELD_EQ(inName,"constraintInertia") ) { return get_constraintInertia(); }
 		if (HX_FIELD_EQ(inName,"set_gravMassScale") ) { return set_gravMassScale_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_gravMassScale") ) { return get_gravMassScale_dyn(); }
 		if (HX_FIELD_EQ(inName,"set_allowRotation") ) { return set_allowRotation_dyn(); }
@@ -12031,7 +11633,7 @@ Dynamic Body_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"worldVectorToLocal") ) { return worldVectorToLocal_dyn(); }
 		if (HX_FIELD_EQ(inName,"localVectorToWorld") ) { return localVectorToWorld_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_constraintMass") ) { return get_constraintMass_dyn(); }
-		if (HX_FIELD_EQ(inName,"constraintVelocity") ) { return inCallProp ? get_constraintVelocity() : constraintVelocity; }
+		if (HX_FIELD_EQ(inName,"constraintVelocity") ) { return get_constraintVelocity(); }
 		break;
 	case 19:
 		if (HX_FIELD_EQ(inName,"applyAngularImpulse") ) { return applyAngularImpulse_dyn(); }
@@ -12056,65 +11658,49 @@ Dynamic Body_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool 
 {
 	switch(inName.length) {
 	case 4:
-		if (HX_FIELD_EQ(inName,"mass") ) { if (inCallProp) return set_mass(inValue);mass=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"type") ) { if (inCallProp) return set_type(inValue);type=inValue.Cast< ::nape::phys::BodyType >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"mass") ) { return set_mass(inValue); }
+		if (HX_FIELD_EQ(inName,"type") ) { return set_type(inValue); }
 		break;
 	case 5:
-		if (HX_FIELD_EQ(inName,"force") ) { if (inCallProp) return set_force(inValue);force=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"space") ) { if (inCallProp) return set_space(inValue);space=inValue.Cast< ::nape::space::Space >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"force") ) { return set_force(inValue); }
+		if (HX_FIELD_EQ(inName,"space") ) { return set_space(inValue); }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"bounds") ) { bounds=inValue.Cast< ::nape::geom::AABB >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"torque") ) { if (inCallProp) return set_torque(inValue);torque=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"shapes") ) { shapes=inValue.Cast< ::nape::shape::ShapeList >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"torque") ) { return set_torque(inValue); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"inertia") ) { if (inCallProp) return set_inertia(inValue);inertia=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"inertia") ) { return set_inertia(inValue); }
 		break;
 	case 8:
-		if (HX_FIELD_EQ(inName,"worldCOM") ) { worldCOM=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"localCOM") ) { localCOM=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"gravMass") ) { if (inCallProp) return set_gravMass(inValue);gravMass=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"massMode") ) { if (inCallProp) return set_massMode(inValue);massMode=inValue.Cast< ::nape::phys::MassMode >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"rotation") ) { if (inCallProp) return set_rotation(inValue);rotation=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"velocity") ) { if (inCallProp) return set_velocity(inValue);velocity=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"position") ) { if (inCallProp) return set_position(inValue);position=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"arbiters") ) { arbiters=inValue.Cast< ::nape::dynamics::ArbiterList >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"compound") ) { if (inCallProp) return set_compound(inValue);compound=inValue.Cast< ::nape::phys::Compound >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"isBullet") ) { if (inCallProp) return set_isBullet(inValue);isBullet=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"gravMass") ) { return set_gravMass(inValue); }
+		if (HX_FIELD_EQ(inName,"massMode") ) { return set_massMode(inValue); }
+		if (HX_FIELD_EQ(inName,"rotation") ) { return set_rotation(inValue); }
+		if (HX_FIELD_EQ(inName,"velocity") ) { return set_velocity(inValue); }
+		if (HX_FIELD_EQ(inName,"position") ) { return set_position(inValue); }
+		if (HX_FIELD_EQ(inName,"compound") ) { return set_compound(inValue); }
+		if (HX_FIELD_EQ(inName,"isBullet") ) { return set_isBullet(inValue); }
 		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"kinAngVel") ) { if (inCallProp) return set_kinAngVel(inValue);kinAngVel=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"kinAngVel") ) { return set_kinAngVel(inValue); }
 		if (HX_FIELD_EQ(inName,"debugDraw") ) { debugDraw=inValue.Cast< bool >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::phys::ZPP_Body >(); return inValue; }
 		break;
 	case 10:
-		if (HX_FIELD_EQ(inName,"angularVel") ) { if (inCallProp) return set_angularVel(inValue);angularVel=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"surfaceVel") ) { if (inCallProp) return set_surfaceVel(inValue);surfaceVel=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"isSleeping") ) { isSleeping=inValue.Cast< bool >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"disableCCD") ) { if (inCallProp) return set_disableCCD(inValue);disableCCD=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"angularVel") ) { return set_angularVel(inValue); }
+		if (HX_FIELD_EQ(inName,"surfaceVel") ) { return set_surfaceVel(inValue); }
+		if (HX_FIELD_EQ(inName,"disableCCD") ) { return set_disableCCD(inValue); }
 		break;
 	case 11:
-		if (HX_FIELD_EQ(inName,"inertiaMode") ) { if (inCallProp) return set_inertiaMode(inValue);inertiaMode=inValue.Cast< ::nape::phys::InertiaMode >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"constraints") ) { constraints=inValue.Cast< ::nape::constraint::ConstraintList >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"inertiaMode") ) { return set_inertiaMode(inValue); }
 		break;
 	case 12:
-		if (HX_FIELD_EQ(inName,"gravMassMode") ) { if (inCallProp) return set_gravMassMode(inValue);gravMassMode=inValue.Cast< ::nape::phys::GravMassMode >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"kinematicVel") ) { if (inCallProp) return set_kinematicVel(inValue);kinematicVel=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"gravMassMode") ) { return set_gravMassMode(inValue); }
+		if (HX_FIELD_EQ(inName,"kinematicVel") ) { return set_kinematicVel(inValue); }
 		break;
 	case 13:
-		if (HX_FIELD_EQ(inName,"gravMassScale") ) { if (inCallProp) return set_gravMassScale(inValue);gravMassScale=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"allowRotation") ) { if (inCallProp) return set_allowRotation(inValue);allowRotation=inValue.Cast< bool >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"allowMovement") ) { if (inCallProp) return set_allowMovement(inValue);allowMovement=inValue.Cast< bool >(); return inValue; }
-		break;
-	case 14:
-		if (HX_FIELD_EQ(inName,"constraintMass") ) { constraintMass=inValue.Cast< Float >(); return inValue; }
-		break;
-	case 17:
-		if (HX_FIELD_EQ(inName,"constraintInertia") ) { constraintInertia=inValue.Cast< Float >(); return inValue; }
-		break;
-	case 18:
-		if (HX_FIELD_EQ(inName,"constraintVelocity") ) { constraintVelocity=inValue.Cast< ::nape::geom::Vec3 >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"gravMassScale") ) { return set_gravMassScale(inValue); }
+		if (HX_FIELD_EQ(inName,"allowRotation") ) { return set_allowRotation(inValue); }
+		if (HX_FIELD_EQ(inName,"allowMovement") ) { return set_allowMovement(inValue); }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -12175,9 +11761,7 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("tangentImpulse"),
 	HX_CSTRING("normalImpulse"),
 	HX_CSTRING("get_worldCOM"),
-	HX_CSTRING("worldCOM"),
 	HX_CSTRING("get_localCOM"),
-	HX_CSTRING("localCOM"),
 	HX_CSTRING("setShapeFluidProperties"),
 	HX_CSTRING("setShapeFilters"),
 	HX_CSTRING("setShapeMaterials"),
@@ -12198,95 +11782,64 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("connectedBodies"),
 	HX_CSTRING("set_inertia"),
 	HX_CSTRING("get_inertia"),
-	HX_CSTRING("inertia"),
 	HX_CSTRING("get_constraintInertia"),
-	HX_CSTRING("constraintInertia"),
 	HX_CSTRING("set_inertiaMode"),
 	HX_CSTRING("get_inertiaMode"),
-	HX_CSTRING("inertiaMode"),
 	HX_CSTRING("set_gravMassScale"),
 	HX_CSTRING("get_gravMassScale"),
-	HX_CSTRING("gravMassScale"),
 	HX_CSTRING("set_gravMass"),
 	HX_CSTRING("get_gravMass"),
-	HX_CSTRING("gravMass"),
 	HX_CSTRING("set_gravMassMode"),
 	HX_CSTRING("get_gravMassMode"),
-	HX_CSTRING("gravMassMode"),
 	HX_CSTRING("set_mass"),
 	HX_CSTRING("get_mass"),
-	HX_CSTRING("mass"),
 	HX_CSTRING("get_constraintMass"),
-	HX_CSTRING("constraintMass"),
 	HX_CSTRING("set_massMode"),
 	HX_CSTRING("get_massMode"),
-	HX_CSTRING("massMode"),
 	HX_CSTRING("set_allowRotation"),
 	HX_CSTRING("get_allowRotation"),
-	HX_CSTRING("allowRotation"),
 	HX_CSTRING("set_allowMovement"),
 	HX_CSTRING("get_allowMovement"),
-	HX_CSTRING("allowMovement"),
 	HX_CSTRING("get_bounds"),
-	HX_CSTRING("bounds"),
 	HX_CSTRING("set_torque"),
 	HX_CSTRING("get_torque"),
-	HX_CSTRING("torque"),
 	HX_CSTRING("set_kinAngVel"),
 	HX_CSTRING("get_kinAngVel"),
-	HX_CSTRING("kinAngVel"),
 	HX_CSTRING("set_angularVel"),
 	HX_CSTRING("get_angularVel"),
-	HX_CSTRING("angularVel"),
 	HX_CSTRING("set_rotation"),
 	HX_CSTRING("get_rotation"),
-	HX_CSTRING("rotation"),
 	HX_CSTRING("get_constraintVelocity"),
-	HX_CSTRING("constraintVelocity"),
 	HX_CSTRING("set_force"),
 	HX_CSTRING("get_force"),
-	HX_CSTRING("force"),
 	HX_CSTRING("set_surfaceVel"),
 	HX_CSTRING("get_surfaceVel"),
-	HX_CSTRING("surfaceVel"),
 	HX_CSTRING("set_kinematicVel"),
 	HX_CSTRING("get_kinematicVel"),
-	HX_CSTRING("kinematicVel"),
 	HX_CSTRING("setVelocityFromTarget"),
 	HX_CSTRING("set_velocity"),
 	HX_CSTRING("get_velocity"),
-	HX_CSTRING("velocity"),
 	HX_CSTRING("set_position"),
 	HX_CSTRING("get_position"),
-	HX_CSTRING("position"),
 	HX_CSTRING("copy"),
 	HX_CSTRING("get_constraints"),
-	HX_CSTRING("constraints"),
 	HX_CSTRING("get_isSleeping"),
-	HX_CSTRING("isSleeping"),
 	HX_CSTRING("get_arbiters"),
-	HX_CSTRING("arbiters"),
 	HX_CSTRING("set_space"),
 	HX_CSTRING("get_space"),
-	HX_CSTRING("space"),
 	HX_CSTRING("set_compound"),
 	HX_CSTRING("get_compound"),
-	HX_CSTRING("compound"),
 	HX_CSTRING("get_shapes"),
-	HX_CSTRING("shapes"),
 	HX_CSTRING("isKinematic"),
 	HX_CSTRING("isDynamic"),
 	HX_CSTRING("isStatic"),
 	HX_CSTRING("integrate"),
 	HX_CSTRING("set_disableCCD"),
 	HX_CSTRING("get_disableCCD"),
-	HX_CSTRING("disableCCD"),
 	HX_CSTRING("set_isBullet"),
 	HX_CSTRING("get_isBullet"),
-	HX_CSTRING("isBullet"),
 	HX_CSTRING("set_type"),
 	HX_CSTRING("get_type"),
-	HX_CSTRING("type"),
 	HX_CSTRING("debugDraw"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
@@ -12303,7 +11856,7 @@ Class Body_obj::__mClass;
 
 void Body_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.phys.Body"), hx::TCanCast< Body_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.phys.Body"), hx::TCanCast< Body_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

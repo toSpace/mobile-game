@@ -8,7 +8,7 @@
 HX_DECLARE_CLASS0(Settings)
 
 
-class Settings_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Settings_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Settings_obj OBJ_;
@@ -28,11 +28,11 @@ class Settings_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("Settings"); }
 
-		static Float brushSize; /* REM */ 
-		static Float flockSpeed; /* REM */ 
-		static Float flockVelocity; /* REM */ 
-		static Float cameraOverflow; /* REM */ 
-		static Float paralaxDepth; /* REM */ 
+		static Float brushSize;
+		static Float flockSpeed;
+		static Float flockVelocity;
+		static Float cameraOverflow;
+		static Float paralaxDepth;
 		static Void load( );
 		static Dynamic load_dyn();
 

@@ -13,7 +13,7 @@ namespace nape{
 namespace callbacks{
 
 
-class ListenerList_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ListenerList_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ListenerList_obj OBJ_;
@@ -84,9 +84,8 @@ class ListenerList_obj : public hx::Object{
 		virtual int get_length( );
 		Dynamic get_length_dyn();
 
-		int length; /* REM */ 
-		::zpp_nape::util::ZPP_ListenerList zpp_inner; /* REM */ 
-		static ::nape::callbacks::ListenerList fromArray( Array< ::nape::callbacks::Listener > array);
+		::zpp_nape::util::ZPP_ListenerList zpp_inner;
+		static ::nape::callbacks::ListenerList fromArray( Array< ::Dynamic > array);
 		static Dynamic fromArray_dyn();
 
 };

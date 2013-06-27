@@ -123,9 +123,6 @@ HX_STACK_PUSH("ZPP_PivotJoint::new","zpp_nape/constraint/PivotJoint.hx",174);
 		this->jAccx = (int)0;
 		HX_STACK_LINE(377)
 		this->jAccy = (int)0;
-		HX_STACK_LINE(378)
-		{
-		}
 		HX_STACK_LINE(386)
 		{
 		}
@@ -140,9 +137,6 @@ HX_STACK_PUSH("ZPP_PivotJoint::new","zpp_nape/constraint/PivotJoint.hx",174);
 			this->a1localx = (int)0;
 			HX_STACK_LINE(399)
 			this->a1localy = (int)0;
-			HX_STACK_LINE(400)
-			{
-			}
 			HX_STACK_LINE(408)
 			{
 			}
@@ -153,9 +147,6 @@ HX_STACK_PUSH("ZPP_PivotJoint::new","zpp_nape/constraint/PivotJoint.hx",174);
 			this->a1relx = (int)0;
 			HX_STACK_LINE(419)
 			this->a1rely = (int)0;
-			HX_STACK_LINE(420)
-			{
-			}
 			HX_STACK_LINE(428)
 			{
 			}
@@ -169,9 +160,6 @@ HX_STACK_PUSH("ZPP_PivotJoint::new","zpp_nape/constraint/PivotJoint.hx",174);
 			this->a2localx = (int)0;
 			HX_STACK_LINE(441)
 			this->a2localy = (int)0;
-			HX_STACK_LINE(442)
-			{
-			}
 			HX_STACK_LINE(450)
 			{
 			}
@@ -182,9 +170,6 @@ HX_STACK_PUSH("ZPP_PivotJoint::new","zpp_nape/constraint/PivotJoint.hx",174);
 			this->a2relx = (int)0;
 			HX_STACK_LINE(461)
 			this->a2rely = (int)0;
-			HX_STACK_LINE(462)
-			{
-			}
 			HX_STACK_LINE(470)
 			{
 			}
@@ -213,428 +198,6 @@ Void ZPP_PivotJoint_obj::draw( ::nape::util::Debug g){
 		HX_STACK_PUSH("ZPP_PivotJoint::draw","zpp_nape/constraint/PivotJoint.hx",1342);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(g,"g");
-		HX_STACK_LINE(1343)
-		::nape::constraint::PivotJoint me = this->outer_zn;		HX_STACK_VAR(me,"me");
-		struct _Function_1_1{
-			inline static ::nape::geom::Vec2 Block( ::nape::constraint::PivotJoint &me){
-				HX_STACK_PUSH("*::closure","zpp_nape/constraint/PivotJoint.hx",1344);
-				{
-					HX_STACK_LINE(1344)
-					if (((me->zpp_inner_zn->wrap_a1 == null()))){
-						HX_STACK_LINE(1344)
-						me->zpp_inner_zn->setup_a1();
-					}
-					HX_STACK_LINE(1344)
-					return me->zpp_inner_zn->wrap_a1;
-				}
-				return null();
-			}
-		};
-		HX_STACK_LINE(1344)
-		::nape::geom::Vec2 a1 = ((  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) ))->localPointToWorld(_Function_1_1::Block(me),null());		HX_STACK_VAR(a1,"a1");
-		struct _Function_1_2{
-			inline static ::nape::geom::Vec2 Block( ::nape::constraint::PivotJoint &me){
-				HX_STACK_PUSH("*::closure","zpp_nape/constraint/PivotJoint.hx",1345);
-				{
-					HX_STACK_LINE(1345)
-					if (((me->zpp_inner_zn->wrap_a2 == null()))){
-						HX_STACK_LINE(1345)
-						me->zpp_inner_zn->setup_a2();
-					}
-					HX_STACK_LINE(1345)
-					return me->zpp_inner_zn->wrap_a2;
-				}
-				return null();
-			}
-		};
-		HX_STACK_LINE(1345)
-		::nape::geom::Vec2 a2 = ((  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) ))->localPointToWorld(_Function_1_2::Block(me),null());		HX_STACK_VAR(a2,"a2");
-		HX_STACK_LINE(1346)
-		if ((!(this->stiff))){
-			HX_STACK_LINE(1347)
-			::nape::geom::Vec2 n = a2->sub(a1,null());		HX_STACK_VAR(n,"n");
-			struct _Function_2_1{
-				inline static Float Block( ::nape::geom::Vec2 &n){
-					HX_STACK_PUSH("*::closure","zpp_nape/constraint/PivotJoint.hx",1348);
-					{
-						HX_STACK_LINE(1348)
-						if (((bool((n != null())) && bool(n->zpp_disp)))){
-							HX_STACK_LINE(1348)
-							hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-						}
-						struct _Function_3_1{
-							inline static Float Block( ::nape::geom::Vec2 &n){
-								HX_STACK_PUSH("*::closure","zpp_nape/constraint/PivotJoint.hx",1348);
-								{
-									HX_STACK_LINE(1348)
-									if (((bool((n != null())) && bool(n->zpp_disp)))){
-										HX_STACK_LINE(1348)
-										hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-									}
-									HX_STACK_LINE(1348)
-									{
-										HX_STACK_LINE(1348)
-										::zpp_nape::geom::ZPP_Vec2 _this = n->zpp_inner;		HX_STACK_VAR(_this,"_this");
-										HX_STACK_LINE(1348)
-										if (((_this->_validate_dyn() != null()))){
-											HX_STACK_LINE(1348)
-											_this->_validate();
-										}
-									}
-									HX_STACK_LINE(1348)
-									return n->zpp_inner->x;
-								}
-								return null();
-							}
-						};
-						struct _Function_3_2{
-							inline static Float Block( ::nape::geom::Vec2 &n){
-								HX_STACK_PUSH("*::closure","zpp_nape/constraint/PivotJoint.hx",1348);
-								{
-									HX_STACK_LINE(1348)
-									if (((bool((n != null())) && bool(n->zpp_disp)))){
-										HX_STACK_LINE(1348)
-										hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-									}
-									HX_STACK_LINE(1348)
-									{
-										HX_STACK_LINE(1348)
-										::zpp_nape::geom::ZPP_Vec2 _this = n->zpp_inner;		HX_STACK_VAR(_this,"_this");
-										HX_STACK_LINE(1348)
-										if (((_this->_validate_dyn() != null()))){
-											HX_STACK_LINE(1348)
-											_this->_validate();
-										}
-									}
-									HX_STACK_LINE(1348)
-									return n->zpp_inner->x;
-								}
-								return null();
-							}
-						};
-						struct _Function_3_3{
-							inline static Float Block( ::nape::geom::Vec2 &n){
-								HX_STACK_PUSH("*::closure","zpp_nape/constraint/PivotJoint.hx",1348);
-								{
-									HX_STACK_LINE(1348)
-									if (((bool((n != null())) && bool(n->zpp_disp)))){
-										HX_STACK_LINE(1348)
-										hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-									}
-									HX_STACK_LINE(1348)
-									{
-										HX_STACK_LINE(1348)
-										::zpp_nape::geom::ZPP_Vec2 _this = n->zpp_inner;		HX_STACK_VAR(_this,"_this");
-										HX_STACK_LINE(1348)
-										if (((_this->_validate_dyn() != null()))){
-											HX_STACK_LINE(1348)
-											_this->_validate();
-										}
-									}
-									HX_STACK_LINE(1348)
-									return n->zpp_inner->y;
-								}
-								return null();
-							}
-						};
-						struct _Function_3_4{
-							inline static Float Block( ::nape::geom::Vec2 &n){
-								HX_STACK_PUSH("*::closure","zpp_nape/constraint/PivotJoint.hx",1348);
-								{
-									HX_STACK_LINE(1348)
-									if (((bool((n != null())) && bool(n->zpp_disp)))){
-										HX_STACK_LINE(1348)
-										hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-									}
-									HX_STACK_LINE(1348)
-									{
-										HX_STACK_LINE(1348)
-										::zpp_nape::geom::ZPP_Vec2 _this = n->zpp_inner;		HX_STACK_VAR(_this,"_this");
-										HX_STACK_LINE(1348)
-										if (((_this->_validate_dyn() != null()))){
-											HX_STACK_LINE(1348)
-											_this->_validate();
-										}
-									}
-									HX_STACK_LINE(1348)
-									return n->zpp_inner->y;
-								}
-								return null();
-							}
-						};
-						HX_STACK_LINE(1348)
-						return ::Math_obj::sqrt(((_Function_3_1::Block(n) * _Function_3_2::Block(n)) + (_Function_3_3::Block(n) * _Function_3_4::Block(n))));
-					}
-					return null();
-				}
-			};
-			HX_STACK_LINE(1348)
-			Float nl = _Function_2_1::Block(n);		HX_STACK_VAR(nl,"nl");
-			HX_STACK_LINE(1349)
-			if (((nl != (int)0))){
-				HX_STACK_LINE(1349)
-				g->drawSpring(a1,a2,(int)16711935,null(),null());
-			}
-			HX_STACK_LINE(1350)
-			{
-				HX_STACK_LINE(1350)
-				if (((bool((n != null())) && bool(n->zpp_disp)))){
-					HX_STACK_LINE(1350)
-					hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-				}
-				HX_STACK_LINE(1350)
-				{
-					HX_STACK_LINE(1350)
-					::zpp_nape::geom::ZPP_Vec2 _this = n->zpp_inner;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(1350)
-					if ((_this->_immutable)){
-						HX_STACK_LINE(1350)
-						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-					}
-					HX_STACK_LINE(1350)
-					if (((_this->_isimmutable_dyn() != null()))){
-						HX_STACK_LINE(1350)
-						_this->_isimmutable();
-					}
-				}
-				HX_STACK_LINE(1350)
-				if ((n->zpp_inner->_inuse)){
-					HX_STACK_LINE(1350)
-					hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-				}
-				HX_STACK_LINE(1350)
-				::zpp_nape::geom::ZPP_Vec2 inner = n->zpp_inner;		HX_STACK_VAR(inner,"inner");
-				HX_STACK_LINE(1350)
-				n->zpp_inner->outer = null();
-				HX_STACK_LINE(1350)
-				n->zpp_inner = null();
-				HX_STACK_LINE(1350)
-				{
-					HX_STACK_LINE(1350)
-					::nape::geom::Vec2 o = n;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(1350)
-					{
-					}
-					HX_STACK_LINE(1350)
-					o->zpp_pool = null();
-					HX_STACK_LINE(1350)
-					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-						HX_STACK_LINE(1350)
-						::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o;
-					}
-					else{
-						HX_STACK_LINE(1350)
-						::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o;
-					}
-					HX_STACK_LINE(1350)
-					::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o;
-					HX_STACK_LINE(1350)
-					o->zpp_disp = true;
-				}
-				HX_STACK_LINE(1350)
-				{
-					HX_STACK_LINE(1350)
-					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(1350)
-					{
-					}
-					HX_STACK_LINE(1350)
-					{
-						HX_STACK_LINE(1350)
-						if (((o->outer != null()))){
-							HX_STACK_LINE(1350)
-							o->outer->zpp_inner = null();
-							HX_STACK_LINE(1350)
-							o->outer = null();
-						}
-						HX_STACK_LINE(1350)
-						o->_isimmutable = null();
-						HX_STACK_LINE(1350)
-						o->_validate = null();
-						HX_STACK_LINE(1350)
-						o->_invalidate = null();
-					}
-					HX_STACK_LINE(1350)
-					o->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-					HX_STACK_LINE(1350)
-					::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o;
-				}
-			}
-		}
-		HX_STACK_LINE(1352)
-		g->drawFilledCircle(a1,(int)2,(int)255);
-		HX_STACK_LINE(1353)
-		g->drawFilledCircle(a2,(int)2,(int)16711680);
-		HX_STACK_LINE(1354)
-		{
-			HX_STACK_LINE(1354)
-			if (((bool((a1 != null())) && bool(a1->zpp_disp)))){
-				HX_STACK_LINE(1354)
-				hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-			}
-			HX_STACK_LINE(1354)
-			{
-				HX_STACK_LINE(1354)
-				::zpp_nape::geom::ZPP_Vec2 _this = a1->zpp_inner;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(1354)
-				if ((_this->_immutable)){
-					HX_STACK_LINE(1354)
-					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-				}
-				HX_STACK_LINE(1354)
-				if (((_this->_isimmutable_dyn() != null()))){
-					HX_STACK_LINE(1354)
-					_this->_isimmutable();
-				}
-			}
-			HX_STACK_LINE(1354)
-			if ((a1->zpp_inner->_inuse)){
-				HX_STACK_LINE(1354)
-				hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-			}
-			HX_STACK_LINE(1354)
-			::zpp_nape::geom::ZPP_Vec2 inner = a1->zpp_inner;		HX_STACK_VAR(inner,"inner");
-			HX_STACK_LINE(1354)
-			a1->zpp_inner->outer = null();
-			HX_STACK_LINE(1354)
-			a1->zpp_inner = null();
-			HX_STACK_LINE(1354)
-			{
-				HX_STACK_LINE(1354)
-				::nape::geom::Vec2 o = a1;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(1354)
-				{
-				}
-				HX_STACK_LINE(1354)
-				o->zpp_pool = null();
-				HX_STACK_LINE(1354)
-				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-					HX_STACK_LINE(1354)
-					::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o;
-				}
-				else{
-					HX_STACK_LINE(1354)
-					::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o;
-				}
-				HX_STACK_LINE(1354)
-				::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o;
-				HX_STACK_LINE(1354)
-				o->zpp_disp = true;
-			}
-			HX_STACK_LINE(1354)
-			{
-				HX_STACK_LINE(1354)
-				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(1354)
-				{
-				}
-				HX_STACK_LINE(1354)
-				{
-					HX_STACK_LINE(1354)
-					if (((o->outer != null()))){
-						HX_STACK_LINE(1354)
-						o->outer->zpp_inner = null();
-						HX_STACK_LINE(1354)
-						o->outer = null();
-					}
-					HX_STACK_LINE(1354)
-					o->_isimmutable = null();
-					HX_STACK_LINE(1354)
-					o->_validate = null();
-					HX_STACK_LINE(1354)
-					o->_invalidate = null();
-				}
-				HX_STACK_LINE(1354)
-				o->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-				HX_STACK_LINE(1354)
-				::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o;
-			}
-		}
-		HX_STACK_LINE(1355)
-		{
-			HX_STACK_LINE(1355)
-			if (((bool((a2 != null())) && bool(a2->zpp_disp)))){
-				HX_STACK_LINE(1355)
-				hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-			}
-			HX_STACK_LINE(1355)
-			{
-				HX_STACK_LINE(1355)
-				::zpp_nape::geom::ZPP_Vec2 _this = a2->zpp_inner;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(1355)
-				if ((_this->_immutable)){
-					HX_STACK_LINE(1355)
-					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-				}
-				HX_STACK_LINE(1355)
-				if (((_this->_isimmutable_dyn() != null()))){
-					HX_STACK_LINE(1355)
-					_this->_isimmutable();
-				}
-			}
-			HX_STACK_LINE(1355)
-			if ((a2->zpp_inner->_inuse)){
-				HX_STACK_LINE(1355)
-				hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-			}
-			HX_STACK_LINE(1355)
-			::zpp_nape::geom::ZPP_Vec2 inner = a2->zpp_inner;		HX_STACK_VAR(inner,"inner");
-			HX_STACK_LINE(1355)
-			a2->zpp_inner->outer = null();
-			HX_STACK_LINE(1355)
-			a2->zpp_inner = null();
-			HX_STACK_LINE(1355)
-			{
-				HX_STACK_LINE(1355)
-				::nape::geom::Vec2 o = a2;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(1355)
-				{
-				}
-				HX_STACK_LINE(1355)
-				o->zpp_pool = null();
-				HX_STACK_LINE(1355)
-				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-					HX_STACK_LINE(1355)
-					::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o;
-				}
-				else{
-					HX_STACK_LINE(1355)
-					::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o;
-				}
-				HX_STACK_LINE(1355)
-				::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o;
-				HX_STACK_LINE(1355)
-				o->zpp_disp = true;
-			}
-			HX_STACK_LINE(1355)
-			{
-				HX_STACK_LINE(1355)
-				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(1355)
-				{
-				}
-				HX_STACK_LINE(1355)
-				{
-					HX_STACK_LINE(1355)
-					if (((o->outer != null()))){
-						HX_STACK_LINE(1355)
-						o->outer->zpp_inner = null();
-						HX_STACK_LINE(1355)
-						o->outer = null();
-					}
-					HX_STACK_LINE(1355)
-					o->_isimmutable = null();
-					HX_STACK_LINE(1355)
-					o->_validate = null();
-					HX_STACK_LINE(1355)
-					o->_invalidate = null();
-				}
-				HX_STACK_LINE(1355)
-				o->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-				HX_STACK_LINE(1355)
-				::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o;
-			}
-		}
 	}
 return null();
 }
@@ -690,9 +253,6 @@ bool ZPP_PivotJoint_obj::applyImpulsePos( ){
 	{
 		HX_STACK_LINE(1060)
 		Float t = 0.5;		HX_STACK_VAR(t,"t");
-		HX_STACK_LINE(1061)
-		{
-		}
 		HX_STACK_LINE(1069)
 		hx::MultEq(Ex,t);
 		HX_STACK_LINE(1070)
@@ -716,9 +276,6 @@ bool ZPP_PivotJoint_obj::applyImpulsePos( ){
 				Jx = (-(Ex) * k);
 				HX_STACK_LINE(1080)
 				Jy = (-(Ey) * k);
-				HX_STACK_LINE(1081)
-				{
-				}
 				HX_STACK_LINE(1089)
 				{
 				}
@@ -727,63 +284,22 @@ bool ZPP_PivotJoint_obj::applyImpulsePos( ){
 			{
 				HX_STACK_LINE(1099)
 				int t = (int)20;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(1100)
-				{
-				}
 				HX_STACK_LINE(1108)
 				Float ls = ((Jx * Jx) + (Jy * Jy));		HX_STACK_VAR(ls,"ls");
 				HX_STACK_LINE(1109)
 				if (((ls > (t * t)))){
-					HX_STACK_LINE(1110)
-					{
-					}
-					HX_STACK_LINE(1118)
-					{
-						struct _Function_6_1{
-							inline static Float Block( Float &ls){
-								HX_STACK_PUSH("*::closure","zpp_nape/constraint/PivotJoint.hx",1119);
-								{
-									HX_STACK_LINE(1119)
-									{
-									}
-									struct _Function_7_1{
-										inline static Float Block( Float &ls){
-											HX_STACK_PUSH("*::closure","zpp_nape/constraint/PivotJoint.hx",1119);
-											{
-												HX_STACK_LINE(1119)
-												{
-												}
-												HX_STACK_LINE(1119)
-												return ::Math_obj::sqrt(ls);
-											}
-											return null();
-										}
-									};
-									HX_STACK_LINE(1119)
-									return (Float(1.0) / Float(_Function_7_1::Block(ls)));
-								}
-								return null();
-							}
-						};
-						HX_STACK_LINE(1119)
-						Float t1 = (t * _Function_6_1::Block(ls));		HX_STACK_VAR(t1,"t1");
-						HX_STACK_LINE(1120)
-						{
-						}
-						HX_STACK_LINE(1128)
-						hx::MultEq(Jx,t1);
-						HX_STACK_LINE(1129)
-						hx::MultEq(Jy,t1);
-					}
+					HX_STACK_LINE(1119)
+					Float t1 = (t * ((Float(1.0) / Float(::Math_obj::sqrt(ls)))));		HX_STACK_VAR(t1,"t1");
+					HX_STACK_LINE(1128)
+					hx::MultEq(Jx,t1);
+					HX_STACK_LINE(1129)
+					hx::MultEq(Jy,t1);
 				}
 			}
 			HX_STACK_LINE(1133)
 			{
 				HX_STACK_LINE(1134)
 				Float t = this->b1->imass;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(1135)
-				{
-				}
 				HX_STACK_LINE(1143)
 				hx::SubEq(this->b1->posx,(Jx * t));
 				HX_STACK_LINE(1144)
@@ -793,9 +309,6 @@ bool ZPP_PivotJoint_obj::applyImpulsePos( ){
 			{
 				HX_STACK_LINE(1147)
 				Float t = this->b2->imass;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(1148)
-				{
-				}
 				HX_STACK_LINE(1156)
 				hx::AddEq(this->b2->posx,(Jx * t));
 				HX_STACK_LINE(1157)
@@ -812,9 +325,6 @@ bool ZPP_PivotJoint_obj::applyImpulsePos( ){
 			{
 				HX_STACK_LINE(1164)
 				Float t = 0.5;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(1165)
-				{
-				}
 				HX_STACK_LINE(1173)
 				hx::MultEq(Ex,t);
 				HX_STACK_LINE(1174)
@@ -880,9 +390,6 @@ bool ZPP_PivotJoint_obj::applyImpulsePos( ){
 		Jx = -(Ex);
 		HX_STACK_LINE(1209)
 		Jy = -(Ey);
-		HX_STACK_LINE(1210)
-		{
-		}
 		HX_STACK_LINE(1218)
 		{
 		}
@@ -891,54 +398,16 @@ bool ZPP_PivotJoint_obj::applyImpulsePos( ){
 	{
 		HX_STACK_LINE(1228)
 		int t = (int)6;		HX_STACK_VAR(t,"t");
-		HX_STACK_LINE(1229)
-		{
-		}
 		HX_STACK_LINE(1237)
 		Float ls = ((Jx * Jx) + (Jy * Jy));		HX_STACK_VAR(ls,"ls");
 		HX_STACK_LINE(1238)
 		if (((ls > (t * t)))){
-			HX_STACK_LINE(1239)
-			{
-			}
-			HX_STACK_LINE(1247)
-			{
-				struct _Function_4_1{
-					inline static Float Block( Float &ls){
-						HX_STACK_PUSH("*::closure","zpp_nape/constraint/PivotJoint.hx",1248);
-						{
-							HX_STACK_LINE(1248)
-							{
-							}
-							struct _Function_5_1{
-								inline static Float Block( Float &ls){
-									HX_STACK_PUSH("*::closure","zpp_nape/constraint/PivotJoint.hx",1248);
-									{
-										HX_STACK_LINE(1248)
-										{
-										}
-										HX_STACK_LINE(1248)
-										return ::Math_obj::sqrt(ls);
-									}
-									return null();
-								}
-							};
-							HX_STACK_LINE(1248)
-							return (Float(1.0) / Float(_Function_5_1::Block(ls)));
-						}
-						return null();
-					}
-				};
-				HX_STACK_LINE(1248)
-				Float t1 = (t * _Function_4_1::Block(ls));		HX_STACK_VAR(t1,"t1");
-				HX_STACK_LINE(1249)
-				{
-				}
-				HX_STACK_LINE(1257)
-				hx::MultEq(Jx,t1);
-				HX_STACK_LINE(1258)
-				hx::MultEq(Jy,t1);
-			}
+			HX_STACK_LINE(1248)
+			Float t1 = (t * ((Float(1.0) / Float(::Math_obj::sqrt(ls)))));		HX_STACK_VAR(t1,"t1");
+			HX_STACK_LINE(1257)
+			hx::MultEq(Jx,t1);
+			HX_STACK_LINE(1258)
+			hx::MultEq(Jy,t1);
 		}
 	}
 	HX_STACK_LINE(1262)
@@ -990,9 +459,6 @@ bool ZPP_PivotJoint_obj::applyImpulsePos( ){
 		{
 			HX_STACK_LINE(1281)
 			Float t = this->b1->imass;		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(1282)
-			{
-			}
 			HX_STACK_LINE(1290)
 			hx::SubEq(this->b1->posx,(Jx * t));
 			HX_STACK_LINE(1291)
@@ -1002,9 +468,6 @@ bool ZPP_PivotJoint_obj::applyImpulsePos( ){
 		{
 			HX_STACK_LINE(1294)
 			Float t = this->b2->imass;		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(1295)
-			{
-			}
 			HX_STACK_LINE(1303)
 			hx::AddEq(this->b2->posx,(Jx * t));
 			HX_STACK_LINE(1304)
@@ -1023,9 +486,6 @@ bool ZPP_PivotJoint_obj::applyImpulsePos( ){
 				_this->axisx = ::Math_obj::sin(_this->rot);
 				HX_STACK_LINE(1306)
 				_this->axisy = ::Math_obj::cos(_this->rot);
-				HX_STACK_LINE(1306)
-				{
-				}
 				HX_STACK_LINE(1306)
 				Dynamic();
 			}
@@ -1057,9 +517,6 @@ bool ZPP_PivotJoint_obj::applyImpulsePos( ){
 				_this->axisx = ::Math_obj::sin(_this->rot);
 				HX_STACK_LINE(1307)
 				_this->axisy = ::Math_obj::cos(_this->rot);
-				HX_STACK_LINE(1307)
-				{
-				}
 				HX_STACK_LINE(1307)
 				Dynamic();
 			}
@@ -1122,9 +579,6 @@ bool ZPP_PivotJoint_obj::applyImpulseVel( ){
 	{
 		HX_STACK_LINE(877)
 		Float t = this->gamma;		HX_STACK_VAR(t,"t");
-		HX_STACK_LINE(878)
-		{
-		}
 		HX_STACK_LINE(886)
 		hx::SubEq(Jx,(this->jAccx * t));
 		HX_STACK_LINE(887)
@@ -1142,9 +596,6 @@ bool ZPP_PivotJoint_obj::applyImpulseVel( ){
 			jOldx = this->jAccx;
 			HX_STACK_LINE(894)
 			jOldy = this->jAccy;
-			HX_STACK_LINE(895)
-			{
-			}
 			HX_STACK_LINE(903)
 			{
 			}
@@ -1153,9 +604,6 @@ bool ZPP_PivotJoint_obj::applyImpulseVel( ){
 		{
 			HX_STACK_LINE(913)
 			Float t = 1.0;		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(914)
-			{
-			}
 			HX_STACK_LINE(922)
 			hx::AddEq(this->jAccx,(Jx * t));
 			HX_STACK_LINE(923)
@@ -1174,54 +622,16 @@ bool ZPP_PivotJoint_obj::applyImpulseVel( ){
 			if ((!(this->stiff))){
 				HX_STACK_LINE(930)
 				Float t = this->jMax;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(931)
-				{
-				}
 				HX_STACK_LINE(939)
 				Float ls = ((this->jAccx * this->jAccx) + (this->jAccy * this->jAccy));		HX_STACK_VAR(ls,"ls");
 				HX_STACK_LINE(940)
 				if (((ls > (t * t)))){
-					HX_STACK_LINE(941)
-					{
-					}
-					HX_STACK_LINE(949)
-					{
-						struct _Function_6_1{
-							inline static Float Block( Float &ls){
-								HX_STACK_PUSH("*::closure","zpp_nape/constraint/PivotJoint.hx",950);
-								{
-									HX_STACK_LINE(950)
-									{
-									}
-									struct _Function_7_1{
-										inline static Float Block( Float &ls){
-											HX_STACK_PUSH("*::closure","zpp_nape/constraint/PivotJoint.hx",950);
-											{
-												HX_STACK_LINE(950)
-												{
-												}
-												HX_STACK_LINE(950)
-												return ::Math_obj::sqrt(ls);
-											}
-											return null();
-										}
-									};
-									HX_STACK_LINE(950)
-									return (Float(1.0) / Float(_Function_7_1::Block(ls)));
-								}
-								return null();
-							}
-						};
-						HX_STACK_LINE(950)
-						Float t1 = (t * _Function_6_1::Block(ls));		HX_STACK_VAR(t1,"t1");
-						HX_STACK_LINE(951)
-						{
-						}
-						HX_STACK_LINE(959)
-						hx::MultEq(this->jAccx,t1);
-						HX_STACK_LINE(960)
-						hx::MultEq(this->jAccy,t1);
-					}
+					HX_STACK_LINE(950)
+					Float t1 = (t * ((Float(1.0) / Float(::Math_obj::sqrt(ls)))));		HX_STACK_VAR(t1,"t1");
+					HX_STACK_LINE(959)
+					hx::MultEq(this->jAccx,t1);
+					HX_STACK_LINE(960)
+					hx::MultEq(this->jAccy,t1);
 				}
 			}
 		}
@@ -1239,9 +649,6 @@ bool ZPP_PivotJoint_obj::applyImpulseVel( ){
 		{
 			HX_STACK_LINE(1003)
 			Float t = this->b1->imass;		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(1004)
-			{
-			}
 			HX_STACK_LINE(1012)
 			hx::SubEq(this->b1->velx,(Jx * t));
 			HX_STACK_LINE(1013)
@@ -1251,9 +658,6 @@ bool ZPP_PivotJoint_obj::applyImpulseVel( ){
 		{
 			HX_STACK_LINE(1016)
 			Float t = this->b2->imass;		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(1017)
-			{
-			}
 			HX_STACK_LINE(1025)
 			hx::AddEq(this->b2->velx,(Jx * t));
 			HX_STACK_LINE(1026)
@@ -1277,9 +681,6 @@ Void ZPP_PivotJoint_obj::warmStart( ){
 		{
 			HX_STACK_LINE(828)
 			Float t = this->b1->imass;		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(829)
-			{
-			}
 			HX_STACK_LINE(837)
 			hx::SubEq(this->b1->velx,(this->jAccx * t));
 			HX_STACK_LINE(838)
@@ -1289,9 +690,6 @@ Void ZPP_PivotJoint_obj::warmStart( ){
 		{
 			HX_STACK_LINE(841)
 			Float t = this->b2->imass;		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(842)
-			{
-			}
 			HX_STACK_LINE(850)
 			hx::AddEq(this->b2->velx,(this->jAccx * t));
 			HX_STACK_LINE(851)
@@ -1436,7 +834,7 @@ bool ZPP_PivotJoint_obj::preStep( Float dt){
 					}
 				};
 				struct _Function_2_3{
-					inline static int Block( Float &det,::zpp_nape::constraint::ZPP_PivotJoint_obj *__this){
+					inline static int Block( ::zpp_nape::constraint::ZPP_PivotJoint_obj *__this,Float &det){
 						HX_STACK_PUSH("*::closure","zpp_nape/constraint/PivotJoint.hx",675);
 						{
 							HX_STACK_LINE(676)
@@ -1456,7 +854,7 @@ bool ZPP_PivotJoint_obj::preStep( Float dt){
 					}
 				};
 				HX_STACK_LINE(656)
-				return (  (((det != det))) ? int(_Function_2_1::Block(__this)) : int((  (((det == (int)0))) ? int(_Function_2_2::Block(__this)) : int(_Function_2_3::Block(det,__this)) )) );
+				return (  (((det != det))) ? int(_Function_2_1::Block(__this)) : int((  (((det == (int)0))) ? int(_Function_2_2::Block(__this)) : int(_Function_2_3::Block(__this,det)) )) );
 			}
 			return null();
 		}
@@ -1480,7 +878,7 @@ bool ZPP_PivotJoint_obj::preStep( Float dt){
 		HX_STACK_LINE(688)
 		{
 			struct _Function_3_1{
-				inline static Float Block( ::zpp_nape::constraint::ZPP_PivotJoint_obj *__this,Float &biasCoef,Float &dt){
+				inline static Float Block( ::zpp_nape::constraint::ZPP_PivotJoint_obj *__this,Float &dt,Float &biasCoef){
 					HX_STACK_PUSH("*::closure","zpp_nape/constraint/PivotJoint.hx",689);
 					{
 						HX_STACK_LINE(690)
@@ -1500,7 +898,7 @@ bool ZPP_PivotJoint_obj::preStep( Float dt){
 				}
 			};
 			HX_STACK_LINE(689)
-			Float X = _Function_3_1::Block(this,biasCoef,dt);		HX_STACK_VAR(X,"X");
+			Float X = _Function_3_1::Block(this,dt,biasCoef);		HX_STACK_VAR(X,"X");
 			HX_STACK_LINE(697)
 			hx::MultEq(this->kMassa,X);
 			HX_STACK_LINE(698)
@@ -1524,9 +922,6 @@ bool ZPP_PivotJoint_obj::preStep( Float dt){
 		{
 			HX_STACK_LINE(707)
 			Float t = -(biasCoef);		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(708)
-			{
-			}
 			HX_STACK_LINE(716)
 			hx::MultEq(this->biasx,t);
 			HX_STACK_LINE(717)
@@ -1536,54 +931,16 @@ bool ZPP_PivotJoint_obj::preStep( Float dt){
 		{
 			HX_STACK_LINE(720)
 			Float t = this->maxError;		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(721)
-			{
-			}
 			HX_STACK_LINE(729)
 			Float ls = ((this->biasx * this->biasx) + (this->biasy * this->biasy));		HX_STACK_VAR(ls,"ls");
 			HX_STACK_LINE(730)
 			if (((ls > (t * t)))){
-				HX_STACK_LINE(731)
-				{
-				}
-				HX_STACK_LINE(739)
-				{
-					struct _Function_5_1{
-						inline static Float Block( Float &ls){
-							HX_STACK_PUSH("*::closure","zpp_nape/constraint/PivotJoint.hx",740);
-							{
-								HX_STACK_LINE(740)
-								{
-								}
-								struct _Function_6_1{
-									inline static Float Block( Float &ls){
-										HX_STACK_PUSH("*::closure","zpp_nape/constraint/PivotJoint.hx",740);
-										{
-											HX_STACK_LINE(740)
-											{
-											}
-											HX_STACK_LINE(740)
-											return ::Math_obj::sqrt(ls);
-										}
-										return null();
-									}
-								};
-								HX_STACK_LINE(740)
-								return (Float(1.0) / Float(_Function_6_1::Block(ls)));
-							}
-							return null();
-						}
-					};
-					HX_STACK_LINE(740)
-					Float t1 = (t * _Function_5_1::Block(ls));		HX_STACK_VAR(t1,"t1");
-					HX_STACK_LINE(741)
-					{
-					}
-					HX_STACK_LINE(749)
-					hx::MultEq(this->biasx,t1);
-					HX_STACK_LINE(750)
-					hx::MultEq(this->biasy,t1);
-				}
+				HX_STACK_LINE(740)
+				Float t1 = (t * ((Float(1.0) / Float(::Math_obj::sqrt(ls)))));		HX_STACK_VAR(t1,"t1");
+				HX_STACK_LINE(749)
+				hx::MultEq(this->biasx,t1);
+				HX_STACK_LINE(750)
+				hx::MultEq(this->biasy,t1);
 			}
 		}
 	}
@@ -1594,9 +951,6 @@ bool ZPP_PivotJoint_obj::preStep( Float dt){
 			this->biasx = (int)0;
 			HX_STACK_LINE(758)
 			this->biasy = (int)0;
-			HX_STACK_LINE(759)
-			{
-			}
 			HX_STACK_LINE(767)
 			{
 			}
@@ -1608,9 +962,6 @@ bool ZPP_PivotJoint_obj::preStep( Float dt){
 	{
 		HX_STACK_LINE(779)
 		Float t = dtratio;		HX_STACK_VAR(t,"t");
-		HX_STACK_LINE(780)
-		{
-		}
 		HX_STACK_LINE(788)
 		hx::MultEq(this->jAccx,t);
 		HX_STACK_LINE(789)
@@ -1633,9 +984,6 @@ Void ZPP_PivotJoint_obj::clearcache( ){
 			this->jAccx = (int)0;
 			HX_STACK_LINE(595)
 			this->jAccy = (int)0;
-			HX_STACK_LINE(596)
-			{
-			}
 			HX_STACK_LINE(604)
 			{
 			}
@@ -1906,7 +1254,7 @@ return null();
 }
 
 
-::nape::constraint::Constraint ZPP_PivotJoint_obj::copy( Array< ::zpp_nape::constraint::ZPP_CopyHelper > dict,Array< ::zpp_nape::constraint::ZPP_CopyHelper > todo){
+::nape::constraint::Constraint ZPP_PivotJoint_obj::copy( Array< ::Dynamic > dict,Array< ::Dynamic > todo){
 	HX_STACK_PUSH("ZPP_PivotJoint::copy","zpp_nape/constraint/PivotJoint.hx",325);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(dict,"dict");
@@ -1946,14 +1294,11 @@ return null();
 		}
 	};
 	HX_STACK_LINE(326)
-	Array< ::nape::constraint::PivotJoint > ret = Array_obj< ::nape::constraint::PivotJoint >::__new().Add(::nape::constraint::PivotJoint_obj::__new(null(),null(),_Function_1_1::Block(this),_Function_1_2::Block(this)));		HX_STACK_VAR(ret,"ret");
+	Array< ::Dynamic > ret = Array_obj< ::Dynamic >::__new().Add(::nape::constraint::PivotJoint_obj::__new(null(),null(),_Function_1_1::Block(this),_Function_1_2::Block(this)));		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(327)
-	this->copyto(ret->__get((int)0));
+	this->copyto(ret->__get((int)0).StaticCast< ::nape::constraint::PivotJoint >());
 	HX_STACK_LINE(328)
 	if (((bool((dict != null())) && bool((this->b1 != null()))))){
-		HX_STACK_LINE(330)
-		{
-		}
 		HX_STACK_LINE(338)
 		::nape::phys::Body b = null();		HX_STACK_VAR(b,"b");
 		HX_STACK_LINE(339)
@@ -1963,7 +1308,7 @@ return null();
 			HX_STACK_LINE(339)
 			while(((_g < dict->length))){
 				HX_STACK_LINE(339)
-				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g);		HX_STACK_VAR(idc,"idc");
+				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_CopyHelper >();		HX_STACK_VAR(idc,"idc");
 				HX_STACK_LINE(339)
 				++(_g);
 				HX_STACK_LINE(340)
@@ -1978,17 +1323,17 @@ return null();
 		HX_STACK_LINE(345)
 		if (((b != null()))){
 			HX_STACK_LINE(345)
-			ret->__get((int)0)->zpp_inner_zn->b1 = b->zpp_inner;
+			ret->__get((int)0).StaticCast< ::nape::constraint::PivotJoint >()->zpp_inner_zn->b1 = b->zpp_inner;
 		}
 		else{
 
-			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::nape::constraint::PivotJoint >,ret)
+			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::Dynamic >,ret)
 			Void run(::nape::phys::Body b1){
 				HX_STACK_PUSH("*::_Function_3_1","zpp_nape/constraint/PivotJoint.hx",346);
 				HX_STACK_ARG(b1,"b1");
 				{
 					HX_STACK_LINE(346)
-					ret->__get((int)0)->zpp_inner_zn->b1 = b1->zpp_inner;
+					ret->__get((int)0).StaticCast< ::nape::constraint::PivotJoint >()->zpp_inner_zn->b1 = b1->zpp_inner;
 				}
 				return null();
 			}
@@ -2000,9 +1345,6 @@ return null();
 	}
 	HX_STACK_LINE(349)
 	if (((bool((dict != null())) && bool((this->b2 != null()))))){
-		HX_STACK_LINE(351)
-		{
-		}
 		HX_STACK_LINE(359)
 		::nape::phys::Body b = null();		HX_STACK_VAR(b,"b");
 		HX_STACK_LINE(360)
@@ -2012,7 +1354,7 @@ return null();
 			HX_STACK_LINE(360)
 			while(((_g < dict->length))){
 				HX_STACK_LINE(360)
-				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g);		HX_STACK_VAR(idc,"idc");
+				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_CopyHelper >();		HX_STACK_VAR(idc,"idc");
 				HX_STACK_LINE(360)
 				++(_g);
 				HX_STACK_LINE(361)
@@ -2027,17 +1369,17 @@ return null();
 		HX_STACK_LINE(366)
 		if (((b != null()))){
 			HX_STACK_LINE(366)
-			ret->__get((int)0)->zpp_inner_zn->b2 = b->zpp_inner;
+			ret->__get((int)0).StaticCast< ::nape::constraint::PivotJoint >()->zpp_inner_zn->b2 = b->zpp_inner;
 		}
 		else{
 
-			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::nape::constraint::PivotJoint >,ret)
+			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::Dynamic >,ret)
 			Void run(::nape::phys::Body b1){
 				HX_STACK_PUSH("*::_Function_3_1","zpp_nape/constraint/PivotJoint.hx",367);
 				HX_STACK_ARG(b1,"b1");
 				{
 					HX_STACK_LINE(367)
-					ret->__get((int)0)->zpp_inner_zn->b2 = b1->zpp_inner;
+					ret->__get((int)0).StaticCast< ::nape::constraint::PivotJoint >()->zpp_inner_zn->b2 = b1->zpp_inner;
 				}
 				return null();
 			}
@@ -2048,7 +1390,7 @@ return null();
 		}
 	}
 	HX_STACK_LINE(370)
-	return ret->__get((int)0);
+	return ret->__get((int)0).StaticCast< ::nape::constraint::PivotJoint >();
 }
 
 
@@ -2130,9 +1472,6 @@ Void ZPP_PivotJoint_obj::setup_a2( ){
 										HX_STACK_LINE(309)
 										{
 										}
-										HX_STACK_LINE(309)
-										{
-										}
 									}
 									HX_STACK_LINE(309)
 									return ret1;
@@ -2161,7 +1500,7 @@ Void ZPP_PivotJoint_obj::setup_a2( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(309)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(309)
 								_this->_isimmutable();
 							}
@@ -2185,7 +1524,7 @@ Void ZPP_PivotJoint_obj::setup_a2( ){
 										HX_STACK_LINE(309)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(309)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(309)
 											_this->_validate();
 										}
@@ -2210,7 +1549,7 @@ Void ZPP_PivotJoint_obj::setup_a2( ){
 										HX_STACK_LINE(309)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(309)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(309)
 											_this->_validate();
 										}
@@ -2232,16 +1571,13 @@ Void ZPP_PivotJoint_obj::setup_a2( ){
 								HX_STACK_LINE(309)
 								{
 								}
-								HX_STACK_LINE(309)
-								{
-								}
 							}
 							HX_STACK_LINE(309)
 							{
 								HX_STACK_LINE(309)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(309)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(309)
 									_this->_invalidate(_this);
 								}
@@ -2286,9 +1622,6 @@ Void ZPP_PivotJoint_obj::invalidate_a2( ::zpp_nape::geom::ZPP_Vec2 x){
 			this->a2localx = x->x;
 			HX_STACK_LINE(288)
 			this->a2localy = x->y;
-			HX_STACK_LINE(289)
-			{
-			}
 			HX_STACK_LINE(297)
 			{
 			}
@@ -2310,9 +1643,6 @@ Void ZPP_PivotJoint_obj::validate_a2( ){
 		this->wrap_a2->zpp_inner->x = this->a2localx;
 		HX_STACK_LINE(265)
 		this->wrap_a2->zpp_inner->y = this->a2localy;
-		HX_STACK_LINE(266)
-		{
-		}
 		HX_STACK_LINE(274)
 		{
 		}
@@ -2401,9 +1731,6 @@ Void ZPP_PivotJoint_obj::setup_a1( ){
 										HX_STACK_LINE(251)
 										{
 										}
-										HX_STACK_LINE(251)
-										{
-										}
 									}
 									HX_STACK_LINE(251)
 									return ret1;
@@ -2432,7 +1759,7 @@ Void ZPP_PivotJoint_obj::setup_a1( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(251)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(251)
 								_this->_isimmutable();
 							}
@@ -2456,7 +1783,7 @@ Void ZPP_PivotJoint_obj::setup_a1( ){
 										HX_STACK_LINE(251)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(251)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(251)
 											_this->_validate();
 										}
@@ -2481,7 +1808,7 @@ Void ZPP_PivotJoint_obj::setup_a1( ){
 										HX_STACK_LINE(251)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(251)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(251)
 											_this->_validate();
 										}
@@ -2503,16 +1830,13 @@ Void ZPP_PivotJoint_obj::setup_a1( ){
 								HX_STACK_LINE(251)
 								{
 								}
-								HX_STACK_LINE(251)
-								{
-								}
 							}
 							HX_STACK_LINE(251)
 							{
 								HX_STACK_LINE(251)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(251)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(251)
 									_this->_invalidate(_this);
 								}
@@ -2557,9 +1881,6 @@ Void ZPP_PivotJoint_obj::invalidate_a1( ::zpp_nape::geom::ZPP_Vec2 x){
 			this->a1localx = x->x;
 			HX_STACK_LINE(230)
 			this->a1localy = x->y;
-			HX_STACK_LINE(231)
-			{
-			}
 			HX_STACK_LINE(239)
 			{
 			}
@@ -2581,9 +1902,6 @@ Void ZPP_PivotJoint_obj::validate_a1( ){
 		this->wrap_a1->zpp_inner->x = this->a1localx;
 		HX_STACK_LINE(207)
 		this->wrap_a1->zpp_inner->y = this->a1localy;
-		HX_STACK_LINE(208)
-		{
-		}
 		HX_STACK_LINE(216)
 		{
 		}
@@ -2933,7 +2251,7 @@ Class ZPP_PivotJoint_obj::__mClass;
 
 void ZPP_PivotJoint_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.constraint.ZPP_PivotJoint"), hx::TCanCast< ZPP_PivotJoint_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.constraint.ZPP_PivotJoint"), hx::TCanCast< ZPP_PivotJoint_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

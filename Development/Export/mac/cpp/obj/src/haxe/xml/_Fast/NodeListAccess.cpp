@@ -18,9 +18,9 @@ namespace _Fast{
 
 Void NodeListAccess_obj::__construct(::Xml x)
 {
-HX_STACK_PUSH("NodeListAccess::new","/usr/lib/haxe/std/haxe/xml/Fast.hx",99);
+HX_STACK_PUSH("NodeListAccess::new","/usr/lib/haxe/std/haxe/xml/Fast.hx",96);
 {
-	HX_STACK_LINE(99)
+	HX_STACK_LINE(96)
 	this->__x = x;
 }
 ;
@@ -41,17 +41,17 @@ Dynamic NodeListAccess_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 ::List NodeListAccess_obj::resolve( ::String name){
-	HX_STACK_PUSH("NodeListAccess::resolve","/usr/lib/haxe/std/haxe/xml/Fast.hx",103);
+	HX_STACK_PUSH("NodeListAccess::resolve","/usr/lib/haxe/std/haxe/xml/Fast.hx",100);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(name,"name");
-	HX_STACK_LINE(104)
+	HX_STACK_LINE(101)
 	::List l = ::List_obj::__new();		HX_STACK_VAR(l,"l");
-	HX_STACK_LINE(105)
+	HX_STACK_LINE(102)
 	for(::cpp::FastIterator_obj< ::Xml > *__it = ::cpp::CreateFastIterator< ::Xml >(this->__x->elementsNamed(name));  __it->hasNext(); ){
 		::Xml x = __it->next();
 		l->add(::haxe::xml::Fast_obj::__new(x));
 	}
-	HX_STACK_LINE(107)
+	HX_STACK_LINE(104)
 	return l;
 }
 
@@ -129,7 +129,7 @@ Class NodeListAccess_obj::__mClass;
 
 void NodeListAccess_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("haxe.xml._Fast.NodeListAccess"), hx::TCanCast< NodeListAccess_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("haxe.xml._Fast.NodeListAccess"), hx::TCanCast< NodeListAccess_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

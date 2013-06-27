@@ -9,7 +9,7 @@ HX_DECLARE_CLASS1(nape,Config)
 namespace nape{
 
 
-class Config_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Config_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Config_obj OBJ_;
@@ -29,34 +29,34 @@ class Config_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("Config"); }
 
-		static Float epsilon; /* REM */ 
-		static Float fluidAngularDragFriction; /* REM */ 
-		static Float fluidAngularDrag; /* REM */ 
-		static Float fluidVacuumDrag; /* REM */ 
-		static Float fluidLinearDrag; /* REM */ 
-		static Float collisionSlop; /* REM */ 
-		static Float collisionSlopCCD; /* REM */ 
-		static Float distanceThresholdCCD; /* REM */ 
-		static Float staticCCDLinearThreshold; /* REM */ 
-		static Float staticCCDAngularThreshold; /* REM */ 
-		static Float bulletCCDLinearThreshold; /* REM */ 
-		static Float bulletCCDAngularThreshold; /* REM */ 
-		static Float dynamicSweepLinearThreshold; /* REM */ 
-		static Float dynamicSweepAngularThreshold; /* REM */ 
-		static Float angularCCDSlipScale; /* REM */ 
-		static int arbiterExpirationDelay; /* REM */ 
-		static Float staticFrictionThreshold; /* REM */ 
-		static Float elasticThreshold; /* REM */ 
-		static int sleepDelay; /* REM */ 
-		static Float linearSleepThreshold; /* REM */ 
-		static Float angularSleepThreshold; /* REM */ 
-		static Float contactBiasCoef; /* REM */ 
-		static Float contactStaticBiasCoef; /* REM */ 
-		static Float contactContinuousBiasCoef; /* REM */ 
-		static Float contactContinuousStaticBiasCoef; /* REM */ 
-		static Float constraintLinearSlop; /* REM */ 
-		static Float constraintAngularSlop; /* REM */ 
-		static Float illConditionedThreshold; /* REM */ 
+		static Float epsilon;
+		static Float fluidAngularDragFriction;
+		static Float fluidAngularDrag;
+		static Float fluidVacuumDrag;
+		static Float fluidLinearDrag;
+		static Float collisionSlop;
+		static Float collisionSlopCCD;
+		static Float distanceThresholdCCD;
+		static Float staticCCDLinearThreshold;
+		static Float staticCCDAngularThreshold;
+		static Float bulletCCDLinearThreshold;
+		static Float bulletCCDAngularThreshold;
+		static Float dynamicSweepLinearThreshold;
+		static Float dynamicSweepAngularThreshold;
+		static Float angularCCDSlipScale;
+		static int arbiterExpirationDelay;
+		static Float staticFrictionThreshold;
+		static Float elasticThreshold;
+		static int sleepDelay;
+		static Float linearSleepThreshold;
+		static Float angularSleepThreshold;
+		static Float contactBiasCoef;
+		static Float contactStaticBiasCoef;
+		static Float contactContinuousBiasCoef;
+		static Float contactContinuousStaticBiasCoef;
+		static Float constraintLinearSlop;
+		static Float constraintAngularSlop;
+		static Float illConditionedThreshold;
 };
 
 } // end namespace nape

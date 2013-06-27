@@ -10,7 +10,7 @@ namespace zpp_nape{
 namespace dynamics{
 
 
-class ZPP_IContact_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_IContact_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_IContact_obj OBJ_;
@@ -114,31 +114,31 @@ class ZPP_IContact_obj : public hx::Object{
 		virtual Void setbegin( ::zpp_nape::dynamics::ZPP_IContact i);
 		Dynamic setbegin_dyn();
 
-		int length; /* REM */ 
-		bool pushmod; /* REM */ 
-		bool modified; /* REM */ 
-		bool _inuse; /* REM */ 
+		int length;
+		bool pushmod;
+		bool modified;
+		bool _inuse;
 		virtual ::zpp_nape::dynamics::ZPP_IContact begin( );
 		Dynamic begin_dyn();
 
 		virtual ::zpp_nape::dynamics::ZPP_IContact elem( );
 		Dynamic elem_dyn();
 
-		::zpp_nape::dynamics::ZPP_IContact next; /* REM */ 
-		Float lr2y; /* REM */ 
-		Float lr2x; /* REM */ 
-		Float lr1y; /* REM */ 
-		Float lr1x; /* REM */ 
-		Float jtAcc; /* REM */ 
-		Float jnAcc; /* REM */ 
-		Float friction; /* REM */ 
-		Float bounce; /* REM */ 
-		Float tMass; /* REM */ 
-		Float nMass; /* REM */ 
-		Float r2y; /* REM */ 
-		Float r2x; /* REM */ 
-		Float r1y; /* REM */ 
-		Float r1x; /* REM */ 
+		::zpp_nape::dynamics::ZPP_IContact next;
+		Float lr2y;
+		Float lr2x;
+		Float lr1y;
+		Float lr1x;
+		Float jtAcc;
+		Float jnAcc;
+		Float friction;
+		Float bounce;
+		Float tMass;
+		Float nMass;
+		Float r2y;
+		Float r2x;
+		Float r1y;
+		Float r1x;
 };
 
 } // end namespace zpp_nape

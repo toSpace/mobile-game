@@ -76,6 +76,7 @@ Float phase = __o_phase.Default(0.0);
 	}
 	catch(Dynamic __e){
 		{
+			HX_STACK_BEGIN_CATCH
 			Dynamic e = __e;{
 			}
 		}
@@ -249,7 +250,7 @@ Float phase = __o_phase.Default(0.0);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(376)
-					if (((_this1->_isimmutable_dyn() != null()))){
+					if (((_this1->_isimmutable != null()))){
 						HX_STACK_LINE(376)
 						_this1->_isimmutable();
 					}
@@ -260,7 +261,7 @@ Float phase = __o_phase.Default(0.0);
 					hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 				}
 				struct _Function_4_2{
-					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor1,::nape::geom::Vec2 &_this){
+					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor1,::nape::geom::Vec2 _this){
 						HX_STACK_PUSH("*::closure","nape/constraint/WeldJoint.hx",376);
 						{
 							struct _Function_5_1{
@@ -277,7 +278,7 @@ Float phase = __o_phase.Default(0.0);
 											HX_STACK_LINE(376)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = anchor1->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(376)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(376)
 												_this1->_validate();
 											}
@@ -302,7 +303,7 @@ Float phase = __o_phase.Default(0.0);
 											HX_STACK_LINE(376)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = anchor1->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(376)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(376)
 												_this1->_validate();
 											}
@@ -331,7 +332,7 @@ Float phase = __o_phase.Default(0.0);
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(376)
-								if (((_this1->_isimmutable_dyn() != null()))){
+								if (((_this1->_isimmutable != null()))){
 									HX_STACK_LINE(376)
 									_this1->_isimmutable();
 								}
@@ -342,7 +343,7 @@ Float phase = __o_phase.Default(0.0);
 								hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 							}
 							struct _Function_5_3{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/constraint/WeldJoint.hx",376);
 									{
 										HX_STACK_LINE(376)
@@ -355,7 +356,7 @@ Float phase = __o_phase.Default(0.0);
 											HX_STACK_LINE(376)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(376)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(376)
 												_this1->_validate();
 											}
@@ -367,7 +368,7 @@ Float phase = __o_phase.Default(0.0);
 								}
 							};
 							struct _Function_5_4{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/constraint/WeldJoint.hx",376);
 									{
 										HX_STACK_LINE(376)
@@ -380,7 +381,7 @@ Float phase = __o_phase.Default(0.0);
 											HX_STACK_LINE(376)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(376)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(376)
 												_this1->_validate();
 											}
@@ -402,16 +403,13 @@ Float phase = __o_phase.Default(0.0);
 									HX_STACK_LINE(376)
 									{
 									}
-									HX_STACK_LINE(376)
-									{
-									}
 								}
 								HX_STACK_LINE(376)
 								{
 									HX_STACK_LINE(376)
 									::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 									HX_STACK_LINE(376)
-									if (((_this1->_invalidate_dyn() != null()))){
+									if (((_this1->_invalidate != null()))){
 										HX_STACK_LINE(376)
 										_this1->_invalidate(_this1);
 									}
@@ -444,7 +442,7 @@ Float phase = __o_phase.Default(0.0);
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(376)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(376)
 								_this1->_isimmutable();
 							}
@@ -465,9 +463,6 @@ Float phase = __o_phase.Default(0.0);
 							HX_STACK_LINE(376)
 							::nape::geom::Vec2 o = anchor1;		HX_STACK_VAR(o,"o");
 							HX_STACK_LINE(376)
-							{
-							}
-							HX_STACK_LINE(376)
 							o->zpp_pool = null();
 							HX_STACK_LINE(376)
 							if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -487,9 +482,6 @@ Float phase = __o_phase.Default(0.0);
 						{
 							HX_STACK_LINE(376)
 							::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(376)
-							{
-							}
 							HX_STACK_LINE(376)
 							{
 								HX_STACK_LINE(376)
@@ -587,7 +579,7 @@ Float phase = __o_phase.Default(0.0);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(377)
-					if (((_this1->_isimmutable_dyn() != null()))){
+					if (((_this1->_isimmutable != null()))){
 						HX_STACK_LINE(377)
 						_this1->_isimmutable();
 					}
@@ -598,7 +590,7 @@ Float phase = __o_phase.Default(0.0);
 					hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 				}
 				struct _Function_4_2{
-					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor2,::nape::geom::Vec2 &_this){
+					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 _this,::nape::geom::Vec2 &anchor2){
 						HX_STACK_PUSH("*::closure","nape/constraint/WeldJoint.hx",377);
 						{
 							struct _Function_5_1{
@@ -615,7 +607,7 @@ Float phase = __o_phase.Default(0.0);
 											HX_STACK_LINE(377)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = anchor2->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(377)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(377)
 												_this1->_validate();
 											}
@@ -640,7 +632,7 @@ Float phase = __o_phase.Default(0.0);
 											HX_STACK_LINE(377)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = anchor2->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(377)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(377)
 												_this1->_validate();
 											}
@@ -669,7 +661,7 @@ Float phase = __o_phase.Default(0.0);
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(377)
-								if (((_this1->_isimmutable_dyn() != null()))){
+								if (((_this1->_isimmutable != null()))){
 									HX_STACK_LINE(377)
 									_this1->_isimmutable();
 								}
@@ -680,7 +672,7 @@ Float phase = __o_phase.Default(0.0);
 								hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 							}
 							struct _Function_5_3{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/constraint/WeldJoint.hx",377);
 									{
 										HX_STACK_LINE(377)
@@ -693,7 +685,7 @@ Float phase = __o_phase.Default(0.0);
 											HX_STACK_LINE(377)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(377)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(377)
 												_this1->_validate();
 											}
@@ -705,7 +697,7 @@ Float phase = __o_phase.Default(0.0);
 								}
 							};
 							struct _Function_5_4{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/constraint/WeldJoint.hx",377);
 									{
 										HX_STACK_LINE(377)
@@ -718,7 +710,7 @@ Float phase = __o_phase.Default(0.0);
 											HX_STACK_LINE(377)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(377)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(377)
 												_this1->_validate();
 											}
@@ -740,16 +732,13 @@ Float phase = __o_phase.Default(0.0);
 									HX_STACK_LINE(377)
 									{
 									}
-									HX_STACK_LINE(377)
-									{
-									}
 								}
 								HX_STACK_LINE(377)
 								{
 									HX_STACK_LINE(377)
 									::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 									HX_STACK_LINE(377)
-									if (((_this1->_invalidate_dyn() != null()))){
+									if (((_this1->_invalidate != null()))){
 										HX_STACK_LINE(377)
 										_this1->_invalidate(_this1);
 									}
@@ -762,7 +751,7 @@ Float phase = __o_phase.Default(0.0);
 					}
 				};
 				HX_STACK_LINE(377)
-				::nape::geom::Vec2 ret = _Function_4_2::Block(anchor2,_this);		HX_STACK_VAR(ret,"ret");
+				::nape::geom::Vec2 ret = _Function_4_2::Block(_this,anchor2);		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(377)
 				if ((anchor2->zpp_inner->weak)){
 					HX_STACK_LINE(377)
@@ -782,7 +771,7 @@ Float phase = __o_phase.Default(0.0);
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(377)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(377)
 								_this1->_isimmutable();
 							}
@@ -803,9 +792,6 @@ Float phase = __o_phase.Default(0.0);
 							HX_STACK_LINE(377)
 							::nape::geom::Vec2 o = anchor2;		HX_STACK_VAR(o,"o");
 							HX_STACK_LINE(377)
-							{
-							}
-							HX_STACK_LINE(377)
 							o->zpp_pool = null();
 							HX_STACK_LINE(377)
 							if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -825,9 +811,6 @@ Float phase = __o_phase.Default(0.0);
 						{
 							HX_STACK_LINE(377)
 							::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(377)
-							{
-							}
 							HX_STACK_LINE(377)
 							{
 								HX_STACK_LINE(377)
@@ -1093,7 +1076,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_phase,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(319)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(319)
 					_this1->_isimmutable();
 				}
@@ -1104,7 +1087,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_phase,return )
 				hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 			}
 			struct _Function_3_2{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor2,::nape::geom::Vec2 &_this){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 _this,::nape::geom::Vec2 &anchor2){
 					HX_STACK_PUSH("*::closure","nape/constraint/WeldJoint.hx",319);
 					{
 						struct _Function_4_1{
@@ -1121,7 +1104,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_phase,return )
 										HX_STACK_LINE(319)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = anchor2->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(319)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(319)
 											_this1->_validate();
 										}
@@ -1146,7 +1129,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_phase,return )
 										HX_STACK_LINE(319)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = anchor2->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(319)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(319)
 											_this1->_validate();
 										}
@@ -1175,7 +1158,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_phase,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(319)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(319)
 								_this1->_isimmutable();
 							}
@@ -1186,7 +1169,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_phase,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 						}
 						struct _Function_4_3{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/constraint/WeldJoint.hx",319);
 								{
 									HX_STACK_LINE(319)
@@ -1199,7 +1182,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_phase,return )
 										HX_STACK_LINE(319)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(319)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(319)
 											_this1->_validate();
 										}
@@ -1211,7 +1194,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_phase,return )
 							}
 						};
 						struct _Function_4_4{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/constraint/WeldJoint.hx",319);
 								{
 									HX_STACK_LINE(319)
@@ -1224,7 +1207,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_phase,return )
 										HX_STACK_LINE(319)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(319)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(319)
 											_this1->_validate();
 										}
@@ -1246,16 +1229,13 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_phase,return )
 								HX_STACK_LINE(319)
 								{
 								}
-								HX_STACK_LINE(319)
-								{
-								}
 							}
 							HX_STACK_LINE(319)
 							{
 								HX_STACK_LINE(319)
 								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(319)
-								if (((_this1->_invalidate_dyn() != null()))){
+								if (((_this1->_invalidate != null()))){
 									HX_STACK_LINE(319)
 									_this1->_invalidate(_this1);
 								}
@@ -1268,7 +1248,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_phase,return )
 				}
 			};
 			HX_STACK_LINE(319)
-			::nape::geom::Vec2 ret = _Function_3_2::Block(anchor2,_this);		HX_STACK_VAR(ret,"ret");
+			::nape::geom::Vec2 ret = _Function_3_2::Block(_this,anchor2);		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(319)
 			if ((anchor2->zpp_inner->weak)){
 				HX_STACK_LINE(319)
@@ -1288,7 +1268,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_phase,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(319)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(319)
 							_this1->_isimmutable();
 						}
@@ -1309,9 +1289,6 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_phase,return )
 						HX_STACK_LINE(319)
 						::nape::geom::Vec2 o = anchor2;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(319)
-						{
-						}
-						HX_STACK_LINE(319)
 						o->zpp_pool = null();
 						HX_STACK_LINE(319)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -1331,9 +1308,6 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_phase,return )
 					{
 						HX_STACK_LINE(319)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(319)
-						{
-						}
 						HX_STACK_LINE(319)
 						{
 							HX_STACK_LINE(319)
@@ -1459,7 +1433,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_anchor2,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(294)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(294)
 					_this1->_isimmutable();
 				}
@@ -1470,7 +1444,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_anchor2,return )
 				hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 			}
 			struct _Function_3_2{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor1,::nape::geom::Vec2 &_this){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor1,::nape::geom::Vec2 _this){
 					HX_STACK_PUSH("*::closure","nape/constraint/WeldJoint.hx",294);
 					{
 						struct _Function_4_1{
@@ -1487,7 +1461,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_anchor2,return )
 										HX_STACK_LINE(294)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = anchor1->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(294)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(294)
 											_this1->_validate();
 										}
@@ -1512,7 +1486,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_anchor2,return )
 										HX_STACK_LINE(294)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = anchor1->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(294)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(294)
 											_this1->_validate();
 										}
@@ -1541,7 +1515,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_anchor2,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(294)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(294)
 								_this1->_isimmutable();
 							}
@@ -1552,7 +1526,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_anchor2,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 						}
 						struct _Function_4_3{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/constraint/WeldJoint.hx",294);
 								{
 									HX_STACK_LINE(294)
@@ -1565,7 +1539,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_anchor2,return )
 										HX_STACK_LINE(294)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(294)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(294)
 											_this1->_validate();
 										}
@@ -1577,7 +1551,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_anchor2,return )
 							}
 						};
 						struct _Function_4_4{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/constraint/WeldJoint.hx",294);
 								{
 									HX_STACK_LINE(294)
@@ -1590,7 +1564,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_anchor2,return )
 										HX_STACK_LINE(294)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(294)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(294)
 											_this1->_validate();
 										}
@@ -1612,16 +1586,13 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_anchor2,return )
 								HX_STACK_LINE(294)
 								{
 								}
-								HX_STACK_LINE(294)
-								{
-								}
 							}
 							HX_STACK_LINE(294)
 							{
 								HX_STACK_LINE(294)
 								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(294)
-								if (((_this1->_invalidate_dyn() != null()))){
+								if (((_this1->_invalidate != null()))){
 									HX_STACK_LINE(294)
 									_this1->_invalidate(_this1);
 								}
@@ -1654,7 +1625,7 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_anchor2,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(294)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(294)
 							_this1->_isimmutable();
 						}
@@ -1675,9 +1646,6 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_anchor2,return )
 						HX_STACK_LINE(294)
 						::nape::geom::Vec2 o = anchor1;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(294)
-						{
-						}
-						HX_STACK_LINE(294)
 						o->zpp_pool = null();
 						HX_STACK_LINE(294)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -1697,9 +1665,6 @@ HX_DEFINE_DYNAMIC_FUNC0(WeldJoint_obj,get_anchor2,return )
 					{
 						HX_STACK_LINE(294)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(294)
-						{
-						}
 						HX_STACK_LINE(294)
 						{
 							HX_STACK_LINE(294)
@@ -1912,11 +1877,6 @@ WeldJoint_obj::WeldJoint_obj()
 void WeldJoint_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(WeldJoint);
-	HX_MARK_MEMBER_NAME(phase,"phase");
-	HX_MARK_MEMBER_NAME(anchor2,"anchor2");
-	HX_MARK_MEMBER_NAME(anchor1,"anchor1");
-	HX_MARK_MEMBER_NAME(body2,"body2");
-	HX_MARK_MEMBER_NAME(body1,"body1");
 	HX_MARK_MEMBER_NAME(zpp_inner_zn,"zpp_inner_zn");
 	super::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
@@ -1924,11 +1884,6 @@ void WeldJoint_obj::__Mark(HX_MARK_PARAMS)
 
 void WeldJoint_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(phase,"phase");
-	HX_VISIT_MEMBER_NAME(anchor2,"anchor2");
-	HX_VISIT_MEMBER_NAME(anchor1,"anchor1");
-	HX_VISIT_MEMBER_NAME(body2,"body2");
-	HX_VISIT_MEMBER_NAME(body1,"body1");
 	HX_VISIT_MEMBER_NAME(zpp_inner_zn,"zpp_inner_zn");
 	super::__Visit(HX_VISIT_ARG);
 }
@@ -1937,14 +1892,14 @@ Dynamic WeldJoint_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"phase") ) { return inCallProp ? get_phase() : phase; }
-		if (HX_FIELD_EQ(inName,"body2") ) { return inCallProp ? get_body2() : body2; }
-		if (HX_FIELD_EQ(inName,"body1") ) { return inCallProp ? get_body1() : body1; }
+		if (HX_FIELD_EQ(inName,"phase") ) { return get_phase(); }
+		if (HX_FIELD_EQ(inName,"body2") ) { return get_body2(); }
+		if (HX_FIELD_EQ(inName,"body1") ) { return get_body1(); }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"impulse") ) { return impulse_dyn(); }
-		if (HX_FIELD_EQ(inName,"anchor2") ) { return inCallProp ? get_anchor2() : anchor2; }
-		if (HX_FIELD_EQ(inName,"anchor1") ) { return inCallProp ? get_anchor1() : anchor1; }
+		if (HX_FIELD_EQ(inName,"anchor2") ) { return get_anchor2(); }
+		if (HX_FIELD_EQ(inName,"anchor1") ) { return get_anchor1(); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"set_phase") ) { return set_phase_dyn(); }
@@ -1972,13 +1927,13 @@ Dynamic WeldJoint_obj::__SetField(const ::String &inName,const Dynamic &inValue,
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"phase") ) { if (inCallProp) return set_phase(inValue);phase=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"body2") ) { if (inCallProp) return set_body2(inValue);body2=inValue.Cast< ::nape::phys::Body >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"body1") ) { if (inCallProp) return set_body1(inValue);body1=inValue.Cast< ::nape::phys::Body >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"phase") ) { return set_phase(inValue); }
+		if (HX_FIELD_EQ(inName,"body2") ) { return set_body2(inValue); }
+		if (HX_FIELD_EQ(inName,"body1") ) { return set_body1(inValue); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"anchor2") ) { if (inCallProp) return set_anchor2(inValue);anchor2=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"anchor1") ) { if (inCallProp) return set_anchor1(inValue);anchor1=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"anchor2") ) { return set_anchor2(inValue); }
+		if (HX_FIELD_EQ(inName,"anchor1") ) { return set_anchor1(inValue); }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"zpp_inner_zn") ) { zpp_inner_zn=inValue.Cast< ::zpp_nape::constraint::ZPP_WeldJoint >(); return inValue; }
@@ -2006,19 +1961,14 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("impulse"),
 	HX_CSTRING("set_phase"),
 	HX_CSTRING("get_phase"),
-	HX_CSTRING("phase"),
 	HX_CSTRING("set_anchor2"),
 	HX_CSTRING("get_anchor2"),
-	HX_CSTRING("anchor2"),
 	HX_CSTRING("set_anchor1"),
 	HX_CSTRING("get_anchor1"),
-	HX_CSTRING("anchor1"),
 	HX_CSTRING("set_body2"),
 	HX_CSTRING("get_body2"),
-	HX_CSTRING("body2"),
 	HX_CSTRING("set_body1"),
 	HX_CSTRING("get_body1"),
-	HX_CSTRING("body1"),
 	HX_CSTRING("zpp_inner_zn"),
 	String(null()) };
 
@@ -2034,7 +1984,7 @@ Class WeldJoint_obj::__mClass;
 
 void WeldJoint_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.constraint.WeldJoint"), hx::TCanCast< WeldJoint_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.constraint.WeldJoint"), hx::TCanCast< WeldJoint_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

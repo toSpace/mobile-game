@@ -46,9 +46,6 @@ Dynamic ZNPList_ZPP_Constraint_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_PUSH("ZNPList_ZPP_Constraint::at","zpp_nape/util/Lists.hx",2246);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(2247)
-	{
-	}
 	HX_STACK_LINE(2255)
 	::zpp_nape::util::ZNPNode_ZPP_Constraint it = this->iterator_at(ind);		HX_STACK_VAR(it,"it");
 	HX_STACK_LINE(2256)
@@ -62,9 +59,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_Constraint_obj,at,return )
 	HX_STACK_PUSH("ZNPList_ZPP_Constraint::iterator_at","zpp_nape/util/Lists.hx",2233);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(2234)
-	{
-	}
 	HX_STACK_LINE(2242)
 	::zpp_nape::util::ZNPNode_ZPP_Constraint ret = this->head;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(2243)
@@ -114,9 +108,6 @@ bool ZNPList_ZPP_Constraint_obj::inlined_has( ::zpp_nape::constraint::ZPP_Constr
 	HX_STACK_PUSH("ZNPList_ZPP_Constraint::inlined_has","zpp_nape/util/Lists.hx",2191);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(2192)
-	{
-	}
 	HX_STACK_LINE(2200)
 	bool ret;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(2201)
@@ -158,9 +149,6 @@ bool ZNPList_ZPP_Constraint_obj::has( ::zpp_nape::constraint::ZPP_Constraint obj
 		inline static bool Block( ::zpp_nape::util::ZNPList_ZPP_Constraint_obj *__this,::zpp_nape::constraint::ZPP_Constraint &obj){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",2187);
 			{
-				HX_STACK_LINE(2187)
-				{
-				}
 				HX_STACK_LINE(2187)
 				bool ret;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(2187)
@@ -259,22 +247,13 @@ Void ZNPList_ZPP_Constraint_obj::inlined_clear( ){
 		HX_STACK_LINE(2159)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(2159)
-			{
-			}
-			HX_STACK_LINE(2159)
 			::zpp_nape::util::ZNPNode_ZPP_Constraint ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(2159)
 			this->head = ret->next;
 			HX_STACK_LINE(2159)
 			{
-			}
-			HX_STACK_LINE(2159)
-			{
 				HX_STACK_LINE(2159)
 				::zpp_nape::util::ZNPNode_ZPP_Constraint o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2159)
-				{
-				}
 				HX_STACK_LINE(2159)
 				o->elt = null();
 				HX_STACK_LINE(2159)
@@ -308,22 +287,13 @@ Void ZNPList_ZPP_Constraint_obj::clear( ){
 		HX_STACK_LINE(2153)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(2153)
-			{
-			}
-			HX_STACK_LINE(2153)
 			::zpp_nape::util::ZNPNode_ZPP_Constraint ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(2153)
 			this->head = ret->next;
 			HX_STACK_LINE(2153)
 			{
-			}
-			HX_STACK_LINE(2153)
-			{
 				HX_STACK_LINE(2153)
 				::zpp_nape::util::ZNPNode_ZPP_Constraint o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2153)
-				{
-				}
 				HX_STACK_LINE(2153)
 				o->elt = null();
 				HX_STACK_LINE(2153)
@@ -371,9 +341,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_Constraint_obj,splice,return )
 	HX_STACK_PUSH("ZNPList_ZPP_Constraint::inlined_erase","zpp_nape/util/Lists.hx",2102);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
-	HX_STACK_LINE(2103)
-	{
-	}
 	HX_STACK_LINE(2111)
 	::zpp_nape::util::ZNPNode_ZPP_Constraint old;		HX_STACK_VAR(old,"old");
 	HX_STACK_LINE(2112)
@@ -405,16 +372,10 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_Constraint_obj,splice,return )
 			this->pushmod = true;
 		}
 	}
-	HX_STACK_LINE(2125)
-	{
-	}
 	HX_STACK_LINE(2126)
 	{
 		HX_STACK_LINE(2127)
 		::zpp_nape::util::ZNPNode_ZPP_Constraint o = old;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(2128)
-		{
-		}
 		HX_STACK_LINE(2136)
 		o->elt = null();
 		HX_STACK_LINE(2137)
@@ -440,12 +401,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_Constraint_obj,inlined_erase,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
 	struct _Function_1_1{
-		inline static ::zpp_nape::util::ZNPNode_ZPP_Constraint Block( ::zpp_nape::util::ZNPNode_ZPP_Constraint &pre,::zpp_nape::util::ZNPList_ZPP_Constraint_obj *__this){
+		inline static ::zpp_nape::util::ZNPNode_ZPP_Constraint Block( ::zpp_nape::util::ZNPList_ZPP_Constraint_obj *__this,::zpp_nape::util::ZNPNode_ZPP_Constraint &pre){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",2098);
 			{
-				HX_STACK_LINE(2098)
-				{
-				}
 				HX_STACK_LINE(2098)
 				::zpp_nape::util::ZNPNode_ZPP_Constraint old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(2098)
@@ -479,14 +437,8 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_Constraint_obj,inlined_erase,return )
 				}
 				HX_STACK_LINE(2098)
 				{
-				}
-				HX_STACK_LINE(2098)
-				{
 					HX_STACK_LINE(2098)
 					::zpp_nape::util::ZNPNode_ZPP_Constraint o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2098)
-					{
-					}
 					HX_STACK_LINE(2098)
 					o->elt = null();
 					HX_STACK_LINE(2098)
@@ -507,7 +459,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_Constraint_obj,inlined_erase,return )
 		}
 	};
 	HX_STACK_LINE(2097)
-	return _Function_1_1::Block(pre,this);
+	return _Function_1_1::Block(this,pre);
 }
 
 
@@ -517,9 +469,6 @@ bool ZNPList_ZPP_Constraint_obj::inlined_try_remove( ::zpp_nape::constraint::ZPP
 	HX_STACK_PUSH("ZNPList_ZPP_Constraint::inlined_try_remove","zpp_nape/util/Lists.hx",2074);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(2075)
-	{
-	}
 	HX_STACK_LINE(2083)
 	::zpp_nape::util::ZNPNode_ZPP_Constraint pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(2084)
@@ -532,9 +481,6 @@ bool ZNPList_ZPP_Constraint_obj::inlined_try_remove( ::zpp_nape::constraint::ZPP
 		if (((cur->elt == obj))){
 			HX_STACK_LINE(2088)
 			{
-				HX_STACK_LINE(2088)
-				{
-				}
 				HX_STACK_LINE(2088)
 				::zpp_nape::util::ZNPNode_ZPP_Constraint old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(2088)
@@ -568,14 +514,8 @@ bool ZNPList_ZPP_Constraint_obj::inlined_try_remove( ::zpp_nape::constraint::ZPP
 				}
 				HX_STACK_LINE(2088)
 				{
-				}
-				HX_STACK_LINE(2088)
-				{
 					HX_STACK_LINE(2088)
 					::zpp_nape::util::ZNPNode_ZPP_Constraint o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2088)
-					{
-					}
 					HX_STACK_LINE(2088)
 					o->elt = null();
 					HX_STACK_LINE(2088)
@@ -614,99 +554,81 @@ Void ZNPList_ZPP_Constraint_obj::inlined_remove( ::zpp_nape::constraint::ZPP_Con
 		HX_STACK_PUSH("ZNPList_ZPP_Constraint::inlined_remove","zpp_nape/util/Lists.hx",2061);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(2062)
-		{
-		}
 		HX_STACK_LINE(2070)
-		{
+		::zpp_nape::util::ZNPNode_ZPP_Constraint pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(2070)
+		::zpp_nape::util::ZNPNode_ZPP_Constraint cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(2070)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(2070)
+		while(((cur != null()))){
 			HX_STACK_LINE(2070)
-			{
-			}
-			HX_STACK_LINE(2070)
-			::zpp_nape::util::ZNPNode_ZPP_Constraint pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(2070)
-			::zpp_nape::util::ZNPNode_ZPP_Constraint cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(2070)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(2070)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(2070)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(2070)
+					::zpp_nape::util::ZNPNode_ZPP_Constraint old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(2070)
+					::zpp_nape::util::ZNPNode_ZPP_Constraint ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(2070)
+					if (((pre == null()))){
+						HX_STACK_LINE(2070)
+						old = this->head;
+						HX_STACK_LINE(2070)
+						ret1 = old->next;
+						HX_STACK_LINE(2070)
+						this->head = ret1;
+						HX_STACK_LINE(2070)
+						if (((this->head == null()))){
+							HX_STACK_LINE(2070)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(2070)
+						old = pre->next;
+						HX_STACK_LINE(2070)
+						ret1 = old->next;
+						HX_STACK_LINE(2070)
+						pre->next = ret1;
+						HX_STACK_LINE(2070)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(2070)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(2070)
 					{
 						HX_STACK_LINE(2070)
-						{
-						}
+						::zpp_nape::util::ZNPNode_ZPP_Constraint o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(2070)
-						::zpp_nape::util::ZNPNode_ZPP_Constraint old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(2070)
-						::zpp_nape::util::ZNPNode_ZPP_Constraint ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_ZPP_Constraint_obj::zpp_pool;
 						HX_STACK_LINE(2070)
-						if (((pre == null()))){
-							HX_STACK_LINE(2070)
-							old = this->head;
-							HX_STACK_LINE(2070)
-							ret1 = old->next;
-							HX_STACK_LINE(2070)
-							this->head = ret1;
-							HX_STACK_LINE(2070)
-							if (((this->head == null()))){
-								HX_STACK_LINE(2070)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(2070)
-							old = pre->next;
-							HX_STACK_LINE(2070)
-							ret1 = old->next;
-							HX_STACK_LINE(2070)
-							pre->next = ret1;
-							HX_STACK_LINE(2070)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(2070)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(2070)
-						{
-						}
-						HX_STACK_LINE(2070)
-						{
-							HX_STACK_LINE(2070)
-							::zpp_nape::util::ZNPNode_ZPP_Constraint o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(2070)
-							{
-							}
-							HX_STACK_LINE(2070)
-							o->elt = null();
-							HX_STACK_LINE(2070)
-							o->next = ::zpp_nape::util::ZNPNode_ZPP_Constraint_obj::zpp_pool;
-							HX_STACK_LINE(2070)
-							::zpp_nape::util::ZNPNode_ZPP_Constraint_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(2070)
-						this->modified = true;
-						HX_STACK_LINE(2070)
-						(this->length)--;
-						HX_STACK_LINE(2070)
-						this->pushmod = true;
-						HX_STACK_LINE(2070)
-						ret1;
+						::zpp_nape::util::ZNPNode_ZPP_Constraint_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(2070)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(2070)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(2070)
+					this->pushmod = true;
+					HX_STACK_LINE(2070)
+					ret1;
 				}
 				HX_STACK_LINE(2070)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(2070)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(2070)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(2070)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(2070)
+		ret;
 	}
 return null();
 }
@@ -718,9 +640,6 @@ bool ZNPList_ZPP_Constraint_obj::try_remove( ::zpp_nape::constraint::ZPP_Constra
 	HX_STACK_PUSH("ZNPList_ZPP_Constraint::try_remove","zpp_nape/util/Lists.hx",2036);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(2037)
-	{
-	}
 	HX_STACK_LINE(2045)
 	::zpp_nape::util::ZNPNode_ZPP_Constraint pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(2046)
@@ -755,99 +674,81 @@ Void ZNPList_ZPP_Constraint_obj::remove( ::zpp_nape::constraint::ZPP_Constraint 
 		HX_STACK_PUSH("ZNPList_ZPP_Constraint::remove","zpp_nape/util/Lists.hx",2025);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(2026)
-		{
-		}
 		HX_STACK_LINE(2034)
-		{
+		::zpp_nape::util::ZNPNode_ZPP_Constraint pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(2034)
+		::zpp_nape::util::ZNPNode_ZPP_Constraint cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(2034)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(2034)
+		while(((cur != null()))){
 			HX_STACK_LINE(2034)
-			{
-			}
-			HX_STACK_LINE(2034)
-			::zpp_nape::util::ZNPNode_ZPP_Constraint pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(2034)
-			::zpp_nape::util::ZNPNode_ZPP_Constraint cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(2034)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(2034)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(2034)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(2034)
+					::zpp_nape::util::ZNPNode_ZPP_Constraint old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(2034)
+					::zpp_nape::util::ZNPNode_ZPP_Constraint ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(2034)
+					if (((pre == null()))){
+						HX_STACK_LINE(2034)
+						old = this->head;
+						HX_STACK_LINE(2034)
+						ret1 = old->next;
+						HX_STACK_LINE(2034)
+						this->head = ret1;
+						HX_STACK_LINE(2034)
+						if (((this->head == null()))){
+							HX_STACK_LINE(2034)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(2034)
+						old = pre->next;
+						HX_STACK_LINE(2034)
+						ret1 = old->next;
+						HX_STACK_LINE(2034)
+						pre->next = ret1;
+						HX_STACK_LINE(2034)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(2034)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(2034)
 					{
 						HX_STACK_LINE(2034)
-						{
-						}
+						::zpp_nape::util::ZNPNode_ZPP_Constraint o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(2034)
-						::zpp_nape::util::ZNPNode_ZPP_Constraint old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(2034)
-						::zpp_nape::util::ZNPNode_ZPP_Constraint ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_ZPP_Constraint_obj::zpp_pool;
 						HX_STACK_LINE(2034)
-						if (((pre == null()))){
-							HX_STACK_LINE(2034)
-							old = this->head;
-							HX_STACK_LINE(2034)
-							ret1 = old->next;
-							HX_STACK_LINE(2034)
-							this->head = ret1;
-							HX_STACK_LINE(2034)
-							if (((this->head == null()))){
-								HX_STACK_LINE(2034)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(2034)
-							old = pre->next;
-							HX_STACK_LINE(2034)
-							ret1 = old->next;
-							HX_STACK_LINE(2034)
-							pre->next = ret1;
-							HX_STACK_LINE(2034)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(2034)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(2034)
-						{
-						}
-						HX_STACK_LINE(2034)
-						{
-							HX_STACK_LINE(2034)
-							::zpp_nape::util::ZNPNode_ZPP_Constraint o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(2034)
-							{
-							}
-							HX_STACK_LINE(2034)
-							o->elt = null();
-							HX_STACK_LINE(2034)
-							o->next = ::zpp_nape::util::ZNPNode_ZPP_Constraint_obj::zpp_pool;
-							HX_STACK_LINE(2034)
-							::zpp_nape::util::ZNPNode_ZPP_Constraint_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(2034)
-						this->modified = true;
-						HX_STACK_LINE(2034)
-						(this->length)--;
-						HX_STACK_LINE(2034)
-						this->pushmod = true;
-						HX_STACK_LINE(2034)
-						ret1;
+						::zpp_nape::util::ZNPNode_ZPP_Constraint_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(2034)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(2034)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(2034)
+					this->pushmod = true;
+					HX_STACK_LINE(2034)
+					ret1;
 				}
 				HX_STACK_LINE(2034)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(2034)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(2034)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(2034)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(2034)
+		ret;
 	}
 return null();
 }
@@ -858,9 +759,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_Constraint_obj,remove,(void))
 ::zpp_nape::constraint::ZPP_Constraint ZNPList_ZPP_Constraint_obj::inlined_pop_unsafe( ){
 	HX_STACK_PUSH("ZNPList_ZPP_Constraint::inlined_pop_unsafe","zpp_nape/util/Lists.hx",2012);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(2013)
-	{
-	}
 	HX_STACK_LINE(2021)
 	::zpp_nape::constraint::ZPP_Constraint ret = this->head->elt;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(2022)
@@ -879,9 +777,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_Constraint_obj,inlined_pop_unsafe,return )
 		inline static ::zpp_nape::constraint::ZPP_Constraint Block( ::zpp_nape::util::ZNPList_ZPP_Constraint_obj *__this){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",2008);
 			{
-				HX_STACK_LINE(2008)
-				{
-				}
 				HX_STACK_LINE(2008)
 				::zpp_nape::constraint::ZPP_Constraint ret = __this->head->elt;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(2008)
@@ -903,23 +798,14 @@ Void ZNPList_ZPP_Constraint_obj::inlined_pop( ){
 {
 		HX_STACK_PUSH("ZNPList_ZPP_Constraint::inlined_pop","zpp_nape/util/Lists.hx",1974);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(1975)
-		{
-		}
 		HX_STACK_LINE(1983)
 		::zpp_nape::util::ZNPNode_ZPP_Constraint ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(1984)
 		this->head = ret->next;
-		HX_STACK_LINE(1985)
-		{
-		}
 		HX_STACK_LINE(1986)
 		{
 			HX_STACK_LINE(1987)
 			::zpp_nape::util::ZNPNode_ZPP_Constraint o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(1988)
-			{
-			}
 			HX_STACK_LINE(1996)
 			o->elt = null();
 			HX_STACK_LINE(1997)
@@ -948,22 +834,13 @@ Void ZNPList_ZPP_Constraint_obj::pop( ){
 		HX_STACK_PUSH("ZNPList_ZPP_Constraint::pop","zpp_nape/util/Lists.hx",1969);
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(1970)
-		{
-		}
-		HX_STACK_LINE(1970)
 		::zpp_nape::util::ZNPNode_ZPP_Constraint ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(1970)
 		this->head = ret->next;
 		HX_STACK_LINE(1970)
 		{
-		}
-		HX_STACK_LINE(1970)
-		{
 			HX_STACK_LINE(1970)
 			::zpp_nape::util::ZNPNode_ZPP_Constraint o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(1970)
-			{
-			}
 			HX_STACK_LINE(1970)
 			o->elt = null();
 			HX_STACK_LINE(1970)
@@ -992,9 +869,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_Constraint_obj,pop,(void))
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(1927)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_Constraint Block( ::zpp_nape::constraint::ZPP_Constraint &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",1935);
@@ -1062,9 +936,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_Constraint_obj,inlined_insert,return )
 		inline static ::zpp_nape::util::ZNPNode_ZPP_Constraint Block( ::zpp_nape::util::ZNPList_ZPP_Constraint_obj *__this,::zpp_nape::constraint::ZPP_Constraint &o,::zpp_nape::util::ZNPNode_ZPP_Constraint &cur){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",1922);
 			{
-				HX_STACK_LINE(1922)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_Constraint Block( ::zpp_nape::constraint::ZPP_Constraint &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",1922);
@@ -1134,22 +1005,16 @@ Void ZNPList_ZPP_Constraint_obj::addAll( ::zpp_nape::util::ZNPList_ZPP_Constrain
 		HX_STACK_PUSH("ZNPList_ZPP_Constraint::addAll","zpp_nape/util/Lists.hx",1903);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(1904)
-		{
-		}
-		HX_STACK_LINE(1912)
-		{
-			HX_STACK_LINE(1913)
-			::zpp_nape::util::ZNPNode_ZPP_Constraint cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
-			HX_STACK_LINE(1914)
-			while(((cx_ite != null()))){
-				HX_STACK_LINE(1915)
-				::zpp_nape::constraint::ZPP_Constraint i = cx_ite->elt;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(1916)
-				this->add(i);
-				HX_STACK_LINE(1917)
-				cx_ite = cx_ite->next;
-			}
+		HX_STACK_LINE(1913)
+		::zpp_nape::util::ZNPNode_ZPP_Constraint cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+		HX_STACK_LINE(1914)
+		while(((cx_ite != null()))){
+			HX_STACK_LINE(1915)
+			::zpp_nape::constraint::ZPP_Constraint i = cx_ite->elt;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(1916)
+			this->add(i);
+			HX_STACK_LINE(1917)
+			cx_ite = cx_ite->next;
 		}
 	}
 return null();
@@ -1162,9 +1027,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_Constraint_obj,addAll,(void))
 	HX_STACK_PUSH("ZNPList_ZPP_Constraint::inlined_add","zpp_nape/util/Lists.hx",1866);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(1867)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_Constraint Block( ::zpp_nape::constraint::ZPP_Constraint &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",1875);
@@ -1219,12 +1081,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_Constraint_obj,inlined_add,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
 	struct _Function_1_1{
-		inline static ::zpp_nape::constraint::ZPP_Constraint Block( ::zpp_nape::constraint::ZPP_Constraint &o,::zpp_nape::util::ZNPList_ZPP_Constraint_obj *__this){
+		inline static ::zpp_nape::constraint::ZPP_Constraint Block( ::zpp_nape::util::ZNPList_ZPP_Constraint_obj *__this,::zpp_nape::constraint::ZPP_Constraint &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",1862);
 			{
-				HX_STACK_LINE(1862)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_Constraint Block( ::zpp_nape::constraint::ZPP_Constraint &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",1862);
@@ -1274,7 +1133,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_Constraint_obj,inlined_add,return )
 		}
 	};
 	HX_STACK_LINE(1861)
-	return _Function_1_1::Block(o,this);
+	return _Function_1_1::Block(this,o);
 }
 
 
@@ -1472,7 +1331,7 @@ Class ZNPList_ZPP_Constraint_obj::__mClass;
 
 void ZNPList_ZPP_Constraint_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ZPP_Constraint"), hx::TCanCast< ZNPList_ZPP_Constraint_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ZPP_Constraint"), hx::TCanCast< ZNPList_ZPP_Constraint_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

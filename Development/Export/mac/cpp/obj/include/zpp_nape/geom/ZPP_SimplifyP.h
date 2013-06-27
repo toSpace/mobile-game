@@ -11,7 +11,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_SimplifyP_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_SimplifyP_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_SimplifyP_obj OBJ_;
@@ -37,10 +37,10 @@ class ZPP_SimplifyP_obj : public hx::Object{
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		::zpp_nape::geom::ZPP_SimplifyV max; /* REM */ 
-		::zpp_nape::geom::ZPP_SimplifyV min; /* REM */ 
-		::zpp_nape::geom::ZPP_SimplifyP next; /* REM */ 
-		static ::zpp_nape::geom::ZPP_SimplifyP zpp_pool; /* REM */ 
+		::zpp_nape::geom::ZPP_SimplifyV max;
+		::zpp_nape::geom::ZPP_SimplifyV min;
+		::zpp_nape::geom::ZPP_SimplifyP next;
+		static ::zpp_nape::geom::ZPP_SimplifyP zpp_pool;
 		static ::zpp_nape::geom::ZPP_SimplifyP get( ::zpp_nape::geom::ZPP_SimplifyV min,::zpp_nape::geom::ZPP_SimplifyV max);
 		static Dynamic get_dyn();
 

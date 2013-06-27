@@ -8,7 +8,7 @@
 HX_DECLARE_CLASS0(StringBuf)
 
 
-class StringBuf_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  StringBuf_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef StringBuf_obj OBJ_;
@@ -28,19 +28,7 @@ class StringBuf_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("StringBuf"); }
 
-		virtual ::String toString( );
-		Dynamic toString_dyn();
-
-		virtual Void addChar( int c);
-		Dynamic addChar_dyn();
-
-		virtual Void addSub( ::String s,int pos,Dynamic len);
-		Dynamic addSub_dyn();
-
-		virtual Void add( Dynamic x);
-		Dynamic add_dyn();
-
-		Dynamic b; /* REM */ 
+		Array< ::String > b;
 };
 
 

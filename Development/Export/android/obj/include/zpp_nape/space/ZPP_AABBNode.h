@@ -13,7 +13,7 @@ namespace zpp_nape{
 namespace space{
 
 
-class ZPP_AABBNode_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_AABBNode_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_AABBNode_obj OBJ_;
@@ -36,27 +36,27 @@ class ZPP_AABBNode_obj : public hx::Object{
 		virtual bool isLeaf( );
 		Dynamic isLeaf_dyn();
 
-		bool first_sync; /* REM */ 
-		bool synced; /* REM */ 
-		::zpp_nape::space::ZPP_AABBNode snext; /* REM */ 
-		bool moved; /* REM */ 
-		::zpp_nape::space::ZPP_AABBNode mnext; /* REM */ 
+		bool first_sync;
+		bool synced;
+		::zpp_nape::space::ZPP_AABBNode snext;
+		bool moved;
+		::zpp_nape::space::ZPP_AABBNode mnext;
 		virtual Void free( );
 		Dynamic free_dyn();
 
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
-		::zpp_nape::space::ZPP_AABBNode next; /* REM */ 
-		Float rayt; /* REM */ 
-		int height; /* REM */ 
-		::zpp_nape::space::ZPP_AABBNode child2; /* REM */ 
-		::zpp_nape::space::ZPP_AABBNode child1; /* REM */ 
-		::zpp_nape::space::ZPP_AABBNode parent; /* REM */ 
-		bool dyn; /* REM */ 
-		::zpp_nape::shape::ZPP_Shape shape; /* REM */ 
-		::zpp_nape::geom::ZPP_AABB aabb; /* REM */ 
-		static ::zpp_nape::space::ZPP_AABBNode zpp_pool; /* REM */ 
+		::zpp_nape::space::ZPP_AABBNode next;
+		Float rayt;
+		int height;
+		::zpp_nape::space::ZPP_AABBNode child2;
+		::zpp_nape::space::ZPP_AABBNode child1;
+		::zpp_nape::space::ZPP_AABBNode parent;
+		bool dyn;
+		::zpp_nape::shape::ZPP_Shape shape;
+		::zpp_nape::geom::ZPP_AABB aabb;
+		static ::zpp_nape::space::ZPP_AABBNode zpp_pool;
 };
 
 } // end namespace zpp_nape

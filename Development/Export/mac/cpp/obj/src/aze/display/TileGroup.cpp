@@ -18,26 +18,23 @@
 #ifndef INCLUDED_aze_display_TileSprite
 #include <aze/display/TileSprite.h>
 #endif
+#ifndef INCLUDED_flash_geom_Rectangle
+#include <flash/geom/Rectangle.h>
+#endif
 #ifndef INCLUDED_haxe_Log
 #include <haxe/Log.h>
-#endif
-#ifndef INCLUDED_haxe_Public
-#include <haxe/Public.h>
-#endif
-#ifndef INCLUDED_native_geom_Rectangle
-#include <native/geom/Rectangle.h>
 #endif
 namespace aze{
 namespace display{
 
-Void TileGroup_obj::__construct()
+Void TileGroup_obj::__construct(::aze::display::TileLayer layer)
 {
 HX_STACK_PUSH("TileGroup::new","aze/display/TileGroup.hx",23);
 {
 	HX_STACK_LINE(24)
-	super::__construct();
+	super::__construct(layer);
 	HX_STACK_LINE(25)
-	this->children = Array_obj< ::aze::display::TileBase >::__new();
+	this->children = Array_obj< ::Dynamic >::__new();
 }
 ;
 	return null();
@@ -46,62 +43,62 @@ HX_STACK_PUSH("TileGroup::new","aze/display/TileGroup.hx",23);
 TileGroup_obj::~TileGroup_obj() { }
 
 Dynamic TileGroup_obj::__CreateEmpty() { return  new TileGroup_obj; }
-hx::ObjectPtr< TileGroup_obj > TileGroup_obj::__new()
+hx::ObjectPtr< TileGroup_obj > TileGroup_obj::__new(::aze::display::TileLayer layer)
 {  hx::ObjectPtr< TileGroup_obj > result = new TileGroup_obj();
-	result->__construct();
+	result->__construct(layer);
 	return result;}
 
 Dynamic TileGroup_obj::__Create(hx::DynamicArray inArgs)
 {  hx::ObjectPtr< TileGroup_obj > result = new TileGroup_obj();
-	result->__construct();
+	result->__construct(inArgs[0]);
 	return result;}
 
 Float TileGroup_obj::get_width( ){
-	HX_STACK_PUSH("TileGroup::get_width","aze/display/TileGroup.hx",148);
+	HX_STACK_PUSH("TileGroup::get_width","aze/display/TileGroup.hx",161);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(149)
+	HX_STACK_LINE(162)
 	if (((((  (((this->children != null()))) ? int(this->children->length) : int((int)0) )) == (int)0))){
-		HX_STACK_LINE(149)
+		HX_STACK_LINE(162)
 		return (int)0;
 	}
-	HX_STACK_LINE(150)
+	HX_STACK_LINE(163)
 	Float xmin = 9999.0;		HX_STACK_VAR(xmin,"xmin");
 	Float xmax = -9999.0;		HX_STACK_VAR(xmax,"xmax");
-	HX_STACK_LINE(151)
+	HX_STACK_LINE(164)
 	{
-		HX_STACK_LINE(151)
+		HX_STACK_LINE(164)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		Array< ::aze::display::TileBase > _g1 = this->children;		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(151)
+		Array< ::Dynamic > _g1 = this->children;		HX_STACK_VAR(_g1,"_g1");
+		HX_STACK_LINE(164)
 		while(((_g < _g1->length))){
-			HX_STACK_LINE(151)
-			::aze::display::TileBase child = _g1->__get(_g);		HX_STACK_VAR(child,"child");
-			HX_STACK_LINE(151)
+			HX_STACK_LINE(164)
+			::aze::display::TileBase child = _g1->__get(_g).StaticCast< ::aze::display::TileBase >();		HX_STACK_VAR(child,"child");
+			HX_STACK_LINE(164)
 			++(_g);
-			HX_STACK_LINE(152)
+			HX_STACK_LINE(165)
 			if ((::Std_obj::is(child,hx::ClassOf< ::aze::display::TileSprite >()))){
-				HX_STACK_LINE(153)
+				HX_STACK_LINE(166)
 				::aze::display::TileSprite sprite = child;		HX_STACK_VAR(sprite,"sprite");
-				HX_STACK_LINE(154)
+				HX_STACK_LINE(167)
 				Float w = (sprite->size->width * sprite->_scaleX);		HX_STACK_VAR(w,"w");
-				HX_STACK_LINE(155)
+				HX_STACK_LINE(168)
 				Float left = (sprite->x - (Float(w) / Float((int)2)));		HX_STACK_VAR(left,"left");
-				HX_STACK_LINE(156)
+				HX_STACK_LINE(169)
 				Float right = (left + w);		HX_STACK_VAR(right,"right");
-				HX_STACK_LINE(157)
+				HX_STACK_LINE(170)
 				if (((left < xmin))){
-					HX_STACK_LINE(157)
+					HX_STACK_LINE(170)
 					xmin = left;
 				}
-				HX_STACK_LINE(158)
+				HX_STACK_LINE(171)
 				if (((right > xmax))){
-					HX_STACK_LINE(158)
+					HX_STACK_LINE(171)
 					xmax = right;
 				}
 			}
 		}
 	}
-	HX_STACK_LINE(160)
+	HX_STACK_LINE(173)
 	return (xmax - xmin);
 }
 
@@ -109,51 +106,51 @@ Float TileGroup_obj::get_width( ){
 HX_DEFINE_DYNAMIC_FUNC0(TileGroup_obj,get_width,return )
 
 Float TileGroup_obj::get_height( ){
-	HX_STACK_PUSH("TileGroup::get_height","aze/display/TileGroup.hx",131);
+	HX_STACK_PUSH("TileGroup::get_height","aze/display/TileGroup.hx",144);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(132)
+	HX_STACK_LINE(145)
 	if (((((  (((this->children != null()))) ? int(this->children->length) : int((int)0) )) == (int)0))){
-		HX_STACK_LINE(132)
+		HX_STACK_LINE(145)
 		return (int)0;
 	}
-	HX_STACK_LINE(133)
+	HX_STACK_LINE(146)
 	Float ymin = 9999.0;		HX_STACK_VAR(ymin,"ymin");
 	Float ymax = -9999.0;		HX_STACK_VAR(ymax,"ymax");
-	HX_STACK_LINE(134)
+	HX_STACK_LINE(147)
 	{
-		HX_STACK_LINE(134)
+		HX_STACK_LINE(147)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		Array< ::aze::display::TileBase > _g1 = this->children;		HX_STACK_VAR(_g1,"_g1");
-		HX_STACK_LINE(134)
+		Array< ::Dynamic > _g1 = this->children;		HX_STACK_VAR(_g1,"_g1");
+		HX_STACK_LINE(147)
 		while(((_g < _g1->length))){
-			HX_STACK_LINE(134)
-			::aze::display::TileBase child = _g1->__get(_g);		HX_STACK_VAR(child,"child");
-			HX_STACK_LINE(134)
+			HX_STACK_LINE(147)
+			::aze::display::TileBase child = _g1->__get(_g).StaticCast< ::aze::display::TileBase >();		HX_STACK_VAR(child,"child");
+			HX_STACK_LINE(147)
 			++(_g);
-			HX_STACK_LINE(135)
+			HX_STACK_LINE(148)
 			if ((::Std_obj::is(child,hx::ClassOf< ::aze::display::TileSprite >()))){
-				HX_STACK_LINE(136)
+				HX_STACK_LINE(149)
 				::aze::display::TileSprite sprite = child;		HX_STACK_VAR(sprite,"sprite");
-				HX_STACK_LINE(137)
+				HX_STACK_LINE(150)
 				Float h = (sprite->size->height * sprite->_scaleY);		HX_STACK_VAR(h,"h");
-				HX_STACK_LINE(138)
+				HX_STACK_LINE(151)
 				Float top = (sprite->y - (Float(h) / Float((int)2)));		HX_STACK_VAR(top,"top");
-				HX_STACK_LINE(139)
+				HX_STACK_LINE(152)
 				Float bottom = (top + h);		HX_STACK_VAR(bottom,"bottom");
-				HX_STACK_LINE(140)
+				HX_STACK_LINE(153)
 				if (((top < ymin))){
-					HX_STACK_LINE(140)
+					HX_STACK_LINE(153)
 					ymin = top;
 				}
-				HX_STACK_LINE(141)
+				HX_STACK_LINE(154)
 				if (((bottom > ymax))){
-					HX_STACK_LINE(141)
+					HX_STACK_LINE(154)
 					ymax = bottom;
 				}
 			}
 		}
 	}
-	HX_STACK_LINE(143)
+	HX_STACK_LINE(156)
 	return (ymax - ymin);
 }
 
@@ -161,9 +158,9 @@ Float TileGroup_obj::get_height( ){
 HX_DEFINE_DYNAMIC_FUNC0(TileGroup_obj,get_height,return )
 
 int TileGroup_obj::get_numChildren( ){
-	HX_STACK_PUSH("TileGroup::get_numChildren","aze/display/TileGroup.hx",127);
+	HX_STACK_PUSH("TileGroup::get_numChildren","aze/display/TileGroup.hx",140);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(127)
+	HX_STACK_LINE(140)
 	return (  (((this->children != null()))) ? int(this->children->length) : int((int)0) );
 }
 
@@ -171,14 +168,36 @@ int TileGroup_obj::get_numChildren( ){
 HX_DEFINE_DYNAMIC_FUNC0(TileGroup_obj,get_numChildren,return )
 
 Dynamic TileGroup_obj::iterator( ){
-	HX_STACK_PUSH("TileGroup::iterator","aze/display/TileGroup.hx",124);
+	HX_STACK_PUSH("TileGroup::iterator","aze/display/TileGroup.hx",137);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(124)
-	return this->children->iterator();
+	HX_STACK_LINE(137)
+	return this->children->iteratorFast< ::aze::display::TileBase >();
 }
 
 
 HX_DEFINE_DYNAMIC_FUNC0(TileGroup_obj,iterator,return )
+
+Void TileGroup_obj::setChildIndex( ::aze::display::TileBase item,int index){
+{
+		HX_STACK_PUSH("TileGroup::setChildIndex","aze/display/TileGroup.hx",125);
+		HX_STACK_THIS(this);
+		HX_STACK_ARG(item,"item");
+		HX_STACK_ARG(index,"index");
+		HX_STACK_LINE(126)
+		int oldIndex = ::Lambda_obj::indexOf(this->children,item);		HX_STACK_VAR(oldIndex,"oldIndex");
+		HX_STACK_LINE(127)
+		if (((bool((oldIndex >= (int)0)) && bool((index != oldIndex))))){
+			HX_STACK_LINE(132)
+			this->children->splice(oldIndex,(int)1);
+			HX_STACK_LINE(133)
+			this->children->insert(index,item);
+		}
+	}
+return null();
+}
+
+
+HX_DEFINE_DYNAMIC_FUNC2(TileGroup_obj,setChildIndex,(void))
 
 int TileGroup_obj::getChildIndex( ::aze::display::TileBase item){
 	HX_STACK_PUSH("TileGroup::getChildIndex","aze/display/TileGroup.hx",120);
@@ -191,18 +210,18 @@ int TileGroup_obj::getChildIndex( ::aze::display::TileBase item){
 
 HX_DEFINE_DYNAMIC_FUNC1(TileGroup_obj,getChildIndex,return )
 
-Array< ::aze::display::TileBase > TileGroup_obj::removeAllChildren( ){
+Array< ::Dynamic > TileGroup_obj::removeAllChildren( ){
 	HX_STACK_PUSH("TileGroup::removeAllChildren","aze/display/TileGroup.hx",110);
 	HX_STACK_THIS(this);
 	HX_STACK_LINE(114)
 	{
 		HX_STACK_LINE(114)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		Array< ::aze::display::TileBase > _g1 = this->children;		HX_STACK_VAR(_g1,"_g1");
+		Array< ::Dynamic > _g1 = this->children;		HX_STACK_VAR(_g1,"_g1");
 		HX_STACK_LINE(114)
 		while(((_g < _g1->length))){
 			HX_STACK_LINE(114)
-			::aze::display::TileBase child = _g1->__get(_g);		HX_STACK_VAR(child,"child");
+			::aze::display::TileBase child = _g1->__get(_g).StaticCast< ::aze::display::TileBase >();		HX_STACK_VAR(child,"child");
 			HX_STACK_LINE(114)
 			++(_g);
 			HX_STACK_LINE(115)
@@ -221,7 +240,7 @@ HX_DEFINE_DYNAMIC_FUNC0(TileGroup_obj,removeAllChildren,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(index,"index");
 	HX_STACK_LINE(104)
-	::aze::display::TileBase child = this->children->splice(index,(int)1)->__get((int)0);		HX_STACK_VAR(child,"child");
+	::aze::display::TileBase child = this->children->splice(index,(int)1)->__get((int)0).StaticCast< ::aze::display::TileBase >();		HX_STACK_VAR(child,"child");
 	HX_STACK_LINE(105)
 	if (((child != null()))){
 		HX_STACK_LINE(105)
@@ -274,7 +293,15 @@ int TileGroup_obj::addChildAt( ::aze::display::TileBase item,int index){
 	HX_STACK_LINE(71)
 	this->removeChild(item);
 	HX_STACK_LINE(75)
-	this->initChild(item);
+	{
+		HX_STACK_LINE(75)
+		item->parent = hx::ObjectPtr<OBJ_>(this);
+		HX_STACK_LINE(75)
+		if (((this->layer != null()))){
+			HX_STACK_LINE(75)
+			item->init(this->layer);
+		}
+	}
 	HX_STACK_LINE(76)
 	this->children->insert(index,item);
 	HX_STACK_LINE(77)
@@ -291,7 +318,15 @@ int TileGroup_obj::addChild( ::aze::display::TileBase item){
 	HX_STACK_LINE(61)
 	this->removeChild(item);
 	HX_STACK_LINE(65)
-	this->initChild(item);
+	{
+		HX_STACK_LINE(65)
+		item->parent = hx::ObjectPtr<OBJ_>(this);
+		HX_STACK_LINE(65)
+		if (((this->layer != null()))){
+			HX_STACK_LINE(65)
+			item->init(this->layer);
+		}
+	}
 	HX_STACK_LINE(66)
 	return this->children->push(item);
 }
@@ -316,15 +351,20 @@ Void TileGroup_obj::initChildren( ){
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(50)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		Array< ::aze::display::TileBase > _g1 = this->children;		HX_STACK_VAR(_g1,"_g1");
+		Array< ::Dynamic > _g1 = this->children;		HX_STACK_VAR(_g1,"_g1");
 		HX_STACK_LINE(50)
 		while(((_g < _g1->length))){
 			HX_STACK_LINE(50)
-			::aze::display::TileBase child = _g1->__get(_g);		HX_STACK_VAR(child,"child");
+			::aze::display::TileBase child = _g1->__get(_g).StaticCast< ::aze::display::TileBase >();		HX_STACK_VAR(child,"child");
 			HX_STACK_LINE(50)
 			++(_g);
 			HX_STACK_LINE(51)
-			this->initChild(child);
+			child->parent = hx::ObjectPtr<OBJ_>(this);
+			HX_STACK_LINE(51)
+			if (((this->layer != null()))){
+				HX_STACK_LINE(51)
+				child->init(this->layer);
+			}
 		}
 	}
 return null();
@@ -341,7 +381,7 @@ Void TileGroup_obj::initChild( ::aze::display::TileBase item){
 		HX_STACK_LINE(43)
 		item->parent = hx::ObjectPtr<OBJ_>(this);
 		HX_STACK_LINE(44)
-		if (((bool((this->layer != null())) && bool((item->layer == null()))))){
+		if (((this->layer != null()))){
 			HX_STACK_LINE(45)
 			item->init(this->layer);
 		}
@@ -360,7 +400,10 @@ Void TileGroup_obj::init( ::aze::display::TileLayer layer){
 		HX_STACK_LINE(33)
 		this->layer = layer;
 		HX_STACK_LINE(34)
-		this->initChildren();
+		if (((this->children != null()))){
+			HX_STACK_LINE(34)
+			this->initChildren();
+		}
 	}
 return null();
 }
@@ -427,6 +470,7 @@ Dynamic TileGroup_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"initChildren") ) { return initChildren_dyn(); }
 		break;
 	case 13:
+		if (HX_FIELD_EQ(inName,"setChildIndex") ) { return setChildIndex_dyn(); }
 		if (HX_FIELD_EQ(inName,"getChildIndex") ) { return getChildIndex_dyn(); }
 		if (HX_FIELD_EQ(inName,"removeChildAt") ) { return removeChildAt_dyn(); }
 		break;
@@ -449,7 +493,7 @@ Dynamic TileGroup_obj::__SetField(const ::String &inName,const Dynamic &inValue,
 		if (HX_FIELD_EQ(inName,"height") ) { height=inValue.Cast< Float >(); return inValue; }
 		break;
 	case 8:
-		if (HX_FIELD_EQ(inName,"children") ) { children=inValue.Cast< Array< ::aze::display::TileBase > >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"children") ) { children=inValue.Cast< Array< ::Dynamic > >(); return inValue; }
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"numChildren") ) { numChildren=inValue.Cast< int >(); return inValue; }
@@ -477,6 +521,7 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("get_numChildren"),
 	HX_CSTRING("numChildren"),
 	HX_CSTRING("iterator"),
+	HX_CSTRING("setChildIndex"),
 	HX_CSTRING("getChildIndex"),
 	HX_CSTRING("removeAllChildren"),
 	HX_CSTRING("removeChildAt"),
@@ -502,7 +547,7 @@ Class TileGroup_obj::__mClass;
 
 void TileGroup_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("aze.display.TileGroup"), hx::TCanCast< TileGroup_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("aze.display.TileGroup"), hx::TCanCast< TileGroup_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

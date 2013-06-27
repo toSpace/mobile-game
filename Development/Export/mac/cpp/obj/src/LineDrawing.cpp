@@ -24,59 +24,59 @@
 #ifndef INCLUDED_Std
 #include <Std.h>
 #endif
-#ifndef INCLUDED_native_display_Bitmap
-#include <native/display/Bitmap.h>
+#ifndef INCLUDED_flash_display_Bitmap
+#include <flash/display/Bitmap.h>
 #endif
-#ifndef INCLUDED_native_display_BitmapData
-#include <native/display/BitmapData.h>
+#ifndef INCLUDED_flash_display_BitmapData
+#include <flash/display/BitmapData.h>
 #endif
-#ifndef INCLUDED_native_display_BlendMode
-#include <native/display/BlendMode.h>
+#ifndef INCLUDED_flash_display_BlendMode
+#include <flash/display/BlendMode.h>
 #endif
-#ifndef INCLUDED_native_display_CapsStyle
-#include <native/display/CapsStyle.h>
+#ifndef INCLUDED_flash_display_CapsStyle
+#include <flash/display/CapsStyle.h>
 #endif
-#ifndef INCLUDED_native_display_DisplayObject
-#include <native/display/DisplayObject.h>
+#ifndef INCLUDED_flash_display_DisplayObject
+#include <flash/display/DisplayObject.h>
 #endif
-#ifndef INCLUDED_native_display_DisplayObjectContainer
-#include <native/display/DisplayObjectContainer.h>
+#ifndef INCLUDED_flash_display_DisplayObjectContainer
+#include <flash/display/DisplayObjectContainer.h>
 #endif
-#ifndef INCLUDED_native_display_Graphics
-#include <native/display/Graphics.h>
+#ifndef INCLUDED_flash_display_Graphics
+#include <flash/display/Graphics.h>
 #endif
-#ifndef INCLUDED_native_display_IBitmapDrawable
-#include <native/display/IBitmapDrawable.h>
+#ifndef INCLUDED_flash_display_IBitmapDrawable
+#include <flash/display/IBitmapDrawable.h>
 #endif
-#ifndef INCLUDED_native_display_InteractiveObject
-#include <native/display/InteractiveObject.h>
+#ifndef INCLUDED_flash_display_InteractiveObject
+#include <flash/display/InteractiveObject.h>
 #endif
-#ifndef INCLUDED_native_display_JointStyle
-#include <native/display/JointStyle.h>
+#ifndef INCLUDED_flash_display_JointStyle
+#include <flash/display/JointStyle.h>
 #endif
-#ifndef INCLUDED_native_display_LineScaleMode
-#include <native/display/LineScaleMode.h>
+#ifndef INCLUDED_flash_display_LineScaleMode
+#include <flash/display/LineScaleMode.h>
 #endif
-#ifndef INCLUDED_native_display_PixelSnapping
-#include <native/display/PixelSnapping.h>
+#ifndef INCLUDED_flash_display_PixelSnapping
+#include <flash/display/PixelSnapping.h>
 #endif
-#ifndef INCLUDED_native_display_Sprite
-#include <native/display/Sprite.h>
+#ifndef INCLUDED_flash_display_Sprite
+#include <flash/display/Sprite.h>
 #endif
-#ifndef INCLUDED_native_events_EventDispatcher
-#include <native/events/EventDispatcher.h>
+#ifndef INCLUDED_flash_events_EventDispatcher
+#include <flash/events/EventDispatcher.h>
 #endif
-#ifndef INCLUDED_native_events_IEventDispatcher
-#include <native/events/IEventDispatcher.h>
+#ifndef INCLUDED_flash_events_IEventDispatcher
+#include <flash/events/IEventDispatcher.h>
 #endif
-#ifndef INCLUDED_native_geom_ColorTransform
-#include <native/geom/ColorTransform.h>
+#ifndef INCLUDED_flash_geom_ColorTransform
+#include <flash/geom/ColorTransform.h>
 #endif
-#ifndef INCLUDED_native_geom_Matrix
-#include <native/geom/Matrix.h>
+#ifndef INCLUDED_flash_geom_Matrix
+#include <flash/geom/Matrix.h>
 #endif
-#ifndef INCLUDED_native_geom_Rectangle
-#include <native/geom/Rectangle.h>
+#ifndef INCLUDED_flash_geom_Rectangle
+#include <flash/geom/Rectangle.h>
 #endif
 
 Void LineDrawing_obj::__construct(Float x,Float y)
@@ -90,7 +90,7 @@ HX_STACK_PUSH("LineDrawing::new","LineDrawing.hx",13);
 	HX_STACK_LINE(21)
 	::Drawing_obj::locked = true;
 	HX_STACK_LINE(24)
-	this->drawing = ::native::display::Sprite_obj::__new();
+	this->drawing = ::flash::display::Sprite_obj::__new();
 	HX_STACK_LINE(27)
 	if ((::Drawing_obj::erasing)){
 		HX_STACK_LINE(27)
@@ -124,71 +124,85 @@ Dynamic LineDrawing_obj::__Create(hx::DynamicArray inArgs)
 	result->__construct(inArgs[0],inArgs[1]);
 	return result;}
 
-Void LineDrawing_obj::erase( ){
+Void LineDrawing_obj::erase( ::flash::display::Bitmap bitmap){
 {
-		HX_STACK_PUSH("LineDrawing::erase","LineDrawing.hx",91);
+		HX_STACK_PUSH("LineDrawing::erase","LineDrawing.hx",100);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(93)
+		HX_STACK_ARG(bitmap,"bitmap");
+		HX_STACK_LINE(102)
 		{
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(102)
 			int _g = (int)0;		HX_STACK_VAR(_g,"_g");
 			Dynamic _g1 = ::Drawing_obj::drawList;		HX_STACK_VAR(_g1,"_g1");
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(102)
 			while(((_g < _g1->__Field(HX_CSTRING("length"),true)))){
-				HX_STACK_LINE(93)
+				HX_STACK_LINE(102)
 				Dynamic object = _g1->__GetItem(_g);		HX_STACK_VAR(object,"object");
-				HX_STACK_LINE(93)
+				HX_STACK_LINE(102)
 				++(_g);
-				HX_STACK_LINE(94)
+				HX_STACK_LINE(103)
 				if ((object->__Field(HX_CSTRING("inView"),true)())){
-					HX_STACK_LINE(94)
-					object->__Field(HX_CSTRING("erase"),true)(this->drawing);
+					HX_STACK_LINE(103)
+					object->__Field(HX_CSTRING("erase"),true)(this->drawing,bitmap);
 				}
 			}
 		}
-		HX_STACK_LINE(97)
+		HX_STACK_LINE(106)
 		::Main_obj::canvas->removeChild(this->drawing);
 	}
 return null();
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC0(LineDrawing_obj,erase,(void))
+HX_DEFINE_DYNAMIC_FUNC1(LineDrawing_obj,erase,(void))
 
-Void LineDrawing_obj::draw( ){
+Void LineDrawing_obj::draw( bool erasing){
 {
-		HX_STACK_PUSH("LineDrawing::draw","LineDrawing.hx",68);
+		HX_STACK_PUSH("LineDrawing::draw","LineDrawing.hx",69);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(70)
-		::native::geom::Rectangle bounds = this->drawing->getBounds(::Main_obj::canvas);		HX_STACK_VAR(bounds,"bounds");
-		HX_STACK_LINE(73)
-		::native::geom::Matrix matrix = ::native::geom::Matrix_obj::__new(null(),null(),null(),null(),null(),null());		HX_STACK_VAR(matrix,"matrix");
+		HX_STACK_ARG(erasing,"erasing");
+		HX_STACK_LINE(71)
+		::flash::geom::Rectangle bounds = this->drawing->getBounds(::Main_obj::canvas);		HX_STACK_VAR(bounds,"bounds");
 		HX_STACK_LINE(74)
-		matrix->tx = ((int)0 - bounds->x);
+		::flash::geom::Matrix matrix = ::flash::geom::Matrix_obj::__new(null(),null(),null(),null(),null(),null());		HX_STACK_VAR(matrix,"matrix");
 		HX_STACK_LINE(75)
-		matrix->ty = ((int)0 - bounds->y);
+		matrix->tx = ((int)0 - bounds->x);
 		HX_STACK_LINE(76)
-		::native::display::Bitmap bitmap = ::native::display::Bitmap_obj::__new(::native::display::BitmapData_obj::__new(::Std_obj::_int((bounds->width + bounds->x)),::Std_obj::_int((bounds->height + bounds->height)),true,(int)0,null()),null(),null());		HX_STACK_VAR(bitmap,"bitmap");
+		matrix->ty = ((int)0 - bounds->y);
 		HX_STACK_LINE(77)
-		bitmap->set_x(bounds->x);
+		::flash::display::Bitmap bitmap = ::flash::display::Bitmap_obj::__new(::flash::display::BitmapData_obj::__new(::Std_obj::_int((bounds->width + bounds->x)),::Std_obj::_int((bounds->height + bounds->height)),true,(int)0,null()),null(),null());		HX_STACK_VAR(bitmap,"bitmap");
 		HX_STACK_LINE(78)
+		bitmap->set_x(bounds->x);
+		HX_STACK_LINE(79)
 		bitmap->set_y(bounds->y);
-		HX_STACK_LINE(80)
-		::native::geom::ColorTransform color = ::native::geom::ColorTransform_obj::__new(null(),null(),null(),null(),null(),null(),null(),null());		HX_STACK_VAR(color,"color");
 		HX_STACK_LINE(81)
-		color->alphaOffset = (int)255;
-		HX_STACK_LINE(83)
+		::flash::geom::ColorTransform color = ::flash::geom::ColorTransform_obj::__new(null(),null(),null(),null(),null(),null(),null(),null());		HX_STACK_VAR(color,"color");
+		HX_STACK_LINE(82)
+		if ((!(erasing))){
+			HX_STACK_LINE(82)
+			color->alphaOffset = (int)255;
+		}
+		else{
+		}
+		HX_STACK_LINE(88)
 		bitmap->bitmapData->draw(this->drawing,matrix,color,null(),null(),null());
-		HX_STACK_LINE(86)
-		::Main_obj::canvas->removeChild(this->drawing);
-		HX_STACK_LINE(87)
-		::DrawObject object = ::DrawObject_obj::__new(bitmap);		HX_STACK_VAR(object,"object");
+		HX_STACK_LINE(91)
+		if ((!(erasing))){
+			HX_STACK_LINE(92)
+			::Main_obj::canvas->removeChild(this->drawing);
+			HX_STACK_LINE(93)
+			::DrawObject object = ::DrawObject_obj::__new(bitmap);		HX_STACK_VAR(object,"object");
+		}
+		else{
+			HX_STACK_LINE(94)
+			this->erase(bitmap);
+		}
 	}
 return null();
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC0(LineDrawing_obj,draw,(void))
+HX_DEFINE_DYNAMIC_FUNC1(LineDrawing_obj,draw,(void))
 
 Void LineDrawing_obj::end( ){
 {
@@ -199,13 +213,13 @@ Void LineDrawing_obj::end( ){
 		HX_STACK_LINE(58)
 		if ((!(::Drawing_obj::erasing))){
 			HX_STACK_LINE(58)
-			this->draw();
+			this->draw(false);
 		}
 		else{
 			HX_STACK_LINE(60)
-			this->erase();
+			this->draw(true);
 		}
-		HX_STACK_LINE(65)
+		HX_STACK_LINE(66)
 		::Drawing_obj::locked = false;
 	}
 return null();
@@ -283,7 +297,7 @@ Dynamic LineDrawing_obj::__SetField(const ::String &inName,const Dynamic &inValu
 	switch(inName.length) {
 	case 7:
 		if (HX_FIELD_EQ(inName,"stopped") ) { stopped=inValue.Cast< bool >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"drawing") ) { drawing=inValue.Cast< ::native::display::Sprite >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"drawing") ) { drawing=inValue.Cast< ::flash::display::Sprite >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -319,7 +333,7 @@ Class LineDrawing_obj::__mClass;
 
 void LineDrawing_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("LineDrawing"), hx::TCanCast< LineDrawing_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("LineDrawing"), hx::TCanCast< LineDrawing_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

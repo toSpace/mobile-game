@@ -84,9 +84,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_PartitionPair_obj,free,(void))
 	HX_STACK_PUSH("ZPP_PartitionPair::at","zpp_nape/geom/Triangular.hx",542);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(543)
-	{
-	}
 	HX_STACK_LINE(551)
 	::zpp_nape::geom::ZPP_PartitionPair it = this->iterator_at(ind);		HX_STACK_VAR(it,"it");
 	HX_STACK_LINE(552)
@@ -100,9 +97,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_PartitionPair_obj,at,return )
 	HX_STACK_PUSH("ZPP_PartitionPair::iterator_at","zpp_nape/geom/Triangular.hx",529);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(530)
-	{
-	}
 	HX_STACK_LINE(538)
 	::zpp_nape::geom::ZPP_PartitionPair ret = this->next;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(539)
@@ -152,9 +146,6 @@ bool ZPP_PartitionPair_obj::inlined_has( ::zpp_nape::geom::ZPP_PartitionPair obj
 	HX_STACK_PUSH("ZPP_PartitionPair::inlined_has","zpp_nape/geom/Triangular.hx",487);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(488)
-	{
-	}
 	HX_STACK_LINE(496)
 	bool ret;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(497)
@@ -196,9 +187,6 @@ bool ZPP_PartitionPair_obj::has( ::zpp_nape::geom::ZPP_PartitionPair obj){
 		inline static bool Block( ::zpp_nape::geom::ZPP_PartitionPair_obj *__this,::zpp_nape::geom::ZPP_PartitionPair &obj){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/Triangular.hx",483);
 			{
-				HX_STACK_LINE(483)
-				{
-				}
 				HX_STACK_LINE(483)
 				bool ret;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(483)
@@ -333,9 +321,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_PartitionPair_obj,splice,return )
 	HX_STACK_PUSH("ZPP_PartitionPair::inlined_erase","zpp_nape/geom/Triangular.hx",412);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
-	HX_STACK_LINE(413)
-	{
-	}
 	HX_STACK_LINE(421)
 	::zpp_nape::geom::ZPP_PartitionPair old;		HX_STACK_VAR(old,"old");
 	HX_STACK_LINE(422)
@@ -369,9 +354,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_PartitionPair_obj,splice,return )
 	}
 	HX_STACK_LINE(435)
 	old->_inuse = false;
-	HX_STACK_LINE(438)
-	{
-	}
 	HX_STACK_LINE(439)
 	this->modified = true;
 	HX_STACK_LINE(440)
@@ -390,12 +372,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_PartitionPair_obj,inlined_erase,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
 	struct _Function_1_1{
-		inline static ::zpp_nape::geom::ZPP_PartitionPair Block( ::zpp_nape::geom::ZPP_PartitionPair &pre,::zpp_nape::geom::ZPP_PartitionPair_obj *__this){
+		inline static ::zpp_nape::geom::ZPP_PartitionPair Block( ::zpp_nape::geom::ZPP_PartitionPair_obj *__this,::zpp_nape::geom::ZPP_PartitionPair &pre){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/Triangular.hx",408);
 			{
-				HX_STACK_LINE(408)
-				{
-				}
 				HX_STACK_LINE(408)
 				::zpp_nape::geom::ZPP_PartitionPair old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(408)
@@ -430,9 +409,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_PartitionPair_obj,inlined_erase,return )
 				HX_STACK_LINE(408)
 				old->_inuse = false;
 				HX_STACK_LINE(408)
-				{
-				}
-				HX_STACK_LINE(408)
 				__this->modified = true;
 				HX_STACK_LINE(408)
 				(__this->length)--;
@@ -445,7 +421,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_PartitionPair_obj,inlined_erase,return )
 		}
 	};
 	HX_STACK_LINE(407)
-	return _Function_1_1::Block(pre,this);
+	return _Function_1_1::Block(this,pre);
 }
 
 
@@ -455,9 +431,6 @@ bool ZPP_PartitionPair_obj::inlined_try_remove( ::zpp_nape::geom::ZPP_PartitionP
 	HX_STACK_PUSH("ZPP_PartitionPair::inlined_try_remove","zpp_nape/geom/Triangular.hx",384);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(385)
-	{
-	}
 	HX_STACK_LINE(393)
 	::zpp_nape::geom::ZPP_PartitionPair pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(394)
@@ -470,9 +443,6 @@ bool ZPP_PartitionPair_obj::inlined_try_remove( ::zpp_nape::geom::ZPP_PartitionP
 		if (((cur == obj))){
 			HX_STACK_LINE(398)
 			{
-				HX_STACK_LINE(398)
-				{
-				}
 				HX_STACK_LINE(398)
 				::zpp_nape::geom::ZPP_PartitionPair old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(398)
@@ -507,9 +477,6 @@ bool ZPP_PartitionPair_obj::inlined_try_remove( ::zpp_nape::geom::ZPP_PartitionP
 				HX_STACK_LINE(398)
 				old->_inuse = false;
 				HX_STACK_LINE(398)
-				{
-				}
-				HX_STACK_LINE(398)
 				this->modified = true;
 				HX_STACK_LINE(398)
 				(this->length)--;
@@ -540,87 +507,72 @@ Void ZPP_PartitionPair_obj::inlined_remove( ::zpp_nape::geom::ZPP_PartitionPair 
 		HX_STACK_PUSH("ZPP_PartitionPair::inlined_remove","zpp_nape/geom/Triangular.hx",371);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(372)
-		{
-		}
 		HX_STACK_LINE(380)
-		{
+		::zpp_nape::geom::ZPP_PartitionPair pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(380)
+		::zpp_nape::geom::ZPP_PartitionPair cur = this->next;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(380)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(380)
+		while(((cur != null()))){
 			HX_STACK_LINE(380)
-			{
-			}
-			HX_STACK_LINE(380)
-			::zpp_nape::geom::ZPP_PartitionPair pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(380)
-			::zpp_nape::geom::ZPP_PartitionPair cur = this->next;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(380)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(380)
-			while(((cur != null()))){
+			if (((cur == obj))){
 				HX_STACK_LINE(380)
-				if (((cur == obj))){
+				{
 					HX_STACK_LINE(380)
-					{
+					::zpp_nape::geom::ZPP_PartitionPair old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(380)
+					::zpp_nape::geom::ZPP_PartitionPair ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(380)
+					if (((pre == null()))){
 						HX_STACK_LINE(380)
-						{
+						old = this->next;
+						HX_STACK_LINE(380)
+						ret1 = old->next;
+						HX_STACK_LINE(380)
+						this->next = ret1;
+						HX_STACK_LINE(380)
+						if (((this->next == null()))){
+							HX_STACK_LINE(380)
+							this->pushmod = true;
 						}
+					}
+					else{
 						HX_STACK_LINE(380)
-						::zpp_nape::geom::ZPP_PartitionPair old;		HX_STACK_VAR(old,"old");
+						old = pre->next;
 						HX_STACK_LINE(380)
-						::zpp_nape::geom::ZPP_PartitionPair ret1;		HX_STACK_VAR(ret1,"ret1");
+						ret1 = old->next;
 						HX_STACK_LINE(380)
-						if (((pre == null()))){
+						pre->next = ret1;
+						HX_STACK_LINE(380)
+						if (((ret1 == null()))){
 							HX_STACK_LINE(380)
-							old = this->next;
-							HX_STACK_LINE(380)
-							ret1 = old->next;
-							HX_STACK_LINE(380)
-							this->next = ret1;
-							HX_STACK_LINE(380)
-							if (((this->next == null()))){
-								HX_STACK_LINE(380)
-								this->pushmod = true;
-							}
+							this->pushmod = true;
 						}
-						else{
-							HX_STACK_LINE(380)
-							old = pre->next;
-							HX_STACK_LINE(380)
-							ret1 = old->next;
-							HX_STACK_LINE(380)
-							pre->next = ret1;
-							HX_STACK_LINE(380)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(380)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(380)
-						old->_inuse = false;
-						HX_STACK_LINE(380)
-						{
-						}
-						HX_STACK_LINE(380)
-						this->modified = true;
-						HX_STACK_LINE(380)
-						(this->length)--;
-						HX_STACK_LINE(380)
-						this->pushmod = true;
-						HX_STACK_LINE(380)
-						ret1;
 					}
 					HX_STACK_LINE(380)
-					ret = true;
+					old->_inuse = false;
 					HX_STACK_LINE(380)
-					break;
+					this->modified = true;
+					HX_STACK_LINE(380)
+					(this->length)--;
+					HX_STACK_LINE(380)
+					this->pushmod = true;
+					HX_STACK_LINE(380)
+					ret1;
 				}
 				HX_STACK_LINE(380)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(380)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(380)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(380)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(380)
+		ret;
 	}
 return null();
 }
@@ -632,9 +584,6 @@ bool ZPP_PartitionPair_obj::try_remove( ::zpp_nape::geom::ZPP_PartitionPair obj)
 	HX_STACK_PUSH("ZPP_PartitionPair::try_remove","zpp_nape/geom/Triangular.hx",346);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(347)
-	{
-	}
 	HX_STACK_LINE(355)
 	::zpp_nape::geom::ZPP_PartitionPair pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(356)
@@ -669,87 +618,72 @@ Void ZPP_PartitionPair_obj::remove( ::zpp_nape::geom::ZPP_PartitionPair obj){
 		HX_STACK_PUSH("ZPP_PartitionPair::remove","zpp_nape/geom/Triangular.hx",335);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(336)
-		{
-		}
 		HX_STACK_LINE(344)
-		{
+		::zpp_nape::geom::ZPP_PartitionPair pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(344)
+		::zpp_nape::geom::ZPP_PartitionPair cur = this->next;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(344)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(344)
+		while(((cur != null()))){
 			HX_STACK_LINE(344)
-			{
-			}
-			HX_STACK_LINE(344)
-			::zpp_nape::geom::ZPP_PartitionPair pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(344)
-			::zpp_nape::geom::ZPP_PartitionPair cur = this->next;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(344)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(344)
-			while(((cur != null()))){
+			if (((cur == obj))){
 				HX_STACK_LINE(344)
-				if (((cur == obj))){
+				{
 					HX_STACK_LINE(344)
-					{
+					::zpp_nape::geom::ZPP_PartitionPair old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(344)
+					::zpp_nape::geom::ZPP_PartitionPair ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(344)
+					if (((pre == null()))){
 						HX_STACK_LINE(344)
-						{
+						old = this->next;
+						HX_STACK_LINE(344)
+						ret1 = old->next;
+						HX_STACK_LINE(344)
+						this->next = ret1;
+						HX_STACK_LINE(344)
+						if (((this->next == null()))){
+							HX_STACK_LINE(344)
+							this->pushmod = true;
 						}
+					}
+					else{
 						HX_STACK_LINE(344)
-						::zpp_nape::geom::ZPP_PartitionPair old;		HX_STACK_VAR(old,"old");
+						old = pre->next;
 						HX_STACK_LINE(344)
-						::zpp_nape::geom::ZPP_PartitionPair ret1;		HX_STACK_VAR(ret1,"ret1");
+						ret1 = old->next;
 						HX_STACK_LINE(344)
-						if (((pre == null()))){
+						pre->next = ret1;
+						HX_STACK_LINE(344)
+						if (((ret1 == null()))){
 							HX_STACK_LINE(344)
-							old = this->next;
-							HX_STACK_LINE(344)
-							ret1 = old->next;
-							HX_STACK_LINE(344)
-							this->next = ret1;
-							HX_STACK_LINE(344)
-							if (((this->next == null()))){
-								HX_STACK_LINE(344)
-								this->pushmod = true;
-							}
+							this->pushmod = true;
 						}
-						else{
-							HX_STACK_LINE(344)
-							old = pre->next;
-							HX_STACK_LINE(344)
-							ret1 = old->next;
-							HX_STACK_LINE(344)
-							pre->next = ret1;
-							HX_STACK_LINE(344)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(344)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(344)
-						old->_inuse = false;
-						HX_STACK_LINE(344)
-						{
-						}
-						HX_STACK_LINE(344)
-						this->modified = true;
-						HX_STACK_LINE(344)
-						(this->length)--;
-						HX_STACK_LINE(344)
-						this->pushmod = true;
-						HX_STACK_LINE(344)
-						ret1;
 					}
 					HX_STACK_LINE(344)
-					ret = true;
+					old->_inuse = false;
 					HX_STACK_LINE(344)
-					break;
+					this->modified = true;
+					HX_STACK_LINE(344)
+					(this->length)--;
+					HX_STACK_LINE(344)
+					this->pushmod = true;
+					HX_STACK_LINE(344)
+					ret1;
 				}
 				HX_STACK_LINE(344)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(344)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(344)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(344)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(344)
+		ret;
 	}
 return null();
 }
@@ -760,9 +694,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_PartitionPair_obj,remove,(void))
 ::zpp_nape::geom::ZPP_PartitionPair ZPP_PartitionPair_obj::inlined_pop_unsafe( ){
 	HX_STACK_PUSH("ZPP_PartitionPair::inlined_pop_unsafe","zpp_nape/geom/Triangular.hx",322);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(323)
-	{
-	}
 	HX_STACK_LINE(331)
 	::zpp_nape::geom::ZPP_PartitionPair ret = this->next;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(332)
@@ -781,9 +712,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_PartitionPair_obj,inlined_pop_unsafe,return )
 		inline static ::zpp_nape::geom::ZPP_PartitionPair Block( ::zpp_nape::geom::ZPP_PartitionPair_obj *__this){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/Triangular.hx",318);
 			{
-				HX_STACK_LINE(318)
-				{
-				}
 				HX_STACK_LINE(318)
 				::zpp_nape::geom::ZPP_PartitionPair ret = __this->next;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(318)
@@ -805,18 +733,12 @@ Void ZPP_PartitionPair_obj::inlined_pop( ){
 {
 		HX_STACK_PUSH("ZPP_PartitionPair::inlined_pop","zpp_nape/geom/Triangular.hx",298);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(299)
-		{
-		}
 		HX_STACK_LINE(307)
 		::zpp_nape::geom::ZPP_PartitionPair ret = this->next;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(308)
 		this->next = ret->next;
 		HX_STACK_LINE(309)
 		ret->_inuse = false;
-		HX_STACK_LINE(312)
-		{
-		}
 		HX_STACK_LINE(313)
 		if (((this->next == null()))){
 			HX_STACK_LINE(313)
@@ -838,17 +760,11 @@ Void ZPP_PartitionPair_obj::pop( ){
 		HX_STACK_PUSH("ZPP_PartitionPair::pop","zpp_nape/geom/Triangular.hx",293);
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(294)
-		{
-		}
-		HX_STACK_LINE(294)
 		::zpp_nape::geom::ZPP_PartitionPair ret = this->next;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(294)
 		this->next = ret->next;
 		HX_STACK_LINE(294)
 		ret->_inuse = false;
-		HX_STACK_LINE(294)
-		{
-		}
 		HX_STACK_LINE(294)
 		if (((this->next == null()))){
 			HX_STACK_LINE(294)
@@ -870,9 +786,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_PartitionPair_obj,pop,(void))
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(269)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::geom::ZPP_PartitionPair Block( ::zpp_nape::geom::ZPP_PartitionPair &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/Triangular.hx",277);
@@ -920,9 +833,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_PartitionPair_obj,inlined_insert,return )
 		inline static ::zpp_nape::geom::ZPP_PartitionPair Block( ::zpp_nape::geom::ZPP_PartitionPair_obj *__this,::zpp_nape::geom::ZPP_PartitionPair &o,::zpp_nape::geom::ZPP_PartitionPair &cur){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/Triangular.hx",264);
 			{
-				HX_STACK_LINE(264)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::geom::ZPP_PartitionPair Block( ::zpp_nape::geom::ZPP_PartitionPair &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Triangular.hx",264);
@@ -972,22 +882,16 @@ Void ZPP_PartitionPair_obj::addAll( ::zpp_nape::geom::ZPP_PartitionPair x){
 		HX_STACK_PUSH("ZPP_PartitionPair::addAll","zpp_nape/geom/Triangular.hx",245);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(246)
-		{
-		}
-		HX_STACK_LINE(254)
-		{
-			HX_STACK_LINE(255)
-			::zpp_nape::geom::ZPP_PartitionPair cx_ite = x->next;		HX_STACK_VAR(cx_ite,"cx_ite");
-			HX_STACK_LINE(256)
-			while(((cx_ite != null()))){
-				HX_STACK_LINE(257)
-				::zpp_nape::geom::ZPP_PartitionPair i = cx_ite;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(258)
-				this->add(i);
-				HX_STACK_LINE(259)
-				cx_ite = cx_ite->next;
-			}
+		HX_STACK_LINE(255)
+		::zpp_nape::geom::ZPP_PartitionPair cx_ite = x->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+		HX_STACK_LINE(256)
+		while(((cx_ite != null()))){
+			HX_STACK_LINE(257)
+			::zpp_nape::geom::ZPP_PartitionPair i = cx_ite;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(258)
+			this->add(i);
+			HX_STACK_LINE(259)
+			cx_ite = cx_ite->next;
 		}
 	}
 return null();
@@ -1000,9 +904,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_PartitionPair_obj,addAll,(void))
 	HX_STACK_PUSH("ZPP_PartitionPair::inlined_add","zpp_nape/geom/Triangular.hx",226);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(227)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::geom::ZPP_PartitionPair Block( ::zpp_nape::geom::ZPP_PartitionPair &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/Triangular.hx",235);
@@ -1037,12 +938,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_PartitionPair_obj,inlined_add,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
 	struct _Function_1_1{
-		inline static ::zpp_nape::geom::ZPP_PartitionPair Block( ::zpp_nape::geom::ZPP_PartitionPair &o,::zpp_nape::geom::ZPP_PartitionPair_obj *__this){
+		inline static ::zpp_nape::geom::ZPP_PartitionPair Block( ::zpp_nape::geom::ZPP_PartitionPair_obj *__this,::zpp_nape::geom::ZPP_PartitionPair &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/Triangular.hx",222);
 			{
-				HX_STACK_LINE(222)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::geom::ZPP_PartitionPair Block( ::zpp_nape::geom::ZPP_PartitionPair &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Triangular.hx",222);
@@ -1072,7 +970,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_PartitionPair_obj,inlined_add,return )
 		}
 	};
 	HX_STACK_LINE(221)
-	return _Function_1_1::Block(o,this);
+	return _Function_1_1::Block(this,o);
 }
 
 
@@ -1420,7 +1318,7 @@ Class ZPP_PartitionPair_obj::__mClass;
 
 void ZPP_PartitionPair_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_PartitionPair"), hx::TCanCast< ZPP_PartitionPair_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_PartitionPair"), hx::TCanCast< ZPP_PartitionPair_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

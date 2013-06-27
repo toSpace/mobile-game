@@ -100,8 +100,6 @@ Dynamic MassMode_obj::__Create(hx::DynamicArray inArgs)
 
 HX_DEFINE_DYNAMIC_FUNC0(MassMode_obj,toString,return )
 
-::nape::phys::MassMode MassMode_obj::DEFAULT;
-
 ::nape::phys::MassMode MassMode_obj::get_DEFAULT( ){
 	HX_STACK_PUSH("MassMode::get_DEFAULT","nape/phys/MassMode.hx",203);
 	HX_STACK_LINE(204)
@@ -119,8 +117,6 @@ HX_DEFINE_DYNAMIC_FUNC0(MassMode_obj,toString,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(MassMode_obj,get_DEFAULT,return )
-
-::nape::phys::MassMode MassMode_obj::FIXED;
 
 ::nape::phys::MassMode MassMode_obj::get_FIXED( ){
 	HX_STACK_PUSH("MassMode::get_FIXED","nape/phys/MassMode.hx",218);
@@ -159,10 +155,10 @@ Dynamic MassMode_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"FIXED") ) { return inCallProp ? get_FIXED() : FIXED; }
+		if (HX_FIELD_EQ(inName,"FIXED") ) { return get_FIXED(); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"DEFAULT") ) { return inCallProp ? get_DEFAULT() : DEFAULT; }
+		if (HX_FIELD_EQ(inName,"DEFAULT") ) { return get_DEFAULT(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
@@ -178,13 +174,6 @@ Dynamic MassMode_obj::__Field(const ::String &inName,bool inCallProp)
 
 Dynamic MassMode_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 5:
-		if (HX_FIELD_EQ(inName,"FIXED") ) { FIXED=inValue.Cast< ::nape::phys::MassMode >(); return inValue; }
-		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"DEFAULT") ) { DEFAULT=inValue.Cast< ::nape::phys::MassMode >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
@@ -194,9 +183,7 @@ void MassMode_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("DEFAULT"),
 	HX_CSTRING("get_DEFAULT"),
-	HX_CSTRING("FIXED"),
 	HX_CSTRING("get_FIXED"),
 	String(null()) };
 
@@ -206,21 +193,17 @@ static ::String sMemberFields[] = {
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(MassMode_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(MassMode_obj::DEFAULT,"DEFAULT");
-	HX_MARK_MEMBER_NAME(MassMode_obj::FIXED,"FIXED");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(MassMode_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(MassMode_obj::DEFAULT,"DEFAULT");
-	HX_VISIT_MEMBER_NAME(MassMode_obj::FIXED,"FIXED");
 };
 
 Class MassMode_obj::__mClass;
 
 void MassMode_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.phys.MassMode"), hx::TCanCast< MassMode_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.phys.MassMode"), hx::TCanCast< MassMode_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

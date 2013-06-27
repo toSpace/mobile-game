@@ -13,7 +13,7 @@ namespace nape{
 namespace dynamics{
 
 
-class ContactList_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ContactList_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ContactList_obj OBJ_;
@@ -84,9 +84,8 @@ class ContactList_obj : public hx::Object{
 		virtual int get_length( );
 		Dynamic get_length_dyn();
 
-		int length; /* REM */ 
-		::zpp_nape::util::ZPP_ContactList zpp_inner; /* REM */ 
-		static ::nape::dynamics::ContactList fromArray( Array< ::nape::dynamics::Contact > array);
+		::zpp_nape::util::ZPP_ContactList zpp_inner;
+		static ::nape::dynamics::ContactList fromArray( Array< ::Dynamic > array);
 		static Dynamic fromArray_dyn();
 
 };

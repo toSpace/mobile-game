@@ -99,7 +99,7 @@ bool combine = __o_combine.Default(true);
 						HX_STACK_LINE(290)
 						::zpp_nape::geom::ZPP_Vec2 _this = cellsize->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(290)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(290)
 							_this->_validate();
 						}
@@ -124,7 +124,7 @@ bool combine = __o_combine.Default(true);
 						HX_STACK_LINE(290)
 						::zpp_nape::geom::ZPP_Vec2 _this = cellsize->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(290)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(290)
 							_this->_validate();
 						}
@@ -159,7 +159,7 @@ bool combine = __o_combine.Default(true);
 						HX_STACK_LINE(296)
 						::zpp_nape::geom::ZPP_Vec2 _this = subgrid->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(296)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(296)
 							_this->_validate();
 						}
@@ -184,7 +184,7 @@ bool combine = __o_combine.Default(true);
 						HX_STACK_LINE(296)
 						::zpp_nape::geom::ZPP_Vec2 _this = subgrid->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(296)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(296)
 							_this->_validate();
 						}
@@ -213,7 +213,7 @@ bool combine = __o_combine.Default(true);
 							HX_STACK_LINE(302)
 							::zpp_nape::geom::ZPP_AABB _this = bounds->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(302)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(302)
 								_this->_validate();
 							}
@@ -233,7 +233,7 @@ bool combine = __o_combine.Default(true);
 							HX_STACK_LINE(302)
 							::zpp_nape::geom::ZPP_AABB _this = bounds->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(302)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(302)
 								_this->_validate();
 							}
@@ -260,7 +260,7 @@ bool combine = __o_combine.Default(true);
 							HX_STACK_LINE(302)
 							::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 							HX_STACK_LINE(302)
-							if (((_this1->_validate_dyn() != null()))){
+							if (((_this1->_validate != null()))){
 								HX_STACK_LINE(302)
 								_this1->_validate();
 							}
@@ -287,7 +287,7 @@ bool combine = __o_combine.Default(true);
 							HX_STACK_LINE(302)
 							::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 							HX_STACK_LINE(302)
-							if (((_this1->_validate_dyn() != null()))){
+							if (((_this1->_validate != null()))){
 								HX_STACK_LINE(302)
 								_this1->_validate();
 							}
@@ -311,7 +311,7 @@ bool combine = __o_combine.Default(true);
 							HX_STACK_LINE(305)
 							::zpp_nape::geom::ZPP_AABB _this = bounds->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(305)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(305)
 								_this->_validate();
 							}
@@ -348,7 +348,7 @@ bool combine = __o_combine.Default(true);
 							HX_STACK_LINE(305)
 							::zpp_nape::geom::ZPP_Vec2 _this = subgrid->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(305)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(305)
 								_this->_validate();
 							}
@@ -370,7 +370,7 @@ bool combine = __o_combine.Default(true);
 							HX_STACK_LINE(306)
 							::zpp_nape::geom::ZPP_AABB _this = bounds->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(306)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(306)
 								_this->_validate();
 							}
@@ -407,7 +407,7 @@ bool combine = __o_combine.Default(true);
 							HX_STACK_LINE(306)
 							::zpp_nape::geom::ZPP_Vec2 _this = subgrid->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(306)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(306)
 								_this->_validate();
 							}
@@ -451,7 +451,7 @@ bool combine = __o_combine.Default(true);
 									HX_STACK_LINE(312)
 									::zpp_nape::geom::ZPP_AABB _this = bounds->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(312)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(312)
 										_this->_validate();
 									}
@@ -476,7 +476,7 @@ bool combine = __o_combine.Default(true);
 									HX_STACK_LINE(312)
 									::zpp_nape::geom::ZPP_Vec2 _this = subgrid->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(312)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(312)
 										_this->_validate();
 									}
@@ -505,7 +505,7 @@ bool combine = __o_combine.Default(true);
 									HX_STACK_LINE(313)
 									::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 									HX_STACK_LINE(313)
-									if (((_this1->_validate_dyn() != null()))){
+									if (((_this1->_validate != null()))){
 										HX_STACK_LINE(313)
 										_this1->_validate();
 									}
@@ -530,7 +530,7 @@ bool combine = __o_combine.Default(true);
 									HX_STACK_LINE(313)
 									::zpp_nape::geom::ZPP_Vec2 _this = subgrid->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(313)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(313)
 										_this->_validate();
 									}
@@ -560,7 +560,7 @@ bool combine = __o_combine.Default(true);
 											HX_STACK_LINE(315)
 											::zpp_nape::geom::ZPP_AABB _this = bounds->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(315)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(315)
 												_this->_validate();
 											}
@@ -585,7 +585,7 @@ bool combine = __o_combine.Default(true);
 											HX_STACK_LINE(315)
 											::zpp_nape::geom::ZPP_Vec2 _this = subgrid->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(315)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(315)
 												_this->_validate();
 											}
@@ -614,7 +614,7 @@ bool combine = __o_combine.Default(true);
 											HX_STACK_LINE(316)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(316)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(316)
 												_this1->_validate();
 											}
@@ -639,7 +639,7 @@ bool combine = __o_combine.Default(true);
 											HX_STACK_LINE(316)
 											::zpp_nape::geom::ZPP_Vec2 _this = subgrid->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(316)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(316)
 												_this->_validate();
 											}
@@ -678,7 +678,7 @@ bool combine = __o_combine.Default(true);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(325)
-					if (((_this->_isimmutable_dyn() != null()))){
+					if (((_this->_isimmutable != null()))){
 						HX_STACK_LINE(325)
 						_this->_isimmutable();
 					}
@@ -699,9 +699,6 @@ bool combine = __o_combine.Default(true);
 					HX_STACK_LINE(325)
 					::nape::geom::Vec2 o = cellsize;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(325)
-					{
-					}
-					HX_STACK_LINE(325)
 					o->zpp_pool = null();
 					HX_STACK_LINE(325)
 					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -721,9 +718,6 @@ bool combine = __o_combine.Default(true);
 				{
 					HX_STACK_LINE(325)
 					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(325)
-					{
-					}
 					HX_STACK_LINE(325)
 					{
 						HX_STACK_LINE(325)
@@ -774,7 +768,7 @@ bool combine = __o_combine.Default(true);
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(337)
-						if (((_this->_isimmutable_dyn() != null()))){
+						if (((_this->_isimmutable != null()))){
 							HX_STACK_LINE(337)
 							_this->_isimmutable();
 						}
@@ -795,9 +789,6 @@ bool combine = __o_combine.Default(true);
 						HX_STACK_LINE(337)
 						::nape::geom::Vec2 o = subgrid;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(337)
-						{
-						}
-						HX_STACK_LINE(337)
 						o->zpp_pool = null();
 						HX_STACK_LINE(337)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -817,9 +808,6 @@ bool combine = __o_combine.Default(true);
 					{
 						HX_STACK_LINE(337)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(337)
-						{
-						}
 						HX_STACK_LINE(337)
 						{
 							HX_STACK_LINE(337)
@@ -911,7 +899,7 @@ Class MarchingSquares_obj::__mClass;
 
 void MarchingSquares_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.MarchingSquares"), hx::TCanCast< MarchingSquares_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.MarchingSquares"), hx::TCanCast< MarchingSquares_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

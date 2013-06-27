@@ -10,7 +10,7 @@ namespace nape{
 namespace geom{
 
 
-class Winding_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Winding_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Winding_obj OBJ_;
@@ -33,15 +33,12 @@ class Winding_obj : public hx::Object{
 		virtual ::String toString( );
 		Dynamic toString_dyn();
 
-		static ::nape::geom::Winding UNDEFINED; /* REM */ 
 		static ::nape::geom::Winding get_UNDEFINED( );
 		static Dynamic get_UNDEFINED_dyn();
 
-		static ::nape::geom::Winding CLOCKWISE; /* REM */ 
 		static ::nape::geom::Winding get_CLOCKWISE( );
 		static Dynamic get_CLOCKWISE_dyn();
 
-		static ::nape::geom::Winding ANTICLOCKWISE; /* REM */ 
 		static ::nape::geom::Winding get_ANTICLOCKWISE( );
 		static Dynamic get_ANTICLOCKWISE_dyn();
 

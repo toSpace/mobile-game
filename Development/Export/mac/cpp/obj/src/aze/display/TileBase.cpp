@@ -9,19 +9,18 @@
 #ifndef INCLUDED_aze_display_TileLayer
 #include <aze/display/TileLayer.h>
 #endif
-#ifndef INCLUDED_haxe_Public
-#include <haxe/Public.h>
-#endif
 namespace aze{
 namespace display{
 
-Void TileBase_obj::__construct()
+Void TileBase_obj::__construct(::aze::display::TileLayer layer)
 {
-HX_STACK_PUSH("TileBase::new","aze/display/TileLayer.hx",162);
+HX_STACK_PUSH("TileBase::new","aze/display/TileLayer.hx",183);
 {
-	HX_STACK_LINE(163)
+	HX_STACK_LINE(184)
+	this->layer = layer;
+	HX_STACK_LINE(185)
 	this->x = this->y = 0.0;
-	HX_STACK_LINE(164)
+	HX_STACK_LINE(186)
 	this->visible = true;
 }
 ;
@@ -31,24 +30,19 @@ HX_STACK_PUSH("TileBase::new","aze/display/TileLayer.hx",162);
 TileBase_obj::~TileBase_obj() { }
 
 Dynamic TileBase_obj::__CreateEmpty() { return  new TileBase_obj; }
-hx::ObjectPtr< TileBase_obj > TileBase_obj::__new()
+hx::ObjectPtr< TileBase_obj > TileBase_obj::__new(::aze::display::TileLayer layer)
 {  hx::ObjectPtr< TileBase_obj > result = new TileBase_obj();
-	result->__construct();
+	result->__construct(layer);
 	return result;}
 
 Dynamic TileBase_obj::__Create(hx::DynamicArray inArgs)
 {  hx::ObjectPtr< TileBase_obj > result = new TileBase_obj();
-	result->__construct();
+	result->__construct(inArgs[0]);
 	return result;}
-
-hx::Object *TileBase_obj::__ToInterface(const type_info &inType) {
-	if (inType==typeid( ::haxe::Public_obj)) return operator ::haxe::Public_obj *();
-	return super::__ToInterface(inType);
-}
 
 Void TileBase_obj::step( int elapsed){
 {
-		HX_STACK_PUSH("TileBase::step","aze/display/TileLayer.hx",173);
+		HX_STACK_PUSH("TileBase::step","aze/display/TileLayer.hx",195);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(elapsed,"elapsed");
 	}
@@ -60,10 +54,10 @@ HX_DEFINE_DYNAMIC_FUNC1(TileBase_obj,step,(void))
 
 Void TileBase_obj::init( ::aze::display::TileLayer layer){
 {
-		HX_STACK_PUSH("TileBase::init","aze/display/TileLayer.hx",168);
+		HX_STACK_PUSH("TileBase::init","aze/display/TileLayer.hx",190);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(layer,"layer");
-		HX_STACK_LINE(168)
+		HX_STACK_LINE(190)
 		this->layer = layer;
 	}
 return null();
@@ -184,7 +178,7 @@ Class TileBase_obj::__mClass;
 
 void TileBase_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("aze.display.TileBase"), hx::TCanCast< TileBase_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("aze.display.TileBase"), hx::TCanCast< TileBase_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

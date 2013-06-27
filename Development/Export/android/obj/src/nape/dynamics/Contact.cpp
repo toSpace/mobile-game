@@ -139,12 +139,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Contact_obj,get_friction,return )
 		Float jx = ((colarb->nx * jnAcc) - (colarb->ny * jtAcc));		HX_STACK_VAR(jx,"jx");
 		HX_STACK_LINE(354)
 		Float jy = ((colarb->ny * jnAcc) + (colarb->nx * jtAcc));		HX_STACK_VAR(jy,"jy");
-		HX_STACK_LINE(355)
-		{
-		}
-		HX_STACK_LINE(363)
-		{
-		}
 		HX_STACK_LINE(371)
 		if (((body == colarb->b1->outer))){
 			HX_STACK_LINE(371)
@@ -369,22 +363,12 @@ Contact_obj::Contact_obj()
 void Contact_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(Contact);
-	HX_MARK_MEMBER_NAME(friction,"friction");
-	HX_MARK_MEMBER_NAME(fresh,"fresh");
-	HX_MARK_MEMBER_NAME(position,"position");
-	HX_MARK_MEMBER_NAME(penetration,"penetration");
-	HX_MARK_MEMBER_NAME(arbiter,"arbiter");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	HX_MARK_END_CLASS();
 }
 
 void Contact_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(friction,"friction");
-	HX_VISIT_MEMBER_NAME(fresh,"fresh");
-	HX_VISIT_MEMBER_NAME(position,"position");
-	HX_VISIT_MEMBER_NAME(penetration,"penetration");
-	HX_VISIT_MEMBER_NAME(arbiter,"arbiter");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 }
 
@@ -392,22 +376,22 @@ Dynamic Contact_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"fresh") ) { return inCallProp ? get_fresh() : fresh; }
+		if (HX_FIELD_EQ(inName,"fresh") ) { return get_fresh(); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"arbiter") ) { return inCallProp ? get_arbiter() : arbiter; }
+		if (HX_FIELD_EQ(inName,"arbiter") ) { return get_arbiter(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
-		if (HX_FIELD_EQ(inName,"friction") ) { return inCallProp ? get_friction() : friction; }
-		if (HX_FIELD_EQ(inName,"position") ) { return inCallProp ? get_position() : position; }
+		if (HX_FIELD_EQ(inName,"friction") ) { return get_friction(); }
+		if (HX_FIELD_EQ(inName,"position") ) { return get_position(); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"get_fresh") ) { return get_fresh_dyn(); }
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { return zpp_inner; }
 		break;
 	case 11:
-		if (HX_FIELD_EQ(inName,"penetration") ) { return inCallProp ? get_penetration() : penetration; }
+		if (HX_FIELD_EQ(inName,"penetration") ) { return get_penetration(); }
 		if (HX_FIELD_EQ(inName,"get_arbiter") ) { return get_arbiter_dyn(); }
 		break;
 	case 12:
@@ -431,21 +415,8 @@ Dynamic Contact_obj::__Field(const ::String &inName,bool inCallProp)
 Dynamic Contact_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
 	switch(inName.length) {
-	case 5:
-		if (HX_FIELD_EQ(inName,"fresh") ) { fresh=inValue.Cast< bool >(); return inValue; }
-		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"arbiter") ) { arbiter=inValue.Cast< ::nape::dynamics::CollisionArbiter >(); return inValue; }
-		break;
-	case 8:
-		if (HX_FIELD_EQ(inName,"friction") ) { friction=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"position") ) { position=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::dynamics::ZPP_Contact >(); return inValue; }
-		break;
-	case 11:
-		if (HX_FIELD_EQ(inName,"penetration") ) { penetration=inValue.Cast< Float >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -467,19 +438,14 @@ static ::String sStaticFields[] = {
 static ::String sMemberFields[] = {
 	HX_CSTRING("toString"),
 	HX_CSTRING("get_friction"),
-	HX_CSTRING("friction"),
 	HX_CSTRING("totalImpulse"),
 	HX_CSTRING("rollingImpulse"),
 	HX_CSTRING("tangentImpulse"),
 	HX_CSTRING("normalImpulse"),
 	HX_CSTRING("get_fresh"),
-	HX_CSTRING("fresh"),
 	HX_CSTRING("get_position"),
-	HX_CSTRING("position"),
 	HX_CSTRING("get_penetration"),
-	HX_CSTRING("penetration"),
 	HX_CSTRING("get_arbiter"),
-	HX_CSTRING("arbiter"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
@@ -495,7 +461,7 @@ Class Contact_obj::__mClass;
 
 void Contact_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.dynamics.Contact"), hx::TCanCast< Contact_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.dynamics.Contact"), hx::TCanCast< Contact_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

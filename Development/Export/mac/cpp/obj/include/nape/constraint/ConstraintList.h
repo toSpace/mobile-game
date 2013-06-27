@@ -13,7 +13,7 @@ namespace nape{
 namespace constraint{
 
 
-class ConstraintList_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ConstraintList_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ConstraintList_obj OBJ_;
@@ -84,9 +84,8 @@ class ConstraintList_obj : public hx::Object{
 		virtual int get_length( );
 		Dynamic get_length_dyn();
 
-		int length; /* REM */ 
-		::zpp_nape::util::ZPP_ConstraintList zpp_inner; /* REM */ 
-		static ::nape::constraint::ConstraintList fromArray( Array< ::nape::constraint::Constraint > array);
+		::zpp_nape::util::ZPP_ConstraintList zpp_inner;
+		static ::nape::constraint::ConstraintList fromArray( Array< ::Dynamic > array);
 		static Dynamic fromArray_dyn();
 
 };

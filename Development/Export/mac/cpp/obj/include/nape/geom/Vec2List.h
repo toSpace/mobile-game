@@ -13,7 +13,7 @@ namespace nape{
 namespace geom{
 
 
-class Vec2List_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Vec2List_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Vec2List_obj OBJ_;
@@ -90,9 +90,8 @@ class Vec2List_obj : public hx::Object{
 		virtual int get_length( );
 		Dynamic get_length_dyn();
 
-		int length; /* REM */ 
-		::zpp_nape::util::ZPP_Vec2List zpp_inner; /* REM */ 
-		static ::nape::geom::Vec2List fromArray( Array< ::nape::geom::Vec2 > array);
+		::zpp_nape::util::ZPP_Vec2List zpp_inner;
+		static ::nape::geom::Vec2List fromArray( Array< ::Dynamic > array);
 		static Dynamic fromArray_dyn();
 
 };

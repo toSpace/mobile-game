@@ -7,13 +7,12 @@
 
 HX_DECLARE_CLASS2(nape,geom,Mat23)
 HX_DECLARE_CLASS2(nape,geom,Vec2)
-HX_DECLARE_CLASS2(native,geom,Matrix)
 HX_DECLARE_CLASS2(zpp_nape,geom,ZPP_Mat23)
 namespace nape{
 namespace geom{
 
 
-class Mat23_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Mat23_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Mat23_obj OBJ_;
@@ -69,10 +68,6 @@ class Mat23_obj : public hx::Object{
 		virtual Float get_determinant( );
 		Dynamic get_determinant_dyn();
 
-		Float determinant; /* REM */ 
-		virtual ::native::geom::Matrix toMatrix( ::native::geom::Matrix output);
-		Dynamic toMatrix_dyn();
-
 		virtual ::nape::geom::Mat23 reset( );
 		Dynamic reset_dyn();
 
@@ -91,46 +86,37 @@ class Mat23_obj : public hx::Object{
 		virtual Float get_ty( );
 		Dynamic get_ty_dyn();
 
-		Float ty; /* REM */ 
 		virtual Float set_tx( Float tx);
 		Dynamic set_tx_dyn();
 
 		virtual Float get_tx( );
 		Dynamic get_tx_dyn();
 
-		Float tx; /* REM */ 
 		virtual Float set_d( Float d);
 		Dynamic set_d_dyn();
 
 		virtual Float get_d( );
 		Dynamic get_d_dyn();
 
-		Float d; /* REM */ 
 		virtual Float set_c( Float c);
 		Dynamic set_c_dyn();
 
 		virtual Float get_c( );
 		Dynamic get_c_dyn();
 
-		Float c; /* REM */ 
 		virtual Float set_b( Float b);
 		Dynamic set_b_dyn();
 
 		virtual Float get_b( );
 		Dynamic get_b_dyn();
 
-		Float b; /* REM */ 
 		virtual Float set_a( Float a);
 		Dynamic set_a_dyn();
 
 		virtual Float get_a( );
 		Dynamic get_a_dyn();
 
-		Float a; /* REM */ 
-		::zpp_nape::geom::ZPP_Mat23 zpp_inner; /* REM */ 
-		static ::nape::geom::Mat23 fromMatrix( ::native::geom::Matrix matrix);
-		static Dynamic fromMatrix_dyn();
-
+		::zpp_nape::geom::ZPP_Mat23 zpp_inner;
 		static ::nape::geom::Mat23 rotation( Float angle);
 		static Dynamic rotation_dyn();
 

@@ -12,7 +12,7 @@ namespace nape{
 namespace dynamics{
 
 
-class InteractionGroupIterator_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  InteractionGroupIterator_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef InteractionGroupIterator_obj OBJ_;
@@ -38,11 +38,11 @@ class InteractionGroupIterator_obj : public hx::Object{
 		virtual bool hasNext( );
 		Dynamic hasNext_dyn();
 
-		::nape::dynamics::InteractionGroupIterator zpp_next; /* REM */ 
-		bool zpp_critical; /* REM */ 
-		int zpp_i; /* REM */ 
-		::nape::dynamics::InteractionGroupList zpp_inner; /* REM */ 
-		static ::nape::dynamics::InteractionGroupIterator zpp_pool; /* REM */ 
+		::nape::dynamics::InteractionGroupIterator zpp_next;
+		bool zpp_critical;
+		int zpp_i;
+		::nape::dynamics::InteractionGroupList zpp_inner;
+		static ::nape::dynamics::InteractionGroupIterator zpp_pool;
 		static ::nape::dynamics::InteractionGroupIterator get( ::nape::dynamics::InteractionGroupList list);
 		static Dynamic get_dyn();
 

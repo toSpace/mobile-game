@@ -11,7 +11,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_Vec3_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Vec3_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Vec3_obj OBJ_;
@@ -34,13 +34,13 @@ class ZPP_Vec3_obj : public hx::Object{
 		virtual Void validate( );
 		Dynamic validate_dyn();
 
-		Dynamic _validate; /* REM */ 
+		Dynamic _validate;
 		Dynamic &_validate_dyn() { return _validate;}
-		bool immutable; /* REM */ 
-		Float z; /* REM */ 
-		Float y; /* REM */ 
-		Float x; /* REM */ 
-		::nape::geom::Vec3 outer; /* REM */ 
+		bool immutable;
+		Float z;
+		Float y;
+		Float x;
+		::nape::geom::Vec3 outer;
 };
 
 } // end namespace zpp_nape

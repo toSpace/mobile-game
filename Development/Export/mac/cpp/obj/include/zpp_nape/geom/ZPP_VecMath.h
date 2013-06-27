@@ -10,7 +10,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_VecMath_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_VecMath_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_VecMath_obj OBJ_;

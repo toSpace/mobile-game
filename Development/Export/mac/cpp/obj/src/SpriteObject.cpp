@@ -1,13 +1,10 @@
 #include <hxcpp.h>
 
-#ifndef INCLUDED_Hash
-#include <Hash.h>
+#ifndef INCLUDED_IMap
+#include <IMap.h>
 #endif
 #ifndef INCLUDED_Main
 #include <Main.h>
-#endif
-#ifndef INCLUDED_hxMath
-#include <hxMath.h>
 #endif
 #ifndef INCLUDED_Mobile
 #include <Mobile.h>
@@ -45,8 +42,38 @@
 #ifndef INCLUDED_aze_display_TilesheetEx
 #include <aze/display/TilesheetEx.h>
 #endif
-#ifndef INCLUDED_haxe_Public
-#include <haxe/Public.h>
+#ifndef INCLUDED_flash_Lib
+#include <flash/Lib.h>
+#endif
+#ifndef INCLUDED_flash_display_BitmapData
+#include <flash/display/BitmapData.h>
+#endif
+#ifndef INCLUDED_flash_display_DisplayObject
+#include <flash/display/DisplayObject.h>
+#endif
+#ifndef INCLUDED_flash_display_DisplayObjectContainer
+#include <flash/display/DisplayObjectContainer.h>
+#endif
+#ifndef INCLUDED_flash_display_IBitmapDrawable
+#include <flash/display/IBitmapDrawable.h>
+#endif
+#ifndef INCLUDED_flash_display_InteractiveObject
+#include <flash/display/InteractiveObject.h>
+#endif
+#ifndef INCLUDED_flash_display_Sprite
+#include <flash/display/Sprite.h>
+#endif
+#ifndef INCLUDED_flash_events_EventDispatcher
+#include <flash/events/EventDispatcher.h>
+#endif
+#ifndef INCLUDED_flash_events_IEventDispatcher
+#include <flash/events/IEventDispatcher.h>
+#endif
+#ifndef INCLUDED_flash_geom_Rectangle
+#include <flash/geom/Rectangle.h>
+#endif
+#ifndef INCLUDED_haxe_ds_StringMap
+#include <haxe/ds/StringMap.h>
 #endif
 #ifndef INCLUDED_haxe_xml_Fast
 #include <haxe/xml/Fast.h>
@@ -56,6 +83,9 @@
 #endif
 #ifndef INCLUDED_haxe_xml__Fast_NodeAccess
 #include <haxe/xml/_Fast/NodeAccess.h>
+#endif
+#ifndef INCLUDED_hxMath
+#include <hxMath.h>
 #endif
 #ifndef INCLUDED_nape_dynamics_InteractionFilter
 #include <nape/dynamics/InteractionFilter.h>
@@ -90,41 +120,11 @@
 #ifndef INCLUDED_nape_space_Space
 #include <nape/space/Space.h>
 #endif
-#ifndef INCLUDED_native_Lib
-#include <native/Lib.h>
+#ifndef INCLUDED_openfl_Assets
+#include <openfl/Assets.h>
 #endif
-#ifndef INCLUDED_native_display_BitmapData
-#include <native/display/BitmapData.h>
-#endif
-#ifndef INCLUDED_native_display_DisplayObject
-#include <native/display/DisplayObject.h>
-#endif
-#ifndef INCLUDED_native_display_DisplayObjectContainer
-#include <native/display/DisplayObjectContainer.h>
-#endif
-#ifndef INCLUDED_native_display_IBitmapDrawable
-#include <native/display/IBitmapDrawable.h>
-#endif
-#ifndef INCLUDED_native_display_InteractiveObject
-#include <native/display/InteractiveObject.h>
-#endif
-#ifndef INCLUDED_native_display_Sprite
-#include <native/display/Sprite.h>
-#endif
-#ifndef INCLUDED_native_display_Tilesheet
-#include <native/display/Tilesheet.h>
-#endif
-#ifndef INCLUDED_native_events_EventDispatcher
-#include <native/events/EventDispatcher.h>
-#endif
-#ifndef INCLUDED_native_events_IEventDispatcher
-#include <native/events/IEventDispatcher.h>
-#endif
-#ifndef INCLUDED_native_geom_Rectangle
-#include <native/geom/Rectangle.h>
-#endif
-#ifndef INCLUDED_nme_installer_Assets
-#include <nme/installer/Assets.h>
+#ifndef INCLUDED_openfl_display_Tilesheet
+#include <openfl/display/Tilesheet.h>
 #endif
 #ifndef INCLUDED_zpp_nape_geom_ZPP_Vec2
 #include <zpp_nape/geom/ZPP_Vec2.h>
@@ -156,7 +156,7 @@ Void SpriteObject_obj::__construct(::String xmlUrl,::String sparrowXml)
 HX_STACK_PUSH("SpriteObject::new","SpriteObject.hx",27);
 {
 	HX_STACK_LINE(30)
-	this->xml = this->readXml(xmlUrl);
+	this->readXml(xmlUrl);
 	HX_STACK_LINE(33)
 	this->makeSpritesheet(sparrowXml,this->xml->get(HX_CSTRING("img")));
 	HX_STACK_LINE(36)
@@ -238,7 +238,7 @@ bool offset = __o_offset.Default(false);
 							HX_STACK_LINE(131)
 							::zpp_nape::geom::ZPP_Vec2 _this = bodyOffset->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(131)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(131)
 								_this->_validate();
 							}
@@ -265,7 +265,7 @@ bool offset = __o_offset.Default(false);
 							HX_STACK_LINE(132)
 							::zpp_nape::geom::ZPP_Vec2 _this = bodyOffset->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(132)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(132)
 								_this->_validate();
 							}
@@ -315,7 +315,7 @@ bool offset = __o_offset.Default(false);
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(134)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(134)
 					_this1->_isimmutable();
 				}
@@ -326,7 +326,7 @@ bool offset = __o_offset.Default(false);
 				hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 			}
 			struct _Function_2_2{
-				inline static Float Block( ::nape::geom::Vec2 &_this){
+				inline static Float Block( ::nape::geom::Vec2 _this){
 					HX_STACK_PUSH("*::closure","SpriteObject.hx",134);
 					{
 						HX_STACK_LINE(134)
@@ -339,7 +339,7 @@ bool offset = __o_offset.Default(false);
 							HX_STACK_LINE(134)
 							::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 							HX_STACK_LINE(134)
-							if (((_this1->_validate_dyn() != null()))){
+							if (((_this1->_validate != null()))){
 								HX_STACK_LINE(134)
 								_this1->_validate();
 							}
@@ -351,7 +351,7 @@ bool offset = __o_offset.Default(false);
 				}
 			};
 			struct _Function_2_3{
-				inline static Float Block( ::nape::geom::Vec2 &_this){
+				inline static Float Block( ::nape::geom::Vec2 _this){
 					HX_STACK_PUSH("*::closure","SpriteObject.hx",134);
 					{
 						HX_STACK_LINE(134)
@@ -364,7 +364,7 @@ bool offset = __o_offset.Default(false);
 							HX_STACK_LINE(134)
 							::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 							HX_STACK_LINE(134)
-							if (((_this1->_validate_dyn() != null()))){
+							if (((_this1->_validate != null()))){
 								HX_STACK_LINE(134)
 								_this1->_validate();
 							}
@@ -386,16 +386,13 @@ bool offset = __o_offset.Default(false);
 					HX_STACK_LINE(134)
 					{
 					}
-					HX_STACK_LINE(134)
-					{
-					}
 				}
 				HX_STACK_LINE(134)
 				{
 					HX_STACK_LINE(134)
 					::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 					HX_STACK_LINE(134)
-					if (((_this1->_invalidate_dyn() != null()))){
+					if (((_this1->_invalidate != null()))){
 						HX_STACK_LINE(134)
 						_this1->_invalidate(_this1);
 					}
@@ -443,7 +440,7 @@ Void SpriteObject_obj::renderPhysics( ){
 			}
 		};
 		HX_STACK_LINE(117)
-		::native::display::DisplayObject graphic = (_Function_1_1::Block(this))->__Field(HX_CSTRING("graphic"),true);		HX_STACK_VAR(graphic,"graphic");
+		::flash::display::DisplayObject graphic = (_Function_1_1::Block(this))->__Field(HX_CSTRING("graphic"),true);		HX_STACK_VAR(graphic,"graphic");
 		struct _Function_1_2{
 			inline static Dynamic Block( ::SpriteObject_obj *__this){
 				HX_STACK_PUSH("*::closure","SpriteObject.hx",118);
@@ -489,7 +486,7 @@ Void SpriteObject_obj::renderPhysics( ){
 						HX_STACK_LINE(120)
 						::zpp_nape::geom::ZPP_Vec2 _this = position->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(120)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(120)
 							_this->_validate();
 						}
@@ -516,7 +513,7 @@ Void SpriteObject_obj::renderPhysics( ){
 						HX_STACK_LINE(121)
 						::zpp_nape::geom::ZPP_Vec2 _this = position->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(121)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(121)
 							_this->_validate();
 						}
@@ -548,7 +545,7 @@ Void SpriteObject_obj::renderPhysics( ){
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(123)
-				if (((_this->_isimmutable_dyn() != null()))){
+				if (((_this->_isimmutable != null()))){
 					HX_STACK_LINE(123)
 					_this->_isimmutable();
 				}
@@ -569,9 +566,6 @@ Void SpriteObject_obj::renderPhysics( ){
 				HX_STACK_LINE(123)
 				::nape::geom::Vec2 o = position;		HX_STACK_VAR(o,"o");
 				HX_STACK_LINE(123)
-				{
-				}
-				HX_STACK_LINE(123)
 				o->zpp_pool = null();
 				HX_STACK_LINE(123)
 				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -591,9 +585,6 @@ Void SpriteObject_obj::renderPhysics( ){
 			{
 				HX_STACK_LINE(123)
 				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(123)
-				{
-				}
 				HX_STACK_LINE(123)
 				{
 					HX_STACK_LINE(123)
@@ -630,9 +621,9 @@ Void SpriteObject_obj::render( ){
 		HX_STACK_LINE(105)
 		this->renderPhysics();
 		HX_STACK_LINE(108)
-		Float tDelta = (::native::Lib_obj::getTimer() - this->tLast);		HX_STACK_VAR(tDelta,"tDelta");
+		Float tDelta = (::flash::Lib_obj::getTimer() - this->tLast);		HX_STACK_VAR(tDelta,"tDelta");
 		HX_STACK_LINE(109)
-		this->tLast = ::native::Lib_obj::getTimer();
+		this->tLast = ::flash::Lib_obj::getTimer();
 		HX_STACK_LINE(110)
 		this->layer->step(::Std_obj::_int(tDelta));
 		HX_STACK_LINE(111)
@@ -806,7 +797,7 @@ Dynamic play = __o_play.Default(true);
 	HX_STACK_ARG(play,"play");
 {
 		HX_STACK_LINE(69)
-		this->clip = ::aze::display::TileClip_obj::__new(name,(int)24);
+		this->clip = ::aze::display::TileClip_obj::__new(this->layer,name,(int)24);
 		HX_STACK_LINE(70)
 		this->layer->addChild(this->clip);
 		HX_STACK_LINE(71)
@@ -841,9 +832,9 @@ Void SpriteObject_obj::makeSpritesheet( ::String xmlUrl,::String imgUrl){
 		HX_STACK_ARG(xmlUrl,"xmlUrl");
 		HX_STACK_ARG(imgUrl,"imgUrl");
 		HX_STACK_LINE(61)
-		::String sheetData = ::nme::installer::Assets_obj::getText((::Mobile_obj::asset + xmlUrl));		HX_STACK_VAR(sheetData,"sheetData");
+		::String sheetData = ::openfl::Assets_obj::getText((::Mobile_obj::asset + xmlUrl));		HX_STACK_VAR(sheetData,"sheetData");
 		HX_STACK_LINE(62)
-		::aze::display::SparrowTilesheet tilesheet = ::aze::display::SparrowTilesheet_obj::__new(::nme::installer::Assets_obj::getBitmapData(imgUrl,null()),sheetData);		HX_STACK_VAR(tilesheet,"tilesheet");
+		::aze::display::SparrowTilesheet tilesheet = ::aze::display::SparrowTilesheet_obj::__new(::openfl::Assets_obj::getBitmapData(imgUrl,null()),sheetData,null());		HX_STACK_VAR(tilesheet,"tilesheet");
 		HX_STACK_LINE(63)
 		this->layer = ::aze::display::TileLayer_obj::__new(tilesheet,null(),null());
 		HX_STACK_LINE(64)
@@ -855,36 +846,35 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC2(SpriteObject_obj,makeSpritesheet,(void))
 
-::Hash SpriteObject_obj::readXml( ::String url){
-	HX_STACK_PUSH("SpriteObject::readXml","SpriteObject.hx",44);
-	HX_STACK_THIS(this);
-	HX_STACK_ARG(url,"url");
-	HX_STACK_LINE(45)
-	::Hash p = ::Hash_obj::__new();		HX_STACK_VAR(p,"p");
-	HX_STACK_LINE(46)
-	::String xmlFile = ::nme::installer::Assets_obj::getText((::Mobile_obj::xml + url));		HX_STACK_VAR(xmlFile,"xmlFile");
-	HX_STACK_LINE(47)
-	::haxe::xml::Fast read = ::haxe::xml::Fast_obj::__new(::Xml_obj::parse(xmlFile));		HX_STACK_VAR(read,"read");
-	HX_STACK_LINE(49)
-	::haxe::xml::Fast asset = read->node->resolve(HX_CSTRING("asset"));		HX_STACK_VAR(asset,"asset");
-	HX_STACK_LINE(50)
-	p->set(HX_CSTRING("img"),(::Mobile_obj::asset + asset->node->resolve(HX_CSTRING("img"))->getInnerData()));
-	HX_STACK_LINE(51)
-	p->set(HX_CSTRING("x"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("x")));
-	HX_STACK_LINE(52)
-	p->set(HX_CSTRING("y"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("y")));
-	HX_STACK_LINE(53)
-	p->set(HX_CSTRING("rotation"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("rotation")));
-	HX_STACK_LINE(54)
-	p->set(HX_CSTRING("physics"),asset->node->resolve(HX_CSTRING("physics"))->getInnerData());
-	HX_STACK_LINE(55)
-	p->set(HX_CSTRING("clip"),asset->node->resolve(HX_CSTRING("clip"))->getInnerData());
-	HX_STACK_LINE(57)
-	return p;
+Void SpriteObject_obj::readXml( ::String url){
+{
+		HX_STACK_PUSH("SpriteObject::readXml","SpriteObject.hx",44);
+		HX_STACK_THIS(this);
+		HX_STACK_ARG(url,"url");
+		HX_STACK_LINE(46)
+		::String xmlFile = ::openfl::Assets_obj::getText((::Mobile_obj::xml + url));		HX_STACK_VAR(xmlFile,"xmlFile");
+		HX_STACK_LINE(47)
+		::haxe::xml::Fast read = ::haxe::xml::Fast_obj::__new(::Xml_obj::parse(xmlFile));		HX_STACK_VAR(read,"read");
+		HX_STACK_LINE(49)
+		::haxe::xml::Fast asset = read->node->resolve(HX_CSTRING("asset"));		HX_STACK_VAR(asset,"asset");
+		HX_STACK_LINE(50)
+		this->xml->set(HX_CSTRING("img"),(::Mobile_obj::asset + asset->node->resolve(HX_CSTRING("img"))->get_innerData()));
+		HX_STACK_LINE(51)
+		this->xml->set(HX_CSTRING("x"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("x")));
+		HX_STACK_LINE(52)
+		this->xml->set(HX_CSTRING("y"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("y")));
+		HX_STACK_LINE(53)
+		this->xml->set(HX_CSTRING("rotation"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("rotation")));
+		HX_STACK_LINE(54)
+		this->xml->set(HX_CSTRING("physics"),asset->node->resolve(HX_CSTRING("physics"))->get_innerData());
+		HX_STACK_LINE(55)
+		this->xml->set(HX_CSTRING("clip"),asset->node->resolve(HX_CSTRING("clip"))->get_innerData());
+	}
+return null();
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC1(SpriteObject_obj,readXml,return )
+HX_DEFINE_DYNAMIC_FUNC1(SpriteObject_obj,readXml,(void))
 
 
 SpriteObject_obj::SpriteObject_obj()
@@ -951,7 +941,7 @@ Dynamic SpriteObject_obj::__SetField(const ::String &inName,const Dynamic &inVal
 {
 	switch(inName.length) {
 	case 3:
-		if (HX_FIELD_EQ(inName,"xml") ) { xml=inValue.Cast< ::Hash >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"xml") ) { xml=inValue.Cast< ::haxe::ds::StringMap >(); return inValue; }
 		break;
 	case 4:
 		if (HX_FIELD_EQ(inName,"clip") ) { clip=inValue.Cast< ::aze::display::TileClip >(); return inValue; }
@@ -1004,7 +994,7 @@ Class SpriteObject_obj::__mClass;
 
 void SpriteObject_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("SpriteObject"), hx::TCanCast< SpriteObject_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("SpriteObject"), hx::TCanCast< SpriteObject_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

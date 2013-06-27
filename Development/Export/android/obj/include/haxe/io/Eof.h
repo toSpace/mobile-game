@@ -10,7 +10,7 @@ namespace haxe{
 namespace io{
 
 
-class Eof_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Eof_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Eof_obj OBJ_;

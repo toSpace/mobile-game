@@ -18,7 +18,7 @@ namespace zpp_nape{
 namespace constraint{
 
 
-class ZPP_MotorJoint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_MotorJoint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj{
 	public:
 		typedef ::zpp_nape::constraint::ZPP_Constraint_obj super;
 		typedef ZPP_MotorJoint_obj OBJ_;
@@ -56,14 +56,14 @@ class ZPP_MotorJoint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj{
 
 		virtual Void validate( );
 
-		virtual ::nape::constraint::Constraint copy( Array< ::zpp_nape::constraint::ZPP_CopyHelper > dict,Array< ::zpp_nape::constraint::ZPP_CopyHelper > todo);
+		virtual ::nape::constraint::Constraint copy( Array< ::Dynamic > dict,Array< ::Dynamic > todo);
 
-		bool stepped; /* REM */ 
-		Float jMax; /* REM */ 
-		Float jAcc; /* REM */ 
-		Float kMass; /* REM */ 
-		::zpp_nape::phys::ZPP_Body b2; /* REM */ 
-		::zpp_nape::phys::ZPP_Body b1; /* REM */ 
+		bool stepped;
+		Float jMax;
+		Float jAcc;
+		Float kMass;
+		::zpp_nape::phys::ZPP_Body b2;
+		::zpp_nape::phys::ZPP_Body b1;
 		virtual Void inactiveBodies( );
 
 		virtual Void activeBodies( );
@@ -71,9 +71,9 @@ class ZPP_MotorJoint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj{
 		virtual ::nape::geom::Vec3 bodyImpulse( ::zpp_nape::phys::ZPP_Body b);
 		Dynamic bodyImpulse_dyn();
 
-		Float rate; /* REM */ 
-		Float ratio; /* REM */ 
-		::nape::constraint::MotorJoint outer_zn; /* REM */ 
+		Float rate;
+		Float ratio;
+		::nape::constraint::MotorJoint outer_zn;
 };
 
 } // end namespace zpp_nape

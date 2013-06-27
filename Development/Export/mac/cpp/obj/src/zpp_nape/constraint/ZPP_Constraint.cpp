@@ -468,7 +468,7 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC1(ZPP_Constraint_obj,copyto,(void))
 
-::nape::constraint::Constraint ZPP_Constraint_obj::copy( Array< ::zpp_nape::constraint::ZPP_CopyHelper > dict,Array< ::zpp_nape::constraint::ZPP_CopyHelper > todo){
+::nape::constraint::Constraint ZPP_Constraint_obj::copy( Array< ::Dynamic > dict,Array< ::Dynamic > todo){
 	HX_STACK_PUSH("ZPP_Constraint::copy","zpp_nape/constraint/Constraint.hx",536);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(dict,"dict");
@@ -511,10 +511,7 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Constraint_obj,wake,(void))
 bool ZPP_Constraint_obj::applyImpulsePos( ){
 	HX_STACK_PUSH("ZPP_Constraint::applyImpulsePos","zpp_nape/constraint/Constraint.hx",521);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(522)
-	{
-	}
-	HX_STACK_LINE(530)
+	HX_STACK_LINE(521)
 	return false;
 }
 
@@ -524,10 +521,7 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Constraint_obj,applyImpulsePos,return )
 bool ZPP_Constraint_obj::applyImpulseVel( ){
 	HX_STACK_PUSH("ZPP_Constraint::applyImpulseVel","zpp_nape/constraint/Constraint.hx",509);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(510)
-	{
-	}
-	HX_STACK_LINE(518)
+	HX_STACK_LINE(509)
 	return false;
 }
 
@@ -538,10 +532,7 @@ bool ZPP_Constraint_obj::preStep( Float dt){
 	HX_STACK_PUSH("ZPP_Constraint::preStep","zpp_nape/constraint/Constraint.hx",497);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(dt,"dt");
-	HX_STACK_LINE(498)
-	{
-	}
-	HX_STACK_LINE(506)
+	HX_STACK_LINE(497)
 	return false;
 }
 
@@ -575,10 +566,7 @@ bool ZPP_Constraint_obj::pair_exists( int id,int di){
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(id,"id");
 	HX_STACK_ARG(di,"di");
-	HX_STACK_LINE(472)
-	{
-	}
-	HX_STACK_LINE(480)
+	HX_STACK_LINE(471)
 	return false;
 }
 
@@ -661,9 +649,6 @@ Void ZPP_Constraint_obj::inactiveOrOutSpace( ){
 		{
 			HX_STACK_LINE(386)
 			::zpp_nape::space::ZPP_Component o = this->component;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(387)
-			{
-			}
 			HX_STACK_LINE(395)
 			{
 				HX_STACK_LINE(395)
@@ -693,9 +678,6 @@ Void ZPP_Constraint_obj::activeInSpace( ){
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(354)
 		this->alloc_cbSet();
-		HX_STACK_LINE(355)
-		{
-		}
 		HX_STACK_LINE(363)
 		{
 			HX_STACK_LINE(364)
@@ -825,48 +807,20 @@ Void ZPP_Constraint_obj::dealloc_cbSet( ){
 {
 		HX_STACK_PUSH("ZPP_Constraint::dealloc_cbSet","zpp_nape/constraint/Constraint.hx",289);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(290)
-		{
-		}
-		HX_STACK_LINE(298)
+		HX_STACK_LINE(289)
 		if (((this->cbSet != null()))){
 			HX_STACK_LINE(299)
 			this->cbSet->constraints->remove(hx::ObjectPtr<OBJ_>(this));
-			struct _Function_2_1{
-				inline static bool Block( ::zpp_nape::constraint::ZPP_Constraint_obj *__this){
-					HX_STACK_PUSH("*::closure","zpp_nape/constraint/Constraint.hx",300);
-					{
-						HX_STACK_LINE(300)
-						{
-						}
-						HX_STACK_LINE(300)
-						return (--(__this->cbSet->count) == (int)0);
-					}
-					return null();
-				}
-			};
 			HX_STACK_LINE(300)
-			if ((_Function_2_1::Block(this))){
+			if (((--(this->cbSet->count) == (int)0))){
 				HX_STACK_LINE(301)
 				this->space->cbsets->remove(this->cbSet);
 				HX_STACK_LINE(302)
 				{
 					HX_STACK_LINE(303)
 					::zpp_nape::callbacks::ZPP_CbSet o = this->cbSet;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(304)
-					{
-					}
 					HX_STACK_LINE(312)
 					{
-						HX_STACK_LINE(312)
-						{
-						}
-						HX_STACK_LINE(312)
-						{
-						}
-						HX_STACK_LINE(312)
-						{
-						}
 						HX_STACK_LINE(312)
 						o->listeners->clear();
 						HX_STACK_LINE(312)
@@ -909,10 +863,7 @@ Void ZPP_Constraint_obj::alloc_cbSet( ){
 {
 		HX_STACK_PUSH("ZPP_Constraint::alloc_cbSet","zpp_nape/constraint/Constraint.hx",275);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(276)
-		{
-		}
-		HX_STACK_LINE(284)
+		HX_STACK_LINE(275)
 		if ((((this->cbSet = this->space->cbsets->get(this->cbTypes)) != null()))){
 			HX_STACK_LINE(285)
 			(this->cbSet->count)++;
@@ -970,9 +921,6 @@ Void ZPP_Constraint_obj::insert_cbtype( ::zpp_nape::callbacks::ZPP_CbType cb){
 				{
 					HX_STACK_LINE(267)
 					::zpp_nape::util::ZNPList_ZPP_CbType _this = this->cbTypes;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(267)
-					{
-					}
 					struct _Function_4_1{
 						inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &cb){
 							HX_STACK_PUSH("*::closure","zpp_nape/constraint/Constraint.hx",267);
@@ -1443,7 +1391,7 @@ Class ZPP_Constraint_obj::__mClass;
 
 void ZPP_Constraint_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.constraint.ZPP_Constraint"), hx::TCanCast< ZPP_Constraint_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.constraint.ZPP_Constraint"), hx::TCanCast< ZPP_Constraint_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

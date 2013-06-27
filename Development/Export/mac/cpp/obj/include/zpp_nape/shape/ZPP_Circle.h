@@ -18,7 +18,7 @@ namespace zpp_nape{
 namespace shape{
 
 
-class ZPP_Circle_obj : public ::zpp_nape::shape::ZPP_Shape_obj{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Circle_obj : public ::zpp_nape::shape::ZPP_Shape_obj{
 	public:
 		typedef ::zpp_nape::shape::ZPP_Shape_obj super;
 		typedef ZPP_Circle_obj OBJ_;
@@ -86,8 +86,8 @@ class ZPP_Circle_obj : public ::zpp_nape::shape::ZPP_Shape_obj{
 		virtual Void __clear( );
 		Dynamic __clear_dyn();
 
-		Float radius; /* REM */ 
-		::nape::shape::Circle outer_zn; /* REM */ 
+		Float radius;
+		::nape::shape::Circle outer_zn;
 };
 
 } // end namespace zpp_nape

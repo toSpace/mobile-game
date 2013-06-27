@@ -15,7 +15,7 @@ namespace zpp_nape{
 namespace dynamics{
 
 
-class ZPP_InteractionFilter_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_InteractionFilter_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_InteractionFilter_obj OBJ_;
@@ -41,18 +41,18 @@ class ZPP_InteractionFilter_obj : public hx::Object{
 		virtual bool shouldFlow( ::zpp_nape::dynamics::ZPP_InteractionFilter x);
 		Dynamic shouldFlow_dyn();
 
-		int fluidMask; /* REM */ 
-		int fluidGroup; /* REM */ 
+		int fluidMask;
+		int fluidGroup;
 		virtual bool shouldSense( ::zpp_nape::dynamics::ZPP_InteractionFilter x);
 		Dynamic shouldSense_dyn();
 
-		int sensorMask; /* REM */ 
-		int sensorGroup; /* REM */ 
+		int sensorMask;
+		int sensorGroup;
 		virtual bool shouldCollide( ::zpp_nape::dynamics::ZPP_InteractionFilter x);
 		Dynamic shouldCollide_dyn();
 
-		int collisionMask; /* REM */ 
-		int collisionGroup; /* REM */ 
+		int collisionMask;
+		int collisionGroup;
 		virtual ::zpp_nape::dynamics::ZPP_InteractionFilter copy( );
 		Dynamic copy_dyn();
 
@@ -65,8 +65,8 @@ class ZPP_InteractionFilter_obj : public hx::Object{
 		virtual Void feature_cons( );
 		Dynamic feature_cons_dyn();
 
-		::nape::shape::ShapeList wrap_shapes; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Shape shapes; /* REM */ 
+		::nape::shape::ShapeList wrap_shapes;
+		::zpp_nape::util::ZNPList_ZPP_Shape shapes;
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
@@ -76,10 +76,10 @@ class ZPP_InteractionFilter_obj : public hx::Object{
 		virtual ::nape::dynamics::InteractionFilter wrapper( );
 		Dynamic wrapper_dyn();
 
-		::nape::dynamics::InteractionFilter outer; /* REM */ 
-		Dynamic userData; /* REM */ 
-		::zpp_nape::dynamics::ZPP_InteractionFilter next; /* REM */ 
-		static ::zpp_nape::dynamics::ZPP_InteractionFilter zpp_pool; /* REM */ 
+		::nape::dynamics::InteractionFilter outer;
+		Dynamic userData;
+		::zpp_nape::dynamics::ZPP_InteractionFilter next;
+		static ::zpp_nape::dynamics::ZPP_InteractionFilter zpp_pool;
 };
 
 } // end namespace zpp_nape

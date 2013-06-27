@@ -8,7 +8,7 @@
 HX_DECLARE_CLASS0(RenderManager)
 
 
-class RenderManager_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  RenderManager_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef RenderManager_obj OBJ_;
@@ -28,8 +28,8 @@ class RenderManager_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("RenderManager"); }
 
-		static Dynamic renderList; /* REM */ 
-		static bool running; /* REM */ 
+		static Dynamic renderList;
+		static bool running;
 		static Void add( Dynamic object);
 		static Dynamic add_dyn();
 

@@ -19,7 +19,7 @@ namespace nape{
 namespace constraint{
 
 
-class PulleyJoint_obj : public ::nape::constraint::Constraint_obj{
+class HXCPP_CLASS_ATTRIBUTES  PulleyJoint_obj : public ::nape::constraint::Constraint_obj{
 	public:
 		typedef ::nape::constraint::Constraint_obj super;
 		typedef PulleyJoint_obj OBJ_;
@@ -54,78 +54,67 @@ class PulleyJoint_obj : public ::nape::constraint::Constraint_obj{
 		virtual Float get_ratio( );
 		Dynamic get_ratio_dyn();
 
-		Float ratio; /* REM */ 
 		virtual Float set_jointMax( Float jointMax);
 		Dynamic set_jointMax_dyn();
 
 		virtual Float get_jointMax( );
 		Dynamic get_jointMax_dyn();
 
-		Float jointMax; /* REM */ 
 		virtual Float set_jointMin( Float jointMin);
 		Dynamic set_jointMin_dyn();
 
 		virtual Float get_jointMin( );
 		Dynamic get_jointMin_dyn();
 
-		Float jointMin; /* REM */ 
 		virtual ::nape::geom::Vec2 set_anchor4( ::nape::geom::Vec2 anchor4);
 		Dynamic set_anchor4_dyn();
 
 		virtual ::nape::geom::Vec2 get_anchor4( );
 		Dynamic get_anchor4_dyn();
 
-		::nape::geom::Vec2 anchor4; /* REM */ 
 		virtual ::nape::geom::Vec2 set_anchor3( ::nape::geom::Vec2 anchor3);
 		Dynamic set_anchor3_dyn();
 
 		virtual ::nape::geom::Vec2 get_anchor3( );
 		Dynamic get_anchor3_dyn();
 
-		::nape::geom::Vec2 anchor3; /* REM */ 
 		virtual ::nape::geom::Vec2 set_anchor2( ::nape::geom::Vec2 anchor2);
 		Dynamic set_anchor2_dyn();
 
 		virtual ::nape::geom::Vec2 get_anchor2( );
 		Dynamic get_anchor2_dyn();
 
-		::nape::geom::Vec2 anchor2; /* REM */ 
 		virtual ::nape::geom::Vec2 set_anchor1( ::nape::geom::Vec2 anchor1);
 		Dynamic set_anchor1_dyn();
 
 		virtual ::nape::geom::Vec2 get_anchor1( );
 		Dynamic get_anchor1_dyn();
 
-		::nape::geom::Vec2 anchor1; /* REM */ 
 		virtual ::nape::phys::Body set_body4( ::nape::phys::Body body4);
 		Dynamic set_body4_dyn();
 
 		virtual ::nape::phys::Body get_body4( );
 		Dynamic get_body4_dyn();
 
-		::nape::phys::Body body4; /* REM */ 
 		virtual ::nape::phys::Body set_body3( ::nape::phys::Body body3);
 		Dynamic set_body3_dyn();
 
 		virtual ::nape::phys::Body get_body3( );
 		Dynamic get_body3_dyn();
 
-		::nape::phys::Body body3; /* REM */ 
 		virtual ::nape::phys::Body set_body2( ::nape::phys::Body body2);
 		Dynamic set_body2_dyn();
 
 		virtual ::nape::phys::Body get_body2( );
 		Dynamic get_body2_dyn();
 
-		::nape::phys::Body body2; /* REM */ 
 		virtual ::nape::phys::Body set_body1( ::nape::phys::Body body1);
 		Dynamic set_body1_dyn();
 
 		virtual ::nape::phys::Body get_body1( );
 		Dynamic get_body1_dyn();
 
-		::nape::phys::Body body1; /* REM */ 
-		::zpp_nape::constraint::ZPP_PulleyJoint zpp_inner_zn; /* REM */ 
+		::zpp_nape::constraint::ZPP_PulleyJoint zpp_inner_zn;
 };
 
 } // end namespace nape

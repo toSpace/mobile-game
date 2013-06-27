@@ -8,22 +8,22 @@
 #include <aze/display/TilesheetEx.h>
 HX_DECLARE_CLASS2(aze,display,SparrowTilesheet)
 HX_DECLARE_CLASS2(aze,display,TilesheetEx)
-HX_DECLARE_CLASS2(native,display,BitmapData)
-HX_DECLARE_CLASS2(native,display,IBitmapDrawable)
-HX_DECLARE_CLASS2(native,display,Tilesheet)
+HX_DECLARE_CLASS2(flash,display,BitmapData)
+HX_DECLARE_CLASS2(flash,display,IBitmapDrawable)
+HX_DECLARE_CLASS2(openfl,display,Tilesheet)
 namespace aze{
 namespace display{
 
 
-class SparrowTilesheet_obj : public ::aze::display::TilesheetEx_obj{
+class HXCPP_CLASS_ATTRIBUTES  SparrowTilesheet_obj : public ::aze::display::TilesheetEx_obj{
 	public:
 		typedef ::aze::display::TilesheetEx_obj super;
 		typedef SparrowTilesheet_obj OBJ_;
 		SparrowTilesheet_obj();
-		Void __construct(::native::display::BitmapData img,::String xml);
+		Void __construct(::flash::display::BitmapData img,::String xml,hx::Null< Float >  __o_textureScale);
 
 	public:
-		static hx::ObjectPtr< SparrowTilesheet_obj > __new(::native::display::BitmapData img,::String xml);
+		static hx::ObjectPtr< SparrowTilesheet_obj > __new(::flash::display::BitmapData img,::String xml,hx::Null< Float >  __o_textureScale);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		~SparrowTilesheet_obj();

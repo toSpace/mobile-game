@@ -11,7 +11,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_Mat23_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Mat23_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Mat23_obj OBJ_;
@@ -37,7 +37,7 @@ class ZPP_Mat23_obj : public hx::Object{
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		::zpp_nape::geom::ZPP_Mat23 next; /* REM */ 
+		::zpp_nape::geom::ZPP_Mat23 next;
 		virtual Void setas( Float a,Float b,Float c,Float d,Float tx,Float ty);
 		Dynamic setas_dyn();
 
@@ -47,19 +47,19 @@ class ZPP_Mat23_obj : public hx::Object{
 		virtual Void invalidate( );
 		Dynamic invalidate_dyn();
 
-		Dynamic _invalidate; /* REM */ 
+		Dynamic _invalidate;
 		Dynamic &_invalidate_dyn() { return _invalidate;}
-		Float ty; /* REM */ 
-		Float tx; /* REM */ 
-		Float d; /* REM */ 
-		Float c; /* REM */ 
-		Float b; /* REM */ 
-		Float a; /* REM */ 
+		Float ty;
+		Float tx;
+		Float d;
+		Float c;
+		Float b;
+		Float a;
 		virtual ::nape::geom::Mat23 wrapper( );
 		Dynamic wrapper_dyn();
 
-		::nape::geom::Mat23 outer; /* REM */ 
-		static ::zpp_nape::geom::ZPP_Mat23 zpp_pool; /* REM */ 
+		::nape::geom::Mat23 outer;
+		static ::zpp_nape::geom::ZPP_Mat23 zpp_pool;
 		static ::zpp_nape::geom::ZPP_Mat23 get( );
 		static Dynamic get_dyn();
 

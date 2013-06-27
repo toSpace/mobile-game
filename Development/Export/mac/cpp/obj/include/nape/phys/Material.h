@@ -12,7 +12,7 @@ namespace nape{
 namespace phys{
 
 
-class Material_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Material_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Material_obj OBJ_;
@@ -41,47 +41,40 @@ class Material_obj : public hx::Object{
 		virtual Float get_rollingFriction( );
 		Dynamic get_rollingFriction_dyn();
 
-		Float rollingFriction; /* REM */ 
 		virtual Float set_density( Float density);
 		Dynamic set_density_dyn();
 
 		virtual Float get_density( );
 		Dynamic get_density_dyn();
 
-		Float density; /* REM */ 
 		virtual Float set_staticFriction( Float staticFriction);
 		Dynamic set_staticFriction_dyn();
 
 		virtual Float get_staticFriction( );
 		Dynamic get_staticFriction_dyn();
 
-		Float staticFriction; /* REM */ 
 		virtual Float set_dynamicFriction( Float dynamicFriction);
 		Dynamic set_dynamicFriction_dyn();
 
 		virtual Float get_dynamicFriction( );
 		Dynamic get_dynamicFriction_dyn();
 
-		Float dynamicFriction; /* REM */ 
 		virtual Float set_elasticity( Float elasticity);
 		Dynamic set_elasticity_dyn();
 
 		virtual Float get_elasticity( );
 		Dynamic get_elasticity_dyn();
 
-		Float elasticity; /* REM */ 
 		virtual ::nape::phys::Material copy( );
 		Dynamic copy_dyn();
 
 		virtual ::nape::shape::ShapeList get_shapes( );
 		Dynamic get_shapes_dyn();
 
-		::nape::shape::ShapeList shapes; /* REM */ 
 		virtual Dynamic get_userData( );
 		Dynamic get_userData_dyn();
 
-		Dynamic userData; /* REM */ 
-		::zpp_nape::phys::ZPP_Material zpp_inner; /* REM */ 
+		::zpp_nape::phys::ZPP_Material zpp_inner;
 		static ::nape::phys::Material wood( );
 		static Dynamic wood_dyn();
 

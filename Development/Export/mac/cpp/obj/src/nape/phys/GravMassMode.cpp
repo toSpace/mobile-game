@@ -126,8 +126,6 @@ Dynamic GravMassMode_obj::__Create(hx::DynamicArray inArgs)
 
 HX_DEFINE_DYNAMIC_FUNC0(GravMassMode_obj,toString,return )
 
-::nape::phys::GravMassMode GravMassMode_obj::DEFAULT;
-
 ::nape::phys::GravMassMode GravMassMode_obj::get_DEFAULT( ){
 	HX_STACK_PUSH("GravMassMode::get_DEFAULT","nape/phys/GravMassMode.hx",204);
 	HX_STACK_LINE(205)
@@ -146,8 +144,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GravMassMode_obj,toString,return )
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(GravMassMode_obj,get_DEFAULT,return )
 
-::nape::phys::GravMassMode GravMassMode_obj::FIXED;
-
 ::nape::phys::GravMassMode GravMassMode_obj::get_FIXED( ){
 	HX_STACK_PUSH("GravMassMode::get_FIXED","nape/phys/GravMassMode.hx",219);
 	HX_STACK_LINE(220)
@@ -165,8 +161,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(GravMassMode_obj,get_DEFAULT,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(GravMassMode_obj,get_FIXED,return )
-
-::nape::phys::GravMassMode GravMassMode_obj::SCALED;
 
 ::nape::phys::GravMassMode GravMassMode_obj::get_SCALED( ){
 	HX_STACK_PUSH("GravMassMode::get_SCALED","nape/phys/GravMassMode.hx",235);
@@ -205,13 +199,13 @@ Dynamic GravMassMode_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"FIXED") ) { return inCallProp ? get_FIXED() : FIXED; }
+		if (HX_FIELD_EQ(inName,"FIXED") ) { return get_FIXED(); }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"SCALED") ) { return inCallProp ? get_SCALED() : SCALED; }
+		if (HX_FIELD_EQ(inName,"SCALED") ) { return get_SCALED(); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"DEFAULT") ) { return inCallProp ? get_DEFAULT() : DEFAULT; }
+		if (HX_FIELD_EQ(inName,"DEFAULT") ) { return get_DEFAULT(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
@@ -230,16 +224,6 @@ Dynamic GravMassMode_obj::__Field(const ::String &inName,bool inCallProp)
 
 Dynamic GravMassMode_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 5:
-		if (HX_FIELD_EQ(inName,"FIXED") ) { FIXED=inValue.Cast< ::nape::phys::GravMassMode >(); return inValue; }
-		break;
-	case 6:
-		if (HX_FIELD_EQ(inName,"SCALED") ) { SCALED=inValue.Cast< ::nape::phys::GravMassMode >(); return inValue; }
-		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"DEFAULT") ) { DEFAULT=inValue.Cast< ::nape::phys::GravMassMode >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
@@ -249,11 +233,8 @@ void GravMassMode_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("DEFAULT"),
 	HX_CSTRING("get_DEFAULT"),
-	HX_CSTRING("FIXED"),
 	HX_CSTRING("get_FIXED"),
-	HX_CSTRING("SCALED"),
 	HX_CSTRING("get_SCALED"),
 	String(null()) };
 
@@ -263,23 +244,17 @@ static ::String sMemberFields[] = {
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(GravMassMode_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(GravMassMode_obj::DEFAULT,"DEFAULT");
-	HX_MARK_MEMBER_NAME(GravMassMode_obj::FIXED,"FIXED");
-	HX_MARK_MEMBER_NAME(GravMassMode_obj::SCALED,"SCALED");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(GravMassMode_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(GravMassMode_obj::DEFAULT,"DEFAULT");
-	HX_VISIT_MEMBER_NAME(GravMassMode_obj::FIXED,"FIXED");
-	HX_VISIT_MEMBER_NAME(GravMassMode_obj::SCALED,"SCALED");
 };
 
 Class GravMassMode_obj::__mClass;
 
 void GravMassMode_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.phys.GravMassMode"), hx::TCanCast< GravMassMode_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.phys.GravMassMode"), hx::TCanCast< GravMassMode_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

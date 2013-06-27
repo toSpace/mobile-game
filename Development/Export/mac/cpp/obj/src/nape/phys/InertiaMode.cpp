@@ -100,8 +100,6 @@ Dynamic InertiaMode_obj::__Create(hx::DynamicArray inArgs)
 
 HX_DEFINE_DYNAMIC_FUNC0(InertiaMode_obj,toString,return )
 
-::nape::phys::InertiaMode InertiaMode_obj::DEFAULT;
-
 ::nape::phys::InertiaMode InertiaMode_obj::get_DEFAULT( ){
 	HX_STACK_PUSH("InertiaMode::get_DEFAULT","nape/phys/InertiaMode.hx",203);
 	HX_STACK_LINE(204)
@@ -119,8 +117,6 @@ HX_DEFINE_DYNAMIC_FUNC0(InertiaMode_obj,toString,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(InertiaMode_obj,get_DEFAULT,return )
-
-::nape::phys::InertiaMode InertiaMode_obj::FIXED;
 
 ::nape::phys::InertiaMode InertiaMode_obj::get_FIXED( ){
 	HX_STACK_PUSH("InertiaMode::get_FIXED","nape/phys/InertiaMode.hx",218);
@@ -159,10 +155,10 @@ Dynamic InertiaMode_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"FIXED") ) { return inCallProp ? get_FIXED() : FIXED; }
+		if (HX_FIELD_EQ(inName,"FIXED") ) { return get_FIXED(); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"DEFAULT") ) { return inCallProp ? get_DEFAULT() : DEFAULT; }
+		if (HX_FIELD_EQ(inName,"DEFAULT") ) { return get_DEFAULT(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
@@ -178,13 +174,6 @@ Dynamic InertiaMode_obj::__Field(const ::String &inName,bool inCallProp)
 
 Dynamic InertiaMode_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 5:
-		if (HX_FIELD_EQ(inName,"FIXED") ) { FIXED=inValue.Cast< ::nape::phys::InertiaMode >(); return inValue; }
-		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"DEFAULT") ) { DEFAULT=inValue.Cast< ::nape::phys::InertiaMode >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
@@ -194,9 +183,7 @@ void InertiaMode_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("DEFAULT"),
 	HX_CSTRING("get_DEFAULT"),
-	HX_CSTRING("FIXED"),
 	HX_CSTRING("get_FIXED"),
 	String(null()) };
 
@@ -206,21 +193,17 @@ static ::String sMemberFields[] = {
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(InertiaMode_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(InertiaMode_obj::DEFAULT,"DEFAULT");
-	HX_MARK_MEMBER_NAME(InertiaMode_obj::FIXED,"FIXED");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(InertiaMode_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(InertiaMode_obj::DEFAULT,"DEFAULT");
-	HX_VISIT_MEMBER_NAME(InertiaMode_obj::FIXED,"FIXED");
 };
 
 Class InertiaMode_obj::__mClass;
 
 void InertiaMode_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.phys.InertiaMode"), hx::TCanCast< InertiaMode_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.phys.InertiaMode"), hx::TCanCast< InertiaMode_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

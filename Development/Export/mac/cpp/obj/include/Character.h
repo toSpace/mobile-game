@@ -10,7 +10,7 @@ HX_DECLARE_CLASS2(nape,phys,Body)
 HX_DECLARE_CLASS2(nape,phys,Interactor)
 
 
-class Character_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Character_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Character_obj OBJ_;

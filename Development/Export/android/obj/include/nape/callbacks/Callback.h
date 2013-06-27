@@ -13,7 +13,7 @@ namespace nape{
 namespace callbacks{
 
 
-class Callback_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Callback_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Callback_obj OBJ_;
@@ -39,12 +39,10 @@ class Callback_obj : public hx::Object{
 		virtual ::nape::callbacks::Listener get_listener( );
 		Dynamic get_listener_dyn();
 
-		::nape::callbacks::Listener listener; /* REM */ 
 		virtual ::nape::callbacks::CbEvent get_event( );
 		Dynamic get_event_dyn();
 
-		::nape::callbacks::CbEvent event; /* REM */ 
-		::zpp_nape::callbacks::ZPP_Callback zpp_inner; /* REM */ 
+		::zpp_nape::callbacks::ZPP_Callback zpp_inner;
 };
 
 } // end namespace nape

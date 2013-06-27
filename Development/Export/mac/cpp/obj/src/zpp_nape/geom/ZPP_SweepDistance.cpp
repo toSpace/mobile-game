@@ -146,17 +146,11 @@ bool userAPI = __o_userAPI.Default(false);
 				HX_STACK_LINE(257)
 				if (((delta != (int)0))){
 					HX_STACK_LINE(257)
-					{
-					}
-					HX_STACK_LINE(257)
 					b1->sweepTime = dt;
 					HX_STACK_LINE(257)
 					{
 						HX_STACK_LINE(257)
 						Float t = delta;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(257)
-						{
-						}
 						HX_STACK_LINE(257)
 						hx::AddEq(b1->posx,(b1->velx * t));
 						HX_STACK_LINE(257)
@@ -174,9 +168,6 @@ bool userAPI = __o_userAPI.Default(false);
 							b1->axisx = ::Math_obj::sin(b1->rot);
 							HX_STACK_LINE(257)
 							b1->axisy = ::Math_obj::cos(b1->rot);
-							HX_STACK_LINE(257)
-							{
-							}
 							HX_STACK_LINE(257)
 							Dynamic();
 						}
@@ -198,89 +189,57 @@ bool userAPI = __o_userAPI.Default(false);
 				}
 			}
 			HX_STACK_LINE(258)
-			{
+			if (((s1->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
+				HX_STACK_LINE(258)
+				s1->worldCOMx = (b1->posx + (((b1->axisy * s1->localCOMx) - (b1->axisx * s1->localCOMy))));
+				HX_STACK_LINE(258)
+				s1->worldCOMy = (b1->posy + (((s1->localCOMx * b1->axisx) + (s1->localCOMy * b1->axisy))));
+			}
+			else{
+				HX_STACK_LINE(258)
+				::zpp_nape::shape::ZPP_Polygon p = s1->polygon;		HX_STACK_VAR(p,"p");
+				HX_STACK_LINE(258)
+				::zpp_nape::geom::ZPP_Vec2 li = p->lverts->next;		HX_STACK_VAR(li,"li");
 				HX_STACK_LINE(258)
 				{
-				}
-				HX_STACK_LINE(258)
-				if (((s1->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 					HX_STACK_LINE(258)
-					s1->worldCOMx = (b1->posx + (((b1->axisy * s1->localCOMx) - (b1->axisx * s1->localCOMy))));
+					::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
 					HX_STACK_LINE(258)
-					s1->worldCOMy = (b1->posy + (((s1->localCOMx * b1->axisx) + (s1->localCOMy * b1->axisy))));
-				}
-				else{
-					HX_STACK_LINE(258)
-					::zpp_nape::shape::ZPP_Polygon p = s1->polygon;		HX_STACK_VAR(p,"p");
-					HX_STACK_LINE(258)
-					::zpp_nape::geom::ZPP_Vec2 li = p->lverts->next;		HX_STACK_VAR(li,"li");
-					HX_STACK_LINE(258)
-					{
+					while(((cx_ite != null()))){
 						HX_STACK_LINE(258)
-						::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+						::zpp_nape::geom::ZPP_Vec2 g = cx_ite;		HX_STACK_VAR(g,"g");
 						HX_STACK_LINE(258)
-						while(((cx_ite != null()))){
+						{
 							HX_STACK_LINE(258)
-							::zpp_nape::geom::ZPP_Vec2 g = cx_ite;		HX_STACK_VAR(g,"g");
+							::zpp_nape::geom::ZPP_Vec2 l = li;		HX_STACK_VAR(l,"l");
+							HX_STACK_LINE(258)
+							li = li->next;
 							HX_STACK_LINE(258)
 							{
 								HX_STACK_LINE(258)
-								::zpp_nape::geom::ZPP_Vec2 l = li;		HX_STACK_VAR(l,"l");
+								g->x = (b1->posx + (((b1->axisy * l->x) - (b1->axisx * l->y))));
 								HX_STACK_LINE(258)
-								li = li->next;
-								HX_STACK_LINE(258)
-								{
-									HX_STACK_LINE(258)
-									g->x = (b1->posx + (((b1->axisy * l->x) - (b1->axisx * l->y))));
-									HX_STACK_LINE(258)
-									g->y = (b1->posy + (((l->x * b1->axisx) + (l->y * b1->axisy))));
-								}
+								g->y = (b1->posy + (((l->x * b1->axisx) + (l->y * b1->axisy))));
 							}
-							HX_STACK_LINE(258)
-							cx_ite = cx_ite->next;
 						}
-					}
-					HX_STACK_LINE(258)
-					::zpp_nape::util::ZNPNode_ZPP_Edge ite = p->edges->head;		HX_STACK_VAR(ite,"ite");
-					HX_STACK_LINE(258)
-					{
-						HX_STACK_LINE(258)
-						::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
-						HX_STACK_LINE(258)
-						::zpp_nape::geom::ZPP_Vec2 u = cx_ite;		HX_STACK_VAR(u,"u");
 						HX_STACK_LINE(258)
 						cx_ite = cx_ite->next;
+					}
+				}
+				HX_STACK_LINE(258)
+				::zpp_nape::util::ZNPNode_ZPP_Edge ite = p->edges->head;		HX_STACK_VAR(ite,"ite");
+				HX_STACK_LINE(258)
+				{
+					HX_STACK_LINE(258)
+					::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+					HX_STACK_LINE(258)
+					::zpp_nape::geom::ZPP_Vec2 u = cx_ite;		HX_STACK_VAR(u,"u");
+					HX_STACK_LINE(258)
+					cx_ite = cx_ite->next;
+					HX_STACK_LINE(258)
+					while(((cx_ite != null()))){
 						HX_STACK_LINE(258)
-						while(((cx_ite != null()))){
-							HX_STACK_LINE(258)
-							::zpp_nape::geom::ZPP_Vec2 v = cx_ite;		HX_STACK_VAR(v,"v");
-							HX_STACK_LINE(258)
-							{
-								HX_STACK_LINE(258)
-								::zpp_nape::shape::ZPP_Edge e = ite->elt;		HX_STACK_VAR(e,"e");
-								HX_STACK_LINE(258)
-								ite = ite->next;
-								HX_STACK_LINE(258)
-								{
-									HX_STACK_LINE(258)
-									e->gnormx = ((b1->axisy * e->lnormx) - (b1->axisx * e->lnormy));
-									HX_STACK_LINE(258)
-									e->gnormy = ((e->lnormx * b1->axisx) + (e->lnormy * b1->axisy));
-								}
-								HX_STACK_LINE(258)
-								e->gprojection = (((b1->posx * e->gnormx) + (b1->posy * e->gnormy)) + e->lprojection);
-								HX_STACK_LINE(258)
-								e->tp0 = ((u->y * e->gnormx) - (u->x * e->gnormy));
-								HX_STACK_LINE(258)
-								e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
-							}
-							HX_STACK_LINE(258)
-							u = v;
-							HX_STACK_LINE(258)
-							cx_ite = cx_ite->next;
-						}
-						HX_STACK_LINE(258)
-						::zpp_nape::geom::ZPP_Vec2 v = p->gverts->next;		HX_STACK_VAR(v,"v");
+						::zpp_nape::geom::ZPP_Vec2 v = cx_ite;		HX_STACK_VAR(v,"v");
 						HX_STACK_LINE(258)
 						{
 							HX_STACK_LINE(258)
@@ -301,6 +260,32 @@ bool userAPI = __o_userAPI.Default(false);
 							HX_STACK_LINE(258)
 							e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
 						}
+						HX_STACK_LINE(258)
+						u = v;
+						HX_STACK_LINE(258)
+						cx_ite = cx_ite->next;
+					}
+					HX_STACK_LINE(258)
+					::zpp_nape::geom::ZPP_Vec2 v = p->gverts->next;		HX_STACK_VAR(v,"v");
+					HX_STACK_LINE(258)
+					{
+						HX_STACK_LINE(258)
+						::zpp_nape::shape::ZPP_Edge e = ite->elt;		HX_STACK_VAR(e,"e");
+						HX_STACK_LINE(258)
+						ite = ite->next;
+						HX_STACK_LINE(258)
+						{
+							HX_STACK_LINE(258)
+							e->gnormx = ((b1->axisy * e->lnormx) - (b1->axisx * e->lnormy));
+							HX_STACK_LINE(258)
+							e->gnormy = ((e->lnormx * b1->axisx) + (e->lnormy * b1->axisy));
+						}
+						HX_STACK_LINE(258)
+						e->gprojection = (((b1->posx * e->gnormx) + (b1->posy * e->gnormy)) + e->lprojection);
+						HX_STACK_LINE(258)
+						e->tp0 = ((u->y * e->gnormx) - (u->x * e->gnormy));
+						HX_STACK_LINE(258)
+						e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
 					}
 				}
 			}
@@ -313,17 +298,11 @@ bool userAPI = __o_userAPI.Default(false);
 				HX_STACK_LINE(259)
 				if (((delta != (int)0))){
 					HX_STACK_LINE(259)
-					{
-					}
-					HX_STACK_LINE(259)
 					b2->sweepTime = dt;
 					HX_STACK_LINE(259)
 					{
 						HX_STACK_LINE(259)
 						Float t = delta;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(259)
-						{
-						}
 						HX_STACK_LINE(259)
 						hx::AddEq(b2->posx,(b2->velx * t));
 						HX_STACK_LINE(259)
@@ -341,9 +320,6 @@ bool userAPI = __o_userAPI.Default(false);
 							b2->axisx = ::Math_obj::sin(b2->rot);
 							HX_STACK_LINE(259)
 							b2->axisy = ::Math_obj::cos(b2->rot);
-							HX_STACK_LINE(259)
-							{
-							}
 							HX_STACK_LINE(259)
 							Dynamic();
 						}
@@ -365,89 +341,57 @@ bool userAPI = __o_userAPI.Default(false);
 				}
 			}
 			HX_STACK_LINE(260)
-			{
+			if (((s2->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
+				HX_STACK_LINE(260)
+				s2->worldCOMx = (b2->posx + (((b2->axisy * s2->localCOMx) - (b2->axisx * s2->localCOMy))));
+				HX_STACK_LINE(260)
+				s2->worldCOMy = (b2->posy + (((s2->localCOMx * b2->axisx) + (s2->localCOMy * b2->axisy))));
+			}
+			else{
+				HX_STACK_LINE(260)
+				::zpp_nape::shape::ZPP_Polygon p = s2->polygon;		HX_STACK_VAR(p,"p");
+				HX_STACK_LINE(260)
+				::zpp_nape::geom::ZPP_Vec2 li = p->lverts->next;		HX_STACK_VAR(li,"li");
 				HX_STACK_LINE(260)
 				{
-				}
-				HX_STACK_LINE(260)
-				if (((s2->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 					HX_STACK_LINE(260)
-					s2->worldCOMx = (b2->posx + (((b2->axisy * s2->localCOMx) - (b2->axisx * s2->localCOMy))));
+					::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
 					HX_STACK_LINE(260)
-					s2->worldCOMy = (b2->posy + (((s2->localCOMx * b2->axisx) + (s2->localCOMy * b2->axisy))));
-				}
-				else{
-					HX_STACK_LINE(260)
-					::zpp_nape::shape::ZPP_Polygon p = s2->polygon;		HX_STACK_VAR(p,"p");
-					HX_STACK_LINE(260)
-					::zpp_nape::geom::ZPP_Vec2 li = p->lverts->next;		HX_STACK_VAR(li,"li");
-					HX_STACK_LINE(260)
-					{
+					while(((cx_ite != null()))){
 						HX_STACK_LINE(260)
-						::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+						::zpp_nape::geom::ZPP_Vec2 g = cx_ite;		HX_STACK_VAR(g,"g");
 						HX_STACK_LINE(260)
-						while(((cx_ite != null()))){
+						{
 							HX_STACK_LINE(260)
-							::zpp_nape::geom::ZPP_Vec2 g = cx_ite;		HX_STACK_VAR(g,"g");
+							::zpp_nape::geom::ZPP_Vec2 l = li;		HX_STACK_VAR(l,"l");
+							HX_STACK_LINE(260)
+							li = li->next;
 							HX_STACK_LINE(260)
 							{
 								HX_STACK_LINE(260)
-								::zpp_nape::geom::ZPP_Vec2 l = li;		HX_STACK_VAR(l,"l");
+								g->x = (b2->posx + (((b2->axisy * l->x) - (b2->axisx * l->y))));
 								HX_STACK_LINE(260)
-								li = li->next;
-								HX_STACK_LINE(260)
-								{
-									HX_STACK_LINE(260)
-									g->x = (b2->posx + (((b2->axisy * l->x) - (b2->axisx * l->y))));
-									HX_STACK_LINE(260)
-									g->y = (b2->posy + (((l->x * b2->axisx) + (l->y * b2->axisy))));
-								}
+								g->y = (b2->posy + (((l->x * b2->axisx) + (l->y * b2->axisy))));
 							}
-							HX_STACK_LINE(260)
-							cx_ite = cx_ite->next;
 						}
-					}
-					HX_STACK_LINE(260)
-					::zpp_nape::util::ZNPNode_ZPP_Edge ite = p->edges->head;		HX_STACK_VAR(ite,"ite");
-					HX_STACK_LINE(260)
-					{
-						HX_STACK_LINE(260)
-						::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
-						HX_STACK_LINE(260)
-						::zpp_nape::geom::ZPP_Vec2 u = cx_ite;		HX_STACK_VAR(u,"u");
 						HX_STACK_LINE(260)
 						cx_ite = cx_ite->next;
+					}
+				}
+				HX_STACK_LINE(260)
+				::zpp_nape::util::ZNPNode_ZPP_Edge ite = p->edges->head;		HX_STACK_VAR(ite,"ite");
+				HX_STACK_LINE(260)
+				{
+					HX_STACK_LINE(260)
+					::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+					HX_STACK_LINE(260)
+					::zpp_nape::geom::ZPP_Vec2 u = cx_ite;		HX_STACK_VAR(u,"u");
+					HX_STACK_LINE(260)
+					cx_ite = cx_ite->next;
+					HX_STACK_LINE(260)
+					while(((cx_ite != null()))){
 						HX_STACK_LINE(260)
-						while(((cx_ite != null()))){
-							HX_STACK_LINE(260)
-							::zpp_nape::geom::ZPP_Vec2 v = cx_ite;		HX_STACK_VAR(v,"v");
-							HX_STACK_LINE(260)
-							{
-								HX_STACK_LINE(260)
-								::zpp_nape::shape::ZPP_Edge e = ite->elt;		HX_STACK_VAR(e,"e");
-								HX_STACK_LINE(260)
-								ite = ite->next;
-								HX_STACK_LINE(260)
-								{
-									HX_STACK_LINE(260)
-									e->gnormx = ((b2->axisy * e->lnormx) - (b2->axisx * e->lnormy));
-									HX_STACK_LINE(260)
-									e->gnormy = ((e->lnormx * b2->axisx) + (e->lnormy * b2->axisy));
-								}
-								HX_STACK_LINE(260)
-								e->gprojection = (((b2->posx * e->gnormx) + (b2->posy * e->gnormy)) + e->lprojection);
-								HX_STACK_LINE(260)
-								e->tp0 = ((u->y * e->gnormx) - (u->x * e->gnormy));
-								HX_STACK_LINE(260)
-								e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
-							}
-							HX_STACK_LINE(260)
-							u = v;
-							HX_STACK_LINE(260)
-							cx_ite = cx_ite->next;
-						}
-						HX_STACK_LINE(260)
-						::zpp_nape::geom::ZPP_Vec2 v = p->gverts->next;		HX_STACK_VAR(v,"v");
+						::zpp_nape::geom::ZPP_Vec2 v = cx_ite;		HX_STACK_VAR(v,"v");
 						HX_STACK_LINE(260)
 						{
 							HX_STACK_LINE(260)
@@ -468,11 +412,37 @@ bool userAPI = __o_userAPI.Default(false);
 							HX_STACK_LINE(260)
 							e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
 						}
+						HX_STACK_LINE(260)
+						u = v;
+						HX_STACK_LINE(260)
+						cx_ite = cx_ite->next;
+					}
+					HX_STACK_LINE(260)
+					::zpp_nape::geom::ZPP_Vec2 v = p->gverts->next;		HX_STACK_VAR(v,"v");
+					HX_STACK_LINE(260)
+					{
+						HX_STACK_LINE(260)
+						::zpp_nape::shape::ZPP_Edge e = ite->elt;		HX_STACK_VAR(e,"e");
+						HX_STACK_LINE(260)
+						ite = ite->next;
+						HX_STACK_LINE(260)
+						{
+							HX_STACK_LINE(260)
+							e->gnormx = ((b2->axisy * e->lnormx) - (b2->axisx * e->lnormy));
+							HX_STACK_LINE(260)
+							e->gnormy = ((e->lnormx * b2->axisx) + (e->lnormy * b2->axisy));
+						}
+						HX_STACK_LINE(260)
+						e->gprojection = (((b2->posx * e->gnormx) + (b2->posy * e->gnormy)) + e->lprojection);
+						HX_STACK_LINE(260)
+						e->tp0 = ((u->y * e->gnormx) - (u->x * e->gnormy));
+						HX_STACK_LINE(260)
+						e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
 					}
 				}
 			}
 			struct _Function_2_1{
-				inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::geom::ZPP_Vec2 &c2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &c1,::zpp_nape::shape::ZPP_Shape &s2){
+				inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &c1,::zpp_nape::geom::ZPP_Vec2 &c2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",261);
 					{
 						HX_STACK_LINE(261)
@@ -482,7 +452,7 @@ bool userAPI = __o_userAPI.Default(false);
 						::zpp_nape::geom::ZPP_Vec2 w2 = c2;		HX_STACK_VAR(w2,"w2");
 						Float upperBound = 1e100;		HX_STACK_VAR(upperBound,"upperBound");
 						struct _Function_3_1{
-							inline static Float Block( Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w1){
+							inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &w1){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",261);
 								{
 									HX_STACK_LINE(261)
@@ -504,21 +474,8 @@ bool userAPI = __o_userAPI.Default(false);
 											HX_STACK_LINE(261)
 											ny = (c21->worldCOMy - c11->worldCOMy);
 										}
-										struct _Function_5_1{
-											inline static Float Block( Float &nx,Float &ny){
-												HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",261);
-												{
-													HX_STACK_LINE(261)
-													{
-													}
-													HX_STACK_LINE(261)
-													return ::Math_obj::sqrt(((nx * nx) + (ny * ny)));
-												}
-												return null();
-											}
-										};
 										HX_STACK_LINE(261)
-										Float len = _Function_5_1::Block(nx,ny);		HX_STACK_VAR(len,"len");
+										Float len = ::Math_obj::sqrt(((nx * nx) + (ny * ny)));		HX_STACK_VAR(len,"len");
 										HX_STACK_LINE(261)
 										dist = (len - ((c11->radius + c21->radius)));
 										HX_STACK_LINE(261)
@@ -532,16 +489,10 @@ bool userAPI = __o_userAPI.Default(false);
 												HX_STACK_LINE(261)
 												{
 												}
-												HX_STACK_LINE(261)
-												{
-												}
 											}
 											else{
 												HX_STACK_LINE(261)
 												Float t = (Float(1.0) / Float(len));		HX_STACK_VAR(t,"t");
-												HX_STACK_LINE(261)
-												{
-												}
 												HX_STACK_LINE(261)
 												hx::MultEq(nx,t);
 												HX_STACK_LINE(261)
@@ -552,9 +503,6 @@ bool userAPI = __o_userAPI.Default(false);
 												HX_STACK_LINE(261)
 												Float t = c11->radius;		HX_STACK_VAR(t,"t");
 												HX_STACK_LINE(261)
-												{
-												}
-												HX_STACK_LINE(261)
 												w1->x = (c11->worldCOMx + (nx * t));
 												HX_STACK_LINE(261)
 												w1->y = (c11->worldCOMy + (ny * t));
@@ -563,9 +511,6 @@ bool userAPI = __o_userAPI.Default(false);
 											{
 												HX_STACK_LINE(261)
 												Float t = -(c21->radius);		HX_STACK_VAR(t,"t");
-												HX_STACK_LINE(261)
-												{
-												}
 												HX_STACK_LINE(261)
 												w2->x = (c21->worldCOMx + (nx * t));
 												HX_STACK_LINE(261)
@@ -580,9 +525,6 @@ bool userAPI = __o_userAPI.Default(false);
 												HX_STACK_LINE(261)
 												{
 												}
-												HX_STACK_LINE(261)
-												{
-												}
 											}
 										}
 									}
@@ -593,7 +535,7 @@ bool userAPI = __o_userAPI.Default(false);
 							}
 						};
 						struct _Function_3_2{
-							inline static Float Block( Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w1){
+							inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &w1){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",261);
 								{
 									HX_STACK_LINE(261)
@@ -616,7 +558,7 @@ bool userAPI = __o_userAPI.Default(false);
 										swapped = true;
 									}
 									struct _Function_4_1{
-										inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &w2,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w1){
+										inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::geom::ZPP_Vec2 &w1){
 											HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",261);
 											{
 												HX_STACK_LINE(261)
@@ -691,21 +633,8 @@ bool userAPI = __o_userAPI.Default(false);
 															HX_STACK_LINE(261)
 															ny = (circle->worldCOMy - v0->y);
 														}
-														struct _Function_7_1{
-															inline static Float Block( Float &nx,Float &ny){
-																HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",261);
-																{
-																	HX_STACK_LINE(261)
-																	{
-																	}
-																	HX_STACK_LINE(261)
-																	return ::Math_obj::sqrt(((nx * nx) + (ny * ny)));
-																}
-																return null();
-															}
-														};
 														HX_STACK_LINE(261)
-														Float len = _Function_7_1::Block(nx,ny);		HX_STACK_VAR(len,"len");
+														Float len = ::Math_obj::sqrt(((nx * nx) + (ny * ny)));		HX_STACK_VAR(len,"len");
 														HX_STACK_LINE(261)
 														best = (len - circle->radius);
 														HX_STACK_LINE(261)
@@ -719,16 +648,10 @@ bool userAPI = __o_userAPI.Default(false);
 																HX_STACK_LINE(261)
 																{
 																}
-																HX_STACK_LINE(261)
-																{
-																}
 															}
 															else{
 																HX_STACK_LINE(261)
 																Float t = (Float(1.0) / Float(len));		HX_STACK_VAR(t,"t");
-																HX_STACK_LINE(261)
-																{
-																}
 																HX_STACK_LINE(261)
 																hx::MultEq(nx,t);
 																HX_STACK_LINE(261)
@@ -739,9 +662,6 @@ bool userAPI = __o_userAPI.Default(false);
 																HX_STACK_LINE(261)
 																int t = (int)0;		HX_STACK_VAR(t,"t");
 																HX_STACK_LINE(261)
-																{
-																}
-																HX_STACK_LINE(261)
 																w1->x = (v0->x + (nx * t));
 																HX_STACK_LINE(261)
 																w1->y = (v0->y + (ny * t));
@@ -750,9 +670,6 @@ bool userAPI = __o_userAPI.Default(false);
 															{
 																HX_STACK_LINE(261)
 																Float t = -(circle->radius);		HX_STACK_VAR(t,"t");
-																HX_STACK_LINE(261)
-																{
-																}
 																HX_STACK_LINE(261)
 																w2->x = (circle->worldCOMx + (nx * t));
 																HX_STACK_LINE(261)
@@ -764,9 +681,6 @@ bool userAPI = __o_userAPI.Default(false);
 																axis->x = nx;
 																HX_STACK_LINE(261)
 																axis->y = ny;
-																HX_STACK_LINE(261)
-																{
-																}
 																HX_STACK_LINE(261)
 																{
 																}
@@ -787,21 +701,8 @@ bool userAPI = __o_userAPI.Default(false);
 																HX_STACK_LINE(261)
 																ny = (circle->worldCOMy - v1->y);
 															}
-															struct _Function_8_1{
-																inline static Float Block( Float &nx,Float &ny){
-																	HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",261);
-																	{
-																		HX_STACK_LINE(261)
-																		{
-																		}
-																		HX_STACK_LINE(261)
-																		return ::Math_obj::sqrt(((nx * nx) + (ny * ny)));
-																	}
-																	return null();
-																}
-															};
 															HX_STACK_LINE(261)
-															Float len = _Function_8_1::Block(nx,ny);		HX_STACK_VAR(len,"len");
+															Float len = ::Math_obj::sqrt(((nx * nx) + (ny * ny)));		HX_STACK_VAR(len,"len");
 															HX_STACK_LINE(261)
 															best = (len - circle->radius);
 															HX_STACK_LINE(261)
@@ -815,16 +716,10 @@ bool userAPI = __o_userAPI.Default(false);
 																	HX_STACK_LINE(261)
 																	{
 																	}
-																	HX_STACK_LINE(261)
-																	{
-																	}
 																}
 																else{
 																	HX_STACK_LINE(261)
 																	Float t = (Float(1.0) / Float(len));		HX_STACK_VAR(t,"t");
-																	HX_STACK_LINE(261)
-																	{
-																	}
 																	HX_STACK_LINE(261)
 																	hx::MultEq(nx,t);
 																	HX_STACK_LINE(261)
@@ -835,9 +730,6 @@ bool userAPI = __o_userAPI.Default(false);
 																	HX_STACK_LINE(261)
 																	int t = (int)0;		HX_STACK_VAR(t,"t");
 																	HX_STACK_LINE(261)
-																	{
-																	}
-																	HX_STACK_LINE(261)
 																	w1->x = (v1->x + (nx * t));
 																	HX_STACK_LINE(261)
 																	w1->y = (v1->y + (ny * t));
@@ -846,9 +738,6 @@ bool userAPI = __o_userAPI.Default(false);
 																{
 																	HX_STACK_LINE(261)
 																	Float t = -(circle->radius);		HX_STACK_VAR(t,"t");
-																	HX_STACK_LINE(261)
-																	{
-																	}
 																	HX_STACK_LINE(261)
 																	w2->x = (circle->worldCOMx + (nx * t));
 																	HX_STACK_LINE(261)
@@ -863,9 +752,6 @@ bool userAPI = __o_userAPI.Default(false);
 																	HX_STACK_LINE(261)
 																	{
 																	}
-																	HX_STACK_LINE(261)
-																	{
-																	}
 																}
 															}
 														}
@@ -875,9 +761,6 @@ bool userAPI = __o_userAPI.Default(false);
 																HX_STACK_LINE(261)
 																Float t = -(circle->radius);		HX_STACK_VAR(t,"t");
 																HX_STACK_LINE(261)
-																{
-																}
-																HX_STACK_LINE(261)
 																w2->x = (circle->worldCOMx + (a0->gnormx * t));
 																HX_STACK_LINE(261)
 																w2->y = (circle->worldCOMy + (a0->gnormy * t));
@@ -886,9 +769,6 @@ bool userAPI = __o_userAPI.Default(false);
 															{
 																HX_STACK_LINE(261)
 																Float t = -(best);		HX_STACK_VAR(t,"t");
-																HX_STACK_LINE(261)
-																{
-																}
 																HX_STACK_LINE(261)
 																w1->x = (w2->x + (a0->gnormx * t));
 																HX_STACK_LINE(261)
@@ -900,9 +780,6 @@ bool userAPI = __o_userAPI.Default(false);
 																axis->x = a0->gnormx;
 																HX_STACK_LINE(261)
 																axis->y = a0->gnormy;
-																HX_STACK_LINE(261)
-																{
-																}
 																HX_STACK_LINE(261)
 																{
 																}
@@ -924,7 +801,7 @@ bool userAPI = __o_userAPI.Default(false);
 										}
 									};
 									struct _Function_4_2{
-										inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &w2,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w1){
+										inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::geom::ZPP_Vec2 &w1){
 											HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",261);
 											{
 												HX_STACK_LINE(261)
@@ -1011,7 +888,7 @@ bool userAPI = __o_userAPI.Default(false);
 													}
 												}
 												struct _Function_5_1{
-													inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Edge &a2,Float &best,::zpp_nape::shape::ZPP_Edge &a1,::zpp_nape::shape::ZPP_Polygon &p2,int &besti,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Polygon &p1,::zpp_nape::geom::ZPP_Vec2 &w1){
+													inline static Float Block( Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::shape::ZPP_Polygon &p1,::zpp_nape::geom::ZPP_Vec2 &w1,Float &best,::zpp_nape::shape::ZPP_Edge &a1,::zpp_nape::shape::ZPP_Polygon &p2,int &besti,::zpp_nape::shape::ZPP_Edge &a2){
 														HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",261);
 														{
 															HX_STACK_LINE(261)
@@ -1086,7 +963,7 @@ bool userAPI = __o_userAPI.Default(false);
 																}
 															}
 															struct _Function_6_1{
-																inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Edge &a2,Float &best,::zpp_nape::shape::ZPP_Edge &a1,::zpp_nape::shape::ZPP_Polygon &p2,int &besti,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w1,::zpp_nape::shape::ZPP_Polygon &p1){
+																inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::shape::ZPP_Polygon &p1,::zpp_nape::geom::ZPP_Vec2 &w1,Float &best,::zpp_nape::shape::ZPP_Edge &a1,int &besti,::zpp_nape::shape::ZPP_Polygon &p2,::zpp_nape::shape::ZPP_Edge &a2){
 																	HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",261);
 																	{
 																		HX_STACK_LINE(261)
@@ -1156,9 +1033,6 @@ bool userAPI = __o_userAPI.Default(false);
 																			HX_STACK_LINE(261)
 																			{
 																			}
-																			HX_STACK_LINE(261)
-																			{
-																			}
 																		}
 																		else{
 																			HX_STACK_LINE(261)
@@ -1168,12 +1042,9 @@ bool userAPI = __o_userAPI.Default(false);
 																			HX_STACK_LINE(261)
 																			{
 																			}
-																			HX_STACK_LINE(261)
-																			{
-																			}
 																		}
 																		struct _Function_7_1{
-																			inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Edge &ay,::zpp_nape::shape::ZPP_Edge &ax,Float &best,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w1){
+																			inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::shape::ZPP_Edge &ax,::zpp_nape::geom::ZPP_Vec2 &w1,Float &best,::zpp_nape::shape::ZPP_Edge &ay){
 																				HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",261);
 																				{
 																					HX_STACK_LINE(261)
@@ -1275,9 +1146,6 @@ bool userAPI = __o_userAPI.Default(false);
 																						HX_STACK_LINE(261)
 																						Float t = t1;		HX_STACK_VAR(t,"t");
 																						HX_STACK_LINE(261)
-																						{
-																						}
-																						HX_STACK_LINE(261)
 																						f1x = (v0->x + (vx * t));
 																						HX_STACK_LINE(261)
 																						f1y = (v0->y + (vy * t));
@@ -1290,9 +1158,6 @@ bool userAPI = __o_userAPI.Default(false);
 																					{
 																						HX_STACK_LINE(261)
 																						Float t = t2;		HX_STACK_VAR(t,"t");
-																						HX_STACK_LINE(261)
-																						{
-																						}
 																						HX_STACK_LINE(261)
 																						f2x = (v0->x + (vx * t));
 																						HX_STACK_LINE(261)
@@ -1307,9 +1172,6 @@ bool userAPI = __o_userAPI.Default(false);
 																						HX_STACK_LINE(261)
 																						Float t = s12;		HX_STACK_VAR(t,"t");
 																						HX_STACK_LINE(261)
-																						{
-																						}
-																						HX_STACK_LINE(261)
 																						g1x = (q0->x + (qx * t));
 																						HX_STACK_LINE(261)
 																						g1y = (q0->y + (qy * t));
@@ -1323,15 +1185,12 @@ bool userAPI = __o_userAPI.Default(false);
 																						HX_STACK_LINE(261)
 																						Float t = s22;		HX_STACK_VAR(t,"t");
 																						HX_STACK_LINE(261)
-																						{
-																						}
-																						HX_STACK_LINE(261)
 																						g2x = (q0->x + (qx * t));
 																						HX_STACK_LINE(261)
 																						g2y = (q0->y + (qy * t));
 																					}
 																					struct _Function_8_1{
-																						inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &q0,Float &f1y,Float &f1x){
+																						inline static Float Block( Float &f1y,::zpp_nape::geom::ZPP_Vec2 &q0,Float &f1x){
 																							HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",261);
 																							{
 																								HX_STACK_LINE(261)
@@ -1352,9 +1211,9 @@ bool userAPI = __o_userAPI.Default(false);
 																						}
 																					};
 																					HX_STACK_LINE(261)
-																					Float d1 = _Function_8_1::Block(q0,f1y,f1x);		HX_STACK_VAR(d1,"d1");
+																					Float d1 = _Function_8_1::Block(f1y,q0,f1x);		HX_STACK_VAR(d1,"d1");
 																					struct _Function_8_2{
-																						inline static Float Block( Float &f2x,::zpp_nape::geom::ZPP_Vec2 &q11,Float &f2y){
+																						inline static Float Block( Float &f2y,Float &f2x,::zpp_nape::geom::ZPP_Vec2 &q11){
 																							HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",261);
 																							{
 																								HX_STACK_LINE(261)
@@ -1375,9 +1234,9 @@ bool userAPI = __o_userAPI.Default(false);
 																						}
 																					};
 																					HX_STACK_LINE(261)
-																					Float d2 = _Function_8_2::Block(f2x,q11,f2y);		HX_STACK_VAR(d2,"d2");
+																					Float d2 = _Function_8_2::Block(f2y,f2x,q11);		HX_STACK_VAR(d2,"d2");
 																					struct _Function_8_3{
-																						inline static Float Block( Float &g1x,::zpp_nape::geom::ZPP_Vec2 &v0,Float &g1y){
+																						inline static Float Block( Float &g1x,Float &g1y,::zpp_nape::geom::ZPP_Vec2 &v0){
 																							HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",261);
 																							{
 																								HX_STACK_LINE(261)
@@ -1398,9 +1257,9 @@ bool userAPI = __o_userAPI.Default(false);
 																						}
 																					};
 																					HX_STACK_LINE(261)
-																					Float e1 = _Function_8_3::Block(g1x,v0,g1y);		HX_STACK_VAR(e1,"e1");
+																					Float e1 = _Function_8_3::Block(g1x,g1y,v0);		HX_STACK_VAR(e1,"e1");
 																					struct _Function_8_4{
-																						inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &v1,Float &g2y,Float &g2x){
+																						inline static Float Block( Float &g2y,Float &g2x,::zpp_nape::geom::ZPP_Vec2 &v1){
 																							HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",261);
 																							{
 																								HX_STACK_LINE(261)
@@ -1421,7 +1280,7 @@ bool userAPI = __o_userAPI.Default(false);
 																						}
 																					};
 																					HX_STACK_LINE(261)
-																					Float e2 = _Function_8_4::Block(v1,g2y,g2x);		HX_STACK_VAR(e2,"e2");
+																					Float e2 = _Function_8_4::Block(g2y,g2x,v1);		HX_STACK_VAR(e2,"e2");
 																					HX_STACK_LINE(261)
 																					Float minfx = 0.0;		HX_STACK_VAR(minfx,"minfx");
 																					HX_STACK_LINE(261)
@@ -1439,9 +1298,6 @@ bool userAPI = __o_userAPI.Default(false);
 																							HX_STACK_LINE(261)
 																							{
 																							}
-																							HX_STACK_LINE(261)
-																							{
-																							}
 																						}
 																						HX_STACK_LINE(261)
 																						minq = q0;
@@ -1453,9 +1309,6 @@ bool userAPI = __o_userAPI.Default(false);
 																							minfx = f2x;
 																							HX_STACK_LINE(261)
 																							minfy = f2y;
-																							HX_STACK_LINE(261)
-																							{
-																							}
 																							HX_STACK_LINE(261)
 																							{
 																							}
@@ -1482,9 +1335,6 @@ bool userAPI = __o_userAPI.Default(false);
 																							HX_STACK_LINE(261)
 																							{
 																							}
-																							HX_STACK_LINE(261)
-																							{
-																							}
 																						}
 																						HX_STACK_LINE(261)
 																						minv = v0;
@@ -1496,9 +1346,6 @@ bool userAPI = __o_userAPI.Default(false);
 																							mingx = g2x;
 																							HX_STACK_LINE(261)
 																							mingy = g2y;
-																							HX_STACK_LINE(261)
-																							{
-																							}
 																							HX_STACK_LINE(261)
 																							{
 																							}
@@ -1519,9 +1366,6 @@ bool userAPI = __o_userAPI.Default(false);
 																							HX_STACK_LINE(261)
 																							{
 																							}
-																							HX_STACK_LINE(261)
-																							{
-																							}
 																						}
 																						HX_STACK_LINE(261)
 																						{
@@ -1529,9 +1373,6 @@ bool userAPI = __o_userAPI.Default(false);
 																							w2->x = minq->x;
 																							HX_STACK_LINE(261)
 																							w2->y = minq->y;
-																							HX_STACK_LINE(261)
-																							{
-																							}
 																							HX_STACK_LINE(261)
 																							{
 																							}
@@ -1549,9 +1390,6 @@ bool userAPI = __o_userAPI.Default(false);
 																							HX_STACK_LINE(261)
 																							{
 																							}
-																							HX_STACK_LINE(261)
-																							{
-																							}
 																						}
 																						HX_STACK_LINE(261)
 																						{
@@ -1559,9 +1397,6 @@ bool userAPI = __o_userAPI.Default(false);
 																							w1->x = minv->x;
 																							HX_STACK_LINE(261)
 																							w1->y = minv->y;
-																							HX_STACK_LINE(261)
-																							{
-																							}
 																							HX_STACK_LINE(261)
 																							{
 																							}
@@ -1583,9 +1418,6 @@ bool userAPI = __o_userAPI.Default(false);
 																							HX_STACK_LINE(261)
 																							Float t = (Float(1.0) / Float(best));		HX_STACK_VAR(t,"t");
 																							HX_STACK_LINE(261)
-																							{
-																							}
-																							HX_STACK_LINE(261)
 																							hx::MultEq(axis->x,t);
 																							HX_STACK_LINE(261)
 																							hx::MultEq(axis->y,t);
@@ -1605,7 +1437,7 @@ bool userAPI = __o_userAPI.Default(false);
 																			}
 																		};
 																		struct _Function_7_2{
-																			inline static Float Block( ::zpp_nape::shape::ZPP_Edge &ay,::zpp_nape::shape::ZPP_Edge &ax,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &w1){
+																			inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::shape::ZPP_Edge &ax,::zpp_nape::geom::ZPP_Vec2 &w1,::zpp_nape::shape::ZPP_Edge &ay){
 																				HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",261);
 																				{
 																					HX_STACK_LINE(261)
@@ -1621,9 +1453,6 @@ bool userAPI = __o_userAPI.Default(false);
 																						HX_STACK_LINE(261)
 																						{
 																						}
-																						HX_STACK_LINE(261)
-																						{
-																						}
 																					}
 																					HX_STACK_LINE(261)
 																					Float c1x = 0.0;		HX_STACK_VAR(c1x,"c1x");
@@ -1635,9 +1464,6 @@ bool userAPI = __o_userAPI.Default(false);
 																						c1x = ay->gp1->x;
 																						HX_STACK_LINE(261)
 																						c1y = ay->gp1->y;
-																						HX_STACK_LINE(261)
-																						{
-																						}
 																						HX_STACK_LINE(261)
 																						{
 																						}
@@ -1666,9 +1492,6 @@ bool userAPI = __o_userAPI.Default(false);
 																						HX_STACK_LINE(261)
 																						Float t1 = t;		HX_STACK_VAR(t1,"t1");
 																						HX_STACK_LINE(261)
-																						{
-																						}
-																						HX_STACK_LINE(261)
 																						hx::AddEq(c0x,(dvx * t1));
 																						HX_STACK_LINE(261)
 																						hx::AddEq(c0y,(dvy * t1));
@@ -1680,9 +1503,6 @@ bool userAPI = __o_userAPI.Default(false);
 																						HX_STACK_LINE(261)
 																						Float t2 = t1;		HX_STACK_VAR(t2,"t2");
 																						HX_STACK_LINE(261)
-																						{
-																						}
-																						HX_STACK_LINE(261)
 																						hx::AddEq(c1x,(dvx * t2));
 																						HX_STACK_LINE(261)
 																						hx::AddEq(c1y,(dvy * t2));
@@ -1692,7 +1512,7 @@ bool userAPI = __o_userAPI.Default(false);
 																					HX_STACK_LINE(261)
 																					Float c1d = (((c1x * ax->gnormx) + (c1y * ax->gnormy)) - ax->gprojection);		HX_STACK_VAR(c1d,"c1d");
 																					struct _Function_8_1{
-																						inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &w2,Float &c0y,Float &c0d,::zpp_nape::shape::ZPP_Edge &ax,Float &c0x,::zpp_nape::geom::ZPP_Vec2 &w1){
+																						inline static Float Block( Float &c0y,::zpp_nape::geom::ZPP_Vec2 &w2,Float &c0x,Float &c0d,::zpp_nape::geom::ZPP_Vec2 &w1,::zpp_nape::shape::ZPP_Edge &ax){
 																							HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",261);
 																							{
 																								HX_STACK_LINE(261)
@@ -1704,17 +1524,11 @@ bool userAPI = __o_userAPI.Default(false);
 																									HX_STACK_LINE(261)
 																									{
 																									}
-																									HX_STACK_LINE(261)
-																									{
-																									}
 																								}
 																								HX_STACK_LINE(261)
 																								{
 																									HX_STACK_LINE(261)
 																									Float t2 = -(c0d);		HX_STACK_VAR(t2,"t2");
-																									HX_STACK_LINE(261)
-																									{
-																									}
 																									HX_STACK_LINE(261)
 																									w1->x = (w2->x + (ax->gnormx * t2));
 																									HX_STACK_LINE(261)
@@ -1727,7 +1541,7 @@ bool userAPI = __o_userAPI.Default(false);
 																						}
 																					};
 																					struct _Function_8_2{
-																						inline static Float Block( Float &c1y,Float &c1d,::zpp_nape::geom::ZPP_Vec2 &w2,Float &c1x,::zpp_nape::shape::ZPP_Edge &ax,::zpp_nape::geom::ZPP_Vec2 &w1){
+																						inline static Float Block( Float &c1x,::zpp_nape::geom::ZPP_Vec2 &w2,Float &c1d,::zpp_nape::geom::ZPP_Vec2 &w1,::zpp_nape::shape::ZPP_Edge &ax,Float &c1y){
 																							HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",261);
 																							{
 																								HX_STACK_LINE(261)
@@ -1739,17 +1553,11 @@ bool userAPI = __o_userAPI.Default(false);
 																									HX_STACK_LINE(261)
 																									{
 																									}
-																									HX_STACK_LINE(261)
-																									{
-																									}
 																								}
 																								HX_STACK_LINE(261)
 																								{
 																									HX_STACK_LINE(261)
 																									Float t2 = -(c1d);		HX_STACK_VAR(t2,"t2");
-																									HX_STACK_LINE(261)
-																									{
-																									}
 																									HX_STACK_LINE(261)
 																									w1->x = (w2->x + (ax->gnormx * t2));
 																									HX_STACK_LINE(261)
@@ -1762,43 +1570,43 @@ bool userAPI = __o_userAPI.Default(false);
 																						}
 																					};
 																					HX_STACK_LINE(261)
-																					return (  (((c0d < c1d))) ? Float(_Function_8_1::Block(w2,c0y,c0d,ax,c0x,w1)) : Float(_Function_8_2::Block(c1y,c1d,w2,c1x,ax,w1)) );
+																					return (  (((c0d < c1d))) ? Float(_Function_8_1::Block(c0y,w2,c0x,c0d,w1,ax)) : Float(_Function_8_2::Block(c1x,w2,c1d,w1,ax,c1y)) );
 																				}
 																				return null();
 																			}
 																		};
 																		HX_STACK_LINE(261)
-																		return (  (((best >= (int)0))) ? Float(_Function_7_1::Block(swapped,ay,ax,best,w2,axis,w1)) : Float(_Function_7_2::Block(ay,ax,w2,w1)) );
+																		return (  (((best >= (int)0))) ? Float(_Function_7_1::Block(axis,w2,swapped,ax,w1,best,ay)) : Float(_Function_7_2::Block(w2,ax,w1,ay)) );
 																	}
 																	return null();
 																}
 															};
 															HX_STACK_LINE(261)
-															return (  (((best < upperBound))) ? Float(_Function_6_1::Block(swapped,a2,best,a1,p2,besti,w2,axis,w1,p1)) : Float(upperBound) );
+															return (  (((best < upperBound))) ? Float(_Function_6_1::Block(axis,w2,swapped,p1,w1,best,a1,besti,p2,a2)) : Float(upperBound) );
 														}
 														return null();
 													}
 												};
 												HX_STACK_LINE(261)
-												return (  (((best < upperBound))) ? Float(_Function_5_1::Block(swapped,a2,best,a1,p2,besti,upperBound,w2,axis,p1,w1)) : Float(upperBound) );
+												return (  (((best < upperBound))) ? Float(_Function_5_1::Block(upperBound,axis,w2,swapped,p1,w1,best,a1,p2,besti,a2)) : Float(upperBound) );
 											}
 											return null();
 										}
 									};
 									HX_STACK_LINE(261)
-									return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_POLYGON)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_4_1::Block(swapped,s11,s21,w2,upperBound,axis,w1)) : Float(_Function_4_2::Block(swapped,s11,s21,w2,upperBound,axis,w1)) );
+									return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_POLYGON)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_4_1::Block(s21,upperBound,axis,s11,w2,swapped,w1)) : Float(_Function_4_2::Block(s21,upperBound,axis,s11,w2,swapped,w1)) );
 								}
 								return null();
 							}
 						};
 						HX_STACK_LINE(261)
-						return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_3_1::Block(upperBound,axis,s21,w2,s11,w1)) : Float(_Function_3_2::Block(upperBound,axis,s21,w2,s11,w1)) );
+						return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_3_1::Block(s21,upperBound,axis,s11,w2,w1)) : Float(_Function_3_2::Block(s21,upperBound,axis,s11,w2,w1)) );
 					}
 					return null();
 				}
 			};
 			HX_STACK_LINE(261)
-			Float sep = (_Function_2_1::Block(s1,c2,axis,c1,s2) + negRadius);		HX_STACK_VAR(sep,"sep");
+			Float sep = (_Function_2_1::Block(c1,c2,axis,s2,s1) + negRadius);		HX_STACK_VAR(sep,"sep");
 			HX_STACK_LINE(262)
 			Float dot = ((deltax * axis->x) + (deltay * axis->y));		HX_STACK_VAR(dot,"dot");
 			HX_STACK_LINE(263)
@@ -1874,17 +1682,11 @@ bool userAPI = __o_userAPI.Default(false);
 					HX_STACK_LINE(297)
 					if (((delta1 != (int)0))){
 						HX_STACK_LINE(297)
-						{
-						}
-						HX_STACK_LINE(297)
 						b1->sweepTime = dt;
 						HX_STACK_LINE(297)
 						{
 							HX_STACK_LINE(297)
 							Float t = delta1;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(297)
-							{
-							}
 							HX_STACK_LINE(297)
 							hx::AddEq(b1->posx,(b1->velx * t));
 							HX_STACK_LINE(297)
@@ -1902,9 +1704,6 @@ bool userAPI = __o_userAPI.Default(false);
 								b1->axisx = ::Math_obj::sin(b1->rot);
 								HX_STACK_LINE(297)
 								b1->axisy = ::Math_obj::cos(b1->rot);
-								HX_STACK_LINE(297)
-								{
-								}
 								HX_STACK_LINE(297)
 								Dynamic();
 							}
@@ -1926,89 +1725,57 @@ bool userAPI = __o_userAPI.Default(false);
 					}
 				}
 				HX_STACK_LINE(298)
-				{
+				if (((s1->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
+					HX_STACK_LINE(298)
+					s1->worldCOMx = (b1->posx + (((b1->axisy * s1->localCOMx) - (b1->axisx * s1->localCOMy))));
+					HX_STACK_LINE(298)
+					s1->worldCOMy = (b1->posy + (((s1->localCOMx * b1->axisx) + (s1->localCOMy * b1->axisy))));
+				}
+				else{
+					HX_STACK_LINE(298)
+					::zpp_nape::shape::ZPP_Polygon p = s1->polygon;		HX_STACK_VAR(p,"p");
+					HX_STACK_LINE(298)
+					::zpp_nape::geom::ZPP_Vec2 li = p->lverts->next;		HX_STACK_VAR(li,"li");
 					HX_STACK_LINE(298)
 					{
-					}
-					HX_STACK_LINE(298)
-					if (((s1->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 						HX_STACK_LINE(298)
-						s1->worldCOMx = (b1->posx + (((b1->axisy * s1->localCOMx) - (b1->axisx * s1->localCOMy))));
+						::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
 						HX_STACK_LINE(298)
-						s1->worldCOMy = (b1->posy + (((s1->localCOMx * b1->axisx) + (s1->localCOMy * b1->axisy))));
-					}
-					else{
-						HX_STACK_LINE(298)
-						::zpp_nape::shape::ZPP_Polygon p = s1->polygon;		HX_STACK_VAR(p,"p");
-						HX_STACK_LINE(298)
-						::zpp_nape::geom::ZPP_Vec2 li = p->lverts->next;		HX_STACK_VAR(li,"li");
-						HX_STACK_LINE(298)
-						{
+						while(((cx_ite != null()))){
 							HX_STACK_LINE(298)
-							::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+							::zpp_nape::geom::ZPP_Vec2 g = cx_ite;		HX_STACK_VAR(g,"g");
 							HX_STACK_LINE(298)
-							while(((cx_ite != null()))){
+							{
 								HX_STACK_LINE(298)
-								::zpp_nape::geom::ZPP_Vec2 g = cx_ite;		HX_STACK_VAR(g,"g");
+								::zpp_nape::geom::ZPP_Vec2 l = li;		HX_STACK_VAR(l,"l");
+								HX_STACK_LINE(298)
+								li = li->next;
 								HX_STACK_LINE(298)
 								{
 									HX_STACK_LINE(298)
-									::zpp_nape::geom::ZPP_Vec2 l = li;		HX_STACK_VAR(l,"l");
+									g->x = (b1->posx + (((b1->axisy * l->x) - (b1->axisx * l->y))));
 									HX_STACK_LINE(298)
-									li = li->next;
-									HX_STACK_LINE(298)
-									{
-										HX_STACK_LINE(298)
-										g->x = (b1->posx + (((b1->axisy * l->x) - (b1->axisx * l->y))));
-										HX_STACK_LINE(298)
-										g->y = (b1->posy + (((l->x * b1->axisx) + (l->y * b1->axisy))));
-									}
+									g->y = (b1->posy + (((l->x * b1->axisx) + (l->y * b1->axisy))));
 								}
-								HX_STACK_LINE(298)
-								cx_ite = cx_ite->next;
 							}
-						}
-						HX_STACK_LINE(298)
-						::zpp_nape::util::ZNPNode_ZPP_Edge ite = p->edges->head;		HX_STACK_VAR(ite,"ite");
-						HX_STACK_LINE(298)
-						{
-							HX_STACK_LINE(298)
-							::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
-							HX_STACK_LINE(298)
-							::zpp_nape::geom::ZPP_Vec2 u = cx_ite;		HX_STACK_VAR(u,"u");
 							HX_STACK_LINE(298)
 							cx_ite = cx_ite->next;
+						}
+					}
+					HX_STACK_LINE(298)
+					::zpp_nape::util::ZNPNode_ZPP_Edge ite = p->edges->head;		HX_STACK_VAR(ite,"ite");
+					HX_STACK_LINE(298)
+					{
+						HX_STACK_LINE(298)
+						::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+						HX_STACK_LINE(298)
+						::zpp_nape::geom::ZPP_Vec2 u = cx_ite;		HX_STACK_VAR(u,"u");
+						HX_STACK_LINE(298)
+						cx_ite = cx_ite->next;
+						HX_STACK_LINE(298)
+						while(((cx_ite != null()))){
 							HX_STACK_LINE(298)
-							while(((cx_ite != null()))){
-								HX_STACK_LINE(298)
-								::zpp_nape::geom::ZPP_Vec2 v = cx_ite;		HX_STACK_VAR(v,"v");
-								HX_STACK_LINE(298)
-								{
-									HX_STACK_LINE(298)
-									::zpp_nape::shape::ZPP_Edge e = ite->elt;		HX_STACK_VAR(e,"e");
-									HX_STACK_LINE(298)
-									ite = ite->next;
-									HX_STACK_LINE(298)
-									{
-										HX_STACK_LINE(298)
-										e->gnormx = ((b1->axisy * e->lnormx) - (b1->axisx * e->lnormy));
-										HX_STACK_LINE(298)
-										e->gnormy = ((e->lnormx * b1->axisx) + (e->lnormy * b1->axisy));
-									}
-									HX_STACK_LINE(298)
-									e->gprojection = (((b1->posx * e->gnormx) + (b1->posy * e->gnormy)) + e->lprojection);
-									HX_STACK_LINE(298)
-									e->tp0 = ((u->y * e->gnormx) - (u->x * e->gnormy));
-									HX_STACK_LINE(298)
-									e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
-								}
-								HX_STACK_LINE(298)
-								u = v;
-								HX_STACK_LINE(298)
-								cx_ite = cx_ite->next;
-							}
-							HX_STACK_LINE(298)
-							::zpp_nape::geom::ZPP_Vec2 v = p->gverts->next;		HX_STACK_VAR(v,"v");
+							::zpp_nape::geom::ZPP_Vec2 v = cx_ite;		HX_STACK_VAR(v,"v");
 							HX_STACK_LINE(298)
 							{
 								HX_STACK_LINE(298)
@@ -2029,6 +1796,32 @@ bool userAPI = __o_userAPI.Default(false);
 								HX_STACK_LINE(298)
 								e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
 							}
+							HX_STACK_LINE(298)
+							u = v;
+							HX_STACK_LINE(298)
+							cx_ite = cx_ite->next;
+						}
+						HX_STACK_LINE(298)
+						::zpp_nape::geom::ZPP_Vec2 v = p->gverts->next;		HX_STACK_VAR(v,"v");
+						HX_STACK_LINE(298)
+						{
+							HX_STACK_LINE(298)
+							::zpp_nape::shape::ZPP_Edge e = ite->elt;		HX_STACK_VAR(e,"e");
+							HX_STACK_LINE(298)
+							ite = ite->next;
+							HX_STACK_LINE(298)
+							{
+								HX_STACK_LINE(298)
+								e->gnormx = ((b1->axisy * e->lnormx) - (b1->axisx * e->lnormy));
+								HX_STACK_LINE(298)
+								e->gnormy = ((e->lnormx * b1->axisx) + (e->lnormy * b1->axisy));
+							}
+							HX_STACK_LINE(298)
+							e->gprojection = (((b1->posx * e->gnormx) + (b1->posy * e->gnormy)) + e->lprojection);
+							HX_STACK_LINE(298)
+							e->tp0 = ((u->y * e->gnormx) - (u->x * e->gnormy));
+							HX_STACK_LINE(298)
+							e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
 						}
 					}
 				}
@@ -2041,17 +1834,11 @@ bool userAPI = __o_userAPI.Default(false);
 					HX_STACK_LINE(299)
 					if (((delta1 != (int)0))){
 						HX_STACK_LINE(299)
-						{
-						}
-						HX_STACK_LINE(299)
 						b2->sweepTime = dt;
 						HX_STACK_LINE(299)
 						{
 							HX_STACK_LINE(299)
 							Float t = delta1;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(299)
-							{
-							}
 							HX_STACK_LINE(299)
 							hx::AddEq(b2->posx,(b2->velx * t));
 							HX_STACK_LINE(299)
@@ -2069,9 +1856,6 @@ bool userAPI = __o_userAPI.Default(false);
 								b2->axisx = ::Math_obj::sin(b2->rot);
 								HX_STACK_LINE(299)
 								b2->axisy = ::Math_obj::cos(b2->rot);
-								HX_STACK_LINE(299)
-								{
-								}
 								HX_STACK_LINE(299)
 								Dynamic();
 							}
@@ -2093,89 +1877,57 @@ bool userAPI = __o_userAPI.Default(false);
 					}
 				}
 				HX_STACK_LINE(300)
-				{
+				if (((s2->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
+					HX_STACK_LINE(300)
+					s2->worldCOMx = (b2->posx + (((b2->axisy * s2->localCOMx) - (b2->axisx * s2->localCOMy))));
+					HX_STACK_LINE(300)
+					s2->worldCOMy = (b2->posy + (((s2->localCOMx * b2->axisx) + (s2->localCOMy * b2->axisy))));
+				}
+				else{
+					HX_STACK_LINE(300)
+					::zpp_nape::shape::ZPP_Polygon p = s2->polygon;		HX_STACK_VAR(p,"p");
+					HX_STACK_LINE(300)
+					::zpp_nape::geom::ZPP_Vec2 li = p->lverts->next;		HX_STACK_VAR(li,"li");
 					HX_STACK_LINE(300)
 					{
-					}
-					HX_STACK_LINE(300)
-					if (((s2->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 						HX_STACK_LINE(300)
-						s2->worldCOMx = (b2->posx + (((b2->axisy * s2->localCOMx) - (b2->axisx * s2->localCOMy))));
+						::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
 						HX_STACK_LINE(300)
-						s2->worldCOMy = (b2->posy + (((s2->localCOMx * b2->axisx) + (s2->localCOMy * b2->axisy))));
-					}
-					else{
-						HX_STACK_LINE(300)
-						::zpp_nape::shape::ZPP_Polygon p = s2->polygon;		HX_STACK_VAR(p,"p");
-						HX_STACK_LINE(300)
-						::zpp_nape::geom::ZPP_Vec2 li = p->lverts->next;		HX_STACK_VAR(li,"li");
-						HX_STACK_LINE(300)
-						{
+						while(((cx_ite != null()))){
 							HX_STACK_LINE(300)
-							::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+							::zpp_nape::geom::ZPP_Vec2 g = cx_ite;		HX_STACK_VAR(g,"g");
 							HX_STACK_LINE(300)
-							while(((cx_ite != null()))){
+							{
 								HX_STACK_LINE(300)
-								::zpp_nape::geom::ZPP_Vec2 g = cx_ite;		HX_STACK_VAR(g,"g");
+								::zpp_nape::geom::ZPP_Vec2 l = li;		HX_STACK_VAR(l,"l");
+								HX_STACK_LINE(300)
+								li = li->next;
 								HX_STACK_LINE(300)
 								{
 									HX_STACK_LINE(300)
-									::zpp_nape::geom::ZPP_Vec2 l = li;		HX_STACK_VAR(l,"l");
+									g->x = (b2->posx + (((b2->axisy * l->x) - (b2->axisx * l->y))));
 									HX_STACK_LINE(300)
-									li = li->next;
-									HX_STACK_LINE(300)
-									{
-										HX_STACK_LINE(300)
-										g->x = (b2->posx + (((b2->axisy * l->x) - (b2->axisx * l->y))));
-										HX_STACK_LINE(300)
-										g->y = (b2->posy + (((l->x * b2->axisx) + (l->y * b2->axisy))));
-									}
+									g->y = (b2->posy + (((l->x * b2->axisx) + (l->y * b2->axisy))));
 								}
-								HX_STACK_LINE(300)
-								cx_ite = cx_ite->next;
 							}
-						}
-						HX_STACK_LINE(300)
-						::zpp_nape::util::ZNPNode_ZPP_Edge ite = p->edges->head;		HX_STACK_VAR(ite,"ite");
-						HX_STACK_LINE(300)
-						{
-							HX_STACK_LINE(300)
-							::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
-							HX_STACK_LINE(300)
-							::zpp_nape::geom::ZPP_Vec2 u = cx_ite;		HX_STACK_VAR(u,"u");
 							HX_STACK_LINE(300)
 							cx_ite = cx_ite->next;
+						}
+					}
+					HX_STACK_LINE(300)
+					::zpp_nape::util::ZNPNode_ZPP_Edge ite = p->edges->head;		HX_STACK_VAR(ite,"ite");
+					HX_STACK_LINE(300)
+					{
+						HX_STACK_LINE(300)
+						::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+						HX_STACK_LINE(300)
+						::zpp_nape::geom::ZPP_Vec2 u = cx_ite;		HX_STACK_VAR(u,"u");
+						HX_STACK_LINE(300)
+						cx_ite = cx_ite->next;
+						HX_STACK_LINE(300)
+						while(((cx_ite != null()))){
 							HX_STACK_LINE(300)
-							while(((cx_ite != null()))){
-								HX_STACK_LINE(300)
-								::zpp_nape::geom::ZPP_Vec2 v = cx_ite;		HX_STACK_VAR(v,"v");
-								HX_STACK_LINE(300)
-								{
-									HX_STACK_LINE(300)
-									::zpp_nape::shape::ZPP_Edge e = ite->elt;		HX_STACK_VAR(e,"e");
-									HX_STACK_LINE(300)
-									ite = ite->next;
-									HX_STACK_LINE(300)
-									{
-										HX_STACK_LINE(300)
-										e->gnormx = ((b2->axisy * e->lnormx) - (b2->axisx * e->lnormy));
-										HX_STACK_LINE(300)
-										e->gnormy = ((e->lnormx * b2->axisx) + (e->lnormy * b2->axisy));
-									}
-									HX_STACK_LINE(300)
-									e->gprojection = (((b2->posx * e->gnormx) + (b2->posy * e->gnormy)) + e->lprojection);
-									HX_STACK_LINE(300)
-									e->tp0 = ((u->y * e->gnormx) - (u->x * e->gnormy));
-									HX_STACK_LINE(300)
-									e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
-								}
-								HX_STACK_LINE(300)
-								u = v;
-								HX_STACK_LINE(300)
-								cx_ite = cx_ite->next;
-							}
-							HX_STACK_LINE(300)
-							::zpp_nape::geom::ZPP_Vec2 v = p->gverts->next;		HX_STACK_VAR(v,"v");
+							::zpp_nape::geom::ZPP_Vec2 v = cx_ite;		HX_STACK_VAR(v,"v");
 							HX_STACK_LINE(300)
 							{
 								HX_STACK_LINE(300)
@@ -2196,11 +1948,37 @@ bool userAPI = __o_userAPI.Default(false);
 								HX_STACK_LINE(300)
 								e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
 							}
+							HX_STACK_LINE(300)
+							u = v;
+							HX_STACK_LINE(300)
+							cx_ite = cx_ite->next;
+						}
+						HX_STACK_LINE(300)
+						::zpp_nape::geom::ZPP_Vec2 v = p->gverts->next;		HX_STACK_VAR(v,"v");
+						HX_STACK_LINE(300)
+						{
+							HX_STACK_LINE(300)
+							::zpp_nape::shape::ZPP_Edge e = ite->elt;		HX_STACK_VAR(e,"e");
+							HX_STACK_LINE(300)
+							ite = ite->next;
+							HX_STACK_LINE(300)
+							{
+								HX_STACK_LINE(300)
+								e->gnormx = ((b2->axisy * e->lnormx) - (b2->axisx * e->lnormy));
+								HX_STACK_LINE(300)
+								e->gnormy = ((e->lnormx * b2->axisx) + (e->lnormy * b2->axisy));
+							}
+							HX_STACK_LINE(300)
+							e->gprojection = (((b2->posx * e->gnormx) + (b2->posy * e->gnormy)) + e->lprojection);
+							HX_STACK_LINE(300)
+							e->tp0 = ((u->y * e->gnormx) - (u->x * e->gnormy));
+							HX_STACK_LINE(300)
+							e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
 						}
 					}
 				}
 				struct _Function_3_1{
-					inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::geom::ZPP_Vec2 &c2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &c1,::zpp_nape::shape::ZPP_Shape &s2){
+					inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &c1,::zpp_nape::geom::ZPP_Vec2 &c2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",301);
 						{
 							HX_STACK_LINE(301)
@@ -2210,7 +1988,7 @@ bool userAPI = __o_userAPI.Default(false);
 							::zpp_nape::geom::ZPP_Vec2 w2 = c2;		HX_STACK_VAR(w2,"w2");
 							Float upperBound = 1e100;		HX_STACK_VAR(upperBound,"upperBound");
 							struct _Function_4_1{
-								inline static Float Block( Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w1){
+								inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &w1){
 									HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",301);
 									{
 										HX_STACK_LINE(301)
@@ -2232,21 +2010,8 @@ bool userAPI = __o_userAPI.Default(false);
 												HX_STACK_LINE(301)
 												ny = (c21->worldCOMy - c11->worldCOMy);
 											}
-											struct _Function_6_1{
-												inline static Float Block( Float &nx,Float &ny){
-													HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",301);
-													{
-														HX_STACK_LINE(301)
-														{
-														}
-														HX_STACK_LINE(301)
-														return ::Math_obj::sqrt(((nx * nx) + (ny * ny)));
-													}
-													return null();
-												}
-											};
 											HX_STACK_LINE(301)
-											Float len = _Function_6_1::Block(nx,ny);		HX_STACK_VAR(len,"len");
+											Float len = ::Math_obj::sqrt(((nx * nx) + (ny * ny)));		HX_STACK_VAR(len,"len");
 											HX_STACK_LINE(301)
 											dist = (len - ((c11->radius + c21->radius)));
 											HX_STACK_LINE(301)
@@ -2260,16 +2025,10 @@ bool userAPI = __o_userAPI.Default(false);
 													HX_STACK_LINE(301)
 													{
 													}
-													HX_STACK_LINE(301)
-													{
-													}
 												}
 												else{
 													HX_STACK_LINE(301)
 													Float t = (Float(1.0) / Float(len));		HX_STACK_VAR(t,"t");
-													HX_STACK_LINE(301)
-													{
-													}
 													HX_STACK_LINE(301)
 													hx::MultEq(nx,t);
 													HX_STACK_LINE(301)
@@ -2280,9 +2039,6 @@ bool userAPI = __o_userAPI.Default(false);
 													HX_STACK_LINE(301)
 													Float t = c11->radius;		HX_STACK_VAR(t,"t");
 													HX_STACK_LINE(301)
-													{
-													}
-													HX_STACK_LINE(301)
 													w1->x = (c11->worldCOMx + (nx * t));
 													HX_STACK_LINE(301)
 													w1->y = (c11->worldCOMy + (ny * t));
@@ -2291,9 +2047,6 @@ bool userAPI = __o_userAPI.Default(false);
 												{
 													HX_STACK_LINE(301)
 													Float t = -(c21->radius);		HX_STACK_VAR(t,"t");
-													HX_STACK_LINE(301)
-													{
-													}
 													HX_STACK_LINE(301)
 													w2->x = (c21->worldCOMx + (nx * t));
 													HX_STACK_LINE(301)
@@ -2308,9 +2061,6 @@ bool userAPI = __o_userAPI.Default(false);
 													HX_STACK_LINE(301)
 													{
 													}
-													HX_STACK_LINE(301)
-													{
-													}
 												}
 											}
 										}
@@ -2321,7 +2071,7 @@ bool userAPI = __o_userAPI.Default(false);
 								}
 							};
 							struct _Function_4_2{
-								inline static Float Block( Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w1){
+								inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &w1){
 									HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",301);
 									{
 										HX_STACK_LINE(301)
@@ -2344,7 +2094,7 @@ bool userAPI = __o_userAPI.Default(false);
 											swapped = true;
 										}
 										struct _Function_5_1{
-											inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &w2,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w1){
+											inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::geom::ZPP_Vec2 &w1){
 												HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",301);
 												{
 													HX_STACK_LINE(301)
@@ -2419,21 +2169,8 @@ bool userAPI = __o_userAPI.Default(false);
 																HX_STACK_LINE(301)
 																ny = (circle->worldCOMy - v0->y);
 															}
-															struct _Function_8_1{
-																inline static Float Block( Float &nx,Float &ny){
-																	HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",301);
-																	{
-																		HX_STACK_LINE(301)
-																		{
-																		}
-																		HX_STACK_LINE(301)
-																		return ::Math_obj::sqrt(((nx * nx) + (ny * ny)));
-																	}
-																	return null();
-																}
-															};
 															HX_STACK_LINE(301)
-															Float len = _Function_8_1::Block(nx,ny);		HX_STACK_VAR(len,"len");
+															Float len = ::Math_obj::sqrt(((nx * nx) + (ny * ny)));		HX_STACK_VAR(len,"len");
 															HX_STACK_LINE(301)
 															best = (len - circle->radius);
 															HX_STACK_LINE(301)
@@ -2447,16 +2184,10 @@ bool userAPI = __o_userAPI.Default(false);
 																	HX_STACK_LINE(301)
 																	{
 																	}
-																	HX_STACK_LINE(301)
-																	{
-																	}
 																}
 																else{
 																	HX_STACK_LINE(301)
 																	Float t = (Float(1.0) / Float(len));		HX_STACK_VAR(t,"t");
-																	HX_STACK_LINE(301)
-																	{
-																	}
 																	HX_STACK_LINE(301)
 																	hx::MultEq(nx,t);
 																	HX_STACK_LINE(301)
@@ -2467,9 +2198,6 @@ bool userAPI = __o_userAPI.Default(false);
 																	HX_STACK_LINE(301)
 																	int t = (int)0;		HX_STACK_VAR(t,"t");
 																	HX_STACK_LINE(301)
-																	{
-																	}
-																	HX_STACK_LINE(301)
 																	w1->x = (v0->x + (nx * t));
 																	HX_STACK_LINE(301)
 																	w1->y = (v0->y + (ny * t));
@@ -2478,9 +2206,6 @@ bool userAPI = __o_userAPI.Default(false);
 																{
 																	HX_STACK_LINE(301)
 																	Float t = -(circle->radius);		HX_STACK_VAR(t,"t");
-																	HX_STACK_LINE(301)
-																	{
-																	}
 																	HX_STACK_LINE(301)
 																	w2->x = (circle->worldCOMx + (nx * t));
 																	HX_STACK_LINE(301)
@@ -2492,9 +2217,6 @@ bool userAPI = __o_userAPI.Default(false);
 																	axis->x = nx;
 																	HX_STACK_LINE(301)
 																	axis->y = ny;
-																	HX_STACK_LINE(301)
-																	{
-																	}
 																	HX_STACK_LINE(301)
 																	{
 																	}
@@ -2515,21 +2237,8 @@ bool userAPI = __o_userAPI.Default(false);
 																	HX_STACK_LINE(301)
 																	ny = (circle->worldCOMy - v1->y);
 																}
-																struct _Function_9_1{
-																	inline static Float Block( Float &nx,Float &ny){
-																		HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",301);
-																		{
-																			HX_STACK_LINE(301)
-																			{
-																			}
-																			HX_STACK_LINE(301)
-																			return ::Math_obj::sqrt(((nx * nx) + (ny * ny)));
-																		}
-																		return null();
-																	}
-																};
 																HX_STACK_LINE(301)
-																Float len = _Function_9_1::Block(nx,ny);		HX_STACK_VAR(len,"len");
+																Float len = ::Math_obj::sqrt(((nx * nx) + (ny * ny)));		HX_STACK_VAR(len,"len");
 																HX_STACK_LINE(301)
 																best = (len - circle->radius);
 																HX_STACK_LINE(301)
@@ -2543,16 +2252,10 @@ bool userAPI = __o_userAPI.Default(false);
 																		HX_STACK_LINE(301)
 																		{
 																		}
-																		HX_STACK_LINE(301)
-																		{
-																		}
 																	}
 																	else{
 																		HX_STACK_LINE(301)
 																		Float t = (Float(1.0) / Float(len));		HX_STACK_VAR(t,"t");
-																		HX_STACK_LINE(301)
-																		{
-																		}
 																		HX_STACK_LINE(301)
 																		hx::MultEq(nx,t);
 																		HX_STACK_LINE(301)
@@ -2563,9 +2266,6 @@ bool userAPI = __o_userAPI.Default(false);
 																		HX_STACK_LINE(301)
 																		int t = (int)0;		HX_STACK_VAR(t,"t");
 																		HX_STACK_LINE(301)
-																		{
-																		}
-																		HX_STACK_LINE(301)
 																		w1->x = (v1->x + (nx * t));
 																		HX_STACK_LINE(301)
 																		w1->y = (v1->y + (ny * t));
@@ -2574,9 +2274,6 @@ bool userAPI = __o_userAPI.Default(false);
 																	{
 																		HX_STACK_LINE(301)
 																		Float t = -(circle->radius);		HX_STACK_VAR(t,"t");
-																		HX_STACK_LINE(301)
-																		{
-																		}
 																		HX_STACK_LINE(301)
 																		w2->x = (circle->worldCOMx + (nx * t));
 																		HX_STACK_LINE(301)
@@ -2591,9 +2288,6 @@ bool userAPI = __o_userAPI.Default(false);
 																		HX_STACK_LINE(301)
 																		{
 																		}
-																		HX_STACK_LINE(301)
-																		{
-																		}
 																	}
 																}
 															}
@@ -2603,9 +2297,6 @@ bool userAPI = __o_userAPI.Default(false);
 																	HX_STACK_LINE(301)
 																	Float t = -(circle->radius);		HX_STACK_VAR(t,"t");
 																	HX_STACK_LINE(301)
-																	{
-																	}
-																	HX_STACK_LINE(301)
 																	w2->x = (circle->worldCOMx + (a0->gnormx * t));
 																	HX_STACK_LINE(301)
 																	w2->y = (circle->worldCOMy + (a0->gnormy * t));
@@ -2614,9 +2305,6 @@ bool userAPI = __o_userAPI.Default(false);
 																{
 																	HX_STACK_LINE(301)
 																	Float t = -(best);		HX_STACK_VAR(t,"t");
-																	HX_STACK_LINE(301)
-																	{
-																	}
 																	HX_STACK_LINE(301)
 																	w1->x = (w2->x + (a0->gnormx * t));
 																	HX_STACK_LINE(301)
@@ -2628,9 +2316,6 @@ bool userAPI = __o_userAPI.Default(false);
 																	axis->x = a0->gnormx;
 																	HX_STACK_LINE(301)
 																	axis->y = a0->gnormy;
-																	HX_STACK_LINE(301)
-																	{
-																	}
 																	HX_STACK_LINE(301)
 																	{
 																	}
@@ -2652,7 +2337,7 @@ bool userAPI = __o_userAPI.Default(false);
 											}
 										};
 										struct _Function_5_2{
-											inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &w2,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w1){
+											inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::geom::ZPP_Vec2 &w1){
 												HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",301);
 												{
 													HX_STACK_LINE(301)
@@ -2739,7 +2424,7 @@ bool userAPI = __o_userAPI.Default(false);
 														}
 													}
 													struct _Function_6_1{
-														inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Edge &a2,Float &best,::zpp_nape::shape::ZPP_Edge &a1,::zpp_nape::shape::ZPP_Polygon &p2,int &besti,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Polygon &p1,::zpp_nape::geom::ZPP_Vec2 &w1){
+														inline static Float Block( Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::shape::ZPP_Polygon &p1,::zpp_nape::geom::ZPP_Vec2 &w1,Float &best,::zpp_nape::shape::ZPP_Edge &a1,::zpp_nape::shape::ZPP_Polygon &p2,int &besti,::zpp_nape::shape::ZPP_Edge &a2){
 															HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",301);
 															{
 																HX_STACK_LINE(301)
@@ -2814,7 +2499,7 @@ bool userAPI = __o_userAPI.Default(false);
 																	}
 																}
 																struct _Function_7_1{
-																	inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Edge &a2,Float &best,::zpp_nape::shape::ZPP_Edge &a1,::zpp_nape::shape::ZPP_Polygon &p2,int &besti,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w1,::zpp_nape::shape::ZPP_Polygon &p1){
+																	inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::shape::ZPP_Polygon &p1,::zpp_nape::geom::ZPP_Vec2 &w1,Float &best,::zpp_nape::shape::ZPP_Edge &a1,int &besti,::zpp_nape::shape::ZPP_Polygon &p2,::zpp_nape::shape::ZPP_Edge &a2){
 																		HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",301);
 																		{
 																			HX_STACK_LINE(301)
@@ -2884,9 +2569,6 @@ bool userAPI = __o_userAPI.Default(false);
 																				HX_STACK_LINE(301)
 																				{
 																				}
-																				HX_STACK_LINE(301)
-																				{
-																				}
 																			}
 																			else{
 																				HX_STACK_LINE(301)
@@ -2896,12 +2578,9 @@ bool userAPI = __o_userAPI.Default(false);
 																				HX_STACK_LINE(301)
 																				{
 																				}
-																				HX_STACK_LINE(301)
-																				{
-																				}
 																			}
 																			struct _Function_8_1{
-																				inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Edge &ay,::zpp_nape::shape::ZPP_Edge &ax,Float &best,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w1){
+																				inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::shape::ZPP_Edge &ax,::zpp_nape::geom::ZPP_Vec2 &w1,Float &best,::zpp_nape::shape::ZPP_Edge &ay){
 																					HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",301);
 																					{
 																						HX_STACK_LINE(301)
@@ -3003,9 +2682,6 @@ bool userAPI = __o_userAPI.Default(false);
 																							HX_STACK_LINE(301)
 																							Float t = t1;		HX_STACK_VAR(t,"t");
 																							HX_STACK_LINE(301)
-																							{
-																							}
-																							HX_STACK_LINE(301)
 																							f1x = (v0->x + (vx * t));
 																							HX_STACK_LINE(301)
 																							f1y = (v0->y + (vy * t));
@@ -3018,9 +2694,6 @@ bool userAPI = __o_userAPI.Default(false);
 																						{
 																							HX_STACK_LINE(301)
 																							Float t = t2;		HX_STACK_VAR(t,"t");
-																							HX_STACK_LINE(301)
-																							{
-																							}
 																							HX_STACK_LINE(301)
 																							f2x = (v0->x + (vx * t));
 																							HX_STACK_LINE(301)
@@ -3035,9 +2708,6 @@ bool userAPI = __o_userAPI.Default(false);
 																							HX_STACK_LINE(301)
 																							Float t = s12;		HX_STACK_VAR(t,"t");
 																							HX_STACK_LINE(301)
-																							{
-																							}
-																							HX_STACK_LINE(301)
 																							g1x = (q0->x + (qx * t));
 																							HX_STACK_LINE(301)
 																							g1y = (q0->y + (qy * t));
@@ -3051,15 +2721,12 @@ bool userAPI = __o_userAPI.Default(false);
 																							HX_STACK_LINE(301)
 																							Float t = s22;		HX_STACK_VAR(t,"t");
 																							HX_STACK_LINE(301)
-																							{
-																							}
-																							HX_STACK_LINE(301)
 																							g2x = (q0->x + (qx * t));
 																							HX_STACK_LINE(301)
 																							g2y = (q0->y + (qy * t));
 																						}
 																						struct _Function_9_1{
-																							inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &q0,Float &f1y,Float &f1x){
+																							inline static Float Block( Float &f1y,::zpp_nape::geom::ZPP_Vec2 &q0,Float &f1x){
 																								HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",301);
 																								{
 																									HX_STACK_LINE(301)
@@ -3080,9 +2747,9 @@ bool userAPI = __o_userAPI.Default(false);
 																							}
 																						};
 																						HX_STACK_LINE(301)
-																						Float d1 = _Function_9_1::Block(q0,f1y,f1x);		HX_STACK_VAR(d1,"d1");
+																						Float d1 = _Function_9_1::Block(f1y,q0,f1x);		HX_STACK_VAR(d1,"d1");
 																						struct _Function_9_2{
-																							inline static Float Block( Float &f2x,::zpp_nape::geom::ZPP_Vec2 &q11,Float &f2y){
+																							inline static Float Block( Float &f2y,Float &f2x,::zpp_nape::geom::ZPP_Vec2 &q11){
 																								HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",301);
 																								{
 																									HX_STACK_LINE(301)
@@ -3103,9 +2770,9 @@ bool userAPI = __o_userAPI.Default(false);
 																							}
 																						};
 																						HX_STACK_LINE(301)
-																						Float d2 = _Function_9_2::Block(f2x,q11,f2y);		HX_STACK_VAR(d2,"d2");
+																						Float d2 = _Function_9_2::Block(f2y,f2x,q11);		HX_STACK_VAR(d2,"d2");
 																						struct _Function_9_3{
-																							inline static Float Block( Float &g1x,::zpp_nape::geom::ZPP_Vec2 &v0,Float &g1y){
+																							inline static Float Block( Float &g1x,Float &g1y,::zpp_nape::geom::ZPP_Vec2 &v0){
 																								HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",301);
 																								{
 																									HX_STACK_LINE(301)
@@ -3126,9 +2793,9 @@ bool userAPI = __o_userAPI.Default(false);
 																							}
 																						};
 																						HX_STACK_LINE(301)
-																						Float e1 = _Function_9_3::Block(g1x,v0,g1y);		HX_STACK_VAR(e1,"e1");
+																						Float e1 = _Function_9_3::Block(g1x,g1y,v0);		HX_STACK_VAR(e1,"e1");
 																						struct _Function_9_4{
-																							inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &v1,Float &g2y,Float &g2x){
+																							inline static Float Block( Float &g2y,Float &g2x,::zpp_nape::geom::ZPP_Vec2 &v1){
 																								HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",301);
 																								{
 																									HX_STACK_LINE(301)
@@ -3149,7 +2816,7 @@ bool userAPI = __o_userAPI.Default(false);
 																							}
 																						};
 																						HX_STACK_LINE(301)
-																						Float e2 = _Function_9_4::Block(v1,g2y,g2x);		HX_STACK_VAR(e2,"e2");
+																						Float e2 = _Function_9_4::Block(g2y,g2x,v1);		HX_STACK_VAR(e2,"e2");
 																						HX_STACK_LINE(301)
 																						Float minfx = 0.0;		HX_STACK_VAR(minfx,"minfx");
 																						HX_STACK_LINE(301)
@@ -3167,9 +2834,6 @@ bool userAPI = __o_userAPI.Default(false);
 																								HX_STACK_LINE(301)
 																								{
 																								}
-																								HX_STACK_LINE(301)
-																								{
-																								}
 																							}
 																							HX_STACK_LINE(301)
 																							minq = q0;
@@ -3181,9 +2845,6 @@ bool userAPI = __o_userAPI.Default(false);
 																								minfx = f2x;
 																								HX_STACK_LINE(301)
 																								minfy = f2y;
-																								HX_STACK_LINE(301)
-																								{
-																								}
 																								HX_STACK_LINE(301)
 																								{
 																								}
@@ -3210,9 +2871,6 @@ bool userAPI = __o_userAPI.Default(false);
 																								HX_STACK_LINE(301)
 																								{
 																								}
-																								HX_STACK_LINE(301)
-																								{
-																								}
 																							}
 																							HX_STACK_LINE(301)
 																							minv = v0;
@@ -3224,9 +2882,6 @@ bool userAPI = __o_userAPI.Default(false);
 																								mingx = g2x;
 																								HX_STACK_LINE(301)
 																								mingy = g2y;
-																								HX_STACK_LINE(301)
-																								{
-																								}
 																								HX_STACK_LINE(301)
 																								{
 																								}
@@ -3247,9 +2902,6 @@ bool userAPI = __o_userAPI.Default(false);
 																								HX_STACK_LINE(301)
 																								{
 																								}
-																								HX_STACK_LINE(301)
-																								{
-																								}
 																							}
 																							HX_STACK_LINE(301)
 																							{
@@ -3257,9 +2909,6 @@ bool userAPI = __o_userAPI.Default(false);
 																								w2->x = minq->x;
 																								HX_STACK_LINE(301)
 																								w2->y = minq->y;
-																								HX_STACK_LINE(301)
-																								{
-																								}
 																								HX_STACK_LINE(301)
 																								{
 																								}
@@ -3277,9 +2926,6 @@ bool userAPI = __o_userAPI.Default(false);
 																								HX_STACK_LINE(301)
 																								{
 																								}
-																								HX_STACK_LINE(301)
-																								{
-																								}
 																							}
 																							HX_STACK_LINE(301)
 																							{
@@ -3287,9 +2933,6 @@ bool userAPI = __o_userAPI.Default(false);
 																								w1->x = minv->x;
 																								HX_STACK_LINE(301)
 																								w1->y = minv->y;
-																								HX_STACK_LINE(301)
-																								{
-																								}
 																								HX_STACK_LINE(301)
 																								{
 																								}
@@ -3311,9 +2954,6 @@ bool userAPI = __o_userAPI.Default(false);
 																								HX_STACK_LINE(301)
 																								Float t = (Float(1.0) / Float(best));		HX_STACK_VAR(t,"t");
 																								HX_STACK_LINE(301)
-																								{
-																								}
-																								HX_STACK_LINE(301)
 																								hx::MultEq(axis->x,t);
 																								HX_STACK_LINE(301)
 																								hx::MultEq(axis->y,t);
@@ -3333,7 +2973,7 @@ bool userAPI = __o_userAPI.Default(false);
 																				}
 																			};
 																			struct _Function_8_2{
-																				inline static Float Block( ::zpp_nape::shape::ZPP_Edge &ay,::zpp_nape::shape::ZPP_Edge &ax,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &w1){
+																				inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::shape::ZPP_Edge &ax,::zpp_nape::geom::ZPP_Vec2 &w1,::zpp_nape::shape::ZPP_Edge &ay){
 																					HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",301);
 																					{
 																						HX_STACK_LINE(301)
@@ -3349,9 +2989,6 @@ bool userAPI = __o_userAPI.Default(false);
 																							HX_STACK_LINE(301)
 																							{
 																							}
-																							HX_STACK_LINE(301)
-																							{
-																							}
 																						}
 																						HX_STACK_LINE(301)
 																						Float c1x = 0.0;		HX_STACK_VAR(c1x,"c1x");
@@ -3363,9 +3000,6 @@ bool userAPI = __o_userAPI.Default(false);
 																							c1x = ay->gp1->x;
 																							HX_STACK_LINE(301)
 																							c1y = ay->gp1->y;
-																							HX_STACK_LINE(301)
-																							{
-																							}
 																							HX_STACK_LINE(301)
 																							{
 																							}
@@ -3394,9 +3028,6 @@ bool userAPI = __o_userAPI.Default(false);
 																							HX_STACK_LINE(301)
 																							Float t1 = t;		HX_STACK_VAR(t1,"t1");
 																							HX_STACK_LINE(301)
-																							{
-																							}
-																							HX_STACK_LINE(301)
 																							hx::AddEq(c0x,(dvx * t1));
 																							HX_STACK_LINE(301)
 																							hx::AddEq(c0y,(dvy * t1));
@@ -3408,9 +3039,6 @@ bool userAPI = __o_userAPI.Default(false);
 																							HX_STACK_LINE(301)
 																							Float t2 = t1;		HX_STACK_VAR(t2,"t2");
 																							HX_STACK_LINE(301)
-																							{
-																							}
-																							HX_STACK_LINE(301)
 																							hx::AddEq(c1x,(dvx * t2));
 																							HX_STACK_LINE(301)
 																							hx::AddEq(c1y,(dvy * t2));
@@ -3420,7 +3048,7 @@ bool userAPI = __o_userAPI.Default(false);
 																						HX_STACK_LINE(301)
 																						Float c1d = (((c1x * ax->gnormx) + (c1y * ax->gnormy)) - ax->gprojection);		HX_STACK_VAR(c1d,"c1d");
 																						struct _Function_9_1{
-																							inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &w2,Float &c0y,Float &c0d,::zpp_nape::shape::ZPP_Edge &ax,Float &c0x,::zpp_nape::geom::ZPP_Vec2 &w1){
+																							inline static Float Block( Float &c0y,::zpp_nape::geom::ZPP_Vec2 &w2,Float &c0x,Float &c0d,::zpp_nape::geom::ZPP_Vec2 &w1,::zpp_nape::shape::ZPP_Edge &ax){
 																								HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",301);
 																								{
 																									HX_STACK_LINE(301)
@@ -3432,17 +3060,11 @@ bool userAPI = __o_userAPI.Default(false);
 																										HX_STACK_LINE(301)
 																										{
 																										}
-																										HX_STACK_LINE(301)
-																										{
-																										}
 																									}
 																									HX_STACK_LINE(301)
 																									{
 																										HX_STACK_LINE(301)
 																										Float t2 = -(c0d);		HX_STACK_VAR(t2,"t2");
-																										HX_STACK_LINE(301)
-																										{
-																										}
 																										HX_STACK_LINE(301)
 																										w1->x = (w2->x + (ax->gnormx * t2));
 																										HX_STACK_LINE(301)
@@ -3455,7 +3077,7 @@ bool userAPI = __o_userAPI.Default(false);
 																							}
 																						};
 																						struct _Function_9_2{
-																							inline static Float Block( Float &c1y,Float &c1d,::zpp_nape::geom::ZPP_Vec2 &w2,Float &c1x,::zpp_nape::shape::ZPP_Edge &ax,::zpp_nape::geom::ZPP_Vec2 &w1){
+																							inline static Float Block( Float &c1x,::zpp_nape::geom::ZPP_Vec2 &w2,Float &c1d,::zpp_nape::geom::ZPP_Vec2 &w1,::zpp_nape::shape::ZPP_Edge &ax,Float &c1y){
 																								HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",301);
 																								{
 																									HX_STACK_LINE(301)
@@ -3467,17 +3089,11 @@ bool userAPI = __o_userAPI.Default(false);
 																										HX_STACK_LINE(301)
 																										{
 																										}
-																										HX_STACK_LINE(301)
-																										{
-																										}
 																									}
 																									HX_STACK_LINE(301)
 																									{
 																										HX_STACK_LINE(301)
 																										Float t2 = -(c1d);		HX_STACK_VAR(t2,"t2");
-																										HX_STACK_LINE(301)
-																										{
-																										}
 																										HX_STACK_LINE(301)
 																										w1->x = (w2->x + (ax->gnormx * t2));
 																										HX_STACK_LINE(301)
@@ -3490,43 +3106,43 @@ bool userAPI = __o_userAPI.Default(false);
 																							}
 																						};
 																						HX_STACK_LINE(301)
-																						return (  (((c0d < c1d))) ? Float(_Function_9_1::Block(w2,c0y,c0d,ax,c0x,w1)) : Float(_Function_9_2::Block(c1y,c1d,w2,c1x,ax,w1)) );
+																						return (  (((c0d < c1d))) ? Float(_Function_9_1::Block(c0y,w2,c0x,c0d,w1,ax)) : Float(_Function_9_2::Block(c1x,w2,c1d,w1,ax,c1y)) );
 																					}
 																					return null();
 																				}
 																			};
 																			HX_STACK_LINE(301)
-																			return (  (((best >= (int)0))) ? Float(_Function_8_1::Block(swapped,ay,ax,best,w2,axis,w1)) : Float(_Function_8_2::Block(ay,ax,w2,w1)) );
+																			return (  (((best >= (int)0))) ? Float(_Function_8_1::Block(axis,w2,swapped,ax,w1,best,ay)) : Float(_Function_8_2::Block(w2,ax,w1,ay)) );
 																		}
 																		return null();
 																	}
 																};
 																HX_STACK_LINE(301)
-																return (  (((best < upperBound))) ? Float(_Function_7_1::Block(swapped,a2,best,a1,p2,besti,w2,axis,w1,p1)) : Float(upperBound) );
+																return (  (((best < upperBound))) ? Float(_Function_7_1::Block(axis,w2,swapped,p1,w1,best,a1,besti,p2,a2)) : Float(upperBound) );
 															}
 															return null();
 														}
 													};
 													HX_STACK_LINE(301)
-													return (  (((best < upperBound))) ? Float(_Function_6_1::Block(swapped,a2,best,a1,p2,besti,upperBound,w2,axis,p1,w1)) : Float(upperBound) );
+													return (  (((best < upperBound))) ? Float(_Function_6_1::Block(upperBound,axis,w2,swapped,p1,w1,best,a1,p2,besti,a2)) : Float(upperBound) );
 												}
 												return null();
 											}
 										};
 										HX_STACK_LINE(301)
-										return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_POLYGON)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_5_1::Block(swapped,s11,s21,w2,upperBound,axis,w1)) : Float(_Function_5_2::Block(swapped,s11,s21,w2,upperBound,axis,w1)) );
+										return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_POLYGON)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_5_1::Block(s21,upperBound,axis,s11,w2,swapped,w1)) : Float(_Function_5_2::Block(s21,upperBound,axis,s11,w2,swapped,w1)) );
 									}
 									return null();
 								}
 							};
 							HX_STACK_LINE(301)
-							return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_4_1::Block(upperBound,axis,s21,w2,s11,w1)) : Float(_Function_4_2::Block(upperBound,axis,s21,w2,s11,w1)) );
+							return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_4_1::Block(s21,upperBound,axis,s11,w2,w1)) : Float(_Function_4_2::Block(s21,upperBound,axis,s11,w2,w1)) );
 						}
 						return null();
 					}
 				};
 				HX_STACK_LINE(301)
-				Float sep1 = (_Function_3_1::Block(s1,c2,axis,c1,s2) + negRadius);		HX_STACK_VAR(sep1,"sep1");
+				Float sep1 = (_Function_3_1::Block(c1,c2,axis,s2,s1) + negRadius);		HX_STACK_VAR(sep1,"sep1");
 				HX_STACK_LINE(302)
 				Float dot1 = ((deltax * axis->x) + (deltay * axis->y));		HX_STACK_VAR(dot1,"dot1");
 				HX_STACK_LINE(303)
@@ -3621,9 +3237,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 			deltax = -(b1->velx);
 			HX_STACK_LINE(348)
 			deltay = -(b1->vely);
-			HX_STACK_LINE(349)
-			{
-			}
 			HX_STACK_LINE(357)
 			{
 			}
@@ -3649,12 +3262,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 		int curIter = (int)0;		HX_STACK_VAR(curIter,"curIter");
 		HX_STACK_LINE(374)
 		while((true)){
-			HX_STACK_LINE(375)
-			{
-			}
-			HX_STACK_LINE(383)
-			{
-			}
 			HX_STACK_LINE(391)
 			{
 				HX_STACK_LINE(391)
@@ -3664,17 +3271,11 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 				HX_STACK_LINE(391)
 				if (((delta != (int)0))){
 					HX_STACK_LINE(391)
-					{
-					}
-					HX_STACK_LINE(391)
 					b1->sweepTime = dt;
 					HX_STACK_LINE(391)
 					{
 						HX_STACK_LINE(391)
 						Float t = delta;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(391)
-						{
-						}
 						HX_STACK_LINE(391)
 						hx::AddEq(b1->posx,(b1->velx * t));
 						HX_STACK_LINE(391)
@@ -3692,9 +3293,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 							b1->axisx = ::Math_obj::sin(b1->rot);
 							HX_STACK_LINE(391)
 							b1->axisy = ::Math_obj::cos(b1->rot);
-							HX_STACK_LINE(391)
-							{
-							}
 							HX_STACK_LINE(391)
 							Dynamic();
 						}
@@ -3716,89 +3314,57 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 				}
 			}
 			HX_STACK_LINE(392)
-			{
+			if (((s1->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
+				HX_STACK_LINE(392)
+				s1->worldCOMx = (b1->posx + (((b1->axisy * s1->localCOMx) - (b1->axisx * s1->localCOMy))));
+				HX_STACK_LINE(392)
+				s1->worldCOMy = (b1->posy + (((s1->localCOMx * b1->axisx) + (s1->localCOMy * b1->axisy))));
+			}
+			else{
+				HX_STACK_LINE(392)
+				::zpp_nape::shape::ZPP_Polygon p = s1->polygon;		HX_STACK_VAR(p,"p");
+				HX_STACK_LINE(392)
+				::zpp_nape::geom::ZPP_Vec2 li = p->lverts->next;		HX_STACK_VAR(li,"li");
 				HX_STACK_LINE(392)
 				{
-				}
-				HX_STACK_LINE(392)
-				if (((s1->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 					HX_STACK_LINE(392)
-					s1->worldCOMx = (b1->posx + (((b1->axisy * s1->localCOMx) - (b1->axisx * s1->localCOMy))));
+					::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
 					HX_STACK_LINE(392)
-					s1->worldCOMy = (b1->posy + (((s1->localCOMx * b1->axisx) + (s1->localCOMy * b1->axisy))));
-				}
-				else{
-					HX_STACK_LINE(392)
-					::zpp_nape::shape::ZPP_Polygon p = s1->polygon;		HX_STACK_VAR(p,"p");
-					HX_STACK_LINE(392)
-					::zpp_nape::geom::ZPP_Vec2 li = p->lverts->next;		HX_STACK_VAR(li,"li");
-					HX_STACK_LINE(392)
-					{
+					while(((cx_ite != null()))){
 						HX_STACK_LINE(392)
-						::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+						::zpp_nape::geom::ZPP_Vec2 g = cx_ite;		HX_STACK_VAR(g,"g");
 						HX_STACK_LINE(392)
-						while(((cx_ite != null()))){
+						{
 							HX_STACK_LINE(392)
-							::zpp_nape::geom::ZPP_Vec2 g = cx_ite;		HX_STACK_VAR(g,"g");
+							::zpp_nape::geom::ZPP_Vec2 l = li;		HX_STACK_VAR(l,"l");
+							HX_STACK_LINE(392)
+							li = li->next;
 							HX_STACK_LINE(392)
 							{
 								HX_STACK_LINE(392)
-								::zpp_nape::geom::ZPP_Vec2 l = li;		HX_STACK_VAR(l,"l");
+								g->x = (b1->posx + (((b1->axisy * l->x) - (b1->axisx * l->y))));
 								HX_STACK_LINE(392)
-								li = li->next;
-								HX_STACK_LINE(392)
-								{
-									HX_STACK_LINE(392)
-									g->x = (b1->posx + (((b1->axisy * l->x) - (b1->axisx * l->y))));
-									HX_STACK_LINE(392)
-									g->y = (b1->posy + (((l->x * b1->axisx) + (l->y * b1->axisy))));
-								}
+								g->y = (b1->posy + (((l->x * b1->axisx) + (l->y * b1->axisy))));
 							}
-							HX_STACK_LINE(392)
-							cx_ite = cx_ite->next;
 						}
-					}
-					HX_STACK_LINE(392)
-					::zpp_nape::util::ZNPNode_ZPP_Edge ite = p->edges->head;		HX_STACK_VAR(ite,"ite");
-					HX_STACK_LINE(392)
-					{
-						HX_STACK_LINE(392)
-						::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
-						HX_STACK_LINE(392)
-						::zpp_nape::geom::ZPP_Vec2 u = cx_ite;		HX_STACK_VAR(u,"u");
 						HX_STACK_LINE(392)
 						cx_ite = cx_ite->next;
+					}
+				}
+				HX_STACK_LINE(392)
+				::zpp_nape::util::ZNPNode_ZPP_Edge ite = p->edges->head;		HX_STACK_VAR(ite,"ite");
+				HX_STACK_LINE(392)
+				{
+					HX_STACK_LINE(392)
+					::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+					HX_STACK_LINE(392)
+					::zpp_nape::geom::ZPP_Vec2 u = cx_ite;		HX_STACK_VAR(u,"u");
+					HX_STACK_LINE(392)
+					cx_ite = cx_ite->next;
+					HX_STACK_LINE(392)
+					while(((cx_ite != null()))){
 						HX_STACK_LINE(392)
-						while(((cx_ite != null()))){
-							HX_STACK_LINE(392)
-							::zpp_nape::geom::ZPP_Vec2 v = cx_ite;		HX_STACK_VAR(v,"v");
-							HX_STACK_LINE(392)
-							{
-								HX_STACK_LINE(392)
-								::zpp_nape::shape::ZPP_Edge e = ite->elt;		HX_STACK_VAR(e,"e");
-								HX_STACK_LINE(392)
-								ite = ite->next;
-								HX_STACK_LINE(392)
-								{
-									HX_STACK_LINE(392)
-									e->gnormx = ((b1->axisy * e->lnormx) - (b1->axisx * e->lnormy));
-									HX_STACK_LINE(392)
-									e->gnormy = ((e->lnormx * b1->axisx) + (e->lnormy * b1->axisy));
-								}
-								HX_STACK_LINE(392)
-								e->gprojection = (((b1->posx * e->gnormx) + (b1->posy * e->gnormy)) + e->lprojection);
-								HX_STACK_LINE(392)
-								e->tp0 = ((u->y * e->gnormx) - (u->x * e->gnormy));
-								HX_STACK_LINE(392)
-								e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
-							}
-							HX_STACK_LINE(392)
-							u = v;
-							HX_STACK_LINE(392)
-							cx_ite = cx_ite->next;
-						}
-						HX_STACK_LINE(392)
-						::zpp_nape::geom::ZPP_Vec2 v = p->gverts->next;		HX_STACK_VAR(v,"v");
+						::zpp_nape::geom::ZPP_Vec2 v = cx_ite;		HX_STACK_VAR(v,"v");
 						HX_STACK_LINE(392)
 						{
 							HX_STACK_LINE(392)
@@ -3819,11 +3385,37 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 							HX_STACK_LINE(392)
 							e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
 						}
+						HX_STACK_LINE(392)
+						u = v;
+						HX_STACK_LINE(392)
+						cx_ite = cx_ite->next;
+					}
+					HX_STACK_LINE(392)
+					::zpp_nape::geom::ZPP_Vec2 v = p->gverts->next;		HX_STACK_VAR(v,"v");
+					HX_STACK_LINE(392)
+					{
+						HX_STACK_LINE(392)
+						::zpp_nape::shape::ZPP_Edge e = ite->elt;		HX_STACK_VAR(e,"e");
+						HX_STACK_LINE(392)
+						ite = ite->next;
+						HX_STACK_LINE(392)
+						{
+							HX_STACK_LINE(392)
+							e->gnormx = ((b1->axisy * e->lnormx) - (b1->axisx * e->lnormy));
+							HX_STACK_LINE(392)
+							e->gnormy = ((e->lnormx * b1->axisx) + (e->lnormy * b1->axisy));
+						}
+						HX_STACK_LINE(392)
+						e->gprojection = (((b1->posx * e->gnormx) + (b1->posy * e->gnormy)) + e->lprojection);
+						HX_STACK_LINE(392)
+						e->tp0 = ((u->y * e->gnormx) - (u->x * e->gnormy));
+						HX_STACK_LINE(392)
+						e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
 					}
 				}
 			}
 			struct _Function_2_1{
-				inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::geom::ZPP_Vec2 &c2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &c1,::zpp_nape::shape::ZPP_Shape &s2){
+				inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &c1,::zpp_nape::geom::ZPP_Vec2 &c2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",393);
 					{
 						HX_STACK_LINE(393)
@@ -3833,7 +3425,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 						::zpp_nape::geom::ZPP_Vec2 w2 = c2;		HX_STACK_VAR(w2,"w2");
 						Float upperBound = 1e100;		HX_STACK_VAR(upperBound,"upperBound");
 						struct _Function_3_1{
-							inline static Float Block( Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w1){
+							inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &w1){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",393);
 								{
 									HX_STACK_LINE(393)
@@ -3855,21 +3447,8 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 											HX_STACK_LINE(393)
 											ny = (c21->worldCOMy - c11->worldCOMy);
 										}
-										struct _Function_5_1{
-											inline static Float Block( Float &nx,Float &ny){
-												HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",393);
-												{
-													HX_STACK_LINE(393)
-													{
-													}
-													HX_STACK_LINE(393)
-													return ::Math_obj::sqrt(((nx * nx) + (ny * ny)));
-												}
-												return null();
-											}
-										};
 										HX_STACK_LINE(393)
-										Float len = _Function_5_1::Block(nx,ny);		HX_STACK_VAR(len,"len");
+										Float len = ::Math_obj::sqrt(((nx * nx) + (ny * ny)));		HX_STACK_VAR(len,"len");
 										HX_STACK_LINE(393)
 										dist = (len - ((c11->radius + c21->radius)));
 										HX_STACK_LINE(393)
@@ -3883,16 +3462,10 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 												HX_STACK_LINE(393)
 												{
 												}
-												HX_STACK_LINE(393)
-												{
-												}
 											}
 											else{
 												HX_STACK_LINE(393)
 												Float t = (Float(1.0) / Float(len));		HX_STACK_VAR(t,"t");
-												HX_STACK_LINE(393)
-												{
-												}
 												HX_STACK_LINE(393)
 												hx::MultEq(nx,t);
 												HX_STACK_LINE(393)
@@ -3903,9 +3476,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 												HX_STACK_LINE(393)
 												Float t = c11->radius;		HX_STACK_VAR(t,"t");
 												HX_STACK_LINE(393)
-												{
-												}
-												HX_STACK_LINE(393)
 												w1->x = (c11->worldCOMx + (nx * t));
 												HX_STACK_LINE(393)
 												w1->y = (c11->worldCOMy + (ny * t));
@@ -3914,9 +3484,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 											{
 												HX_STACK_LINE(393)
 												Float t = -(c21->radius);		HX_STACK_VAR(t,"t");
-												HX_STACK_LINE(393)
-												{
-												}
 												HX_STACK_LINE(393)
 												w2->x = (c21->worldCOMx + (nx * t));
 												HX_STACK_LINE(393)
@@ -3931,9 +3498,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 												HX_STACK_LINE(393)
 												{
 												}
-												HX_STACK_LINE(393)
-												{
-												}
 											}
 										}
 									}
@@ -3944,7 +3508,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 							}
 						};
 						struct _Function_3_2{
-							inline static Float Block( Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w1){
+							inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &w1){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",393);
 								{
 									HX_STACK_LINE(393)
@@ -3967,7 +3531,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 										swapped = true;
 									}
 									struct _Function_4_1{
-										inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &w2,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w1){
+										inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::geom::ZPP_Vec2 &w1){
 											HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",393);
 											{
 												HX_STACK_LINE(393)
@@ -4042,21 +3606,8 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 															HX_STACK_LINE(393)
 															ny = (circle->worldCOMy - v0->y);
 														}
-														struct _Function_7_1{
-															inline static Float Block( Float &nx,Float &ny){
-																HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",393);
-																{
-																	HX_STACK_LINE(393)
-																	{
-																	}
-																	HX_STACK_LINE(393)
-																	return ::Math_obj::sqrt(((nx * nx) + (ny * ny)));
-																}
-																return null();
-															}
-														};
 														HX_STACK_LINE(393)
-														Float len = _Function_7_1::Block(nx,ny);		HX_STACK_VAR(len,"len");
+														Float len = ::Math_obj::sqrt(((nx * nx) + (ny * ny)));		HX_STACK_VAR(len,"len");
 														HX_STACK_LINE(393)
 														best = (len - circle->radius);
 														HX_STACK_LINE(393)
@@ -4070,16 +3621,10 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																HX_STACK_LINE(393)
 																{
 																}
-																HX_STACK_LINE(393)
-																{
-																}
 															}
 															else{
 																HX_STACK_LINE(393)
 																Float t = (Float(1.0) / Float(len));		HX_STACK_VAR(t,"t");
-																HX_STACK_LINE(393)
-																{
-																}
 																HX_STACK_LINE(393)
 																hx::MultEq(nx,t);
 																HX_STACK_LINE(393)
@@ -4090,9 +3635,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																HX_STACK_LINE(393)
 																int t = (int)0;		HX_STACK_VAR(t,"t");
 																HX_STACK_LINE(393)
-																{
-																}
-																HX_STACK_LINE(393)
 																w1->x = (v0->x + (nx * t));
 																HX_STACK_LINE(393)
 																w1->y = (v0->y + (ny * t));
@@ -4101,9 +3643,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 															{
 																HX_STACK_LINE(393)
 																Float t = -(circle->radius);		HX_STACK_VAR(t,"t");
-																HX_STACK_LINE(393)
-																{
-																}
 																HX_STACK_LINE(393)
 																w2->x = (circle->worldCOMx + (nx * t));
 																HX_STACK_LINE(393)
@@ -4115,9 +3654,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																axis->x = nx;
 																HX_STACK_LINE(393)
 																axis->y = ny;
-																HX_STACK_LINE(393)
-																{
-																}
 																HX_STACK_LINE(393)
 																{
 																}
@@ -4138,21 +3674,8 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																HX_STACK_LINE(393)
 																ny = (circle->worldCOMy - v1->y);
 															}
-															struct _Function_8_1{
-																inline static Float Block( Float &nx,Float &ny){
-																	HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",393);
-																	{
-																		HX_STACK_LINE(393)
-																		{
-																		}
-																		HX_STACK_LINE(393)
-																		return ::Math_obj::sqrt(((nx * nx) + (ny * ny)));
-																	}
-																	return null();
-																}
-															};
 															HX_STACK_LINE(393)
-															Float len = _Function_8_1::Block(nx,ny);		HX_STACK_VAR(len,"len");
+															Float len = ::Math_obj::sqrt(((nx * nx) + (ny * ny)));		HX_STACK_VAR(len,"len");
 															HX_STACK_LINE(393)
 															best = (len - circle->radius);
 															HX_STACK_LINE(393)
@@ -4166,16 +3689,10 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																	HX_STACK_LINE(393)
 																	{
 																	}
-																	HX_STACK_LINE(393)
-																	{
-																	}
 																}
 																else{
 																	HX_STACK_LINE(393)
 																	Float t = (Float(1.0) / Float(len));		HX_STACK_VAR(t,"t");
-																	HX_STACK_LINE(393)
-																	{
-																	}
 																	HX_STACK_LINE(393)
 																	hx::MultEq(nx,t);
 																	HX_STACK_LINE(393)
@@ -4186,9 +3703,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																	HX_STACK_LINE(393)
 																	int t = (int)0;		HX_STACK_VAR(t,"t");
 																	HX_STACK_LINE(393)
-																	{
-																	}
-																	HX_STACK_LINE(393)
 																	w1->x = (v1->x + (nx * t));
 																	HX_STACK_LINE(393)
 																	w1->y = (v1->y + (ny * t));
@@ -4197,9 +3711,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																{
 																	HX_STACK_LINE(393)
 																	Float t = -(circle->radius);		HX_STACK_VAR(t,"t");
-																	HX_STACK_LINE(393)
-																	{
-																	}
 																	HX_STACK_LINE(393)
 																	w2->x = (circle->worldCOMx + (nx * t));
 																	HX_STACK_LINE(393)
@@ -4214,9 +3725,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																	HX_STACK_LINE(393)
 																	{
 																	}
-																	HX_STACK_LINE(393)
-																	{
-																	}
 																}
 															}
 														}
@@ -4226,9 +3734,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																HX_STACK_LINE(393)
 																Float t = -(circle->radius);		HX_STACK_VAR(t,"t");
 																HX_STACK_LINE(393)
-																{
-																}
-																HX_STACK_LINE(393)
 																w2->x = (circle->worldCOMx + (a0->gnormx * t));
 																HX_STACK_LINE(393)
 																w2->y = (circle->worldCOMy + (a0->gnormy * t));
@@ -4237,9 +3742,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 															{
 																HX_STACK_LINE(393)
 																Float t = -(best);		HX_STACK_VAR(t,"t");
-																HX_STACK_LINE(393)
-																{
-																}
 																HX_STACK_LINE(393)
 																w1->x = (w2->x + (a0->gnormx * t));
 																HX_STACK_LINE(393)
@@ -4251,9 +3753,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																axis->x = a0->gnormx;
 																HX_STACK_LINE(393)
 																axis->y = a0->gnormy;
-																HX_STACK_LINE(393)
-																{
-																}
 																HX_STACK_LINE(393)
 																{
 																}
@@ -4275,7 +3774,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 										}
 									};
 									struct _Function_4_2{
-										inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &w2,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w1){
+										inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::geom::ZPP_Vec2 &w1){
 											HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",393);
 											{
 												HX_STACK_LINE(393)
@@ -4362,7 +3861,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 													}
 												}
 												struct _Function_5_1{
-													inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Edge &a2,Float &best,::zpp_nape::shape::ZPP_Edge &a1,::zpp_nape::shape::ZPP_Polygon &p2,int &besti,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Polygon &p1,::zpp_nape::geom::ZPP_Vec2 &w1){
+													inline static Float Block( Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::shape::ZPP_Polygon &p1,::zpp_nape::geom::ZPP_Vec2 &w1,Float &best,::zpp_nape::shape::ZPP_Edge &a1,::zpp_nape::shape::ZPP_Polygon &p2,int &besti,::zpp_nape::shape::ZPP_Edge &a2){
 														HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",393);
 														{
 															HX_STACK_LINE(393)
@@ -4437,7 +3936,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																}
 															}
 															struct _Function_6_1{
-																inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Edge &a2,Float &best,::zpp_nape::shape::ZPP_Edge &a1,::zpp_nape::shape::ZPP_Polygon &p2,int &besti,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w1,::zpp_nape::shape::ZPP_Polygon &p1){
+																inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::shape::ZPP_Polygon &p1,::zpp_nape::geom::ZPP_Vec2 &w1,Float &best,::zpp_nape::shape::ZPP_Edge &a1,int &besti,::zpp_nape::shape::ZPP_Polygon &p2,::zpp_nape::shape::ZPP_Edge &a2){
 																	HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",393);
 																	{
 																		HX_STACK_LINE(393)
@@ -4507,9 +4006,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																			HX_STACK_LINE(393)
 																			{
 																			}
-																			HX_STACK_LINE(393)
-																			{
-																			}
 																		}
 																		else{
 																			HX_STACK_LINE(393)
@@ -4519,12 +4015,9 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																			HX_STACK_LINE(393)
 																			{
 																			}
-																			HX_STACK_LINE(393)
-																			{
-																			}
 																		}
 																		struct _Function_7_1{
-																			inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Edge &ay,::zpp_nape::shape::ZPP_Edge &ax,Float &best,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w1){
+																			inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::shape::ZPP_Edge &ax,::zpp_nape::geom::ZPP_Vec2 &w1,Float &best,::zpp_nape::shape::ZPP_Edge &ay){
 																				HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",393);
 																				{
 																					HX_STACK_LINE(393)
@@ -4626,9 +4119,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																						HX_STACK_LINE(393)
 																						Float t = t1;		HX_STACK_VAR(t,"t");
 																						HX_STACK_LINE(393)
-																						{
-																						}
-																						HX_STACK_LINE(393)
 																						f1x = (v0->x + (vx * t));
 																						HX_STACK_LINE(393)
 																						f1y = (v0->y + (vy * t));
@@ -4641,9 +4131,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																					{
 																						HX_STACK_LINE(393)
 																						Float t = t2;		HX_STACK_VAR(t,"t");
-																						HX_STACK_LINE(393)
-																						{
-																						}
 																						HX_STACK_LINE(393)
 																						f2x = (v0->x + (vx * t));
 																						HX_STACK_LINE(393)
@@ -4658,9 +4145,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																						HX_STACK_LINE(393)
 																						Float t = s12;		HX_STACK_VAR(t,"t");
 																						HX_STACK_LINE(393)
-																						{
-																						}
-																						HX_STACK_LINE(393)
 																						g1x = (q0->x + (qx * t));
 																						HX_STACK_LINE(393)
 																						g1y = (q0->y + (qy * t));
@@ -4674,15 +4158,12 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																						HX_STACK_LINE(393)
 																						Float t = s22;		HX_STACK_VAR(t,"t");
 																						HX_STACK_LINE(393)
-																						{
-																						}
-																						HX_STACK_LINE(393)
 																						g2x = (q0->x + (qx * t));
 																						HX_STACK_LINE(393)
 																						g2y = (q0->y + (qy * t));
 																					}
 																					struct _Function_8_1{
-																						inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &q0,Float &f1y,Float &f1x){
+																						inline static Float Block( Float &f1y,::zpp_nape::geom::ZPP_Vec2 &q0,Float &f1x){
 																							HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",393);
 																							{
 																								HX_STACK_LINE(393)
@@ -4703,9 +4184,9 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																						}
 																					};
 																					HX_STACK_LINE(393)
-																					Float d1 = _Function_8_1::Block(q0,f1y,f1x);		HX_STACK_VAR(d1,"d1");
+																					Float d1 = _Function_8_1::Block(f1y,q0,f1x);		HX_STACK_VAR(d1,"d1");
 																					struct _Function_8_2{
-																						inline static Float Block( Float &f2x,::zpp_nape::geom::ZPP_Vec2 &q11,Float &f2y){
+																						inline static Float Block( Float &f2y,Float &f2x,::zpp_nape::geom::ZPP_Vec2 &q11){
 																							HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",393);
 																							{
 																								HX_STACK_LINE(393)
@@ -4726,9 +4207,9 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																						}
 																					};
 																					HX_STACK_LINE(393)
-																					Float d2 = _Function_8_2::Block(f2x,q11,f2y);		HX_STACK_VAR(d2,"d2");
+																					Float d2 = _Function_8_2::Block(f2y,f2x,q11);		HX_STACK_VAR(d2,"d2");
 																					struct _Function_8_3{
-																						inline static Float Block( Float &g1x,::zpp_nape::geom::ZPP_Vec2 &v0,Float &g1y){
+																						inline static Float Block( Float &g1x,Float &g1y,::zpp_nape::geom::ZPP_Vec2 &v0){
 																							HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",393);
 																							{
 																								HX_STACK_LINE(393)
@@ -4749,9 +4230,9 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																						}
 																					};
 																					HX_STACK_LINE(393)
-																					Float e1 = _Function_8_3::Block(g1x,v0,g1y);		HX_STACK_VAR(e1,"e1");
+																					Float e1 = _Function_8_3::Block(g1x,g1y,v0);		HX_STACK_VAR(e1,"e1");
 																					struct _Function_8_4{
-																						inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &v1,Float &g2y,Float &g2x){
+																						inline static Float Block( Float &g2y,Float &g2x,::zpp_nape::geom::ZPP_Vec2 &v1){
 																							HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",393);
 																							{
 																								HX_STACK_LINE(393)
@@ -4772,7 +4253,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																						}
 																					};
 																					HX_STACK_LINE(393)
-																					Float e2 = _Function_8_4::Block(v1,g2y,g2x);		HX_STACK_VAR(e2,"e2");
+																					Float e2 = _Function_8_4::Block(g2y,g2x,v1);		HX_STACK_VAR(e2,"e2");
 																					HX_STACK_LINE(393)
 																					Float minfx = 0.0;		HX_STACK_VAR(minfx,"minfx");
 																					HX_STACK_LINE(393)
@@ -4790,9 +4271,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							HX_STACK_LINE(393)
 																							{
 																							}
-																							HX_STACK_LINE(393)
-																							{
-																							}
 																						}
 																						HX_STACK_LINE(393)
 																						minq = q0;
@@ -4804,9 +4282,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							minfx = f2x;
 																							HX_STACK_LINE(393)
 																							minfy = f2y;
-																							HX_STACK_LINE(393)
-																							{
-																							}
 																							HX_STACK_LINE(393)
 																							{
 																							}
@@ -4833,9 +4308,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							HX_STACK_LINE(393)
 																							{
 																							}
-																							HX_STACK_LINE(393)
-																							{
-																							}
 																						}
 																						HX_STACK_LINE(393)
 																						minv = v0;
@@ -4847,9 +4319,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							mingx = g2x;
 																							HX_STACK_LINE(393)
 																							mingy = g2y;
-																							HX_STACK_LINE(393)
-																							{
-																							}
 																							HX_STACK_LINE(393)
 																							{
 																							}
@@ -4870,9 +4339,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							HX_STACK_LINE(393)
 																							{
 																							}
-																							HX_STACK_LINE(393)
-																							{
-																							}
 																						}
 																						HX_STACK_LINE(393)
 																						{
@@ -4880,9 +4346,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							w2->x = minq->x;
 																							HX_STACK_LINE(393)
 																							w2->y = minq->y;
-																							HX_STACK_LINE(393)
-																							{
-																							}
 																							HX_STACK_LINE(393)
 																							{
 																							}
@@ -4900,9 +4363,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							HX_STACK_LINE(393)
 																							{
 																							}
-																							HX_STACK_LINE(393)
-																							{
-																							}
 																						}
 																						HX_STACK_LINE(393)
 																						{
@@ -4910,9 +4370,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							w1->x = minv->x;
 																							HX_STACK_LINE(393)
 																							w1->y = minv->y;
-																							HX_STACK_LINE(393)
-																							{
-																							}
 																							HX_STACK_LINE(393)
 																							{
 																							}
@@ -4934,9 +4391,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							HX_STACK_LINE(393)
 																							Float t = (Float(1.0) / Float(best));		HX_STACK_VAR(t,"t");
 																							HX_STACK_LINE(393)
-																							{
-																							}
-																							HX_STACK_LINE(393)
 																							hx::MultEq(axis->x,t);
 																							HX_STACK_LINE(393)
 																							hx::MultEq(axis->y,t);
@@ -4956,7 +4410,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																			}
 																		};
 																		struct _Function_7_2{
-																			inline static Float Block( ::zpp_nape::shape::ZPP_Edge &ay,::zpp_nape::shape::ZPP_Edge &ax,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &w1){
+																			inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::shape::ZPP_Edge &ax,::zpp_nape::geom::ZPP_Vec2 &w1,::zpp_nape::shape::ZPP_Edge &ay){
 																				HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",393);
 																				{
 																					HX_STACK_LINE(393)
@@ -4972,9 +4426,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																						HX_STACK_LINE(393)
 																						{
 																						}
-																						HX_STACK_LINE(393)
-																						{
-																						}
 																					}
 																					HX_STACK_LINE(393)
 																					Float c1x = 0.0;		HX_STACK_VAR(c1x,"c1x");
@@ -4986,9 +4437,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																						c1x = ay->gp1->x;
 																						HX_STACK_LINE(393)
 																						c1y = ay->gp1->y;
-																						HX_STACK_LINE(393)
-																						{
-																						}
 																						HX_STACK_LINE(393)
 																						{
 																						}
@@ -5017,9 +4465,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																						HX_STACK_LINE(393)
 																						Float t1 = t;		HX_STACK_VAR(t1,"t1");
 																						HX_STACK_LINE(393)
-																						{
-																						}
-																						HX_STACK_LINE(393)
 																						hx::AddEq(c0x,(dvx * t1));
 																						HX_STACK_LINE(393)
 																						hx::AddEq(c0y,(dvy * t1));
@@ -5031,9 +4476,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																						HX_STACK_LINE(393)
 																						Float t2 = t1;		HX_STACK_VAR(t2,"t2");
 																						HX_STACK_LINE(393)
-																						{
-																						}
-																						HX_STACK_LINE(393)
 																						hx::AddEq(c1x,(dvx * t2));
 																						HX_STACK_LINE(393)
 																						hx::AddEq(c1y,(dvy * t2));
@@ -5043,7 +4485,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																					HX_STACK_LINE(393)
 																					Float c1d = (((c1x * ax->gnormx) + (c1y * ax->gnormy)) - ax->gprojection);		HX_STACK_VAR(c1d,"c1d");
 																					struct _Function_8_1{
-																						inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &w2,Float &c0y,Float &c0d,::zpp_nape::shape::ZPP_Edge &ax,Float &c0x,::zpp_nape::geom::ZPP_Vec2 &w1){
+																						inline static Float Block( Float &c0y,::zpp_nape::geom::ZPP_Vec2 &w2,Float &c0x,Float &c0d,::zpp_nape::geom::ZPP_Vec2 &w1,::zpp_nape::shape::ZPP_Edge &ax){
 																							HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",393);
 																							{
 																								HX_STACK_LINE(393)
@@ -5055,17 +4497,11 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																									HX_STACK_LINE(393)
 																									{
 																									}
-																									HX_STACK_LINE(393)
-																									{
-																									}
 																								}
 																								HX_STACK_LINE(393)
 																								{
 																									HX_STACK_LINE(393)
 																									Float t2 = -(c0d);		HX_STACK_VAR(t2,"t2");
-																									HX_STACK_LINE(393)
-																									{
-																									}
 																									HX_STACK_LINE(393)
 																									w1->x = (w2->x + (ax->gnormx * t2));
 																									HX_STACK_LINE(393)
@@ -5078,7 +4514,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																						}
 																					};
 																					struct _Function_8_2{
-																						inline static Float Block( Float &c1y,Float &c1d,::zpp_nape::geom::ZPP_Vec2 &w2,Float &c1x,::zpp_nape::shape::ZPP_Edge &ax,::zpp_nape::geom::ZPP_Vec2 &w1){
+																						inline static Float Block( Float &c1x,::zpp_nape::geom::ZPP_Vec2 &w2,Float &c1d,::zpp_nape::geom::ZPP_Vec2 &w1,::zpp_nape::shape::ZPP_Edge &ax,Float &c1y){
 																							HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",393);
 																							{
 																								HX_STACK_LINE(393)
@@ -5090,17 +4526,11 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																									HX_STACK_LINE(393)
 																									{
 																									}
-																									HX_STACK_LINE(393)
-																									{
-																									}
 																								}
 																								HX_STACK_LINE(393)
 																								{
 																									HX_STACK_LINE(393)
 																									Float t2 = -(c1d);		HX_STACK_VAR(t2,"t2");
-																									HX_STACK_LINE(393)
-																									{
-																									}
 																									HX_STACK_LINE(393)
 																									w1->x = (w2->x + (ax->gnormx * t2));
 																									HX_STACK_LINE(393)
@@ -5113,43 +4543,43 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																						}
 																					};
 																					HX_STACK_LINE(393)
-																					return (  (((c0d < c1d))) ? Float(_Function_8_1::Block(w2,c0y,c0d,ax,c0x,w1)) : Float(_Function_8_2::Block(c1y,c1d,w2,c1x,ax,w1)) );
+																					return (  (((c0d < c1d))) ? Float(_Function_8_1::Block(c0y,w2,c0x,c0d,w1,ax)) : Float(_Function_8_2::Block(c1x,w2,c1d,w1,ax,c1y)) );
 																				}
 																				return null();
 																			}
 																		};
 																		HX_STACK_LINE(393)
-																		return (  (((best >= (int)0))) ? Float(_Function_7_1::Block(swapped,ay,ax,best,w2,axis,w1)) : Float(_Function_7_2::Block(ay,ax,w2,w1)) );
+																		return (  (((best >= (int)0))) ? Float(_Function_7_1::Block(axis,w2,swapped,ax,w1,best,ay)) : Float(_Function_7_2::Block(w2,ax,w1,ay)) );
 																	}
 																	return null();
 																}
 															};
 															HX_STACK_LINE(393)
-															return (  (((best < upperBound))) ? Float(_Function_6_1::Block(swapped,a2,best,a1,p2,besti,w2,axis,w1,p1)) : Float(upperBound) );
+															return (  (((best < upperBound))) ? Float(_Function_6_1::Block(axis,w2,swapped,p1,w1,best,a1,besti,p2,a2)) : Float(upperBound) );
 														}
 														return null();
 													}
 												};
 												HX_STACK_LINE(393)
-												return (  (((best < upperBound))) ? Float(_Function_5_1::Block(swapped,a2,best,a1,p2,besti,upperBound,w2,axis,p1,w1)) : Float(upperBound) );
+												return (  (((best < upperBound))) ? Float(_Function_5_1::Block(upperBound,axis,w2,swapped,p1,w1,best,a1,p2,besti,a2)) : Float(upperBound) );
 											}
 											return null();
 										}
 									};
 									HX_STACK_LINE(393)
-									return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_POLYGON)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_4_1::Block(swapped,s11,s21,w2,upperBound,axis,w1)) : Float(_Function_4_2::Block(swapped,s11,s21,w2,upperBound,axis,w1)) );
+									return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_POLYGON)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_4_1::Block(s21,upperBound,axis,s11,w2,swapped,w1)) : Float(_Function_4_2::Block(s21,upperBound,axis,s11,w2,swapped,w1)) );
 								}
 								return null();
 							}
 						};
 						HX_STACK_LINE(393)
-						return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_3_1::Block(upperBound,axis,s21,w2,s11,w1)) : Float(_Function_3_2::Block(upperBound,axis,s21,w2,s11,w1)) );
+						return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_3_1::Block(s21,upperBound,axis,s11,w2,w1)) : Float(_Function_3_2::Block(s21,upperBound,axis,s11,w2,w1)) );
 					}
 					return null();
 				}
 			};
 			HX_STACK_LINE(393)
-			Float sep = (_Function_2_1::Block(s1,c2,axis,c1,s2) + negRadius);		HX_STACK_VAR(sep,"sep");
+			Float sep = (_Function_2_1::Block(c1,c2,axis,s2,s1) + negRadius);		HX_STACK_VAR(sep,"sep");
 			HX_STACK_LINE(394)
 			Float dot = ((deltax * axis->x) + (deltay * axis->y));		HX_STACK_VAR(dot,"dot");
 			HX_STACK_LINE(395)
@@ -5194,21 +4624,12 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 				HX_STACK_LINE(416)
 				delta = 1e-6;
 			}
-			HX_STACK_LINE(417)
-			{
-			}
 			HX_STACK_LINE(425)
 			hx::AddEq(curTOI,delta);
 			HX_STACK_LINE(426)
 			if (((curTOI >= (int)1))){
 				HX_STACK_LINE(427)
 				curTOI = (int)1;
-				HX_STACK_LINE(428)
-				{
-				}
-				HX_STACK_LINE(436)
-				{
-				}
 				HX_STACK_LINE(444)
 				{
 					HX_STACK_LINE(444)
@@ -5218,17 +4639,11 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 					HX_STACK_LINE(444)
 					if (((delta1 != (int)0))){
 						HX_STACK_LINE(444)
-						{
-						}
-						HX_STACK_LINE(444)
 						b1->sweepTime = dt;
 						HX_STACK_LINE(444)
 						{
 							HX_STACK_LINE(444)
 							Float t = delta1;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(444)
-							{
-							}
 							HX_STACK_LINE(444)
 							hx::AddEq(b1->posx,(b1->velx * t));
 							HX_STACK_LINE(444)
@@ -5246,9 +4661,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 								b1->axisx = ::Math_obj::sin(b1->rot);
 								HX_STACK_LINE(444)
 								b1->axisy = ::Math_obj::cos(b1->rot);
-								HX_STACK_LINE(444)
-								{
-								}
 								HX_STACK_LINE(444)
 								Dynamic();
 							}
@@ -5270,89 +4682,57 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 					}
 				}
 				HX_STACK_LINE(445)
-				{
+				if (((s1->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
+					HX_STACK_LINE(445)
+					s1->worldCOMx = (b1->posx + (((b1->axisy * s1->localCOMx) - (b1->axisx * s1->localCOMy))));
+					HX_STACK_LINE(445)
+					s1->worldCOMy = (b1->posy + (((s1->localCOMx * b1->axisx) + (s1->localCOMy * b1->axisy))));
+				}
+				else{
+					HX_STACK_LINE(445)
+					::zpp_nape::shape::ZPP_Polygon p = s1->polygon;		HX_STACK_VAR(p,"p");
+					HX_STACK_LINE(445)
+					::zpp_nape::geom::ZPP_Vec2 li = p->lverts->next;		HX_STACK_VAR(li,"li");
 					HX_STACK_LINE(445)
 					{
-					}
-					HX_STACK_LINE(445)
-					if (((s1->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 						HX_STACK_LINE(445)
-						s1->worldCOMx = (b1->posx + (((b1->axisy * s1->localCOMx) - (b1->axisx * s1->localCOMy))));
+						::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
 						HX_STACK_LINE(445)
-						s1->worldCOMy = (b1->posy + (((s1->localCOMx * b1->axisx) + (s1->localCOMy * b1->axisy))));
-					}
-					else{
-						HX_STACK_LINE(445)
-						::zpp_nape::shape::ZPP_Polygon p = s1->polygon;		HX_STACK_VAR(p,"p");
-						HX_STACK_LINE(445)
-						::zpp_nape::geom::ZPP_Vec2 li = p->lverts->next;		HX_STACK_VAR(li,"li");
-						HX_STACK_LINE(445)
-						{
+						while(((cx_ite != null()))){
 							HX_STACK_LINE(445)
-							::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+							::zpp_nape::geom::ZPP_Vec2 g = cx_ite;		HX_STACK_VAR(g,"g");
 							HX_STACK_LINE(445)
-							while(((cx_ite != null()))){
+							{
 								HX_STACK_LINE(445)
-								::zpp_nape::geom::ZPP_Vec2 g = cx_ite;		HX_STACK_VAR(g,"g");
+								::zpp_nape::geom::ZPP_Vec2 l = li;		HX_STACK_VAR(l,"l");
+								HX_STACK_LINE(445)
+								li = li->next;
 								HX_STACK_LINE(445)
 								{
 									HX_STACK_LINE(445)
-									::zpp_nape::geom::ZPP_Vec2 l = li;		HX_STACK_VAR(l,"l");
+									g->x = (b1->posx + (((b1->axisy * l->x) - (b1->axisx * l->y))));
 									HX_STACK_LINE(445)
-									li = li->next;
-									HX_STACK_LINE(445)
-									{
-										HX_STACK_LINE(445)
-										g->x = (b1->posx + (((b1->axisy * l->x) - (b1->axisx * l->y))));
-										HX_STACK_LINE(445)
-										g->y = (b1->posy + (((l->x * b1->axisx) + (l->y * b1->axisy))));
-									}
+									g->y = (b1->posy + (((l->x * b1->axisx) + (l->y * b1->axisy))));
 								}
-								HX_STACK_LINE(445)
-								cx_ite = cx_ite->next;
 							}
-						}
-						HX_STACK_LINE(445)
-						::zpp_nape::util::ZNPNode_ZPP_Edge ite = p->edges->head;		HX_STACK_VAR(ite,"ite");
-						HX_STACK_LINE(445)
-						{
-							HX_STACK_LINE(445)
-							::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
-							HX_STACK_LINE(445)
-							::zpp_nape::geom::ZPP_Vec2 u = cx_ite;		HX_STACK_VAR(u,"u");
 							HX_STACK_LINE(445)
 							cx_ite = cx_ite->next;
+						}
+					}
+					HX_STACK_LINE(445)
+					::zpp_nape::util::ZNPNode_ZPP_Edge ite = p->edges->head;		HX_STACK_VAR(ite,"ite");
+					HX_STACK_LINE(445)
+					{
+						HX_STACK_LINE(445)
+						::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+						HX_STACK_LINE(445)
+						::zpp_nape::geom::ZPP_Vec2 u = cx_ite;		HX_STACK_VAR(u,"u");
+						HX_STACK_LINE(445)
+						cx_ite = cx_ite->next;
+						HX_STACK_LINE(445)
+						while(((cx_ite != null()))){
 							HX_STACK_LINE(445)
-							while(((cx_ite != null()))){
-								HX_STACK_LINE(445)
-								::zpp_nape::geom::ZPP_Vec2 v = cx_ite;		HX_STACK_VAR(v,"v");
-								HX_STACK_LINE(445)
-								{
-									HX_STACK_LINE(445)
-									::zpp_nape::shape::ZPP_Edge e = ite->elt;		HX_STACK_VAR(e,"e");
-									HX_STACK_LINE(445)
-									ite = ite->next;
-									HX_STACK_LINE(445)
-									{
-										HX_STACK_LINE(445)
-										e->gnormx = ((b1->axisy * e->lnormx) - (b1->axisx * e->lnormy));
-										HX_STACK_LINE(445)
-										e->gnormy = ((e->lnormx * b1->axisx) + (e->lnormy * b1->axisy));
-									}
-									HX_STACK_LINE(445)
-									e->gprojection = (((b1->posx * e->gnormx) + (b1->posy * e->gnormy)) + e->lprojection);
-									HX_STACK_LINE(445)
-									e->tp0 = ((u->y * e->gnormx) - (u->x * e->gnormy));
-									HX_STACK_LINE(445)
-									e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
-								}
-								HX_STACK_LINE(445)
-								u = v;
-								HX_STACK_LINE(445)
-								cx_ite = cx_ite->next;
-							}
-							HX_STACK_LINE(445)
-							::zpp_nape::geom::ZPP_Vec2 v = p->gverts->next;		HX_STACK_VAR(v,"v");
+							::zpp_nape::geom::ZPP_Vec2 v = cx_ite;		HX_STACK_VAR(v,"v");
 							HX_STACK_LINE(445)
 							{
 								HX_STACK_LINE(445)
@@ -5373,11 +4753,37 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 								HX_STACK_LINE(445)
 								e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
 							}
+							HX_STACK_LINE(445)
+							u = v;
+							HX_STACK_LINE(445)
+							cx_ite = cx_ite->next;
+						}
+						HX_STACK_LINE(445)
+						::zpp_nape::geom::ZPP_Vec2 v = p->gverts->next;		HX_STACK_VAR(v,"v");
+						HX_STACK_LINE(445)
+						{
+							HX_STACK_LINE(445)
+							::zpp_nape::shape::ZPP_Edge e = ite->elt;		HX_STACK_VAR(e,"e");
+							HX_STACK_LINE(445)
+							ite = ite->next;
+							HX_STACK_LINE(445)
+							{
+								HX_STACK_LINE(445)
+								e->gnormx = ((b1->axisy * e->lnormx) - (b1->axisx * e->lnormy));
+								HX_STACK_LINE(445)
+								e->gnormy = ((e->lnormx * b1->axisx) + (e->lnormy * b1->axisy));
+							}
+							HX_STACK_LINE(445)
+							e->gprojection = (((b1->posx * e->gnormx) + (b1->posy * e->gnormy)) + e->lprojection);
+							HX_STACK_LINE(445)
+							e->tp0 = ((u->y * e->gnormx) - (u->x * e->gnormy));
+							HX_STACK_LINE(445)
+							e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
 						}
 					}
 				}
 				struct _Function_3_1{
-					inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::geom::ZPP_Vec2 &c2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &c1,::zpp_nape::shape::ZPP_Shape &s2){
+					inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &c1,::zpp_nape::geom::ZPP_Vec2 &c2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",446);
 						{
 							HX_STACK_LINE(446)
@@ -5387,7 +4793,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 							::zpp_nape::geom::ZPP_Vec2 w2 = c2;		HX_STACK_VAR(w2,"w2");
 							Float upperBound = 1e100;		HX_STACK_VAR(upperBound,"upperBound");
 							struct _Function_4_1{
-								inline static Float Block( Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w1){
+								inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &w1){
 									HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",446);
 									{
 										HX_STACK_LINE(446)
@@ -5409,21 +4815,8 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 												HX_STACK_LINE(446)
 												ny = (c21->worldCOMy - c11->worldCOMy);
 											}
-											struct _Function_6_1{
-												inline static Float Block( Float &nx,Float &ny){
-													HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",446);
-													{
-														HX_STACK_LINE(446)
-														{
-														}
-														HX_STACK_LINE(446)
-														return ::Math_obj::sqrt(((nx * nx) + (ny * ny)));
-													}
-													return null();
-												}
-											};
 											HX_STACK_LINE(446)
-											Float len = _Function_6_1::Block(nx,ny);		HX_STACK_VAR(len,"len");
+											Float len = ::Math_obj::sqrt(((nx * nx) + (ny * ny)));		HX_STACK_VAR(len,"len");
 											HX_STACK_LINE(446)
 											dist = (len - ((c11->radius + c21->radius)));
 											HX_STACK_LINE(446)
@@ -5437,16 +4830,10 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 													HX_STACK_LINE(446)
 													{
 													}
-													HX_STACK_LINE(446)
-													{
-													}
 												}
 												else{
 													HX_STACK_LINE(446)
 													Float t = (Float(1.0) / Float(len));		HX_STACK_VAR(t,"t");
-													HX_STACK_LINE(446)
-													{
-													}
 													HX_STACK_LINE(446)
 													hx::MultEq(nx,t);
 													HX_STACK_LINE(446)
@@ -5457,9 +4844,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 													HX_STACK_LINE(446)
 													Float t = c11->radius;		HX_STACK_VAR(t,"t");
 													HX_STACK_LINE(446)
-													{
-													}
-													HX_STACK_LINE(446)
 													w1->x = (c11->worldCOMx + (nx * t));
 													HX_STACK_LINE(446)
 													w1->y = (c11->worldCOMy + (ny * t));
@@ -5468,9 +4852,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 												{
 													HX_STACK_LINE(446)
 													Float t = -(c21->radius);		HX_STACK_VAR(t,"t");
-													HX_STACK_LINE(446)
-													{
-													}
 													HX_STACK_LINE(446)
 													w2->x = (c21->worldCOMx + (nx * t));
 													HX_STACK_LINE(446)
@@ -5485,9 +4866,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 													HX_STACK_LINE(446)
 													{
 													}
-													HX_STACK_LINE(446)
-													{
-													}
 												}
 											}
 										}
@@ -5498,7 +4876,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 								}
 							};
 							struct _Function_4_2{
-								inline static Float Block( Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w1){
+								inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &w1){
 									HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",446);
 									{
 										HX_STACK_LINE(446)
@@ -5521,7 +4899,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 											swapped = true;
 										}
 										struct _Function_5_1{
-											inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &w2,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w1){
+											inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::geom::ZPP_Vec2 &w1){
 												HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",446);
 												{
 													HX_STACK_LINE(446)
@@ -5596,21 +4974,8 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																HX_STACK_LINE(446)
 																ny = (circle->worldCOMy - v0->y);
 															}
-															struct _Function_8_1{
-																inline static Float Block( Float &nx,Float &ny){
-																	HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",446);
-																	{
-																		HX_STACK_LINE(446)
-																		{
-																		}
-																		HX_STACK_LINE(446)
-																		return ::Math_obj::sqrt(((nx * nx) + (ny * ny)));
-																	}
-																	return null();
-																}
-															};
 															HX_STACK_LINE(446)
-															Float len = _Function_8_1::Block(nx,ny);		HX_STACK_VAR(len,"len");
+															Float len = ::Math_obj::sqrt(((nx * nx) + (ny * ny)));		HX_STACK_VAR(len,"len");
 															HX_STACK_LINE(446)
 															best = (len - circle->radius);
 															HX_STACK_LINE(446)
@@ -5624,16 +4989,10 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																	HX_STACK_LINE(446)
 																	{
 																	}
-																	HX_STACK_LINE(446)
-																	{
-																	}
 																}
 																else{
 																	HX_STACK_LINE(446)
 																	Float t = (Float(1.0) / Float(len));		HX_STACK_VAR(t,"t");
-																	HX_STACK_LINE(446)
-																	{
-																	}
 																	HX_STACK_LINE(446)
 																	hx::MultEq(nx,t);
 																	HX_STACK_LINE(446)
@@ -5644,9 +5003,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																	HX_STACK_LINE(446)
 																	int t = (int)0;		HX_STACK_VAR(t,"t");
 																	HX_STACK_LINE(446)
-																	{
-																	}
-																	HX_STACK_LINE(446)
 																	w1->x = (v0->x + (nx * t));
 																	HX_STACK_LINE(446)
 																	w1->y = (v0->y + (ny * t));
@@ -5655,9 +5011,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																{
 																	HX_STACK_LINE(446)
 																	Float t = -(circle->radius);		HX_STACK_VAR(t,"t");
-																	HX_STACK_LINE(446)
-																	{
-																	}
 																	HX_STACK_LINE(446)
 																	w2->x = (circle->worldCOMx + (nx * t));
 																	HX_STACK_LINE(446)
@@ -5669,9 +5022,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																	axis->x = nx;
 																	HX_STACK_LINE(446)
 																	axis->y = ny;
-																	HX_STACK_LINE(446)
-																	{
-																	}
 																	HX_STACK_LINE(446)
 																	{
 																	}
@@ -5692,21 +5042,8 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																	HX_STACK_LINE(446)
 																	ny = (circle->worldCOMy - v1->y);
 																}
-																struct _Function_9_1{
-																	inline static Float Block( Float &nx,Float &ny){
-																		HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",446);
-																		{
-																			HX_STACK_LINE(446)
-																			{
-																			}
-																			HX_STACK_LINE(446)
-																			return ::Math_obj::sqrt(((nx * nx) + (ny * ny)));
-																		}
-																		return null();
-																	}
-																};
 																HX_STACK_LINE(446)
-																Float len = _Function_9_1::Block(nx,ny);		HX_STACK_VAR(len,"len");
+																Float len = ::Math_obj::sqrt(((nx * nx) + (ny * ny)));		HX_STACK_VAR(len,"len");
 																HX_STACK_LINE(446)
 																best = (len - circle->radius);
 																HX_STACK_LINE(446)
@@ -5720,16 +5057,10 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																		HX_STACK_LINE(446)
 																		{
 																		}
-																		HX_STACK_LINE(446)
-																		{
-																		}
 																	}
 																	else{
 																		HX_STACK_LINE(446)
 																		Float t = (Float(1.0) / Float(len));		HX_STACK_VAR(t,"t");
-																		HX_STACK_LINE(446)
-																		{
-																		}
 																		HX_STACK_LINE(446)
 																		hx::MultEq(nx,t);
 																		HX_STACK_LINE(446)
@@ -5740,9 +5071,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																		HX_STACK_LINE(446)
 																		int t = (int)0;		HX_STACK_VAR(t,"t");
 																		HX_STACK_LINE(446)
-																		{
-																		}
-																		HX_STACK_LINE(446)
 																		w1->x = (v1->x + (nx * t));
 																		HX_STACK_LINE(446)
 																		w1->y = (v1->y + (ny * t));
@@ -5751,9 +5079,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																	{
 																		HX_STACK_LINE(446)
 																		Float t = -(circle->radius);		HX_STACK_VAR(t,"t");
-																		HX_STACK_LINE(446)
-																		{
-																		}
 																		HX_STACK_LINE(446)
 																		w2->x = (circle->worldCOMx + (nx * t));
 																		HX_STACK_LINE(446)
@@ -5768,9 +5093,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																		HX_STACK_LINE(446)
 																		{
 																		}
-																		HX_STACK_LINE(446)
-																		{
-																		}
 																	}
 																}
 															}
@@ -5780,9 +5102,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																	HX_STACK_LINE(446)
 																	Float t = -(circle->radius);		HX_STACK_VAR(t,"t");
 																	HX_STACK_LINE(446)
-																	{
-																	}
-																	HX_STACK_LINE(446)
 																	w2->x = (circle->worldCOMx + (a0->gnormx * t));
 																	HX_STACK_LINE(446)
 																	w2->y = (circle->worldCOMy + (a0->gnormy * t));
@@ -5791,9 +5110,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																{
 																	HX_STACK_LINE(446)
 																	Float t = -(best);		HX_STACK_VAR(t,"t");
-																	HX_STACK_LINE(446)
-																	{
-																	}
 																	HX_STACK_LINE(446)
 																	w1->x = (w2->x + (a0->gnormx * t));
 																	HX_STACK_LINE(446)
@@ -5805,9 +5121,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																	axis->x = a0->gnormx;
 																	HX_STACK_LINE(446)
 																	axis->y = a0->gnormy;
-																	HX_STACK_LINE(446)
-																	{
-																	}
 																	HX_STACK_LINE(446)
 																	{
 																	}
@@ -5829,7 +5142,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 											}
 										};
 										struct _Function_5_2{
-											inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &w2,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w1){
+											inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::geom::ZPP_Vec2 &w1){
 												HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",446);
 												{
 													HX_STACK_LINE(446)
@@ -5916,7 +5229,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 														}
 													}
 													struct _Function_6_1{
-														inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Edge &a2,Float &best,::zpp_nape::shape::ZPP_Edge &a1,::zpp_nape::shape::ZPP_Polygon &p2,int &besti,Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::shape::ZPP_Polygon &p1,::zpp_nape::geom::ZPP_Vec2 &w1){
+														inline static Float Block( Float &upperBound,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::shape::ZPP_Polygon &p1,::zpp_nape::geom::ZPP_Vec2 &w1,Float &best,::zpp_nape::shape::ZPP_Edge &a1,::zpp_nape::shape::ZPP_Polygon &p2,int &besti,::zpp_nape::shape::ZPP_Edge &a2){
 															HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",446);
 															{
 																HX_STACK_LINE(446)
@@ -5991,7 +5304,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																	}
 																}
 																struct _Function_7_1{
-																	inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Edge &a2,Float &best,::zpp_nape::shape::ZPP_Edge &a1,::zpp_nape::shape::ZPP_Polygon &p2,int &besti,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w1,::zpp_nape::shape::ZPP_Polygon &p1){
+																	inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::shape::ZPP_Polygon &p1,::zpp_nape::geom::ZPP_Vec2 &w1,Float &best,::zpp_nape::shape::ZPP_Edge &a1,int &besti,::zpp_nape::shape::ZPP_Polygon &p2,::zpp_nape::shape::ZPP_Edge &a2){
 																		HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",446);
 																		{
 																			HX_STACK_LINE(446)
@@ -6061,9 +5374,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																				HX_STACK_LINE(446)
 																				{
 																				}
-																				HX_STACK_LINE(446)
-																				{
-																				}
 																			}
 																			else{
 																				HX_STACK_LINE(446)
@@ -6073,12 +5383,9 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																				HX_STACK_LINE(446)
 																				{
 																				}
-																				HX_STACK_LINE(446)
-																				{
-																				}
 																			}
 																			struct _Function_8_1{
-																				inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Edge &ay,::zpp_nape::shape::ZPP_Edge &ax,Float &best,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w1){
+																				inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &axis,::zpp_nape::geom::ZPP_Vec2 &w2,bool &swapped,::zpp_nape::shape::ZPP_Edge &ax,::zpp_nape::geom::ZPP_Vec2 &w1,Float &best,::zpp_nape::shape::ZPP_Edge &ay){
 																					HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",446);
 																					{
 																						HX_STACK_LINE(446)
@@ -6180,9 +5487,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							HX_STACK_LINE(446)
 																							Float t = t1;		HX_STACK_VAR(t,"t");
 																							HX_STACK_LINE(446)
-																							{
-																							}
-																							HX_STACK_LINE(446)
 																							f1x = (v0->x + (vx * t));
 																							HX_STACK_LINE(446)
 																							f1y = (v0->y + (vy * t));
@@ -6195,9 +5499,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																						{
 																							HX_STACK_LINE(446)
 																							Float t = t2;		HX_STACK_VAR(t,"t");
-																							HX_STACK_LINE(446)
-																							{
-																							}
 																							HX_STACK_LINE(446)
 																							f2x = (v0->x + (vx * t));
 																							HX_STACK_LINE(446)
@@ -6212,9 +5513,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							HX_STACK_LINE(446)
 																							Float t = s12;		HX_STACK_VAR(t,"t");
 																							HX_STACK_LINE(446)
-																							{
-																							}
-																							HX_STACK_LINE(446)
 																							g1x = (q0->x + (qx * t));
 																							HX_STACK_LINE(446)
 																							g1y = (q0->y + (qy * t));
@@ -6228,15 +5526,12 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							HX_STACK_LINE(446)
 																							Float t = s22;		HX_STACK_VAR(t,"t");
 																							HX_STACK_LINE(446)
-																							{
-																							}
-																							HX_STACK_LINE(446)
 																							g2x = (q0->x + (qx * t));
 																							HX_STACK_LINE(446)
 																							g2y = (q0->y + (qy * t));
 																						}
 																						struct _Function_9_1{
-																							inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &q0,Float &f1y,Float &f1x){
+																							inline static Float Block( Float &f1y,::zpp_nape::geom::ZPP_Vec2 &q0,Float &f1x){
 																								HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",446);
 																								{
 																									HX_STACK_LINE(446)
@@ -6257,9 +5552,9 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							}
 																						};
 																						HX_STACK_LINE(446)
-																						Float d1 = _Function_9_1::Block(q0,f1y,f1x);		HX_STACK_VAR(d1,"d1");
+																						Float d1 = _Function_9_1::Block(f1y,q0,f1x);		HX_STACK_VAR(d1,"d1");
 																						struct _Function_9_2{
-																							inline static Float Block( Float &f2x,::zpp_nape::geom::ZPP_Vec2 &q11,Float &f2y){
+																							inline static Float Block( Float &f2y,Float &f2x,::zpp_nape::geom::ZPP_Vec2 &q11){
 																								HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",446);
 																								{
 																									HX_STACK_LINE(446)
@@ -6280,9 +5575,9 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							}
 																						};
 																						HX_STACK_LINE(446)
-																						Float d2 = _Function_9_2::Block(f2x,q11,f2y);		HX_STACK_VAR(d2,"d2");
+																						Float d2 = _Function_9_2::Block(f2y,f2x,q11);		HX_STACK_VAR(d2,"d2");
 																						struct _Function_9_3{
-																							inline static Float Block( Float &g1x,::zpp_nape::geom::ZPP_Vec2 &v0,Float &g1y){
+																							inline static Float Block( Float &g1x,Float &g1y,::zpp_nape::geom::ZPP_Vec2 &v0){
 																								HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",446);
 																								{
 																									HX_STACK_LINE(446)
@@ -6303,9 +5598,9 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							}
 																						};
 																						HX_STACK_LINE(446)
-																						Float e1 = _Function_9_3::Block(g1x,v0,g1y);		HX_STACK_VAR(e1,"e1");
+																						Float e1 = _Function_9_3::Block(g1x,g1y,v0);		HX_STACK_VAR(e1,"e1");
 																						struct _Function_9_4{
-																							inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &v1,Float &g2y,Float &g2x){
+																							inline static Float Block( Float &g2y,Float &g2x,::zpp_nape::geom::ZPP_Vec2 &v1){
 																								HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",446);
 																								{
 																									HX_STACK_LINE(446)
@@ -6326,7 +5621,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							}
 																						};
 																						HX_STACK_LINE(446)
-																						Float e2 = _Function_9_4::Block(v1,g2y,g2x);		HX_STACK_VAR(e2,"e2");
+																						Float e2 = _Function_9_4::Block(g2y,g2x,v1);		HX_STACK_VAR(e2,"e2");
 																						HX_STACK_LINE(446)
 																						Float minfx = 0.0;		HX_STACK_VAR(minfx,"minfx");
 																						HX_STACK_LINE(446)
@@ -6344,9 +5639,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																								HX_STACK_LINE(446)
 																								{
 																								}
-																								HX_STACK_LINE(446)
-																								{
-																								}
 																							}
 																							HX_STACK_LINE(446)
 																							minq = q0;
@@ -6358,9 +5650,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																								minfx = f2x;
 																								HX_STACK_LINE(446)
 																								minfy = f2y;
-																								HX_STACK_LINE(446)
-																								{
-																								}
 																								HX_STACK_LINE(446)
 																								{
 																								}
@@ -6387,9 +5676,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																								HX_STACK_LINE(446)
 																								{
 																								}
-																								HX_STACK_LINE(446)
-																								{
-																								}
 																							}
 																							HX_STACK_LINE(446)
 																							minv = v0;
@@ -6401,9 +5687,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																								mingx = g2x;
 																								HX_STACK_LINE(446)
 																								mingy = g2y;
-																								HX_STACK_LINE(446)
-																								{
-																								}
 																								HX_STACK_LINE(446)
 																								{
 																								}
@@ -6424,9 +5707,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																								HX_STACK_LINE(446)
 																								{
 																								}
-																								HX_STACK_LINE(446)
-																								{
-																								}
 																							}
 																							HX_STACK_LINE(446)
 																							{
@@ -6434,9 +5714,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																								w2->x = minq->x;
 																								HX_STACK_LINE(446)
 																								w2->y = minq->y;
-																								HX_STACK_LINE(446)
-																								{
-																								}
 																								HX_STACK_LINE(446)
 																								{
 																								}
@@ -6454,9 +5731,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																								HX_STACK_LINE(446)
 																								{
 																								}
-																								HX_STACK_LINE(446)
-																								{
-																								}
 																							}
 																							HX_STACK_LINE(446)
 																							{
@@ -6464,9 +5738,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																								w1->x = minv->x;
 																								HX_STACK_LINE(446)
 																								w1->y = minv->y;
-																								HX_STACK_LINE(446)
-																								{
-																								}
 																								HX_STACK_LINE(446)
 																								{
 																								}
@@ -6488,9 +5759,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																								HX_STACK_LINE(446)
 																								Float t = (Float(1.0) / Float(best));		HX_STACK_VAR(t,"t");
 																								HX_STACK_LINE(446)
-																								{
-																								}
-																								HX_STACK_LINE(446)
 																								hx::MultEq(axis->x,t);
 																								HX_STACK_LINE(446)
 																								hx::MultEq(axis->y,t);
@@ -6510,7 +5778,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																				}
 																			};
 																			struct _Function_8_2{
-																				inline static Float Block( ::zpp_nape::shape::ZPP_Edge &ay,::zpp_nape::shape::ZPP_Edge &ax,::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::geom::ZPP_Vec2 &w1){
+																				inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &w2,::zpp_nape::shape::ZPP_Edge &ax,::zpp_nape::geom::ZPP_Vec2 &w1,::zpp_nape::shape::ZPP_Edge &ay){
 																					HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",446);
 																					{
 																						HX_STACK_LINE(446)
@@ -6526,9 +5794,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							HX_STACK_LINE(446)
 																							{
 																							}
-																							HX_STACK_LINE(446)
-																							{
-																							}
 																						}
 																						HX_STACK_LINE(446)
 																						Float c1x = 0.0;		HX_STACK_VAR(c1x,"c1x");
@@ -6540,9 +5805,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							c1x = ay->gp1->x;
 																							HX_STACK_LINE(446)
 																							c1y = ay->gp1->y;
-																							HX_STACK_LINE(446)
-																							{
-																							}
 																							HX_STACK_LINE(446)
 																							{
 																							}
@@ -6571,9 +5833,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							HX_STACK_LINE(446)
 																							Float t1 = t;		HX_STACK_VAR(t1,"t1");
 																							HX_STACK_LINE(446)
-																							{
-																							}
-																							HX_STACK_LINE(446)
 																							hx::AddEq(c0x,(dvx * t1));
 																							HX_STACK_LINE(446)
 																							hx::AddEq(c0y,(dvy * t1));
@@ -6585,9 +5844,6 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							HX_STACK_LINE(446)
 																							Float t2 = t1;		HX_STACK_VAR(t2,"t2");
 																							HX_STACK_LINE(446)
-																							{
-																							}
-																							HX_STACK_LINE(446)
 																							hx::AddEq(c1x,(dvx * t2));
 																							HX_STACK_LINE(446)
 																							hx::AddEq(c1y,(dvy * t2));
@@ -6597,7 +5853,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																						HX_STACK_LINE(446)
 																						Float c1d = (((c1x * ax->gnormx) + (c1y * ax->gnormy)) - ax->gprojection);		HX_STACK_VAR(c1d,"c1d");
 																						struct _Function_9_1{
-																							inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &w2,Float &c0y,Float &c0d,::zpp_nape::shape::ZPP_Edge &ax,Float &c0x,::zpp_nape::geom::ZPP_Vec2 &w1){
+																							inline static Float Block( Float &c0y,::zpp_nape::geom::ZPP_Vec2 &w2,Float &c0x,Float &c0d,::zpp_nape::geom::ZPP_Vec2 &w1,::zpp_nape::shape::ZPP_Edge &ax){
 																								HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",446);
 																								{
 																									HX_STACK_LINE(446)
@@ -6609,17 +5865,11 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																										HX_STACK_LINE(446)
 																										{
 																										}
-																										HX_STACK_LINE(446)
-																										{
-																										}
 																									}
 																									HX_STACK_LINE(446)
 																									{
 																										HX_STACK_LINE(446)
 																										Float t2 = -(c0d);		HX_STACK_VAR(t2,"t2");
-																										HX_STACK_LINE(446)
-																										{
-																										}
 																										HX_STACK_LINE(446)
 																										w1->x = (w2->x + (ax->gnormx * t2));
 																										HX_STACK_LINE(446)
@@ -6632,7 +5882,7 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							}
 																						};
 																						struct _Function_9_2{
-																							inline static Float Block( Float &c1y,Float &c1d,::zpp_nape::geom::ZPP_Vec2 &w2,Float &c1x,::zpp_nape::shape::ZPP_Edge &ax,::zpp_nape::geom::ZPP_Vec2 &w1){
+																							inline static Float Block( Float &c1x,::zpp_nape::geom::ZPP_Vec2 &w2,Float &c1d,::zpp_nape::geom::ZPP_Vec2 &w1,::zpp_nape::shape::ZPP_Edge &ax,Float &c1y){
 																								HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",446);
 																								{
 																									HX_STACK_LINE(446)
@@ -6644,17 +5894,11 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																										HX_STACK_LINE(446)
 																										{
 																										}
-																										HX_STACK_LINE(446)
-																										{
-																										}
 																									}
 																									HX_STACK_LINE(446)
 																									{
 																										HX_STACK_LINE(446)
 																										Float t2 = -(c1d);		HX_STACK_VAR(t2,"t2");
-																										HX_STACK_LINE(446)
-																										{
-																										}
 																										HX_STACK_LINE(446)
 																										w1->x = (w2->x + (ax->gnormx * t2));
 																										HX_STACK_LINE(446)
@@ -6667,43 +5911,43 @@ Void ZPP_SweepDistance_obj::staticSweep( ::zpp_nape::geom::ZPP_ToiEvent toi,Floa
 																							}
 																						};
 																						HX_STACK_LINE(446)
-																						return (  (((c0d < c1d))) ? Float(_Function_9_1::Block(w2,c0y,c0d,ax,c0x,w1)) : Float(_Function_9_2::Block(c1y,c1d,w2,c1x,ax,w1)) );
+																						return (  (((c0d < c1d))) ? Float(_Function_9_1::Block(c0y,w2,c0x,c0d,w1,ax)) : Float(_Function_9_2::Block(c1x,w2,c1d,w1,ax,c1y)) );
 																					}
 																					return null();
 																				}
 																			};
 																			HX_STACK_LINE(446)
-																			return (  (((best >= (int)0))) ? Float(_Function_8_1::Block(swapped,ay,ax,best,w2,axis,w1)) : Float(_Function_8_2::Block(ay,ax,w2,w1)) );
+																			return (  (((best >= (int)0))) ? Float(_Function_8_1::Block(axis,w2,swapped,ax,w1,best,ay)) : Float(_Function_8_2::Block(w2,ax,w1,ay)) );
 																		}
 																		return null();
 																	}
 																};
 																HX_STACK_LINE(446)
-																return (  (((best < upperBound))) ? Float(_Function_7_1::Block(swapped,a2,best,a1,p2,besti,w2,axis,w1,p1)) : Float(upperBound) );
+																return (  (((best < upperBound))) ? Float(_Function_7_1::Block(axis,w2,swapped,p1,w1,best,a1,besti,p2,a2)) : Float(upperBound) );
 															}
 															return null();
 														}
 													};
 													HX_STACK_LINE(446)
-													return (  (((best < upperBound))) ? Float(_Function_6_1::Block(swapped,a2,best,a1,p2,besti,upperBound,w2,axis,p1,w1)) : Float(upperBound) );
+													return (  (((best < upperBound))) ? Float(_Function_6_1::Block(upperBound,axis,w2,swapped,p1,w1,best,a1,p2,besti,a2)) : Float(upperBound) );
 												}
 												return null();
 											}
 										};
 										HX_STACK_LINE(446)
-										return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_POLYGON)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_5_1::Block(swapped,s11,s21,w2,upperBound,axis,w1)) : Float(_Function_5_2::Block(swapped,s11,s21,w2,upperBound,axis,w1)) );
+										return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_POLYGON)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_5_1::Block(s21,upperBound,axis,s11,w2,swapped,w1)) : Float(_Function_5_2::Block(s21,upperBound,axis,s11,w2,swapped,w1)) );
 									}
 									return null();
 								}
 							};
 							HX_STACK_LINE(446)
-							return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_4_1::Block(upperBound,axis,s21,w2,s11,w1)) : Float(_Function_4_2::Block(upperBound,axis,s21,w2,s11,w1)) );
+							return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_4_1::Block(s21,upperBound,axis,s11,w2,w1)) : Float(_Function_4_2::Block(s21,upperBound,axis,s11,w2,w1)) );
 						}
 						return null();
 					}
 				};
 				HX_STACK_LINE(446)
-				Float sep1 = (_Function_3_1::Block(s1,c2,axis,c1,s2) + negRadius);		HX_STACK_VAR(sep1,"sep1");
+				Float sep1 = (_Function_3_1::Block(c1,c2,axis,s2,s1) + negRadius);		HX_STACK_VAR(sep1,"sep1");
 				HX_STACK_LINE(447)
 				Float dot1 = ((deltax * axis->x) + (deltay * axis->y));		HX_STACK_VAR(dot1,"dot1");
 				HX_STACK_LINE(448)
@@ -6844,7 +6088,7 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 					HX_STACK_LINE(540)
 					{
 						struct _Function_6_1{
-							inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::geom::ZPP_Vec2 &t2,::zpp_nape::geom::ZPP_Vec2 &ax,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::geom::ZPP_Vec2 &t1,Float &min){
+							inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &t1,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::geom::ZPP_Vec2 &ax,::zpp_nape::geom::ZPP_Vec2 &t2,Float &min,::zpp_nape::shape::ZPP_Shape &s1){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",541);
 								{
 									HX_STACK_LINE(541)
@@ -6853,7 +6097,7 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 									::zpp_nape::geom::ZPP_Vec2 w11 = t1;		HX_STACK_VAR(w11,"w11");
 									::zpp_nape::geom::ZPP_Vec2 w21 = t2;		HX_STACK_VAR(w21,"w21");
 									struct _Function_7_1{
-										inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &w21,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &w11,::zpp_nape::geom::ZPP_Vec2 &ax,::zpp_nape::shape::ZPP_Shape &s11,Float &min){
+										inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &ax,::zpp_nape::geom::ZPP_Vec2 &w11,::zpp_nape::geom::ZPP_Vec2 &w21,Float &min){
 											HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",541);
 											{
 												HX_STACK_LINE(541)
@@ -6875,21 +6119,8 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 														HX_STACK_LINE(541)
 														ny = (c2->worldCOMy - c1->worldCOMy);
 													}
-													struct _Function_9_1{
-														inline static Float Block( Float &nx,Float &ny){
-															HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",541);
-															{
-																HX_STACK_LINE(541)
-																{
-																}
-																HX_STACK_LINE(541)
-																return ::Math_obj::sqrt(((nx * nx) + (ny * ny)));
-															}
-															return null();
-														}
-													};
 													HX_STACK_LINE(541)
-													Float len = _Function_9_1::Block(nx,ny);		HX_STACK_VAR(len,"len");
+													Float len = ::Math_obj::sqrt(((nx * nx) + (ny * ny)));		HX_STACK_VAR(len,"len");
 													HX_STACK_LINE(541)
 													dist = (len - ((c1->radius + c2->radius)));
 													HX_STACK_LINE(541)
@@ -6903,16 +6134,10 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 															HX_STACK_LINE(541)
 															{
 															}
-															HX_STACK_LINE(541)
-															{
-															}
 														}
 														else{
 															HX_STACK_LINE(541)
 															Float t = (Float(1.0) / Float(len));		HX_STACK_VAR(t,"t");
-															HX_STACK_LINE(541)
-															{
-															}
 															HX_STACK_LINE(541)
 															hx::MultEq(nx,t);
 															HX_STACK_LINE(541)
@@ -6923,9 +6148,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 															HX_STACK_LINE(541)
 															Float t = c1->radius;		HX_STACK_VAR(t,"t");
 															HX_STACK_LINE(541)
-															{
-															}
-															HX_STACK_LINE(541)
 															w11->x = (c1->worldCOMx + (nx * t));
 															HX_STACK_LINE(541)
 															w11->y = (c1->worldCOMy + (ny * t));
@@ -6934,9 +6156,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 														{
 															HX_STACK_LINE(541)
 															Float t = -(c2->radius);		HX_STACK_VAR(t,"t");
-															HX_STACK_LINE(541)
-															{
-															}
 															HX_STACK_LINE(541)
 															w21->x = (c2->worldCOMx + (nx * t));
 															HX_STACK_LINE(541)
@@ -6951,9 +6170,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 															HX_STACK_LINE(541)
 															{
 															}
-															HX_STACK_LINE(541)
-															{
-															}
 														}
 													}
 												}
@@ -6964,7 +6180,7 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 										}
 									};
 									struct _Function_7_2{
-										inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &w21,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &w11,::zpp_nape::geom::ZPP_Vec2 &ax,::zpp_nape::shape::ZPP_Shape &s11,Float &min){
+										inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &ax,::zpp_nape::geom::ZPP_Vec2 &w11,::zpp_nape::geom::ZPP_Vec2 &w21,Float &min){
 											HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",541);
 											{
 												HX_STACK_LINE(541)
@@ -6987,7 +6203,7 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 													swapped = true;
 												}
 												struct _Function_8_1{
-													inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w21,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &ax,Float &min,::zpp_nape::geom::ZPP_Vec2 &w11){
+													inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::shape::ZPP_Shape &s11,bool &swapped,::zpp_nape::geom::ZPP_Vec2 &ax,::zpp_nape::geom::ZPP_Vec2 &w11,::zpp_nape::geom::ZPP_Vec2 &w21,Float &min){
 														HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",541);
 														{
 															HX_STACK_LINE(541)
@@ -7062,21 +6278,8 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																		HX_STACK_LINE(541)
 																		ny = (circle->worldCOMy - v0->y);
 																	}
-																	struct _Function_11_1{
-																		inline static Float Block( Float &nx,Float &ny){
-																			HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",541);
-																			{
-																				HX_STACK_LINE(541)
-																				{
-																				}
-																				HX_STACK_LINE(541)
-																				return ::Math_obj::sqrt(((nx * nx) + (ny * ny)));
-																			}
-																			return null();
-																		}
-																	};
 																	HX_STACK_LINE(541)
-																	Float len = _Function_11_1::Block(nx,ny);		HX_STACK_VAR(len,"len");
+																	Float len = ::Math_obj::sqrt(((nx * nx) + (ny * ny)));		HX_STACK_VAR(len,"len");
 																	HX_STACK_LINE(541)
 																	best = (len - circle->radius);
 																	HX_STACK_LINE(541)
@@ -7090,16 +6293,10 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																			HX_STACK_LINE(541)
 																			{
 																			}
-																			HX_STACK_LINE(541)
-																			{
-																			}
 																		}
 																		else{
 																			HX_STACK_LINE(541)
 																			Float t = (Float(1.0) / Float(len));		HX_STACK_VAR(t,"t");
-																			HX_STACK_LINE(541)
-																			{
-																			}
 																			HX_STACK_LINE(541)
 																			hx::MultEq(nx,t);
 																			HX_STACK_LINE(541)
@@ -7110,9 +6307,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																			HX_STACK_LINE(541)
 																			int t = (int)0;		HX_STACK_VAR(t,"t");
 																			HX_STACK_LINE(541)
-																			{
-																			}
-																			HX_STACK_LINE(541)
 																			w11->x = (v0->x + (nx * t));
 																			HX_STACK_LINE(541)
 																			w11->y = (v0->y + (ny * t));
@@ -7121,9 +6315,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																		{
 																			HX_STACK_LINE(541)
 																			Float t = -(circle->radius);		HX_STACK_VAR(t,"t");
-																			HX_STACK_LINE(541)
-																			{
-																			}
 																			HX_STACK_LINE(541)
 																			w21->x = (circle->worldCOMx + (nx * t));
 																			HX_STACK_LINE(541)
@@ -7135,9 +6326,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																			ax->x = nx;
 																			HX_STACK_LINE(541)
 																			ax->y = ny;
-																			HX_STACK_LINE(541)
-																			{
-																			}
 																			HX_STACK_LINE(541)
 																			{
 																			}
@@ -7158,21 +6346,8 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																			HX_STACK_LINE(541)
 																			ny = (circle->worldCOMy - v1->y);
 																		}
-																		struct _Function_12_1{
-																			inline static Float Block( Float &nx,Float &ny){
-																				HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",541);
-																				{
-																					HX_STACK_LINE(541)
-																					{
-																					}
-																					HX_STACK_LINE(541)
-																					return ::Math_obj::sqrt(((nx * nx) + (ny * ny)));
-																				}
-																				return null();
-																			}
-																		};
 																		HX_STACK_LINE(541)
-																		Float len = _Function_12_1::Block(nx,ny);		HX_STACK_VAR(len,"len");
+																		Float len = ::Math_obj::sqrt(((nx * nx) + (ny * ny)));		HX_STACK_VAR(len,"len");
 																		HX_STACK_LINE(541)
 																		best = (len - circle->radius);
 																		HX_STACK_LINE(541)
@@ -7186,16 +6361,10 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																				HX_STACK_LINE(541)
 																				{
 																				}
-																				HX_STACK_LINE(541)
-																				{
-																				}
 																			}
 																			else{
 																				HX_STACK_LINE(541)
 																				Float t = (Float(1.0) / Float(len));		HX_STACK_VAR(t,"t");
-																				HX_STACK_LINE(541)
-																				{
-																				}
 																				HX_STACK_LINE(541)
 																				hx::MultEq(nx,t);
 																				HX_STACK_LINE(541)
@@ -7206,9 +6375,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																				HX_STACK_LINE(541)
 																				int t = (int)0;		HX_STACK_VAR(t,"t");
 																				HX_STACK_LINE(541)
-																				{
-																				}
-																				HX_STACK_LINE(541)
 																				w11->x = (v1->x + (nx * t));
 																				HX_STACK_LINE(541)
 																				w11->y = (v1->y + (ny * t));
@@ -7217,9 +6383,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																			{
 																				HX_STACK_LINE(541)
 																				Float t = -(circle->radius);		HX_STACK_VAR(t,"t");
-																				HX_STACK_LINE(541)
-																				{
-																				}
 																				HX_STACK_LINE(541)
 																				w21->x = (circle->worldCOMx + (nx * t));
 																				HX_STACK_LINE(541)
@@ -7234,9 +6397,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																				HX_STACK_LINE(541)
 																				{
 																				}
-																				HX_STACK_LINE(541)
-																				{
-																				}
 																			}
 																		}
 																	}
@@ -7246,9 +6406,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																			HX_STACK_LINE(541)
 																			Float t = -(circle->radius);		HX_STACK_VAR(t,"t");
 																			HX_STACK_LINE(541)
-																			{
-																			}
-																			HX_STACK_LINE(541)
 																			w21->x = (circle->worldCOMx + (a0->gnormx * t));
 																			HX_STACK_LINE(541)
 																			w21->y = (circle->worldCOMy + (a0->gnormy * t));
@@ -7257,9 +6414,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																		{
 																			HX_STACK_LINE(541)
 																			Float t = -(best);		HX_STACK_VAR(t,"t");
-																			HX_STACK_LINE(541)
-																			{
-																			}
 																			HX_STACK_LINE(541)
 																			w11->x = (w21->x + (a0->gnormx * t));
 																			HX_STACK_LINE(541)
@@ -7271,9 +6425,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																			ax->x = a0->gnormx;
 																			HX_STACK_LINE(541)
 																			ax->y = a0->gnormy;
-																			HX_STACK_LINE(541)
-																			{
-																			}
 																			HX_STACK_LINE(541)
 																			{
 																			}
@@ -7295,7 +6446,7 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 													}
 												};
 												struct _Function_8_2{
-													inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Shape &s11,::zpp_nape::geom::ZPP_Vec2 &w21,::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::geom::ZPP_Vec2 &ax,Float &min,::zpp_nape::geom::ZPP_Vec2 &w11){
+													inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s21,::zpp_nape::shape::ZPP_Shape &s11,bool &swapped,::zpp_nape::geom::ZPP_Vec2 &ax,::zpp_nape::geom::ZPP_Vec2 &w11,::zpp_nape::geom::ZPP_Vec2 &w21,Float &min){
 														HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",541);
 														{
 															HX_STACK_LINE(541)
@@ -7382,7 +6533,7 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																}
 															}
 															struct _Function_9_1{
-																inline static Float Block( bool &swapped,::zpp_nape::geom::ZPP_Vec2 &w21,::zpp_nape::shape::ZPP_Edge &a2,Float &best,::zpp_nape::geom::ZPP_Vec2 &ax,::zpp_nape::shape::ZPP_Edge &a1,::zpp_nape::shape::ZPP_Polygon &p2,int &besti,Float &min,::zpp_nape::shape::ZPP_Polygon &p1,::zpp_nape::geom::ZPP_Vec2 &w11){
+																inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Polygon &p1,::zpp_nape::geom::ZPP_Vec2 &ax,Float &best,::zpp_nape::shape::ZPP_Edge &a1,::zpp_nape::geom::ZPP_Vec2 &w11,::zpp_nape::geom::ZPP_Vec2 &w21,::zpp_nape::shape::ZPP_Polygon &p2,int &besti,Float &min,::zpp_nape::shape::ZPP_Edge &a2){
 																	HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",541);
 																	{
 																		HX_STACK_LINE(541)
@@ -7457,7 +6608,7 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																			}
 																		}
 																		struct _Function_10_1{
-																			inline static Float Block( bool &swapped,::zpp_nape::geom::ZPP_Vec2 &w21,::zpp_nape::shape::ZPP_Edge &a2,::zpp_nape::geom::ZPP_Vec2 &ax,Float &best,::zpp_nape::shape::ZPP_Edge &a1,::zpp_nape::shape::ZPP_Polygon &p2,int &besti,::zpp_nape::geom::ZPP_Vec2 &w11,::zpp_nape::shape::ZPP_Polygon &p1){
+																			inline static Float Block( bool &swapped,::zpp_nape::shape::ZPP_Polygon &p1,::zpp_nape::geom::ZPP_Vec2 &ax,Float &best,::zpp_nape::shape::ZPP_Edge &a1,::zpp_nape::geom::ZPP_Vec2 &w11,::zpp_nape::geom::ZPP_Vec2 &w21,int &besti,::zpp_nape::shape::ZPP_Polygon &p2,::zpp_nape::shape::ZPP_Edge &a2){
 																				HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",541);
 																				{
 																					HX_STACK_LINE(541)
@@ -7527,9 +6678,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																						HX_STACK_LINE(541)
 																						{
 																						}
-																						HX_STACK_LINE(541)
-																						{
-																						}
 																					}
 																					else{
 																						HX_STACK_LINE(541)
@@ -7539,12 +6687,9 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																						HX_STACK_LINE(541)
 																						{
 																						}
-																						HX_STACK_LINE(541)
-																						{
-																						}
 																					}
 																					struct _Function_11_1{
-																						inline static Float Block( bool &swapped,::zpp_nape::geom::ZPP_Vec2 &w21,::zpp_nape::shape::ZPP_Edge &ay,Float &best,::zpp_nape::geom::ZPP_Vec2 &ax,::zpp_nape::shape::ZPP_Edge &ax1,::zpp_nape::geom::ZPP_Vec2 &w11){
+																						inline static Float Block( bool &swapped,::zpp_nape::geom::ZPP_Vec2 &ax,Float &best,::zpp_nape::geom::ZPP_Vec2 &w11,::zpp_nape::geom::ZPP_Vec2 &w21,::zpp_nape::shape::ZPP_Edge &ax1,::zpp_nape::shape::ZPP_Edge &ay){
 																							HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",541);
 																							{
 																								HX_STACK_LINE(541)
@@ -7646,9 +6791,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																									HX_STACK_LINE(541)
 																									Float t = t11;		HX_STACK_VAR(t,"t");
 																									HX_STACK_LINE(541)
-																									{
-																									}
-																									HX_STACK_LINE(541)
 																									f1x = (v0->x + (vx * t));
 																									HX_STACK_LINE(541)
 																									f1y = (v0->y + (vy * t));
@@ -7661,9 +6803,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																								{
 																									HX_STACK_LINE(541)
 																									Float t = t21;		HX_STACK_VAR(t,"t");
-																									HX_STACK_LINE(541)
-																									{
-																									}
 																									HX_STACK_LINE(541)
 																									f2x = (v0->x + (vx * t));
 																									HX_STACK_LINE(541)
@@ -7678,9 +6817,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																									HX_STACK_LINE(541)
 																									Float t = s12;		HX_STACK_VAR(t,"t");
 																									HX_STACK_LINE(541)
-																									{
-																									}
-																									HX_STACK_LINE(541)
 																									g1x = (q0->x + (qx * t));
 																									HX_STACK_LINE(541)
 																									g1y = (q0->y + (qy * t));
@@ -7694,15 +6830,12 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																									HX_STACK_LINE(541)
 																									Float t = s22;		HX_STACK_VAR(t,"t");
 																									HX_STACK_LINE(541)
-																									{
-																									}
-																									HX_STACK_LINE(541)
 																									g2x = (q0->x + (qx * t));
 																									HX_STACK_LINE(541)
 																									g2y = (q0->y + (qy * t));
 																								}
 																								struct _Function_12_1{
-																									inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &q0,Float &f1y,Float &f1x){
+																									inline static Float Block( Float &f1y,::zpp_nape::geom::ZPP_Vec2 &q0,Float &f1x){
 																										HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",541);
 																										{
 																											HX_STACK_LINE(541)
@@ -7723,9 +6856,9 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																									}
 																								};
 																								HX_STACK_LINE(541)
-																								Float d1 = _Function_12_1::Block(q0,f1y,f1x);		HX_STACK_VAR(d1,"d1");
+																								Float d1 = _Function_12_1::Block(f1y,q0,f1x);		HX_STACK_VAR(d1,"d1");
 																								struct _Function_12_2{
-																									inline static Float Block( Float &f2x,::zpp_nape::geom::ZPP_Vec2 &q11,Float &f2y){
+																									inline static Float Block( Float &f2y,Float &f2x,::zpp_nape::geom::ZPP_Vec2 &q11){
 																										HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",541);
 																										{
 																											HX_STACK_LINE(541)
@@ -7746,9 +6879,9 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																									}
 																								};
 																								HX_STACK_LINE(541)
-																								Float d2 = _Function_12_2::Block(f2x,q11,f2y);		HX_STACK_VAR(d2,"d2");
+																								Float d2 = _Function_12_2::Block(f2y,f2x,q11);		HX_STACK_VAR(d2,"d2");
 																								struct _Function_12_3{
-																									inline static Float Block( Float &g1x,::zpp_nape::geom::ZPP_Vec2 &v0,Float &g1y){
+																									inline static Float Block( Float &g1x,Float &g1y,::zpp_nape::geom::ZPP_Vec2 &v0){
 																										HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",541);
 																										{
 																											HX_STACK_LINE(541)
@@ -7769,9 +6902,9 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																									}
 																								};
 																								HX_STACK_LINE(541)
-																								Float e1 = _Function_12_3::Block(g1x,v0,g1y);		HX_STACK_VAR(e1,"e1");
+																								Float e1 = _Function_12_3::Block(g1x,g1y,v0);		HX_STACK_VAR(e1,"e1");
 																								struct _Function_12_4{
-																									inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &v1,Float &g2y,Float &g2x){
+																									inline static Float Block( Float &g2y,Float &g2x,::zpp_nape::geom::ZPP_Vec2 &v1){
 																										HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",541);
 																										{
 																											HX_STACK_LINE(541)
@@ -7792,7 +6925,7 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																									}
 																								};
 																								HX_STACK_LINE(541)
-																								Float e2 = _Function_12_4::Block(v1,g2y,g2x);		HX_STACK_VAR(e2,"e2");
+																								Float e2 = _Function_12_4::Block(g2y,g2x,v1);		HX_STACK_VAR(e2,"e2");
 																								HX_STACK_LINE(541)
 																								Float minfx = 0.0;		HX_STACK_VAR(minfx,"minfx");
 																								HX_STACK_LINE(541)
@@ -7810,9 +6943,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																										HX_STACK_LINE(541)
 																										{
 																										}
-																										HX_STACK_LINE(541)
-																										{
-																										}
 																									}
 																									HX_STACK_LINE(541)
 																									minq = q0;
@@ -7824,9 +6954,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																										minfx = f2x;
 																										HX_STACK_LINE(541)
 																										minfy = f2y;
-																										HX_STACK_LINE(541)
-																										{
-																										}
 																										HX_STACK_LINE(541)
 																										{
 																										}
@@ -7853,9 +6980,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																										HX_STACK_LINE(541)
 																										{
 																										}
-																										HX_STACK_LINE(541)
-																										{
-																										}
 																									}
 																									HX_STACK_LINE(541)
 																									minv = v0;
@@ -7867,9 +6991,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																										mingx = g2x;
 																										HX_STACK_LINE(541)
 																										mingy = g2y;
-																										HX_STACK_LINE(541)
-																										{
-																										}
 																										HX_STACK_LINE(541)
 																										{
 																										}
@@ -7890,9 +7011,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																										HX_STACK_LINE(541)
 																										{
 																										}
-																										HX_STACK_LINE(541)
-																										{
-																										}
 																									}
 																									HX_STACK_LINE(541)
 																									{
@@ -7900,9 +7018,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																										w21->x = minq->x;
 																										HX_STACK_LINE(541)
 																										w21->y = minq->y;
-																										HX_STACK_LINE(541)
-																										{
-																										}
 																										HX_STACK_LINE(541)
 																										{
 																										}
@@ -7920,9 +7035,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																										HX_STACK_LINE(541)
 																										{
 																										}
-																										HX_STACK_LINE(541)
-																										{
-																										}
 																									}
 																									HX_STACK_LINE(541)
 																									{
@@ -7930,9 +7042,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																										w11->x = minv->x;
 																										HX_STACK_LINE(541)
 																										w11->y = minv->y;
-																										HX_STACK_LINE(541)
-																										{
-																										}
 																										HX_STACK_LINE(541)
 																										{
 																										}
@@ -7954,9 +7063,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																										HX_STACK_LINE(541)
 																										Float t = (Float(1.0) / Float(best));		HX_STACK_VAR(t,"t");
 																										HX_STACK_LINE(541)
-																										{
-																										}
-																										HX_STACK_LINE(541)
 																										hx::MultEq(ax->x,t);
 																										HX_STACK_LINE(541)
 																										hx::MultEq(ax->y,t);
@@ -7976,7 +7082,7 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																						}
 																					};
 																					struct _Function_11_2{
-																						inline static Float Block( ::zpp_nape::shape::ZPP_Edge &ay,::zpp_nape::shape::ZPP_Edge &ax1,::zpp_nape::geom::ZPP_Vec2 &w21,::zpp_nape::geom::ZPP_Vec2 &w11){
+																						inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &w21,::zpp_nape::geom::ZPP_Vec2 &w11,::zpp_nape::shape::ZPP_Edge &ax1,::zpp_nape::shape::ZPP_Edge &ay){
 																							HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",541);
 																							{
 																								HX_STACK_LINE(541)
@@ -7992,9 +7098,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																									HX_STACK_LINE(541)
 																									{
 																									}
-																									HX_STACK_LINE(541)
-																									{
-																									}
 																								}
 																								HX_STACK_LINE(541)
 																								Float c1x = 0.0;		HX_STACK_VAR(c1x,"c1x");
@@ -8006,9 +7109,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																									c1x = ay->gp1->x;
 																									HX_STACK_LINE(541)
 																									c1y = ay->gp1->y;
-																									HX_STACK_LINE(541)
-																									{
-																									}
 																									HX_STACK_LINE(541)
 																									{
 																									}
@@ -8037,9 +7137,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																									HX_STACK_LINE(541)
 																									Float t3 = t;		HX_STACK_VAR(t3,"t3");
 																									HX_STACK_LINE(541)
-																									{
-																									}
-																									HX_STACK_LINE(541)
 																									hx::AddEq(c0x,(dvx * t3));
 																									HX_STACK_LINE(541)
 																									hx::AddEq(c0y,(dvy * t3));
@@ -8051,9 +7148,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																									HX_STACK_LINE(541)
 																									Float t4 = t3;		HX_STACK_VAR(t4,"t4");
 																									HX_STACK_LINE(541)
-																									{
-																									}
-																									HX_STACK_LINE(541)
 																									hx::AddEq(c1x,(dvx * t4));
 																									HX_STACK_LINE(541)
 																									hx::AddEq(c1y,(dvy * t4));
@@ -8063,7 +7157,7 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																								HX_STACK_LINE(541)
 																								Float c1d = (((c1x * ax1->gnormx) + (c1y * ax1->gnormy)) - ax1->gprojection);		HX_STACK_VAR(c1d,"c1d");
 																								struct _Function_12_1{
-																									inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &w21,::zpp_nape::shape::ZPP_Edge &ax1,Float &c0y,Float &c0d,::zpp_nape::geom::ZPP_Vec2 &w11,Float &c0x){
+																									inline static Float Block( Float &c0y,Float &c0x,Float &c0d,::zpp_nape::geom::ZPP_Vec2 &w21,::zpp_nape::geom::ZPP_Vec2 &w11,::zpp_nape::shape::ZPP_Edge &ax1){
 																										HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",541);
 																										{
 																											HX_STACK_LINE(541)
@@ -8075,17 +7169,11 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																												HX_STACK_LINE(541)
 																												{
 																												}
-																												HX_STACK_LINE(541)
-																												{
-																												}
 																											}
 																											HX_STACK_LINE(541)
 																											{
 																												HX_STACK_LINE(541)
 																												Float t4 = -(c0d);		HX_STACK_VAR(t4,"t4");
-																												HX_STACK_LINE(541)
-																												{
-																												}
 																												HX_STACK_LINE(541)
 																												w11->x = (w21->x + (ax1->gnormx * t4));
 																												HX_STACK_LINE(541)
@@ -8098,7 +7186,7 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																									}
 																								};
 																								struct _Function_12_2{
-																									inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &w21,Float &c1y,Float &c1d,::zpp_nape::shape::ZPP_Edge &ax1,Float &c1x,::zpp_nape::geom::ZPP_Vec2 &w11){
+																									inline static Float Block( Float &c1x,Float &c1d,::zpp_nape::geom::ZPP_Vec2 &w21,::zpp_nape::geom::ZPP_Vec2 &w11,Float &c1y,::zpp_nape::shape::ZPP_Edge &ax1){
 																										HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",541);
 																										{
 																											HX_STACK_LINE(541)
@@ -8110,17 +7198,11 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																												HX_STACK_LINE(541)
 																												{
 																												}
-																												HX_STACK_LINE(541)
-																												{
-																												}
 																											}
 																											HX_STACK_LINE(541)
 																											{
 																												HX_STACK_LINE(541)
 																												Float t4 = -(c1d);		HX_STACK_VAR(t4,"t4");
-																												HX_STACK_LINE(541)
-																												{
-																												}
 																												HX_STACK_LINE(541)
 																												w11->x = (w21->x + (ax1->gnormx * t4));
 																												HX_STACK_LINE(541)
@@ -8133,43 +7215,43 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 																									}
 																								};
 																								HX_STACK_LINE(541)
-																								return (  (((c0d < c1d))) ? Float(_Function_12_1::Block(w21,ax1,c0y,c0d,w11,c0x)) : Float(_Function_12_2::Block(w21,c1y,c1d,ax1,c1x,w11)) );
+																								return (  (((c0d < c1d))) ? Float(_Function_12_1::Block(c0y,c0x,c0d,w21,w11,ax1)) : Float(_Function_12_2::Block(c1x,c1d,w21,w11,c1y,ax1)) );
 																							}
 																							return null();
 																						}
 																					};
 																					HX_STACK_LINE(541)
-																					return (  (((best >= (int)0))) ? Float(_Function_11_1::Block(swapped,w21,ay,best,ax,ax1,w11)) : Float(_Function_11_2::Block(ay,ax1,w21,w11)) );
+																					return (  (((best >= (int)0))) ? Float(_Function_11_1::Block(swapped,ax,best,w11,w21,ax1,ay)) : Float(_Function_11_2::Block(w21,w11,ax1,ay)) );
 																				}
 																				return null();
 																			}
 																		};
 																		HX_STACK_LINE(541)
-																		return (  (((best < min))) ? Float(_Function_10_1::Block(swapped,w21,a2,ax,best,a1,p2,besti,w11,p1)) : Float(min) );
+																		return (  (((best < min))) ? Float(_Function_10_1::Block(swapped,p1,ax,best,a1,w11,w21,besti,p2,a2)) : Float(min) );
 																	}
 																	return null();
 																}
 															};
 															HX_STACK_LINE(541)
-															return (  (((best < min))) ? Float(_Function_9_1::Block(swapped,w21,a2,best,ax,a1,p2,besti,min,p1,w11)) : Float(min) );
+															return (  (((best < min))) ? Float(_Function_9_1::Block(swapped,p1,ax,best,a1,w11,w21,p2,besti,min,a2)) : Float(min) );
 														}
 														return null();
 													}
 												};
 												HX_STACK_LINE(541)
-												return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_POLYGON)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_8_1::Block(swapped,s11,w21,s21,ax,min,w11)) : Float(_Function_8_2::Block(swapped,s11,w21,s21,ax,min,w11)) );
+												return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_POLYGON)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_8_1::Block(s21,s11,swapped,ax,w11,w21,min)) : Float(_Function_8_2::Block(s21,s11,swapped,ax,w11,w21,min)) );
 											}
 											return null();
 										}
 									};
 									HX_STACK_LINE(541)
-									return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_7_1::Block(w21,s21,w11,ax,s11,min)) : Float(_Function_7_2::Block(w21,s21,w11,ax,s11,min)) );
+									return (  (((bool((s11->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE)) && bool((s21->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))))) ? Float(_Function_7_1::Block(s21,s11,ax,w11,w21,min)) : Float(_Function_7_2::Block(s21,s11,ax,w11,w21,min)) );
 								}
 								return null();
 							}
 						};
 						HX_STACK_LINE(541)
-						Float dist = _Function_6_1::Block(s1,t2,ax,s2,t1,min);		HX_STACK_VAR(dist,"dist");
+						Float dist = _Function_6_1::Block(t1,s2,ax,t2,min,s1);		HX_STACK_VAR(dist,"dist");
 						HX_STACK_LINE(542)
 						if (((dist < min))){
 							HX_STACK_LINE(543)
@@ -8180,9 +7262,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 								w1->x = t1->x;
 								HX_STACK_LINE(546)
 								w1->y = t1->y;
-								HX_STACK_LINE(547)
-								{
-								}
 								HX_STACK_LINE(555)
 								{
 								}
@@ -8193,9 +7272,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 								w2->x = t2->x;
 								HX_STACK_LINE(566)
 								w2->y = t2->y;
-								HX_STACK_LINE(567)
-								{
-								}
 								HX_STACK_LINE(575)
 								{
 								}
@@ -8214,9 +7290,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 	{
 		HX_STACK_LINE(594)
 		::zpp_nape::geom::ZPP_Vec2 o = t1;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(595)
-		{
-		}
 		HX_STACK_LINE(603)
 		{
 			HX_STACK_LINE(603)
@@ -8242,9 +7315,6 @@ Float ZPP_SweepDistance_obj::distanceBody( ::zpp_nape::phys::ZPP_Body b1,::zpp_n
 	{
 		HX_STACK_LINE(611)
 		::zpp_nape::geom::ZPP_Vec2 o = t2;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(612)
-		{
-		}
 		HX_STACK_LINE(620)
 		{
 			HX_STACK_LINE(620)
@@ -8304,21 +7374,8 @@ Float upperBound = __o_upperBound.Default(1e100);
 					HX_STACK_LINE(640)
 					ny = (c2->worldCOMy - c1->worldCOMy);
 				}
-				struct _Function_3_1{
-					inline static Float Block( Float &nx,Float &ny){
-						HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",642);
-						{
-							HX_STACK_LINE(642)
-							{
-							}
-							HX_STACK_LINE(642)
-							return ::Math_obj::sqrt(((nx * nx) + (ny * ny)));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(642)
-				Float len = _Function_3_1::Block(nx,ny);		HX_STACK_VAR(len,"len");
+				Float len = ::Math_obj::sqrt(((nx * nx) + (ny * ny)));		HX_STACK_VAR(len,"len");
 				HX_STACK_LINE(643)
 				dist = (len - ((c1->radius + c2->radius)));
 				HX_STACK_LINE(644)
@@ -8329,9 +7386,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 						nx = (int)1;
 						HX_STACK_LINE(647)
 						ny = (int)0;
-						HX_STACK_LINE(648)
-						{
-						}
 						HX_STACK_LINE(656)
 						{
 						}
@@ -8339,9 +7393,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 					else{
 						HX_STACK_LINE(666)
 						Float t = (Float(1.0) / Float(len));		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(667)
-						{
-						}
 						HX_STACK_LINE(675)
 						hx::MultEq(nx,t);
 						HX_STACK_LINE(676)
@@ -8351,9 +7402,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 					{
 						HX_STACK_LINE(679)
 						Float t = c1->radius;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(680)
-						{
-						}
 						HX_STACK_LINE(688)
 						w1->x = (c1->worldCOMx + (nx * t));
 						HX_STACK_LINE(689)
@@ -8363,9 +7411,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 					{
 						HX_STACK_LINE(692)
 						Float t = -(c2->radius);		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(693)
-						{
-						}
 						HX_STACK_LINE(701)
 						w2->x = (c2->worldCOMx + (nx * t));
 						HX_STACK_LINE(702)
@@ -8377,9 +7422,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 						axis->x = nx;
 						HX_STACK_LINE(706)
 						axis->y = ny;
-						HX_STACK_LINE(707)
-						{
-						}
 						HX_STACK_LINE(715)
 						{
 						}
@@ -8483,21 +7525,8 @@ Float upperBound = __o_upperBound.Default(1e100);
 							HX_STACK_LINE(778)
 							ny = (circle->worldCOMy - v0->y);
 						}
-						struct _Function_5_1{
-							inline static Float Block( Float &nx,Float &ny){
-								HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",780);
-								{
-									HX_STACK_LINE(780)
-									{
-									}
-									HX_STACK_LINE(780)
-									return ::Math_obj::sqrt(((nx * nx) + (ny * ny)));
-								}
-								return null();
-							}
-						};
 						HX_STACK_LINE(780)
-						Float len = _Function_5_1::Block(nx,ny);		HX_STACK_VAR(len,"len");
+						Float len = ::Math_obj::sqrt(((nx * nx) + (ny * ny)));		HX_STACK_VAR(len,"len");
 						HX_STACK_LINE(781)
 						best = (len - circle->radius);
 						HX_STACK_LINE(782)
@@ -8508,9 +7537,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 								nx = (int)1;
 								HX_STACK_LINE(785)
 								ny = (int)0;
-								HX_STACK_LINE(786)
-								{
-								}
 								HX_STACK_LINE(794)
 								{
 								}
@@ -8518,9 +7544,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 							else{
 								HX_STACK_LINE(804)
 								Float t = (Float(1.0) / Float(len));		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(805)
-								{
-								}
 								HX_STACK_LINE(813)
 								hx::MultEq(nx,t);
 								HX_STACK_LINE(814)
@@ -8530,9 +7553,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 							{
 								HX_STACK_LINE(817)
 								int t = (int)0;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(818)
-								{
-								}
 								HX_STACK_LINE(826)
 								w1->x = (v0->x + (nx * t));
 								HX_STACK_LINE(827)
@@ -8542,9 +7562,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 							{
 								HX_STACK_LINE(830)
 								Float t = -(circle->radius);		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(831)
-								{
-								}
 								HX_STACK_LINE(839)
 								w2->x = (circle->worldCOMx + (nx * t));
 								HX_STACK_LINE(840)
@@ -8556,9 +7573,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 								axis->x = nx;
 								HX_STACK_LINE(844)
 								axis->y = ny;
-								HX_STACK_LINE(845)
-								{
-								}
 								HX_STACK_LINE(853)
 								{
 								}
@@ -8579,21 +7593,8 @@ Float upperBound = __o_upperBound.Default(1e100);
 								HX_STACK_LINE(871)
 								ny = (circle->worldCOMy - v1->y);
 							}
-							struct _Function_6_1{
-								inline static Float Block( Float &nx,Float &ny){
-									HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",873);
-									{
-										HX_STACK_LINE(873)
-										{
-										}
-										HX_STACK_LINE(873)
-										return ::Math_obj::sqrt(((nx * nx) + (ny * ny)));
-									}
-									return null();
-								}
-							};
 							HX_STACK_LINE(873)
-							Float len = _Function_6_1::Block(nx,ny);		HX_STACK_VAR(len,"len");
+							Float len = ::Math_obj::sqrt(((nx * nx) + (ny * ny)));		HX_STACK_VAR(len,"len");
 							HX_STACK_LINE(874)
 							best = (len - circle->radius);
 							HX_STACK_LINE(875)
@@ -8604,9 +7605,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 									nx = (int)1;
 									HX_STACK_LINE(878)
 									ny = (int)0;
-									HX_STACK_LINE(879)
-									{
-									}
 									HX_STACK_LINE(887)
 									{
 									}
@@ -8614,9 +7612,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 								else{
 									HX_STACK_LINE(897)
 									Float t = (Float(1.0) / Float(len));		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(898)
-									{
-									}
 									HX_STACK_LINE(906)
 									hx::MultEq(nx,t);
 									HX_STACK_LINE(907)
@@ -8626,9 +7621,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 								{
 									HX_STACK_LINE(910)
 									int t = (int)0;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(911)
-									{
-									}
 									HX_STACK_LINE(919)
 									w1->x = (v1->x + (nx * t));
 									HX_STACK_LINE(920)
@@ -8638,9 +7630,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 								{
 									HX_STACK_LINE(923)
 									Float t = -(circle->radius);		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(924)
-									{
-									}
 									HX_STACK_LINE(932)
 									w2->x = (circle->worldCOMx + (nx * t));
 									HX_STACK_LINE(933)
@@ -8652,9 +7641,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 									axis->x = nx;
 									HX_STACK_LINE(937)
 									axis->y = ny;
-									HX_STACK_LINE(938)
-									{
-									}
 									HX_STACK_LINE(946)
 									{
 									}
@@ -8666,9 +7652,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 							{
 								HX_STACK_LINE(960)
 								Float t = -(circle->radius);		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(961)
-								{
-								}
 								HX_STACK_LINE(969)
 								w2->x = (circle->worldCOMx + (a0->gnormx * t));
 								HX_STACK_LINE(970)
@@ -8678,9 +7661,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 							{
 								HX_STACK_LINE(973)
 								Float t = -(best);		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(974)
-								{
-								}
 								HX_STACK_LINE(982)
 								w1->x = (w2->x + (a0->gnormx * t));
 								HX_STACK_LINE(983)
@@ -8692,9 +7672,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 								axis->x = a0->gnormx;
 								HX_STACK_LINE(987)
 								axis->y = a0->gnormy;
-								HX_STACK_LINE(988)
-								{
-								}
 								HX_STACK_LINE(996)
 								{
 								}
@@ -8935,9 +7912,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 							axis->x = -(ax->gnormx);
 							HX_STACK_LINE(1132)
 							axis->y = -(ax->gnormy);
-							HX_STACK_LINE(1133)
-							{
-							}
 							HX_STACK_LINE(1141)
 							{
 							}
@@ -8947,9 +7921,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 							axis->x = ax->gnormx;
 							HX_STACK_LINE(1152)
 							axis->y = ax->gnormy;
-							HX_STACK_LINE(1153)
-							{
-							}
 							HX_STACK_LINE(1161)
 							{
 							}
@@ -9054,9 +8025,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 							{
 								HX_STACK_LINE(1204)
 								Float t = t1;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(1205)
-								{
-								}
 								HX_STACK_LINE(1213)
 								f1x = (v0->x + (vx * t));
 								HX_STACK_LINE(1214)
@@ -9070,9 +8038,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 							{
 								HX_STACK_LINE(1219)
 								Float t = t2;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(1220)
-								{
-								}
 								HX_STACK_LINE(1228)
 								f2x = (v0->x + (vx * t));
 								HX_STACK_LINE(1229)
@@ -9086,9 +8051,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 							{
 								HX_STACK_LINE(1234)
 								Float t = s11;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(1235)
-								{
-								}
 								HX_STACK_LINE(1243)
 								g1x = (q0->x + (qx * t));
 								HX_STACK_LINE(1244)
@@ -9102,16 +8064,13 @@ Float upperBound = __o_upperBound.Default(1e100);
 							{
 								HX_STACK_LINE(1249)
 								Float t = s21;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(1250)
-								{
-								}
 								HX_STACK_LINE(1258)
 								g2x = (q0->x + (qx * t));
 								HX_STACK_LINE(1259)
 								g2y = (q0->y + (qy * t));
 							}
 							struct _Function_6_1{
-								inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &q0,Float &f1y,Float &f1x){
+								inline static Float Block( Float &f1y,::zpp_nape::geom::ZPP_Vec2 &q0,Float &f1x){
 									HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",1261);
 									{
 										HX_STACK_LINE(1261)
@@ -9132,9 +8091,9 @@ Float upperBound = __o_upperBound.Default(1e100);
 								}
 							};
 							HX_STACK_LINE(1261)
-							Float d1 = _Function_6_1::Block(q0,f1y,f1x);		HX_STACK_VAR(d1,"d1");
+							Float d1 = _Function_6_1::Block(f1y,q0,f1x);		HX_STACK_VAR(d1,"d1");
 							struct _Function_6_2{
-								inline static Float Block( Float &f2x,::zpp_nape::geom::ZPP_Vec2 &q11,Float &f2y){
+								inline static Float Block( Float &f2y,Float &f2x,::zpp_nape::geom::ZPP_Vec2 &q11){
 									HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",1262);
 									{
 										HX_STACK_LINE(1262)
@@ -9155,9 +8114,9 @@ Float upperBound = __o_upperBound.Default(1e100);
 								}
 							};
 							HX_STACK_LINE(1262)
-							Float d2 = _Function_6_2::Block(f2x,q11,f2y);		HX_STACK_VAR(d2,"d2");
+							Float d2 = _Function_6_2::Block(f2y,f2x,q11);		HX_STACK_VAR(d2,"d2");
 							struct _Function_6_3{
-								inline static Float Block( Float &g1x,::zpp_nape::geom::ZPP_Vec2 &v0,Float &g1y){
+								inline static Float Block( Float &g1x,Float &g1y,::zpp_nape::geom::ZPP_Vec2 &v0){
 									HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",1263);
 									{
 										HX_STACK_LINE(1263)
@@ -9178,9 +8137,9 @@ Float upperBound = __o_upperBound.Default(1e100);
 								}
 							};
 							HX_STACK_LINE(1263)
-							Float e1 = _Function_6_3::Block(g1x,v0,g1y);		HX_STACK_VAR(e1,"e1");
+							Float e1 = _Function_6_3::Block(g1x,g1y,v0);		HX_STACK_VAR(e1,"e1");
 							struct _Function_6_4{
-								inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &v1,Float &g2y,Float &g2x){
+								inline static Float Block( Float &g2y,Float &g2x,::zpp_nape::geom::ZPP_Vec2 &v1){
 									HX_STACK_PUSH("*::closure","zpp_nape/geom/SweepDistance.hx",1264);
 									{
 										HX_STACK_LINE(1264)
@@ -9201,7 +8160,7 @@ Float upperBound = __o_upperBound.Default(1e100);
 								}
 							};
 							HX_STACK_LINE(1264)
-							Float e2 = _Function_6_4::Block(v1,g2y,g2x);		HX_STACK_VAR(e2,"e2");
+							Float e2 = _Function_6_4::Block(g2y,g2x,v1);		HX_STACK_VAR(e2,"e2");
 							HX_STACK_LINE(1265)
 							Float minfx = 0.0;		HX_STACK_VAR(minfx,"minfx");
 							HX_STACK_LINE(1266)
@@ -9216,9 +8175,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 									minfx = f1x;
 									HX_STACK_LINE(1271)
 									minfy = f1y;
-									HX_STACK_LINE(1272)
-									{
-									}
 									HX_STACK_LINE(1280)
 									{
 									}
@@ -9233,9 +8189,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 									minfx = f2x;
 									HX_STACK_LINE(1294)
 									minfy = f2y;
-									HX_STACK_LINE(1295)
-									{
-									}
 									HX_STACK_LINE(1303)
 									{
 									}
@@ -9259,9 +8212,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 									mingx = g1x;
 									HX_STACK_LINE(1321)
 									mingy = g1y;
-									HX_STACK_LINE(1322)
-									{
-									}
 									HX_STACK_LINE(1330)
 									{
 									}
@@ -9276,9 +8226,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 									mingx = g2x;
 									HX_STACK_LINE(1344)
 									mingy = g2y;
-									HX_STACK_LINE(1345)
-									{
-									}
 									HX_STACK_LINE(1353)
 									{
 									}
@@ -9296,9 +8243,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 									w1->x = minfx;
 									HX_STACK_LINE(1368)
 									w1->y = minfy;
-									HX_STACK_LINE(1369)
-									{
-									}
 									HX_STACK_LINE(1377)
 									{
 									}
@@ -9309,9 +8253,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 									w2->x = minq->x;
 									HX_STACK_LINE(1388)
 									w2->y = minq->y;
-									HX_STACK_LINE(1389)
-									{
-									}
 									HX_STACK_LINE(1397)
 									{
 									}
@@ -9326,9 +8267,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 									w2->x = mingx;
 									HX_STACK_LINE(1411)
 									w2->y = mingy;
-									HX_STACK_LINE(1412)
-									{
-									}
 									HX_STACK_LINE(1420)
 									{
 									}
@@ -9339,9 +8277,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 									w1->x = minv->x;
 									HX_STACK_LINE(1431)
 									w1->y = minv->y;
-									HX_STACK_LINE(1432)
-									{
-									}
 									HX_STACK_LINE(1440)
 									{
 									}
@@ -9362,9 +8297,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 								{
 									HX_STACK_LINE(1457)
 									Float t = (Float(1.0) / Float(best));		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(1458)
-									{
-									}
 									HX_STACK_LINE(1466)
 									hx::MultEq(axis->x,t);
 									HX_STACK_LINE(1467)
@@ -9392,9 +8324,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 								c0x = ay->gp0->x;
 								HX_STACK_LINE(1481)
 								c0y = ay->gp0->y;
-								HX_STACK_LINE(1482)
-								{
-								}
 								HX_STACK_LINE(1490)
 								{
 								}
@@ -9409,9 +8338,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 								c1x = ay->gp1->x;
 								HX_STACK_LINE(1503)
 								c1y = ay->gp1->y;
-								HX_STACK_LINE(1504)
-								{
-								}
 								HX_STACK_LINE(1512)
 								{
 								}
@@ -9439,9 +8365,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 							if (((t > ::nape::Config_obj::epsilon))){
 								HX_STACK_LINE(1532)
 								Float t1 = t;		HX_STACK_VAR(t1,"t1");
-								HX_STACK_LINE(1533)
-								{
-								}
 								HX_STACK_LINE(1541)
 								hx::AddEq(c0x,(dvx * t1));
 								HX_STACK_LINE(1542)
@@ -9453,9 +8376,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 							if (((t1 < -(::nape::Config_obj::epsilon)))){
 								HX_STACK_LINE(1546)
 								Float t2 = t1;		HX_STACK_VAR(t2,"t2");
-								HX_STACK_LINE(1547)
-								{
-								}
 								HX_STACK_LINE(1555)
 								hx::AddEq(c1x,(dvx * t2));
 								HX_STACK_LINE(1556)
@@ -9473,9 +8393,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 									w2->x = c0x;
 									HX_STACK_LINE(1563)
 									w2->y = c0y;
-									HX_STACK_LINE(1564)
-									{
-									}
 									HX_STACK_LINE(1572)
 									{
 									}
@@ -9484,9 +8401,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 								{
 									HX_STACK_LINE(1582)
 									Float t2 = -(c0d);		HX_STACK_VAR(t2,"t2");
-									HX_STACK_LINE(1583)
-									{
-									}
 									HX_STACK_LINE(1591)
 									w1->x = (w2->x + (ax->gnormx * t2));
 									HX_STACK_LINE(1592)
@@ -9502,9 +8416,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 									w2->x = c1x;
 									HX_STACK_LINE(1599)
 									w2->y = c1y;
-									HX_STACK_LINE(1600)
-									{
-									}
 									HX_STACK_LINE(1608)
 									{
 									}
@@ -9513,9 +8424,6 @@ Float upperBound = __o_upperBound.Default(1e100);
 								{
 									HX_STACK_LINE(1618)
 									Float t2 = -(c1d);		HX_STACK_VAR(t2,"t2");
-									HX_STACK_LINE(1619)
-									{
-									}
 									HX_STACK_LINE(1627)
 									w1->x = (w2->x + (ax->gnormx * t2));
 									HX_STACK_LINE(1628)
@@ -9608,7 +8516,7 @@ Class ZPP_SweepDistance_obj::__mClass;
 
 void ZPP_SweepDistance_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_SweepDistance"), hx::TCanCast< ZPP_SweepDistance_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_SweepDistance"), hx::TCanCast< ZPP_SweepDistance_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

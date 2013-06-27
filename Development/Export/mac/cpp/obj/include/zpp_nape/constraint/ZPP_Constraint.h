@@ -22,7 +22,7 @@ namespace zpp_nape{
 namespace constraint{
 
 
-class ZPP_Constraint_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Constraint_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Constraint_obj OBJ_;
@@ -45,7 +45,7 @@ class ZPP_Constraint_obj : public hx::Object{
 		virtual Void copyto( ::nape::constraint::Constraint ret);
 		Dynamic copyto_dyn();
 
-		virtual ::nape::constraint::Constraint copy( Array< ::zpp_nape::constraint::ZPP_CopyHelper > dict,Array< ::zpp_nape::constraint::ZPP_CopyHelper > todo);
+		virtual ::nape::constraint::Constraint copy( Array< ::Dynamic > dict,Array< ::Dynamic > todo);
 		Dynamic copy_dyn();
 
 		virtual Void draw( ::nape::util::Debug g);
@@ -63,7 +63,7 @@ class ZPP_Constraint_obj : public hx::Object{
 		virtual bool preStep( Float dt);
 		Dynamic preStep_dyn();
 
-		Float pre_dt; /* REM */ 
+		Float pre_dt;
 		virtual Void warmStart( );
 		Dynamic warmStart_dyn();
 
@@ -130,32 +130,32 @@ class ZPP_Constraint_obj : public hx::Object{
 		virtual Void setupcbTypes( );
 		Dynamic setupcbTypes_dyn();
 
-		::nape::callbacks::CbTypeList wrap_cbTypes; /* REM */ 
-		::zpp_nape::callbacks::ZPP_CbSet cbSet; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_CbType cbTypes; /* REM */ 
+		::nape::callbacks::CbTypeList wrap_cbTypes;
+		::zpp_nape::callbacks::ZPP_CbSet cbSet;
+		::zpp_nape::util::ZNPList_ZPP_CbType cbTypes;
 		virtual Void immutable_midstep( ::String name);
 		Dynamic immutable_midstep_dyn();
 
-		bool __velocity; /* REM */ 
-		bool ignore; /* REM */ 
-		::zpp_nape::space::ZPP_Component component; /* REM */ 
-		bool removeOnBreak; /* REM */ 
-		bool breakUnderError; /* REM */ 
-		bool breakUnderForce; /* REM */ 
-		Float maxError; /* REM */ 
-		Float maxForce; /* REM */ 
-		Float damping; /* REM */ 
-		Float frequency; /* REM */ 
-		bool stiff; /* REM */ 
-		bool active; /* REM */ 
-		::zpp_nape::space::ZPP_Space space; /* REM */ 
-		::zpp_nape::phys::ZPP_Compound compound; /* REM */ 
-		Dynamic userData; /* REM */ 
-		int id; /* REM */ 
+		bool __velocity;
+		bool ignore;
+		::zpp_nape::space::ZPP_Component component;
+		bool removeOnBreak;
+		bool breakUnderError;
+		bool breakUnderForce;
+		Float maxError;
+		Float maxForce;
+		Float damping;
+		Float frequency;
+		bool stiff;
+		bool active;
+		::zpp_nape::space::ZPP_Space space;
+		::zpp_nape::phys::ZPP_Compound compound;
+		Dynamic userData;
+		int id;
 		virtual Void clear( );
 		Dynamic clear_dyn();
 
-		::nape::constraint::Constraint outer; /* REM */ 
+		::nape::constraint::Constraint outer;
 };
 
 } // end namespace zpp_nape

@@ -54,9 +54,6 @@ Void ZPP_AABBPair_obj::free( ){
 {
 		HX_STACK_PUSH("ZPP_AABBPair::free","zpp_nape/space/DynAABBPhase.hx",321);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(322)
-		{
-		}
 		HX_STACK_LINE(330)
 		this->n1 = this->n2 = null();
 		HX_STACK_LINE(331)
@@ -208,7 +205,7 @@ Class ZPP_AABBPair_obj::__mClass;
 
 void ZPP_AABBPair_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_AABBPair"), hx::TCanCast< ZPP_AABBPair_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_AABBPair"), hx::TCanCast< ZPP_AABBPair_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

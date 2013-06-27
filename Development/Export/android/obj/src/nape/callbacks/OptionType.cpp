@@ -161,16 +161,12 @@ OptionType_obj::OptionType_obj()
 void OptionType_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(OptionType);
-	HX_MARK_MEMBER_NAME(excludes,"excludes");
-	HX_MARK_MEMBER_NAME(includes,"includes");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	HX_MARK_END_CLASS();
 }
 
 void OptionType_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(excludes,"excludes");
-	HX_VISIT_MEMBER_NAME(includes,"includes");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 }
 
@@ -179,8 +175,8 @@ Dynamic OptionType_obj::__Field(const ::String &inName,bool inCallProp)
 	switch(inName.length) {
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
-		if (HX_FIELD_EQ(inName,"excludes") ) { return inCallProp ? get_excludes() : excludes; }
-		if (HX_FIELD_EQ(inName,"includes") ) { return inCallProp ? get_includes() : includes; }
+		if (HX_FIELD_EQ(inName,"excludes") ) { return get_excludes(); }
+		if (HX_FIELD_EQ(inName,"includes") ) { return get_includes(); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"excluding") ) { return excluding_dyn(); }
@@ -197,10 +193,6 @@ Dynamic OptionType_obj::__Field(const ::String &inName,bool inCallProp)
 Dynamic OptionType_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
 	switch(inName.length) {
-	case 8:
-		if (HX_FIELD_EQ(inName,"excludes") ) { excludes=inValue.Cast< ::nape::callbacks::CbTypeList >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"includes") ) { includes=inValue.Cast< ::nape::callbacks::CbTypeList >(); return inValue; }
-		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::callbacks::ZPP_OptionType >(); return inValue; }
 	}
@@ -223,9 +215,7 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("excluding"),
 	HX_CSTRING("including"),
 	HX_CSTRING("get_excludes"),
-	HX_CSTRING("excludes"),
 	HX_CSTRING("get_includes"),
-	HX_CSTRING("includes"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
@@ -241,7 +231,7 @@ Class OptionType_obj::__mClass;
 
 void OptionType_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.OptionType"), hx::TCanCast< OptionType_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.OptionType"), hx::TCanCast< OptionType_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

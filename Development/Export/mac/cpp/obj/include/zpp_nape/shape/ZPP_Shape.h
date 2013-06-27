@@ -25,7 +25,7 @@ namespace zpp_nape{
 namespace shape{
 
 
-class ZPP_Shape_obj : public ::zpp_nape::phys::ZPP_Interactor_obj{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Shape_obj : public ::zpp_nape::phys::ZPP_Interactor_obj{
 	public:
 		typedef ::zpp_nape::phys::ZPP_Interactor_obj super;
 		typedef ZPP_Shape_obj OBJ_;
@@ -120,53 +120,53 @@ class ZPP_Shape_obj : public ::zpp_nape::phys::ZPP_Interactor_obj{
 		virtual Void validate_aabb( );
 		Dynamic validate_aabb_dyn();
 
-		bool zip_aabb; /* REM */ 
-		::zpp_nape::geom::ZPP_AABB aabb; /* REM */ 
+		bool zip_aabb;
+		::zpp_nape::geom::ZPP_AABB aabb;
 		virtual Void clear( );
 		Dynamic clear_dyn();
 
-		::zpp_nape::util::ZNPList_ZPP_AABBPair pairs; /* REM */ 
-		::zpp_nape::space::ZPP_AABBNode node; /* REM */ 
-		::zpp_nape::space::ZPP_SweepData sweep; /* REM */ 
-		bool sensorEnabled; /* REM */ 
-		bool fluidEnabled; /* REM */ 
-		::zpp_nape::phys::ZPP_FluidProperties fluidProperties; /* REM */ 
-		::zpp_nape::dynamics::ZPP_InteractionFilter filter; /* REM */ 
-		::zpp_nape::phys::ZPP_Material material; /* REM */ 
-		::zpp_nape::phys::ZPP_Material refmaterial; /* REM */ 
-		::zpp_nape::shape::ZPP_Polygon polygon; /* REM */ 
-		::zpp_nape::shape::ZPP_Circle circle; /* REM */ 
+		::zpp_nape::util::ZNPList_ZPP_AABBPair pairs;
+		::zpp_nape::space::ZPP_AABBNode node;
+		::zpp_nape::space::ZPP_SweepData sweep;
+		bool sensorEnabled;
+		bool fluidEnabled;
+		::zpp_nape::phys::ZPP_FluidProperties fluidProperties;
+		::zpp_nape::dynamics::ZPP_InteractionFilter filter;
+		::zpp_nape::phys::ZPP_Material material;
+		::zpp_nape::phys::ZPP_Material refmaterial;
+		::zpp_nape::shape::ZPP_Polygon polygon;
+		::zpp_nape::shape::ZPP_Circle circle;
 		virtual Void validate_sweepRadius( );
 		Dynamic validate_sweepRadius_dyn();
 
 		virtual Void invalidate_sweepRadius( );
 		Dynamic invalidate_sweepRadius_dyn();
 
-		Float sweepCoef; /* REM */ 
-		bool zip_sweepRadius; /* REM */ 
-		Float sweepRadius; /* REM */ 
-		::nape::geom::Vec2 wrap_worldCOM; /* REM */ 
-		::nape::geom::Vec2 wrap_localCOM; /* REM */ 
-		bool zip_worldCOM; /* REM */ 
-		Float worldCOMy; /* REM */ 
-		Float worldCOMx; /* REM */ 
-		bool zip_localCOM; /* REM */ 
-		Float localCOMy; /* REM */ 
-		Float localCOMx; /* REM */ 
-		bool zip_angDrag; /* REM */ 
-		Float angDrag; /* REM */ 
-		Float inertia; /* REM */ 
-		bool zip_area_inertia; /* REM */ 
-		Float area; /* REM */ 
+		Float sweepCoef;
+		bool zip_sweepRadius;
+		Float sweepRadius;
+		::nape::geom::Vec2 wrap_worldCOM;
+		::nape::geom::Vec2 wrap_localCOM;
+		bool zip_worldCOM;
+		Float worldCOMy;
+		Float worldCOMx;
+		bool zip_localCOM;
+		Float localCOMy;
+		Float localCOMx;
+		bool zip_angDrag;
+		Float angDrag;
+		Float inertia;
+		bool zip_area_inertia;
+		Float area;
 		virtual bool isPolygon( );
 		Dynamic isPolygon_dyn();
 
 		virtual bool isCircle( );
 		Dynamic isCircle_dyn();
 
-		int type; /* REM */ 
-		::zpp_nape::phys::ZPP_Body body; /* REM */ 
-		::nape::shape::Shape outer; /* REM */ 
+		int type;
+		::zpp_nape::phys::ZPP_Body body;
+		::nape::shape::Shape outer;
 };
 
 } // end namespace zpp_nape

@@ -69,7 +69,7 @@ Float z = __o_z.Default(0);
 						HX_STACK_LINE(365)
 						::zpp_nape::geom::ZPP_Vec3 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(365)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(365)
 							_this->_validate();
 						}
@@ -107,7 +107,7 @@ Float z = __o_z.Default(0);
 						HX_STACK_LINE(366)
 						::zpp_nape::geom::ZPP_Vec3 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(366)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(366)
 							_this->_validate();
 						}
@@ -115,9 +115,6 @@ Float z = __o_z.Default(0);
 					HX_STACK_LINE(366)
 					this->zpp_inner->y;
 				}
-			}
-			HX_STACK_LINE(367)
-			{
 			}
 			HX_STACK_LINE(375)
 			{
@@ -152,7 +149,7 @@ Float z = __o_z.Default(0);
 					HX_STACK_LINE(384)
 					::zpp_nape::geom::ZPP_Vec3 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(384)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(384)
 						_this->_validate();
 					}
@@ -202,7 +199,7 @@ Dynamic Vec3_obj::__Create(hx::DynamicArray inArgs)
 					HX_STACK_LINE(614)
 					::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(614)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(614)
 						_this->_validate();
 					}
@@ -227,7 +224,7 @@ Dynamic Vec3_obj::__Create(hx::DynamicArray inArgs)
 					HX_STACK_LINE(614)
 					::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(614)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(614)
 						_this->_validate();
 					}
@@ -252,7 +249,7 @@ Dynamic Vec3_obj::__Create(hx::DynamicArray inArgs)
 					HX_STACK_LINE(614)
 					::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(614)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(614)
 						_this->_validate();
 					}
@@ -299,7 +296,7 @@ bool weak = __o_weak.Default(false);
 									HX_STACK_LINE(603)
 									::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(603)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(603)
 										_this->_validate();
 									}
@@ -324,7 +321,7 @@ bool weak = __o_weak.Default(false);
 									HX_STACK_LINE(603)
 									::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(603)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(603)
 										_this->_validate();
 									}
@@ -404,9 +401,6 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(603)
 										{
 										}
-										HX_STACK_LINE(603)
-										{
-										}
 									}
 									HX_STACK_LINE(603)
 									return ret1;
@@ -435,7 +429,7 @@ bool weak = __o_weak.Default(false);
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(603)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(603)
 								_this->_isimmutable();
 							}
@@ -459,7 +453,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(603)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(603)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(603)
 											_this->_validate();
 										}
@@ -484,7 +478,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(603)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(603)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(603)
 											_this->_validate();
 										}
@@ -506,16 +500,13 @@ bool weak = __o_weak.Default(false);
 								HX_STACK_LINE(603)
 								{
 								}
-								HX_STACK_LINE(603)
-								{
-								}
 							}
 							HX_STACK_LINE(603)
 							{
 								HX_STACK_LINE(603)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(603)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(603)
 									_this->_invalidate(_this);
 								}
@@ -584,7 +575,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Vec3_obj,xy,return )
 						HX_STACK_LINE(560)
 						::zpp_nape::geom::ZPP_Vec3 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(560)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(560)
 							_this->_validate();
 						}
@@ -622,7 +613,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Vec3_obj,xy,return )
 						HX_STACK_LINE(561)
 						::zpp_nape::geom::ZPP_Vec3 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(561)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(561)
 							_this->_validate();
 						}
@@ -630,9 +621,6 @@ HX_DEFINE_DYNAMIC_FUNC1(Vec3_obj,xy,return )
 					HX_STACK_LINE(561)
 					this->zpp_inner->y;
 				}
-			}
-			HX_STACK_LINE(562)
-			{
 			}
 			HX_STACK_LINE(570)
 			{
@@ -667,7 +655,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Vec3_obj,xy,return )
 					HX_STACK_LINE(579)
 					::zpp_nape::geom::ZPP_Vec3 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(579)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(579)
 						_this->_validate();
 					}
@@ -717,7 +705,7 @@ HX_DEFINE_DYNAMIC_FUNC3(Vec3_obj,setxyz,return )
 					HX_STACK_LINE(540)
 					::zpp_nape::geom::ZPP_Vec3 _this = vector->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(540)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(540)
 						_this->_validate();
 					}
@@ -742,7 +730,7 @@ HX_DEFINE_DYNAMIC_FUNC3(Vec3_obj,setxyz,return )
 					HX_STACK_LINE(540)
 					::zpp_nape::geom::ZPP_Vec3 _this = vector->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(540)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(540)
 						_this->_validate();
 					}
@@ -767,7 +755,7 @@ HX_DEFINE_DYNAMIC_FUNC3(Vec3_obj,setxyz,return )
 					HX_STACK_LINE(540)
 					::zpp_nape::geom::ZPP_Vec3 _this = vector->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(540)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(540)
 						_this->_validate();
 					}
@@ -807,7 +795,7 @@ Float Vec3_obj::lsq( ){
 					HX_STACK_LINE(513)
 					::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(513)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(513)
 						_this->_validate();
 					}
@@ -832,7 +820,7 @@ Float Vec3_obj::lsq( ){
 					HX_STACK_LINE(513)
 					::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(513)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(513)
 						_this->_validate();
 					}
@@ -857,7 +845,7 @@ Float Vec3_obj::lsq( ){
 					HX_STACK_LINE(513)
 					::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(513)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(513)
 						_this->_validate();
 					}
@@ -882,7 +870,7 @@ Float Vec3_obj::lsq( ){
 					HX_STACK_LINE(513)
 					::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(513)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(513)
 						_this->_validate();
 					}
@@ -907,7 +895,7 @@ Float Vec3_obj::lsq( ){
 					HX_STACK_LINE(513)
 					::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(513)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(513)
 						_this->_validate();
 					}
@@ -932,7 +920,7 @@ Float Vec3_obj::lsq( ){
 					HX_STACK_LINE(513)
 					::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(513)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(513)
 						_this->_validate();
 					}
@@ -980,7 +968,7 @@ Float Vec3_obj::set_length( Float length){
 						HX_STACK_LINE(476)
 						::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(476)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(476)
 							_this->_validate();
 						}
@@ -1005,7 +993,7 @@ Float Vec3_obj::set_length( Float length){
 						HX_STACK_LINE(476)
 						::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(476)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(476)
 							_this->_validate();
 						}
@@ -1030,7 +1018,7 @@ Float Vec3_obj::set_length( Float length){
 						HX_STACK_LINE(476)
 						::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(476)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(476)
 							_this->_validate();
 						}
@@ -1055,7 +1043,7 @@ Float Vec3_obj::set_length( Float length){
 						HX_STACK_LINE(476)
 						::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(476)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(476)
 							_this->_validate();
 						}
@@ -1080,7 +1068,7 @@ Float Vec3_obj::set_length( Float length){
 						HX_STACK_LINE(476)
 						::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(476)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(476)
 							_this->_validate();
 						}
@@ -1105,7 +1093,7 @@ Float Vec3_obj::set_length( Float length){
 						HX_STACK_LINE(476)
 						::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(476)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(476)
 							_this->_validate();
 						}
@@ -1146,7 +1134,7 @@ Float Vec3_obj::set_length( Float length){
 										HX_STACK_LINE(481)
 										::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(481)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(481)
 											_this->_validate();
 										}
@@ -1171,7 +1159,7 @@ Float Vec3_obj::set_length( Float length){
 										HX_STACK_LINE(481)
 										::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(481)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(481)
 											_this->_validate();
 										}
@@ -1196,7 +1184,7 @@ Float Vec3_obj::set_length( Float length){
 										HX_STACK_LINE(481)
 										::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(481)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(481)
 											_this->_validate();
 										}
@@ -1221,7 +1209,7 @@ Float Vec3_obj::set_length( Float length){
 										HX_STACK_LINE(481)
 										::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(481)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(481)
 											_this->_validate();
 										}
@@ -1246,7 +1234,7 @@ Float Vec3_obj::set_length( Float length){
 										HX_STACK_LINE(481)
 										::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(481)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(481)
 											_this->_validate();
 										}
@@ -1271,7 +1259,7 @@ Float Vec3_obj::set_length( Float length){
 										HX_STACK_LINE(481)
 										::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(481)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(481)
 											_this->_validate();
 										}
@@ -1294,9 +1282,6 @@ Float Vec3_obj::set_length( Float length){
 			{
 				HX_STACK_LINE(483)
 				Float t1 = t;		HX_STACK_VAR(t1,"t1");
-				HX_STACK_LINE(484)
-				{
-				}
 				HX_STACK_LINE(492)
 				{
 					HX_STACK_LINE(492)
@@ -1329,7 +1314,7 @@ Float Vec3_obj::set_length( Float length){
 											HX_STACK_LINE(492)
 											::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(492)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(492)
 												_this->_validate();
 											}
@@ -1355,7 +1340,7 @@ Float Vec3_obj::set_length( Float length){
 								HX_STACK_LINE(492)
 								::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(492)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(492)
 									_this->_validate();
 								}
@@ -1397,7 +1382,7 @@ Float Vec3_obj::set_length( Float length){
 											HX_STACK_LINE(493)
 											::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(493)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(493)
 												_this->_validate();
 											}
@@ -1423,7 +1408,7 @@ Float Vec3_obj::set_length( Float length){
 								HX_STACK_LINE(493)
 								::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(493)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(493)
 									_this->_validate();
 								}
@@ -1466,7 +1451,7 @@ Float Vec3_obj::set_length( Float length){
 										HX_STACK_LINE(495)
 										::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(495)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(495)
 											_this->_validate();
 										}
@@ -1492,7 +1477,7 @@ Float Vec3_obj::set_length( Float length){
 							HX_STACK_LINE(495)
 							::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(495)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(495)
 								_this->_validate();
 							}
@@ -1527,7 +1512,7 @@ Float Vec3_obj::set_length( Float length){
 								HX_STACK_LINE(498)
 								::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(498)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(498)
 									_this->_validate();
 								}
@@ -1552,7 +1537,7 @@ Float Vec3_obj::set_length( Float length){
 								HX_STACK_LINE(498)
 								::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(498)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(498)
 									_this->_validate();
 								}
@@ -1577,7 +1562,7 @@ Float Vec3_obj::set_length( Float length){
 								HX_STACK_LINE(498)
 								::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(498)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(498)
 									_this->_validate();
 								}
@@ -1602,7 +1587,7 @@ Float Vec3_obj::set_length( Float length){
 								HX_STACK_LINE(498)
 								::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(498)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(498)
 									_this->_validate();
 								}
@@ -1627,7 +1612,7 @@ Float Vec3_obj::set_length( Float length){
 								HX_STACK_LINE(498)
 								::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(498)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(498)
 									_this->_validate();
 								}
@@ -1652,7 +1637,7 @@ Float Vec3_obj::set_length( Float length){
 								HX_STACK_LINE(498)
 								::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(498)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(498)
 									_this->_validate();
 								}
@@ -1698,7 +1683,7 @@ Float Vec3_obj::get_length( ){
 					HX_STACK_LINE(463)
 					::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(463)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(463)
 						_this->_validate();
 					}
@@ -1723,7 +1708,7 @@ Float Vec3_obj::get_length( ){
 					HX_STACK_LINE(463)
 					::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(463)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(463)
 						_this->_validate();
 					}
@@ -1748,7 +1733,7 @@ Float Vec3_obj::get_length( ){
 					HX_STACK_LINE(463)
 					::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(463)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(463)
 						_this->_validate();
 					}
@@ -1773,7 +1758,7 @@ Float Vec3_obj::get_length( ){
 					HX_STACK_LINE(463)
 					::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(463)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(463)
 						_this->_validate();
 					}
@@ -1798,7 +1783,7 @@ Float Vec3_obj::get_length( ){
 					HX_STACK_LINE(463)
 					::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(463)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(463)
 						_this->_validate();
 					}
@@ -1823,7 +1808,7 @@ Float Vec3_obj::get_length( ){
 					HX_STACK_LINE(463)
 					::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(463)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(463)
 						_this->_validate();
 					}
@@ -1859,9 +1844,6 @@ Void Vec3_obj::dispose( ){
 		{
 			HX_STACK_LINE(418)
 			::nape::geom::Vec3 o = hx::ObjectPtr<OBJ_>(this);		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(419)
-			{
-			}
 			HX_STACK_LINE(428)
 			o->zpp_pool = null();
 			HX_STACK_LINE(429)
@@ -1918,7 +1900,7 @@ Float Vec3_obj::set_z( Float z){
 					HX_STACK_LINE(310)
 					::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(310)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(310)
 						_this->_validate();
 					}
@@ -1949,7 +1931,7 @@ Float Vec3_obj::get_z( ){
 		HX_STACK_LINE(293)
 		::zpp_nape::geom::ZPP_Vec3 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 		HX_STACK_LINE(293)
-		if (((_this->_validate_dyn() != null()))){
+		if (((_this->_validate != null()))){
 			HX_STACK_LINE(293)
 			_this->_validate();
 		}
@@ -1994,7 +1976,7 @@ Float Vec3_obj::set_y( Float y){
 					HX_STACK_LINE(279)
 					::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(279)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(279)
 						_this->_validate();
 					}
@@ -2025,7 +2007,7 @@ Float Vec3_obj::get_y( ){
 		HX_STACK_LINE(262)
 		::zpp_nape::geom::ZPP_Vec3 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 		HX_STACK_LINE(262)
-		if (((_this->_validate_dyn() != null()))){
+		if (((_this->_validate != null()))){
 			HX_STACK_LINE(262)
 			_this->_validate();
 		}
@@ -2070,7 +2052,7 @@ Float Vec3_obj::set_x( Float x){
 					HX_STACK_LINE(248)
 					::zpp_nape::geom::ZPP_Vec3 _this = __this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(248)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(248)
 						_this->_validate();
 					}
@@ -2101,7 +2083,7 @@ Float Vec3_obj::get_x( ){
 		HX_STACK_LINE(231)
 		::zpp_nape::geom::ZPP_Vec3 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 		HX_STACK_LINE(231)
-		if (((_this->_validate_dyn() != null()))){
+		if (((_this->_validate != null()))){
 			HX_STACK_LINE(231)
 			_this->_validate();
 		}
@@ -2166,10 +2148,6 @@ Vec3_obj::Vec3_obj()
 void Vec3_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(Vec3);
-	HX_MARK_MEMBER_NAME(length,"length");
-	HX_MARK_MEMBER_NAME(z,"z");
-	HX_MARK_MEMBER_NAME(y,"y");
-	HX_MARK_MEMBER_NAME(x,"x");
 	HX_MARK_MEMBER_NAME(zpp_disp,"zpp_disp");
 	HX_MARK_MEMBER_NAME(zpp_pool,"zpp_pool");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
@@ -2178,10 +2156,6 @@ void Vec3_obj::__Mark(HX_MARK_PARAMS)
 
 void Vec3_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(length,"length");
-	HX_VISIT_MEMBER_NAME(z,"z");
-	HX_VISIT_MEMBER_NAME(y,"y");
-	HX_VISIT_MEMBER_NAME(x,"x");
 	HX_VISIT_MEMBER_NAME(zpp_disp,"zpp_disp");
 	HX_VISIT_MEMBER_NAME(zpp_pool,"zpp_pool");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
@@ -2191,9 +2165,9 @@ Dynamic Vec3_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 1:
-		if (HX_FIELD_EQ(inName,"z") ) { return inCallProp ? get_z() : z; }
-		if (HX_FIELD_EQ(inName,"y") ) { return inCallProp ? get_y() : y; }
-		if (HX_FIELD_EQ(inName,"x") ) { return inCallProp ? get_x() : x; }
+		if (HX_FIELD_EQ(inName,"z") ) { return get_z(); }
+		if (HX_FIELD_EQ(inName,"y") ) { return get_y(); }
+		if (HX_FIELD_EQ(inName,"x") ) { return get_x(); }
 		break;
 	case 2:
 		if (HX_FIELD_EQ(inName,"xy") ) { return xy_dyn(); }
@@ -2213,7 +2187,7 @@ Dynamic Vec3_obj::__Field(const ::String &inName,bool inCallProp)
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"setxyz") ) { return setxyz_dyn(); }
-		if (HX_FIELD_EQ(inName,"length") ) { return inCallProp ? get_length() : length; }
+		if (HX_FIELD_EQ(inName,"length") ) { return get_length(); }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"dispose") ) { return dispose_dyn(); }
@@ -2237,12 +2211,12 @@ Dynamic Vec3_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool 
 {
 	switch(inName.length) {
 	case 1:
-		if (HX_FIELD_EQ(inName,"z") ) { if (inCallProp) return set_z(inValue);z=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"y") ) { if (inCallProp) return set_y(inValue);y=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"x") ) { if (inCallProp) return set_x(inValue);x=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"z") ) { return set_z(inValue); }
+		if (HX_FIELD_EQ(inName,"y") ) { return set_y(inValue); }
+		if (HX_FIELD_EQ(inName,"x") ) { return set_x(inValue); }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"length") ) { if (inCallProp) return set_length(inValue);length=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"length") ) { return set_length(inValue); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"zpp_disp") ) { zpp_disp=inValue.Cast< bool >(); return inValue; }
@@ -2278,17 +2252,13 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("lsq"),
 	HX_CSTRING("set_length"),
 	HX_CSTRING("get_length"),
-	HX_CSTRING("length"),
 	HX_CSTRING("dispose"),
 	HX_CSTRING("set_z"),
 	HX_CSTRING("get_z"),
-	HX_CSTRING("z"),
 	HX_CSTRING("set_y"),
 	HX_CSTRING("get_y"),
-	HX_CSTRING("y"),
 	HX_CSTRING("set_x"),
 	HX_CSTRING("get_x"),
-	HX_CSTRING("x"),
 	HX_CSTRING("zpp_disp"),
 	HX_CSTRING("zpp_pool"),
 	HX_CSTRING("zpp_inner"),
@@ -2306,7 +2276,7 @@ Class Vec3_obj::__mClass;
 
 void Vec3_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.Vec3"), hx::TCanCast< Vec3_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.Vec3"), hx::TCanCast< Vec3_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

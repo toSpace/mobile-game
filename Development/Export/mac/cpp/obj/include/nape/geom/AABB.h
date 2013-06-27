@@ -7,13 +7,12 @@
 
 HX_DECLARE_CLASS2(nape,geom,AABB)
 HX_DECLARE_CLASS2(nape,geom,Vec2)
-HX_DECLARE_CLASS2(native,geom,Rectangle)
 HX_DECLARE_CLASS2(zpp_nape,geom,ZPP_AABB)
 namespace nape{
 namespace geom{
 
 
-class AABB_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  AABB_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef AABB_obj OBJ_;
@@ -42,52 +41,40 @@ class AABB_obj : public hx::Object{
 		virtual Float get_height( );
 		Dynamic get_height_dyn();
 
-		Float height; /* REM */ 
 		virtual Float set_width( Float width);
 		Dynamic set_width_dyn();
 
 		virtual Float get_width( );
 		Dynamic get_width_dyn();
 
-		Float width; /* REM */ 
 		virtual Float set_y( Float y);
 		Dynamic set_y_dyn();
 
 		virtual Float get_y( );
 		Dynamic get_y_dyn();
 
-		Float y; /* REM */ 
 		virtual Float set_x( Float x);
 		Dynamic set_x_dyn();
 
 		virtual Float get_x( );
 		Dynamic get_x_dyn();
 
-		Float x; /* REM */ 
 		virtual ::nape::geom::Vec2 set_max( ::nape::geom::Vec2 max);
 		Dynamic set_max_dyn();
 
 		virtual ::nape::geom::Vec2 get_max( );
 		Dynamic get_max_dyn();
 
-		::nape::geom::Vec2 max; /* REM */ 
 		virtual ::nape::geom::Vec2 set_min( ::nape::geom::Vec2 min);
 		Dynamic set_min_dyn();
 
 		virtual ::nape::geom::Vec2 get_min( );
 		Dynamic get_min_dyn();
 
-		::nape::geom::Vec2 min; /* REM */ 
-		virtual ::native::geom::Rectangle toRect( );
-		Dynamic toRect_dyn();
-
 		virtual ::nape::geom::AABB copy( );
 		Dynamic copy_dyn();
 
-		::zpp_nape::geom::ZPP_AABB zpp_inner; /* REM */ 
-		static ::nape::geom::AABB fromRect( ::native::geom::Rectangle rect);
-		static Dynamic fromRect_dyn();
-
+		::zpp_nape::geom::ZPP_AABB zpp_inner;
 };
 
 } // end namespace nape

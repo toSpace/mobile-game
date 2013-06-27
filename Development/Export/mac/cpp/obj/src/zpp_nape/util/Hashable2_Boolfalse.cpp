@@ -68,7 +68,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Hashable2_Boolfalse_obj,free,(void))
 	HX_STACK_ARG(di,"di");
 	HX_STACK_ARG(val,"val");
 	struct _Function_1_1{
-		inline static ::zpp_nape::util::Hashable2_Boolfalse Block( int &id,int &di){
+		inline static ::zpp_nape::util::Hashable2_Boolfalse Block( int &di,int &id){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/FastHash.hx",215);
 			{
 				HX_STACK_LINE(215)
@@ -102,7 +102,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Hashable2_Boolfalse_obj,free,(void))
 		}
 	};
 	HX_STACK_LINE(215)
-	::zpp_nape::util::Hashable2_Boolfalse ret = _Function_1_1::Block(id,di);		HX_STACK_VAR(ret,"ret");
+	::zpp_nape::util::Hashable2_Boolfalse ret = _Function_1_1::Block(di,id);		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(216)
 	ret->value = val;
 	HX_STACK_LINE(217)
@@ -153,11 +153,11 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(Hashable2_Boolfalse_obj,getpersist,return )
 	HX_STACK_ARG(di,"di");
 	HX_STACK_ARG(val,"val");
 	struct _Function_1_1{
-		inline static ::zpp_nape::util::Hashable2_Boolfalse Block( bool &val,int &id,int &di){
+		inline static ::zpp_nape::util::Hashable2_Boolfalse Block( int &di,bool &val,int &id){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/FastHash.hx",245);
 			{
 				struct _Function_2_1{
-					inline static ::zpp_nape::util::Hashable2_Boolfalse Block( int &id,int &di){
+					inline static ::zpp_nape::util::Hashable2_Boolfalse Block( int &di,int &id){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/FastHash.hx",245);
 						{
 							HX_STACK_LINE(245)
@@ -191,7 +191,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(Hashable2_Boolfalse_obj,getpersist,return )
 					}
 				};
 				HX_STACK_LINE(245)
-				::zpp_nape::util::Hashable2_Boolfalse ret = _Function_2_1::Block(id,di);		HX_STACK_VAR(ret,"ret");
+				::zpp_nape::util::Hashable2_Boolfalse ret = _Function_2_1::Block(di,id);		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(245)
 				ret->value = val;
 				HX_STACK_LINE(245)
@@ -201,7 +201,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(Hashable2_Boolfalse_obj,getpersist,return )
 		}
 	};
 	struct _Function_1_2{
-		inline static ::zpp_nape::util::Hashable2_Boolfalse Block( bool &val,int &di,int &id){
+		inline static ::zpp_nape::util::Hashable2_Boolfalse Block( int &di,bool &val,int &id){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/FastHash.hx",245);
 			{
 				struct _Function_2_1{
@@ -249,7 +249,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(Hashable2_Boolfalse_obj,getpersist,return )
 		}
 	};
 	HX_STACK_LINE(244)
-	return (  (((id <= di))) ? ::zpp_nape::util::Hashable2_Boolfalse(_Function_1_1::Block(val,id,di)) : ::zpp_nape::util::Hashable2_Boolfalse(_Function_1_2::Block(val,di,id)) );
+	return (  (((id <= di))) ? ::zpp_nape::util::Hashable2_Boolfalse(_Function_1_1::Block(di,val,id)) : ::zpp_nape::util::Hashable2_Boolfalse(_Function_1_2::Block(di,val,id)) );
 }
 
 
@@ -260,7 +260,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC3(Hashable2_Boolfalse_obj,ordered_get,return )
 	HX_STACK_ARG(id,"id");
 	HX_STACK_ARG(di,"di");
 	struct _Function_1_1{
-		inline static ::zpp_nape::util::Hashable2_Boolfalse Block( int &id,int &di){
+		inline static ::zpp_nape::util::Hashable2_Boolfalse Block( int &di,int &id){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/FastHash.hx",249);
 			{
 				HX_STACK_LINE(249)
@@ -328,7 +328,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC3(Hashable2_Boolfalse_obj,ordered_get,return )
 		}
 	};
 	HX_STACK_LINE(248)
-	return (  (((id <= di))) ? ::zpp_nape::util::Hashable2_Boolfalse(_Function_1_1::Block(id,di)) : ::zpp_nape::util::Hashable2_Boolfalse(_Function_1_2::Block(di,id)) );
+	return (  (((id <= di))) ? ::zpp_nape::util::Hashable2_Boolfalse(_Function_1_1::Block(di,id)) : ::zpp_nape::util::Hashable2_Boolfalse(_Function_1_2::Block(di,id)) );
 }
 
 
@@ -455,7 +455,7 @@ Class Hashable2_Boolfalse_obj::__mClass;
 
 void Hashable2_Boolfalse_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.Hashable2_Boolfalse"), hx::TCanCast< Hashable2_Boolfalse_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.Hashable2_Boolfalse"), hx::TCanCast< Hashable2_Boolfalse_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

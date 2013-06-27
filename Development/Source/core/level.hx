@@ -1,5 +1,5 @@
 //nme
-import nme.feedback.Haptic;
+//import openfl.feedback.Haptic;
 
 //importing all levels
 import World1Level1;

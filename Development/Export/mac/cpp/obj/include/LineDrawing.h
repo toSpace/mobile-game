@@ -6,16 +6,17 @@
 #endif
 
 HX_DECLARE_CLASS0(LineDrawing)
-HX_DECLARE_CLASS2(native,display,DisplayObject)
-HX_DECLARE_CLASS2(native,display,DisplayObjectContainer)
-HX_DECLARE_CLASS2(native,display,IBitmapDrawable)
-HX_DECLARE_CLASS2(native,display,InteractiveObject)
-HX_DECLARE_CLASS2(native,display,Sprite)
-HX_DECLARE_CLASS2(native,events,EventDispatcher)
-HX_DECLARE_CLASS2(native,events,IEventDispatcher)
+HX_DECLARE_CLASS2(flash,display,Bitmap)
+HX_DECLARE_CLASS2(flash,display,DisplayObject)
+HX_DECLARE_CLASS2(flash,display,DisplayObjectContainer)
+HX_DECLARE_CLASS2(flash,display,IBitmapDrawable)
+HX_DECLARE_CLASS2(flash,display,InteractiveObject)
+HX_DECLARE_CLASS2(flash,display,Sprite)
+HX_DECLARE_CLASS2(flash,events,EventDispatcher)
+HX_DECLARE_CLASS2(flash,events,IEventDispatcher)
 
 
-class LineDrawing_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  LineDrawing_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef LineDrawing_obj OBJ_;
@@ -35,10 +36,10 @@ class LineDrawing_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("LineDrawing"); }
 
-		virtual Void erase( );
+		virtual Void erase( ::flash::display::Bitmap bitmap);
 		Dynamic erase_dyn();
 
-		virtual Void draw( );
+		virtual Void draw( bool erasing);
 		Dynamic draw_dyn();
 
 		virtual Void end( );
@@ -47,8 +48,8 @@ class LineDrawing_obj : public hx::Object{
 		virtual Void render( );
 		Dynamic render_dyn();
 
-		bool stopped; /* REM */ 
-		::native::display::Sprite drawing; /* REM */ 
+		bool stopped;
+		::flash::display::Sprite drawing;
 };
 
 

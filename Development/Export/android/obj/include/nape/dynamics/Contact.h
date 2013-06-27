@@ -17,7 +17,7 @@ namespace nape{
 namespace dynamics{
 
 
-class Contact_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Contact_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Contact_obj OBJ_;
@@ -43,7 +43,6 @@ class Contact_obj : public hx::Object{
 		virtual Float get_friction( );
 		Dynamic get_friction_dyn();
 
-		Float friction; /* REM */ 
 		virtual ::nape::geom::Vec3 totalImpulse( ::nape::phys::Body body);
 		Dynamic totalImpulse_dyn();
 
@@ -59,20 +58,16 @@ class Contact_obj : public hx::Object{
 		virtual bool get_fresh( );
 		Dynamic get_fresh_dyn();
 
-		bool fresh; /* REM */ 
 		virtual ::nape::geom::Vec2 get_position( );
 		Dynamic get_position_dyn();
 
-		::nape::geom::Vec2 position; /* REM */ 
 		virtual Float get_penetration( );
 		Dynamic get_penetration_dyn();
 
-		Float penetration; /* REM */ 
 		virtual ::nape::dynamics::CollisionArbiter get_arbiter( );
 		Dynamic get_arbiter_dyn();
 
-		::nape::dynamics::CollisionArbiter arbiter; /* REM */ 
-		::zpp_nape::dynamics::ZPP_Contact zpp_inner; /* REM */ 
+		::zpp_nape::dynamics::ZPP_Contact zpp_inner;
 };
 
 } // end namespace nape

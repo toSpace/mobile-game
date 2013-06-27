@@ -81,18 +81,18 @@ Dynamic __Create_Flush_obj() { return new Flush_obj; }
 void Flush_obj::__register()
 {
 
-Static(__mClass) = hx::RegisterClass(HX_CSTRING("cpp.zip.Flush"), hx::TCanCast< Flush_obj >,sStaticFields,sMemberFields,
+hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("cpp.zip.Flush"), hx::TCanCast< Flush_obj >,sStaticFields,sMemberFields,
 	&__Create_Flush_obj, &__Create,
 	&super::__SGetClass(), &CreateFlush_obj, sMarkStatics, sVisitStatic);
 }
 
 void Flush_obj::__boot()
 {
-Static(BLOCK) = hx::CreateEnum< Flush_obj >(HX_CSTRING("BLOCK"),4);
-Static(FINISH) = hx::CreateEnum< Flush_obj >(HX_CSTRING("FINISH"),3);
-Static(FULL) = hx::CreateEnum< Flush_obj >(HX_CSTRING("FULL"),2);
-Static(NO) = hx::CreateEnum< Flush_obj >(HX_CSTRING("NO"),0);
-Static(SYNC) = hx::CreateEnum< Flush_obj >(HX_CSTRING("SYNC"),1);
+hx::Static(BLOCK) = hx::CreateEnum< Flush_obj >(HX_CSTRING("BLOCK"),4);
+hx::Static(FINISH) = hx::CreateEnum< Flush_obj >(HX_CSTRING("FINISH"),3);
+hx::Static(FULL) = hx::CreateEnum< Flush_obj >(HX_CSTRING("FULL"),2);
+hx::Static(NO) = hx::CreateEnum< Flush_obj >(HX_CSTRING("NO"),0);
+hx::Static(SYNC) = hx::CreateEnum< Flush_obj >(HX_CSTRING("SYNC"),1);
 }
 
 

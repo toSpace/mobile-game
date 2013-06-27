@@ -87,9 +87,6 @@ Void ZPP_Mat23_obj::setas( Float a,Float b,Float c,Float d,Float tx,Float ty){
 			this->tx = tx;
 			HX_STACK_LINE(222)
 			this->ty = ty;
-			HX_STACK_LINE(223)
-			{
-			}
 			HX_STACK_LINE(231)
 			{
 			}
@@ -153,9 +150,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Mat23_obj,invalidate,(void))
 		{
 			HX_STACK_LINE(180)
 			::zpp_nape::geom::ZPP_Mat23 o = this->outer->zpp_inner;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(181)
-			{
-			}
 			HX_STACK_LINE(190)
 			o->next = ::zpp_nape::geom::ZPP_Mat23_obj::zpp_pool;
 			HX_STACK_LINE(191)
@@ -369,7 +363,7 @@ Class ZPP_Mat23_obj::__mClass;
 
 void ZPP_Mat23_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_Mat23"), hx::TCanCast< ZPP_Mat23_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_Mat23"), hx::TCanCast< ZPP_Mat23_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

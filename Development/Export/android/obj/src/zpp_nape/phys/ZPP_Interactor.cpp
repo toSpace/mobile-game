@@ -366,50 +366,22 @@ Void ZPP_Interactor_obj::dealloc_cbSet( ){
 		};
 		HX_STACK_LINE(367)
 		::zpp_nape::space::ZPP_Space space = (  (((this->ishape != null()))) ? ::zpp_nape::space::ZPP_Space(_Function_1_1::Block(this)) : ::zpp_nape::space::ZPP_Space((  (((this->ibody != null()))) ? ::zpp_nape::space::ZPP_Space(this->ibody->space) : ::zpp_nape::space::ZPP_Space(this->icompound->space) )) );		HX_STACK_VAR(space,"space");
-		HX_STACK_LINE(368)
-		{
-		}
 		HX_STACK_LINE(376)
 		if (((this->cbSet != null()))){
 			HX_STACK_LINE(377)
 			this->cbSet->interactors->remove(hx::ObjectPtr<OBJ_>(this));
 			HX_STACK_LINE(378)
 			space->nullInteractorType(hx::ObjectPtr<OBJ_>(this),null());
-			struct _Function_2_1{
-				inline static bool Block( ::zpp_nape::phys::ZPP_Interactor_obj *__this){
-					HX_STACK_PUSH("*::closure","zpp_nape/phys/Interactor.hx",379);
-					{
-						HX_STACK_LINE(379)
-						{
-						}
-						HX_STACK_LINE(379)
-						return (--(__this->cbSet->count) == (int)0);
-					}
-					return null();
-				}
-			};
 			HX_STACK_LINE(379)
-			if ((_Function_2_1::Block(this))){
+			if (((--(this->cbSet->count) == (int)0))){
 				HX_STACK_LINE(380)
 				space->cbsets->remove(this->cbSet);
 				HX_STACK_LINE(381)
 				{
 					HX_STACK_LINE(382)
 					::zpp_nape::callbacks::ZPP_CbSet o = this->cbSet;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(383)
-					{
-					}
 					HX_STACK_LINE(391)
 					{
-						HX_STACK_LINE(391)
-						{
-						}
-						HX_STACK_LINE(391)
-						{
-						}
-						HX_STACK_LINE(391)
-						{
-						}
 						HX_STACK_LINE(391)
 						o->listeners->clear();
 						HX_STACK_LINE(391)
@@ -464,9 +436,6 @@ Void ZPP_Interactor_obj::alloc_cbSet( ){
 		};
 		HX_STACK_LINE(350)
 		::zpp_nape::space::ZPP_Space space = (  (((this->ishape != null()))) ? ::zpp_nape::space::ZPP_Space(_Function_1_1::Block(this)) : ::zpp_nape::space::ZPP_Space((  (((this->ibody != null()))) ? ::zpp_nape::space::ZPP_Space(this->ibody->space) : ::zpp_nape::space::ZPP_Space(this->icompound->space) )) );		HX_STACK_VAR(space,"space");
-		HX_STACK_LINE(351)
-		{
-		}
 		HX_STACK_LINE(359)
 		if ((((this->cbSet = space->cbsets->get(this->cbTypes)) != null()))){
 			HX_STACK_LINE(360)
@@ -541,9 +510,6 @@ Void ZPP_Interactor_obj::insert_cbtype( ::zpp_nape::callbacks::ZPP_CbType cb){
 				{
 					HX_STACK_LINE(341)
 					::zpp_nape::util::ZNPList_ZPP_CbType _this = this->cbTypes;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(341)
-					{
-					}
 					struct _Function_4_1{
 						inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &cb){
 							HX_STACK_PUSH("*::closure","zpp_nape/phys/Interactor.hx",341);
@@ -872,16 +838,10 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Interactor_obj,isShape,return )
 	HX_STACK_PUSH("ZPP_Interactor::get","zpp_nape/phys/Interactor.hx",235);
 	HX_STACK_ARG(i1,"i1");
 	HX_STACK_ARG(i2,"i2");
-	HX_STACK_LINE(236)
-	{
-	}
 	HX_STACK_LINE(244)
 	int id = (  (((i1->id < i2->id))) ? int(i1->id) : int(i2->id) );		HX_STACK_VAR(id,"id");
 	HX_STACK_LINE(245)
 	int di = (  (((i1->id < i2->id))) ? int(i2->id) : int(i1->id) );		HX_STACK_VAR(di,"di");
-	HX_STACK_LINE(246)
-	{
-	}
 	HX_STACK_LINE(254)
 	::zpp_nape::util::ZNPList_ZPP_CallbackSet xs = (  (((i1->cbsets->length < i2->cbsets->length))) ? ::zpp_nape::util::ZNPList_ZPP_CallbackSet(i1->cbsets) : ::zpp_nape::util::ZNPList_ZPP_CallbackSet(i2->cbsets) );		HX_STACK_VAR(xs,"xs");
 	HX_STACK_LINE(255)
@@ -895,17 +855,11 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Interactor_obj,isShape,return )
 			HX_STACK_LINE(259)
 			::zpp_nape::space::ZPP_CallbackSet x = cx_ite->elt;		HX_STACK_VAR(x,"x");
 			HX_STACK_LINE(260)
-			{
-				HX_STACK_LINE(261)
-				{
-				}
-				HX_STACK_LINE(269)
-				if (((bool((x->id == id)) && bool((x->di == di))))){
-					HX_STACK_LINE(270)
-					ret = x;
-					HX_STACK_LINE(271)
-					break;
-				}
+			if (((bool((x->id == id)) && bool((x->di == di))))){
+				HX_STACK_LINE(270)
+				ret = x;
+				HX_STACK_LINE(271)
+				break;
 			}
 			HX_STACK_LINE(274)
 			cx_ite = cx_ite->next;
@@ -1176,7 +1130,7 @@ Class ZPP_Interactor_obj::__mClass;
 
 void ZPP_Interactor_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.phys.ZPP_Interactor"), hx::TCanCast< ZPP_Interactor_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.phys.ZPP_Interactor"), hx::TCanCast< ZPP_Interactor_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

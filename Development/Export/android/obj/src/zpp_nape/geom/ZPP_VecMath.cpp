@@ -68,21 +68,8 @@ Float ZPP_VecMath_obj::vec_distance( Float ax,Float ay,Float bx,Float by){
 		HX_STACK_LINE(191)
 		dy = (ay - by);
 	}
-	struct _Function_1_1{
-		inline static Float Block( Float &dx,Float &dy){
-			HX_STACK_PUSH("*::closure","zpp_nape/geom/VecMath.hx",193);
-			{
-				HX_STACK_LINE(193)
-				{
-				}
-				HX_STACK_LINE(193)
-				return ::Math_obj::sqrt(((dx * dx) + (dy * dy)));
-			}
-			return null();
-		}
-	};
 	HX_STACK_LINE(193)
-	return _Function_1_1::Block(dx,dy);
+	return ::Math_obj::sqrt(((dx * dx) + (dy * dy)));
 }
 
 
@@ -145,7 +132,7 @@ Class ZPP_VecMath_obj::__mClass;
 
 void ZPP_VecMath_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_VecMath"), hx::TCanCast< ZPP_VecMath_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_VecMath"), hx::TCanCast< ZPP_VecMath_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -11,20 +11,19 @@ HX_DECLARE_CLASS2(aze,display,TileBase)
 HX_DECLARE_CLASS2(aze,display,TileGroup)
 HX_DECLARE_CLASS2(aze,display,TileLayer)
 HX_DECLARE_CLASS2(aze,display,TilesheetEx)
-HX_DECLARE_CLASS1(haxe,Public)
-HX_DECLARE_CLASS2(native,display,DisplayObject)
-HX_DECLARE_CLASS2(native,display,DisplayObjectContainer)
-HX_DECLARE_CLASS2(native,display,IBitmapDrawable)
-HX_DECLARE_CLASS2(native,display,InteractiveObject)
-HX_DECLARE_CLASS2(native,display,Sprite)
-HX_DECLARE_CLASS2(native,display,Tilesheet)
-HX_DECLARE_CLASS2(native,events,EventDispatcher)
-HX_DECLARE_CLASS2(native,events,IEventDispatcher)
+HX_DECLARE_CLASS2(flash,display,DisplayObject)
+HX_DECLARE_CLASS2(flash,display,DisplayObjectContainer)
+HX_DECLARE_CLASS2(flash,display,IBitmapDrawable)
+HX_DECLARE_CLASS2(flash,display,InteractiveObject)
+HX_DECLARE_CLASS2(flash,display,Sprite)
+HX_DECLARE_CLASS2(flash,events,EventDispatcher)
+HX_DECLARE_CLASS2(flash,events,IEventDispatcher)
+HX_DECLARE_CLASS2(openfl,display,Tilesheet)
 namespace aze{
 namespace display{
 
 
-class TileLayer_obj : public ::aze::display::TileGroup_obj{
+class HXCPP_CLASS_ATTRIBUTES  TileLayer_obj : public ::aze::display::TileGroup_obj{
 	public:
 		typedef ::aze::display::TileGroup_obj super;
 		typedef TileLayer_obj OBJ_;
@@ -50,15 +49,15 @@ class TileLayer_obj : public ::aze::display::TileGroup_obj{
 		virtual int render( Dynamic elapsed);
 		Dynamic render_dyn();
 
-		::aze::display::DrawList drawList; /* REM */ 
-		::aze::display::TilesheetEx tilesheet; /* REM */ 
-		bool useTint; /* REM */ 
-		bool useTransforms; /* REM */ 
-		bool useAlpha; /* REM */ 
-		bool useAdditive; /* REM */ 
-		bool useSmoothing; /* REM */ 
-		::native::display::Sprite view; /* REM */ 
-		static Float synchronizedElapsed; /* REM */ 
+		::aze::display::DrawList drawList;
+		::aze::display::TilesheetEx tilesheet;
+		bool useTint;
+		bool useTransforms;
+		bool useAlpha;
+		bool useAdditive;
+		bool useSmoothing;
+		::flash::display::Sprite view;
+		static Float synchronizedElapsed;
 };
 
 } // end namespace aze

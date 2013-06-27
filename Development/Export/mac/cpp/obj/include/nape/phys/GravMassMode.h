@@ -10,7 +10,7 @@ namespace nape{
 namespace phys{
 
 
-class GravMassMode_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  GravMassMode_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef GravMassMode_obj OBJ_;
@@ -33,15 +33,12 @@ class GravMassMode_obj : public hx::Object{
 		virtual ::String toString( );
 		Dynamic toString_dyn();
 
-		static ::nape::phys::GravMassMode DEFAULT; /* REM */ 
 		static ::nape::phys::GravMassMode get_DEFAULT( );
 		static Dynamic get_DEFAULT_dyn();
 
-		static ::nape::phys::GravMassMode FIXED; /* REM */ 
 		static ::nape::phys::GravMassMode get_FIXED( );
 		static Dynamic get_FIXED_dyn();
 
-		static ::nape::phys::GravMassMode SCALED; /* REM */ 
 		static ::nape::phys::GravMassMode get_SCALED( );
 		static Dynamic get_SCALED_dyn();
 

@@ -20,7 +20,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_Collide_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Collide_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Collide_obj OBJ_;
@@ -67,8 +67,8 @@ class ZPP_Collide_obj : public hx::Object{
 		static bool flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::shape::ZPP_Shape s2,::zpp_nape::dynamics::ZPP_FluidArbiter arb);
 		static Dynamic flowCollide_dyn();
 
-		static ::zpp_nape::util::ZNPList_ZPP_Vec2 flowpoly; /* REM */ 
-		static ::zpp_nape::util::ZNPList_ZPP_Vec2 flowsegs; /* REM */ 
+		static ::zpp_nape::util::ZNPList_ZPP_Vec2 flowpoly;
+		static ::zpp_nape::util::ZNPList_ZPP_Vec2 flowsegs;
 };
 
 } // end namespace zpp_nape

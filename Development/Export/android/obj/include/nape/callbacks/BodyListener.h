@@ -18,7 +18,7 @@ namespace nape{
 namespace callbacks{
 
 
-class BodyListener_obj : public ::nape::callbacks::Listener_obj{
+class HXCPP_CLASS_ATTRIBUTES  BodyListener_obj : public ::nape::callbacks::Listener_obj{
 	public:
 		typedef ::nape::callbacks::Listener_obj super;
 		typedef BodyListener_obj OBJ_;
@@ -44,16 +44,13 @@ class BodyListener_obj : public ::nape::callbacks::Listener_obj{
 		virtual Dynamic get_handler( );
 		Dynamic get_handler_dyn();
 
-		Dynamic handler; /* REM */ 
-		Dynamic &handler_dyn() { return handler;}
 		virtual ::nape::callbacks::OptionType set_options( ::nape::callbacks::OptionType options);
 		Dynamic set_options_dyn();
 
 		virtual ::nape::callbacks::OptionType get_options( );
 		Dynamic get_options_dyn();
 
-		::nape::callbacks::OptionType options; /* REM */ 
-		::zpp_nape::callbacks::ZPP_BodyListener zpp_inner_zn; /* REM */ 
+		::zpp_nape::callbacks::ZPP_BodyListener zpp_inner_zn;
 };
 
 } // end namespace nape

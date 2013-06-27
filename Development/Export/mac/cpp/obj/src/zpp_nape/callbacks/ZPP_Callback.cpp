@@ -115,9 +115,6 @@ Void ZPP_Callback_obj::genarbs( ){
 {
 		HX_STACK_PUSH("ZPP_Callback::genarbs","zpp_nape/callbacks/Callback.hx",416);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(417)
-		{
-		}
 		HX_STACK_LINE(425)
 		if (((this->wrap_arbiters == null()))){
 			HX_STACK_LINE(425)
@@ -179,9 +176,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Callback_obj,free,(void))
 	HX_STACK_PUSH("ZPP_Callback::rev_at","zpp_nape/callbacks/Callback.hx",356);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(i,"i");
-	HX_STACK_LINE(357)
-	{
-	}
 	HX_STACK_LINE(365)
 	::zpp_nape::callbacks::ZPP_Callback ret = this->prev;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(366)
@@ -200,9 +194,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Callback_obj,rev_at,return )
 	HX_STACK_PUSH("ZPP_Callback::at","zpp_nape/callbacks/Callback.hx",343);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(i,"i");
-	HX_STACK_LINE(344)
-	{
-	}
 	HX_STACK_LINE(352)
 	::zpp_nape::callbacks::ZPP_Callback ret = this->next;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(353)
@@ -221,10 +212,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Callback_obj,at,return )
 	HX_STACK_PUSH("ZPP_Callback::cyclePrev","zpp_nape/callbacks/Callback.hx",331);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(332)
-	{
-	}
-	HX_STACK_LINE(340)
+	HX_STACK_LINE(331)
 	if (((o->prev == null()))){
 		HX_STACK_LINE(340)
 		return this->prev;
@@ -233,7 +221,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Callback_obj,at,return )
 		HX_STACK_LINE(341)
 		return o->prev;
 	}
-	HX_STACK_LINE(340)
+	HX_STACK_LINE(331)
 	return null();
 }
 
@@ -244,10 +232,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Callback_obj,cyclePrev,return )
 	HX_STACK_PUSH("ZPP_Callback::cycleNext","zpp_nape/callbacks/Callback.hx",319);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(320)
-	{
-	}
-	HX_STACK_LINE(328)
+	HX_STACK_LINE(319)
 	if (((o->next == null()))){
 		HX_STACK_LINE(328)
 		return this->next;
@@ -256,7 +241,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Callback_obj,cyclePrev,return )
 		HX_STACK_LINE(329)
 		return o->next;
 	}
-	HX_STACK_LINE(328)
+	HX_STACK_LINE(319)
 	return null();
 }
 
@@ -360,9 +345,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Callback_obj,empty,return )
 ::zpp_nape::callbacks::ZPP_Callback ZPP_Callback_obj::pop_rev( ){
 	HX_STACK_PUSH("ZPP_Callback::pop_rev","zpp_nape/callbacks/Callback.hx",276);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(277)
-	{
-	}
 	HX_STACK_LINE(285)
 	::zpp_nape::callbacks::ZPP_Callback ret = this->prev;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(286)
@@ -388,9 +370,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Callback_obj,pop_rev,return )
 ::zpp_nape::callbacks::ZPP_Callback ZPP_Callback_obj::pop( ){
 	HX_STACK_PUSH("ZPP_Callback::pop","zpp_nape/callbacks/Callback.hx",260);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(261)
-	{
-	}
 	HX_STACK_LINE(269)
 	::zpp_nape::callbacks::ZPP_Callback ret = this->next;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(270)
@@ -418,9 +397,6 @@ Void ZPP_Callback_obj::push_rev( ::zpp_nape::callbacks::ZPP_Callback obj){
 		HX_STACK_PUSH("ZPP_Callback::push_rev","zpp_nape/callbacks/Callback.hx",244);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(245)
-		{
-		}
 		HX_STACK_LINE(253)
 		if (((this->next != null()))){
 			HX_STACK_LINE(253)
@@ -450,9 +426,6 @@ Void ZPP_Callback_obj::push( ::zpp_nape::callbacks::ZPP_Callback obj){
 		HX_STACK_PUSH("ZPP_Callback::push","zpp_nape/callbacks/Callback.hx",228);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(229)
-		{
-		}
 		HX_STACK_LINE(237)
 		if (((this->prev != null()))){
 			HX_STACK_LINE(237)
@@ -493,9 +466,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Callback_obj,push,(void))
 	}
 	HX_STACK_LINE(218)
 	{
-		HX_STACK_LINE(218)
-		{
-		}
 		HX_STACK_LINE(218)
 		if (((this->wrap_arbiters == null()))){
 			HX_STACK_LINE(218)
@@ -811,7 +781,7 @@ Class ZPP_Callback_obj::__mClass;
 
 void ZPP_Callback_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.callbacks.ZPP_Callback"), hx::TCanCast< ZPP_Callback_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.callbacks.ZPP_Callback"), hx::TCanCast< ZPP_Callback_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

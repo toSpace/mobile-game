@@ -17,7 +17,7 @@ namespace nape{
 namespace geom{
 
 
-class GeomPoly_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  GeomPoly_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef GeomPoly_obj OBJ_;
@@ -151,9 +151,9 @@ class GeomPoly_obj : public hx::Object{
 		virtual bool empty( );
 		Dynamic empty_dyn();
 
-		::zpp_nape::geom::ZPP_GeomPoly zpp_inner; /* REM */ 
-		bool zpp_disp; /* REM */ 
-		::nape::geom::GeomPoly zpp_pool; /* REM */ 
+		::zpp_nape::geom::ZPP_GeomPoly zpp_inner;
+		bool zpp_disp;
+		::nape::geom::GeomPoly zpp_pool;
 		static ::nape::geom::GeomPoly get( Dynamic vertices);
 		static Dynamic get_dyn();
 

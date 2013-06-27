@@ -21,7 +21,7 @@ namespace zpp_nape{
 namespace constraint{
 
 
-class ZPP_LineJoint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_LineJoint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj{
 	public:
 		typedef ::zpp_nape::constraint::ZPP_Constraint_obj super;
 		typedef ZPP_LineJoint_obj OBJ_;
@@ -61,22 +61,22 @@ class ZPP_LineJoint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj{
 
 		virtual Void validate( );
 
-		virtual ::nape::constraint::Constraint copy( Array< ::zpp_nape::constraint::ZPP_CopyHelper > dict,Array< ::zpp_nape::constraint::ZPP_CopyHelper > todo);
+		virtual ::nape::constraint::Constraint copy( Array< ::Dynamic > dict,Array< ::Dynamic > todo);
 
-		bool stepped; /* REM */ 
-		Float biasy; /* REM */ 
-		Float biasx; /* REM */ 
-		Float gamma; /* REM */ 
-		Float jMax; /* REM */ 
-		Float jAccy; /* REM */ 
-		Float jAccx; /* REM */ 
-		Float kMassc; /* REM */ 
-		Float kMassb; /* REM */ 
-		Float kMassa; /* REM */ 
+		bool stepped;
+		Float biasy;
+		Float biasx;
+		Float gamma;
+		Float jMax;
+		Float jAccy;
+		Float jAccx;
+		Float kMassc;
+		Float kMassb;
+		Float kMassa;
 		virtual Void validate_norm( );
 		Dynamic validate_norm_dyn();
 
-		::nape::geom::Vec2 wrap_n; /* REM */ 
+		::nape::geom::Vec2 wrap_n;
 		virtual Void setup_n( );
 		Dynamic setup_n_dyn();
 
@@ -86,12 +86,12 @@ class ZPP_LineJoint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj{
 		virtual Void validate_n( );
 		Dynamic validate_n_dyn();
 
-		Float nrely; /* REM */ 
-		Float nrelx; /* REM */ 
-		Float nlocaly; /* REM */ 
-		Float nlocalx; /* REM */ 
-		bool zip_n; /* REM */ 
-		::nape::geom::Vec2 wrap_a2; /* REM */ 
+		Float nrely;
+		Float nrelx;
+		Float nlocaly;
+		Float nlocalx;
+		bool zip_n;
+		::nape::geom::Vec2 wrap_a2;
 		virtual Void setup_a2( );
 		Dynamic setup_a2_dyn();
 
@@ -101,12 +101,12 @@ class ZPP_LineJoint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj{
 		virtual Void validate_a2( );
 		Dynamic validate_a2_dyn();
 
-		Float a2rely; /* REM */ 
-		Float a2relx; /* REM */ 
-		Float a2localy; /* REM */ 
-		Float a2localx; /* REM */ 
-		::zpp_nape::phys::ZPP_Body b2; /* REM */ 
-		::nape::geom::Vec2 wrap_a1; /* REM */ 
+		Float a2rely;
+		Float a2relx;
+		Float a2localy;
+		Float a2localx;
+		::zpp_nape::phys::ZPP_Body b2;
+		::nape::geom::Vec2 wrap_a1;
 		virtual Void setup_a1( );
 		Dynamic setup_a1_dyn();
 
@@ -116,11 +116,11 @@ class ZPP_LineJoint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj{
 		virtual Void validate_a1( );
 		Dynamic validate_a1_dyn();
 
-		Float a1rely; /* REM */ 
-		Float a1relx; /* REM */ 
-		Float a1localy; /* REM */ 
-		Float a1localx; /* REM */ 
-		::zpp_nape::phys::ZPP_Body b1; /* REM */ 
+		Float a1rely;
+		Float a1relx;
+		Float a1localy;
+		Float a1localx;
+		::zpp_nape::phys::ZPP_Body b1;
 		virtual Void inactiveBodies( );
 
 		virtual Void activeBodies( );
@@ -128,15 +128,15 @@ class ZPP_LineJoint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj{
 		virtual ::nape::geom::Vec3 bodyImpulse( ::zpp_nape::phys::ZPP_Body b);
 		Dynamic bodyImpulse_dyn();
 
-		Float cx2; /* REM */ 
-		Float cx1; /* REM */ 
-		Float dot2; /* REM */ 
-		Float dot1; /* REM */ 
-		bool equal; /* REM */ 
-		Float jointMax; /* REM */ 
-		Float jointMin; /* REM */ 
-		Float scale; /* REM */ 
-		::nape::constraint::LineJoint outer_zn; /* REM */ 
+		Float cx2;
+		Float cx1;
+		Float dot2;
+		Float dot1;
+		bool equal;
+		Float jointMax;
+		Float jointMin;
+		Float scale;
+		::nape::constraint::LineJoint outer_zn;
 };
 
 } // end namespace zpp_nape

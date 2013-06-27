@@ -23,10 +23,10 @@ Dynamic Std_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 bool Std_obj::is( Dynamic v,Dynamic t){
-	HX_STACK_PUSH("Std::is","/usr/lib/haxe/std/cpp/_std/Std.hx",27);
+	HX_STACK_PUSH("Std::is","/usr/lib/haxe/std/cpp/_std/Std.hx",23);
 	HX_STACK_ARG(v,"v");
 	HX_STACK_ARG(t,"t");
-	HX_STACK_LINE(27)
+	HX_STACK_LINE(23)
 	return ::__instanceof(v,t);
 }
 
@@ -34,9 +34,9 @@ bool Std_obj::is( Dynamic v,Dynamic t){
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(Std_obj,is,return )
 
 ::String Std_obj::string( Dynamic s){
-	HX_STACK_PUSH("Std::string","/usr/lib/haxe/std/cpp/_std/Std.hx",31);
+	HX_STACK_PUSH("Std::string","/usr/lib/haxe/std/cpp/_std/Std.hx",27);
 	HX_STACK_ARG(s,"s");
-	HX_STACK_LINE(31)
+	HX_STACK_LINE(27)
 	return (  (((s == null()))) ? ::String(HX_CSTRING("null")) : ::String(s->toString()) );
 }
 
@@ -44,9 +44,9 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(Std_obj,is,return )
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Std_obj,string,return )
 
 int Std_obj::_int( Float x){
-	HX_STACK_PUSH("Std::int","/usr/lib/haxe/std/cpp/_std/Std.hx",35);
+	HX_STACK_PUSH("Std::int","/usr/lib/haxe/std/cpp/_std/Std.hx",31);
 	HX_STACK_ARG(x,"x");
-	HX_STACK_LINE(35)
+	HX_STACK_LINE(31)
 	return ::__int__(x);
 }
 
@@ -54,9 +54,9 @@ int Std_obj::_int( Float x){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Std_obj,_int,return )
 
 Dynamic Std_obj::parseInt( ::String x){
-	HX_STACK_PUSH("Std::parseInt","/usr/lib/haxe/std/cpp/_std/Std.hx",39);
+	HX_STACK_PUSH("Std::parseInt","/usr/lib/haxe/std/cpp/_std/Std.hx",35);
 	HX_STACK_ARG(x,"x");
-	HX_STACK_LINE(39)
+	HX_STACK_LINE(35)
 	return ::__hxcpp_parse_int(x);
 }
 
@@ -64,24 +64,14 @@ Dynamic Std_obj::parseInt( ::String x){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Std_obj,parseInt,return )
 
 Float Std_obj::parseFloat( ::String x){
-	HX_STACK_PUSH("Std::parseFloat","/usr/lib/haxe/std/cpp/_std/Std.hx",43);
+	HX_STACK_PUSH("Std::parseFloat","/usr/lib/haxe/std/cpp/_std/Std.hx",39);
 	HX_STACK_ARG(x,"x");
-	HX_STACK_LINE(43)
+	HX_STACK_LINE(39)
 	return ::__hxcpp_parse_float(x);
 }
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Std_obj,parseFloat,return )
-
-int Std_obj::random( int x){
-	HX_STACK_PUSH("Std::random","/usr/lib/haxe/std/cpp/_std/Std.hx",47);
-	HX_STACK_ARG(x,"x");
-	HX_STACK_LINE(47)
-	return ::__hxcpp_irand(x);
-}
-
-
-STATIC_HX_DEFINE_DYNAMIC_FUNC1(Std_obj,random,return )
 
 
 Std_obj::Std_obj()
@@ -109,7 +99,6 @@ Dynamic Std_obj::__Field(const ::String &inName,bool inCallProp)
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"string") ) { return string_dyn(); }
-		if (HX_FIELD_EQ(inName,"random") ) { return random_dyn(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"parseInt") ) { return parseInt_dyn(); }
@@ -136,7 +125,6 @@ static ::String sStaticFields[] = {
 	HX_CSTRING("int"),
 	HX_CSTRING("parseInt"),
 	HX_CSTRING("parseFloat"),
-	HX_CSTRING("random"),
 	String(null()) };
 
 static ::String sMemberFields[] = {
@@ -154,7 +142,7 @@ Class Std_obj::__mClass;
 
 void Std_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("Std"), hx::TCanCast< Std_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("Std"), hx::TCanCast< Std_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

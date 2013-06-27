@@ -17,7 +17,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_MarchingSquares_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_MarchingSquares_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_MarchingSquares_obj OBJ_;
@@ -88,14 +88,14 @@ class ZPP_MarchingSquares_obj : public hx::Object{
 		virtual Void output( ::nape::geom::GeomPolyList ret,::zpp_nape::geom::ZPP_GeomVert poly);
 		Dynamic output_dyn();
 
-		static ::zpp_nape::geom::ZPP_MarchingSquares me; /* REM */ 
-		static ::zpp_nape::util::ZNPArray2_Float isos; /* REM */ 
-		static ::zpp_nape::util::ZNPArray2_ZPP_GeomVert ints; /* REM */ 
-		static ::zpp_nape::util::ZNPArray2_ZPP_MarchPair map; /* REM */ 
+		static ::zpp_nape::geom::ZPP_MarchingSquares me;
+		static ::zpp_nape::util::ZNPArray2_Float isos;
+		static ::zpp_nape::util::ZNPArray2_ZPP_GeomVert ints;
+		static ::zpp_nape::util::ZNPArray2_ZPP_MarchPair map;
 		static Void run( Dynamic iso,Float bx0,Float by0,Float bx1,Float by1,::nape::geom::Vec2 cell,int quality,bool combine,::nape::geom::GeomPolyList ret);
 		static Dynamic run_dyn();
 
-		static Array< int > look_march; /* REM */ 
+		static Array< int > look_march;
 		static Float ISO( Dynamic iso,Float x,Float y);
 		static Dynamic ISO_dyn();
 

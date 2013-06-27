@@ -152,8 +152,6 @@ Dynamic ListenerType_obj::__Create(hx::DynamicArray inArgs)
 
 HX_DEFINE_DYNAMIC_FUNC0(ListenerType_obj,toString,return )
 
-::nape::callbacks::ListenerType ListenerType_obj::BODY;
-
 ::nape::callbacks::ListenerType ListenerType_obj::get_BODY( ){
 	HX_STACK_PUSH("ListenerType::get_BODY","nape/callbacks/ListenerType.hx",203);
 	HX_STACK_LINE(204)
@@ -171,8 +169,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ListenerType_obj,toString,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(ListenerType_obj,get_BODY,return )
-
-::nape::callbacks::ListenerType ListenerType_obj::CONSTRAINT;
 
 ::nape::callbacks::ListenerType ListenerType_obj::get_CONSTRAINT( ){
 	HX_STACK_PUSH("ListenerType::get_CONSTRAINT","nape/callbacks/ListenerType.hx",216);
@@ -192,8 +188,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(ListenerType_obj,get_BODY,return )
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(ListenerType_obj,get_CONSTRAINT,return )
 
-::nape::callbacks::ListenerType ListenerType_obj::INTERACTION;
-
 ::nape::callbacks::ListenerType ListenerType_obj::get_INTERACTION( ){
 	HX_STACK_PUSH("ListenerType::get_INTERACTION","nape/callbacks/ListenerType.hx",229);
 	HX_STACK_LINE(230)
@@ -211,8 +205,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(ListenerType_obj,get_CONSTRAINT,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(ListenerType_obj,get_INTERACTION,return )
-
-::nape::callbacks::ListenerType ListenerType_obj::PRE;
 
 ::nape::callbacks::ListenerType ListenerType_obj::get_PRE( ){
 	HX_STACK_PUSH("ListenerType::get_PRE","nape/callbacks/ListenerType.hx",242);
@@ -251,10 +243,10 @@ Dynamic ListenerType_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 3:
-		if (HX_FIELD_EQ(inName,"PRE") ) { return inCallProp ? get_PRE() : PRE; }
+		if (HX_FIELD_EQ(inName,"PRE") ) { return get_PRE(); }
 		break;
 	case 4:
-		if (HX_FIELD_EQ(inName,"BODY") ) { return inCallProp ? get_BODY() : BODY; }
+		if (HX_FIELD_EQ(inName,"BODY") ) { return get_BODY(); }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"get_PRE") ) { return get_PRE_dyn(); }
@@ -264,10 +256,10 @@ Dynamic ListenerType_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
 		break;
 	case 10:
-		if (HX_FIELD_EQ(inName,"CONSTRAINT") ) { return inCallProp ? get_CONSTRAINT() : CONSTRAINT; }
+		if (HX_FIELD_EQ(inName,"CONSTRAINT") ) { return get_CONSTRAINT(); }
 		break;
 	case 11:
-		if (HX_FIELD_EQ(inName,"INTERACTION") ) { return inCallProp ? get_INTERACTION() : INTERACTION; }
+		if (HX_FIELD_EQ(inName,"INTERACTION") ) { return get_INTERACTION(); }
 		break;
 	case 14:
 		if (HX_FIELD_EQ(inName,"get_CONSTRAINT") ) { return get_CONSTRAINT_dyn(); }
@@ -280,19 +272,6 @@ Dynamic ListenerType_obj::__Field(const ::String &inName,bool inCallProp)
 
 Dynamic ListenerType_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 3:
-		if (HX_FIELD_EQ(inName,"PRE") ) { PRE=inValue.Cast< ::nape::callbacks::ListenerType >(); return inValue; }
-		break;
-	case 4:
-		if (HX_FIELD_EQ(inName,"BODY") ) { BODY=inValue.Cast< ::nape::callbacks::ListenerType >(); return inValue; }
-		break;
-	case 10:
-		if (HX_FIELD_EQ(inName,"CONSTRAINT") ) { CONSTRAINT=inValue.Cast< ::nape::callbacks::ListenerType >(); return inValue; }
-		break;
-	case 11:
-		if (HX_FIELD_EQ(inName,"INTERACTION") ) { INTERACTION=inValue.Cast< ::nape::callbacks::ListenerType >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
@@ -302,13 +281,9 @@ void ListenerType_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("BODY"),
 	HX_CSTRING("get_BODY"),
-	HX_CSTRING("CONSTRAINT"),
 	HX_CSTRING("get_CONSTRAINT"),
-	HX_CSTRING("INTERACTION"),
 	HX_CSTRING("get_INTERACTION"),
-	HX_CSTRING("PRE"),
 	HX_CSTRING("get_PRE"),
 	String(null()) };
 
@@ -318,25 +293,17 @@ static ::String sMemberFields[] = {
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(ListenerType_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(ListenerType_obj::BODY,"BODY");
-	HX_MARK_MEMBER_NAME(ListenerType_obj::CONSTRAINT,"CONSTRAINT");
-	HX_MARK_MEMBER_NAME(ListenerType_obj::INTERACTION,"INTERACTION");
-	HX_MARK_MEMBER_NAME(ListenerType_obj::PRE,"PRE");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(ListenerType_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(ListenerType_obj::BODY,"BODY");
-	HX_VISIT_MEMBER_NAME(ListenerType_obj::CONSTRAINT,"CONSTRAINT");
-	HX_VISIT_MEMBER_NAME(ListenerType_obj::INTERACTION,"INTERACTION");
-	HX_VISIT_MEMBER_NAME(ListenerType_obj::PRE,"PRE");
 };
 
 Class ListenerType_obj::__mClass;
 
 void ListenerType_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.ListenerType"), hx::TCanCast< ListenerType_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.ListenerType"), hx::TCanCast< ListenerType_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

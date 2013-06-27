@@ -76,6 +76,7 @@ Float ratio = __o_ratio.Default(1.0);
 	}
 	catch(Dynamic __e){
 		{
+			HX_STACK_BEGIN_CATCH
 			Dynamic e = __e;{
 			}
 		}
@@ -365,7 +366,7 @@ Float ratio = __o_ratio.Default(1.0);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(580)
-					if (((_this1->_isimmutable_dyn() != null()))){
+					if (((_this1->_isimmutable != null()))){
 						HX_STACK_LINE(580)
 						_this1->_isimmutable();
 					}
@@ -376,7 +377,7 @@ Float ratio = __o_ratio.Default(1.0);
 					hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 				}
 				struct _Function_4_2{
-					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor1,::nape::geom::Vec2 &_this){
+					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor1,::nape::geom::Vec2 _this){
 						HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",580);
 						{
 							struct _Function_5_1{
@@ -393,7 +394,7 @@ Float ratio = __o_ratio.Default(1.0);
 											HX_STACK_LINE(580)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = anchor1->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(580)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(580)
 												_this1->_validate();
 											}
@@ -418,7 +419,7 @@ Float ratio = __o_ratio.Default(1.0);
 											HX_STACK_LINE(580)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = anchor1->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(580)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(580)
 												_this1->_validate();
 											}
@@ -447,7 +448,7 @@ Float ratio = __o_ratio.Default(1.0);
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(580)
-								if (((_this1->_isimmutable_dyn() != null()))){
+								if (((_this1->_isimmutable != null()))){
 									HX_STACK_LINE(580)
 									_this1->_isimmutable();
 								}
@@ -458,7 +459,7 @@ Float ratio = __o_ratio.Default(1.0);
 								hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 							}
 							struct _Function_5_3{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",580);
 									{
 										HX_STACK_LINE(580)
@@ -471,7 +472,7 @@ Float ratio = __o_ratio.Default(1.0);
 											HX_STACK_LINE(580)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(580)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(580)
 												_this1->_validate();
 											}
@@ -483,7 +484,7 @@ Float ratio = __o_ratio.Default(1.0);
 								}
 							};
 							struct _Function_5_4{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",580);
 									{
 										HX_STACK_LINE(580)
@@ -496,7 +497,7 @@ Float ratio = __o_ratio.Default(1.0);
 											HX_STACK_LINE(580)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(580)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(580)
 												_this1->_validate();
 											}
@@ -518,16 +519,13 @@ Float ratio = __o_ratio.Default(1.0);
 									HX_STACK_LINE(580)
 									{
 									}
-									HX_STACK_LINE(580)
-									{
-									}
 								}
 								HX_STACK_LINE(580)
 								{
 									HX_STACK_LINE(580)
 									::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 									HX_STACK_LINE(580)
-									if (((_this1->_invalidate_dyn() != null()))){
+									if (((_this1->_invalidate != null()))){
 										HX_STACK_LINE(580)
 										_this1->_invalidate(_this1);
 									}
@@ -560,7 +558,7 @@ Float ratio = __o_ratio.Default(1.0);
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(580)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(580)
 								_this1->_isimmutable();
 							}
@@ -581,9 +579,6 @@ Float ratio = __o_ratio.Default(1.0);
 							HX_STACK_LINE(580)
 							::nape::geom::Vec2 o = anchor1;		HX_STACK_VAR(o,"o");
 							HX_STACK_LINE(580)
-							{
-							}
-							HX_STACK_LINE(580)
 							o->zpp_pool = null();
 							HX_STACK_LINE(580)
 							if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -603,9 +598,6 @@ Float ratio = __o_ratio.Default(1.0);
 						{
 							HX_STACK_LINE(580)
 							::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(580)
-							{
-							}
 							HX_STACK_LINE(580)
 							{
 								HX_STACK_LINE(580)
@@ -703,7 +695,7 @@ Float ratio = __o_ratio.Default(1.0);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(581)
-					if (((_this1->_isimmutable_dyn() != null()))){
+					if (((_this1->_isimmutable != null()))){
 						HX_STACK_LINE(581)
 						_this1->_isimmutable();
 					}
@@ -714,7 +706,7 @@ Float ratio = __o_ratio.Default(1.0);
 					hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 				}
 				struct _Function_4_2{
-					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor2,::nape::geom::Vec2 &_this){
+					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 _this,::nape::geom::Vec2 &anchor2){
 						HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",581);
 						{
 							struct _Function_5_1{
@@ -731,7 +723,7 @@ Float ratio = __o_ratio.Default(1.0);
 											HX_STACK_LINE(581)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = anchor2->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(581)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(581)
 												_this1->_validate();
 											}
@@ -756,7 +748,7 @@ Float ratio = __o_ratio.Default(1.0);
 											HX_STACK_LINE(581)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = anchor2->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(581)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(581)
 												_this1->_validate();
 											}
@@ -785,7 +777,7 @@ Float ratio = __o_ratio.Default(1.0);
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(581)
-								if (((_this1->_isimmutable_dyn() != null()))){
+								if (((_this1->_isimmutable != null()))){
 									HX_STACK_LINE(581)
 									_this1->_isimmutable();
 								}
@@ -796,7 +788,7 @@ Float ratio = __o_ratio.Default(1.0);
 								hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 							}
 							struct _Function_5_3{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",581);
 									{
 										HX_STACK_LINE(581)
@@ -809,7 +801,7 @@ Float ratio = __o_ratio.Default(1.0);
 											HX_STACK_LINE(581)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(581)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(581)
 												_this1->_validate();
 											}
@@ -821,7 +813,7 @@ Float ratio = __o_ratio.Default(1.0);
 								}
 							};
 							struct _Function_5_4{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",581);
 									{
 										HX_STACK_LINE(581)
@@ -834,7 +826,7 @@ Float ratio = __o_ratio.Default(1.0);
 											HX_STACK_LINE(581)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(581)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(581)
 												_this1->_validate();
 											}
@@ -856,16 +848,13 @@ Float ratio = __o_ratio.Default(1.0);
 									HX_STACK_LINE(581)
 									{
 									}
-									HX_STACK_LINE(581)
-									{
-									}
 								}
 								HX_STACK_LINE(581)
 								{
 									HX_STACK_LINE(581)
 									::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 									HX_STACK_LINE(581)
-									if (((_this1->_invalidate_dyn() != null()))){
+									if (((_this1->_invalidate != null()))){
 										HX_STACK_LINE(581)
 										_this1->_invalidate(_this1);
 									}
@@ -878,7 +867,7 @@ Float ratio = __o_ratio.Default(1.0);
 					}
 				};
 				HX_STACK_LINE(581)
-				::nape::geom::Vec2 ret = _Function_4_2::Block(anchor2,_this);		HX_STACK_VAR(ret,"ret");
+				::nape::geom::Vec2 ret = _Function_4_2::Block(_this,anchor2);		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(581)
 				if ((anchor2->zpp_inner->weak)){
 					HX_STACK_LINE(581)
@@ -898,7 +887,7 @@ Float ratio = __o_ratio.Default(1.0);
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(581)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(581)
 								_this1->_isimmutable();
 							}
@@ -919,9 +908,6 @@ Float ratio = __o_ratio.Default(1.0);
 							HX_STACK_LINE(581)
 							::nape::geom::Vec2 o = anchor2;		HX_STACK_VAR(o,"o");
 							HX_STACK_LINE(581)
-							{
-							}
-							HX_STACK_LINE(581)
 							o->zpp_pool = null();
 							HX_STACK_LINE(581)
 							if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -941,9 +927,6 @@ Float ratio = __o_ratio.Default(1.0);
 						{
 							HX_STACK_LINE(581)
 							::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(581)
-							{
-							}
 							HX_STACK_LINE(581)
 							{
 								HX_STACK_LINE(581)
@@ -1041,7 +1024,7 @@ Float ratio = __o_ratio.Default(1.0);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(582)
-					if (((_this1->_isimmutable_dyn() != null()))){
+					if (((_this1->_isimmutable != null()))){
 						HX_STACK_LINE(582)
 						_this1->_isimmutable();
 					}
@@ -1052,7 +1035,7 @@ Float ratio = __o_ratio.Default(1.0);
 					hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 				}
 				struct _Function_4_2{
-					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor3,::nape::geom::Vec2 &_this){
+					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 _this,::nape::geom::Vec2 &anchor3){
 						HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",582);
 						{
 							struct _Function_5_1{
@@ -1069,7 +1052,7 @@ Float ratio = __o_ratio.Default(1.0);
 											HX_STACK_LINE(582)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = anchor3->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(582)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(582)
 												_this1->_validate();
 											}
@@ -1094,7 +1077,7 @@ Float ratio = __o_ratio.Default(1.0);
 											HX_STACK_LINE(582)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = anchor3->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(582)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(582)
 												_this1->_validate();
 											}
@@ -1123,7 +1106,7 @@ Float ratio = __o_ratio.Default(1.0);
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(582)
-								if (((_this1->_isimmutable_dyn() != null()))){
+								if (((_this1->_isimmutable != null()))){
 									HX_STACK_LINE(582)
 									_this1->_isimmutable();
 								}
@@ -1134,7 +1117,7 @@ Float ratio = __o_ratio.Default(1.0);
 								hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 							}
 							struct _Function_5_3{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",582);
 									{
 										HX_STACK_LINE(582)
@@ -1147,7 +1130,7 @@ Float ratio = __o_ratio.Default(1.0);
 											HX_STACK_LINE(582)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(582)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(582)
 												_this1->_validate();
 											}
@@ -1159,7 +1142,7 @@ Float ratio = __o_ratio.Default(1.0);
 								}
 							};
 							struct _Function_5_4{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",582);
 									{
 										HX_STACK_LINE(582)
@@ -1172,7 +1155,7 @@ Float ratio = __o_ratio.Default(1.0);
 											HX_STACK_LINE(582)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(582)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(582)
 												_this1->_validate();
 											}
@@ -1194,16 +1177,13 @@ Float ratio = __o_ratio.Default(1.0);
 									HX_STACK_LINE(582)
 									{
 									}
-									HX_STACK_LINE(582)
-									{
-									}
 								}
 								HX_STACK_LINE(582)
 								{
 									HX_STACK_LINE(582)
 									::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 									HX_STACK_LINE(582)
-									if (((_this1->_invalidate_dyn() != null()))){
+									if (((_this1->_invalidate != null()))){
 										HX_STACK_LINE(582)
 										_this1->_invalidate(_this1);
 									}
@@ -1216,7 +1196,7 @@ Float ratio = __o_ratio.Default(1.0);
 					}
 				};
 				HX_STACK_LINE(582)
-				::nape::geom::Vec2 ret = _Function_4_2::Block(anchor3,_this);		HX_STACK_VAR(ret,"ret");
+				::nape::geom::Vec2 ret = _Function_4_2::Block(_this,anchor3);		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(582)
 				if ((anchor3->zpp_inner->weak)){
 					HX_STACK_LINE(582)
@@ -1236,7 +1216,7 @@ Float ratio = __o_ratio.Default(1.0);
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(582)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(582)
 								_this1->_isimmutable();
 							}
@@ -1257,9 +1237,6 @@ Float ratio = __o_ratio.Default(1.0);
 							HX_STACK_LINE(582)
 							::nape::geom::Vec2 o = anchor3;		HX_STACK_VAR(o,"o");
 							HX_STACK_LINE(582)
-							{
-							}
-							HX_STACK_LINE(582)
 							o->zpp_pool = null();
 							HX_STACK_LINE(582)
 							if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -1279,9 +1256,6 @@ Float ratio = __o_ratio.Default(1.0);
 						{
 							HX_STACK_LINE(582)
 							::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(582)
-							{
-							}
 							HX_STACK_LINE(582)
 							{
 								HX_STACK_LINE(582)
@@ -1379,7 +1353,7 @@ Float ratio = __o_ratio.Default(1.0);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(583)
-					if (((_this1->_isimmutable_dyn() != null()))){
+					if (((_this1->_isimmutable != null()))){
 						HX_STACK_LINE(583)
 						_this1->_isimmutable();
 					}
@@ -1390,7 +1364,7 @@ Float ratio = __o_ratio.Default(1.0);
 					hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 				}
 				struct _Function_4_2{
-					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor4,::nape::geom::Vec2 &_this){
+					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor4,::nape::geom::Vec2 _this){
 						HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",583);
 						{
 							struct _Function_5_1{
@@ -1407,7 +1381,7 @@ Float ratio = __o_ratio.Default(1.0);
 											HX_STACK_LINE(583)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = anchor4->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(583)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(583)
 												_this1->_validate();
 											}
@@ -1432,7 +1406,7 @@ Float ratio = __o_ratio.Default(1.0);
 											HX_STACK_LINE(583)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = anchor4->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(583)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(583)
 												_this1->_validate();
 											}
@@ -1461,7 +1435,7 @@ Float ratio = __o_ratio.Default(1.0);
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(583)
-								if (((_this1->_isimmutable_dyn() != null()))){
+								if (((_this1->_isimmutable != null()))){
 									HX_STACK_LINE(583)
 									_this1->_isimmutable();
 								}
@@ -1472,7 +1446,7 @@ Float ratio = __o_ratio.Default(1.0);
 								hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 							}
 							struct _Function_5_3{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",583);
 									{
 										HX_STACK_LINE(583)
@@ -1485,7 +1459,7 @@ Float ratio = __o_ratio.Default(1.0);
 											HX_STACK_LINE(583)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(583)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(583)
 												_this1->_validate();
 											}
@@ -1497,7 +1471,7 @@ Float ratio = __o_ratio.Default(1.0);
 								}
 							};
 							struct _Function_5_4{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",583);
 									{
 										HX_STACK_LINE(583)
@@ -1510,7 +1484,7 @@ Float ratio = __o_ratio.Default(1.0);
 											HX_STACK_LINE(583)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(583)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(583)
 												_this1->_validate();
 											}
@@ -1532,16 +1506,13 @@ Float ratio = __o_ratio.Default(1.0);
 									HX_STACK_LINE(583)
 									{
 									}
-									HX_STACK_LINE(583)
-									{
-									}
 								}
 								HX_STACK_LINE(583)
 								{
 									HX_STACK_LINE(583)
 									::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 									HX_STACK_LINE(583)
-									if (((_this1->_invalidate_dyn() != null()))){
+									if (((_this1->_invalidate != null()))){
 										HX_STACK_LINE(583)
 										_this1->_invalidate(_this1);
 									}
@@ -1574,7 +1545,7 @@ Float ratio = __o_ratio.Default(1.0);
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(583)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(583)
 								_this1->_isimmutable();
 							}
@@ -1595,9 +1566,6 @@ Float ratio = __o_ratio.Default(1.0);
 							HX_STACK_LINE(583)
 							::nape::geom::Vec2 o = anchor4;		HX_STACK_VAR(o,"o");
 							HX_STACK_LINE(583)
-							{
-							}
-							HX_STACK_LINE(583)
 							o->zpp_pool = null();
 							HX_STACK_LINE(583)
 							if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -1617,9 +1585,6 @@ Float ratio = __o_ratio.Default(1.0);
 						{
 							HX_STACK_LINE(583)
 							::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(583)
-							{
-							}
 							HX_STACK_LINE(583)
 							{
 								HX_STACK_LINE(583)
@@ -2030,7 +1995,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_jointMin,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(440)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(440)
 					_this1->_isimmutable();
 				}
@@ -2041,7 +2006,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_jointMin,return )
 				hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 			}
 			struct _Function_3_2{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor4,::nape::geom::Vec2 &_this){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor4,::nape::geom::Vec2 _this){
 					HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",440);
 					{
 						struct _Function_4_1{
@@ -2058,7 +2023,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_jointMin,return )
 										HX_STACK_LINE(440)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = anchor4->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(440)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(440)
 											_this1->_validate();
 										}
@@ -2083,7 +2048,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_jointMin,return )
 										HX_STACK_LINE(440)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = anchor4->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(440)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(440)
 											_this1->_validate();
 										}
@@ -2112,7 +2077,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_jointMin,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(440)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(440)
 								_this1->_isimmutable();
 							}
@@ -2123,7 +2088,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_jointMin,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 						}
 						struct _Function_4_3{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",440);
 								{
 									HX_STACK_LINE(440)
@@ -2136,7 +2101,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_jointMin,return )
 										HX_STACK_LINE(440)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(440)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(440)
 											_this1->_validate();
 										}
@@ -2148,7 +2113,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_jointMin,return )
 							}
 						};
 						struct _Function_4_4{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",440);
 								{
 									HX_STACK_LINE(440)
@@ -2161,7 +2126,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_jointMin,return )
 										HX_STACK_LINE(440)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(440)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(440)
 											_this1->_validate();
 										}
@@ -2183,16 +2148,13 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_jointMin,return )
 								HX_STACK_LINE(440)
 								{
 								}
-								HX_STACK_LINE(440)
-								{
-								}
 							}
 							HX_STACK_LINE(440)
 							{
 								HX_STACK_LINE(440)
 								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(440)
-								if (((_this1->_invalidate_dyn() != null()))){
+								if (((_this1->_invalidate != null()))){
 									HX_STACK_LINE(440)
 									_this1->_invalidate(_this1);
 								}
@@ -2225,7 +2187,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_jointMin,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(440)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(440)
 							_this1->_isimmutable();
 						}
@@ -2246,9 +2208,6 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_jointMin,return )
 						HX_STACK_LINE(440)
 						::nape::geom::Vec2 o = anchor4;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(440)
-						{
-						}
-						HX_STACK_LINE(440)
 						o->zpp_pool = null();
 						HX_STACK_LINE(440)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -2268,9 +2227,6 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_jointMin,return )
 					{
 						HX_STACK_LINE(440)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(440)
-						{
-						}
 						HX_STACK_LINE(440)
 						{
 							HX_STACK_LINE(440)
@@ -2396,7 +2352,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor4,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(415)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(415)
 					_this1->_isimmutable();
 				}
@@ -2407,7 +2363,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor4,return )
 				hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 			}
 			struct _Function_3_2{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor3,::nape::geom::Vec2 &_this){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 _this,::nape::geom::Vec2 &anchor3){
 					HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",415);
 					{
 						struct _Function_4_1{
@@ -2424,7 +2380,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor4,return )
 										HX_STACK_LINE(415)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = anchor3->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(415)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(415)
 											_this1->_validate();
 										}
@@ -2449,7 +2405,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor4,return )
 										HX_STACK_LINE(415)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = anchor3->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(415)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(415)
 											_this1->_validate();
 										}
@@ -2478,7 +2434,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor4,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(415)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(415)
 								_this1->_isimmutable();
 							}
@@ -2489,7 +2445,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor4,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 						}
 						struct _Function_4_3{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",415);
 								{
 									HX_STACK_LINE(415)
@@ -2502,7 +2458,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor4,return )
 										HX_STACK_LINE(415)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(415)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(415)
 											_this1->_validate();
 										}
@@ -2514,7 +2470,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor4,return )
 							}
 						};
 						struct _Function_4_4{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",415);
 								{
 									HX_STACK_LINE(415)
@@ -2527,7 +2483,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor4,return )
 										HX_STACK_LINE(415)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(415)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(415)
 											_this1->_validate();
 										}
@@ -2549,16 +2505,13 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor4,return )
 								HX_STACK_LINE(415)
 								{
 								}
-								HX_STACK_LINE(415)
-								{
-								}
 							}
 							HX_STACK_LINE(415)
 							{
 								HX_STACK_LINE(415)
 								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(415)
-								if (((_this1->_invalidate_dyn() != null()))){
+								if (((_this1->_invalidate != null()))){
 									HX_STACK_LINE(415)
 									_this1->_invalidate(_this1);
 								}
@@ -2571,7 +2524,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor4,return )
 				}
 			};
 			HX_STACK_LINE(415)
-			::nape::geom::Vec2 ret = _Function_3_2::Block(anchor3,_this);		HX_STACK_VAR(ret,"ret");
+			::nape::geom::Vec2 ret = _Function_3_2::Block(_this,anchor3);		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(415)
 			if ((anchor3->zpp_inner->weak)){
 				HX_STACK_LINE(415)
@@ -2591,7 +2544,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor4,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(415)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(415)
 							_this1->_isimmutable();
 						}
@@ -2612,9 +2565,6 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor4,return )
 						HX_STACK_LINE(415)
 						::nape::geom::Vec2 o = anchor3;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(415)
-						{
-						}
-						HX_STACK_LINE(415)
 						o->zpp_pool = null();
 						HX_STACK_LINE(415)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -2634,9 +2584,6 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor4,return )
 					{
 						HX_STACK_LINE(415)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(415)
-						{
-						}
 						HX_STACK_LINE(415)
 						{
 							HX_STACK_LINE(415)
@@ -2762,7 +2709,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor3,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(390)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(390)
 					_this1->_isimmutable();
 				}
@@ -2773,7 +2720,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor3,return )
 				hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 			}
 			struct _Function_3_2{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor2,::nape::geom::Vec2 &_this){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 _this,::nape::geom::Vec2 &anchor2){
 					HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",390);
 					{
 						struct _Function_4_1{
@@ -2790,7 +2737,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor3,return )
 										HX_STACK_LINE(390)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = anchor2->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(390)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(390)
 											_this1->_validate();
 										}
@@ -2815,7 +2762,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor3,return )
 										HX_STACK_LINE(390)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = anchor2->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(390)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(390)
 											_this1->_validate();
 										}
@@ -2844,7 +2791,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor3,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(390)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(390)
 								_this1->_isimmutable();
 							}
@@ -2855,7 +2802,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor3,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 						}
 						struct _Function_4_3{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",390);
 								{
 									HX_STACK_LINE(390)
@@ -2868,7 +2815,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor3,return )
 										HX_STACK_LINE(390)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(390)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(390)
 											_this1->_validate();
 										}
@@ -2880,7 +2827,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor3,return )
 							}
 						};
 						struct _Function_4_4{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",390);
 								{
 									HX_STACK_LINE(390)
@@ -2893,7 +2840,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor3,return )
 										HX_STACK_LINE(390)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(390)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(390)
 											_this1->_validate();
 										}
@@ -2915,16 +2862,13 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor3,return )
 								HX_STACK_LINE(390)
 								{
 								}
-								HX_STACK_LINE(390)
-								{
-								}
 							}
 							HX_STACK_LINE(390)
 							{
 								HX_STACK_LINE(390)
 								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(390)
-								if (((_this1->_invalidate_dyn() != null()))){
+								if (((_this1->_invalidate != null()))){
 									HX_STACK_LINE(390)
 									_this1->_invalidate(_this1);
 								}
@@ -2937,7 +2881,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor3,return )
 				}
 			};
 			HX_STACK_LINE(390)
-			::nape::geom::Vec2 ret = _Function_3_2::Block(anchor2,_this);		HX_STACK_VAR(ret,"ret");
+			::nape::geom::Vec2 ret = _Function_3_2::Block(_this,anchor2);		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(390)
 			if ((anchor2->zpp_inner->weak)){
 				HX_STACK_LINE(390)
@@ -2957,7 +2901,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor3,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(390)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(390)
 							_this1->_isimmutable();
 						}
@@ -2978,9 +2922,6 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor3,return )
 						HX_STACK_LINE(390)
 						::nape::geom::Vec2 o = anchor2;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(390)
-						{
-						}
-						HX_STACK_LINE(390)
 						o->zpp_pool = null();
 						HX_STACK_LINE(390)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -3000,9 +2941,6 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor3,return )
 					{
 						HX_STACK_LINE(390)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(390)
-						{
-						}
 						HX_STACK_LINE(390)
 						{
 							HX_STACK_LINE(390)
@@ -3128,7 +3066,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor2,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(365)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(365)
 					_this1->_isimmutable();
 				}
@@ -3139,7 +3077,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor2,return )
 				hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 			}
 			struct _Function_3_2{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor1,::nape::geom::Vec2 &_this){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor1,::nape::geom::Vec2 _this){
 					HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",365);
 					{
 						struct _Function_4_1{
@@ -3156,7 +3094,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor2,return )
 										HX_STACK_LINE(365)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = anchor1->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(365)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(365)
 											_this1->_validate();
 										}
@@ -3181,7 +3119,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor2,return )
 										HX_STACK_LINE(365)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = anchor1->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(365)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(365)
 											_this1->_validate();
 										}
@@ -3210,7 +3148,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor2,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(365)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(365)
 								_this1->_isimmutable();
 							}
@@ -3221,7 +3159,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor2,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 						}
 						struct _Function_4_3{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",365);
 								{
 									HX_STACK_LINE(365)
@@ -3234,7 +3172,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor2,return )
 										HX_STACK_LINE(365)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(365)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(365)
 											_this1->_validate();
 										}
@@ -3246,7 +3184,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor2,return )
 							}
 						};
 						struct _Function_4_4{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/constraint/PulleyJoint.hx",365);
 								{
 									HX_STACK_LINE(365)
@@ -3259,7 +3197,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor2,return )
 										HX_STACK_LINE(365)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(365)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(365)
 											_this1->_validate();
 										}
@@ -3281,16 +3219,13 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor2,return )
 								HX_STACK_LINE(365)
 								{
 								}
-								HX_STACK_LINE(365)
-								{
-								}
 							}
 							HX_STACK_LINE(365)
 							{
 								HX_STACK_LINE(365)
 								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(365)
-								if (((_this1->_invalidate_dyn() != null()))){
+								if (((_this1->_invalidate != null()))){
 									HX_STACK_LINE(365)
 									_this1->_invalidate(_this1);
 								}
@@ -3323,7 +3258,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor2,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(365)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(365)
 							_this1->_isimmutable();
 						}
@@ -3344,9 +3279,6 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor2,return )
 						HX_STACK_LINE(365)
 						::nape::geom::Vec2 o = anchor1;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(365)
-						{
-						}
-						HX_STACK_LINE(365)
 						o->zpp_pool = null();
 						HX_STACK_LINE(365)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -3366,9 +3298,6 @@ HX_DEFINE_DYNAMIC_FUNC0(PulleyJoint_obj,get_anchor2,return )
 					{
 						HX_STACK_LINE(365)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(365)
-						{
-						}
 						HX_STACK_LINE(365)
 						{
 							HX_STACK_LINE(365)
@@ -3715,17 +3644,6 @@ PulleyJoint_obj::PulleyJoint_obj()
 void PulleyJoint_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(PulleyJoint);
-	HX_MARK_MEMBER_NAME(ratio,"ratio");
-	HX_MARK_MEMBER_NAME(jointMax,"jointMax");
-	HX_MARK_MEMBER_NAME(jointMin,"jointMin");
-	HX_MARK_MEMBER_NAME(anchor4,"anchor4");
-	HX_MARK_MEMBER_NAME(anchor3,"anchor3");
-	HX_MARK_MEMBER_NAME(anchor2,"anchor2");
-	HX_MARK_MEMBER_NAME(anchor1,"anchor1");
-	HX_MARK_MEMBER_NAME(body4,"body4");
-	HX_MARK_MEMBER_NAME(body3,"body3");
-	HX_MARK_MEMBER_NAME(body2,"body2");
-	HX_MARK_MEMBER_NAME(body1,"body1");
 	HX_MARK_MEMBER_NAME(zpp_inner_zn,"zpp_inner_zn");
 	super::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
@@ -3733,17 +3651,6 @@ void PulleyJoint_obj::__Mark(HX_MARK_PARAMS)
 
 void PulleyJoint_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(ratio,"ratio");
-	HX_VISIT_MEMBER_NAME(jointMax,"jointMax");
-	HX_VISIT_MEMBER_NAME(jointMin,"jointMin");
-	HX_VISIT_MEMBER_NAME(anchor4,"anchor4");
-	HX_VISIT_MEMBER_NAME(anchor3,"anchor3");
-	HX_VISIT_MEMBER_NAME(anchor2,"anchor2");
-	HX_VISIT_MEMBER_NAME(anchor1,"anchor1");
-	HX_VISIT_MEMBER_NAME(body4,"body4");
-	HX_VISIT_MEMBER_NAME(body3,"body3");
-	HX_VISIT_MEMBER_NAME(body2,"body2");
-	HX_VISIT_MEMBER_NAME(body1,"body1");
 	HX_VISIT_MEMBER_NAME(zpp_inner_zn,"zpp_inner_zn");
 	super::__Visit(HX_VISIT_ARG);
 }
@@ -3752,23 +3659,23 @@ Dynamic PulleyJoint_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"ratio") ) { return inCallProp ? get_ratio() : ratio; }
-		if (HX_FIELD_EQ(inName,"body4") ) { return inCallProp ? get_body4() : body4; }
-		if (HX_FIELD_EQ(inName,"body3") ) { return inCallProp ? get_body3() : body3; }
-		if (HX_FIELD_EQ(inName,"body2") ) { return inCallProp ? get_body2() : body2; }
-		if (HX_FIELD_EQ(inName,"body1") ) { return inCallProp ? get_body1() : body1; }
+		if (HX_FIELD_EQ(inName,"ratio") ) { return get_ratio(); }
+		if (HX_FIELD_EQ(inName,"body4") ) { return get_body4(); }
+		if (HX_FIELD_EQ(inName,"body3") ) { return get_body3(); }
+		if (HX_FIELD_EQ(inName,"body2") ) { return get_body2(); }
+		if (HX_FIELD_EQ(inName,"body1") ) { return get_body1(); }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"impulse") ) { return impulse_dyn(); }
 		if (HX_FIELD_EQ(inName,"isSlack") ) { return isSlack_dyn(); }
-		if (HX_FIELD_EQ(inName,"anchor4") ) { return inCallProp ? get_anchor4() : anchor4; }
-		if (HX_FIELD_EQ(inName,"anchor3") ) { return inCallProp ? get_anchor3() : anchor3; }
-		if (HX_FIELD_EQ(inName,"anchor2") ) { return inCallProp ? get_anchor2() : anchor2; }
-		if (HX_FIELD_EQ(inName,"anchor1") ) { return inCallProp ? get_anchor1() : anchor1; }
+		if (HX_FIELD_EQ(inName,"anchor4") ) { return get_anchor4(); }
+		if (HX_FIELD_EQ(inName,"anchor3") ) { return get_anchor3(); }
+		if (HX_FIELD_EQ(inName,"anchor2") ) { return get_anchor2(); }
+		if (HX_FIELD_EQ(inName,"anchor1") ) { return get_anchor1(); }
 		break;
 	case 8:
-		if (HX_FIELD_EQ(inName,"jointMax") ) { return inCallProp ? get_jointMax() : jointMax; }
-		if (HX_FIELD_EQ(inName,"jointMin") ) { return inCallProp ? get_jointMin() : jointMin; }
+		if (HX_FIELD_EQ(inName,"jointMax") ) { return get_jointMax(); }
+		if (HX_FIELD_EQ(inName,"jointMin") ) { return get_jointMin(); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"set_ratio") ) { return set_ratio_dyn(); }
@@ -3808,21 +3715,21 @@ Dynamic PulleyJoint_obj::__SetField(const ::String &inName,const Dynamic &inValu
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"ratio") ) { if (inCallProp) return set_ratio(inValue);ratio=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"body4") ) { if (inCallProp) return set_body4(inValue);body4=inValue.Cast< ::nape::phys::Body >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"body3") ) { if (inCallProp) return set_body3(inValue);body3=inValue.Cast< ::nape::phys::Body >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"body2") ) { if (inCallProp) return set_body2(inValue);body2=inValue.Cast< ::nape::phys::Body >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"body1") ) { if (inCallProp) return set_body1(inValue);body1=inValue.Cast< ::nape::phys::Body >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"ratio") ) { return set_ratio(inValue); }
+		if (HX_FIELD_EQ(inName,"body4") ) { return set_body4(inValue); }
+		if (HX_FIELD_EQ(inName,"body3") ) { return set_body3(inValue); }
+		if (HX_FIELD_EQ(inName,"body2") ) { return set_body2(inValue); }
+		if (HX_FIELD_EQ(inName,"body1") ) { return set_body1(inValue); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"anchor4") ) { if (inCallProp) return set_anchor4(inValue);anchor4=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"anchor3") ) { if (inCallProp) return set_anchor3(inValue);anchor3=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"anchor2") ) { if (inCallProp) return set_anchor2(inValue);anchor2=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"anchor1") ) { if (inCallProp) return set_anchor1(inValue);anchor1=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"anchor4") ) { return set_anchor4(inValue); }
+		if (HX_FIELD_EQ(inName,"anchor3") ) { return set_anchor3(inValue); }
+		if (HX_FIELD_EQ(inName,"anchor2") ) { return set_anchor2(inValue); }
+		if (HX_FIELD_EQ(inName,"anchor1") ) { return set_anchor1(inValue); }
 		break;
 	case 8:
-		if (HX_FIELD_EQ(inName,"jointMax") ) { if (inCallProp) return set_jointMax(inValue);jointMax=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"jointMin") ) { if (inCallProp) return set_jointMin(inValue);jointMin=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"jointMax") ) { return set_jointMax(inValue); }
+		if (HX_FIELD_EQ(inName,"jointMin") ) { return set_jointMin(inValue); }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"zpp_inner_zn") ) { zpp_inner_zn=inValue.Cast< ::zpp_nape::constraint::ZPP_PulleyJoint >(); return inValue; }
@@ -3857,37 +3764,26 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("isSlack"),
 	HX_CSTRING("set_ratio"),
 	HX_CSTRING("get_ratio"),
-	HX_CSTRING("ratio"),
 	HX_CSTRING("set_jointMax"),
 	HX_CSTRING("get_jointMax"),
-	HX_CSTRING("jointMax"),
 	HX_CSTRING("set_jointMin"),
 	HX_CSTRING("get_jointMin"),
-	HX_CSTRING("jointMin"),
 	HX_CSTRING("set_anchor4"),
 	HX_CSTRING("get_anchor4"),
-	HX_CSTRING("anchor4"),
 	HX_CSTRING("set_anchor3"),
 	HX_CSTRING("get_anchor3"),
-	HX_CSTRING("anchor3"),
 	HX_CSTRING("set_anchor2"),
 	HX_CSTRING("get_anchor2"),
-	HX_CSTRING("anchor2"),
 	HX_CSTRING("set_anchor1"),
 	HX_CSTRING("get_anchor1"),
-	HX_CSTRING("anchor1"),
 	HX_CSTRING("set_body4"),
 	HX_CSTRING("get_body4"),
-	HX_CSTRING("body4"),
 	HX_CSTRING("set_body3"),
 	HX_CSTRING("get_body3"),
-	HX_CSTRING("body3"),
 	HX_CSTRING("set_body2"),
 	HX_CSTRING("get_body2"),
-	HX_CSTRING("body2"),
 	HX_CSTRING("set_body1"),
 	HX_CSTRING("get_body1"),
-	HX_CSTRING("body1"),
 	HX_CSTRING("zpp_inner_zn"),
 	String(null()) };
 
@@ -3903,7 +3799,7 @@ Class PulleyJoint_obj::__mClass;
 
 void PulleyJoint_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.constraint.PulleyJoint"), hx::TCanCast< PulleyJoint_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.constraint.PulleyJoint"), hx::TCanCast< PulleyJoint_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

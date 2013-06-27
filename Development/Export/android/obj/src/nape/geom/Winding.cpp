@@ -126,8 +126,6 @@ Dynamic Winding_obj::__Create(hx::DynamicArray inArgs)
 
 HX_DEFINE_DYNAMIC_FUNC0(Winding_obj,toString,return )
 
-::nape::geom::Winding Winding_obj::UNDEFINED;
-
 ::nape::geom::Winding Winding_obj::get_UNDEFINED( ){
 	HX_STACK_PUSH("Winding::get_UNDEFINED","nape/geom/Winding.hx",213);
 	HX_STACK_LINE(214)
@@ -146,8 +144,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Winding_obj,toString,return )
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Winding_obj,get_UNDEFINED,return )
 
-::nape::geom::Winding Winding_obj::CLOCKWISE;
-
 ::nape::geom::Winding Winding_obj::get_CLOCKWISE( ){
 	HX_STACK_PUSH("Winding::get_CLOCKWISE","nape/geom/Winding.hx",226);
 	HX_STACK_LINE(227)
@@ -165,8 +161,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(Winding_obj,get_UNDEFINED,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Winding_obj,get_CLOCKWISE,return )
-
-::nape::geom::Winding Winding_obj::ANTICLOCKWISE;
 
 ::nape::geom::Winding Winding_obj::get_ANTICLOCKWISE( ){
 	HX_STACK_PUSH("Winding::get_ANTICLOCKWISE","nape/geom/Winding.hx",239);
@@ -208,13 +202,13 @@ Dynamic Winding_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
 		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"UNDEFINED") ) { return inCallProp ? get_UNDEFINED() : UNDEFINED; }
-		if (HX_FIELD_EQ(inName,"CLOCKWISE") ) { return inCallProp ? get_CLOCKWISE() : CLOCKWISE; }
+		if (HX_FIELD_EQ(inName,"UNDEFINED") ) { return get_UNDEFINED(); }
+		if (HX_FIELD_EQ(inName,"CLOCKWISE") ) { return get_CLOCKWISE(); }
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"get_UNDEFINED") ) { return get_UNDEFINED_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_CLOCKWISE") ) { return get_CLOCKWISE_dyn(); }
-		if (HX_FIELD_EQ(inName,"ANTICLOCKWISE") ) { return inCallProp ? get_ANTICLOCKWISE() : ANTICLOCKWISE; }
+		if (HX_FIELD_EQ(inName,"ANTICLOCKWISE") ) { return get_ANTICLOCKWISE(); }
 		break;
 	case 17:
 		if (HX_FIELD_EQ(inName,"get_ANTICLOCKWISE") ) { return get_ANTICLOCKWISE_dyn(); }
@@ -224,14 +218,6 @@ Dynamic Winding_obj::__Field(const ::String &inName,bool inCallProp)
 
 Dynamic Winding_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 9:
-		if (HX_FIELD_EQ(inName,"UNDEFINED") ) { UNDEFINED=inValue.Cast< ::nape::geom::Winding >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"CLOCKWISE") ) { CLOCKWISE=inValue.Cast< ::nape::geom::Winding >(); return inValue; }
-		break;
-	case 13:
-		if (HX_FIELD_EQ(inName,"ANTICLOCKWISE") ) { ANTICLOCKWISE=inValue.Cast< ::nape::geom::Winding >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
@@ -241,11 +227,8 @@ void Winding_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("UNDEFINED"),
 	HX_CSTRING("get_UNDEFINED"),
-	HX_CSTRING("CLOCKWISE"),
 	HX_CSTRING("get_CLOCKWISE"),
-	HX_CSTRING("ANTICLOCKWISE"),
 	HX_CSTRING("get_ANTICLOCKWISE"),
 	String(null()) };
 
@@ -255,23 +238,17 @@ static ::String sMemberFields[] = {
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(Winding_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(Winding_obj::UNDEFINED,"UNDEFINED");
-	HX_MARK_MEMBER_NAME(Winding_obj::CLOCKWISE,"CLOCKWISE");
-	HX_MARK_MEMBER_NAME(Winding_obj::ANTICLOCKWISE,"ANTICLOCKWISE");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(Winding_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(Winding_obj::UNDEFINED,"UNDEFINED");
-	HX_VISIT_MEMBER_NAME(Winding_obj::CLOCKWISE,"CLOCKWISE");
-	HX_VISIT_MEMBER_NAME(Winding_obj::ANTICLOCKWISE,"ANTICLOCKWISE");
 };
 
 Class Winding_obj::__mClass;
 
 void Winding_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.Winding"), hx::TCanCast< Winding_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.Winding"), hx::TCanCast< Winding_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

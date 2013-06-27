@@ -93,9 +93,6 @@ Void ZPP_AABBNode_obj::free( ){
 		{
 			HX_STACK_LINE(240)
 			::zpp_nape::geom::ZPP_AABB o = this->aabb;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(241)
-			{
-			}
 			HX_STACK_LINE(249)
 			{
 				HX_STACK_LINE(249)
@@ -338,7 +335,7 @@ Class ZPP_AABBNode_obj::__mClass;
 
 void ZPP_AABBNode_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_AABBNode"), hx::TCanCast< ZPP_AABBNode_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_AABBNode"), hx::TCanCast< ZPP_AABBNode_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -20,45 +20,45 @@ namespace util{
 
 Void ZPP_EdgeList_obj::__construct()
 {
-HX_STACK_PUSH("ZPP_EdgeList::new","zpp_nape/util/Lists.hx",17177);
+HX_STACK_PUSH("ZPP_EdgeList::new","zpp_nape/util/Lists.hx",17115);
 {
-	HX_STACK_LINE(17232)
+	HX_STACK_LINE(17170)
 	this->user_length = (int)0;
-	HX_STACK_LINE(17231)
+	HX_STACK_LINE(17169)
 	this->zip_length = false;
-	HX_STACK_LINE(17230)
+	HX_STACK_LINE(17168)
 	this->push_ite = null();
-	HX_STACK_LINE(17229)
+	HX_STACK_LINE(17167)
 	this->at_ite = null();
-	HX_STACK_LINE(17228)
+	HX_STACK_LINE(17166)
 	this->at_index = (int)0;
-	HX_STACK_LINE(17190)
+	HX_STACK_LINE(17128)
 	this->reverse_flag = false;
-	HX_STACK_LINE(17189)
+	HX_STACK_LINE(17127)
 	this->dontremove = false;
-	HX_STACK_LINE(17188)
+	HX_STACK_LINE(17126)
 	this->subber = null();
-	HX_STACK_LINE(17187)
+	HX_STACK_LINE(17125)
 	this->post_adder = null();
-	HX_STACK_LINE(17186)
+	HX_STACK_LINE(17124)
 	this->adder = null();
-	HX_STACK_LINE(17184)
+	HX_STACK_LINE(17122)
 	this->_modifiable = null();
-	HX_STACK_LINE(17183)
+	HX_STACK_LINE(17121)
 	this->_validate = null();
-	HX_STACK_LINE(17182)
+	HX_STACK_LINE(17120)
 	this->_invalidate = null();
-	HX_STACK_LINE(17181)
+	HX_STACK_LINE(17119)
 	this->_invalidated = false;
-	HX_STACK_LINE(17180)
+	HX_STACK_LINE(17118)
 	this->immutable = false;
-	HX_STACK_LINE(17179)
+	HX_STACK_LINE(17117)
 	this->inner = null();
-	HX_STACK_LINE(17178)
+	HX_STACK_LINE(17116)
 	this->outer = null();
-	HX_STACK_LINE(17234)
+	HX_STACK_LINE(17172)
 	this->inner = ::zpp_nape::util::ZNPList_ZPP_Edge_obj::__new();
-	HX_STACK_LINE(17235)
+	HX_STACK_LINE(17173)
 	this->_invalidated = true;
 }
 ;
@@ -80,13 +80,13 @@ Dynamic ZPP_EdgeList_obj::__Create(hx::DynamicArray inArgs)
 
 Void ZPP_EdgeList_obj::invalidate( ){
 {
-		HX_STACK_PUSH("ZPP_EdgeList::invalidate","zpp_nape/util/Lists.hx",17224);
+		HX_STACK_PUSH("ZPP_EdgeList::invalidate","zpp_nape/util/Lists.hx",17162);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(17225)
+		HX_STACK_LINE(17163)
 		this->_invalidated = true;
-		HX_STACK_LINE(17226)
+		HX_STACK_LINE(17164)
 		if (((this->_invalidate_dyn() != null()))){
-			HX_STACK_LINE(17226)
+			HX_STACK_LINE(17164)
 			this->_invalidate(hx::ObjectPtr<OBJ_>(this));
 		}
 	}
@@ -98,15 +98,15 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_EdgeList_obj,invalidate,(void))
 
 Void ZPP_EdgeList_obj::validate( ){
 {
-		HX_STACK_PUSH("ZPP_EdgeList::validate","zpp_nape/util/Lists.hx",17218);
+		HX_STACK_PUSH("ZPP_EdgeList::validate","zpp_nape/util/Lists.hx",17156);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(17218)
+		HX_STACK_LINE(17156)
 		if ((this->_invalidated)){
-			HX_STACK_LINE(17220)
+			HX_STACK_LINE(17158)
 			this->_invalidated = false;
-			HX_STACK_LINE(17221)
+			HX_STACK_LINE(17159)
 			if (((this->_validate_dyn() != null()))){
-				HX_STACK_LINE(17221)
+				HX_STACK_LINE(17159)
 				this->_validate();
 			}
 		}
@@ -119,11 +119,11 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_EdgeList_obj,validate,(void))
 
 Void ZPP_EdgeList_obj::modify_test( ){
 {
-		HX_STACK_PUSH("ZPP_EdgeList::modify_test","zpp_nape/util/Lists.hx",17213);
+		HX_STACK_PUSH("ZPP_EdgeList::modify_test","zpp_nape/util/Lists.hx",17151);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(17213)
+		HX_STACK_LINE(17151)
 		if (((this->_modifiable_dyn() != null()))){
-			HX_STACK_LINE(17215)
+			HX_STACK_LINE(17153)
 			this->_modifiable();
 		}
 	}
@@ -135,13 +135,13 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_EdgeList_obj,modify_test,(void))
 
 Void ZPP_EdgeList_obj::modified( ){
 {
-		HX_STACK_PUSH("ZPP_EdgeList::modified","zpp_nape/util/Lists.hx",17208);
+		HX_STACK_PUSH("ZPP_EdgeList::modified","zpp_nape/util/Lists.hx",17146);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(17209)
+		HX_STACK_LINE(17147)
 		this->zip_length = true;
-		HX_STACK_LINE(17210)
+		HX_STACK_LINE(17148)
 		this->at_ite = null();
-		HX_STACK_LINE(17211)
+		HX_STACK_LINE(17149)
 		this->push_ite = null();
 	}
 return null();
@@ -152,24 +152,24 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_EdgeList_obj,modified,(void))
 
 Void ZPP_EdgeList_obj::valmod( ){
 {
-		HX_STACK_PUSH("ZPP_EdgeList::valmod","zpp_nape/util/Lists.hx",17198);
+		HX_STACK_PUSH("ZPP_EdgeList::valmod","zpp_nape/util/Lists.hx",17136);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(17199)
+		HX_STACK_LINE(17137)
 		this->validate();
-		HX_STACK_LINE(17200)
+		HX_STACK_LINE(17138)
 		if ((this->inner->modified)){
-			HX_STACK_LINE(17201)
+			HX_STACK_LINE(17139)
 			if ((this->inner->pushmod)){
-				HX_STACK_LINE(17201)
+				HX_STACK_LINE(17139)
 				this->push_ite = null();
 			}
-			HX_STACK_LINE(17202)
+			HX_STACK_LINE(17140)
 			this->at_ite = null();
-			HX_STACK_LINE(17203)
+			HX_STACK_LINE(17141)
 			this->inner->modified = false;
-			HX_STACK_LINE(17204)
+			HX_STACK_LINE(17142)
 			this->inner->pushmod = false;
-			HX_STACK_LINE(17205)
+			HX_STACK_LINE(17143)
 			this->zip_length = true;
 		}
 	}
@@ -183,22 +183,22 @@ bool ZPP_EdgeList_obj::internal;
 
 ::nape::shape::EdgeList ZPP_EdgeList_obj::get( ::zpp_nape::util::ZNPList_ZPP_Edge list,hx::Null< bool >  __o_imm){
 bool imm = __o_imm.Default(false);
-	HX_STACK_PUSH("ZPP_EdgeList::get","zpp_nape/util/Lists.hx",17191);
+	HX_STACK_PUSH("ZPP_EdgeList::get","zpp_nape/util/Lists.hx",17129);
 	HX_STACK_ARG(list,"list");
 	HX_STACK_ARG(imm,"imm");
 {
-		HX_STACK_LINE(17192)
+		HX_STACK_LINE(17130)
 		::nape::shape::EdgeList ret = ::nape::shape::EdgeList_obj::__new();		HX_STACK_VAR(ret,"ret");
-		HX_STACK_LINE(17193)
+		HX_STACK_LINE(17131)
 		ret->zpp_inner->inner = list;
-		HX_STACK_LINE(17194)
+		HX_STACK_LINE(17132)
 		if ((imm)){
-			HX_STACK_LINE(17194)
+			HX_STACK_LINE(17132)
 			ret->zpp_inner->immutable = true;
 		}
-		HX_STACK_LINE(17195)
+		HX_STACK_LINE(17133)
 		ret->zpp_inner->zip_length = true;
-		HX_STACK_LINE(17196)
+		HX_STACK_LINE(17134)
 		return ret;
 	}
 }
@@ -399,7 +399,7 @@ Class ZPP_EdgeList_obj::__mClass;
 
 void ZPP_EdgeList_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_EdgeList"), hx::TCanCast< ZPP_EdgeList_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_EdgeList"), hx::TCanCast< ZPP_EdgeList_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

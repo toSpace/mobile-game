@@ -12,7 +12,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_Geom_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Geom_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Geom_obj OBJ_;

@@ -152,8 +152,6 @@ Dynamic ValidationResult_obj::__Create(hx::DynamicArray inArgs)
 
 HX_DEFINE_DYNAMIC_FUNC0(ValidationResult_obj,toString,return )
 
-::nape::shape::ValidationResult ValidationResult_obj::VALID;
-
 ::nape::shape::ValidationResult ValidationResult_obj::get_VALID( ){
 	HX_STACK_PUSH("ValidationResult::get_VALID","nape/shape/ValidationResult.hx",203);
 	HX_STACK_LINE(204)
@@ -171,8 +169,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ValidationResult_obj,toString,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(ValidationResult_obj,get_VALID,return )
-
-::nape::shape::ValidationResult ValidationResult_obj::DEGENERATE;
 
 ::nape::shape::ValidationResult ValidationResult_obj::get_DEGENERATE( ){
 	HX_STACK_PUSH("ValidationResult::get_DEGENERATE","nape/shape/ValidationResult.hx",216);
@@ -192,8 +188,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(ValidationResult_obj,get_VALID,return )
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(ValidationResult_obj,get_DEGENERATE,return )
 
-::nape::shape::ValidationResult ValidationResult_obj::CONCAVE;
-
 ::nape::shape::ValidationResult ValidationResult_obj::get_CONCAVE( ){
 	HX_STACK_PUSH("ValidationResult::get_CONCAVE","nape/shape/ValidationResult.hx",229);
 	HX_STACK_LINE(230)
@@ -211,8 +205,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(ValidationResult_obj,get_DEGENERATE,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(ValidationResult_obj,get_CONCAVE,return )
-
-::nape::shape::ValidationResult ValidationResult_obj::SELF_INTERSECTING;
 
 ::nape::shape::ValidationResult ValidationResult_obj::get_SELF_INTERSECTING( ){
 	HX_STACK_PUSH("ValidationResult::get_SELF_INTERSECTING","nape/shape/ValidationResult.hx",242);
@@ -251,10 +243,10 @@ Dynamic ValidationResult_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"VALID") ) { return inCallProp ? get_VALID() : VALID; }
+		if (HX_FIELD_EQ(inName,"VALID") ) { return get_VALID(); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"CONCAVE") ) { return inCallProp ? get_CONCAVE() : CONCAVE; }
+		if (HX_FIELD_EQ(inName,"CONCAVE") ) { return get_CONCAVE(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
@@ -263,7 +255,7 @@ Dynamic ValidationResult_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"get_VALID") ) { return get_VALID_dyn(); }
 		break;
 	case 10:
-		if (HX_FIELD_EQ(inName,"DEGENERATE") ) { return inCallProp ? get_DEGENERATE() : DEGENERATE; }
+		if (HX_FIELD_EQ(inName,"DEGENERATE") ) { return get_DEGENERATE(); }
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"get_CONCAVE") ) { return get_CONCAVE_dyn(); }
@@ -272,7 +264,7 @@ Dynamic ValidationResult_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"get_DEGENERATE") ) { return get_DEGENERATE_dyn(); }
 		break;
 	case 17:
-		if (HX_FIELD_EQ(inName,"SELF_INTERSECTING") ) { return inCallProp ? get_SELF_INTERSECTING() : SELF_INTERSECTING; }
+		if (HX_FIELD_EQ(inName,"SELF_INTERSECTING") ) { return get_SELF_INTERSECTING(); }
 		break;
 	case 21:
 		if (HX_FIELD_EQ(inName,"get_SELF_INTERSECTING") ) { return get_SELF_INTERSECTING_dyn(); }
@@ -282,19 +274,6 @@ Dynamic ValidationResult_obj::__Field(const ::String &inName,bool inCallProp)
 
 Dynamic ValidationResult_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 5:
-		if (HX_FIELD_EQ(inName,"VALID") ) { VALID=inValue.Cast< ::nape::shape::ValidationResult >(); return inValue; }
-		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"CONCAVE") ) { CONCAVE=inValue.Cast< ::nape::shape::ValidationResult >(); return inValue; }
-		break;
-	case 10:
-		if (HX_FIELD_EQ(inName,"DEGENERATE") ) { DEGENERATE=inValue.Cast< ::nape::shape::ValidationResult >(); return inValue; }
-		break;
-	case 17:
-		if (HX_FIELD_EQ(inName,"SELF_INTERSECTING") ) { SELF_INTERSECTING=inValue.Cast< ::nape::shape::ValidationResult >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
@@ -304,13 +283,9 @@ void ValidationResult_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("VALID"),
 	HX_CSTRING("get_VALID"),
-	HX_CSTRING("DEGENERATE"),
 	HX_CSTRING("get_DEGENERATE"),
-	HX_CSTRING("CONCAVE"),
 	HX_CSTRING("get_CONCAVE"),
-	HX_CSTRING("SELF_INTERSECTING"),
 	HX_CSTRING("get_SELF_INTERSECTING"),
 	String(null()) };
 
@@ -320,25 +295,17 @@ static ::String sMemberFields[] = {
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(ValidationResult_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(ValidationResult_obj::VALID,"VALID");
-	HX_MARK_MEMBER_NAME(ValidationResult_obj::DEGENERATE,"DEGENERATE");
-	HX_MARK_MEMBER_NAME(ValidationResult_obj::CONCAVE,"CONCAVE");
-	HX_MARK_MEMBER_NAME(ValidationResult_obj::SELF_INTERSECTING,"SELF_INTERSECTING");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(ValidationResult_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(ValidationResult_obj::VALID,"VALID");
-	HX_VISIT_MEMBER_NAME(ValidationResult_obj::DEGENERATE,"DEGENERATE");
-	HX_VISIT_MEMBER_NAME(ValidationResult_obj::CONCAVE,"CONCAVE");
-	HX_VISIT_MEMBER_NAME(ValidationResult_obj::SELF_INTERSECTING,"SELF_INTERSECTING");
 };
 
 Class ValidationResult_obj::__mClass;
 
 void ValidationResult_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.shape.ValidationResult"), hx::TCanCast< ValidationResult_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.shape.ValidationResult"), hx::TCanCast< ValidationResult_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

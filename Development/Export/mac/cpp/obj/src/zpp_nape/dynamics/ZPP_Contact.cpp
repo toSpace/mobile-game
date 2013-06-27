@@ -88,9 +88,6 @@ Dynamic ZPP_Contact_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_PUSH("ZPP_Contact::at","zpp_nape/dynamics/Contact.hx",611);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(612)
-	{
-	}
 	HX_STACK_LINE(620)
 	::zpp_nape::dynamics::ZPP_Contact it = this->iterator_at(ind);		HX_STACK_VAR(it,"it");
 	HX_STACK_LINE(621)
@@ -104,9 +101,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Contact_obj,at,return )
 	HX_STACK_PUSH("ZPP_Contact::iterator_at","zpp_nape/dynamics/Contact.hx",598);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(599)
-	{
-	}
 	HX_STACK_LINE(607)
 	::zpp_nape::dynamics::ZPP_Contact ret = this->next;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(608)
@@ -156,9 +150,6 @@ bool ZPP_Contact_obj::inlined_has( ::zpp_nape::dynamics::ZPP_Contact obj){
 	HX_STACK_PUSH("ZPP_Contact::inlined_has","zpp_nape/dynamics/Contact.hx",556);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(557)
-	{
-	}
 	HX_STACK_LINE(565)
 	bool ret;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(566)
@@ -200,9 +191,6 @@ bool ZPP_Contact_obj::has( ::zpp_nape::dynamics::ZPP_Contact obj){
 		inline static bool Block( ::zpp_nape::dynamics::ZPP_Contact_obj *__this,::zpp_nape::dynamics::ZPP_Contact &obj){
 			HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Contact.hx",552);
 			{
-				HX_STACK_LINE(552)
-				{
-				}
 				HX_STACK_LINE(552)
 				bool ret;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(552)
@@ -337,9 +325,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Contact_obj,splice,return )
 	HX_STACK_PUSH("ZPP_Contact::inlined_erase","zpp_nape/dynamics/Contact.hx",481);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
-	HX_STACK_LINE(482)
-	{
-	}
 	HX_STACK_LINE(490)
 	::zpp_nape::dynamics::ZPP_Contact old;		HX_STACK_VAR(old,"old");
 	HX_STACK_LINE(491)
@@ -373,9 +358,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Contact_obj,splice,return )
 	}
 	HX_STACK_LINE(504)
 	old->_inuse = false;
-	HX_STACK_LINE(507)
-	{
-	}
 	HX_STACK_LINE(508)
 	this->modified = true;
 	HX_STACK_LINE(509)
@@ -394,12 +376,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Contact_obj,inlined_erase,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
 	struct _Function_1_1{
-		inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &pre,::zpp_nape::dynamics::ZPP_Contact_obj *__this){
+		inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact_obj *__this,::zpp_nape::dynamics::ZPP_Contact &pre){
 			HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Contact.hx",477);
 			{
-				HX_STACK_LINE(477)
-				{
-				}
 				HX_STACK_LINE(477)
 				::zpp_nape::dynamics::ZPP_Contact old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(477)
@@ -434,9 +413,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Contact_obj,inlined_erase,return )
 				HX_STACK_LINE(477)
 				old->_inuse = false;
 				HX_STACK_LINE(477)
-				{
-				}
-				HX_STACK_LINE(477)
 				__this->modified = true;
 				HX_STACK_LINE(477)
 				(__this->length)--;
@@ -449,7 +425,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Contact_obj,inlined_erase,return )
 		}
 	};
 	HX_STACK_LINE(476)
-	return _Function_1_1::Block(pre,this);
+	return _Function_1_1::Block(this,pre);
 }
 
 
@@ -459,9 +435,6 @@ bool ZPP_Contact_obj::inlined_try_remove( ::zpp_nape::dynamics::ZPP_Contact obj)
 	HX_STACK_PUSH("ZPP_Contact::inlined_try_remove","zpp_nape/dynamics/Contact.hx",453);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(454)
-	{
-	}
 	HX_STACK_LINE(462)
 	::zpp_nape::dynamics::ZPP_Contact pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(463)
@@ -474,9 +447,6 @@ bool ZPP_Contact_obj::inlined_try_remove( ::zpp_nape::dynamics::ZPP_Contact obj)
 		if (((cur == obj))){
 			HX_STACK_LINE(467)
 			{
-				HX_STACK_LINE(467)
-				{
-				}
 				HX_STACK_LINE(467)
 				::zpp_nape::dynamics::ZPP_Contact old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(467)
@@ -511,9 +481,6 @@ bool ZPP_Contact_obj::inlined_try_remove( ::zpp_nape::dynamics::ZPP_Contact obj)
 				HX_STACK_LINE(467)
 				old->_inuse = false;
 				HX_STACK_LINE(467)
-				{
-				}
-				HX_STACK_LINE(467)
 				this->modified = true;
 				HX_STACK_LINE(467)
 				(this->length)--;
@@ -544,87 +511,72 @@ Void ZPP_Contact_obj::inlined_remove( ::zpp_nape::dynamics::ZPP_Contact obj){
 		HX_STACK_PUSH("ZPP_Contact::inlined_remove","zpp_nape/dynamics/Contact.hx",440);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(441)
-		{
-		}
 		HX_STACK_LINE(449)
-		{
+		::zpp_nape::dynamics::ZPP_Contact pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(449)
+		::zpp_nape::dynamics::ZPP_Contact cur = this->next;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(449)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(449)
+		while(((cur != null()))){
 			HX_STACK_LINE(449)
-			{
-			}
-			HX_STACK_LINE(449)
-			::zpp_nape::dynamics::ZPP_Contact pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(449)
-			::zpp_nape::dynamics::ZPP_Contact cur = this->next;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(449)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(449)
-			while(((cur != null()))){
+			if (((cur == obj))){
 				HX_STACK_LINE(449)
-				if (((cur == obj))){
+				{
 					HX_STACK_LINE(449)
-					{
+					::zpp_nape::dynamics::ZPP_Contact old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(449)
+					::zpp_nape::dynamics::ZPP_Contact ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(449)
+					if (((pre == null()))){
 						HX_STACK_LINE(449)
-						{
+						old = this->next;
+						HX_STACK_LINE(449)
+						ret1 = old->next;
+						HX_STACK_LINE(449)
+						this->next = ret1;
+						HX_STACK_LINE(449)
+						if (((this->next == null()))){
+							HX_STACK_LINE(449)
+							this->pushmod = true;
 						}
+					}
+					else{
 						HX_STACK_LINE(449)
-						::zpp_nape::dynamics::ZPP_Contact old;		HX_STACK_VAR(old,"old");
+						old = pre->next;
 						HX_STACK_LINE(449)
-						::zpp_nape::dynamics::ZPP_Contact ret1;		HX_STACK_VAR(ret1,"ret1");
+						ret1 = old->next;
 						HX_STACK_LINE(449)
-						if (((pre == null()))){
+						pre->next = ret1;
+						HX_STACK_LINE(449)
+						if (((ret1 == null()))){
 							HX_STACK_LINE(449)
-							old = this->next;
-							HX_STACK_LINE(449)
-							ret1 = old->next;
-							HX_STACK_LINE(449)
-							this->next = ret1;
-							HX_STACK_LINE(449)
-							if (((this->next == null()))){
-								HX_STACK_LINE(449)
-								this->pushmod = true;
-							}
+							this->pushmod = true;
 						}
-						else{
-							HX_STACK_LINE(449)
-							old = pre->next;
-							HX_STACK_LINE(449)
-							ret1 = old->next;
-							HX_STACK_LINE(449)
-							pre->next = ret1;
-							HX_STACK_LINE(449)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(449)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(449)
-						old->_inuse = false;
-						HX_STACK_LINE(449)
-						{
-						}
-						HX_STACK_LINE(449)
-						this->modified = true;
-						HX_STACK_LINE(449)
-						(this->length)--;
-						HX_STACK_LINE(449)
-						this->pushmod = true;
-						HX_STACK_LINE(449)
-						ret1;
 					}
 					HX_STACK_LINE(449)
-					ret = true;
+					old->_inuse = false;
 					HX_STACK_LINE(449)
-					break;
+					this->modified = true;
+					HX_STACK_LINE(449)
+					(this->length)--;
+					HX_STACK_LINE(449)
+					this->pushmod = true;
+					HX_STACK_LINE(449)
+					ret1;
 				}
 				HX_STACK_LINE(449)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(449)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(449)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(449)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(449)
+		ret;
 	}
 return null();
 }
@@ -636,9 +588,6 @@ bool ZPP_Contact_obj::try_remove( ::zpp_nape::dynamics::ZPP_Contact obj){
 	HX_STACK_PUSH("ZPP_Contact::try_remove","zpp_nape/dynamics/Contact.hx",415);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(416)
-	{
-	}
 	HX_STACK_LINE(424)
 	::zpp_nape::dynamics::ZPP_Contact pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(425)
@@ -673,87 +622,72 @@ Void ZPP_Contact_obj::remove( ::zpp_nape::dynamics::ZPP_Contact obj){
 		HX_STACK_PUSH("ZPP_Contact::remove","zpp_nape/dynamics/Contact.hx",404);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(405)
-		{
-		}
 		HX_STACK_LINE(413)
-		{
+		::zpp_nape::dynamics::ZPP_Contact pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(413)
+		::zpp_nape::dynamics::ZPP_Contact cur = this->next;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(413)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(413)
+		while(((cur != null()))){
 			HX_STACK_LINE(413)
-			{
-			}
-			HX_STACK_LINE(413)
-			::zpp_nape::dynamics::ZPP_Contact pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(413)
-			::zpp_nape::dynamics::ZPP_Contact cur = this->next;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(413)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(413)
-			while(((cur != null()))){
+			if (((cur == obj))){
 				HX_STACK_LINE(413)
-				if (((cur == obj))){
+				{
 					HX_STACK_LINE(413)
-					{
+					::zpp_nape::dynamics::ZPP_Contact old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(413)
+					::zpp_nape::dynamics::ZPP_Contact ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(413)
+					if (((pre == null()))){
 						HX_STACK_LINE(413)
-						{
+						old = this->next;
+						HX_STACK_LINE(413)
+						ret1 = old->next;
+						HX_STACK_LINE(413)
+						this->next = ret1;
+						HX_STACK_LINE(413)
+						if (((this->next == null()))){
+							HX_STACK_LINE(413)
+							this->pushmod = true;
 						}
+					}
+					else{
 						HX_STACK_LINE(413)
-						::zpp_nape::dynamics::ZPP_Contact old;		HX_STACK_VAR(old,"old");
+						old = pre->next;
 						HX_STACK_LINE(413)
-						::zpp_nape::dynamics::ZPP_Contact ret1;		HX_STACK_VAR(ret1,"ret1");
+						ret1 = old->next;
 						HX_STACK_LINE(413)
-						if (((pre == null()))){
+						pre->next = ret1;
+						HX_STACK_LINE(413)
+						if (((ret1 == null()))){
 							HX_STACK_LINE(413)
-							old = this->next;
-							HX_STACK_LINE(413)
-							ret1 = old->next;
-							HX_STACK_LINE(413)
-							this->next = ret1;
-							HX_STACK_LINE(413)
-							if (((this->next == null()))){
-								HX_STACK_LINE(413)
-								this->pushmod = true;
-							}
+							this->pushmod = true;
 						}
-						else{
-							HX_STACK_LINE(413)
-							old = pre->next;
-							HX_STACK_LINE(413)
-							ret1 = old->next;
-							HX_STACK_LINE(413)
-							pre->next = ret1;
-							HX_STACK_LINE(413)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(413)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(413)
-						old->_inuse = false;
-						HX_STACK_LINE(413)
-						{
-						}
-						HX_STACK_LINE(413)
-						this->modified = true;
-						HX_STACK_LINE(413)
-						(this->length)--;
-						HX_STACK_LINE(413)
-						this->pushmod = true;
-						HX_STACK_LINE(413)
-						ret1;
 					}
 					HX_STACK_LINE(413)
-					ret = true;
+					old->_inuse = false;
 					HX_STACK_LINE(413)
-					break;
+					this->modified = true;
+					HX_STACK_LINE(413)
+					(this->length)--;
+					HX_STACK_LINE(413)
+					this->pushmod = true;
+					HX_STACK_LINE(413)
+					ret1;
 				}
 				HX_STACK_LINE(413)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(413)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(413)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(413)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(413)
+		ret;
 	}
 return null();
 }
@@ -764,9 +698,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Contact_obj,remove,(void))
 ::zpp_nape::dynamics::ZPP_Contact ZPP_Contact_obj::inlined_pop_unsafe( ){
 	HX_STACK_PUSH("ZPP_Contact::inlined_pop_unsafe","zpp_nape/dynamics/Contact.hx",391);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(392)
-	{
-	}
 	HX_STACK_LINE(400)
 	::zpp_nape::dynamics::ZPP_Contact ret = this->next;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(401)
@@ -785,9 +716,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Contact_obj,inlined_pop_unsafe,return )
 		inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact_obj *__this){
 			HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Contact.hx",387);
 			{
-				HX_STACK_LINE(387)
-				{
-				}
 				HX_STACK_LINE(387)
 				::zpp_nape::dynamics::ZPP_Contact ret = __this->next;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(387)
@@ -809,18 +737,12 @@ Void ZPP_Contact_obj::inlined_pop( ){
 {
 		HX_STACK_PUSH("ZPP_Contact::inlined_pop","zpp_nape/dynamics/Contact.hx",367);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(368)
-		{
-		}
 		HX_STACK_LINE(376)
 		::zpp_nape::dynamics::ZPP_Contact ret = this->next;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(377)
 		this->next = ret->next;
 		HX_STACK_LINE(378)
 		ret->_inuse = false;
-		HX_STACK_LINE(381)
-		{
-		}
 		HX_STACK_LINE(382)
 		if (((this->next == null()))){
 			HX_STACK_LINE(382)
@@ -842,17 +764,11 @@ Void ZPP_Contact_obj::pop( ){
 		HX_STACK_PUSH("ZPP_Contact::pop","zpp_nape/dynamics/Contact.hx",362);
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(363)
-		{
-		}
-		HX_STACK_LINE(363)
 		::zpp_nape::dynamics::ZPP_Contact ret = this->next;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(363)
 		this->next = ret->next;
 		HX_STACK_LINE(363)
 		ret->_inuse = false;
-		HX_STACK_LINE(363)
-		{
-		}
 		HX_STACK_LINE(363)
 		if (((this->next == null()))){
 			HX_STACK_LINE(363)
@@ -874,9 +790,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Contact_obj,pop,(void))
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(338)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Contact.hx",346);
@@ -924,9 +837,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Contact_obj,inlined_insert,return )
 		inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact_obj *__this,::zpp_nape::dynamics::ZPP_Contact &o,::zpp_nape::dynamics::ZPP_Contact &cur){
 			HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Contact.hx",333);
 			{
-				HX_STACK_LINE(333)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Contact.hx",333);
@@ -976,22 +886,16 @@ Void ZPP_Contact_obj::addAll( ::zpp_nape::dynamics::ZPP_Contact x){
 		HX_STACK_PUSH("ZPP_Contact::addAll","zpp_nape/dynamics/Contact.hx",314);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(315)
-		{
-		}
-		HX_STACK_LINE(323)
-		{
-			HX_STACK_LINE(324)
-			::zpp_nape::dynamics::ZPP_Contact cx_ite = x->next;		HX_STACK_VAR(cx_ite,"cx_ite");
-			HX_STACK_LINE(325)
-			while(((cx_ite != null()))){
-				HX_STACK_LINE(326)
-				::zpp_nape::dynamics::ZPP_Contact i = cx_ite;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(327)
-				this->add(i);
-				HX_STACK_LINE(328)
-				cx_ite = cx_ite->next;
-			}
+		HX_STACK_LINE(324)
+		::zpp_nape::dynamics::ZPP_Contact cx_ite = x->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+		HX_STACK_LINE(325)
+		while(((cx_ite != null()))){
+			HX_STACK_LINE(326)
+			::zpp_nape::dynamics::ZPP_Contact i = cx_ite;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(327)
+			this->add(i);
+			HX_STACK_LINE(328)
+			cx_ite = cx_ite->next;
 		}
 	}
 return null();
@@ -1004,9 +908,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Contact_obj,addAll,(void))
 	HX_STACK_PUSH("ZPP_Contact::inlined_add","zpp_nape/dynamics/Contact.hx",295);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(296)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Contact.hx",304);
@@ -1041,12 +942,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Contact_obj,inlined_add,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
 	struct _Function_1_1{
-		inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &o,::zpp_nape::dynamics::ZPP_Contact_obj *__this){
+		inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact_obj *__this,::zpp_nape::dynamics::ZPP_Contact &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Contact.hx",291);
 			{
-				HX_STACK_LINE(291)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Contact.hx",291);
@@ -1076,7 +974,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Contact_obj,inlined_add,return )
 		}
 	};
 	HX_STACK_LINE(290)
-	return _Function_1_1::Block(o,this);
+	return _Function_1_1::Block(this,o);
 }
 
 
@@ -1234,9 +1132,6 @@ Void ZPP_Contact_obj::getposition( ){
 										HX_STACK_LINE(216)
 										{
 										}
-										HX_STACK_LINE(216)
-										{
-										}
 									}
 									HX_STACK_LINE(216)
 									return ret1;
@@ -1265,7 +1160,7 @@ Void ZPP_Contact_obj::getposition( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(216)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(216)
 								_this->_isimmutable();
 							}
@@ -1289,7 +1184,7 @@ Void ZPP_Contact_obj::getposition( ){
 										HX_STACK_LINE(216)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(216)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(216)
 											_this->_validate();
 										}
@@ -1314,7 +1209,7 @@ Void ZPP_Contact_obj::getposition( ){
 										HX_STACK_LINE(216)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(216)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(216)
 											_this->_validate();
 										}
@@ -1336,16 +1231,13 @@ Void ZPP_Contact_obj::getposition( ){
 								HX_STACK_LINE(216)
 								{
 								}
-								HX_STACK_LINE(216)
-								{
-								}
 							}
 							HX_STACK_LINE(216)
 							{
 								HX_STACK_LINE(216)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(216)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(216)
 									_this->_invalidate(_this);
 								}
@@ -1392,9 +1284,6 @@ Void ZPP_Contact_obj::position_validate( ){
 			this->wrap_position->zpp_inner->x = this->px;
 			HX_STACK_LINE(194)
 			this->wrap_position->zpp_inner->y = this->py;
-			HX_STACK_LINE(195)
-			{
-			}
 			HX_STACK_LINE(203)
 			{
 			}
@@ -1713,7 +1602,7 @@ Class ZPP_Contact_obj::__mClass;
 
 void ZPP_Contact_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.dynamics.ZPP_Contact"), hx::TCanCast< ZPP_Contact_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.dynamics.ZPP_Contact"), hx::TCanCast< ZPP_Contact_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

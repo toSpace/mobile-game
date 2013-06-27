@@ -10,7 +10,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_MarchSpan_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_MarchSpan_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_MarchSpan_obj OBJ_;
@@ -36,11 +36,11 @@ class ZPP_MarchSpan_obj : public hx::Object{
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		::zpp_nape::geom::ZPP_MarchSpan next; /* REM */ 
-		bool out; /* REM */ 
-		int rank; /* REM */ 
-		::zpp_nape::geom::ZPP_MarchSpan parent; /* REM */ 
-		static ::zpp_nape::geom::ZPP_MarchSpan zpp_pool; /* REM */ 
+		::zpp_nape::geom::ZPP_MarchSpan next;
+		bool out;
+		int rank;
+		::zpp_nape::geom::ZPP_MarchSpan parent;
+		static ::zpp_nape::geom::ZPP_MarchSpan zpp_pool;
 };
 
 } // end namespace zpp_nape

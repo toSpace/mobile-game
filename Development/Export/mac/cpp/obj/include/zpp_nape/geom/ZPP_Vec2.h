@@ -11,7 +11,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_Vec2_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Vec2_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Vec2_obj OBJ_;
@@ -37,8 +37,8 @@ class ZPP_Vec2_obj : public hx::Object{
 		virtual ::zpp_nape::geom::ZPP_Vec2 copy( );
 		Dynamic copy_dyn();
 
-		Float y; /* REM */ 
-		Float x; /* REM */ 
+		Float y;
+		Float x;
 		virtual ::zpp_nape::geom::ZPP_Vec2 at( int ind);
 		Dynamic at_dyn();
 
@@ -123,45 +123,45 @@ class ZPP_Vec2_obj : public hx::Object{
 		virtual Void setbegin( ::zpp_nape::geom::ZPP_Vec2 i);
 		Dynamic setbegin_dyn();
 
-		int length; /* REM */ 
-		bool pushmod; /* REM */ 
-		bool modified; /* REM */ 
-		bool _inuse; /* REM */ 
+		int length;
+		bool pushmod;
+		bool modified;
+		bool _inuse;
 		virtual ::zpp_nape::geom::ZPP_Vec2 begin( );
 		Dynamic begin_dyn();
 
 		virtual ::zpp_nape::geom::ZPP_Vec2 elem( );
 		Dynamic elem_dyn();
 
-		::zpp_nape::geom::ZPP_Vec2 next; /* REM */ 
+		::zpp_nape::geom::ZPP_Vec2 next;
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		bool weak; /* REM */ 
+		bool weak;
 		virtual ::nape::geom::Vec2 wrapper( );
 		Dynamic wrapper_dyn();
 
-		::nape::geom::Vec2 outer; /* REM */ 
+		::nape::geom::Vec2 outer;
 		virtual Void immutable( );
 		Dynamic immutable_dyn();
 
-		Dynamic _isimmutable; /* REM */ 
+		Dynamic _isimmutable;
 		Dynamic &_isimmutable_dyn() { return _isimmutable;}
-		bool _immutable; /* REM */ 
+		bool _immutable;
 		virtual Void invalidate( );
 		Dynamic invalidate_dyn();
 
 		virtual Void validate( );
 		Dynamic validate_dyn();
 
-		Dynamic _validate; /* REM */ 
+		Dynamic _validate;
 		Dynamic &_validate_dyn() { return _validate;}
-		Dynamic _invalidate; /* REM */ 
+		Dynamic _invalidate;
 		Dynamic &_invalidate_dyn() { return _invalidate;}
-		static ::zpp_nape::geom::ZPP_Vec2 zpp_pool; /* REM */ 
+		static ::zpp_nape::geom::ZPP_Vec2 zpp_pool;
 		static ::zpp_nape::geom::ZPP_Vec2 get( Float x,Float y,hx::Null< bool >  immutable);
 		static Dynamic get_dyn();
 

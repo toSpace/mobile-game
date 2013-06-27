@@ -8,7 +8,7 @@ namespace io{
 
 Void Eof_obj::__construct()
 {
-HX_STACK_PUSH("Eof::new","/usr/lib/haxe/std/haxe/io/Eof.hx",31);
+HX_STACK_PUSH("Eof::new","/usr/lib/haxe/std/haxe/io/Eof.hx",28);
 {
 }
 ;
@@ -29,9 +29,9 @@ Dynamic Eof_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 ::String Eof_obj::toString( ){
-	HX_STACK_PUSH("Eof::toString","/usr/lib/haxe/std/haxe/io/Eof.hx",33);
+	HX_STACK_PUSH("Eof::toString","/usr/lib/haxe/std/haxe/io/Eof.hx",30);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(33)
+	HX_STACK_LINE(30)
 	return HX_CSTRING("Eof");
 }
 
@@ -91,7 +91,7 @@ Class Eof_obj::__mClass;
 
 void Eof_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("haxe.io.Eof"), hx::TCanCast< Eof_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("haxe.io.Eof"), hx::TCanCast< Eof_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

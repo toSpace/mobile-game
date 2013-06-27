@@ -81,7 +81,7 @@ Void ZPP_PartitionVertex_obj::sort( ){
 		HX_STACK_LINE(318)
 		Float vy = 0.0;		HX_STACK_VAR(vy,"vy");
 		struct _Function_1_1{
-			inline static int Block( ::zpp_nape::geom::ZPP_PartitionVertex_obj *__this,Float &vy,Float &uy,Float &vx,Float &ux){
+			inline static int Block( Float &vx,::zpp_nape::geom::ZPP_PartitionVertex_obj *__this,Float &uy,Float &ux,Float &vy){
 				HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",319);
 				{
 					HX_STACK_LINE(320)
@@ -107,10 +107,7 @@ Void ZPP_PartitionVertex_obj::sort( ){
 			}
 		};
 		HX_STACK_LINE(319)
-		int vorient = _Function_1_1::Block(this,vy,uy,vx,ux);		HX_STACK_VAR(vorient,"vorient");
-		HX_STACK_LINE(331)
-		{
-		}
+		int vorient = _Function_1_1::Block(vx,this,uy,ux,vy);		HX_STACK_VAR(vorient,"vorient");
 		HX_STACK_LINE(339)
 		{
 			HX_STACK_LINE(340)
@@ -181,7 +178,7 @@ Void ZPP_PartitionVertex_obj::sort( ){
 								}
 								else{
 									struct _Function_8_1{
-										inline static int Block( Float &uy,Float &ux,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &left,Float &vy,Float &vx,::zpp_nape::geom::ZPP_PartitionVertex_obj *__this,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &right){
+										inline static int Block( Float &vx,::zpp_nape::geom::ZPP_PartitionVertex_obj *__this,Float &uy,Float &ux,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &left,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &right,Float &vy){
 											HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",375);
 											{
 												HX_STACK_LINE(376)
@@ -207,11 +204,11 @@ Void ZPP_PartitionVertex_obj::sort( ){
 										}
 									};
 									struct _Function_8_2{
-										inline static bool Block( Float &uy,Float &ux,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &left,Float &vy,Float &vx,::zpp_nape::geom::ZPP_PartitionVertex_obj *__this,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &right){
+										inline static bool Block( Float &vx,::zpp_nape::geom::ZPP_PartitionVertex_obj *__this,Float &uy,Float &ux,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &left,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &right,Float &vy){
 											HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",388);
 											{
 												struct _Function_9_1{
-													inline static int Block( ::zpp_nape::geom::ZPP_PartitionVertex_obj *__this,Float &vy,Float &uy,Float &vx,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &left,Float &ux){
+													inline static int Block( Float &vx,::zpp_nape::geom::ZPP_PartitionVertex_obj *__this,Float &uy,Float &ux,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &left,Float &vy){
 														HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",389);
 														{
 															HX_STACK_LINE(390)
@@ -237,9 +234,9 @@ Void ZPP_PartitionVertex_obj::sort( ){
 													}
 												};
 												HX_STACK_LINE(389)
-												int d1 = _Function_9_1::Block(__this,vy,uy,vx,left,ux);		HX_STACK_VAR(d1,"d1");
+												int d1 = _Function_9_1::Block(vx,__this,uy,ux,left,vy);		HX_STACK_VAR(d1,"d1");
 												struct _Function_9_2{
-													inline static int Block( ::zpp_nape::geom::ZPP_PartitionVertex_obj *__this,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &right,Float &vy,Float &uy,Float &vx,Float &ux){
+													inline static int Block( Float &vx,::zpp_nape::geom::ZPP_PartitionVertex_obj *__this,Float &uy,Float &ux,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &right,Float &vy){
 														HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",401);
 														{
 															HX_STACK_LINE(402)
@@ -265,9 +262,9 @@ Void ZPP_PartitionVertex_obj::sort( ){
 													}
 												};
 												HX_STACK_LINE(401)
-												int d2 = _Function_9_2::Block(__this,right,vy,uy,vx,ux);		HX_STACK_VAR(d2,"d2");
+												int d2 = _Function_9_2::Block(vx,__this,uy,ux,right,vy);		HX_STACK_VAR(d2,"d2");
 												struct _Function_9_3{
-													inline static int Block( Float &uy,Float &ux,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &left,Float &vy,Float &vx,::zpp_nape::geom::ZPP_PartitionVertex_obj *__this,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &right){
+													inline static int Block( Float &vx,::zpp_nape::geom::ZPP_PartitionVertex_obj *__this,Float &uy,Float &ux,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &left,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &right,Float &vy){
 														HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",414);
 														{
 															HX_STACK_LINE(415)
@@ -293,7 +290,7 @@ Void ZPP_PartitionVertex_obj::sort( ){
 													}
 												};
 												struct _Function_9_4{
-													inline static bool Block( Float &uy,Float &ux,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &left,Float &vy,Float &vx,::zpp_nape::geom::ZPP_PartitionVertex_obj *__this,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &right){
+													inline static bool Block( Float &vx,::zpp_nape::geom::ZPP_PartitionVertex_obj *__this,Float &uy,Float &ux,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &left,::zpp_nape::util::ZNPNode_ZPP_PartitionVertex &right,Float &vy){
 														HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",430);
 														{
 															HX_STACK_LINE(431)
@@ -321,46 +318,20 @@ Void ZPP_PartitionVertex_obj::sort( ){
 															}
 															HX_STACK_LINE(444)
 															Float d21 = ((ux * vx) + (uy * vy));		HX_STACK_VAR(d21,"d21");
-															struct _Function_10_1{
-																inline static bool Block( ){
-																	HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",445);
-																	{
-																		HX_STACK_LINE(446)
-																		{
-																		}
-																		HX_STACK_LINE(454)
-																		return true;
-																	}
-																	return null();
-																}
-															};
 															HX_STACK_LINE(445)
-															return (  (((bool((d11 < (int)0)) && bool((d21 > (int)0))))) ? bool(true) : bool((  (((bool((d21 < (int)0)) && bool((d11 > (int)0))))) ? bool(false) : bool(_Function_10_1::Block()) )) );
-														}
-														return null();
-													}
-												};
-												struct _Function_9_5{
-													inline static bool Block( ){
-														HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",457);
-														{
-															HX_STACK_LINE(458)
-															{
-															}
-															HX_STACK_LINE(466)
-															return true;
+															return (  (((bool((d11 < (int)0)) && bool((d21 > (int)0))))) ? bool(true) : bool((  (((bool((d21 < (int)0)) && bool((d11 > (int)0))))) ? bool(false) : bool(true) )) );
 														}
 														return null();
 													}
 												};
 												HX_STACK_LINE(413)
-												return (  (((bool(((d1 * d2) == (int)1)) || bool((bool(((d1 * d2) == (int)0)) && bool(((bool((d1 == (int)1)) || bool((d2 == (int)1)))))))))) ? bool((_Function_9_3::Block(uy,ux,left,vy,vx,__this,right) == (int)1)) : bool((  (((bool((d1 == (int)-1)) || bool((d2 == (int)-1))))) ? bool((d2 == (int)-1)) : bool((  (((bool((d1 == (int)0)) && bool((d2 == (int)0))))) ? bool(_Function_9_4::Block(uy,ux,left,vy,vx,__this,right)) : bool(_Function_9_5::Block()) )) )) );
+												return (  (((bool(((d1 * d2) == (int)1)) || bool((bool(((d1 * d2) == (int)0)) && bool(((bool((d1 == (int)1)) || bool((d2 == (int)1)))))))))) ? bool((_Function_9_3::Block(vx,__this,uy,ux,left,right,vy) == (int)1)) : bool((  (((bool((d1 == (int)-1)) || bool((d2 == (int)-1))))) ? bool((d2 == (int)-1)) : bool((  (((bool((d1 == (int)0)) && bool((d2 == (int)0))))) ? bool(_Function_9_4::Block(vx,__this,uy,ux,left,right,vy)) : bool(true) )) )) );
 											}
 											return null();
 										}
 									};
 									HX_STACK_LINE(373)
-									if (((  (((vorient == (int)1))) ? bool((_Function_8_1::Block(uy,ux,left,vy,vx,this,right) == (int)1)) : bool(_Function_8_2::Block(uy,ux,left,vy,vx,this,right)) ))){
+									if (((  (((vorient == (int)1))) ? bool((_Function_8_1::Block(vx,this,uy,ux,left,right,vy) == (int)1)) : bool(_Function_8_2::Block(vx,this,uy,ux,left,right,vy)) ))){
 										HX_STACK_LINE(470)
 										nxt = left;
 										HX_STACK_LINE(471)
@@ -446,9 +417,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_PartitionVertex_obj,sort,(void))
 		ret->x = this->x;
 		HX_STACK_LINE(293)
 		ret->y = this->y;
-		HX_STACK_LINE(294)
-		{
-		}
 		HX_STACK_LINE(302)
 		{
 		}
@@ -522,9 +490,6 @@ int ZPP_PartitionVertex_obj::nextId;
 		ret->x = x->x;
 		HX_STACK_LINE(251)
 		ret->y = x->y;
-		HX_STACK_LINE(252)
-		{
-		}
 		HX_STACK_LINE(260)
 		{
 		}
@@ -620,10 +585,7 @@ bool ZPP_PartitionVertex_obj::edge_lt( ::zpp_nape::geom::ZPP_PartitionVertex p,:
 	HX_STACK_ARG(q,"q");
 	HX_STACK_LINE(524)
 	if (((bool((p == q)) && bool((p->next == q->next))))){
-		HX_STACK_LINE(525)
-		{
-		}
-		HX_STACK_LINE(533)
+		HX_STACK_LINE(524)
 		return false;
 	}
 	HX_STACK_LINE(535)
@@ -718,16 +680,10 @@ bool ZPP_PartitionVertex_obj::edge_lt( ::zpp_nape::geom::ZPP_PartitionVertex p,:
 				Float pRight = ::zpp_nape::geom::ZPP_PartitionVertex_obj::rightdistance(q,p);		HX_STACK_VAR(pRight,"pRight");
 				HX_STACK_LINE(564)
 				Float pNextRight = ::zpp_nape::geom::ZPP_PartitionVertex_obj::rightdistance(q,p->next);		HX_STACK_VAR(pNextRight,"pNextRight");
-				HX_STACK_LINE(565)
-				{
-				}
 				HX_STACK_LINE(573)
 				if ((((pRight * pNextRight) >= (int)0))){
 					HX_STACK_LINE(573)
 					return (bool((pRight > (int)0)) || bool((pNextRight > (int)0)));
-				}
-				HX_STACK_LINE(574)
-				{
 				}
 				HX_STACK_LINE(582)
 				return false;
@@ -929,7 +885,7 @@ Class ZPP_PartitionVertex_obj::__mClass;
 
 void ZPP_PartitionVertex_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_PartitionVertex"), hx::TCanCast< ZPP_PartitionVertex_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_PartitionVertex"), hx::TCanCast< ZPP_PartitionVertex_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

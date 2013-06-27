@@ -14,15 +14,15 @@ namespace util{
 
 Void ZNPList_ZPP_SimplifyP_obj::__construct()
 {
-HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::new","zpp_nape/util/Lists.hx",7681);
+HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::new","zpp_nape/util/Lists.hx",7264);
 {
-	HX_STACK_LINE(7691)
+	HX_STACK_LINE(7274)
 	this->length = (int)0;
-	HX_STACK_LINE(7690)
+	HX_STACK_LINE(7273)
 	this->pushmod = false;
-	HX_STACK_LINE(7689)
+	HX_STACK_LINE(7272)
 	this->modified = false;
-	HX_STACK_LINE(7682)
+	HX_STACK_LINE(7265)
 	this->head = null();
 }
 ;
@@ -43,15 +43,12 @@ Dynamic ZNPList_ZPP_SimplifyP_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 ::zpp_nape::geom::ZPP_SimplifyP ZNPList_ZPP_SimplifyP_obj::at( int ind){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::at","zpp_nape/util/Lists.hx",8084);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::at","zpp_nape/util/Lists.hx",7667);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(8085)
-	{
-	}
-	HX_STACK_LINE(8093)
+	HX_STACK_LINE(7676)
 	::zpp_nape::util::ZNPNode_ZPP_SimplifyP it = this->iterator_at(ind);		HX_STACK_VAR(it,"it");
-	HX_STACK_LINE(8094)
+	HX_STACK_LINE(7677)
 	return (  (((it != null()))) ? ::zpp_nape::geom::ZPP_SimplifyP(it->elt) : ::zpp_nape::geom::ZPP_SimplifyP(null()) );
 }
 
@@ -59,20 +56,17 @@ Dynamic ZNPList_ZPP_SimplifyP_obj::__Create(hx::DynamicArray inArgs)
 HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SimplifyP_obj,at,return )
 
 ::zpp_nape::util::ZNPNode_ZPP_SimplifyP ZNPList_ZPP_SimplifyP_obj::iterator_at( int ind){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::iterator_at","zpp_nape/util/Lists.hx",8071);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::iterator_at","zpp_nape/util/Lists.hx",7654);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(8072)
-	{
-	}
-	HX_STACK_LINE(8080)
+	HX_STACK_LINE(7663)
 	::zpp_nape::util::ZNPNode_ZPP_SimplifyP ret = this->head;		HX_STACK_VAR(ret,"ret");
-	HX_STACK_LINE(8081)
+	HX_STACK_LINE(7664)
 	while(((bool(((ind)-- > (int)0)) && bool((ret != null()))))){
-		HX_STACK_LINE(8081)
+		HX_STACK_LINE(7664)
 		ret = ret->next;
 	}
-	HX_STACK_LINE(8082)
+	HX_STACK_LINE(7665)
 	return ret;
 }
 
@@ -80,20 +74,20 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SimplifyP_obj,at,return )
 HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SimplifyP_obj,iterator_at,return )
 
 ::zpp_nape::geom::ZPP_SimplifyP ZNPList_ZPP_SimplifyP_obj::back( ){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::back","zpp_nape/util/Lists.hx",8062);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::back","zpp_nape/util/Lists.hx",7645);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(8063)
+	HX_STACK_LINE(7646)
 	::zpp_nape::util::ZNPNode_ZPP_SimplifyP ret = this->head;		HX_STACK_VAR(ret,"ret");
-	HX_STACK_LINE(8064)
+	HX_STACK_LINE(7647)
 	::zpp_nape::util::ZNPNode_ZPP_SimplifyP cur = ret;		HX_STACK_VAR(cur,"cur");
-	HX_STACK_LINE(8065)
+	HX_STACK_LINE(7648)
 	while(((cur != null()))){
-		HX_STACK_LINE(8066)
+		HX_STACK_LINE(7649)
 		ret = cur;
-		HX_STACK_LINE(8067)
+		HX_STACK_LINE(7650)
 		cur = cur->next;
 	}
-	HX_STACK_LINE(8069)
+	HX_STACK_LINE(7652)
 	return ret->elt;
 }
 
@@ -101,9 +95,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SimplifyP_obj,iterator_at,return )
 HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_SimplifyP_obj,back,return )
 
 ::zpp_nape::geom::ZPP_SimplifyP ZNPList_ZPP_SimplifyP_obj::front( ){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::front","zpp_nape/util/Lists.hx",8059);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::front","zpp_nape/util/Lists.hx",7642);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(8059)
+	HX_STACK_LINE(7642)
 	return this->head->elt;
 }
 
@@ -111,39 +105,36 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_SimplifyP_obj,back,return )
 HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_SimplifyP_obj,front,return )
 
 bool ZNPList_ZPP_SimplifyP_obj::inlined_has( ::zpp_nape::geom::ZPP_SimplifyP obj){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::inlined_has","zpp_nape/util/Lists.hx",8029);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::inlined_has","zpp_nape/util/Lists.hx",7612);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(8030)
-	{
-	}
-	HX_STACK_LINE(8038)
+	HX_STACK_LINE(7621)
 	bool ret;		HX_STACK_VAR(ret,"ret");
-	HX_STACK_LINE(8039)
+	HX_STACK_LINE(7622)
 	{
-		HX_STACK_LINE(8040)
+		HX_STACK_LINE(7623)
 		ret = false;
-		HX_STACK_LINE(8041)
+		HX_STACK_LINE(7624)
 		{
-			HX_STACK_LINE(8042)
+			HX_STACK_LINE(7625)
 			::zpp_nape::util::ZNPNode_ZPP_SimplifyP cx_ite = this->head;		HX_STACK_VAR(cx_ite,"cx_ite");
-			HX_STACK_LINE(8043)
+			HX_STACK_LINE(7626)
 			while(((cx_ite != null()))){
-				HX_STACK_LINE(8044)
+				HX_STACK_LINE(7627)
 				::zpp_nape::geom::ZPP_SimplifyP npite = cx_ite->elt;		HX_STACK_VAR(npite,"npite");
-				HX_STACK_LINE(8045)
+				HX_STACK_LINE(7628)
 				if (((npite == obj))){
-					HX_STACK_LINE(8047)
+					HX_STACK_LINE(7630)
 					ret = true;
-					HX_STACK_LINE(8048)
+					HX_STACK_LINE(7631)
 					break;
 				}
-				HX_STACK_LINE(8051)
+				HX_STACK_LINE(7634)
 				cx_ite = cx_ite->next;
 			}
 		}
 	}
-	HX_STACK_LINE(8055)
+	HX_STACK_LINE(7638)
 	return ret;
 }
 
@@ -151,49 +142,46 @@ bool ZNPList_ZPP_SimplifyP_obj::inlined_has( ::zpp_nape::geom::ZPP_SimplifyP obj
 HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SimplifyP_obj,inlined_has,return )
 
 bool ZNPList_ZPP_SimplifyP_obj::has( ::zpp_nape::geom::ZPP_SimplifyP obj){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::has","zpp_nape/util/Lists.hx",8024);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::has","zpp_nape/util/Lists.hx",7607);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
 	struct _Function_1_1{
 		inline static bool Block( ::zpp_nape::util::ZNPList_ZPP_SimplifyP_obj *__this,::zpp_nape::geom::ZPP_SimplifyP &obj){
-			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",8025);
+			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7608);
 			{
-				HX_STACK_LINE(8025)
-				{
-				}
-				HX_STACK_LINE(8025)
+				HX_STACK_LINE(7608)
 				bool ret;		HX_STACK_VAR(ret,"ret");
-				HX_STACK_LINE(8025)
+				HX_STACK_LINE(7608)
 				{
-					HX_STACK_LINE(8025)
+					HX_STACK_LINE(7608)
 					ret = false;
-					HX_STACK_LINE(8025)
+					HX_STACK_LINE(7608)
 					{
-						HX_STACK_LINE(8025)
+						HX_STACK_LINE(7608)
 						::zpp_nape::util::ZNPNode_ZPP_SimplifyP cx_ite = __this->head;		HX_STACK_VAR(cx_ite,"cx_ite");
-						HX_STACK_LINE(8025)
+						HX_STACK_LINE(7608)
 						while(((cx_ite != null()))){
-							HX_STACK_LINE(8025)
+							HX_STACK_LINE(7608)
 							::zpp_nape::geom::ZPP_SimplifyP npite = cx_ite->elt;		HX_STACK_VAR(npite,"npite");
-							HX_STACK_LINE(8025)
+							HX_STACK_LINE(7608)
 							if (((npite == obj))){
-								HX_STACK_LINE(8025)
+								HX_STACK_LINE(7608)
 								ret = true;
-								HX_STACK_LINE(8025)
+								HX_STACK_LINE(7608)
 								break;
 							}
-							HX_STACK_LINE(8025)
+							HX_STACK_LINE(7608)
 							cx_ite = cx_ite->next;
 						}
 					}
 				}
-				HX_STACK_LINE(8025)
+				HX_STACK_LINE(7608)
 				return ret;
 			}
 			return null();
 		}
 	};
-	HX_STACK_LINE(8024)
+	HX_STACK_LINE(7607)
 	return _Function_1_1::Block(this,obj);
 }
 
@@ -201,9 +189,9 @@ bool ZNPList_ZPP_SimplifyP_obj::has( ::zpp_nape::geom::ZPP_SimplifyP obj){
 HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SimplifyP_obj,has,return )
 
 int ZNPList_ZPP_SimplifyP_obj::size( ){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::size","zpp_nape/util/Lists.hx",8021);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::size","zpp_nape/util/Lists.hx",7604);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(8021)
+	HX_STACK_LINE(7604)
 	return this->length;
 }
 
@@ -211,9 +199,9 @@ int ZNPList_ZPP_SimplifyP_obj::size( ){
 HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_SimplifyP_obj,size,return )
 
 bool ZNPList_ZPP_SimplifyP_obj::empty( ){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::empty","zpp_nape/util/Lists.hx",8016);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::empty","zpp_nape/util/Lists.hx",7599);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(8016)
+	HX_STACK_LINE(7599)
 	return (this->head == null());
 }
 
@@ -222,28 +210,28 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_SimplifyP_obj,empty,return )
 
 Void ZNPList_ZPP_SimplifyP_obj::reverse( ){
 {
-		HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::reverse","zpp_nape/util/Lists.hx",8001);
+		HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::reverse","zpp_nape/util/Lists.hx",7584);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(8002)
+		HX_STACK_LINE(7585)
 		::zpp_nape::util::ZNPNode_ZPP_SimplifyP cur = this->head;		HX_STACK_VAR(cur,"cur");
-		HX_STACK_LINE(8003)
+		HX_STACK_LINE(7586)
 		::zpp_nape::util::ZNPNode_ZPP_SimplifyP pre = null();		HX_STACK_VAR(pre,"pre");
-		HX_STACK_LINE(8004)
+		HX_STACK_LINE(7587)
 		while(((cur != null()))){
-			HX_STACK_LINE(8005)
+			HX_STACK_LINE(7588)
 			::zpp_nape::util::ZNPNode_ZPP_SimplifyP nx = cur->next;		HX_STACK_VAR(nx,"nx");
-			HX_STACK_LINE(8006)
+			HX_STACK_LINE(7589)
 			cur->next = pre;
-			HX_STACK_LINE(8007)
+			HX_STACK_LINE(7590)
 			this->head = cur;
-			HX_STACK_LINE(8008)
+			HX_STACK_LINE(7591)
 			pre = cur;
-			HX_STACK_LINE(8009)
+			HX_STACK_LINE(7592)
 			cur = nx;
 		}
-		HX_STACK_LINE(8011)
+		HX_STACK_LINE(7594)
 		this->modified = true;
-		HX_STACK_LINE(8012)
+		HX_STACK_LINE(7595)
 		this->pushmod = true;
 	}
 return null();
@@ -254,45 +242,36 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_SimplifyP_obj,reverse,(void))
 
 Void ZNPList_ZPP_SimplifyP_obj::inlined_clear( ){
 {
-		HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::inlined_clear","zpp_nape/util/Lists.hx",7995);
+		HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::inlined_clear","zpp_nape/util/Lists.hx",7578);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(7997)
+		HX_STACK_LINE(7580)
 		while((!(((this->head == null()))))){
-			HX_STACK_LINE(7997)
-			{
-			}
-			HX_STACK_LINE(7997)
+			HX_STACK_LINE(7580)
 			::zpp_nape::util::ZNPNode_ZPP_SimplifyP ret = this->head;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(7997)
+			HX_STACK_LINE(7580)
 			this->head = ret->next;
-			HX_STACK_LINE(7997)
+			HX_STACK_LINE(7580)
 			{
-			}
-			HX_STACK_LINE(7997)
-			{
-				HX_STACK_LINE(7997)
+				HX_STACK_LINE(7580)
 				::zpp_nape::util::ZNPNode_ZPP_SimplifyP o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(7997)
-				{
-				}
-				HX_STACK_LINE(7997)
+				HX_STACK_LINE(7580)
 				o->elt = null();
-				HX_STACK_LINE(7997)
+				HX_STACK_LINE(7580)
 				o->next = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool;
-				HX_STACK_LINE(7997)
+				HX_STACK_LINE(7580)
 				::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool = o;
 			}
-			HX_STACK_LINE(7997)
+			HX_STACK_LINE(7580)
 			if (((this->head == null()))){
-				HX_STACK_LINE(7997)
+				HX_STACK_LINE(7580)
 				this->pushmod = true;
 			}
-			HX_STACK_LINE(7997)
+			HX_STACK_LINE(7580)
 			this->modified = true;
-			HX_STACK_LINE(7997)
+			HX_STACK_LINE(7580)
 			(this->length)--;
 		}
-		HX_STACK_LINE(7998)
+		HX_STACK_LINE(7581)
 		this->pushmod = true;
 	}
 return null();
@@ -303,45 +282,36 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_SimplifyP_obj,inlined_clear,(void))
 
 Void ZNPList_ZPP_SimplifyP_obj::clear( ){
 {
-		HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::clear","zpp_nape/util/Lists.hx",7990);
+		HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::clear","zpp_nape/util/Lists.hx",7573);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(7991)
+		HX_STACK_LINE(7574)
 		while((!(((this->head == null()))))){
-			HX_STACK_LINE(7991)
-			{
-			}
-			HX_STACK_LINE(7991)
+			HX_STACK_LINE(7574)
 			::zpp_nape::util::ZNPNode_ZPP_SimplifyP ret = this->head;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(7991)
+			HX_STACK_LINE(7574)
 			this->head = ret->next;
-			HX_STACK_LINE(7991)
+			HX_STACK_LINE(7574)
 			{
-			}
-			HX_STACK_LINE(7991)
-			{
-				HX_STACK_LINE(7991)
+				HX_STACK_LINE(7574)
 				::zpp_nape::util::ZNPNode_ZPP_SimplifyP o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(7991)
-				{
-				}
-				HX_STACK_LINE(7991)
+				HX_STACK_LINE(7574)
 				o->elt = null();
-				HX_STACK_LINE(7991)
+				HX_STACK_LINE(7574)
 				o->next = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool;
-				HX_STACK_LINE(7991)
+				HX_STACK_LINE(7574)
 				::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool = o;
 			}
-			HX_STACK_LINE(7991)
+			HX_STACK_LINE(7574)
 			if (((this->head == null()))){
-				HX_STACK_LINE(7991)
+				HX_STACK_LINE(7574)
 				this->pushmod = true;
 			}
-			HX_STACK_LINE(7991)
+			HX_STACK_LINE(7574)
 			this->modified = true;
-			HX_STACK_LINE(7991)
+			HX_STACK_LINE(7574)
 			(this->length)--;
 		}
-		HX_STACK_LINE(7991)
+		HX_STACK_LINE(7574)
 		this->pushmod = true;
 	}
 return null();
@@ -351,16 +321,16 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_SimplifyP_obj,clear,(void))
 
 ::zpp_nape::util::ZNPNode_ZPP_SimplifyP ZNPList_ZPP_SimplifyP_obj::splice( ::zpp_nape::util::ZNPNode_ZPP_SimplifyP pre,int n){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::splice","zpp_nape/util/Lists.hx",7986);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::splice","zpp_nape/util/Lists.hx",7569);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
 	HX_STACK_ARG(n,"n");
-	HX_STACK_LINE(7987)
+	HX_STACK_LINE(7570)
 	while(((bool(((n)-- > (int)0)) && bool((pre->next != null()))))){
-		HX_STACK_LINE(7987)
+		HX_STACK_LINE(7570)
 		this->erase(pre);
 	}
-	HX_STACK_LINE(7988)
+	HX_STACK_LINE(7571)
 	return pre->next;
 }
 
@@ -368,67 +338,58 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_SimplifyP_obj,clear,(void))
 HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_SimplifyP_obj,splice,return )
 
 ::zpp_nape::util::ZNPNode_ZPP_SimplifyP ZNPList_ZPP_SimplifyP_obj::inlined_erase( ::zpp_nape::util::ZNPNode_ZPP_SimplifyP pre){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::inlined_erase","zpp_nape/util/Lists.hx",7940);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::inlined_erase","zpp_nape/util/Lists.hx",7523);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
-	HX_STACK_LINE(7941)
-	{
-	}
-	HX_STACK_LINE(7949)
+	HX_STACK_LINE(7532)
 	::zpp_nape::util::ZNPNode_ZPP_SimplifyP old;		HX_STACK_VAR(old,"old");
-	HX_STACK_LINE(7950)
+	HX_STACK_LINE(7533)
 	::zpp_nape::util::ZNPNode_ZPP_SimplifyP ret;		HX_STACK_VAR(ret,"ret");
-	HX_STACK_LINE(7951)
+	HX_STACK_LINE(7534)
 	if (((pre == null()))){
-		HX_STACK_LINE(7952)
+		HX_STACK_LINE(7535)
 		old = this->head;
-		HX_STACK_LINE(7953)
+		HX_STACK_LINE(7536)
 		ret = old->next;
-		HX_STACK_LINE(7954)
+		HX_STACK_LINE(7537)
 		this->head = ret;
-		HX_STACK_LINE(7955)
+		HX_STACK_LINE(7538)
 		if (((this->head == null()))){
-			HX_STACK_LINE(7955)
+			HX_STACK_LINE(7538)
 			this->pushmod = true;
 		}
 	}
 	else{
-		HX_STACK_LINE(7958)
+		HX_STACK_LINE(7541)
 		old = pre->next;
-		HX_STACK_LINE(7959)
+		HX_STACK_LINE(7542)
 		ret = old->next;
-		HX_STACK_LINE(7960)
+		HX_STACK_LINE(7543)
 		pre->next = ret;
-		HX_STACK_LINE(7961)
+		HX_STACK_LINE(7544)
 		if (((ret == null()))){
-			HX_STACK_LINE(7961)
+			HX_STACK_LINE(7544)
 			this->pushmod = true;
 		}
 	}
-	HX_STACK_LINE(7963)
+	HX_STACK_LINE(7547)
 	{
-	}
-	HX_STACK_LINE(7964)
-	{
-		HX_STACK_LINE(7965)
+		HX_STACK_LINE(7548)
 		::zpp_nape::util::ZNPNode_ZPP_SimplifyP o = old;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(7966)
-		{
-		}
-		HX_STACK_LINE(7974)
+		HX_STACK_LINE(7557)
 		o->elt = null();
-		HX_STACK_LINE(7975)
+		HX_STACK_LINE(7558)
 		o->next = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool;
-		HX_STACK_LINE(7976)
+		HX_STACK_LINE(7559)
 		::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool = o;
 	}
-	HX_STACK_LINE(7981)
+	HX_STACK_LINE(7564)
 	this->modified = true;
-	HX_STACK_LINE(7982)
+	HX_STACK_LINE(7565)
 	(this->length)--;
-	HX_STACK_LINE(7983)
+	HX_STACK_LINE(7566)
 	this->pushmod = true;
-	HX_STACK_LINE(7984)
+	HX_STACK_LINE(7567)
 	return ret;
 }
 
@@ -436,173 +397,152 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_SimplifyP_obj,splice,return )
 HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SimplifyP_obj,inlined_erase,return )
 
 ::zpp_nape::util::ZNPNode_ZPP_SimplifyP ZNPList_ZPP_SimplifyP_obj::erase( ::zpp_nape::util::ZNPNode_ZPP_SimplifyP pre){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::erase","zpp_nape/util/Lists.hx",7935);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::erase","zpp_nape/util/Lists.hx",7518);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
 	struct _Function_1_1{
-		inline static ::zpp_nape::util::ZNPNode_ZPP_SimplifyP Block( ::zpp_nape::util::ZNPNode_ZPP_SimplifyP &pre,::zpp_nape::util::ZNPList_ZPP_SimplifyP_obj *__this){
-			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7936);
+		inline static ::zpp_nape::util::ZNPNode_ZPP_SimplifyP Block( ::zpp_nape::util::ZNPList_ZPP_SimplifyP_obj *__this,::zpp_nape::util::ZNPNode_ZPP_SimplifyP &pre){
+			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7519);
 			{
-				HX_STACK_LINE(7936)
-				{
-				}
-				HX_STACK_LINE(7936)
+				HX_STACK_LINE(7519)
 				::zpp_nape::util::ZNPNode_ZPP_SimplifyP old;		HX_STACK_VAR(old,"old");
-				HX_STACK_LINE(7936)
+				HX_STACK_LINE(7519)
 				::zpp_nape::util::ZNPNode_ZPP_SimplifyP ret;		HX_STACK_VAR(ret,"ret");
-				HX_STACK_LINE(7936)
+				HX_STACK_LINE(7519)
 				if (((pre == null()))){
-					HX_STACK_LINE(7936)
+					HX_STACK_LINE(7519)
 					old = __this->head;
-					HX_STACK_LINE(7936)
+					HX_STACK_LINE(7519)
 					ret = old->next;
-					HX_STACK_LINE(7936)
+					HX_STACK_LINE(7519)
 					__this->head = ret;
-					HX_STACK_LINE(7936)
+					HX_STACK_LINE(7519)
 					if (((__this->head == null()))){
-						HX_STACK_LINE(7936)
+						HX_STACK_LINE(7519)
 						__this->pushmod = true;
 					}
 				}
 				else{
-					HX_STACK_LINE(7936)
+					HX_STACK_LINE(7519)
 					old = pre->next;
-					HX_STACK_LINE(7936)
+					HX_STACK_LINE(7519)
 					ret = old->next;
-					HX_STACK_LINE(7936)
+					HX_STACK_LINE(7519)
 					pre->next = ret;
-					HX_STACK_LINE(7936)
+					HX_STACK_LINE(7519)
 					if (((ret == null()))){
-						HX_STACK_LINE(7936)
+						HX_STACK_LINE(7519)
 						__this->pushmod = true;
 					}
 				}
-				HX_STACK_LINE(7936)
+				HX_STACK_LINE(7519)
 				{
-				}
-				HX_STACK_LINE(7936)
-				{
-					HX_STACK_LINE(7936)
+					HX_STACK_LINE(7519)
 					::zpp_nape::util::ZNPNode_ZPP_SimplifyP o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(7936)
-					{
-					}
-					HX_STACK_LINE(7936)
+					HX_STACK_LINE(7519)
 					o->elt = null();
-					HX_STACK_LINE(7936)
+					HX_STACK_LINE(7519)
 					o->next = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool;
-					HX_STACK_LINE(7936)
+					HX_STACK_LINE(7519)
 					::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool = o;
 				}
-				HX_STACK_LINE(7936)
+				HX_STACK_LINE(7519)
 				__this->modified = true;
-				HX_STACK_LINE(7936)
+				HX_STACK_LINE(7519)
 				(__this->length)--;
-				HX_STACK_LINE(7936)
+				HX_STACK_LINE(7519)
 				__this->pushmod = true;
-				HX_STACK_LINE(7936)
+				HX_STACK_LINE(7519)
 				return ret;
 			}
 			return null();
 		}
 	};
-	HX_STACK_LINE(7935)
-	return _Function_1_1::Block(pre,this);
+	HX_STACK_LINE(7518)
+	return _Function_1_1::Block(this,pre);
 }
 
 
 HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SimplifyP_obj,erase,return )
 
 bool ZNPList_ZPP_SimplifyP_obj::inlined_try_remove( ::zpp_nape::geom::ZPP_SimplifyP obj){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::inlined_try_remove","zpp_nape/util/Lists.hx",7912);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::inlined_try_remove","zpp_nape/util/Lists.hx",7495);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(7913)
-	{
-	}
-	HX_STACK_LINE(7921)
+	HX_STACK_LINE(7504)
 	::zpp_nape::util::ZNPNode_ZPP_SimplifyP pre = null();		HX_STACK_VAR(pre,"pre");
-	HX_STACK_LINE(7922)
+	HX_STACK_LINE(7505)
 	::zpp_nape::util::ZNPNode_ZPP_SimplifyP cur = this->head;		HX_STACK_VAR(cur,"cur");
-	HX_STACK_LINE(7923)
+	HX_STACK_LINE(7506)
 	bool ret = false;		HX_STACK_VAR(ret,"ret");
-	HX_STACK_LINE(7924)
+	HX_STACK_LINE(7507)
 	while(((cur != null()))){
-		HX_STACK_LINE(7925)
+		HX_STACK_LINE(7508)
 		if (((cur->elt == obj))){
-			HX_STACK_LINE(7926)
+			HX_STACK_LINE(7509)
 			{
-				HX_STACK_LINE(7926)
-				{
-				}
-				HX_STACK_LINE(7926)
+				HX_STACK_LINE(7509)
 				::zpp_nape::util::ZNPNode_ZPP_SimplifyP old;		HX_STACK_VAR(old,"old");
-				HX_STACK_LINE(7926)
+				HX_STACK_LINE(7509)
 				::zpp_nape::util::ZNPNode_ZPP_SimplifyP ret1;		HX_STACK_VAR(ret1,"ret1");
-				HX_STACK_LINE(7926)
+				HX_STACK_LINE(7509)
 				if (((pre == null()))){
-					HX_STACK_LINE(7926)
+					HX_STACK_LINE(7509)
 					old = this->head;
-					HX_STACK_LINE(7926)
+					HX_STACK_LINE(7509)
 					ret1 = old->next;
-					HX_STACK_LINE(7926)
+					HX_STACK_LINE(7509)
 					this->head = ret1;
-					HX_STACK_LINE(7926)
+					HX_STACK_LINE(7509)
 					if (((this->head == null()))){
-						HX_STACK_LINE(7926)
+						HX_STACK_LINE(7509)
 						this->pushmod = true;
 					}
 				}
 				else{
-					HX_STACK_LINE(7926)
+					HX_STACK_LINE(7509)
 					old = pre->next;
-					HX_STACK_LINE(7926)
+					HX_STACK_LINE(7509)
 					ret1 = old->next;
-					HX_STACK_LINE(7926)
+					HX_STACK_LINE(7509)
 					pre->next = ret1;
-					HX_STACK_LINE(7926)
+					HX_STACK_LINE(7509)
 					if (((ret1 == null()))){
-						HX_STACK_LINE(7926)
+						HX_STACK_LINE(7509)
 						this->pushmod = true;
 					}
 				}
-				HX_STACK_LINE(7926)
+				HX_STACK_LINE(7509)
 				{
-				}
-				HX_STACK_LINE(7926)
-				{
-					HX_STACK_LINE(7926)
+					HX_STACK_LINE(7509)
 					::zpp_nape::util::ZNPNode_ZPP_SimplifyP o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(7926)
-					{
-					}
-					HX_STACK_LINE(7926)
+					HX_STACK_LINE(7509)
 					o->elt = null();
-					HX_STACK_LINE(7926)
+					HX_STACK_LINE(7509)
 					o->next = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool;
-					HX_STACK_LINE(7926)
+					HX_STACK_LINE(7509)
 					::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool = o;
 				}
-				HX_STACK_LINE(7926)
+				HX_STACK_LINE(7509)
 				this->modified = true;
-				HX_STACK_LINE(7926)
+				HX_STACK_LINE(7509)
 				(this->length)--;
-				HX_STACK_LINE(7926)
+				HX_STACK_LINE(7509)
 				this->pushmod = true;
-				HX_STACK_LINE(7926)
+				HX_STACK_LINE(7509)
 				ret1;
 			}
-			HX_STACK_LINE(7927)
+			HX_STACK_LINE(7510)
 			ret = true;
-			HX_STACK_LINE(7928)
+			HX_STACK_LINE(7511)
 			break;
 		}
-		HX_STACK_LINE(7930)
+		HX_STACK_LINE(7513)
 		pre = cur;
-		HX_STACK_LINE(7931)
+		HX_STACK_LINE(7514)
 		cur = cur->next;
 	}
-	HX_STACK_LINE(7933)
+	HX_STACK_LINE(7516)
 	return ret;
 }
 
@@ -611,102 +551,84 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SimplifyP_obj,inlined_try_remove,return )
 
 Void ZNPList_ZPP_SimplifyP_obj::inlined_remove( ::zpp_nape::geom::ZPP_SimplifyP obj){
 {
-		HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::inlined_remove","zpp_nape/util/Lists.hx",7899);
+		HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::inlined_remove","zpp_nape/util/Lists.hx",7482);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(7900)
-		{
-		}
-		HX_STACK_LINE(7908)
-		{
-			HX_STACK_LINE(7908)
-			{
-			}
-			HX_STACK_LINE(7908)
-			::zpp_nape::util::ZNPNode_ZPP_SimplifyP pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(7908)
-			::zpp_nape::util::ZNPNode_ZPP_SimplifyP cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(7908)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(7908)
-			while(((cur != null()))){
-				HX_STACK_LINE(7908)
-				if (((cur->elt == obj))){
-					HX_STACK_LINE(7908)
-					{
-						HX_STACK_LINE(7908)
-						{
+		HX_STACK_LINE(7491)
+		::zpp_nape::util::ZNPNode_ZPP_SimplifyP pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(7491)
+		::zpp_nape::util::ZNPNode_ZPP_SimplifyP cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(7491)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(7491)
+		while(((cur != null()))){
+			HX_STACK_LINE(7491)
+			if (((cur->elt == obj))){
+				HX_STACK_LINE(7491)
+				{
+					HX_STACK_LINE(7491)
+					::zpp_nape::util::ZNPNode_ZPP_SimplifyP old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(7491)
+					::zpp_nape::util::ZNPNode_ZPP_SimplifyP ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(7491)
+					if (((pre == null()))){
+						HX_STACK_LINE(7491)
+						old = this->head;
+						HX_STACK_LINE(7491)
+						ret1 = old->next;
+						HX_STACK_LINE(7491)
+						this->head = ret1;
+						HX_STACK_LINE(7491)
+						if (((this->head == null()))){
+							HX_STACK_LINE(7491)
+							this->pushmod = true;
 						}
-						HX_STACK_LINE(7908)
-						::zpp_nape::util::ZNPNode_ZPP_SimplifyP old;		HX_STACK_VAR(old,"old");
-						HX_STACK_LINE(7908)
-						::zpp_nape::util::ZNPNode_ZPP_SimplifyP ret1;		HX_STACK_VAR(ret1,"ret1");
-						HX_STACK_LINE(7908)
-						if (((pre == null()))){
-							HX_STACK_LINE(7908)
-							old = this->head;
-							HX_STACK_LINE(7908)
-							ret1 = old->next;
-							HX_STACK_LINE(7908)
-							this->head = ret1;
-							HX_STACK_LINE(7908)
-							if (((this->head == null()))){
-								HX_STACK_LINE(7908)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(7908)
-							old = pre->next;
-							HX_STACK_LINE(7908)
-							ret1 = old->next;
-							HX_STACK_LINE(7908)
-							pre->next = ret1;
-							HX_STACK_LINE(7908)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(7908)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(7908)
-						{
-						}
-						HX_STACK_LINE(7908)
-						{
-							HX_STACK_LINE(7908)
-							::zpp_nape::util::ZNPNode_ZPP_SimplifyP o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(7908)
-							{
-							}
-							HX_STACK_LINE(7908)
-							o->elt = null();
-							HX_STACK_LINE(7908)
-							o->next = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool;
-							HX_STACK_LINE(7908)
-							::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(7908)
-						this->modified = true;
-						HX_STACK_LINE(7908)
-						(this->length)--;
-						HX_STACK_LINE(7908)
-						this->pushmod = true;
-						HX_STACK_LINE(7908)
-						ret1;
 					}
-					HX_STACK_LINE(7908)
-					ret = true;
-					HX_STACK_LINE(7908)
-					break;
+					else{
+						HX_STACK_LINE(7491)
+						old = pre->next;
+						HX_STACK_LINE(7491)
+						ret1 = old->next;
+						HX_STACK_LINE(7491)
+						pre->next = ret1;
+						HX_STACK_LINE(7491)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(7491)
+							this->pushmod = true;
+						}
+					}
+					HX_STACK_LINE(7491)
+					{
+						HX_STACK_LINE(7491)
+						::zpp_nape::util::ZNPNode_ZPP_SimplifyP o = old;		HX_STACK_VAR(o,"o");
+						HX_STACK_LINE(7491)
+						o->elt = null();
+						HX_STACK_LINE(7491)
+						o->next = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool;
+						HX_STACK_LINE(7491)
+						::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool = o;
+					}
+					HX_STACK_LINE(7491)
+					this->modified = true;
+					HX_STACK_LINE(7491)
+					(this->length)--;
+					HX_STACK_LINE(7491)
+					this->pushmod = true;
+					HX_STACK_LINE(7491)
+					ret1;
 				}
-				HX_STACK_LINE(7908)
-				pre = cur;
-				HX_STACK_LINE(7908)
-				cur = cur->next;
+				HX_STACK_LINE(7491)
+				ret = true;
+				HX_STACK_LINE(7491)
+				break;
 			}
-			HX_STACK_LINE(7908)
-			ret;
+			HX_STACK_LINE(7491)
+			pre = cur;
+			HX_STACK_LINE(7491)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(7491)
+		ret;
 	}
 return null();
 }
@@ -715,35 +637,32 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SimplifyP_obj,inlined_remove,(void))
 
 bool ZNPList_ZPP_SimplifyP_obj::try_remove( ::zpp_nape::geom::ZPP_SimplifyP obj){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::try_remove","zpp_nape/util/Lists.hx",7874);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::try_remove","zpp_nape/util/Lists.hx",7457);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(7875)
-	{
-	}
-	HX_STACK_LINE(7883)
+	HX_STACK_LINE(7466)
 	::zpp_nape::util::ZNPNode_ZPP_SimplifyP pre = null();		HX_STACK_VAR(pre,"pre");
-	HX_STACK_LINE(7884)
+	HX_STACK_LINE(7467)
 	::zpp_nape::util::ZNPNode_ZPP_SimplifyP cur = this->head;		HX_STACK_VAR(cur,"cur");
-	HX_STACK_LINE(7885)
+	HX_STACK_LINE(7468)
 	bool ret = false;		HX_STACK_VAR(ret,"ret");
-	HX_STACK_LINE(7886)
+	HX_STACK_LINE(7469)
 	while(((cur != null()))){
-		HX_STACK_LINE(7887)
+		HX_STACK_LINE(7470)
 		if (((cur->elt == obj))){
-			HX_STACK_LINE(7888)
+			HX_STACK_LINE(7471)
 			this->erase(pre);
-			HX_STACK_LINE(7889)
+			HX_STACK_LINE(7472)
 			ret = true;
-			HX_STACK_LINE(7890)
+			HX_STACK_LINE(7473)
 			break;
 		}
-		HX_STACK_LINE(7892)
+		HX_STACK_LINE(7475)
 		pre = cur;
-		HX_STACK_LINE(7893)
+		HX_STACK_LINE(7476)
 		cur = cur->next;
 	}
-	HX_STACK_LINE(7895)
+	HX_STACK_LINE(7478)
 	return ret;
 }
 
@@ -752,102 +671,84 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SimplifyP_obj,try_remove,return )
 
 Void ZNPList_ZPP_SimplifyP_obj::remove( ::zpp_nape::geom::ZPP_SimplifyP obj){
 {
-		HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::remove","zpp_nape/util/Lists.hx",7863);
+		HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::remove","zpp_nape/util/Lists.hx",7446);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(7864)
-		{
-		}
-		HX_STACK_LINE(7872)
-		{
-			HX_STACK_LINE(7872)
-			{
-			}
-			HX_STACK_LINE(7872)
-			::zpp_nape::util::ZNPNode_ZPP_SimplifyP pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(7872)
-			::zpp_nape::util::ZNPNode_ZPP_SimplifyP cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(7872)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(7872)
-			while(((cur != null()))){
-				HX_STACK_LINE(7872)
-				if (((cur->elt == obj))){
-					HX_STACK_LINE(7872)
-					{
-						HX_STACK_LINE(7872)
-						{
+		HX_STACK_LINE(7455)
+		::zpp_nape::util::ZNPNode_ZPP_SimplifyP pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(7455)
+		::zpp_nape::util::ZNPNode_ZPP_SimplifyP cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(7455)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(7455)
+		while(((cur != null()))){
+			HX_STACK_LINE(7455)
+			if (((cur->elt == obj))){
+				HX_STACK_LINE(7455)
+				{
+					HX_STACK_LINE(7455)
+					::zpp_nape::util::ZNPNode_ZPP_SimplifyP old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(7455)
+					::zpp_nape::util::ZNPNode_ZPP_SimplifyP ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(7455)
+					if (((pre == null()))){
+						HX_STACK_LINE(7455)
+						old = this->head;
+						HX_STACK_LINE(7455)
+						ret1 = old->next;
+						HX_STACK_LINE(7455)
+						this->head = ret1;
+						HX_STACK_LINE(7455)
+						if (((this->head == null()))){
+							HX_STACK_LINE(7455)
+							this->pushmod = true;
 						}
-						HX_STACK_LINE(7872)
-						::zpp_nape::util::ZNPNode_ZPP_SimplifyP old;		HX_STACK_VAR(old,"old");
-						HX_STACK_LINE(7872)
-						::zpp_nape::util::ZNPNode_ZPP_SimplifyP ret1;		HX_STACK_VAR(ret1,"ret1");
-						HX_STACK_LINE(7872)
-						if (((pre == null()))){
-							HX_STACK_LINE(7872)
-							old = this->head;
-							HX_STACK_LINE(7872)
-							ret1 = old->next;
-							HX_STACK_LINE(7872)
-							this->head = ret1;
-							HX_STACK_LINE(7872)
-							if (((this->head == null()))){
-								HX_STACK_LINE(7872)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(7872)
-							old = pre->next;
-							HX_STACK_LINE(7872)
-							ret1 = old->next;
-							HX_STACK_LINE(7872)
-							pre->next = ret1;
-							HX_STACK_LINE(7872)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(7872)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(7872)
-						{
-						}
-						HX_STACK_LINE(7872)
-						{
-							HX_STACK_LINE(7872)
-							::zpp_nape::util::ZNPNode_ZPP_SimplifyP o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(7872)
-							{
-							}
-							HX_STACK_LINE(7872)
-							o->elt = null();
-							HX_STACK_LINE(7872)
-							o->next = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool;
-							HX_STACK_LINE(7872)
-							::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(7872)
-						this->modified = true;
-						HX_STACK_LINE(7872)
-						(this->length)--;
-						HX_STACK_LINE(7872)
-						this->pushmod = true;
-						HX_STACK_LINE(7872)
-						ret1;
 					}
-					HX_STACK_LINE(7872)
-					ret = true;
-					HX_STACK_LINE(7872)
-					break;
+					else{
+						HX_STACK_LINE(7455)
+						old = pre->next;
+						HX_STACK_LINE(7455)
+						ret1 = old->next;
+						HX_STACK_LINE(7455)
+						pre->next = ret1;
+						HX_STACK_LINE(7455)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(7455)
+							this->pushmod = true;
+						}
+					}
+					HX_STACK_LINE(7455)
+					{
+						HX_STACK_LINE(7455)
+						::zpp_nape::util::ZNPNode_ZPP_SimplifyP o = old;		HX_STACK_VAR(o,"o");
+						HX_STACK_LINE(7455)
+						o->elt = null();
+						HX_STACK_LINE(7455)
+						o->next = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool;
+						HX_STACK_LINE(7455)
+						::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool = o;
+					}
+					HX_STACK_LINE(7455)
+					this->modified = true;
+					HX_STACK_LINE(7455)
+					(this->length)--;
+					HX_STACK_LINE(7455)
+					this->pushmod = true;
+					HX_STACK_LINE(7455)
+					ret1;
 				}
-				HX_STACK_LINE(7872)
-				pre = cur;
-				HX_STACK_LINE(7872)
-				cur = cur->next;
+				HX_STACK_LINE(7455)
+				ret = true;
+				HX_STACK_LINE(7455)
+				break;
 			}
-			HX_STACK_LINE(7872)
-			ret;
+			HX_STACK_LINE(7455)
+			pre = cur;
+			HX_STACK_LINE(7455)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(7455)
+		ret;
 	}
 return null();
 }
@@ -856,16 +757,13 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SimplifyP_obj,remove,(void))
 
 ::zpp_nape::geom::ZPP_SimplifyP ZNPList_ZPP_SimplifyP_obj::inlined_pop_unsafe( ){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::inlined_pop_unsafe","zpp_nape/util/Lists.hx",7850);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::inlined_pop_unsafe","zpp_nape/util/Lists.hx",7433);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(7851)
-	{
-	}
-	HX_STACK_LINE(7859)
+	HX_STACK_LINE(7442)
 	::zpp_nape::geom::ZPP_SimplifyP ret = this->head->elt;		HX_STACK_VAR(ret,"ret");
-	HX_STACK_LINE(7860)
+	HX_STACK_LINE(7443)
 	this->pop();
-	HX_STACK_LINE(7861)
+	HX_STACK_LINE(7444)
 	return ret;
 }
 
@@ -873,26 +771,23 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SimplifyP_obj,remove,(void))
 HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_SimplifyP_obj,inlined_pop_unsafe,return )
 
 ::zpp_nape::geom::ZPP_SimplifyP ZNPList_ZPP_SimplifyP_obj::pop_unsafe( ){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::pop_unsafe","zpp_nape/util/Lists.hx",7845);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::pop_unsafe","zpp_nape/util/Lists.hx",7428);
 	HX_STACK_THIS(this);
 	struct _Function_1_1{
 		inline static ::zpp_nape::geom::ZPP_SimplifyP Block( ::zpp_nape::util::ZNPList_ZPP_SimplifyP_obj *__this){
-			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7846);
+			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7429);
 			{
-				HX_STACK_LINE(7846)
-				{
-				}
-				HX_STACK_LINE(7846)
+				HX_STACK_LINE(7429)
 				::zpp_nape::geom::ZPP_SimplifyP ret = __this->head->elt;		HX_STACK_VAR(ret,"ret");
-				HX_STACK_LINE(7846)
+				HX_STACK_LINE(7429)
 				__this->pop();
-				HX_STACK_LINE(7846)
+				HX_STACK_LINE(7429)
 				return ret;
 			}
 			return null();
 		}
 	};
-	HX_STACK_LINE(7845)
+	HX_STACK_LINE(7428)
 	return _Function_1_1::Block(this);
 }
 
@@ -901,40 +796,31 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_SimplifyP_obj,pop_unsafe,return )
 
 Void ZNPList_ZPP_SimplifyP_obj::inlined_pop( ){
 {
-		HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::inlined_pop","zpp_nape/util/Lists.hx",7812);
+		HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::inlined_pop","zpp_nape/util/Lists.hx",7395);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(7813)
-		{
-		}
-		HX_STACK_LINE(7821)
+		HX_STACK_LINE(7404)
 		::zpp_nape::util::ZNPNode_ZPP_SimplifyP ret = this->head;		HX_STACK_VAR(ret,"ret");
-		HX_STACK_LINE(7822)
+		HX_STACK_LINE(7405)
 		this->head = ret->next;
-		HX_STACK_LINE(7823)
+		HX_STACK_LINE(7407)
 		{
-		}
-		HX_STACK_LINE(7824)
-		{
-			HX_STACK_LINE(7825)
+			HX_STACK_LINE(7408)
 			::zpp_nape::util::ZNPNode_ZPP_SimplifyP o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(7826)
-			{
-			}
-			HX_STACK_LINE(7834)
+			HX_STACK_LINE(7417)
 			o->elt = null();
-			HX_STACK_LINE(7835)
+			HX_STACK_LINE(7418)
 			o->next = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool;
-			HX_STACK_LINE(7836)
+			HX_STACK_LINE(7419)
 			::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool = o;
 		}
-		HX_STACK_LINE(7841)
+		HX_STACK_LINE(7424)
 		if (((this->head == null()))){
-			HX_STACK_LINE(7841)
+			HX_STACK_LINE(7424)
 			this->pushmod = true;
 		}
-		HX_STACK_LINE(7842)
+		HX_STACK_LINE(7425)
 		this->modified = true;
-		HX_STACK_LINE(7843)
+		HX_STACK_LINE(7426)
 		(this->length)--;
 	}
 return null();
@@ -945,40 +831,31 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_SimplifyP_obj,inlined_pop,(void))
 
 Void ZNPList_ZPP_SimplifyP_obj::pop( ){
 {
-		HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::pop","zpp_nape/util/Lists.hx",7807);
+		HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::pop","zpp_nape/util/Lists.hx",7390);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(7808)
-		{
-		}
-		HX_STACK_LINE(7808)
+		HX_STACK_LINE(7391)
 		::zpp_nape::util::ZNPNode_ZPP_SimplifyP ret = this->head;		HX_STACK_VAR(ret,"ret");
-		HX_STACK_LINE(7808)
+		HX_STACK_LINE(7391)
 		this->head = ret->next;
-		HX_STACK_LINE(7808)
+		HX_STACK_LINE(7391)
 		{
-		}
-		HX_STACK_LINE(7808)
-		{
-			HX_STACK_LINE(7808)
+			HX_STACK_LINE(7391)
 			::zpp_nape::util::ZNPNode_ZPP_SimplifyP o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(7808)
-			{
-			}
-			HX_STACK_LINE(7808)
+			HX_STACK_LINE(7391)
 			o->elt = null();
-			HX_STACK_LINE(7808)
+			HX_STACK_LINE(7391)
 			o->next = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool;
-			HX_STACK_LINE(7808)
+			HX_STACK_LINE(7391)
 			::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool = o;
 		}
-		HX_STACK_LINE(7808)
+		HX_STACK_LINE(7391)
 		if (((this->head == null()))){
-			HX_STACK_LINE(7808)
+			HX_STACK_LINE(7391)
 			this->pushmod = true;
 		}
-		HX_STACK_LINE(7808)
+		HX_STACK_LINE(7391)
 		this->modified = true;
-		HX_STACK_LINE(7808)
+		HX_STACK_LINE(7391)
 		(this->length)--;
 	}
 return null();
@@ -988,65 +865,62 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_SimplifyP_obj,pop,(void))
 
 ::zpp_nape::util::ZNPNode_ZPP_SimplifyP ZNPList_ZPP_SimplifyP_obj::inlined_insert( ::zpp_nape::util::ZNPNode_ZPP_SimplifyP cur,::zpp_nape::geom::ZPP_SimplifyP o){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::inlined_insert","zpp_nape/util/Lists.hx",7764);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::inlined_insert","zpp_nape/util/Lists.hx",7347);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(7765)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyP &o){
-			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7773);
+			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7356);
 			{
-				HX_STACK_LINE(7774)
+				HX_STACK_LINE(7357)
 				::zpp_nape::util::ZNPNode_ZPP_SimplifyP ret;		HX_STACK_VAR(ret,"ret");
-				HX_STACK_LINE(7775)
+				HX_STACK_LINE(7358)
 				{
-					HX_STACK_LINE(7776)
+					HX_STACK_LINE(7359)
 					if (((::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool == null()))){
-						HX_STACK_LINE(7776)
+						HX_STACK_LINE(7359)
 						ret = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::__new();
 					}
 					else{
-						HX_STACK_LINE(7783)
+						HX_STACK_LINE(7366)
 						ret = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool;
-						HX_STACK_LINE(7784)
+						HX_STACK_LINE(7367)
 						::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool = ret->next;
-						HX_STACK_LINE(7785)
+						HX_STACK_LINE(7368)
 						ret->next = null();
 					}
-					HX_STACK_LINE(7790)
+					HX_STACK_LINE(7373)
 					Dynamic();
 				}
-				HX_STACK_LINE(7792)
+				HX_STACK_LINE(7375)
 				ret->elt = o;
-				HX_STACK_LINE(7793)
+				HX_STACK_LINE(7376)
 				return ret;
 			}
 			return null();
 		}
 	};
-	HX_STACK_LINE(7773)
+	HX_STACK_LINE(7356)
 	::zpp_nape::util::ZNPNode_ZPP_SimplifyP temp = _Function_1_1::Block(o);		HX_STACK_VAR(temp,"temp");
-	HX_STACK_LINE(7795)
+	HX_STACK_LINE(7378)
 	if (((cur == null()))){
-		HX_STACK_LINE(7796)
+		HX_STACK_LINE(7379)
 		temp->next = this->head;
-		HX_STACK_LINE(7797)
+		HX_STACK_LINE(7380)
 		this->head = temp;
 	}
 	else{
-		HX_STACK_LINE(7800)
+		HX_STACK_LINE(7383)
 		temp->next = cur->next;
-		HX_STACK_LINE(7801)
+		HX_STACK_LINE(7384)
 		cur->next = temp;
 	}
-	HX_STACK_LINE(7803)
+	HX_STACK_LINE(7386)
 	this->pushmod = this->modified = true;
-	HX_STACK_LINE(7804)
+	HX_STACK_LINE(7387)
 	(this->length)++;
-	HX_STACK_LINE(7805)
+	HX_STACK_LINE(7388)
 	return temp;
 }
 
@@ -1054,75 +928,72 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_SimplifyP_obj,pop,(void))
 HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_SimplifyP_obj,inlined_insert,return )
 
 ::zpp_nape::util::ZNPNode_ZPP_SimplifyP ZNPList_ZPP_SimplifyP_obj::insert( ::zpp_nape::util::ZNPNode_ZPP_SimplifyP cur,::zpp_nape::geom::ZPP_SimplifyP o){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::insert","zpp_nape/util/Lists.hx",7759);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::insert","zpp_nape/util/Lists.hx",7342);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
 	HX_STACK_ARG(o,"o");
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_SimplifyP Block( ::zpp_nape::util::ZNPList_ZPP_SimplifyP_obj *__this,::zpp_nape::geom::ZPP_SimplifyP &o,::zpp_nape::util::ZNPNode_ZPP_SimplifyP &cur){
-			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7760);
+			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7343);
 			{
-				HX_STACK_LINE(7760)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyP &o){
-						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7760);
+						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7343);
 						{
-							HX_STACK_LINE(7760)
+							HX_STACK_LINE(7343)
 							::zpp_nape::util::ZNPNode_ZPP_SimplifyP ret;		HX_STACK_VAR(ret,"ret");
-							HX_STACK_LINE(7760)
+							HX_STACK_LINE(7343)
 							{
-								HX_STACK_LINE(7760)
+								HX_STACK_LINE(7343)
 								if (((::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool == null()))){
-									HX_STACK_LINE(7760)
+									HX_STACK_LINE(7343)
 									ret = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::__new();
 								}
 								else{
-									HX_STACK_LINE(7760)
+									HX_STACK_LINE(7343)
 									ret = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool;
-									HX_STACK_LINE(7760)
+									HX_STACK_LINE(7343)
 									::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool = ret->next;
-									HX_STACK_LINE(7760)
+									HX_STACK_LINE(7343)
 									ret->next = null();
 								}
-								HX_STACK_LINE(7760)
+								HX_STACK_LINE(7343)
 								Dynamic();
 							}
-							HX_STACK_LINE(7760)
+							HX_STACK_LINE(7343)
 							ret->elt = o;
-							HX_STACK_LINE(7760)
+							HX_STACK_LINE(7343)
 							return ret;
 						}
 						return null();
 					}
 				};
-				HX_STACK_LINE(7760)
+				HX_STACK_LINE(7343)
 				::zpp_nape::util::ZNPNode_ZPP_SimplifyP temp = _Function_2_1::Block(o);		HX_STACK_VAR(temp,"temp");
-				HX_STACK_LINE(7760)
+				HX_STACK_LINE(7343)
 				if (((cur == null()))){
-					HX_STACK_LINE(7760)
+					HX_STACK_LINE(7343)
 					temp->next = __this->head;
-					HX_STACK_LINE(7760)
+					HX_STACK_LINE(7343)
 					__this->head = temp;
 				}
 				else{
-					HX_STACK_LINE(7760)
+					HX_STACK_LINE(7343)
 					temp->next = cur->next;
-					HX_STACK_LINE(7760)
+					HX_STACK_LINE(7343)
 					cur->next = temp;
 				}
-				HX_STACK_LINE(7760)
+				HX_STACK_LINE(7343)
 				__this->pushmod = __this->modified = true;
-				HX_STACK_LINE(7760)
+				HX_STACK_LINE(7343)
 				(__this->length)++;
-				HX_STACK_LINE(7760)
+				HX_STACK_LINE(7343)
 				return temp;
 			}
 			return null();
 		}
 	};
-	HX_STACK_LINE(7759)
+	HX_STACK_LINE(7342)
 	return _Function_1_1::Block(this,o,cur);
 }
 
@@ -1131,25 +1002,19 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_SimplifyP_obj,insert,return )
 
 Void ZNPList_ZPP_SimplifyP_obj::addAll( ::zpp_nape::util::ZNPList_ZPP_SimplifyP x){
 {
-		HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::addAll","zpp_nape/util/Lists.hx",7741);
+		HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::addAll","zpp_nape/util/Lists.hx",7324);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(7742)
-		{
-		}
-		HX_STACK_LINE(7750)
-		{
-			HX_STACK_LINE(7751)
-			::zpp_nape::util::ZNPNode_ZPP_SimplifyP cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
-			HX_STACK_LINE(7752)
-			while(((cx_ite != null()))){
-				HX_STACK_LINE(7753)
-				::zpp_nape::geom::ZPP_SimplifyP i = cx_ite->elt;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(7754)
-				this->add(i);
-				HX_STACK_LINE(7755)
-				cx_ite = cx_ite->next;
-			}
+		HX_STACK_LINE(7334)
+		::zpp_nape::util::ZNPNode_ZPP_SimplifyP cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+		HX_STACK_LINE(7335)
+		while(((cx_ite != null()))){
+			HX_STACK_LINE(7336)
+			::zpp_nape::geom::ZPP_SimplifyP i = cx_ite->elt;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(7337)
+			this->add(i);
+			HX_STACK_LINE(7338)
+			cx_ite = cx_ite->next;
 		}
 	}
 return null();
@@ -1159,55 +1024,52 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SimplifyP_obj,addAll,(void))
 
 ::zpp_nape::geom::ZPP_SimplifyP ZNPList_ZPP_SimplifyP_obj::inlined_add( ::zpp_nape::geom::ZPP_SimplifyP o){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::inlined_add","zpp_nape/util/Lists.hx",7704);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::inlined_add","zpp_nape/util/Lists.hx",7287);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(7705)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyP &o){
-			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7713);
+			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7296);
 			{
-				HX_STACK_LINE(7714)
+				HX_STACK_LINE(7297)
 				::zpp_nape::util::ZNPNode_ZPP_SimplifyP ret;		HX_STACK_VAR(ret,"ret");
-				HX_STACK_LINE(7715)
+				HX_STACK_LINE(7298)
 				{
-					HX_STACK_LINE(7716)
+					HX_STACK_LINE(7299)
 					if (((::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool == null()))){
-						HX_STACK_LINE(7716)
+						HX_STACK_LINE(7299)
 						ret = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::__new();
 					}
 					else{
-						HX_STACK_LINE(7723)
+						HX_STACK_LINE(7306)
 						ret = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool;
-						HX_STACK_LINE(7724)
+						HX_STACK_LINE(7307)
 						::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool = ret->next;
-						HX_STACK_LINE(7725)
+						HX_STACK_LINE(7308)
 						ret->next = null();
 					}
-					HX_STACK_LINE(7730)
+					HX_STACK_LINE(7313)
 					Dynamic();
 				}
-				HX_STACK_LINE(7732)
+				HX_STACK_LINE(7315)
 				ret->elt = o;
-				HX_STACK_LINE(7733)
+				HX_STACK_LINE(7316)
 				return ret;
 			}
 			return null();
 		}
 	};
-	HX_STACK_LINE(7713)
+	HX_STACK_LINE(7296)
 	::zpp_nape::util::ZNPNode_ZPP_SimplifyP temp = _Function_1_1::Block(o);		HX_STACK_VAR(temp,"temp");
-	HX_STACK_LINE(7735)
+	HX_STACK_LINE(7318)
 	temp->next = this->head;
-	HX_STACK_LINE(7736)
+	HX_STACK_LINE(7319)
 	this->head = temp;
-	HX_STACK_LINE(7737)
+	HX_STACK_LINE(7320)
 	this->modified = true;
-	HX_STACK_LINE(7738)
+	HX_STACK_LINE(7321)
 	(this->length)++;
-	HX_STACK_LINE(7739)
+	HX_STACK_LINE(7322)
 	return o;
 }
 
@@ -1215,66 +1077,63 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SimplifyP_obj,addAll,(void))
 HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SimplifyP_obj,inlined_add,return )
 
 ::zpp_nape::geom::ZPP_SimplifyP ZNPList_ZPP_SimplifyP_obj::add( ::zpp_nape::geom::ZPP_SimplifyP o){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::add","zpp_nape/util/Lists.hx",7699);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::add","zpp_nape/util/Lists.hx",7282);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
 	struct _Function_1_1{
-		inline static ::zpp_nape::geom::ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyP &o,::zpp_nape::util::ZNPList_ZPP_SimplifyP_obj *__this){
-			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7700);
+		inline static ::zpp_nape::geom::ZPP_SimplifyP Block( ::zpp_nape::util::ZNPList_ZPP_SimplifyP_obj *__this,::zpp_nape::geom::ZPP_SimplifyP &o){
+			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7283);
 			{
-				HX_STACK_LINE(7700)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyP &o){
-						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7700);
+						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7283);
 						{
-							HX_STACK_LINE(7700)
+							HX_STACK_LINE(7283)
 							::zpp_nape::util::ZNPNode_ZPP_SimplifyP ret;		HX_STACK_VAR(ret,"ret");
-							HX_STACK_LINE(7700)
+							HX_STACK_LINE(7283)
 							{
-								HX_STACK_LINE(7700)
+								HX_STACK_LINE(7283)
 								if (((::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool == null()))){
-									HX_STACK_LINE(7700)
+									HX_STACK_LINE(7283)
 									ret = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::__new();
 								}
 								else{
-									HX_STACK_LINE(7700)
+									HX_STACK_LINE(7283)
 									ret = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool;
-									HX_STACK_LINE(7700)
+									HX_STACK_LINE(7283)
 									::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool = ret->next;
-									HX_STACK_LINE(7700)
+									HX_STACK_LINE(7283)
 									ret->next = null();
 								}
-								HX_STACK_LINE(7700)
+								HX_STACK_LINE(7283)
 								Dynamic();
 							}
-							HX_STACK_LINE(7700)
+							HX_STACK_LINE(7283)
 							ret->elt = o;
-							HX_STACK_LINE(7700)
+							HX_STACK_LINE(7283)
 							return ret;
 						}
 						return null();
 					}
 				};
-				HX_STACK_LINE(7700)
+				HX_STACK_LINE(7283)
 				::zpp_nape::util::ZNPNode_ZPP_SimplifyP temp = _Function_2_1::Block(o);		HX_STACK_VAR(temp,"temp");
-				HX_STACK_LINE(7700)
+				HX_STACK_LINE(7283)
 				temp->next = __this->head;
-				HX_STACK_LINE(7700)
+				HX_STACK_LINE(7283)
 				__this->head = temp;
-				HX_STACK_LINE(7700)
+				HX_STACK_LINE(7283)
 				__this->modified = true;
-				HX_STACK_LINE(7700)
+				HX_STACK_LINE(7283)
 				(__this->length)++;
-				HX_STACK_LINE(7700)
+				HX_STACK_LINE(7283)
 				return o;
 			}
 			return null();
 		}
 	};
-	HX_STACK_LINE(7699)
-	return _Function_1_1::Block(o,this);
+	HX_STACK_LINE(7282)
+	return _Function_1_1::Block(this,o);
 }
 
 
@@ -1282,14 +1141,14 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SimplifyP_obj,add,return )
 
 Void ZNPList_ZPP_SimplifyP_obj::setbegin( ::zpp_nape::util::ZNPNode_ZPP_SimplifyP i){
 {
-		HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::setbegin","zpp_nape/util/Lists.hx",7694);
+		HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::setbegin","zpp_nape/util/Lists.hx",7277);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(i,"i");
-		HX_STACK_LINE(7695)
+		HX_STACK_LINE(7278)
 		this->head = i;
-		HX_STACK_LINE(7696)
+		HX_STACK_LINE(7279)
 		this->modified = true;
-		HX_STACK_LINE(7697)
+		HX_STACK_LINE(7280)
 		this->pushmod = true;
 	}
 return null();
@@ -1299,9 +1158,9 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SimplifyP_obj,setbegin,(void))
 
 ::zpp_nape::util::ZNPNode_ZPP_SimplifyP ZNPList_ZPP_SimplifyP_obj::begin( ){
-	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::begin","zpp_nape/util/Lists.hx",7686);
+	HX_STACK_PUSH("ZNPList_ZPP_SimplifyP::begin","zpp_nape/util/Lists.hx",7269);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(7686)
+	HX_STACK_LINE(7269)
 	return this->head;
 }
 
@@ -1472,7 +1331,7 @@ Class ZNPList_ZPP_SimplifyP_obj::__mClass;
 
 void ZNPList_ZPP_SimplifyP_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ZPP_SimplifyP"), hx::TCanCast< ZNPList_ZPP_SimplifyP_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ZPP_SimplifyP"), hx::TCanCast< ZNPList_ZPP_SimplifyP_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -16,7 +16,7 @@ namespace zpp_nape{
 namespace dynamics{
 
 
-class ZPP_InteractionGroup_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_InteractionGroup_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_InteractionGroup_obj OBJ_;
@@ -51,19 +51,19 @@ class ZPP_InteractionGroup_obj : public hx::Object{
 		virtual Void invalidate( hx::Null< bool >  force);
 		Dynamic invalidate_dyn();
 
-		int depth; /* REM */ 
-		::nape::phys::InteractorList wrap_interactors; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Interactor interactors; /* REM */ 
-		::nape::dynamics::InteractionGroupList wrap_groups; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_InteractionGroup groups; /* REM */ 
+		int depth;
+		::nape::phys::InteractorList wrap_interactors;
+		::zpp_nape::util::ZNPList_ZPP_Interactor interactors;
+		::nape::dynamics::InteractionGroupList wrap_groups;
+		::zpp_nape::util::ZNPList_ZPP_InteractionGroup groups;
 		virtual Void setGroup( ::zpp_nape::dynamics::ZPP_InteractionGroup group);
 		Dynamic setGroup_dyn();
 
-		::zpp_nape::dynamics::ZPP_InteractionGroup group; /* REM */ 
-		bool ignore; /* REM */ 
-		::nape::dynamics::InteractionGroup outer; /* REM */ 
-		static int SHAPE; /* REM */ 
-		static int BODY; /* REM */ 
+		::zpp_nape::dynamics::ZPP_InteractionGroup group;
+		bool ignore;
+		::nape::dynamics::InteractionGroup outer;
+		static int SHAPE;
+		static int BODY;
 };
 
 } // end namespace zpp_nape

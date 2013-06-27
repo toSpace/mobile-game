@@ -247,9 +247,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_InteractionFilter_obj,free,(void))
 		{
 			HX_STACK_LINE(206)
 			::zpp_nape::dynamics::ZPP_InteractionFilter o = this->outer->zpp_inner;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(207)
-			{
-			}
 			HX_STACK_LINE(215)
 			o->outer = null();
 			HX_STACK_LINE(216)
@@ -452,7 +449,7 @@ Class ZPP_InteractionFilter_obj::__mClass;
 
 void ZPP_InteractionFilter_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.dynamics.ZPP_InteractionFilter"), hx::TCanCast< ZPP_InteractionFilter_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.dynamics.ZPP_InteractionFilter"), hx::TCanCast< ZPP_InteractionFilter_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

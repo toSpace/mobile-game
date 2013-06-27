@@ -131,7 +131,7 @@ bool ZPP_MixVec2List_obj::remove( ::nape::geom::Vec2 obj){
 	HX_STACK_LINE(16473)
 	if ((ret)){
 		HX_STACK_LINE(16474)
-		if (((this->zpp_inner->subber_dyn() != null()))){
+		if (((this->zpp_inner->subber != null()))){
 			HX_STACK_LINE(16474)
 			this->zpp_inner->subber(obj);
 		}
@@ -192,9 +192,6 @@ bool ZPP_MixVec2List_obj::remove( ::nape::geom::Vec2 obj){
 							::zpp_nape::geom::ZPP_Vec2 o = ret->outer->zpp_inner;		HX_STACK_VAR(o,"o");
 							HX_STACK_LINE(16435)
 							{
-							}
-							HX_STACK_LINE(16435)
-							{
 								HX_STACK_LINE(16435)
 								if (((o->outer != null()))){
 									HX_STACK_LINE(16435)
@@ -226,7 +223,7 @@ bool ZPP_MixVec2List_obj::remove( ::nape::geom::Vec2 obj){
 		HX_STACK_LINE(16435)
 		::nape::geom::Vec2 retx = _Function_2_1::Block(ret);		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(16436)
-		if (((this->zpp_inner->subber_dyn() != null()))){
+		if (((this->zpp_inner->subber != null()))){
 			HX_STACK_LINE(16436)
 			this->zpp_inner->subber(retx);
 		}
@@ -251,9 +248,6 @@ bool ZPP_MixVec2List_obj::remove( ::nape::geom::Vec2 obj){
 						{
 							HX_STACK_LINE(16441)
 							::zpp_nape::geom::ZPP_Vec2 o = ret->outer->zpp_inner;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(16441)
-							{
-							}
 							HX_STACK_LINE(16441)
 							{
 								HX_STACK_LINE(16441)
@@ -287,7 +281,7 @@ bool ZPP_MixVec2List_obj::remove( ::nape::geom::Vec2 obj){
 		HX_STACK_LINE(16441)
 		::nape::geom::Vec2 retx = _Function_2_1::Block(ret);		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(16442)
-		if (((this->zpp_inner->subber_dyn() != null()))){
+		if (((this->zpp_inner->subber != null()))){
 			HX_STACK_LINE(16442)
 			this->zpp_inner->subber(retx);
 		}
@@ -311,9 +305,6 @@ bool ZPP_MixVec2List_obj::remove( ::nape::geom::Vec2 obj){
 					{
 						HX_STACK_LINE(16446)
 						::zpp_nape::geom::ZPP_Vec2 o = ret->outer->zpp_inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(16446)
-						{
-						}
 						HX_STACK_LINE(16446)
 						{
 							HX_STACK_LINE(16446)
@@ -388,9 +379,6 @@ bool ZPP_MixVec2List_obj::remove( ::nape::geom::Vec2 obj){
 							::zpp_nape::geom::ZPP_Vec2 o = ret->outer->zpp_inner;		HX_STACK_VAR(o,"o");
 							HX_STACK_LINE(16404)
 							{
-							}
-							HX_STACK_LINE(16404)
-							{
 								HX_STACK_LINE(16404)
 								if (((o->outer != null()))){
 									HX_STACK_LINE(16404)
@@ -422,7 +410,7 @@ bool ZPP_MixVec2List_obj::remove( ::nape::geom::Vec2 obj){
 		HX_STACK_LINE(16404)
 		::nape::geom::Vec2 retx = _Function_2_1::Block(ret);		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(16405)
-		if (((this->zpp_inner->subber_dyn() != null()))){
+		if (((this->zpp_inner->subber != null()))){
 			HX_STACK_LINE(16405)
 			this->zpp_inner->subber(retx);
 		}
@@ -456,9 +444,6 @@ bool ZPP_MixVec2List_obj::remove( ::nape::geom::Vec2 obj){
 							::zpp_nape::geom::ZPP_Vec2 o = ret->outer->zpp_inner;		HX_STACK_VAR(o,"o");
 							HX_STACK_LINE(16412)
 							{
-							}
-							HX_STACK_LINE(16412)
-							{
 								HX_STACK_LINE(16412)
 								if (((o->outer != null()))){
 									HX_STACK_LINE(16412)
@@ -490,7 +475,7 @@ bool ZPP_MixVec2List_obj::remove( ::nape::geom::Vec2 obj){
 		HX_STACK_LINE(16412)
 		::nape::geom::Vec2 retx = _Function_2_1::Block(ret);		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(16413)
-		if (((this->zpp_inner->subber_dyn() != null()))){
+		if (((this->zpp_inner->subber != null()))){
 			HX_STACK_LINE(16413)
 			this->zpp_inner->subber(retx);
 		}
@@ -514,9 +499,6 @@ bool ZPP_MixVec2List_obj::remove( ::nape::geom::Vec2 obj){
 					{
 						HX_STACK_LINE(16417)
 						::zpp_nape::geom::ZPP_Vec2 o = ret->outer->zpp_inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(16417)
-						{
-						}
 						HX_STACK_LINE(16417)
 						{
 							HX_STACK_LINE(16417)
@@ -573,7 +555,7 @@ bool ZPP_MixVec2List_obj::unshift( ::nape::geom::Vec2 obj){
 		hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" is already in use")));
 	}
 	HX_STACK_LINE(16379)
-	bool cont = (  (((this->zpp_inner->adder_dyn() != null()))) ? bool(this->zpp_inner->adder(obj)) : bool(true) );		HX_STACK_VAR(cont,"cont");
+	bool cont = (  (((this->zpp_inner->adder != null()))) ? bool(this->zpp_inner->adder(obj)) : bool(true) );		HX_STACK_VAR(cont,"cont");
 	HX_STACK_LINE(16380)
 	if ((cont)){
 		HX_STACK_LINE(16381)
@@ -590,7 +572,7 @@ bool ZPP_MixVec2List_obj::unshift( ::nape::geom::Vec2 obj){
 		HX_STACK_LINE(16386)
 		this->zpp_inner->invalidate();
 		HX_STACK_LINE(16387)
-		if (((this->zpp_inner->post_adder_dyn() != null()))){
+		if (((this->zpp_inner->post_adder != null()))){
 			HX_STACK_LINE(16387)
 			this->zpp_inner->post_adder(obj);
 		}
@@ -619,7 +601,7 @@ bool ZPP_MixVec2List_obj::push( ::nape::geom::Vec2 obj){
 		hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" is already in use")));
 	}
 	HX_STACK_LINE(16357)
-	bool cont = (  (((this->zpp_inner->adder_dyn() != null()))) ? bool(this->zpp_inner->adder(obj)) : bool(true) );		HX_STACK_VAR(cont,"cont");
+	bool cont = (  (((this->zpp_inner->adder != null()))) ? bool(this->zpp_inner->adder(obj)) : bool(true) );		HX_STACK_VAR(cont,"cont");
 	HX_STACK_LINE(16358)
 	if ((cont)){
 		HX_STACK_LINE(16359)
@@ -636,7 +618,7 @@ bool ZPP_MixVec2List_obj::push( ::nape::geom::Vec2 obj){
 		HX_STACK_LINE(16364)
 		this->zpp_inner->invalidate();
 		HX_STACK_LINE(16365)
-		if (((this->zpp_inner->post_adder_dyn() != null()))){
+		if (((this->zpp_inner->post_adder != null()))){
 			HX_STACK_LINE(16365)
 			this->zpp_inner->post_adder(obj);
 		}
@@ -708,9 +690,6 @@ bool ZPP_MixVec2List_obj::push( ::nape::geom::Vec2 obj){
 					{
 						HX_STACK_LINE(16345)
 						::zpp_nape::geom::ZPP_Vec2 o = _this->outer->zpp_inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(16345)
-						{
-						}
 						HX_STACK_LINE(16345)
 						{
 							HX_STACK_LINE(16345)
@@ -945,7 +924,7 @@ Class ZPP_MixVec2List_obj::__mClass;
 
 void ZPP_MixVec2List_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_MixVec2List"), hx::TCanCast< ZPP_MixVec2List_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_MixVec2List"), hx::TCanCast< ZPP_MixVec2List_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

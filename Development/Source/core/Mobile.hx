@@ -1,4 +1,4 @@
-import nme.system.Capabilities;
+import flash.system.Capabilities;
 
 class Mobile {
 

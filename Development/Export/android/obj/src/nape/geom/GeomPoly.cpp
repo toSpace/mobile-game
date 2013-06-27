@@ -1,10 +1,10 @@
 #include <hxcpp.h>
 
-#ifndef INCLUDED_hxMath
-#include <hxMath.h>
-#endif
 #ifndef INCLUDED_Std
 #include <Std.h>
+#endif
+#ifndef INCLUDED_hxMath
+#include <hxMath.h>
 #endif
 #ifndef INCLUDED_nape_Config
 #include <nape/Config.h>
@@ -149,7 +149,7 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 						hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 					}
 					struct _Function_5_1{
-						inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::Vec2 &v,::nape::geom::GeomPoly_obj *__this){
+						inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this,::nape::geom::Vec2 &v){
 							HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",974);
 							{
 								struct _Function_6_1{
@@ -192,7 +192,7 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 																HX_STACK_LINE(975)
 																::zpp_nape::geom::ZPP_Vec2 _this = v->zpp_inner;		HX_STACK_VAR(_this,"_this");
 																HX_STACK_LINE(975)
-																if (((_this->_validate_dyn() != null()))){
+																if (((_this->_validate != null()))){
 																	HX_STACK_LINE(975)
 																	_this->_validate();
 																}
@@ -219,7 +219,7 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 																HX_STACK_LINE(975)
 																::zpp_nape::geom::ZPP_Vec2 _this = v->zpp_inner;		HX_STACK_VAR(_this,"_this");
 																HX_STACK_LINE(975)
-																if (((_this->_validate_dyn() != null()))){
+																if (((_this->_validate != null()))){
 																	HX_STACK_LINE(975)
 																	_this->_validate();
 																}
@@ -232,9 +232,6 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 												};
 												HX_STACK_LINE(975)
 												ret->y = _Function_8_2::Block(v);
-												HX_STACK_LINE(975)
-												{
-												}
 												HX_STACK_LINE(975)
 												{
 												}
@@ -269,7 +266,7 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 						}
 					};
 					HX_STACK_LINE(973)
-					this->zpp_inner->vertices = _Function_5_1::Block(v,this);
+					this->zpp_inner->vertices = _Function_5_1::Block(this,v);
 				}
 			}
 		}
@@ -293,7 +290,7 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 							hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 						}
 						struct _Function_5_1{
-							inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::Vec2 &v,::nape::geom::GeomPoly_obj *__this){
+							inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this,::nape::geom::Vec2 &v){
 								HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",1028);
 								{
 									struct _Function_6_1{
@@ -336,7 +333,7 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 																	HX_STACK_LINE(1029)
 																	::zpp_nape::geom::ZPP_Vec2 _this = v->zpp_inner;		HX_STACK_VAR(_this,"_this");
 																	HX_STACK_LINE(1029)
-																	if (((_this->_validate_dyn() != null()))){
+																	if (((_this->_validate != null()))){
 																		HX_STACK_LINE(1029)
 																		_this->_validate();
 																	}
@@ -363,7 +360,7 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 																	HX_STACK_LINE(1029)
 																	::zpp_nape::geom::ZPP_Vec2 _this = v->zpp_inner;		HX_STACK_VAR(_this,"_this");
 																	HX_STACK_LINE(1029)
-																	if (((_this->_validate_dyn() != null()))){
+																	if (((_this->_validate != null()))){
 																		HX_STACK_LINE(1029)
 																		_this->_validate();
 																	}
@@ -376,9 +373,6 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 													};
 													HX_STACK_LINE(1029)
 													ret->y = _Function_8_2::Block(v);
-													HX_STACK_LINE(1029)
-													{
-													}
 													HX_STACK_LINE(1029)
 													{
 													}
@@ -413,7 +407,7 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 							}
 						};
 						HX_STACK_LINE(1027)
-						this->zpp_inner->vertices = _Function_5_1::Block(v,this);
+						this->zpp_inner->vertices = _Function_5_1::Block(this,v);
 					}
 ;
 				}
@@ -510,9 +504,6 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 															HX_STACK_LINE(1053)
 															{
 															}
-															HX_STACK_LINE(1053)
-															{
-															}
 														}
 														HX_STACK_LINE(1053)
 														return ret1;
@@ -541,7 +532,7 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 													hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 												}
 												HX_STACK_LINE(1053)
-												if (((_this->_isimmutable_dyn() != null()))){
+												if (((_this->_isimmutable != null()))){
 													HX_STACK_LINE(1053)
 													_this->_isimmutable();
 												}
@@ -565,7 +556,7 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 															HX_STACK_LINE(1053)
 															::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 															HX_STACK_LINE(1053)
-															if (((_this->_validate_dyn() != null()))){
+															if (((_this->_validate != null()))){
 																HX_STACK_LINE(1053)
 																_this->_validate();
 															}
@@ -590,7 +581,7 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 															HX_STACK_LINE(1053)
 															::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 															HX_STACK_LINE(1053)
-															if (((_this->_validate_dyn() != null()))){
+															if (((_this->_validate != null()))){
 																HX_STACK_LINE(1053)
 																_this->_validate();
 															}
@@ -612,16 +603,13 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 													HX_STACK_LINE(1053)
 													{
 													}
-													HX_STACK_LINE(1053)
-													{
-													}
 												}
 												HX_STACK_LINE(1053)
 												{
 													HX_STACK_LINE(1053)
 													::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 													HX_STACK_LINE(1053)
-													if (((_this->_invalidate_dyn() != null()))){
+													if (((_this->_invalidate != null()))){
 														HX_STACK_LINE(1053)
 														_this->_invalidate(_this);
 													}
@@ -643,7 +631,7 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 							HX_STACK_LINE(1054)
 							vite = vite->next;
 							struct _Function_7_2{
-								inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::Vec2 &v,::nape::geom::GeomPoly_obj *__this){
+								inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this,::nape::geom::Vec2 &v){
 									HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",1056);
 									{
 										struct _Function_8_1{
@@ -686,7 +674,7 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 																		HX_STACK_LINE(1057)
 																		::zpp_nape::geom::ZPP_Vec2 _this = v->zpp_inner;		HX_STACK_VAR(_this,"_this");
 																		HX_STACK_LINE(1057)
-																		if (((_this->_validate_dyn() != null()))){
+																		if (((_this->_validate != null()))){
 																			HX_STACK_LINE(1057)
 																			_this->_validate();
 																		}
@@ -713,7 +701,7 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 																		HX_STACK_LINE(1057)
 																		::zpp_nape::geom::ZPP_Vec2 _this = v->zpp_inner;		HX_STACK_VAR(_this,"_this");
 																		HX_STACK_LINE(1057)
-																		if (((_this->_validate_dyn() != null()))){
+																		if (((_this->_validate != null()))){
 																			HX_STACK_LINE(1057)
 																			_this->_validate();
 																		}
@@ -726,9 +714,6 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 														};
 														HX_STACK_LINE(1057)
 														ret->y = _Function_10_2::Block(v);
-														HX_STACK_LINE(1057)
-														{
-														}
 														HX_STACK_LINE(1057)
 														{
 														}
@@ -763,7 +748,7 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 								}
 							};
 							HX_STACK_LINE(1055)
-							this->zpp_inner->vertices = _Function_7_2::Block(v,this);
+							this->zpp_inner->vertices = _Function_7_2::Block(this,v);
 							HX_STACK_LINE(1068)
 							{
 								HX_STACK_LINE(1068)
@@ -781,7 +766,7 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 										hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 									}
 									HX_STACK_LINE(1068)
-									if (((_this->_isimmutable_dyn() != null()))){
+									if (((_this->_isimmutable != null()))){
 										HX_STACK_LINE(1068)
 										_this->_isimmutable();
 									}
@@ -802,9 +787,6 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 									HX_STACK_LINE(1068)
 									::nape::geom::Vec2 o = v;		HX_STACK_VAR(o,"o");
 									HX_STACK_LINE(1068)
-									{
-									}
-									HX_STACK_LINE(1068)
 									o->zpp_pool = null();
 									HX_STACK_LINE(1068)
 									if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -824,9 +806,6 @@ HX_STACK_PUSH("GeomPoly::new","nape/geom/GeomPoly.hx",184);
 								{
 									HX_STACK_LINE(1068)
 									::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1068)
-									{
-									}
 									HX_STACK_LINE(1068)
 									{
 										HX_STACK_LINE(1068)
@@ -864,13 +843,13 @@ while(((vite != verts)));
 		HX_STACK_LINE(1080)
 		if ((::Std_obj::is(vertices,hx::ClassOf< Array<int> >()))){
 			HX_STACK_LINE(1082)
-			Array< ::nape::geom::Vec2 > lv = vertices;		HX_STACK_VAR(lv,"lv");
+			Array< ::Dynamic > lv = vertices;		HX_STACK_VAR(lv,"lv");
 			HX_STACK_LINE(1083)
 			int i = (int)0;		HX_STACK_VAR(i,"i");
 			HX_STACK_LINE(1084)
 			while(((i < lv->length))){
 				HX_STACK_LINE(1085)
-				::nape::geom::Vec2 cur = lv->__get(i);		HX_STACK_VAR(cur,"cur");
+				::nape::geom::Vec2 cur = lv->__get(i).StaticCast< ::nape::geom::Vec2 >();		HX_STACK_VAR(cur,"cur");
 				struct _Function_4_1{
 					inline static bool Block( ::nape::geom::Vec2 &cur){
 						HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",1089);
@@ -892,7 +871,7 @@ while(((vite != verts)));
 										hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 									}
 									HX_STACK_LINE(1090)
-									if (((_this->_isimmutable_dyn() != null()))){
+									if (((_this->_isimmutable != null()))){
 										HX_STACK_LINE(1090)
 										_this->_isimmutable();
 									}
@@ -913,9 +892,6 @@ while(((vite != verts)));
 									HX_STACK_LINE(1090)
 									::nape::geom::Vec2 o = cur;		HX_STACK_VAR(o,"o");
 									HX_STACK_LINE(1090)
-									{
-									}
-									HX_STACK_LINE(1090)
 									o->zpp_pool = null();
 									HX_STACK_LINE(1090)
 									if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -935,9 +911,6 @@ while(((vite != verts)));
 								{
 									HX_STACK_LINE(1090)
 									::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1090)
-									{
-									}
 									HX_STACK_LINE(1090)
 									{
 										HX_STACK_LINE(1090)
@@ -983,7 +956,7 @@ while(((vite != verts)));
 				HX_STACK_LINE(1129)
 				::nape::geom::Vec2List lv = vertices;		HX_STACK_VAR(lv,"lv");
 				HX_STACK_LINE(1130)
-				if (((lv->zpp_inner->_validate_dyn() != null()))){
+				if (((lv->zpp_inner->_validate != null()))){
 					HX_STACK_LINE(1130)
 					lv->zpp_inner->_validate();
 				}
@@ -1022,7 +995,7 @@ while(((vite != verts)));
 										hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 									}
 									HX_STACK_LINE(1144)
-									if (((_this1->_isimmutable_dyn() != null()))){
+									if (((_this1->_isimmutable != null()))){
 										HX_STACK_LINE(1144)
 										_this1->_isimmutable();
 									}
@@ -1043,9 +1016,6 @@ while(((vite != verts)));
 									HX_STACK_LINE(1144)
 									::nape::geom::Vec2 o = _this;		HX_STACK_VAR(o,"o");
 									HX_STACK_LINE(1144)
-									{
-									}
-									HX_STACK_LINE(1144)
 									o->zpp_pool = null();
 									HX_STACK_LINE(1144)
 									if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -1065,9 +1035,6 @@ while(((vite != verts)));
 								{
 									HX_STACK_LINE(1144)
 									::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1144)
-									{
-									}
 									HX_STACK_LINE(1144)
 									{
 										HX_STACK_LINE(1144)
@@ -1261,9 +1228,6 @@ while(((nite != L)));
 													HX_STACK_LINE(2797)
 													{
 													}
-													HX_STACK_LINE(2797)
-													{
-													}
 												}
 												HX_STACK_LINE(2797)
 												return ret1;
@@ -1292,7 +1256,7 @@ while(((nite != L)));
 											hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 										}
 										HX_STACK_LINE(2797)
-										if (((_this->_isimmutable_dyn() != null()))){
+										if (((_this->_isimmutable != null()))){
 											HX_STACK_LINE(2797)
 											_this->_isimmutable();
 										}
@@ -1316,7 +1280,7 @@ while(((nite != L)));
 													HX_STACK_LINE(2797)
 													::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 													HX_STACK_LINE(2797)
-													if (((_this->_validate_dyn() != null()))){
+													if (((_this->_validate != null()))){
 														HX_STACK_LINE(2797)
 														_this->_validate();
 													}
@@ -1341,7 +1305,7 @@ while(((nite != L)));
 													HX_STACK_LINE(2797)
 													::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 													HX_STACK_LINE(2797)
-													if (((_this->_validate_dyn() != null()))){
+													if (((_this->_validate != null()))){
 														HX_STACK_LINE(2797)
 														_this->_validate();
 													}
@@ -1363,16 +1327,13 @@ while(((nite != L)));
 											HX_STACK_LINE(2797)
 											{
 											}
-											HX_STACK_LINE(2797)
-											{
-											}
 										}
 										HX_STACK_LINE(2797)
 										{
 											HX_STACK_LINE(2797)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(2797)
-											if (((_this->_invalidate_dyn() != null()))){
+											if (((_this->_invalidate != null()))){
 												HX_STACK_LINE(2797)
 												_this->_invalidate(_this);
 											}
@@ -1546,9 +1507,6 @@ while(((nite != L)));
 													HX_STACK_LINE(2755)
 													{
 													}
-													HX_STACK_LINE(2755)
-													{
-													}
 												}
 												HX_STACK_LINE(2755)
 												return ret1;
@@ -1577,7 +1535,7 @@ while(((nite != L)));
 											hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 										}
 										HX_STACK_LINE(2755)
-										if (((_this->_isimmutable_dyn() != null()))){
+										if (((_this->_isimmutable != null()))){
 											HX_STACK_LINE(2755)
 											_this->_isimmutable();
 										}
@@ -1601,7 +1559,7 @@ while(((nite != L)));
 													HX_STACK_LINE(2755)
 													::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 													HX_STACK_LINE(2755)
-													if (((_this->_validate_dyn() != null()))){
+													if (((_this->_validate != null()))){
 														HX_STACK_LINE(2755)
 														_this->_validate();
 													}
@@ -1626,7 +1584,7 @@ while(((nite != L)));
 													HX_STACK_LINE(2755)
 													::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 													HX_STACK_LINE(2755)
-													if (((_this->_validate_dyn() != null()))){
+													if (((_this->_validate != null()))){
 														HX_STACK_LINE(2755)
 														_this->_validate();
 													}
@@ -1648,16 +1606,13 @@ while(((nite != L)));
 											HX_STACK_LINE(2755)
 											{
 											}
-											HX_STACK_LINE(2755)
-											{
-											}
 										}
 										HX_STACK_LINE(2755)
 										{
 											HX_STACK_LINE(2755)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(2755)
-											if (((_this->_invalidate_dyn() != null()))){
+											if (((_this->_invalidate != null()))){
 												HX_STACK_LINE(2755)
 												_this->_invalidate(_this);
 											}
@@ -1831,9 +1786,6 @@ while(((nite != L)));
 													HX_STACK_LINE(2713)
 													{
 													}
-													HX_STACK_LINE(2713)
-													{
-													}
 												}
 												HX_STACK_LINE(2713)
 												return ret1;
@@ -1862,7 +1814,7 @@ while(((nite != L)));
 											hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 										}
 										HX_STACK_LINE(2713)
-										if (((_this->_isimmutable_dyn() != null()))){
+										if (((_this->_isimmutable != null()))){
 											HX_STACK_LINE(2713)
 											_this->_isimmutable();
 										}
@@ -1886,7 +1838,7 @@ while(((nite != L)));
 													HX_STACK_LINE(2713)
 													::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 													HX_STACK_LINE(2713)
-													if (((_this->_validate_dyn() != null()))){
+													if (((_this->_validate != null()))){
 														HX_STACK_LINE(2713)
 														_this->_validate();
 													}
@@ -1911,7 +1863,7 @@ while(((nite != L)));
 													HX_STACK_LINE(2713)
 													::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 													HX_STACK_LINE(2713)
-													if (((_this->_validate_dyn() != null()))){
+													if (((_this->_validate != null()))){
 														HX_STACK_LINE(2713)
 														_this->_validate();
 													}
@@ -1933,16 +1885,13 @@ while(((nite != L)));
 											HX_STACK_LINE(2713)
 											{
 											}
-											HX_STACK_LINE(2713)
-											{
-											}
 										}
 										HX_STACK_LINE(2713)
 										{
 											HX_STACK_LINE(2713)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(2713)
-											if (((_this->_invalidate_dyn() != null()))){
+											if (((_this->_invalidate != null()))){
 												HX_STACK_LINE(2713)
 												_this->_invalidate(_this);
 											}
@@ -2116,9 +2065,6 @@ while(((nite != L)));
 													HX_STACK_LINE(2671)
 													{
 													}
-													HX_STACK_LINE(2671)
-													{
-													}
 												}
 												HX_STACK_LINE(2671)
 												return ret1;
@@ -2147,7 +2093,7 @@ while(((nite != L)));
 											hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 										}
 										HX_STACK_LINE(2671)
-										if (((_this->_isimmutable_dyn() != null()))){
+										if (((_this->_isimmutable != null()))){
 											HX_STACK_LINE(2671)
 											_this->_isimmutable();
 										}
@@ -2171,7 +2117,7 @@ while(((nite != L)));
 													HX_STACK_LINE(2671)
 													::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 													HX_STACK_LINE(2671)
-													if (((_this->_validate_dyn() != null()))){
+													if (((_this->_validate != null()))){
 														HX_STACK_LINE(2671)
 														_this->_validate();
 													}
@@ -2196,7 +2142,7 @@ while(((nite != L)));
 													HX_STACK_LINE(2671)
 													::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 													HX_STACK_LINE(2671)
-													if (((_this->_validate_dyn() != null()))){
+													if (((_this->_validate != null()))){
 														HX_STACK_LINE(2671)
 														_this->_validate();
 													}
@@ -2218,16 +2164,13 @@ while(((nite != L)));
 											HX_STACK_LINE(2671)
 											{
 											}
-											HX_STACK_LINE(2671)
-											{
-											}
 										}
 										HX_STACK_LINE(2671)
 										{
 											HX_STACK_LINE(2671)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(2671)
-											if (((_this->_invalidate_dyn() != null()))){
+											if (((_this->_invalidate != null()))){
 												HX_STACK_LINE(2671)
 												_this->_invalidate(_this);
 											}
@@ -2298,22 +2241,10 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,top,return )
 	Float minx = 1e100;		HX_STACK_VAR(minx,"minx");
 	HX_STACK_LINE(2574)
 	Float miny = 1e100;		HX_STACK_VAR(miny,"miny");
-	HX_STACK_LINE(2575)
-	{
-	}
-	HX_STACK_LINE(2583)
-	{
-	}
 	HX_STACK_LINE(2591)
 	Float maxx = -1e+100;		HX_STACK_VAR(maxx,"maxx");
 	HX_STACK_LINE(2592)
 	Float maxy = -1e+100;		HX_STACK_VAR(maxy,"maxy");
-	HX_STACK_LINE(2593)
-	{
-	}
-	HX_STACK_LINE(2601)
-	{
-	}
 	HX_STACK_LINE(2609)
 	{
 		HX_STACK_LINE(2610)
@@ -2486,7 +2417,7 @@ bool boundedEnd = __o_boundedEnd.Default(false);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(2489)
-					if (((_this->_isimmutable_dyn() != null()))){
+					if (((_this->_isimmutable != null()))){
 						HX_STACK_LINE(2489)
 						_this->_isimmutable();
 					}
@@ -2507,9 +2438,6 @@ bool boundedEnd = __o_boundedEnd.Default(false);
 					HX_STACK_LINE(2489)
 					::nape::geom::Vec2 o = start;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(2489)
-					{
-					}
-					HX_STACK_LINE(2489)
 					o->zpp_pool = null();
 					HX_STACK_LINE(2489)
 					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -2529,9 +2457,6 @@ bool boundedEnd = __o_boundedEnd.Default(false);
 				{
 					HX_STACK_LINE(2489)
 					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2489)
-					{
-					}
 					HX_STACK_LINE(2489)
 					{
 						HX_STACK_LINE(2489)
@@ -2580,7 +2505,7 @@ bool boundedEnd = __o_boundedEnd.Default(false);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(2500)
-					if (((_this->_isimmutable_dyn() != null()))){
+					if (((_this->_isimmutable != null()))){
 						HX_STACK_LINE(2500)
 						_this->_isimmutable();
 					}
@@ -2601,9 +2526,6 @@ bool boundedEnd = __o_boundedEnd.Default(false);
 					HX_STACK_LINE(2500)
 					::nape::geom::Vec2 o = end;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(2500)
-					{
-					}
-					HX_STACK_LINE(2500)
 					o->zpp_pool = null();
 					HX_STACK_LINE(2500)
 					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -2623,9 +2545,6 @@ bool boundedEnd = __o_boundedEnd.Default(false);
 				{
 					HX_STACK_LINE(2500)
 					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2500)
-					{
-					}
 					HX_STACK_LINE(2500)
 					{
 						HX_STACK_LINE(2500)
@@ -2754,9 +2673,6 @@ HX_DEFINE_DYNAMIC_FUNC5(GeomPoly_obj,cut,return )
 						apx = ax;
 						HX_STACK_LINE(2264)
 						apy = ay;
-						HX_STACK_LINE(2265)
-						{
-						}
 						HX_STACK_LINE(2273)
 						{
 						}
@@ -2767,44 +2683,12 @@ HX_DEFINE_DYNAMIC_FUNC5(GeomPoly_obj,cut,return )
 						{
 							HX_STACK_LINE(2284)
 							Float d = ((apx * apx) + (apy * apy));		HX_STACK_VAR(d,"d");
-							HX_STACK_LINE(2285)
-							{
-							}
-							struct _Function_7_1{
-								inline static Float Block( Float &d){
-									HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",2293);
-									{
-										HX_STACK_LINE(2293)
-										{
-										}
-										struct _Function_8_1{
-											inline static Float Block( Float &d){
-												HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",2293);
-												{
-													HX_STACK_LINE(2293)
-													{
-													}
-													HX_STACK_LINE(2293)
-													return ::Math_obj::sqrt(d);
-												}
-												return null();
-											}
-										};
-										HX_STACK_LINE(2293)
-										return (Float(1.0) / Float(_Function_8_1::Block(d)));
-									}
-									return null();
-								}
-							};
 							HX_STACK_LINE(2293)
-							Float imag = _Function_7_1::Block(d);		HX_STACK_VAR(imag,"imag");
+							Float imag = (Float(1.0) / Float(::Math_obj::sqrt(d)));		HX_STACK_VAR(imag,"imag");
 							HX_STACK_LINE(2294)
 							{
 								HX_STACK_LINE(2295)
 								Float t = imag;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(2296)
-								{
-								}
 								HX_STACK_LINE(2304)
 								hx::MultEq(apx,t);
 								HX_STACK_LINE(2305)
@@ -2825,9 +2709,6 @@ HX_DEFINE_DYNAMIC_FUNC5(GeomPoly_obj,cut,return )
 					{
 						HX_STACK_LINE(2315)
 						Float t = inflation;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(2316)
-						{
-						}
 						HX_STACK_LINE(2324)
 						hx::MultEq(apx,t);
 						HX_STACK_LINE(2325)
@@ -2839,9 +2720,6 @@ HX_DEFINE_DYNAMIC_FUNC5(GeomPoly_obj,cut,return )
 						bpx = bx;
 						HX_STACK_LINE(2329)
 						bpy = by;
-						HX_STACK_LINE(2330)
-						{
-						}
 						HX_STACK_LINE(2338)
 						{
 						}
@@ -2852,44 +2730,12 @@ HX_DEFINE_DYNAMIC_FUNC5(GeomPoly_obj,cut,return )
 						{
 							HX_STACK_LINE(2349)
 							Float d = ((bpx * bpx) + (bpy * bpy));		HX_STACK_VAR(d,"d");
-							HX_STACK_LINE(2350)
-							{
-							}
-							struct _Function_7_1{
-								inline static Float Block( Float &d){
-									HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",2358);
-									{
-										HX_STACK_LINE(2358)
-										{
-										}
-										struct _Function_8_1{
-											inline static Float Block( Float &d){
-												HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",2358);
-												{
-													HX_STACK_LINE(2358)
-													{
-													}
-													HX_STACK_LINE(2358)
-													return ::Math_obj::sqrt(d);
-												}
-												return null();
-											}
-										};
-										HX_STACK_LINE(2358)
-										return (Float(1.0) / Float(_Function_8_1::Block(d)));
-									}
-									return null();
-								}
-							};
 							HX_STACK_LINE(2358)
-							Float imag = _Function_7_1::Block(d);		HX_STACK_VAR(imag,"imag");
+							Float imag = (Float(1.0) / Float(::Math_obj::sqrt(d)));		HX_STACK_VAR(imag,"imag");
 							HX_STACK_LINE(2359)
 							{
 								HX_STACK_LINE(2360)
 								Float t = imag;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(2361)
-								{
-								}
 								HX_STACK_LINE(2369)
 								hx::MultEq(bpx,t);
 								HX_STACK_LINE(2370)
@@ -2910,9 +2756,6 @@ HX_DEFINE_DYNAMIC_FUNC5(GeomPoly_obj,cut,return )
 					{
 						HX_STACK_LINE(2380)
 						Float t = inflation;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(2381)
-						{
-						}
 						HX_STACK_LINE(2389)
 						hx::MultEq(bpx,t);
 						HX_STACK_LINE(2390)
@@ -2948,9 +2791,6 @@ HX_DEFINE_DYNAMIC_FUNC5(GeomPoly_obj,cut,return )
 					{
 						HX_STACK_LINE(2407)
 						Float t1 = t;		HX_STACK_VAR(t1,"t1");
-						HX_STACK_LINE(2408)
-						{
-						}
 						HX_STACK_LINE(2416)
 						hx::AddEq(px,(ax * t1));
 						HX_STACK_LINE(2417)
@@ -3028,9 +2868,6 @@ HX_DEFINE_DYNAMIC_FUNC5(GeomPoly_obj,cut,return )
 													HX_STACK_LINE(2419)
 													{
 													}
-													HX_STACK_LINE(2419)
-													{
-													}
 												}
 												HX_STACK_LINE(2419)
 												return ret2;
@@ -3059,7 +2896,7 @@ HX_DEFINE_DYNAMIC_FUNC5(GeomPoly_obj,cut,return )
 											hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 										}
 										HX_STACK_LINE(2419)
-										if (((_this->_isimmutable_dyn() != null()))){
+										if (((_this->_isimmutable != null()))){
 											HX_STACK_LINE(2419)
 											_this->_isimmutable();
 										}
@@ -3083,7 +2920,7 @@ HX_DEFINE_DYNAMIC_FUNC5(GeomPoly_obj,cut,return )
 													HX_STACK_LINE(2419)
 													::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 													HX_STACK_LINE(2419)
-													if (((_this->_validate_dyn() != null()))){
+													if (((_this->_validate != null()))){
 														HX_STACK_LINE(2419)
 														_this->_validate();
 													}
@@ -3108,7 +2945,7 @@ HX_DEFINE_DYNAMIC_FUNC5(GeomPoly_obj,cut,return )
 													HX_STACK_LINE(2419)
 													::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 													HX_STACK_LINE(2419)
-													if (((_this->_validate_dyn() != null()))){
+													if (((_this->_validate != null()))){
 														HX_STACK_LINE(2419)
 														_this->_validate();
 													}
@@ -3130,16 +2967,13 @@ HX_DEFINE_DYNAMIC_FUNC5(GeomPoly_obj,cut,return )
 											HX_STACK_LINE(2419)
 											{
 											}
-											HX_STACK_LINE(2419)
-											{
-											}
 										}
 										HX_STACK_LINE(2419)
 										{
 											HX_STACK_LINE(2419)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(2419)
-											if (((_this->_invalidate_dyn() != null()))){
+											if (((_this->_invalidate != null()))){
 												HX_STACK_LINE(2419)
 												_this->_invalidate(_this);
 											}
@@ -3257,9 +3091,6 @@ bool delaunay = __o_delaunay.Default(false);
 			{
 				HX_STACK_LINE(2178)
 				::zpp_nape::geom::ZPP_PartitionedPoly o = MP;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2179)
-				{
-				}
 				HX_STACK_LINE(2188)
 				o->next = ::zpp_nape::geom::ZPP_PartitionedPoly_obj::zpp_pool;
 				HX_STACK_LINE(2189)
@@ -3382,9 +3213,6 @@ bool delaunay = __o_delaunay.Default(false);
 			{
 				HX_STACK_LINE(2100)
 				::zpp_nape::geom::ZPP_PartitionedPoly o = MP;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2101)
-				{
-				}
 				HX_STACK_LINE(2110)
 				o->next = ::zpp_nape::geom::ZPP_PartitionedPoly_obj::zpp_pool;
 				HX_STACK_LINE(2111)
@@ -3649,9 +3477,6 @@ bool GeomPoly_obj::isConvex( ){
 		inline static bool Block( ::nape::geom::GeomPoly_obj *__this){
 			HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",1743);
 			{
-				HX_STACK_LINE(1744)
-				{
-				}
 				HX_STACK_LINE(1768)
 				bool neg = false;		HX_STACK_VAR(neg,"neg");
 				HX_STACK_LINE(1769)
@@ -3790,7 +3615,7 @@ bool GeomPoly_obj::contains( ::nape::geom::Vec2 point){
 		hx::Throw (HX_CSTRING("Error: GeomPoly::contains point cannot be null"));
 	}
 	struct _Function_1_1{
-		inline static bool Block( ::nape::geom::Vec2 &point,::nape::geom::GeomPoly_obj *__this){
+		inline static bool Block( ::nape::geom::GeomPoly_obj *__this,::nape::geom::Vec2 &point){
 			HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",1657);
 			{
 				struct _Function_2_1{
@@ -3807,7 +3632,7 @@ bool GeomPoly_obj::contains( ::nape::geom::Vec2 point){
 								HX_STACK_LINE(1658)
 								::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1658)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(1658)
 									_this->_validate();
 								}
@@ -3834,7 +3659,7 @@ bool GeomPoly_obj::contains( ::nape::geom::Vec2 point){
 								HX_STACK_LINE(1659)
 								::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1659)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(1659)
 									_this->_validate();
 								}
@@ -3889,7 +3714,7 @@ while(((nite != L)));
 		}
 	};
 	HX_STACK_LINE(1657)
-	bool ret = _Function_1_1::Block(point,this);		HX_STACK_VAR(ret,"ret");
+	bool ret = _Function_1_1::Block(this,point);		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(1685)
 	if ((point->zpp_inner->weak)){
 		HX_STACK_LINE(1689)
@@ -3909,7 +3734,7 @@ while(((nite != L)));
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(1689)
-				if (((_this->_isimmutable_dyn() != null()))){
+				if (((_this->_isimmutable != null()))){
 					HX_STACK_LINE(1689)
 					_this->_isimmutable();
 				}
@@ -3930,9 +3755,6 @@ while(((nite != L)));
 				HX_STACK_LINE(1689)
 				::nape::geom::Vec2 o = point;		HX_STACK_VAR(o,"o");
 				HX_STACK_LINE(1689)
-				{
-				}
-				HX_STACK_LINE(1689)
 				o->zpp_pool = null();
 				HX_STACK_LINE(1689)
 				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -3952,9 +3774,6 @@ while(((nite != L)));
 			{
 				HX_STACK_LINE(1689)
 				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(1689)
-				{
-				}
 				HX_STACK_LINE(1689)
 				{
 					HX_STACK_LINE(1689)
@@ -4028,9 +3847,6 @@ HX_DEFINE_DYNAMIC_FUNC1(GeomPoly_obj,contains,return )
 			inline static Float Block( ::nape::geom::GeomPoly_obj *__this){
 				HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",1577);
 				{
-					HX_STACK_LINE(1578)
-					{
-					}
 					HX_STACK_LINE(1602)
 					Float area = 0.0;		HX_STACK_VAR(area,"area");
 					HX_STACK_LINE(1603)
@@ -4146,9 +3962,6 @@ Float GeomPoly_obj::area( ){
 					inline static Float Block( ::nape::geom::GeomPoly_obj *__this){
 						HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",1496);
 						{
-							HX_STACK_LINE(1497)
-							{
-							}
 							HX_STACK_LINE(1521)
 							Float area = 0.0;		HX_STACK_VAR(area,"area");
 							HX_STACK_LINE(1522)
@@ -4251,9 +4064,6 @@ Void GeomPoly_obj::dispose( ){
 		{
 			HX_STACK_LINE(1424)
 			::nape::geom::GeomPoly o = hx::ObjectPtr<OBJ_>(this);		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(1425)
-			{
-			}
 			HX_STACK_LINE(1434)
 			o->zpp_pool = null();
 			HX_STACK_LINE(1435)
@@ -4338,9 +4148,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,dispose,(void))
 											HX_STACK_LINE(919)
 											{
 											}
-											HX_STACK_LINE(919)
-											{
-											}
 										}
 										HX_STACK_LINE(919)
 										return ret1;
@@ -4400,64 +4207,42 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,copy,return )
 		::zpp_nape::geom::ZPP_GeomVert tmp = this->zpp_inner->vertices;		HX_STACK_VAR(tmp,"tmp");
 		struct _Function_2_1{
 			inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
-				HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",836);
+				HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",845);
 				{
-					HX_STACK_LINE(837)
-					{
-					}
-					struct _Function_3_1{
-						inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
-							HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",845);
-							{
-								HX_STACK_LINE(846)
-								__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
-								HX_STACK_LINE(847)
-								{
-								}
-								HX_STACK_LINE(848)
-								return __this->zpp_inner->vertices = null();
-							}
-							return null();
-						}
-					};
-					struct _Function_3_2{
-						inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
-							HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",850);
-							{
-								HX_STACK_LINE(851)
-								::zpp_nape::geom::ZPP_GeomVert retnodes = __this->zpp_inner->vertices->next;		HX_STACK_VAR(retnodes,"retnodes");
-								HX_STACK_LINE(852)
-								__this->zpp_inner->vertices->prev->next = __this->zpp_inner->vertices->next;
-								HX_STACK_LINE(853)
-								__this->zpp_inner->vertices->next->prev = __this->zpp_inner->vertices->prev;
-								HX_STACK_LINE(854)
-								__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
-								HX_STACK_LINE(855)
-								{
-								}
-								HX_STACK_LINE(856)
-								__this->zpp_inner->vertices = null();
-								HX_STACK_LINE(857)
-								return retnodes;
-							}
-							return null();
-						}
-					};
-					HX_STACK_LINE(845)
-					return (  (((bool((__this->zpp_inner->vertices != null())) && bool((__this->zpp_inner->vertices->prev == __this->zpp_inner->vertices))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_3_1::Block(__this)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_3_2::Block(__this)) );
+					HX_STACK_LINE(846)
+					__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
+					HX_STACK_LINE(848)
+					return __this->zpp_inner->vertices = null();
+				}
+				return null();
+			}
+		};
+		struct _Function_2_2{
+			inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
+				HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",850);
+				{
+					HX_STACK_LINE(851)
+					::zpp_nape::geom::ZPP_GeomVert retnodes = __this->zpp_inner->vertices->next;		HX_STACK_VAR(retnodes,"retnodes");
+					HX_STACK_LINE(852)
+					__this->zpp_inner->vertices->prev->next = __this->zpp_inner->vertices->next;
+					HX_STACK_LINE(853)
+					__this->zpp_inner->vertices->next->prev = __this->zpp_inner->vertices->prev;
+					HX_STACK_LINE(854)
+					__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
+					HX_STACK_LINE(856)
+					__this->zpp_inner->vertices = null();
+					HX_STACK_LINE(857)
+					return retnodes;
 				}
 				return null();
 			}
 		};
 		HX_STACK_LINE(836)
-		this->zpp_inner->vertices = _Function_2_1::Block(this);
+		this->zpp_inner->vertices = (  (((bool((this->zpp_inner->vertices != null())) && bool((this->zpp_inner->vertices->prev == this->zpp_inner->vertices))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_2_1::Block(this)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_2_2::Block(this)) );
 		HX_STACK_LINE(860)
 		{
 			HX_STACK_LINE(861)
 			::zpp_nape::geom::ZPP_GeomVert o = tmp;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(862)
-			{
-			}
 			HX_STACK_LINE(870)
 			{
 				HX_STACK_LINE(870)
@@ -4483,7 +4268,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,copy,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(870)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(870)
 								_this1->_isimmutable();
 							}
@@ -4504,9 +4289,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,copy,return )
 							HX_STACK_LINE(870)
 							::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
 							HX_STACK_LINE(870)
-							{
-							}
-							HX_STACK_LINE(870)
 							o1->zpp_pool = null();
 							HX_STACK_LINE(870)
 							if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -4526,9 +4308,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,copy,return )
 						{
 							HX_STACK_LINE(870)
 							::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-							HX_STACK_LINE(870)
-							{
-							}
 							HX_STACK_LINE(870)
 							{
 								HX_STACK_LINE(870)
@@ -4587,57 +4366,38 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,clear,return )
 		if (((count > (int)0))){
 			struct _Function_3_1{
 				inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
-					HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",746);
+					HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",755);
 					{
-						HX_STACK_LINE(747)
-						{
-						}
-						struct _Function_4_1{
-							inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
-								HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",755);
-								{
-									HX_STACK_LINE(756)
-									__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
-									HX_STACK_LINE(757)
-									{
-									}
-									HX_STACK_LINE(758)
-									return __this->zpp_inner->vertices = null();
-								}
-								return null();
-							}
-						};
-						struct _Function_4_2{
-							inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
-								HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",760);
-								{
-									HX_STACK_LINE(761)
-									::zpp_nape::geom::ZPP_GeomVert retnodes = __this->zpp_inner->vertices->next;		HX_STACK_VAR(retnodes,"retnodes");
-									HX_STACK_LINE(762)
-									__this->zpp_inner->vertices->prev->next = __this->zpp_inner->vertices->next;
-									HX_STACK_LINE(763)
-									__this->zpp_inner->vertices->next->prev = __this->zpp_inner->vertices->prev;
-									HX_STACK_LINE(764)
-									__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
-									HX_STACK_LINE(765)
-									{
-									}
-									HX_STACK_LINE(766)
-									__this->zpp_inner->vertices = null();
-									HX_STACK_LINE(767)
-									return retnodes;
-								}
-								return null();
-							}
-						};
-						HX_STACK_LINE(755)
-						return (  (((bool((__this->zpp_inner->vertices != null())) && bool((__this->zpp_inner->vertices->prev == __this->zpp_inner->vertices))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_4_1::Block(__this)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_4_2::Block(__this)) );
+						HX_STACK_LINE(756)
+						__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
+						HX_STACK_LINE(758)
+						return __this->zpp_inner->vertices = null();
+					}
+					return null();
+				}
+			};
+			struct _Function_3_2{
+				inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
+					HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",760);
+					{
+						HX_STACK_LINE(761)
+						::zpp_nape::geom::ZPP_GeomVert retnodes = __this->zpp_inner->vertices->next;		HX_STACK_VAR(retnodes,"retnodes");
+						HX_STACK_LINE(762)
+						__this->zpp_inner->vertices->prev->next = __this->zpp_inner->vertices->next;
+						HX_STACK_LINE(763)
+						__this->zpp_inner->vertices->next->prev = __this->zpp_inner->vertices->prev;
+						HX_STACK_LINE(764)
+						__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
+						HX_STACK_LINE(766)
+						__this->zpp_inner->vertices = null();
+						HX_STACK_LINE(767)
+						return retnodes;
 					}
 					return null();
 				}
 			};
 			HX_STACK_LINE(746)
-			this->zpp_inner->vertices = _Function_3_1::Block(this);
+			this->zpp_inner->vertices = (  (((bool((this->zpp_inner->vertices != null())) && bool((this->zpp_inner->vertices->prev == this->zpp_inner->vertices))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_3_1::Block(this)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_3_2::Block(this)) );
 			HX_STACK_LINE(770)
 			(count)--;
 		}
@@ -4646,57 +4406,38 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,clear,return )
 			if (((count < (int)0))){
 				struct _Function_4_1{
 					inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
-						HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",773);
+						HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",782);
 						{
-							HX_STACK_LINE(774)
-							{
-							}
-							struct _Function_5_1{
-								inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
-									HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",782);
-									{
-										HX_STACK_LINE(783)
-										__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
-										HX_STACK_LINE(784)
-										{
-										}
-										HX_STACK_LINE(785)
-										return null();
-									}
-									return null();
-								}
-							};
-							struct _Function_5_2{
-								inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
-									HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",787);
-									{
-										HX_STACK_LINE(788)
-										::zpp_nape::geom::ZPP_GeomVert retnodes = __this->zpp_inner->vertices->prev;		HX_STACK_VAR(retnodes,"retnodes");
-										HX_STACK_LINE(789)
-										__this->zpp_inner->vertices->prev->next = __this->zpp_inner->vertices->next;
-										HX_STACK_LINE(790)
-										__this->zpp_inner->vertices->next->prev = __this->zpp_inner->vertices->prev;
-										HX_STACK_LINE(791)
-										__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
-										HX_STACK_LINE(792)
-										{
-										}
-										HX_STACK_LINE(793)
-										__this->zpp_inner->vertices = null();
-										HX_STACK_LINE(794)
-										return retnodes;
-									}
-									return null();
-								}
-							};
-							HX_STACK_LINE(782)
-							return (  (((bool((__this->zpp_inner->vertices != null())) && bool((__this->zpp_inner->vertices->prev == __this->zpp_inner->vertices))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_5_1::Block(__this)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_5_2::Block(__this)) );
+							HX_STACK_LINE(783)
+							__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
+							HX_STACK_LINE(785)
+							return null();
+						}
+						return null();
+					}
+				};
+				struct _Function_4_2{
+					inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
+						HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",787);
+						{
+							HX_STACK_LINE(788)
+							::zpp_nape::geom::ZPP_GeomVert retnodes = __this->zpp_inner->vertices->prev;		HX_STACK_VAR(retnodes,"retnodes");
+							HX_STACK_LINE(789)
+							__this->zpp_inner->vertices->prev->next = __this->zpp_inner->vertices->next;
+							HX_STACK_LINE(790)
+							__this->zpp_inner->vertices->next->prev = __this->zpp_inner->vertices->prev;
+							HX_STACK_LINE(791)
+							__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
+							HX_STACK_LINE(793)
+							__this->zpp_inner->vertices = null();
+							HX_STACK_LINE(794)
+							return retnodes;
 						}
 						return null();
 					}
 				};
 				HX_STACK_LINE(773)
-				this->zpp_inner->vertices = _Function_4_1::Block(this);
+				this->zpp_inner->vertices = (  (((bool((this->zpp_inner->vertices != null())) && bool((this->zpp_inner->vertices->prev == this->zpp_inner->vertices))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_4_1::Block(this)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_4_2::Block(this)) );
 				HX_STACK_LINE(797)
 				(count)++;
 			}
@@ -4705,9 +4446,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,clear,return )
 		{
 			HX_STACK_LINE(800)
 			::zpp_nape::geom::ZPP_GeomVert o = retv;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(801)
-			{
-			}
 			HX_STACK_LINE(809)
 			{
 				HX_STACK_LINE(809)
@@ -4733,7 +4471,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,clear,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(809)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(809)
 								_this1->_isimmutable();
 							}
@@ -4754,9 +4492,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,clear,return )
 							HX_STACK_LINE(809)
 							::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
 							HX_STACK_LINE(809)
-							{
-							}
-							HX_STACK_LINE(809)
 							o1->zpp_pool = null();
 							HX_STACK_LINE(809)
 							if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -4776,9 +4511,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,clear,return )
 						{
 							HX_STACK_LINE(809)
 							::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-							HX_STACK_LINE(809)
-							{
-							}
 							HX_STACK_LINE(809)
 							{
 								HX_STACK_LINE(809)
@@ -4890,64 +4622,42 @@ HX_DEFINE_DYNAMIC_FUNC1(GeomPoly_obj,skipForward,return )
 	::zpp_nape::geom::ZPP_GeomVert retv = this->zpp_inner->vertices;		HX_STACK_VAR(retv,"retv");
 	struct _Function_1_1{
 		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
-			HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",588);
+			HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",597);
 			{
-				HX_STACK_LINE(589)
-				{
-				}
-				struct _Function_2_1{
-					inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
-						HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",597);
-						{
-							HX_STACK_LINE(598)
-							__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
-							HX_STACK_LINE(599)
-							{
-							}
-							HX_STACK_LINE(600)
-							return __this->zpp_inner->vertices = null();
-						}
-						return null();
-					}
-				};
-				struct _Function_2_2{
-					inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
-						HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",602);
-						{
-							HX_STACK_LINE(603)
-							::zpp_nape::geom::ZPP_GeomVert retnodes = __this->zpp_inner->vertices->next;		HX_STACK_VAR(retnodes,"retnodes");
-							HX_STACK_LINE(604)
-							__this->zpp_inner->vertices->prev->next = __this->zpp_inner->vertices->next;
-							HX_STACK_LINE(605)
-							__this->zpp_inner->vertices->next->prev = __this->zpp_inner->vertices->prev;
-							HX_STACK_LINE(606)
-							__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
-							HX_STACK_LINE(607)
-							{
-							}
-							HX_STACK_LINE(608)
-							__this->zpp_inner->vertices = null();
-							HX_STACK_LINE(609)
-							return retnodes;
-						}
-						return null();
-					}
-				};
-				HX_STACK_LINE(597)
-				return (  (((bool((__this->zpp_inner->vertices != null())) && bool((__this->zpp_inner->vertices->prev == __this->zpp_inner->vertices))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_2_1::Block(__this)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_2_2::Block(__this)) );
+				HX_STACK_LINE(598)
+				__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
+				HX_STACK_LINE(600)
+				return __this->zpp_inner->vertices = null();
+			}
+			return null();
+		}
+	};
+	struct _Function_1_2{
+		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
+			HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",602);
+			{
+				HX_STACK_LINE(603)
+				::zpp_nape::geom::ZPP_GeomVert retnodes = __this->zpp_inner->vertices->next;		HX_STACK_VAR(retnodes,"retnodes");
+				HX_STACK_LINE(604)
+				__this->zpp_inner->vertices->prev->next = __this->zpp_inner->vertices->next;
+				HX_STACK_LINE(605)
+				__this->zpp_inner->vertices->next->prev = __this->zpp_inner->vertices->prev;
+				HX_STACK_LINE(606)
+				__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
+				HX_STACK_LINE(608)
+				__this->zpp_inner->vertices = null();
+				HX_STACK_LINE(609)
+				return retnodes;
 			}
 			return null();
 		}
 	};
 	HX_STACK_LINE(588)
-	this->zpp_inner->vertices = _Function_1_1::Block(this);
+	this->zpp_inner->vertices = (  (((bool((this->zpp_inner->vertices != null())) && bool((this->zpp_inner->vertices->prev == this->zpp_inner->vertices))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_1_1::Block(this)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_1_2::Block(this)) );
 	HX_STACK_LINE(612)
 	{
 		HX_STACK_LINE(613)
 		::zpp_nape::geom::ZPP_GeomVert o = retv;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(614)
-		{
-		}
 		HX_STACK_LINE(622)
 		{
 			HX_STACK_LINE(622)
@@ -4973,7 +4683,7 @@ HX_DEFINE_DYNAMIC_FUNC1(GeomPoly_obj,skipForward,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(622)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(622)
 							_this1->_isimmutable();
 						}
@@ -4994,9 +4704,6 @@ HX_DEFINE_DYNAMIC_FUNC1(GeomPoly_obj,skipForward,return )
 						HX_STACK_LINE(622)
 						::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
 						HX_STACK_LINE(622)
-						{
-						}
-						HX_STACK_LINE(622)
 						o1->zpp_pool = null();
 						HX_STACK_LINE(622)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -5016,9 +4723,6 @@ HX_DEFINE_DYNAMIC_FUNC1(GeomPoly_obj,skipForward,return )
 					{
 						HX_STACK_LINE(622)
 						::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-						HX_STACK_LINE(622)
-						{
-						}
 						HX_STACK_LINE(622)
 						{
 							HX_STACK_LINE(622)
@@ -5074,7 +4778,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,shift,return )
 		hx::Throw (HX_CSTRING("Error: Cannot unshift null vertex"));
 	}
 	struct _Function_1_1{
-		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::Vec2 &vertex,::nape::geom::GeomPoly_obj *__this){
+		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this,::nape::geom::Vec2 &vertex){
 			HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",529);
 			{
 				struct _Function_2_1{
@@ -5117,7 +4821,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,shift,return )
 												HX_STACK_LINE(530)
 												::zpp_nape::geom::ZPP_Vec2 _this = vertex->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(530)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(530)
 													_this->_validate();
 												}
@@ -5144,7 +4848,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,shift,return )
 												HX_STACK_LINE(530)
 												::zpp_nape::geom::ZPP_Vec2 _this = vertex->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(530)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(530)
 													_this->_validate();
 												}
@@ -5157,9 +4861,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,shift,return )
 								};
 								HX_STACK_LINE(530)
 								ret->y = _Function_4_2::Block(vertex);
-								HX_STACK_LINE(530)
-								{
-								}
 								HX_STACK_LINE(530)
 								{
 								}
@@ -5194,7 +4895,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,shift,return )
 		}
 	};
 	HX_STACK_LINE(529)
-	this->zpp_inner->vertices = _Function_1_1::Block(vertex,this);
+	this->zpp_inner->vertices = _Function_1_1::Block(this,vertex);
 	HX_STACK_LINE(540)
 	if ((vertex->zpp_inner->weak)){
 		HX_STACK_LINE(544)
@@ -5214,7 +4915,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,shift,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(544)
-				if (((_this->_isimmutable_dyn() != null()))){
+				if (((_this->_isimmutable != null()))){
 					HX_STACK_LINE(544)
 					_this->_isimmutable();
 				}
@@ -5235,9 +4936,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,shift,return )
 				HX_STACK_LINE(544)
 				::nape::geom::Vec2 o = vertex;		HX_STACK_VAR(o,"o");
 				HX_STACK_LINE(544)
-				{
-				}
-				HX_STACK_LINE(544)
 				o->zpp_pool = null();
 				HX_STACK_LINE(544)
 				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -5257,9 +4955,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,shift,return )
 			{
 				HX_STACK_LINE(544)
 				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(544)
-				{
-				}
 				HX_STACK_LINE(544)
 				{
 					HX_STACK_LINE(544)
@@ -5313,64 +5008,42 @@ HX_DEFINE_DYNAMIC_FUNC1(GeomPoly_obj,unshift,return )
 	::zpp_nape::geom::ZPP_GeomVert retv = this->zpp_inner->vertices;		HX_STACK_VAR(retv,"retv");
 	struct _Function_1_1{
 		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
-			HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",448);
+			HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",457);
 			{
-				HX_STACK_LINE(449)
-				{
-				}
-				struct _Function_2_1{
-					inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
-						HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",457);
-						{
-							HX_STACK_LINE(458)
-							__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
-							HX_STACK_LINE(459)
-							{
-							}
-							HX_STACK_LINE(460)
-							return null();
-						}
-						return null();
-					}
-				};
-				struct _Function_2_2{
-					inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
-						HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",462);
-						{
-							HX_STACK_LINE(463)
-							::zpp_nape::geom::ZPP_GeomVert retnodes = __this->zpp_inner->vertices->prev;		HX_STACK_VAR(retnodes,"retnodes");
-							HX_STACK_LINE(464)
-							__this->zpp_inner->vertices->prev->next = __this->zpp_inner->vertices->next;
-							HX_STACK_LINE(465)
-							__this->zpp_inner->vertices->next->prev = __this->zpp_inner->vertices->prev;
-							HX_STACK_LINE(466)
-							__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
-							HX_STACK_LINE(467)
-							{
-							}
-							HX_STACK_LINE(468)
-							__this->zpp_inner->vertices = null();
-							HX_STACK_LINE(469)
-							return retnodes;
-						}
-						return null();
-					}
-				};
-				HX_STACK_LINE(457)
-				return (  (((bool((__this->zpp_inner->vertices != null())) && bool((__this->zpp_inner->vertices->prev == __this->zpp_inner->vertices))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_2_1::Block(__this)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_2_2::Block(__this)) );
+				HX_STACK_LINE(458)
+				__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
+				HX_STACK_LINE(460)
+				return null();
+			}
+			return null();
+		}
+	};
+	struct _Function_1_2{
+		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this){
+			HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",462);
+			{
+				HX_STACK_LINE(463)
+				::zpp_nape::geom::ZPP_GeomVert retnodes = __this->zpp_inner->vertices->prev;		HX_STACK_VAR(retnodes,"retnodes");
+				HX_STACK_LINE(464)
+				__this->zpp_inner->vertices->prev->next = __this->zpp_inner->vertices->next;
+				HX_STACK_LINE(465)
+				__this->zpp_inner->vertices->next->prev = __this->zpp_inner->vertices->prev;
+				HX_STACK_LINE(466)
+				__this->zpp_inner->vertices->next = __this->zpp_inner->vertices->prev = null();
+				HX_STACK_LINE(468)
+				__this->zpp_inner->vertices = null();
+				HX_STACK_LINE(469)
+				return retnodes;
 			}
 			return null();
 		}
 	};
 	HX_STACK_LINE(448)
-	this->zpp_inner->vertices = _Function_1_1::Block(this);
+	this->zpp_inner->vertices = (  (((bool((this->zpp_inner->vertices != null())) && bool((this->zpp_inner->vertices->prev == this->zpp_inner->vertices))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_1_1::Block(this)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_1_2::Block(this)) );
 	HX_STACK_LINE(472)
 	{
 		HX_STACK_LINE(473)
 		::zpp_nape::geom::ZPP_GeomVert o = retv;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(474)
-		{
-		}
 		HX_STACK_LINE(482)
 		{
 			HX_STACK_LINE(482)
@@ -5396,7 +5069,7 @@ HX_DEFINE_DYNAMIC_FUNC1(GeomPoly_obj,unshift,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(482)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(482)
 							_this1->_isimmutable();
 						}
@@ -5417,9 +5090,6 @@ HX_DEFINE_DYNAMIC_FUNC1(GeomPoly_obj,unshift,return )
 						HX_STACK_LINE(482)
 						::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
 						HX_STACK_LINE(482)
-						{
-						}
-						HX_STACK_LINE(482)
 						o1->zpp_pool = null();
 						HX_STACK_LINE(482)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -5439,9 +5109,6 @@ HX_DEFINE_DYNAMIC_FUNC1(GeomPoly_obj,unshift,return )
 					{
 						HX_STACK_LINE(482)
 						::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-						HX_STACK_LINE(482)
-						{
-						}
 						HX_STACK_LINE(482)
 						{
 							HX_STACK_LINE(482)
@@ -5502,7 +5169,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,pop,return )
 		hx::Throw (HX_CSTRING("Error: Cannot push null vertex"));
 	}
 	struct _Function_1_1{
-		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::Vec2 &vertex,::nape::geom::GeomPoly_obj *__this){
+		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::nape::geom::GeomPoly_obj *__this,::nape::geom::Vec2 &vertex){
 			HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",390);
 			{
 				struct _Function_2_1{
@@ -5545,7 +5212,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,pop,return )
 												HX_STACK_LINE(391)
 												::zpp_nape::geom::ZPP_Vec2 _this = vertex->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(391)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(391)
 													_this->_validate();
 												}
@@ -5572,7 +5239,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,pop,return )
 												HX_STACK_LINE(391)
 												::zpp_nape::geom::ZPP_Vec2 _this = vertex->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(391)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(391)
 													_this->_validate();
 												}
@@ -5585,9 +5252,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,pop,return )
 								};
 								HX_STACK_LINE(391)
 								ret->y = _Function_4_2::Block(vertex);
-								HX_STACK_LINE(391)
-								{
-								}
 								HX_STACK_LINE(391)
 								{
 								}
@@ -5622,7 +5286,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,pop,return )
 		}
 	};
 	HX_STACK_LINE(390)
-	this->zpp_inner->vertices = _Function_1_1::Block(vertex,this);
+	this->zpp_inner->vertices = _Function_1_1::Block(this,vertex);
 	HX_STACK_LINE(401)
 	if ((vertex->zpp_inner->weak)){
 		HX_STACK_LINE(405)
@@ -5642,7 +5306,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,pop,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(405)
-				if (((_this->_isimmutable_dyn() != null()))){
+				if (((_this->_isimmutable != null()))){
 					HX_STACK_LINE(405)
 					_this->_isimmutable();
 				}
@@ -5663,9 +5327,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,pop,return )
 				HX_STACK_LINE(405)
 				::nape::geom::Vec2 o = vertex;		HX_STACK_VAR(o,"o");
 				HX_STACK_LINE(405)
-				{
-				}
-				HX_STACK_LINE(405)
 				o->zpp_pool = null();
 				HX_STACK_LINE(405)
 				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -5685,9 +5346,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,pop,return )
 			{
 				HX_STACK_LINE(405)
 				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(405)
-				{
-				}
 				HX_STACK_LINE(405)
 				{
 					HX_STACK_LINE(405)
@@ -5761,7 +5419,7 @@ HX_DEFINE_DYNAMIC_FUNC1(GeomPoly_obj,push,return )
 				HX_STACK_LINE(345)
 				if (((_this->wrap == null()))){
 					struct _Function_3_1{
-						inline static ::nape::geom::Vec2 Block( ::zpp_nape::geom::ZPP_GeomVert &_this){
+						inline static ::nape::geom::Vec2 Block( ::zpp_nape::geom::ZPP_GeomVert _this){
 							HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",345);
 							{
 								HX_STACK_LINE(345)
@@ -5834,9 +5492,6 @@ HX_DEFINE_DYNAMIC_FUNC1(GeomPoly_obj,push,return )
 													HX_STACK_LINE(345)
 													{
 													}
-													HX_STACK_LINE(345)
-													{
-													}
 												}
 												HX_STACK_LINE(345)
 												return ret1;
@@ -5865,7 +5520,7 @@ HX_DEFINE_DYNAMIC_FUNC1(GeomPoly_obj,push,return )
 											hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 										}
 										HX_STACK_LINE(345)
-										if (((_this1->_isimmutable_dyn() != null()))){
+										if (((_this1->_isimmutable != null()))){
 											HX_STACK_LINE(345)
 											_this1->_isimmutable();
 										}
@@ -5889,7 +5544,7 @@ HX_DEFINE_DYNAMIC_FUNC1(GeomPoly_obj,push,return )
 													HX_STACK_LINE(345)
 													::zpp_nape::geom::ZPP_Vec2 _this1 = ret->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 													HX_STACK_LINE(345)
-													if (((_this1->_validate_dyn() != null()))){
+													if (((_this1->_validate != null()))){
 														HX_STACK_LINE(345)
 														_this1->_validate();
 													}
@@ -5914,7 +5569,7 @@ HX_DEFINE_DYNAMIC_FUNC1(GeomPoly_obj,push,return )
 													HX_STACK_LINE(345)
 													::zpp_nape::geom::ZPP_Vec2 _this1 = ret->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 													HX_STACK_LINE(345)
-													if (((_this1->_validate_dyn() != null()))){
+													if (((_this1->_validate != null()))){
 														HX_STACK_LINE(345)
 														_this1->_validate();
 													}
@@ -5936,16 +5591,13 @@ HX_DEFINE_DYNAMIC_FUNC1(GeomPoly_obj,push,return )
 											HX_STACK_LINE(345)
 											{
 											}
-											HX_STACK_LINE(345)
-											{
-											}
 										}
 										HX_STACK_LINE(345)
 										{
 											HX_STACK_LINE(345)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = ret->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(345)
-											if (((_this1->_invalidate_dyn() != null()))){
+											if (((_this1->_invalidate != null()))){
 												HX_STACK_LINE(345)
 												_this1->_invalidate(_this1);
 											}
@@ -6195,7 +5847,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,empty,return )
 																HX_STACK_LINE(1216)
 																::zpp_nape::geom::ZPP_Vec2 _this = v->zpp_inner;		HX_STACK_VAR(_this,"_this");
 																HX_STACK_LINE(1216)
-																if (((_this->_validate_dyn() != null()))){
+																if (((_this->_validate != null()))){
 																	HX_STACK_LINE(1216)
 																	_this->_validate();
 																}
@@ -6222,7 +5874,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,empty,return )
 																HX_STACK_LINE(1216)
 																::zpp_nape::geom::ZPP_Vec2 _this = v->zpp_inner;		HX_STACK_VAR(_this,"_this");
 																HX_STACK_LINE(1216)
-																if (((_this->_validate_dyn() != null()))){
+																if (((_this->_validate != null()))){
 																	HX_STACK_LINE(1216)
 																	_this->_validate();
 																}
@@ -6235,9 +5887,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,empty,return )
 												};
 												HX_STACK_LINE(1216)
 												ret1->y = _Function_8_2::Block(v);
-												HX_STACK_LINE(1216)
-												{
-												}
 												HX_STACK_LINE(1216)
 												{
 												}
@@ -6339,7 +5988,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,empty,return )
 																	HX_STACK_LINE(1270)
 																	::zpp_nape::geom::ZPP_Vec2 _this = v->zpp_inner;		HX_STACK_VAR(_this,"_this");
 																	HX_STACK_LINE(1270)
-																	if (((_this->_validate_dyn() != null()))){
+																	if (((_this->_validate != null()))){
 																		HX_STACK_LINE(1270)
 																		_this->_validate();
 																	}
@@ -6366,7 +6015,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,empty,return )
 																	HX_STACK_LINE(1270)
 																	::zpp_nape::geom::ZPP_Vec2 _this = v->zpp_inner;		HX_STACK_VAR(_this,"_this");
 																	HX_STACK_LINE(1270)
-																	if (((_this->_validate_dyn() != null()))){
+																	if (((_this->_validate != null()))){
 																		HX_STACK_LINE(1270)
 																		_this->_validate();
 																	}
@@ -6379,9 +6028,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,empty,return )
 													};
 													HX_STACK_LINE(1270)
 													ret1->y = _Function_8_2::Block(v);
-													HX_STACK_LINE(1270)
-													{
-													}
 													HX_STACK_LINE(1270)
 													{
 													}
@@ -6513,9 +6159,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,empty,return )
 															HX_STACK_LINE(1294)
 															{
 															}
-															HX_STACK_LINE(1294)
-															{
-															}
 														}
 														HX_STACK_LINE(1294)
 														return ret2;
@@ -6544,7 +6187,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,empty,return )
 													hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 												}
 												HX_STACK_LINE(1294)
-												if (((_this->_isimmutable_dyn() != null()))){
+												if (((_this->_isimmutable != null()))){
 													HX_STACK_LINE(1294)
 													_this->_isimmutable();
 												}
@@ -6568,7 +6211,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,empty,return )
 															HX_STACK_LINE(1294)
 															::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 															HX_STACK_LINE(1294)
-															if (((_this->_validate_dyn() != null()))){
+															if (((_this->_validate != null()))){
 																HX_STACK_LINE(1294)
 																_this->_validate();
 															}
@@ -6593,7 +6236,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,empty,return )
 															HX_STACK_LINE(1294)
 															::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 															HX_STACK_LINE(1294)
-															if (((_this->_validate_dyn() != null()))){
+															if (((_this->_validate != null()))){
 																HX_STACK_LINE(1294)
 																_this->_validate();
 															}
@@ -6615,16 +6258,13 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,empty,return )
 													HX_STACK_LINE(1294)
 													{
 													}
-													HX_STACK_LINE(1294)
-													{
-													}
 												}
 												HX_STACK_LINE(1294)
 												{
 													HX_STACK_LINE(1294)
 													::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 													HX_STACK_LINE(1294)
-													if (((_this->_invalidate_dyn() != null()))){
+													if (((_this->_invalidate != null()))){
 														HX_STACK_LINE(1294)
 														_this->_invalidate(_this);
 													}
@@ -6689,7 +6329,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,empty,return )
 																		HX_STACK_LINE(1298)
 																		::zpp_nape::geom::ZPP_Vec2 _this = v->zpp_inner;		HX_STACK_VAR(_this,"_this");
 																		HX_STACK_LINE(1298)
-																		if (((_this->_validate_dyn() != null()))){
+																		if (((_this->_validate != null()))){
 																			HX_STACK_LINE(1298)
 																			_this->_validate();
 																		}
@@ -6716,7 +6356,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,empty,return )
 																		HX_STACK_LINE(1298)
 																		::zpp_nape::geom::ZPP_Vec2 _this = v->zpp_inner;		HX_STACK_VAR(_this,"_this");
 																		HX_STACK_LINE(1298)
-																		if (((_this->_validate_dyn() != null()))){
+																		if (((_this->_validate != null()))){
 																			HX_STACK_LINE(1298)
 																			_this->_validate();
 																		}
@@ -6729,9 +6369,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,empty,return )
 														};
 														HX_STACK_LINE(1298)
 														ret1->y = _Function_10_2::Block(v);
-														HX_STACK_LINE(1298)
-														{
-														}
 														HX_STACK_LINE(1298)
 														{
 														}
@@ -6784,7 +6421,7 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,empty,return )
 										hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 									}
 									HX_STACK_LINE(1309)
-									if (((_this->_isimmutable_dyn() != null()))){
+									if (((_this->_isimmutable != null()))){
 										HX_STACK_LINE(1309)
 										_this->_isimmutable();
 									}
@@ -6805,9 +6442,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,empty,return )
 									HX_STACK_LINE(1309)
 									::nape::geom::Vec2 o = v;		HX_STACK_VAR(o,"o");
 									HX_STACK_LINE(1309)
-									{
-									}
-									HX_STACK_LINE(1309)
 									o->zpp_pool = null();
 									HX_STACK_LINE(1309)
 									if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -6827,9 +6461,6 @@ HX_DEFINE_DYNAMIC_FUNC0(GeomPoly_obj,empty,return )
 								{
 									HX_STACK_LINE(1309)
 									::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1309)
-									{
-									}
 									HX_STACK_LINE(1309)
 									{
 										HX_STACK_LINE(1309)
@@ -6867,13 +6498,13 @@ while(((vite != verts)));
 		HX_STACK_LINE(1321)
 		if ((::Std_obj::is(vertices,hx::ClassOf< Array<int> >()))){
 			HX_STACK_LINE(1323)
-			Array< ::nape::geom::Vec2 > lv = vertices;		HX_STACK_VAR(lv,"lv");
+			Array< ::Dynamic > lv = vertices;		HX_STACK_VAR(lv,"lv");
 			HX_STACK_LINE(1324)
 			int i = (int)0;		HX_STACK_VAR(i,"i");
 			HX_STACK_LINE(1325)
 			while(((i < lv->length))){
 				HX_STACK_LINE(1326)
-				::nape::geom::Vec2 cur = lv->__get(i);		HX_STACK_VAR(cur,"cur");
+				::nape::geom::Vec2 cur = lv->__get(i).StaticCast< ::nape::geom::Vec2 >();		HX_STACK_VAR(cur,"cur");
 				struct _Function_4_1{
 					inline static bool Block( ::nape::geom::Vec2 &cur){
 						HX_STACK_PUSH("*::closure","nape/geom/GeomPoly.hx",1330);
@@ -6895,7 +6526,7 @@ while(((vite != verts)));
 										hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 									}
 									HX_STACK_LINE(1331)
-									if (((_this->_isimmutable_dyn() != null()))){
+									if (((_this->_isimmutable != null()))){
 										HX_STACK_LINE(1331)
 										_this->_isimmutable();
 									}
@@ -6916,9 +6547,6 @@ while(((vite != verts)));
 									HX_STACK_LINE(1331)
 									::nape::geom::Vec2 o = cur;		HX_STACK_VAR(o,"o");
 									HX_STACK_LINE(1331)
-									{
-									}
-									HX_STACK_LINE(1331)
 									o->zpp_pool = null();
 									HX_STACK_LINE(1331)
 									if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -6938,9 +6566,6 @@ while(((vite != verts)));
 								{
 									HX_STACK_LINE(1331)
 									::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1331)
-									{
-									}
 									HX_STACK_LINE(1331)
 									{
 										HX_STACK_LINE(1331)
@@ -6986,7 +6611,7 @@ while(((vite != verts)));
 				HX_STACK_LINE(1370)
 				::nape::geom::Vec2List lv = vertices;		HX_STACK_VAR(lv,"lv");
 				HX_STACK_LINE(1371)
-				if (((lv->zpp_inner->_validate_dyn() != null()))){
+				if (((lv->zpp_inner->_validate != null()))){
 					HX_STACK_LINE(1371)
 					lv->zpp_inner->_validate();
 				}
@@ -7025,7 +6650,7 @@ while(((vite != verts)));
 										hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 									}
 									HX_STACK_LINE(1385)
-									if (((_this1->_isimmutable_dyn() != null()))){
+									if (((_this1->_isimmutable != null()))){
 										HX_STACK_LINE(1385)
 										_this1->_isimmutable();
 									}
@@ -7046,9 +6671,6 @@ while(((vite != verts)));
 									HX_STACK_LINE(1385)
 									::nape::geom::Vec2 o = _this;		HX_STACK_VAR(o,"o");
 									HX_STACK_LINE(1385)
-									{
-									}
-									HX_STACK_LINE(1385)
 									o->zpp_pool = null();
 									HX_STACK_LINE(1385)
 									if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -7068,9 +6690,6 @@ while(((vite != verts)));
 								{
 									HX_STACK_LINE(1385)
 									::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1385)
-									{
-									}
 									HX_STACK_LINE(1385)
 									{
 										HX_STACK_LINE(1385)
@@ -7300,7 +6919,7 @@ Class GeomPoly_obj::__mClass;
 
 void GeomPoly_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.GeomPoly"), hx::TCanCast< GeomPoly_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.GeomPoly"), hx::TCanCast< GeomPoly_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

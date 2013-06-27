@@ -44,8 +44,6 @@ Float ZPP_Const_obj::NEGINF( ){
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(ZPP_Const_obj,NEGINF,return )
 
-Float ZPP_Const_obj::FMAX;
-
 
 ZPP_Const_obj::ZPP_Const_obj()
 {
@@ -64,9 +62,6 @@ void ZPP_Const_obj::__Visit(HX_VISIT_PARAMS)
 Dynamic ZPP_Const_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
-	case 4:
-		if (HX_FIELD_EQ(inName,"FMAX") ) { return FMAX; }
-		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"POSINF") ) { return POSINF_dyn(); }
 		if (HX_FIELD_EQ(inName,"NEGINF") ) { return NEGINF_dyn(); }
@@ -76,10 +71,6 @@ Dynamic ZPP_Const_obj::__Field(const ::String &inName,bool inCallProp)
 
 Dynamic ZPP_Const_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 4:
-		if (HX_FIELD_EQ(inName,"FMAX") ) { FMAX=inValue.Cast< Float >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
@@ -91,7 +82,6 @@ void ZPP_Const_obj::__GetFields(Array< ::String> &outFields)
 static ::String sStaticFields[] = {
 	HX_CSTRING("POSINF"),
 	HX_CSTRING("NEGINF"),
-	HX_CSTRING("FMAX"),
 	String(null()) };
 
 static ::String sMemberFields[] = {
@@ -99,26 +89,23 @@ static ::String sMemberFields[] = {
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(ZPP_Const_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(ZPP_Const_obj::FMAX,"FMAX");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(ZPP_Const_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(ZPP_Const_obj::FMAX,"FMAX");
 };
 
 Class ZPP_Const_obj::__mClass;
 
 void ZPP_Const_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.ZPP_Const"), hx::TCanCast< ZPP_Const_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.ZPP_Const"), hx::TCanCast< ZPP_Const_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }
 
 void ZPP_Const_obj::__boot()
 {
-	FMAX= 1e100;
 }
 
 } // end namespace zpp_nape

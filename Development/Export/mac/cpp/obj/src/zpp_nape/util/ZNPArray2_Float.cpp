@@ -42,10 +42,7 @@ Float ZNPArray2_Float_obj::set( int x,int y,Float obj){
 	HX_STACK_ARG(x,"x");
 	HX_STACK_ARG(y,"y");
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(223)
-	{
-	}
-	HX_STACK_LINE(231)
+	HX_STACK_LINE(222)
 	return this->list[((y * this->width) + x)] = obj;
 }
 
@@ -57,10 +54,7 @@ Float ZNPArray2_Float_obj::get( int x,int y){
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(x,"x");
 	HX_STACK_ARG(y,"y");
-	HX_STACK_LINE(210)
-	{
-	}
-	HX_STACK_LINE(218)
+	HX_STACK_LINE(209)
 	return this->list->__get(((y * this->width) + x));
 }
 
@@ -176,7 +170,7 @@ Class ZNPArray2_Float_obj::__mClass;
 
 void ZNPArray2_Float_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPArray2_Float"), hx::TCanCast< ZNPArray2_Float_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPArray2_Float"), hx::TCanCast< ZNPArray2_Float_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

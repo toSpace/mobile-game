@@ -12,7 +12,7 @@ namespace cpp{
 namespace zip{
 
 
-class Compress_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Compress_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Compress_obj OBJ_;
@@ -41,19 +41,19 @@ class Compress_obj : public hx::Object{
 		virtual Dynamic execute( ::haxe::io::Bytes src,int srcPos,::haxe::io::Bytes dst,int dstPos);
 		Dynamic execute_dyn();
 
-		Dynamic s; /* REM */ 
+		Dynamic s;
 		static ::haxe::io::Bytes run( ::haxe::io::Bytes s,int level);
 		static Dynamic run_dyn();
 
-		static Dynamic _deflate_init; /* REM */ 
+		static Dynamic _deflate_init;
 		static Dynamic &_deflate_init_dyn() { return _deflate_init;}
-		static Dynamic _deflate_bound; /* REM */ 
+		static Dynamic _deflate_bound;
 		static Dynamic &_deflate_bound_dyn() { return _deflate_bound;}
-		static Dynamic _deflate_buffer; /* REM */ 
+		static Dynamic _deflate_buffer;
 		static Dynamic &_deflate_buffer_dyn() { return _deflate_buffer;}
-		static Dynamic _deflate_end; /* REM */ 
+		static Dynamic _deflate_end;
 		static Dynamic &_deflate_end_dyn() { return _deflate_end;}
-		static Dynamic _set_flush_mode; /* REM */ 
+		static Dynamic _set_flush_mode;
 		static Dynamic &_set_flush_mode_dyn() { return _set_flush_mode;}
 };
 

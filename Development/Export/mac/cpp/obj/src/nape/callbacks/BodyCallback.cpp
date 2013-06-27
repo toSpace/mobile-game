@@ -94,14 +94,12 @@ BodyCallback_obj::BodyCallback_obj()
 void BodyCallback_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(BodyCallback);
-	HX_MARK_MEMBER_NAME(body,"body");
 	super::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
 }
 
 void BodyCallback_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(body,"body");
 	super::__Visit(HX_VISIT_ARG);
 }
 
@@ -109,7 +107,7 @@ Dynamic BodyCallback_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 4:
-		if (HX_FIELD_EQ(inName,"body") ) { return inCallProp ? get_body() : body; }
+		if (HX_FIELD_EQ(inName,"body") ) { return get_body(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
@@ -120,10 +118,6 @@ Dynamic BodyCallback_obj::__Field(const ::String &inName,bool inCallProp)
 
 Dynamic BodyCallback_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 4:
-		if (HX_FIELD_EQ(inName,"body") ) { body=inValue.Cast< ::nape::phys::Body >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
@@ -139,7 +133,6 @@ static ::String sStaticFields[] = {
 static ::String sMemberFields[] = {
 	HX_CSTRING("toString"),
 	HX_CSTRING("get_body"),
-	HX_CSTRING("body"),
 	String(null()) };
 
 static void sMarkStatics(HX_MARK_PARAMS) {
@@ -154,7 +147,7 @@ Class BodyCallback_obj::__mClass;
 
 void BodyCallback_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.BodyCallback"), hx::TCanCast< BodyCallback_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.BodyCallback"), hx::TCanCast< BodyCallback_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

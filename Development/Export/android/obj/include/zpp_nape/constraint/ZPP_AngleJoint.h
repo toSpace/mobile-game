@@ -19,7 +19,7 @@ namespace zpp_nape{
 namespace constraint{
 
 
-class ZPP_AngleJoint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_AngleJoint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj{
 	public:
 		typedef ::zpp_nape::constraint::ZPP_Constraint_obj super;
 		typedef ZPP_AngleJoint_obj OBJ_;
@@ -59,16 +59,16 @@ class ZPP_AngleJoint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj{
 
 		virtual Void validate( );
 
-		virtual ::nape::constraint::Constraint copy( Array< ::zpp_nape::constraint::ZPP_CopyHelper > dict,Array< ::zpp_nape::constraint::ZPP_CopyHelper > todo);
+		virtual ::nape::constraint::Constraint copy( Array< ::Dynamic > dict,Array< ::Dynamic > todo);
 
-		bool stepped; /* REM */ 
-		Float bias; /* REM */ 
-		Float gamma; /* REM */ 
-		Float jMax; /* REM */ 
-		Float jAcc; /* REM */ 
-		Float kMass; /* REM */ 
-		::zpp_nape::phys::ZPP_Body b2; /* REM */ 
-		::zpp_nape::phys::ZPP_Body b1; /* REM */ 
+		bool stepped;
+		Float bias;
+		Float gamma;
+		Float jMax;
+		Float jAcc;
+		Float kMass;
+		::zpp_nape::phys::ZPP_Body b2;
+		::zpp_nape::phys::ZPP_Body b1;
 		virtual Void inactiveBodies( );
 
 		virtual Void activeBodies( );
@@ -79,13 +79,13 @@ class ZPP_AngleJoint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj{
 		virtual bool is_slack( );
 		Dynamic is_slack_dyn();
 
-		Float scale; /* REM */ 
-		bool equal; /* REM */ 
-		bool slack; /* REM */ 
-		Float jointMax; /* REM */ 
-		Float jointMin; /* REM */ 
-		Float ratio; /* REM */ 
-		::nape::constraint::AngleJoint outer_zn; /* REM */ 
+		Float scale;
+		bool equal;
+		bool slack;
+		Float jointMax;
+		Float jointMin;
+		Float ratio;
+		::nape::constraint::AngleJoint outer_zn;
 };
 
 } // end namespace zpp_nape

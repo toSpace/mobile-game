@@ -10,7 +10,7 @@ namespace haxe{
 namespace io{
 
 
-class Bytes_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Bytes_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Bytes_obj OBJ_;
@@ -30,35 +30,14 @@ class Bytes_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("Bytes"); }
 
-		virtual Array< unsigned char > getData( );
-		Dynamic getData_dyn();
-
-		virtual ::String toHex( );
-		Dynamic toHex_dyn();
-
-		virtual ::String toString( );
-		Dynamic toString_dyn();
-
-		virtual ::String readString( int pos,int len);
-		Dynamic readString_dyn();
-
-		virtual int compare( ::haxe::io::Bytes other);
-		Dynamic compare_dyn();
-
 		virtual ::haxe::io::Bytes sub( int pos,int len);
 		Dynamic sub_dyn();
 
 		virtual Void blit( int pos,::haxe::io::Bytes src,int srcpos,int len);
 		Dynamic blit_dyn();
 
-		virtual Void set( int pos,int v);
-		Dynamic set_dyn();
-
-		virtual int get( int pos);
-		Dynamic get_dyn();
-
-		Array< unsigned char > b; /* REM */ 
-		int length; /* REM */ 
+		Array< unsigned char > b;
+		int length;
 		static ::haxe::io::Bytes alloc( int length);
 		static Dynamic alloc_dyn();
 

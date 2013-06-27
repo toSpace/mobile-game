@@ -10,7 +10,7 @@ namespace nape{
 namespace phys{
 
 
-class BodyType_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  BodyType_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef BodyType_obj OBJ_;
@@ -33,15 +33,12 @@ class BodyType_obj : public hx::Object{
 		virtual ::String toString( );
 		Dynamic toString_dyn();
 
-		static ::nape::phys::BodyType STATIC; /* REM */ 
 		static ::nape::phys::BodyType get_STATIC( );
 		static Dynamic get_STATIC_dyn();
 
-		static ::nape::phys::BodyType DYNAMIC; /* REM */ 
 		static ::nape::phys::BodyType get_DYNAMIC( );
 		static Dynamic get_DYNAMIC_dyn();
 
-		static ::nape::phys::BodyType KINEMATIC; /* REM */ 
 		static ::nape::phys::BodyType get_KINEMATIC( );
 		static Dynamic get_KINEMATIC_dyn();
 

@@ -59,7 +59,7 @@ namespace zpp_nape{
 namespace space{
 
 
-class ZPP_Space_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Space_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Space_obj OBJ_;
@@ -85,13 +85,13 @@ class ZPP_Space_obj : public hx::Object{
 		virtual Void MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::shape::ZPP_Shape s2);
 		Dynamic MRCA_chains_dyn();
 
-		::zpp_nape::util::ZNPList_ZPP_Interactor mrca2; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Interactor mrca1; /* REM */ 
+		::zpp_nape::util::ZNPList_ZPP_Interactor mrca2;
+		::zpp_nape::util::ZNPList_ZPP_Interactor mrca1;
 		virtual ::zpp_nape::dynamics::ZPP_Arbiter narrowPhase( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::shape::ZPP_Shape s2,bool stat,::zpp_nape::dynamics::ZPP_Arbiter in_arb,bool continuous);
 		Dynamic narrowPhase_dyn();
 
-		::zpp_nape::util::ZNPList_ZPP_InteractionListener prelisteners; /* REM */ 
-		::nape::callbacks::PreCallback precb; /* REM */ 
+		::zpp_nape::util::ZNPList_ZPP_InteractionListener prelisteners;
+		::nape::callbacks::PreCallback precb;
 		virtual int interactionType( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::shape::ZPP_Shape s2,::zpp_nape::phys::ZPP_Body b1,::zpp_nape::phys::ZPP_Body b2);
 		Dynamic interactionType_dyn();
 
@@ -113,7 +113,7 @@ class ZPP_Space_obj : public hx::Object{
 		virtual bool presteparb( ::zpp_nape::dynamics::ZPP_Arbiter arb,Float dt,Dynamic cont);
 		Dynamic presteparb_dyn();
 
-		bool continuous; /* REM */ 
+		bool continuous;
 		virtual Void updatePos( Float dt);
 		Dynamic updatePos_dyn();
 
@@ -180,11 +180,11 @@ class ZPP_Space_obj : public hx::Object{
 		virtual Void continuousCollisions( Float deltaTime);
 		Dynamic continuousCollisions_dyn();
 
-		::zpp_nape::util::ZNPList_ZPP_ToiEvent toiEvents; /* REM */ 
+		::zpp_nape::util::ZNPList_ZPP_ToiEvent toiEvents;
 		virtual Void step( Float deltaTime,int velocityIterations,int positionIterations);
 		Dynamic step_dyn();
 
-		Float pre_dt; /* REM */ 
+		Float pre_dt;
 		virtual ::zpp_nape::callbacks::ZPP_Callback push_callback( ::zpp_nape::callbacks::ZPP_Listener i);
 		Dynamic push_callback_dyn();
 
@@ -197,7 +197,7 @@ class ZPP_Space_obj : public hx::Object{
 		virtual ::nape::geom::ConvexResult convexCast( ::zpp_nape::shape::ZPP_Shape shape,Float deltaTime,::nape::dynamics::InteractionFilter filter,bool dynamics);
 		Dynamic convexCast_dyn();
 
-		::nape::shape::ShapeList convexShapeList; /* REM */ 
+		::nape::shape::ShapeList convexShapeList;
 		virtual ::nape::geom::RayResultList rayMultiCast( ::nape::geom::Ray ray,bool inner,::nape::dynamics::InteractionFilter filter,::nape::geom::RayResultList output);
 		Dynamic rayMultiCast_dyn();
 
@@ -312,37 +312,37 @@ class ZPP_Space_obj : public hx::Object{
 		virtual Void clear( );
 		Dynamic clear_dyn();
 
-		::zpp_nape::space::ZPP_CbSetManager cbsets; /* REM */ 
-		::zpp_nape::space::ZPP_CallbackSet callbackset_list; /* REM */ 
-		::zpp_nape::callbacks::ZPP_Callback callbacks; /* REM */ 
-		::nape::callbacks::ListenerList wrap_listeners; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Listener listeners; /* REM */ 
-		::zpp_nape::space::ZPP_Island islands; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Body staticsleep; /* REM */ 
-		::nape::constraint::ConstraintList wrap_livecon; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Constraint live_constraints; /* REM */ 
-		::nape::phys::BodyList wrap_live; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Body live; /* REM */ 
-		::nape::dynamics::ArbiterList wrap_arbiters; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_SensorArbiter s_arbiters; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_FluidArbiter f_arbiters; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_ColArbiter c_arbiters_false; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_ColArbiter c_arbiters_true; /* REM */ 
-		bool sortcontacts; /* REM */ 
-		Float time; /* REM */ 
-		bool midstep; /* REM */ 
-		int stamp; /* REM */ 
-		Float global_ang_drag; /* REM */ 
-		Float global_lin_drag; /* REM */ 
-		::nape::phys::Body __static; /* REM */ 
-		::zpp_nape::space::ZPP_Broadphase bphase; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Body kinematics; /* REM */ 
-		::nape::constraint::ConstraintList wrap_constraints; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Constraint constraints; /* REM */ 
-		::nape::phys::CompoundList wrap_compounds; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Compound compounds; /* REM */ 
-		::nape::phys::BodyList wrap_bodies; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Body bodies; /* REM */ 
+		::zpp_nape::space::ZPP_CbSetManager cbsets;
+		::zpp_nape::space::ZPP_CallbackSet callbackset_list;
+		::zpp_nape::callbacks::ZPP_Callback callbacks;
+		::nape::callbacks::ListenerList wrap_listeners;
+		::zpp_nape::util::ZNPList_ZPP_Listener listeners;
+		::zpp_nape::space::ZPP_Island islands;
+		::zpp_nape::util::ZNPList_ZPP_Body staticsleep;
+		::nape::constraint::ConstraintList wrap_livecon;
+		::zpp_nape::util::ZNPList_ZPP_Constraint live_constraints;
+		::nape::phys::BodyList wrap_live;
+		::zpp_nape::util::ZNPList_ZPP_Body live;
+		::nape::dynamics::ArbiterList wrap_arbiters;
+		::zpp_nape::util::ZNPList_ZPP_SensorArbiter s_arbiters;
+		::zpp_nape::util::ZNPList_ZPP_FluidArbiter f_arbiters;
+		::zpp_nape::util::ZNPList_ZPP_ColArbiter c_arbiters_false;
+		::zpp_nape::util::ZNPList_ZPP_ColArbiter c_arbiters_true;
+		bool sortcontacts;
+		Float time;
+		bool midstep;
+		int stamp;
+		Float global_ang_drag;
+		Float global_lin_drag;
+		::nape::phys::Body __static;
+		::zpp_nape::space::ZPP_Broadphase bphase;
+		::zpp_nape::util::ZNPList_ZPP_Body kinematics;
+		::nape::constraint::ConstraintList wrap_constraints;
+		::zpp_nape::util::ZNPList_ZPP_Constraint constraints;
+		::nape::phys::CompoundList wrap_compounds;
+		::zpp_nape::util::ZNPList_ZPP_Compound compounds;
+		::nape::phys::BodyList wrap_bodies;
+		::zpp_nape::util::ZNPList_ZPP_Body bodies;
 		virtual Void gravity_validate( );
 		Dynamic gravity_validate_dyn();
 
@@ -352,11 +352,11 @@ class ZPP_Space_obj : public hx::Object{
 		virtual Void getgravity( );
 		Dynamic getgravity_dyn();
 
-		::nape::geom::Vec2 wrap_gravity; /* REM */ 
-		Float gravityy; /* REM */ 
-		Float gravityx; /* REM */ 
-		Dynamic userData; /* REM */ 
-		::nape::space::Space outer; /* REM */ 
+		::nape::geom::Vec2 wrap_gravity;
+		Float gravityy;
+		Float gravityx;
+		Dynamic userData;
+		::nape::space::Space outer;
 };
 
 } // end namespace zpp_nape

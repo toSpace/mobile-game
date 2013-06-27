@@ -9,7 +9,7 @@ HX_DECLARE_CLASS1(zpp_nape,ZPP_Const)
 namespace zpp_nape{
 
 
-class ZPP_Const_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Const_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Const_obj OBJ_;
@@ -35,7 +35,6 @@ class ZPP_Const_obj : public hx::Object{
 		static Float NEGINF( );
 		static Dynamic NEGINF_dyn();
 
-		static Float FMAX; /* REM */ 
 };
 
 } // end namespace zpp_nape

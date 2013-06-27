@@ -24,7 +24,7 @@ namespace zpp_nape{
 namespace shape{
 
 
-class ZPP_Polygon_obj : public ::zpp_nape::shape::ZPP_Shape_obj{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Polygon_obj : public ::zpp_nape::shape::ZPP_Shape_obj{
 	public:
 		typedef ::zpp_nape::shape::ZPP_Shape_obj super;
 		typedef ZPP_Polygon_obj OBJ_;
@@ -104,7 +104,7 @@ class ZPP_Polygon_obj : public ::zpp_nape::shape::ZPP_Shape_obj{
 		virtual Void splice_collinear( );
 		Dynamic splice_collinear_dyn();
 
-		bool zip_sanitation; /* REM */ 
+		bool zip_sanitation;
 		virtual Void cleanup_lvert( ::zpp_nape::geom::ZPP_Vec2 x);
 		Dynamic cleanup_lvert_dyn();
 
@@ -114,24 +114,24 @@ class ZPP_Polygon_obj : public ::zpp_nape::shape::ZPP_Shape_obj{
 		virtual ::nape::shape::ValidationResult valid( );
 		Dynamic valid_dyn();
 
-		::nape::shape::ValidationResult validation; /* REM */ 
-		bool zip_valid; /* REM */ 
+		::nape::shape::ValidationResult validation;
+		bool zip_valid;
 		virtual Void invalidate_gaxi( );
 		Dynamic invalidate_gaxi_dyn();
 
-		bool zip_gaxi; /* REM */ 
+		bool zip_gaxi;
 		virtual Void invalidate_gverts( );
 		Dynamic invalidate_gverts_dyn();
 
-		bool zip_gverts; /* REM */ 
+		bool zip_gverts;
 		virtual Void invalidate_laxi( );
 		Dynamic invalidate_laxi_dyn();
 
-		bool zip_laxi; /* REM */ 
+		bool zip_laxi;
 		virtual Void invalidate_lverts( );
 		Dynamic invalidate_lverts_dyn();
 
-		bool zip_lverts; /* REM */ 
+		bool zip_lverts;
 		virtual Void getedges( );
 		Dynamic getedges_dyn();
 
@@ -174,15 +174,15 @@ class ZPP_Polygon_obj : public ::zpp_nape::shape::ZPP_Shape_obj{
 		virtual Void __clear( );
 		Dynamic __clear_dyn();
 
-		bool reverse_flag; /* REM */ 
-		int edgeCnt; /* REM */ 
-		::nape::shape::EdgeList wrap_edges; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Edge edges; /* REM */ 
-		::nape::geom::Vec2List wrap_gverts; /* REM */ 
-		::zpp_nape::geom::ZPP_Vec2 gverts; /* REM */ 
-		::nape::geom::Vec2List wrap_lverts; /* REM */ 
-		::zpp_nape::geom::ZPP_Vec2 lverts; /* REM */ 
-		::nape::shape::Polygon outer_zn; /* REM */ 
+		bool reverse_flag;
+		int edgeCnt;
+		::nape::shape::EdgeList wrap_edges;
+		::zpp_nape::util::ZNPList_ZPP_Edge edges;
+		::nape::geom::Vec2List wrap_gverts;
+		::zpp_nape::geom::ZPP_Vec2 gverts;
+		::nape::geom::Vec2List wrap_lverts;
+		::zpp_nape::geom::ZPP_Vec2 lverts;
+		::nape::shape::Polygon outer_zn;
 };
 
 } // end namespace zpp_nape

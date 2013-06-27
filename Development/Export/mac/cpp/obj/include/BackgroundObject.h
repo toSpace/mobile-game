@@ -6,18 +6,19 @@
 #endif
 
 HX_DECLARE_CLASS0(BackgroundObject)
-HX_DECLARE_CLASS0(Hash)
-HX_DECLARE_CLASS2(native,display,Bitmap)
-HX_DECLARE_CLASS2(native,display,DisplayObject)
-HX_DECLARE_CLASS2(native,display,DisplayObjectContainer)
-HX_DECLARE_CLASS2(native,display,IBitmapDrawable)
-HX_DECLARE_CLASS2(native,display,InteractiveObject)
-HX_DECLARE_CLASS2(native,display,Sprite)
-HX_DECLARE_CLASS2(native,events,EventDispatcher)
-HX_DECLARE_CLASS2(native,events,IEventDispatcher)
+HX_DECLARE_CLASS0(IMap)
+HX_DECLARE_CLASS2(flash,display,Bitmap)
+HX_DECLARE_CLASS2(flash,display,DisplayObject)
+HX_DECLARE_CLASS2(flash,display,DisplayObjectContainer)
+HX_DECLARE_CLASS2(flash,display,IBitmapDrawable)
+HX_DECLARE_CLASS2(flash,display,InteractiveObject)
+HX_DECLARE_CLASS2(flash,display,Sprite)
+HX_DECLARE_CLASS2(flash,events,EventDispatcher)
+HX_DECLARE_CLASS2(flash,events,IEventDispatcher)
+HX_DECLARE_CLASS2(haxe,ds,StringMap)
 
 
-class BackgroundObject_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  BackgroundObject_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef BackgroundObject_obj OBJ_;
@@ -46,15 +47,15 @@ class BackgroundObject_obj : public hx::Object{
 		virtual Void render( );
 		Dynamic render_dyn();
 
-		virtual ::Hash readXml( ::String url);
+		virtual Void readXml( ::String url);
 		Dynamic readXml_dyn();
 
-		Float x; /* REM */ 
-		Float speed; /* REM */ 
-		Float startX; /* REM */ 
-		::Hash xml; /* REM */ 
-		::native::display::Bitmap asset; /* REM */ 
-		::native::display::Sprite canvas; /* REM */ 
+		Float x;
+		Float speed;
+		Float startX;
+		::haxe::ds::StringMap xml;
+		::flash::display::Bitmap asset;
+		::flash::display::Sprite canvas;
 };
 
 

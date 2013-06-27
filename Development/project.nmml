@@ -15,14 +15,14 @@
 	<source path="Source/GUI" />
 	<source path="Source/characters" />
 	
-	<haxelib name="nme" />
-	<haxelib name="actuate" />
+	<haxelib name="openfl-native" />
+	<!--<haxelib name="actuate" />-->
 	<haxelib name="nape" />
 	<haxelib name="tilelayer" />
 	
 	<assets path="Assets" rename="assets" exclude="nme.svg" />
 	<icon path="Assets/nme.svg" />
 
-	<template path="template/AndroidManifest.xml" if="android" rename="AndroidManifest.xml"></template>
+	<!--<template path="template/AndroidManifest.xml" if="android" rename="AndroidManifest.xml"></template>-->
 	
 </project>

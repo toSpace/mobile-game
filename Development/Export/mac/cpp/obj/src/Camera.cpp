@@ -6,11 +6,41 @@
 #ifndef INCLUDED_Main
 #include <Main.h>
 #endif
-#ifndef INCLUDED_hxMath
-#include <hxMath.h>
-#endif
 #ifndef INCLUDED_Mobile
 #include <Mobile.h>
+#endif
+#ifndef INCLUDED_flash_display_DisplayObject
+#include <flash/display/DisplayObject.h>
+#endif
+#ifndef INCLUDED_flash_display_DisplayObjectContainer
+#include <flash/display/DisplayObjectContainer.h>
+#endif
+#ifndef INCLUDED_flash_display_IBitmapDrawable
+#include <flash/display/IBitmapDrawable.h>
+#endif
+#ifndef INCLUDED_flash_display_InteractiveObject
+#include <flash/display/InteractiveObject.h>
+#endif
+#ifndef INCLUDED_flash_display_Sprite
+#include <flash/display/Sprite.h>
+#endif
+#ifndef INCLUDED_flash_events_Event
+#include <flash/events/Event.h>
+#endif
+#ifndef INCLUDED_flash_events_EventDispatcher
+#include <flash/events/EventDispatcher.h>
+#endif
+#ifndef INCLUDED_flash_events_IEventDispatcher
+#include <flash/events/IEventDispatcher.h>
+#endif
+#ifndef INCLUDED_flash_events_KeyboardEvent
+#include <flash/events/KeyboardEvent.h>
+#endif
+#ifndef INCLUDED_flash_geom_Point
+#include <flash/geom/Point.h>
+#endif
+#ifndef INCLUDED_hxMath
+#include <hxMath.h>
 #endif
 #ifndef INCLUDED_nape_geom_Vec2
 #include <nape/geom/Vec2.h>
@@ -20,30 +50,6 @@
 #endif
 #ifndef INCLUDED_nape_phys_Interactor
 #include <nape/phys/Interactor.h>
-#endif
-#ifndef INCLUDED_native_display_DisplayObject
-#include <native/display/DisplayObject.h>
-#endif
-#ifndef INCLUDED_native_display_DisplayObjectContainer
-#include <native/display/DisplayObjectContainer.h>
-#endif
-#ifndef INCLUDED_native_display_IBitmapDrawable
-#include <native/display/IBitmapDrawable.h>
-#endif
-#ifndef INCLUDED_native_display_InteractiveObject
-#include <native/display/InteractiveObject.h>
-#endif
-#ifndef INCLUDED_native_display_Sprite
-#include <native/display/Sprite.h>
-#endif
-#ifndef INCLUDED_native_events_EventDispatcher
-#include <native/events/EventDispatcher.h>
-#endif
-#ifndef INCLUDED_native_events_IEventDispatcher
-#include <native/events/IEventDispatcher.h>
-#endif
-#ifndef INCLUDED_native_geom_Point
-#include <native/geom/Point.h>
 #endif
 #ifndef INCLUDED_zpp_nape_geom_ZPP_Vec2
 #include <zpp_nape/geom/ZPP_Vec2.h>
@@ -177,7 +183,7 @@ Void Camera_obj::follow( ::nape::phys::Body body){
 						HX_STACK_LINE(52)
 						::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 						HX_STACK_LINE(52)
-						if (((_this1->_validate_dyn() != null()))){
+						if (((_this1->_validate != null()))){
 							HX_STACK_LINE(52)
 							_this1->_validate();
 						}
@@ -219,7 +225,7 @@ Void Camera_obj::follow( ::nape::phys::Body body){
 						HX_STACK_LINE(52)
 						::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 						HX_STACK_LINE(52)
-						if (((_this1->_validate_dyn() != null()))){
+						if (((_this1->_validate != null()))){
 							HX_STACK_LINE(52)
 							_this1->_validate();
 						}
@@ -239,10 +245,10 @@ return null();
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Camera_obj,follow,(void))
 
-::native::geom::Point Camera_obj::getPosition( ){
+::flash::geom::Point Camera_obj::getPosition( ){
 	HX_STACK_PUSH("Camera::getPosition","Camera.hx",55);
 	HX_STACK_LINE(55)
-	return ::native::geom::Point_obj::__new(::Math_obj::abs(::Main_obj::canvas->get_x()),::Math_obj::abs(::Main_obj::canvas->get_y()));
+	return ::flash::geom::Point_obj::__new(::Math_obj::abs(::Main_obj::canvas->get_x()),::Math_obj::abs(::Main_obj::canvas->get_y()));
 }
 
 
@@ -320,6 +326,30 @@ return null();
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Camera_obj,render,(void))
 
+Void Camera_obj::keyboard( ::flash::events::KeyboardEvent e){
+{
+		HX_STACK_PUSH("Camera::keyboard","Camera.hx",100);
+		HX_STACK_ARG(e,"e");
+		HX_STACK_LINE(100)
+		switch( (int)(e->keyCode)){
+			case (int)37: {
+				HX_STACK_LINE(103)
+				::Camera_obj::move((::Camera_obj::getPosition()->x - (int)100),::Camera_obj::getPosition()->y,null());
+			}
+			;break;
+			case (int)39: {
+				HX_STACK_LINE(105)
+				::Camera_obj::move((::Camera_obj::getPosition()->x + (int)100),::Camera_obj::getPosition()->y,null());
+			}
+			;break;
+		}
+	}
+return null();
+}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC1(Camera_obj,keyboard,(void))
+
 Float Camera_obj::smooth( Float data,Float previous){
 	HX_STACK_PUSH("Camera::smooth","Camera.hx",113);
 	HX_STACK_ARG(data,"data");
@@ -366,6 +396,7 @@ Dynamic Camera_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"currentX") ) { return currentX; }
 		if (HX_FIELD_EQ(inName,"currentY") ) { return currentY; }
 		if (HX_FIELD_EQ(inName,"setSpeed") ) { return setSpeed_dyn(); }
+		if (HX_FIELD_EQ(inName,"keyboard") ) { return keyboard_dyn(); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"smoothing") ) { return smoothing; }
@@ -415,6 +446,7 @@ static ::String sStaticFields[] = {
 	HX_CSTRING("getPosition"),
 	HX_CSTRING("setSpeed"),
 	HX_CSTRING("render"),
+	HX_CSTRING("keyboard"),
 	HX_CSTRING("smooth"),
 	String(null()) };
 
@@ -445,7 +477,7 @@ Class Camera_obj::__mClass;
 
 void Camera_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("Camera"), hx::TCanCast< Camera_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("Camera"), hx::TCanCast< Camera_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

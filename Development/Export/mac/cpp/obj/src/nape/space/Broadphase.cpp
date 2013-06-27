@@ -100,8 +100,6 @@ Dynamic Broadphase_obj::__Create(hx::DynamicArray inArgs)
 
 HX_DEFINE_DYNAMIC_FUNC0(Broadphase_obj,toString,return )
 
-::nape::space::Broadphase Broadphase_obj::DYNAMIC_AABB_TREE;
-
 ::nape::space::Broadphase Broadphase_obj::get_DYNAMIC_AABB_TREE( ){
 	HX_STACK_PUSH("Broadphase::get_DYNAMIC_AABB_TREE","nape/space/Broadphase.hx",210);
 	HX_STACK_LINE(211)
@@ -119,8 +117,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Broadphase_obj,toString,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Broadphase_obj,get_DYNAMIC_AABB_TREE,return )
-
-::nape::space::Broadphase Broadphase_obj::SWEEP_AND_PRUNE;
 
 ::nape::space::Broadphase Broadphase_obj::get_SWEEP_AND_PRUNE( ){
 	HX_STACK_PUSH("Broadphase::get_SWEEP_AND_PRUNE","nape/space/Broadphase.hx",238);
@@ -162,10 +158,10 @@ Dynamic Broadphase_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
 		break;
 	case 15:
-		if (HX_FIELD_EQ(inName,"SWEEP_AND_PRUNE") ) { return inCallProp ? get_SWEEP_AND_PRUNE() : SWEEP_AND_PRUNE; }
+		if (HX_FIELD_EQ(inName,"SWEEP_AND_PRUNE") ) { return get_SWEEP_AND_PRUNE(); }
 		break;
 	case 17:
-		if (HX_FIELD_EQ(inName,"DYNAMIC_AABB_TREE") ) { return inCallProp ? get_DYNAMIC_AABB_TREE() : DYNAMIC_AABB_TREE; }
+		if (HX_FIELD_EQ(inName,"DYNAMIC_AABB_TREE") ) { return get_DYNAMIC_AABB_TREE(); }
 		break;
 	case 19:
 		if (HX_FIELD_EQ(inName,"get_SWEEP_AND_PRUNE") ) { return get_SWEEP_AND_PRUNE_dyn(); }
@@ -178,13 +174,6 @@ Dynamic Broadphase_obj::__Field(const ::String &inName,bool inCallProp)
 
 Dynamic Broadphase_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 15:
-		if (HX_FIELD_EQ(inName,"SWEEP_AND_PRUNE") ) { SWEEP_AND_PRUNE=inValue.Cast< ::nape::space::Broadphase >(); return inValue; }
-		break;
-	case 17:
-		if (HX_FIELD_EQ(inName,"DYNAMIC_AABB_TREE") ) { DYNAMIC_AABB_TREE=inValue.Cast< ::nape::space::Broadphase >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
@@ -194,9 +183,7 @@ void Broadphase_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("DYNAMIC_AABB_TREE"),
 	HX_CSTRING("get_DYNAMIC_AABB_TREE"),
-	HX_CSTRING("SWEEP_AND_PRUNE"),
 	HX_CSTRING("get_SWEEP_AND_PRUNE"),
 	String(null()) };
 
@@ -206,21 +193,17 @@ static ::String sMemberFields[] = {
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(Broadphase_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(Broadphase_obj::DYNAMIC_AABB_TREE,"DYNAMIC_AABB_TREE");
-	HX_MARK_MEMBER_NAME(Broadphase_obj::SWEEP_AND_PRUNE,"SWEEP_AND_PRUNE");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(Broadphase_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(Broadphase_obj::DYNAMIC_AABB_TREE,"DYNAMIC_AABB_TREE");
-	HX_VISIT_MEMBER_NAME(Broadphase_obj::SWEEP_AND_PRUNE,"SWEEP_AND_PRUNE");
 };
 
 Class Broadphase_obj::__mClass;
 
 void Broadphase_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.space.Broadphase"), hx::TCanCast< Broadphase_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.space.Broadphase"), hx::TCanCast< Broadphase_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

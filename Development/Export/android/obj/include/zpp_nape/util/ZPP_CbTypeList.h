@@ -14,7 +14,7 @@ namespace zpp_nape{
 namespace util{
 
 
-class ZPP_CbTypeList_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_CbTypeList_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_CbTypeList_obj OBJ_;
@@ -34,11 +34,11 @@ class ZPP_CbTypeList_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("ZPP_CbTypeList"); }
 
-		int user_length; /* REM */ 
-		bool zip_length; /* REM */ 
-		::zpp_nape::util::ZNPNode_ZPP_CbType push_ite; /* REM */ 
-		::zpp_nape::util::ZNPNode_ZPP_CbType at_ite; /* REM */ 
-		int at_index; /* REM */ 
+		int user_length;
+		bool zip_length;
+		::zpp_nape::util::ZNPNode_ZPP_CbType push_ite;
+		::zpp_nape::util::ZNPNode_ZPP_CbType at_ite;
+		int at_index;
 		virtual Void invalidate( );
 		Dynamic invalidate_dyn();
 
@@ -54,25 +54,25 @@ class ZPP_CbTypeList_obj : public hx::Object{
 		virtual Void valmod( );
 		Dynamic valmod_dyn();
 
-		bool reverse_flag; /* REM */ 
-		bool dontremove; /* REM */ 
-		Dynamic subber; /* REM */ 
+		bool reverse_flag;
+		bool dontremove;
+		Dynamic subber;
 		Dynamic &subber_dyn() { return subber;}
-		Dynamic post_adder; /* REM */ 
+		Dynamic post_adder;
 		Dynamic &post_adder_dyn() { return post_adder;}
-		Dynamic adder; /* REM */ 
+		Dynamic adder;
 		Dynamic &adder_dyn() { return adder;}
-		Dynamic _modifiable; /* REM */ 
+		Dynamic _modifiable;
 		Dynamic &_modifiable_dyn() { return _modifiable;}
-		Dynamic _validate; /* REM */ 
+		Dynamic _validate;
 		Dynamic &_validate_dyn() { return _validate;}
-		Dynamic _invalidate; /* REM */ 
+		Dynamic _invalidate;
 		Dynamic &_invalidate_dyn() { return _invalidate;}
-		bool _invalidated; /* REM */ 
-		bool immutable; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_CbType inner; /* REM */ 
-		::nape::callbacks::CbTypeList outer; /* REM */ 
-		static bool internal; /* REM */ 
+		bool _invalidated;
+		bool immutable;
+		::zpp_nape::util::ZNPList_ZPP_CbType inner;
+		::nape::callbacks::CbTypeList outer;
+		static bool internal;
 		static ::nape::callbacks::CbTypeList get( ::zpp_nape::util::ZNPList_ZPP_CbType list,hx::Null< bool >  imm);
 		static Dynamic get_dyn();
 

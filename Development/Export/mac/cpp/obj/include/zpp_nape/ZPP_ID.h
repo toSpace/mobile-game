@@ -9,7 +9,7 @@ HX_DECLARE_CLASS1(zpp_nape,ZPP_ID)
 namespace zpp_nape{
 
 
-class ZPP_ID_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_ID_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_ID_obj OBJ_;
@@ -29,39 +29,39 @@ class ZPP_ID_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("ZPP_ID"); }
 
-		static int _Constraint; /* REM */ 
+		static int _Constraint;
 		static int Constraint( );
 		static Dynamic Constraint_dyn();
 
-		static int _Interactor; /* REM */ 
+		static int _Interactor;
 		static int Interactor( );
 		static Dynamic Interactor_dyn();
 
-		static int _CbType; /* REM */ 
+		static int _CbType;
 		static int CbType( );
 		static Dynamic CbType_dyn();
 
-		static int _CbSet; /* REM */ 
+		static int _CbSet;
 		static int CbSet( );
 		static Dynamic CbSet_dyn();
 
-		static int _Listener; /* REM */ 
+		static int _Listener;
 		static int Listener( );
 		static Dynamic Listener_dyn();
 
-		static int _ZPP_SimpleVert; /* REM */ 
+		static int _ZPP_SimpleVert;
 		static int ZPP_SimpleVert( );
 		static Dynamic ZPP_SimpleVert_dyn();
 
-		static int _ZPP_SimpleSeg; /* REM */ 
+		static int _ZPP_SimpleSeg;
 		static int ZPP_SimpleSeg( );
 		static Dynamic ZPP_SimpleSeg_dyn();
 
-		static int _Space; /* REM */ 
+		static int _Space;
 		static int Space( );
 		static Dynamic Space_dyn();
 
-		static int _InteractionGroup; /* REM */ 
+		static int _InteractionGroup;
 		static int InteractionGroup( );
 		static Dynamic InteractionGroup_dyn();
 

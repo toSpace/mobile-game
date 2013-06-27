@@ -13,7 +13,7 @@ namespace nape{
 namespace geom{
 
 
-class GeomPolyList_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  GeomPolyList_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef GeomPolyList_obj OBJ_;
@@ -84,9 +84,8 @@ class GeomPolyList_obj : public hx::Object{
 		virtual int get_length( );
 		Dynamic get_length_dyn();
 
-		int length; /* REM */ 
-		::zpp_nape::util::ZPP_GeomPolyList zpp_inner; /* REM */ 
-		static ::nape::geom::GeomPolyList fromArray( Array< ::nape::geom::GeomPoly > array);
+		::zpp_nape::util::ZPP_GeomPolyList zpp_inner;
+		static ::nape::geom::GeomPolyList fromArray( Array< ::Dynamic > array);
 		static Dynamic fromArray_dyn();
 
 };

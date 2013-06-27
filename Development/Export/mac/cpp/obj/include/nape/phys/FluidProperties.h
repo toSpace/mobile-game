@@ -13,7 +13,7 @@ namespace nape{
 namespace phys{
 
 
-class FluidProperties_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  FluidProperties_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef FluidProperties_obj OBJ_;
@@ -42,33 +42,28 @@ class FluidProperties_obj : public hx::Object{
 		virtual ::nape::geom::Vec2 get_gravity( );
 		Dynamic get_gravity_dyn();
 
-		::nape::geom::Vec2 gravity; /* REM */ 
 		virtual Float set_viscosity( Float viscosity);
 		Dynamic set_viscosity_dyn();
 
 		virtual Float get_viscosity( );
 		Dynamic get_viscosity_dyn();
 
-		Float viscosity; /* REM */ 
 		virtual Float set_density( Float density);
 		Dynamic set_density_dyn();
 
 		virtual Float get_density( );
 		Dynamic get_density_dyn();
 
-		Float density; /* REM */ 
 		virtual ::nape::phys::FluidProperties copy( );
 		Dynamic copy_dyn();
 
 		virtual ::nape::shape::ShapeList get_shapes( );
 		Dynamic get_shapes_dyn();
 
-		::nape::shape::ShapeList shapes; /* REM */ 
 		virtual Dynamic get_userData( );
 		Dynamic get_userData_dyn();
 
-		Dynamic userData; /* REM */ 
-		::zpp_nape::phys::ZPP_FluidProperties zpp_inner; /* REM */ 
+		::zpp_nape::phys::ZPP_FluidProperties zpp_inner;
 };
 
 } // end namespace nape

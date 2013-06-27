@@ -18,9 +18,9 @@ namespace _Fast{
 
 Void NodeAccess_obj::__construct(::Xml x)
 {
-HX_STACK_PUSH("NodeAccess::new","/usr/lib/haxe/std/haxe/xml/Fast.hx",31);
+HX_STACK_PUSH("NodeAccess::new","/usr/lib/haxe/std/haxe/xml/Fast.hx",28);
 {
-	HX_STACK_LINE(31)
+	HX_STACK_LINE(28)
 	this->__x = x;
 }
 ;
@@ -41,19 +41,19 @@ Dynamic NodeAccess_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 ::haxe::xml::Fast NodeAccess_obj::resolve( ::String name){
-	HX_STACK_PUSH("NodeAccess::resolve","/usr/lib/haxe/std/haxe/xml/Fast.hx",35);
+	HX_STACK_PUSH("NodeAccess::resolve","/usr/lib/haxe/std/haxe/xml/Fast.hx",32);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(name,"name");
-	HX_STACK_LINE(36)
+	HX_STACK_LINE(33)
 	::Xml x = this->__x->elementsNamed(name)->__Field(HX_CSTRING("next"),true)();		HX_STACK_VAR(x,"x");
-	HX_STACK_LINE(37)
+	HX_STACK_LINE(34)
 	if (((x == null()))){
-		HX_STACK_LINE(38)
-		::String xname = (  (((this->__x->nodeType == ::Xml_obj::Document))) ? ::String(HX_CSTRING("Document")) : ::String(this->__x->getNodeName()) );		HX_STACK_VAR(xname,"xname");
-		HX_STACK_LINE(39)
+		HX_STACK_LINE(35)
+		::String xname = (  (((this->__x->nodeType == ::Xml_obj::Document))) ? ::String(HX_CSTRING("Document")) : ::String(this->__x->get_nodeName()) );		HX_STACK_VAR(xname,"xname");
+		HX_STACK_LINE(36)
 		hx::Throw (((xname + HX_CSTRING(" is missing element ")) + name));
 	}
-	HX_STACK_LINE(41)
+	HX_STACK_LINE(38)
 	return ::haxe::xml::Fast_obj::__new(x);
 }
 
@@ -131,7 +131,7 @@ Class NodeAccess_obj::__mClass;
 
 void NodeAccess_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("haxe.xml._Fast.NodeAccess"), hx::TCanCast< NodeAccess_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("haxe.xml._Fast.NodeAccess"), hx::TCanCast< NodeAccess_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

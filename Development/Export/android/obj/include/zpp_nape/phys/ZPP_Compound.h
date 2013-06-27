@@ -24,7 +24,7 @@ namespace zpp_nape{
 namespace phys{
 
 
-class ZPP_Compound_obj : public ::zpp_nape::phys::ZPP_Interactor_obj{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Compound_obj : public ::zpp_nape::phys::ZPP_Interactor_obj{
 	public:
 		typedef ::zpp_nape::phys::ZPP_Interactor_obj super;
 		typedef ZPP_Compound_obj OBJ_;
@@ -44,7 +44,7 @@ class ZPP_Compound_obj : public ::zpp_nape::phys::ZPP_Interactor_obj{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("ZPP_Compound"); }
 
-		virtual ::nape::phys::Compound copy( Array< ::zpp_nape::constraint::ZPP_CopyHelper > dict,Array< ::zpp_nape::constraint::ZPP_CopyHelper > todo);
+		virtual ::nape::phys::Compound copy( Array< ::Dynamic > dict,Array< ::Dynamic > todo);
 		Dynamic copy_dyn();
 
 		virtual Void compounds_modifiable( );
@@ -86,16 +86,16 @@ class ZPP_Compound_obj : public ::zpp_nape::phys::ZPP_Interactor_obj{
 		virtual Void __imutable_midstep( ::String name);
 		Dynamic __imutable_midstep_dyn();
 
-		::zpp_nape::space::ZPP_Space space; /* REM */ 
-		::zpp_nape::phys::ZPP_Compound compound; /* REM */ 
-		int depth; /* REM */ 
-		::nape::phys::CompoundList wrap_compounds; /* REM */ 
-		::nape::constraint::ConstraintList wrap_constraints; /* REM */ 
-		::nape::phys::BodyList wrap_bodies; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Compound compounds; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Constraint constraints; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Body bodies; /* REM */ 
-		::nape::phys::Compound outer; /* REM */ 
+		::zpp_nape::space::ZPP_Space space;
+		::zpp_nape::phys::ZPP_Compound compound;
+		int depth;
+		::nape::phys::CompoundList wrap_compounds;
+		::nape::constraint::ConstraintList wrap_constraints;
+		::nape::phys::BodyList wrap_bodies;
+		::zpp_nape::util::ZNPList_ZPP_Compound compounds;
+		::zpp_nape::util::ZNPList_ZPP_Constraint constraints;
+		::zpp_nape::util::ZNPList_ZPP_Body bodies;
+		::nape::phys::Compound outer;
 };
 
 } // end namespace zpp_nape

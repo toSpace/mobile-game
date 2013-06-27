@@ -1,9 +1,9 @@
 //nme
-import nme.display.Sprite;
-import nme.events.Event;
-import nme.events.EventDispatcher;
-import nme.events.MouseEvent;
-import nme.geom.Point;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.EventDispatcher;
+import flash.events.MouseEvent;
+import flash.geom.Point;
 
 //nape
 import nape.space.Space;

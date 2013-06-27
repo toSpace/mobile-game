@@ -19,11 +19,11 @@ import nape.phys.Body;
 import nape.phys.BodyType;
 import nape.shape.Polygon;
 
-import nme.display.Bitmap;
-import nme.display.BitmapData;
-import nme.display.DisplayObject;
-import nme.display.Sprite;
-import nme.display.StageQuality;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.DisplayObject;
+import flash.display.Sprite;
+import flash.display.StageQuality;
 
 class BitmapDataIso #if flash implements IsoFunction #end {
     public var bitmap:BitmapData;

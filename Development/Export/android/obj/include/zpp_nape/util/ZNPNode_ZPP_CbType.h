@@ -11,7 +11,7 @@ namespace zpp_nape{
 namespace util{
 
 
-class ZNPNode_ZPP_CbType_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZNPNode_ZPP_CbType_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZNPNode_ZPP_CbType_obj OBJ_;
@@ -34,15 +34,15 @@ class ZNPNode_ZPP_CbType_obj : public hx::Object{
 		virtual ::zpp_nape::callbacks::ZPP_CbType elem( );
 		Dynamic elem_dyn();
 
-		::zpp_nape::callbacks::ZPP_CbType elt; /* REM */ 
+		::zpp_nape::callbacks::ZPP_CbType elt;
 		virtual Void free( );
 		Dynamic free_dyn();
 
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
-		::zpp_nape::util::ZNPNode_ZPP_CbType next; /* REM */ 
-		static ::zpp_nape::util::ZNPNode_ZPP_CbType zpp_pool; /* REM */ 
+		::zpp_nape::util::ZNPNode_ZPP_CbType next;
+		static ::zpp_nape::util::ZNPNode_ZPP_CbType zpp_pool;
 };
 
 } // end namespace zpp_nape

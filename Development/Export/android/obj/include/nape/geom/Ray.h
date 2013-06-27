@@ -13,7 +13,7 @@ namespace nape{
 namespace geom{
 
 
-class Ray_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Ray_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Ray_obj OBJ_;
@@ -48,26 +48,22 @@ class Ray_obj : public hx::Object{
 		virtual Float get_maxDistance( );
 		Dynamic get_maxDistance_dyn();
 
-		Float maxDistance; /* REM */ 
 		virtual ::nape::geom::Vec2 set_direction( ::nape::geom::Vec2 direction);
 		Dynamic set_direction_dyn();
 
 		virtual ::nape::geom::Vec2 get_direction( );
 		Dynamic get_direction_dyn();
 
-		::nape::geom::Vec2 direction; /* REM */ 
 		virtual ::nape::geom::Vec2 set_origin( ::nape::geom::Vec2 origin);
 		Dynamic set_origin_dyn();
 
 		virtual ::nape::geom::Vec2 get_origin( );
 		Dynamic get_origin_dyn();
 
-		::nape::geom::Vec2 origin; /* REM */ 
 		virtual Dynamic get_userData( );
 		Dynamic get_userData_dyn();
 
-		Dynamic userData; /* REM */ 
-		::zpp_nape::geom::ZPP_Ray zpp_inner; /* REM */ 
+		::zpp_nape::geom::ZPP_Ray zpp_inner;
 		static ::nape::geom::Ray fromSegment( ::nape::geom::Vec2 start,::nape::geom::Vec2 end);
 		static Dynamic fromSegment_dyn();
 

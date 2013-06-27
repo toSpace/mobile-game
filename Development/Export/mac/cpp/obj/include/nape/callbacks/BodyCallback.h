@@ -14,7 +14,7 @@ namespace nape{
 namespace callbacks{
 
 
-class BodyCallback_obj : public ::nape::callbacks::Callback_obj{
+class HXCPP_CLASS_ATTRIBUTES  BodyCallback_obj : public ::nape::callbacks::Callback_obj{
 	public:
 		typedef ::nape::callbacks::Callback_obj super;
 		typedef BodyCallback_obj OBJ_;
@@ -39,7 +39,6 @@ class BodyCallback_obj : public ::nape::callbacks::Callback_obj{
 		virtual ::nape::phys::Body get_body( );
 		Dynamic get_body_dyn();
 
-		::nape::phys::Body body; /* REM */ 
 };
 
 } // end namespace nape

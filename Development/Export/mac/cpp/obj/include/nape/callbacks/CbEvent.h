@@ -10,7 +10,7 @@ namespace nape{
 namespace callbacks{
 
 
-class CbEvent_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  CbEvent_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef CbEvent_obj OBJ_;
@@ -33,31 +33,24 @@ class CbEvent_obj : public hx::Object{
 		virtual ::String toString( );
 		Dynamic toString_dyn();
 
-		static ::nape::callbacks::CbEvent BEGIN; /* REM */ 
 		static ::nape::callbacks::CbEvent get_BEGIN( );
 		static Dynamic get_BEGIN_dyn();
 
-		static ::nape::callbacks::CbEvent ONGOING; /* REM */ 
 		static ::nape::callbacks::CbEvent get_ONGOING( );
 		static Dynamic get_ONGOING_dyn();
 
-		static ::nape::callbacks::CbEvent END; /* REM */ 
 		static ::nape::callbacks::CbEvent get_END( );
 		static Dynamic get_END_dyn();
 
-		static ::nape::callbacks::CbEvent WAKE; /* REM */ 
 		static ::nape::callbacks::CbEvent get_WAKE( );
 		static Dynamic get_WAKE_dyn();
 
-		static ::nape::callbacks::CbEvent SLEEP; /* REM */ 
 		static ::nape::callbacks::CbEvent get_SLEEP( );
 		static Dynamic get_SLEEP_dyn();
 
-		static ::nape::callbacks::CbEvent BREAK; /* REM */ 
 		static ::nape::callbacks::CbEvent get_BREAK( );
 		static Dynamic get_BREAK_dyn();
 
-		static ::nape::callbacks::CbEvent PRE; /* REM */ 
 		static ::nape::callbacks::CbEvent get_PRE( );
 		static Dynamic get_PRE_dyn();
 

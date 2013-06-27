@@ -85,9 +85,6 @@ HX_STACK_PUSH("ZPP_Edge::new","zpp_nape/shape/Edge.hx",174);
 		this->lnormx = (int)0;
 		HX_STACK_LINE(301)
 		this->lnormy = (int)0;
-		HX_STACK_LINE(302)
-		{
-		}
 		HX_STACK_LINE(310)
 		{
 		}
@@ -98,9 +95,6 @@ HX_STACK_PUSH("ZPP_Edge::new","zpp_nape/shape/Edge.hx",174);
 		this->gnormx = (int)0;
 		HX_STACK_LINE(321)
 		this->gnormy = (int)0;
-		HX_STACK_LINE(322)
-		{
-		}
 		HX_STACK_LINE(330)
 		{
 		}
@@ -207,9 +201,6 @@ Void ZPP_Edge_obj::getgnorm( ){
 										HX_STACK_LINE(294)
 										{
 										}
-										HX_STACK_LINE(294)
-										{
-										}
 									}
 									HX_STACK_LINE(294)
 									return ret1;
@@ -238,7 +229,7 @@ Void ZPP_Edge_obj::getgnorm( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(294)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(294)
 								_this->_isimmutable();
 							}
@@ -262,7 +253,7 @@ Void ZPP_Edge_obj::getgnorm( ){
 										HX_STACK_LINE(294)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(294)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(294)
 											_this->_validate();
 										}
@@ -287,7 +278,7 @@ Void ZPP_Edge_obj::getgnorm( ){
 										HX_STACK_LINE(294)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(294)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(294)
 											_this->_validate();
 										}
@@ -309,16 +300,13 @@ Void ZPP_Edge_obj::getgnorm( ){
 								HX_STACK_LINE(294)
 								{
 								}
-								HX_STACK_LINE(294)
-								{
-								}
 							}
 							HX_STACK_LINE(294)
 							{
 								HX_STACK_LINE(294)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(294)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(294)
 									_this->_invalidate(_this);
 								}
@@ -426,9 +414,6 @@ Void ZPP_Edge_obj::getlnorm( ){
 										HX_STACK_LINE(289)
 										{
 										}
-										HX_STACK_LINE(289)
-										{
-										}
 									}
 									HX_STACK_LINE(289)
 									return ret1;
@@ -457,7 +442,7 @@ Void ZPP_Edge_obj::getlnorm( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(289)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(289)
 								_this->_isimmutable();
 							}
@@ -481,7 +466,7 @@ Void ZPP_Edge_obj::getlnorm( ){
 										HX_STACK_LINE(289)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(289)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(289)
 											_this->_validate();
 										}
@@ -506,7 +491,7 @@ Void ZPP_Edge_obj::getlnorm( ){
 										HX_STACK_LINE(289)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(289)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(289)
 											_this->_validate();
 										}
@@ -528,16 +513,13 @@ Void ZPP_Edge_obj::getlnorm( ){
 								HX_STACK_LINE(289)
 								{
 								}
-								HX_STACK_LINE(289)
-								{
-								}
 							}
 							HX_STACK_LINE(289)
 							{
 								HX_STACK_LINE(289)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(289)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(289)
 									_this->_invalidate(_this);
 								}
@@ -608,9 +590,6 @@ Void ZPP_Edge_obj::gnorm_validate( ){
 								HX_STACK_LINE(266)
 								_this1->axisy = ::Math_obj::cos(_this1->rot);
 								HX_STACK_LINE(266)
-								{
-								}
-								HX_STACK_LINE(266)
 								Dynamic();
 							}
 						}
@@ -637,9 +616,6 @@ Void ZPP_Edge_obj::gnorm_validate( ){
 										_this1->axisx = ::Math_obj::sin(_this1->rot);
 										HX_STACK_LINE(266)
 										_this1->axisy = ::Math_obj::cos(_this1->rot);
-										HX_STACK_LINE(266)
-										{
-										}
 										HX_STACK_LINE(266)
 										Dynamic();
 									}
@@ -717,9 +693,6 @@ Void ZPP_Edge_obj::gnorm_validate( ){
 									HX_STACK_LINE(266)
 									{
 									}
-									HX_STACK_LINE(266)
-									{
-									}
 								}
 								HX_STACK_LINE(266)
 								e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -761,9 +734,6 @@ Void ZPP_Edge_obj::gnorm_validate( ){
 								HX_STACK_LINE(266)
 								{
 								}
-								HX_STACK_LINE(266)
-								{
-								}
 							}
 							HX_STACK_LINE(266)
 							e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -780,9 +750,6 @@ Void ZPP_Edge_obj::gnorm_validate( ){
 			this->wrap_gnorm->zpp_inner->x = this->gnormx;
 			HX_STACK_LINE(269)
 			this->wrap_gnorm->zpp_inner->y = this->gnormy;
-			HX_STACK_LINE(270)
-			{
-			}
 			HX_STACK_LINE(278)
 			{
 			}
@@ -811,9 +778,6 @@ Void ZPP_Edge_obj::lnorm_validate( ){
 			this->wrap_lnorm->zpp_inner->x = this->lnormx;
 			HX_STACK_LINE(242)
 			this->wrap_lnorm->zpp_inner->y = this->lnormy;
-			HX_STACK_LINE(243)
-			{
-			}
 			HX_STACK_LINE(251)
 			{
 			}
@@ -1090,7 +1054,7 @@ Class ZPP_Edge_obj::__mClass;
 
 void ZPP_Edge_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.shape.ZPP_Edge"), hx::TCanCast< ZPP_Edge_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.shape.ZPP_Edge"), hx::TCanCast< ZPP_Edge_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

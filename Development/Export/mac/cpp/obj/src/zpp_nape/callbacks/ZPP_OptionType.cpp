@@ -250,9 +250,6 @@ Void ZPP_OptionType_obj::append_type( ::zpp_nape::util::ZNPList_ZPP_CbType list,
 						{
 							HX_STACK_LINE(268)
 							::zpp_nape::util::ZNPList_ZPP_CbType _this = this->includes;		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(268)
-							{
-							}
 							struct _Function_6_1{
 								inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &val){
 									HX_STACK_PUSH("*::closure","zpp_nape/callbacks/OptionType.hx",268);
@@ -361,9 +358,6 @@ Void ZPP_OptionType_obj::append_type( ::zpp_nape::util::ZNPList_ZPP_CbType list,
 						{
 							HX_STACK_LINE(280)
 							::zpp_nape::util::ZNPList_ZPP_CbType _this = this->excludes;		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(280)
-							{
-							}
 							struct _Function_6_1{
 								inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &val){
 									HX_STACK_PUSH("*::closure","zpp_nape/callbacks/OptionType.hx",280);
@@ -479,9 +473,6 @@ Void ZPP_OptionType_obj::effect_change( ::zpp_nape::callbacks::ZPP_CbType val,bo
 				{
 					HX_STACK_LINE(240)
 					::zpp_nape::util::ZNPList_ZPP_CbType _this = this->includes;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(240)
-					{
-					}
 					struct _Function_4_1{
 						inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &val){
 							HX_STACK_PUSH("*::closure","zpp_nape/callbacks/OptionType.hx",240);
@@ -573,9 +564,6 @@ Void ZPP_OptionType_obj::effect_change( ::zpp_nape::callbacks::ZPP_CbType val,bo
 				{
 					HX_STACK_LINE(258)
 					::zpp_nape::util::ZNPList_ZPP_CbType _this = this->excludes;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(258)
-					{
-					}
 					struct _Function_4_1{
 						inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &val){
 							HX_STACK_PUSH("*::closure","zpp_nape/callbacks/OptionType.hx",258);
@@ -890,7 +878,7 @@ Class ZPP_OptionType_obj::__mClass;
 
 void ZPP_OptionType_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.callbacks.ZPP_OptionType"), hx::TCanCast< ZPP_OptionType_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.callbacks.ZPP_OptionType"), hx::TCanCast< ZPP_OptionType_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

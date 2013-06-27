@@ -126,8 +126,6 @@ Dynamic ArbiterType_obj::__Create(hx::DynamicArray inArgs)
 
 HX_DEFINE_DYNAMIC_FUNC0(ArbiterType_obj,toString,return )
 
-::nape::dynamics::ArbiterType ArbiterType_obj::COLLISION;
-
 ::nape::dynamics::ArbiterType ArbiterType_obj::get_COLLISION( ){
 	HX_STACK_PUSH("ArbiterType::get_COLLISION","nape/dynamics/ArbiterType.hx",202);
 	HX_STACK_LINE(203)
@@ -146,8 +144,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ArbiterType_obj,toString,return )
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(ArbiterType_obj,get_COLLISION,return )
 
-::nape::dynamics::ArbiterType ArbiterType_obj::SENSOR;
-
 ::nape::dynamics::ArbiterType ArbiterType_obj::get_SENSOR( ){
 	HX_STACK_PUSH("ArbiterType::get_SENSOR","nape/dynamics/ArbiterType.hx",215);
 	HX_STACK_LINE(216)
@@ -165,8 +161,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(ArbiterType_obj,get_COLLISION,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(ArbiterType_obj,get_SENSOR,return )
-
-::nape::dynamics::ArbiterType ArbiterType_obj::FLUID;
 
 ::nape::dynamics::ArbiterType ArbiterType_obj::get_FLUID( ){
 	HX_STACK_PUSH("ArbiterType::get_FLUID","nape/dynamics/ArbiterType.hx",228);
@@ -205,16 +199,16 @@ Dynamic ArbiterType_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"FLUID") ) { return inCallProp ? get_FLUID() : FLUID; }
+		if (HX_FIELD_EQ(inName,"FLUID") ) { return get_FLUID(); }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"SENSOR") ) { return inCallProp ? get_SENSOR() : SENSOR; }
+		if (HX_FIELD_EQ(inName,"SENSOR") ) { return get_SENSOR(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
 		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"COLLISION") ) { return inCallProp ? get_COLLISION() : COLLISION; }
+		if (HX_FIELD_EQ(inName,"COLLISION") ) { return get_COLLISION(); }
 		if (HX_FIELD_EQ(inName,"get_FLUID") ) { return get_FLUID_dyn(); }
 		break;
 	case 10:
@@ -228,16 +222,6 @@ Dynamic ArbiterType_obj::__Field(const ::String &inName,bool inCallProp)
 
 Dynamic ArbiterType_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 5:
-		if (HX_FIELD_EQ(inName,"FLUID") ) { FLUID=inValue.Cast< ::nape::dynamics::ArbiterType >(); return inValue; }
-		break;
-	case 6:
-		if (HX_FIELD_EQ(inName,"SENSOR") ) { SENSOR=inValue.Cast< ::nape::dynamics::ArbiterType >(); return inValue; }
-		break;
-	case 9:
-		if (HX_FIELD_EQ(inName,"COLLISION") ) { COLLISION=inValue.Cast< ::nape::dynamics::ArbiterType >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
@@ -247,11 +231,8 @@ void ArbiterType_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("COLLISION"),
 	HX_CSTRING("get_COLLISION"),
-	HX_CSTRING("SENSOR"),
 	HX_CSTRING("get_SENSOR"),
-	HX_CSTRING("FLUID"),
 	HX_CSTRING("get_FLUID"),
 	String(null()) };
 
@@ -261,23 +242,17 @@ static ::String sMemberFields[] = {
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(ArbiterType_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(ArbiterType_obj::COLLISION,"COLLISION");
-	HX_MARK_MEMBER_NAME(ArbiterType_obj::SENSOR,"SENSOR");
-	HX_MARK_MEMBER_NAME(ArbiterType_obj::FLUID,"FLUID");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(ArbiterType_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(ArbiterType_obj::COLLISION,"COLLISION");
-	HX_VISIT_MEMBER_NAME(ArbiterType_obj::SENSOR,"SENSOR");
-	HX_VISIT_MEMBER_NAME(ArbiterType_obj::FLUID,"FLUID");
 };
 
 Class ArbiterType_obj::__mClass;
 
 void ArbiterType_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.dynamics.ArbiterType"), hx::TCanCast< ArbiterType_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.dynamics.ArbiterType"), hx::TCanCast< ArbiterType_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

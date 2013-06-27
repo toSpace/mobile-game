@@ -402,7 +402,7 @@ Class ZPP_BodyList_obj::__mClass;
 
 void ZPP_BodyList_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_BodyList"), hx::TCanCast< ZPP_BodyList_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_BodyList"), hx::TCanCast< ZPP_BodyList_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

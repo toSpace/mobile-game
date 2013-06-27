@@ -11,7 +11,7 @@ namespace zpp_nape{
 namespace util{
 
 
-class ZPP_Set_ZPP_CbSet_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Set_ZPP_CbSet_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Set_ZPP_CbSet_obj OBJ_;
@@ -106,14 +106,14 @@ class ZPP_Set_ZPP_CbSet_obj : public hx::Object{
 		virtual bool verify( );
 		Dynamic verify_dyn();
 
-		int colour; /* REM */ 
-		::zpp_nape::util::ZPP_Set_ZPP_CbSet parent; /* REM */ 
-		::zpp_nape::util::ZPP_Set_ZPP_CbSet next; /* REM */ 
-		::zpp_nape::util::ZPP_Set_ZPP_CbSet prev; /* REM */ 
-		::zpp_nape::callbacks::ZPP_CbSet data; /* REM */ 
-		Dynamic swapped; /* REM */ 
+		int colour;
+		::zpp_nape::util::ZPP_Set_ZPP_CbSet parent;
+		::zpp_nape::util::ZPP_Set_ZPP_CbSet next;
+		::zpp_nape::util::ZPP_Set_ZPP_CbSet prev;
+		::zpp_nape::callbacks::ZPP_CbSet data;
+		Dynamic swapped;
 		Dynamic &swapped_dyn() { return swapped;}
-		Dynamic lt; /* REM */ 
+		Dynamic lt;
 		Dynamic &lt_dyn() { return lt;}
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
@@ -121,7 +121,7 @@ class ZPP_Set_ZPP_CbSet_obj : public hx::Object{
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		static ::zpp_nape::util::ZPP_Set_ZPP_CbSet zpp_pool; /* REM */ 
+		static ::zpp_nape::util::ZPP_Set_ZPP_CbSet zpp_pool;
 };
 
 } // end namespace zpp_nape

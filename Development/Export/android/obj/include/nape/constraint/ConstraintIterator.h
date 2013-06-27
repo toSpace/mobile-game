@@ -12,7 +12,7 @@ namespace nape{
 namespace constraint{
 
 
-class ConstraintIterator_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ConstraintIterator_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ConstraintIterator_obj OBJ_;
@@ -38,11 +38,11 @@ class ConstraintIterator_obj : public hx::Object{
 		virtual bool hasNext( );
 		Dynamic hasNext_dyn();
 
-		::nape::constraint::ConstraintIterator zpp_next; /* REM */ 
-		bool zpp_critical; /* REM */ 
-		int zpp_i; /* REM */ 
-		::nape::constraint::ConstraintList zpp_inner; /* REM */ 
-		static ::nape::constraint::ConstraintIterator zpp_pool; /* REM */ 
+		::nape::constraint::ConstraintIterator zpp_next;
+		bool zpp_critical;
+		int zpp_i;
+		::nape::constraint::ConstraintList zpp_inner;
+		static ::nape::constraint::ConstraintIterator zpp_pool;
 		static ::nape::constraint::ConstraintIterator get( ::nape::constraint::ConstraintList list);
 		static Dynamic get_dyn();
 

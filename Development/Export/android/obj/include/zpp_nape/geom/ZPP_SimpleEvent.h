@@ -13,7 +13,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_SimpleEvent_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_SimpleEvent_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_SimpleEvent_obj OBJ_;
@@ -39,19 +39,19 @@ class ZPP_SimpleEvent_obj : public hx::Object{
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		::zpp_nape::geom::ZPP_SimpleEvent next; /* REM */ 
-		::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent node; /* REM */ 
-		::zpp_nape::geom::ZPP_SimpleSeg segment2; /* REM */ 
-		::zpp_nape::geom::ZPP_SimpleSeg segment; /* REM */ 
-		::zpp_nape::geom::ZPP_SimpleVert vertex; /* REM */ 
-		int type; /* REM */ 
+		::zpp_nape::geom::ZPP_SimpleEvent next;
+		::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent node;
+		::zpp_nape::geom::ZPP_SimpleSeg segment2;
+		::zpp_nape::geom::ZPP_SimpleSeg segment;
+		::zpp_nape::geom::ZPP_SimpleVert vertex;
+		int type;
 		static Void swap_nodes( ::zpp_nape::geom::ZPP_SimpleEvent a,::zpp_nape::geom::ZPP_SimpleEvent b);
 		static Dynamic swap_nodes_dyn();
 
 		static bool less_xy( ::zpp_nape::geom::ZPP_SimpleEvent a,::zpp_nape::geom::ZPP_SimpleEvent b);
 		static Dynamic less_xy_dyn();
 
-		static ::zpp_nape::geom::ZPP_SimpleEvent zpp_pool; /* REM */ 
+		static ::zpp_nape::geom::ZPP_SimpleEvent zpp_pool;
 		static ::zpp_nape::geom::ZPP_SimpleEvent get( ::zpp_nape::geom::ZPP_SimpleVert v);
 		static Dynamic get_dyn();
 

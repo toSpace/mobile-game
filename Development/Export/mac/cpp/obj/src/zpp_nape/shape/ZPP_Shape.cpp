@@ -1,10 +1,10 @@
 #include <hxcpp.h>
 
-#ifndef INCLUDED_hxMath
-#include <hxMath.h>
-#endif
 #ifndef INCLUDED_Reflect
 #include <Reflect.h>
+#endif
+#ifndef INCLUDED_hxMath
+#include <hxMath.h>
 #endif
 #ifndef INCLUDED_nape_dynamics_InteractionFilter
 #include <nape/dynamics/InteractionFilter.h>
@@ -181,9 +181,6 @@ HX_STACK_PUSH("ZPP_Shape::new","zpp_nape/shape/Shape.hx",174);
 					HX_STACK_LINE(375)
 					{
 					}
-					HX_STACK_LINE(375)
-					{
-					}
 				}
 				HX_STACK_LINE(375)
 				{
@@ -191,9 +188,6 @@ HX_STACK_PUSH("ZPP_Shape::new","zpp_nape/shape/Shape.hx",174);
 					ret->maxx = (int)0;
 					HX_STACK_LINE(375)
 					ret->maxy = (int)0;
-					HX_STACK_LINE(375)
-					{
-					}
 					HX_STACK_LINE(375)
 					{
 					}
@@ -220,9 +214,6 @@ HX_STACK_PUSH("ZPP_Shape::new","zpp_nape/shape/Shape.hx",174);
 		this->localCOMx = (int)0;
 		HX_STACK_LINE(382)
 		this->localCOMy = (int)0;
-		HX_STACK_LINE(383)
-		{
-		}
 		HX_STACK_LINE(391)
 		{
 		}
@@ -233,9 +224,6 @@ HX_STACK_PUSH("ZPP_Shape::new","zpp_nape/shape/Shape.hx",174);
 		this->worldCOMx = (int)0;
 		HX_STACK_LINE(402)
 		this->worldCOMy = (int)0;
-		HX_STACK_LINE(403)
-		{
-		}
 		HX_STACK_LINE(411)
 		{
 		}
@@ -323,9 +311,6 @@ Dynamic ZPP_Shape_obj::__Create(hx::DynamicArray inArgs)
 			ret->aabb->minx = this->aabb->minx;
 			HX_STACK_LINE(499)
 			ret->aabb->miny = this->aabb->miny;
-			HX_STACK_LINE(500)
-			{
-			}
 			HX_STACK_LINE(508)
 			{
 			}
@@ -336,9 +321,6 @@ Dynamic ZPP_Shape_obj::__Create(hx::DynamicArray inArgs)
 			ret->aabb->maxx = this->aabb->maxx;
 			HX_STACK_LINE(519)
 			ret->aabb->maxy = this->aabb->maxy;
-			HX_STACK_LINE(520)
-			{
-			}
 			HX_STACK_LINE(528)
 			{
 			}
@@ -357,9 +339,6 @@ Dynamic ZPP_Shape_obj::__Create(hx::DynamicArray inArgs)
 	{
 		HX_STACK_LINE(540)
 		::zpp_nape::phys::ZPP_Material o = ret->material;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(541)
-		{
-		}
 		HX_STACK_LINE(549)
 		o->outer = null();
 		HX_STACK_LINE(550)
@@ -371,9 +350,6 @@ Dynamic ZPP_Shape_obj::__Create(hx::DynamicArray inArgs)
 	{
 		HX_STACK_LINE(557)
 		::zpp_nape::dynamics::ZPP_InteractionFilter o = ret->filter;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(558)
-		{
-		}
 		HX_STACK_LINE(566)
 		o->outer = null();
 		HX_STACK_LINE(567)
@@ -652,9 +628,6 @@ Void ZPP_Shape_obj::aabb_validate( ){
 										HX_STACK_LINE(368)
 										_this1->localCOMy = _this1->lverts->next->y;
 										HX_STACK_LINE(368)
-										{
-										}
-										HX_STACK_LINE(368)
 										Dynamic();
 									}
 									else{
@@ -669,17 +642,11 @@ Void ZPP_Shape_obj::aabb_validate( ){
 												HX_STACK_LINE(368)
 												{
 												}
-												HX_STACK_LINE(368)
-												{
-												}
 											}
 											HX_STACK_LINE(368)
 											{
 												HX_STACK_LINE(368)
 												Float t = 1.0;		HX_STACK_VAR(t,"t");
-												HX_STACK_LINE(368)
-												{
-												}
 												HX_STACK_LINE(368)
 												hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 												HX_STACK_LINE(368)
@@ -689,9 +656,6 @@ Void ZPP_Shape_obj::aabb_validate( ){
 											{
 												HX_STACK_LINE(368)
 												Float t = 0.5;		HX_STACK_VAR(t,"t");
-												HX_STACK_LINE(368)
-												{
-												}
 												HX_STACK_LINE(368)
 												hx::MultEq(_this1->localCOMx,t);
 												HX_STACK_LINE(368)
@@ -705,9 +669,6 @@ Void ZPP_Shape_obj::aabb_validate( ){
 												_this1->localCOMx = (int)0;
 												HX_STACK_LINE(368)
 												_this1->localCOMy = (int)0;
-												HX_STACK_LINE(368)
-												{
-												}
 												HX_STACK_LINE(368)
 												{
 												}
@@ -790,9 +751,6 @@ Void ZPP_Shape_obj::aabb_validate( ){
 												HX_STACK_LINE(368)
 												Float t = area;		HX_STACK_VAR(t,"t");
 												HX_STACK_LINE(368)
-												{
-												}
-												HX_STACK_LINE(368)
 												hx::MultEq(_this1->localCOMx,t);
 												HX_STACK_LINE(368)
 												hx::MultEq(_this1->localCOMy,t);
@@ -816,9 +774,6 @@ Void ZPP_Shape_obj::aabb_validate( ){
 										HX_STACK_LINE(368)
 										_this1->axisy = ::Math_obj::cos(_this1->rot);
 										HX_STACK_LINE(368)
-										{
-										}
-										HX_STACK_LINE(368)
 										Dynamic();
 									}
 								}
@@ -836,12 +791,6 @@ Void ZPP_Shape_obj::aabb_validate( ){
 					Float rx = _this->radius;		HX_STACK_VAR(rx,"rx");
 					HX_STACK_LINE(368)
 					Float ry = _this->radius;		HX_STACK_VAR(ry,"ry");
-					HX_STACK_LINE(368)
-					{
-					}
-					HX_STACK_LINE(368)
-					{
-					}
 					HX_STACK_LINE(368)
 					{
 						HX_STACK_LINE(368)
@@ -882,9 +831,6 @@ Void ZPP_Shape_obj::aabb_validate( ){
 										_this1->axisx = ::Math_obj::sin(_this1->rot);
 										HX_STACK_LINE(368)
 										_this1->axisy = ::Math_obj::cos(_this1->rot);
-										HX_STACK_LINE(368)
-										{
-										}
 										HX_STACK_LINE(368)
 										Dynamic();
 									}
@@ -936,9 +882,6 @@ Void ZPP_Shape_obj::aabb_validate( ){
 						HX_STACK_LINE(368)
 						{
 						}
-						HX_STACK_LINE(368)
-						{
-						}
 					}
 					HX_STACK_LINE(368)
 					{
@@ -946,9 +889,6 @@ Void ZPP_Shape_obj::aabb_validate( ){
 						_this->aabb->maxx = p0->x;
 						HX_STACK_LINE(368)
 						_this->aabb->maxy = p0->y;
-						HX_STACK_LINE(368)
-						{
-						}
 						HX_STACK_LINE(368)
 						{
 						}
@@ -1211,9 +1151,6 @@ Void ZPP_Shape_obj::getworldCOM( ){
 							HX_STACK_LINE(296)
 							_this->localCOMy = _this->lverts->next->y;
 							HX_STACK_LINE(296)
-							{
-							}
-							HX_STACK_LINE(296)
 							Dynamic();
 						}
 						else{
@@ -1228,17 +1165,11 @@ Void ZPP_Shape_obj::getworldCOM( ){
 									HX_STACK_LINE(296)
 									{
 									}
-									HX_STACK_LINE(296)
-									{
-									}
 								}
 								HX_STACK_LINE(296)
 								{
 									HX_STACK_LINE(296)
 									Float t = 1.0;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(296)
-									{
-									}
 									HX_STACK_LINE(296)
 									hx::AddEq(_this->localCOMx,(_this->lverts->next->next->x * t));
 									HX_STACK_LINE(296)
@@ -1248,9 +1179,6 @@ Void ZPP_Shape_obj::getworldCOM( ){
 								{
 									HX_STACK_LINE(296)
 									Float t = 0.5;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(296)
-									{
-									}
 									HX_STACK_LINE(296)
 									hx::MultEq(_this->localCOMx,t);
 									HX_STACK_LINE(296)
@@ -1264,9 +1192,6 @@ Void ZPP_Shape_obj::getworldCOM( ){
 									_this->localCOMx = (int)0;
 									HX_STACK_LINE(296)
 									_this->localCOMy = (int)0;
-									HX_STACK_LINE(296)
-									{
-									}
 									HX_STACK_LINE(296)
 									{
 									}
@@ -1349,9 +1274,6 @@ Void ZPP_Shape_obj::getworldCOM( ){
 									HX_STACK_LINE(296)
 									Float t = area;		HX_STACK_VAR(t,"t");
 									HX_STACK_LINE(296)
-									{
-									}
-									HX_STACK_LINE(296)
 									hx::MultEq(_this->localCOMx,t);
 									HX_STACK_LINE(296)
 									hx::MultEq(_this->localCOMy,t);
@@ -1375,9 +1297,6 @@ Void ZPP_Shape_obj::getworldCOM( ){
 							HX_STACK_LINE(296)
 							_this->axisy = ::Math_obj::cos(_this->rot);
 							HX_STACK_LINE(296)
-							{
-							}
-							HX_STACK_LINE(296)
 							Dynamic();
 						}
 					}
@@ -1397,9 +1316,6 @@ Void ZPP_Shape_obj::getworldCOM( ){
 			this->wrap_worldCOM->zpp_inner->x = this->worldCOMx;
 			HX_STACK_LINE(299)
 			this->wrap_worldCOM->zpp_inner->y = this->worldCOMy;
-			HX_STACK_LINE(300)
-			{
-			}
 			HX_STACK_LINE(308)
 			{
 			}
@@ -1441,9 +1357,6 @@ Void ZPP_Shape_obj::validate_worldCOM( ){
 							HX_STACK_LINE(283)
 							_this->localCOMy = _this->lverts->next->y;
 							HX_STACK_LINE(283)
-							{
-							}
-							HX_STACK_LINE(283)
 							Dynamic();
 						}
 						else{
@@ -1458,17 +1371,11 @@ Void ZPP_Shape_obj::validate_worldCOM( ){
 									HX_STACK_LINE(283)
 									{
 									}
-									HX_STACK_LINE(283)
-									{
-									}
 								}
 								HX_STACK_LINE(283)
 								{
 									HX_STACK_LINE(283)
 									Float t = 1.0;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(283)
-									{
-									}
 									HX_STACK_LINE(283)
 									hx::AddEq(_this->localCOMx,(_this->lverts->next->next->x * t));
 									HX_STACK_LINE(283)
@@ -1478,9 +1385,6 @@ Void ZPP_Shape_obj::validate_worldCOM( ){
 								{
 									HX_STACK_LINE(283)
 									Float t = 0.5;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(283)
-									{
-									}
 									HX_STACK_LINE(283)
 									hx::MultEq(_this->localCOMx,t);
 									HX_STACK_LINE(283)
@@ -1494,9 +1398,6 @@ Void ZPP_Shape_obj::validate_worldCOM( ){
 									_this->localCOMx = (int)0;
 									HX_STACK_LINE(283)
 									_this->localCOMy = (int)0;
-									HX_STACK_LINE(283)
-									{
-									}
 									HX_STACK_LINE(283)
 									{
 									}
@@ -1579,9 +1480,6 @@ Void ZPP_Shape_obj::validate_worldCOM( ){
 									HX_STACK_LINE(283)
 									Float t = area;		HX_STACK_VAR(t,"t");
 									HX_STACK_LINE(283)
-									{
-									}
-									HX_STACK_LINE(283)
 									hx::MultEq(_this->localCOMx,t);
 									HX_STACK_LINE(283)
 									hx::MultEq(_this->localCOMy,t);
@@ -1604,9 +1502,6 @@ Void ZPP_Shape_obj::validate_worldCOM( ){
 							_this->axisx = ::Math_obj::sin(_this->rot);
 							HX_STACK_LINE(284)
 							_this->axisy = ::Math_obj::cos(_this->rot);
-							HX_STACK_LINE(284)
-							{
-							}
 							HX_STACK_LINE(284)
 							Dynamic();
 						}
@@ -1652,9 +1547,6 @@ Void ZPP_Shape_obj::validate_localCOM( ){
 					HX_STACK_LINE(274)
 					_this->localCOMy = _this->lverts->next->y;
 					HX_STACK_LINE(274)
-					{
-					}
-					HX_STACK_LINE(274)
 					Dynamic();
 				}
 				else{
@@ -1669,17 +1561,11 @@ Void ZPP_Shape_obj::validate_localCOM( ){
 							HX_STACK_LINE(274)
 							{
 							}
-							HX_STACK_LINE(274)
-							{
-							}
 						}
 						HX_STACK_LINE(274)
 						{
 							HX_STACK_LINE(274)
 							Float t = 1.0;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(274)
-							{
-							}
 							HX_STACK_LINE(274)
 							hx::AddEq(_this->localCOMx,(_this->lverts->next->next->x * t));
 							HX_STACK_LINE(274)
@@ -1689,9 +1575,6 @@ Void ZPP_Shape_obj::validate_localCOM( ){
 						{
 							HX_STACK_LINE(274)
 							Float t = 0.5;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(274)
-							{
-							}
 							HX_STACK_LINE(274)
 							hx::MultEq(_this->localCOMx,t);
 							HX_STACK_LINE(274)
@@ -1705,9 +1588,6 @@ Void ZPP_Shape_obj::validate_localCOM( ){
 							_this->localCOMx = (int)0;
 							HX_STACK_LINE(274)
 							_this->localCOMy = (int)0;
-							HX_STACK_LINE(274)
-							{
-							}
 							HX_STACK_LINE(274)
 							{
 							}
@@ -1789,9 +1669,6 @@ Void ZPP_Shape_obj::validate_localCOM( ){
 						{
 							HX_STACK_LINE(274)
 							Float t = area;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(274)
-							{
-							}
 							HX_STACK_LINE(274)
 							hx::MultEq(_this->localCOMx,t);
 							HX_STACK_LINE(274)
@@ -1929,9 +1806,6 @@ Void ZPP_Shape_obj::force_validate_aabb( ){
 				HX_STACK_LINE(246)
 				{
 				}
-				HX_STACK_LINE(246)
-				{
-				}
 			}
 			HX_STACK_LINE(246)
 			{
@@ -1939,9 +1813,6 @@ Void ZPP_Shape_obj::force_validate_aabb( ){
 				_this->aabb->maxx = p0->x;
 				HX_STACK_LINE(246)
 				_this->aabb->maxy = p0->y;
-				HX_STACK_LINE(246)
-				{
-				}
 				HX_STACK_LINE(246)
 				{
 				}
@@ -2040,9 +1911,6 @@ Void ZPP_Shape_obj::validate_aabb( ){
 										HX_STACK_LINE(237)
 										_this1->localCOMy = _this1->lverts->next->y;
 										HX_STACK_LINE(237)
-										{
-										}
-										HX_STACK_LINE(237)
 										Dynamic();
 									}
 									else{
@@ -2057,17 +1925,11 @@ Void ZPP_Shape_obj::validate_aabb( ){
 												HX_STACK_LINE(237)
 												{
 												}
-												HX_STACK_LINE(237)
-												{
-												}
 											}
 											HX_STACK_LINE(237)
 											{
 												HX_STACK_LINE(237)
 												Float t = 1.0;		HX_STACK_VAR(t,"t");
-												HX_STACK_LINE(237)
-												{
-												}
 												HX_STACK_LINE(237)
 												hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 												HX_STACK_LINE(237)
@@ -2077,9 +1939,6 @@ Void ZPP_Shape_obj::validate_aabb( ){
 											{
 												HX_STACK_LINE(237)
 												Float t = 0.5;		HX_STACK_VAR(t,"t");
-												HX_STACK_LINE(237)
-												{
-												}
 												HX_STACK_LINE(237)
 												hx::MultEq(_this1->localCOMx,t);
 												HX_STACK_LINE(237)
@@ -2093,9 +1952,6 @@ Void ZPP_Shape_obj::validate_aabb( ){
 												_this1->localCOMx = (int)0;
 												HX_STACK_LINE(237)
 												_this1->localCOMy = (int)0;
-												HX_STACK_LINE(237)
-												{
-												}
 												HX_STACK_LINE(237)
 												{
 												}
@@ -2178,9 +2034,6 @@ Void ZPP_Shape_obj::validate_aabb( ){
 												HX_STACK_LINE(237)
 												Float t = area;		HX_STACK_VAR(t,"t");
 												HX_STACK_LINE(237)
-												{
-												}
-												HX_STACK_LINE(237)
 												hx::MultEq(_this1->localCOMx,t);
 												HX_STACK_LINE(237)
 												hx::MultEq(_this1->localCOMy,t);
@@ -2204,9 +2057,6 @@ Void ZPP_Shape_obj::validate_aabb( ){
 										HX_STACK_LINE(237)
 										_this1->axisy = ::Math_obj::cos(_this1->rot);
 										HX_STACK_LINE(237)
-										{
-										}
-										HX_STACK_LINE(237)
 										Dynamic();
 									}
 								}
@@ -2224,12 +2074,6 @@ Void ZPP_Shape_obj::validate_aabb( ){
 					Float rx = _this->radius;		HX_STACK_VAR(rx,"rx");
 					HX_STACK_LINE(237)
 					Float ry = _this->radius;		HX_STACK_VAR(ry,"ry");
-					HX_STACK_LINE(237)
-					{
-					}
-					HX_STACK_LINE(237)
-					{
-					}
 					HX_STACK_LINE(237)
 					{
 						HX_STACK_LINE(237)
@@ -2270,9 +2114,6 @@ Void ZPP_Shape_obj::validate_aabb( ){
 										_this1->axisx = ::Math_obj::sin(_this1->rot);
 										HX_STACK_LINE(238)
 										_this1->axisy = ::Math_obj::cos(_this1->rot);
-										HX_STACK_LINE(238)
-										{
-										}
 										HX_STACK_LINE(238)
 										Dynamic();
 									}
@@ -2324,9 +2165,6 @@ Void ZPP_Shape_obj::validate_aabb( ){
 						HX_STACK_LINE(238)
 						{
 						}
-						HX_STACK_LINE(238)
-						{
-						}
 					}
 					HX_STACK_LINE(238)
 					{
@@ -2334,9 +2172,6 @@ Void ZPP_Shape_obj::validate_aabb( ){
 						_this->aabb->maxx = p0->x;
 						HX_STACK_LINE(238)
 						_this->aabb->maxy = p0->y;
-						HX_STACK_LINE(238)
-						{
-						}
 						HX_STACK_LINE(238)
 						{
 						}
@@ -2826,7 +2661,7 @@ Class ZPP_Shape_obj::__mClass;
 
 void ZPP_Shape_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.shape.ZPP_Shape"), hx::TCanCast< ZPP_Shape_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.shape.ZPP_Shape"), hx::TCanCast< ZPP_Shape_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

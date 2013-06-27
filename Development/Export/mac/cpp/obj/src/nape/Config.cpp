@@ -333,7 +333,7 @@ Class Config_obj::__mClass;
 
 void Config_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.Config"), hx::TCanCast< Config_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.Config"), hx::TCanCast< Config_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -12,7 +12,7 @@ namespace nape{
 namespace geom{
 
 
-class GeomVertexIterator_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  GeomVertexIterator_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef GeomVertexIterator_obj OBJ_;
@@ -38,7 +38,7 @@ class GeomVertexIterator_obj : public hx::Object{
 		virtual bool hasNext( );
 		Dynamic hasNext_dyn();
 
-		::zpp_nape::geom::ZPP_GeomVertexIterator zpp_inner; /* REM */ 
+		::zpp_nape::geom::ZPP_GeomVertexIterator zpp_inner;
 };
 
 } // end namespace nape

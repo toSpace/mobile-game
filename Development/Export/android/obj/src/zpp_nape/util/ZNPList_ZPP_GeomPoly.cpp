@@ -46,9 +46,6 @@ Dynamic ZNPList_ZPP_GeomPoly_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_PUSH("ZNPList_ZPP_GeomPoly::at","zpp_nape/util/Lists.hx",14339);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(14340)
-	{
-	}
 	HX_STACK_LINE(14348)
 	::zpp_nape::util::ZNPNode_ZPP_GeomPoly it = this->iterator_at(ind);		HX_STACK_VAR(it,"it");
 	HX_STACK_LINE(14349)
@@ -62,9 +59,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_GeomPoly_obj,at,return )
 	HX_STACK_PUSH("ZNPList_ZPP_GeomPoly::iterator_at","zpp_nape/util/Lists.hx",14326);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(14327)
-	{
-	}
 	HX_STACK_LINE(14335)
 	::zpp_nape::util::ZNPNode_ZPP_GeomPoly ret = this->head;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(14336)
@@ -114,9 +108,6 @@ bool ZNPList_ZPP_GeomPoly_obj::inlined_has( ::zpp_nape::geom::ZPP_GeomPoly obj){
 	HX_STACK_PUSH("ZNPList_ZPP_GeomPoly::inlined_has","zpp_nape/util/Lists.hx",14284);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(14285)
-	{
-	}
 	HX_STACK_LINE(14293)
 	bool ret;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(14294)
@@ -158,9 +149,6 @@ bool ZNPList_ZPP_GeomPoly_obj::has( ::zpp_nape::geom::ZPP_GeomPoly obj){
 		inline static bool Block( ::zpp_nape::util::ZNPList_ZPP_GeomPoly_obj *__this,::zpp_nape::geom::ZPP_GeomPoly &obj){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",14280);
 			{
-				HX_STACK_LINE(14280)
-				{
-				}
 				HX_STACK_LINE(14280)
 				bool ret;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(14280)
@@ -259,22 +247,13 @@ Void ZNPList_ZPP_GeomPoly_obj::inlined_clear( ){
 		HX_STACK_LINE(14252)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(14252)
-			{
-			}
-			HX_STACK_LINE(14252)
 			::zpp_nape::util::ZNPNode_ZPP_GeomPoly ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(14252)
 			this->head = ret->next;
 			HX_STACK_LINE(14252)
 			{
-			}
-			HX_STACK_LINE(14252)
-			{
 				HX_STACK_LINE(14252)
 				::zpp_nape::util::ZNPNode_ZPP_GeomPoly o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(14252)
-				{
-				}
 				HX_STACK_LINE(14252)
 				o->elt = null();
 				HX_STACK_LINE(14252)
@@ -308,22 +287,13 @@ Void ZNPList_ZPP_GeomPoly_obj::clear( ){
 		HX_STACK_LINE(14246)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(14246)
-			{
-			}
-			HX_STACK_LINE(14246)
 			::zpp_nape::util::ZNPNode_ZPP_GeomPoly ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(14246)
 			this->head = ret->next;
 			HX_STACK_LINE(14246)
 			{
-			}
-			HX_STACK_LINE(14246)
-			{
 				HX_STACK_LINE(14246)
 				::zpp_nape::util::ZNPNode_ZPP_GeomPoly o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(14246)
-				{
-				}
 				HX_STACK_LINE(14246)
 				o->elt = null();
 				HX_STACK_LINE(14246)
@@ -371,9 +341,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_GeomPoly_obj,splice,return )
 	HX_STACK_PUSH("ZNPList_ZPP_GeomPoly::inlined_erase","zpp_nape/util/Lists.hx",14195);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
-	HX_STACK_LINE(14196)
-	{
-	}
 	HX_STACK_LINE(14204)
 	::zpp_nape::util::ZNPNode_ZPP_GeomPoly old;		HX_STACK_VAR(old,"old");
 	HX_STACK_LINE(14205)
@@ -405,16 +372,10 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_GeomPoly_obj,splice,return )
 			this->pushmod = true;
 		}
 	}
-	HX_STACK_LINE(14218)
-	{
-	}
 	HX_STACK_LINE(14219)
 	{
 		HX_STACK_LINE(14220)
 		::zpp_nape::util::ZNPNode_ZPP_GeomPoly o = old;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(14221)
-		{
-		}
 		HX_STACK_LINE(14229)
 		o->elt = null();
 		HX_STACK_LINE(14230)
@@ -440,12 +401,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_GeomPoly_obj,inlined_erase,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
 	struct _Function_1_1{
-		inline static ::zpp_nape::util::ZNPNode_ZPP_GeomPoly Block( ::zpp_nape::util::ZNPNode_ZPP_GeomPoly &pre,::zpp_nape::util::ZNPList_ZPP_GeomPoly_obj *__this){
+		inline static ::zpp_nape::util::ZNPNode_ZPP_GeomPoly Block( ::zpp_nape::util::ZNPList_ZPP_GeomPoly_obj *__this,::zpp_nape::util::ZNPNode_ZPP_GeomPoly &pre){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",14191);
 			{
-				HX_STACK_LINE(14191)
-				{
-				}
 				HX_STACK_LINE(14191)
 				::zpp_nape::util::ZNPNode_ZPP_GeomPoly old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(14191)
@@ -479,14 +437,8 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_GeomPoly_obj,inlined_erase,return )
 				}
 				HX_STACK_LINE(14191)
 				{
-				}
-				HX_STACK_LINE(14191)
-				{
 					HX_STACK_LINE(14191)
 					::zpp_nape::util::ZNPNode_ZPP_GeomPoly o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(14191)
-					{
-					}
 					HX_STACK_LINE(14191)
 					o->elt = null();
 					HX_STACK_LINE(14191)
@@ -507,7 +459,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_GeomPoly_obj,inlined_erase,return )
 		}
 	};
 	HX_STACK_LINE(14190)
-	return _Function_1_1::Block(pre,this);
+	return _Function_1_1::Block(this,pre);
 }
 
 
@@ -517,9 +469,6 @@ bool ZNPList_ZPP_GeomPoly_obj::inlined_try_remove( ::zpp_nape::geom::ZPP_GeomPol
 	HX_STACK_PUSH("ZNPList_ZPP_GeomPoly::inlined_try_remove","zpp_nape/util/Lists.hx",14167);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(14168)
-	{
-	}
 	HX_STACK_LINE(14176)
 	::zpp_nape::util::ZNPNode_ZPP_GeomPoly pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(14177)
@@ -532,9 +481,6 @@ bool ZNPList_ZPP_GeomPoly_obj::inlined_try_remove( ::zpp_nape::geom::ZPP_GeomPol
 		if (((cur->elt == obj))){
 			HX_STACK_LINE(14181)
 			{
-				HX_STACK_LINE(14181)
-				{
-				}
 				HX_STACK_LINE(14181)
 				::zpp_nape::util::ZNPNode_ZPP_GeomPoly old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(14181)
@@ -568,14 +514,8 @@ bool ZNPList_ZPP_GeomPoly_obj::inlined_try_remove( ::zpp_nape::geom::ZPP_GeomPol
 				}
 				HX_STACK_LINE(14181)
 				{
-				}
-				HX_STACK_LINE(14181)
-				{
 					HX_STACK_LINE(14181)
 					::zpp_nape::util::ZNPNode_ZPP_GeomPoly o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(14181)
-					{
-					}
 					HX_STACK_LINE(14181)
 					o->elt = null();
 					HX_STACK_LINE(14181)
@@ -614,99 +554,81 @@ Void ZNPList_ZPP_GeomPoly_obj::inlined_remove( ::zpp_nape::geom::ZPP_GeomPoly ob
 		HX_STACK_PUSH("ZNPList_ZPP_GeomPoly::inlined_remove","zpp_nape/util/Lists.hx",14154);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(14155)
-		{
-		}
 		HX_STACK_LINE(14163)
-		{
+		::zpp_nape::util::ZNPNode_ZPP_GeomPoly pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(14163)
+		::zpp_nape::util::ZNPNode_ZPP_GeomPoly cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(14163)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(14163)
+		while(((cur != null()))){
 			HX_STACK_LINE(14163)
-			{
-			}
-			HX_STACK_LINE(14163)
-			::zpp_nape::util::ZNPNode_ZPP_GeomPoly pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(14163)
-			::zpp_nape::util::ZNPNode_ZPP_GeomPoly cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(14163)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(14163)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(14163)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(14163)
+					::zpp_nape::util::ZNPNode_ZPP_GeomPoly old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(14163)
+					::zpp_nape::util::ZNPNode_ZPP_GeomPoly ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(14163)
+					if (((pre == null()))){
+						HX_STACK_LINE(14163)
+						old = this->head;
+						HX_STACK_LINE(14163)
+						ret1 = old->next;
+						HX_STACK_LINE(14163)
+						this->head = ret1;
+						HX_STACK_LINE(14163)
+						if (((this->head == null()))){
+							HX_STACK_LINE(14163)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(14163)
+						old = pre->next;
+						HX_STACK_LINE(14163)
+						ret1 = old->next;
+						HX_STACK_LINE(14163)
+						pre->next = ret1;
+						HX_STACK_LINE(14163)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(14163)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(14163)
 					{
 						HX_STACK_LINE(14163)
-						{
-						}
+						::zpp_nape::util::ZNPNode_ZPP_GeomPoly o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(14163)
-						::zpp_nape::util::ZNPNode_ZPP_GeomPoly old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(14163)
-						::zpp_nape::util::ZNPNode_ZPP_GeomPoly ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_ZPP_GeomPoly_obj::zpp_pool;
 						HX_STACK_LINE(14163)
-						if (((pre == null()))){
-							HX_STACK_LINE(14163)
-							old = this->head;
-							HX_STACK_LINE(14163)
-							ret1 = old->next;
-							HX_STACK_LINE(14163)
-							this->head = ret1;
-							HX_STACK_LINE(14163)
-							if (((this->head == null()))){
-								HX_STACK_LINE(14163)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(14163)
-							old = pre->next;
-							HX_STACK_LINE(14163)
-							ret1 = old->next;
-							HX_STACK_LINE(14163)
-							pre->next = ret1;
-							HX_STACK_LINE(14163)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(14163)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(14163)
-						{
-						}
-						HX_STACK_LINE(14163)
-						{
-							HX_STACK_LINE(14163)
-							::zpp_nape::util::ZNPNode_ZPP_GeomPoly o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(14163)
-							{
-							}
-							HX_STACK_LINE(14163)
-							o->elt = null();
-							HX_STACK_LINE(14163)
-							o->next = ::zpp_nape::util::ZNPNode_ZPP_GeomPoly_obj::zpp_pool;
-							HX_STACK_LINE(14163)
-							::zpp_nape::util::ZNPNode_ZPP_GeomPoly_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(14163)
-						this->modified = true;
-						HX_STACK_LINE(14163)
-						(this->length)--;
-						HX_STACK_LINE(14163)
-						this->pushmod = true;
-						HX_STACK_LINE(14163)
-						ret1;
+						::zpp_nape::util::ZNPNode_ZPP_GeomPoly_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(14163)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(14163)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(14163)
+					this->pushmod = true;
+					HX_STACK_LINE(14163)
+					ret1;
 				}
 				HX_STACK_LINE(14163)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(14163)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(14163)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(14163)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(14163)
+		ret;
 	}
 return null();
 }
@@ -718,9 +640,6 @@ bool ZNPList_ZPP_GeomPoly_obj::try_remove( ::zpp_nape::geom::ZPP_GeomPoly obj){
 	HX_STACK_PUSH("ZNPList_ZPP_GeomPoly::try_remove","zpp_nape/util/Lists.hx",14129);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(14130)
-	{
-	}
 	HX_STACK_LINE(14138)
 	::zpp_nape::util::ZNPNode_ZPP_GeomPoly pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(14139)
@@ -755,99 +674,81 @@ Void ZNPList_ZPP_GeomPoly_obj::remove( ::zpp_nape::geom::ZPP_GeomPoly obj){
 		HX_STACK_PUSH("ZNPList_ZPP_GeomPoly::remove","zpp_nape/util/Lists.hx",14118);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(14119)
-		{
-		}
 		HX_STACK_LINE(14127)
-		{
+		::zpp_nape::util::ZNPNode_ZPP_GeomPoly pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(14127)
+		::zpp_nape::util::ZNPNode_ZPP_GeomPoly cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(14127)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(14127)
+		while(((cur != null()))){
 			HX_STACK_LINE(14127)
-			{
-			}
-			HX_STACK_LINE(14127)
-			::zpp_nape::util::ZNPNode_ZPP_GeomPoly pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(14127)
-			::zpp_nape::util::ZNPNode_ZPP_GeomPoly cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(14127)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(14127)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(14127)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(14127)
+					::zpp_nape::util::ZNPNode_ZPP_GeomPoly old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(14127)
+					::zpp_nape::util::ZNPNode_ZPP_GeomPoly ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(14127)
+					if (((pre == null()))){
+						HX_STACK_LINE(14127)
+						old = this->head;
+						HX_STACK_LINE(14127)
+						ret1 = old->next;
+						HX_STACK_LINE(14127)
+						this->head = ret1;
+						HX_STACK_LINE(14127)
+						if (((this->head == null()))){
+							HX_STACK_LINE(14127)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(14127)
+						old = pre->next;
+						HX_STACK_LINE(14127)
+						ret1 = old->next;
+						HX_STACK_LINE(14127)
+						pre->next = ret1;
+						HX_STACK_LINE(14127)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(14127)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(14127)
 					{
 						HX_STACK_LINE(14127)
-						{
-						}
+						::zpp_nape::util::ZNPNode_ZPP_GeomPoly o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(14127)
-						::zpp_nape::util::ZNPNode_ZPP_GeomPoly old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(14127)
-						::zpp_nape::util::ZNPNode_ZPP_GeomPoly ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_ZPP_GeomPoly_obj::zpp_pool;
 						HX_STACK_LINE(14127)
-						if (((pre == null()))){
-							HX_STACK_LINE(14127)
-							old = this->head;
-							HX_STACK_LINE(14127)
-							ret1 = old->next;
-							HX_STACK_LINE(14127)
-							this->head = ret1;
-							HX_STACK_LINE(14127)
-							if (((this->head == null()))){
-								HX_STACK_LINE(14127)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(14127)
-							old = pre->next;
-							HX_STACK_LINE(14127)
-							ret1 = old->next;
-							HX_STACK_LINE(14127)
-							pre->next = ret1;
-							HX_STACK_LINE(14127)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(14127)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(14127)
-						{
-						}
-						HX_STACK_LINE(14127)
-						{
-							HX_STACK_LINE(14127)
-							::zpp_nape::util::ZNPNode_ZPP_GeomPoly o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(14127)
-							{
-							}
-							HX_STACK_LINE(14127)
-							o->elt = null();
-							HX_STACK_LINE(14127)
-							o->next = ::zpp_nape::util::ZNPNode_ZPP_GeomPoly_obj::zpp_pool;
-							HX_STACK_LINE(14127)
-							::zpp_nape::util::ZNPNode_ZPP_GeomPoly_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(14127)
-						this->modified = true;
-						HX_STACK_LINE(14127)
-						(this->length)--;
-						HX_STACK_LINE(14127)
-						this->pushmod = true;
-						HX_STACK_LINE(14127)
-						ret1;
+						::zpp_nape::util::ZNPNode_ZPP_GeomPoly_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(14127)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(14127)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(14127)
+					this->pushmod = true;
+					HX_STACK_LINE(14127)
+					ret1;
 				}
 				HX_STACK_LINE(14127)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(14127)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(14127)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(14127)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(14127)
+		ret;
 	}
 return null();
 }
@@ -858,9 +759,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_GeomPoly_obj,remove,(void))
 ::zpp_nape::geom::ZPP_GeomPoly ZNPList_ZPP_GeomPoly_obj::inlined_pop_unsafe( ){
 	HX_STACK_PUSH("ZNPList_ZPP_GeomPoly::inlined_pop_unsafe","zpp_nape/util/Lists.hx",14105);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(14106)
-	{
-	}
 	HX_STACK_LINE(14114)
 	::zpp_nape::geom::ZPP_GeomPoly ret = this->head->elt;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(14115)
@@ -879,9 +777,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_GeomPoly_obj,inlined_pop_unsafe,return )
 		inline static ::zpp_nape::geom::ZPP_GeomPoly Block( ::zpp_nape::util::ZNPList_ZPP_GeomPoly_obj *__this){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",14101);
 			{
-				HX_STACK_LINE(14101)
-				{
-				}
 				HX_STACK_LINE(14101)
 				::zpp_nape::geom::ZPP_GeomPoly ret = __this->head->elt;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(14101)
@@ -903,23 +798,14 @@ Void ZNPList_ZPP_GeomPoly_obj::inlined_pop( ){
 {
 		HX_STACK_PUSH("ZNPList_ZPP_GeomPoly::inlined_pop","zpp_nape/util/Lists.hx",14067);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(14068)
-		{
-		}
 		HX_STACK_LINE(14076)
 		::zpp_nape::util::ZNPNode_ZPP_GeomPoly ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(14077)
 		this->head = ret->next;
-		HX_STACK_LINE(14078)
-		{
-		}
 		HX_STACK_LINE(14079)
 		{
 			HX_STACK_LINE(14080)
 			::zpp_nape::util::ZNPNode_ZPP_GeomPoly o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(14081)
-			{
-			}
 			HX_STACK_LINE(14089)
 			o->elt = null();
 			HX_STACK_LINE(14090)
@@ -948,22 +834,13 @@ Void ZNPList_ZPP_GeomPoly_obj::pop( ){
 		HX_STACK_PUSH("ZNPList_ZPP_GeomPoly::pop","zpp_nape/util/Lists.hx",14062);
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(14063)
-		{
-		}
-		HX_STACK_LINE(14063)
 		::zpp_nape::util::ZNPNode_ZPP_GeomPoly ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(14063)
 		this->head = ret->next;
 		HX_STACK_LINE(14063)
 		{
-		}
-		HX_STACK_LINE(14063)
-		{
 			HX_STACK_LINE(14063)
 			::zpp_nape::util::ZNPNode_ZPP_GeomPoly o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(14063)
-			{
-			}
 			HX_STACK_LINE(14063)
 			o->elt = null();
 			HX_STACK_LINE(14063)
@@ -992,9 +869,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_GeomPoly_obj,pop,(void))
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(14020)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_GeomPoly Block( ::zpp_nape::geom::ZPP_GeomPoly &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",14028);
@@ -1062,9 +936,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_GeomPoly_obj,inlined_insert,return )
 		inline static ::zpp_nape::util::ZNPNode_ZPP_GeomPoly Block( ::zpp_nape::util::ZNPList_ZPP_GeomPoly_obj *__this,::zpp_nape::geom::ZPP_GeomPoly &o,::zpp_nape::util::ZNPNode_ZPP_GeomPoly &cur){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",14015);
 			{
-				HX_STACK_LINE(14015)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_GeomPoly Block( ::zpp_nape::geom::ZPP_GeomPoly &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",14015);
@@ -1134,22 +1005,16 @@ Void ZNPList_ZPP_GeomPoly_obj::addAll( ::zpp_nape::util::ZNPList_ZPP_GeomPoly x)
 		HX_STACK_PUSH("ZNPList_ZPP_GeomPoly::addAll","zpp_nape/util/Lists.hx",13996);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(13997)
-		{
-		}
-		HX_STACK_LINE(14005)
-		{
-			HX_STACK_LINE(14006)
-			::zpp_nape::util::ZNPNode_ZPP_GeomPoly cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
-			HX_STACK_LINE(14007)
-			while(((cx_ite != null()))){
-				HX_STACK_LINE(14008)
-				::zpp_nape::geom::ZPP_GeomPoly i = cx_ite->elt;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(14009)
-				this->add(i);
-				HX_STACK_LINE(14010)
-				cx_ite = cx_ite->next;
-			}
+		HX_STACK_LINE(14006)
+		::zpp_nape::util::ZNPNode_ZPP_GeomPoly cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+		HX_STACK_LINE(14007)
+		while(((cx_ite != null()))){
+			HX_STACK_LINE(14008)
+			::zpp_nape::geom::ZPP_GeomPoly i = cx_ite->elt;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(14009)
+			this->add(i);
+			HX_STACK_LINE(14010)
+			cx_ite = cx_ite->next;
 		}
 	}
 return null();
@@ -1162,9 +1027,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_GeomPoly_obj,addAll,(void))
 	HX_STACK_PUSH("ZNPList_ZPP_GeomPoly::inlined_add","zpp_nape/util/Lists.hx",13959);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(13960)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_GeomPoly Block( ::zpp_nape::geom::ZPP_GeomPoly &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",13968);
@@ -1219,12 +1081,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_GeomPoly_obj,inlined_add,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
 	struct _Function_1_1{
-		inline static ::zpp_nape::geom::ZPP_GeomPoly Block( ::zpp_nape::geom::ZPP_GeomPoly &o,::zpp_nape::util::ZNPList_ZPP_GeomPoly_obj *__this){
+		inline static ::zpp_nape::geom::ZPP_GeomPoly Block( ::zpp_nape::util::ZNPList_ZPP_GeomPoly_obj *__this,::zpp_nape::geom::ZPP_GeomPoly &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",13955);
 			{
-				HX_STACK_LINE(13955)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_GeomPoly Block( ::zpp_nape::geom::ZPP_GeomPoly &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",13955);
@@ -1274,7 +1133,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_GeomPoly_obj,inlined_add,return )
 		}
 	};
 	HX_STACK_LINE(13954)
-	return _Function_1_1::Block(o,this);
+	return _Function_1_1::Block(this,o);
 }
 
 
@@ -1472,7 +1331,7 @@ Class ZNPList_ZPP_GeomPoly_obj::__mClass;
 
 void ZNPList_ZPP_GeomPoly_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ZPP_GeomPoly"), hx::TCanCast< ZNPList_ZPP_GeomPoly_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ZPP_GeomPoly"), hx::TCanCast< ZNPList_ZPP_GeomPoly_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

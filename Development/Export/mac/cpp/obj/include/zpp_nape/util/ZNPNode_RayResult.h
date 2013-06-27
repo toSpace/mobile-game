@@ -11,7 +11,7 @@ namespace zpp_nape{
 namespace util{
 
 
-class ZNPNode_RayResult_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZNPNode_RayResult_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZNPNode_RayResult_obj OBJ_;
@@ -34,15 +34,15 @@ class ZNPNode_RayResult_obj : public hx::Object{
 		virtual ::nape::geom::RayResult elem( );
 		Dynamic elem_dyn();
 
-		::nape::geom::RayResult elt; /* REM */ 
+		::nape::geom::RayResult elt;
 		virtual Void free( );
 		Dynamic free_dyn();
 
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
-		::zpp_nape::util::ZNPNode_RayResult next; /* REM */ 
-		static ::zpp_nape::util::ZNPNode_RayResult zpp_pool; /* REM */ 
+		::zpp_nape::util::ZNPNode_RayResult next;
+		static ::zpp_nape::util::ZNPNode_RayResult zpp_pool;
 };
 
 } // end namespace zpp_nape

@@ -25,7 +25,7 @@ namespace zpp_nape{
 namespace callbacks{
 
 
-class ZPP_CbType_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_CbType_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_CbType_obj OBJ_;
@@ -54,7 +54,7 @@ class ZPP_CbType_obj : public hx::Object{
 		virtual Void addconstraint( ::zpp_nape::callbacks::ZPP_ConstraintListener x);
 		Dynamic addconstraint_dyn();
 
-		::zpp_nape::util::ZNPList_ZPP_ConstraintListener conlisteners; /* REM */ 
+		::zpp_nape::util::ZNPList_ZPP_ConstraintListener conlisteners;
 		virtual Void invalidatebody( );
 		Dynamic invalidatebody_dyn();
 
@@ -64,7 +64,7 @@ class ZPP_CbType_obj : public hx::Object{
 		virtual Void addbody( ::zpp_nape::callbacks::ZPP_BodyListener x);
 		Dynamic addbody_dyn();
 
-		::zpp_nape::util::ZNPList_ZPP_BodyListener bodylisteners; /* REM */ 
+		::zpp_nape::util::ZNPList_ZPP_BodyListener bodylisteners;
 		virtual Void invalidateint( );
 		Dynamic invalidateint_dyn();
 
@@ -74,7 +74,7 @@ class ZPP_CbType_obj : public hx::Object{
 		virtual Void addint( ::zpp_nape::callbacks::ZPP_InteractionListener x);
 		Dynamic addint_dyn();
 
-		::zpp_nape::util::ZNPList_ZPP_InteractionListener listeners; /* REM */ 
+		::zpp_nape::util::ZNPList_ZPP_InteractionListener listeners;
 		virtual Void remInteractor( ::zpp_nape::phys::ZPP_Interactor intx);
 		Dynamic remInteractor_dyn();
 
@@ -87,21 +87,21 @@ class ZPP_CbType_obj : public hx::Object{
 		virtual Void addConstraint( ::zpp_nape::constraint::ZPP_Constraint con);
 		Dynamic addConstraint_dyn();
 
-		::nape::constraint::ConstraintList wrap_constraints; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Constraint constraints; /* REM */ 
-		::nape::phys::InteractorList wrap_interactors; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Interactor interactors; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_CbSet cbsets; /* REM */ 
-		int id; /* REM */ 
-		Dynamic userData; /* REM */ 
-		::nape::callbacks::CbType outer; /* REM */ 
+		::nape::constraint::ConstraintList wrap_constraints;
+		::zpp_nape::util::ZNPList_ZPP_Constraint constraints;
+		::nape::phys::InteractorList wrap_interactors;
+		::zpp_nape::util::ZNPList_ZPP_Interactor interactors;
+		::zpp_nape::util::ZNPList_ZPP_CbSet cbsets;
+		int id;
+		Dynamic userData;
+		::nape::callbacks::CbType outer;
 		static bool setlt( ::zpp_nape::callbacks::ZPP_CbType a,::zpp_nape::callbacks::ZPP_CbType b);
 		static Dynamic setlt_dyn();
 
-		static ::nape::callbacks::CbType ANY_SHAPE; /* REM */ 
-		static ::nape::callbacks::CbType ANY_BODY; /* REM */ 
-		static ::nape::callbacks::CbType ANY_COMPOUND; /* REM */ 
-		static ::nape::callbacks::CbType ANY_CONSTRAINT; /* REM */ 
+		static ::nape::callbacks::CbType ANY_SHAPE;
+		static ::nape::callbacks::CbType ANY_BODY;
+		static ::nape::callbacks::CbType ANY_COMPOUND;
+		static ::nape::callbacks::CbType ANY_CONSTRAINT;
 };
 
 } // end namespace zpp_nape

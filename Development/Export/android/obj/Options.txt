@@ -1,14 +1,2 @@
-actuate
-android
-cpp
-haxe_208
-haxe_209
-haxe_210
-mobile
-nape
-nme
-nme_install_tool
-sys
-tilelayer
-true
-/usr/lib/haxe/lib/hxcpp/3,0,0/
+ -Dandroid="1" -Dhaxe3="1" -Dhaxe_release="1" -Dhaxe_ver="3." -Dmobile="1" -Dnape="1" -Dopenfl="1" -Dopenfl-native="1" -Dopenfl_native="1" -Dopenfl_ver="1.0.4" -Dtilelayer="1" -Dtools="1"
+/usr/lib/haxe/lib/hxcpp/3,0,2/

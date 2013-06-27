@@ -249,7 +249,7 @@ Class ZPP_MarchPair_obj::__mClass;
 
 void ZPP_MarchPair_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_MarchPair"), hx::TCanCast< ZPP_MarchPair_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_MarchPair"), hx::TCanCast< ZPP_MarchPair_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

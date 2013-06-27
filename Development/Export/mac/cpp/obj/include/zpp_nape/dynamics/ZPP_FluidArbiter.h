@@ -19,7 +19,7 @@ namespace zpp_nape{
 namespace dynamics{
 
 
-class ZPP_FluidArbiter_obj : public ::zpp_nape::dynamics::ZPP_Arbiter_obj{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_FluidArbiter_obj : public ::zpp_nape::dynamics::ZPP_Arbiter_obj{
 	public:
 		typedef ::zpp_nape::dynamics::ZPP_Arbiter_obj super;
 		typedef ZPP_FluidArbiter_obj OBJ_;
@@ -48,7 +48,7 @@ class ZPP_FluidArbiter_obj : public ::zpp_nape::dynamics::ZPP_Arbiter_obj{
 		virtual Void preStep( ::zpp_nape::space::ZPP_Space s,Float dt);
 		Dynamic preStep_dyn();
 
-		Float pre_dt; /* REM */ 
+		Float pre_dt;
 		virtual Void inject( Float area,Float cx,Float cy);
 		Dynamic inject_dyn();
 
@@ -58,7 +58,7 @@ class ZPP_FluidArbiter_obj : public ::zpp_nape::dynamics::ZPP_Arbiter_obj{
 		virtual Void makemutable( );
 		Dynamic makemutable_dyn();
 
-		bool _mutable; /* REM */ 
+		bool _mutable;
 		virtual Void retire( );
 		Dynamic retire_dyn();
 
@@ -68,43 +68,43 @@ class ZPP_FluidArbiter_obj : public ::zpp_nape::dynamics::ZPP_Arbiter_obj{
 		virtual Void getposition( );
 		Dynamic getposition_dyn();
 
-		::nape::geom::Vec2 wrap_position; /* REM */ 
+		::nape::geom::Vec2 wrap_position;
 		virtual Void position_invalidate( ::zpp_nape::geom::ZPP_Vec2 x);
 		Dynamic position_invalidate_dyn();
 
 		virtual Void position_validate( );
 		Dynamic position_validate_dyn();
 
-		Float buoyy; /* REM */ 
-		Float buoyx; /* REM */ 
-		Float ny; /* REM */ 
-		Float nx; /* REM */ 
-		Float lgamma; /* REM */ 
-		Float dampy; /* REM */ 
-		Float dampx; /* REM */ 
-		Float vMassc; /* REM */ 
-		Float vMassb; /* REM */ 
-		Float vMassa; /* REM */ 
-		Float agamma; /* REM */ 
-		Float adamp; /* REM */ 
-		Float wMass; /* REM */ 
-		bool nodrag; /* REM */ 
-		Float r2y; /* REM */ 
-		Float r2x; /* REM */ 
-		Float r1y; /* REM */ 
-		Float r1x; /* REM */ 
-		Float overlap; /* REM */ 
-		Float centroidy; /* REM */ 
-		Float centroidx; /* REM */ 
+		Float buoyy;
+		Float buoyx;
+		Float ny;
+		Float nx;
+		Float lgamma;
+		Float dampy;
+		Float dampx;
+		Float vMassc;
+		Float vMassb;
+		Float vMassa;
+		Float agamma;
+		Float adamp;
+		Float wMass;
+		bool nodrag;
+		Float r2y;
+		Float r2x;
+		Float r1y;
+		Float r1x;
+		Float overlap;
+		Float centroidy;
+		Float centroidx;
 		virtual Void free( );
 		Dynamic free_dyn();
 
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
-		::zpp_nape::dynamics::ZPP_FluidArbiter next; /* REM */ 
-		::nape::dynamics::FluidArbiter outer_zn; /* REM */ 
-		static ::zpp_nape::dynamics::ZPP_FluidArbiter zpp_pool; /* REM */ 
+		::zpp_nape::dynamics::ZPP_FluidArbiter next;
+		::nape::dynamics::FluidArbiter outer_zn;
+		static ::zpp_nape::dynamics::ZPP_FluidArbiter zpp_pool;
 };
 
 } // end namespace zpp_nape

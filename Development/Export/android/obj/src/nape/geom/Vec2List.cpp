@@ -84,6 +84,7 @@ Dynamic Vec2List_obj::__Create(hx::DynamicArray inArgs)
 		}
 		catch(Dynamic __e){
 			{
+				HX_STACK_BEGIN_CATCH
 				Dynamic e = __e;{
 					HX_STACK_LINE(784)
 					break;
@@ -165,6 +166,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Vec2List_obj,filter,return )
 		}
 		catch(Dynamic __e){
 			{
+				HX_STACK_BEGIN_CATCH
 				Dynamic e = __e;{
 					HX_STACK_LINE(736)
 					{
@@ -281,7 +283,7 @@ bool deep = __o_deep.Default(false);
 												HX_STACK_LINE(664)
 												::zpp_nape::geom::ZPP_Vec2 _this = i->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(664)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(664)
 													_this->_validate();
 												}
@@ -306,7 +308,7 @@ bool deep = __o_deep.Default(false);
 												HX_STACK_LINE(664)
 												::zpp_nape::geom::ZPP_Vec2 _this = i->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(664)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(664)
 													_this->_validate();
 												}
@@ -386,9 +388,6 @@ bool deep = __o_deep.Default(false);
 													HX_STACK_LINE(664)
 													{
 													}
-													HX_STACK_LINE(664)
-													{
-													}
 												}
 												HX_STACK_LINE(664)
 												return ret2;
@@ -417,7 +416,7 @@ bool deep = __o_deep.Default(false);
 											hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 										}
 										HX_STACK_LINE(664)
-										if (((_this->_isimmutable_dyn() != null()))){
+										if (((_this->_isimmutable != null()))){
 											HX_STACK_LINE(664)
 											_this->_isimmutable();
 										}
@@ -441,7 +440,7 @@ bool deep = __o_deep.Default(false);
 													HX_STACK_LINE(664)
 													::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 													HX_STACK_LINE(664)
-													if (((_this->_validate_dyn() != null()))){
+													if (((_this->_validate != null()))){
 														HX_STACK_LINE(664)
 														_this->_validate();
 													}
@@ -466,7 +465,7 @@ bool deep = __o_deep.Default(false);
 													HX_STACK_LINE(664)
 													::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 													HX_STACK_LINE(664)
-													if (((_this->_validate_dyn() != null()))){
+													if (((_this->_validate != null()))){
 														HX_STACK_LINE(664)
 														_this->_validate();
 													}
@@ -488,16 +487,13 @@ bool deep = __o_deep.Default(false);
 											HX_STACK_LINE(664)
 											{
 											}
-											HX_STACK_LINE(664)
-											{
-											}
 										}
 										HX_STACK_LINE(664)
 										{
 											HX_STACK_LINE(664)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(664)
-											if (((_this->_invalidate_dyn() != null()))){
+											if (((_this->_invalidate != null()))){
 												HX_STACK_LINE(664)
 												_this->_invalidate(_this);
 											}
@@ -628,7 +624,7 @@ bool Vec2List_obj::remove( ::nape::geom::Vec2 obj){
 	HX_STACK_LINE(601)
 	if ((ret)){
 		HX_STACK_LINE(602)
-		if (((this->zpp_inner->subber_dyn() != null()))){
+		if (((this->zpp_inner->subber != null()))){
 			HX_STACK_LINE(602)
 			this->zpp_inner->subber(obj);
 		}
@@ -702,9 +698,6 @@ HX_DEFINE_DYNAMIC_FUNC1(Vec2List_obj,add,return )
 							::zpp_nape::geom::ZPP_Vec2 o = ret->outer->zpp_inner;		HX_STACK_VAR(o,"o");
 							HX_STACK_LINE(535)
 							{
-							}
-							HX_STACK_LINE(535)
-							{
 								HX_STACK_LINE(535)
 								if (((o->outer != null()))){
 									HX_STACK_LINE(535)
@@ -736,7 +729,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Vec2List_obj,add,return )
 		HX_STACK_LINE(535)
 		::nape::geom::Vec2 retx = _Function_2_1::Block(ret);		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(536)
-		if (((this->zpp_inner->subber_dyn() != null()))){
+		if (((this->zpp_inner->subber != null()))){
 			HX_STACK_LINE(536)
 			this->zpp_inner->subber(retx);
 		}
@@ -761,9 +754,6 @@ HX_DEFINE_DYNAMIC_FUNC1(Vec2List_obj,add,return )
 						{
 							HX_STACK_LINE(541)
 							::zpp_nape::geom::ZPP_Vec2 o = ret->outer->zpp_inner;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(541)
-							{
-							}
 							HX_STACK_LINE(541)
 							{
 								HX_STACK_LINE(541)
@@ -797,7 +787,7 @@ HX_DEFINE_DYNAMIC_FUNC1(Vec2List_obj,add,return )
 		HX_STACK_LINE(541)
 		::nape::geom::Vec2 retx = _Function_2_1::Block(ret);		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(542)
-		if (((this->zpp_inner->subber_dyn() != null()))){
+		if (((this->zpp_inner->subber != null()))){
 			HX_STACK_LINE(542)
 			this->zpp_inner->subber(retx);
 		}
@@ -821,9 +811,6 @@ HX_DEFINE_DYNAMIC_FUNC1(Vec2List_obj,add,return )
 					{
 						HX_STACK_LINE(546)
 						::zpp_nape::geom::ZPP_Vec2 o = ret->outer->zpp_inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(546)
-						{
-						}
 						HX_STACK_LINE(546)
 						{
 							HX_STACK_LINE(546)
@@ -900,9 +887,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Vec2List_obj,shift,return )
 							::zpp_nape::geom::ZPP_Vec2 o = ret->outer->zpp_inner;		HX_STACK_VAR(o,"o");
 							HX_STACK_LINE(492)
 							{
-							}
-							HX_STACK_LINE(492)
-							{
 								HX_STACK_LINE(492)
 								if (((o->outer != null()))){
 									HX_STACK_LINE(492)
@@ -934,7 +918,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Vec2List_obj,shift,return )
 		HX_STACK_LINE(492)
 		::nape::geom::Vec2 retx = _Function_2_1::Block(ret);		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(493)
-		if (((this->zpp_inner->subber_dyn() != null()))){
+		if (((this->zpp_inner->subber != null()))){
 			HX_STACK_LINE(493)
 			this->zpp_inner->subber(retx);
 		}
@@ -968,9 +952,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Vec2List_obj,shift,return )
 							::zpp_nape::geom::ZPP_Vec2 o = ret->outer->zpp_inner;		HX_STACK_VAR(o,"o");
 							HX_STACK_LINE(500)
 							{
-							}
-							HX_STACK_LINE(500)
-							{
 								HX_STACK_LINE(500)
 								if (((o->outer != null()))){
 									HX_STACK_LINE(500)
@@ -1002,7 +983,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Vec2List_obj,shift,return )
 		HX_STACK_LINE(500)
 		::nape::geom::Vec2 retx = _Function_2_1::Block(ret);		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(501)
-		if (((this->zpp_inner->subber_dyn() != null()))){
+		if (((this->zpp_inner->subber != null()))){
 			HX_STACK_LINE(501)
 			this->zpp_inner->subber(retx);
 		}
@@ -1026,9 +1007,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Vec2List_obj,shift,return )
 					{
 						HX_STACK_LINE(505)
 						::zpp_nape::geom::ZPP_Vec2 o = ret->outer->zpp_inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(505)
-						{
-						}
 						HX_STACK_LINE(505)
 						{
 							HX_STACK_LINE(505)
@@ -1082,7 +1060,7 @@ bool Vec2List_obj::unshift( ::nape::geom::Vec2 obj){
 	HX_STACK_LINE(453)
 	this->zpp_vm();
 	HX_STACK_LINE(455)
-	bool cont = (  (((this->zpp_inner->adder_dyn() != null()))) ? bool(this->zpp_inner->adder(obj)) : bool(true) );		HX_STACK_VAR(cont,"cont");
+	bool cont = (  (((this->zpp_inner->adder != null()))) ? bool(this->zpp_inner->adder(obj)) : bool(true) );		HX_STACK_VAR(cont,"cont");
 	HX_STACK_LINE(456)
 	if ((cont)){
 		HX_STACK_LINE(457)
@@ -1102,7 +1080,7 @@ bool Vec2List_obj::unshift( ::nape::geom::Vec2 obj){
 		HX_STACK_LINE(462)
 		this->zpp_inner->invalidate();
 		HX_STACK_LINE(463)
-		if (((this->zpp_inner->post_adder_dyn() != null()))){
+		if (((this->zpp_inner->post_adder != null()))){
 			HX_STACK_LINE(463)
 			this->zpp_inner->post_adder(obj);
 		}
@@ -1128,7 +1106,7 @@ bool Vec2List_obj::push( ::nape::geom::Vec2 obj){
 	HX_STACK_LINE(422)
 	this->zpp_vm();
 	HX_STACK_LINE(424)
-	bool cont = (  (((this->zpp_inner->adder_dyn() != null()))) ? bool(this->zpp_inner->adder(obj)) : bool(true) );		HX_STACK_VAR(cont,"cont");
+	bool cont = (  (((this->zpp_inner->adder != null()))) ? bool(this->zpp_inner->adder(obj)) : bool(true) );		HX_STACK_VAR(cont,"cont");
 	HX_STACK_LINE(425)
 	if ((cont)){
 		HX_STACK_LINE(426)
@@ -1148,7 +1126,7 @@ bool Vec2List_obj::push( ::nape::geom::Vec2 obj){
 		HX_STACK_LINE(431)
 		this->zpp_inner->invalidate();
 		HX_STACK_LINE(432)
-		if (((this->zpp_inner->post_adder_dyn() != null()))){
+		if (((this->zpp_inner->post_adder != null()))){
 			HX_STACK_LINE(432)
 			this->zpp_inner->post_adder(obj);
 		}
@@ -1206,9 +1184,6 @@ HX_DEFINE_DYNAMIC_FUNC1(Vec2List_obj,push,return )
 					{
 						HX_STACK_LINE(403)
 						::zpp_nape::geom::ZPP_Vec2 o = _this->outer->zpp_inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(403)
-						{
-						}
 						HX_STACK_LINE(403)
 						{
 							HX_STACK_LINE(403)
@@ -1301,7 +1276,7 @@ int Vec2List_obj::get_length( ){
 
 HX_DEFINE_DYNAMIC_FUNC0(Vec2List_obj,get_length,return )
 
-::nape::geom::Vec2List Vec2List_obj::fromArray( Array< ::nape::geom::Vec2 > array){
+::nape::geom::Vec2List Vec2List_obj::fromArray( Array< ::Dynamic > array){
 	HX_STACK_PUSH("Vec2List::fromArray","nape/geom/Vec2List.hx",304);
 	HX_STACK_ARG(array,"array");
 	HX_STACK_LINE(306)
@@ -1318,7 +1293,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Vec2List_obj,get_length,return )
 		HX_STACK_LINE(311)
 		while(((_g < array->length))){
 			HX_STACK_LINE(311)
-			::nape::geom::Vec2 i = array->__get(_g);		HX_STACK_VAR(i,"i");
+			::nape::geom::Vec2 i = array->__get(_g).StaticCast< ::nape::geom::Vec2 >();		HX_STACK_VAR(i,"i");
 			HX_STACK_LINE(311)
 			++(_g);
 			HX_STACK_LINE(316)
@@ -1340,14 +1315,12 @@ Vec2List_obj::Vec2List_obj()
 void Vec2List_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(Vec2List);
-	HX_MARK_MEMBER_NAME(length,"length");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	HX_MARK_END_CLASS();
 }
 
 void Vec2List_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(length,"length");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 }
 
@@ -1377,7 +1350,7 @@ Dynamic Vec2List_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"remove") ) { return remove_dyn(); }
 		if (HX_FIELD_EQ(inName,"zpp_vm") ) { return zpp_vm_dyn(); }
 		if (HX_FIELD_EQ(inName,"zpp_gl") ) { return zpp_gl_dyn(); }
-		if (HX_FIELD_EQ(inName,"length") ) { return inCallProp ? get_length() : length; }
+		if (HX_FIELD_EQ(inName,"length") ) { return get_length(); }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"foreach") ) { return foreach_dyn(); }
@@ -1400,9 +1373,6 @@ Dynamic Vec2List_obj::__Field(const ::String &inName,bool inCallProp)
 Dynamic Vec2List_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
 	switch(inName.length) {
-	case 6:
-		if (HX_FIELD_EQ(inName,"length") ) { length=inValue.Cast< int >(); return inValue; }
-		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::util::ZPP_Vec2List >(); return inValue; }
 	}
@@ -1440,7 +1410,6 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("zpp_vm"),
 	HX_CSTRING("zpp_gl"),
 	HX_CSTRING("get_length"),
-	HX_CSTRING("length"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
@@ -1456,7 +1425,7 @@ Class Vec2List_obj::__mClass;
 
 void Vec2List_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.Vec2List"), hx::TCanCast< Vec2List_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.Vec2List"), hx::TCanCast< Vec2List_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

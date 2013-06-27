@@ -93,41 +93,41 @@ int ZPP_Flags_obj::id_BodyType_KINEMATIC;
 
 int ZPP_Flags_obj::id_ListenerType_BODY;
 
-int ZPP_Flags_obj::id_ListenerType_CONSTRAINT;
-
-int ZPP_Flags_obj::id_ListenerType_INTERACTION;
-
-int ZPP_Flags_obj::id_ListenerType_PRE;
-
 int ZPP_Flags_obj::id_PreFlag_ACCEPT;
+
+int ZPP_Flags_obj::id_ListenerType_CONSTRAINT;
 
 int ZPP_Flags_obj::id_PreFlag_IGNORE;
 
+int ZPP_Flags_obj::id_ListenerType_INTERACTION;
+
 int ZPP_Flags_obj::id_PreFlag_ACCEPT_ONCE;
+
+int ZPP_Flags_obj::id_ListenerType_PRE;
 
 int ZPP_Flags_obj::id_PreFlag_IGNORE_ONCE;
 
 int ZPP_Flags_obj::id_CbEvent_BEGIN;
 
+int ZPP_Flags_obj::id_InteractionType_COLLISION;
+
 int ZPP_Flags_obj::id_CbEvent_ONGOING;
 
+int ZPP_Flags_obj::id_InteractionType_SENSOR;
+
 int ZPP_Flags_obj::id_CbEvent_END;
+
+int ZPP_Flags_obj::id_InteractionType_FLUID;
 
 int ZPP_Flags_obj::id_CbEvent_WAKE;
 
 int ZPP_Flags_obj::id_CbEvent_SLEEP;
 
+int ZPP_Flags_obj::id_InteractionType_ANY;
+
 int ZPP_Flags_obj::id_CbEvent_BREAK;
 
 int ZPP_Flags_obj::id_CbEvent_PRE;
-
-int ZPP_Flags_obj::id_InteractionType_COLLISION;
-
-int ZPP_Flags_obj::id_InteractionType_SENSOR;
-
-int ZPP_Flags_obj::id_InteractionType_FLUID;
-
-int ZPP_Flags_obj::id_InteractionType_ANY;
 
 int ZPP_Flags_obj::id_Winding_UNDEFINED;
 
@@ -179,41 +179,41 @@ int ZPP_Flags_obj::id_ArbiterType_FLUID;
 
 ::nape::callbacks::ListenerType ZPP_Flags_obj::ListenerType_BODY;
 
-::nape::callbacks::ListenerType ZPP_Flags_obj::ListenerType_CONSTRAINT;
-
-::nape::callbacks::ListenerType ZPP_Flags_obj::ListenerType_INTERACTION;
-
-::nape::callbacks::ListenerType ZPP_Flags_obj::ListenerType_PRE;
-
 ::nape::callbacks::PreFlag ZPP_Flags_obj::PreFlag_ACCEPT;
+
+::nape::callbacks::ListenerType ZPP_Flags_obj::ListenerType_CONSTRAINT;
 
 ::nape::callbacks::PreFlag ZPP_Flags_obj::PreFlag_IGNORE;
 
+::nape::callbacks::ListenerType ZPP_Flags_obj::ListenerType_INTERACTION;
+
 ::nape::callbacks::PreFlag ZPP_Flags_obj::PreFlag_ACCEPT_ONCE;
+
+::nape::callbacks::ListenerType ZPP_Flags_obj::ListenerType_PRE;
 
 ::nape::callbacks::PreFlag ZPP_Flags_obj::PreFlag_IGNORE_ONCE;
 
 ::nape::callbacks::CbEvent ZPP_Flags_obj::CbEvent_BEGIN;
 
+::nape::callbacks::InteractionType ZPP_Flags_obj::InteractionType_COLLISION;
+
 ::nape::callbacks::CbEvent ZPP_Flags_obj::CbEvent_ONGOING;
 
+::nape::callbacks::InteractionType ZPP_Flags_obj::InteractionType_SENSOR;
+
 ::nape::callbacks::CbEvent ZPP_Flags_obj::CbEvent_END;
+
+::nape::callbacks::InteractionType ZPP_Flags_obj::InteractionType_FLUID;
 
 ::nape::callbacks::CbEvent ZPP_Flags_obj::CbEvent_WAKE;
 
 ::nape::callbacks::CbEvent ZPP_Flags_obj::CbEvent_SLEEP;
 
+::nape::callbacks::InteractionType ZPP_Flags_obj::InteractionType_ANY;
+
 ::nape::callbacks::CbEvent ZPP_Flags_obj::CbEvent_BREAK;
 
 ::nape::callbacks::CbEvent ZPP_Flags_obj::CbEvent_PRE;
-
-::nape::callbacks::InteractionType ZPP_Flags_obj::InteractionType_COLLISION;
-
-::nape::callbacks::InteractionType ZPP_Flags_obj::InteractionType_SENSOR;
-
-::nape::callbacks::InteractionType ZPP_Flags_obj::InteractionType_FLUID;
-
-::nape::callbacks::InteractionType ZPP_Flags_obj::InteractionType_ANY;
 
 ::nape::geom::Winding ZPP_Flags_obj::Winding_UNDEFINED;
 
@@ -567,24 +567,24 @@ static ::String sStaticFields[] = {
 	HX_CSTRING("id_BodyType_DYNAMIC"),
 	HX_CSTRING("id_BodyType_KINEMATIC"),
 	HX_CSTRING("id_ListenerType_BODY"),
-	HX_CSTRING("id_ListenerType_CONSTRAINT"),
-	HX_CSTRING("id_ListenerType_INTERACTION"),
-	HX_CSTRING("id_ListenerType_PRE"),
 	HX_CSTRING("id_PreFlag_ACCEPT"),
+	HX_CSTRING("id_ListenerType_CONSTRAINT"),
 	HX_CSTRING("id_PreFlag_IGNORE"),
+	HX_CSTRING("id_ListenerType_INTERACTION"),
 	HX_CSTRING("id_PreFlag_ACCEPT_ONCE"),
+	HX_CSTRING("id_ListenerType_PRE"),
 	HX_CSTRING("id_PreFlag_IGNORE_ONCE"),
 	HX_CSTRING("id_CbEvent_BEGIN"),
+	HX_CSTRING("id_InteractionType_COLLISION"),
 	HX_CSTRING("id_CbEvent_ONGOING"),
+	HX_CSTRING("id_InteractionType_SENSOR"),
 	HX_CSTRING("id_CbEvent_END"),
+	HX_CSTRING("id_InteractionType_FLUID"),
 	HX_CSTRING("id_CbEvent_WAKE"),
 	HX_CSTRING("id_CbEvent_SLEEP"),
+	HX_CSTRING("id_InteractionType_ANY"),
 	HX_CSTRING("id_CbEvent_BREAK"),
 	HX_CSTRING("id_CbEvent_PRE"),
-	HX_CSTRING("id_InteractionType_COLLISION"),
-	HX_CSTRING("id_InteractionType_SENSOR"),
-	HX_CSTRING("id_InteractionType_FLUID"),
-	HX_CSTRING("id_InteractionType_ANY"),
 	HX_CSTRING("id_Winding_UNDEFINED"),
 	HX_CSTRING("id_Winding_CLOCKWISE"),
 	HX_CSTRING("id_Winding_ANTICLOCKWISE"),
@@ -610,24 +610,24 @@ static ::String sStaticFields[] = {
 	HX_CSTRING("BodyType_DYNAMIC"),
 	HX_CSTRING("BodyType_KINEMATIC"),
 	HX_CSTRING("ListenerType_BODY"),
-	HX_CSTRING("ListenerType_CONSTRAINT"),
-	HX_CSTRING("ListenerType_INTERACTION"),
-	HX_CSTRING("ListenerType_PRE"),
 	HX_CSTRING("PreFlag_ACCEPT"),
+	HX_CSTRING("ListenerType_CONSTRAINT"),
 	HX_CSTRING("PreFlag_IGNORE"),
+	HX_CSTRING("ListenerType_INTERACTION"),
 	HX_CSTRING("PreFlag_ACCEPT_ONCE"),
+	HX_CSTRING("ListenerType_PRE"),
 	HX_CSTRING("PreFlag_IGNORE_ONCE"),
 	HX_CSTRING("CbEvent_BEGIN"),
+	HX_CSTRING("InteractionType_COLLISION"),
 	HX_CSTRING("CbEvent_ONGOING"),
+	HX_CSTRING("InteractionType_SENSOR"),
 	HX_CSTRING("CbEvent_END"),
+	HX_CSTRING("InteractionType_FLUID"),
 	HX_CSTRING("CbEvent_WAKE"),
 	HX_CSTRING("CbEvent_SLEEP"),
+	HX_CSTRING("InteractionType_ANY"),
 	HX_CSTRING("CbEvent_BREAK"),
 	HX_CSTRING("CbEvent_PRE"),
-	HX_CSTRING("InteractionType_COLLISION"),
-	HX_CSTRING("InteractionType_SENSOR"),
-	HX_CSTRING("InteractionType_FLUID"),
-	HX_CSTRING("InteractionType_ANY"),
 	HX_CSTRING("Winding_UNDEFINED"),
 	HX_CSTRING("Winding_CLOCKWISE"),
 	HX_CSTRING("Winding_ANTICLOCKWISE"),
@@ -664,24 +664,24 @@ static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_BodyType_DYNAMIC,"id_BodyType_DYNAMIC");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_BodyType_KINEMATIC,"id_BodyType_KINEMATIC");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_ListenerType_BODY,"id_ListenerType_BODY");
-	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_ListenerType_CONSTRAINT,"id_ListenerType_CONSTRAINT");
-	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_ListenerType_INTERACTION,"id_ListenerType_INTERACTION");
-	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_ListenerType_PRE,"id_ListenerType_PRE");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_PreFlag_ACCEPT,"id_PreFlag_ACCEPT");
+	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_ListenerType_CONSTRAINT,"id_ListenerType_CONSTRAINT");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_PreFlag_IGNORE,"id_PreFlag_IGNORE");
+	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_ListenerType_INTERACTION,"id_ListenerType_INTERACTION");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_PreFlag_ACCEPT_ONCE,"id_PreFlag_ACCEPT_ONCE");
+	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_ListenerType_PRE,"id_ListenerType_PRE");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_PreFlag_IGNORE_ONCE,"id_PreFlag_IGNORE_ONCE");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_CbEvent_BEGIN,"id_CbEvent_BEGIN");
+	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_InteractionType_COLLISION,"id_InteractionType_COLLISION");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_CbEvent_ONGOING,"id_CbEvent_ONGOING");
+	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_InteractionType_SENSOR,"id_InteractionType_SENSOR");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_CbEvent_END,"id_CbEvent_END");
+	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_InteractionType_FLUID,"id_InteractionType_FLUID");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_CbEvent_WAKE,"id_CbEvent_WAKE");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_CbEvent_SLEEP,"id_CbEvent_SLEEP");
+	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_InteractionType_ANY,"id_InteractionType_ANY");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_CbEvent_BREAK,"id_CbEvent_BREAK");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_CbEvent_PRE,"id_CbEvent_PRE");
-	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_InteractionType_COLLISION,"id_InteractionType_COLLISION");
-	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_InteractionType_SENSOR,"id_InteractionType_SENSOR");
-	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_InteractionType_FLUID,"id_InteractionType_FLUID");
-	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_InteractionType_ANY,"id_InteractionType_ANY");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_Winding_UNDEFINED,"id_Winding_UNDEFINED");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_Winding_CLOCKWISE,"id_Winding_CLOCKWISE");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::id_Winding_ANTICLOCKWISE,"id_Winding_ANTICLOCKWISE");
@@ -707,24 +707,24 @@ static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::BodyType_DYNAMIC,"BodyType_DYNAMIC");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::BodyType_KINEMATIC,"BodyType_KINEMATIC");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::ListenerType_BODY,"ListenerType_BODY");
-	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::ListenerType_CONSTRAINT,"ListenerType_CONSTRAINT");
-	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::ListenerType_INTERACTION,"ListenerType_INTERACTION");
-	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::ListenerType_PRE,"ListenerType_PRE");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::PreFlag_ACCEPT,"PreFlag_ACCEPT");
+	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::ListenerType_CONSTRAINT,"ListenerType_CONSTRAINT");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::PreFlag_IGNORE,"PreFlag_IGNORE");
+	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::ListenerType_INTERACTION,"ListenerType_INTERACTION");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::PreFlag_ACCEPT_ONCE,"PreFlag_ACCEPT_ONCE");
+	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::ListenerType_PRE,"ListenerType_PRE");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::PreFlag_IGNORE_ONCE,"PreFlag_IGNORE_ONCE");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::CbEvent_BEGIN,"CbEvent_BEGIN");
+	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::InteractionType_COLLISION,"InteractionType_COLLISION");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::CbEvent_ONGOING,"CbEvent_ONGOING");
+	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::InteractionType_SENSOR,"InteractionType_SENSOR");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::CbEvent_END,"CbEvent_END");
+	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::InteractionType_FLUID,"InteractionType_FLUID");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::CbEvent_WAKE,"CbEvent_WAKE");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::CbEvent_SLEEP,"CbEvent_SLEEP");
+	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::InteractionType_ANY,"InteractionType_ANY");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::CbEvent_BREAK,"CbEvent_BREAK");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::CbEvent_PRE,"CbEvent_PRE");
-	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::InteractionType_COLLISION,"InteractionType_COLLISION");
-	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::InteractionType_SENSOR,"InteractionType_SENSOR");
-	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::InteractionType_FLUID,"InteractionType_FLUID");
-	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::InteractionType_ANY,"InteractionType_ANY");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::Winding_UNDEFINED,"Winding_UNDEFINED");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::Winding_CLOCKWISE,"Winding_CLOCKWISE");
 	HX_MARK_MEMBER_NAME(ZPP_Flags_obj::Winding_ANTICLOCKWISE,"Winding_ANTICLOCKWISE");
@@ -758,24 +758,24 @@ static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_BodyType_DYNAMIC,"id_BodyType_DYNAMIC");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_BodyType_KINEMATIC,"id_BodyType_KINEMATIC");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_ListenerType_BODY,"id_ListenerType_BODY");
-	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_ListenerType_CONSTRAINT,"id_ListenerType_CONSTRAINT");
-	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_ListenerType_INTERACTION,"id_ListenerType_INTERACTION");
-	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_ListenerType_PRE,"id_ListenerType_PRE");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_PreFlag_ACCEPT,"id_PreFlag_ACCEPT");
+	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_ListenerType_CONSTRAINT,"id_ListenerType_CONSTRAINT");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_PreFlag_IGNORE,"id_PreFlag_IGNORE");
+	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_ListenerType_INTERACTION,"id_ListenerType_INTERACTION");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_PreFlag_ACCEPT_ONCE,"id_PreFlag_ACCEPT_ONCE");
+	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_ListenerType_PRE,"id_ListenerType_PRE");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_PreFlag_IGNORE_ONCE,"id_PreFlag_IGNORE_ONCE");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_CbEvent_BEGIN,"id_CbEvent_BEGIN");
+	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_InteractionType_COLLISION,"id_InteractionType_COLLISION");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_CbEvent_ONGOING,"id_CbEvent_ONGOING");
+	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_InteractionType_SENSOR,"id_InteractionType_SENSOR");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_CbEvent_END,"id_CbEvent_END");
+	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_InteractionType_FLUID,"id_InteractionType_FLUID");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_CbEvent_WAKE,"id_CbEvent_WAKE");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_CbEvent_SLEEP,"id_CbEvent_SLEEP");
+	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_InteractionType_ANY,"id_InteractionType_ANY");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_CbEvent_BREAK,"id_CbEvent_BREAK");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_CbEvent_PRE,"id_CbEvent_PRE");
-	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_InteractionType_COLLISION,"id_InteractionType_COLLISION");
-	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_InteractionType_SENSOR,"id_InteractionType_SENSOR");
-	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_InteractionType_FLUID,"id_InteractionType_FLUID");
-	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_InteractionType_ANY,"id_InteractionType_ANY");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_Winding_UNDEFINED,"id_Winding_UNDEFINED");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_Winding_CLOCKWISE,"id_Winding_CLOCKWISE");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::id_Winding_ANTICLOCKWISE,"id_Winding_ANTICLOCKWISE");
@@ -801,24 +801,24 @@ static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::BodyType_DYNAMIC,"BodyType_DYNAMIC");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::BodyType_KINEMATIC,"BodyType_KINEMATIC");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::ListenerType_BODY,"ListenerType_BODY");
-	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::ListenerType_CONSTRAINT,"ListenerType_CONSTRAINT");
-	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::ListenerType_INTERACTION,"ListenerType_INTERACTION");
-	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::ListenerType_PRE,"ListenerType_PRE");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::PreFlag_ACCEPT,"PreFlag_ACCEPT");
+	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::ListenerType_CONSTRAINT,"ListenerType_CONSTRAINT");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::PreFlag_IGNORE,"PreFlag_IGNORE");
+	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::ListenerType_INTERACTION,"ListenerType_INTERACTION");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::PreFlag_ACCEPT_ONCE,"PreFlag_ACCEPT_ONCE");
+	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::ListenerType_PRE,"ListenerType_PRE");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::PreFlag_IGNORE_ONCE,"PreFlag_IGNORE_ONCE");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::CbEvent_BEGIN,"CbEvent_BEGIN");
+	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::InteractionType_COLLISION,"InteractionType_COLLISION");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::CbEvent_ONGOING,"CbEvent_ONGOING");
+	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::InteractionType_SENSOR,"InteractionType_SENSOR");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::CbEvent_END,"CbEvent_END");
+	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::InteractionType_FLUID,"InteractionType_FLUID");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::CbEvent_WAKE,"CbEvent_WAKE");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::CbEvent_SLEEP,"CbEvent_SLEEP");
+	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::InteractionType_ANY,"InteractionType_ANY");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::CbEvent_BREAK,"CbEvent_BREAK");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::CbEvent_PRE,"CbEvent_PRE");
-	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::InteractionType_COLLISION,"InteractionType_COLLISION");
-	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::InteractionType_SENSOR,"InteractionType_SENSOR");
-	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::InteractionType_FLUID,"InteractionType_FLUID");
-	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::InteractionType_ANY,"InteractionType_ANY");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::Winding_UNDEFINED,"Winding_UNDEFINED");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::Winding_CLOCKWISE,"Winding_CLOCKWISE");
 	HX_VISIT_MEMBER_NAME(ZPP_Flags_obj::Winding_ANTICLOCKWISE,"Winding_ANTICLOCKWISE");
@@ -839,7 +839,7 @@ Class ZPP_Flags_obj::__mClass;
 
 void ZPP_Flags_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_Flags"), hx::TCanCast< ZPP_Flags_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_Flags"), hx::TCanCast< ZPP_Flags_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }
@@ -861,24 +861,24 @@ void ZPP_Flags_obj::__boot()
 	id_BodyType_DYNAMIC= (int)2;
 	id_BodyType_KINEMATIC= (int)3;
 	id_ListenerType_BODY= (int)0;
-	id_ListenerType_CONSTRAINT= (int)1;
-	id_ListenerType_INTERACTION= (int)2;
-	id_ListenerType_PRE= (int)3;
 	id_PreFlag_ACCEPT= (int)1;
+	id_ListenerType_CONSTRAINT= (int)1;
 	id_PreFlag_IGNORE= (int)2;
+	id_ListenerType_INTERACTION= (int)2;
 	id_PreFlag_ACCEPT_ONCE= (int)3;
+	id_ListenerType_PRE= (int)3;
 	id_PreFlag_IGNORE_ONCE= (int)4;
 	id_CbEvent_BEGIN= (int)0;
+	id_InteractionType_COLLISION= (int)1;
 	id_CbEvent_ONGOING= (int)6;
+	id_InteractionType_SENSOR= (int)2;
 	id_CbEvent_END= (int)1;
+	id_InteractionType_FLUID= (int)4;
 	id_CbEvent_WAKE= (int)2;
 	id_CbEvent_SLEEP= (int)3;
+	id_InteractionType_ANY= (int)7;
 	id_CbEvent_BREAK= (int)4;
 	id_CbEvent_PRE= (int)5;
-	id_InteractionType_COLLISION= (int)1;
-	id_InteractionType_SENSOR= (int)2;
-	id_InteractionType_FLUID= (int)4;
-	id_InteractionType_ANY= (int)7;
 	id_Winding_UNDEFINED= (int)0;
 	id_Winding_CLOCKWISE= (int)1;
 	id_Winding_ANTICLOCKWISE= (int)2;

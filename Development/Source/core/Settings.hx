@@ -1,5 +1,5 @@
 //nme
-import nme.Assets;
+import openfl.Assets;
 
 class Settings{
 

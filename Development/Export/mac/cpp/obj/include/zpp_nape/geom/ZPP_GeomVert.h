@@ -12,7 +12,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_GeomVert_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_GeomVert_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_GeomVert_obj OBJ_;
@@ -47,13 +47,13 @@ class ZPP_GeomVert_obj : public hx::Object{
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		bool forced; /* REM */ 
-		::nape::geom::Vec2 wrap; /* REM */ 
-		::zpp_nape::geom::ZPP_GeomVert next; /* REM */ 
-		::zpp_nape::geom::ZPP_GeomVert prev; /* REM */ 
-		Float y; /* REM */ 
-		Float x; /* REM */ 
-		static ::zpp_nape::geom::ZPP_GeomVert zpp_pool; /* REM */ 
+		bool forced;
+		::nape::geom::Vec2 wrap;
+		::zpp_nape::geom::ZPP_GeomVert next;
+		::zpp_nape::geom::ZPP_GeomVert prev;
+		Float y;
+		Float x;
+		static ::zpp_nape::geom::ZPP_GeomVert zpp_pool;
 		static ::zpp_nape::geom::ZPP_GeomVert get( Float x,Float y);
 		static Dynamic get_dyn();
 

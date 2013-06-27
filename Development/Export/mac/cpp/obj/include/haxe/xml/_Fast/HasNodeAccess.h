@@ -12,7 +12,7 @@ namespace xml{
 namespace _Fast{
 
 
-class HasNodeAccess_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  HasNodeAccess_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef HasNodeAccess_obj OBJ_;
@@ -33,10 +33,7 @@ class HasNodeAccess_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("HasNodeAccess"); }
 
-		virtual bool resolve( ::String name);
-		Dynamic resolve_dyn();
-
-		::Xml __x; /* REM */ 
+		::Xml __x;
 };
 
 } // end namespace haxe

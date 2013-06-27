@@ -24,7 +24,7 @@ namespace nape{
 namespace shape{
 
 
-class Shape_obj : public ::nape::phys::Interactor_obj{
+class HXCPP_CLASS_ATTRIBUTES  Shape_obj : public ::nape::phys::Interactor_obj{
 	public:
 		typedef ::nape::phys::Interactor_obj super;
 		typedef Shape_obj OBJ_;
@@ -67,80 +67,66 @@ class Shape_obj : public ::nape::phys::Interactor_obj{
 		virtual ::nape::geom::AABB get_bounds( );
 		Dynamic get_bounds_dyn();
 
-		::nape::geom::AABB bounds; /* REM */ 
 		virtual bool set_sensorEnabled( bool sensorEnabled);
 		Dynamic set_sensorEnabled_dyn();
 
 		virtual bool get_sensorEnabled( );
 		Dynamic get_sensorEnabled_dyn();
 
-		bool sensorEnabled; /* REM */ 
 		virtual bool set_fluidEnabled( bool fluidEnabled);
 		Dynamic set_fluidEnabled_dyn();
 
 		virtual bool get_fluidEnabled( );
 		Dynamic get_fluidEnabled_dyn();
 
-		bool fluidEnabled; /* REM */ 
 		virtual ::nape::phys::FluidProperties set_fluidProperties( ::nape::phys::FluidProperties fluidProperties);
 		Dynamic set_fluidProperties_dyn();
 
 		virtual ::nape::phys::FluidProperties get_fluidProperties( );
 		Dynamic get_fluidProperties_dyn();
 
-		::nape::phys::FluidProperties fluidProperties; /* REM */ 
 		virtual ::nape::dynamics::InteractionFilter set_filter( ::nape::dynamics::InteractionFilter filter);
 		Dynamic set_filter_dyn();
 
 		virtual ::nape::dynamics::InteractionFilter get_filter( );
 		Dynamic get_filter_dyn();
 
-		::nape::dynamics::InteractionFilter filter; /* REM */ 
 		virtual ::nape::phys::Material set_material( ::nape::phys::Material material);
 		Dynamic set_material_dyn();
 
 		virtual ::nape::phys::Material get_material( );
 		Dynamic get_material_dyn();
 
-		::nape::phys::Material material; /* REM */ 
 		virtual Float get_angDrag( );
 		Dynamic get_angDrag_dyn();
 
-		Float angDrag; /* REM */ 
 		virtual Float get_inertia( );
 		Dynamic get_inertia_dyn();
 
-		Float inertia; /* REM */ 
 		virtual Float get_area( );
 		Dynamic get_area_dyn();
 
-		Float area; /* REM */ 
 		virtual ::nape::geom::Vec2 set_localCOM( ::nape::geom::Vec2 localCOM);
 		Dynamic set_localCOM_dyn();
 
 		virtual ::nape::geom::Vec2 get_localCOM( );
 		Dynamic get_localCOM_dyn();
 
-		::nape::geom::Vec2 localCOM; /* REM */ 
 		virtual ::nape::geom::Vec2 get_worldCOM( );
 		Dynamic get_worldCOM_dyn();
 
-		::nape::geom::Vec2 worldCOM; /* REM */ 
 		virtual ::nape::shape::Polygon get_castPolygon( );
 		Dynamic get_castPolygon_dyn();
 
-		::nape::shape::Polygon castPolygon; /* REM */ 
 		virtual ::nape::shape::Circle get_castCircle( );
 		Dynamic get_castCircle_dyn();
 
-		::nape::shape::Circle castCircle; /* REM */ 
 		virtual ::nape::phys::Body set_body( ::nape::phys::Body body);
 		Dynamic set_body_dyn();
 
 		virtual ::nape::phys::Body get_body( );
 		Dynamic get_body_dyn();
 
-		::nape::phys::Body body; /* REM */ 
 		virtual bool isPolygon( );
 		Dynamic isPolygon_dyn();
 
@@ -150,8 +136,7 @@ class Shape_obj : public ::nape::phys::Interactor_obj{
 		virtual ::nape::shape::ShapeType get_type( );
 		Dynamic get_type_dyn();
 
-		::nape::shape::ShapeType type; /* REM */ 
-		::zpp_nape::shape::ZPP_Shape zpp_inner; /* REM */ 
+		::zpp_nape::shape::ZPP_Shape zpp_inner;
 };
 
 } // end namespace nape

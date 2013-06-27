@@ -8,16 +8,16 @@
 #include <UIobject.h>
 HX_DECLARE_CLASS0(DrawButton)
 HX_DECLARE_CLASS0(UIobject)
-HX_DECLARE_CLASS2(native,display,Bitmap)
-HX_DECLARE_CLASS2(native,display,DisplayObject)
-HX_DECLARE_CLASS2(native,display,IBitmapDrawable)
-HX_DECLARE_CLASS2(native,events,Event)
-HX_DECLARE_CLASS2(native,events,EventDispatcher)
-HX_DECLARE_CLASS2(native,events,IEventDispatcher)
-HX_DECLARE_CLASS2(native,events,MouseEvent)
+HX_DECLARE_CLASS2(flash,display,Bitmap)
+HX_DECLARE_CLASS2(flash,display,DisplayObject)
+HX_DECLARE_CLASS2(flash,display,IBitmapDrawable)
+HX_DECLARE_CLASS2(flash,events,Event)
+HX_DECLARE_CLASS2(flash,events,EventDispatcher)
+HX_DECLARE_CLASS2(flash,events,IEventDispatcher)
+HX_DECLARE_CLASS2(flash,events,MouseEvent)
 
 
-class DrawButton_obj : public ::UIobject_obj{
+class HXCPP_CLASS_ATTRIBUTES  DrawButton_obj : public ::UIobject_obj{
 	public:
 		typedef ::UIobject_obj super;
 		typedef DrawButton_obj OBJ_;
@@ -37,10 +37,10 @@ class DrawButton_obj : public ::UIobject_obj{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("DrawButton"); }
 
-		virtual Void mouseClick( ::native::events::MouseEvent ev);
+		virtual Void mouseClick( ::flash::events::MouseEvent ev);
 
-		::native::display::Bitmap asset_out; /* REM */ 
-		::native::display::Bitmap asset_over; /* REM */ 
+		::flash::display::Bitmap asset_out;
+		::flash::display::Bitmap asset_over;
 };
 
 

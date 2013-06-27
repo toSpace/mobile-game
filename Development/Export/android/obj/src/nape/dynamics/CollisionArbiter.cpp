@@ -119,9 +119,6 @@ Float CollisionArbiter_obj::set_rollingFriction( Float rollingFriction){
 			HX_STACK_LINE(716)
 			hx::Throw (((HX_CSTRING("Error: CollisionArbiter::") + HX_CSTRING("rollingFriction")) + HX_CSTRING(" cannot be negative")));
 		}
-		HX_STACK_LINE(717)
-		{
-		}
 		HX_STACK_LINE(719)
 		::zpp_nape::dynamics::ZPP_ColArbiter colarb = this->zpp_inner->colarb;		HX_STACK_VAR(colarb,"colarb");
 		HX_STACK_LINE(720)
@@ -177,57 +174,18 @@ Float CollisionArbiter_obj::set_rollingFriction( Float rollingFriction){
 						}
 						HX_STACK_LINE(723)
 						if ((!(colarb->userdef_dyn_fric))){
-							struct _Function_5_1{
-								inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-									HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",723);
-									{
-										HX_STACK_LINE(723)
-										{
-										}
-										HX_STACK_LINE(723)
-										return ::Math_obj::sqrt((colarb->s1->material->dynamicFriction * colarb->s2->material->dynamicFriction));
-									}
-									return null();
-								}
-							};
 							HX_STACK_LINE(723)
-							colarb->dyn_fric = _Function_5_1::Block(colarb);
+							colarb->dyn_fric = ::Math_obj::sqrt((colarb->s1->material->dynamicFriction * colarb->s2->material->dynamicFriction));
 						}
 						HX_STACK_LINE(723)
 						if ((!(colarb->userdef_stat_fric))){
-							struct _Function_5_1{
-								inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-									HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",723);
-									{
-										HX_STACK_LINE(723)
-										{
-										}
-										HX_STACK_LINE(723)
-										return ::Math_obj::sqrt((colarb->s1->material->staticFriction * colarb->s2->material->staticFriction));
-									}
-									return null();
-								}
-							};
 							HX_STACK_LINE(723)
-							colarb->stat_fric = _Function_5_1::Block(colarb);
+							colarb->stat_fric = ::Math_obj::sqrt((colarb->s1->material->staticFriction * colarb->s2->material->staticFriction));
 						}
 						HX_STACK_LINE(723)
 						if ((!(colarb->userdef_rfric))){
-							struct _Function_5_1{
-								inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-									HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",723);
-									{
-										HX_STACK_LINE(723)
-										{
-										}
-										HX_STACK_LINE(723)
-										return ::Math_obj::sqrt((colarb->s1->material->rollingFriction * colarb->s2->material->rollingFriction));
-									}
-									return null();
-								}
-							};
 							HX_STACK_LINE(723)
-							colarb->rfric = _Function_5_1::Block(colarb);
+							colarb->rfric = ::Math_obj::sqrt((colarb->s1->material->rollingFriction * colarb->s2->material->rollingFriction));
 						}
 					}
 				}
@@ -291,57 +249,18 @@ Float CollisionArbiter_obj::get_rollingFriction( ){
 			}
 			HX_STACK_LINE(706)
 			if ((!(colarb->userdef_dyn_fric))){
-				struct _Function_4_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-						HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",706);
-						{
-							HX_STACK_LINE(706)
-							{
-							}
-							HX_STACK_LINE(706)
-							return ::Math_obj::sqrt((colarb->s1->material->dynamicFriction * colarb->s2->material->dynamicFriction));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(706)
-				colarb->dyn_fric = _Function_4_1::Block(colarb);
+				colarb->dyn_fric = ::Math_obj::sqrt((colarb->s1->material->dynamicFriction * colarb->s2->material->dynamicFriction));
 			}
 			HX_STACK_LINE(706)
 			if ((!(colarb->userdef_stat_fric))){
-				struct _Function_4_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-						HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",706);
-						{
-							HX_STACK_LINE(706)
-							{
-							}
-							HX_STACK_LINE(706)
-							return ::Math_obj::sqrt((colarb->s1->material->staticFriction * colarb->s2->material->staticFriction));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(706)
-				colarb->stat_fric = _Function_4_1::Block(colarb);
+				colarb->stat_fric = ::Math_obj::sqrt((colarb->s1->material->staticFriction * colarb->s2->material->staticFriction));
 			}
 			HX_STACK_LINE(706)
 			if ((!(colarb->userdef_rfric))){
-				struct _Function_4_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-						HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",706);
-						{
-							HX_STACK_LINE(706)
-							{
-							}
-							HX_STACK_LINE(706)
-							return ::Math_obj::sqrt((colarb->s1->material->rollingFriction * colarb->s2->material->rollingFriction));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(706)
-				colarb->rfric = _Function_4_1::Block(colarb);
+				colarb->rfric = ::Math_obj::sqrt((colarb->s1->material->rollingFriction * colarb->s2->material->rollingFriction));
 			}
 		}
 	}
@@ -372,9 +291,6 @@ Float CollisionArbiter_obj::set_staticFriction( Float staticFriction){
 		if (((staticFriction < (int)0))){
 			HX_STACK_LINE(681)
 			hx::Throw (((HX_CSTRING("Error: CollisionArbiter::") + HX_CSTRING("staticFriction")) + HX_CSTRING(" cannot be negative")));
-		}
-		HX_STACK_LINE(682)
-		{
 		}
 		HX_STACK_LINE(684)
 		::zpp_nape::dynamics::ZPP_ColArbiter colarb = this->zpp_inner->colarb;		HX_STACK_VAR(colarb,"colarb");
@@ -431,57 +347,18 @@ Float CollisionArbiter_obj::set_staticFriction( Float staticFriction){
 						}
 						HX_STACK_LINE(688)
 						if ((!(colarb->userdef_dyn_fric))){
-							struct _Function_5_1{
-								inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-									HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",688);
-									{
-										HX_STACK_LINE(688)
-										{
-										}
-										HX_STACK_LINE(688)
-										return ::Math_obj::sqrt((colarb->s1->material->dynamicFriction * colarb->s2->material->dynamicFriction));
-									}
-									return null();
-								}
-							};
 							HX_STACK_LINE(688)
-							colarb->dyn_fric = _Function_5_1::Block(colarb);
+							colarb->dyn_fric = ::Math_obj::sqrt((colarb->s1->material->dynamicFriction * colarb->s2->material->dynamicFriction));
 						}
 						HX_STACK_LINE(688)
 						if ((!(colarb->userdef_stat_fric))){
-							struct _Function_5_1{
-								inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-									HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",688);
-									{
-										HX_STACK_LINE(688)
-										{
-										}
-										HX_STACK_LINE(688)
-										return ::Math_obj::sqrt((colarb->s1->material->staticFriction * colarb->s2->material->staticFriction));
-									}
-									return null();
-								}
-							};
 							HX_STACK_LINE(688)
-							colarb->stat_fric = _Function_5_1::Block(colarb);
+							colarb->stat_fric = ::Math_obj::sqrt((colarb->s1->material->staticFriction * colarb->s2->material->staticFriction));
 						}
 						HX_STACK_LINE(688)
 						if ((!(colarb->userdef_rfric))){
-							struct _Function_5_1{
-								inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-									HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",688);
-									{
-										HX_STACK_LINE(688)
-										{
-										}
-										HX_STACK_LINE(688)
-										return ::Math_obj::sqrt((colarb->s1->material->rollingFriction * colarb->s2->material->rollingFriction));
-									}
-									return null();
-								}
-							};
 							HX_STACK_LINE(688)
-							colarb->rfric = _Function_5_1::Block(colarb);
+							colarb->rfric = ::Math_obj::sqrt((colarb->s1->material->rollingFriction * colarb->s2->material->rollingFriction));
 						}
 					}
 				}
@@ -545,57 +422,18 @@ Float CollisionArbiter_obj::get_staticFriction( ){
 			}
 			HX_STACK_LINE(671)
 			if ((!(colarb->userdef_dyn_fric))){
-				struct _Function_4_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-						HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",671);
-						{
-							HX_STACK_LINE(671)
-							{
-							}
-							HX_STACK_LINE(671)
-							return ::Math_obj::sqrt((colarb->s1->material->dynamicFriction * colarb->s2->material->dynamicFriction));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(671)
-				colarb->dyn_fric = _Function_4_1::Block(colarb);
+				colarb->dyn_fric = ::Math_obj::sqrt((colarb->s1->material->dynamicFriction * colarb->s2->material->dynamicFriction));
 			}
 			HX_STACK_LINE(671)
 			if ((!(colarb->userdef_stat_fric))){
-				struct _Function_4_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-						HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",671);
-						{
-							HX_STACK_LINE(671)
-							{
-							}
-							HX_STACK_LINE(671)
-							return ::Math_obj::sqrt((colarb->s1->material->staticFriction * colarb->s2->material->staticFriction));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(671)
-				colarb->stat_fric = _Function_4_1::Block(colarb);
+				colarb->stat_fric = ::Math_obj::sqrt((colarb->s1->material->staticFriction * colarb->s2->material->staticFriction));
 			}
 			HX_STACK_LINE(671)
 			if ((!(colarb->userdef_rfric))){
-				struct _Function_4_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-						HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",671);
-						{
-							HX_STACK_LINE(671)
-							{
-							}
-							HX_STACK_LINE(671)
-							return ::Math_obj::sqrt((colarb->s1->material->rollingFriction * colarb->s2->material->rollingFriction));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(671)
-				colarb->rfric = _Function_4_1::Block(colarb);
+				colarb->rfric = ::Math_obj::sqrt((colarb->s1->material->rollingFriction * colarb->s2->material->rollingFriction));
 			}
 		}
 	}
@@ -626,9 +464,6 @@ Float CollisionArbiter_obj::set_dynamicFriction( Float dynamicFriction){
 		if (((dynamicFriction < (int)0))){
 			HX_STACK_LINE(646)
 			hx::Throw (((HX_CSTRING("Error: CollisionArbiter::") + HX_CSTRING("dynamicFriction")) + HX_CSTRING(" cannot be negative")));
-		}
-		HX_STACK_LINE(647)
-		{
 		}
 		HX_STACK_LINE(649)
 		::zpp_nape::dynamics::ZPP_ColArbiter colarb = this->zpp_inner->colarb;		HX_STACK_VAR(colarb,"colarb");
@@ -685,57 +520,18 @@ Float CollisionArbiter_obj::set_dynamicFriction( Float dynamicFriction){
 						}
 						HX_STACK_LINE(653)
 						if ((!(colarb->userdef_dyn_fric))){
-							struct _Function_5_1{
-								inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-									HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",653);
-									{
-										HX_STACK_LINE(653)
-										{
-										}
-										HX_STACK_LINE(653)
-										return ::Math_obj::sqrt((colarb->s1->material->dynamicFriction * colarb->s2->material->dynamicFriction));
-									}
-									return null();
-								}
-							};
 							HX_STACK_LINE(653)
-							colarb->dyn_fric = _Function_5_1::Block(colarb);
+							colarb->dyn_fric = ::Math_obj::sqrt((colarb->s1->material->dynamicFriction * colarb->s2->material->dynamicFriction));
 						}
 						HX_STACK_LINE(653)
 						if ((!(colarb->userdef_stat_fric))){
-							struct _Function_5_1{
-								inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-									HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",653);
-									{
-										HX_STACK_LINE(653)
-										{
-										}
-										HX_STACK_LINE(653)
-										return ::Math_obj::sqrt((colarb->s1->material->staticFriction * colarb->s2->material->staticFriction));
-									}
-									return null();
-								}
-							};
 							HX_STACK_LINE(653)
-							colarb->stat_fric = _Function_5_1::Block(colarb);
+							colarb->stat_fric = ::Math_obj::sqrt((colarb->s1->material->staticFriction * colarb->s2->material->staticFriction));
 						}
 						HX_STACK_LINE(653)
 						if ((!(colarb->userdef_rfric))){
-							struct _Function_5_1{
-								inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-									HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",653);
-									{
-										HX_STACK_LINE(653)
-										{
-										}
-										HX_STACK_LINE(653)
-										return ::Math_obj::sqrt((colarb->s1->material->rollingFriction * colarb->s2->material->rollingFriction));
-									}
-									return null();
-								}
-							};
 							HX_STACK_LINE(653)
-							colarb->rfric = _Function_5_1::Block(colarb);
+							colarb->rfric = ::Math_obj::sqrt((colarb->s1->material->rollingFriction * colarb->s2->material->rollingFriction));
 						}
 					}
 				}
@@ -799,57 +595,18 @@ Float CollisionArbiter_obj::get_dynamicFriction( ){
 			}
 			HX_STACK_LINE(636)
 			if ((!(colarb->userdef_dyn_fric))){
-				struct _Function_4_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-						HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",636);
-						{
-							HX_STACK_LINE(636)
-							{
-							}
-							HX_STACK_LINE(636)
-							return ::Math_obj::sqrt((colarb->s1->material->dynamicFriction * colarb->s2->material->dynamicFriction));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(636)
-				colarb->dyn_fric = _Function_4_1::Block(colarb);
+				colarb->dyn_fric = ::Math_obj::sqrt((colarb->s1->material->dynamicFriction * colarb->s2->material->dynamicFriction));
 			}
 			HX_STACK_LINE(636)
 			if ((!(colarb->userdef_stat_fric))){
-				struct _Function_4_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-						HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",636);
-						{
-							HX_STACK_LINE(636)
-							{
-							}
-							HX_STACK_LINE(636)
-							return ::Math_obj::sqrt((colarb->s1->material->staticFriction * colarb->s2->material->staticFriction));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(636)
-				colarb->stat_fric = _Function_4_1::Block(colarb);
+				colarb->stat_fric = ::Math_obj::sqrt((colarb->s1->material->staticFriction * colarb->s2->material->staticFriction));
 			}
 			HX_STACK_LINE(636)
 			if ((!(colarb->userdef_rfric))){
-				struct _Function_4_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-						HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",636);
-						{
-							HX_STACK_LINE(636)
-							{
-							}
-							HX_STACK_LINE(636)
-							return ::Math_obj::sqrt((colarb->s1->material->rollingFriction * colarb->s2->material->rollingFriction));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(636)
-				colarb->rfric = _Function_4_1::Block(colarb);
+				colarb->rfric = ::Math_obj::sqrt((colarb->s1->material->rollingFriction * colarb->s2->material->rollingFriction));
 			}
 		}
 	}
@@ -880,9 +637,6 @@ Float CollisionArbiter_obj::set_elasticity( Float elasticity){
 		if (((elasticity < (int)0))){
 			HX_STACK_LINE(611)
 			hx::Throw (((HX_CSTRING("Error: CollisionArbiter::") + HX_CSTRING("elasticity")) + HX_CSTRING(" cannot be negative")));
-		}
-		HX_STACK_LINE(612)
-		{
 		}
 		HX_STACK_LINE(614)
 		::zpp_nape::dynamics::ZPP_ColArbiter colarb = this->zpp_inner->colarb;		HX_STACK_VAR(colarb,"colarb");
@@ -939,57 +693,18 @@ Float CollisionArbiter_obj::set_elasticity( Float elasticity){
 						}
 						HX_STACK_LINE(618)
 						if ((!(colarb->userdef_dyn_fric))){
-							struct _Function_5_1{
-								inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-									HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",618);
-									{
-										HX_STACK_LINE(618)
-										{
-										}
-										HX_STACK_LINE(618)
-										return ::Math_obj::sqrt((colarb->s1->material->dynamicFriction * colarb->s2->material->dynamicFriction));
-									}
-									return null();
-								}
-							};
 							HX_STACK_LINE(618)
-							colarb->dyn_fric = _Function_5_1::Block(colarb);
+							colarb->dyn_fric = ::Math_obj::sqrt((colarb->s1->material->dynamicFriction * colarb->s2->material->dynamicFriction));
 						}
 						HX_STACK_LINE(618)
 						if ((!(colarb->userdef_stat_fric))){
-							struct _Function_5_1{
-								inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-									HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",618);
-									{
-										HX_STACK_LINE(618)
-										{
-										}
-										HX_STACK_LINE(618)
-										return ::Math_obj::sqrt((colarb->s1->material->staticFriction * colarb->s2->material->staticFriction));
-									}
-									return null();
-								}
-							};
 							HX_STACK_LINE(618)
-							colarb->stat_fric = _Function_5_1::Block(colarb);
+							colarb->stat_fric = ::Math_obj::sqrt((colarb->s1->material->staticFriction * colarb->s2->material->staticFriction));
 						}
 						HX_STACK_LINE(618)
 						if ((!(colarb->userdef_rfric))){
-							struct _Function_5_1{
-								inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-									HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",618);
-									{
-										HX_STACK_LINE(618)
-										{
-										}
-										HX_STACK_LINE(618)
-										return ::Math_obj::sqrt((colarb->s1->material->rollingFriction * colarb->s2->material->rollingFriction));
-									}
-									return null();
-								}
-							};
 							HX_STACK_LINE(618)
-							colarb->rfric = _Function_5_1::Block(colarb);
+							colarb->rfric = ::Math_obj::sqrt((colarb->s1->material->rollingFriction * colarb->s2->material->rollingFriction));
 						}
 					}
 				}
@@ -1053,57 +768,18 @@ Float CollisionArbiter_obj::get_elasticity( ){
 			}
 			HX_STACK_LINE(601)
 			if ((!(colarb->userdef_dyn_fric))){
-				struct _Function_4_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-						HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",601);
-						{
-							HX_STACK_LINE(601)
-							{
-							}
-							HX_STACK_LINE(601)
-							return ::Math_obj::sqrt((colarb->s1->material->dynamicFriction * colarb->s2->material->dynamicFriction));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(601)
-				colarb->dyn_fric = _Function_4_1::Block(colarb);
+				colarb->dyn_fric = ::Math_obj::sqrt((colarb->s1->material->dynamicFriction * colarb->s2->material->dynamicFriction));
 			}
 			HX_STACK_LINE(601)
 			if ((!(colarb->userdef_stat_fric))){
-				struct _Function_4_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-						HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",601);
-						{
-							HX_STACK_LINE(601)
-							{
-							}
-							HX_STACK_LINE(601)
-							return ::Math_obj::sqrt((colarb->s1->material->staticFriction * colarb->s2->material->staticFriction));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(601)
-				colarb->stat_fric = _Function_4_1::Block(colarb);
+				colarb->stat_fric = ::Math_obj::sqrt((colarb->s1->material->staticFriction * colarb->s2->material->staticFriction));
 			}
 			HX_STACK_LINE(601)
 			if ((!(colarb->userdef_rfric))){
-				struct _Function_4_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &colarb){
-						HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",601);
-						{
-							HX_STACK_LINE(601)
-							{
-							}
-							HX_STACK_LINE(601)
-							return ::Math_obj::sqrt((colarb->s1->material->rollingFriction * colarb->s2->material->rollingFriction));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(601)
-				colarb->rfric = _Function_4_1::Block(colarb);
+				colarb->rfric = ::Math_obj::sqrt((colarb->s1->material->rollingFriction * colarb->s2->material->rollingFriction));
 			}
 		}
 	}
@@ -1231,12 +907,6 @@ bool freshOnly = __o_freshOnly.Default(false);
 		Float retx = (int)0;		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(493)
 		Float rety = (int)0;		HX_STACK_VAR(rety,"rety");
-		HX_STACK_LINE(494)
-		{
-		}
-		HX_STACK_LINE(502)
-		{
-		}
 		HX_STACK_LINE(510)
 		Float retz = (int)0;		HX_STACK_VAR(retz,"retz");
 		HX_STACK_LINE(511)
@@ -1253,9 +923,6 @@ bool freshOnly = __o_freshOnly.Default(false);
 				{
 					HX_STACK_LINE(518)
 					int t1 = t;		HX_STACK_VAR(t1,"t1");
-					HX_STACK_LINE(519)
-					{
-					}
 					struct _Function_4_1{
 						inline static Float Block( ::nape::geom::Vec3 &imp){
 							HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",527);
@@ -1270,7 +937,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 									HX_STACK_LINE(527)
 									::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(527)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(527)
 										_this->_validate();
 									}
@@ -1297,7 +964,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 									HX_STACK_LINE(528)
 									::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(528)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(528)
 										_this->_validate();
 									}
@@ -1325,7 +992,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 								HX_STACK_LINE(530)
 								::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(530)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(530)
 									_this->_validate();
 								}
@@ -1356,9 +1023,6 @@ bool freshOnly = __o_freshOnly.Default(false);
 					{
 						HX_STACK_LINE(541)
 						int t1 = t;		HX_STACK_VAR(t1,"t1");
-						HX_STACK_LINE(542)
-						{
-						}
 						struct _Function_5_1{
 							inline static Float Block( ::nape::geom::Vec3 &imp){
 								HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",550);
@@ -1373,7 +1037,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 										HX_STACK_LINE(550)
 										::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(550)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(550)
 											_this->_validate();
 										}
@@ -1400,7 +1064,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 										HX_STACK_LINE(551)
 										::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(551)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(551)
 											_this->_validate();
 										}
@@ -1428,7 +1092,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 									HX_STACK_LINE(553)
 									::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(553)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(553)
 										_this->_validate();
 									}
@@ -1503,12 +1167,6 @@ bool freshOnly = __o_freshOnly.Default(false);
 		Float retx = (int)0;		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(402)
 		Float rety = (int)0;		HX_STACK_VAR(rety,"rety");
-		HX_STACK_LINE(403)
-		{
-		}
-		HX_STACK_LINE(411)
-		{
-		}
 		HX_STACK_LINE(419)
 		Float retz = (int)0;		HX_STACK_VAR(retz,"retz");
 		HX_STACK_LINE(420)
@@ -1525,9 +1183,6 @@ bool freshOnly = __o_freshOnly.Default(false);
 				{
 					HX_STACK_LINE(427)
 					int t1 = t;		HX_STACK_VAR(t1,"t1");
-					HX_STACK_LINE(428)
-					{
-					}
 					struct _Function_4_1{
 						inline static Float Block( ::nape::geom::Vec3 &imp){
 							HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",436);
@@ -1542,7 +1197,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 									HX_STACK_LINE(436)
 									::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(436)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(436)
 										_this->_validate();
 									}
@@ -1569,7 +1224,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 									HX_STACK_LINE(437)
 									::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(437)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(437)
 										_this->_validate();
 									}
@@ -1597,7 +1252,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 								HX_STACK_LINE(439)
 								::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(439)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(439)
 									_this->_validate();
 								}
@@ -1628,9 +1283,6 @@ bool freshOnly = __o_freshOnly.Default(false);
 					{
 						HX_STACK_LINE(450)
 						int t1 = t;		HX_STACK_VAR(t1,"t1");
-						HX_STACK_LINE(451)
-						{
-						}
 						struct _Function_5_1{
 							inline static Float Block( ::nape::geom::Vec3 &imp){
 								HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",459);
@@ -1645,7 +1297,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 										HX_STACK_LINE(459)
 										::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(459)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(459)
 											_this->_validate();
 										}
@@ -1672,7 +1324,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 										HX_STACK_LINE(460)
 										::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(460)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(460)
 											_this->_validate();
 										}
@@ -1700,7 +1352,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 									HX_STACK_LINE(462)
 									::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(462)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(462)
 										_this->_validate();
 									}
@@ -1777,12 +1429,6 @@ bool freshOnly = __o_freshOnly.Default(false);
 		Float retx = (int)0;		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(308)
 		Float rety = (int)0;		HX_STACK_VAR(rety,"rety");
-		HX_STACK_LINE(309)
-		{
-		}
-		HX_STACK_LINE(317)
-		{
-		}
 		HX_STACK_LINE(325)
 		Float retz = (int)0;		HX_STACK_VAR(retz,"retz");
 		HX_STACK_LINE(326)
@@ -1799,9 +1445,6 @@ bool freshOnly = __o_freshOnly.Default(false);
 				{
 					HX_STACK_LINE(333)
 					int t1 = t;		HX_STACK_VAR(t1,"t1");
-					HX_STACK_LINE(334)
-					{
-					}
 					struct _Function_4_1{
 						inline static Float Block( ::nape::geom::Vec3 &imp){
 							HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",342);
@@ -1816,7 +1459,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 									HX_STACK_LINE(342)
 									::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(342)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(342)
 										_this->_validate();
 									}
@@ -1843,7 +1486,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 									HX_STACK_LINE(343)
 									::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(343)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(343)
 										_this->_validate();
 									}
@@ -1871,7 +1514,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 								HX_STACK_LINE(345)
 								::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(345)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(345)
 									_this->_validate();
 								}
@@ -1902,9 +1545,6 @@ bool freshOnly = __o_freshOnly.Default(false);
 					{
 						HX_STACK_LINE(356)
 						int t1 = t;		HX_STACK_VAR(t1,"t1");
-						HX_STACK_LINE(357)
-						{
-						}
 						struct _Function_5_1{
 							inline static Float Block( ::nape::geom::Vec3 &imp){
 								HX_STACK_PUSH("*::closure","nape/dynamics/CollisionArbiter.hx",365);
@@ -1919,7 +1559,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 										HX_STACK_LINE(365)
 										::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(365)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(365)
 											_this->_validate();
 										}
@@ -1946,7 +1586,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 										HX_STACK_LINE(366)
 										::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(366)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(366)
 											_this->_validate();
 										}
@@ -1974,7 +1614,7 @@ bool freshOnly = __o_freshOnly.Default(false);
 									HX_STACK_LINE(368)
 									::zpp_nape::geom::ZPP_Vec3 _this = imp->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(368)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(368)
 										_this->_validate();
 									}
@@ -2201,30 +1841,12 @@ CollisionArbiter_obj::CollisionArbiter_obj()
 void CollisionArbiter_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(CollisionArbiter);
-	HX_MARK_MEMBER_NAME(rollingFriction,"rollingFriction");
-	HX_MARK_MEMBER_NAME(staticFriction,"staticFriction");
-	HX_MARK_MEMBER_NAME(dynamicFriction,"dynamicFriction");
-	HX_MARK_MEMBER_NAME(elasticity,"elasticity");
-	HX_MARK_MEMBER_NAME(referenceEdge2,"referenceEdge2");
-	HX_MARK_MEMBER_NAME(referenceEdge1,"referenceEdge1");
-	HX_MARK_MEMBER_NAME(radius,"radius");
-	HX_MARK_MEMBER_NAME(normal,"normal");
-	HX_MARK_MEMBER_NAME(contacts,"contacts");
 	super::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
 }
 
 void CollisionArbiter_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(rollingFriction,"rollingFriction");
-	HX_VISIT_MEMBER_NAME(staticFriction,"staticFriction");
-	HX_VISIT_MEMBER_NAME(dynamicFriction,"dynamicFriction");
-	HX_VISIT_MEMBER_NAME(elasticity,"elasticity");
-	HX_VISIT_MEMBER_NAME(referenceEdge2,"referenceEdge2");
-	HX_VISIT_MEMBER_NAME(referenceEdge1,"referenceEdge1");
-	HX_VISIT_MEMBER_NAME(radius,"radius");
-	HX_VISIT_MEMBER_NAME(normal,"normal");
-	HX_VISIT_MEMBER_NAME(contacts,"contacts");
 	super::__Visit(HX_VISIT_ARG);
 }
 
@@ -2232,14 +1854,14 @@ Dynamic CollisionArbiter_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 6:
-		if (HX_FIELD_EQ(inName,"radius") ) { return inCallProp ? get_radius() : radius; }
-		if (HX_FIELD_EQ(inName,"normal") ) { return inCallProp ? get_normal() : normal; }
+		if (HX_FIELD_EQ(inName,"radius") ) { return get_radius(); }
+		if (HX_FIELD_EQ(inName,"normal") ) { return get_normal(); }
 		break;
 	case 8:
-		if (HX_FIELD_EQ(inName,"contacts") ) { return inCallProp ? get_contacts() : contacts; }
+		if (HX_FIELD_EQ(inName,"contacts") ) { return get_contacts(); }
 		break;
 	case 10:
-		if (HX_FIELD_EQ(inName,"elasticity") ) { return inCallProp ? get_elasticity() : elasticity; }
+		if (HX_FIELD_EQ(inName,"elasticity") ) { return get_elasticity(); }
 		if (HX_FIELD_EQ(inName,"get_radius") ) { return get_radius_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_normal") ) { return get_normal_dyn(); }
 		break;
@@ -2255,17 +1877,17 @@ Dynamic CollisionArbiter_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"normalImpulse") ) { return normalImpulse_dyn(); }
 		break;
 	case 14:
-		if (HX_FIELD_EQ(inName,"staticFriction") ) { return inCallProp ? get_staticFriction() : staticFriction; }
+		if (HX_FIELD_EQ(inName,"staticFriction") ) { return get_staticFriction(); }
 		if (HX_FIELD_EQ(inName,"set_elasticity") ) { return set_elasticity_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_elasticity") ) { return get_elasticity_dyn(); }
 		if (HX_FIELD_EQ(inName,"rollingImpulse") ) { return rollingImpulse_dyn(); }
 		if (HX_FIELD_EQ(inName,"tangentImpulse") ) { return tangentImpulse_dyn(); }
-		if (HX_FIELD_EQ(inName,"referenceEdge2") ) { return inCallProp ? get_referenceEdge2() : referenceEdge2; }
-		if (HX_FIELD_EQ(inName,"referenceEdge1") ) { return inCallProp ? get_referenceEdge1() : referenceEdge1; }
+		if (HX_FIELD_EQ(inName,"referenceEdge2") ) { return get_referenceEdge2(); }
+		if (HX_FIELD_EQ(inName,"referenceEdge1") ) { return get_referenceEdge1(); }
 		break;
 	case 15:
-		if (HX_FIELD_EQ(inName,"rollingFriction") ) { return inCallProp ? get_rollingFriction() : rollingFriction; }
-		if (HX_FIELD_EQ(inName,"dynamicFriction") ) { return inCallProp ? get_dynamicFriction() : dynamicFriction; }
+		if (HX_FIELD_EQ(inName,"rollingFriction") ) { return get_rollingFriction(); }
+		if (HX_FIELD_EQ(inName,"dynamicFriction") ) { return get_dynamicFriction(); }
 		break;
 	case 18:
 		if (HX_FIELD_EQ(inName,"set_staticFriction") ) { return set_staticFriction_dyn(); }
@@ -2285,24 +1907,15 @@ Dynamic CollisionArbiter_obj::__Field(const ::String &inName,bool inCallProp)
 Dynamic CollisionArbiter_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
 	switch(inName.length) {
-	case 6:
-		if (HX_FIELD_EQ(inName,"radius") ) { radius=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"normal") ) { normal=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		break;
-	case 8:
-		if (HX_FIELD_EQ(inName,"contacts") ) { contacts=inValue.Cast< ::nape::dynamics::ContactList >(); return inValue; }
-		break;
 	case 10:
-		if (HX_FIELD_EQ(inName,"elasticity") ) { if (inCallProp) return set_elasticity(inValue);elasticity=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"elasticity") ) { return set_elasticity(inValue); }
 		break;
 	case 14:
-		if (HX_FIELD_EQ(inName,"staticFriction") ) { if (inCallProp) return set_staticFriction(inValue);staticFriction=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"referenceEdge2") ) { referenceEdge2=inValue.Cast< ::nape::shape::Edge >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"referenceEdge1") ) { referenceEdge1=inValue.Cast< ::nape::shape::Edge >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"staticFriction") ) { return set_staticFriction(inValue); }
 		break;
 	case 15:
-		if (HX_FIELD_EQ(inName,"rollingFriction") ) { if (inCallProp) return set_rollingFriction(inValue);rollingFriction=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"dynamicFriction") ) { if (inCallProp) return set_dynamicFriction(inValue);dynamicFriction=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"rollingFriction") ) { return set_rollingFriction(inValue); }
+		if (HX_FIELD_EQ(inName,"dynamicFriction") ) { return set_dynamicFriction(inValue); }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -2327,16 +1940,12 @@ static ::String sStaticFields[] = {
 static ::String sMemberFields[] = {
 	HX_CSTRING("set_rollingFriction"),
 	HX_CSTRING("get_rollingFriction"),
-	HX_CSTRING("rollingFriction"),
 	HX_CSTRING("set_staticFriction"),
 	HX_CSTRING("get_staticFriction"),
-	HX_CSTRING("staticFriction"),
 	HX_CSTRING("set_dynamicFriction"),
 	HX_CSTRING("get_dynamicFriction"),
-	HX_CSTRING("dynamicFriction"),
 	HX_CSTRING("set_elasticity"),
 	HX_CSTRING("get_elasticity"),
-	HX_CSTRING("elasticity"),
 	HX_CSTRING("rollingImpulse"),
 	HX_CSTRING("totalImpulse"),
 	HX_CSTRING("tangentImpulse"),
@@ -2344,15 +1953,10 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("secondVertex"),
 	HX_CSTRING("firstVertex"),
 	HX_CSTRING("get_referenceEdge2"),
-	HX_CSTRING("referenceEdge2"),
 	HX_CSTRING("get_referenceEdge1"),
-	HX_CSTRING("referenceEdge1"),
 	HX_CSTRING("get_radius"),
-	HX_CSTRING("radius"),
 	HX_CSTRING("get_normal"),
-	HX_CSTRING("normal"),
 	HX_CSTRING("get_contacts"),
-	HX_CSTRING("contacts"),
 	String(null()) };
 
 static void sMarkStatics(HX_MARK_PARAMS) {
@@ -2367,7 +1971,7 @@ Class CollisionArbiter_obj::__mClass;
 
 void CollisionArbiter_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.dynamics.CollisionArbiter"), hx::TCanCast< CollisionArbiter_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.dynamics.CollisionArbiter"), hx::TCanCast< CollisionArbiter_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

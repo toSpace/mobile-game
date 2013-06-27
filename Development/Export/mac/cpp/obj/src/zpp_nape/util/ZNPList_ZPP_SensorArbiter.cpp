@@ -49,9 +49,6 @@ Dynamic ZNPList_ZPP_SensorArbiter_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_PUSH("ZNPList_ZPP_SensorArbiter::at","zpp_nape/util/Lists.hx",11837);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(11838)
-	{
-	}
 	HX_STACK_LINE(11846)
 	::zpp_nape::util::ZNPNode_ZPP_SensorArbiter it = this->iterator_at(ind);		HX_STACK_VAR(it,"it");
 	HX_STACK_LINE(11847)
@@ -65,9 +62,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SensorArbiter_obj,at,return )
 	HX_STACK_PUSH("ZNPList_ZPP_SensorArbiter::iterator_at","zpp_nape/util/Lists.hx",11824);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(11825)
-	{
-	}
 	HX_STACK_LINE(11833)
 	::zpp_nape::util::ZNPNode_ZPP_SensorArbiter ret = this->head;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(11834)
@@ -117,9 +111,6 @@ bool ZNPList_ZPP_SensorArbiter_obj::inlined_has( ::zpp_nape::dynamics::ZPP_Senso
 	HX_STACK_PUSH("ZNPList_ZPP_SensorArbiter::inlined_has","zpp_nape/util/Lists.hx",11782);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(11783)
-	{
-	}
 	HX_STACK_LINE(11791)
 	bool ret;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(11792)
@@ -161,9 +152,6 @@ bool ZNPList_ZPP_SensorArbiter_obj::has( ::zpp_nape::dynamics::ZPP_SensorArbiter
 		inline static bool Block( ::zpp_nape::util::ZNPList_ZPP_SensorArbiter_obj *__this,::zpp_nape::dynamics::ZPP_SensorArbiter &obj){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",11778);
 			{
-				HX_STACK_LINE(11778)
-				{
-				}
 				HX_STACK_LINE(11778)
 				bool ret;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(11778)
@@ -262,22 +250,13 @@ Void ZNPList_ZPP_SensorArbiter_obj::inlined_clear( ){
 		HX_STACK_LINE(11750)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(11750)
-			{
-			}
-			HX_STACK_LINE(11750)
 			::zpp_nape::util::ZNPNode_ZPP_SensorArbiter ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(11750)
 			this->head = ret->next;
 			HX_STACK_LINE(11750)
 			{
-			}
-			HX_STACK_LINE(11750)
-			{
 				HX_STACK_LINE(11750)
 				::zpp_nape::util::ZNPNode_ZPP_SensorArbiter o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(11750)
-				{
-				}
 				HX_STACK_LINE(11750)
 				o->elt = null();
 				HX_STACK_LINE(11750)
@@ -311,22 +290,13 @@ Void ZNPList_ZPP_SensorArbiter_obj::clear( ){
 		HX_STACK_LINE(11744)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(11744)
-			{
-			}
-			HX_STACK_LINE(11744)
 			::zpp_nape::util::ZNPNode_ZPP_SensorArbiter ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(11744)
 			this->head = ret->next;
 			HX_STACK_LINE(11744)
 			{
-			}
-			HX_STACK_LINE(11744)
-			{
 				HX_STACK_LINE(11744)
 				::zpp_nape::util::ZNPNode_ZPP_SensorArbiter o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(11744)
-				{
-				}
 				HX_STACK_LINE(11744)
 				o->elt = null();
 				HX_STACK_LINE(11744)
@@ -374,9 +344,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_SensorArbiter_obj,splice,return )
 	HX_STACK_PUSH("ZNPList_ZPP_SensorArbiter::inlined_erase","zpp_nape/util/Lists.hx",11693);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
-	HX_STACK_LINE(11694)
-	{
-	}
 	HX_STACK_LINE(11702)
 	::zpp_nape::util::ZNPNode_ZPP_SensorArbiter old;		HX_STACK_VAR(old,"old");
 	HX_STACK_LINE(11703)
@@ -408,16 +375,10 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_SensorArbiter_obj,splice,return )
 			this->pushmod = true;
 		}
 	}
-	HX_STACK_LINE(11716)
-	{
-	}
 	HX_STACK_LINE(11717)
 	{
 		HX_STACK_LINE(11718)
 		::zpp_nape::util::ZNPNode_ZPP_SensorArbiter o = old;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(11719)
-		{
-		}
 		HX_STACK_LINE(11727)
 		o->elt = null();
 		HX_STACK_LINE(11728)
@@ -443,12 +404,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SensorArbiter_obj,inlined_erase,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
 	struct _Function_1_1{
-		inline static ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter Block( ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter &pre,::zpp_nape::util::ZNPList_ZPP_SensorArbiter_obj *__this){
+		inline static ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter Block( ::zpp_nape::util::ZNPList_ZPP_SensorArbiter_obj *__this,::zpp_nape::util::ZNPNode_ZPP_SensorArbiter &pre){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",11689);
 			{
-				HX_STACK_LINE(11689)
-				{
-				}
 				HX_STACK_LINE(11689)
 				::zpp_nape::util::ZNPNode_ZPP_SensorArbiter old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(11689)
@@ -482,14 +440,8 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SensorArbiter_obj,inlined_erase,return )
 				}
 				HX_STACK_LINE(11689)
 				{
-				}
-				HX_STACK_LINE(11689)
-				{
 					HX_STACK_LINE(11689)
 					::zpp_nape::util::ZNPNode_ZPP_SensorArbiter o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(11689)
-					{
-					}
 					HX_STACK_LINE(11689)
 					o->elt = null();
 					HX_STACK_LINE(11689)
@@ -510,7 +462,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SensorArbiter_obj,inlined_erase,return )
 		}
 	};
 	HX_STACK_LINE(11688)
-	return _Function_1_1::Block(pre,this);
+	return _Function_1_1::Block(this,pre);
 }
 
 
@@ -520,9 +472,6 @@ bool ZNPList_ZPP_SensorArbiter_obj::inlined_try_remove( ::zpp_nape::dynamics::ZP
 	HX_STACK_PUSH("ZNPList_ZPP_SensorArbiter::inlined_try_remove","zpp_nape/util/Lists.hx",11665);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(11666)
-	{
-	}
 	HX_STACK_LINE(11674)
 	::zpp_nape::util::ZNPNode_ZPP_SensorArbiter pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(11675)
@@ -535,9 +484,6 @@ bool ZNPList_ZPP_SensorArbiter_obj::inlined_try_remove( ::zpp_nape::dynamics::ZP
 		if (((cur->elt == obj))){
 			HX_STACK_LINE(11679)
 			{
-				HX_STACK_LINE(11679)
-				{
-				}
 				HX_STACK_LINE(11679)
 				::zpp_nape::util::ZNPNode_ZPP_SensorArbiter old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(11679)
@@ -571,14 +517,8 @@ bool ZNPList_ZPP_SensorArbiter_obj::inlined_try_remove( ::zpp_nape::dynamics::ZP
 				}
 				HX_STACK_LINE(11679)
 				{
-				}
-				HX_STACK_LINE(11679)
-				{
 					HX_STACK_LINE(11679)
 					::zpp_nape::util::ZNPNode_ZPP_SensorArbiter o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(11679)
-					{
-					}
 					HX_STACK_LINE(11679)
 					o->elt = null();
 					HX_STACK_LINE(11679)
@@ -617,99 +557,81 @@ Void ZNPList_ZPP_SensorArbiter_obj::inlined_remove( ::zpp_nape::dynamics::ZPP_Se
 		HX_STACK_PUSH("ZNPList_ZPP_SensorArbiter::inlined_remove","zpp_nape/util/Lists.hx",11652);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(11653)
-		{
-		}
 		HX_STACK_LINE(11661)
-		{
+		::zpp_nape::util::ZNPNode_ZPP_SensorArbiter pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(11661)
+		::zpp_nape::util::ZNPNode_ZPP_SensorArbiter cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(11661)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(11661)
+		while(((cur != null()))){
 			HX_STACK_LINE(11661)
-			{
-			}
-			HX_STACK_LINE(11661)
-			::zpp_nape::util::ZNPNode_ZPP_SensorArbiter pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(11661)
-			::zpp_nape::util::ZNPNode_ZPP_SensorArbiter cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(11661)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(11661)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(11661)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(11661)
+					::zpp_nape::util::ZNPNode_ZPP_SensorArbiter old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(11661)
+					::zpp_nape::util::ZNPNode_ZPP_SensorArbiter ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(11661)
+					if (((pre == null()))){
+						HX_STACK_LINE(11661)
+						old = this->head;
+						HX_STACK_LINE(11661)
+						ret1 = old->next;
+						HX_STACK_LINE(11661)
+						this->head = ret1;
+						HX_STACK_LINE(11661)
+						if (((this->head == null()))){
+							HX_STACK_LINE(11661)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(11661)
+						old = pre->next;
+						HX_STACK_LINE(11661)
+						ret1 = old->next;
+						HX_STACK_LINE(11661)
+						pre->next = ret1;
+						HX_STACK_LINE(11661)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(11661)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(11661)
 					{
 						HX_STACK_LINE(11661)
-						{
-						}
+						::zpp_nape::util::ZNPNode_ZPP_SensorArbiter o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(11661)
-						::zpp_nape::util::ZNPNode_ZPP_SensorArbiter old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(11661)
-						::zpp_nape::util::ZNPNode_ZPP_SensorArbiter ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter_obj::zpp_pool;
 						HX_STACK_LINE(11661)
-						if (((pre == null()))){
-							HX_STACK_LINE(11661)
-							old = this->head;
-							HX_STACK_LINE(11661)
-							ret1 = old->next;
-							HX_STACK_LINE(11661)
-							this->head = ret1;
-							HX_STACK_LINE(11661)
-							if (((this->head == null()))){
-								HX_STACK_LINE(11661)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(11661)
-							old = pre->next;
-							HX_STACK_LINE(11661)
-							ret1 = old->next;
-							HX_STACK_LINE(11661)
-							pre->next = ret1;
-							HX_STACK_LINE(11661)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(11661)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(11661)
-						{
-						}
-						HX_STACK_LINE(11661)
-						{
-							HX_STACK_LINE(11661)
-							::zpp_nape::util::ZNPNode_ZPP_SensorArbiter o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(11661)
-							{
-							}
-							HX_STACK_LINE(11661)
-							o->elt = null();
-							HX_STACK_LINE(11661)
-							o->next = ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter_obj::zpp_pool;
-							HX_STACK_LINE(11661)
-							::zpp_nape::util::ZNPNode_ZPP_SensorArbiter_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(11661)
-						this->modified = true;
-						HX_STACK_LINE(11661)
-						(this->length)--;
-						HX_STACK_LINE(11661)
-						this->pushmod = true;
-						HX_STACK_LINE(11661)
-						ret1;
+						::zpp_nape::util::ZNPNode_ZPP_SensorArbiter_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(11661)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(11661)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(11661)
+					this->pushmod = true;
+					HX_STACK_LINE(11661)
+					ret1;
 				}
 				HX_STACK_LINE(11661)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(11661)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(11661)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(11661)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(11661)
+		ret;
 	}
 return null();
 }
@@ -721,9 +643,6 @@ bool ZNPList_ZPP_SensorArbiter_obj::try_remove( ::zpp_nape::dynamics::ZPP_Sensor
 	HX_STACK_PUSH("ZNPList_ZPP_SensorArbiter::try_remove","zpp_nape/util/Lists.hx",11627);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(11628)
-	{
-	}
 	HX_STACK_LINE(11636)
 	::zpp_nape::util::ZNPNode_ZPP_SensorArbiter pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(11637)
@@ -758,99 +677,81 @@ Void ZNPList_ZPP_SensorArbiter_obj::remove( ::zpp_nape::dynamics::ZPP_SensorArbi
 		HX_STACK_PUSH("ZNPList_ZPP_SensorArbiter::remove","zpp_nape/util/Lists.hx",11616);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(11617)
-		{
-		}
 		HX_STACK_LINE(11625)
-		{
+		::zpp_nape::util::ZNPNode_ZPP_SensorArbiter pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(11625)
+		::zpp_nape::util::ZNPNode_ZPP_SensorArbiter cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(11625)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(11625)
+		while(((cur != null()))){
 			HX_STACK_LINE(11625)
-			{
-			}
-			HX_STACK_LINE(11625)
-			::zpp_nape::util::ZNPNode_ZPP_SensorArbiter pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(11625)
-			::zpp_nape::util::ZNPNode_ZPP_SensorArbiter cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(11625)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(11625)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(11625)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(11625)
+					::zpp_nape::util::ZNPNode_ZPP_SensorArbiter old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(11625)
+					::zpp_nape::util::ZNPNode_ZPP_SensorArbiter ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(11625)
+					if (((pre == null()))){
+						HX_STACK_LINE(11625)
+						old = this->head;
+						HX_STACK_LINE(11625)
+						ret1 = old->next;
+						HX_STACK_LINE(11625)
+						this->head = ret1;
+						HX_STACK_LINE(11625)
+						if (((this->head == null()))){
+							HX_STACK_LINE(11625)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(11625)
+						old = pre->next;
+						HX_STACK_LINE(11625)
+						ret1 = old->next;
+						HX_STACK_LINE(11625)
+						pre->next = ret1;
+						HX_STACK_LINE(11625)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(11625)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(11625)
 					{
 						HX_STACK_LINE(11625)
-						{
-						}
+						::zpp_nape::util::ZNPNode_ZPP_SensorArbiter o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(11625)
-						::zpp_nape::util::ZNPNode_ZPP_SensorArbiter old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(11625)
-						::zpp_nape::util::ZNPNode_ZPP_SensorArbiter ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter_obj::zpp_pool;
 						HX_STACK_LINE(11625)
-						if (((pre == null()))){
-							HX_STACK_LINE(11625)
-							old = this->head;
-							HX_STACK_LINE(11625)
-							ret1 = old->next;
-							HX_STACK_LINE(11625)
-							this->head = ret1;
-							HX_STACK_LINE(11625)
-							if (((this->head == null()))){
-								HX_STACK_LINE(11625)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(11625)
-							old = pre->next;
-							HX_STACK_LINE(11625)
-							ret1 = old->next;
-							HX_STACK_LINE(11625)
-							pre->next = ret1;
-							HX_STACK_LINE(11625)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(11625)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(11625)
-						{
-						}
-						HX_STACK_LINE(11625)
-						{
-							HX_STACK_LINE(11625)
-							::zpp_nape::util::ZNPNode_ZPP_SensorArbiter o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(11625)
-							{
-							}
-							HX_STACK_LINE(11625)
-							o->elt = null();
-							HX_STACK_LINE(11625)
-							o->next = ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter_obj::zpp_pool;
-							HX_STACK_LINE(11625)
-							::zpp_nape::util::ZNPNode_ZPP_SensorArbiter_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(11625)
-						this->modified = true;
-						HX_STACK_LINE(11625)
-						(this->length)--;
-						HX_STACK_LINE(11625)
-						this->pushmod = true;
-						HX_STACK_LINE(11625)
-						ret1;
+						::zpp_nape::util::ZNPNode_ZPP_SensorArbiter_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(11625)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(11625)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(11625)
+					this->pushmod = true;
+					HX_STACK_LINE(11625)
+					ret1;
 				}
 				HX_STACK_LINE(11625)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(11625)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(11625)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(11625)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(11625)
+		ret;
 	}
 return null();
 }
@@ -861,9 +762,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SensorArbiter_obj,remove,(void))
 ::zpp_nape::dynamics::ZPP_SensorArbiter ZNPList_ZPP_SensorArbiter_obj::inlined_pop_unsafe( ){
 	HX_STACK_PUSH("ZNPList_ZPP_SensorArbiter::inlined_pop_unsafe","zpp_nape/util/Lists.hx",11603);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(11604)
-	{
-	}
 	HX_STACK_LINE(11612)
 	::zpp_nape::dynamics::ZPP_SensorArbiter ret = this->head->elt;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(11613)
@@ -882,9 +780,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_SensorArbiter_obj,inlined_pop_unsafe,return 
 		inline static ::zpp_nape::dynamics::ZPP_SensorArbiter Block( ::zpp_nape::util::ZNPList_ZPP_SensorArbiter_obj *__this){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",11599);
 			{
-				HX_STACK_LINE(11599)
-				{
-				}
 				HX_STACK_LINE(11599)
 				::zpp_nape::dynamics::ZPP_SensorArbiter ret = __this->head->elt;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(11599)
@@ -906,23 +801,14 @@ Void ZNPList_ZPP_SensorArbiter_obj::inlined_pop( ){
 {
 		HX_STACK_PUSH("ZNPList_ZPP_SensorArbiter::inlined_pop","zpp_nape/util/Lists.hx",11565);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(11566)
-		{
-		}
 		HX_STACK_LINE(11574)
 		::zpp_nape::util::ZNPNode_ZPP_SensorArbiter ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(11575)
 		this->head = ret->next;
-		HX_STACK_LINE(11576)
-		{
-		}
 		HX_STACK_LINE(11577)
 		{
 			HX_STACK_LINE(11578)
 			::zpp_nape::util::ZNPNode_ZPP_SensorArbiter o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(11579)
-			{
-			}
 			HX_STACK_LINE(11587)
 			o->elt = null();
 			HX_STACK_LINE(11588)
@@ -951,22 +837,13 @@ Void ZNPList_ZPP_SensorArbiter_obj::pop( ){
 		HX_STACK_PUSH("ZNPList_ZPP_SensorArbiter::pop","zpp_nape/util/Lists.hx",11560);
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(11561)
-		{
-		}
-		HX_STACK_LINE(11561)
 		::zpp_nape::util::ZNPNode_ZPP_SensorArbiter ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(11561)
 		this->head = ret->next;
 		HX_STACK_LINE(11561)
 		{
-		}
-		HX_STACK_LINE(11561)
-		{
 			HX_STACK_LINE(11561)
 			::zpp_nape::util::ZNPNode_ZPP_SensorArbiter o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(11561)
-			{
-			}
 			HX_STACK_LINE(11561)
 			o->elt = null();
 			HX_STACK_LINE(11561)
@@ -995,9 +872,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_SensorArbiter_obj,pop,(void))
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(11518)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter Block( ::zpp_nape::dynamics::ZPP_SensorArbiter &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",11526);
@@ -1065,9 +939,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_SensorArbiter_obj,inlined_insert,return )
 		inline static ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter Block( ::zpp_nape::util::ZNPList_ZPP_SensorArbiter_obj *__this,::zpp_nape::dynamics::ZPP_SensorArbiter &o,::zpp_nape::util::ZNPNode_ZPP_SensorArbiter &cur){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",11513);
 			{
-				HX_STACK_LINE(11513)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter Block( ::zpp_nape::dynamics::ZPP_SensorArbiter &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",11513);
@@ -1137,22 +1008,16 @@ Void ZNPList_ZPP_SensorArbiter_obj::addAll( ::zpp_nape::util::ZNPList_ZPP_Sensor
 		HX_STACK_PUSH("ZNPList_ZPP_SensorArbiter::addAll","zpp_nape/util/Lists.hx",11494);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(11495)
-		{
-		}
-		HX_STACK_LINE(11503)
-		{
-			HX_STACK_LINE(11504)
-			::zpp_nape::util::ZNPNode_ZPP_SensorArbiter cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
-			HX_STACK_LINE(11505)
-			while(((cx_ite != null()))){
-				HX_STACK_LINE(11506)
-				::zpp_nape::dynamics::ZPP_SensorArbiter i = cx_ite->elt;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(11507)
-				this->add(i);
-				HX_STACK_LINE(11508)
-				cx_ite = cx_ite->next;
-			}
+		HX_STACK_LINE(11504)
+		::zpp_nape::util::ZNPNode_ZPP_SensorArbiter cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+		HX_STACK_LINE(11505)
+		while(((cx_ite != null()))){
+			HX_STACK_LINE(11506)
+			::zpp_nape::dynamics::ZPP_SensorArbiter i = cx_ite->elt;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(11507)
+			this->add(i);
+			HX_STACK_LINE(11508)
+			cx_ite = cx_ite->next;
 		}
 	}
 return null();
@@ -1165,9 +1030,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SensorArbiter_obj,addAll,(void))
 	HX_STACK_PUSH("ZNPList_ZPP_SensorArbiter::inlined_add","zpp_nape/util/Lists.hx",11457);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(11458)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter Block( ::zpp_nape::dynamics::ZPP_SensorArbiter &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",11466);
@@ -1222,12 +1084,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SensorArbiter_obj,inlined_add,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
 	struct _Function_1_1{
-		inline static ::zpp_nape::dynamics::ZPP_SensorArbiter Block( ::zpp_nape::dynamics::ZPP_SensorArbiter &o,::zpp_nape::util::ZNPList_ZPP_SensorArbiter_obj *__this){
+		inline static ::zpp_nape::dynamics::ZPP_SensorArbiter Block( ::zpp_nape::util::ZNPList_ZPP_SensorArbiter_obj *__this,::zpp_nape::dynamics::ZPP_SensorArbiter &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",11453);
 			{
-				HX_STACK_LINE(11453)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter Block( ::zpp_nape::dynamics::ZPP_SensorArbiter &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",11453);
@@ -1277,7 +1136,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_SensorArbiter_obj,inlined_add,return )
 		}
 	};
 	HX_STACK_LINE(11452)
-	return _Function_1_1::Block(o,this);
+	return _Function_1_1::Block(this,o);
 }
 
 
@@ -1475,7 +1334,7 @@ Class ZNPList_ZPP_SensorArbiter_obj::__mClass;
 
 void ZNPList_ZPP_SensorArbiter_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ZPP_SensorArbiter"), hx::TCanCast< ZNPList_ZPP_SensorArbiter_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ZPP_SensorArbiter"), hx::TCanCast< ZNPList_ZPP_SensorArbiter_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

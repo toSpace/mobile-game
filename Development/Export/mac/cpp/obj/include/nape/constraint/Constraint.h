@@ -18,7 +18,7 @@ namespace nape{
 namespace constraint{
 
 
-class Constraint_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Constraint_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Constraint_obj OBJ_;
@@ -47,7 +47,6 @@ class Constraint_obj : public hx::Object{
 		virtual ::nape::callbacks::CbTypeList get_cbTypes( );
 		Dynamic get_cbTypes_dyn();
 
-		::nape::callbacks::CbTypeList cbTypes; /* REM */ 
 		virtual Void visitBodies( Dynamic lambda);
 		Dynamic visitBodies_dyn();
 
@@ -63,94 +62,80 @@ class Constraint_obj : public hx::Object{
 		virtual bool get_removeOnBreak( );
 		Dynamic get_removeOnBreak_dyn();
 
-		bool removeOnBreak; /* REM */ 
 		virtual bool set_breakUnderError( bool breakUnderError);
 		Dynamic set_breakUnderError_dyn();
 
 		virtual bool get_breakUnderError( );
 		Dynamic get_breakUnderError_dyn();
 
-		bool breakUnderError; /* REM */ 
 		virtual bool set_breakUnderForce( bool breakUnderForce);
 		Dynamic set_breakUnderForce_dyn();
 
 		virtual bool get_breakUnderForce( );
 		Dynamic get_breakUnderForce_dyn();
 
-		bool breakUnderForce; /* REM */ 
 		virtual Float set_maxError( Float maxError);
 		Dynamic set_maxError_dyn();
 
 		virtual Float get_maxError( );
 		Dynamic get_maxError_dyn();
 
-		Float maxError; /* REM */ 
 		virtual Float set_maxForce( Float maxForce);
 		Dynamic set_maxForce_dyn();
 
 		virtual Float get_maxForce( );
 		Dynamic get_maxForce_dyn();
 
-		Float maxForce; /* REM */ 
 		virtual Float set_damping( Float damping);
 		Dynamic set_damping_dyn();
 
 		virtual Float get_damping( );
 		Dynamic get_damping_dyn();
 
-		Float damping; /* REM */ 
 		virtual Float set_frequency( Float frequency);
 		Dynamic set_frequency_dyn();
 
 		virtual Float get_frequency( );
 		Dynamic get_frequency_dyn();
 
-		Float frequency; /* REM */ 
 		virtual bool set_stiff( bool stiff);
 		Dynamic set_stiff_dyn();
 
 		virtual bool get_stiff( );
 		Dynamic get_stiff_dyn();
 
-		bool stiff; /* REM */ 
 		virtual bool set_ignore( bool ignore);
 		Dynamic set_ignore_dyn();
 
 		virtual bool get_ignore( );
 		Dynamic get_ignore_dyn();
 
-		bool ignore; /* REM */ 
 		virtual bool set_active( bool active);
 		Dynamic set_active_dyn();
 
 		virtual bool get_active( );
 		Dynamic get_active_dyn();
 
-		bool active; /* REM */ 
 		virtual bool get_isSleeping( );
 		Dynamic get_isSleeping_dyn();
 
-		bool isSleeping; /* REM */ 
 		virtual ::nape::space::Space set_space( ::nape::space::Space space);
 		Dynamic set_space_dyn();
 
 		virtual ::nape::space::Space get_space( );
 		Dynamic get_space_dyn();
 
-		::nape::space::Space space; /* REM */ 
 		virtual ::nape::phys::Compound set_compound( ::nape::phys::Compound compound);
 		Dynamic set_compound_dyn();
 
 		virtual ::nape::phys::Compound get_compound( );
 		Dynamic get_compound_dyn();
 
-		::nape::phys::Compound compound; /* REM */ 
-		bool debugDraw; /* REM */ 
+		bool debugDraw;
 		virtual Dynamic get_userData( );
 		Dynamic get_userData_dyn();
 
-		Dynamic userData; /* REM */ 
-		::zpp_nape::constraint::ZPP_Constraint zpp_inner; /* REM */ 
+		::zpp_nape::constraint::ZPP_Constraint zpp_inner;
 };
 
 } // end namespace nape

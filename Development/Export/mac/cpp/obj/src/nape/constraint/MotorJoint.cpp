@@ -68,6 +68,7 @@ Float ratio = __o_ratio.Default(1.0);
 	}
 	catch(Dynamic __e){
 		{
+			HX_STACK_BEGIN_CATCH
 			Dynamic e = __e;{
 			}
 		}
@@ -536,10 +537,6 @@ MotorJoint_obj::MotorJoint_obj()
 void MotorJoint_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(MotorJoint);
-	HX_MARK_MEMBER_NAME(rate,"rate");
-	HX_MARK_MEMBER_NAME(ratio,"ratio");
-	HX_MARK_MEMBER_NAME(body2,"body2");
-	HX_MARK_MEMBER_NAME(body1,"body1");
 	HX_MARK_MEMBER_NAME(zpp_inner_zn,"zpp_inner_zn");
 	super::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
@@ -547,10 +544,6 @@ void MotorJoint_obj::__Mark(HX_MARK_PARAMS)
 
 void MotorJoint_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(rate,"rate");
-	HX_VISIT_MEMBER_NAME(ratio,"ratio");
-	HX_VISIT_MEMBER_NAME(body2,"body2");
-	HX_VISIT_MEMBER_NAME(body1,"body1");
 	HX_VISIT_MEMBER_NAME(zpp_inner_zn,"zpp_inner_zn");
 	super::__Visit(HX_VISIT_ARG);
 }
@@ -559,12 +552,12 @@ Dynamic MotorJoint_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 4:
-		if (HX_FIELD_EQ(inName,"rate") ) { return inCallProp ? get_rate() : rate; }
+		if (HX_FIELD_EQ(inName,"rate") ) { return get_rate(); }
 		break;
 	case 5:
-		if (HX_FIELD_EQ(inName,"ratio") ) { return inCallProp ? get_ratio() : ratio; }
-		if (HX_FIELD_EQ(inName,"body2") ) { return inCallProp ? get_body2() : body2; }
-		if (HX_FIELD_EQ(inName,"body1") ) { return inCallProp ? get_body1() : body1; }
+		if (HX_FIELD_EQ(inName,"ratio") ) { return get_ratio(); }
+		if (HX_FIELD_EQ(inName,"body2") ) { return get_body2(); }
+		if (HX_FIELD_EQ(inName,"body1") ) { return get_body1(); }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"impulse") ) { return impulse_dyn(); }
@@ -595,12 +588,12 @@ Dynamic MotorJoint_obj::__SetField(const ::String &inName,const Dynamic &inValue
 {
 	switch(inName.length) {
 	case 4:
-		if (HX_FIELD_EQ(inName,"rate") ) { if (inCallProp) return set_rate(inValue);rate=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"rate") ) { return set_rate(inValue); }
 		break;
 	case 5:
-		if (HX_FIELD_EQ(inName,"ratio") ) { if (inCallProp) return set_ratio(inValue);ratio=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"body2") ) { if (inCallProp) return set_body2(inValue);body2=inValue.Cast< ::nape::phys::Body >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"body1") ) { if (inCallProp) return set_body1(inValue);body1=inValue.Cast< ::nape::phys::Body >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"ratio") ) { return set_ratio(inValue); }
+		if (HX_FIELD_EQ(inName,"body2") ) { return set_body2(inValue); }
+		if (HX_FIELD_EQ(inName,"body1") ) { return set_body1(inValue); }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"zpp_inner_zn") ) { zpp_inner_zn=inValue.Cast< ::zpp_nape::constraint::ZPP_MotorJoint >(); return inValue; }
@@ -627,16 +620,12 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("impulse"),
 	HX_CSTRING("set_rate"),
 	HX_CSTRING("get_rate"),
-	HX_CSTRING("rate"),
 	HX_CSTRING("set_ratio"),
 	HX_CSTRING("get_ratio"),
-	HX_CSTRING("ratio"),
 	HX_CSTRING("set_body2"),
 	HX_CSTRING("get_body2"),
-	HX_CSTRING("body2"),
 	HX_CSTRING("set_body1"),
 	HX_CSTRING("get_body1"),
-	HX_CSTRING("body1"),
 	HX_CSTRING("zpp_inner_zn"),
 	String(null()) };
 
@@ -652,7 +641,7 @@ Class MotorJoint_obj::__mClass;
 
 void MotorJoint_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.constraint.MotorJoint"), hx::TCanCast< MotorJoint_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.constraint.MotorJoint"), hx::TCanCast< MotorJoint_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

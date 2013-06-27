@@ -14,7 +14,7 @@ namespace nape{
 namespace callbacks{
 
 
-class CbType_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  CbType_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef CbType_obj OBJ_;
@@ -40,15 +40,12 @@ class CbType_obj : public hx::Object{
 		virtual ::nape::constraint::ConstraintList get_constraints( );
 		Dynamic get_constraints_dyn();
 
-		::nape::constraint::ConstraintList constraints; /* REM */ 
 		virtual ::nape::phys::InteractorList get_interactors( );
 		Dynamic get_interactors_dyn();
 
-		::nape::phys::InteractorList interactors; /* REM */ 
 		virtual Dynamic get_userData( );
 		Dynamic get_userData_dyn();
 
-		Dynamic userData; /* REM */ 
 		virtual ::nape::callbacks::OptionType excluding( Dynamic excludes);
 		Dynamic excluding_dyn();
 
@@ -58,21 +55,16 @@ class CbType_obj : public hx::Object{
 		virtual int get_id( );
 		Dynamic get_id_dyn();
 
-		int id; /* REM */ 
-		::zpp_nape::callbacks::ZPP_CbType zpp_inner; /* REM */ 
-		static ::nape::callbacks::CbType ANY_BODY; /* REM */ 
+		::zpp_nape::callbacks::ZPP_CbType zpp_inner;
 		static ::nape::callbacks::CbType get_ANY_BODY( );
 		static Dynamic get_ANY_BODY_dyn();
 
-		static ::nape::callbacks::CbType ANY_CONSTRAINT; /* REM */ 
 		static ::nape::callbacks::CbType get_ANY_CONSTRAINT( );
 		static Dynamic get_ANY_CONSTRAINT_dyn();
 
-		static ::nape::callbacks::CbType ANY_SHAPE; /* REM */ 
 		static ::nape::callbacks::CbType get_ANY_SHAPE( );
 		static Dynamic get_ANY_SHAPE_dyn();
 
-		static ::nape::callbacks::CbType ANY_COMPOUND; /* REM */ 
 		static ::nape::callbacks::CbType get_ANY_COMPOUND( );
 		static Dynamic get_ANY_COMPOUND_dyn();
 

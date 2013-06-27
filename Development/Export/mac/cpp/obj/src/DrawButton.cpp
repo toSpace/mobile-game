@@ -12,44 +12,44 @@
 #ifndef INCLUDED_UIobject
 #include <UIobject.h>
 #endif
-#ifndef INCLUDED_native_display_Bitmap
-#include <native/display/Bitmap.h>
+#ifndef INCLUDED_flash_display_Bitmap
+#include <flash/display/Bitmap.h>
 #endif
-#ifndef INCLUDED_native_display_BitmapData
-#include <native/display/BitmapData.h>
+#ifndef INCLUDED_flash_display_BitmapData
+#include <flash/display/BitmapData.h>
 #endif
-#ifndef INCLUDED_native_display_DisplayObject
-#include <native/display/DisplayObject.h>
+#ifndef INCLUDED_flash_display_DisplayObject
+#include <flash/display/DisplayObject.h>
 #endif
-#ifndef INCLUDED_native_display_DisplayObjectContainer
-#include <native/display/DisplayObjectContainer.h>
+#ifndef INCLUDED_flash_display_DisplayObjectContainer
+#include <flash/display/DisplayObjectContainer.h>
 #endif
-#ifndef INCLUDED_native_display_IBitmapDrawable
-#include <native/display/IBitmapDrawable.h>
+#ifndef INCLUDED_flash_display_IBitmapDrawable
+#include <flash/display/IBitmapDrawable.h>
 #endif
-#ifndef INCLUDED_native_display_InteractiveObject
-#include <native/display/InteractiveObject.h>
+#ifndef INCLUDED_flash_display_InteractiveObject
+#include <flash/display/InteractiveObject.h>
 #endif
-#ifndef INCLUDED_native_display_PixelSnapping
-#include <native/display/PixelSnapping.h>
+#ifndef INCLUDED_flash_display_PixelSnapping
+#include <flash/display/PixelSnapping.h>
 #endif
-#ifndef INCLUDED_native_display_Sprite
-#include <native/display/Sprite.h>
+#ifndef INCLUDED_flash_display_Sprite
+#include <flash/display/Sprite.h>
 #endif
-#ifndef INCLUDED_native_events_Event
-#include <native/events/Event.h>
+#ifndef INCLUDED_flash_events_Event
+#include <flash/events/Event.h>
 #endif
-#ifndef INCLUDED_native_events_EventDispatcher
-#include <native/events/EventDispatcher.h>
+#ifndef INCLUDED_flash_events_EventDispatcher
+#include <flash/events/EventDispatcher.h>
 #endif
-#ifndef INCLUDED_native_events_IEventDispatcher
-#include <native/events/IEventDispatcher.h>
+#ifndef INCLUDED_flash_events_IEventDispatcher
+#include <flash/events/IEventDispatcher.h>
 #endif
-#ifndef INCLUDED_native_events_MouseEvent
-#include <native/events/MouseEvent.h>
+#ifndef INCLUDED_flash_events_MouseEvent
+#include <flash/events/MouseEvent.h>
 #endif
-#ifndef INCLUDED_nme_installer_Assets
-#include <nme/installer/Assets.h>
+#ifndef INCLUDED_openfl_Assets
+#include <openfl/Assets.h>
 #endif
 
 Void DrawButton_obj::__construct()
@@ -59,7 +59,7 @@ HX_STACK_PUSH("DrawButton::new","DrawButton.hx",11);
 	HX_STACK_LINE(12)
 	super::__construct(HX_CSTRING("general/gui/button.png"),((::Mobile_obj::screenWidth - (int)44) - (int)10),(int)10,true);
 	HX_STACK_LINE(14)
-	this->asset_over = ::native::display::Bitmap_obj::__new(::nme::installer::Assets_obj::getBitmapData((::Mobile_obj::asset + HX_CSTRING("general/gui/button2.png")),null()),null(),null());
+	this->asset_over = ::flash::display::Bitmap_obj::__new(::openfl::Assets_obj::getBitmapData((::Mobile_obj::asset + HX_CSTRING("general/gui/button2.png")),null()),null(),null());
 }
 ;
 	return null();
@@ -78,7 +78,7 @@ Dynamic DrawButton_obj::__Create(hx::DynamicArray inArgs)
 	result->__construct();
 	return result;}
 
-Void DrawButton_obj::mouseClick( ::native::events::MouseEvent ev){
+Void DrawButton_obj::mouseClick( ::flash::events::MouseEvent ev){
 {
 		HX_STACK_PUSH("DrawButton::mouseClick","DrawButton.hx",17);
 		HX_STACK_THIS(this);
@@ -143,10 +143,10 @@ Dynamic DrawButton_obj::__SetField(const ::String &inName,const Dynamic &inValue
 {
 	switch(inName.length) {
 	case 9:
-		if (HX_FIELD_EQ(inName,"asset_out") ) { asset_out=inValue.Cast< ::native::display::Bitmap >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"asset_out") ) { asset_out=inValue.Cast< ::flash::display::Bitmap >(); return inValue; }
 		break;
 	case 10:
-		if (HX_FIELD_EQ(inName,"asset_over") ) { asset_over=inValue.Cast< ::native::display::Bitmap >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"asset_over") ) { asset_over=inValue.Cast< ::flash::display::Bitmap >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -179,7 +179,7 @@ Class DrawButton_obj::__mClass;
 
 void DrawButton_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("DrawButton"), hx::TCanCast< DrawButton_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("DrawButton"), hx::TCanCast< DrawButton_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

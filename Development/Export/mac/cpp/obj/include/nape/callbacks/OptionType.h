@@ -12,7 +12,7 @@ namespace nape{
 namespace callbacks{
 
 
-class OptionType_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  OptionType_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef OptionType_obj OBJ_;
@@ -44,12 +44,10 @@ class OptionType_obj : public hx::Object{
 		virtual ::nape::callbacks::CbTypeList get_excludes( );
 		Dynamic get_excludes_dyn();
 
-		::nape::callbacks::CbTypeList excludes; /* REM */ 
 		virtual ::nape::callbacks::CbTypeList get_includes( );
 		Dynamic get_includes_dyn();
 
-		::nape::callbacks::CbTypeList includes; /* REM */ 
-		::zpp_nape::callbacks::ZPP_OptionType zpp_inner; /* REM */ 
+		::zpp_nape::callbacks::ZPP_OptionType zpp_inner;
 };
 
 } // end namespace nape

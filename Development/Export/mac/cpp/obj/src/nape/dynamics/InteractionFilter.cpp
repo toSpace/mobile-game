@@ -466,28 +466,12 @@ InteractionFilter_obj::InteractionFilter_obj()
 void InteractionFilter_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(InteractionFilter);
-	HX_MARK_MEMBER_NAME(fluidMask,"fluidMask");
-	HX_MARK_MEMBER_NAME(fluidGroup,"fluidGroup");
-	HX_MARK_MEMBER_NAME(sensorMask,"sensorMask");
-	HX_MARK_MEMBER_NAME(sensorGroup,"sensorGroup");
-	HX_MARK_MEMBER_NAME(collisionMask,"collisionMask");
-	HX_MARK_MEMBER_NAME(collisionGroup,"collisionGroup");
-	HX_MARK_MEMBER_NAME(shapes,"shapes");
-	HX_MARK_MEMBER_NAME(userData,"userData");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	HX_MARK_END_CLASS();
 }
 
 void InteractionFilter_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(fluidMask,"fluidMask");
-	HX_VISIT_MEMBER_NAME(fluidGroup,"fluidGroup");
-	HX_VISIT_MEMBER_NAME(sensorMask,"sensorMask");
-	HX_VISIT_MEMBER_NAME(sensorGroup,"sensorGroup");
-	HX_VISIT_MEMBER_NAME(collisionMask,"collisionMask");
-	HX_VISIT_MEMBER_NAME(collisionGroup,"collisionGroup");
-	HX_VISIT_MEMBER_NAME(shapes,"shapes");
-	HX_VISIT_MEMBER_NAME(userData,"userData");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 }
 
@@ -498,25 +482,25 @@ Dynamic InteractionFilter_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"copy") ) { return copy_dyn(); }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"shapes") ) { return inCallProp ? get_shapes() : shapes; }
+		if (HX_FIELD_EQ(inName,"shapes") ) { return get_shapes(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
-		if (HX_FIELD_EQ(inName,"userData") ) { return inCallProp ? get_userData() : userData; }
+		if (HX_FIELD_EQ(inName,"userData") ) { return get_userData(); }
 		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"fluidMask") ) { return inCallProp ? get_fluidMask() : fluidMask; }
+		if (HX_FIELD_EQ(inName,"fluidMask") ) { return get_fluidMask(); }
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { return zpp_inner; }
 		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"shouldFlow") ) { return shouldFlow_dyn(); }
-		if (HX_FIELD_EQ(inName,"fluidGroup") ) { return inCallProp ? get_fluidGroup() : fluidGroup; }
-		if (HX_FIELD_EQ(inName,"sensorMask") ) { return inCallProp ? get_sensorMask() : sensorMask; }
+		if (HX_FIELD_EQ(inName,"fluidGroup") ) { return get_fluidGroup(); }
+		if (HX_FIELD_EQ(inName,"sensorMask") ) { return get_sensorMask(); }
 		if (HX_FIELD_EQ(inName,"get_shapes") ) { return get_shapes_dyn(); }
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"shouldSense") ) { return shouldSense_dyn(); }
-		if (HX_FIELD_EQ(inName,"sensorGroup") ) { return inCallProp ? get_sensorGroup() : sensorGroup; }
+		if (HX_FIELD_EQ(inName,"sensorGroup") ) { return get_sensorGroup(); }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"get_userData") ) { return get_userData_dyn(); }
@@ -525,14 +509,14 @@ Dynamic InteractionFilter_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"shouldCollide") ) { return shouldCollide_dyn(); }
 		if (HX_FIELD_EQ(inName,"set_fluidMask") ) { return set_fluidMask_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_fluidMask") ) { return get_fluidMask_dyn(); }
-		if (HX_FIELD_EQ(inName,"collisionMask") ) { return inCallProp ? get_collisionMask() : collisionMask; }
+		if (HX_FIELD_EQ(inName,"collisionMask") ) { return get_collisionMask(); }
 		break;
 	case 14:
 		if (HX_FIELD_EQ(inName,"set_fluidGroup") ) { return set_fluidGroup_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_fluidGroup") ) { return get_fluidGroup_dyn(); }
 		if (HX_FIELD_EQ(inName,"set_sensorMask") ) { return set_sensorMask_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_sensorMask") ) { return get_sensorMask_dyn(); }
-		if (HX_FIELD_EQ(inName,"collisionGroup") ) { return inCallProp ? get_collisionGroup() : collisionGroup; }
+		if (HX_FIELD_EQ(inName,"collisionGroup") ) { return get_collisionGroup(); }
 		break;
 	case 15:
 		if (HX_FIELD_EQ(inName,"set_sensorGroup") ) { return set_sensorGroup_dyn(); }
@@ -552,28 +536,22 @@ Dynamic InteractionFilter_obj::__Field(const ::String &inName,bool inCallProp)
 Dynamic InteractionFilter_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
 	switch(inName.length) {
-	case 6:
-		if (HX_FIELD_EQ(inName,"shapes") ) { shapes=inValue.Cast< ::nape::shape::ShapeList >(); return inValue; }
-		break;
-	case 8:
-		if (HX_FIELD_EQ(inName,"userData") ) { userData=inValue.Cast< Dynamic >(); return inValue; }
-		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"fluidMask") ) { if (inCallProp) return set_fluidMask(inValue);fluidMask=inValue.Cast< int >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"fluidMask") ) { return set_fluidMask(inValue); }
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::dynamics::ZPP_InteractionFilter >(); return inValue; }
 		break;
 	case 10:
-		if (HX_FIELD_EQ(inName,"fluidGroup") ) { if (inCallProp) return set_fluidGroup(inValue);fluidGroup=inValue.Cast< int >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"sensorMask") ) { if (inCallProp) return set_sensorMask(inValue);sensorMask=inValue.Cast< int >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"fluidGroup") ) { return set_fluidGroup(inValue); }
+		if (HX_FIELD_EQ(inName,"sensorMask") ) { return set_sensorMask(inValue); }
 		break;
 	case 11:
-		if (HX_FIELD_EQ(inName,"sensorGroup") ) { if (inCallProp) return set_sensorGroup(inValue);sensorGroup=inValue.Cast< int >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"sensorGroup") ) { return set_sensorGroup(inValue); }
 		break;
 	case 13:
-		if (HX_FIELD_EQ(inName,"collisionMask") ) { if (inCallProp) return set_collisionMask(inValue);collisionMask=inValue.Cast< int >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"collisionMask") ) { return set_collisionMask(inValue); }
 		break;
 	case 14:
-		if (HX_FIELD_EQ(inName,"collisionGroup") ) { if (inCallProp) return set_collisionGroup(inValue);collisionGroup=inValue.Cast< int >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"collisionGroup") ) { return set_collisionGroup(inValue); }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -603,26 +581,18 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("shouldCollide"),
 	HX_CSTRING("set_fluidMask"),
 	HX_CSTRING("get_fluidMask"),
-	HX_CSTRING("fluidMask"),
 	HX_CSTRING("set_fluidGroup"),
 	HX_CSTRING("get_fluidGroup"),
-	HX_CSTRING("fluidGroup"),
 	HX_CSTRING("set_sensorMask"),
 	HX_CSTRING("get_sensorMask"),
-	HX_CSTRING("sensorMask"),
 	HX_CSTRING("set_sensorGroup"),
 	HX_CSTRING("get_sensorGroup"),
-	HX_CSTRING("sensorGroup"),
 	HX_CSTRING("set_collisionMask"),
 	HX_CSTRING("get_collisionMask"),
-	HX_CSTRING("collisionMask"),
 	HX_CSTRING("set_collisionGroup"),
 	HX_CSTRING("get_collisionGroup"),
-	HX_CSTRING("collisionGroup"),
 	HX_CSTRING("get_shapes"),
-	HX_CSTRING("shapes"),
 	HX_CSTRING("get_userData"),
-	HX_CSTRING("userData"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
@@ -638,7 +608,7 @@ Class InteractionFilter_obj::__mClass;
 
 void InteractionFilter_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.dynamics.InteractionFilter"), hx::TCanCast< InteractionFilter_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.dynamics.InteractionFilter"), hx::TCanCast< InteractionFilter_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

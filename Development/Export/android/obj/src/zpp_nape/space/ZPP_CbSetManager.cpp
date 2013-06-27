@@ -138,7 +138,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_CbSetManager_obj,valid_listener,return )
 	HX_STACK_LINE(1364)
 	if (((ret == null()))){
 		struct _Function_2_1{
-			inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &a,::zpp_nape::callbacks::ZPP_CbSet &b){
+			inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &b,::zpp_nape::callbacks::ZPP_CbSet &a){
 				HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",1365);
 				{
 					HX_STACK_LINE(1365)
@@ -181,7 +181,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_CbSetManager_obj,valid_listener,return )
 			}
 		};
 		HX_STACK_LINE(1365)
-		ret = _Function_2_1::Block(a,b);
+		ret = _Function_2_1::Block(b,a);
 		HX_STACK_LINE(1366)
 		a->cbpairs->add(ret);
 		HX_STACK_LINE(1367)
@@ -208,10 +208,7 @@ Void ZPP_CbSetManager_obj::validate( ){
 {
 		HX_STACK_PUSH("ZPP_CbSetManager::validate","zpp_nape/space/Space.hx",1318);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(1320)
-		{
-		}
-		HX_STACK_LINE(1328)
+		HX_STACK_LINE(1318)
 		if ((!(this->cbsets->empty()))){
 			HX_STACK_LINE(1329)
 			::zpp_nape::util::ZPP_Set_ZPP_CbSet set_ite = this->cbsets->parent;		HX_STACK_VAR(set_ite,"set_ite");
@@ -294,9 +291,6 @@ Void ZPP_CbSetManager_obj::remove( ::zpp_nape::callbacks::ZPP_CbSet set){
 				{
 					HX_STACK_LINE(1264)
 					::zpp_nape::callbacks::ZPP_CbSetPair o = pair;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(1265)
-					{
-					}
 					HX_STACK_LINE(1273)
 					{
 						HX_STACK_LINE(1273)
@@ -356,14 +350,11 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_CbSetManager_obj,remove,(void))
 	HX_STACK_LINE(1218)
 	::zpp_nape::util::ZPP_Set_ZPP_CbSet res = this->cbsets->find_weak(fake);		HX_STACK_VAR(res,"res");
 	struct _Function_1_1{
-		inline static ::zpp_nape::callbacks::ZPP_CbSet Block( ::zpp_nape::util::ZNPList_ZPP_CbType &cbTypes,::zpp_nape::space::ZPP_CbSetManager_obj *__this){
+		inline static ::zpp_nape::callbacks::ZPP_CbSet Block( ::zpp_nape::space::ZPP_CbSetManager_obj *__this,::zpp_nape::util::ZNPList_ZPP_CbType &cbTypes){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",1219);
 			{
 				HX_STACK_LINE(1220)
 				::zpp_nape::callbacks::ZPP_CbSet set = ::zpp_nape::callbacks::ZPP_CbSet_obj::get(cbTypes);		HX_STACK_VAR(set,"set");
-				HX_STACK_LINE(1221)
-				{
-				}
 				HX_STACK_LINE(1229)
 				__this->cbsets->insert(set);
 				HX_STACK_LINE(1230)
@@ -375,27 +366,15 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_CbSetManager_obj,remove,(void))
 		}
 	};
 	HX_STACK_LINE(1219)
-	::zpp_nape::callbacks::ZPP_CbSet ret = (  (((res != null()))) ? ::zpp_nape::callbacks::ZPP_CbSet(res->data) : ::zpp_nape::callbacks::ZPP_CbSet(_Function_1_1::Block(cbTypes,this)) );		HX_STACK_VAR(ret,"ret");
+	::zpp_nape::callbacks::ZPP_CbSet ret = (  (((res != null()))) ? ::zpp_nape::callbacks::ZPP_CbSet(res->data) : ::zpp_nape::callbacks::ZPP_CbSet(_Function_1_1::Block(this,cbTypes)) );		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(1233)
 	fake->cbTypes = faketypes;
 	HX_STACK_LINE(1234)
 	{
 		HX_STACK_LINE(1235)
 		::zpp_nape::callbacks::ZPP_CbSet o = fake;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(1236)
-		{
-		}
 		HX_STACK_LINE(1244)
 		{
-			HX_STACK_LINE(1244)
-			{
-			}
-			HX_STACK_LINE(1244)
-			{
-			}
-			HX_STACK_LINE(1244)
-			{
-			}
 			HX_STACK_LINE(1244)
 			o->listeners->clear();
 			HX_STACK_LINE(1244)
@@ -520,7 +499,7 @@ Class ZPP_CbSetManager_obj::__mClass;
 
 void ZPP_CbSetManager_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_CbSetManager"), hx::TCanCast< ZPP_CbSetManager_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_CbSetManager"), hx::TCanCast< ZPP_CbSetManager_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

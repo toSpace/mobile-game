@@ -13,7 +13,7 @@ namespace nape{
 namespace phys{
 
 
-class BodyIterator_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  BodyIterator_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef BodyIterator_obj OBJ_;
@@ -39,11 +39,11 @@ class BodyIterator_obj : public hx::Object{
 		virtual bool hasNext( );
 		Dynamic hasNext_dyn();
 
-		::nape::phys::BodyIterator zpp_next; /* REM */ 
-		bool zpp_critical; /* REM */ 
-		int zpp_i; /* REM */ 
-		::nape::phys::BodyList zpp_inner; /* REM */ 
-		static ::nape::phys::BodyIterator zpp_pool; /* REM */ 
+		::nape::phys::BodyIterator zpp_next;
+		bool zpp_critical;
+		int zpp_i;
+		::nape::phys::BodyList zpp_inner;
+		static ::nape::phys::BodyIterator zpp_pool;
 		static ::nape::phys::BodyIterator get( ::nape::phys::BodyList list);
 		static Dynamic get_dyn();
 

@@ -15,9 +15,9 @@ namespace _Fast{
 
 Void AttribAccess_obj::__construct(::Xml x)
 {
-HX_STACK_PUSH("AttribAccess::new","/usr/lib/haxe/std/haxe/xml/Fast.hx",50);
+HX_STACK_PUSH("AttribAccess::new","/usr/lib/haxe/std/haxe/xml/Fast.hx",47);
 {
-	HX_STACK_LINE(50)
+	HX_STACK_LINE(47)
 	this->__x = x;
 }
 ;
@@ -38,22 +38,22 @@ Dynamic AttribAccess_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 ::String AttribAccess_obj::resolve( ::String name){
-	HX_STACK_PUSH("AttribAccess::resolve","/usr/lib/haxe/std/haxe/xml/Fast.hx",54);
+	HX_STACK_PUSH("AttribAccess::resolve","/usr/lib/haxe/std/haxe/xml/Fast.hx",51);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(name,"name");
-	HX_STACK_LINE(55)
+	HX_STACK_LINE(52)
 	if (((this->__x->nodeType == ::Xml_obj::Document))){
-		HX_STACK_LINE(56)
+		HX_STACK_LINE(53)
 		hx::Throw ((HX_CSTRING("Cannot access document attribute ") + name));
 	}
-	HX_STACK_LINE(57)
+	HX_STACK_LINE(54)
 	::String v = this->__x->get(name);		HX_STACK_VAR(v,"v");
-	HX_STACK_LINE(58)
+	HX_STACK_LINE(55)
 	if (((v == null()))){
-		HX_STACK_LINE(59)
-		hx::Throw (((this->__x->getNodeName() + HX_CSTRING(" is missing attribute ")) + name));
+		HX_STACK_LINE(56)
+		hx::Throw (((this->__x->get_nodeName() + HX_CSTRING(" is missing attribute ")) + name));
 	}
-	HX_STACK_LINE(60)
+	HX_STACK_LINE(57)
 	return v;
 }
 
@@ -131,7 +131,7 @@ Class AttribAccess_obj::__mClass;
 
 void AttribAccess_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("haxe.xml._Fast.AttribAccess"), hx::TCanCast< AttribAccess_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("haxe.xml._Fast.AttribAccess"), hx::TCanCast< AttribAccess_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

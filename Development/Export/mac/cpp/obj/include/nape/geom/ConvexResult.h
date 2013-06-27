@@ -14,7 +14,7 @@ namespace nape{
 namespace geom{
 
 
-class ConvexResult_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ConvexResult_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ConvexResult_obj OBJ_;
@@ -43,20 +43,16 @@ class ConvexResult_obj : public hx::Object{
 		virtual ::nape::shape::Shape get_shape( );
 		Dynamic get_shape_dyn();
 
-		::nape::shape::Shape shape; /* REM */ 
 		virtual Float get_toi( );
 		Dynamic get_toi_dyn();
 
-		Float toi; /* REM */ 
 		virtual ::nape::geom::Vec2 get_position( );
 		Dynamic get_position_dyn();
 
-		::nape::geom::Vec2 position; /* REM */ 
 		virtual ::nape::geom::Vec2 get_normal( );
 		Dynamic get_normal_dyn();
 
-		::nape::geom::Vec2 normal; /* REM */ 
-		::zpp_nape::geom::ZPP_ConvexRayResult zpp_inner; /* REM */ 
+		::zpp_nape::geom::ZPP_ConvexRayResult zpp_inner;
 };
 
 } // end namespace nape

@@ -12,7 +12,7 @@ namespace nape{
 namespace geom{
 
 
-class GeomPolyIterator_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  GeomPolyIterator_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef GeomPolyIterator_obj OBJ_;
@@ -38,11 +38,11 @@ class GeomPolyIterator_obj : public hx::Object{
 		virtual bool hasNext( );
 		Dynamic hasNext_dyn();
 
-		::nape::geom::GeomPolyIterator zpp_next; /* REM */ 
-		bool zpp_critical; /* REM */ 
-		int zpp_i; /* REM */ 
-		::nape::geom::GeomPolyList zpp_inner; /* REM */ 
-		static ::nape::geom::GeomPolyIterator zpp_pool; /* REM */ 
+		::nape::geom::GeomPolyIterator zpp_next;
+		bool zpp_critical;
+		int zpp_i;
+		::nape::geom::GeomPolyList zpp_inner;
+		static ::nape::geom::GeomPolyIterator zpp_pool;
 		static ::nape::geom::GeomPolyIterator get( ::nape::geom::GeomPolyList list);
 		static Dynamic get_dyn();
 

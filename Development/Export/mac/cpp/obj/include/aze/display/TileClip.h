@@ -11,20 +11,19 @@ HX_DECLARE_CLASS2(aze,display,TileClip)
 HX_DECLARE_CLASS2(aze,display,TileGroup)
 HX_DECLARE_CLASS2(aze,display,TileLayer)
 HX_DECLARE_CLASS2(aze,display,TileSprite)
-HX_DECLARE_CLASS1(haxe,Public)
 namespace aze{
 namespace display{
 
 
-class TileClip_obj : public ::aze::display::TileSprite_obj{
+class HXCPP_CLASS_ATTRIBUTES  TileClip_obj : public ::aze::display::TileSprite_obj{
 	public:
 		typedef ::aze::display::TileSprite_obj super;
 		typedef TileClip_obj OBJ_;
 		TileClip_obj();
-		Void __construct(::String tile,hx::Null< int >  __o_fps);
+		Void __construct(::aze::display::TileLayer layer,::String tile,hx::Null< int >  __o_fps);
 
 	public:
-		static hx::ObjectPtr< TileClip_obj > __new(::String tile,hx::Null< int >  __o_fps);
+		static hx::ObjectPtr< TileClip_obj > __new(::aze::display::TileLayer layer,::String tile,hx::Null< int >  __o_fps);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		~TileClip_obj();
@@ -39,14 +38,13 @@ class TileClip_obj : public ::aze::display::TileSprite_obj{
 		virtual int get_totalFrames( );
 		Dynamic get_totalFrames_dyn();
 
-		int totalFrames; /* REM */ 
+		int totalFrames;
 		virtual int set_currentFrame( int value);
 		Dynamic set_currentFrame_dyn();
 
 		virtual int get_currentFrame( );
 		Dynamic get_currentFrame_dyn();
 
-		int currentFrame; /* REM */ 
 		virtual Void stop( );
 		Dynamic stop_dyn();
 
@@ -57,12 +55,12 @@ class TileClip_obj : public ::aze::display::TileSprite_obj{
 
 		virtual Void init( ::aze::display::TileLayer layer);
 
-		int prevFrame; /* REM */ 
-		int time; /* REM */ 
-		bool loop; /* REM */ 
-		int fps; /* REM */ 
-		Array< int > frames; /* REM */ 
-		Dynamic onComplete; /* REM */ 
+		int prevFrame;
+		int time;
+		bool loop;
+		int fps;
+		Array< int > frames;
+		Dynamic onComplete;
 		Dynamic &onComplete_dyn() { return onComplete;}
 };
 

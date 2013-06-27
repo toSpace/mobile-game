@@ -12,7 +12,7 @@ namespace zpp_nape{
 namespace util{
 
 
-class ZNPNode_ZPP_ConstraintListener_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZNPNode_ZPP_ConstraintListener_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZNPNode_ZPP_ConstraintListener_obj OBJ_;
@@ -35,15 +35,15 @@ class ZNPNode_ZPP_ConstraintListener_obj : public hx::Object{
 		virtual ::zpp_nape::callbacks::ZPP_ConstraintListener elem( );
 		Dynamic elem_dyn();
 
-		::zpp_nape::callbacks::ZPP_ConstraintListener elt; /* REM */ 
+		::zpp_nape::callbacks::ZPP_ConstraintListener elt;
 		virtual Void free( );
 		Dynamic free_dyn();
 
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
-		::zpp_nape::util::ZNPNode_ZPP_ConstraintListener next; /* REM */ 
-		static ::zpp_nape::util::ZNPNode_ZPP_ConstraintListener zpp_pool; /* REM */ 
+		::zpp_nape::util::ZNPNode_ZPP_ConstraintListener next;
+		static ::zpp_nape::util::ZNPNode_ZPP_ConstraintListener zpp_pool;
 };
 
 } // end namespace zpp_nape

@@ -8,7 +8,7 @@
 HX_DECLARE_CLASS0(Reflect)
 
 
-class Reflect_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Reflect_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Reflect_obj OBJ_;
@@ -34,15 +34,6 @@ class Reflect_obj : public hx::Object{
 		static Dynamic field( Dynamic o,::String field);
 		static Dynamic field_dyn();
 
-		static Void setField( Dynamic o,::String field,Dynamic value);
-		static Dynamic setField_dyn();
-
-		static Dynamic getProperty( Dynamic o,::String field);
-		static Dynamic getProperty_dyn();
-
-		static Void setProperty( Dynamic o,::String field,Dynamic value);
-		static Dynamic setProperty_dyn();
-
 		static Dynamic callMethod( Dynamic o,Dynamic func,Dynamic args);
 		static Dynamic callMethod_dyn();
 
@@ -52,23 +43,17 @@ class Reflect_obj : public hx::Object{
 		static bool isFunction( Dynamic f);
 		static Dynamic isFunction_dyn();
 
-		static int compare( Dynamic a,Dynamic b);
-		static Dynamic compare_dyn();
-
 		static bool compareMethods( Dynamic f1,Dynamic f2);
 		static Dynamic compareMethods_dyn();
 
 		static bool isObject( Dynamic v);
 		static Dynamic isObject_dyn();
 
-		static bool deleteField( Dynamic o,::String f);
+		static bool deleteField( Dynamic o,::String field);
 		static Dynamic deleteField_dyn();
 
 		static Dynamic copy( Dynamic o);
 		static Dynamic copy_dyn();
-
-		static Dynamic makeVarArgs( Dynamic f);
-		static Dynamic makeVarArgs_dyn();
 
 };
 

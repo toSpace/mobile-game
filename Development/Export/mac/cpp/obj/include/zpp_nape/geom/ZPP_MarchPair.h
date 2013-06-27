@@ -12,7 +12,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_MarchPair_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_MarchPair_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_MarchPair_obj OBJ_;
@@ -38,21 +38,21 @@ class ZPP_MarchPair_obj : public hx::Object{
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		::zpp_nape::geom::ZPP_MarchPair next; /* REM */ 
-		::zpp_nape::geom::ZPP_MarchSpan spanr; /* REM */ 
-		::zpp_nape::geom::ZPP_MarchSpan span2; /* REM */ 
-		::zpp_nape::geom::ZPP_MarchSpan span1; /* REM */ 
-		::zpp_nape::geom::ZPP_GeomVert pd; /* REM */ 
-		int okeyr; /* REM */ 
-		int keyr; /* REM */ 
-		::zpp_nape::geom::ZPP_GeomVert pr; /* REM */ 
-		int okey2; /* REM */ 
-		int key2; /* REM */ 
-		::zpp_nape::geom::ZPP_GeomVert p2; /* REM */ 
-		int okey1; /* REM */ 
-		int key1; /* REM */ 
-		::zpp_nape::geom::ZPP_GeomVert p1; /* REM */ 
-		static ::zpp_nape::geom::ZPP_MarchPair zpp_pool; /* REM */ 
+		::zpp_nape::geom::ZPP_MarchPair next;
+		::zpp_nape::geom::ZPP_MarchSpan spanr;
+		::zpp_nape::geom::ZPP_MarchSpan span2;
+		::zpp_nape::geom::ZPP_MarchSpan span1;
+		::zpp_nape::geom::ZPP_GeomVert pd;
+		int okeyr;
+		int keyr;
+		::zpp_nape::geom::ZPP_GeomVert pr;
+		int okey2;
+		int key2;
+		::zpp_nape::geom::ZPP_GeomVert p2;
+		int okey1;
+		int key1;
+		::zpp_nape::geom::ZPP_GeomVert p1;
+		static ::zpp_nape::geom::ZPP_MarchPair zpp_pool;
 };
 
 } // end namespace zpp_nape

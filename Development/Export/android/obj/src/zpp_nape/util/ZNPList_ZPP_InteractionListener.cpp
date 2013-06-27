@@ -49,9 +49,6 @@ Dynamic ZNPList_ZPP_InteractionListener_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_PUSH("ZNPList_ZPP_InteractionListener::at","zpp_nape/util/Lists.hx",3080);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(3081)
-	{
-	}
 	HX_STACK_LINE(3089)
 	::zpp_nape::util::ZNPNode_ZPP_InteractionListener it = this->iterator_at(ind);		HX_STACK_VAR(it,"it");
 	HX_STACK_LINE(3090)
@@ -65,9 +62,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_InteractionListener_obj,at,return )
 	HX_STACK_PUSH("ZNPList_ZPP_InteractionListener::iterator_at","zpp_nape/util/Lists.hx",3067);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(3068)
-	{
-	}
 	HX_STACK_LINE(3076)
 	::zpp_nape::util::ZNPNode_ZPP_InteractionListener ret = this->head;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(3077)
@@ -117,9 +111,6 @@ bool ZNPList_ZPP_InteractionListener_obj::inlined_has( ::zpp_nape::callbacks::ZP
 	HX_STACK_PUSH("ZNPList_ZPP_InteractionListener::inlined_has","zpp_nape/util/Lists.hx",3025);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(3026)
-	{
-	}
 	HX_STACK_LINE(3034)
 	bool ret;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(3035)
@@ -161,9 +152,6 @@ bool ZNPList_ZPP_InteractionListener_obj::has( ::zpp_nape::callbacks::ZPP_Intera
 		inline static bool Block( ::zpp_nape::util::ZNPList_ZPP_InteractionListener_obj *__this,::zpp_nape::callbacks::ZPP_InteractionListener &obj){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",3021);
 			{
-				HX_STACK_LINE(3021)
-				{
-				}
 				HX_STACK_LINE(3021)
 				bool ret;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(3021)
@@ -262,22 +250,13 @@ Void ZNPList_ZPP_InteractionListener_obj::inlined_clear( ){
 		HX_STACK_LINE(2993)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(2993)
-			{
-			}
-			HX_STACK_LINE(2993)
 			::zpp_nape::util::ZNPNode_ZPP_InteractionListener ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(2993)
 			this->head = ret->next;
 			HX_STACK_LINE(2993)
 			{
-			}
-			HX_STACK_LINE(2993)
-			{
 				HX_STACK_LINE(2993)
 				::zpp_nape::util::ZNPNode_ZPP_InteractionListener o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2993)
-				{
-				}
 				HX_STACK_LINE(2993)
 				o->elt = null();
 				HX_STACK_LINE(2993)
@@ -311,22 +290,13 @@ Void ZNPList_ZPP_InteractionListener_obj::clear( ){
 		HX_STACK_LINE(2987)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(2987)
-			{
-			}
-			HX_STACK_LINE(2987)
 			::zpp_nape::util::ZNPNode_ZPP_InteractionListener ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(2987)
 			this->head = ret->next;
 			HX_STACK_LINE(2987)
 			{
-			}
-			HX_STACK_LINE(2987)
-			{
 				HX_STACK_LINE(2987)
 				::zpp_nape::util::ZNPNode_ZPP_InteractionListener o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2987)
-				{
-				}
 				HX_STACK_LINE(2987)
 				o->elt = null();
 				HX_STACK_LINE(2987)
@@ -374,9 +344,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_InteractionListener_obj,splice,return )
 	HX_STACK_PUSH("ZNPList_ZPP_InteractionListener::inlined_erase","zpp_nape/util/Lists.hx",2936);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
-	HX_STACK_LINE(2937)
-	{
-	}
 	HX_STACK_LINE(2945)
 	::zpp_nape::util::ZNPNode_ZPP_InteractionListener old;		HX_STACK_VAR(old,"old");
 	HX_STACK_LINE(2946)
@@ -408,16 +375,10 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_InteractionListener_obj,splice,return )
 			this->pushmod = true;
 		}
 	}
-	HX_STACK_LINE(2959)
-	{
-	}
 	HX_STACK_LINE(2960)
 	{
 		HX_STACK_LINE(2961)
 		::zpp_nape::util::ZNPNode_ZPP_InteractionListener o = old;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(2962)
-		{
-		}
 		HX_STACK_LINE(2970)
 		o->elt = null();
 		HX_STACK_LINE(2971)
@@ -443,12 +404,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_InteractionListener_obj,inlined_erase,return
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
 	struct _Function_1_1{
-		inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::util::ZNPNode_ZPP_InteractionListener &pre,::zpp_nape::util::ZNPList_ZPP_InteractionListener_obj *__this){
+		inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::util::ZNPList_ZPP_InteractionListener_obj *__this,::zpp_nape::util::ZNPNode_ZPP_InteractionListener &pre){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",2932);
 			{
-				HX_STACK_LINE(2932)
-				{
-				}
 				HX_STACK_LINE(2932)
 				::zpp_nape::util::ZNPNode_ZPP_InteractionListener old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(2932)
@@ -482,14 +440,8 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_InteractionListener_obj,inlined_erase,return
 				}
 				HX_STACK_LINE(2932)
 				{
-				}
-				HX_STACK_LINE(2932)
-				{
 					HX_STACK_LINE(2932)
 					::zpp_nape::util::ZNPNode_ZPP_InteractionListener o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2932)
-					{
-					}
 					HX_STACK_LINE(2932)
 					o->elt = null();
 					HX_STACK_LINE(2932)
@@ -510,7 +462,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_InteractionListener_obj,inlined_erase,return
 		}
 	};
 	HX_STACK_LINE(2931)
-	return _Function_1_1::Block(pre,this);
+	return _Function_1_1::Block(this,pre);
 }
 
 
@@ -520,9 +472,6 @@ bool ZNPList_ZPP_InteractionListener_obj::inlined_try_remove( ::zpp_nape::callba
 	HX_STACK_PUSH("ZNPList_ZPP_InteractionListener::inlined_try_remove","zpp_nape/util/Lists.hx",2908);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(2909)
-	{
-	}
 	HX_STACK_LINE(2917)
 	::zpp_nape::util::ZNPNode_ZPP_InteractionListener pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(2918)
@@ -535,9 +484,6 @@ bool ZNPList_ZPP_InteractionListener_obj::inlined_try_remove( ::zpp_nape::callba
 		if (((cur->elt == obj))){
 			HX_STACK_LINE(2922)
 			{
-				HX_STACK_LINE(2922)
-				{
-				}
 				HX_STACK_LINE(2922)
 				::zpp_nape::util::ZNPNode_ZPP_InteractionListener old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(2922)
@@ -571,14 +517,8 @@ bool ZNPList_ZPP_InteractionListener_obj::inlined_try_remove( ::zpp_nape::callba
 				}
 				HX_STACK_LINE(2922)
 				{
-				}
-				HX_STACK_LINE(2922)
-				{
 					HX_STACK_LINE(2922)
 					::zpp_nape::util::ZNPNode_ZPP_InteractionListener o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2922)
-					{
-					}
 					HX_STACK_LINE(2922)
 					o->elt = null();
 					HX_STACK_LINE(2922)
@@ -617,99 +557,81 @@ Void ZNPList_ZPP_InteractionListener_obj::inlined_remove( ::zpp_nape::callbacks:
 		HX_STACK_PUSH("ZNPList_ZPP_InteractionListener::inlined_remove","zpp_nape/util/Lists.hx",2895);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(2896)
-		{
-		}
 		HX_STACK_LINE(2904)
-		{
+		::zpp_nape::util::ZNPNode_ZPP_InteractionListener pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(2904)
+		::zpp_nape::util::ZNPNode_ZPP_InteractionListener cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(2904)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(2904)
+		while(((cur != null()))){
 			HX_STACK_LINE(2904)
-			{
-			}
-			HX_STACK_LINE(2904)
-			::zpp_nape::util::ZNPNode_ZPP_InteractionListener pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(2904)
-			::zpp_nape::util::ZNPNode_ZPP_InteractionListener cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(2904)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(2904)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(2904)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(2904)
+					::zpp_nape::util::ZNPNode_ZPP_InteractionListener old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(2904)
+					::zpp_nape::util::ZNPNode_ZPP_InteractionListener ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(2904)
+					if (((pre == null()))){
+						HX_STACK_LINE(2904)
+						old = this->head;
+						HX_STACK_LINE(2904)
+						ret1 = old->next;
+						HX_STACK_LINE(2904)
+						this->head = ret1;
+						HX_STACK_LINE(2904)
+						if (((this->head == null()))){
+							HX_STACK_LINE(2904)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(2904)
+						old = pre->next;
+						HX_STACK_LINE(2904)
+						ret1 = old->next;
+						HX_STACK_LINE(2904)
+						pre->next = ret1;
+						HX_STACK_LINE(2904)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(2904)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(2904)
 					{
 						HX_STACK_LINE(2904)
-						{
-						}
+						::zpp_nape::util::ZNPNode_ZPP_InteractionListener o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(2904)
-						::zpp_nape::util::ZNPNode_ZPP_InteractionListener old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(2904)
-						::zpp_nape::util::ZNPNode_ZPP_InteractionListener ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool;
 						HX_STACK_LINE(2904)
-						if (((pre == null()))){
-							HX_STACK_LINE(2904)
-							old = this->head;
-							HX_STACK_LINE(2904)
-							ret1 = old->next;
-							HX_STACK_LINE(2904)
-							this->head = ret1;
-							HX_STACK_LINE(2904)
-							if (((this->head == null()))){
-								HX_STACK_LINE(2904)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(2904)
-							old = pre->next;
-							HX_STACK_LINE(2904)
-							ret1 = old->next;
-							HX_STACK_LINE(2904)
-							pre->next = ret1;
-							HX_STACK_LINE(2904)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(2904)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(2904)
-						{
-						}
-						HX_STACK_LINE(2904)
-						{
-							HX_STACK_LINE(2904)
-							::zpp_nape::util::ZNPNode_ZPP_InteractionListener o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(2904)
-							{
-							}
-							HX_STACK_LINE(2904)
-							o->elt = null();
-							HX_STACK_LINE(2904)
-							o->next = ::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool;
-							HX_STACK_LINE(2904)
-							::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(2904)
-						this->modified = true;
-						HX_STACK_LINE(2904)
-						(this->length)--;
-						HX_STACK_LINE(2904)
-						this->pushmod = true;
-						HX_STACK_LINE(2904)
-						ret1;
+						::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(2904)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(2904)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(2904)
+					this->pushmod = true;
+					HX_STACK_LINE(2904)
+					ret1;
 				}
 				HX_STACK_LINE(2904)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(2904)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(2904)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(2904)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(2904)
+		ret;
 	}
 return null();
 }
@@ -721,9 +643,6 @@ bool ZNPList_ZPP_InteractionListener_obj::try_remove( ::zpp_nape::callbacks::ZPP
 	HX_STACK_PUSH("ZNPList_ZPP_InteractionListener::try_remove","zpp_nape/util/Lists.hx",2870);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(2871)
-	{
-	}
 	HX_STACK_LINE(2879)
 	::zpp_nape::util::ZNPNode_ZPP_InteractionListener pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(2880)
@@ -758,99 +677,81 @@ Void ZNPList_ZPP_InteractionListener_obj::remove( ::zpp_nape::callbacks::ZPP_Int
 		HX_STACK_PUSH("ZNPList_ZPP_InteractionListener::remove","zpp_nape/util/Lists.hx",2859);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(2860)
-		{
-		}
 		HX_STACK_LINE(2868)
-		{
+		::zpp_nape::util::ZNPNode_ZPP_InteractionListener pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(2868)
+		::zpp_nape::util::ZNPNode_ZPP_InteractionListener cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(2868)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(2868)
+		while(((cur != null()))){
 			HX_STACK_LINE(2868)
-			{
-			}
-			HX_STACK_LINE(2868)
-			::zpp_nape::util::ZNPNode_ZPP_InteractionListener pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(2868)
-			::zpp_nape::util::ZNPNode_ZPP_InteractionListener cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(2868)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(2868)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(2868)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(2868)
+					::zpp_nape::util::ZNPNode_ZPP_InteractionListener old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(2868)
+					::zpp_nape::util::ZNPNode_ZPP_InteractionListener ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(2868)
+					if (((pre == null()))){
+						HX_STACK_LINE(2868)
+						old = this->head;
+						HX_STACK_LINE(2868)
+						ret1 = old->next;
+						HX_STACK_LINE(2868)
+						this->head = ret1;
+						HX_STACK_LINE(2868)
+						if (((this->head == null()))){
+							HX_STACK_LINE(2868)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(2868)
+						old = pre->next;
+						HX_STACK_LINE(2868)
+						ret1 = old->next;
+						HX_STACK_LINE(2868)
+						pre->next = ret1;
+						HX_STACK_LINE(2868)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(2868)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(2868)
 					{
 						HX_STACK_LINE(2868)
-						{
-						}
+						::zpp_nape::util::ZNPNode_ZPP_InteractionListener o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(2868)
-						::zpp_nape::util::ZNPNode_ZPP_InteractionListener old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(2868)
-						::zpp_nape::util::ZNPNode_ZPP_InteractionListener ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool;
 						HX_STACK_LINE(2868)
-						if (((pre == null()))){
-							HX_STACK_LINE(2868)
-							old = this->head;
-							HX_STACK_LINE(2868)
-							ret1 = old->next;
-							HX_STACK_LINE(2868)
-							this->head = ret1;
-							HX_STACK_LINE(2868)
-							if (((this->head == null()))){
-								HX_STACK_LINE(2868)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(2868)
-							old = pre->next;
-							HX_STACK_LINE(2868)
-							ret1 = old->next;
-							HX_STACK_LINE(2868)
-							pre->next = ret1;
-							HX_STACK_LINE(2868)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(2868)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(2868)
-						{
-						}
-						HX_STACK_LINE(2868)
-						{
-							HX_STACK_LINE(2868)
-							::zpp_nape::util::ZNPNode_ZPP_InteractionListener o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(2868)
-							{
-							}
-							HX_STACK_LINE(2868)
-							o->elt = null();
-							HX_STACK_LINE(2868)
-							o->next = ::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool;
-							HX_STACK_LINE(2868)
-							::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(2868)
-						this->modified = true;
-						HX_STACK_LINE(2868)
-						(this->length)--;
-						HX_STACK_LINE(2868)
-						this->pushmod = true;
-						HX_STACK_LINE(2868)
-						ret1;
+						::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(2868)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(2868)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(2868)
+					this->pushmod = true;
+					HX_STACK_LINE(2868)
+					ret1;
 				}
 				HX_STACK_LINE(2868)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(2868)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(2868)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(2868)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(2868)
+		ret;
 	}
 return null();
 }
@@ -861,9 +762,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_InteractionListener_obj,remove,(void))
 ::zpp_nape::callbacks::ZPP_InteractionListener ZNPList_ZPP_InteractionListener_obj::inlined_pop_unsafe( ){
 	HX_STACK_PUSH("ZNPList_ZPP_InteractionListener::inlined_pop_unsafe","zpp_nape/util/Lists.hx",2846);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(2847)
-	{
-	}
 	HX_STACK_LINE(2855)
 	::zpp_nape::callbacks::ZPP_InteractionListener ret = this->head->elt;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(2856)
@@ -882,9 +780,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_InteractionListener_obj,inlined_pop_unsafe,r
 		inline static ::zpp_nape::callbacks::ZPP_InteractionListener Block( ::zpp_nape::util::ZNPList_ZPP_InteractionListener_obj *__this){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",2842);
 			{
-				HX_STACK_LINE(2842)
-				{
-				}
 				HX_STACK_LINE(2842)
 				::zpp_nape::callbacks::ZPP_InteractionListener ret = __this->head->elt;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(2842)
@@ -906,23 +801,14 @@ Void ZNPList_ZPP_InteractionListener_obj::inlined_pop( ){
 {
 		HX_STACK_PUSH("ZNPList_ZPP_InteractionListener::inlined_pop","zpp_nape/util/Lists.hx",2808);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(2809)
-		{
-		}
 		HX_STACK_LINE(2817)
 		::zpp_nape::util::ZNPNode_ZPP_InteractionListener ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(2818)
 		this->head = ret->next;
-		HX_STACK_LINE(2819)
-		{
-		}
 		HX_STACK_LINE(2820)
 		{
 			HX_STACK_LINE(2821)
 			::zpp_nape::util::ZNPNode_ZPP_InteractionListener o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(2822)
-			{
-			}
 			HX_STACK_LINE(2830)
 			o->elt = null();
 			HX_STACK_LINE(2831)
@@ -951,22 +837,13 @@ Void ZNPList_ZPP_InteractionListener_obj::pop( ){
 		HX_STACK_PUSH("ZNPList_ZPP_InteractionListener::pop","zpp_nape/util/Lists.hx",2803);
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(2804)
-		{
-		}
-		HX_STACK_LINE(2804)
 		::zpp_nape::util::ZNPNode_ZPP_InteractionListener ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(2804)
 		this->head = ret->next;
 		HX_STACK_LINE(2804)
 		{
-		}
-		HX_STACK_LINE(2804)
-		{
 			HX_STACK_LINE(2804)
 			::zpp_nape::util::ZNPNode_ZPP_InteractionListener o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(2804)
-			{
-			}
 			HX_STACK_LINE(2804)
 			o->elt = null();
 			HX_STACK_LINE(2804)
@@ -995,9 +872,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_InteractionListener_obj,pop,(void))
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(2761)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",2769);
@@ -1065,9 +939,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_InteractionListener_obj,inlined_insert,retur
 		inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::util::ZNPList_ZPP_InteractionListener_obj *__this,::zpp_nape::callbacks::ZPP_InteractionListener &o,::zpp_nape::util::ZNPNode_ZPP_InteractionListener &cur){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",2756);
 			{
-				HX_STACK_LINE(2756)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",2756);
@@ -1137,22 +1008,16 @@ Void ZNPList_ZPP_InteractionListener_obj::addAll( ::zpp_nape::util::ZNPList_ZPP_
 		HX_STACK_PUSH("ZNPList_ZPP_InteractionListener::addAll","zpp_nape/util/Lists.hx",2737);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(2738)
-		{
-		}
-		HX_STACK_LINE(2746)
-		{
-			HX_STACK_LINE(2747)
-			::zpp_nape::util::ZNPNode_ZPP_InteractionListener cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
-			HX_STACK_LINE(2748)
-			while(((cx_ite != null()))){
-				HX_STACK_LINE(2749)
-				::zpp_nape::callbacks::ZPP_InteractionListener i = cx_ite->elt;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(2750)
-				this->add(i);
-				HX_STACK_LINE(2751)
-				cx_ite = cx_ite->next;
-			}
+		HX_STACK_LINE(2747)
+		::zpp_nape::util::ZNPNode_ZPP_InteractionListener cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+		HX_STACK_LINE(2748)
+		while(((cx_ite != null()))){
+			HX_STACK_LINE(2749)
+			::zpp_nape::callbacks::ZPP_InteractionListener i = cx_ite->elt;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(2750)
+			this->add(i);
+			HX_STACK_LINE(2751)
+			cx_ite = cx_ite->next;
 		}
 	}
 return null();
@@ -1165,9 +1030,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_InteractionListener_obj,addAll,(void))
 	HX_STACK_PUSH("ZNPList_ZPP_InteractionListener::inlined_add","zpp_nape/util/Lists.hx",2700);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(2701)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",2709);
@@ -1222,12 +1084,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_InteractionListener_obj,inlined_add,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
 	struct _Function_1_1{
-		inline static ::zpp_nape::callbacks::ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &o,::zpp_nape::util::ZNPList_ZPP_InteractionListener_obj *__this){
+		inline static ::zpp_nape::callbacks::ZPP_InteractionListener Block( ::zpp_nape::util::ZNPList_ZPP_InteractionListener_obj *__this,::zpp_nape::callbacks::ZPP_InteractionListener &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",2696);
 			{
-				HX_STACK_LINE(2696)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",2696);
@@ -1277,7 +1136,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_InteractionListener_obj,inlined_add,return )
 		}
 	};
 	HX_STACK_LINE(2695)
-	return _Function_1_1::Block(o,this);
+	return _Function_1_1::Block(this,o);
 }
 
 
@@ -1475,7 +1334,7 @@ Class ZNPList_ZPP_InteractionListener_obj::__mClass;
 
 void ZNPList_ZPP_InteractionListener_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ZPP_InteractionListener"), hx::TCanCast< ZNPList_ZPP_InteractionListener_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ZPP_InteractionListener"), hx::TCanCast< ZNPList_ZPP_InteractionListener_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -13,7 +13,7 @@ namespace zpp_nape{
 namespace space{
 
 
-class ZPP_SweepData_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_SweepData_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_SweepData_obj OBJ_;
@@ -42,11 +42,11 @@ class ZPP_SweepData_obj : public hx::Object{
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		::zpp_nape::geom::ZPP_AABB aabb; /* REM */ 
-		::zpp_nape::shape::ZPP_Shape shape; /* REM */ 
-		::zpp_nape::space::ZPP_SweepData prev; /* REM */ 
-		::zpp_nape::space::ZPP_SweepData next; /* REM */ 
-		static ::zpp_nape::space::ZPP_SweepData zpp_pool; /* REM */ 
+		::zpp_nape::geom::ZPP_AABB aabb;
+		::zpp_nape::shape::ZPP_Shape shape;
+		::zpp_nape::space::ZPP_SweepData prev;
+		::zpp_nape::space::ZPP_SweepData next;
+		static ::zpp_nape::space::ZPP_SweepData zpp_pool;
 };
 
 } // end namespace zpp_nape

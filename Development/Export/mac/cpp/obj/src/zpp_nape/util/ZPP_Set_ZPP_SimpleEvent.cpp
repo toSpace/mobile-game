@@ -49,9 +49,6 @@ Dynamic ZPP_Set_ZPP_SimpleEvent_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_PUSH("ZPP_Set_ZPP_SimpleEvent::insert","zpp_nape/util/RBTree.hx",6331);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(6332)
-	{
-	}
 	HX_STACK_LINE(6340)
 	::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent x;		HX_STACK_VAR(x,"x");
 	HX_STACK_LINE(6341)
@@ -130,9 +127,6 @@ Dynamic ZPP_Set_ZPP_SimpleEvent_obj::__Create(hx::DynamicArray inArgs)
 			HX_STACK_LINE(6384)
 			this->__fix_dbl_red(x);
 		}
-	}
-	HX_STACK_LINE(6386)
-	{
 	}
 	HX_STACK_LINE(6394)
 	return x;
@@ -650,7 +644,7 @@ Void ZPP_Set_ZPP_SimpleEvent_obj::__fix_neg_red( ::zpp_nape::util::ZPP_Set_ZPP_S
 		HX_STACK_LINE(5992)
 		::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent parent = negred->parent;		HX_STACK_VAR(parent,"parent");
 		struct _Function_1_1{
-			inline static ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent Block( ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent &negred,::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent &parent,::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent_obj *__this){
+			inline static ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent Block( ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent_obj *__this,::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent &negred,::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent &parent){
 				HX_STACK_PUSH("*::closure","zpp_nape/util/RBTree.hx",5993);
 				{
 					HX_STACK_LINE(5994)
@@ -685,7 +679,7 @@ Void ZPP_Set_ZPP_SimpleEvent_obj::__fix_neg_red( ::zpp_nape::util::ZPP_Set_ZPP_S
 						nr->data = t;
 					}
 					HX_STACK_LINE(6009)
-					if (((__this->swapped_dyn() != null()))){
+					if (((__this->swapped != null()))){
 						HX_STACK_LINE(6009)
 						__this->swapped(parent->data,nr->data);
 					}
@@ -726,7 +720,7 @@ Void ZPP_Set_ZPP_SimpleEvent_obj::__fix_neg_red( ::zpp_nape::util::ZPP_Set_ZPP_S
 			}
 		};
 		struct _Function_1_2{
-			inline static ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent Block( ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent &negred,::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent &parent,::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent_obj *__this){
+			inline static ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent Block( ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent_obj *__this,::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent &negred,::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent &parent){
 				HX_STACK_PUSH("*::closure","zpp_nape/util/RBTree.hx",6024);
 				{
 					HX_STACK_LINE(6025)
@@ -761,7 +755,7 @@ Void ZPP_Set_ZPP_SimpleEvent_obj::__fix_neg_red( ::zpp_nape::util::ZPP_Set_ZPP_S
 						nr->data = t;
 					}
 					HX_STACK_LINE(6040)
-					if (((__this->swapped_dyn() != null()))){
+					if (((__this->swapped != null()))){
 						HX_STACK_LINE(6040)
 						__this->swapped(parent->data,nr->data);
 					}
@@ -802,7 +796,7 @@ Void ZPP_Set_ZPP_SimpleEvent_obj::__fix_neg_red( ::zpp_nape::util::ZPP_Set_ZPP_S
 			}
 		};
 		HX_STACK_LINE(5993)
-		::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent child = (  (((parent->prev == negred))) ? ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent(_Function_1_1::Block(negred,parent,this)) : ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent(_Function_1_2::Block(negred,parent,this)) );		HX_STACK_VAR(child,"child");
+		::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent child = (  (((parent->prev == negred))) ? ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent(_Function_1_1::Block(this,negred,parent)) : ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent(_Function_1_2::Block(this,negred,parent)) );		HX_STACK_VAR(child,"child");
 		HX_STACK_LINE(6055)
 		if (((bool((child->prev != null())) && bool((child->prev->colour == (int)0))))){
 			HX_STACK_LINE(6055)
@@ -827,9 +821,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_SimpleEvent_obj,__fix_neg_red,(void))
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(node,"node");
 	HX_STACK_ARG(lambda,"lambda");
-	HX_STACK_LINE(5957)
-	{
-	}
 	HX_STACK_LINE(5965)
 	lambda(node->data).Cast< Void >();
 	HX_STACK_LINE(5966)
@@ -852,9 +843,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_SimpleEvent_obj,__fix_neg_red,(void))
 	{
 		HX_STACK_LINE(5973)
 		::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent o = node;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(5974)
-		{
-		}
 		HX_STACK_LINE(5982)
 		{
 			HX_STACK_LINE(5982)
@@ -892,12 +880,9 @@ Void ZPP_Set_ZPP_SimpleEvent_obj::clear_with( Dynamic lambda){
 			HX_STACK_LINE(5951)
 			while(((cur != null()))){
 				struct _Function_3_1{
-					inline static ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent Block( Dynamic &lambda,::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent &cur){
+					inline static ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent Block( ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent &cur,Dynamic &lambda){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/RBTree.hx",5951);
 						{
-							HX_STACK_LINE(5951)
-							{
-							}
 							HX_STACK_LINE(5951)
 							lambda(cur->data).Cast< Void >();
 							HX_STACK_LINE(5951)
@@ -922,9 +907,6 @@ Void ZPP_Set_ZPP_SimpleEvent_obj::clear_with( Dynamic lambda){
 								::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent o = cur;		HX_STACK_VAR(o,"o");
 								HX_STACK_LINE(5951)
 								{
-								}
-								HX_STACK_LINE(5951)
-								{
 									HX_STACK_LINE(5951)
 									o->data = null();
 									HX_STACK_LINE(5951)
@@ -944,7 +926,7 @@ Void ZPP_Set_ZPP_SimpleEvent_obj::clear_with( Dynamic lambda){
 					}
 				};
 				HX_STACK_LINE(5951)
-				cur = (  (((cur->prev != null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent(cur->prev) : ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent((  (((cur->next != null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent(cur->next) : ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent(_Function_3_1::Block(lambda,cur)) )) );
+				cur = (  (((cur->prev != null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent(cur->prev) : ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent((  (((cur->next != null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent(cur->next) : ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent(_Function_3_1::Block(cur,lambda)) )) );
 			}
 			HX_STACK_LINE(5952)
 			this->parent = null();
@@ -975,9 +957,6 @@ Void ZPP_Set_ZPP_SimpleEvent_obj::clear( ){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/RBTree.hx",5944);
 						{
 							HX_STACK_LINE(5944)
-							{
-							}
-							HX_STACK_LINE(5944)
 							::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent ret = cur->parent;		HX_STACK_VAR(ret,"ret");
 							HX_STACK_LINE(5944)
 							if (((ret != null()))){
@@ -997,9 +976,6 @@ Void ZPP_Set_ZPP_SimpleEvent_obj::clear( ){
 							{
 								HX_STACK_LINE(5944)
 								::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent o = cur;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(5944)
-								{
-								}
 								HX_STACK_LINE(5944)
 								{
 									HX_STACK_LINE(5944)
@@ -1038,9 +1014,6 @@ Void ZPP_Set_ZPP_SimpleEvent_obj::remove_node( ::zpp_nape::util::ZPP_Set_ZPP_Sim
 		HX_STACK_PUSH("ZPP_Set_ZPP_SimpleEvent::remove_node","zpp_nape/util/RBTree.hx",5823);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(cur,"cur");
-		HX_STACK_LINE(5824)
-		{
-		}
 		HX_STACK_LINE(5832)
 		if (((bool((cur->next != null())) && bool((cur->prev != null()))))){
 			HX_STACK_LINE(5833)
@@ -1066,9 +1039,6 @@ Void ZPP_Set_ZPP_SimpleEvent_obj::remove_node( ::zpp_nape::util::ZPP_Set_ZPP_Sim
 			}
 			HX_STACK_LINE(5841)
 			cur = sm;
-		}
-		HX_STACK_LINE(5843)
-		{
 		}
 		HX_STACK_LINE(5851)
 		::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent child = (  (((cur->prev == null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent(cur->next) : ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent(cur->prev) );		HX_STACK_VAR(child,"child");
@@ -1206,9 +1176,6 @@ Void ZPP_Set_ZPP_SimpleEvent_obj::remove_node( ::zpp_nape::util::ZPP_Set_ZPP_Sim
 		{
 			HX_STACK_LINE(5926)
 			::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent o = cur;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(5927)
-			{
-			}
 			HX_STACK_LINE(5935)
 			{
 				HX_STACK_LINE(5935)
@@ -1234,9 +1201,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_SimpleEvent_obj,remove_node,(void))
 	HX_STACK_PUSH("ZPP_Set_ZPP_SimpleEvent::predecessor","zpp_nape/util/RBTree.hx",5811);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(5812)
-	{
-	}
 	HX_STACK_LINE(5820)
 	::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent node = this->predecessor_node(this->find(obj));		HX_STACK_VAR(node,"node");
 	HX_STACK_LINE(5821)
@@ -1250,9 +1214,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_SimpleEvent_obj,predecessor,return )
 	HX_STACK_PUSH("ZPP_Set_ZPP_SimpleEvent::successor","zpp_nape/util/RBTree.hx",5799);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(5800)
-	{
-	}
 	HX_STACK_LINE(5808)
 	::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent node = this->successor_node(this->find(obj));		HX_STACK_VAR(node,"node");
 	HX_STACK_LINE(5809)
@@ -1266,9 +1227,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_SimpleEvent_obj,successor,return )
 	HX_STACK_PUSH("ZPP_Set_ZPP_SimpleEvent::predecessor_node","zpp_nape/util/RBTree.hx",5776);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
-	HX_STACK_LINE(5777)
-	{
-	}
 	HX_STACK_LINE(5785)
 	if (((cur->prev != null()))){
 		HX_STACK_LINE(5786)
@@ -1303,9 +1261,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_SimpleEvent_obj,predecessor_node,return )
 	HX_STACK_PUSH("ZPP_Set_ZPP_SimpleEvent::successor_node","zpp_nape/util/RBTree.hx",5753);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
-	HX_STACK_LINE(5754)
-	{
-	}
 	HX_STACK_LINE(5762)
 	if (((cur->next != null()))){
 		HX_STACK_LINE(5763)
@@ -1343,9 +1298,6 @@ Void ZPP_Set_ZPP_SimpleEvent_obj::remove( ::zpp_nape::geom::ZPP_SimpleEvent obj)
 		HX_STACK_ARG(obj,"obj");
 		HX_STACK_LINE(5742)
 		::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent node = this->find(obj);		HX_STACK_VAR(node,"node");
-		HX_STACK_LINE(5743)
-		{
-		}
 		HX_STACK_LINE(5751)
 		this->remove_node(node);
 	}
@@ -1358,9 +1310,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_SimpleEvent_obj,remove,(void))
 ::zpp_nape::geom::ZPP_SimpleEvent ZPP_Set_ZPP_SimpleEvent_obj::pop_front( ){
 	HX_STACK_PUSH("ZPP_Set_ZPP_SimpleEvent::pop_front","zpp_nape/util/RBTree.hx",5726);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(5727)
-	{
-	}
 	HX_STACK_LINE(5735)
 	::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent cur = this->parent;		HX_STACK_VAR(cur,"cur");
 	HX_STACK_LINE(5736)
@@ -1382,9 +1331,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Set_ZPP_SimpleEvent_obj,pop_front,return )
 ::zpp_nape::geom::ZPP_SimpleEvent ZPP_Set_ZPP_SimpleEvent_obj::first( ){
 	HX_STACK_PUSH("ZPP_Set_ZPP_SimpleEvent::first","zpp_nape/util/RBTree.hx",5713);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(5714)
-	{
-	}
 	HX_STACK_LINE(5722)
 	::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent cur = this->parent;		HX_STACK_VAR(cur,"cur");
 	HX_STACK_LINE(5723)
@@ -1410,49 +1356,43 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Set_ZPP_SimpleEvent_obj,first,return )
 				HX_STACK_LINE(5678)
 				::zpp_nape::geom::ZPP_SimpleEvent ret = null();		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(5679)
-				{
-					HX_STACK_LINE(5680)
-					{
-					}
-					HX_STACK_LINE(5688)
-					if ((!(__this->empty()))){
-						HX_STACK_LINE(5689)
-						::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent set_ite = __this->parent;		HX_STACK_VAR(set_ite,"set_ite");
+				if ((!(__this->empty()))){
+					HX_STACK_LINE(5689)
+					::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent set_ite = __this->parent;		HX_STACK_VAR(set_ite,"set_ite");
+					HX_STACK_LINE(5690)
+					while(((set_ite->prev != null()))){
 						HX_STACK_LINE(5690)
-						while(((set_ite->prev != null()))){
-							HX_STACK_LINE(5690)
-							set_ite = set_ite->prev;
+						set_ite = set_ite->prev;
+					}
+					HX_STACK_LINE(5691)
+					while(((set_ite != null()))){
+						HX_STACK_LINE(5692)
+						::zpp_nape::geom::ZPP_SimpleEvent elt = set_ite->data;		HX_STACK_VAR(elt,"elt");
+						HX_STACK_LINE(5693)
+						if ((!(__this->lt(elt,obj)))){
+							HX_STACK_LINE(5695)
+							ret = elt;
+							HX_STACK_LINE(5696)
+							break;
 						}
-						HX_STACK_LINE(5691)
-						while(((set_ite != null()))){
-							HX_STACK_LINE(5692)
-							::zpp_nape::geom::ZPP_SimpleEvent elt = set_ite->data;		HX_STACK_VAR(elt,"elt");
-							HX_STACK_LINE(5693)
-							if ((!(__this->lt(elt,obj)))){
-								HX_STACK_LINE(5695)
-								ret = elt;
-								HX_STACK_LINE(5696)
-								break;
-							}
-							HX_STACK_LINE(5699)
-							if (((set_ite->next != null()))){
-								HX_STACK_LINE(5700)
-								set_ite = set_ite->next;
+						HX_STACK_LINE(5699)
+						if (((set_ite->next != null()))){
+							HX_STACK_LINE(5700)
+							set_ite = set_ite->next;
+							HX_STACK_LINE(5701)
+							while(((set_ite->prev != null()))){
 								HX_STACK_LINE(5701)
-								while(((set_ite->prev != null()))){
-									HX_STACK_LINE(5701)
-									set_ite = set_ite->prev;
-								}
+								set_ite = set_ite->prev;
 							}
-							else{
+						}
+						else{
+							HX_STACK_LINE(5704)
+							while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
 								HX_STACK_LINE(5704)
-								while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
-									HX_STACK_LINE(5704)
-									set_ite = set_ite->parent;
-								}
-								HX_STACK_LINE(5705)
 								set_ite = set_ite->parent;
 							}
+							HX_STACK_LINE(5705)
+							set_ite = set_ite->parent;
 						}
 					}
 				}
@@ -1554,44 +1494,38 @@ int ZPP_Set_ZPP_SimpleEvent_obj::size( ){
 	HX_STACK_LINE(5624)
 	int ret = (int)0;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(5625)
-	{
-		HX_STACK_LINE(5626)
-		{
-		}
-		HX_STACK_LINE(5634)
-		if ((!(this->empty()))){
-			HX_STACK_LINE(5635)
-			::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent set_ite = this->parent;		HX_STACK_VAR(set_ite,"set_ite");
+	if ((!(this->empty()))){
+		HX_STACK_LINE(5635)
+		::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent set_ite = this->parent;		HX_STACK_VAR(set_ite,"set_ite");
+		HX_STACK_LINE(5636)
+		while(((set_ite->prev != null()))){
 			HX_STACK_LINE(5636)
-			while(((set_ite->prev != null()))){
-				HX_STACK_LINE(5636)
-				set_ite = set_ite->prev;
-			}
-			HX_STACK_LINE(5637)
-			while(((set_ite != null()))){
-				HX_STACK_LINE(5638)
-				::zpp_nape::geom::ZPP_SimpleEvent i = set_ite->data;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(5639)
-				(ret)++;
-				HX_STACK_LINE(5640)
-				if (((set_ite->next != null()))){
-					HX_STACK_LINE(5641)
-					set_ite = set_ite->next;
+			set_ite = set_ite->prev;
+		}
+		HX_STACK_LINE(5637)
+		while(((set_ite != null()))){
+			HX_STACK_LINE(5638)
+			::zpp_nape::geom::ZPP_SimpleEvent i = set_ite->data;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(5639)
+			(ret)++;
+			HX_STACK_LINE(5640)
+			if (((set_ite->next != null()))){
+				HX_STACK_LINE(5641)
+				set_ite = set_ite->next;
+				HX_STACK_LINE(5642)
+				while(((set_ite->prev != null()))){
 					HX_STACK_LINE(5642)
-					while(((set_ite->prev != null()))){
-						HX_STACK_LINE(5642)
-						set_ite = set_ite->prev;
-					}
+					set_ite = set_ite->prev;
 				}
-				else{
+			}
+			else{
+				HX_STACK_LINE(5645)
+				while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
 					HX_STACK_LINE(5645)
-					while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
-						HX_STACK_LINE(5645)
-						set_ite = set_ite->parent;
-					}
-					HX_STACK_LINE(5646)
 					set_ite = set_ite->parent;
 				}
+				HX_STACK_LINE(5646)
+				set_ite = set_ite->parent;
 			}
 		}
 	}
@@ -1626,109 +1560,97 @@ bool ZPP_Set_ZPP_SimpleEvent_obj::verify( ){
 	HX_STACK_PUSH("ZPP_Set_ZPP_SimpleEvent::verify","zpp_nape/util/RBTree.hx",5552);
 	HX_STACK_THIS(this);
 	HX_STACK_LINE(5553)
-	{
-		HX_STACK_LINE(5554)
-		{
-		}
-		HX_STACK_LINE(5562)
-		if ((!(this->empty()))){
-			HX_STACK_LINE(5563)
-			::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent set_ite = this->parent;		HX_STACK_VAR(set_ite,"set_ite");
+	if ((!(this->empty()))){
+		HX_STACK_LINE(5563)
+		::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent set_ite = this->parent;		HX_STACK_VAR(set_ite,"set_ite");
+		HX_STACK_LINE(5564)
+		while(((set_ite->prev != null()))){
 			HX_STACK_LINE(5564)
-			while(((set_ite->prev != null()))){
-				HX_STACK_LINE(5564)
-				set_ite = set_ite->prev;
-			}
-			HX_STACK_LINE(5565)
-			while(((set_ite != null()))){
-				HX_STACK_LINE(5566)
-				::zpp_nape::geom::ZPP_SimpleEvent i = set_ite->data;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(5567)
-				{
-					HX_STACK_LINE(5568)
-					bool prei = true;		HX_STACK_VAR(prei,"prei");
-					HX_STACK_LINE(5569)
-					{
-						HX_STACK_LINE(5570)
-						{
+			set_ite = set_ite->prev;
+		}
+		HX_STACK_LINE(5565)
+		while(((set_ite != null()))){
+			HX_STACK_LINE(5566)
+			::zpp_nape::geom::ZPP_SimpleEvent i = set_ite->data;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(5567)
+			{
+				HX_STACK_LINE(5568)
+				bool prei = true;		HX_STACK_VAR(prei,"prei");
+				HX_STACK_LINE(5569)
+				if ((!(this->empty()))){
+					HX_STACK_LINE(5579)
+					::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent set_ite1 = this->parent;		HX_STACK_VAR(set_ite1,"set_ite1");
+					HX_STACK_LINE(5580)
+					while(((set_ite1->prev != null()))){
+						HX_STACK_LINE(5580)
+						set_ite1 = set_ite1->prev;
+					}
+					HX_STACK_LINE(5581)
+					while(((set_ite1 != null()))){
+						HX_STACK_LINE(5582)
+						::zpp_nape::geom::ZPP_SimpleEvent j = set_ite1->data;		HX_STACK_VAR(j,"j");
+						HX_STACK_LINE(5583)
+						if ((!(prei))){
+							HX_STACK_LINE(5584)
+							if (((bool(!(this->lt(i,j))) && bool(this->lt(j,i))))){
+								HX_STACK_LINE(5585)
+								return false;
+							}
 						}
-						HX_STACK_LINE(5578)
-						if ((!(this->empty()))){
-							HX_STACK_LINE(5579)
-							::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent set_ite1 = this->parent;		HX_STACK_VAR(set_ite1,"set_ite1");
-							HX_STACK_LINE(5580)
+						else{
+							HX_STACK_LINE(5587)
+							if (((i == j))){
+								HX_STACK_LINE(5587)
+								prei = false;
+							}
+							else{
+								HX_STACK_LINE(5588)
+								if (((bool(!(this->lt(j,i))) && bool(this->lt(i,j))))){
+									HX_STACK_LINE(5589)
+									return false;
+								}
+							}
+						}
+						HX_STACK_LINE(5592)
+						if (((set_ite1->next != null()))){
+							HX_STACK_LINE(5593)
+							set_ite1 = set_ite1->next;
+							HX_STACK_LINE(5594)
 							while(((set_ite1->prev != null()))){
-								HX_STACK_LINE(5580)
+								HX_STACK_LINE(5594)
 								set_ite1 = set_ite1->prev;
 							}
-							HX_STACK_LINE(5581)
-							while(((set_ite1 != null()))){
-								HX_STACK_LINE(5582)
-								::zpp_nape::geom::ZPP_SimpleEvent j = set_ite1->data;		HX_STACK_VAR(j,"j");
-								HX_STACK_LINE(5583)
-								if ((!(prei))){
-									HX_STACK_LINE(5584)
-									if (((bool(!(this->lt(i,j))) && bool(this->lt(j,i))))){
-										HX_STACK_LINE(5585)
-										return false;
-									}
-								}
-								else{
-									HX_STACK_LINE(5587)
-									if (((i == j))){
-										HX_STACK_LINE(5587)
-										prei = false;
-									}
-									else{
-										HX_STACK_LINE(5588)
-										if (((bool(!(this->lt(j,i))) && bool(this->lt(i,j))))){
-											HX_STACK_LINE(5589)
-											return false;
-										}
-									}
-								}
-								HX_STACK_LINE(5592)
-								if (((set_ite1->next != null()))){
-									HX_STACK_LINE(5593)
-									set_ite1 = set_ite1->next;
-									HX_STACK_LINE(5594)
-									while(((set_ite1->prev != null()))){
-										HX_STACK_LINE(5594)
-										set_ite1 = set_ite1->prev;
-									}
-								}
-								else{
-									HX_STACK_LINE(5597)
-									while(((bool((set_ite1->parent != null())) && bool((set_ite1 == set_ite1->parent->next))))){
-										HX_STACK_LINE(5597)
-										set_ite1 = set_ite1->parent;
-									}
-									HX_STACK_LINE(5598)
-									set_ite1 = set_ite1->parent;
-								}
+						}
+						else{
+							HX_STACK_LINE(5597)
+							while(((bool((set_ite1->parent != null())) && bool((set_ite1 == set_ite1->parent->next))))){
+								HX_STACK_LINE(5597)
+								set_ite1 = set_ite1->parent;
 							}
+							HX_STACK_LINE(5598)
+							set_ite1 = set_ite1->parent;
 						}
 					}
 				}
-				HX_STACK_LINE(5604)
-				if (((set_ite->next != null()))){
-					HX_STACK_LINE(5605)
-					set_ite = set_ite->next;
+			}
+			HX_STACK_LINE(5604)
+			if (((set_ite->next != null()))){
+				HX_STACK_LINE(5605)
+				set_ite = set_ite->next;
+				HX_STACK_LINE(5606)
+				while(((set_ite->prev != null()))){
 					HX_STACK_LINE(5606)
-					while(((set_ite->prev != null()))){
-						HX_STACK_LINE(5606)
-						set_ite = set_ite->prev;
-					}
+					set_ite = set_ite->prev;
 				}
-				else{
+			}
+			else{
+				HX_STACK_LINE(5609)
+				while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
 					HX_STACK_LINE(5609)
-					while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
-						HX_STACK_LINE(5609)
-						set_ite = set_ite->parent;
-					}
-					HX_STACK_LINE(5610)
 					set_ite = set_ite->parent;
 				}
+				HX_STACK_LINE(5610)
+				set_ite = set_ite->parent;
 			}
 		}
 	}
@@ -1956,7 +1878,7 @@ Class ZPP_Set_ZPP_SimpleEvent_obj::__mClass;
 
 void ZPP_Set_ZPP_SimpleEvent_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_Set_ZPP_SimpleEvent"), hx::TCanCast< ZPP_Set_ZPP_SimpleEvent_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_Set_ZPP_SimpleEvent"), hx::TCanCast< ZPP_Set_ZPP_SimpleEvent_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

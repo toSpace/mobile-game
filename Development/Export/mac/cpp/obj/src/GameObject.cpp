@@ -6,14 +6,11 @@
 #ifndef INCLUDED_GameObject
 #include <GameObject.h>
 #endif
-#ifndef INCLUDED_Hash
-#include <Hash.h>
+#ifndef INCLUDED_IMap
+#include <IMap.h>
 #endif
 #ifndef INCLUDED_Main
 #include <Main.h>
-#endif
-#ifndef INCLUDED_hxMath
-#include <hxMath.h>
 #endif
 #ifndef INCLUDED_Mobile
 #include <Mobile.h>
@@ -27,6 +24,42 @@
 #ifndef INCLUDED_Xml
 #include <Xml.h>
 #endif
+#ifndef INCLUDED_flash_display_Bitmap
+#include <flash/display/Bitmap.h>
+#endif
+#ifndef INCLUDED_flash_display_BitmapData
+#include <flash/display/BitmapData.h>
+#endif
+#ifndef INCLUDED_flash_display_DisplayObject
+#include <flash/display/DisplayObject.h>
+#endif
+#ifndef INCLUDED_flash_display_DisplayObjectContainer
+#include <flash/display/DisplayObjectContainer.h>
+#endif
+#ifndef INCLUDED_flash_display_IBitmapDrawable
+#include <flash/display/IBitmapDrawable.h>
+#endif
+#ifndef INCLUDED_flash_display_InteractiveObject
+#include <flash/display/InteractiveObject.h>
+#endif
+#ifndef INCLUDED_flash_display_PixelSnapping
+#include <flash/display/PixelSnapping.h>
+#endif
+#ifndef INCLUDED_flash_display_Sprite
+#include <flash/display/Sprite.h>
+#endif
+#ifndef INCLUDED_flash_events_EventDispatcher
+#include <flash/events/EventDispatcher.h>
+#endif
+#ifndef INCLUDED_flash_events_IEventDispatcher
+#include <flash/events/IEventDispatcher.h>
+#endif
+#ifndef INCLUDED_flash_geom_Point
+#include <flash/geom/Point.h>
+#endif
+#ifndef INCLUDED_haxe_ds_StringMap
+#include <haxe/ds/StringMap.h>
+#endif
 #ifndef INCLUDED_haxe_xml_Fast
 #include <haxe/xml/Fast.h>
 #endif
@@ -35,6 +68,9 @@
 #endif
 #ifndef INCLUDED_haxe_xml__Fast_NodeAccess
 #include <haxe/xml/_Fast/NodeAccess.h>
+#endif
+#ifndef INCLUDED_hxMath
+#include <hxMath.h>
 #endif
 #ifndef INCLUDED_nape_geom_AABB
 #include <nape/geom/AABB.h>
@@ -54,41 +90,8 @@
 #ifndef INCLUDED_nape_space_Space
 #include <nape/space/Space.h>
 #endif
-#ifndef INCLUDED_native_display_Bitmap
-#include <native/display/Bitmap.h>
-#endif
-#ifndef INCLUDED_native_display_BitmapData
-#include <native/display/BitmapData.h>
-#endif
-#ifndef INCLUDED_native_display_DisplayObject
-#include <native/display/DisplayObject.h>
-#endif
-#ifndef INCLUDED_native_display_DisplayObjectContainer
-#include <native/display/DisplayObjectContainer.h>
-#endif
-#ifndef INCLUDED_native_display_IBitmapDrawable
-#include <native/display/IBitmapDrawable.h>
-#endif
-#ifndef INCLUDED_native_display_InteractiveObject
-#include <native/display/InteractiveObject.h>
-#endif
-#ifndef INCLUDED_native_display_PixelSnapping
-#include <native/display/PixelSnapping.h>
-#endif
-#ifndef INCLUDED_native_display_Sprite
-#include <native/display/Sprite.h>
-#endif
-#ifndef INCLUDED_native_events_EventDispatcher
-#include <native/events/EventDispatcher.h>
-#endif
-#ifndef INCLUDED_native_events_IEventDispatcher
-#include <native/events/IEventDispatcher.h>
-#endif
-#ifndef INCLUDED_native_geom_Point
-#include <native/geom/Point.h>
-#endif
-#ifndef INCLUDED_nme_installer_Assets
-#include <nme/installer/Assets.h>
+#ifndef INCLUDED_openfl_Assets
+#include <openfl/Assets.h>
 #endif
 #ifndef INCLUDED_zpp_nape_geom_ZPP_AABB
 #include <zpp_nape/geom/ZPP_AABB.h>
@@ -115,9 +118,9 @@ HX_STACK_PUSH("GameObject::new","GameObject.hx",26);
 	HX_STACK_LINE(30)
 	this->canvas = ::Main_obj::canvas;
 	HX_STACK_LINE(33)
-	this->xml = this->readXml(xmlUrl);
+	this->readXml(xmlUrl);
 	HX_STACK_LINE(34)
-	this->asset = ::native::display::Bitmap_obj::__new(::nme::installer::Assets_obj::getBitmapData(this->xml->get(HX_CSTRING("img")),null()),null(),null());
+	this->asset = ::flash::display::Bitmap_obj::__new(::openfl::Assets_obj::getBitmapData(this->xml->get(HX_CSTRING("img")),null()),null(),null());
 	HX_STACK_LINE(35)
 	this->xml->set(HX_CSTRING("y"),(::Mobile_obj::getY(this->asset) - this->xml->get(HX_CSTRING("y"))));
 	HX_STACK_LINE(38)
@@ -199,7 +202,7 @@ bool offset = __o_offset.Default(false);
 							HX_STACK_LINE(138)
 							::zpp_nape::geom::ZPP_Vec2 _this = bodyOffset->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(138)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(138)
 								_this->_validate();
 							}
@@ -226,7 +229,7 @@ bool offset = __o_offset.Default(false);
 							HX_STACK_LINE(139)
 							::zpp_nape::geom::ZPP_Vec2 _this = bodyOffset->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(139)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(139)
 								_this->_validate();
 							}
@@ -276,7 +279,7 @@ bool offset = __o_offset.Default(false);
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(141)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(141)
 					_this1->_isimmutable();
 				}
@@ -287,7 +290,7 @@ bool offset = __o_offset.Default(false);
 				hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 			}
 			struct _Function_2_2{
-				inline static Float Block( ::nape::geom::Vec2 &_this){
+				inline static Float Block( ::nape::geom::Vec2 _this){
 					HX_STACK_PUSH("*::closure","GameObject.hx",141);
 					{
 						HX_STACK_LINE(141)
@@ -300,7 +303,7 @@ bool offset = __o_offset.Default(false);
 							HX_STACK_LINE(141)
 							::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 							HX_STACK_LINE(141)
-							if (((_this1->_validate_dyn() != null()))){
+							if (((_this1->_validate != null()))){
 								HX_STACK_LINE(141)
 								_this1->_validate();
 							}
@@ -312,7 +315,7 @@ bool offset = __o_offset.Default(false);
 				}
 			};
 			struct _Function_2_3{
-				inline static Float Block( ::nape::geom::Vec2 &_this){
+				inline static Float Block( ::nape::geom::Vec2 _this){
 					HX_STACK_PUSH("*::closure","GameObject.hx",141);
 					{
 						HX_STACK_LINE(141)
@@ -325,7 +328,7 @@ bool offset = __o_offset.Default(false);
 							HX_STACK_LINE(141)
 							::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 							HX_STACK_LINE(141)
-							if (((_this1->_validate_dyn() != null()))){
+							if (((_this1->_validate != null()))){
 								HX_STACK_LINE(141)
 								_this1->_validate();
 							}
@@ -347,16 +350,13 @@ bool offset = __o_offset.Default(false);
 					HX_STACK_LINE(141)
 					{
 					}
-					HX_STACK_LINE(141)
-					{
-					}
 				}
 				HX_STACK_LINE(141)
 				{
 					HX_STACK_LINE(141)
 					::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 					HX_STACK_LINE(141)
-					if (((_this1->_invalidate_dyn() != null()))){
+					if (((_this1->_invalidate != null()))){
 						HX_STACK_LINE(141)
 						_this1->_invalidate(_this1);
 					}
@@ -389,7 +389,7 @@ bool GameObject_obj::inView( ){
 	HX_STACK_LINE(114)
 	bool toReturn = false;		HX_STACK_VAR(toReturn,"toReturn");
 	HX_STACK_LINE(115)
-	::native::geom::Point camera = ::Camera_obj::getPosition();		HX_STACK_VAR(camera,"camera");
+	::flash::geom::Point camera = ::Camera_obj::getPosition();		HX_STACK_VAR(camera,"camera");
 	struct _Function_1_1{
 		inline static ::nape::geom::Vec2 Block( ::GameObject_obj *__this){
 			HX_STACK_PUSH("*::closure","GameObject.hx",116);
@@ -442,7 +442,7 @@ bool GameObject_obj::inView( ){
 					HX_STACK_LINE(120)
 					::zpp_nape::geom::ZPP_Vec2 _this = bodyPos->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(120)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(120)
 						_this->_validate();
 					}
@@ -462,7 +462,7 @@ bool GameObject_obj::inView( ){
 					HX_STACK_LINE(120)
 					::zpp_nape::geom::ZPP_AABB _this = bodyBounds->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(120)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(120)
 						_this->_validate();
 					}
@@ -499,7 +499,7 @@ bool GameObject_obj::inView( ){
 					HX_STACK_LINE(120)
 					::zpp_nape::geom::ZPP_Vec2 _this = bodyPos->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(120)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(120)
 						_this->_validate();
 					}
@@ -519,7 +519,7 @@ bool GameObject_obj::inView( ){
 					HX_STACK_LINE(120)
 					::zpp_nape::geom::ZPP_AABB _this = bodyBounds->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(120)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(120)
 						_this->_validate();
 					}
@@ -556,7 +556,7 @@ bool GameObject_obj::inView( ){
 					HX_STACK_LINE(122)
 					::zpp_nape::geom::ZPP_Vec2 _this = bodyPos->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(122)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(122)
 						_this->_validate();
 					}
@@ -576,7 +576,7 @@ bool GameObject_obj::inView( ){
 					HX_STACK_LINE(122)
 					::zpp_nape::geom::ZPP_AABB _this = bodyBounds->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(122)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(122)
 						_this->_validate();
 					}
@@ -613,7 +613,7 @@ bool GameObject_obj::inView( ){
 					HX_STACK_LINE(122)
 					::zpp_nape::geom::ZPP_Vec2 _this = bodyPos->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(122)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(122)
 						_this->_validate();
 					}
@@ -633,7 +633,7 @@ bool GameObject_obj::inView( ){
 					HX_STACK_LINE(122)
 					::zpp_nape::geom::ZPP_AABB _this = bodyBounds->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(122)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(122)
 						_this->_validate();
 					}
@@ -715,7 +715,7 @@ Void GameObject_obj::renderPhysics( ){
 			}
 		};
 		HX_STACK_LINE(93)
-		::native::display::DisplayObject graphic = (_Function_1_1::Block(this))->__Field(HX_CSTRING("graphic"),true);		HX_STACK_VAR(graphic,"graphic");
+		::flash::display::DisplayObject graphic = (_Function_1_1::Block(this))->__Field(HX_CSTRING("graphic"),true);		HX_STACK_VAR(graphic,"graphic");
 		struct _Function_1_2{
 			inline static Dynamic Block( ::GameObject_obj *__this){
 				HX_STACK_PUSH("*::closure","GameObject.hx",94);
@@ -761,7 +761,7 @@ Void GameObject_obj::renderPhysics( ){
 						HX_STACK_LINE(96)
 						::zpp_nape::geom::ZPP_Vec2 _this = position->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(96)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(96)
 							_this->_validate();
 						}
@@ -788,7 +788,7 @@ Void GameObject_obj::renderPhysics( ){
 						HX_STACK_LINE(97)
 						::zpp_nape::geom::ZPP_Vec2 _this = position->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(97)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(97)
 							_this->_validate();
 						}
@@ -820,7 +820,7 @@ Void GameObject_obj::renderPhysics( ){
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(99)
-				if (((_this->_isimmutable_dyn() != null()))){
+				if (((_this->_isimmutable != null()))){
 					HX_STACK_LINE(99)
 					_this->_isimmutable();
 				}
@@ -841,9 +841,6 @@ Void GameObject_obj::renderPhysics( ){
 				HX_STACK_LINE(99)
 				::nape::geom::Vec2 o = position;		HX_STACK_VAR(o,"o");
 				HX_STACK_LINE(99)
-				{
-				}
-				HX_STACK_LINE(99)
 				o->zpp_pool = null();
 				HX_STACK_LINE(99)
 				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -863,9 +860,6 @@ Void GameObject_obj::renderPhysics( ){
 			{
 				HX_STACK_LINE(99)
 				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(99)
-				{
-				}
 				HX_STACK_LINE(99)
 				{
 					HX_STACK_LINE(99)
@@ -933,44 +927,43 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC1(GameObject_obj,physicsObject,(void))
 
-::Hash GameObject_obj::readXml( ::String url){
-	HX_STACK_PUSH("GameObject::readXml","GameObject.hx",47);
-	HX_STACK_THIS(this);
-	HX_STACK_ARG(url,"url");
-	HX_STACK_LINE(48)
-	::Hash p = ::Hash_obj::__new();		HX_STACK_VAR(p,"p");
-	HX_STACK_LINE(49)
-	::String xmlFile = ::nme::installer::Assets_obj::getText((::Mobile_obj::xml + url));		HX_STACK_VAR(xmlFile,"xmlFile");
-	HX_STACK_LINE(50)
-	::haxe::xml::Fast read = ::haxe::xml::Fast_obj::__new(::Xml_obj::parse(xmlFile));		HX_STACK_VAR(read,"read");
-	HX_STACK_LINE(52)
-	::haxe::xml::Fast asset = read->node->resolve(HX_CSTRING("asset"));		HX_STACK_VAR(asset,"asset");
-	HX_STACK_LINE(53)
-	p->set(HX_CSTRING("img"),(::Mobile_obj::asset + asset->node->resolve(HX_CSTRING("img"))->getInnerData()));
-	HX_STACK_LINE(56)
-	p->set(HX_CSTRING("x"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("x")));
-	HX_STACK_LINE(57)
-	p->set(HX_CSTRING("y"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("y")));
-	HX_STACK_LINE(58)
-	p->set(HX_CSTRING("rotation"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("rotation")));
-	HX_STACK_LINE(61)
-	p->set(HX_CSTRING("physics"),asset->node->resolve(HX_CSTRING("physics"))->getInnerData());
-	HX_STACK_LINE(62)
-	p->set(HX_CSTRING("elasticity"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("elasticity")));
-	HX_STACK_LINE(63)
-	p->set(HX_CSTRING("dynamicFriction"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("dynamicFriction")));
-	HX_STACK_LINE(64)
-	p->set(HX_CSTRING("staticFriction"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("staticFriction")));
-	HX_STACK_LINE(65)
-	p->set(HX_CSTRING("density"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("density")));
-	HX_STACK_LINE(66)
-	p->set(HX_CSTRING("rollingFriction"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("rollingFriction")));
-	HX_STACK_LINE(68)
-	return p;
+Void GameObject_obj::readXml( ::String url){
+{
+		HX_STACK_PUSH("GameObject::readXml","GameObject.hx",47);
+		HX_STACK_THIS(this);
+		HX_STACK_ARG(url,"url");
+		HX_STACK_LINE(49)
+		::String xmlFile = ::openfl::Assets_obj::getText((::Mobile_obj::xml + url));		HX_STACK_VAR(xmlFile,"xmlFile");
+		HX_STACK_LINE(50)
+		::haxe::xml::Fast read = ::haxe::xml::Fast_obj::__new(::Xml_obj::parse(xmlFile));		HX_STACK_VAR(read,"read");
+		HX_STACK_LINE(52)
+		::haxe::xml::Fast asset = read->node->resolve(HX_CSTRING("asset"));		HX_STACK_VAR(asset,"asset");
+		HX_STACK_LINE(53)
+		this->xml->set(HX_CSTRING("img"),(::Mobile_obj::asset + asset->node->resolve(HX_CSTRING("img"))->get_innerData()));
+		HX_STACK_LINE(56)
+		this->xml->set(HX_CSTRING("x"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("x")));
+		HX_STACK_LINE(57)
+		this->xml->set(HX_CSTRING("y"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("y")));
+		HX_STACK_LINE(58)
+		this->xml->set(HX_CSTRING("rotation"),asset->node->resolve(HX_CSTRING("pos"))->att->resolve(HX_CSTRING("rotation")));
+		HX_STACK_LINE(61)
+		this->xml->set(HX_CSTRING("physics"),asset->node->resolve(HX_CSTRING("physics"))->get_innerData());
+		HX_STACK_LINE(62)
+		this->xml->set(HX_CSTRING("elasticity"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("elasticity")));
+		HX_STACK_LINE(63)
+		this->xml->set(HX_CSTRING("dynamicFriction"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("dynamicFriction")));
+		HX_STACK_LINE(64)
+		this->xml->set(HX_CSTRING("staticFriction"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("staticFriction")));
+		HX_STACK_LINE(65)
+		this->xml->set(HX_CSTRING("density"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("density")));
+		HX_STACK_LINE(66)
+		this->xml->set(HX_CSTRING("rollingFriction"),asset->node->resolve(HX_CSTRING("material"))->att->resolve(HX_CSTRING("rollingFriction")));
+	}
+return null();
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC1(GameObject_obj,readXml,return )
+HX_DEFINE_DYNAMIC_FUNC1(GameObject_obj,readXml,(void))
 
 
 GameObject_obj::GameObject_obj()
@@ -1035,17 +1028,17 @@ Dynamic GameObject_obj::__SetField(const ::String &inName,const Dynamic &inValue
 {
 	switch(inName.length) {
 	case 3:
-		if (HX_FIELD_EQ(inName,"xml") ) { xml=inValue.Cast< ::Hash >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"xml") ) { xml=inValue.Cast< ::haxe::ds::StringMap >(); return inValue; }
 		break;
 	case 4:
 		if (HX_FIELD_EQ(inName,"body") ) { body=inValue.Cast< ::nape::phys::Body >(); return inValue; }
 		break;
 	case 5:
-		if (HX_FIELD_EQ(inName,"asset") ) { asset=inValue.Cast< ::native::display::Bitmap >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"asset") ) { asset=inValue.Cast< ::flash::display::Bitmap >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"space") ) { space=inValue.Cast< ::nape::space::Space >(); return inValue; }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"canvas") ) { canvas=inValue.Cast< ::native::display::Sprite >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"canvas") ) { canvas=inValue.Cast< ::flash::display::Sprite >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -1092,7 +1085,7 @@ Class GameObject_obj::__mClass;
 
 void GameObject_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("GameObject"), hx::TCanCast< GameObject_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("GameObject"), hx::TCanCast< GameObject_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

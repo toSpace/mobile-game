@@ -12,17 +12,14 @@
 #ifndef INCLUDED_GameObject
 #include <GameObject.h>
 #endif
-#ifndef INCLUDED_Hash
-#include <Hash.h>
+#ifndef INCLUDED_IMap
+#include <IMap.h>
 #endif
 #ifndef INCLUDED_IsoBody
 #include <IsoBody.h>
 #endif
 #ifndef INCLUDED_Main
 #include <Main.h>
-#endif
-#ifndef INCLUDED_hxMath
-#include <hxMath.h>
 #endif
 #ifndef INCLUDED_RenderManager
 #include <RenderManager.h>
@@ -32,6 +29,66 @@
 #endif
 #ifndef INCLUDED_Std
 #include <Std.h>
+#endif
+#ifndef INCLUDED_flash__Vector_Vector_Impl_
+#include <flash/_Vector/Vector_Impl_.h>
+#endif
+#ifndef INCLUDED_flash_display_Bitmap
+#include <flash/display/Bitmap.h>
+#endif
+#ifndef INCLUDED_flash_display_BitmapData
+#include <flash/display/BitmapData.h>
+#endif
+#ifndef INCLUDED_flash_display_BlendMode
+#include <flash/display/BlendMode.h>
+#endif
+#ifndef INCLUDED_flash_display_CapsStyle
+#include <flash/display/CapsStyle.h>
+#endif
+#ifndef INCLUDED_flash_display_DisplayObject
+#include <flash/display/DisplayObject.h>
+#endif
+#ifndef INCLUDED_flash_display_DisplayObjectContainer
+#include <flash/display/DisplayObjectContainer.h>
+#endif
+#ifndef INCLUDED_flash_display_Graphics
+#include <flash/display/Graphics.h>
+#endif
+#ifndef INCLUDED_flash_display_IBitmapDrawable
+#include <flash/display/IBitmapDrawable.h>
+#endif
+#ifndef INCLUDED_flash_display_InteractiveObject
+#include <flash/display/InteractiveObject.h>
+#endif
+#ifndef INCLUDED_flash_display_JointStyle
+#include <flash/display/JointStyle.h>
+#endif
+#ifndef INCLUDED_flash_display_LineScaleMode
+#include <flash/display/LineScaleMode.h>
+#endif
+#ifndef INCLUDED_flash_display_Sprite
+#include <flash/display/Sprite.h>
+#endif
+#ifndef INCLUDED_flash_events_EventDispatcher
+#include <flash/events/EventDispatcher.h>
+#endif
+#ifndef INCLUDED_flash_events_IEventDispatcher
+#include <flash/events/IEventDispatcher.h>
+#endif
+#ifndef INCLUDED_flash_geom_ColorTransform
+#include <flash/geom/ColorTransform.h>
+#endif
+#ifndef INCLUDED_flash_geom_Matrix
+#include <flash/geom/Matrix.h>
+#endif
+#ifndef INCLUDED_flash_geom_Rectangle
+#include <flash/geom/Rectangle.h>
+#endif
+#ifndef INCLUDED_haxe_ds_StringMap
+#include <haxe/ds/StringMap.h>
+#endif
+#ifndef INCLUDED_hxMath
+#include <hxMath.h>
 #endif
 #ifndef INCLUDED_nape_geom_AABB
 #include <nape/geom/AABB.h>
@@ -53,57 +110,6 @@
 #endif
 #ifndef INCLUDED_nape_space_Space
 #include <nape/space/Space.h>
-#endif
-#ifndef INCLUDED_native_display_Bitmap
-#include <native/display/Bitmap.h>
-#endif
-#ifndef INCLUDED_native_display_BitmapData
-#include <native/display/BitmapData.h>
-#endif
-#ifndef INCLUDED_native_display_BlendMode
-#include <native/display/BlendMode.h>
-#endif
-#ifndef INCLUDED_native_display_CapsStyle
-#include <native/display/CapsStyle.h>
-#endif
-#ifndef INCLUDED_native_display_DisplayObject
-#include <native/display/DisplayObject.h>
-#endif
-#ifndef INCLUDED_native_display_DisplayObjectContainer
-#include <native/display/DisplayObjectContainer.h>
-#endif
-#ifndef INCLUDED_native_display_Graphics
-#include <native/display/Graphics.h>
-#endif
-#ifndef INCLUDED_native_display_IBitmapDrawable
-#include <native/display/IBitmapDrawable.h>
-#endif
-#ifndef INCLUDED_native_display_InteractiveObject
-#include <native/display/InteractiveObject.h>
-#endif
-#ifndef INCLUDED_native_display_JointStyle
-#include <native/display/JointStyle.h>
-#endif
-#ifndef INCLUDED_native_display_LineScaleMode
-#include <native/display/LineScaleMode.h>
-#endif
-#ifndef INCLUDED_native_display_Sprite
-#include <native/display/Sprite.h>
-#endif
-#ifndef INCLUDED_native_events_EventDispatcher
-#include <native/events/EventDispatcher.h>
-#endif
-#ifndef INCLUDED_native_events_IEventDispatcher
-#include <native/events/IEventDispatcher.h>
-#endif
-#ifndef INCLUDED_native_geom_ColorTransform
-#include <native/geom/ColorTransform.h>
-#endif
-#ifndef INCLUDED_native_geom_Matrix
-#include <native/geom/Matrix.h>
-#endif
-#ifndef INCLUDED_native_geom_Rectangle
-#include <native/geom/Rectangle.h>
 #endif
 #ifndef INCLUDED_zpp_nape_phys_ZPP_Body
 #include <zpp_nape/phys/ZPP_Body.h>
@@ -135,22 +141,22 @@
 
 Void DrawObject_obj::__construct(Dynamic xmlUrl)
 {
-HX_STACK_PUSH("DrawObject::new","DrawObject.hx",22);
+HX_STACK_PUSH("DrawObject::new","DrawObject.hx",24);
 {
-	HX_STACK_LINE(27)
+	HX_STACK_LINE(29)
 	this->mass = (int)-1;
-	HX_STACK_LINE(24)
+	HX_STACK_LINE(26)
 	this->drawing = false;
-	HX_STACK_LINE(30)
+	HX_STACK_LINE(32)
 	if ((::Std_obj::is(xmlUrl,hx::ClassOf< ::String >()))){
-		HX_STACK_LINE(30)
+		HX_STACK_LINE(32)
 		super::__construct(xmlUrl);
 	}
 	else{
-		HX_STACK_LINE(32)
+		HX_STACK_LINE(34)
 		this->loadBitmap(xmlUrl,null());
 	}
-	HX_STACK_LINE(37)
+	HX_STACK_LINE(39)
 	::Drawing_obj::addDrawObject(hx::ObjectPtr<OBJ_>(this));
 }
 ;
@@ -170,11 +176,62 @@ Dynamic DrawObject_obj::__Create(hx::DynamicArray inArgs)
 	result->__construct(inArgs[0]);
 	return result;}
 
+::flash::display::BitmapData DrawObject_obj::invert( ::flash::display::BitmapData image){
+	HX_STACK_PUSH("DrawObject::invert","DrawObject.hx",207);
+	HX_STACK_THIS(this);
+	HX_STACK_ARG(image,"image");
+	HX_STACK_LINE(208)
+	Array< int > pixels = ::flash::_Vector::Vector_Impl__obj::_new(null(),null());		HX_STACK_VAR(pixels,"pixels");
+	HX_STACK_LINE(209)
+	{
+		HX_STACK_LINE(209)
+		int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
+		int _g = image->get_height();		HX_STACK_VAR(_g,"_g");
+		HX_STACK_LINE(209)
+		while(((_g1 < _g))){
+			HX_STACK_LINE(209)
+			int y = (_g1)++;		HX_STACK_VAR(y,"y");
+			HX_STACK_LINE(210)
+			{
+				HX_STACK_LINE(210)
+				int _g3 = (int)0;		HX_STACK_VAR(_g3,"_g3");
+				int _g2 = image->get_width();		HX_STACK_VAR(_g2,"_g2");
+				HX_STACK_LINE(210)
+				while(((_g3 < _g2))){
+					HX_STACK_LINE(210)
+					int x = (_g3)++;		HX_STACK_VAR(x,"x");
+					HX_STACK_LINE(215)
+					int pixel = image->getPixel32(x,y);		HX_STACK_VAR(pixel,"pixel");
+					HX_STACK_LINE(216)
+					int a = hx::UShr(((int)255 - image->getPixel32(x,y)),(int)24);		HX_STACK_VAR(a,"a");
+					HX_STACK_LINE(217)
+					int r = hx::UShr(pixel,(int)16);		HX_STACK_VAR(r,"r");
+					HX_STACK_LINE(218)
+					int g = (int(hx::UShr(pixel,(int)8)) & int((int)255));		HX_STACK_VAR(g,"g");
+					HX_STACK_LINE(219)
+					int b = (int(pixel) & int((int)255));		HX_STACK_VAR(b,"b");
+					HX_STACK_LINE(221)
+					int i = (int((int((int((int(((int(a) & int((int)255)))) << int((int)24))) | int((int(((int(r) & int((int)255)))) << int((int)16))))) | int((int(((int(g) & int((int)255)))) << int((int)8))))) | int((int(b) & int((int)255))));		HX_STACK_VAR(i,"i");
+					HX_STACK_LINE(227)
+					::flash::_Vector::Vector_Impl__obj::push(pixels,i);
+				}
+			}
+		}
+	}
+	HX_STACK_LINE(232)
+	image->setVector(::flash::geom::Rectangle_obj::__new((int)0,(int)0,image->get_width(),image->get_height()),hx::TCastToArray(pixels));
+	HX_STACK_LINE(234)
+	return image;
+}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(DrawObject_obj,invert,return )
+
 Void DrawObject_obj::draw( ){
 {
-		HX_STACK_PUSH("DrawObject::draw","DrawObject.hx",198);
+		HX_STACK_PUSH("DrawObject::draw","DrawObject.hx",200);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(198)
+		HX_STACK_LINE(200)
 		this->drawingCanvas->get_graphics()->lineTo(::Drawing_obj::x,::Drawing_obj::y);
 	}
 return null();
@@ -183,44 +240,43 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC0(DrawObject_obj,draw,(void))
 
-Void DrawObject_obj::erase( ::native::display::Sprite erase){
+Void DrawObject_obj::erase( ::flash::display::Sprite erase,::flash::display::Bitmap bitmap){
 {
 		HX_STACK_PUSH("DrawObject::erase","DrawObject.hx",171);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(erase,"erase");
+		HX_STACK_ARG(bitmap,"bitmap");
 		HX_STACK_LINE(173)
 		::Main_obj::space->zpp_inner->wrap_bodies->remove(this->body);
 		HX_STACK_LINE(176)
-		::native::geom::Rectangle bounds = erase->getBounds(::Main_obj::canvas);		HX_STACK_VAR(bounds,"bounds");
+		::flash::geom::Rectangle bounds = erase->getBounds(::Main_obj::canvas);		HX_STACK_VAR(bounds,"bounds");
 		HX_STACK_LINE(177)
-		::native::geom::Matrix matrix = ::native::geom::Matrix_obj::__new(null(),null(),null(),null(),null(),null());		HX_STACK_VAR(matrix,"matrix");
+		::flash::geom::Matrix matrix = ::flash::geom::Matrix_obj::__new(null(),null(),null(),null(),null(),null());		HX_STACK_VAR(matrix,"matrix");
 		HX_STACK_LINE(181)
 		matrix->tx = ((int)0 - this->asset->get_x());
 		HX_STACK_LINE(182)
 		matrix->ty = ((int)0 - this->asset->get_y());
 		HX_STACK_LINE(185)
-		::native::geom::ColorTransform color = ::native::geom::ColorTransform_obj::__new(null(),null(),null(),null(),null(),null(),null(),null());		HX_STACK_VAR(color,"color");
-		HX_STACK_LINE(186)
-		color->alphaMultiplier = (int)1;
-		HX_STACK_LINE(192)
-		this->asset->bitmapData->draw(erase,matrix,color,::native::display::BlendMode_obj::ERASE_dyn(),null(),null());
-		HX_STACK_LINE(195)
+		::flash::geom::ColorTransform color = ::flash::geom::ColorTransform_obj::__new(null(),null(),null(),null(),null(),null(),null(),null());		HX_STACK_VAR(color,"color");
+		HX_STACK_LINE(193)
+		this->asset->set_blendMode(::flash::display::BlendMode_obj::LAYER);
+		HX_STACK_LINE(194)
+		this->asset->bitmapData->draw(erase,matrix,color,::flash::display::BlendMode_obj::ERASE,null(),null());
+		HX_STACK_LINE(197)
 		this->updateBody();
 	}
 return null();
 }
 
 
-HX_DEFINE_DYNAMIC_FUNC1(DrawObject_obj,erase,(void))
+HX_DEFINE_DYNAMIC_FUNC2(DrawObject_obj,erase,(void))
 
 Void DrawObject_obj::stopDrawing( ){
 {
 		HX_STACK_PUSH("DrawObject::stopDrawing","DrawObject.hx",163);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(164)
+		HX_STACK_LINE(163)
 		this->drawing = false;
-		HX_STACK_LINE(166)
-		this->erase(this->drawingCanvas);
 	}
 return null();
 }
@@ -235,7 +291,7 @@ Void DrawObject_obj::startDrawing( ){
 		HX_STACK_LINE(142)
 		this->drawing = true;
 		HX_STACK_LINE(145)
-		this->drawingCanvas = ::native::display::Sprite_obj::__new();
+		this->drawingCanvas = ::flash::display::Sprite_obj::__new();
 		HX_STACK_LINE(153)
 		this->drawingCanvas->get_graphics()->lineStyle(::Settings_obj::brushSize,(int)16711680,(int)1,true,null(),null(),null(),null());
 		HX_STACK_LINE(157)
@@ -458,7 +514,7 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 					}
 				};
 				HX_STACK_LINE(88)
-				if (((Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_3_1::Block()).Add(_Function_3_2::Block()).Add(_Function_3_3::Block())->__get(_this->zpp_inner->type) != type))){
+				if (((Array_obj< ::Dynamic >::__new().Add(null()).Add(_Function_3_1::Block()).Add(_Function_3_2::Block()).Add(_Function_3_3::Block())->__get(_this->zpp_inner->type).StaticCast< ::nape::phys::BodyType >() != type))){
 					HX_STACK_LINE(88)
 					if (((type == null()))){
 						HX_STACK_LINE(88)
@@ -512,9 +568,6 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 							_this->zpp_inner->velx = (int)0;
 							HX_STACK_LINE(88)
 							_this->zpp_inner->vely = (int)0;
-							HX_STACK_LINE(88)
-							{
-							}
 							HX_STACK_LINE(88)
 							{
 							}
@@ -593,7 +646,7 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 				}
 			};
 			HX_STACK_LINE(88)
-			Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_2_2::Block()).Add(_Function_2_3::Block()).Add(_Function_2_4::Block())->__get(_this->zpp_inner->type);
+			Array_obj< ::Dynamic >::__new().Add(null()).Add(_Function_2_2::Block()).Add(_Function_2_3::Block()).Add(_Function_2_4::Block())->__get(_this->zpp_inner->type).StaticCast< ::nape::phys::BodyType >();
 		}
 		else if (  ( _switch_1==HX_CSTRING("dynamic"))){
 			struct _Function_2_1{
@@ -685,7 +738,7 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 					}
 				};
 				HX_STACK_LINE(90)
-				if (((Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_3_1::Block()).Add(_Function_3_2::Block()).Add(_Function_3_3::Block())->__get(_this->zpp_inner->type) != type))){
+				if (((Array_obj< ::Dynamic >::__new().Add(null()).Add(_Function_3_1::Block()).Add(_Function_3_2::Block()).Add(_Function_3_3::Block())->__get(_this->zpp_inner->type).StaticCast< ::nape::phys::BodyType >() != type))){
 					HX_STACK_LINE(90)
 					if (((type == null()))){
 						HX_STACK_LINE(90)
@@ -739,9 +792,6 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 							_this->zpp_inner->velx = (int)0;
 							HX_STACK_LINE(90)
 							_this->zpp_inner->vely = (int)0;
-							HX_STACK_LINE(90)
-							{
-							}
 							HX_STACK_LINE(90)
 							{
 							}
@@ -820,7 +870,7 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 				}
 			};
 			HX_STACK_LINE(90)
-			Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_2_2::Block()).Add(_Function_2_3::Block()).Add(_Function_2_4::Block())->__get(_this->zpp_inner->type);
+			Array_obj< ::Dynamic >::__new().Add(null()).Add(_Function_2_2::Block()).Add(_Function_2_3::Block()).Add(_Function_2_4::Block())->__get(_this->zpp_inner->type).StaticCast< ::nape::phys::BodyType >();
 		}
 		else if (  ( _switch_1==HX_CSTRING("kinematic"))){
 			struct _Function_2_1{
@@ -912,7 +962,7 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 					}
 				};
 				HX_STACK_LINE(92)
-				if (((Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_3_1::Block()).Add(_Function_3_2::Block()).Add(_Function_3_3::Block())->__get(_this->zpp_inner->type) != type))){
+				if (((Array_obj< ::Dynamic >::__new().Add(null()).Add(_Function_3_1::Block()).Add(_Function_3_2::Block()).Add(_Function_3_3::Block())->__get(_this->zpp_inner->type).StaticCast< ::nape::phys::BodyType >() != type))){
 					HX_STACK_LINE(92)
 					if (((type == null()))){
 						HX_STACK_LINE(92)
@@ -966,9 +1016,6 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 							_this->zpp_inner->velx = (int)0;
 							HX_STACK_LINE(92)
 							_this->zpp_inner->vely = (int)0;
-							HX_STACK_LINE(92)
-							{
-							}
 							HX_STACK_LINE(92)
 							{
 							}
@@ -1047,7 +1094,7 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 				}
 			};
 			HX_STACK_LINE(92)
-			Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_2_2::Block()).Add(_Function_2_3::Block()).Add(_Function_2_4::Block())->__get(_this->zpp_inner->type);
+			Array_obj< ::Dynamic >::__new().Add(null()).Add(_Function_2_2::Block()).Add(_Function_2_3::Block()).Add(_Function_2_4::Block())->__get(_this->zpp_inner->type).StaticCast< ::nape::phys::BodyType >();
 		}
 		else  {
 			struct _Function_2_1{
@@ -1139,7 +1186,7 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 					}
 				};
 				HX_STACK_LINE(94)
-				if (((Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_3_1::Block()).Add(_Function_3_2::Block()).Add(_Function_3_3::Block())->__get(_this->zpp_inner->type) != type))){
+				if (((Array_obj< ::Dynamic >::__new().Add(null()).Add(_Function_3_1::Block()).Add(_Function_3_2::Block()).Add(_Function_3_3::Block())->__get(_this->zpp_inner->type).StaticCast< ::nape::phys::BodyType >() != type))){
 					HX_STACK_LINE(94)
 					if (((type == null()))){
 						HX_STACK_LINE(94)
@@ -1193,9 +1240,6 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 							_this->zpp_inner->velx = (int)0;
 							HX_STACK_LINE(94)
 							_this->zpp_inner->vely = (int)0;
-							HX_STACK_LINE(94)
-							{
-							}
 							HX_STACK_LINE(94)
 							{
 							}
@@ -1274,7 +1318,7 @@ Void DrawObject_obj::convert( ::String bodyT,Float x,Float y,Float rotation){
 				}
 			};
 			HX_STACK_LINE(94)
-			Array_obj< ::nape::phys::BodyType >::__new().Add(null()).Add(_Function_2_2::Block()).Add(_Function_2_3::Block()).Add(_Function_2_4::Block())->__get(_this->zpp_inner->type);
+			Array_obj< ::Dynamic >::__new().Add(null()).Add(_Function_2_2::Block()).Add(_Function_2_3::Block()).Add(_Function_2_4::Block())->__get(_this->zpp_inner->type).StaticCast< ::nape::phys::BodyType >();
 		}
 ;
 ;
@@ -1385,33 +1429,29 @@ return null();
 }
 
 
-Void DrawObject_obj::loadBitmap( ::native::display::Bitmap bitmap,::String __o_physics){
+Void DrawObject_obj::loadBitmap( ::flash::display::Bitmap bitmap,::String __o_physics){
 ::String physics = __o_physics.Default(HX_CSTRING("static"));
-	HX_STACK_PUSH("DrawObject::loadBitmap","DrawObject.hx",40);
+	HX_STACK_PUSH("DrawObject::loadBitmap","DrawObject.hx",42);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(bitmap,"bitmap");
 	HX_STACK_ARG(physics,"physics");
 {
-		HX_STACK_LINE(43)
-		this->space = ::Main_obj::space;
-		HX_STACK_LINE(44)
-		this->canvas = ::Main_obj::canvas;
 		HX_STACK_LINE(45)
+		this->space = ::Main_obj::space;
+		HX_STACK_LINE(46)
+		this->canvas = ::Main_obj::canvas;
+		HX_STACK_LINE(47)
 		this->asset = bitmap;
-		HX_STACK_LINE(48)
-		this->canvas->addChild(bitmap);
-		HX_STACK_LINE(49)
-		::Hash p = ::Hash_obj::__new();		HX_STACK_VAR(p,"p");
 		HX_STACK_LINE(50)
-		p->set(HX_CSTRING("x"),bitmap->get_x());
+		this->canvas->addChild(bitmap);
 		HX_STACK_LINE(51)
-		p->set(HX_CSTRING("y"),bitmap->get_y());
+		this->xml->set(HX_CSTRING("x"),bitmap->get_x());
 		HX_STACK_LINE(52)
-		p->set(HX_CSTRING("rotation"),bitmap->get_rotation());
+		this->xml->set(HX_CSTRING("y"),bitmap->get_y());
 		HX_STACK_LINE(53)
-		p->set(HX_CSTRING("physics"),physics);
+		this->xml->set(HX_CSTRING("rotation"),bitmap->get_rotation());
 		HX_STACK_LINE(54)
-		this->xml = p;
+		this->xml->set(HX_CSTRING("physics"),physics);
 		HX_STACK_LINE(57)
 		this->mass = (int)0;
 		HX_STACK_LINE(58)
@@ -1461,6 +1501,7 @@ Dynamic DrawObject_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"erase") ) { return erase_dyn(); }
 		break;
 	case 6:
+		if (HX_FIELD_EQ(inName,"invert") ) { return invert_dyn(); }
 		if (HX_FIELD_EQ(inName,"render") ) { return render_dyn(); }
 		break;
 	case 7:
@@ -1498,7 +1539,7 @@ Dynamic DrawObject_obj::__SetField(const ::String &inName,const Dynamic &inValue
 		if (HX_FIELD_EQ(inName,"physicType") ) { physicType=inValue.Cast< ::String >(); return inValue; }
 		break;
 	case 13:
-		if (HX_FIELD_EQ(inName,"drawingCanvas") ) { drawingCanvas=inValue.Cast< ::native::display::Sprite >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"drawingCanvas") ) { drawingCanvas=inValue.Cast< ::flash::display::Sprite >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -1516,6 +1557,7 @@ static ::String sStaticFields[] = {
 	String(null()) };
 
 static ::String sMemberFields[] = {
+	HX_CSTRING("invert"),
 	HX_CSTRING("draw"),
 	HX_CSTRING("erase"),
 	HX_CSTRING("stopDrawing"),
@@ -1543,7 +1585,7 @@ Class DrawObject_obj::__mClass;
 
 void DrawObject_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("DrawObject"), hx::TCanCast< DrawObject_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("DrawObject"), hx::TCanCast< DrawObject_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

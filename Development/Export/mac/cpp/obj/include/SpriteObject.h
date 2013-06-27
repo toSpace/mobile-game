@@ -5,19 +5,19 @@
 #include <hxcpp.h>
 #endif
 
-HX_DECLARE_CLASS0(Hash)
+HX_DECLARE_CLASS0(IMap)
 HX_DECLARE_CLASS0(SpriteObject)
 HX_DECLARE_CLASS2(aze,display,TileBase)
 HX_DECLARE_CLASS2(aze,display,TileClip)
 HX_DECLARE_CLASS2(aze,display,TileGroup)
 HX_DECLARE_CLASS2(aze,display,TileLayer)
 HX_DECLARE_CLASS2(aze,display,TileSprite)
-HX_DECLARE_CLASS1(haxe,Public)
+HX_DECLARE_CLASS2(haxe,ds,StringMap)
 HX_DECLARE_CLASS2(nape,phys,Body)
 HX_DECLARE_CLASS2(nape,phys,Interactor)
 
 
-class SpriteObject_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  SpriteObject_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef SpriteObject_obj OBJ_;
@@ -55,14 +55,14 @@ class SpriteObject_obj : public hx::Object{
 		virtual Void makeSpritesheet( ::String xmlUrl,::String imgUrl);
 		Dynamic makeSpritesheet_dyn();
 
-		virtual ::Hash readXml( ::String url);
+		virtual Void readXml( ::String url);
 		Dynamic readXml_dyn();
 
-		::aze::display::TileClip clip; /* REM */ 
-		::nape::phys::Body body; /* REM */ 
-		::Hash xml; /* REM */ 
-		::aze::display::TileLayer layer; /* REM */ 
-		Float tLast; /* REM */ 
+		::aze::display::TileClip clip;
+		::nape::phys::Body body;
+		::haxe::ds::StringMap xml;
+		::aze::display::TileLayer layer;
+		Float tLast;
 };
 
 

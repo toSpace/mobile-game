@@ -110,9 +110,6 @@ bool ZPP_MotorJoint_obj::applyImpulseVel( ){
 	Float j = (-(this->kMass) * E);		HX_STACK_VAR(j,"j");
 	HX_STACK_LINE(407)
 	{
-		HX_STACK_LINE(408)
-		{
-		}
 		HX_STACK_LINE(416)
 		Float jOld = this->jAcc;		HX_STACK_VAR(jOld,"jOld");
 		HX_STACK_LINE(417)
@@ -184,9 +181,6 @@ bool ZPP_MotorJoint_obj::preStep( Float dt){
 	this->stepped = true;
 	HX_STACK_LINE(380)
 	this->kMass = (this->b1->sinertia + ((this->ratio * this->ratio) * this->b2->sinertia));
-	HX_STACK_LINE(383)
-	{
-	}
 	HX_STACK_LINE(391)
 	this->kMass = (Float(1.0) / Float(this->kMass));
 	HX_STACK_LINE(392)
@@ -470,20 +464,17 @@ return null();
 }
 
 
-::nape::constraint::Constraint ZPP_MotorJoint_obj::copy( Array< ::zpp_nape::constraint::ZPP_CopyHelper > dict,Array< ::zpp_nape::constraint::ZPP_CopyHelper > todo){
+::nape::constraint::Constraint ZPP_MotorJoint_obj::copy( Array< ::Dynamic > dict,Array< ::Dynamic > todo){
 	HX_STACK_PUSH("ZPP_MotorJoint::copy","zpp_nape/constraint/MotorJoint.hx",207);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(dict,"dict");
 	HX_STACK_ARG(todo,"todo");
 	HX_STACK_LINE(208)
-	Array< ::nape::constraint::MotorJoint > ret = Array_obj< ::nape::constraint::MotorJoint >::__new().Add(::nape::constraint::MotorJoint_obj::__new(null(),null(),this->rate,this->ratio));		HX_STACK_VAR(ret,"ret");
+	Array< ::Dynamic > ret = Array_obj< ::Dynamic >::__new().Add(::nape::constraint::MotorJoint_obj::__new(null(),null(),this->rate,this->ratio));		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(209)
-	this->copyto(ret->__get((int)0));
+	this->copyto(ret->__get((int)0).StaticCast< ::nape::constraint::MotorJoint >());
 	HX_STACK_LINE(210)
 	if (((bool((dict != null())) && bool((this->b1 != null()))))){
-		HX_STACK_LINE(212)
-		{
-		}
 		HX_STACK_LINE(220)
 		::nape::phys::Body b = null();		HX_STACK_VAR(b,"b");
 		HX_STACK_LINE(221)
@@ -493,7 +484,7 @@ return null();
 			HX_STACK_LINE(221)
 			while(((_g < dict->length))){
 				HX_STACK_LINE(221)
-				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g);		HX_STACK_VAR(idc,"idc");
+				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_CopyHelper >();		HX_STACK_VAR(idc,"idc");
 				HX_STACK_LINE(221)
 				++(_g);
 				HX_STACK_LINE(222)
@@ -508,17 +499,17 @@ return null();
 		HX_STACK_LINE(227)
 		if (((b != null()))){
 			HX_STACK_LINE(227)
-			ret->__get((int)0)->zpp_inner_zn->b1 = b->zpp_inner;
+			ret->__get((int)0).StaticCast< ::nape::constraint::MotorJoint >()->zpp_inner_zn->b1 = b->zpp_inner;
 		}
 		else{
 
-			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::nape::constraint::MotorJoint >,ret)
+			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::Dynamic >,ret)
 			Void run(::nape::phys::Body b1){
 				HX_STACK_PUSH("*::_Function_3_1","zpp_nape/constraint/MotorJoint.hx",228);
 				HX_STACK_ARG(b1,"b1");
 				{
 					HX_STACK_LINE(228)
-					ret->__get((int)0)->zpp_inner_zn->b1 = b1->zpp_inner;
+					ret->__get((int)0).StaticCast< ::nape::constraint::MotorJoint >()->zpp_inner_zn->b1 = b1->zpp_inner;
 				}
 				return null();
 			}
@@ -530,9 +521,6 @@ return null();
 	}
 	HX_STACK_LINE(231)
 	if (((bool((dict != null())) && bool((this->b2 != null()))))){
-		HX_STACK_LINE(233)
-		{
-		}
 		HX_STACK_LINE(241)
 		::nape::phys::Body b = null();		HX_STACK_VAR(b,"b");
 		HX_STACK_LINE(242)
@@ -542,7 +530,7 @@ return null();
 			HX_STACK_LINE(242)
 			while(((_g < dict->length))){
 				HX_STACK_LINE(242)
-				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g);		HX_STACK_VAR(idc,"idc");
+				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_CopyHelper >();		HX_STACK_VAR(idc,"idc");
 				HX_STACK_LINE(242)
 				++(_g);
 				HX_STACK_LINE(243)
@@ -557,17 +545,17 @@ return null();
 		HX_STACK_LINE(248)
 		if (((b != null()))){
 			HX_STACK_LINE(248)
-			ret->__get((int)0)->zpp_inner_zn->b2 = b->zpp_inner;
+			ret->__get((int)0).StaticCast< ::nape::constraint::MotorJoint >()->zpp_inner_zn->b2 = b->zpp_inner;
 		}
 		else{
 
-			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::nape::constraint::MotorJoint >,ret)
+			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::Dynamic >,ret)
 			Void run(::nape::phys::Body b1){
 				HX_STACK_PUSH("*::_Function_3_1","zpp_nape/constraint/MotorJoint.hx",249);
 				HX_STACK_ARG(b1,"b1");
 				{
 					HX_STACK_LINE(249)
-					ret->__get((int)0)->zpp_inner_zn->b2 = b1->zpp_inner;
+					ret->__get((int)0).StaticCast< ::nape::constraint::MotorJoint >()->zpp_inner_zn->b2 = b1->zpp_inner;
 				}
 				return null();
 			}
@@ -578,7 +566,7 @@ return null();
 		}
 	}
 	HX_STACK_LINE(252)
-	return ret->__get((int)0);
+	return ret->__get((int)0).StaticCast< ::nape::constraint::MotorJoint >();
 }
 
 
@@ -819,7 +807,7 @@ Class ZPP_MotorJoint_obj::__mClass;
 
 void ZPP_MotorJoint_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.constraint.ZPP_MotorJoint"), hx::TCanCast< ZPP_MotorJoint_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.constraint.ZPP_MotorJoint"), hx::TCanCast< ZPP_MotorJoint_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

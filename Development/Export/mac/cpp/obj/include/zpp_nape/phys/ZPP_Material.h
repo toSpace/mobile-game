@@ -15,7 +15,7 @@ namespace zpp_nape{
 namespace phys{
 
 
-class ZPP_Material_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Material_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Material_obj OBJ_;
@@ -44,11 +44,11 @@ class ZPP_Material_obj : public hx::Object{
 		virtual ::zpp_nape::phys::ZPP_Material copy( );
 		Dynamic copy_dyn();
 
-		Float rollingFriction; /* REM */ 
-		Float elasticity; /* REM */ 
-		Float density; /* REM */ 
-		Float staticFriction; /* REM */ 
-		Float dynamicFriction; /* REM */ 
+		Float rollingFriction;
+		Float elasticity;
+		Float density;
+		Float staticFriction;
+		Float dynamicFriction;
 		virtual Void remShape( ::zpp_nape::shape::ZPP_Shape shape);
 		Dynamic remShape_dyn();
 
@@ -58,8 +58,8 @@ class ZPP_Material_obj : public hx::Object{
 		virtual Void feature_cons( );
 		Dynamic feature_cons_dyn();
 
-		::nape::shape::ShapeList wrap_shapes; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Shape shapes; /* REM */ 
+		::nape::shape::ShapeList wrap_shapes;
+		::zpp_nape::util::ZNPList_ZPP_Shape shapes;
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
@@ -69,14 +69,14 @@ class ZPP_Material_obj : public hx::Object{
 		virtual ::nape::phys::Material wrapper( );
 		Dynamic wrapper_dyn();
 
-		::nape::phys::Material outer; /* REM */ 
-		Dynamic userData; /* REM */ 
-		::zpp_nape::phys::ZPP_Material next; /* REM */ 
-		static ::zpp_nape::phys::ZPP_Material zpp_pool; /* REM */ 
-		static int WAKE; /* REM */ 
-		static int PROPS; /* REM */ 
-		static int ANGDRAG; /* REM */ 
-		static int ARBITERS; /* REM */ 
+		::nape::phys::Material outer;
+		Dynamic userData;
+		::zpp_nape::phys::ZPP_Material next;
+		static ::zpp_nape::phys::ZPP_Material zpp_pool;
+		static int WAKE;
+		static int PROPS;
+		static int ANGDRAG;
+		static int ARBITERS;
 };
 
 } // end namespace zpp_nape

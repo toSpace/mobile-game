@@ -133,7 +133,7 @@ Class ZPP_PubPool_obj::__mClass;
 
 void ZPP_PubPool_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_PubPool"), hx::TCanCast< ZPP_PubPool_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_PubPool"), hx::TCanCast< ZPP_PubPool_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -320,9 +320,6 @@ HX_STACK_PUSH("ZPP_Body::new","zpp_nape/phys/Body.hx",174);
 		this->posx = (int)0;
 		HX_STACK_LINE(1430)
 		this->posy = (int)0;
-		HX_STACK_LINE(1431)
-		{
-		}
 		HX_STACK_LINE(1439)
 		{
 		}
@@ -335,9 +332,6 @@ HX_STACK_PUSH("ZPP_Body::new","zpp_nape/phys/Body.hx",174);
 		this->axisx = (int)0;
 		HX_STACK_LINE(1451)
 		this->axisy = (int)1;
-		HX_STACK_LINE(1452)
-		{
-		}
 		HX_STACK_LINE(1460)
 		{
 		}
@@ -348,9 +342,6 @@ HX_STACK_PUSH("ZPP_Body::new","zpp_nape/phys/Body.hx",174);
 		this->svelx = (int)0;
 		HX_STACK_LINE(1471)
 		this->svely = (int)0;
-		HX_STACK_LINE(1472)
-		{
-		}
 		HX_STACK_LINE(1480)
 		{
 		}
@@ -361,9 +352,6 @@ HX_STACK_PUSH("ZPP_Body::new","zpp_nape/phys/Body.hx",174);
 		this->velx = (int)0;
 		HX_STACK_LINE(1491)
 		this->vely = (int)0;
-		HX_STACK_LINE(1492)
-		{
-		}
 		HX_STACK_LINE(1500)
 		{
 		}
@@ -374,9 +362,6 @@ HX_STACK_PUSH("ZPP_Body::new","zpp_nape/phys/Body.hx",174);
 		this->kinvelx = (int)0;
 		HX_STACK_LINE(1511)
 		this->kinvely = (int)0;
-		HX_STACK_LINE(1512)
-		{
-		}
 		HX_STACK_LINE(1520)
 		{
 		}
@@ -387,9 +372,6 @@ HX_STACK_PUSH("ZPP_Body::new","zpp_nape/phys/Body.hx",174);
 		this->forcex = (int)0;
 		HX_STACK_LINE(1531)
 		this->forcey = (int)0;
-		HX_STACK_LINE(1532)
-		{
-		}
 		HX_STACK_LINE(1540)
 		{
 		}
@@ -402,9 +384,6 @@ HX_STACK_PUSH("ZPP_Body::new","zpp_nape/phys/Body.hx",174);
 		this->pre_posx = ::Math_obj::POSITIVE_INFINITY;
 		HX_STACK_LINE(1552)
 		this->pre_posy = ::Math_obj::POSITIVE_INFINITY;
-		HX_STACK_LINE(1553)
-		{
-		}
 		HX_STACK_LINE(1561)
 		{
 		}
@@ -417,9 +396,6 @@ HX_STACK_PUSH("ZPP_Body::new","zpp_nape/phys/Body.hx",174);
 		this->localCOMx = (int)0;
 		HX_STACK_LINE(1573)
 		this->localCOMy = (int)0;
-		HX_STACK_LINE(1574)
-		{
-		}
 		HX_STACK_LINE(1582)
 		{
 		}
@@ -430,9 +406,6 @@ HX_STACK_PUSH("ZPP_Body::new","zpp_nape/phys/Body.hx",174);
 		this->worldCOMx = (int)0;
 		HX_STACK_LINE(1593)
 		this->worldCOMy = (int)0;
-		HX_STACK_LINE(1594)
-		{
-		}
 		HX_STACK_LINE(1602)
 		{
 		}
@@ -472,9 +445,6 @@ HX_STACK_PUSH("ZPP_Body::new","zpp_nape/phys/Body.hx",174);
 					HX_STACK_LINE(1612)
 					{
 					}
-					HX_STACK_LINE(1612)
-					{
-					}
 				}
 				HX_STACK_LINE(1612)
 				{
@@ -482,9 +452,6 @@ HX_STACK_PUSH("ZPP_Body::new","zpp_nape/phys/Body.hx",174);
 					ret->maxx = (int)0;
 					HX_STACK_LINE(1612)
 					ret->maxy = (int)0;
-					HX_STACK_LINE(1612)
-					{
-					}
 					HX_STACK_LINE(1612)
 					{
 					}
@@ -591,9 +558,6 @@ Dynamic ZPP_Body_obj::__Create(hx::DynamicArray inArgs)
 		ret->posx = this->posx;
 		HX_STACK_LINE(1704)
 		ret->posy = this->posy;
-		HX_STACK_LINE(1705)
-		{
-		}
 		HX_STACK_LINE(1713)
 		{
 		}
@@ -604,9 +568,6 @@ Dynamic ZPP_Body_obj::__Create(hx::DynamicArray inArgs)
 		ret->velx = this->velx;
 		HX_STACK_LINE(1724)
 		ret->vely = this->vely;
-		HX_STACK_LINE(1725)
-		{
-		}
 		HX_STACK_LINE(1733)
 		{
 		}
@@ -617,9 +578,6 @@ Dynamic ZPP_Body_obj::__Create(hx::DynamicArray inArgs)
 		ret->forcex = this->forcex;
 		HX_STACK_LINE(1744)
 		ret->forcey = this->forcey;
-		HX_STACK_LINE(1745)
-		{
-		}
 		HX_STACK_LINE(1753)
 		{
 		}
@@ -636,9 +594,6 @@ Dynamic ZPP_Body_obj::__Create(hx::DynamicArray inArgs)
 		ret->kinvelx = this->kinvelx;
 		HX_STACK_LINE(1767)
 		ret->kinvely = this->kinvely;
-		HX_STACK_LINE(1768)
-		{
-		}
 		HX_STACK_LINE(1776)
 		{
 		}
@@ -651,9 +606,6 @@ Dynamic ZPP_Body_obj::__Create(hx::DynamicArray inArgs)
 		ret->svelx = this->svelx;
 		HX_STACK_LINE(1788)
 		ret->svely = this->svely;
-		HX_STACK_LINE(1789)
-		{
-		}
 		HX_STACK_LINE(1797)
 		{
 		}
@@ -664,9 +616,6 @@ Dynamic ZPP_Body_obj::__Create(hx::DynamicArray inArgs)
 		ret->axisx = this->axisx;
 		HX_STACK_LINE(1808)
 		ret->axisy = this->axisy;
-		HX_STACK_LINE(1809)
-		{
-		}
 		HX_STACK_LINE(1817)
 		{
 		}
@@ -753,9 +702,6 @@ Dynamic ZPP_Body_obj::__Create(hx::DynamicArray inArgs)
 			ret->aabb->minx = this->aabb->minx;
 			HX_STACK_LINE(1842)
 			ret->aabb->miny = this->aabb->miny;
-			HX_STACK_LINE(1843)
-			{
-			}
 			HX_STACK_LINE(1851)
 			{
 			}
@@ -766,9 +712,6 @@ Dynamic ZPP_Body_obj::__Create(hx::DynamicArray inArgs)
 			ret->aabb->maxx = this->aabb->maxx;
 			HX_STACK_LINE(1862)
 			ret->aabb->maxy = this->aabb->maxy;
-			HX_STACK_LINE(1863)
-			{
-			}
 			HX_STACK_LINE(1871)
 			{
 			}
@@ -784,9 +727,6 @@ Dynamic ZPP_Body_obj::__Create(hx::DynamicArray inArgs)
 		ret->localCOMx = this->localCOMx;
 		HX_STACK_LINE(1884)
 		ret->localCOMy = this->localCOMy;
-		HX_STACK_LINE(1885)
-		{
-		}
 		HX_STACK_LINE(1893)
 		{
 		}
@@ -803,9 +743,6 @@ Dynamic ZPP_Body_obj::__Create(hx::DynamicArray inArgs)
 		ret->worldCOMx = this->worldCOMx;
 		HX_STACK_LINE(1905)
 		ret->worldCOMy = this->worldCOMy;
-		HX_STACK_LINE(1906)
-		{
-		}
 		HX_STACK_LINE(1914)
 		{
 		}
@@ -834,9 +771,6 @@ Void ZPP_Body_obj::removedFromSpace( ){
 			HX_STACK_LINE(1665)
 			{
 				HX_STACK_LINE(1665)
-				{
-				}
-				HX_STACK_LINE(1665)
 				arb->cleared = true;
 				HX_STACK_LINE(1665)
 				if (((arb->b2 == hx::ObjectPtr<OBJ_>(this)))){
@@ -844,12 +778,6 @@ Void ZPP_Body_obj::removedFromSpace( ){
 					::zpp_nape::util::ZNPList_ZPP_Arbiter _this = arb->b1->arbiters;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(1665)
 					{
-					}
-					HX_STACK_LINE(1665)
-					{
-						HX_STACK_LINE(1665)
-						{
-						}
 						HX_STACK_LINE(1665)
 						::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 						HX_STACK_LINE(1665)
@@ -862,9 +790,6 @@ Void ZPP_Body_obj::removedFromSpace( ){
 							if (((cur->elt == arb))){
 								HX_STACK_LINE(1665)
 								{
-									HX_STACK_LINE(1665)
-									{
-									}
 									HX_STACK_LINE(1665)
 									::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 									HX_STACK_LINE(1665)
@@ -898,14 +823,8 @@ Void ZPP_Body_obj::removedFromSpace( ){
 									}
 									HX_STACK_LINE(1665)
 									{
-									}
-									HX_STACK_LINE(1665)
-									{
 										HX_STACK_LINE(1665)
 										::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(1665)
-										{
-										}
 										HX_STACK_LINE(1665)
 										o->elt = null();
 										HX_STACK_LINE(1665)
@@ -942,12 +861,6 @@ Void ZPP_Body_obj::removedFromSpace( ){
 					::zpp_nape::util::ZNPList_ZPP_Arbiter _this = arb->b2->arbiters;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(1665)
 					{
-					}
-					HX_STACK_LINE(1665)
-					{
-						HX_STACK_LINE(1665)
-						{
-						}
 						HX_STACK_LINE(1665)
 						::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 						HX_STACK_LINE(1665)
@@ -960,9 +873,6 @@ Void ZPP_Body_obj::removedFromSpace( ){
 							if (((cur->elt == arb))){
 								HX_STACK_LINE(1665)
 								{
-									HX_STACK_LINE(1665)
-									{
-									}
 									HX_STACK_LINE(1665)
 									::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 									HX_STACK_LINE(1665)
@@ -996,14 +906,8 @@ Void ZPP_Body_obj::removedFromSpace( ){
 									}
 									HX_STACK_LINE(1665)
 									{
-									}
-									HX_STACK_LINE(1665)
-									{
 										HX_STACK_LINE(1665)
 										::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(1665)
-										{
-										}
 										HX_STACK_LINE(1665)
 										o->elt = null();
 										HX_STACK_LINE(1665)
@@ -1051,9 +955,6 @@ Void ZPP_Body_obj::removedFromSpace( ){
 		{
 			HX_STACK_LINE(1668)
 			::zpp_nape::space::ZPP_Component o = this->component;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(1669)
-			{
-			}
 			HX_STACK_LINE(1677)
 			{
 				HX_STACK_LINE(1677)
@@ -1083,9 +984,6 @@ Void ZPP_Body_obj::addedToSpace( ){
 {
 		HX_STACK_PUSH("ZPP_Body::addedToSpace","zpp_nape/phys/Body.hx",1632);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(1633)
-		{
-		}
 		HX_STACK_LINE(1641)
 		{
 			HX_STACK_LINE(1642)
@@ -1196,13 +1094,7 @@ bool ZPP_Body_obj::shapes_adder( ::nape::shape::Shape s){
 				HX_STACK_LINE(1396)
 				::zpp_nape::phys::ZPP_Body o = s1->body;		HX_STACK_VAR(o,"o");
 				HX_STACK_LINE(1396)
-				{
-				}
-				HX_STACK_LINE(1396)
 				if ((!(o->world))){
-					HX_STACK_LINE(1396)
-					{
-					}
 					HX_STACK_LINE(1396)
 					o->component->waket = (_this->stamp + ((  ((_this->midstep)) ? int((int)0) : int((int)1) )));
 					HX_STACK_LINE(1396)
@@ -1272,9 +1164,6 @@ Void ZPP_Body_obj::aabb_validate( ){
 					HX_STACK_LINE(1389)
 					{
 					}
-					HX_STACK_LINE(1389)
-					{
-					}
 				}
 				HX_STACK_LINE(1389)
 				{
@@ -1282,9 +1171,6 @@ Void ZPP_Body_obj::aabb_validate( ){
 					this->aabb->maxx = ::Math_obj::NEGATIVE_INFINITY;
 					HX_STACK_LINE(1389)
 					this->aabb->maxy = ::Math_obj::NEGATIVE_INFINITY;
-					HX_STACK_LINE(1389)
-					{
-					}
 					HX_STACK_LINE(1389)
 					{
 					}
@@ -1335,9 +1221,6 @@ Void ZPP_Body_obj::aabb_validate( ){
 															HX_STACK_LINE(1389)
 															_this1->localCOMy = _this1->lverts->next->y;
 															HX_STACK_LINE(1389)
-															{
-															}
-															HX_STACK_LINE(1389)
 															Dynamic();
 														}
 														else{
@@ -1352,17 +1235,11 @@ Void ZPP_Body_obj::aabb_validate( ){
 																	HX_STACK_LINE(1389)
 																	{
 																	}
-																	HX_STACK_LINE(1389)
-																	{
-																	}
 																}
 																HX_STACK_LINE(1389)
 																{
 																	HX_STACK_LINE(1389)
 																	Float t = 1.0;		HX_STACK_VAR(t,"t");
-																	HX_STACK_LINE(1389)
-																	{
-																	}
 																	HX_STACK_LINE(1389)
 																	hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 																	HX_STACK_LINE(1389)
@@ -1372,9 +1249,6 @@ Void ZPP_Body_obj::aabb_validate( ){
 																{
 																	HX_STACK_LINE(1389)
 																	Float t = 0.5;		HX_STACK_VAR(t,"t");
-																	HX_STACK_LINE(1389)
-																	{
-																	}
 																	HX_STACK_LINE(1389)
 																	hx::MultEq(_this1->localCOMx,t);
 																	HX_STACK_LINE(1389)
@@ -1388,9 +1262,6 @@ Void ZPP_Body_obj::aabb_validate( ){
 																	_this1->localCOMx = (int)0;
 																	HX_STACK_LINE(1389)
 																	_this1->localCOMy = (int)0;
-																	HX_STACK_LINE(1389)
-																	{
-																	}
 																	HX_STACK_LINE(1389)
 																	{
 																	}
@@ -1473,9 +1344,6 @@ Void ZPP_Body_obj::aabb_validate( ){
 																	HX_STACK_LINE(1389)
 																	Float t = area;		HX_STACK_VAR(t,"t");
 																	HX_STACK_LINE(1389)
-																	{
-																	}
-																	HX_STACK_LINE(1389)
 																	hx::MultEq(_this1->localCOMx,t);
 																	HX_STACK_LINE(1389)
 																	hx::MultEq(_this1->localCOMy,t);
@@ -1499,9 +1367,6 @@ Void ZPP_Body_obj::aabb_validate( ){
 															HX_STACK_LINE(1389)
 															_this1->axisy = ::Math_obj::cos(_this1->rot);
 															HX_STACK_LINE(1389)
-															{
-															}
-															HX_STACK_LINE(1389)
 															Dynamic();
 														}
 													}
@@ -1519,12 +1384,6 @@ Void ZPP_Body_obj::aabb_validate( ){
 										Float rx = _this->radius;		HX_STACK_VAR(rx,"rx");
 										HX_STACK_LINE(1389)
 										Float ry = _this->radius;		HX_STACK_VAR(ry,"ry");
-										HX_STACK_LINE(1389)
-										{
-										}
-										HX_STACK_LINE(1389)
-										{
-										}
 										HX_STACK_LINE(1389)
 										{
 											HX_STACK_LINE(1389)
@@ -1565,9 +1424,6 @@ Void ZPP_Body_obj::aabb_validate( ){
 															_this1->axisx = ::Math_obj::sin(_this1->rot);
 															HX_STACK_LINE(1389)
 															_this1->axisy = ::Math_obj::cos(_this1->rot);
-															HX_STACK_LINE(1389)
-															{
-															}
 															HX_STACK_LINE(1389)
 															Dynamic();
 														}
@@ -1619,9 +1475,6 @@ Void ZPP_Body_obj::aabb_validate( ){
 											HX_STACK_LINE(1389)
 											{
 											}
-											HX_STACK_LINE(1389)
-											{
-											}
 										}
 										HX_STACK_LINE(1389)
 										{
@@ -1629,9 +1482,6 @@ Void ZPP_Body_obj::aabb_validate( ){
 											_this->aabb->maxx = p0->x;
 											HX_STACK_LINE(1389)
 											_this->aabb->maxy = p0->y;
-											HX_STACK_LINE(1389)
-											{
-											}
 											HX_STACK_LINE(1389)
 											{
 											}
@@ -1748,9 +1598,6 @@ Void ZPP_Body_obj::clear( ){
 			this->pre_posx = (int)0;
 			HX_STACK_LINE(1226)
 			this->pre_posy = (int)0;
-			HX_STACK_LINE(1227)
-			{
-			}
 			HX_STACK_LINE(1235)
 			{
 			}
@@ -1761,9 +1608,6 @@ Void ZPP_Body_obj::clear( ){
 			this->posx = (int)0;
 			HX_STACK_LINE(1246)
 			this->posy = (int)0;
-			HX_STACK_LINE(1247)
-			{
-			}
 			HX_STACK_LINE(1255)
 			{
 			}
@@ -1774,9 +1618,6 @@ Void ZPP_Body_obj::clear( ){
 			this->velx = (int)0;
 			HX_STACK_LINE(1266)
 			this->vely = (int)0;
-			HX_STACK_LINE(1267)
-			{
-			}
 			HX_STACK_LINE(1275)
 			{
 			}
@@ -1787,9 +1628,6 @@ Void ZPP_Body_obj::clear( ){
 			this->forcex = (int)0;
 			HX_STACK_LINE(1286)
 			this->forcey = (int)0;
-			HX_STACK_LINE(1287)
-			{
-			}
 			HX_STACK_LINE(1295)
 			{
 			}
@@ -1800,9 +1638,6 @@ Void ZPP_Body_obj::clear( ){
 			this->kinvelx = (int)0;
 			HX_STACK_LINE(1306)
 			this->kinvely = (int)0;
-			HX_STACK_LINE(1307)
-			{
-			}
 			HX_STACK_LINE(1315)
 			{
 			}
@@ -1813,9 +1648,6 @@ Void ZPP_Body_obj::clear( ){
 			this->svelx = (int)0;
 			HX_STACK_LINE(1326)
 			this->svely = (int)0;
-			HX_STACK_LINE(1327)
-			{
-			}
 			HX_STACK_LINE(1335)
 			{
 			}
@@ -1888,9 +1720,6 @@ Void ZPP_Body_obj::clear( ){
 			this->axisx = (int)0;
 			HX_STACK_LINE(1349)
 			this->axisy = (int)1;
-			HX_STACK_LINE(1350)
-			{
-			}
 			HX_STACK_LINE(1358)
 			{
 			}
@@ -1990,9 +1819,6 @@ Void ZPP_Body_obj::validate_worldCOM( ){
 					HX_STACK_LINE(1161)
 					this->axisy = ::Math_obj::cos(this->rot);
 					HX_STACK_LINE(1161)
-					{
-					}
-					HX_STACK_LINE(1161)
 					Dynamic();
 				}
 			}
@@ -2009,9 +1835,6 @@ Void ZPP_Body_obj::validate_worldCOM( ){
 				this->wrap_worldCOM->zpp_inner->x = this->worldCOMx;
 				HX_STACK_LINE(1168)
 				this->wrap_worldCOM->zpp_inner->y = this->worldCOMy;
-				HX_STACK_LINE(1169)
-				{
-				}
 				HX_STACK_LINE(1177)
 				{
 				}
@@ -2036,12 +1859,6 @@ Void ZPP_Body_obj::validate_localCOM( ){
 			Float tempx = (int)0;		HX_STACK_VAR(tempx,"tempx");
 			HX_STACK_LINE(1065)
 			Float tempy = (int)0;		HX_STACK_VAR(tempy,"tempy");
-			HX_STACK_LINE(1066)
-			{
-			}
-			HX_STACK_LINE(1074)
-			{
-			}
 			HX_STACK_LINE(1082)
 			Float msum = 0.0;		HX_STACK_VAR(msum,"msum");
 			HX_STACK_LINE(1083)
@@ -2074,9 +1891,6 @@ Void ZPP_Body_obj::validate_localCOM( ){
 									HX_STACK_LINE(1088)
 									_this->localCOMy = _this->lverts->next->y;
 									HX_STACK_LINE(1088)
-									{
-									}
-									HX_STACK_LINE(1088)
 									Dynamic();
 								}
 								else{
@@ -2091,17 +1905,11 @@ Void ZPP_Body_obj::validate_localCOM( ){
 											HX_STACK_LINE(1088)
 											{
 											}
-											HX_STACK_LINE(1088)
-											{
-											}
 										}
 										HX_STACK_LINE(1088)
 										{
 											HX_STACK_LINE(1088)
 											Float t = 1.0;		HX_STACK_VAR(t,"t");
-											HX_STACK_LINE(1088)
-											{
-											}
 											HX_STACK_LINE(1088)
 											hx::AddEq(_this->localCOMx,(_this->lverts->next->next->x * t));
 											HX_STACK_LINE(1088)
@@ -2111,9 +1919,6 @@ Void ZPP_Body_obj::validate_localCOM( ){
 										{
 											HX_STACK_LINE(1088)
 											Float t = 0.5;		HX_STACK_VAR(t,"t");
-											HX_STACK_LINE(1088)
-											{
-											}
 											HX_STACK_LINE(1088)
 											hx::MultEq(_this->localCOMx,t);
 											HX_STACK_LINE(1088)
@@ -2127,9 +1932,6 @@ Void ZPP_Body_obj::validate_localCOM( ){
 											_this->localCOMx = (int)0;
 											HX_STACK_LINE(1088)
 											_this->localCOMy = (int)0;
-											HX_STACK_LINE(1088)
-											{
-											}
 											HX_STACK_LINE(1088)
 											{
 											}
@@ -2212,9 +2014,6 @@ Void ZPP_Body_obj::validate_localCOM( ){
 											HX_STACK_LINE(1088)
 											Float t = area;		HX_STACK_VAR(t,"t");
 											HX_STACK_LINE(1088)
-											{
-											}
-											HX_STACK_LINE(1088)
 											hx::MultEq(_this->localCOMx,t);
 											HX_STACK_LINE(1088)
 											hx::MultEq(_this->localCOMy,t);
@@ -2229,9 +2028,6 @@ Void ZPP_Body_obj::validate_localCOM( ){
 						{
 							HX_STACK_LINE(1091)
 							Float t = (s->area * s->material->density);		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(1092)
-							{
-							}
 							HX_STACK_LINE(1100)
 							hx::AddEq(tempx,(s->localCOMx * t));
 							HX_STACK_LINE(1101)
@@ -2248,9 +2044,6 @@ Void ZPP_Body_obj::validate_localCOM( ){
 			if (((msum != (int)0))){
 				HX_STACK_LINE(1110)
 				Float t = (Float(1.0) / Float(msum));		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(1111)
-				{
-				}
 				HX_STACK_LINE(1119)
 				this->localCOMx = (tempx * t);
 				HX_STACK_LINE(1120)
@@ -2262,9 +2055,6 @@ Void ZPP_Body_obj::validate_localCOM( ){
 				this->wrap_localCOM->zpp_inner->x = this->localCOMx;
 				HX_STACK_LINE(1125)
 				this->wrap_localCOM->zpp_inner->y = this->localCOMy;
-				HX_STACK_LINE(1126)
-				{
-				}
 				HX_STACK_LINE(1134)
 				{
 				}
@@ -2357,9 +2147,6 @@ Void ZPP_Body_obj::validate_aabb( ){
 				this->aabb->minx = ::Math_obj::POSITIVE_INFINITY;
 				HX_STACK_LINE(986)
 				this->aabb->miny = ::Math_obj::POSITIVE_INFINITY;
-				HX_STACK_LINE(987)
-				{
-				}
 				HX_STACK_LINE(995)
 				{
 				}
@@ -2370,9 +2157,6 @@ Void ZPP_Body_obj::validate_aabb( ){
 				this->aabb->maxx = ::Math_obj::NEGATIVE_INFINITY;
 				HX_STACK_LINE(1006)
 				this->aabb->maxy = ::Math_obj::NEGATIVE_INFINITY;
-				HX_STACK_LINE(1007)
-				{
-				}
 				HX_STACK_LINE(1015)
 				{
 				}
@@ -2423,9 +2207,6 @@ Void ZPP_Body_obj::validate_aabb( ){
 														HX_STACK_LINE(1029)
 														_this1->localCOMy = _this1->lverts->next->y;
 														HX_STACK_LINE(1029)
-														{
-														}
-														HX_STACK_LINE(1029)
 														Dynamic();
 													}
 													else{
@@ -2440,17 +2221,11 @@ Void ZPP_Body_obj::validate_aabb( ){
 																HX_STACK_LINE(1029)
 																{
 																}
-																HX_STACK_LINE(1029)
-																{
-																}
 															}
 															HX_STACK_LINE(1029)
 															{
 																HX_STACK_LINE(1029)
 																Float t = 1.0;		HX_STACK_VAR(t,"t");
-																HX_STACK_LINE(1029)
-																{
-																}
 																HX_STACK_LINE(1029)
 																hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 																HX_STACK_LINE(1029)
@@ -2460,9 +2235,6 @@ Void ZPP_Body_obj::validate_aabb( ){
 															{
 																HX_STACK_LINE(1029)
 																Float t = 0.5;		HX_STACK_VAR(t,"t");
-																HX_STACK_LINE(1029)
-																{
-																}
 																HX_STACK_LINE(1029)
 																hx::MultEq(_this1->localCOMx,t);
 																HX_STACK_LINE(1029)
@@ -2476,9 +2248,6 @@ Void ZPP_Body_obj::validate_aabb( ){
 																_this1->localCOMx = (int)0;
 																HX_STACK_LINE(1029)
 																_this1->localCOMy = (int)0;
-																HX_STACK_LINE(1029)
-																{
-																}
 																HX_STACK_LINE(1029)
 																{
 																}
@@ -2561,9 +2330,6 @@ Void ZPP_Body_obj::validate_aabb( ){
 																HX_STACK_LINE(1029)
 																Float t = area;		HX_STACK_VAR(t,"t");
 																HX_STACK_LINE(1029)
-																{
-																}
-																HX_STACK_LINE(1029)
 																hx::MultEq(_this1->localCOMx,t);
 																HX_STACK_LINE(1029)
 																hx::MultEq(_this1->localCOMy,t);
@@ -2587,9 +2353,6 @@ Void ZPP_Body_obj::validate_aabb( ){
 														HX_STACK_LINE(1029)
 														_this1->axisy = ::Math_obj::cos(_this1->rot);
 														HX_STACK_LINE(1029)
-														{
-														}
-														HX_STACK_LINE(1029)
 														Dynamic();
 													}
 												}
@@ -2607,12 +2370,6 @@ Void ZPP_Body_obj::validate_aabb( ){
 									Float rx = _this->radius;		HX_STACK_VAR(rx,"rx");
 									HX_STACK_LINE(1029)
 									Float ry = _this->radius;		HX_STACK_VAR(ry,"ry");
-									HX_STACK_LINE(1029)
-									{
-									}
-									HX_STACK_LINE(1029)
-									{
-									}
 									HX_STACK_LINE(1029)
 									{
 										HX_STACK_LINE(1029)
@@ -2653,9 +2410,6 @@ Void ZPP_Body_obj::validate_aabb( ){
 														_this1->axisx = ::Math_obj::sin(_this1->rot);
 														HX_STACK_LINE(1029)
 														_this1->axisy = ::Math_obj::cos(_this1->rot);
-														HX_STACK_LINE(1029)
-														{
-														}
 														HX_STACK_LINE(1029)
 														Dynamic();
 													}
@@ -2707,9 +2461,6 @@ Void ZPP_Body_obj::validate_aabb( ){
 										HX_STACK_LINE(1029)
 										{
 										}
-										HX_STACK_LINE(1029)
-										{
-										}
 									}
 									HX_STACK_LINE(1029)
 									{
@@ -2717,9 +2468,6 @@ Void ZPP_Body_obj::validate_aabb( ){
 										_this->aabb->maxx = p0->x;
 										HX_STACK_LINE(1029)
 										_this->aabb->maxy = p0->y;
-										HX_STACK_LINE(1029)
-										{
-										}
 										HX_STACK_LINE(1029)
 										{
 										}
@@ -3089,9 +2837,6 @@ Void ZPP_Body_obj::delta_rot( Float dr){
 			HX_STACK_LINE(839)
 			this->axisy = ::Math_obj::cos(this->rot);
 			HX_STACK_LINE(839)
-			{
-			}
-			HX_STACK_LINE(839)
 			Dynamic();
 		}
 		else{
@@ -3123,9 +2868,6 @@ Void ZPP_Body_obj::quick_validate_axis( ){
 		this->axisx = ::Math_obj::sin(this->rot);
 		HX_STACK_LINE(816)
 		this->axisy = ::Math_obj::cos(this->rot);
-		HX_STACK_LINE(817)
-		{
-		}
 		HX_STACK_LINE(825)
 		{
 		}
@@ -3150,9 +2892,6 @@ Void ZPP_Body_obj::validate_axis( ){
 				this->axisx = ::Math_obj::sin(this->rot);
 				HX_STACK_LINE(808)
 				this->axisy = ::Math_obj::cos(this->rot);
-				HX_STACK_LINE(808)
-				{
-				}
 				HX_STACK_LINE(808)
 				Dynamic();
 			}
@@ -3317,9 +3056,6 @@ Void ZPP_Body_obj::setupForce( ){
 										HX_STACK_LINE(756)
 										{
 										}
-										HX_STACK_LINE(756)
-										{
-										}
 									}
 									HX_STACK_LINE(756)
 									return ret1;
@@ -3348,7 +3084,7 @@ Void ZPP_Body_obj::setupForce( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(756)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(756)
 								_this->_isimmutable();
 							}
@@ -3372,7 +3108,7 @@ Void ZPP_Body_obj::setupForce( ){
 										HX_STACK_LINE(756)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(756)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(756)
 											_this->_validate();
 										}
@@ -3397,7 +3133,7 @@ Void ZPP_Body_obj::setupForce( ){
 										HX_STACK_LINE(756)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(756)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(756)
 											_this->_validate();
 										}
@@ -3419,16 +3155,13 @@ Void ZPP_Body_obj::setupForce( ){
 								HX_STACK_LINE(756)
 								{
 								}
-								HX_STACK_LINE(756)
-								{
-								}
 							}
 							HX_STACK_LINE(756)
 							{
 								HX_STACK_LINE(756)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(756)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(756)
 									_this->_invalidate(_this);
 								}
@@ -3545,9 +3278,6 @@ Void ZPP_Body_obj::setupsvel( ){
 										HX_STACK_LINE(747)
 										{
 										}
-										HX_STACK_LINE(747)
-										{
-										}
 									}
 									HX_STACK_LINE(747)
 									return ret1;
@@ -3576,7 +3306,7 @@ Void ZPP_Body_obj::setupsvel( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(747)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(747)
 								_this->_isimmutable();
 							}
@@ -3600,7 +3330,7 @@ Void ZPP_Body_obj::setupsvel( ){
 										HX_STACK_LINE(747)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(747)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(747)
 											_this->_validate();
 										}
@@ -3625,7 +3355,7 @@ Void ZPP_Body_obj::setupsvel( ){
 										HX_STACK_LINE(747)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(747)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(747)
 											_this->_validate();
 										}
@@ -3647,16 +3377,13 @@ Void ZPP_Body_obj::setupsvel( ){
 								HX_STACK_LINE(747)
 								{
 								}
-								HX_STACK_LINE(747)
-								{
-								}
 							}
 							HX_STACK_LINE(747)
 							{
 								HX_STACK_LINE(747)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(747)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(747)
 									_this->_invalidate(_this);
 								}
@@ -3773,9 +3500,6 @@ Void ZPP_Body_obj::setupkinvel( ){
 										HX_STACK_LINE(738)
 										{
 										}
-										HX_STACK_LINE(738)
-										{
-										}
 									}
 									HX_STACK_LINE(738)
 									return ret1;
@@ -3804,7 +3528,7 @@ Void ZPP_Body_obj::setupkinvel( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(738)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(738)
 								_this->_isimmutable();
 							}
@@ -3828,7 +3552,7 @@ Void ZPP_Body_obj::setupkinvel( ){
 										HX_STACK_LINE(738)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(738)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(738)
 											_this->_validate();
 										}
@@ -3853,7 +3577,7 @@ Void ZPP_Body_obj::setupkinvel( ){
 										HX_STACK_LINE(738)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(738)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(738)
 											_this->_validate();
 										}
@@ -3875,16 +3599,13 @@ Void ZPP_Body_obj::setupkinvel( ){
 								HX_STACK_LINE(738)
 								{
 								}
-								HX_STACK_LINE(738)
-								{
-								}
 							}
 							HX_STACK_LINE(738)
 							{
 								HX_STACK_LINE(738)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(738)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(738)
 									_this->_invalidate(_this);
 								}
@@ -4001,9 +3722,6 @@ Void ZPP_Body_obj::setupVelocity( ){
 										HX_STACK_LINE(729)
 										{
 										}
-										HX_STACK_LINE(729)
-										{
-										}
 									}
 									HX_STACK_LINE(729)
 									return ret1;
@@ -4032,7 +3750,7 @@ Void ZPP_Body_obj::setupVelocity( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(729)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(729)
 								_this->_isimmutable();
 							}
@@ -4056,7 +3774,7 @@ Void ZPP_Body_obj::setupVelocity( ){
 										HX_STACK_LINE(729)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(729)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(729)
 											_this->_validate();
 										}
@@ -4081,7 +3799,7 @@ Void ZPP_Body_obj::setupVelocity( ){
 										HX_STACK_LINE(729)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(729)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(729)
 											_this->_validate();
 										}
@@ -4103,16 +3821,13 @@ Void ZPP_Body_obj::setupVelocity( ){
 								HX_STACK_LINE(729)
 								{
 								}
-								HX_STACK_LINE(729)
-								{
-								}
 							}
 							HX_STACK_LINE(729)
 							{
 								HX_STACK_LINE(729)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(729)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(729)
 									_this->_invalidate(_this);
 								}
@@ -4229,9 +3944,6 @@ Void ZPP_Body_obj::setupPosition( ){
 										HX_STACK_LINE(720)
 										{
 										}
-										HX_STACK_LINE(720)
-										{
-										}
 									}
 									HX_STACK_LINE(720)
 									return ret1;
@@ -4260,7 +3972,7 @@ Void ZPP_Body_obj::setupPosition( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(720)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(720)
 								_this->_isimmutable();
 							}
@@ -4284,7 +3996,7 @@ Void ZPP_Body_obj::setupPosition( ){
 										HX_STACK_LINE(720)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(720)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(720)
 											_this->_validate();
 										}
@@ -4309,7 +4021,7 @@ Void ZPP_Body_obj::setupPosition( ){
 										HX_STACK_LINE(720)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(720)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(720)
 											_this->_validate();
 										}
@@ -4331,16 +4043,13 @@ Void ZPP_Body_obj::setupPosition( ){
 								HX_STACK_LINE(720)
 								{
 								}
-								HX_STACK_LINE(720)
-								{
-								}
 							}
 							HX_STACK_LINE(720)
 							{
 								HX_STACK_LINE(720)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(720)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(720)
 									_this->_invalidate(_this);
 								}
@@ -4387,9 +4096,6 @@ Void ZPP_Body_obj::force_validate( ){
 		this->wrap_force->zpp_inner->x = this->forcex;
 		HX_STACK_LINE(701)
 		this->wrap_force->zpp_inner->y = this->forcey;
-		HX_STACK_LINE(702)
-		{
-		}
 		HX_STACK_LINE(710)
 		{
 		}
@@ -4416,9 +4122,6 @@ Void ZPP_Body_obj::force_invalidate( ::zpp_nape::geom::ZPP_Vec2 force){
 			this->forcex = force->x;
 			HX_STACK_LINE(679)
 			this->forcey = force->y;
-			HX_STACK_LINE(680)
-			{
-			}
 			HX_STACK_LINE(688)
 			{
 			}
@@ -4440,9 +4143,6 @@ Void ZPP_Body_obj::svel_validate( ){
 		this->wrap_svel->zpp_inner->x = this->svelx;
 		HX_STACK_LINE(654)
 		this->wrap_svel->zpp_inner->y = this->svely;
-		HX_STACK_LINE(655)
-		{
-		}
 		HX_STACK_LINE(663)
 		{
 		}
@@ -4464,9 +4164,6 @@ Void ZPP_Body_obj::svel_invalidate( ::zpp_nape::geom::ZPP_Vec2 vel){
 			this->svelx = vel->x;
 			HX_STACK_LINE(631)
 			this->svely = vel->y;
-			HX_STACK_LINE(632)
-			{
-			}
 			HX_STACK_LINE(640)
 			{
 			}
@@ -4488,9 +4185,6 @@ Void ZPP_Body_obj::kinvel_validate( ){
 		this->wrap_kinvel->zpp_inner->x = this->kinvelx;
 		HX_STACK_LINE(609)
 		this->wrap_kinvel->zpp_inner->y = this->kinvely;
-		HX_STACK_LINE(610)
-		{
-		}
 		HX_STACK_LINE(618)
 		{
 		}
@@ -4512,9 +4206,6 @@ Void ZPP_Body_obj::kinvel_invalidate( ::zpp_nape::geom::ZPP_Vec2 vel){
 			this->kinvelx = vel->x;
 			HX_STACK_LINE(586)
 			this->kinvely = vel->y;
-			HX_STACK_LINE(587)
-			{
-			}
 			HX_STACK_LINE(595)
 			{
 			}
@@ -4536,9 +4227,6 @@ Void ZPP_Body_obj::vel_validate( ){
 		this->wrap_vel->zpp_inner->x = this->velx;
 		HX_STACK_LINE(564)
 		this->wrap_vel->zpp_inner->y = this->vely;
-		HX_STACK_LINE(565)
-		{
-		}
 		HX_STACK_LINE(573)
 		{
 		}
@@ -4565,9 +4253,6 @@ Void ZPP_Body_obj::vel_invalidate( ::zpp_nape::geom::ZPP_Vec2 vel){
 			this->velx = vel->x;
 			HX_STACK_LINE(541)
 			this->vely = vel->y;
-			HX_STACK_LINE(542)
-			{
-			}
 			HX_STACK_LINE(550)
 			{
 			}
@@ -4589,9 +4274,6 @@ Void ZPP_Body_obj::pos_validate( ){
 		this->wrap_pos->zpp_inner->x = this->posx;
 		HX_STACK_LINE(516)
 		this->wrap_pos->zpp_inner->y = this->posy;
-		HX_STACK_LINE(517)
-		{
-		}
 		HX_STACK_LINE(525)
 		{
 		}
@@ -4622,9 +4304,6 @@ Void ZPP_Body_obj::pos_invalidate( ::zpp_nape::geom::ZPP_Vec2 pos){
 				this->posx = pos->x;
 				HX_STACK_LINE(491)
 				this->posy = pos->y;
-				HX_STACK_LINE(492)
-				{
-				}
 				HX_STACK_LINE(500)
 				{
 				}
@@ -4710,10 +4389,7 @@ Void ZPP_Body_obj::sweepValidate( ::zpp_nape::shape::ZPP_Shape s){
 		HX_STACK_PUSH("ZPP_Body::sweepValidate","zpp_nape/phys/Body.hx",378);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(s,"s");
-		HX_STACK_LINE(379)
-		{
-		}
-		HX_STACK_LINE(387)
+		HX_STACK_LINE(378)
 		if (((s->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 			HX_STACK_LINE(389)
 			s->worldCOMx = (this->posx + (((this->axisy * s->localCOMx) - (this->axisx * s->localCOMy))));
@@ -4830,18 +4506,12 @@ Void ZPP_Body_obj::sweepIntegrate( Float dt){
 		Float delta = (dt - this->sweepTime);		HX_STACK_VAR(delta,"delta");
 		HX_STACK_LINE(350)
 		if (((delta != (int)0))){
-			HX_STACK_LINE(351)
-			{
-			}
 			HX_STACK_LINE(359)
 			this->sweepTime = dt;
 			HX_STACK_LINE(360)
 			{
 				HX_STACK_LINE(361)
 				Float t = delta;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(362)
-				{
-				}
 				HX_STACK_LINE(370)
 				hx::AddEq(this->posx,(this->velx * t));
 				HX_STACK_LINE(371)
@@ -4859,9 +4529,6 @@ Void ZPP_Body_obj::sweepIntegrate( Float dt){
 					this->axisx = ::Math_obj::sin(this->rot);
 					HX_STACK_LINE(373)
 					this->axisy = ::Math_obj::cos(this->rot);
-					HX_STACK_LINE(373)
-					{
-					}
 					HX_STACK_LINE(373)
 					Dynamic();
 				}
@@ -4967,7 +4634,7 @@ bool ZPP_Body_obj::atRest( Float dt){
 					HX_STACK_LINE(319)
 					hx::MultEq(angSq,angSq);
 					struct _Function_3_1{
-						inline static bool Block( ::zpp_nape::phys::ZPP_Body_obj *__this,Float &angSq,Float &idl,Float &dt){
+						inline static bool Block( ::zpp_nape::phys::ZPP_Body_obj *__this,Float &idl,Float &dt,Float &angSq){
 							HX_STACK_PUSH("*::closure","zpp_nape/phys/Body.hx",320);
 							{
 								HX_STACK_LINE(321)
@@ -4979,7 +4646,7 @@ bool ZPP_Body_obj::atRest( Float dt){
 						}
 					};
 					HX_STACK_LINE(320)
-					return (  (((((((int)4 * __this->angvel) * __this->angvel) * idl) > angSq))) ? bool(false) : bool(_Function_3_1::Block(__this,angSq,idl,dt)) );
+					return (  (((((((int)4 * __this->angvel) * __this->angvel) * idl) > angSq))) ? bool(false) : bool(_Function_3_1::Block(__this,idl,dt,angSq)) );
 				}
 				return null();
 			}
@@ -5019,9 +4686,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Body_obj,atRest,return )
 			::zpp_nape::phys::ZPP_Body_obj::bodyset->lt = ::zpp_nape::phys::ZPP_Body_obj::bodysetlt_dyn();
 			HX_STACK_LINE(274)
 			::zpp_nape::phys::ZPP_Body_obj::bodystack = ::zpp_nape::util::ZNPList_ZPP_Body_obj::__new();
-		}
-		HX_STACK_LINE(274)
-		{
 		}
 		HX_STACK_LINE(274)
 		Dynamic();
@@ -5083,12 +4747,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Body_obj,atRest,return )
 			HX_STACK_LINE(299)
 			while(((cur != null()))){
 				struct _Function_4_1{
-					inline static ::zpp_nape::util::ZPP_Set_ZPP_Body Block( ::nape::phys::BodyList &ret,::zpp_nape::util::ZPP_Set_ZPP_Body &cur,::zpp_nape::phys::ZPP_Body &_g){
+					inline static ::zpp_nape::util::ZPP_Set_ZPP_Body Block( ::zpp_nape::util::ZPP_Set_ZPP_Body &cur,::zpp_nape::phys::ZPP_Body &_g,::nape::phys::BodyList &ret){
 						HX_STACK_PUSH("*::closure","zpp_nape/phys/Body.hx",299);
 						{
-							HX_STACK_LINE(299)
-							{
-							}
 							HX_STACK_LINE(299)
 							{
 								HX_STACK_LINE(299)
@@ -5130,9 +4791,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Body_obj,atRest,return )
 								::zpp_nape::util::ZPP_Set_ZPP_Body o = cur;		HX_STACK_VAR(o,"o");
 								HX_STACK_LINE(299)
 								{
-								}
-								HX_STACK_LINE(299)
-								{
 									HX_STACK_LINE(299)
 									o->data = null();
 									HX_STACK_LINE(299)
@@ -5152,7 +4810,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Body_obj,atRest,return )
 					}
 				};
 				HX_STACK_LINE(299)
-				cur = (  (((cur->prev != null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_Body(cur->prev) : ::zpp_nape::util::ZPP_Set_ZPP_Body((  (((cur->next != null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_Body(cur->next) : ::zpp_nape::util::ZPP_Set_ZPP_Body(_Function_4_1::Block(ret,cur,_g)) )) );
+				cur = (  (((cur->prev != null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_Body(cur->prev) : ::zpp_nape::util::ZPP_Set_ZPP_Body((  (((cur->next != null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_Body(cur->next) : ::zpp_nape::util::ZPP_Set_ZPP_Body(_Function_4_1::Block(cur,_g,ret)) )) );
 			}
 			HX_STACK_LINE(299)
 			_this->parent = null();
@@ -5182,9 +4840,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Body_obj,interactingBodies,return )
 			::zpp_nape::phys::ZPP_Body_obj::bodyset->lt = ::zpp_nape::phys::ZPP_Body_obj::bodysetlt_dyn();
 			HX_STACK_LINE(250)
 			::zpp_nape::phys::ZPP_Body_obj::bodystack = ::zpp_nape::util::ZNPList_ZPP_Body_obj::__new();
-		}
-		HX_STACK_LINE(250)
-		{
 		}
 		HX_STACK_LINE(250)
 		Dynamic();
@@ -5238,12 +4893,9 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Body_obj,interactingBodies,return )
 			HX_STACK_LINE(268)
 			while(((cur != null()))){
 				struct _Function_4_1{
-					inline static ::zpp_nape::util::ZPP_Set_ZPP_Body Block( ::nape::phys::BodyList &ret,::zpp_nape::util::ZPP_Set_ZPP_Body &cur,::zpp_nape::phys::ZPP_Body &_g){
+					inline static ::zpp_nape::util::ZPP_Set_ZPP_Body Block( ::zpp_nape::util::ZPP_Set_ZPP_Body &cur,::zpp_nape::phys::ZPP_Body &_g,::nape::phys::BodyList &ret){
 						HX_STACK_PUSH("*::closure","zpp_nape/phys/Body.hx",268);
 						{
-							HX_STACK_LINE(268)
-							{
-							}
 							HX_STACK_LINE(268)
 							{
 								HX_STACK_LINE(268)
@@ -5285,9 +4937,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Body_obj,interactingBodies,return )
 								::zpp_nape::util::ZPP_Set_ZPP_Body o = cur;		HX_STACK_VAR(o,"o");
 								HX_STACK_LINE(268)
 								{
-								}
-								HX_STACK_LINE(268)
-								{
 									HX_STACK_LINE(268)
 									o->data = null();
 									HX_STACK_LINE(268)
@@ -5307,7 +4956,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Body_obj,interactingBodies,return )
 					}
 				};
 				HX_STACK_LINE(268)
-				cur = (  (((cur->prev != null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_Body(cur->prev) : ::zpp_nape::util::ZPP_Set_ZPP_Body((  (((cur->next != null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_Body(cur->next) : ::zpp_nape::util::ZPP_Set_ZPP_Body(_Function_4_1::Block(ret,cur,_g)) )) );
+				cur = (  (((cur->prev != null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_Body(cur->prev) : ::zpp_nape::util::ZPP_Set_ZPP_Body((  (((cur->next != null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_Body(cur->next) : ::zpp_nape::util::ZPP_Set_ZPP_Body(_Function_4_1::Block(cur,_g,ret)) )) );
 			}
 			HX_STACK_LINE(268)
 			_this->parent = null();
@@ -5351,9 +5000,6 @@ Void ZPP_Body_obj::init_bodysetlist( ){
 			::zpp_nape::phys::ZPP_Body_obj::bodyset->lt = ::zpp_nape::phys::ZPP_Body_obj::bodysetlt_dyn();
 			HX_STACK_LINE(223)
 			::zpp_nape::phys::ZPP_Body_obj::bodystack = ::zpp_nape::util::ZNPList_ZPP_Body_obj::__new();
-		}
-		HX_STACK_LINE(225)
-		{
 		}
 		HX_STACK_LINE(233)
 		{
@@ -6214,7 +5860,7 @@ Class ZPP_Body_obj::__mClass;
 
 void ZPP_Body_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.phys.ZPP_Body"), hx::TCanCast< ZPP_Body_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.phys.ZPP_Body"), hx::TCanCast< ZPP_Body_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

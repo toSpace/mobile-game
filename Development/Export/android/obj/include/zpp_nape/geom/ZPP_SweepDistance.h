@@ -15,7 +15,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_SweepDistance_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_SweepDistance_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_SweepDistance_obj OBJ_;

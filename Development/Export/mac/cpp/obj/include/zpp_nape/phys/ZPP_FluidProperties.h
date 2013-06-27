@@ -17,7 +17,7 @@ namespace zpp_nape{
 namespace phys{
 
 
-class ZPP_FluidProperties_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_FluidProperties_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_FluidProperties_obj OBJ_;
@@ -49,11 +49,11 @@ class ZPP_FluidProperties_obj : public hx::Object{
 		virtual Void gravity_invalidate( ::zpp_nape::geom::ZPP_Vec2 x);
 		Dynamic gravity_invalidate_dyn();
 
-		::nape::geom::Vec2 wrap_gravity; /* REM */ 
-		Float gravityy; /* REM */ 
-		Float gravityx; /* REM */ 
-		Float density; /* REM */ 
-		Float viscosity; /* REM */ 
+		::nape::geom::Vec2 wrap_gravity;
+		Float gravityy;
+		Float gravityx;
+		Float density;
+		Float viscosity;
 		virtual ::zpp_nape::phys::ZPP_FluidProperties copy( );
 		Dynamic copy_dyn();
 
@@ -66,8 +66,8 @@ class ZPP_FluidProperties_obj : public hx::Object{
 		virtual Void feature_cons( );
 		Dynamic feature_cons_dyn();
 
-		::nape::shape::ShapeList wrap_shapes; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Shape shapes; /* REM */ 
+		::nape::shape::ShapeList wrap_shapes;
+		::zpp_nape::util::ZNPList_ZPP_Shape shapes;
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
@@ -77,10 +77,10 @@ class ZPP_FluidProperties_obj : public hx::Object{
 		virtual ::nape::phys::FluidProperties wrapper( );
 		Dynamic wrapper_dyn();
 
-		::nape::phys::FluidProperties outer; /* REM */ 
-		Dynamic userData; /* REM */ 
-		::zpp_nape::phys::ZPP_FluidProperties next; /* REM */ 
-		static ::zpp_nape::phys::ZPP_FluidProperties zpp_pool; /* REM */ 
+		::nape::phys::FluidProperties outer;
+		Dynamic userData;
+		::zpp_nape::phys::ZPP_FluidProperties next;
+		static ::zpp_nape::phys::ZPP_FluidProperties zpp_pool;
 };
 
 } // end namespace zpp_nape

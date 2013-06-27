@@ -152,8 +152,6 @@ Dynamic InteractionType_obj::__Create(hx::DynamicArray inArgs)
 
 HX_DEFINE_DYNAMIC_FUNC0(InteractionType_obj,toString,return )
 
-::nape::callbacks::InteractionType InteractionType_obj::COLLISION;
-
 ::nape::callbacks::InteractionType InteractionType_obj::get_COLLISION( ){
 	HX_STACK_PUSH("InteractionType::get_COLLISION","nape/callbacks/InteractionType.hx",203);
 	HX_STACK_LINE(204)
@@ -171,8 +169,6 @@ HX_DEFINE_DYNAMIC_FUNC0(InteractionType_obj,toString,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(InteractionType_obj,get_COLLISION,return )
-
-::nape::callbacks::InteractionType InteractionType_obj::SENSOR;
 
 ::nape::callbacks::InteractionType InteractionType_obj::get_SENSOR( ){
 	HX_STACK_PUSH("InteractionType::get_SENSOR","nape/callbacks/InteractionType.hx",215);
@@ -192,8 +188,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(InteractionType_obj,get_COLLISION,return )
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(InteractionType_obj,get_SENSOR,return )
 
-::nape::callbacks::InteractionType InteractionType_obj::FLUID;
-
 ::nape::callbacks::InteractionType InteractionType_obj::get_FLUID( ){
 	HX_STACK_PUSH("InteractionType::get_FLUID","nape/callbacks/InteractionType.hx",228);
 	HX_STACK_LINE(229)
@@ -211,8 +205,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(InteractionType_obj,get_SENSOR,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(InteractionType_obj,get_FLUID,return )
-
-::nape::callbacks::InteractionType InteractionType_obj::ANY;
 
 ::nape::callbacks::InteractionType InteractionType_obj::get_ANY( ){
 	HX_STACK_PUSH("InteractionType::get_ANY","nape/callbacks/InteractionType.hx",241);
@@ -251,13 +243,13 @@ Dynamic InteractionType_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 3:
-		if (HX_FIELD_EQ(inName,"ANY") ) { return inCallProp ? get_ANY() : ANY; }
+		if (HX_FIELD_EQ(inName,"ANY") ) { return get_ANY(); }
 		break;
 	case 5:
-		if (HX_FIELD_EQ(inName,"FLUID") ) { return inCallProp ? get_FLUID() : FLUID; }
+		if (HX_FIELD_EQ(inName,"FLUID") ) { return get_FLUID(); }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"SENSOR") ) { return inCallProp ? get_SENSOR() : SENSOR; }
+		if (HX_FIELD_EQ(inName,"SENSOR") ) { return get_SENSOR(); }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"get_ANY") ) { return get_ANY_dyn(); }
@@ -266,7 +258,7 @@ Dynamic InteractionType_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
 		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"COLLISION") ) { return inCallProp ? get_COLLISION() : COLLISION; }
+		if (HX_FIELD_EQ(inName,"COLLISION") ) { return get_COLLISION(); }
 		if (HX_FIELD_EQ(inName,"get_FLUID") ) { return get_FLUID_dyn(); }
 		break;
 	case 10:
@@ -280,19 +272,6 @@ Dynamic InteractionType_obj::__Field(const ::String &inName,bool inCallProp)
 
 Dynamic InteractionType_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 3:
-		if (HX_FIELD_EQ(inName,"ANY") ) { ANY=inValue.Cast< ::nape::callbacks::InteractionType >(); return inValue; }
-		break;
-	case 5:
-		if (HX_FIELD_EQ(inName,"FLUID") ) { FLUID=inValue.Cast< ::nape::callbacks::InteractionType >(); return inValue; }
-		break;
-	case 6:
-		if (HX_FIELD_EQ(inName,"SENSOR") ) { SENSOR=inValue.Cast< ::nape::callbacks::InteractionType >(); return inValue; }
-		break;
-	case 9:
-		if (HX_FIELD_EQ(inName,"COLLISION") ) { COLLISION=inValue.Cast< ::nape::callbacks::InteractionType >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
@@ -302,13 +281,9 @@ void InteractionType_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("COLLISION"),
 	HX_CSTRING("get_COLLISION"),
-	HX_CSTRING("SENSOR"),
 	HX_CSTRING("get_SENSOR"),
-	HX_CSTRING("FLUID"),
 	HX_CSTRING("get_FLUID"),
-	HX_CSTRING("ANY"),
 	HX_CSTRING("get_ANY"),
 	String(null()) };
 
@@ -318,25 +293,17 @@ static ::String sMemberFields[] = {
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(InteractionType_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(InteractionType_obj::COLLISION,"COLLISION");
-	HX_MARK_MEMBER_NAME(InteractionType_obj::SENSOR,"SENSOR");
-	HX_MARK_MEMBER_NAME(InteractionType_obj::FLUID,"FLUID");
-	HX_MARK_MEMBER_NAME(InteractionType_obj::ANY,"ANY");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(InteractionType_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(InteractionType_obj::COLLISION,"COLLISION");
-	HX_VISIT_MEMBER_NAME(InteractionType_obj::SENSOR,"SENSOR");
-	HX_VISIT_MEMBER_NAME(InteractionType_obj::FLUID,"FLUID");
-	HX_VISIT_MEMBER_NAME(InteractionType_obj::ANY,"ANY");
 };
 
 Class InteractionType_obj::__mClass;
 
 void InteractionType_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.InteractionType"), hx::TCanCast< InteractionType_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.InteractionType"), hx::TCanCast< InteractionType_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

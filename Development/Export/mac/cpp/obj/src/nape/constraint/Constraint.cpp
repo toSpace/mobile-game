@@ -675,44 +675,14 @@ Constraint_obj::Constraint_obj()
 void Constraint_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(Constraint);
-	HX_MARK_MEMBER_NAME(cbTypes,"cbTypes");
-	HX_MARK_MEMBER_NAME(removeOnBreak,"removeOnBreak");
-	HX_MARK_MEMBER_NAME(breakUnderError,"breakUnderError");
-	HX_MARK_MEMBER_NAME(breakUnderForce,"breakUnderForce");
-	HX_MARK_MEMBER_NAME(maxError,"maxError");
-	HX_MARK_MEMBER_NAME(maxForce,"maxForce");
-	HX_MARK_MEMBER_NAME(damping,"damping");
-	HX_MARK_MEMBER_NAME(frequency,"frequency");
-	HX_MARK_MEMBER_NAME(stiff,"stiff");
-	HX_MARK_MEMBER_NAME(ignore,"ignore");
-	HX_MARK_MEMBER_NAME(active,"active");
-	HX_MARK_MEMBER_NAME(isSleeping,"isSleeping");
-	HX_MARK_MEMBER_NAME(space,"space");
-	HX_MARK_MEMBER_NAME(compound,"compound");
 	HX_MARK_MEMBER_NAME(debugDraw,"debugDraw");
-	HX_MARK_MEMBER_NAME(userData,"userData");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	HX_MARK_END_CLASS();
 }
 
 void Constraint_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(cbTypes,"cbTypes");
-	HX_VISIT_MEMBER_NAME(removeOnBreak,"removeOnBreak");
-	HX_VISIT_MEMBER_NAME(breakUnderError,"breakUnderError");
-	HX_VISIT_MEMBER_NAME(breakUnderForce,"breakUnderForce");
-	HX_VISIT_MEMBER_NAME(maxError,"maxError");
-	HX_VISIT_MEMBER_NAME(maxForce,"maxForce");
-	HX_VISIT_MEMBER_NAME(damping,"damping");
-	HX_VISIT_MEMBER_NAME(frequency,"frequency");
-	HX_VISIT_MEMBER_NAME(stiff,"stiff");
-	HX_VISIT_MEMBER_NAME(ignore,"ignore");
-	HX_VISIT_MEMBER_NAME(active,"active");
-	HX_VISIT_MEMBER_NAME(isSleeping,"isSleeping");
-	HX_VISIT_MEMBER_NAME(space,"space");
-	HX_VISIT_MEMBER_NAME(compound,"compound");
 	HX_VISIT_MEMBER_NAME(debugDraw,"debugDraw");
-	HX_VISIT_MEMBER_NAME(userData,"userData");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 }
 
@@ -723,27 +693,27 @@ Dynamic Constraint_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"copy") ) { return copy_dyn(); }
 		break;
 	case 5:
-		if (HX_FIELD_EQ(inName,"stiff") ) { return inCallProp ? get_stiff() : stiff; }
-		if (HX_FIELD_EQ(inName,"space") ) { return inCallProp ? get_space() : space; }
+		if (HX_FIELD_EQ(inName,"stiff") ) { return get_stiff(); }
+		if (HX_FIELD_EQ(inName,"space") ) { return get_space(); }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"ignore") ) { return inCallProp ? get_ignore() : ignore; }
-		if (HX_FIELD_EQ(inName,"active") ) { return inCallProp ? get_active() : active; }
+		if (HX_FIELD_EQ(inName,"ignore") ) { return get_ignore(); }
+		if (HX_FIELD_EQ(inName,"active") ) { return get_active(); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"cbTypes") ) { return inCallProp ? get_cbTypes() : cbTypes; }
+		if (HX_FIELD_EQ(inName,"cbTypes") ) { return get_cbTypes(); }
 		if (HX_FIELD_EQ(inName,"impulse") ) { return impulse_dyn(); }
-		if (HX_FIELD_EQ(inName,"damping") ) { return inCallProp ? get_damping() : damping; }
+		if (HX_FIELD_EQ(inName,"damping") ) { return get_damping(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
-		if (HX_FIELD_EQ(inName,"maxError") ) { return inCallProp ? get_maxError() : maxError; }
-		if (HX_FIELD_EQ(inName,"maxForce") ) { return inCallProp ? get_maxForce() : maxForce; }
-		if (HX_FIELD_EQ(inName,"compound") ) { return inCallProp ? get_compound() : compound; }
-		if (HX_FIELD_EQ(inName,"userData") ) { return inCallProp ? get_userData() : userData; }
+		if (HX_FIELD_EQ(inName,"maxError") ) { return get_maxError(); }
+		if (HX_FIELD_EQ(inName,"maxForce") ) { return get_maxForce(); }
+		if (HX_FIELD_EQ(inName,"compound") ) { return get_compound(); }
+		if (HX_FIELD_EQ(inName,"userData") ) { return get_userData(); }
 		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"frequency") ) { return inCallProp ? get_frequency() : frequency; }
+		if (HX_FIELD_EQ(inName,"frequency") ) { return get_frequency(); }
 		if (HX_FIELD_EQ(inName,"set_stiff") ) { return set_stiff_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_stiff") ) { return get_stiff_dyn(); }
 		if (HX_FIELD_EQ(inName,"set_space") ) { return set_space_dyn(); }
@@ -756,7 +726,7 @@ Dynamic Constraint_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"get_ignore") ) { return get_ignore_dyn(); }
 		if (HX_FIELD_EQ(inName,"set_active") ) { return set_active_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_active") ) { return get_active_dyn(); }
-		if (HX_FIELD_EQ(inName,"isSleeping") ) { return inCallProp ? get_isSleeping() : isSleeping; }
+		if (HX_FIELD_EQ(inName,"isSleeping") ) { return get_isSleeping(); }
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"get_cbTypes") ) { return get_cbTypes_dyn(); }
@@ -775,7 +745,7 @@ Dynamic Constraint_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"get_userData") ) { return get_userData_dyn(); }
 		break;
 	case 13:
-		if (HX_FIELD_EQ(inName,"removeOnBreak") ) { return inCallProp ? get_removeOnBreak() : removeOnBreak; }
+		if (HX_FIELD_EQ(inName,"removeOnBreak") ) { return get_removeOnBreak(); }
 		if (HX_FIELD_EQ(inName,"set_frequency") ) { return set_frequency_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_frequency") ) { return get_frequency_dyn(); }
 		break;
@@ -783,8 +753,8 @@ Dynamic Constraint_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"get_isSleeping") ) { return get_isSleeping_dyn(); }
 		break;
 	case 15:
-		if (HX_FIELD_EQ(inName,"breakUnderError") ) { return inCallProp ? get_breakUnderError() : breakUnderError; }
-		if (HX_FIELD_EQ(inName,"breakUnderForce") ) { return inCallProp ? get_breakUnderForce() : breakUnderForce; }
+		if (HX_FIELD_EQ(inName,"breakUnderError") ) { return get_breakUnderError(); }
+		if (HX_FIELD_EQ(inName,"breakUnderForce") ) { return get_breakUnderForce(); }
 		break;
 	case 17:
 		if (HX_FIELD_EQ(inName,"set_removeOnBreak") ) { return set_removeOnBreak_dyn(); }
@@ -803,37 +773,32 @@ Dynamic Constraint_obj::__SetField(const ::String &inName,const Dynamic &inValue
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"stiff") ) { if (inCallProp) return set_stiff(inValue);stiff=inValue.Cast< bool >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"space") ) { if (inCallProp) return set_space(inValue);space=inValue.Cast< ::nape::space::Space >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"stiff") ) { return set_stiff(inValue); }
+		if (HX_FIELD_EQ(inName,"space") ) { return set_space(inValue); }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"ignore") ) { if (inCallProp) return set_ignore(inValue);ignore=inValue.Cast< bool >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"active") ) { if (inCallProp) return set_active(inValue);active=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"ignore") ) { return set_ignore(inValue); }
+		if (HX_FIELD_EQ(inName,"active") ) { return set_active(inValue); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"cbTypes") ) { cbTypes=inValue.Cast< ::nape::callbacks::CbTypeList >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"damping") ) { if (inCallProp) return set_damping(inValue);damping=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"damping") ) { return set_damping(inValue); }
 		break;
 	case 8:
-		if (HX_FIELD_EQ(inName,"maxError") ) { if (inCallProp) return set_maxError(inValue);maxError=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"maxForce") ) { if (inCallProp) return set_maxForce(inValue);maxForce=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"compound") ) { if (inCallProp) return set_compound(inValue);compound=inValue.Cast< ::nape::phys::Compound >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"userData") ) { userData=inValue.Cast< Dynamic >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"maxError") ) { return set_maxError(inValue); }
+		if (HX_FIELD_EQ(inName,"maxForce") ) { return set_maxForce(inValue); }
+		if (HX_FIELD_EQ(inName,"compound") ) { return set_compound(inValue); }
 		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"frequency") ) { if (inCallProp) return set_frequency(inValue);frequency=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"frequency") ) { return set_frequency(inValue); }
 		if (HX_FIELD_EQ(inName,"debugDraw") ) { debugDraw=inValue.Cast< bool >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::constraint::ZPP_Constraint >(); return inValue; }
 		break;
-	case 10:
-		if (HX_FIELD_EQ(inName,"isSleeping") ) { isSleeping=inValue.Cast< bool >(); return inValue; }
-		break;
 	case 13:
-		if (HX_FIELD_EQ(inName,"removeOnBreak") ) { if (inCallProp) return set_removeOnBreak(inValue);removeOnBreak=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"removeOnBreak") ) { return set_removeOnBreak(inValue); }
 		break;
 	case 15:
-		if (HX_FIELD_EQ(inName,"breakUnderError") ) { if (inCallProp) return set_breakUnderError(inValue);breakUnderError=inValue.Cast< bool >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"breakUnderForce") ) { if (inCallProp) return set_breakUnderForce(inValue);breakUnderForce=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"breakUnderError") ) { return set_breakUnderError(inValue); }
+		if (HX_FIELD_EQ(inName,"breakUnderForce") ) { return set_breakUnderForce(inValue); }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -867,51 +832,36 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("copy"),
 	HX_CSTRING("toString"),
 	HX_CSTRING("get_cbTypes"),
-	HX_CSTRING("cbTypes"),
 	HX_CSTRING("visitBodies"),
 	HX_CSTRING("bodyImpulse"),
 	HX_CSTRING("impulse"),
 	HX_CSTRING("set_removeOnBreak"),
 	HX_CSTRING("get_removeOnBreak"),
-	HX_CSTRING("removeOnBreak"),
 	HX_CSTRING("set_breakUnderError"),
 	HX_CSTRING("get_breakUnderError"),
-	HX_CSTRING("breakUnderError"),
 	HX_CSTRING("set_breakUnderForce"),
 	HX_CSTRING("get_breakUnderForce"),
-	HX_CSTRING("breakUnderForce"),
 	HX_CSTRING("set_maxError"),
 	HX_CSTRING("get_maxError"),
-	HX_CSTRING("maxError"),
 	HX_CSTRING("set_maxForce"),
 	HX_CSTRING("get_maxForce"),
-	HX_CSTRING("maxForce"),
 	HX_CSTRING("set_damping"),
 	HX_CSTRING("get_damping"),
-	HX_CSTRING("damping"),
 	HX_CSTRING("set_frequency"),
 	HX_CSTRING("get_frequency"),
-	HX_CSTRING("frequency"),
 	HX_CSTRING("set_stiff"),
 	HX_CSTRING("get_stiff"),
-	HX_CSTRING("stiff"),
 	HX_CSTRING("set_ignore"),
 	HX_CSTRING("get_ignore"),
-	HX_CSTRING("ignore"),
 	HX_CSTRING("set_active"),
 	HX_CSTRING("get_active"),
-	HX_CSTRING("active"),
 	HX_CSTRING("get_isSleeping"),
-	HX_CSTRING("isSleeping"),
 	HX_CSTRING("set_space"),
 	HX_CSTRING("get_space"),
-	HX_CSTRING("space"),
 	HX_CSTRING("set_compound"),
 	HX_CSTRING("get_compound"),
-	HX_CSTRING("compound"),
 	HX_CSTRING("debugDraw"),
 	HX_CSTRING("get_userData"),
-	HX_CSTRING("userData"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
@@ -927,7 +877,7 @@ Class Constraint_obj::__mClass;
 
 void Constraint_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.constraint.Constraint"), hx::TCanCast< Constraint_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.constraint.Constraint"), hx::TCanCast< Constraint_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

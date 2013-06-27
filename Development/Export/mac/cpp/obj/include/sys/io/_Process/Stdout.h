@@ -14,7 +14,7 @@ namespace io{
 namespace _Process{
 
 
-class Stdout_obj : public ::haxe::io::Input_obj{
+class HXCPP_CLASS_ATTRIBUTES  Stdout_obj : public ::haxe::io::Input_obj{
 	public:
 		typedef ::haxe::io::Input_obj super;
 		typedef Stdout_obj OBJ_;
@@ -35,15 +35,16 @@ class Stdout_obj : public ::haxe::io::Input_obj{
 		::String __ToString() const { return HX_CSTRING("Stdout"); }
 
 		virtual int readBytes( ::haxe::io::Bytes str,int pos,int len);
+		Dynamic readBytes_dyn();
 
 		virtual int readByte( );
 
-		::haxe::io::Bytes buf; /* REM */ 
-		bool out; /* REM */ 
-		Dynamic p; /* REM */ 
-		static Dynamic _stdout_read; /* REM */ 
+		::haxe::io::Bytes buf;
+		bool out;
+		Dynamic p;
+		static Dynamic _stdout_read;
 		static Dynamic &_stdout_read_dyn() { return _stdout_read;}
-		static Dynamic _stderr_read; /* REM */ 
+		static Dynamic _stderr_read;
 		static Dynamic &_stderr_read_dyn() { return _stderr_read;}
 };
 

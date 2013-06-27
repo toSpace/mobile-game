@@ -22,7 +22,7 @@ namespace nape{
 namespace shape{
 
 
-class Polygon_obj : public ::nape::shape::Shape_obj{
+class HXCPP_CLASS_ATTRIBUTES  Polygon_obj : public ::nape::shape::Shape_obj{
 	public:
 		typedef ::nape::shape::Shape_obj super;
 		typedef Polygon_obj OBJ_;
@@ -48,23 +48,20 @@ class Polygon_obj : public ::nape::shape::Shape_obj{
 		virtual ::nape::shape::EdgeList get_edges( );
 		Dynamic get_edges_dyn();
 
-		::nape::shape::EdgeList edges; /* REM */ 
 		virtual ::nape::geom::Vec2List get_worldVerts( );
 		Dynamic get_worldVerts_dyn();
 
-		::nape::geom::Vec2List worldVerts; /* REM */ 
 		virtual ::nape::geom::Vec2List get_localVerts( );
 		Dynamic get_localVerts_dyn();
 
-		::nape::geom::Vec2List localVerts; /* REM */ 
-		::zpp_nape::shape::ZPP_Polygon zpp_inner_zn; /* REM */ 
-		static Array< ::nape::geom::Vec2 > rect( Float x,Float y,Float width,Float height,hx::Null< bool >  weak);
+		::zpp_nape::shape::ZPP_Polygon zpp_inner_zn;
+		static Array< ::Dynamic > rect( Float x,Float y,Float width,Float height,hx::Null< bool >  weak);
 		static Dynamic rect_dyn();
 
-		static Array< ::nape::geom::Vec2 > box( Float width,Float height,hx::Null< bool >  weak);
+		static Array< ::Dynamic > box( Float width,Float height,hx::Null< bool >  weak);
 		static Dynamic box_dyn();
 
-		static Array< ::nape::geom::Vec2 > regular( Float xRadius,Float yRadius,int edgeCount,hx::Null< Float >  angleOffset,hx::Null< bool >  weak);
+		static Array< ::Dynamic > regular( Float xRadius,Float yRadius,int edgeCount,hx::Null< Float >  angleOffset,hx::Null< bool >  weak);
 		static Dynamic regular_dyn();
 
 };

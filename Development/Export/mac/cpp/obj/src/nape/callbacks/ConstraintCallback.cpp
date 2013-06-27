@@ -88,14 +88,12 @@ ConstraintCallback_obj::ConstraintCallback_obj()
 void ConstraintCallback_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(ConstraintCallback);
-	HX_MARK_MEMBER_NAME(constraint,"constraint");
 	super::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
 }
 
 void ConstraintCallback_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(constraint,"constraint");
 	super::__Visit(HX_VISIT_ARG);
 }
 
@@ -106,7 +104,7 @@ Dynamic ConstraintCallback_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
 		break;
 	case 10:
-		if (HX_FIELD_EQ(inName,"constraint") ) { return inCallProp ? get_constraint() : constraint; }
+		if (HX_FIELD_EQ(inName,"constraint") ) { return get_constraint(); }
 		break;
 	case 14:
 		if (HX_FIELD_EQ(inName,"get_constraint") ) { return get_constraint_dyn(); }
@@ -116,10 +114,6 @@ Dynamic ConstraintCallback_obj::__Field(const ::String &inName,bool inCallProp)
 
 Dynamic ConstraintCallback_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 10:
-		if (HX_FIELD_EQ(inName,"constraint") ) { constraint=inValue.Cast< ::nape::constraint::Constraint >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
@@ -135,7 +129,6 @@ static ::String sStaticFields[] = {
 static ::String sMemberFields[] = {
 	HX_CSTRING("toString"),
 	HX_CSTRING("get_constraint"),
-	HX_CSTRING("constraint"),
 	String(null()) };
 
 static void sMarkStatics(HX_MARK_PARAMS) {
@@ -150,7 +143,7 @@ Class ConstraintCallback_obj::__mClass;
 
 void ConstraintCallback_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.ConstraintCallback"), hx::TCanCast< ConstraintCallback_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.ConstraintCallback"), hx::TCanCast< ConstraintCallback_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

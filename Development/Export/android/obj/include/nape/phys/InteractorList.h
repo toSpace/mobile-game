@@ -13,7 +13,7 @@ namespace nape{
 namespace phys{
 
 
-class InteractorList_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  InteractorList_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef InteractorList_obj OBJ_;
@@ -84,9 +84,8 @@ class InteractorList_obj : public hx::Object{
 		virtual int get_length( );
 		Dynamic get_length_dyn();
 
-		int length; /* REM */ 
-		::zpp_nape::util::ZPP_InteractorList zpp_inner; /* REM */ 
-		static ::nape::phys::InteractorList fromArray( Array< ::nape::phys::Interactor > array);
+		::zpp_nape::util::ZPP_InteractorList zpp_inner;
+		static ::nape::phys::InteractorList fromArray( Array< ::Dynamic > array);
 		static Dynamic fromArray_dyn();
 
 };

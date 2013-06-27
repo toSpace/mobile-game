@@ -12,7 +12,7 @@ namespace cpp{
 namespace zip{
 
 
-class Uncompress_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Uncompress_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Uncompress_obj OBJ_;
@@ -41,17 +41,17 @@ class Uncompress_obj : public hx::Object{
 		virtual Dynamic this_run( ::haxe::io::Bytes src,int srcPos,::haxe::io::Bytes dst,int dstPos);
 		Dynamic this_run_dyn();
 
-		Dynamic s; /* REM */ 
+		Dynamic s;
 		static ::haxe::io::Bytes run( ::haxe::io::Bytes src,Dynamic bufsize);
 		static Dynamic run_dyn();
 
-		static Dynamic _inflate_init; /* REM */ 
+		static Dynamic _inflate_init;
 		static Dynamic &_inflate_init_dyn() { return _inflate_init;}
-		static Dynamic _inflate_buffer; /* REM */ 
+		static Dynamic _inflate_buffer;
 		static Dynamic &_inflate_buffer_dyn() { return _inflate_buffer;}
-		static Dynamic _inflate_end; /* REM */ 
+		static Dynamic _inflate_end;
 		static Dynamic &_inflate_end_dyn() { return _inflate_end;}
-		static Dynamic _set_flush_mode; /* REM */ 
+		static Dynamic _set_flush_mode;
 		static Dynamic &_set_flush_mode_dyn() { return _set_flush_mode;}
 };
 

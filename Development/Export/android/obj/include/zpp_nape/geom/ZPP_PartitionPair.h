@@ -12,7 +12,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_PartitionPair_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_PartitionPair_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_PartitionPair_obj OBJ_;
@@ -32,11 +32,11 @@ class ZPP_PartitionPair_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("ZPP_PartitionPair"); }
 
-		::zpp_nape::util::ZPP_Set_ZPP_PartitionPair node; /* REM */ 
-		int di; /* REM */ 
-		int id; /* REM */ 
-		::zpp_nape::geom::ZPP_PartitionVertex b; /* REM */ 
-		::zpp_nape::geom::ZPP_PartitionVertex a; /* REM */ 
+		::zpp_nape::util::ZPP_Set_ZPP_PartitionPair node;
+		int di;
+		int id;
+		::zpp_nape::geom::ZPP_PartitionVertex b;
+		::zpp_nape::geom::ZPP_PartitionVertex a;
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
@@ -127,18 +127,18 @@ class ZPP_PartitionPair_obj : public hx::Object{
 		virtual Void setbegin( ::zpp_nape::geom::ZPP_PartitionPair i);
 		Dynamic setbegin_dyn();
 
-		int length; /* REM */ 
-		bool pushmod; /* REM */ 
-		bool modified; /* REM */ 
-		bool _inuse; /* REM */ 
+		int length;
+		bool pushmod;
+		bool modified;
+		bool _inuse;
 		virtual ::zpp_nape::geom::ZPP_PartitionPair begin( );
 		Dynamic begin_dyn();
 
 		virtual ::zpp_nape::geom::ZPP_PartitionPair elem( );
 		Dynamic elem_dyn();
 
-		::zpp_nape::geom::ZPP_PartitionPair next; /* REM */ 
-		static ::zpp_nape::geom::ZPP_PartitionPair zpp_pool; /* REM */ 
+		::zpp_nape::geom::ZPP_PartitionPair next;
+		static ::zpp_nape::geom::ZPP_PartitionPair zpp_pool;
 		static ::zpp_nape::geom::ZPP_PartitionPair get( ::zpp_nape::geom::ZPP_PartitionVertex a,::zpp_nape::geom::ZPP_PartitionVertex b);
 		static Dynamic get_dyn();
 

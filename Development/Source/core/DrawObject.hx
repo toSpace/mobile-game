@@ -1,19 +1,19 @@
 //nme
-import nme.display.Sprite;
-import nme.Assets;
-import nme.events.Event;
-import nme.events.EventDispatcher;
-import nme.events.MouseEvent;
-import nme.display.Sprite;
-import nme.display.Bitmap;
-import nme.display.BitmapData;
-import nme.geom.Matrix;
-import nme.geom.Point;
-import nme.geom.Rectangle;
-import nme.display.BlendMode;
-import nme.geom.ColorTransform;
-import nme.Vector;
-import nme.display.BitmapDataChannel;
+import flash.display.Sprite;
+import openfl.Assets;
+import flash.events.Event;
+import flash.events.EventDispatcher;
+import flash.events.MouseEvent;
+import flash.display.Sprite;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.geom.Matrix;
+import flash.geom.Point;
+import flash.geom.Rectangle;
+import flash.display.BlendMode;
+import flash.geom.ColorTransform;
+import flash.Vector;
+import flash.display.BitmapDataChannel;
 
 //nape
 import nape.space.Space;
@@ -48,12 +48,10 @@ class DrawObject extends GameObject{
 
         //read xml
         canvas.addChild(bitmap);
-        var p = new Hash<Dynamic>();
-        p.set('x', bitmap.x);
-        p.set('y', bitmap.y);
-        p.set('rotation', bitmap.rotation);
-        p.set('physics', physics);
-        xml = p;
+        xml.set('x', bitmap.x);
+        xml.set('y', bitmap.y);
+        xml.set('rotation', bitmap.rotation);
+        xml.set('physics', physics);
 
         //make physics object
         mass = 0;

@@ -18,35 +18,35 @@
 #ifndef INCLUDED_aze_display_TilesheetEx
 #include <aze/display/TilesheetEx.h>
 #endif
-#ifndef INCLUDED_haxe_Public
-#include <haxe/Public.h>
+#ifndef INCLUDED_flash_display_DisplayObject
+#include <flash/display/DisplayObject.h>
 #endif
-#ifndef INCLUDED_native_display_DisplayObject
-#include <native/display/DisplayObject.h>
+#ifndef INCLUDED_flash_display_DisplayObjectContainer
+#include <flash/display/DisplayObjectContainer.h>
 #endif
-#ifndef INCLUDED_native_display_DisplayObjectContainer
-#include <native/display/DisplayObjectContainer.h>
+#ifndef INCLUDED_flash_display_Graphics
+#include <flash/display/Graphics.h>
 #endif
-#ifndef INCLUDED_native_display_Graphics
-#include <native/display/Graphics.h>
+#ifndef INCLUDED_flash_display_IBitmapDrawable
+#include <flash/display/IBitmapDrawable.h>
 #endif
-#ifndef INCLUDED_native_display_IBitmapDrawable
-#include <native/display/IBitmapDrawable.h>
+#ifndef INCLUDED_flash_display_InteractiveObject
+#include <flash/display/InteractiveObject.h>
 #endif
-#ifndef INCLUDED_native_display_InteractiveObject
-#include <native/display/InteractiveObject.h>
+#ifndef INCLUDED_flash_display_Sprite
+#include <flash/display/Sprite.h>
 #endif
-#ifndef INCLUDED_native_display_Sprite
-#include <native/display/Sprite.h>
+#ifndef INCLUDED_flash_events_EventDispatcher
+#include <flash/events/EventDispatcher.h>
 #endif
-#ifndef INCLUDED_native_display_Tilesheet
-#include <native/display/Tilesheet.h>
+#ifndef INCLUDED_flash_events_IEventDispatcher
+#include <flash/events/IEventDispatcher.h>
 #endif
-#ifndef INCLUDED_native_events_EventDispatcher
-#include <native/events/EventDispatcher.h>
+#ifndef INCLUDED_flash_geom_Point
+#include <flash/geom/Point.h>
 #endif
-#ifndef INCLUDED_native_events_IEventDispatcher
-#include <native/events/IEventDispatcher.h>
+#ifndef INCLUDED_openfl_display_Tilesheet
+#include <openfl/display/Tilesheet.h>
 #endif
 namespace aze{
 namespace display{
@@ -58,9 +58,9 @@ bool smooth = __o_smooth.Default(true);
 bool additive = __o_additive.Default(false);
 {
 	HX_STACK_LINE(36)
-	super::__construct();
+	super::__construct(hx::ObjectPtr<OBJ_>(this));
 	HX_STACK_LINE(38)
-	this->view = ::native::display::Sprite_obj::__new();
+	this->view = ::flash::display::Sprite_obj::__new();
 	HX_STACK_LINE(39)
 	this->view->set_mouseEnabled(false);
 	HX_STACK_LINE(40)
@@ -76,8 +76,6 @@ bool additive = __o_additive.Default(false);
 	HX_STACK_LINE(46)
 	this->useTransforms = true;
 	HX_STACK_LINE(48)
-	this->init(hx::ObjectPtr<OBJ_>(this));
-	HX_STACK_LINE(49)
 	this->drawList = ::aze::display::DrawList_obj::__new();
 }
 ;
@@ -98,106 +96,136 @@ Dynamic TileLayer_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 int TileLayer_obj::renderGroup( ::aze::display::TileGroup group,int index,Float gx,Float gy){
-	HX_STACK_PUSH("TileLayer::renderGroup","aze/display/TileLayer.hx",67);
+	HX_STACK_PUSH("TileLayer::renderGroup","aze/display/TileLayer.hx",66);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(group,"group");
 	HX_STACK_ARG(index,"index");
 	HX_STACK_ARG(gx,"gx");
 	HX_STACK_ARG(gy,"gy");
-	HX_STACK_LINE(68)
+	HX_STACK_LINE(67)
 	Array< Float > list = this->drawList->list;		HX_STACK_VAR(list,"list");
-	HX_STACK_LINE(69)
+	HX_STACK_LINE(68)
 	int fields = this->drawList->fields;		HX_STACK_VAR(fields,"fields");
-	HX_STACK_LINE(70)
+	HX_STACK_LINE(69)
 	int offsetTransform = this->drawList->offsetTransform;		HX_STACK_VAR(offsetTransform,"offsetTransform");
-	HX_STACK_LINE(71)
+	HX_STACK_LINE(70)
 	int offsetRGB = this->drawList->offsetRGB;		HX_STACK_VAR(offsetRGB,"offsetRGB");
-	HX_STACK_LINE(72)
+	HX_STACK_LINE(71)
 	int offsetAlpha = this->drawList->offsetAlpha;		HX_STACK_VAR(offsetAlpha,"offsetAlpha");
-	HX_STACK_LINE(73)
+	HX_STACK_LINE(72)
 	int elapsed = this->drawList->elapsed;		HX_STACK_VAR(elapsed,"elapsed");
-	HX_STACK_LINE(80)
+	HX_STACK_LINE(79)
 	hx::AddEq(gx,group->x);
-	HX_STACK_LINE(81)
+	HX_STACK_LINE(80)
 	hx::AddEq(gy,group->y);
-	HX_STACK_LINE(84)
+	HX_STACK_LINE(83)
 	int n = (  (((group->children != null()))) ? int(group->children->length) : int((int)0) );		HX_STACK_VAR(n,"n");
-	HX_STACK_LINE(85)
+	HX_STACK_LINE(84)
 	{
-		HX_STACK_LINE(85)
+		HX_STACK_LINE(84)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(85)
+		HX_STACK_LINE(84)
 		while(((_g < n))){
-			HX_STACK_LINE(85)
+			HX_STACK_LINE(84)
 			int i = (_g)++;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(86)
+			::aze::display::TileBase child = group->children->__get(i).StaticCast< ::aze::display::TileBase >();		HX_STACK_VAR(child,"child");
 			HX_STACK_LINE(87)
-			::aze::display::TileBase child = group->children->__get(i);		HX_STACK_VAR(child,"child");
-			HX_STACK_LINE(88)
 			if ((child->animated)){
-				HX_STACK_LINE(88)
+				HX_STACK_LINE(87)
 				child->step(elapsed);
 			}
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(92)
 			if ((!(child->visible))){
-				HX_STACK_LINE(94)
+				HX_STACK_LINE(93)
 				continue;
 			}
-			HX_STACK_LINE(95)
+			HX_STACK_LINE(94)
 			::aze::display::TileGroup group1 = child;		HX_STACK_VAR(group1,"group1");
-			HX_STACK_LINE(98)
+			HX_STACK_LINE(97)
 			if (((group1 != null()))){
-				HX_STACK_LINE(99)
+				HX_STACK_LINE(98)
 				index = this->renderGroup(group1,index,gx,gy);
 			}
 			else{
-				HX_STACK_LINE(104)
+				HX_STACK_LINE(103)
 				::aze::display::TileSprite sprite = child;		HX_STACK_VAR(sprite,"sprite");
-				HX_STACK_LINE(122)
+				HX_STACK_LINE(121)
 				if (((sprite->alpha <= 0.0))){
-					HX_STACK_LINE(122)
+					HX_STACK_LINE(121)
 					continue;
 				}
-				HX_STACK_LINE(123)
-				list[index] = (sprite->x + gx);
-				HX_STACK_LINE(124)
-				list[(index + (int)1)] = (sprite->y + gy);
-				HX_STACK_LINE(125)
+				HX_STACK_LINE(122)
 				list[(index + (int)2)] = sprite->_indice;
-				HX_STACK_LINE(126)
-				if (((offsetTransform > (int)0))){
+				HX_STACK_LINE(124)
+				if (((sprite->_offset != null()))){
+					HX_STACK_LINE(126)
+					::flash::geom::Point off = sprite->_offset;		HX_STACK_VAR(off,"off");
 					HX_STACK_LINE(127)
-					Array< Float > t = sprite->get_transform();		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(128)
-					list[(index + offsetTransform)] = t->__get((int)0);
-					HX_STACK_LINE(129)
-					list[((index + offsetTransform) + (int)1)] = t->__get((int)1);
-					HX_STACK_LINE(130)
-					list[((index + offsetTransform) + (int)2)] = t->__get((int)2);
-					HX_STACK_LINE(131)
-					list[((index + offsetTransform) + (int)3)] = t->__get((int)3);
+					if (((offsetTransform > (int)0))){
+						HX_STACK_LINE(128)
+						Array< Float > t = sprite->get_transform();		HX_STACK_VAR(t,"t");
+						HX_STACK_LINE(129)
+						list[index] = (((sprite->x - (off->x * t->__get((int)0))) - (off->y * t->__get((int)1))) + gx);
+						HX_STACK_LINE(130)
+						list[(index + (int)1)] = (((sprite->y - (off->x * t->__get((int)2))) - (off->y * t->__get((int)3))) + gy);
+						HX_STACK_LINE(131)
+						list[(index + offsetTransform)] = t->__get((int)0);
+						HX_STACK_LINE(132)
+						list[((index + offsetTransform) + (int)1)] = t->__get((int)1);
+						HX_STACK_LINE(133)
+						list[((index + offsetTransform) + (int)2)] = t->__get((int)2);
+						HX_STACK_LINE(134)
+						list[((index + offsetTransform) + (int)3)] = t->__get((int)3);
+					}
+					else{
+						HX_STACK_LINE(137)
+						list[index] = ((sprite->x - off->x) + gx);
+						HX_STACK_LINE(138)
+						list[(index + (int)1)] = ((sprite->y - off->y) + gy);
+					}
 				}
-				HX_STACK_LINE(133)
+				else{
+					HX_STACK_LINE(142)
+					list[index] = (sprite->x + gx);
+					HX_STACK_LINE(143)
+					list[(index + (int)1)] = (sprite->y + gy);
+					HX_STACK_LINE(144)
+					if (((offsetTransform > (int)0))){
+						HX_STACK_LINE(145)
+						Array< Float > t = sprite->get_transform();		HX_STACK_VAR(t,"t");
+						HX_STACK_LINE(146)
+						list[(index + offsetTransform)] = t->__get((int)0);
+						HX_STACK_LINE(147)
+						list[((index + offsetTransform) + (int)1)] = t->__get((int)1);
+						HX_STACK_LINE(148)
+						list[((index + offsetTransform) + (int)2)] = t->__get((int)2);
+						HX_STACK_LINE(149)
+						list[((index + offsetTransform) + (int)3)] = t->__get((int)3);
+					}
+				}
+				HX_STACK_LINE(153)
 				if (((offsetRGB > (int)0))){
-					HX_STACK_LINE(134)
+					HX_STACK_LINE(154)
 					list[(index + offsetRGB)] = sprite->r;
-					HX_STACK_LINE(135)
+					HX_STACK_LINE(155)
 					list[((index + offsetRGB) + (int)1)] = sprite->g;
-					HX_STACK_LINE(136)
+					HX_STACK_LINE(156)
 					list[((index + offsetRGB) + (int)2)] = sprite->b;
 				}
-				HX_STACK_LINE(138)
+				HX_STACK_LINE(158)
 				if (((offsetAlpha > (int)0))){
-					HX_STACK_LINE(138)
+					HX_STACK_LINE(158)
 					list[(index + offsetAlpha)] = sprite->alpha;
 				}
-				HX_STACK_LINE(139)
+				HX_STACK_LINE(159)
 				hx::AddEq(index,fields);
 			}
 		}
 	}
-	HX_STACK_LINE(143)
+	HX_STACK_LINE(163)
 	this->drawList->index = index;
-	HX_STACK_LINE(144)
+	HX_STACK_LINE(164)
 	return index;
 }
 
@@ -205,20 +233,20 @@ int TileLayer_obj::renderGroup( ::aze::display::TileGroup group,int index,Float 
 HX_DEFINE_DYNAMIC_FUNC4(TileLayer_obj,renderGroup,return )
 
 int TileLayer_obj::render( Dynamic elapsed){
-	HX_STACK_PUSH("TileLayer::render","aze/display/TileLayer.hx",53);
+	HX_STACK_PUSH("TileLayer::render","aze/display/TileLayer.hx",52);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(elapsed,"elapsed");
+	HX_STACK_LINE(53)
+	this->drawList->begin((  (((elapsed == null()))) ? int((int)0) : int(elapsed) ),this->useTransforms,this->useAlpha,this->useTint,this->useAdditive);
 	HX_STACK_LINE(54)
-	this->drawList->begin((  (((elapsed == null()))) ? Dynamic((int)0) : Dynamic(elapsed) ),this->useTransforms,this->useAlpha,this->useTint,this->useAdditive);
-	HX_STACK_LINE(55)
 	this->renderGroup(hx::ObjectPtr<OBJ_>(this),(int)0,(int)0,(int)0);
-	HX_STACK_LINE(56)
+	HX_STACK_LINE(55)
 	this->drawList->end();
-	HX_STACK_LINE(60)
+	HX_STACK_LINE(59)
 	this->view->get_graphics()->clear();
-	HX_STACK_LINE(61)
+	HX_STACK_LINE(60)
 	this->tilesheet->drawTiles(this->view->get_graphics(),this->drawList->list,this->useSmoothing,this->drawList->flags);
-	HX_STACK_LINE(63)
+	HX_STACK_LINE(62)
 	return this->drawList->elapsed;
 }
 
@@ -299,7 +327,7 @@ Dynamic TileLayer_obj::__SetField(const ::String &inName,const Dynamic &inValue,
 {
 	switch(inName.length) {
 	case 4:
-		if (HX_FIELD_EQ(inName,"view") ) { view=inValue.Cast< ::native::display::Sprite >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"view") ) { view=inValue.Cast< ::flash::display::Sprite >(); return inValue; }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"useTint") ) { useTint=inValue.Cast< bool >(); return inValue; }
@@ -370,7 +398,7 @@ Class TileLayer_obj::__mClass;
 
 void TileLayer_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("aze.display.TileLayer"), hx::TCanCast< TileLayer_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("aze.display.TileLayer"), hx::TCanCast< TileLayer_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

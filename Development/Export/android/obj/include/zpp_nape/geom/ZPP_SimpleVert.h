@@ -11,7 +11,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_SimpleVert_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_SimpleVert_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_SimpleVert_obj OBJ_;
@@ -37,14 +37,14 @@ class ZPP_SimpleVert_obj : public hx::Object{
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		::zpp_nape::util::ZPP_Set_ZPP_SimpleVert node; /* REM */ 
-		::zpp_nape::geom::ZPP_SimpleVert next; /* REM */ 
-		int id; /* REM */ 
-		::zpp_nape::util::ZPP_Set_ZPP_SimpleVert links; /* REM */ 
-		Float y; /* REM */ 
-		Float x; /* REM */ 
-		bool forced; /* REM */ 
-		static ::zpp_nape::geom::ZPP_SimpleVert zpp_pool; /* REM */ 
+		::zpp_nape::util::ZPP_Set_ZPP_SimpleVert node;
+		::zpp_nape::geom::ZPP_SimpleVert next;
+		int id;
+		::zpp_nape::util::ZPP_Set_ZPP_SimpleVert links;
+		Float y;
+		Float x;
+		bool forced;
+		static ::zpp_nape::geom::ZPP_SimpleVert zpp_pool;
 		static bool less_xy( ::zpp_nape::geom::ZPP_SimpleVert p,::zpp_nape::geom::ZPP_SimpleVert q);
 		static Dynamic less_xy_dyn();
 

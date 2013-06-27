@@ -46,9 +46,6 @@ Dynamic ZNPList_ZPP_Vec2_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_PUSH("ZNPList_ZPP_Vec2::at","zpp_nape/util/Lists.hx",9335);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(9336)
-	{
-	}
 	HX_STACK_LINE(9344)
 	::zpp_nape::util::ZNPNode_ZPP_Vec2 it = this->iterator_at(ind);		HX_STACK_VAR(it,"it");
 	HX_STACK_LINE(9345)
@@ -62,9 +59,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_Vec2_obj,at,return )
 	HX_STACK_PUSH("ZNPList_ZPP_Vec2::iterator_at","zpp_nape/util/Lists.hx",9322);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(9323)
-	{
-	}
 	HX_STACK_LINE(9331)
 	::zpp_nape::util::ZNPNode_ZPP_Vec2 ret = this->head;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(9332)
@@ -114,9 +108,6 @@ bool ZNPList_ZPP_Vec2_obj::inlined_has( ::zpp_nape::geom::ZPP_Vec2 obj){
 	HX_STACK_PUSH("ZNPList_ZPP_Vec2::inlined_has","zpp_nape/util/Lists.hx",9280);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(9281)
-	{
-	}
 	HX_STACK_LINE(9289)
 	bool ret;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(9290)
@@ -158,9 +149,6 @@ bool ZNPList_ZPP_Vec2_obj::has( ::zpp_nape::geom::ZPP_Vec2 obj){
 		inline static bool Block( ::zpp_nape::util::ZNPList_ZPP_Vec2_obj *__this,::zpp_nape::geom::ZPP_Vec2 &obj){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",9276);
 			{
-				HX_STACK_LINE(9276)
-				{
-				}
 				HX_STACK_LINE(9276)
 				bool ret;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(9276)
@@ -259,22 +247,13 @@ Void ZNPList_ZPP_Vec2_obj::inlined_clear( ){
 		HX_STACK_LINE(9248)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(9248)
-			{
-			}
-			HX_STACK_LINE(9248)
 			::zpp_nape::util::ZNPNode_ZPP_Vec2 ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(9248)
 			this->head = ret->next;
 			HX_STACK_LINE(9248)
 			{
-			}
-			HX_STACK_LINE(9248)
-			{
 				HX_STACK_LINE(9248)
 				::zpp_nape::util::ZNPNode_ZPP_Vec2 o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(9248)
-				{
-				}
 				HX_STACK_LINE(9248)
 				o->elt = null();
 				HX_STACK_LINE(9248)
@@ -308,22 +287,13 @@ Void ZNPList_ZPP_Vec2_obj::clear( ){
 		HX_STACK_LINE(9242)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(9242)
-			{
-			}
-			HX_STACK_LINE(9242)
 			::zpp_nape::util::ZNPNode_ZPP_Vec2 ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(9242)
 			this->head = ret->next;
 			HX_STACK_LINE(9242)
 			{
-			}
-			HX_STACK_LINE(9242)
-			{
 				HX_STACK_LINE(9242)
 				::zpp_nape::util::ZNPNode_ZPP_Vec2 o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(9242)
-				{
-				}
 				HX_STACK_LINE(9242)
 				o->elt = null();
 				HX_STACK_LINE(9242)
@@ -371,9 +341,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_Vec2_obj,splice,return )
 	HX_STACK_PUSH("ZNPList_ZPP_Vec2::inlined_erase","zpp_nape/util/Lists.hx",9191);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
-	HX_STACK_LINE(9192)
-	{
-	}
 	HX_STACK_LINE(9200)
 	::zpp_nape::util::ZNPNode_ZPP_Vec2 old;		HX_STACK_VAR(old,"old");
 	HX_STACK_LINE(9201)
@@ -405,16 +372,10 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_Vec2_obj,splice,return )
 			this->pushmod = true;
 		}
 	}
-	HX_STACK_LINE(9214)
-	{
-	}
 	HX_STACK_LINE(9215)
 	{
 		HX_STACK_LINE(9216)
 		::zpp_nape::util::ZNPNode_ZPP_Vec2 o = old;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(9217)
-		{
-		}
 		HX_STACK_LINE(9225)
 		o->elt = null();
 		HX_STACK_LINE(9226)
@@ -440,12 +401,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_Vec2_obj,inlined_erase,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
 	struct _Function_1_1{
-		inline static ::zpp_nape::util::ZNPNode_ZPP_Vec2 Block( ::zpp_nape::util::ZNPNode_ZPP_Vec2 &pre,::zpp_nape::util::ZNPList_ZPP_Vec2_obj *__this){
+		inline static ::zpp_nape::util::ZNPNode_ZPP_Vec2 Block( ::zpp_nape::util::ZNPList_ZPP_Vec2_obj *__this,::zpp_nape::util::ZNPNode_ZPP_Vec2 &pre){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",9187);
 			{
-				HX_STACK_LINE(9187)
-				{
-				}
 				HX_STACK_LINE(9187)
 				::zpp_nape::util::ZNPNode_ZPP_Vec2 old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(9187)
@@ -479,14 +437,8 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_Vec2_obj,inlined_erase,return )
 				}
 				HX_STACK_LINE(9187)
 				{
-				}
-				HX_STACK_LINE(9187)
-				{
 					HX_STACK_LINE(9187)
 					::zpp_nape::util::ZNPNode_ZPP_Vec2 o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(9187)
-					{
-					}
 					HX_STACK_LINE(9187)
 					o->elt = null();
 					HX_STACK_LINE(9187)
@@ -507,7 +459,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_Vec2_obj,inlined_erase,return )
 		}
 	};
 	HX_STACK_LINE(9186)
-	return _Function_1_1::Block(pre,this);
+	return _Function_1_1::Block(this,pre);
 }
 
 
@@ -517,9 +469,6 @@ bool ZNPList_ZPP_Vec2_obj::inlined_try_remove( ::zpp_nape::geom::ZPP_Vec2 obj){
 	HX_STACK_PUSH("ZNPList_ZPP_Vec2::inlined_try_remove","zpp_nape/util/Lists.hx",9163);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(9164)
-	{
-	}
 	HX_STACK_LINE(9172)
 	::zpp_nape::util::ZNPNode_ZPP_Vec2 pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(9173)
@@ -532,9 +481,6 @@ bool ZNPList_ZPP_Vec2_obj::inlined_try_remove( ::zpp_nape::geom::ZPP_Vec2 obj){
 		if (((cur->elt == obj))){
 			HX_STACK_LINE(9177)
 			{
-				HX_STACK_LINE(9177)
-				{
-				}
 				HX_STACK_LINE(9177)
 				::zpp_nape::util::ZNPNode_ZPP_Vec2 old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(9177)
@@ -568,14 +514,8 @@ bool ZNPList_ZPP_Vec2_obj::inlined_try_remove( ::zpp_nape::geom::ZPP_Vec2 obj){
 				}
 				HX_STACK_LINE(9177)
 				{
-				}
-				HX_STACK_LINE(9177)
-				{
 					HX_STACK_LINE(9177)
 					::zpp_nape::util::ZNPNode_ZPP_Vec2 o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(9177)
-					{
-					}
 					HX_STACK_LINE(9177)
 					o->elt = null();
 					HX_STACK_LINE(9177)
@@ -614,99 +554,81 @@ Void ZNPList_ZPP_Vec2_obj::inlined_remove( ::zpp_nape::geom::ZPP_Vec2 obj){
 		HX_STACK_PUSH("ZNPList_ZPP_Vec2::inlined_remove","zpp_nape/util/Lists.hx",9150);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(9151)
-		{
-		}
 		HX_STACK_LINE(9159)
-		{
+		::zpp_nape::util::ZNPNode_ZPP_Vec2 pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(9159)
+		::zpp_nape::util::ZNPNode_ZPP_Vec2 cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(9159)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(9159)
+		while(((cur != null()))){
 			HX_STACK_LINE(9159)
-			{
-			}
-			HX_STACK_LINE(9159)
-			::zpp_nape::util::ZNPNode_ZPP_Vec2 pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(9159)
-			::zpp_nape::util::ZNPNode_ZPP_Vec2 cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(9159)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(9159)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(9159)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(9159)
+					::zpp_nape::util::ZNPNode_ZPP_Vec2 old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(9159)
+					::zpp_nape::util::ZNPNode_ZPP_Vec2 ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(9159)
+					if (((pre == null()))){
+						HX_STACK_LINE(9159)
+						old = this->head;
+						HX_STACK_LINE(9159)
+						ret1 = old->next;
+						HX_STACK_LINE(9159)
+						this->head = ret1;
+						HX_STACK_LINE(9159)
+						if (((this->head == null()))){
+							HX_STACK_LINE(9159)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(9159)
+						old = pre->next;
+						HX_STACK_LINE(9159)
+						ret1 = old->next;
+						HX_STACK_LINE(9159)
+						pre->next = ret1;
+						HX_STACK_LINE(9159)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(9159)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(9159)
 					{
 						HX_STACK_LINE(9159)
-						{
-						}
+						::zpp_nape::util::ZNPNode_ZPP_Vec2 o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(9159)
-						::zpp_nape::util::ZNPNode_ZPP_Vec2 old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(9159)
-						::zpp_nape::util::ZNPNode_ZPP_Vec2 ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_ZPP_Vec2_obj::zpp_pool;
 						HX_STACK_LINE(9159)
-						if (((pre == null()))){
-							HX_STACK_LINE(9159)
-							old = this->head;
-							HX_STACK_LINE(9159)
-							ret1 = old->next;
-							HX_STACK_LINE(9159)
-							this->head = ret1;
-							HX_STACK_LINE(9159)
-							if (((this->head == null()))){
-								HX_STACK_LINE(9159)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(9159)
-							old = pre->next;
-							HX_STACK_LINE(9159)
-							ret1 = old->next;
-							HX_STACK_LINE(9159)
-							pre->next = ret1;
-							HX_STACK_LINE(9159)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(9159)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(9159)
-						{
-						}
-						HX_STACK_LINE(9159)
-						{
-							HX_STACK_LINE(9159)
-							::zpp_nape::util::ZNPNode_ZPP_Vec2 o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(9159)
-							{
-							}
-							HX_STACK_LINE(9159)
-							o->elt = null();
-							HX_STACK_LINE(9159)
-							o->next = ::zpp_nape::util::ZNPNode_ZPP_Vec2_obj::zpp_pool;
-							HX_STACK_LINE(9159)
-							::zpp_nape::util::ZNPNode_ZPP_Vec2_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(9159)
-						this->modified = true;
-						HX_STACK_LINE(9159)
-						(this->length)--;
-						HX_STACK_LINE(9159)
-						this->pushmod = true;
-						HX_STACK_LINE(9159)
-						ret1;
+						::zpp_nape::util::ZNPNode_ZPP_Vec2_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(9159)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(9159)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(9159)
+					this->pushmod = true;
+					HX_STACK_LINE(9159)
+					ret1;
 				}
 				HX_STACK_LINE(9159)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(9159)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(9159)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(9159)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(9159)
+		ret;
 	}
 return null();
 }
@@ -718,9 +640,6 @@ bool ZNPList_ZPP_Vec2_obj::try_remove( ::zpp_nape::geom::ZPP_Vec2 obj){
 	HX_STACK_PUSH("ZNPList_ZPP_Vec2::try_remove","zpp_nape/util/Lists.hx",9125);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(9126)
-	{
-	}
 	HX_STACK_LINE(9134)
 	::zpp_nape::util::ZNPNode_ZPP_Vec2 pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(9135)
@@ -755,99 +674,81 @@ Void ZNPList_ZPP_Vec2_obj::remove( ::zpp_nape::geom::ZPP_Vec2 obj){
 		HX_STACK_PUSH("ZNPList_ZPP_Vec2::remove","zpp_nape/util/Lists.hx",9114);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(9115)
-		{
-		}
 		HX_STACK_LINE(9123)
-		{
+		::zpp_nape::util::ZNPNode_ZPP_Vec2 pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(9123)
+		::zpp_nape::util::ZNPNode_ZPP_Vec2 cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(9123)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(9123)
+		while(((cur != null()))){
 			HX_STACK_LINE(9123)
-			{
-			}
-			HX_STACK_LINE(9123)
-			::zpp_nape::util::ZNPNode_ZPP_Vec2 pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(9123)
-			::zpp_nape::util::ZNPNode_ZPP_Vec2 cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(9123)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(9123)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(9123)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(9123)
+					::zpp_nape::util::ZNPNode_ZPP_Vec2 old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(9123)
+					::zpp_nape::util::ZNPNode_ZPP_Vec2 ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(9123)
+					if (((pre == null()))){
+						HX_STACK_LINE(9123)
+						old = this->head;
+						HX_STACK_LINE(9123)
+						ret1 = old->next;
+						HX_STACK_LINE(9123)
+						this->head = ret1;
+						HX_STACK_LINE(9123)
+						if (((this->head == null()))){
+							HX_STACK_LINE(9123)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(9123)
+						old = pre->next;
+						HX_STACK_LINE(9123)
+						ret1 = old->next;
+						HX_STACK_LINE(9123)
+						pre->next = ret1;
+						HX_STACK_LINE(9123)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(9123)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(9123)
 					{
 						HX_STACK_LINE(9123)
-						{
-						}
+						::zpp_nape::util::ZNPNode_ZPP_Vec2 o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(9123)
-						::zpp_nape::util::ZNPNode_ZPP_Vec2 old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(9123)
-						::zpp_nape::util::ZNPNode_ZPP_Vec2 ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_ZPP_Vec2_obj::zpp_pool;
 						HX_STACK_LINE(9123)
-						if (((pre == null()))){
-							HX_STACK_LINE(9123)
-							old = this->head;
-							HX_STACK_LINE(9123)
-							ret1 = old->next;
-							HX_STACK_LINE(9123)
-							this->head = ret1;
-							HX_STACK_LINE(9123)
-							if (((this->head == null()))){
-								HX_STACK_LINE(9123)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(9123)
-							old = pre->next;
-							HX_STACK_LINE(9123)
-							ret1 = old->next;
-							HX_STACK_LINE(9123)
-							pre->next = ret1;
-							HX_STACK_LINE(9123)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(9123)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(9123)
-						{
-						}
-						HX_STACK_LINE(9123)
-						{
-							HX_STACK_LINE(9123)
-							::zpp_nape::util::ZNPNode_ZPP_Vec2 o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(9123)
-							{
-							}
-							HX_STACK_LINE(9123)
-							o->elt = null();
-							HX_STACK_LINE(9123)
-							o->next = ::zpp_nape::util::ZNPNode_ZPP_Vec2_obj::zpp_pool;
-							HX_STACK_LINE(9123)
-							::zpp_nape::util::ZNPNode_ZPP_Vec2_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(9123)
-						this->modified = true;
-						HX_STACK_LINE(9123)
-						(this->length)--;
-						HX_STACK_LINE(9123)
-						this->pushmod = true;
-						HX_STACK_LINE(9123)
-						ret1;
+						::zpp_nape::util::ZNPNode_ZPP_Vec2_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(9123)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(9123)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(9123)
+					this->pushmod = true;
+					HX_STACK_LINE(9123)
+					ret1;
 				}
 				HX_STACK_LINE(9123)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(9123)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(9123)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(9123)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(9123)
+		ret;
 	}
 return null();
 }
@@ -858,9 +759,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_Vec2_obj,remove,(void))
 ::zpp_nape::geom::ZPP_Vec2 ZNPList_ZPP_Vec2_obj::inlined_pop_unsafe( ){
 	HX_STACK_PUSH("ZNPList_ZPP_Vec2::inlined_pop_unsafe","zpp_nape/util/Lists.hx",9101);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(9102)
-	{
-	}
 	HX_STACK_LINE(9110)
 	::zpp_nape::geom::ZPP_Vec2 ret = this->head->elt;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(9111)
@@ -879,9 +777,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_Vec2_obj,inlined_pop_unsafe,return )
 		inline static ::zpp_nape::geom::ZPP_Vec2 Block( ::zpp_nape::util::ZNPList_ZPP_Vec2_obj *__this){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",9097);
 			{
-				HX_STACK_LINE(9097)
-				{
-				}
 				HX_STACK_LINE(9097)
 				::zpp_nape::geom::ZPP_Vec2 ret = __this->head->elt;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(9097)
@@ -903,23 +798,14 @@ Void ZNPList_ZPP_Vec2_obj::inlined_pop( ){
 {
 		HX_STACK_PUSH("ZNPList_ZPP_Vec2::inlined_pop","zpp_nape/util/Lists.hx",9063);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(9064)
-		{
-		}
 		HX_STACK_LINE(9072)
 		::zpp_nape::util::ZNPNode_ZPP_Vec2 ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(9073)
 		this->head = ret->next;
-		HX_STACK_LINE(9074)
-		{
-		}
 		HX_STACK_LINE(9075)
 		{
 			HX_STACK_LINE(9076)
 			::zpp_nape::util::ZNPNode_ZPP_Vec2 o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(9077)
-			{
-			}
 			HX_STACK_LINE(9085)
 			o->elt = null();
 			HX_STACK_LINE(9086)
@@ -948,22 +834,13 @@ Void ZNPList_ZPP_Vec2_obj::pop( ){
 		HX_STACK_PUSH("ZNPList_ZPP_Vec2::pop","zpp_nape/util/Lists.hx",9058);
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(9059)
-		{
-		}
-		HX_STACK_LINE(9059)
 		::zpp_nape::util::ZNPNode_ZPP_Vec2 ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(9059)
 		this->head = ret->next;
 		HX_STACK_LINE(9059)
 		{
-		}
-		HX_STACK_LINE(9059)
-		{
 			HX_STACK_LINE(9059)
 			::zpp_nape::util::ZNPNode_ZPP_Vec2 o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(9059)
-			{
-			}
 			HX_STACK_LINE(9059)
 			o->elt = null();
 			HX_STACK_LINE(9059)
@@ -992,9 +869,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_Vec2_obj,pop,(void))
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(9016)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_Vec2 Block( ::zpp_nape::geom::ZPP_Vec2 &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",9024);
@@ -1062,9 +936,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_Vec2_obj,inlined_insert,return )
 		inline static ::zpp_nape::util::ZNPNode_ZPP_Vec2 Block( ::zpp_nape::util::ZNPList_ZPP_Vec2_obj *__this,::zpp_nape::geom::ZPP_Vec2 &o,::zpp_nape::util::ZNPNode_ZPP_Vec2 &cur){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",9011);
 			{
-				HX_STACK_LINE(9011)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_Vec2 Block( ::zpp_nape::geom::ZPP_Vec2 &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",9011);
@@ -1134,22 +1005,16 @@ Void ZNPList_ZPP_Vec2_obj::addAll( ::zpp_nape::util::ZNPList_ZPP_Vec2 x){
 		HX_STACK_PUSH("ZNPList_ZPP_Vec2::addAll","zpp_nape/util/Lists.hx",8992);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(8993)
-		{
-		}
-		HX_STACK_LINE(9001)
-		{
-			HX_STACK_LINE(9002)
-			::zpp_nape::util::ZNPNode_ZPP_Vec2 cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
-			HX_STACK_LINE(9003)
-			while(((cx_ite != null()))){
-				HX_STACK_LINE(9004)
-				::zpp_nape::geom::ZPP_Vec2 i = cx_ite->elt;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(9005)
-				this->add(i);
-				HX_STACK_LINE(9006)
-				cx_ite = cx_ite->next;
-			}
+		HX_STACK_LINE(9002)
+		::zpp_nape::util::ZNPNode_ZPP_Vec2 cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+		HX_STACK_LINE(9003)
+		while(((cx_ite != null()))){
+			HX_STACK_LINE(9004)
+			::zpp_nape::geom::ZPP_Vec2 i = cx_ite->elt;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(9005)
+			this->add(i);
+			HX_STACK_LINE(9006)
+			cx_ite = cx_ite->next;
 		}
 	}
 return null();
@@ -1162,9 +1027,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_Vec2_obj,addAll,(void))
 	HX_STACK_PUSH("ZNPList_ZPP_Vec2::inlined_add","zpp_nape/util/Lists.hx",8955);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(8956)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_Vec2 Block( ::zpp_nape::geom::ZPP_Vec2 &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",8964);
@@ -1219,12 +1081,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_Vec2_obj,inlined_add,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
 	struct _Function_1_1{
-		inline static ::zpp_nape::geom::ZPP_Vec2 Block( ::zpp_nape::geom::ZPP_Vec2 &o,::zpp_nape::util::ZNPList_ZPP_Vec2_obj *__this){
+		inline static ::zpp_nape::geom::ZPP_Vec2 Block( ::zpp_nape::util::ZNPList_ZPP_Vec2_obj *__this,::zpp_nape::geom::ZPP_Vec2 &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",8951);
 			{
-				HX_STACK_LINE(8951)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_Vec2 Block( ::zpp_nape::geom::ZPP_Vec2 &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",8951);
@@ -1274,7 +1133,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_Vec2_obj,inlined_add,return )
 		}
 	};
 	HX_STACK_LINE(8950)
-	return _Function_1_1::Block(o,this);
+	return _Function_1_1::Block(this,o);
 }
 
 
@@ -1472,7 +1331,7 @@ Class ZNPList_ZPP_Vec2_obj::__mClass;
 
 void ZNPList_ZPP_Vec2_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ZPP_Vec2"), hx::TCanCast< ZNPList_ZPP_Vec2_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ZPP_Vec2"), hx::TCanCast< ZNPList_ZPP_Vec2_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

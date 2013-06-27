@@ -174,9 +174,6 @@ Void ZPP_CbType_obj::addconstraint( ::zpp_nape::callbacks::ZPP_ConstraintListene
 		HX_STACK_PUSH("ZPP_CbType::addconstraint","zpp_nape/callbacks/CbType.hx",304);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(305)
-		{
-		}
 		HX_STACK_LINE(313)
 		{
 			HX_STACK_LINE(314)
@@ -207,9 +204,6 @@ Void ZPP_CbType_obj::addconstraint( ::zpp_nape::callbacks::ZPP_ConstraintListene
 			{
 				HX_STACK_LINE(326)
 				::zpp_nape::util::ZNPList_ZPP_ConstraintListener _this = this->conlisteners;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(326)
-				{
-				}
 				struct _Function_3_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_ConstraintListener Block( ::zpp_nape::callbacks::ZPP_ConstraintListener &x){
 						HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbType.hx",326);
@@ -341,9 +335,6 @@ Void ZPP_CbType_obj::addbody( ::zpp_nape::callbacks::ZPP_BodyListener x){
 		HX_STACK_PUSH("ZPP_CbType::addbody","zpp_nape/callbacks/CbType.hx",257);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(258)
-		{
-		}
 		HX_STACK_LINE(266)
 		{
 			HX_STACK_LINE(267)
@@ -374,9 +365,6 @@ Void ZPP_CbType_obj::addbody( ::zpp_nape::callbacks::ZPP_BodyListener x){
 			{
 				HX_STACK_LINE(279)
 				::zpp_nape::util::ZNPList_ZPP_BodyListener _this = this->bodylisteners;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(279)
-				{
-				}
 				struct _Function_3_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_BodyListener Block( ::zpp_nape::callbacks::ZPP_BodyListener &x){
 						HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbType.hx",279);
@@ -518,9 +506,6 @@ Void ZPP_CbType_obj::addint( ::zpp_nape::callbacks::ZPP_InteractionListener x){
 		HX_STACK_PUSH("ZPP_CbType::addint","zpp_nape/callbacks/CbType.hx",210);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(211)
-		{
-		}
 		HX_STACK_LINE(219)
 		{
 			HX_STACK_LINE(220)
@@ -551,9 +536,6 @@ Void ZPP_CbType_obj::addint( ::zpp_nape::callbacks::ZPP_InteractionListener x){
 			{
 				HX_STACK_LINE(232)
 				::zpp_nape::util::ZNPList_ZPP_InteractionListener _this = this->listeners;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(232)
-				{
-				}
 				struct _Function_3_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x){
 						HX_STACK_PUSH("*::closure","zpp_nape/callbacks/CbType.hx",232);
@@ -920,7 +902,7 @@ Class ZPP_CbType_obj::__mClass;
 
 void ZPP_CbType_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.callbacks.ZPP_CbType"), hx::TCanCast< ZPP_CbType_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.callbacks.ZPP_CbType"), hx::TCanCast< ZPP_CbType_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

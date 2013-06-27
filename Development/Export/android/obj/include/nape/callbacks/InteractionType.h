@@ -10,7 +10,7 @@ namespace nape{
 namespace callbacks{
 
 
-class InteractionType_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  InteractionType_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef InteractionType_obj OBJ_;
@@ -33,19 +33,15 @@ class InteractionType_obj : public hx::Object{
 		virtual ::String toString( );
 		Dynamic toString_dyn();
 
-		static ::nape::callbacks::InteractionType COLLISION; /* REM */ 
 		static ::nape::callbacks::InteractionType get_COLLISION( );
 		static Dynamic get_COLLISION_dyn();
 
-		static ::nape::callbacks::InteractionType SENSOR; /* REM */ 
 		static ::nape::callbacks::InteractionType get_SENSOR( );
 		static Dynamic get_SENSOR_dyn();
 
-		static ::nape::callbacks::InteractionType FLUID; /* REM */ 
 		static ::nape::callbacks::InteractionType get_FLUID( );
 		static Dynamic get_FLUID_dyn();
 
-		static ::nape::callbacks::InteractionType ANY; /* REM */ 
 		static ::nape::callbacks::InteractionType get_ANY( );
 		static Dynamic get_ANY_dyn();
 

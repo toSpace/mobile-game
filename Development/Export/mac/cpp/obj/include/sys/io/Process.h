@@ -12,7 +12,7 @@ namespace sys{
 namespace io{
 
 
-class Process_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Process_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Process_obj OBJ_;
@@ -32,29 +32,16 @@ class Process_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("Process"); }
 
-		virtual Void kill( );
-		Dynamic kill_dyn();
-
 		virtual Void close( );
 		Dynamic close_dyn();
 
-		virtual int exitCode( );
-		Dynamic exitCode_dyn();
-
-		virtual int getPid( );
-		Dynamic getPid_dyn();
-
-		::haxe::io::Output _stdin; /* REM */ 
-		::haxe::io::Input _stderr; /* REM */ 
-		::haxe::io::Input _stdout; /* REM */ 
-		Dynamic p; /* REM */ 
-		static Dynamic _run; /* REM */ 
+		::haxe::io::Output _stdin;
+		::haxe::io::Input _stderr;
+		::haxe::io::Input _stdout;
+		Dynamic p;
+		static Dynamic _run;
 		static Dynamic &_run_dyn() { return _run;}
-		static Dynamic _exit; /* REM */ 
-		static Dynamic &_exit_dyn() { return _exit;}
-		static Dynamic _pid; /* REM */ 
-		static Dynamic &_pid_dyn() { return _pid;}
-		static Dynamic _close; /* REM */ 
+		static Dynamic _close;
 		static Dynamic &_close_dyn() { return _close;}
 };
 

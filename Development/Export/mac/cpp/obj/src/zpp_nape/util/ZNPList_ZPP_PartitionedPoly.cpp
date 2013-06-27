@@ -46,9 +46,6 @@ Dynamic ZNPList_ZPP_PartitionedPoly_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_PUSH("ZNPList_ZPP_PartitionedPoly::at","zpp_nape/util/Lists.hx",7250);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(7251)
-	{
-	}
 	HX_STACK_LINE(7259)
 	::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly it = this->iterator_at(ind);		HX_STACK_VAR(it,"it");
 	HX_STACK_LINE(7260)
@@ -62,9 +59,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_PartitionedPoly_obj,at,return )
 	HX_STACK_PUSH("ZNPList_ZPP_PartitionedPoly::iterator_at","zpp_nape/util/Lists.hx",7237);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(7238)
-	{
-	}
 	HX_STACK_LINE(7246)
 	::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly ret = this->head;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(7247)
@@ -114,9 +108,6 @@ bool ZNPList_ZPP_PartitionedPoly_obj::inlined_has( ::zpp_nape::geom::ZPP_Partiti
 	HX_STACK_PUSH("ZNPList_ZPP_PartitionedPoly::inlined_has","zpp_nape/util/Lists.hx",7195);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(7196)
-	{
-	}
 	HX_STACK_LINE(7204)
 	bool ret;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(7205)
@@ -158,9 +149,6 @@ bool ZNPList_ZPP_PartitionedPoly_obj::has( ::zpp_nape::geom::ZPP_PartitionedPoly
 		inline static bool Block( ::zpp_nape::util::ZNPList_ZPP_PartitionedPoly_obj *__this,::zpp_nape::geom::ZPP_PartitionedPoly &obj){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7191);
 			{
-				HX_STACK_LINE(7191)
-				{
-				}
 				HX_STACK_LINE(7191)
 				bool ret;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(7191)
@@ -259,22 +247,13 @@ Void ZNPList_ZPP_PartitionedPoly_obj::inlined_clear( ){
 		HX_STACK_LINE(7163)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(7163)
-			{
-			}
-			HX_STACK_LINE(7163)
 			::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(7163)
 			this->head = ret->next;
 			HX_STACK_LINE(7163)
 			{
-			}
-			HX_STACK_LINE(7163)
-			{
 				HX_STACK_LINE(7163)
 				::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(7163)
-				{
-				}
 				HX_STACK_LINE(7163)
 				o->elt = null();
 				HX_STACK_LINE(7163)
@@ -308,22 +287,13 @@ Void ZNPList_ZPP_PartitionedPoly_obj::clear( ){
 		HX_STACK_LINE(7157)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(7157)
-			{
-			}
-			HX_STACK_LINE(7157)
 			::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(7157)
 			this->head = ret->next;
 			HX_STACK_LINE(7157)
 			{
-			}
-			HX_STACK_LINE(7157)
-			{
 				HX_STACK_LINE(7157)
 				::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(7157)
-				{
-				}
 				HX_STACK_LINE(7157)
 				o->elt = null();
 				HX_STACK_LINE(7157)
@@ -371,9 +341,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_PartitionedPoly_obj,splice,return )
 	HX_STACK_PUSH("ZNPList_ZPP_PartitionedPoly::inlined_erase","zpp_nape/util/Lists.hx",7106);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
-	HX_STACK_LINE(7107)
-	{
-	}
 	HX_STACK_LINE(7115)
 	::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly old;		HX_STACK_VAR(old,"old");
 	HX_STACK_LINE(7116)
@@ -405,16 +372,10 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_PartitionedPoly_obj,splice,return )
 			this->pushmod = true;
 		}
 	}
-	HX_STACK_LINE(7129)
-	{
-	}
 	HX_STACK_LINE(7130)
 	{
 		HX_STACK_LINE(7131)
 		::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly o = old;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(7132)
-		{
-		}
 		HX_STACK_LINE(7140)
 		o->elt = null();
 		HX_STACK_LINE(7141)
@@ -440,12 +401,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_PartitionedPoly_obj,inlined_erase,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
 	struct _Function_1_1{
-		inline static ::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly Block( ::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly &pre,::zpp_nape::util::ZNPList_ZPP_PartitionedPoly_obj *__this){
+		inline static ::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly Block( ::zpp_nape::util::ZNPList_ZPP_PartitionedPoly_obj *__this,::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly &pre){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7102);
 			{
-				HX_STACK_LINE(7102)
-				{
-				}
 				HX_STACK_LINE(7102)
 				::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(7102)
@@ -479,14 +437,8 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_PartitionedPoly_obj,inlined_erase,return )
 				}
 				HX_STACK_LINE(7102)
 				{
-				}
-				HX_STACK_LINE(7102)
-				{
 					HX_STACK_LINE(7102)
 					::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(7102)
-					{
-					}
 					HX_STACK_LINE(7102)
 					o->elt = null();
 					HX_STACK_LINE(7102)
@@ -507,7 +459,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_PartitionedPoly_obj,inlined_erase,return )
 		}
 	};
 	HX_STACK_LINE(7101)
-	return _Function_1_1::Block(pre,this);
+	return _Function_1_1::Block(this,pre);
 }
 
 
@@ -517,9 +469,6 @@ bool ZNPList_ZPP_PartitionedPoly_obj::inlined_try_remove( ::zpp_nape::geom::ZPP_
 	HX_STACK_PUSH("ZNPList_ZPP_PartitionedPoly::inlined_try_remove","zpp_nape/util/Lists.hx",7078);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(7079)
-	{
-	}
 	HX_STACK_LINE(7087)
 	::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(7088)
@@ -532,9 +481,6 @@ bool ZNPList_ZPP_PartitionedPoly_obj::inlined_try_remove( ::zpp_nape::geom::ZPP_
 		if (((cur->elt == obj))){
 			HX_STACK_LINE(7092)
 			{
-				HX_STACK_LINE(7092)
-				{
-				}
 				HX_STACK_LINE(7092)
 				::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(7092)
@@ -568,14 +514,8 @@ bool ZNPList_ZPP_PartitionedPoly_obj::inlined_try_remove( ::zpp_nape::geom::ZPP_
 				}
 				HX_STACK_LINE(7092)
 				{
-				}
-				HX_STACK_LINE(7092)
-				{
 					HX_STACK_LINE(7092)
 					::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(7092)
-					{
-					}
 					HX_STACK_LINE(7092)
 					o->elt = null();
 					HX_STACK_LINE(7092)
@@ -614,99 +554,81 @@ Void ZNPList_ZPP_PartitionedPoly_obj::inlined_remove( ::zpp_nape::geom::ZPP_Part
 		HX_STACK_PUSH("ZNPList_ZPP_PartitionedPoly::inlined_remove","zpp_nape/util/Lists.hx",7065);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(7066)
-		{
-		}
 		HX_STACK_LINE(7074)
-		{
+		::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(7074)
+		::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(7074)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(7074)
+		while(((cur != null()))){
 			HX_STACK_LINE(7074)
-			{
-			}
-			HX_STACK_LINE(7074)
-			::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(7074)
-			::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(7074)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(7074)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(7074)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(7074)
+					::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(7074)
+					::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(7074)
+					if (((pre == null()))){
+						HX_STACK_LINE(7074)
+						old = this->head;
+						HX_STACK_LINE(7074)
+						ret1 = old->next;
+						HX_STACK_LINE(7074)
+						this->head = ret1;
+						HX_STACK_LINE(7074)
+						if (((this->head == null()))){
+							HX_STACK_LINE(7074)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(7074)
+						old = pre->next;
+						HX_STACK_LINE(7074)
+						ret1 = old->next;
+						HX_STACK_LINE(7074)
+						pre->next = ret1;
+						HX_STACK_LINE(7074)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(7074)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(7074)
 					{
 						HX_STACK_LINE(7074)
-						{
-						}
+						::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(7074)
-						::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(7074)
-						::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly_obj::zpp_pool;
 						HX_STACK_LINE(7074)
-						if (((pre == null()))){
-							HX_STACK_LINE(7074)
-							old = this->head;
-							HX_STACK_LINE(7074)
-							ret1 = old->next;
-							HX_STACK_LINE(7074)
-							this->head = ret1;
-							HX_STACK_LINE(7074)
-							if (((this->head == null()))){
-								HX_STACK_LINE(7074)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(7074)
-							old = pre->next;
-							HX_STACK_LINE(7074)
-							ret1 = old->next;
-							HX_STACK_LINE(7074)
-							pre->next = ret1;
-							HX_STACK_LINE(7074)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(7074)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(7074)
-						{
-						}
-						HX_STACK_LINE(7074)
-						{
-							HX_STACK_LINE(7074)
-							::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(7074)
-							{
-							}
-							HX_STACK_LINE(7074)
-							o->elt = null();
-							HX_STACK_LINE(7074)
-							o->next = ::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly_obj::zpp_pool;
-							HX_STACK_LINE(7074)
-							::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(7074)
-						this->modified = true;
-						HX_STACK_LINE(7074)
-						(this->length)--;
-						HX_STACK_LINE(7074)
-						this->pushmod = true;
-						HX_STACK_LINE(7074)
-						ret1;
+						::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(7074)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(7074)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(7074)
+					this->pushmod = true;
+					HX_STACK_LINE(7074)
+					ret1;
 				}
 				HX_STACK_LINE(7074)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(7074)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(7074)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(7074)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(7074)
+		ret;
 	}
 return null();
 }
@@ -718,9 +640,6 @@ bool ZNPList_ZPP_PartitionedPoly_obj::try_remove( ::zpp_nape::geom::ZPP_Partitio
 	HX_STACK_PUSH("ZNPList_ZPP_PartitionedPoly::try_remove","zpp_nape/util/Lists.hx",7040);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(7041)
-	{
-	}
 	HX_STACK_LINE(7049)
 	::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(7050)
@@ -755,99 +674,81 @@ Void ZNPList_ZPP_PartitionedPoly_obj::remove( ::zpp_nape::geom::ZPP_PartitionedP
 		HX_STACK_PUSH("ZNPList_ZPP_PartitionedPoly::remove","zpp_nape/util/Lists.hx",7029);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(7030)
-		{
-		}
 		HX_STACK_LINE(7038)
-		{
+		::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(7038)
+		::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(7038)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(7038)
+		while(((cur != null()))){
 			HX_STACK_LINE(7038)
-			{
-			}
-			HX_STACK_LINE(7038)
-			::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(7038)
-			::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(7038)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(7038)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(7038)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(7038)
+					::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(7038)
+					::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(7038)
+					if (((pre == null()))){
+						HX_STACK_LINE(7038)
+						old = this->head;
+						HX_STACK_LINE(7038)
+						ret1 = old->next;
+						HX_STACK_LINE(7038)
+						this->head = ret1;
+						HX_STACK_LINE(7038)
+						if (((this->head == null()))){
+							HX_STACK_LINE(7038)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(7038)
+						old = pre->next;
+						HX_STACK_LINE(7038)
+						ret1 = old->next;
+						HX_STACK_LINE(7038)
+						pre->next = ret1;
+						HX_STACK_LINE(7038)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(7038)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(7038)
 					{
 						HX_STACK_LINE(7038)
-						{
-						}
+						::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(7038)
-						::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(7038)
-						::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly_obj::zpp_pool;
 						HX_STACK_LINE(7038)
-						if (((pre == null()))){
-							HX_STACK_LINE(7038)
-							old = this->head;
-							HX_STACK_LINE(7038)
-							ret1 = old->next;
-							HX_STACK_LINE(7038)
-							this->head = ret1;
-							HX_STACK_LINE(7038)
-							if (((this->head == null()))){
-								HX_STACK_LINE(7038)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(7038)
-							old = pre->next;
-							HX_STACK_LINE(7038)
-							ret1 = old->next;
-							HX_STACK_LINE(7038)
-							pre->next = ret1;
-							HX_STACK_LINE(7038)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(7038)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(7038)
-						{
-						}
-						HX_STACK_LINE(7038)
-						{
-							HX_STACK_LINE(7038)
-							::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(7038)
-							{
-							}
-							HX_STACK_LINE(7038)
-							o->elt = null();
-							HX_STACK_LINE(7038)
-							o->next = ::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly_obj::zpp_pool;
-							HX_STACK_LINE(7038)
-							::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(7038)
-						this->modified = true;
-						HX_STACK_LINE(7038)
-						(this->length)--;
-						HX_STACK_LINE(7038)
-						this->pushmod = true;
-						HX_STACK_LINE(7038)
-						ret1;
+						::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(7038)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(7038)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(7038)
+					this->pushmod = true;
+					HX_STACK_LINE(7038)
+					ret1;
 				}
 				HX_STACK_LINE(7038)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(7038)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(7038)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(7038)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(7038)
+		ret;
 	}
 return null();
 }
@@ -858,9 +759,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_PartitionedPoly_obj,remove,(void))
 ::zpp_nape::geom::ZPP_PartitionedPoly ZNPList_ZPP_PartitionedPoly_obj::inlined_pop_unsafe( ){
 	HX_STACK_PUSH("ZNPList_ZPP_PartitionedPoly::inlined_pop_unsafe","zpp_nape/util/Lists.hx",7016);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(7017)
-	{
-	}
 	HX_STACK_LINE(7025)
 	::zpp_nape::geom::ZPP_PartitionedPoly ret = this->head->elt;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(7026)
@@ -879,9 +777,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_PartitionedPoly_obj,inlined_pop_unsafe,retur
 		inline static ::zpp_nape::geom::ZPP_PartitionedPoly Block( ::zpp_nape::util::ZNPList_ZPP_PartitionedPoly_obj *__this){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",7012);
 			{
-				HX_STACK_LINE(7012)
-				{
-				}
 				HX_STACK_LINE(7012)
 				::zpp_nape::geom::ZPP_PartitionedPoly ret = __this->head->elt;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(7012)
@@ -903,23 +798,14 @@ Void ZNPList_ZPP_PartitionedPoly_obj::inlined_pop( ){
 {
 		HX_STACK_PUSH("ZNPList_ZPP_PartitionedPoly::inlined_pop","zpp_nape/util/Lists.hx",6978);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(6979)
-		{
-		}
 		HX_STACK_LINE(6987)
 		::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(6988)
 		this->head = ret->next;
-		HX_STACK_LINE(6989)
-		{
-		}
 		HX_STACK_LINE(6990)
 		{
 			HX_STACK_LINE(6991)
 			::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(6992)
-			{
-			}
 			HX_STACK_LINE(7000)
 			o->elt = null();
 			HX_STACK_LINE(7001)
@@ -948,22 +834,13 @@ Void ZNPList_ZPP_PartitionedPoly_obj::pop( ){
 		HX_STACK_PUSH("ZNPList_ZPP_PartitionedPoly::pop","zpp_nape/util/Lists.hx",6973);
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(6974)
-		{
-		}
-		HX_STACK_LINE(6974)
 		::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(6974)
 		this->head = ret->next;
 		HX_STACK_LINE(6974)
 		{
-		}
-		HX_STACK_LINE(6974)
-		{
 			HX_STACK_LINE(6974)
 			::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(6974)
-			{
-			}
 			HX_STACK_LINE(6974)
 			o->elt = null();
 			HX_STACK_LINE(6974)
@@ -992,9 +869,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_PartitionedPoly_obj,pop,(void))
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(6931)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly Block( ::zpp_nape::geom::ZPP_PartitionedPoly &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",6939);
@@ -1062,9 +936,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_PartitionedPoly_obj,inlined_insert,return )
 		inline static ::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly Block( ::zpp_nape::util::ZNPList_ZPP_PartitionedPoly_obj *__this,::zpp_nape::geom::ZPP_PartitionedPoly &o,::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly &cur){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",6926);
 			{
-				HX_STACK_LINE(6926)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly Block( ::zpp_nape::geom::ZPP_PartitionedPoly &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",6926);
@@ -1134,22 +1005,16 @@ Void ZNPList_ZPP_PartitionedPoly_obj::addAll( ::zpp_nape::util::ZNPList_ZPP_Part
 		HX_STACK_PUSH("ZNPList_ZPP_PartitionedPoly::addAll","zpp_nape/util/Lists.hx",6907);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(6908)
-		{
-		}
-		HX_STACK_LINE(6916)
-		{
-			HX_STACK_LINE(6917)
-			::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
-			HX_STACK_LINE(6918)
-			while(((cx_ite != null()))){
-				HX_STACK_LINE(6919)
-				::zpp_nape::geom::ZPP_PartitionedPoly i = cx_ite->elt;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(6920)
-				this->add(i);
-				HX_STACK_LINE(6921)
-				cx_ite = cx_ite->next;
-			}
+		HX_STACK_LINE(6917)
+		::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+		HX_STACK_LINE(6918)
+		while(((cx_ite != null()))){
+			HX_STACK_LINE(6919)
+			::zpp_nape::geom::ZPP_PartitionedPoly i = cx_ite->elt;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(6920)
+			this->add(i);
+			HX_STACK_LINE(6921)
+			cx_ite = cx_ite->next;
 		}
 	}
 return null();
@@ -1162,9 +1027,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_PartitionedPoly_obj,addAll,(void))
 	HX_STACK_PUSH("ZNPList_ZPP_PartitionedPoly::inlined_add","zpp_nape/util/Lists.hx",6870);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(6871)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly Block( ::zpp_nape::geom::ZPP_PartitionedPoly &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",6879);
@@ -1219,12 +1081,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_PartitionedPoly_obj,inlined_add,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
 	struct _Function_1_1{
-		inline static ::zpp_nape::geom::ZPP_PartitionedPoly Block( ::zpp_nape::geom::ZPP_PartitionedPoly &o,::zpp_nape::util::ZNPList_ZPP_PartitionedPoly_obj *__this){
+		inline static ::zpp_nape::geom::ZPP_PartitionedPoly Block( ::zpp_nape::util::ZNPList_ZPP_PartitionedPoly_obj *__this,::zpp_nape::geom::ZPP_PartitionedPoly &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",6866);
 			{
-				HX_STACK_LINE(6866)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly Block( ::zpp_nape::geom::ZPP_PartitionedPoly &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",6866);
@@ -1274,7 +1133,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_PartitionedPoly_obj,inlined_add,return )
 		}
 	};
 	HX_STACK_LINE(6865)
-	return _Function_1_1::Block(o,this);
+	return _Function_1_1::Block(this,o);
 }
 
 
@@ -1472,7 +1331,7 @@ Class ZNPList_ZPP_PartitionedPoly_obj::__mClass;
 
 void ZNPList_ZPP_PartitionedPoly_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ZPP_PartitionedPoly"), hx::TCanCast< ZNPList_ZPP_PartitionedPoly_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ZPP_PartitionedPoly"), hx::TCanCast< ZNPList_ZPP_PartitionedPoly_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

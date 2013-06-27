@@ -12,7 +12,7 @@ namespace nape{
 namespace geom{
 
 
-class ConvexResultIterator_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ConvexResultIterator_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ConvexResultIterator_obj OBJ_;
@@ -38,11 +38,11 @@ class ConvexResultIterator_obj : public hx::Object{
 		virtual bool hasNext( );
 		Dynamic hasNext_dyn();
 
-		::nape::geom::ConvexResultIterator zpp_next; /* REM */ 
-		bool zpp_critical; /* REM */ 
-		int zpp_i; /* REM */ 
-		::nape::geom::ConvexResultList zpp_inner; /* REM */ 
-		static ::nape::geom::ConvexResultIterator zpp_pool; /* REM */ 
+		::nape::geom::ConvexResultIterator zpp_next;
+		bool zpp_critical;
+		int zpp_i;
+		::nape::geom::ConvexResultList zpp_inner;
+		static ::nape::geom::ConvexResultIterator zpp_pool;
 		static ::nape::geom::ConvexResultIterator get( ::nape::geom::ConvexResultList list);
 		static Dynamic get_dyn();
 

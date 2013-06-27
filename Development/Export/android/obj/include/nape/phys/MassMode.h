@@ -10,7 +10,7 @@ namespace nape{
 namespace phys{
 
 
-class MassMode_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  MassMode_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef MassMode_obj OBJ_;
@@ -33,11 +33,9 @@ class MassMode_obj : public hx::Object{
 		virtual ::String toString( );
 		Dynamic toString_dyn();
 
-		static ::nape::phys::MassMode DEFAULT; /* REM */ 
 		static ::nape::phys::MassMode get_DEFAULT( );
 		static Dynamic get_DEFAULT_dyn();
 
-		static ::nape::phys::MassMode FIXED; /* REM */ 
 		static ::nape::phys::MassMode get_FIXED( );
 		static Dynamic get_FIXED_dyn();
 

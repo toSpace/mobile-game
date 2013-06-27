@@ -13,7 +13,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_PartitionVertex_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_PartitionVertex_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_PartitionVertex_obj OBJ_;
@@ -33,7 +33,7 @@ class ZPP_PartitionVertex_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("ZPP_PartitionVertex"); }
 
-		::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex node; /* REM */ 
+		::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex node;
 		virtual Void sort( );
 		Dynamic sort_dyn();
 
@@ -46,19 +46,19 @@ class ZPP_PartitionVertex_obj : public hx::Object{
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
-		::zpp_nape::geom::ZPP_PartitionVertex prev; /* REM */ 
-		::zpp_nape::geom::ZPP_PartitionVertex next; /* REM */ 
-		bool rightchain; /* REM */ 
-		::zpp_nape::geom::ZPP_PartitionVertex helper; /* REM */ 
-		int type; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_PartitionVertex diagonals; /* REM */ 
-		bool forced; /* REM */ 
-		Float y; /* REM */ 
-		Float x; /* REM */ 
-		Float mag; /* REM */ 
-		int id; /* REM */ 
-		static int nextId; /* REM */ 
-		static ::zpp_nape::geom::ZPP_PartitionVertex zpp_pool; /* REM */ 
+		::zpp_nape::geom::ZPP_PartitionVertex prev;
+		::zpp_nape::geom::ZPP_PartitionVertex next;
+		bool rightchain;
+		::zpp_nape::geom::ZPP_PartitionVertex helper;
+		int type;
+		::zpp_nape::util::ZNPList_ZPP_PartitionVertex diagonals;
+		bool forced;
+		Float y;
+		Float x;
+		Float mag;
+		int id;
+		static int nextId;
+		static ::zpp_nape::geom::ZPP_PartitionVertex zpp_pool;
 		static ::zpp_nape::geom::ZPP_PartitionVertex get( ::zpp_nape::geom::ZPP_GeomVert x);
 		static Dynamic get_dyn();
 

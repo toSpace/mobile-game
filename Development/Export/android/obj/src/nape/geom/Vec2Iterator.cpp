@@ -253,7 +253,7 @@ Class Vec2Iterator_obj::__mClass;
 
 void Vec2Iterator_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.Vec2Iterator"), hx::TCanCast< Vec2Iterator_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.Vec2Iterator"), hx::TCanCast< Vec2Iterator_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

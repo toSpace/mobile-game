@@ -1,7 +1,7 @@
 //nme
-import nme.events.MouseEvent;
-import nme.display.Bitmap;
-import nme.Assets;
+import flash.events.MouseEvent;
+import flash.display.Bitmap;
+import openfl.Assets;
 
 class DrawButton extends UIobject{
 

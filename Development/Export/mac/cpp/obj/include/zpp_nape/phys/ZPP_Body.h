@@ -33,7 +33,7 @@ namespace zpp_nape{
 namespace phys{
 
 
-class ZPP_Body_obj : public ::zpp_nape::phys::ZPP_Interactor_obj{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Body_obj : public ::zpp_nape::phys::ZPP_Interactor_obj{
 	public:
 		typedef ::zpp_nape::phys::ZPP_Interactor_obj super;
 		typedef ZPP_Body_obj OBJ_;
@@ -101,22 +101,22 @@ class ZPP_Body_obj : public ::zpp_nape::phys::ZPP_Interactor_obj{
 		virtual Void invalidate_localCOM( );
 		Dynamic invalidate_localCOM_dyn();
 
-		::nape::geom::Vec2 wrap_worldCOM; /* REM */ 
-		::nape::geom::Vec2 wrap_localCOM; /* REM */ 
-		bool zip_worldCOM; /* REM */ 
-		Float worldCOMy; /* REM */ 
-		Float worldCOMx; /* REM */ 
-		bool zip_localCOM; /* REM */ 
-		Float localCOMy; /* REM */ 
-		Float localCOMx; /* REM */ 
+		::nape::geom::Vec2 wrap_worldCOM;
+		::nape::geom::Vec2 wrap_localCOM;
+		bool zip_worldCOM;
+		Float worldCOMy;
+		Float worldCOMx;
+		bool zip_localCOM;
+		Float localCOMy;
+		Float localCOMx;
 		virtual Void invalidate_aabb( );
 		Dynamic invalidate_aabb_dyn();
 
 		virtual Void validate_aabb( );
 		Dynamic validate_aabb_dyn();
 
-		bool zip_aabb; /* REM */ 
-		::zpp_nape::geom::ZPP_AABB aabb; /* REM */ 
+		bool zip_aabb;
+		::zpp_nape::geom::ZPP_AABB aabb;
 		virtual Void invalidate_wake( );
 		Dynamic invalidate_wake_dyn();
 
@@ -126,13 +126,13 @@ class ZPP_Body_obj : public ::zpp_nape::phys::ZPP_Interactor_obj{
 		virtual Void invalidate_inertia( );
 		Dynamic invalidate_inertia_dyn();
 
-		bool norotate; /* REM */ 
-		Float sinertia; /* REM */ 
-		Float iinertia; /* REM */ 
-		Float cinertia; /* REM */ 
-		bool zip_inertia; /* REM */ 
-		Float inertia; /* REM */ 
-		int inertiaMode; /* REM */ 
+		bool norotate;
+		Float sinertia;
+		Float iinertia;
+		Float cinertia;
+		bool zip_inertia;
+		Float inertia;
+		int inertiaMode;
 		virtual Void validate_gravMassScale( );
 		Dynamic validate_gravMassScale_dyn();
 
@@ -145,25 +145,25 @@ class ZPP_Body_obj : public ::zpp_nape::phys::ZPP_Interactor_obj{
 		virtual Void invalidate_gravMass( );
 		Dynamic invalidate_gravMass_dyn();
 
-		bool zip_gravMassScale; /* REM */ 
-		Float gravMassScale; /* REM */ 
-		int gravMassMode; /* REM */ 
-		bool zip_gravMass; /* REM */ 
-		Float gravMass; /* REM */ 
+		bool zip_gravMassScale;
+		Float gravMassScale;
+		int gravMassMode;
+		bool zip_gravMass;
+		Float gravMass;
 		virtual Void validate_mass( );
 		Dynamic validate_mass_dyn();
 
 		virtual Void invalidate_mass( );
 		Dynamic invalidate_mass_dyn();
 
-		bool nomove; /* REM */ 
-		Float cmass; /* REM */ 
-		Float smass; /* REM */ 
-		Float imass; /* REM */ 
-		int massMode; /* REM */ 
-		bool zip_mass; /* REM */ 
-		Float mass; /* REM */ 
-		bool kinematicDelaySleep; /* REM */ 
+		bool nomove;
+		Float cmass;
+		Float smass;
+		Float imass;
+		int massMode;
+		bool zip_mass;
+		Float mass;
+		bool kinematicDelaySleep;
 		virtual Void delta_rot( Float dr);
 		Dynamic delta_rot_dyn();
 
@@ -173,21 +173,21 @@ class ZPP_Body_obj : public ::zpp_nape::phys::ZPP_Interactor_obj{
 		virtual Void validate_axis( );
 		Dynamic validate_axis_dyn();
 
-		bool zip_axis; /* REM */ 
-		Float axisy; /* REM */ 
-		Float axisx; /* REM */ 
+		bool zip_axis;
+		Float axisy;
+		Float axisx;
 		virtual Void invalidate_rot( );
 		Dynamic invalidate_rot_dyn();
 
-		Float rot; /* REM */ 
-		Float pre_rot; /* REM */ 
-		Float kinangvel; /* REM */ 
-		Float torque; /* REM */ 
-		Float angvel; /* REM */ 
+		Float rot;
+		Float pre_rot;
+		Float kinangvel;
+		Float torque;
+		Float angvel;
 		virtual Void setup_cvel( );
 		Dynamic setup_cvel_dyn();
 
-		::nape::geom::Vec3 wrapcvel; /* REM */ 
+		::nape::geom::Vec3 wrapcvel;
 		virtual Void cvel_validate( );
 		Dynamic cvel_validate_dyn();
 
@@ -239,36 +239,36 @@ class ZPP_Body_obj : public ::zpp_nape::phys::ZPP_Interactor_obj{
 		virtual Void invalidate_pos( );
 		Dynamic invalidate_pos_dyn();
 
-		::nape::geom::Vec2 wrap_svel; /* REM */ 
-		Float svely; /* REM */ 
-		Float svelx; /* REM */ 
-		::nape::geom::Vec2 wrap_kinvel; /* REM */ 
-		Float kinvely; /* REM */ 
-		Float kinvelx; /* REM */ 
-		::nape::geom::Vec2 wrap_force; /* REM */ 
-		Float forcey; /* REM */ 
-		Float forcex; /* REM */ 
-		::nape::geom::Vec2 wrap_vel; /* REM */ 
-		Float vely; /* REM */ 
-		Float velx; /* REM */ 
-		::nape::geom::Vec2 wrap_pos; /* REM */ 
-		Float posy; /* REM */ 
-		Float posx; /* REM */ 
-		Float pre_posy; /* REM */ 
-		Float pre_posx; /* REM */ 
+		::nape::geom::Vec2 wrap_svel;
+		Float svely;
+		Float svelx;
+		::nape::geom::Vec2 wrap_kinvel;
+		Float kinvely;
+		Float kinvelx;
+		::nape::geom::Vec2 wrap_force;
+		Float forcey;
+		Float forcex;
+		::nape::geom::Vec2 wrap_vel;
+		Float vely;
+		Float velx;
+		::nape::geom::Vec2 wrap_pos;
+		Float posy;
+		Float posx;
+		Float pre_posy;
+		Float pre_posx;
 		virtual Void sweepValidate( ::zpp_nape::shape::ZPP_Shape s);
 		Dynamic sweepValidate_dyn();
 
 		virtual Void sweepIntegrate( Float dt);
 		Dynamic sweepIntegrate_dyn();
 
-		bool disableCCD; /* REM */ 
-		bool bulletEnabled; /* REM */ 
-		bool bullet; /* REM */ 
-		Float sweepRadius; /* REM */ 
-		bool sweepFrozen; /* REM */ 
-		Float sweep_angvel; /* REM */ 
-		Float sweepTime; /* REM */ 
+		bool disableCCD;
+		bool bulletEnabled;
+		bool bullet;
+		Float sweepRadius;
+		bool sweepFrozen;
+		Float sweep_angvel;
+		Float sweepTime;
 		virtual Void refreshArbiters( );
 		Dynamic refreshArbiters_dyn();
 
@@ -287,19 +287,19 @@ class ZPP_Body_obj : public ::zpp_nape::phys::ZPP_Interactor_obj{
 		virtual Void init_bodysetlist( );
 		Dynamic init_bodysetlist_dyn();
 
-		int graph_depth; /* REM */ 
-		::zpp_nape::space::ZPP_Component component; /* REM */ 
-		::nape::constraint::ConstraintList wrap_constraints; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Constraint constraints; /* REM */ 
-		::nape::dynamics::ArbiterList wrap_arbiters; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Arbiter arbiters; /* REM */ 
-		::zpp_nape::space::ZPP_Space space; /* REM */ 
+		int graph_depth;
+		::zpp_nape::space::ZPP_Component component;
+		::nape::constraint::ConstraintList wrap_constraints;
+		::zpp_nape::util::ZNPList_ZPP_Constraint constraints;
+		::nape::dynamics::ArbiterList wrap_arbiters;
+		::zpp_nape::util::ZNPList_ZPP_Arbiter arbiters;
+		::zpp_nape::space::ZPP_Space space;
 		virtual Void invalidate_shapes( );
 		Dynamic invalidate_shapes_dyn();
 
-		::nape::shape::ShapeList wrap_shapes; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Shape shapes; /* REM */ 
-		::zpp_nape::phys::ZPP_Compound compound; /* REM */ 
+		::nape::shape::ShapeList wrap_shapes;
+		::zpp_nape::util::ZNPList_ZPP_Shape shapes;
+		::zpp_nape::phys::ZPP_Compound compound;
 		virtual Void invalidate_type( );
 		Dynamic invalidate_type_dyn();
 
@@ -312,15 +312,15 @@ class ZPP_Body_obj : public ::zpp_nape::phys::ZPP_Interactor_obj{
 		virtual bool isStatic( );
 		Dynamic isStatic_dyn();
 
-		int type; /* REM */ 
-		bool world; /* REM */ 
-		::nape::phys::Body outer; /* REM */ 
-		static ::zpp_nape::util::ZNPList_ZPP_Body bodystack; /* REM */ 
-		static ::zpp_nape::util::ZPP_Set_ZPP_Body bodyset; /* REM */ 
+		int type;
+		bool world;
+		::nape::phys::Body outer;
+		static ::zpp_nape::util::ZNPList_ZPP_Body bodystack;
+		static ::zpp_nape::util::ZPP_Set_ZPP_Body bodyset;
 		static bool bodysetlt( ::zpp_nape::phys::ZPP_Body a,::zpp_nape::phys::ZPP_Body b);
 		static Dynamic bodysetlt_dyn();
 
-		static int cur_graph_depth; /* REM */ 
+		static int cur_graph_depth;
 		static ::nape::phys::Body __static( );
 		static Dynamic __static_dyn();
 

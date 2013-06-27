@@ -24,13 +24,13 @@ namespace _Process{
 
 Void Stdout_obj::__construct(Dynamic p,bool out)
 {
-HX_STACK_PUSH("Stdout::new","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",67);
+HX_STACK_PUSH("Stdout::new","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",64);
 {
-	HX_STACK_LINE(68)
+	HX_STACK_LINE(65)
 	this->p = p;
-	HX_STACK_LINE(69)
+	HX_STACK_LINE(66)
 	this->out = out;
-	HX_STACK_LINE(70)
+	HX_STACK_LINE(67)
 	this->buf = ::haxe::io::Bytes_obj::alloc((int)1);
 }
 ;
@@ -51,45 +51,48 @@ Dynamic Stdout_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 int Stdout_obj::readBytes( ::haxe::io::Bytes str,int pos,int len){
-	HX_STACK_PUSH("Stdout::readBytes","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",79);
+	HX_STACK_PUSH("Stdout::readBytes","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",76);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(str,"str");
 	HX_STACK_ARG(pos,"pos");
 	HX_STACK_ARG(len,"len");
-	HX_STACK_LINE(80)
+	HX_STACK_LINE(77)
 	int result;		HX_STACK_VAR(result,"result");
-	HX_STACK_LINE(81)
+	HX_STACK_LINE(78)
 	try{
-		HX_STACK_LINE(81)
+		HX_STACK_LINE(78)
 		result = ((  ((this->out)) ? Dynamic(::sys::io::_Process::Stdout_obj::_stdout_read_dyn()) : Dynamic(::sys::io::_Process::Stdout_obj::_stderr_read_dyn()) ))(this->p,str->b,pos,len).Cast< int >();
 	}
 	catch(Dynamic __e){
 		{
+			HX_STACK_BEGIN_CATCH
 			Dynamic e = __e;{
-				HX_STACK_LINE(83)
+				HX_STACK_LINE(80)
 				hx::Throw (::haxe::io::Eof_obj::__new());
 			}
 		}
 	}
-	HX_STACK_LINE(86)
+	HX_STACK_LINE(83)
 	if (((result == (int)0))){
-		HX_STACK_LINE(86)
+		HX_STACK_LINE(83)
 		hx::Throw (::haxe::io::Eof_obj::__new());
 	}
-	HX_STACK_LINE(87)
+	HX_STACK_LINE(84)
 	return result;
 }
 
 
+HX_DEFINE_DYNAMIC_FUNC3(Stdout_obj,readBytes,return )
+
 int Stdout_obj::readByte( ){
-	HX_STACK_PUSH("Stdout::readByte","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",73);
+	HX_STACK_PUSH("Stdout::readByte","/usr/lib/haxe/std/cpp/_std/sys/io/Process.hx",70);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(74)
+	HX_STACK_LINE(71)
 	if (((this->readBytes(this->buf,(int)0,(int)1) == (int)0))){
-		HX_STACK_LINE(75)
-		hx::Throw (::haxe::io::Error_obj::Blocked_dyn());
+		HX_STACK_LINE(72)
+		hx::Throw (::haxe::io::Error_obj::Blocked);
 	}
-	HX_STACK_LINE(76)
+	HX_STACK_LINE(73)
 	return this->buf->b->__get((int)0);
 }
 
@@ -198,7 +201,7 @@ Class Stdout_obj::__mClass;
 
 void Stdout_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("sys.io._Process.Stdout"), hx::TCanCast< Stdout_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("sys.io._Process.Stdout"), hx::TCanCast< Stdout_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

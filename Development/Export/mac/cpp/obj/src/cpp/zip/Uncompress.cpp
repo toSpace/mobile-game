@@ -23,9 +23,9 @@ namespace zip{
 
 Void Uncompress_obj::__construct(Dynamic windowBits)
 {
-HX_STACK_PUSH("Uncompress::new","/usr/lib/haxe/std/cpp/zip/Uncompress.hx",30);
+HX_STACK_PUSH("Uncompress::new","/usr/lib/haxe/std/cpp/zip/Uncompress.hx",27);
 {
-	HX_STACK_LINE(30)
+	HX_STACK_LINE(27)
 	this->s = ::cpp::zip::Uncompress_obj::_inflate_init(windowBits);
 }
 ;
@@ -47,9 +47,9 @@ Dynamic Uncompress_obj::__Create(hx::DynamicArray inArgs)
 
 Void Uncompress_obj::close( ){
 {
-		HX_STACK_PUSH("Uncompress::close","/usr/lib/haxe/std/cpp/zip/Uncompress.hx",42);
+		HX_STACK_PUSH("Uncompress::close","/usr/lib/haxe/std/cpp/zip/Uncompress.hx",39);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(42)
+		HX_STACK_LINE(39)
 		::cpp::zip::Uncompress_obj::_inflate_end(this->s);
 	}
 return null();
@@ -60,10 +60,10 @@ HX_DEFINE_DYNAMIC_FUNC0(Uncompress_obj,close,(void))
 
 Void Uncompress_obj::setFlushMode( ::cpp::zip::Flush f){
 {
-		HX_STACK_PUSH("Uncompress::setFlushMode","/usr/lib/haxe/std/cpp/zip/Uncompress.hx",38);
+		HX_STACK_PUSH("Uncompress::setFlushMode","/usr/lib/haxe/std/cpp/zip/Uncompress.hx",35);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(f,"f");
-		HX_STACK_LINE(38)
+		HX_STACK_LINE(35)
 		::cpp::zip::Uncompress_obj::_set_flush_mode(this->s,f->__Tag());
 	}
 return null();
@@ -73,13 +73,13 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(Uncompress_obj,setFlushMode,(void))
 
 Dynamic Uncompress_obj::this_run( ::haxe::io::Bytes src,int srcPos,::haxe::io::Bytes dst,int dstPos){
-	HX_STACK_PUSH("Uncompress::this_run","/usr/lib/haxe/std/cpp/zip/Uncompress.hx",34);
+	HX_STACK_PUSH("Uncompress::this_run","/usr/lib/haxe/std/cpp/zip/Uncompress.hx",31);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(src,"src");
 	HX_STACK_ARG(srcPos,"srcPos");
 	HX_STACK_ARG(dst,"dst");
 	HX_STACK_ARG(dstPos,"dstPos");
-	HX_STACK_LINE(34)
+	HX_STACK_LINE(31)
 	return ::cpp::zip::Uncompress_obj::_inflate_buffer(this->s,src->b,srcPos,dst->b,dstPos);
 }
 
@@ -87,66 +87,66 @@ Dynamic Uncompress_obj::this_run( ::haxe::io::Bytes src,int srcPos,::haxe::io::B
 HX_DEFINE_DYNAMIC_FUNC4(Uncompress_obj,this_run,return )
 
 ::haxe::io::Bytes Uncompress_obj::run( ::haxe::io::Bytes src,Dynamic bufsize){
-	HX_STACK_PUSH("Uncompress::run","/usr/lib/haxe/std/cpp/zip/Uncompress.hx",46);
+	HX_STACK_PUSH("Uncompress::run","/usr/lib/haxe/std/cpp/zip/Uncompress.hx",43);
 	HX_STACK_ARG(src,"src");
 	HX_STACK_ARG(bufsize,"bufsize");
-	HX_STACK_LINE(47)
+	HX_STACK_LINE(44)
 	::cpp::zip::Uncompress u = ::cpp::zip::Uncompress_obj::__new(null());		HX_STACK_VAR(u,"u");
-	HX_STACK_LINE(48)
+	HX_STACK_LINE(45)
 	if (((bufsize == null()))){
-		HX_STACK_LINE(48)
+		HX_STACK_LINE(45)
 		bufsize = (int)65536;
 	}
-	HX_STACK_LINE(49)
+	HX_STACK_LINE(46)
 	::haxe::io::Bytes tmp = ::haxe::io::Bytes_obj::alloc(bufsize);		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(50)
+	HX_STACK_LINE(47)
 	::haxe::io::BytesBuffer b = ::haxe::io::BytesBuffer_obj::__new();		HX_STACK_VAR(b,"b");
-	HX_STACK_LINE(51)
+	HX_STACK_LINE(48)
 	int pos = (int)0;		HX_STACK_VAR(pos,"pos");
-	HX_STACK_LINE(52)
-	u->setFlushMode(::cpp::zip::Flush_obj::SYNC_dyn());
-	HX_STACK_LINE(53)
+	HX_STACK_LINE(49)
+	u->setFlushMode(::cpp::zip::Flush_obj::SYNC);
+	HX_STACK_LINE(50)
 	while((true)){
-		HX_STACK_LINE(54)
+		HX_STACK_LINE(51)
 		Dynamic r = u->this_run(src,pos,tmp,(int)0);		HX_STACK_VAR(r,"r");
-		HX_STACK_LINE(55)
+		HX_STACK_LINE(52)
 		{
-			HX_STACK_LINE(55)
+			HX_STACK_LINE(52)
 			int len = r->__Field(HX_CSTRING("write"),true);		HX_STACK_VAR(len,"len");
-			HX_STACK_LINE(55)
+			HX_STACK_LINE(52)
 			if (((bool((len < (int)0)) || bool((len > tmp->length))))){
-				HX_STACK_LINE(55)
-				hx::Throw (::haxe::io::Error_obj::OutsideBounds_dyn());
+				HX_STACK_LINE(52)
+				hx::Throw (::haxe::io::Error_obj::OutsideBounds);
 			}
-			HX_STACK_LINE(55)
+			HX_STACK_LINE(52)
 			Array< unsigned char > b1 = b->b;		HX_STACK_VAR(b1,"b1");
-			HX_STACK_LINE(55)
+			HX_STACK_LINE(52)
 			Array< unsigned char > b2 = tmp->b;		HX_STACK_VAR(b2,"b2");
-			HX_STACK_LINE(55)
+			HX_STACK_LINE(52)
 			{
-				HX_STACK_LINE(55)
+				HX_STACK_LINE(52)
 				int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
 				int _g = len;		HX_STACK_VAR(_g,"_g");
-				HX_STACK_LINE(55)
+				HX_STACK_LINE(52)
 				while(((_g1 < _g))){
-					HX_STACK_LINE(55)
+					HX_STACK_LINE(52)
 					int i = (_g1)++;		HX_STACK_VAR(i,"i");
-					HX_STACK_LINE(55)
+					HX_STACK_LINE(52)
 					b->b->push(b2->__get(i));
 				}
 			}
 		}
-		HX_STACK_LINE(56)
+		HX_STACK_LINE(53)
 		hx::AddEq(pos,r->__Field(HX_CSTRING("read"),true));
-		HX_STACK_LINE(57)
+		HX_STACK_LINE(54)
 		if ((r->__Field(HX_CSTRING("done"),true))){
-			HX_STACK_LINE(58)
+			HX_STACK_LINE(55)
 			break;
 		}
 	}
-	HX_STACK_LINE(60)
+	HX_STACK_LINE(57)
 	u->close();
-	HX_STACK_LINE(61)
+	HX_STACK_LINE(58)
 	return b->getBytes();
 }
 
@@ -267,7 +267,7 @@ Class Uncompress_obj::__mClass;
 
 void Uncompress_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("cpp.zip.Uncompress"), hx::TCanCast< Uncompress_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("cpp.zip.Uncompress"), hx::TCanCast< Uncompress_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -26,7 +26,7 @@ namespace zpp_nape{
 namespace space{
 
 
-class ZPP_DynAABBPhase_obj : public ::zpp_nape::space::ZPP_Broadphase_obj{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_DynAABBPhase_obj : public ::zpp_nape::space::ZPP_Broadphase_obj{
 	public:
 		typedef ::zpp_nape::space::ZPP_Broadphase_obj super;
 		typedef ZPP_DynAABBPhase_obj OBJ_;
@@ -50,7 +50,7 @@ class ZPP_DynAABBPhase_obj : public ::zpp_nape::space::ZPP_Broadphase_obj{
 
 		virtual ::nape::geom::RayResult rayCast( ::zpp_nape::geom::ZPP_Ray ray,bool inner,::zpp_nape::dynamics::ZPP_InteractionFilter filter);
 
-		::zpp_nape::util::ZNPList_ZPP_AABBNode openlist; /* REM */ 
+		::zpp_nape::util::ZNPList_ZPP_AABBNode openlist;
 		virtual ::nape::phys::BodyList bodiesInShape( ::zpp_nape::shape::ZPP_Shape shp,bool containment,::zpp_nape::dynamics::ZPP_InteractionFilter filter,::nape::phys::BodyList output);
 
 		virtual ::nape::shape::ShapeList shapesInShape( ::zpp_nape::shape::ZPP_Shape shp,bool containment,::zpp_nape::dynamics::ZPP_InteractionFilter filter,::nape::shape::ShapeList output);
@@ -61,15 +61,15 @@ class ZPP_DynAABBPhase_obj : public ::zpp_nape::space::ZPP_Broadphase_obj{
 
 		virtual ::nape::phys::BodyList bodiesInAABB( ::zpp_nape::geom::ZPP_AABB aabb,bool strict,bool containment,::zpp_nape::dynamics::ZPP_InteractionFilter filter,::nape::phys::BodyList output);
 
-		::nape::phys::BodyList failed; /* REM */ 
+		::nape::phys::BodyList failed;
 		virtual ::nape::shape::ShapeList shapesInAABB( ::zpp_nape::geom::ZPP_AABB aabb,bool strict,bool containment,::zpp_nape::dynamics::ZPP_InteractionFilter filter,::nape::shape::ShapeList output);
 
-		::zpp_nape::util::ZNPList_ZPP_AABBNode treeStack2; /* REM */ 
+		::zpp_nape::util::ZNPList_ZPP_AABBNode treeStack2;
 		virtual ::nape::phys::BodyList bodiesUnderPoint( Float x,Float y,::zpp_nape::dynamics::ZPP_InteractionFilter filter,::nape::phys::BodyList output);
 
 		virtual ::nape::shape::ShapeList shapesUnderPoint( Float x,Float y,::zpp_nape::dynamics::ZPP_InteractionFilter filter,::nape::shape::ShapeList output);
 
-		::zpp_nape::util::ZNPList_ZPP_AABBNode treeStack; /* REM */ 
+		::zpp_nape::util::ZNPList_ZPP_AABBNode treeStack;
 		virtual Void clear( );
 
 		virtual Void broadphase( ::zpp_nape::space::ZPP_Space space,bool discrete);
@@ -89,13 +89,11 @@ class ZPP_DynAABBPhase_obj : public ::zpp_nape::space::ZPP_Broadphase_obj{
 		virtual bool dyn( ::zpp_nape::shape::ZPP_Shape shape);
 		Dynamic dyn_dyn();
 
-		::zpp_nape::space::ZPP_AABBNode moves; /* REM */ 
-		::zpp_nape::space::ZPP_AABBNode syncs; /* REM */ 
-		::zpp_nape::space::ZPP_AABBPair pairs; /* REM */ 
-		::zpp_nape::space::ZPP_AABBTree dtree; /* REM */ 
-		::zpp_nape::space::ZPP_AABBTree stree; /* REM */ 
-		static Float FATTEN; /* REM */ 
-		static Float VEL_STEPS; /* REM */ 
+		::zpp_nape::space::ZPP_AABBNode moves;
+		::zpp_nape::space::ZPP_AABBNode syncs;
+		::zpp_nape::space::ZPP_AABBPair pairs;
+		::zpp_nape::space::ZPP_AABBTree dtree;
+		::zpp_nape::space::ZPP_AABBTree stree;
 };
 
 } // end namespace zpp_nape

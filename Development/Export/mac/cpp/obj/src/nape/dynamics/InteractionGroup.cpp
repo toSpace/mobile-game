@@ -182,20 +182,12 @@ InteractionGroup_obj::InteractionGroup_obj()
 void InteractionGroup_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(InteractionGroup);
-	HX_MARK_MEMBER_NAME(groups,"groups");
-	HX_MARK_MEMBER_NAME(interactors,"interactors");
-	HX_MARK_MEMBER_NAME(ignore,"ignore");
-	HX_MARK_MEMBER_NAME(group,"group");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	HX_MARK_END_CLASS();
 }
 
 void InteractionGroup_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(groups,"groups");
-	HX_VISIT_MEMBER_NAME(interactors,"interactors");
-	HX_VISIT_MEMBER_NAME(ignore,"ignore");
-	HX_VISIT_MEMBER_NAME(group,"group");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 }
 
@@ -203,11 +195,11 @@ Dynamic InteractionGroup_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"group") ) { return inCallProp ? get_group() : group; }
+		if (HX_FIELD_EQ(inName,"group") ) { return get_group(); }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"groups") ) { return inCallProp ? get_groups() : groups; }
-		if (HX_FIELD_EQ(inName,"ignore") ) { return inCallProp ? get_ignore() : ignore; }
+		if (HX_FIELD_EQ(inName,"groups") ) { return get_groups(); }
+		if (HX_FIELD_EQ(inName,"ignore") ) { return get_ignore(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
@@ -223,7 +215,7 @@ Dynamic InteractionGroup_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"get_ignore") ) { return get_ignore_dyn(); }
 		break;
 	case 11:
-		if (HX_FIELD_EQ(inName,"interactors") ) { return inCallProp ? get_interactors() : interactors; }
+		if (HX_FIELD_EQ(inName,"interactors") ) { return get_interactors(); }
 		break;
 	case 15:
 		if (HX_FIELD_EQ(inName,"get_interactors") ) { return get_interactors_dyn(); }
@@ -235,17 +227,13 @@ Dynamic InteractionGroup_obj::__SetField(const ::String &inName,const Dynamic &i
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"group") ) { if (inCallProp) return set_group(inValue);group=inValue.Cast< ::nape::dynamics::InteractionGroup >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"group") ) { return set_group(inValue); }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"groups") ) { groups=inValue.Cast< ::nape::dynamics::InteractionGroupList >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"ignore") ) { if (inCallProp) return set_ignore(inValue);ignore=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"ignore") ) { return set_ignore(inValue); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::dynamics::ZPP_InteractionGroup >(); return inValue; }
-		break;
-	case 11:
-		if (HX_FIELD_EQ(inName,"interactors") ) { interactors=inValue.Cast< ::nape::phys::InteractorList >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -266,15 +254,11 @@ static ::String sStaticFields[] = {
 static ::String sMemberFields[] = {
 	HX_CSTRING("toString"),
 	HX_CSTRING("get_groups"),
-	HX_CSTRING("groups"),
 	HX_CSTRING("get_interactors"),
-	HX_CSTRING("interactors"),
 	HX_CSTRING("set_ignore"),
 	HX_CSTRING("get_ignore"),
-	HX_CSTRING("ignore"),
 	HX_CSTRING("set_group"),
 	HX_CSTRING("get_group"),
-	HX_CSTRING("group"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
@@ -290,7 +274,7 @@ Class InteractionGroup_obj::__mClass;
 
 void InteractionGroup_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.dynamics.InteractionGroup"), hx::TCanCast< InteractionGroup_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.dynamics.InteractionGroup"), hx::TCanCast< InteractionGroup_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

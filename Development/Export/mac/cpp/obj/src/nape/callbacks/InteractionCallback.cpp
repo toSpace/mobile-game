@@ -110,18 +110,12 @@ InteractionCallback_obj::InteractionCallback_obj()
 void InteractionCallback_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(InteractionCallback);
-	HX_MARK_MEMBER_NAME(arbiters,"arbiters");
-	HX_MARK_MEMBER_NAME(int2,"int2");
-	HX_MARK_MEMBER_NAME(int1,"int1");
 	super::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
 }
 
 void InteractionCallback_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(arbiters,"arbiters");
-	HX_VISIT_MEMBER_NAME(int2,"int2");
-	HX_VISIT_MEMBER_NAME(int1,"int1");
 	super::__Visit(HX_VISIT_ARG);
 }
 
@@ -129,12 +123,12 @@ Dynamic InteractionCallback_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 4:
-		if (HX_FIELD_EQ(inName,"int2") ) { return inCallProp ? get_int2() : int2; }
-		if (HX_FIELD_EQ(inName,"int1") ) { return inCallProp ? get_int1() : int1; }
+		if (HX_FIELD_EQ(inName,"int2") ) { return get_int2(); }
+		if (HX_FIELD_EQ(inName,"int1") ) { return get_int1(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
-		if (HX_FIELD_EQ(inName,"arbiters") ) { return inCallProp ? get_arbiters() : arbiters; }
+		if (HX_FIELD_EQ(inName,"arbiters") ) { return get_arbiters(); }
 		if (HX_FIELD_EQ(inName,"get_int2") ) { return get_int2_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_int1") ) { return get_int1_dyn(); }
 		break;
@@ -146,14 +140,6 @@ Dynamic InteractionCallback_obj::__Field(const ::String &inName,bool inCallProp)
 
 Dynamic InteractionCallback_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 4:
-		if (HX_FIELD_EQ(inName,"int2") ) { int2=inValue.Cast< ::nape::phys::Interactor >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"int1") ) { int1=inValue.Cast< ::nape::phys::Interactor >(); return inValue; }
-		break;
-	case 8:
-		if (HX_FIELD_EQ(inName,"arbiters") ) { arbiters=inValue.Cast< ::nape::dynamics::ArbiterList >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
@@ -171,11 +157,8 @@ static ::String sStaticFields[] = {
 static ::String sMemberFields[] = {
 	HX_CSTRING("toString"),
 	HX_CSTRING("get_arbiters"),
-	HX_CSTRING("arbiters"),
 	HX_CSTRING("get_int2"),
-	HX_CSTRING("int2"),
 	HX_CSTRING("get_int1"),
-	HX_CSTRING("int1"),
 	String(null()) };
 
 static void sMarkStatics(HX_MARK_PARAMS) {
@@ -190,7 +173,7 @@ Class InteractionCallback_obj::__mClass;
 
 void InteractionCallback_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.InteractionCallback"), hx::TCanCast< InteractionCallback_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.InteractionCallback"), hx::TCanCast< InteractionCallback_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

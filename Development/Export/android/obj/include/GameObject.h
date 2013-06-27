@@ -6,22 +6,23 @@
 #endif
 
 HX_DECLARE_CLASS0(GameObject)
-HX_DECLARE_CLASS0(Hash)
+HX_DECLARE_CLASS0(IMap)
+HX_DECLARE_CLASS2(flash,display,Bitmap)
+HX_DECLARE_CLASS2(flash,display,DisplayObject)
+HX_DECLARE_CLASS2(flash,display,DisplayObjectContainer)
+HX_DECLARE_CLASS2(flash,display,IBitmapDrawable)
+HX_DECLARE_CLASS2(flash,display,InteractiveObject)
+HX_DECLARE_CLASS2(flash,display,Sprite)
+HX_DECLARE_CLASS2(flash,events,EventDispatcher)
+HX_DECLARE_CLASS2(flash,events,IEventDispatcher)
+HX_DECLARE_CLASS2(haxe,ds,StringMap)
 HX_DECLARE_CLASS2(nape,phys,Body)
 HX_DECLARE_CLASS2(nape,phys,Interactor)
 HX_DECLARE_CLASS2(nape,phys,Material)
 HX_DECLARE_CLASS2(nape,space,Space)
-HX_DECLARE_CLASS2(native,display,Bitmap)
-HX_DECLARE_CLASS2(native,display,DisplayObject)
-HX_DECLARE_CLASS2(native,display,DisplayObjectContainer)
-HX_DECLARE_CLASS2(native,display,IBitmapDrawable)
-HX_DECLARE_CLASS2(native,display,InteractiveObject)
-HX_DECLARE_CLASS2(native,display,Sprite)
-HX_DECLARE_CLASS2(native,events,EventDispatcher)
-HX_DECLARE_CLASS2(native,events,IEventDispatcher)
 
 
-class GameObject_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  GameObject_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef GameObject_obj OBJ_;
@@ -65,14 +66,14 @@ class GameObject_obj : public hx::Object{
 		virtual Void physicsObject( ::String physic);
 		Dynamic physicsObject_dyn();
 
-		virtual ::Hash readXml( ::String url);
+		virtual Void readXml( ::String url);
 		Dynamic readXml_dyn();
 
-		::Hash xml; /* REM */ 
-		::native::display::Bitmap asset; /* REM */ 
-		::native::display::Sprite canvas; /* REM */ 
-		::nape::space::Space space; /* REM */ 
-		::nape::phys::Body body; /* REM */ 
+		::haxe::ds::StringMap xml;
+		::flash::display::Bitmap asset;
+		::flash::display::Sprite canvas;
+		::nape::space::Space space;
+		::nape::phys::Body body;
 };
 
 

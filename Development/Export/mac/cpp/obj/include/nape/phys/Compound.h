@@ -21,7 +21,7 @@ namespace nape{
 namespace phys{
 
 
-class Compound_obj : public ::nape::phys::Interactor_obj{
+class HXCPP_CLASS_ATTRIBUTES  Compound_obj : public ::nape::phys::Interactor_obj{
 	public:
 		typedef ::nape::phys::Interactor_obj super;
 		typedef Compound_obj OBJ_;
@@ -73,27 +73,22 @@ class Compound_obj : public ::nape::phys::Interactor_obj{
 		virtual ::nape::space::Space get_space( );
 		Dynamic get_space_dyn();
 
-		::nape::space::Space space; /* REM */ 
 		virtual ::nape::phys::Compound set_compound( ::nape::phys::Compound compound);
 		Dynamic set_compound_dyn();
 
 		virtual ::nape::phys::Compound get_compound( );
 		Dynamic get_compound_dyn();
 
-		::nape::phys::Compound compound; /* REM */ 
 		virtual ::nape::phys::CompoundList get_compounds( );
 		Dynamic get_compounds_dyn();
 
-		::nape::phys::CompoundList compounds; /* REM */ 
 		virtual ::nape::constraint::ConstraintList get_constraints( );
 		Dynamic get_constraints_dyn();
 
-		::nape::constraint::ConstraintList constraints; /* REM */ 
 		virtual ::nape::phys::BodyList get_bodies( );
 		Dynamic get_bodies_dyn();
 
-		::nape::phys::BodyList bodies; /* REM */ 
-		::zpp_nape::phys::ZPP_Compound zpp_inner; /* REM */ 
+		::zpp_nape::phys::ZPP_Compound zpp_inner;
 };
 
 } // end namespace nape

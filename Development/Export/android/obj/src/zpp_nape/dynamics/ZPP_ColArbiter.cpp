@@ -249,9 +249,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 			{
 				HX_STACK_LINE(2347)
 				Float t = 1.0;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(2348)
-				{
-				}
 				HX_STACK_LINE(2356)
 				hx::AddEq(r2x,(this->b2->posx * t));
 				HX_STACK_LINE(2357)
@@ -272,9 +269,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 			{
 				HX_STACK_LINE(2366)
 				Float t = 1.0;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(2367)
-				{
-				}
 				HX_STACK_LINE(2375)
 				hx::AddEq(r1x,(this->b1->posx * t));
 				HX_STACK_LINE(2376)
@@ -291,21 +285,8 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 				HX_STACK_LINE(2382)
 				dy1 = (r2y - r1y);
 			}
-			struct _Function_2_1{
-				inline static Float Block( Float &dx1,Float &dy1){
-					HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",2384);
-					{
-						HX_STACK_LINE(2384)
-						{
-						}
-						HX_STACK_LINE(2384)
-						return ::Math_obj::sqrt(((dx1 * dx1) + (dy1 * dy1)));
-					}
-					return null();
-				}
-			};
 			HX_STACK_LINE(2384)
-			Float dl = _Function_2_1::Block(dx1,dy1);		HX_STACK_VAR(dl,"dl");
+			Float dl = ::Math_obj::sqrt(((dx1 * dx1) + (dy1 * dy1)));		HX_STACK_VAR(dl,"dl");
 			HX_STACK_LINE(2385)
 			Float r = (this->radius - ::nape::Config_obj::collisionSlop);		HX_STACK_VAR(r,"r");
 			HX_STACK_LINE(2386)
@@ -341,9 +322,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 					{
 						HX_STACK_LINE(2401)
 						Float t = (Float(1.0) / Float(dl));		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(2402)
-						{
-						}
 						HX_STACK_LINE(2410)
 						hx::MultEq(dx1,t);
 						HX_STACK_LINE(2411)
@@ -353,12 +331,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 					Float px = (0.5 * ((r1x + r2x)));		HX_STACK_VAR(px,"px");
 					HX_STACK_LINE(2414)
 					Float py = (0.5 * ((r1y + r2y)));		HX_STACK_VAR(py,"py");
-					HX_STACK_LINE(2415)
-					{
-					}
-					HX_STACK_LINE(2423)
-					{
-					}
 					HX_STACK_LINE(2431)
 					Float pen = (dl - r);		HX_STACK_VAR(pen,"pen");
 					HX_STACK_LINE(2432)
@@ -393,9 +365,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 						{
 							HX_STACK_LINE(2448)
 							Float t = jn;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(2449)
-							{
-							}
 							HX_STACK_LINE(2457)
 							Jx = (dx1 * t);
 							HX_STACK_LINE(2458)
@@ -405,9 +374,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 						{
 							HX_STACK_LINE(2461)
 							Float t = this->b1->imass;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(2462)
-							{
-							}
 							HX_STACK_LINE(2470)
 							hx::SubEq(this->b1->posx,(Jx * t));
 							HX_STACK_LINE(2471)
@@ -426,9 +392,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 								_this->axisx = ::Math_obj::sin(_this->rot);
 								HX_STACK_LINE(2473)
 								_this->axisy = ::Math_obj::cos(_this->rot);
-								HX_STACK_LINE(2473)
-								{
-								}
 								HX_STACK_LINE(2473)
 								Dynamic();
 							}
@@ -451,9 +414,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 						{
 							HX_STACK_LINE(2475)
 							Float t = this->b2->imass;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(2476)
-							{
-							}
 							HX_STACK_LINE(2484)
 							hx::AddEq(this->b2->posx,(Jx * t));
 							HX_STACK_LINE(2485)
@@ -472,9 +432,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 								_this->axisx = ::Math_obj::sin(_this->rot);
 								HX_STACK_LINE(2487)
 								_this->axisy = ::Math_obj::cos(_this->rot);
-								HX_STACK_LINE(2487)
-								{
-								}
 								HX_STACK_LINE(2487)
 								Dynamic();
 							}
@@ -512,12 +469,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 			Float clip2x = (int)0;		HX_STACK_VAR(clip2x,"clip2x");
 			HX_STACK_LINE(2499)
 			Float clip2y = (int)0;		HX_STACK_VAR(clip2y,"clip2y");
-			HX_STACK_LINE(2500)
-			{
-			}
-			HX_STACK_LINE(2508)
-			{
-			}
 			HX_STACK_LINE(2516)
 			if (((this->ptype == (int)0))){
 				HX_STACK_LINE(2517)
@@ -540,9 +491,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 				{
 					HX_STACK_LINE(2527)
 					Float t = 1.0;		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(2528)
-					{
-					}
 					HX_STACK_LINE(2536)
 					hx::AddEq(clip1x,(this->b2->posx * t));
 					HX_STACK_LINE(2537)
@@ -561,9 +509,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 					{
 						HX_STACK_LINE(2545)
 						Float t = 1.0;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(2546)
-						{
-						}
 						HX_STACK_LINE(2554)
 						hx::AddEq(clip2x,(this->b2->posx * t));
 						HX_STACK_LINE(2555)
@@ -592,9 +537,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 				{
 					HX_STACK_LINE(2570)
 					Float t = 1.0;		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(2571)
-					{
-					}
 					HX_STACK_LINE(2579)
 					hx::AddEq(clip1x,(this->b1->posx * t));
 					HX_STACK_LINE(2580)
@@ -613,9 +555,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 					{
 						HX_STACK_LINE(2588)
 						Float t = 1.0;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(2589)
-						{
-						}
 						HX_STACK_LINE(2597)
 						hx::AddEq(clip2x,(this->b1->posx * t));
 						HX_STACK_LINE(2598)
@@ -671,22 +610,10 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 				Float c2r1x = (int)0;		HX_STACK_VAR(c2r1x,"c2r1x");
 				HX_STACK_LINE(2627)
 				Float c2r1y = (int)0;		HX_STACK_VAR(c2r1y,"c2r1y");
-				HX_STACK_LINE(2628)
-				{
-				}
-				HX_STACK_LINE(2636)
-				{
-				}
 				HX_STACK_LINE(2644)
 				Float c2r2x = (int)0;		HX_STACK_VAR(c2r2x,"c2r2x");
 				HX_STACK_LINE(2645)
 				Float c2r2y = (int)0;		HX_STACK_VAR(c2r2y,"c2r2y");
-				HX_STACK_LINE(2646)
-				{
-				}
-				HX_STACK_LINE(2654)
-				{
-				}
 				HX_STACK_LINE(2662)
 				if ((this->hpc2)){
 					HX_STACK_LINE(2663)
@@ -741,12 +668,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 					Float bx = (err1 * this->biasCoef);		HX_STACK_VAR(bx,"bx");
 					HX_STACK_LINE(2690)
 					Float by = (err2 * this->biasCoef);		HX_STACK_VAR(by,"by");
-					HX_STACK_LINE(2691)
-					{
-					}
-					HX_STACK_LINE(2699)
-					{
-					}
 					HX_STACK_LINE(2707)
 					do{
 						HX_STACK_LINE(2708)
@@ -759,9 +680,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 							xx = bx;
 							HX_STACK_LINE(2712)
 							xy = by;
-							HX_STACK_LINE(2713)
-							{
-							}
 							HX_STACK_LINE(2721)
 							{
 							}
@@ -822,9 +740,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 							{
 								HX_STACK_LINE(2752)
 								Float t = (((xx + xy)) * this->b1->imass);		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(2753)
-								{
-								}
 								HX_STACK_LINE(2761)
 								hx::SubEq(this->b1->posx,(gnormx * t));
 								HX_STACK_LINE(2762)
@@ -843,9 +758,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 									_this->axisx = ::Math_obj::sin(_this->rot);
 									HX_STACK_LINE(2764)
 									_this->axisy = ::Math_obj::cos(_this->rot);
-									HX_STACK_LINE(2764)
-									{
-									}
 									HX_STACK_LINE(2764)
 									Dynamic();
 								}
@@ -868,9 +780,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 							{
 								HX_STACK_LINE(2766)
 								Float t = (((xx + xy)) * this->b2->imass);		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(2767)
-								{
-								}
 								HX_STACK_LINE(2775)
 								hx::AddEq(this->b2->posx,(gnormx * t));
 								HX_STACK_LINE(2776)
@@ -889,9 +798,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 									_this->axisx = ::Math_obj::sin(_this->rot);
 									HX_STACK_LINE(2778)
 									_this->axisy = ::Math_obj::cos(_this->rot);
-									HX_STACK_LINE(2778)
-									{
-									}
 									HX_STACK_LINE(2778)
 									Dynamic();
 								}
@@ -919,9 +825,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 							xx = (Float(-(bx)) / Float(Ka));
 							HX_STACK_LINE(2783)
 							xy = (int)0;
-							HX_STACK_LINE(2784)
-							{
-							}
 							HX_STACK_LINE(2792)
 							{
 							}
@@ -934,9 +837,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 							{
 								HX_STACK_LINE(2804)
 								Float t = (((xx + xy)) * this->b1->imass);		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(2805)
-								{
-								}
 								HX_STACK_LINE(2813)
 								hx::SubEq(this->b1->posx,(gnormx * t));
 								HX_STACK_LINE(2814)
@@ -955,9 +855,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 									_this->axisx = ::Math_obj::sin(_this->rot);
 									HX_STACK_LINE(2816)
 									_this->axisy = ::Math_obj::cos(_this->rot);
-									HX_STACK_LINE(2816)
-									{
-									}
 									HX_STACK_LINE(2816)
 									Dynamic();
 								}
@@ -980,9 +877,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 							{
 								HX_STACK_LINE(2818)
 								Float t = (((xx + xy)) * this->b2->imass);		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(2819)
-								{
-								}
 								HX_STACK_LINE(2827)
 								hx::AddEq(this->b2->posx,(gnormx * t));
 								HX_STACK_LINE(2828)
@@ -1001,9 +895,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 									_this->axisx = ::Math_obj::sin(_this->rot);
 									HX_STACK_LINE(2830)
 									_this->axisy = ::Math_obj::cos(_this->rot);
-									HX_STACK_LINE(2830)
-									{
-									}
 									HX_STACK_LINE(2830)
 									Dynamic();
 								}
@@ -1031,9 +922,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 							xx = (int)0;
 							HX_STACK_LINE(2835)
 							xy = (Float(-(by)) / Float(Kc));
-							HX_STACK_LINE(2836)
-							{
-							}
 							HX_STACK_LINE(2844)
 							{
 							}
@@ -1046,9 +934,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 							{
 								HX_STACK_LINE(2856)
 								Float t = (((xx + xy)) * this->b1->imass);		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(2857)
-								{
-								}
 								HX_STACK_LINE(2865)
 								hx::SubEq(this->b1->posx,(gnormx * t));
 								HX_STACK_LINE(2866)
@@ -1067,9 +952,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 									_this->axisx = ::Math_obj::sin(_this->rot);
 									HX_STACK_LINE(2868)
 									_this->axisy = ::Math_obj::cos(_this->rot);
-									HX_STACK_LINE(2868)
-									{
-									}
 									HX_STACK_LINE(2868)
 									Dynamic();
 								}
@@ -1092,9 +974,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 							{
 								HX_STACK_LINE(2870)
 								Float t = (((xx + xy)) * this->b2->imass);		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(2871)
-								{
-								}
 								HX_STACK_LINE(2879)
 								hx::AddEq(this->b2->posx,(gnormx * t));
 								HX_STACK_LINE(2880)
@@ -1113,9 +992,6 @@ Void ZPP_ColArbiter_obj::applyImpulsePos( ){
 									_this->axisx = ::Math_obj::sin(_this->rot);
 									HX_STACK_LINE(2882)
 									_this->axisy = ::Math_obj::cos(_this->rot);
-									HX_STACK_LINE(2882)
-									{
-									}
 									HX_STACK_LINE(2882)
 									Dynamic();
 								}
@@ -1159,9 +1035,6 @@ while((false));
 						{
 							HX_STACK_LINE(2897)
 							Float t = jn;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(2898)
-							{
-							}
 							HX_STACK_LINE(2906)
 							Jx = (gnormx * t);
 							HX_STACK_LINE(2907)
@@ -1171,9 +1044,6 @@ while((false));
 						{
 							HX_STACK_LINE(2910)
 							Float t = this->b1->imass;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(2911)
-							{
-							}
 							HX_STACK_LINE(2919)
 							hx::SubEq(this->b1->posx,(Jx * t));
 							HX_STACK_LINE(2920)
@@ -1192,9 +1062,6 @@ while((false));
 								_this->axisx = ::Math_obj::sin(_this->rot);
 								HX_STACK_LINE(2922)
 								_this->axisy = ::Math_obj::cos(_this->rot);
-								HX_STACK_LINE(2922)
-								{
-								}
 								HX_STACK_LINE(2922)
 								Dynamic();
 							}
@@ -1217,9 +1084,6 @@ while((false));
 						{
 							HX_STACK_LINE(2924)
 							Float t = this->b2->imass;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(2925)
-							{
-							}
 							HX_STACK_LINE(2933)
 							hx::AddEq(this->b2->posx,(Jx * t));
 							HX_STACK_LINE(2934)
@@ -1238,9 +1102,6 @@ while((false));
 								_this->axisx = ::Math_obj::sin(_this->rot);
 								HX_STACK_LINE(2936)
 								_this->axisy = ::Math_obj::cos(_this->rot);
-								HX_STACK_LINE(2936)
-								{
-								}
 								HX_STACK_LINE(2936)
 								Dynamic();
 							}
@@ -1388,12 +1249,6 @@ Void ZPP_ColArbiter_obj::applyImpulseVel( ){
 			Float ax = this->c1->jnAcc;		HX_STACK_VAR(ax,"ax");
 			HX_STACK_LINE(2237)
 			Float ay = this->c2->jnAcc;		HX_STACK_VAR(ay,"ay");
-			HX_STACK_LINE(2238)
-			{
-			}
-			HX_STACK_LINE(2246)
-			{
-			}
 			HX_STACK_LINE(2254)
 			Float jnx = (((((v1x * this->nx) + (v1y * this->ny)) + this->surfacey) + this->c1->bounce) - (((this->Ka * ax) + (this->Kb * ay))));		HX_STACK_VAR(jnx,"jnx");
 			HX_STACK_LINE(2255)
@@ -1571,9 +1426,6 @@ Void ZPP_ColArbiter_obj::warmStart( ){
 			{
 				HX_STACK_LINE(2125)
 				Float t = this->b1->imass;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(2126)
-				{
-				}
 				HX_STACK_LINE(2134)
 				hx::SubEq(this->b1->velx,(jx * t));
 				HX_STACK_LINE(2135)
@@ -1585,9 +1437,6 @@ Void ZPP_ColArbiter_obj::warmStart( ){
 			{
 				HX_STACK_LINE(2139)
 				Float t = this->b2->imass;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(2140)
-				{
-				}
 				HX_STACK_LINE(2148)
 				hx::AddEq(this->b2->velx,(jx * t));
 				HX_STACK_LINE(2149)
@@ -1606,9 +1455,6 @@ Void ZPP_ColArbiter_obj::warmStart( ){
 			{
 				HX_STACK_LINE(2157)
 				Float t = this->b1->imass;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(2158)
-				{
-				}
 				HX_STACK_LINE(2166)
 				hx::SubEq(this->b1->velx,(jx * t));
 				HX_STACK_LINE(2167)
@@ -1620,9 +1466,6 @@ Void ZPP_ColArbiter_obj::warmStart( ){
 			{
 				HX_STACK_LINE(2171)
 				Float t = this->b2->imass;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(2172)
-				{
-				}
 				HX_STACK_LINE(2180)
 				hx::AddEq(this->b2->velx,(jx * t));
 				HX_STACK_LINE(2181)
@@ -1683,57 +1526,18 @@ bool ZPP_ColArbiter_obj::preStep( Float dt){
 			}
 			HX_STACK_LINE(1876)
 			if ((!(this->userdef_dyn_fric))){
-				struct _Function_4_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter_obj *__this){
-						HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1876);
-						{
-							HX_STACK_LINE(1876)
-							{
-							}
-							HX_STACK_LINE(1876)
-							return ::Math_obj::sqrt((__this->s1->material->dynamicFriction * __this->s2->material->dynamicFriction));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(1876)
-				this->dyn_fric = _Function_4_1::Block(this);
+				this->dyn_fric = ::Math_obj::sqrt((this->s1->material->dynamicFriction * this->s2->material->dynamicFriction));
 			}
 			HX_STACK_LINE(1876)
 			if ((!(this->userdef_stat_fric))){
-				struct _Function_4_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter_obj *__this){
-						HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1876);
-						{
-							HX_STACK_LINE(1876)
-							{
-							}
-							HX_STACK_LINE(1876)
-							return ::Math_obj::sqrt((__this->s1->material->staticFriction * __this->s2->material->staticFriction));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(1876)
-				this->stat_fric = _Function_4_1::Block(this);
+				this->stat_fric = ::Math_obj::sqrt((this->s1->material->staticFriction * this->s2->material->staticFriction));
 			}
 			HX_STACK_LINE(1876)
 			if ((!(this->userdef_rfric))){
-				struct _Function_4_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter_obj *__this){
-						HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1876);
-						{
-							HX_STACK_LINE(1876)
-							{
-							}
-							HX_STACK_LINE(1876)
-							return ::Math_obj::sqrt((__this->s1->material->rollingFriction * __this->s2->material->rollingFriction));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(1876)
-				this->rfric = _Function_4_1::Block(this);
+				this->rfric = ::Math_obj::sqrt((this->s1->material->rollingFriction * this->s2->material->rollingFriction));
 			}
 		}
 	}
@@ -1795,9 +1599,6 @@ bool ZPP_ColArbiter_obj::preStep( Float dt){
 								HX_STACK_LINE(1898)
 								::zpp_nape::dynamics::ZPP_Contact _this = __this->contacts;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1898)
-								{
-								}
-								HX_STACK_LINE(1898)
 								::zpp_nape::dynamics::ZPP_Contact old;		HX_STACK_VAR(old,"old");
 								HX_STACK_LINE(1898)
 								::zpp_nape::dynamics::ZPP_Contact ret;		HX_STACK_VAR(ret,"ret");
@@ -1831,9 +1632,6 @@ bool ZPP_ColArbiter_obj::preStep( Float dt){
 								HX_STACK_LINE(1898)
 								old->_inuse = false;
 								HX_STACK_LINE(1898)
-								{
-								}
-								HX_STACK_LINE(1898)
 								_this->modified = true;
 								HX_STACK_LINE(1898)
 								(_this->length)--;
@@ -1853,9 +1651,6 @@ bool ZPP_ColArbiter_obj::preStep( Float dt){
 							{
 								HX_STACK_LINE(1899)
 								::zpp_nape::dynamics::ZPP_IContact _this = __this->innards;		HX_STACK_VAR(_this,"_this");
-								HX_STACK_LINE(1899)
-								{
-								}
 								HX_STACK_LINE(1899)
 								::zpp_nape::dynamics::ZPP_IContact old;		HX_STACK_VAR(old,"old");
 								HX_STACK_LINE(1899)
@@ -1890,9 +1685,6 @@ bool ZPP_ColArbiter_obj::preStep( Float dt){
 								HX_STACK_LINE(1899)
 								old->_inuse = false;
 								HX_STACK_LINE(1899)
-								{
-								}
-								HX_STACK_LINE(1899)
 								_this->modified = true;
 								HX_STACK_LINE(1899)
 								(_this->length)--;
@@ -1910,9 +1702,6 @@ bool ZPP_ColArbiter_obj::preStep( Float dt){
 					{
 						HX_STACK_LINE(1901)
 						::zpp_nape::dynamics::ZPP_Contact o = c;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(1902)
-						{
-						}
 						HX_STACK_LINE(1910)
 						o->arbiter = null();
 						HX_STACK_LINE(1911)
@@ -1963,14 +1752,11 @@ bool ZPP_ColArbiter_obj::preStep( Float dt){
 						ci->r1y = (c->py - this->b1->posy);
 					}
 					struct _Function_5_1{
-						inline static Float Block( ::zpp_nape::dynamics::ZPP_IContact &ci,::zpp_nape::dynamics::ZPP_ColArbiter_obj *__this){
+						inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter_obj *__this,::zpp_nape::dynamics::ZPP_IContact &ci){
 							HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1945);
 							{
 								HX_STACK_LINE(1945)
 								Float x = ((ci->r2x * __this->nx) + (ci->r2y * __this->ny));		HX_STACK_VAR(x,"x");
-								HX_STACK_LINE(1945)
-								{
-								}
 								HX_STACK_LINE(1945)
 								return (x * x);
 							}
@@ -1978,16 +1764,13 @@ bool ZPP_ColArbiter_obj::preStep( Float dt){
 						}
 					};
 					HX_STACK_LINE(1945)
-					Float kt = (mass_sum + (this->b2->sinertia * _Function_5_1::Block(ci,this)));		HX_STACK_VAR(kt,"kt");
+					Float kt = (mass_sum + (this->b2->sinertia * _Function_5_1::Block(this,ci)));		HX_STACK_VAR(kt,"kt");
 					struct _Function_5_2{
-						inline static Float Block( ::zpp_nape::dynamics::ZPP_IContact &ci,::zpp_nape::dynamics::ZPP_ColArbiter_obj *__this){
+						inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter_obj *__this,::zpp_nape::dynamics::ZPP_IContact &ci){
 							HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1946);
 							{
 								HX_STACK_LINE(1946)
 								Float x = ((ci->r1x * __this->nx) + (ci->r1y * __this->ny));		HX_STACK_VAR(x,"x");
-								HX_STACK_LINE(1946)
-								{
-								}
 								HX_STACK_LINE(1946)
 								return (x * x);
 							}
@@ -1995,7 +1778,7 @@ bool ZPP_ColArbiter_obj::preStep( Float dt){
 						}
 					};
 					HX_STACK_LINE(1946)
-					hx::AddEq(kt,(this->b1->sinertia * _Function_5_2::Block(ci,this)));
+					hx::AddEq(kt,(this->b1->sinertia * _Function_5_2::Block(this,ci)));
 					HX_STACK_LINE(1947)
 					ci->tMass = (  (((kt < (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? Float((int)0) : Float((Float(1.0) / Float(kt))) );
 					struct _Function_5_3{
@@ -2004,9 +1787,6 @@ bool ZPP_ColArbiter_obj::preStep( Float dt){
 							{
 								HX_STACK_LINE(1948)
 								Float x = ((__this->ny * ci->r2x) - (__this->nx * ci->r2y));		HX_STACK_VAR(x,"x");
-								HX_STACK_LINE(1948)
-								{
-								}
 								HX_STACK_LINE(1948)
 								return (x * x);
 							}
@@ -2021,9 +1801,6 @@ bool ZPP_ColArbiter_obj::preStep( Float dt){
 							{
 								HX_STACK_LINE(1949)
 								Float x = ((__this->ny * ci->r1x) - (__this->nx * ci->r1y));		HX_STACK_VAR(x,"x");
-								HX_STACK_LINE(1949)
-								{
-								}
 								HX_STACK_LINE(1949)
 								return (x * x);
 							}
@@ -2273,9 +2050,6 @@ bool ZPP_ColArbiter_obj::preStep( Float dt){
 		this->surfacex = this->b2->svelx;
 		HX_STACK_LINE(2079)
 		this->surfacey = this->b2->svely;
-		HX_STACK_LINE(2080)
-		{
-		}
 		HX_STACK_LINE(2088)
 		{
 		}
@@ -2284,9 +2058,6 @@ bool ZPP_ColArbiter_obj::preStep( Float dt){
 	{
 		HX_STACK_LINE(2098)
 		Float t = 1.0;		HX_STACK_VAR(t,"t");
-		HX_STACK_LINE(2099)
-		{
-		}
 		HX_STACK_LINE(2107)
 		hx::AddEq(this->surfacex,(this->b1->svelx * t));
 		HX_STACK_LINE(2108)
@@ -2345,9 +2116,6 @@ bool ZPP_ColArbiter_obj::cleanupContacts( ){
 								HX_STACK_LINE(1797)
 								::zpp_nape::dynamics::ZPP_Contact _this = __this->contacts;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1797)
-								{
-								}
-								HX_STACK_LINE(1797)
 								::zpp_nape::dynamics::ZPP_Contact old;		HX_STACK_VAR(old,"old");
 								HX_STACK_LINE(1797)
 								::zpp_nape::dynamics::ZPP_Contact ret;		HX_STACK_VAR(ret,"ret");
@@ -2381,9 +2149,6 @@ bool ZPP_ColArbiter_obj::cleanupContacts( ){
 								HX_STACK_LINE(1797)
 								old->_inuse = false;
 								HX_STACK_LINE(1797)
-								{
-								}
-								HX_STACK_LINE(1797)
 								_this->modified = true;
 								HX_STACK_LINE(1797)
 								(_this->length)--;
@@ -2403,9 +2168,6 @@ bool ZPP_ColArbiter_obj::cleanupContacts( ){
 							{
 								HX_STACK_LINE(1798)
 								::zpp_nape::dynamics::ZPP_IContact _this = __this->innards;		HX_STACK_VAR(_this,"_this");
-								HX_STACK_LINE(1798)
-								{
-								}
 								HX_STACK_LINE(1798)
 								::zpp_nape::dynamics::ZPP_IContact old;		HX_STACK_VAR(old,"old");
 								HX_STACK_LINE(1798)
@@ -2440,9 +2202,6 @@ bool ZPP_ColArbiter_obj::cleanupContacts( ){
 								HX_STACK_LINE(1798)
 								old->_inuse = false;
 								HX_STACK_LINE(1798)
-								{
-								}
-								HX_STACK_LINE(1798)
 								_this->modified = true;
 								HX_STACK_LINE(1798)
 								(_this->length)--;
@@ -2460,9 +2219,6 @@ bool ZPP_ColArbiter_obj::cleanupContacts( ){
 					{
 						HX_STACK_LINE(1800)
 						::zpp_nape::dynamics::ZPP_Contact o = c;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(1801)
-						{
-						}
 						HX_STACK_LINE(1809)
 						o->arbiter = null();
 						HX_STACK_LINE(1810)
@@ -2491,9 +2247,6 @@ bool ZPP_ColArbiter_obj::cleanupContacts( ){
 						this->oc1 = c;
 					}
 					else{
-						HX_STACK_LINE(1828)
-						{
-						}
 						HX_STACK_LINE(1836)
 						this->hc2 = true;
 						HX_STACK_LINE(1837)
@@ -2615,9 +2368,6 @@ Void ZPP_ColArbiter_obj::contacts_subber( ::nape::dynamics::Contact x){
 						{
 							HX_STACK_LINE(1750)
 							::zpp_nape::dynamics::ZPP_Contact o = c;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(1751)
-							{
-							}
 							HX_STACK_LINE(1759)
 							o->arbiter = null();
 							HX_STACK_LINE(1760)
@@ -2712,18 +2462,6 @@ Void ZPP_ColArbiter_obj::retire( ){
 		HX_STACK_LINE(1676)
 		{
 			HX_STACK_LINE(1676)
-			{
-			}
-			HX_STACK_LINE(1676)
-			{
-			}
-			HX_STACK_LINE(1676)
-			{
-			}
-			HX_STACK_LINE(1676)
-			{
-			}
-			HX_STACK_LINE(1676)
 			if ((!(this->cleared))){
 				HX_STACK_LINE(1676)
 				{
@@ -2731,12 +2469,6 @@ Void ZPP_ColArbiter_obj::retire( ){
 					::zpp_nape::util::ZNPList_ZPP_Arbiter _this = this->b1->arbiters;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(1676)
 					{
-					}
-					HX_STACK_LINE(1676)
-					{
-						HX_STACK_LINE(1676)
-						{
-						}
 						HX_STACK_LINE(1676)
 						::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 						HX_STACK_LINE(1676)
@@ -2749,9 +2481,6 @@ Void ZPP_ColArbiter_obj::retire( ){
 							if (((cur->elt == hx::ObjectPtr<OBJ_>(this)))){
 								HX_STACK_LINE(1676)
 								{
-									HX_STACK_LINE(1676)
-									{
-									}
 									HX_STACK_LINE(1676)
 									::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 									HX_STACK_LINE(1676)
@@ -2785,14 +2514,8 @@ Void ZPP_ColArbiter_obj::retire( ){
 									}
 									HX_STACK_LINE(1676)
 									{
-									}
-									HX_STACK_LINE(1676)
-									{
 										HX_STACK_LINE(1676)
 										::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(1676)
-										{
-										}
 										HX_STACK_LINE(1676)
 										o->elt = null();
 										HX_STACK_LINE(1676)
@@ -2829,12 +2552,6 @@ Void ZPP_ColArbiter_obj::retire( ){
 					::zpp_nape::util::ZNPList_ZPP_Arbiter _this = this->b2->arbiters;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(1676)
 					{
-					}
-					HX_STACK_LINE(1676)
-					{
-						HX_STACK_LINE(1676)
-						{
-						}
 						HX_STACK_LINE(1676)
 						::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 						HX_STACK_LINE(1676)
@@ -2847,9 +2564,6 @@ Void ZPP_ColArbiter_obj::retire( ){
 							if (((cur->elt == hx::ObjectPtr<OBJ_>(this)))){
 								HX_STACK_LINE(1676)
 								{
-									HX_STACK_LINE(1676)
-									{
-									}
 									HX_STACK_LINE(1676)
 									::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 									HX_STACK_LINE(1676)
@@ -2883,14 +2597,8 @@ Void ZPP_ColArbiter_obj::retire( ){
 									}
 									HX_STACK_LINE(1676)
 									{
-									}
-									HX_STACK_LINE(1676)
-									{
 										HX_STACK_LINE(1676)
 										::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(1676)
-										{
-										}
 										HX_STACK_LINE(1676)
 										o->elt = null();
 										HX_STACK_LINE(1676)
@@ -2947,9 +2655,6 @@ Void ZPP_ColArbiter_obj::retire( ){
 							HX_STACK_LINE(1679)
 							::zpp_nape::dynamics::ZPP_Contact _this = __this->contacts;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1679)
-							{
-							}
-							HX_STACK_LINE(1679)
 							::zpp_nape::dynamics::ZPP_Contact ret = _this->next;		HX_STACK_VAR(ret,"ret");
 							HX_STACK_LINE(1679)
 							_this->pop();
@@ -2961,9 +2666,6 @@ Void ZPP_ColArbiter_obj::retire( ){
 				};
 				HX_STACK_LINE(1679)
 				::zpp_nape::dynamics::ZPP_Contact o = _Function_3_1::Block(this);		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(1680)
-				{
-				}
 				HX_STACK_LINE(1688)
 				o->arbiter = null();
 				HX_STACK_LINE(1689)
@@ -2976,17 +2678,11 @@ Void ZPP_ColArbiter_obj::retire( ){
 				HX_STACK_LINE(1695)
 				::zpp_nape::dynamics::ZPP_IContact _this = this->innards;		HX_STACK_VAR(_this,"_this");
 				HX_STACK_LINE(1695)
-				{
-				}
-				HX_STACK_LINE(1695)
 				::zpp_nape::dynamics::ZPP_IContact ret = _this->next;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(1695)
 				_this->next = ret->next;
 				HX_STACK_LINE(1695)
 				ret->_inuse = false;
-				HX_STACK_LINE(1695)
-				{
-				}
 				HX_STACK_LINE(1695)
 				if (((_this->next == null()))){
 					HX_STACK_LINE(1695)
@@ -3002,17 +2698,8 @@ Void ZPP_ColArbiter_obj::retire( ){
 		{
 			HX_STACK_LINE(1698)
 			::zpp_nape::dynamics::ZPP_ColArbiter o = hx::ObjectPtr<OBJ_>(this);		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(1699)
-			{
-			}
 			HX_STACK_LINE(1707)
 			{
-				HX_STACK_LINE(1707)
-				{
-				}
-				HX_STACK_LINE(1707)
-				{
-				}
 				HX_STACK_LINE(1707)
 				o->userdef_dyn_fric = false;
 				HX_STACK_LINE(1707)
@@ -3079,57 +2766,18 @@ Void ZPP_ColArbiter_obj::validate_props( ){
 				}
 				HX_STACK_LINE(1670)
 				if ((!(this->userdef_dyn_fric))){
-					struct _Function_4_1{
-						inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter_obj *__this){
-							HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1670);
-							{
-								HX_STACK_LINE(1670)
-								{
-								}
-								HX_STACK_LINE(1670)
-								return ::Math_obj::sqrt((__this->s1->material->dynamicFriction * __this->s2->material->dynamicFriction));
-							}
-							return null();
-						}
-					};
 					HX_STACK_LINE(1670)
-					this->dyn_fric = _Function_4_1::Block(this);
+					this->dyn_fric = ::Math_obj::sqrt((this->s1->material->dynamicFriction * this->s2->material->dynamicFriction));
 				}
 				HX_STACK_LINE(1670)
 				if ((!(this->userdef_stat_fric))){
-					struct _Function_4_1{
-						inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter_obj *__this){
-							HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1670);
-							{
-								HX_STACK_LINE(1670)
-								{
-								}
-								HX_STACK_LINE(1670)
-								return ::Math_obj::sqrt((__this->s1->material->staticFriction * __this->s2->material->staticFriction));
-							}
-							return null();
-						}
-					};
 					HX_STACK_LINE(1670)
-					this->stat_fric = _Function_4_1::Block(this);
+					this->stat_fric = ::Math_obj::sqrt((this->s1->material->staticFriction * this->s2->material->staticFriction));
 				}
 				HX_STACK_LINE(1670)
 				if ((!(this->userdef_rfric))){
-					struct _Function_4_1{
-						inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter_obj *__this){
-							HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1670);
-							{
-								HX_STACK_LINE(1670)
-								{
-								}
-								HX_STACK_LINE(1670)
-								return ::Math_obj::sqrt((__this->s1->material->rollingFriction * __this->s2->material->rollingFriction));
-							}
-							return null();
-						}
-					};
 					HX_STACK_LINE(1670)
-					this->rfric = _Function_4_1::Block(this);
+					this->rfric = ::Math_obj::sqrt((this->s1->material->rollingFriction * this->s2->material->rollingFriction));
 				}
 			}
 		}
@@ -3175,57 +2823,18 @@ Void ZPP_ColArbiter_obj::calcProperties( ){
 		}
 		HX_STACK_LINE(1655)
 		if ((!(this->userdef_dyn_fric))){
-			struct _Function_2_1{
-				inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter_obj *__this){
-					HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1656);
-					{
-						HX_STACK_LINE(1656)
-						{
-						}
-						HX_STACK_LINE(1656)
-						return ::Math_obj::sqrt((__this->s1->material->dynamicFriction * __this->s2->material->dynamicFriction));
-					}
-					return null();
-				}
-			};
 			HX_STACK_LINE(1655)
-			this->dyn_fric = _Function_2_1::Block(this);
+			this->dyn_fric = ::Math_obj::sqrt((this->s1->material->dynamicFriction * this->s2->material->dynamicFriction));
 		}
 		HX_STACK_LINE(1658)
 		if ((!(this->userdef_stat_fric))){
-			struct _Function_2_1{
-				inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter_obj *__this){
-					HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1659);
-					{
-						HX_STACK_LINE(1659)
-						{
-						}
-						HX_STACK_LINE(1659)
-						return ::Math_obj::sqrt((__this->s1->material->staticFriction * __this->s2->material->staticFriction));
-					}
-					return null();
-				}
-			};
 			HX_STACK_LINE(1658)
-			this->stat_fric = _Function_2_1::Block(this);
+			this->stat_fric = ::Math_obj::sqrt((this->s1->material->staticFriction * this->s2->material->staticFriction));
 		}
 		HX_STACK_LINE(1661)
 		if ((!(this->userdef_rfric))){
-			struct _Function_2_1{
-				inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter_obj *__this){
-					HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1662);
-					{
-						HX_STACK_LINE(1662)
-						{
-						}
-						HX_STACK_LINE(1662)
-						return ::Math_obj::sqrt((__this->s1->material->rollingFriction * __this->s2->material->rollingFriction));
-					}
-					return null();
-				}
-			};
 			HX_STACK_LINE(1661)
-			this->rfric = _Function_2_1::Block(this);
+			this->rfric = ::Math_obj::sqrt((this->s1->material->rollingFriction * this->s2->material->rollingFriction));
 		}
 	}
 return null();
@@ -3260,9 +2869,6 @@ Void ZPP_ColArbiter_obj::assign( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::sha
 			{
 				HX_STACK_LINE(1640)
 				::zpp_nape::util::ZNPList_ZPP_Arbiter _this = this->b1->arbiters;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(1640)
-				{
-				}
 				struct _Function_3_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter_obj *__this){
 						HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1640);
@@ -3312,9 +2918,6 @@ Void ZPP_ColArbiter_obj::assign( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::sha
 			{
 				HX_STACK_LINE(1640)
 				::zpp_nape::util::ZNPList_ZPP_Arbiter _this = this->b2->arbiters;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(1640)
-				{
-				}
 				struct _Function_3_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter_obj *__this){
 						HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1640);
@@ -3410,57 +3013,18 @@ Void ZPP_ColArbiter_obj::assign( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::sha
 			}
 			HX_STACK_LINE(1643)
 			if ((!(this->userdef_dyn_fric))){
-				struct _Function_3_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter_obj *__this){
-						HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1643);
-						{
-							HX_STACK_LINE(1643)
-							{
-							}
-							HX_STACK_LINE(1643)
-							return ::Math_obj::sqrt((__this->s1->material->dynamicFriction * __this->s2->material->dynamicFriction));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(1643)
-				this->dyn_fric = _Function_3_1::Block(this);
+				this->dyn_fric = ::Math_obj::sqrt((this->s1->material->dynamicFriction * this->s2->material->dynamicFriction));
 			}
 			HX_STACK_LINE(1643)
 			if ((!(this->userdef_stat_fric))){
-				struct _Function_3_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter_obj *__this){
-						HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1643);
-						{
-							HX_STACK_LINE(1643)
-							{
-							}
-							HX_STACK_LINE(1643)
-							return ::Math_obj::sqrt((__this->s1->material->staticFriction * __this->s2->material->staticFriction));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(1643)
-				this->stat_fric = _Function_3_1::Block(this);
+				this->stat_fric = ::Math_obj::sqrt((this->s1->material->staticFriction * this->s2->material->staticFriction));
 			}
 			HX_STACK_LINE(1643)
 			if ((!(this->userdef_rfric))){
-				struct _Function_3_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter_obj *__this){
-						HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1643);
-						{
-							HX_STACK_LINE(1643)
-							{
-							}
-							HX_STACK_LINE(1643)
-							return ::Math_obj::sqrt((__this->s1->material->rollingFriction * __this->s2->material->rollingFriction));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(1643)
-				this->rfric = _Function_3_1::Block(this);
+				this->rfric = ::Math_obj::sqrt((this->s1->material->rollingFriction * this->s2->material->rollingFriction));
 			}
 		}
 	}
@@ -3539,9 +3103,6 @@ bool posOnly = __o_posOnly.Default(false);
 			{
 				HX_STACK_LINE(1588)
 				::zpp_nape::dynamics::ZPP_Contact _this = this->contacts;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(1588)
-				{
-				}
 				struct _Function_3_1{
 					inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &c){
 						HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1588);
@@ -3580,9 +3141,6 @@ bool posOnly = __o_posOnly.Default(false);
 			c->px = px;
 			HX_STACK_LINE(1594)
 			c->py = py;
-			HX_STACK_LINE(1595)
-			{
-			}
 			HX_STACK_LINE(1603)
 			{
 			}
@@ -3593,9 +3151,6 @@ bool posOnly = __o_posOnly.Default(false);
 			this->nx = nx;
 			HX_STACK_LINE(1614)
 			this->ny = ny;
-			HX_STACK_LINE(1615)
-			{
-			}
 			HX_STACK_LINE(1623)
 			{
 			}
@@ -3618,12 +3173,6 @@ Void ZPP_ColArbiter_obj::free( ){
 {
 		HX_STACK_PUSH("ZPP_ColArbiter::free","zpp_nape/dynamics/Arbiter.hx",1525);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(1526)
-		{
-		}
-		HX_STACK_LINE(1534)
-		{
-		}
 		HX_STACK_LINE(1542)
 		this->userdef_dyn_fric = false;
 		HX_STACK_LINE(1543)
@@ -3662,9 +3211,6 @@ Void ZPP_ColArbiter_obj::getnormal( ){
 				{
 					HX_STACK_LINE(1432)
 					bool weak = false;		HX_STACK_VAR(weak,"weak");
-					HX_STACK_LINE(1432)
-					{
-					}
 					HX_STACK_LINE(1432)
 					::nape::geom::Vec2 ret;		HX_STACK_VAR(ret,"ret");
 					HX_STACK_LINE(1432)
@@ -3726,9 +3272,6 @@ Void ZPP_ColArbiter_obj::getnormal( ){
 										HX_STACK_LINE(1432)
 										{
 										}
-										HX_STACK_LINE(1432)
-										{
-										}
 									}
 									HX_STACK_LINE(1432)
 									return ret1;
@@ -3757,13 +3300,10 @@ Void ZPP_ColArbiter_obj::getnormal( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(1432)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(1432)
 								_this->_isimmutable();
 							}
-						}
-						HX_STACK_LINE(1432)
-						{
 						}
 						struct _Function_3_1{
 							inline static Float Block( ::nape::geom::Vec2 &ret){
@@ -3779,7 +3319,7 @@ Void ZPP_ColArbiter_obj::getnormal( ){
 										HX_STACK_LINE(1432)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1432)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1432)
 											_this->_validate();
 										}
@@ -3804,7 +3344,7 @@ Void ZPP_ColArbiter_obj::getnormal( ){
 										HX_STACK_LINE(1432)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1432)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1432)
 											_this->_validate();
 										}
@@ -3826,16 +3366,13 @@ Void ZPP_ColArbiter_obj::getnormal( ){
 								HX_STACK_LINE(1432)
 								{
 								}
-								HX_STACK_LINE(1432)
-								{
-								}
 							}
 							HX_STACK_LINE(1432)
 							{
 								HX_STACK_LINE(1432)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1432)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(1432)
 									_this->_invalidate(_this);
 								}
@@ -3882,9 +3419,6 @@ Void ZPP_ColArbiter_obj::normal_validate( ){
 			this->wrap_normal->zpp_inner->x = this->nx;
 			HX_STACK_LINE(1411)
 			this->wrap_normal->zpp_inner->y = this->ny;
-			HX_STACK_LINE(1412)
-			{
-			}
 			HX_STACK_LINE(1420)
 			{
 			}
@@ -3895,12 +3429,6 @@ return null();
 
 
 HX_DEFINE_DYNAMIC_FUNC0(ZPP_ColArbiter_obj,normal_validate,(void))
-
-int ZPP_ColArbiter_obj::FACE1;
-
-int ZPP_ColArbiter_obj::FACE2;
-
-int ZPP_ColArbiter_obj::CIRCLE;
 
 ::zpp_nape::dynamics::ZPP_ColArbiter ZPP_ColArbiter_obj::zpp_pool;
 
@@ -4078,8 +3606,6 @@ Dynamic ZPP_ColArbiter_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"rn1a") ) { return rn1a; }
 		break;
 	case 5:
-		if (HX_FIELD_EQ(inName,"FACE1") ) { return FACE1; }
-		if (HX_FIELD_EQ(inName,"FACE2") ) { return FACE2; }
 		if (HX_FIELD_EQ(inName,"alloc") ) { return alloc_dyn(); }
 		if (HX_FIELD_EQ(inName,"lproj") ) { return lproj; }
 		if (HX_FIELD_EQ(inName,"ptype") ) { return ptype; }
@@ -4088,7 +3614,6 @@ Dynamic ZPP_ColArbiter_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"rfric") ) { return rfric; }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"CIRCLE") ) { return CIRCLE; }
 		if (HX_FIELD_EQ(inName,"pre_dt") ) { return pre_dt; }
 		if (HX_FIELD_EQ(inName,"retire") ) { return retire_dyn(); }
 		if (HX_FIELD_EQ(inName,"assign") ) { return assign_dyn(); }
@@ -4197,8 +3722,6 @@ Dynamic ZPP_ColArbiter_obj::__SetField(const ::String &inName,const Dynamic &inV
 		if (HX_FIELD_EQ(inName,"rn1a") ) { rn1a=inValue.Cast< Float >(); return inValue; }
 		break;
 	case 5:
-		if (HX_FIELD_EQ(inName,"FACE1") ) { FACE1=inValue.Cast< int >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"FACE2") ) { FACE2=inValue.Cast< int >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"lproj") ) { lproj=inValue.Cast< Float >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"ptype") ) { ptype=inValue.Cast< int >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"jrAcc") ) { jrAcc=inValue.Cast< Float >(); return inValue; }
@@ -4206,7 +3729,6 @@ Dynamic ZPP_ColArbiter_obj::__SetField(const ::String &inName,const Dynamic &inV
 		if (HX_FIELD_EQ(inName,"rfric") ) { rfric=inValue.Cast< Float >(); return inValue; }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"CIRCLE") ) { CIRCLE=inValue.Cast< int >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"pre_dt") ) { pre_dt=inValue.Cast< Float >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"radius") ) { radius=inValue.Cast< Float >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"lnormy") ) { lnormy=inValue.Cast< Float >(); return inValue; }
@@ -4321,9 +3843,6 @@ void ZPP_ColArbiter_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("FACE1"),
-	HX_CSTRING("FACE2"),
-	HX_CSTRING("CIRCLE"),
 	HX_CSTRING("zpp_pool"),
 	String(null()) };
 
@@ -4410,17 +3929,11 @@ static ::String sMemberFields[] = {
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(ZPP_ColArbiter_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(ZPP_ColArbiter_obj::FACE1,"FACE1");
-	HX_MARK_MEMBER_NAME(ZPP_ColArbiter_obj::FACE2,"FACE2");
-	HX_MARK_MEMBER_NAME(ZPP_ColArbiter_obj::CIRCLE,"CIRCLE");
 	HX_MARK_MEMBER_NAME(ZPP_ColArbiter_obj::zpp_pool,"zpp_pool");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(ZPP_ColArbiter_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(ZPP_ColArbiter_obj::FACE1,"FACE1");
-	HX_VISIT_MEMBER_NAME(ZPP_ColArbiter_obj::FACE2,"FACE2");
-	HX_VISIT_MEMBER_NAME(ZPP_ColArbiter_obj::CIRCLE,"CIRCLE");
 	HX_VISIT_MEMBER_NAME(ZPP_ColArbiter_obj::zpp_pool,"zpp_pool");
 };
 
@@ -4428,16 +3941,13 @@ Class ZPP_ColArbiter_obj::__mClass;
 
 void ZPP_ColArbiter_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.dynamics.ZPP_ColArbiter"), hx::TCanCast< ZPP_ColArbiter_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.dynamics.ZPP_ColArbiter"), hx::TCanCast< ZPP_ColArbiter_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }
 
 void ZPP_ColArbiter_obj::__boot()
 {
-	FACE1= (int)0;
-	FACE2= (int)1;
-	CIRCLE= (int)2;
 	zpp_pool= null();
 }
 

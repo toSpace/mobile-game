@@ -207,7 +207,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Callback_obj,get_listener,return )
 		}
 	};
 	HX_STACK_LINE(190)
-	return Array_obj< ::nape::callbacks::CbEvent >::__new().Add(_Function_1_1::Block()).Add(_Function_1_2::Block()).Add(_Function_1_3::Block()).Add(_Function_1_4::Block()).Add(_Function_1_5::Block()).Add(_Function_1_6::Block()).Add(_Function_1_7::Block())->__get(this->zpp_inner->event);
+	return Array_obj< ::Dynamic >::__new().Add(_Function_1_1::Block()).Add(_Function_1_2::Block()).Add(_Function_1_3::Block()).Add(_Function_1_4::Block()).Add(_Function_1_5::Block()).Add(_Function_1_6::Block()).Add(_Function_1_7::Block())->__get(this->zpp_inner->event).StaticCast< ::nape::callbacks::CbEvent >();
 }
 
 
@@ -221,16 +221,12 @@ Callback_obj::Callback_obj()
 void Callback_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(Callback);
-	HX_MARK_MEMBER_NAME(listener,"listener");
-	HX_MARK_MEMBER_NAME(event,"event");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	HX_MARK_END_CLASS();
 }
 
 void Callback_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(listener,"listener");
-	HX_VISIT_MEMBER_NAME(event,"event");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 }
 
@@ -238,11 +234,11 @@ Dynamic Callback_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"event") ) { return inCallProp ? get_event() : event; }
+		if (HX_FIELD_EQ(inName,"event") ) { return get_event(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
-		if (HX_FIELD_EQ(inName,"listener") ) { return inCallProp ? get_listener() : listener; }
+		if (HX_FIELD_EQ(inName,"listener") ) { return get_listener(); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"get_event") ) { return get_event_dyn(); }
@@ -257,12 +253,6 @@ Dynamic Callback_obj::__Field(const ::String &inName,bool inCallProp)
 Dynamic Callback_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
 	switch(inName.length) {
-	case 5:
-		if (HX_FIELD_EQ(inName,"event") ) { event=inValue.Cast< ::nape::callbacks::CbEvent >(); return inValue; }
-		break;
-	case 8:
-		if (HX_FIELD_EQ(inName,"listener") ) { listener=inValue.Cast< ::nape::callbacks::Listener >(); return inValue; }
-		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::callbacks::ZPP_Callback >(); return inValue; }
 	}
@@ -283,9 +273,7 @@ static ::String sStaticFields[] = {
 static ::String sMemberFields[] = {
 	HX_CSTRING("toString"),
 	HX_CSTRING("get_listener"),
-	HX_CSTRING("listener"),
 	HX_CSTRING("get_event"),
-	HX_CSTRING("event"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
@@ -301,7 +289,7 @@ Class Callback_obj::__mClass;
 
 void Callback_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.Callback"), hx::TCanCast< Callback_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.Callback"), hx::TCanCast< Callback_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

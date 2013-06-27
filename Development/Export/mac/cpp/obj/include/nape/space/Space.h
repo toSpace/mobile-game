@@ -32,7 +32,7 @@ namespace nape{
 namespace space{
 
 
-class Space_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Space_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Space_obj OBJ_;
@@ -100,11 +100,9 @@ class Space_obj : public hx::Object{
 		virtual Float get_elapsedTime( );
 		Dynamic get_elapsedTime_dyn();
 
-		Float elapsedTime; /* REM */ 
 		virtual int get_timeStamp( );
 		Dynamic get_timeStamp_dyn();
 
-		int timeStamp; /* REM */ 
 		virtual Void step( Float deltaTime,hx::Null< int >  velocityIterations,hx::Null< int >  positionIterations);
 		Dynamic step_dyn();
 
@@ -114,15 +112,12 @@ class Space_obj : public hx::Object{
 		virtual ::nape::callbacks::ListenerList get_listeners( );
 		Dynamic get_listeners_dyn();
 
-		::nape::callbacks::ListenerList listeners; /* REM */ 
 		virtual ::nape::dynamics::ArbiterList get_arbiters( );
 		Dynamic get_arbiters_dyn();
 
-		::nape::dynamics::ArbiterList arbiters; /* REM */ 
 		virtual ::nape::phys::Body get_world( );
 		Dynamic get_world_dyn();
 
-		::nape::phys::Body world; /* REM */ 
 		virtual Void visitCompounds( Dynamic lambda);
 		Dynamic visitCompounds_dyn();
 
@@ -135,60 +130,49 @@ class Space_obj : public hx::Object{
 		virtual ::nape::constraint::ConstraintList get_liveConstraints( );
 		Dynamic get_liveConstraints_dyn();
 
-		::nape::constraint::ConstraintList liveConstraints; /* REM */ 
 		virtual ::nape::constraint::ConstraintList get_constraints( );
 		Dynamic get_constraints_dyn();
 
-		::nape::constraint::ConstraintList constraints; /* REM */ 
 		virtual ::nape::phys::BodyList get_liveBodies( );
 		Dynamic get_liveBodies_dyn();
 
-		::nape::phys::BodyList liveBodies; /* REM */ 
 		virtual ::nape::phys::BodyList get_bodies( );
 		Dynamic get_bodies_dyn();
 
-		::nape::phys::BodyList bodies; /* REM */ 
 		virtual ::nape::phys::CompoundList get_compounds( );
 		Dynamic get_compounds_dyn();
 
-		::nape::phys::CompoundList compounds; /* REM */ 
 		virtual Float set_worldLinearDrag( Float worldLinearDrag);
 		Dynamic set_worldLinearDrag_dyn();
 
 		virtual Float get_worldLinearDrag( );
 		Dynamic get_worldLinearDrag_dyn();
 
-		Float worldLinearDrag; /* REM */ 
 		virtual Float set_worldAngularDrag( Float worldAngularDrag);
 		Dynamic set_worldAngularDrag_dyn();
 
 		virtual Float get_worldAngularDrag( );
 		Dynamic get_worldAngularDrag_dyn();
 
-		Float worldAngularDrag; /* REM */ 
 		virtual bool set_sortContacts( bool sortContacts);
 		Dynamic set_sortContacts_dyn();
 
 		virtual bool get_sortContacts( );
 		Dynamic get_sortContacts_dyn();
 
-		bool sortContacts; /* REM */ 
 		virtual ::nape::space::Broadphase get_broadphase( );
 		Dynamic get_broadphase_dyn();
 
-		::nape::space::Broadphase broadphase; /* REM */ 
 		virtual ::nape::geom::Vec2 set_gravity( ::nape::geom::Vec2 gravity);
 		Dynamic set_gravity_dyn();
 
 		virtual ::nape::geom::Vec2 get_gravity( );
 		Dynamic get_gravity_dyn();
 
-		::nape::geom::Vec2 gravity; /* REM */ 
 		virtual Dynamic get_userData( );
 		Dynamic get_userData_dyn();
 
-		Dynamic userData; /* REM */ 
-		::zpp_nape::space::ZPP_Space zpp_inner; /* REM */ 
+		::zpp_nape::space::ZPP_Space zpp_inner;
 };
 
 } // end namespace nape

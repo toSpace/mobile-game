@@ -14,7 +14,7 @@ namespace zpp_nape{
 namespace callbacks{
 
 
-class ZPP_OptionType_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_OptionType_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_OptionType_obj OBJ_;
@@ -64,13 +64,13 @@ class ZPP_OptionType_obj : public hx::Object{
 		virtual Void setup_includes( );
 		Dynamic setup_includes_dyn();
 
-		::nape::callbacks::CbTypeList wrap_excludes; /* REM */ 
-		::nape::callbacks::CbTypeList wrap_includes; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_CbType excludes; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_CbType includes; /* REM */ 
-		Dynamic handler; /* REM */ 
+		::nape::callbacks::CbTypeList wrap_excludes;
+		::nape::callbacks::CbTypeList wrap_includes;
+		::zpp_nape::util::ZNPList_ZPP_CbType excludes;
+		::zpp_nape::util::ZNPList_ZPP_CbType includes;
+		Dynamic handler;
 		Dynamic &handler_dyn() { return handler;}
-		::nape::callbacks::OptionType outer; /* REM */ 
+		::nape::callbacks::OptionType outer;
 		static ::nape::callbacks::OptionType argument( Dynamic val);
 		static Dynamic argument_dyn();
 

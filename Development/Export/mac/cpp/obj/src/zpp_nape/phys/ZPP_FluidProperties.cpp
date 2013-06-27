@@ -69,9 +69,6 @@ HX_STACK_PUSH("ZPP_FluidProperties::new","zpp_nape/phys/FluidProperties.hx",174)
 		this->gravityx = (int)0;
 		HX_STACK_LINE(280)
 		this->gravityy = (int)0;
-		HX_STACK_LINE(281)
-		{
-		}
 		HX_STACK_LINE(289)
 		{
 		}
@@ -194,9 +191,6 @@ Void ZPP_FluidProperties_obj::getgravity( ){
 										HX_STACK_LINE(350)
 										{
 										}
-										HX_STACK_LINE(350)
-										{
-										}
 									}
 									HX_STACK_LINE(350)
 									return ret1;
@@ -225,7 +219,7 @@ Void ZPP_FluidProperties_obj::getgravity( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(350)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(350)
 								_this->_isimmutable();
 							}
@@ -249,7 +243,7 @@ Void ZPP_FluidProperties_obj::getgravity( ){
 										HX_STACK_LINE(350)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(350)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(350)
 											_this->_validate();
 										}
@@ -274,7 +268,7 @@ Void ZPP_FluidProperties_obj::getgravity( ){
 										HX_STACK_LINE(350)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(350)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(350)
 											_this->_validate();
 										}
@@ -296,16 +290,13 @@ Void ZPP_FluidProperties_obj::getgravity( ){
 								HX_STACK_LINE(350)
 								{
 								}
-								HX_STACK_LINE(350)
-								{
-								}
 							}
 							HX_STACK_LINE(350)
 							{
 								HX_STACK_LINE(350)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(350)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(350)
 									_this->_invalidate(_this);
 								}
@@ -345,9 +336,6 @@ Void ZPP_FluidProperties_obj::gravity_validate( ){
 		this->wrap_gravity->zpp_inner->x = this->gravityx;
 		HX_STACK_LINE(330)
 		this->wrap_gravity->zpp_inner->y = this->gravityy;
-		HX_STACK_LINE(331)
-		{
-		}
 		HX_STACK_LINE(339)
 		{
 		}
@@ -369,9 +357,6 @@ Void ZPP_FluidProperties_obj::gravity_invalidate( ::zpp_nape::geom::ZPP_Vec2 x){
 			this->gravityx = x->x;
 			HX_STACK_LINE(307)
 			this->gravityy = x->y;
-			HX_STACK_LINE(308)
-			{
-			}
 			HX_STACK_LINE(316)
 			{
 			}
@@ -495,9 +480,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_FluidProperties_obj,free,(void))
 		{
 			HX_STACK_LINE(206)
 			::zpp_nape::phys::ZPP_FluidProperties o = this->outer->zpp_inner;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(207)
-			{
-			}
 			HX_STACK_LINE(215)
 			o->outer = null();
 			HX_STACK_LINE(216)
@@ -692,7 +674,7 @@ Class ZPP_FluidProperties_obj::__mClass;
 
 void ZPP_FluidProperties_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.phys.ZPP_FluidProperties"), hx::TCanCast< ZPP_FluidProperties_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.phys.ZPP_FluidProperties"), hx::TCanCast< ZPP_FluidProperties_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

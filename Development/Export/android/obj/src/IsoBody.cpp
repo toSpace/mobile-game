@@ -101,9 +101,6 @@ Float simplification = __o_simplification.Default(1.5);
 					HX_STACK_PUSH("*::closure","IsoBody.hx",33);
 					{
 						HX_STACK_LINE(33)
-						{
-						}
-						HX_STACK_LINE(33)
 						::nape::geom::Vec2 ret;		HX_STACK_VAR(ret,"ret");
 						HX_STACK_LINE(33)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::poolVec2 == null()))){
@@ -164,9 +161,6 @@ Float simplification = __o_simplification.Default(1.5);
 											HX_STACK_LINE(33)
 											{
 											}
-											HX_STACK_LINE(33)
-											{
-											}
 										}
 										HX_STACK_LINE(33)
 										return ret1;
@@ -195,13 +189,10 @@ Float simplification = __o_simplification.Default(1.5);
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(33)
-								if (((_this->_isimmutable_dyn() != null()))){
+								if (((_this->_isimmutable != null()))){
 									HX_STACK_LINE(33)
 									_this->_isimmutable();
 								}
-							}
-							HX_STACK_LINE(33)
-							{
 							}
 							struct _Function_4_1{
 								inline static Float Block( ::nape::geom::Vec2 &ret){
@@ -217,7 +208,7 @@ Float simplification = __o_simplification.Default(1.5);
 											HX_STACK_LINE(33)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(33)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(33)
 												_this->_validate();
 											}
@@ -242,7 +233,7 @@ Float simplification = __o_simplification.Default(1.5);
 											HX_STACK_LINE(33)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(33)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(33)
 												_this->_validate();
 											}
@@ -264,16 +255,13 @@ Float simplification = __o_simplification.Default(1.5);
 									HX_STACK_LINE(33)
 									{
 									}
-									HX_STACK_LINE(33)
-									{
-									}
 								}
 								HX_STACK_LINE(33)
 								{
 									HX_STACK_LINE(33)
 									::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(33)
-									if (((_this->_invalidate_dyn() != null()))){
+									if (((_this->_invalidate != null()))){
 										HX_STACK_LINE(33)
 										_this->_invalidate(_this);
 									}
@@ -443,9 +431,6 @@ Float simplification = __o_simplification.Default(1.5);
 														HX_STACK_LINE(56)
 														{
 														}
-														HX_STACK_LINE(56)
-														{
-														}
 													}
 													HX_STACK_LINE(56)
 													return ret1;
@@ -474,7 +459,7 @@ Float simplification = __o_simplification.Default(1.5);
 												hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 											}
 											HX_STACK_LINE(56)
-											if (((_this->_isimmutable_dyn() != null()))){
+											if (((_this->_isimmutable != null()))){
 												HX_STACK_LINE(56)
 												_this->_isimmutable();
 											}
@@ -498,7 +483,7 @@ Float simplification = __o_simplification.Default(1.5);
 														HX_STACK_LINE(56)
 														::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 														HX_STACK_LINE(56)
-														if (((_this->_validate_dyn() != null()))){
+														if (((_this->_validate != null()))){
 															HX_STACK_LINE(56)
 															_this->_validate();
 														}
@@ -523,7 +508,7 @@ Float simplification = __o_simplification.Default(1.5);
 														HX_STACK_LINE(56)
 														::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 														HX_STACK_LINE(56)
-														if (((_this->_validate_dyn() != null()))){
+														if (((_this->_validate != null()))){
 															HX_STACK_LINE(56)
 															_this->_validate();
 														}
@@ -545,16 +530,13 @@ Float simplification = __o_simplification.Default(1.5);
 												HX_STACK_LINE(56)
 												{
 												}
-												HX_STACK_LINE(56)
-												{
-												}
 											}
 											HX_STACK_LINE(56)
 											{
 												HX_STACK_LINE(56)
 												::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(56)
-												if (((_this->_invalidate_dyn() != null()))){
+												if (((_this->_invalidate != null()))){
 													HX_STACK_LINE(56)
 													_this->_invalidate(_this);
 												}
@@ -678,7 +660,7 @@ Class IsoBody_obj::__mClass;
 
 void IsoBody_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("IsoBody"), hx::TCanCast< IsoBody_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("IsoBody"), hx::TCanCast< IsoBody_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -49,9 +49,6 @@ Dynamic ZNPList_ZPP_FluidArbiter_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_PUSH("ZNPList_ZPP_FluidArbiter::at","zpp_nape/util/Lists.hx",11420);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(11421)
-	{
-	}
 	HX_STACK_LINE(11429)
 	::zpp_nape::util::ZNPNode_ZPP_FluidArbiter it = this->iterator_at(ind);		HX_STACK_VAR(it,"it");
 	HX_STACK_LINE(11430)
@@ -65,9 +62,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_FluidArbiter_obj,at,return )
 	HX_STACK_PUSH("ZNPList_ZPP_FluidArbiter::iterator_at","zpp_nape/util/Lists.hx",11407);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(11408)
-	{
-	}
 	HX_STACK_LINE(11416)
 	::zpp_nape::util::ZNPNode_ZPP_FluidArbiter ret = this->head;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(11417)
@@ -117,9 +111,6 @@ bool ZNPList_ZPP_FluidArbiter_obj::inlined_has( ::zpp_nape::dynamics::ZPP_FluidA
 	HX_STACK_PUSH("ZNPList_ZPP_FluidArbiter::inlined_has","zpp_nape/util/Lists.hx",11365);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(11366)
-	{
-	}
 	HX_STACK_LINE(11374)
 	bool ret;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(11375)
@@ -161,9 +152,6 @@ bool ZNPList_ZPP_FluidArbiter_obj::has( ::zpp_nape::dynamics::ZPP_FluidArbiter o
 		inline static bool Block( ::zpp_nape::util::ZNPList_ZPP_FluidArbiter_obj *__this,::zpp_nape::dynamics::ZPP_FluidArbiter &obj){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",11361);
 			{
-				HX_STACK_LINE(11361)
-				{
-				}
 				HX_STACK_LINE(11361)
 				bool ret;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(11361)
@@ -262,22 +250,13 @@ Void ZNPList_ZPP_FluidArbiter_obj::inlined_clear( ){
 		HX_STACK_LINE(11333)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(11333)
-			{
-			}
-			HX_STACK_LINE(11333)
 			::zpp_nape::util::ZNPNode_ZPP_FluidArbiter ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(11333)
 			this->head = ret->next;
 			HX_STACK_LINE(11333)
 			{
-			}
-			HX_STACK_LINE(11333)
-			{
 				HX_STACK_LINE(11333)
 				::zpp_nape::util::ZNPNode_ZPP_FluidArbiter o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(11333)
-				{
-				}
 				HX_STACK_LINE(11333)
 				o->elt = null();
 				HX_STACK_LINE(11333)
@@ -311,22 +290,13 @@ Void ZNPList_ZPP_FluidArbiter_obj::clear( ){
 		HX_STACK_LINE(11327)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(11327)
-			{
-			}
-			HX_STACK_LINE(11327)
 			::zpp_nape::util::ZNPNode_ZPP_FluidArbiter ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(11327)
 			this->head = ret->next;
 			HX_STACK_LINE(11327)
 			{
-			}
-			HX_STACK_LINE(11327)
-			{
 				HX_STACK_LINE(11327)
 				::zpp_nape::util::ZNPNode_ZPP_FluidArbiter o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(11327)
-				{
-				}
 				HX_STACK_LINE(11327)
 				o->elt = null();
 				HX_STACK_LINE(11327)
@@ -374,9 +344,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_FluidArbiter_obj,splice,return )
 	HX_STACK_PUSH("ZNPList_ZPP_FluidArbiter::inlined_erase","zpp_nape/util/Lists.hx",11276);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
-	HX_STACK_LINE(11277)
-	{
-	}
 	HX_STACK_LINE(11285)
 	::zpp_nape::util::ZNPNode_ZPP_FluidArbiter old;		HX_STACK_VAR(old,"old");
 	HX_STACK_LINE(11286)
@@ -408,16 +375,10 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_FluidArbiter_obj,splice,return )
 			this->pushmod = true;
 		}
 	}
-	HX_STACK_LINE(11299)
-	{
-	}
 	HX_STACK_LINE(11300)
 	{
 		HX_STACK_LINE(11301)
 		::zpp_nape::util::ZNPNode_ZPP_FluidArbiter o = old;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(11302)
-		{
-		}
 		HX_STACK_LINE(11310)
 		o->elt = null();
 		HX_STACK_LINE(11311)
@@ -443,12 +404,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_FluidArbiter_obj,inlined_erase,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
 	struct _Function_1_1{
-		inline static ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter Block( ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter &pre,::zpp_nape::util::ZNPList_ZPP_FluidArbiter_obj *__this){
+		inline static ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter Block( ::zpp_nape::util::ZNPList_ZPP_FluidArbiter_obj *__this,::zpp_nape::util::ZNPNode_ZPP_FluidArbiter &pre){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",11272);
 			{
-				HX_STACK_LINE(11272)
-				{
-				}
 				HX_STACK_LINE(11272)
 				::zpp_nape::util::ZNPNode_ZPP_FluidArbiter old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(11272)
@@ -482,14 +440,8 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_FluidArbiter_obj,inlined_erase,return )
 				}
 				HX_STACK_LINE(11272)
 				{
-				}
-				HX_STACK_LINE(11272)
-				{
 					HX_STACK_LINE(11272)
 					::zpp_nape::util::ZNPNode_ZPP_FluidArbiter o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(11272)
-					{
-					}
 					HX_STACK_LINE(11272)
 					o->elt = null();
 					HX_STACK_LINE(11272)
@@ -510,7 +462,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_FluidArbiter_obj,inlined_erase,return )
 		}
 	};
 	HX_STACK_LINE(11271)
-	return _Function_1_1::Block(pre,this);
+	return _Function_1_1::Block(this,pre);
 }
 
 
@@ -520,9 +472,6 @@ bool ZNPList_ZPP_FluidArbiter_obj::inlined_try_remove( ::zpp_nape::dynamics::ZPP
 	HX_STACK_PUSH("ZNPList_ZPP_FluidArbiter::inlined_try_remove","zpp_nape/util/Lists.hx",11248);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(11249)
-	{
-	}
 	HX_STACK_LINE(11257)
 	::zpp_nape::util::ZNPNode_ZPP_FluidArbiter pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(11258)
@@ -535,9 +484,6 @@ bool ZNPList_ZPP_FluidArbiter_obj::inlined_try_remove( ::zpp_nape::dynamics::ZPP
 		if (((cur->elt == obj))){
 			HX_STACK_LINE(11262)
 			{
-				HX_STACK_LINE(11262)
-				{
-				}
 				HX_STACK_LINE(11262)
 				::zpp_nape::util::ZNPNode_ZPP_FluidArbiter old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(11262)
@@ -571,14 +517,8 @@ bool ZNPList_ZPP_FluidArbiter_obj::inlined_try_remove( ::zpp_nape::dynamics::ZPP
 				}
 				HX_STACK_LINE(11262)
 				{
-				}
-				HX_STACK_LINE(11262)
-				{
 					HX_STACK_LINE(11262)
 					::zpp_nape::util::ZNPNode_ZPP_FluidArbiter o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(11262)
-					{
-					}
 					HX_STACK_LINE(11262)
 					o->elt = null();
 					HX_STACK_LINE(11262)
@@ -617,99 +557,81 @@ Void ZNPList_ZPP_FluidArbiter_obj::inlined_remove( ::zpp_nape::dynamics::ZPP_Flu
 		HX_STACK_PUSH("ZNPList_ZPP_FluidArbiter::inlined_remove","zpp_nape/util/Lists.hx",11235);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(11236)
-		{
-		}
 		HX_STACK_LINE(11244)
-		{
+		::zpp_nape::util::ZNPNode_ZPP_FluidArbiter pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(11244)
+		::zpp_nape::util::ZNPNode_ZPP_FluidArbiter cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(11244)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(11244)
+		while(((cur != null()))){
 			HX_STACK_LINE(11244)
-			{
-			}
-			HX_STACK_LINE(11244)
-			::zpp_nape::util::ZNPNode_ZPP_FluidArbiter pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(11244)
-			::zpp_nape::util::ZNPNode_ZPP_FluidArbiter cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(11244)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(11244)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(11244)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(11244)
+					::zpp_nape::util::ZNPNode_ZPP_FluidArbiter old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(11244)
+					::zpp_nape::util::ZNPNode_ZPP_FluidArbiter ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(11244)
+					if (((pre == null()))){
+						HX_STACK_LINE(11244)
+						old = this->head;
+						HX_STACK_LINE(11244)
+						ret1 = old->next;
+						HX_STACK_LINE(11244)
+						this->head = ret1;
+						HX_STACK_LINE(11244)
+						if (((this->head == null()))){
+							HX_STACK_LINE(11244)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(11244)
+						old = pre->next;
+						HX_STACK_LINE(11244)
+						ret1 = old->next;
+						HX_STACK_LINE(11244)
+						pre->next = ret1;
+						HX_STACK_LINE(11244)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(11244)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(11244)
 					{
 						HX_STACK_LINE(11244)
-						{
-						}
+						::zpp_nape::util::ZNPNode_ZPP_FluidArbiter o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(11244)
-						::zpp_nape::util::ZNPNode_ZPP_FluidArbiter old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(11244)
-						::zpp_nape::util::ZNPNode_ZPP_FluidArbiter ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter_obj::zpp_pool;
 						HX_STACK_LINE(11244)
-						if (((pre == null()))){
-							HX_STACK_LINE(11244)
-							old = this->head;
-							HX_STACK_LINE(11244)
-							ret1 = old->next;
-							HX_STACK_LINE(11244)
-							this->head = ret1;
-							HX_STACK_LINE(11244)
-							if (((this->head == null()))){
-								HX_STACK_LINE(11244)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(11244)
-							old = pre->next;
-							HX_STACK_LINE(11244)
-							ret1 = old->next;
-							HX_STACK_LINE(11244)
-							pre->next = ret1;
-							HX_STACK_LINE(11244)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(11244)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(11244)
-						{
-						}
-						HX_STACK_LINE(11244)
-						{
-							HX_STACK_LINE(11244)
-							::zpp_nape::util::ZNPNode_ZPP_FluidArbiter o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(11244)
-							{
-							}
-							HX_STACK_LINE(11244)
-							o->elt = null();
-							HX_STACK_LINE(11244)
-							o->next = ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter_obj::zpp_pool;
-							HX_STACK_LINE(11244)
-							::zpp_nape::util::ZNPNode_ZPP_FluidArbiter_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(11244)
-						this->modified = true;
-						HX_STACK_LINE(11244)
-						(this->length)--;
-						HX_STACK_LINE(11244)
-						this->pushmod = true;
-						HX_STACK_LINE(11244)
-						ret1;
+						::zpp_nape::util::ZNPNode_ZPP_FluidArbiter_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(11244)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(11244)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(11244)
+					this->pushmod = true;
+					HX_STACK_LINE(11244)
+					ret1;
 				}
 				HX_STACK_LINE(11244)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(11244)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(11244)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(11244)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(11244)
+		ret;
 	}
 return null();
 }
@@ -721,9 +643,6 @@ bool ZNPList_ZPP_FluidArbiter_obj::try_remove( ::zpp_nape::dynamics::ZPP_FluidAr
 	HX_STACK_PUSH("ZNPList_ZPP_FluidArbiter::try_remove","zpp_nape/util/Lists.hx",11210);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(11211)
-	{
-	}
 	HX_STACK_LINE(11219)
 	::zpp_nape::util::ZNPNode_ZPP_FluidArbiter pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(11220)
@@ -758,99 +677,81 @@ Void ZNPList_ZPP_FluidArbiter_obj::remove( ::zpp_nape::dynamics::ZPP_FluidArbite
 		HX_STACK_PUSH("ZNPList_ZPP_FluidArbiter::remove","zpp_nape/util/Lists.hx",11199);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(11200)
-		{
-		}
 		HX_STACK_LINE(11208)
-		{
+		::zpp_nape::util::ZNPNode_ZPP_FluidArbiter pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(11208)
+		::zpp_nape::util::ZNPNode_ZPP_FluidArbiter cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(11208)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(11208)
+		while(((cur != null()))){
 			HX_STACK_LINE(11208)
-			{
-			}
-			HX_STACK_LINE(11208)
-			::zpp_nape::util::ZNPNode_ZPP_FluidArbiter pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(11208)
-			::zpp_nape::util::ZNPNode_ZPP_FluidArbiter cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(11208)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(11208)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(11208)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(11208)
+					::zpp_nape::util::ZNPNode_ZPP_FluidArbiter old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(11208)
+					::zpp_nape::util::ZNPNode_ZPP_FluidArbiter ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(11208)
+					if (((pre == null()))){
+						HX_STACK_LINE(11208)
+						old = this->head;
+						HX_STACK_LINE(11208)
+						ret1 = old->next;
+						HX_STACK_LINE(11208)
+						this->head = ret1;
+						HX_STACK_LINE(11208)
+						if (((this->head == null()))){
+							HX_STACK_LINE(11208)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(11208)
+						old = pre->next;
+						HX_STACK_LINE(11208)
+						ret1 = old->next;
+						HX_STACK_LINE(11208)
+						pre->next = ret1;
+						HX_STACK_LINE(11208)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(11208)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(11208)
 					{
 						HX_STACK_LINE(11208)
-						{
-						}
+						::zpp_nape::util::ZNPNode_ZPP_FluidArbiter o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(11208)
-						::zpp_nape::util::ZNPNode_ZPP_FluidArbiter old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(11208)
-						::zpp_nape::util::ZNPNode_ZPP_FluidArbiter ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter_obj::zpp_pool;
 						HX_STACK_LINE(11208)
-						if (((pre == null()))){
-							HX_STACK_LINE(11208)
-							old = this->head;
-							HX_STACK_LINE(11208)
-							ret1 = old->next;
-							HX_STACK_LINE(11208)
-							this->head = ret1;
-							HX_STACK_LINE(11208)
-							if (((this->head == null()))){
-								HX_STACK_LINE(11208)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(11208)
-							old = pre->next;
-							HX_STACK_LINE(11208)
-							ret1 = old->next;
-							HX_STACK_LINE(11208)
-							pre->next = ret1;
-							HX_STACK_LINE(11208)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(11208)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(11208)
-						{
-						}
-						HX_STACK_LINE(11208)
-						{
-							HX_STACK_LINE(11208)
-							::zpp_nape::util::ZNPNode_ZPP_FluidArbiter o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(11208)
-							{
-							}
-							HX_STACK_LINE(11208)
-							o->elt = null();
-							HX_STACK_LINE(11208)
-							o->next = ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter_obj::zpp_pool;
-							HX_STACK_LINE(11208)
-							::zpp_nape::util::ZNPNode_ZPP_FluidArbiter_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(11208)
-						this->modified = true;
-						HX_STACK_LINE(11208)
-						(this->length)--;
-						HX_STACK_LINE(11208)
-						this->pushmod = true;
-						HX_STACK_LINE(11208)
-						ret1;
+						::zpp_nape::util::ZNPNode_ZPP_FluidArbiter_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(11208)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(11208)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(11208)
+					this->pushmod = true;
+					HX_STACK_LINE(11208)
+					ret1;
 				}
 				HX_STACK_LINE(11208)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(11208)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(11208)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(11208)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(11208)
+		ret;
 	}
 return null();
 }
@@ -861,9 +762,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_FluidArbiter_obj,remove,(void))
 ::zpp_nape::dynamics::ZPP_FluidArbiter ZNPList_ZPP_FluidArbiter_obj::inlined_pop_unsafe( ){
 	HX_STACK_PUSH("ZNPList_ZPP_FluidArbiter::inlined_pop_unsafe","zpp_nape/util/Lists.hx",11186);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(11187)
-	{
-	}
 	HX_STACK_LINE(11195)
 	::zpp_nape::dynamics::ZPP_FluidArbiter ret = this->head->elt;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(11196)
@@ -882,9 +780,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_FluidArbiter_obj,inlined_pop_unsafe,return )
 		inline static ::zpp_nape::dynamics::ZPP_FluidArbiter Block( ::zpp_nape::util::ZNPList_ZPP_FluidArbiter_obj *__this){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",11182);
 			{
-				HX_STACK_LINE(11182)
-				{
-				}
 				HX_STACK_LINE(11182)
 				::zpp_nape::dynamics::ZPP_FluidArbiter ret = __this->head->elt;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(11182)
@@ -906,23 +801,14 @@ Void ZNPList_ZPP_FluidArbiter_obj::inlined_pop( ){
 {
 		HX_STACK_PUSH("ZNPList_ZPP_FluidArbiter::inlined_pop","zpp_nape/util/Lists.hx",11148);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(11149)
-		{
-		}
 		HX_STACK_LINE(11157)
 		::zpp_nape::util::ZNPNode_ZPP_FluidArbiter ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(11158)
 		this->head = ret->next;
-		HX_STACK_LINE(11159)
-		{
-		}
 		HX_STACK_LINE(11160)
 		{
 			HX_STACK_LINE(11161)
 			::zpp_nape::util::ZNPNode_ZPP_FluidArbiter o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(11162)
-			{
-			}
 			HX_STACK_LINE(11170)
 			o->elt = null();
 			HX_STACK_LINE(11171)
@@ -951,22 +837,13 @@ Void ZNPList_ZPP_FluidArbiter_obj::pop( ){
 		HX_STACK_PUSH("ZNPList_ZPP_FluidArbiter::pop","zpp_nape/util/Lists.hx",11143);
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(11144)
-		{
-		}
-		HX_STACK_LINE(11144)
 		::zpp_nape::util::ZNPNode_ZPP_FluidArbiter ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(11144)
 		this->head = ret->next;
 		HX_STACK_LINE(11144)
 		{
-		}
-		HX_STACK_LINE(11144)
-		{
 			HX_STACK_LINE(11144)
 			::zpp_nape::util::ZNPNode_ZPP_FluidArbiter o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(11144)
-			{
-			}
 			HX_STACK_LINE(11144)
 			o->elt = null();
 			HX_STACK_LINE(11144)
@@ -995,9 +872,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_FluidArbiter_obj,pop,(void))
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(11101)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",11109);
@@ -1065,9 +939,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_FluidArbiter_obj,inlined_insert,return )
 		inline static ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter Block( ::zpp_nape::util::ZNPList_ZPP_FluidArbiter_obj *__this,::zpp_nape::dynamics::ZPP_FluidArbiter &o,::zpp_nape::util::ZNPNode_ZPP_FluidArbiter &cur){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",11096);
 			{
-				HX_STACK_LINE(11096)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",11096);
@@ -1137,22 +1008,16 @@ Void ZNPList_ZPP_FluidArbiter_obj::addAll( ::zpp_nape::util::ZNPList_ZPP_FluidAr
 		HX_STACK_PUSH("ZNPList_ZPP_FluidArbiter::addAll","zpp_nape/util/Lists.hx",11077);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(11078)
-		{
-		}
-		HX_STACK_LINE(11086)
-		{
-			HX_STACK_LINE(11087)
-			::zpp_nape::util::ZNPNode_ZPP_FluidArbiter cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
-			HX_STACK_LINE(11088)
-			while(((cx_ite != null()))){
-				HX_STACK_LINE(11089)
-				::zpp_nape::dynamics::ZPP_FluidArbiter i = cx_ite->elt;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(11090)
-				this->add(i);
-				HX_STACK_LINE(11091)
-				cx_ite = cx_ite->next;
-			}
+		HX_STACK_LINE(11087)
+		::zpp_nape::util::ZNPNode_ZPP_FluidArbiter cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+		HX_STACK_LINE(11088)
+		while(((cx_ite != null()))){
+			HX_STACK_LINE(11089)
+			::zpp_nape::dynamics::ZPP_FluidArbiter i = cx_ite->elt;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(11090)
+			this->add(i);
+			HX_STACK_LINE(11091)
+			cx_ite = cx_ite->next;
 		}
 	}
 return null();
@@ -1165,9 +1030,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_FluidArbiter_obj,addAll,(void))
 	HX_STACK_PUSH("ZNPList_ZPP_FluidArbiter::inlined_add","zpp_nape/util/Lists.hx",11040);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(11041)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",11049);
@@ -1222,12 +1084,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_FluidArbiter_obj,inlined_add,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
 	struct _Function_1_1{
-		inline static ::zpp_nape::dynamics::ZPP_FluidArbiter Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &o,::zpp_nape::util::ZNPList_ZPP_FluidArbiter_obj *__this){
+		inline static ::zpp_nape::dynamics::ZPP_FluidArbiter Block( ::zpp_nape::util::ZNPList_ZPP_FluidArbiter_obj *__this,::zpp_nape::dynamics::ZPP_FluidArbiter &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",11036);
 			{
-				HX_STACK_LINE(11036)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",11036);
@@ -1277,7 +1136,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_FluidArbiter_obj,inlined_add,return )
 		}
 	};
 	HX_STACK_LINE(11035)
-	return _Function_1_1::Block(o,this);
+	return _Function_1_1::Block(this,o);
 }
 
 
@@ -1475,7 +1334,7 @@ Class ZNPList_ZPP_FluidArbiter_obj::__mClass;
 
 void ZNPList_ZPP_FluidArbiter_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ZPP_FluidArbiter"), hx::TCanCast< ZNPList_ZPP_FluidArbiter_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ZPP_FluidArbiter"), hx::TCanCast< ZNPList_ZPP_FluidArbiter_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

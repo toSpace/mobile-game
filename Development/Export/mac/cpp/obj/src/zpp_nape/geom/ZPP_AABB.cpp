@@ -247,9 +247,6 @@ Void ZPP_AABB_obj::mod_max( ::zpp_nape::geom::ZPP_Vec2 max){
 				this->maxx = max->x;
 				HX_STACK_LINE(448)
 				this->maxy = max->y;
-				HX_STACK_LINE(449)
-				{
-				}
 				HX_STACK_LINE(457)
 				{
 				}
@@ -282,9 +279,6 @@ Void ZPP_AABB_obj::dom_max( ){
 			this->wrap_max->zpp_inner->x = this->maxx;
 			HX_STACK_LINE(425)
 			this->wrap_max->zpp_inner->y = this->maxy;
-			HX_STACK_LINE(426)
-			{
-			}
 			HX_STACK_LINE(434)
 			{
 			}
@@ -375,9 +369,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_AABB_obj,dom_max,(void))
 										HX_STACK_LINE(409)
 										{
 										}
-										HX_STACK_LINE(409)
-										{
-										}
 									}
 									HX_STACK_LINE(409)
 									return ret1;
@@ -406,7 +397,7 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_AABB_obj,dom_max,(void))
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(409)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(409)
 								_this->_isimmutable();
 							}
@@ -430,7 +421,7 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_AABB_obj,dom_max,(void))
 										HX_STACK_LINE(409)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(409)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(409)
 											_this->_validate();
 										}
@@ -455,7 +446,7 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_AABB_obj,dom_max,(void))
 										HX_STACK_LINE(409)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(409)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(409)
 											_this->_validate();
 										}
@@ -477,16 +468,13 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_AABB_obj,dom_max,(void))
 								HX_STACK_LINE(409)
 								{
 								}
-								HX_STACK_LINE(409)
-								{
-								}
 							}
 							HX_STACK_LINE(409)
 							{
 								HX_STACK_LINE(409)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(409)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(409)
 									_this->_invalidate(_this);
 								}
@@ -539,9 +527,6 @@ Void ZPP_AABB_obj::mod_min( ::zpp_nape::geom::ZPP_Vec2 min){
 				this->minx = min->x;
 				HX_STACK_LINE(383)
 				this->miny = min->y;
-				HX_STACK_LINE(384)
-				{
-				}
 				HX_STACK_LINE(392)
 				{
 				}
@@ -574,9 +559,6 @@ Void ZPP_AABB_obj::dom_min( ){
 			this->wrap_min->zpp_inner->x = this->minx;
 			HX_STACK_LINE(360)
 			this->wrap_min->zpp_inner->y = this->miny;
-			HX_STACK_LINE(361)
-			{
-			}
 			HX_STACK_LINE(369)
 			{
 			}
@@ -667,9 +649,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_AABB_obj,dom_min,(void))
 										HX_STACK_LINE(344)
 										{
 										}
-										HX_STACK_LINE(344)
-										{
-										}
 									}
 									HX_STACK_LINE(344)
 									return ret1;
@@ -698,7 +677,7 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_AABB_obj,dom_min,(void))
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(344)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(344)
 								_this->_isimmutable();
 							}
@@ -722,7 +701,7 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_AABB_obj,dom_min,(void))
 										HX_STACK_LINE(344)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(344)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(344)
 											_this->_validate();
 										}
@@ -747,7 +726,7 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_AABB_obj,dom_min,(void))
 										HX_STACK_LINE(344)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(344)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(344)
 											_this->_validate();
 										}
@@ -769,16 +748,13 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_AABB_obj,dom_min,(void))
 								HX_STACK_LINE(344)
 								{
 								}
-								HX_STACK_LINE(344)
-								{
-								}
 							}
 							HX_STACK_LINE(344)
 							{
 								HX_STACK_LINE(344)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(344)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(344)
 									_this->_invalidate(_this);
 								}
@@ -884,9 +860,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_AABB_obj,width,return )
 					HX_STACK_LINE(322)
 					{
 					}
-					HX_STACK_LINE(322)
-					{
-					}
 				}
 				HX_STACK_LINE(322)
 				{
@@ -894,9 +867,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_AABB_obj,width,return )
 					ret->maxx = __this->maxx;
 					HX_STACK_LINE(322)
 					ret->maxy = __this->maxy;
-					HX_STACK_LINE(322)
-					{
-					}
 					HX_STACK_LINE(322)
 					{
 					}
@@ -960,9 +930,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_AABB_obj,alloc,(void))
 		{
 			HX_STACK_LINE(197)
 			::zpp_nape::geom::ZPP_AABB o = this->outer->zpp_inner;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(198)
-			{
-			}
 			HX_STACK_LINE(206)
 			{
 				HX_STACK_LINE(206)
@@ -1060,9 +1027,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_AABB_obj,validate,(void))
 		ret->minx = minx;
 		HX_STACK_LINE(279)
 		ret->miny = miny;
-		HX_STACK_LINE(280)
-		{
-		}
 		HX_STACK_LINE(288)
 		{
 		}
@@ -1073,9 +1037,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_AABB_obj,validate,(void))
 		ret->maxx = maxx;
 		HX_STACK_LINE(299)
 		ret->maxy = maxy;
-		HX_STACK_LINE(300)
-		{
-		}
 		HX_STACK_LINE(308)
 		{
 		}
@@ -1292,7 +1253,7 @@ Class ZPP_AABB_obj::__mClass;
 
 void ZPP_AABB_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_AABB"), hx::TCanCast< ZPP_AABB_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_AABB"), hx::TCanCast< ZPP_AABB_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

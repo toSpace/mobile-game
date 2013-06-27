@@ -8,7 +8,7 @@
 HX_DECLARE_CLASS0(Garbage)
 
 
-class Garbage_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Garbage_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Garbage_obj OBJ_;
@@ -28,7 +28,7 @@ class Garbage_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("Garbage"); }
 
-		static Dynamic garbageList; /* REM */ 
+		static Dynamic garbageList;
 		static Void add( Dynamic element);
 		static Dynamic add_dyn();
 

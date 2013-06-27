@@ -14,7 +14,7 @@ namespace zpp_nape{
 namespace space{
 
 
-class ZPP_Component_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Component_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Component_obj OBJ_;
@@ -43,17 +43,17 @@ class ZPP_Component_obj : public hx::Object{
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		bool woken; /* REM */ 
-		int waket; /* REM */ 
-		bool sleeping; /* REM */ 
-		::zpp_nape::space::ZPP_Island island; /* REM */ 
-		::zpp_nape::constraint::ZPP_Constraint constraint; /* REM */ 
-		::zpp_nape::phys::ZPP_Body body; /* REM */ 
-		bool isBody; /* REM */ 
-		int rank; /* REM */ 
-		::zpp_nape::space::ZPP_Component parent; /* REM */ 
-		::zpp_nape::space::ZPP_Component next; /* REM */ 
-		static ::zpp_nape::space::ZPP_Component zpp_pool; /* REM */ 
+		bool woken;
+		int waket;
+		bool sleeping;
+		::zpp_nape::space::ZPP_Island island;
+		::zpp_nape::constraint::ZPP_Constraint constraint;
+		::zpp_nape::phys::ZPP_Body body;
+		bool isBody;
+		int rank;
+		::zpp_nape::space::ZPP_Component parent;
+		::zpp_nape::space::ZPP_Component next;
+		static ::zpp_nape::space::ZPP_Component zpp_pool;
 };
 
 } // end namespace zpp_nape

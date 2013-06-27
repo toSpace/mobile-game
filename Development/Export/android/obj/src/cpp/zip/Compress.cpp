@@ -20,9 +20,9 @@ namespace zip{
 
 Void Compress_obj::__construct(int level)
 {
-HX_STACK_PUSH("Compress::new","/usr/lib/haxe/std/cpp/zip/Compress.hx",31);
+HX_STACK_PUSH("Compress::new","/usr/lib/haxe/std/cpp/zip/Compress.hx",28);
 {
-	HX_STACK_LINE(31)
+	HX_STACK_LINE(28)
 	this->s = ::cpp::zip::Compress_obj::_deflate_init(level);
 }
 ;
@@ -44,9 +44,9 @@ Dynamic Compress_obj::__Create(hx::DynamicArray inArgs)
 
 Void Compress_obj::close( ){
 {
-		HX_STACK_PUSH("Compress::close","/usr/lib/haxe/std/cpp/zip/Compress.hx",43);
+		HX_STACK_PUSH("Compress::close","/usr/lib/haxe/std/cpp/zip/Compress.hx",40);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(43)
+		HX_STACK_LINE(40)
 		::cpp::zip::Compress_obj::_deflate_end(this->s);
 	}
 return null();
@@ -57,10 +57,10 @@ HX_DEFINE_DYNAMIC_FUNC0(Compress_obj,close,(void))
 
 Void Compress_obj::setFlushMode( ::cpp::zip::Flush f){
 {
-		HX_STACK_PUSH("Compress::setFlushMode","/usr/lib/haxe/std/cpp/zip/Compress.hx",39);
+		HX_STACK_PUSH("Compress::setFlushMode","/usr/lib/haxe/std/cpp/zip/Compress.hx",36);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(f,"f");
-		HX_STACK_LINE(39)
+		HX_STACK_LINE(36)
 		::cpp::zip::Compress_obj::_set_flush_mode(this->s,::Std_obj::string(f));
 	}
 return null();
@@ -70,13 +70,13 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(Compress_obj,setFlushMode,(void))
 
 Dynamic Compress_obj::execute( ::haxe::io::Bytes src,int srcPos,::haxe::io::Bytes dst,int dstPos){
-	HX_STACK_PUSH("Compress::execute","/usr/lib/haxe/std/cpp/zip/Compress.hx",35);
+	HX_STACK_PUSH("Compress::execute","/usr/lib/haxe/std/cpp/zip/Compress.hx",32);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(src,"src");
 	HX_STACK_ARG(srcPos,"srcPos");
 	HX_STACK_ARG(dst,"dst");
 	HX_STACK_ARG(dstPos,"dstPos");
-	HX_STACK_LINE(35)
+	HX_STACK_LINE(32)
 	return ::cpp::zip::Compress_obj::_deflate_buffer(this->s,src->b,srcPos,dst->b,dstPos);
 }
 
@@ -84,25 +84,25 @@ Dynamic Compress_obj::execute( ::haxe::io::Bytes src,int srcPos,::haxe::io::Byte
 HX_DEFINE_DYNAMIC_FUNC4(Compress_obj,execute,return )
 
 ::haxe::io::Bytes Compress_obj::run( ::haxe::io::Bytes s,int level){
-	HX_STACK_PUSH("Compress::run","/usr/lib/haxe/std/cpp/zip/Compress.hx",47);
+	HX_STACK_PUSH("Compress::run","/usr/lib/haxe/std/cpp/zip/Compress.hx",44);
 	HX_STACK_ARG(s,"s");
 	HX_STACK_ARG(level,"level");
-	HX_STACK_LINE(48)
+	HX_STACK_LINE(45)
 	::cpp::zip::Compress c = ::cpp::zip::Compress_obj::__new(level);		HX_STACK_VAR(c,"c");
-	HX_STACK_LINE(49)
-	c->setFlushMode(::cpp::zip::Flush_obj::FINISH_dyn());
-	HX_STACK_LINE(50)
+	HX_STACK_LINE(46)
+	c->setFlushMode(::cpp::zip::Flush_obj::FINISH);
+	HX_STACK_LINE(47)
 	::haxe::io::Bytes out = ::haxe::io::Bytes_obj::alloc(::cpp::zip::Compress_obj::_deflate_bound(c->s,s->length));		HX_STACK_VAR(out,"out");
-	HX_STACK_LINE(51)
+	HX_STACK_LINE(48)
 	Dynamic r = c->execute(s,(int)0,out,(int)0);		HX_STACK_VAR(r,"r");
-	HX_STACK_LINE(52)
+	HX_STACK_LINE(49)
 	c->close();
-	HX_STACK_LINE(53)
+	HX_STACK_LINE(50)
 	if (((bool(!(r->__Field(HX_CSTRING("done"),true))) || bool((r->__Field(HX_CSTRING("read"),true) != s->length))))){
-		HX_STACK_LINE(54)
+		HX_STACK_LINE(51)
 		hx::Throw (HX_CSTRING("Compression failed"));
 	}
-	HX_STACK_LINE(55)
+	HX_STACK_LINE(52)
 	return out->sub((int)0,r->__Field(HX_CSTRING("write"),true));
 }
 
@@ -234,7 +234,7 @@ Class Compress_obj::__mClass;
 
 void Compress_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("cpp.zip.Compress"), hx::TCanCast< Compress_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("cpp.zip.Compress"), hx::TCanCast< Compress_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

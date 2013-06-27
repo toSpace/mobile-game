@@ -14,7 +14,7 @@ namespace nape{
 namespace geom{
 
 
-class RayResult_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  RayResult_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef RayResult_obj OBJ_;
@@ -43,20 +43,16 @@ class RayResult_obj : public hx::Object{
 		virtual ::nape::shape::Shape get_shape( );
 		Dynamic get_shape_dyn();
 
-		::nape::shape::Shape shape; /* REM */ 
 		virtual bool get_inner( );
 		Dynamic get_inner_dyn();
 
-		bool inner; /* REM */ 
 		virtual Float get_distance( );
 		Dynamic get_distance_dyn();
 
-		Float distance; /* REM */ 
 		virtual ::nape::geom::Vec2 get_normal( );
 		Dynamic get_normal_dyn();
 
-		::nape::geom::Vec2 normal; /* REM */ 
-		::zpp_nape::geom::ZPP_ConvexRayResult zpp_inner; /* REM */ 
+		::zpp_nape::geom::ZPP_ConvexRayResult zpp_inner;
 };
 
 } // end namespace nape

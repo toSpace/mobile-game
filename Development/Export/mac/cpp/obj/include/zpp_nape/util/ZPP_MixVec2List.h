@@ -14,7 +14,7 @@ namespace zpp_nape{
 namespace util{
 
 
-class ZPP_MixVec2List_obj : public ::nape::geom::Vec2List_obj{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_MixVec2List_obj : public ::nape::geom::Vec2List_obj{
 	public:
 		typedef ::nape::geom::Vec2List_obj super;
 		typedef ZPP_MixVec2List_obj OBJ_;
@@ -52,11 +52,11 @@ class ZPP_MixVec2List_obj : public ::nape::geom::Vec2List_obj{
 
 		virtual int zpp_gl( );
 
-		int at_index; /* REM */ 
-		::zpp_nape::geom::ZPP_Vec2 at_ite; /* REM */ 
-		bool zip_length; /* REM */ 
-		int _length; /* REM */ 
-		::zpp_nape::geom::ZPP_Vec2 inner; /* REM */ 
+		int at_index;
+		::zpp_nape::geom::ZPP_Vec2 at_ite;
+		bool zip_length;
+		int _length;
+		::zpp_nape::geom::ZPP_Vec2 inner;
 		static ::zpp_nape::util::ZPP_MixVec2List get( ::zpp_nape::geom::ZPP_Vec2 list,hx::Null< bool >  immutable);
 		static Dynamic get_dyn();
 

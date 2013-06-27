@@ -109,9 +109,6 @@ Dynamic ZPP_Circle_obj::__Create(hx::DynamicArray inArgs)
 		ret->localCOMx = this->localCOMx;
 		HX_STACK_LINE(380)
 		ret->localCOMy = this->localCOMy;
-		HX_STACK_LINE(381)
-		{
-		}
 		HX_STACK_LINE(389)
 		{
 		}
@@ -184,9 +181,6 @@ Void ZPP_Circle_obj::__rotate( Float x,Float y){
 				this->localCOMx = tx;
 				HX_STACK_LINE(343)
 				this->localCOMy = ty;
-				HX_STACK_LINE(344)
-				{
-				}
 				HX_STACK_LINE(352)
 				{
 				}
@@ -211,9 +205,6 @@ Void ZPP_Circle_obj::__translate( Float x,Float y){
 		{
 			HX_STACK_LINE(319)
 			Float t = 1.0;		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(320)
-			{
-			}
 			HX_STACK_LINE(328)
 			hx::AddEq(this->localCOMx,(x * t));
 			HX_STACK_LINE(329)
@@ -365,9 +356,6 @@ Void ZPP_Circle_obj::__validate_aabb( ){
 							HX_STACK_LINE(251)
 							_this->localCOMy = _this->lverts->next->y;
 							HX_STACK_LINE(251)
-							{
-							}
-							HX_STACK_LINE(251)
 							Dynamic();
 						}
 						else{
@@ -382,17 +370,11 @@ Void ZPP_Circle_obj::__validate_aabb( ){
 									HX_STACK_LINE(251)
 									{
 									}
-									HX_STACK_LINE(251)
-									{
-									}
 								}
 								HX_STACK_LINE(251)
 								{
 									HX_STACK_LINE(251)
 									Float t = 1.0;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(251)
-									{
-									}
 									HX_STACK_LINE(251)
 									hx::AddEq(_this->localCOMx,(_this->lverts->next->next->x * t));
 									HX_STACK_LINE(251)
@@ -402,9 +384,6 @@ Void ZPP_Circle_obj::__validate_aabb( ){
 								{
 									HX_STACK_LINE(251)
 									Float t = 0.5;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(251)
-									{
-									}
 									HX_STACK_LINE(251)
 									hx::MultEq(_this->localCOMx,t);
 									HX_STACK_LINE(251)
@@ -418,9 +397,6 @@ Void ZPP_Circle_obj::__validate_aabb( ){
 									_this->localCOMx = (int)0;
 									HX_STACK_LINE(251)
 									_this->localCOMy = (int)0;
-									HX_STACK_LINE(251)
-									{
-									}
 									HX_STACK_LINE(251)
 									{
 									}
@@ -503,9 +479,6 @@ Void ZPP_Circle_obj::__validate_aabb( ){
 									HX_STACK_LINE(251)
 									Float t = area;		HX_STACK_VAR(t,"t");
 									HX_STACK_LINE(251)
-									{
-									}
-									HX_STACK_LINE(251)
 									hx::MultEq(_this->localCOMx,t);
 									HX_STACK_LINE(251)
 									hx::MultEq(_this->localCOMy,t);
@@ -529,9 +502,6 @@ Void ZPP_Circle_obj::__validate_aabb( ){
 							HX_STACK_LINE(251)
 							_this->axisy = ::Math_obj::cos(_this->rot);
 							HX_STACK_LINE(251)
-							{
-							}
-							HX_STACK_LINE(251)
 							Dynamic();
 						}
 					}
@@ -549,12 +519,6 @@ Void ZPP_Circle_obj::__validate_aabb( ){
 		Float rx = this->radius;		HX_STACK_VAR(rx,"rx");
 		HX_STACK_LINE(253)
 		Float ry = this->radius;		HX_STACK_VAR(ry,"ry");
-		HX_STACK_LINE(254)
-		{
-		}
-		HX_STACK_LINE(262)
-		{
-		}
 		HX_STACK_LINE(270)
 		{
 			HX_STACK_LINE(271)
@@ -656,9 +620,6 @@ Void ZPP_Circle_obj::setupLocalCOM( ){
 										HX_STACK_LINE(240)
 										{
 										}
-										HX_STACK_LINE(240)
-										{
-										}
 									}
 									HX_STACK_LINE(240)
 									return ret1;
@@ -687,7 +648,7 @@ Void ZPP_Circle_obj::setupLocalCOM( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(240)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(240)
 								_this->_isimmutable();
 							}
@@ -711,7 +672,7 @@ Void ZPP_Circle_obj::setupLocalCOM( ){
 										HX_STACK_LINE(240)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(240)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(240)
 											_this->_validate();
 										}
@@ -736,7 +697,7 @@ Void ZPP_Circle_obj::setupLocalCOM( ){
 										HX_STACK_LINE(240)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(240)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(240)
 											_this->_validate();
 										}
@@ -758,16 +719,13 @@ Void ZPP_Circle_obj::setupLocalCOM( ){
 								HX_STACK_LINE(240)
 								{
 								}
-								HX_STACK_LINE(240)
-								{
-								}
 							}
 							HX_STACK_LINE(240)
 							{
 								HX_STACK_LINE(240)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(240)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(240)
 									_this->_invalidate(_this);
 								}
@@ -828,9 +786,6 @@ Void ZPP_Circle_obj::localCOM_invalidate( ::zpp_nape::geom::ZPP_Vec2 x){
 			this->localCOMx = x->x;
 			HX_STACK_LINE(212)
 			this->localCOMy = x->y;
-			HX_STACK_LINE(213)
-			{
-			}
 			HX_STACK_LINE(221)
 			{
 			}
@@ -857,9 +812,6 @@ Void ZPP_Circle_obj::localCOM_validate( ){
 		this->wrap_localCOM->zpp_inner->x = this->localCOMx;
 		HX_STACK_LINE(191)
 		this->wrap_localCOM->zpp_inner->y = this->localCOMy;
-		HX_STACK_LINE(192)
-		{
-		}
 		HX_STACK_LINE(200)
 		{
 		}
@@ -1035,7 +987,7 @@ Class ZPP_Circle_obj::__mClass;
 
 void ZPP_Circle_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.shape.ZPP_Circle"), hx::TCanCast< ZPP_Circle_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.shape.ZPP_Circle"), hx::TCanCast< ZPP_Circle_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

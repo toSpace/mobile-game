@@ -81,6 +81,7 @@ bool velocityOnly = __o_velocityOnly.Default(false);
 	}
 	catch(Dynamic __e){
 		{
+			HX_STACK_BEGIN_CATCH
 			Dynamic e = __e;{
 			}
 		}
@@ -175,7 +176,7 @@ Void UserConstraint_obj::visitBodies( Dynamic lambda){
 		HX_STACK_LINE(440)
 		while(((i < nbodies))){
 			HX_STACK_LINE(441)
-			::zpp_nape::constraint::ZPP_UserBody b = this->zpp_inner_zn->bodies->__get(i);		HX_STACK_VAR(b,"b");
+			::zpp_nape::constraint::ZPP_UserBody b = this->zpp_inner_zn->bodies->__get(i).StaticCast< ::zpp_nape::constraint::ZPP_UserBody >();		HX_STACK_VAR(b,"b");
 			HX_STACK_LINE(442)
 			if (((b->body != null()))){
 				HX_STACK_LINE(443)
@@ -189,7 +190,7 @@ Void UserConstraint_obj::visitBodies( Dynamic lambda){
 						HX_STACK_LINE(444)
 						int j = (_g)++;		HX_STACK_VAR(j,"j");
 						HX_STACK_LINE(445)
-						::zpp_nape::constraint::ZPP_UserBody c = this->zpp_inner_zn->bodies->__get(j);		HX_STACK_VAR(c,"c");
+						::zpp_nape::constraint::ZPP_UserBody c = this->zpp_inner_zn->bodies->__get(j).StaticCast< ::zpp_nape::constraint::ZPP_UserBody >();		HX_STACK_VAR(c,"c");
 						HX_STACK_LINE(446)
 						if (((c->body == b->body))){
 							HX_STACK_LINE(447)
@@ -228,11 +229,11 @@ return null();
 	{
 		HX_STACK_LINE(417)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		Array< ::zpp_nape::constraint::ZPP_UserBody > _g1 = this->zpp_inner_zn->bodies;		HX_STACK_VAR(_g1,"_g1");
+		Array< ::Dynamic > _g1 = this->zpp_inner_zn->bodies;		HX_STACK_VAR(_g1,"_g1");
 		HX_STACK_LINE(417)
 		while(((_g < _g1->length))){
 			HX_STACK_LINE(417)
-			::zpp_nape::constraint::ZPP_UserBody b = _g1->__get(_g);		HX_STACK_VAR(b,"b");
+			::zpp_nape::constraint::ZPP_UserBody b = _g1->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_UserBody >();		HX_STACK_VAR(b,"b");
 			HX_STACK_LINE(417)
 			++(_g);
 			HX_STACK_LINE(418)
@@ -545,7 +546,7 @@ Class UserConstraint_obj::__mClass;
 
 void UserConstraint_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.constraint.UserConstraint"), hx::TCanCast< UserConstraint_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.constraint.UserConstraint"), hx::TCanCast< UserConstraint_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

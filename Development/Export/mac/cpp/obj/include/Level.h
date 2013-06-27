@@ -8,7 +8,7 @@
 HX_DECLARE_CLASS0(Level)
 
 
-class Level_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Level_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Level_obj OBJ_;
@@ -52,8 +52,8 @@ class Level_obj : public hx::Object{
 		virtual Void clear( );
 		Dynamic clear_dyn();
 
-		int nightmareTolerance; /* REM */ 
-		Float nightmare; /* REM */ 
+		int nightmareTolerance;
+		Float nightmare;
 		static Dynamic load( ::String level);
 		static Dynamic load_dyn();
 

@@ -6,19 +6,19 @@
 #endif
 
 HX_DECLARE_CLASS0(UIobject)
-HX_DECLARE_CLASS2(native,display,Bitmap)
-HX_DECLARE_CLASS2(native,display,DisplayObject)
-HX_DECLARE_CLASS2(native,display,DisplayObjectContainer)
-HX_DECLARE_CLASS2(native,display,IBitmapDrawable)
-HX_DECLARE_CLASS2(native,display,InteractiveObject)
-HX_DECLARE_CLASS2(native,display,Sprite)
-HX_DECLARE_CLASS2(native,events,Event)
-HX_DECLARE_CLASS2(native,events,EventDispatcher)
-HX_DECLARE_CLASS2(native,events,IEventDispatcher)
-HX_DECLARE_CLASS2(native,events,MouseEvent)
+HX_DECLARE_CLASS2(flash,display,Bitmap)
+HX_DECLARE_CLASS2(flash,display,DisplayObject)
+HX_DECLARE_CLASS2(flash,display,DisplayObjectContainer)
+HX_DECLARE_CLASS2(flash,display,IBitmapDrawable)
+HX_DECLARE_CLASS2(flash,display,InteractiveObject)
+HX_DECLARE_CLASS2(flash,display,Sprite)
+HX_DECLARE_CLASS2(flash,events,Event)
+HX_DECLARE_CLASS2(flash,events,EventDispatcher)
+HX_DECLARE_CLASS2(flash,events,IEventDispatcher)
+HX_DECLARE_CLASS2(flash,events,MouseEvent)
 
 
-class UIobject_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  UIobject_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef UIobject_obj OBJ_;
@@ -41,21 +41,21 @@ class UIobject_obj : public hx::Object{
 		virtual Void render( );
 		Dynamic render_dyn();
 
-		virtual Void mouseOut( ::native::events::MouseEvent ev);
+		virtual Void mouseOut( ::flash::events::MouseEvent ev);
 		Dynamic mouseOut_dyn();
 
-		virtual Void mouseOver( ::native::events::MouseEvent ev);
+		virtual Void mouseOver( ::flash::events::MouseEvent ev);
 		Dynamic mouseOver_dyn();
 
-		virtual Void mouseClick( ::native::events::MouseEvent ev);
+		virtual Void mouseClick( ::flash::events::MouseEvent ev);
 		Dynamic mouseClick_dyn();
 
-		virtual Void onAdded( ::native::events::Event ev);
+		virtual Void onAdded( ::flash::events::Event ev);
 		Dynamic onAdded_dyn();
 
-		::native::display::Sprite parent; /* REM */ 
-		::native::display::Bitmap asset; /* REM */ 
-		Dynamic canvas; /* REM */ 
+		::flash::display::Sprite parent;
+		::flash::display::Bitmap asset;
+		Dynamic canvas;
 };
 
 

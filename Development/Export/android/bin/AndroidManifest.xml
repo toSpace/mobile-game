@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="internalOnly" android:versionCode="66" android:versionName="1.0.0" package="com.tospace.game">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="preferExternal" android:versionCode="73" android:versionName="1.0.0" package="com.tospace.game">
 
 	<application android:label="Game" android:debuggable="true" android:icon="@drawable/icon">
 		
-		
+		<uses-feature android:glEsVersion="0x00020000" android:required="true" />
 		
 		<activity android:name="MainActivity" android:label="Game" android:configChanges="keyboard|keyboardHidden|orientation" android:screenOrientation="landscape">
 			

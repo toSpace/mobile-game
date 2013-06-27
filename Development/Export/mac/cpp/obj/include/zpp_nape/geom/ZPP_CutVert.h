@@ -11,7 +11,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_CutVert_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_CutVert_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_CutVert_obj OBJ_;
@@ -37,17 +37,17 @@ class ZPP_CutVert_obj : public hx::Object{
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
-		bool used; /* REM */ 
-		int rank; /* REM */ 
-		::zpp_nape::geom::ZPP_CutVert parent; /* REM */ 
-		bool positive; /* REM */ 
-		Float value; /* REM */ 
-		::zpp_nape::geom::ZPP_GeomVert vert; /* REM */ 
-		Float posy; /* REM */ 
-		Float posx; /* REM */ 
-		::zpp_nape::geom::ZPP_CutVert next; /* REM */ 
-		::zpp_nape::geom::ZPP_CutVert prev; /* REM */ 
-		static ::zpp_nape::geom::ZPP_CutVert zpp_pool; /* REM */ 
+		bool used;
+		int rank;
+		::zpp_nape::geom::ZPP_CutVert parent;
+		bool positive;
+		Float value;
+		::zpp_nape::geom::ZPP_GeomVert vert;
+		Float posy;
+		Float posx;
+		::zpp_nape::geom::ZPP_CutVert next;
+		::zpp_nape::geom::ZPP_CutVert prev;
+		static ::zpp_nape::geom::ZPP_CutVert zpp_pool;
 		static ::zpp_nape::geom::ZPP_CutVert path( ::zpp_nape::geom::ZPP_GeomVert poly);
 		static Dynamic path_dyn();
 

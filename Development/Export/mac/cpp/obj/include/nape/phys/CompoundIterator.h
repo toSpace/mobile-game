@@ -13,7 +13,7 @@ namespace nape{
 namespace phys{
 
 
-class CompoundIterator_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  CompoundIterator_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef CompoundIterator_obj OBJ_;
@@ -39,11 +39,11 @@ class CompoundIterator_obj : public hx::Object{
 		virtual bool hasNext( );
 		Dynamic hasNext_dyn();
 
-		::nape::phys::CompoundIterator zpp_next; /* REM */ 
-		bool zpp_critical; /* REM */ 
-		int zpp_i; /* REM */ 
-		::nape::phys::CompoundList zpp_inner; /* REM */ 
-		static ::nape::phys::CompoundIterator zpp_pool; /* REM */ 
+		::nape::phys::CompoundIterator zpp_next;
+		bool zpp_critical;
+		int zpp_i;
+		::nape::phys::CompoundList zpp_inner;
+		static ::nape::phys::CompoundIterator zpp_pool;
 		static ::nape::phys::CompoundIterator get( ::nape::phys::CompoundList list);
 		static Dynamic get_dyn();
 

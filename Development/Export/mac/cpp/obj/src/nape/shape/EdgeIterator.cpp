@@ -277,7 +277,7 @@ Class EdgeIterator_obj::__mClass;
 
 void EdgeIterator_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.shape.EdgeIterator"), hx::TCanCast< EdgeIterator_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.shape.EdgeIterator"), hx::TCanCast< EdgeIterator_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

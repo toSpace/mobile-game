@@ -193,9 +193,6 @@ Dynamic ZPP_Simple_obj::__Create(hx::DynamicArray inArgs)
 									HX_STACK_LINE(851)
 									{
 									}
-									HX_STACK_LINE(851)
-									{
-									}
 								}
 								HX_STACK_LINE(851)
 								return ret;
@@ -244,9 +241,6 @@ Dynamic ZPP_Simple_obj::__Create(hx::DynamicArray inArgs)
 						{
 							HX_STACK_LINE(863)
 							::zpp_nape::geom::ZPP_SimpleVert o = vert;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(864)
-							{
-							}
 							HX_STACK_LINE(872)
 							{
 								HX_STACK_LINE(872)
@@ -599,9 +593,6 @@ while(((nite != L)));
 								{
 									HX_STACK_LINE(983)
 									::zpp_nape::geom::ZPP_SimpleVert o = intx->vertex;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(984)
-									{
-									}
 									HX_STACK_LINE(992)
 									{
 										HX_STACK_LINE(992)
@@ -747,9 +738,6 @@ while(((nite != L)));
 							{
 								HX_STACK_LINE(1016)
 								::zpp_nape::geom::ZPP_SimpleVert o = intx->vertex;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(1017)
-								{
-								}
 								HX_STACK_LINE(1025)
 								{
 									HX_STACK_LINE(1025)
@@ -768,9 +756,6 @@ while(((nite != L)));
 							{
 								HX_STACK_LINE(1033)
 								::zpp_nape::geom::ZPP_SimpleEvent o = intx;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(1034)
-								{
-								}
 								HX_STACK_LINE(1042)
 								{
 									HX_STACK_LINE(1042)
@@ -792,9 +777,6 @@ while(((nite != L)));
 						{
 							HX_STACK_LINE(1053)
 							::zpp_nape::geom::ZPP_SimpleVert o = intx->vertex;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(1054)
-							{
-							}
 							HX_STACK_LINE(1062)
 							{
 								HX_STACK_LINE(1062)
@@ -813,9 +795,6 @@ while(((nite != L)));
 						{
 							HX_STACK_LINE(1070)
 							::zpp_nape::geom::ZPP_SimpleEvent o = intx;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(1071)
-							{
-							}
 							HX_STACK_LINE(1079)
 							{
 								HX_STACK_LINE(1079)
@@ -915,9 +894,6 @@ while(((nite != L)));
 								{
 									HX_STACK_LINE(1116)
 									::zpp_nape::geom::ZPP_SimpleVert o = intx->vertex;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1117)
-									{
-									}
 									HX_STACK_LINE(1125)
 									{
 										HX_STACK_LINE(1125)
@@ -1063,9 +1039,6 @@ while(((nite != L)));
 							{
 								HX_STACK_LINE(1149)
 								::zpp_nape::geom::ZPP_SimpleVert o = intx->vertex;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(1150)
-								{
-								}
 								HX_STACK_LINE(1158)
 								{
 									HX_STACK_LINE(1158)
@@ -1084,9 +1057,6 @@ while(((nite != L)));
 							{
 								HX_STACK_LINE(1166)
 								::zpp_nape::geom::ZPP_SimpleEvent o = intx;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(1167)
-								{
-								}
 								HX_STACK_LINE(1175)
 								{
 									HX_STACK_LINE(1175)
@@ -1108,9 +1078,6 @@ while(((nite != L)));
 						{
 							HX_STACK_LINE(1186)
 							::zpp_nape::geom::ZPP_SimpleVert o = intx->vertex;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(1187)
-							{
-							}
 							HX_STACK_LINE(1195)
 							{
 								HX_STACK_LINE(1195)
@@ -1129,9 +1096,6 @@ while(((nite != L)));
 						{
 							HX_STACK_LINE(1203)
 							::zpp_nape::geom::ZPP_SimpleEvent o = intx;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(1204)
-							{
-							}
 							HX_STACK_LINE(1212)
 							{
 								HX_STACK_LINE(1212)
@@ -1167,9 +1131,6 @@ while(((nite != L)));
 					{
 						HX_STACK_LINE(1231)
 						::zpp_nape::geom::ZPP_SimpleSeg o = s;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(1232)
-						{
-						}
 						HX_STACK_LINE(1240)
 						{
 							HX_STACK_LINE(1240)
@@ -1268,9 +1229,6 @@ while(((nite != L)));
 										{
 											HX_STACK_LINE(1273)
 											::zpp_nape::geom::ZPP_SimpleVert o = intx->vertex;		HX_STACK_VAR(o,"o");
-											HX_STACK_LINE(1274)
-											{
-											}
 											HX_STACK_LINE(1282)
 											{
 												HX_STACK_LINE(1282)
@@ -1353,11 +1311,11 @@ while(((nite != L)));
 									}
 									else{
 										struct _Function_10_1{
-											inline static ::zpp_nape::util::Hashable2_Boolfalse Block( ::zpp_nape::geom::ZPP_SimpleSeg &pre1,::zpp_nape::geom::ZPP_SimpleSeg &nxt){
+											inline static ::zpp_nape::util::Hashable2_Boolfalse Block( ::zpp_nape::geom::ZPP_SimpleSeg &nxt,::zpp_nape::geom::ZPP_SimpleSeg &pre1){
 												HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",1298);
 												{
 													struct _Function_11_1{
-														inline static ::zpp_nape::util::Hashable2_Boolfalse Block( ::zpp_nape::geom::ZPP_SimpleSeg &pre1,::zpp_nape::geom::ZPP_SimpleSeg &nxt){
+														inline static ::zpp_nape::util::Hashable2_Boolfalse Block( ::zpp_nape::geom::ZPP_SimpleSeg &nxt,::zpp_nape::geom::ZPP_SimpleSeg &pre1){
 															HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",1298);
 															{
 																HX_STACK_LINE(1298)
@@ -1391,7 +1349,7 @@ while(((nite != L)));
 														}
 													};
 													HX_STACK_LINE(1298)
-													::zpp_nape::util::Hashable2_Boolfalse ret = _Function_11_1::Block(pre1,nxt);		HX_STACK_VAR(ret,"ret");
+													::zpp_nape::util::Hashable2_Boolfalse ret = _Function_11_1::Block(nxt,pre1);		HX_STACK_VAR(ret,"ret");
 													HX_STACK_LINE(1298)
 													ret->value = true;
 													HX_STACK_LINE(1298)
@@ -1401,7 +1359,7 @@ while(((nite != L)));
 											}
 										};
 										HX_STACK_LINE(1298)
-										::zpp_nape::geom::ZPP_Simple_obj::inthash->add(_Function_10_1::Block(pre1,nxt));
+										::zpp_nape::geom::ZPP_Simple_obj::inthash->add(_Function_10_1::Block(nxt,pre1));
 									}
 								}
 								else{
@@ -1416,9 +1374,6 @@ while(((nite != L)));
 									{
 										HX_STACK_LINE(1306)
 										::zpp_nape::geom::ZPP_SimpleVert o = intx->vertex;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(1307)
-										{
-										}
 										HX_STACK_LINE(1315)
 										{
 											HX_STACK_LINE(1315)
@@ -1437,9 +1392,6 @@ while(((nite != L)));
 									{
 										HX_STACK_LINE(1323)
 										::zpp_nape::geom::ZPP_SimpleEvent o = intx;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(1324)
-										{
-										}
 										HX_STACK_LINE(1332)
 										{
 											HX_STACK_LINE(1332)
@@ -1461,9 +1413,6 @@ while(((nite != L)));
 								{
 									HX_STACK_LINE(1343)
 									::zpp_nape::geom::ZPP_SimpleVert o = intx->vertex;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1344)
-									{
-									}
 									HX_STACK_LINE(1352)
 									{
 										HX_STACK_LINE(1352)
@@ -1482,9 +1431,6 @@ while(((nite != L)));
 								{
 									HX_STACK_LINE(1360)
 									::zpp_nape::geom::ZPP_SimpleEvent o = intx;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1361)
-									{
-									}
 									HX_STACK_LINE(1369)
 									{
 										HX_STACK_LINE(1369)
@@ -1513,9 +1459,6 @@ while(((nite != L)));
 				::zpp_nape::geom::ZPP_SimpleSeg a = e->segment;		HX_STACK_VAR(a,"a");
 				HX_STACK_LINE(1386)
 				::zpp_nape::geom::ZPP_SimpleSeg b = e->segment2;		HX_STACK_VAR(b,"b");
-				HX_STACK_LINE(1387)
-				{
-				}
 				HX_STACK_LINE(1395)
 				if (((b->next != a))){
 					HX_STACK_LINE(1396)
@@ -1526,7 +1469,7 @@ while(((nite != L)));
 					b = t;
 				}
 				struct _Function_4_1{
-					inline static ::zpp_nape::util::ZPP_Set_ZPP_SimpleVert Block( ::zpp_nape::geom::ZPP_SimpleSeg &a,::zpp_nape::geom::ZPP_SimpleVert &intx){
+					inline static ::zpp_nape::util::ZPP_Set_ZPP_SimpleVert Block( ::zpp_nape::geom::ZPP_SimpleVert &intx,::zpp_nape::geom::ZPP_SimpleSeg &a){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",1400);
 						{
 							HX_STACK_LINE(1401)
@@ -1557,7 +1500,7 @@ while(((nite != L)));
 					}
 				};
 				HX_STACK_LINE(1400)
-				bool anew = (_Function_4_1::Block(a,intx) == null());		HX_STACK_VAR(anew,"anew");
+				bool anew = (_Function_4_1::Block(intx,a) == null());		HX_STACK_VAR(anew,"anew");
 				struct _Function_4_2{
 					inline static ::zpp_nape::util::ZPP_Set_ZPP_SimpleVert Block( ::zpp_nape::geom::ZPP_SimpleSeg &b,::zpp_nape::geom::ZPP_SimpleVert &intx){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",1409);
@@ -1779,9 +1722,6 @@ while(((nite != L)));
 									{
 										HX_STACK_LINE(1482)
 										::zpp_nape::geom::ZPP_SimpleVert o = intx1->vertex;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(1483)
-										{
-										}
 										HX_STACK_LINE(1491)
 										{
 											HX_STACK_LINE(1491)
@@ -1927,9 +1867,6 @@ while(((nite != L)));
 								{
 									HX_STACK_LINE(1515)
 									::zpp_nape::geom::ZPP_SimpleVert o = intx1->vertex;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1516)
-									{
-									}
 									HX_STACK_LINE(1524)
 									{
 										HX_STACK_LINE(1524)
@@ -1948,9 +1885,6 @@ while(((nite != L)));
 								{
 									HX_STACK_LINE(1532)
 									::zpp_nape::geom::ZPP_SimpleEvent o = intx1;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1533)
-									{
-									}
 									HX_STACK_LINE(1541)
 									{
 										HX_STACK_LINE(1541)
@@ -1972,9 +1906,6 @@ while(((nite != L)));
 							{
 								HX_STACK_LINE(1552)
 								::zpp_nape::geom::ZPP_SimpleVert o = intx1->vertex;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(1553)
-								{
-								}
 								HX_STACK_LINE(1561)
 								{
 									HX_STACK_LINE(1561)
@@ -1993,9 +1924,6 @@ while(((nite != L)));
 							{
 								HX_STACK_LINE(1569)
 								::zpp_nape::geom::ZPP_SimpleEvent o = intx1;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(1570)
-								{
-								}
 								HX_STACK_LINE(1578)
 								{
 									HX_STACK_LINE(1578)
@@ -2095,9 +2023,6 @@ while(((nite != L)));
 									{
 										HX_STACK_LINE(1615)
 										::zpp_nape::geom::ZPP_SimpleVert o = intx1->vertex;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(1616)
-										{
-										}
 										HX_STACK_LINE(1624)
 										{
 											HX_STACK_LINE(1624)
@@ -2243,9 +2168,6 @@ while(((nite != L)));
 								{
 									HX_STACK_LINE(1648)
 									::zpp_nape::geom::ZPP_SimpleVert o = intx1->vertex;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1649)
-									{
-									}
 									HX_STACK_LINE(1657)
 									{
 										HX_STACK_LINE(1657)
@@ -2264,9 +2186,6 @@ while(((nite != L)));
 								{
 									HX_STACK_LINE(1665)
 									::zpp_nape::geom::ZPP_SimpleEvent o = intx1;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1666)
-									{
-									}
 									HX_STACK_LINE(1674)
 									{
 										HX_STACK_LINE(1674)
@@ -2288,9 +2207,6 @@ while(((nite != L)));
 							{
 								HX_STACK_LINE(1685)
 								::zpp_nape::geom::ZPP_SimpleVert o = intx1->vertex;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(1686)
-								{
-								}
 								HX_STACK_LINE(1694)
 								{
 									HX_STACK_LINE(1694)
@@ -2309,9 +2225,6 @@ while(((nite != L)));
 							{
 								HX_STACK_LINE(1702)
 								::zpp_nape::geom::ZPP_SimpleEvent o = intx1;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(1703)
-								{
-								}
 								HX_STACK_LINE(1711)
 								{
 									HX_STACK_LINE(1711)
@@ -2337,9 +2250,6 @@ while(((nite != L)));
 		{
 			HX_STACK_LINE(1725)
 			::zpp_nape::geom::ZPP_SimpleEvent o = e;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(1726)
-			{
-			}
 			HX_STACK_LINE(1734)
 			{
 				HX_STACK_LINE(1734)
@@ -2355,12 +2265,6 @@ while(((nite != L)));
 			::zpp_nape::geom::ZPP_SimpleEvent_obj::zpp_pool = o;
 		}
 	}
-	HX_STACK_LINE(1742)
-	{
-	}
-	HX_STACK_LINE(1750)
-	{
-	}
 	HX_STACK_LINE(1758)
 	{
 		HX_STACK_LINE(1759)
@@ -2371,7 +2275,7 @@ while(((nite != L)));
 			HX_STACK_LINE(1759)
 			int i = (_g1)++;		HX_STACK_VAR(i,"i");
 			HX_STACK_LINE(1760)
-			::zpp_nape::util::Hashable2_Boolfalse n = ::zpp_nape::geom::ZPP_Simple_obj::inthash->table->__get(i);		HX_STACK_VAR(n,"n");
+			::zpp_nape::util::Hashable2_Boolfalse n = ::zpp_nape::geom::ZPP_Simple_obj::inthash->table->__get(i).StaticCast< ::zpp_nape::util::Hashable2_Boolfalse >();		HX_STACK_VAR(n,"n");
 			HX_STACK_LINE(1761)
 			if (((n == null()))){
 				HX_STACK_LINE(1761)
@@ -2387,9 +2291,6 @@ while(((nite != L)));
 				{
 					HX_STACK_LINE(1766)
 					::zpp_nape::util::Hashable2_Boolfalse o = n;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(1767)
-					{
-					}
 					HX_STACK_LINE(1776)
 					o->next = ::zpp_nape::util::Hashable2_Boolfalse_obj::zpp_pool;
 					HX_STACK_LINE(1777)
@@ -2428,9 +2329,6 @@ Void ZPP_Simple_obj::clip_polygon( ::zpp_nape::util::ZPP_Set_ZPP_SimpleVert vert
 		::zpp_nape::geom::ZPP_GeomVert ret = null();		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(1793)
 		::zpp_nape::geom::ZPP_SimpleVert cur = vertices->first();		HX_STACK_VAR(cur,"cur");
-		HX_STACK_LINE(1794)
-		{
-		}
 		HX_STACK_LINE(1802)
 		::zpp_nape::geom::ZPP_SimpleVert fst = cur;		HX_STACK_VAR(fst,"fst");
 		HX_STACK_LINE(1803)
@@ -2442,7 +2340,7 @@ Void ZPP_Simple_obj::clip_polygon( ::zpp_nape::util::ZPP_Set_ZPP_SimpleVert vert
 		HX_STACK_LINE(1806)
 		::zpp_nape::geom::ZPP_SimpleVert nxt = nxtn->data;		HX_STACK_VAR(nxt,"nxt");
 		struct _Function_1_1{
-			inline static Float Block( ::zpp_nape::geom::ZPP_SimpleVert &nxt,::zpp_nape::geom::ZPP_SimpleVert &cur,::zpp_nape::geom::ZPP_SimpleVert &pre){
+			inline static Float Block( ::zpp_nape::geom::ZPP_SimpleVert &cur,::zpp_nape::geom::ZPP_SimpleVert &nxt,::zpp_nape::geom::ZPP_SimpleVert &pre){
 				HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",1807);
 				{
 					HX_STACK_LINE(1808)
@@ -2474,7 +2372,7 @@ Void ZPP_Simple_obj::clip_polygon( ::zpp_nape::util::ZPP_Set_ZPP_SimpleVert vert
 			}
 		};
 		HX_STACK_LINE(1807)
-		if (((_Function_1_1::Block(nxt,cur,pre) < (int)0))){
+		if (((_Function_1_1::Block(cur,nxt,pre) < (int)0))){
 			HX_STACK_LINE(1821)
 			nxt = pre;
 		}
@@ -2512,9 +2410,6 @@ Void ZPP_Simple_obj::clip_polygon( ::zpp_nape::util::ZPP_Set_ZPP_SimpleVert vert
 									ret1->x = cur->x;
 									HX_STACK_LINE(1823)
 									ret1->y = cur->y;
-									HX_STACK_LINE(1823)
-									{
-									}
 									HX_STACK_LINE(1823)
 									{
 									}
@@ -2568,9 +2463,6 @@ Void ZPP_Simple_obj::clip_polygon( ::zpp_nape::util::ZPP_Set_ZPP_SimpleVert vert
 					{
 						HX_STACK_LINE(1841)
 						::zpp_nape::geom::ZPP_SimpleVert o = cur;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(1842)
-						{
-						}
 						HX_STACK_LINE(1850)
 						{
 							HX_STACK_LINE(1850)
@@ -2626,9 +2518,6 @@ Void ZPP_Simple_obj::clip_polygon( ::zpp_nape::util::ZPP_Set_ZPP_SimpleVert vert
 										HX_STACK_LINE(1861)
 										{
 										}
-										HX_STACK_LINE(1861)
-										{
-										}
 									}
 									HX_STACK_LINE(1861)
 									return ret1;
@@ -2663,9 +2552,6 @@ Void ZPP_Simple_obj::clip_polygon( ::zpp_nape::util::ZPP_Set_ZPP_SimpleVert vert
 			ret = _Function_2_1::Block(nxt,ret);
 			HX_STACK_LINE(1871)
 			ret->forced = nxt->forced;
-			HX_STACK_LINE(1872)
-			{
-			}
 			HX_STACK_LINE(1880)
 			if ((nxt->links->singular())){
 				HX_STACK_LINE(1881)
@@ -2676,9 +2562,6 @@ Void ZPP_Simple_obj::clip_polygon( ::zpp_nape::util::ZPP_Set_ZPP_SimpleVert vert
 					{
 						HX_STACK_LINE(1884)
 						::zpp_nape::geom::ZPP_SimpleVert o = cur;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(1885)
-						{
-						}
 						HX_STACK_LINE(1893)
 						{
 							HX_STACK_LINE(1893)
@@ -2705,170 +2588,164 @@ Void ZPP_Simple_obj::clip_polygon( ::zpp_nape::util::ZPP_Set_ZPP_SimpleVert vert
 				HX_STACK_LINE(1906)
 				Float minl = 0.0;		HX_STACK_VAR(minl,"minl");
 				HX_STACK_LINE(1907)
-				{
-					HX_STACK_LINE(1908)
-					{
-					}
-					HX_STACK_LINE(1916)
-					if ((!(nxt->links->empty()))){
-						HX_STACK_LINE(1917)
-						::zpp_nape::util::ZPP_Set_ZPP_SimpleVert set_ite = nxt->links->parent;		HX_STACK_VAR(set_ite,"set_ite");
+				if ((!(nxt->links->empty()))){
+					HX_STACK_LINE(1917)
+					::zpp_nape::util::ZPP_Set_ZPP_SimpleVert set_ite = nxt->links->parent;		HX_STACK_VAR(set_ite,"set_ite");
+					HX_STACK_LINE(1918)
+					while(((set_ite->prev != null()))){
 						HX_STACK_LINE(1918)
-						while(((set_ite->prev != null()))){
-							HX_STACK_LINE(1918)
-							set_ite = set_ite->prev;
+						set_ite = set_ite->prev;
+					}
+					HX_STACK_LINE(1919)
+					while(((set_ite != null()))){
+						HX_STACK_LINE(1920)
+						::zpp_nape::geom::ZPP_SimpleVert p = set_ite->data;		HX_STACK_VAR(p,"p");
+						HX_STACK_LINE(1921)
+						if (((min == null()))){
+							HX_STACK_LINE(1923)
+							min = p;
+							struct _Function_6_1{
+								inline static Float Block( ::zpp_nape::geom::ZPP_SimpleVert &cur,::zpp_nape::geom::ZPP_SimpleVert &nxt,::zpp_nape::geom::ZPP_SimpleVert &p){
+									HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",1924);
+									{
+										HX_STACK_LINE(1925)
+										Float ux = 0.0;		HX_STACK_VAR(ux,"ux");
+										HX_STACK_LINE(1926)
+										Float uy = 0.0;		HX_STACK_VAR(uy,"uy");
+										HX_STACK_LINE(1927)
+										{
+											HX_STACK_LINE(1928)
+											ux = (nxt->x - cur->x);
+											HX_STACK_LINE(1929)
+											uy = (nxt->y - cur->y);
+										}
+										HX_STACK_LINE(1931)
+										Float vx = 0.0;		HX_STACK_VAR(vx,"vx");
+										HX_STACK_LINE(1932)
+										Float vy = 0.0;		HX_STACK_VAR(vy,"vy");
+										HX_STACK_LINE(1933)
+										{
+											HX_STACK_LINE(1934)
+											vx = (p->x - nxt->x);
+											HX_STACK_LINE(1935)
+											vy = (p->y - nxt->y);
+										}
+										HX_STACK_LINE(1937)
+										return ((vy * ux) - (vx * uy));
+									}
+									return null();
+								}
+							};
+							HX_STACK_LINE(1924)
+							minl = _Function_6_1::Block(cur,nxt,p);
 						}
-						HX_STACK_LINE(1919)
-						while(((set_ite != null()))){
-							HX_STACK_LINE(1920)
-							::zpp_nape::geom::ZPP_SimpleVert p = set_ite->data;		HX_STACK_VAR(p,"p");
-							HX_STACK_LINE(1921)
-							if (((min == null()))){
-								HX_STACK_LINE(1923)
+						else{
+							struct _Function_6_1{
+								inline static Float Block( ::zpp_nape::geom::ZPP_SimpleVert &cur,::zpp_nape::geom::ZPP_SimpleVert &nxt,::zpp_nape::geom::ZPP_SimpleVert &p){
+									HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",1941);
+									{
+										HX_STACK_LINE(1942)
+										Float ux = 0.0;		HX_STACK_VAR(ux,"ux");
+										HX_STACK_LINE(1943)
+										Float uy = 0.0;		HX_STACK_VAR(uy,"uy");
+										HX_STACK_LINE(1944)
+										{
+											HX_STACK_LINE(1945)
+											ux = (nxt->x - cur->x);
+											HX_STACK_LINE(1946)
+											uy = (nxt->y - cur->y);
+										}
+										HX_STACK_LINE(1948)
+										Float vx = 0.0;		HX_STACK_VAR(vx,"vx");
+										HX_STACK_LINE(1949)
+										Float vy = 0.0;		HX_STACK_VAR(vy,"vy");
+										HX_STACK_LINE(1950)
+										{
+											HX_STACK_LINE(1951)
+											vx = (p->x - nxt->x);
+											HX_STACK_LINE(1952)
+											vy = (p->y - nxt->y);
+										}
+										HX_STACK_LINE(1954)
+										return ((vy * ux) - (vx * uy));
+									}
+									return null();
+								}
+							};
+							HX_STACK_LINE(1941)
+							Float nleft = _Function_6_1::Block(cur,nxt,p);		HX_STACK_VAR(nleft,"nleft");
+							HX_STACK_LINE(1956)
+							if (((bool((nleft > (int)0)) && bool((minl <= (int)0))))){
+								HX_STACK_LINE(1957)
 								min = p;
-								struct _Function_7_1{
-									inline static Float Block( ::zpp_nape::geom::ZPP_SimpleVert &nxt,::zpp_nape::geom::ZPP_SimpleVert &p,::zpp_nape::geom::ZPP_SimpleVert &cur){
-										HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",1924);
-										{
-											HX_STACK_LINE(1925)
-											Float ux = 0.0;		HX_STACK_VAR(ux,"ux");
-											HX_STACK_LINE(1926)
-											Float uy = 0.0;		HX_STACK_VAR(uy,"uy");
-											HX_STACK_LINE(1927)
-											{
-												HX_STACK_LINE(1928)
-												ux = (nxt->x - cur->x);
-												HX_STACK_LINE(1929)
-												uy = (nxt->y - cur->y);
-											}
-											HX_STACK_LINE(1931)
-											Float vx = 0.0;		HX_STACK_VAR(vx,"vx");
-											HX_STACK_LINE(1932)
-											Float vy = 0.0;		HX_STACK_VAR(vy,"vy");
-											HX_STACK_LINE(1933)
-											{
-												HX_STACK_LINE(1934)
-												vx = (p->x - nxt->x);
-												HX_STACK_LINE(1935)
-												vy = (p->y - nxt->y);
-											}
-											HX_STACK_LINE(1937)
-											return ((vy * ux) - (vx * uy));
-										}
-										return null();
-									}
-								};
-								HX_STACK_LINE(1924)
-								minl = _Function_7_1::Block(nxt,p,cur);
+								HX_STACK_LINE(1958)
+								minl = nleft;
 							}
 							else{
-								struct _Function_7_1{
-									inline static Float Block( ::zpp_nape::geom::ZPP_SimpleVert &nxt,::zpp_nape::geom::ZPP_SimpleVert &p,::zpp_nape::geom::ZPP_SimpleVert &cur){
-										HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",1941);
-										{
-											HX_STACK_LINE(1942)
-											Float ux = 0.0;		HX_STACK_VAR(ux,"ux");
-											HX_STACK_LINE(1943)
-											Float uy = 0.0;		HX_STACK_VAR(uy,"uy");
-											HX_STACK_LINE(1944)
+								HX_STACK_LINE(1960)
+								if ((((minl * nleft) >= (int)0))){
+									struct _Function_8_1{
+										inline static Float Block( ::zpp_nape::geom::ZPP_SimpleVert &nxt,::zpp_nape::geom::ZPP_SimpleVert &p,::zpp_nape::geom::ZPP_SimpleVert &min){
+											HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",1961);
 											{
-												HX_STACK_LINE(1945)
-												ux = (nxt->x - cur->x);
-												HX_STACK_LINE(1946)
-												uy = (nxt->y - cur->y);
-											}
-											HX_STACK_LINE(1948)
-											Float vx = 0.0;		HX_STACK_VAR(vx,"vx");
-											HX_STACK_LINE(1949)
-											Float vy = 0.0;		HX_STACK_VAR(vy,"vy");
-											HX_STACK_LINE(1950)
-											{
-												HX_STACK_LINE(1951)
-												vx = (p->x - nxt->x);
-												HX_STACK_LINE(1952)
-												vy = (p->y - nxt->y);
-											}
-											HX_STACK_LINE(1954)
-											return ((vy * ux) - (vx * uy));
-										}
-										return null();
-									}
-								};
-								HX_STACK_LINE(1941)
-								Float nleft = _Function_7_1::Block(nxt,p,cur);		HX_STACK_VAR(nleft,"nleft");
-								HX_STACK_LINE(1956)
-								if (((bool((nleft > (int)0)) && bool((minl <= (int)0))))){
-									HX_STACK_LINE(1957)
-									min = p;
-									HX_STACK_LINE(1958)
-									minl = nleft;
-								}
-								else{
-									HX_STACK_LINE(1960)
-									if ((((minl * nleft) >= (int)0))){
-										struct _Function_9_1{
-											inline static Float Block( ::zpp_nape::geom::ZPP_SimpleVert &nxt,::zpp_nape::geom::ZPP_SimpleVert &p,::zpp_nape::geom::ZPP_SimpleVert &min){
-												HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",1961);
+												HX_STACK_LINE(1962)
+												Float ux = 0.0;		HX_STACK_VAR(ux,"ux");
+												HX_STACK_LINE(1963)
+												Float uy = 0.0;		HX_STACK_VAR(uy,"uy");
+												HX_STACK_LINE(1964)
 												{
-													HX_STACK_LINE(1962)
-													Float ux = 0.0;		HX_STACK_VAR(ux,"ux");
-													HX_STACK_LINE(1963)
-													Float uy = 0.0;		HX_STACK_VAR(uy,"uy");
-													HX_STACK_LINE(1964)
-													{
-														HX_STACK_LINE(1965)
-														ux = (nxt->x - p->x);
-														HX_STACK_LINE(1966)
-														uy = (nxt->y - p->y);
-													}
-													HX_STACK_LINE(1968)
-													Float vx = 0.0;		HX_STACK_VAR(vx,"vx");
-													HX_STACK_LINE(1969)
-													Float vy = 0.0;		HX_STACK_VAR(vy,"vy");
-													HX_STACK_LINE(1970)
-													{
-														HX_STACK_LINE(1971)
-														vx = (min->x - nxt->x);
-														HX_STACK_LINE(1972)
-														vy = (min->y - nxt->y);
-													}
-													HX_STACK_LINE(1974)
-													return ((vy * ux) - (vx * uy));
+													HX_STACK_LINE(1965)
+													ux = (nxt->x - p->x);
+													HX_STACK_LINE(1966)
+													uy = (nxt->y - p->y);
 												}
-												return null();
+												HX_STACK_LINE(1968)
+												Float vx = 0.0;		HX_STACK_VAR(vx,"vx");
+												HX_STACK_LINE(1969)
+												Float vy = 0.0;		HX_STACK_VAR(vy,"vy");
+												HX_STACK_LINE(1970)
+												{
+													HX_STACK_LINE(1971)
+													vx = (min->x - nxt->x);
+													HX_STACK_LINE(1972)
+													vy = (min->y - nxt->y);
+												}
+												HX_STACK_LINE(1974)
+												return ((vy * ux) - (vx * uy));
 											}
-										};
-										HX_STACK_LINE(1961)
-										Float pleft = _Function_9_1::Block(nxt,p,min);		HX_STACK_VAR(pleft,"pleft");
-										HX_STACK_LINE(1976)
-										if (((pleft > (int)0))){
-											HX_STACK_LINE(1977)
-											min = p;
-											HX_STACK_LINE(1978)
-											minl = nleft;
+											return null();
 										}
+									};
+									HX_STACK_LINE(1961)
+									Float pleft = _Function_8_1::Block(nxt,p,min);		HX_STACK_VAR(pleft,"pleft");
+									HX_STACK_LINE(1976)
+									if (((pleft > (int)0))){
+										HX_STACK_LINE(1977)
+										min = p;
+										HX_STACK_LINE(1978)
+										minl = nleft;
 									}
 								}
 							}
-							HX_STACK_LINE(1983)
-							if (((set_ite->next != null()))){
-								HX_STACK_LINE(1984)
-								set_ite = set_ite->next;
+						}
+						HX_STACK_LINE(1983)
+						if (((set_ite->next != null()))){
+							HX_STACK_LINE(1984)
+							set_ite = set_ite->next;
+							HX_STACK_LINE(1985)
+							while(((set_ite->prev != null()))){
 								HX_STACK_LINE(1985)
-								while(((set_ite->prev != null()))){
-									HX_STACK_LINE(1985)
-									set_ite = set_ite->prev;
-								}
+								set_ite = set_ite->prev;
 							}
-							else{
+						}
+						else{
+							HX_STACK_LINE(1988)
+							while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
 								HX_STACK_LINE(1988)
-								while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
-									HX_STACK_LINE(1988)
-									set_ite = set_ite->parent;
-								}
-								HX_STACK_LINE(1989)
 								set_ite = set_ite->parent;
 							}
+							HX_STACK_LINE(1989)
+							set_ite = set_ite->parent;
 						}
 					}
 				}
@@ -2880,9 +2757,6 @@ Void ZPP_Simple_obj::clip_polygon( ::zpp_nape::util::ZPP_Set_ZPP_SimpleVert vert
 					{
 						HX_STACK_LINE(1997)
 						::zpp_nape::geom::ZPP_SimpleVert o = cur;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(1998)
-						{
-						}
 						HX_STACK_LINE(2006)
 						{
 							HX_STACK_LINE(2006)
@@ -2904,9 +2778,6 @@ Void ZPP_Simple_obj::clip_polygon( ::zpp_nape::util::ZPP_Set_ZPP_SimpleVert vert
 				nxt = min;
 			}
 		}
-		HX_STACK_LINE(2018)
-		{
-		}
 		HX_STACK_LINE(2026)
 		{
 			HX_STACK_LINE(2027)
@@ -2915,9 +2786,6 @@ Void ZPP_Simple_obj::clip_polygon( ::zpp_nape::util::ZPP_Set_ZPP_SimpleVert vert
 			{
 				HX_STACK_LINE(2029)
 				::zpp_nape::geom::ZPP_SimpleVert o = fst;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2030)
-				{
-				}
 				HX_STACK_LINE(2038)
 				{
 					HX_STACK_LINE(2038)
@@ -3007,9 +2875,6 @@ bool ZPP_Simple_obj::isSimple( ::zpp_nape::geom::ZPP_GeomVert poly){
 								ret->x = v->x;
 								HX_STACK_LINE(2066)
 								ret->y = v->y;
-								HX_STACK_LINE(2066)
-								{
-								}
 								HX_STACK_LINE(2066)
 								{
 								}
@@ -3118,7 +2983,7 @@ while(((nite != L)));
 				HX_STACK_LINE(2084)
 				::zpp_nape::geom::ZPP_SimpleEvent e2 = queue->add(_Function_4_2::Block(v));		HX_STACK_VAR(e2,"e2");
 				struct _Function_4_3{
-					inline static ::zpp_nape::geom::ZPP_SimpleSeg Block( ::zpp_nape::geom::ZPP_SimpleEvent &e2,::zpp_nape::geom::ZPP_SimpleVert &v,::zpp_nape::geom::ZPP_SimpleEvent &e1,::zpp_nape::geom::ZPP_SimpleVert &u){
+					inline static ::zpp_nape::geom::ZPP_SimpleSeg Block( ::zpp_nape::geom::ZPP_SimpleEvent &e1,::zpp_nape::geom::ZPP_SimpleVert &v,::zpp_nape::geom::ZPP_SimpleEvent &e2,::zpp_nape::geom::ZPP_SimpleVert &u){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",2085);
 						{
 							HX_STACK_LINE(2086)
@@ -3132,7 +2997,7 @@ while(((nite != L)));
 					}
 				};
 				struct _Function_4_4{
-					inline static ::zpp_nape::geom::ZPP_SimpleSeg Block( ::zpp_nape::geom::ZPP_SimpleEvent &e2,::zpp_nape::geom::ZPP_SimpleVert &v,::zpp_nape::geom::ZPP_SimpleEvent &e1,::zpp_nape::geom::ZPP_SimpleVert &u){
+					inline static ::zpp_nape::geom::ZPP_SimpleSeg Block( ::zpp_nape::geom::ZPP_SimpleEvent &e1,::zpp_nape::geom::ZPP_SimpleVert &v,::zpp_nape::geom::ZPP_SimpleEvent &e2,::zpp_nape::geom::ZPP_SimpleVert &u){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",2090);
 						{
 							HX_STACK_LINE(2091)
@@ -3146,7 +3011,7 @@ while(((nite != L)));
 					}
 				};
 				HX_STACK_LINE(2085)
-				e1->segment = e2->segment = (  ((::zpp_nape::geom::ZPP_SimpleEvent_obj::less_xy(e1,e2))) ? ::zpp_nape::geom::ZPP_SimpleSeg(_Function_4_3::Block(e2,v,e1,u)) : ::zpp_nape::geom::ZPP_SimpleSeg(_Function_4_4::Block(e2,v,e1,u)) );
+				e1->segment = e2->segment = (  ((::zpp_nape::geom::ZPP_SimpleEvent_obj::less_xy(e1,e2))) ? ::zpp_nape::geom::ZPP_SimpleSeg(_Function_4_3::Block(e1,v,e2,u)) : ::zpp_nape::geom::ZPP_SimpleSeg(_Function_4_4::Block(e1,v,e2,u)) );
 			}
 			HX_STACK_LINE(2096)
 			u = v;
@@ -3226,7 +3091,7 @@ while(((nite != L)));
 			HX_STACK_LINE(2102)
 			::zpp_nape::geom::ZPP_SimpleEvent e2 = queue->add(_Function_3_2::Block(v));		HX_STACK_VAR(e2,"e2");
 			struct _Function_3_3{
-				inline static ::zpp_nape::geom::ZPP_SimpleSeg Block( ::zpp_nape::geom::ZPP_SimpleEvent &e2,::zpp_nape::geom::ZPP_SimpleVert &v,::zpp_nape::geom::ZPP_SimpleEvent &e1,::zpp_nape::geom::ZPP_SimpleVert &u){
+				inline static ::zpp_nape::geom::ZPP_SimpleSeg Block( ::zpp_nape::geom::ZPP_SimpleEvent &e1,::zpp_nape::geom::ZPP_SimpleVert &v,::zpp_nape::geom::ZPP_SimpleEvent &e2,::zpp_nape::geom::ZPP_SimpleVert &u){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",2103);
 					{
 						HX_STACK_LINE(2104)
@@ -3240,7 +3105,7 @@ while(((nite != L)));
 				}
 			};
 			struct _Function_3_4{
-				inline static ::zpp_nape::geom::ZPP_SimpleSeg Block( ::zpp_nape::geom::ZPP_SimpleEvent &e2,::zpp_nape::geom::ZPP_SimpleVert &v,::zpp_nape::geom::ZPP_SimpleEvent &e1,::zpp_nape::geom::ZPP_SimpleVert &u){
+				inline static ::zpp_nape::geom::ZPP_SimpleSeg Block( ::zpp_nape::geom::ZPP_SimpleEvent &e1,::zpp_nape::geom::ZPP_SimpleVert &v,::zpp_nape::geom::ZPP_SimpleEvent &e2,::zpp_nape::geom::ZPP_SimpleVert &u){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",2108);
 					{
 						HX_STACK_LINE(2109)
@@ -3254,7 +3119,7 @@ while(((nite != L)));
 				}
 			};
 			HX_STACK_LINE(2103)
-			e1->segment = e2->segment = (  ((::zpp_nape::geom::ZPP_SimpleEvent_obj::less_xy(e1,e2))) ? ::zpp_nape::geom::ZPP_SimpleSeg(_Function_3_3::Block(e2,v,e1,u)) : ::zpp_nape::geom::ZPP_SimpleSeg(_Function_3_4::Block(e2,v,e1,u)) );
+			e1->segment = e2->segment = (  ((::zpp_nape::geom::ZPP_SimpleEvent_obj::less_xy(e1,e2))) ? ::zpp_nape::geom::ZPP_SimpleSeg(_Function_3_3::Block(e1,v,e2,u)) : ::zpp_nape::geom::ZPP_SimpleSeg(_Function_3_4::Block(e1,v,e2,u)) );
 		}
 	}
 	HX_STACK_LINE(2115)
@@ -3413,9 +3278,6 @@ while(((numMerges > (int)1)));
 				{
 					HX_STACK_LINE(2190)
 					::zpp_nape::geom::ZPP_SimpleSeg o = seg;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2191)
-					{
-					}
 					HX_STACK_LINE(2199)
 					{
 						HX_STACK_LINE(2199)
@@ -3438,9 +3300,6 @@ while(((numMerges > (int)1)));
 		{
 			HX_STACK_LINE(2208)
 			::zpp_nape::geom::ZPP_SimpleEvent o = e;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(2209)
-			{
-			}
 			HX_STACK_LINE(2217)
 			{
 				HX_STACK_LINE(2217)
@@ -3464,9 +3323,6 @@ while(((numMerges > (int)1)));
 		if (((e->type == (int)2))){
 			HX_STACK_LINE(2228)
 			::zpp_nape::geom::ZPP_SimpleSeg o = e->segment;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(2229)
-			{
-			}
 			HX_STACK_LINE(2237)
 			{
 				HX_STACK_LINE(2237)
@@ -3487,9 +3343,6 @@ while(((numMerges > (int)1)));
 		{
 			HX_STACK_LINE(2245)
 			::zpp_nape::geom::ZPP_SimpleEvent o = e;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(2246)
-			{
-			}
 			HX_STACK_LINE(2254)
 			{
 				HX_STACK_LINE(2254)
@@ -3511,9 +3364,6 @@ while(((numMerges > (int)1)));
 	while((!(((vertices->head == null()))))){
 		HX_STACK_LINE(2264)
 		::zpp_nape::geom::ZPP_SimpleVert o = vertices->pop_unsafe();		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(2265)
-		{
-		}
 		HX_STACK_LINE(2273)
 		{
 			HX_STACK_LINE(2273)
@@ -3654,7 +3504,7 @@ Class ZPP_Simple_obj::__mClass;
 
 void ZPP_Simple_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_Simple"), hx::TCanCast< ZPP_Simple_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_Simple"), hx::TCanCast< ZPP_Simple_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

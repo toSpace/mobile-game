@@ -135,9 +135,6 @@ Float ZPP_Simplify_obj::distance( ::zpp_nape::geom::ZPP_SimplifyV v,::zpp_nape::
 				{
 					HX_STACK_LINE(350)
 					Float t1 = t;		HX_STACK_VAR(t1,"t1");
-					HX_STACK_LINE(351)
-					{
-					}
 					HX_STACK_LINE(359)
 					hx::SubEq(cx,(nx * t1));
 					HX_STACK_LINE(360)
@@ -215,9 +212,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC3(ZPP_Simplify_obj,distance,return )
 						HX_STACK_LINE(379)
 						{
 						}
-						HX_STACK_LINE(379)
-						{
-						}
 					}
 					HX_STACK_LINE(379)
 					ret1->flag = false;
@@ -238,7 +232,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC3(ZPP_Simplify_obj,distance,return )
 			HX_STACK_LINE(383)
 			if (((pre != null()))){
 				struct _Function_4_1{
-					inline static ::zpp_nape::geom::ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyV &pre,::zpp_nape::geom::ZPP_SimplifyV &v){
+					inline static ::zpp_nape::geom::ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyV &v,::zpp_nape::geom::ZPP_SimplifyV &pre){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Simplify.hx",383);
 						{
 							HX_STACK_LINE(383)
@@ -272,7 +266,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC3(ZPP_Simplify_obj,distance,return )
 					}
 				};
 				HX_STACK_LINE(383)
-				::zpp_nape::geom::ZPP_Simplify_obj::stack->add(_Function_4_1::Block(pre,v));
+				::zpp_nape::geom::ZPP_Simplify_obj::stack->add(_Function_4_1::Block(v,pre));
 			}
 			else{
 				HX_STACK_LINE(384)
@@ -340,7 +334,7 @@ while(((cur != P)));
 			HX_STACK_LINE(411)
 			min->flag = max->flag = true;
 			struct _Function_3_1{
-				inline static ::zpp_nape::geom::ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyV &min,::zpp_nape::geom::ZPP_SimplifyV &max){
+				inline static ::zpp_nape::geom::ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyV &max,::zpp_nape::geom::ZPP_SimplifyV &min){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Simplify.hx",412);
 					{
 						HX_STACK_LINE(412)
@@ -374,7 +368,7 @@ while(((cur != P)));
 				}
 			};
 			HX_STACK_LINE(412)
-			::zpp_nape::geom::ZPP_Simplify_obj::stack->add(_Function_3_1::Block(min,max));
+			::zpp_nape::geom::ZPP_Simplify_obj::stack->add(_Function_3_1::Block(max,min));
 			struct _Function_3_2{
 				inline static ::zpp_nape::geom::ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyV &max,::zpp_nape::geom::ZPP_SimplifyV &min){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Simplify.hx",413);
@@ -432,7 +426,7 @@ while(((cur != P)));
 				HX_STACK_LINE(421)
 				min->flag = fst->flag = true;
 				struct _Function_4_1{
-					inline static ::zpp_nape::geom::ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyV &min,::zpp_nape::geom::ZPP_SimplifyV &fst){
+					inline static ::zpp_nape::geom::ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyV &fst,::zpp_nape::geom::ZPP_SimplifyV &min){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Simplify.hx",422);
 						{
 							HX_STACK_LINE(422)
@@ -466,7 +460,7 @@ while(((cur != P)));
 					}
 				};
 				HX_STACK_LINE(422)
-				::zpp_nape::geom::ZPP_Simplify_obj::stack->add(_Function_4_1::Block(min,fst));
+				::zpp_nape::geom::ZPP_Simplify_obj::stack->add(_Function_4_1::Block(fst,min));
 				struct _Function_4_2{
 					inline static ::zpp_nape::geom::ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyV &fst,::zpp_nape::geom::ZPP_SimplifyV &min){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Simplify.hx",423);
@@ -508,7 +502,7 @@ while(((cur != P)));
 				HX_STACK_LINE(426)
 				max->flag = fst->flag = true;
 				struct _Function_4_1{
-					inline static ::zpp_nape::geom::ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyV &max,::zpp_nape::geom::ZPP_SimplifyV &fst){
+					inline static ::zpp_nape::geom::ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyV &fst,::zpp_nape::geom::ZPP_SimplifyV &max){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Simplify.hx",427);
 						{
 							HX_STACK_LINE(427)
@@ -542,7 +536,7 @@ while(((cur != P)));
 					}
 				};
 				HX_STACK_LINE(427)
-				::zpp_nape::geom::ZPP_Simplify_obj::stack->add(_Function_4_1::Block(max,fst));
+				::zpp_nape::geom::ZPP_Simplify_obj::stack->add(_Function_4_1::Block(fst,max));
 				struct _Function_4_2{
 					inline static ::zpp_nape::geom::ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyV &fst,::zpp_nape::geom::ZPP_SimplifyV &max){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Simplify.hx",428);
@@ -632,9 +626,6 @@ while(((cur != P)));
 		{
 			HX_STACK_LINE(438)
 			::zpp_nape::geom::ZPP_SimplifyP o = cur1;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(439)
-			{
-			}
 			HX_STACK_LINE(447)
 			o->min = o->max = null();
 			HX_STACK_LINE(448)
@@ -667,7 +658,7 @@ while(((cur != P)));
 			HX_STACK_LINE(466)
 			dv->flag = true;
 			struct _Function_3_1{
-				inline static ::zpp_nape::geom::ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyV &min1,::zpp_nape::geom::ZPP_SimplifyV &dv){
+				inline static ::zpp_nape::geom::ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyV &dv,::zpp_nape::geom::ZPP_SimplifyV &min1){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Simplify.hx",467);
 					{
 						HX_STACK_LINE(467)
@@ -701,7 +692,7 @@ while(((cur != P)));
 				}
 			};
 			HX_STACK_LINE(467)
-			::zpp_nape::geom::ZPP_Simplify_obj::stack->add(_Function_3_1::Block(min1,dv));
+			::zpp_nape::geom::ZPP_Simplify_obj::stack->add(_Function_3_1::Block(dv,min1));
 			struct _Function_3_2{
 				inline static ::zpp_nape::geom::ZPP_SimplifyP Block( ::zpp_nape::geom::ZPP_SimplifyV &dv,::zpp_nape::geom::ZPP_SimplifyV &max1){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Simplify.hx",468);
@@ -747,7 +738,7 @@ while(((cur != P)));
 		HX_STACK_LINE(473)
 		if ((ret->flag)){
 			struct _Function_3_1{
-				inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_SimplifyV &ret,::zpp_nape::geom::ZPP_GeomVert &retp){
+				inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &retp,::zpp_nape::geom::ZPP_SimplifyV &ret){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Simplify.hx",474);
 					{
 						struct _Function_4_1{
@@ -783,9 +774,6 @@ while(((cur != P)));
 										HX_STACK_LINE(475)
 										{
 										}
-										HX_STACK_LINE(475)
-										{
-										}
 									}
 									HX_STACK_LINE(475)
 									return ret1;
@@ -817,81 +805,62 @@ while(((cur != P)));
 				}
 			};
 			HX_STACK_LINE(474)
-			retp = _Function_3_1::Block(ret,retp);
+			retp = _Function_3_1::Block(retp,ret);
 			HX_STACK_LINE(485)
 			retp->forced = ret->forced;
 		}
 		struct _Function_2_1{
 			inline static ::zpp_nape::geom::ZPP_SimplifyV Block( ::zpp_nape::geom::ZPP_SimplifyV &ret){
-				HX_STACK_PUSH("*::closure","zpp_nape/geom/Simplify.hx",487);
+				HX_STACK_PUSH("*::closure","zpp_nape/geom/Simplify.hx",496);
 				{
-					HX_STACK_LINE(488)
+					HX_STACK_LINE(497)
+					ret->next = ret->prev = null();
+					HX_STACK_LINE(498)
 					{
+						HX_STACK_LINE(499)
+						::zpp_nape::geom::ZPP_SimplifyV o = ret;		HX_STACK_VAR(o,"o");
+						HX_STACK_LINE(509)
+						o->next = ::zpp_nape::geom::ZPP_SimplifyV_obj::zpp_pool;
+						HX_STACK_LINE(510)
+						::zpp_nape::geom::ZPP_SimplifyV_obj::zpp_pool = o;
 					}
-					struct _Function_3_1{
-						inline static ::zpp_nape::geom::ZPP_SimplifyV Block( ::zpp_nape::geom::ZPP_SimplifyV &ret){
-							HX_STACK_PUSH("*::closure","zpp_nape/geom/Simplify.hx",496);
-							{
-								HX_STACK_LINE(497)
-								ret->next = ret->prev = null();
-								HX_STACK_LINE(498)
-								{
-									HX_STACK_LINE(499)
-									::zpp_nape::geom::ZPP_SimplifyV o = ret;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(500)
-									{
-									}
-									HX_STACK_LINE(509)
-									o->next = ::zpp_nape::geom::ZPP_SimplifyV_obj::zpp_pool;
-									HX_STACK_LINE(510)
-									::zpp_nape::geom::ZPP_SimplifyV_obj::zpp_pool = o;
-								}
-								HX_STACK_LINE(515)
-								return ret = null();
-							}
-							return null();
-						}
-					};
-					struct _Function_3_2{
-						inline static ::zpp_nape::geom::ZPP_SimplifyV Block( ::zpp_nape::geom::ZPP_SimplifyV &ret){
-							HX_STACK_PUSH("*::closure","zpp_nape/geom/Simplify.hx",517);
-							{
-								HX_STACK_LINE(518)
-								::zpp_nape::geom::ZPP_SimplifyV retnodes = ret->next;		HX_STACK_VAR(retnodes,"retnodes");
-								HX_STACK_LINE(519)
-								ret->prev->next = ret->next;
-								HX_STACK_LINE(520)
-								ret->next->prev = ret->prev;
-								HX_STACK_LINE(521)
-								ret->next = ret->prev = null();
-								HX_STACK_LINE(522)
-								{
-									HX_STACK_LINE(523)
-									::zpp_nape::geom::ZPP_SimplifyV o = ret;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(524)
-									{
-									}
-									HX_STACK_LINE(533)
-									o->next = ::zpp_nape::geom::ZPP_SimplifyV_obj::zpp_pool;
-									HX_STACK_LINE(534)
-									::zpp_nape::geom::ZPP_SimplifyV_obj::zpp_pool = o;
-								}
-								HX_STACK_LINE(539)
-								ret = null();
-								HX_STACK_LINE(540)
-								return retnodes;
-							}
-							return null();
-						}
-					};
-					HX_STACK_LINE(496)
-					return (  (((bool((ret != null())) && bool((ret->prev == ret))))) ? ::zpp_nape::geom::ZPP_SimplifyV(_Function_3_1::Block(ret)) : ::zpp_nape::geom::ZPP_SimplifyV(_Function_3_2::Block(ret)) );
+					HX_STACK_LINE(515)
+					return ret = null();
+				}
+				return null();
+			}
+		};
+		struct _Function_2_2{
+			inline static ::zpp_nape::geom::ZPP_SimplifyV Block( ::zpp_nape::geom::ZPP_SimplifyV &ret){
+				HX_STACK_PUSH("*::closure","zpp_nape/geom/Simplify.hx",517);
+				{
+					HX_STACK_LINE(518)
+					::zpp_nape::geom::ZPP_SimplifyV retnodes = ret->next;		HX_STACK_VAR(retnodes,"retnodes");
+					HX_STACK_LINE(519)
+					ret->prev->next = ret->next;
+					HX_STACK_LINE(520)
+					ret->next->prev = ret->prev;
+					HX_STACK_LINE(521)
+					ret->next = ret->prev = null();
+					HX_STACK_LINE(522)
+					{
+						HX_STACK_LINE(523)
+						::zpp_nape::geom::ZPP_SimplifyV o = ret;		HX_STACK_VAR(o,"o");
+						HX_STACK_LINE(533)
+						o->next = ::zpp_nape::geom::ZPP_SimplifyV_obj::zpp_pool;
+						HX_STACK_LINE(534)
+						::zpp_nape::geom::ZPP_SimplifyV_obj::zpp_pool = o;
+					}
+					HX_STACK_LINE(539)
+					ret = null();
+					HX_STACK_LINE(540)
+					return retnodes;
 				}
 				return null();
 			}
 		};
 		HX_STACK_LINE(487)
-		ret = _Function_2_1::Block(ret);
+		ret = (  (((bool((ret != null())) && bool((ret->prev == ret))))) ? ::zpp_nape::geom::ZPP_SimplifyV(_Function_2_1::Block(ret)) : ::zpp_nape::geom::ZPP_SimplifyV(_Function_2_2::Block(ret)) );
 	}
 	HX_STACK_LINE(544)
 	return retp;
@@ -973,7 +942,7 @@ Class ZPP_Simplify_obj::__mClass;
 
 void ZPP_Simplify_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_Simplify"), hx::TCanCast< ZPP_Simplify_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_Simplify"), hx::TCanCast< ZPP_Simplify_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

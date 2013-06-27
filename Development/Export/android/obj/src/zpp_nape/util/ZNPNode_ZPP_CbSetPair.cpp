@@ -11,11 +11,11 @@ namespace util{
 
 Void ZNPNode_ZPP_CbSetPair_obj::__construct()
 {
-HX_STACK_PUSH("ZNPNode_ZPP_CbSetPair::new","zpp_nape/util/Lists.hx",15287);
+HX_STACK_PUSH("ZNPNode_ZPP_CbSetPair::new","zpp_nape/util/Lists.hx",15158);
 {
-	HX_STACK_LINE(15321)
+	HX_STACK_LINE(15192)
 	this->elt = null();
-	HX_STACK_LINE(15312)
+	HX_STACK_LINE(15183)
 	this->next = null();
 }
 ;
@@ -36,9 +36,9 @@ Dynamic ZNPNode_ZPP_CbSetPair_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 ::zpp_nape::callbacks::ZPP_CbSetPair ZNPNode_ZPP_CbSetPair_obj::elem( ){
-	HX_STACK_PUSH("ZNPNode_ZPP_CbSetPair::elem","zpp_nape/util/Lists.hx",15325);
+	HX_STACK_PUSH("ZNPNode_ZPP_CbSetPair::elem","zpp_nape/util/Lists.hx",15196);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(15325)
+	HX_STACK_LINE(15196)
 	return this->elt;
 }
 
@@ -47,9 +47,9 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPNode_ZPP_CbSetPair_obj,elem,return )
 
 Void ZNPNode_ZPP_CbSetPair_obj::free( ){
 {
-		HX_STACK_PUSH("ZNPNode_ZPP_CbSetPair::free","zpp_nape/util/Lists.hx",15318);
+		HX_STACK_PUSH("ZNPNode_ZPP_CbSetPair::free","zpp_nape/util/Lists.hx",15189);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(15318)
+		HX_STACK_LINE(15189)
 		this->elt = null();
 	}
 return null();
@@ -60,7 +60,7 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPNode_ZPP_CbSetPair_obj,free,(void))
 
 Void ZNPNode_ZPP_CbSetPair_obj::alloc( ){
 {
-		HX_STACK_PUSH("ZNPNode_ZPP_CbSetPair::alloc","zpp_nape/util/Lists.hx",15315);
+		HX_STACK_PUSH("ZNPNode_ZPP_CbSetPair::alloc","zpp_nape/util/Lists.hx",15186);
 		HX_STACK_THIS(this);
 	}
 return null();
@@ -158,7 +158,7 @@ Class ZNPNode_ZPP_CbSetPair_obj::__mClass;
 
 void ZNPNode_ZPP_CbSetPair_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPNode_ZPP_CbSetPair"), hx::TCanCast< ZNPNode_ZPP_CbSetPair_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPNode_ZPP_CbSetPair"), hx::TCanCast< ZNPNode_ZPP_CbSetPair_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

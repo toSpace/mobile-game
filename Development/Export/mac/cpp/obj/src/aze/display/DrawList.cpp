@@ -1,29 +1,26 @@
 #include <hxcpp.h>
 
-#ifndef INCLUDED_hxMath
-#include <hxMath.h>
-#endif
 #ifndef INCLUDED_aze_display_DrawList
 #include <aze/display/DrawList.h>
 #endif
-#ifndef INCLUDED_haxe_Public
-#include <haxe/Public.h>
+#ifndef INCLUDED_flash_Lib
+#include <flash/Lib.h>
 #endif
-#ifndef INCLUDED_native_Lib
-#include <native/Lib.h>
+#ifndef INCLUDED_hxMath
+#include <hxMath.h>
 #endif
 namespace aze{
 namespace display{
 
 Void DrawList_obj::__construct()
 {
-HX_STACK_PUSH("DrawList::new","aze/display/TileLayer.hx",199);
+HX_STACK_PUSH("DrawList::new","aze/display/TileLayer.hx",229);
 {
-	HX_STACK_LINE(200)
+	HX_STACK_LINE(230)
 	this->list = Array_obj< Float >::__new();
-	HX_STACK_LINE(201)
+	HX_STACK_LINE(231)
 	this->elapsed = (int)0;
-	HX_STACK_LINE(202)
+	HX_STACK_LINE(232)
 	this->runs = (int)0;
 }
 ;
@@ -43,30 +40,25 @@ Dynamic DrawList_obj::__Create(hx::DynamicArray inArgs)
 	result->__construct();
 	return result;}
 
-hx::Object *DrawList_obj::__ToInterface(const type_info &inType) {
-	if (inType==typeid( ::haxe::Public_obj)) return operator ::haxe::Public_obj *();
-	return super::__ToInterface(inType);
-}
-
 Void DrawList_obj::end( ){
 {
-		HX_STACK_PUSH("DrawList::end","aze/display/TileLayer.hx",245);
+		HX_STACK_PUSH("DrawList::end","aze/display/TileLayer.hx",279);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(245)
+		HX_STACK_LINE(279)
 		if (((this->list->length > this->index))){
-			HX_STACK_LINE(247)
+			HX_STACK_LINE(281)
 			if (((++(this->runs) > (int)60))){
-				HX_STACK_LINE(250)
+				HX_STACK_LINE(284)
 				this->list->splice(this->index,(this->list->length - this->index));
-				HX_STACK_LINE(251)
+				HX_STACK_LINE(285)
 				this->runs = (int)0;
 			}
 			else{
-				HX_STACK_LINE(254)
+				HX_STACK_LINE(288)
 				while(((this->index < this->list->length))){
-					HX_STACK_LINE(257)
+					HX_STACK_LINE(291)
 					this->list[(this->index + (int)2)] = -2.0;
-					HX_STACK_LINE(258)
+					HX_STACK_LINE(292)
 					hx::AddEq(this->index,this->fields);
 				}
 			}
@@ -80,81 +72,81 @@ HX_DEFINE_DYNAMIC_FUNC0(DrawList_obj,end,(void))
 
 Void DrawList_obj::begin( int elapsed,bool useTransforms,bool useAlpha,bool useTint,bool useAdditive){
 {
-		HX_STACK_PUSH("DrawList::begin","aze/display/TileLayer.hx",206);
+		HX_STACK_PUSH("DrawList::begin","aze/display/TileLayer.hx",240);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(elapsed,"elapsed");
 		HX_STACK_ARG(useTransforms,"useTransforms");
 		HX_STACK_ARG(useAlpha,"useAlpha");
 		HX_STACK_ARG(useTint,"useTint");
 		HX_STACK_ARG(useAdditive,"useAdditive");
-		HX_STACK_LINE(208)
+		HX_STACK_LINE(242)
 		this->flags = (int)0;
-		HX_STACK_LINE(209)
+		HX_STACK_LINE(243)
 		this->fields = (int)3;
-		HX_STACK_LINE(210)
+		HX_STACK_LINE(244)
 		if ((useTransforms)){
-			HX_STACK_LINE(211)
+			HX_STACK_LINE(245)
 			this->offsetTransform = this->fields;
-			HX_STACK_LINE(212)
+			HX_STACK_LINE(246)
 			hx::AddEq(this->fields,(int)4);
-			HX_STACK_LINE(213)
+			HX_STACK_LINE(247)
 			hx::OrEq(this->flags,(int)16);
 		}
 		else{
-			HX_STACK_LINE(215)
+			HX_STACK_LINE(249)
 			this->offsetTransform = (int)0;
 		}
-		HX_STACK_LINE(216)
+		HX_STACK_LINE(250)
 		if ((useTint)){
-			HX_STACK_LINE(217)
+			HX_STACK_LINE(251)
 			this->offsetRGB = this->fields;
-			HX_STACK_LINE(218)
+			HX_STACK_LINE(252)
 			hx::AddEq(this->fields,(int)3);
-			HX_STACK_LINE(219)
+			HX_STACK_LINE(253)
 			hx::OrEq(this->flags,(int)4);
 		}
 		else{
-			HX_STACK_LINE(221)
+			HX_STACK_LINE(255)
 			this->offsetRGB = (int)0;
 		}
-		HX_STACK_LINE(222)
+		HX_STACK_LINE(256)
 		if ((useAlpha)){
-			HX_STACK_LINE(223)
+			HX_STACK_LINE(257)
 			this->offsetAlpha = this->fields;
-			HX_STACK_LINE(224)
+			HX_STACK_LINE(258)
 			(this->fields)++;
-			HX_STACK_LINE(225)
+			HX_STACK_LINE(259)
 			hx::OrEq(this->flags,(int)8);
 		}
 		else{
-			HX_STACK_LINE(227)
+			HX_STACK_LINE(261)
 			this->offsetAlpha = (int)0;
 		}
-		HX_STACK_LINE(228)
+		HX_STACK_LINE(262)
 		if ((useAdditive)){
-			HX_STACK_LINE(228)
+			HX_STACK_LINE(262)
 			hx::OrEq(this->flags,(int)65536);
 		}
-		HX_STACK_LINE(231)
+		HX_STACK_LINE(265)
 		if (((elapsed > (int)0))){
-			HX_STACK_LINE(231)
+			HX_STACK_LINE(265)
 			this->elapsed = elapsed;
 		}
 		else{
-			HX_STACK_LINE(234)
+			HX_STACK_LINE(268)
 			this->index = (int)0;
-			HX_STACK_LINE(235)
+			HX_STACK_LINE(269)
 			if (((this->time > (int)0))){
-				HX_STACK_LINE(236)
-				int t = ::native::Lib_obj::getTimer();		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(237)
+				HX_STACK_LINE(270)
+				int t = ::flash::Lib_obj::getTimer();		HX_STACK_VAR(t,"t");
+				HX_STACK_LINE(271)
 				this->elapsed = ::Math_obj::min((int)67,(t - this->time));
-				HX_STACK_LINE(238)
+				HX_STACK_LINE(272)
 				this->time = t;
 			}
 			else{
-				HX_STACK_LINE(240)
-				this->time = ::native::Lib_obj::getTimer();
+				HX_STACK_LINE(274)
+				this->time = ::flash::Lib_obj::getTimer();
 			}
 		}
 	}
@@ -308,7 +300,7 @@ Class DrawList_obj::__mClass;
 
 void DrawList_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("aze.display.DrawList"), hx::TCanCast< DrawList_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("aze.display.DrawList"), hx::TCanCast< DrawList_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

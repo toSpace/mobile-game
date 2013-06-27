@@ -218,26 +218,12 @@ Interactor_obj::Interactor_obj()
 void Interactor_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(Interactor);
-	HX_MARK_MEMBER_NAME(cbTypes,"cbTypes");
-	HX_MARK_MEMBER_NAME(group,"group");
-	HX_MARK_MEMBER_NAME(castCompound,"castCompound");
-	HX_MARK_MEMBER_NAME(castBody,"castBody");
-	HX_MARK_MEMBER_NAME(castShape,"castShape");
-	HX_MARK_MEMBER_NAME(userData,"userData");
-	HX_MARK_MEMBER_NAME(id,"id");
 	HX_MARK_MEMBER_NAME(zpp_inner_i,"zpp_inner_i");
 	HX_MARK_END_CLASS();
 }
 
 void Interactor_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(cbTypes,"cbTypes");
-	HX_VISIT_MEMBER_NAME(group,"group");
-	HX_VISIT_MEMBER_NAME(castCompound,"castCompound");
-	HX_VISIT_MEMBER_NAME(castBody,"castBody");
-	HX_VISIT_MEMBER_NAME(castShape,"castShape");
-	HX_VISIT_MEMBER_NAME(userData,"userData");
-	HX_VISIT_MEMBER_NAME(id,"id");
 	HX_VISIT_MEMBER_NAME(zpp_inner_i,"zpp_inner_i");
 }
 
@@ -245,28 +231,28 @@ Dynamic Interactor_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 2:
-		if (HX_FIELD_EQ(inName,"id") ) { return inCallProp ? get_id() : id; }
+		if (HX_FIELD_EQ(inName,"id") ) { return get_id(); }
 		break;
 	case 5:
-		if (HX_FIELD_EQ(inName,"group") ) { return inCallProp ? get_group() : group; }
+		if (HX_FIELD_EQ(inName,"group") ) { return get_group(); }
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"isBody") ) { return isBody_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_id") ) { return get_id_dyn(); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"cbTypes") ) { return inCallProp ? get_cbTypes() : cbTypes; }
+		if (HX_FIELD_EQ(inName,"cbTypes") ) { return get_cbTypes(); }
 		if (HX_FIELD_EQ(inName,"isShape") ) { return isShape_dyn(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
-		if (HX_FIELD_EQ(inName,"castBody") ) { return inCallProp ? get_castBody() : castBody; }
-		if (HX_FIELD_EQ(inName,"userData") ) { return inCallProp ? get_userData() : userData; }
+		if (HX_FIELD_EQ(inName,"castBody") ) { return get_castBody(); }
+		if (HX_FIELD_EQ(inName,"userData") ) { return get_userData(); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"set_group") ) { return set_group_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_group") ) { return get_group_dyn(); }
-		if (HX_FIELD_EQ(inName,"castShape") ) { return inCallProp ? get_castShape() : castShape; }
+		if (HX_FIELD_EQ(inName,"castShape") ) { return get_castShape(); }
 		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"isCompound") ) { return isCompound_dyn(); }
@@ -276,7 +262,7 @@ Dynamic Interactor_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"zpp_inner_i") ) { return zpp_inner_i; }
 		break;
 	case 12:
-		if (HX_FIELD_EQ(inName,"castCompound") ) { return inCallProp ? get_castCompound() : castCompound; }
+		if (HX_FIELD_EQ(inName,"castCompound") ) { return get_castCompound(); }
 		if (HX_FIELD_EQ(inName,"get_castBody") ) { return get_castBody_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_userData") ) { return get_userData_dyn(); }
 		break;
@@ -292,27 +278,11 @@ Dynamic Interactor_obj::__Field(const ::String &inName,bool inCallProp)
 Dynamic Interactor_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
 	switch(inName.length) {
-	case 2:
-		if (HX_FIELD_EQ(inName,"id") ) { id=inValue.Cast< int >(); return inValue; }
-		break;
 	case 5:
-		if (HX_FIELD_EQ(inName,"group") ) { if (inCallProp) return set_group(inValue);group=inValue.Cast< ::nape::dynamics::InteractionGroup >(); return inValue; }
-		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"cbTypes") ) { cbTypes=inValue.Cast< ::nape::callbacks::CbTypeList >(); return inValue; }
-		break;
-	case 8:
-		if (HX_FIELD_EQ(inName,"castBody") ) { castBody=inValue.Cast< ::nape::phys::Body >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"userData") ) { userData=inValue.Cast< Dynamic >(); return inValue; }
-		break;
-	case 9:
-		if (HX_FIELD_EQ(inName,"castShape") ) { castShape=inValue.Cast< ::nape::shape::Shape >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"group") ) { return set_group(inValue); }
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"zpp_inner_i") ) { zpp_inner_i=inValue.Cast< ::zpp_nape::phys::ZPP_Interactor >(); return inValue; }
-		break;
-	case 12:
-		if (HX_FIELD_EQ(inName,"castCompound") ) { castCompound=inValue.Cast< ::nape::phys::Compound >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -336,23 +306,16 @@ static ::String sStaticFields[] = {
 static ::String sMemberFields[] = {
 	HX_CSTRING("toString"),
 	HX_CSTRING("get_cbTypes"),
-	HX_CSTRING("cbTypes"),
 	HX_CSTRING("set_group"),
 	HX_CSTRING("get_group"),
-	HX_CSTRING("group"),
 	HX_CSTRING("get_castCompound"),
-	HX_CSTRING("castCompound"),
 	HX_CSTRING("get_castBody"),
-	HX_CSTRING("castBody"),
 	HX_CSTRING("get_castShape"),
-	HX_CSTRING("castShape"),
 	HX_CSTRING("isCompound"),
 	HX_CSTRING("isBody"),
 	HX_CSTRING("isShape"),
 	HX_CSTRING("get_userData"),
-	HX_CSTRING("userData"),
 	HX_CSTRING("get_id"),
-	HX_CSTRING("id"),
 	HX_CSTRING("zpp_inner_i"),
 	String(null()) };
 
@@ -368,7 +331,7 @@ Class Interactor_obj::__mClass;
 
 void Interactor_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.phys.Interactor"), hx::TCanCast< Interactor_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.phys.Interactor"), hx::TCanCast< Interactor_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

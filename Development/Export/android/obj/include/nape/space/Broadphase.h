@@ -10,7 +10,7 @@ namespace nape{
 namespace space{
 
 
-class Broadphase_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Broadphase_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Broadphase_obj OBJ_;
@@ -33,11 +33,9 @@ class Broadphase_obj : public hx::Object{
 		virtual ::String toString( );
 		Dynamic toString_dyn();
 
-		static ::nape::space::Broadphase DYNAMIC_AABB_TREE; /* REM */ 
 		static ::nape::space::Broadphase get_DYNAMIC_AABB_TREE( );
 		static Dynamic get_DYNAMIC_AABB_TREE_dyn();
 
-		static ::nape::space::Broadphase SWEEP_AND_PRUNE; /* REM */ 
 		static ::nape::space::Broadphase get_SWEEP_AND_PRUNE( );
 		static Dynamic get_SWEEP_AND_PRUNE_dyn();
 

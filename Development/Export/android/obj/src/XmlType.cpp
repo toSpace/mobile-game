@@ -39,7 +39,7 @@ Dynamic __Create_XmlType_obj() { return new XmlType_obj; }
 void XmlType_obj::__register()
 {
 
-Static(__mClass) = hx::RegisterClass(HX_CSTRING("XmlType"), hx::TCanCast< XmlType_obj >,sStaticFields,sMemberFields,
+hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("XmlType"), hx::TCanCast< XmlType_obj >,sStaticFields,sMemberFields,
 	&__Create_XmlType_obj, &__Create,
 	&super::__SGetClass(), &CreateXmlType_obj, sMarkStatics, sVisitStatic);
 }

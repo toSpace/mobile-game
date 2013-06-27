@@ -57,9 +57,6 @@ Void ZPP_GeomVert_obj::getwrap( ){
 		this->wrap->zpp_inner->x = this->x;
 		HX_STACK_LINE(255)
 		this->wrap->zpp_inner->y = this->y;
-		HX_STACK_LINE(256)
-		{
-		}
 		HX_STACK_LINE(264)
 		{
 		}
@@ -79,9 +76,6 @@ Void ZPP_GeomVert_obj::modwrap( ::zpp_nape::geom::ZPP_Vec2 n){
 		this->x = n->x;
 		HX_STACK_LINE(232)
 		this->y = n->y;
-		HX_STACK_LINE(233)
-		{
-		}
 		HX_STACK_LINE(241)
 		{
 		}
@@ -171,9 +165,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_GeomVert_obj,modwrap,(void))
 										HX_STACK_LINE(221)
 										{
 										}
-										HX_STACK_LINE(221)
-										{
-										}
 									}
 									HX_STACK_LINE(221)
 									return ret1;
@@ -202,7 +193,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_GeomVert_obj,modwrap,(void))
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(221)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(221)
 								_this->_isimmutable();
 							}
@@ -226,7 +217,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_GeomVert_obj,modwrap,(void))
 										HX_STACK_LINE(221)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(221)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(221)
 											_this->_validate();
 										}
@@ -251,7 +242,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_GeomVert_obj,modwrap,(void))
 										HX_STACK_LINE(221)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(221)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(221)
 											_this->_validate();
 										}
@@ -273,16 +264,13 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_GeomVert_obj,modwrap,(void))
 								HX_STACK_LINE(221)
 								{
 								}
-								HX_STACK_LINE(221)
-								{
-								}
 							}
 							HX_STACK_LINE(221)
 							{
 								HX_STACK_LINE(221)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(221)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(221)
 									_this->_invalidate(_this);
 								}
@@ -355,7 +343,7 @@ Void ZPP_GeomVert_obj::free( ){
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(209)
-					if (((_this1->_isimmutable_dyn() != null()))){
+					if (((_this1->_isimmutable != null()))){
 						HX_STACK_LINE(209)
 						_this1->_isimmutable();
 					}
@@ -376,9 +364,6 @@ Void ZPP_GeomVert_obj::free( ){
 					HX_STACK_LINE(209)
 					::nape::geom::Vec2 o = _this;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(209)
-					{
-					}
-					HX_STACK_LINE(209)
 					o->zpp_pool = null();
 					HX_STACK_LINE(209)
 					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -398,9 +383,6 @@ Void ZPP_GeomVert_obj::free( ){
 				{
 					HX_STACK_LINE(209)
 					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(209)
-					{
-					}
 					HX_STACK_LINE(209)
 					{
 						HX_STACK_LINE(209)
@@ -467,9 +449,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_GeomVert_obj,free,(void))
 		ret->x = x;
 		HX_STACK_LINE(296)
 		ret->y = y;
-		HX_STACK_LINE(297)
-		{
-		}
 		HX_STACK_LINE(305)
 		{
 		}
@@ -606,7 +585,7 @@ Class ZPP_GeomVert_obj::__mClass;
 
 void ZPP_GeomVert_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_GeomVert"), hx::TCanCast< ZPP_GeomVert_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_GeomVert"), hx::TCanCast< ZPP_GeomVert_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -14,7 +14,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_PartitionedPoly_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_PartitionedPoly_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_PartitionedPoly_obj OBJ_;
@@ -61,17 +61,17 @@ class ZPP_PartitionedPoly_obj : public hx::Object{
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
-		::zpp_nape::geom::ZPP_PartitionedPoly next; /* REM */ 
+		::zpp_nape::geom::ZPP_PartitionedPoly next;
 		virtual bool eq( ::zpp_nape::geom::ZPP_PartitionVertex a,::zpp_nape::geom::ZPP_PartitionVertex b);
 		Dynamic eq_dyn();
 
-		::zpp_nape::geom::ZPP_PartitionVertex vertices; /* REM */ 
-		static ::zpp_nape::geom::ZPP_PartitionedPoly zpp_pool; /* REM */ 
-		static ::zpp_nape::util::ZNPList_ZPP_PartitionedPoly sharedPPList; /* REM */ 
+		::zpp_nape::geom::ZPP_PartitionVertex vertices;
+		static ::zpp_nape::geom::ZPP_PartitionedPoly zpp_pool;
+		static ::zpp_nape::util::ZNPList_ZPP_PartitionedPoly sharedPPList;
 		static ::zpp_nape::util::ZNPList_ZPP_PartitionedPoly getSharedPP( );
 		static Dynamic getSharedPP_dyn();
 
-		static ::zpp_nape::util::ZNPList_ZPP_GeomVert sharedGVList; /* REM */ 
+		static ::zpp_nape::util::ZNPList_ZPP_GeomVert sharedGVList;
 		static ::zpp_nape::util::ZNPList_ZPP_GeomVert getShared( );
 		static Dynamic getShared_dyn();
 

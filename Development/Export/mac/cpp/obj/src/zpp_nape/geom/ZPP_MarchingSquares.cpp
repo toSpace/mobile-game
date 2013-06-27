@@ -84,7 +84,7 @@ Float ZPP_MarchingSquares_obj::ylerp( Float y0,Float y1,Float x,Float v0,Float v
 	HX_STACK_ARG(iso,"iso");
 	HX_STACK_ARG(quality,"quality");
 	struct _Function_1_1{
-		inline static Float Block( Float &v1,Float &y1,Float &v0,Float &y0){
+		inline static Float Block( Float &y0,Float &v0,Float &v1,Float &y1){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1911);
 			{
 				HX_STACK_LINE(1911)
@@ -110,7 +110,7 @@ Float ZPP_MarchingSquares_obj::ylerp( Float y0,Float y1,Float x,Float v0,Float v
 		}
 	};
 	HX_STACK_LINE(1911)
-	Float ym = (  (((v0 == (int)0))) ? Float(y0) : Float((  (((v1 == (int)0))) ? Float(y1) : Float(_Function_1_1::Block(v1,y1,v0,y0)) )) );		HX_STACK_VAR(ym,"ym");
+	Float ym = (  (((v0 == (int)0))) ? Float(y0) : Float((  (((v1 == (int)0))) ? Float(y1) : Float(_Function_1_1::Block(y0,v0,v1,y1)) )) );		HX_STACK_VAR(ym,"ym");
 	HX_STACK_LINE(1912)
 	while(((bool((bool(((quality)-- != (int)0)) && bool((y0 < ym)))) && bool((ym < y1))))){
 		HX_STACK_LINE(1913)
@@ -134,7 +134,7 @@ Float ZPP_MarchingSquares_obj::ylerp( Float y0,Float y1,Float x,Float v0,Float v
 			v0 = vm;
 		}
 		struct _Function_2_1{
-			inline static Float Block( Float &v1,Float &y1,Float &v0,Float &y0){
+			inline static Float Block( Float &y0,Float &v0,Float &v1,Float &y1){
 				HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1923);
 				{
 					HX_STACK_LINE(1923)
@@ -160,7 +160,7 @@ Float ZPP_MarchingSquares_obj::ylerp( Float y0,Float y1,Float x,Float v0,Float v
 			}
 		};
 		HX_STACK_LINE(1923)
-		ym = (  (((v0 == (int)0))) ? Float(y0) : Float((  (((v1 == (int)0))) ? Float(y1) : Float(_Function_2_1::Block(v1,y1,v0,y0)) )) );
+		ym = (  (((v0 == (int)0))) ? Float(y0) : Float((  (((v1 == (int)0))) ? Float(y1) : Float(_Function_2_1::Block(y0,v0,v1,y1)) )) );
 	}
 	HX_STACK_LINE(1925)
 	return ym;
@@ -180,7 +180,7 @@ Float ZPP_MarchingSquares_obj::xlerp( Float x0,Float x1,Float y,Float v0,Float v
 	HX_STACK_ARG(iso,"iso");
 	HX_STACK_ARG(quality,"quality");
 	struct _Function_1_1{
-		inline static Float Block( Float &v1,Float &v0,Float &x1,Float &x0){
+		inline static Float Block( Float &x0,Float &v0,Float &x1,Float &v1){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1894);
 			{
 				HX_STACK_LINE(1894)
@@ -206,7 +206,7 @@ Float ZPP_MarchingSquares_obj::xlerp( Float x0,Float x1,Float y,Float v0,Float v
 		}
 	};
 	HX_STACK_LINE(1894)
-	Float xm = (  (((v0 == (int)0))) ? Float(x0) : Float((  (((v1 == (int)0))) ? Float(x1) : Float(_Function_1_1::Block(v1,v0,x1,x0)) )) );		HX_STACK_VAR(xm,"xm");
+	Float xm = (  (((v0 == (int)0))) ? Float(x0) : Float((  (((v1 == (int)0))) ? Float(x1) : Float(_Function_1_1::Block(x0,v0,x1,v1)) )) );		HX_STACK_VAR(xm,"xm");
 	HX_STACK_LINE(1895)
 	while(((bool((bool(((quality)-- != (int)0)) && bool((x0 < xm)))) && bool((xm < x1))))){
 		HX_STACK_LINE(1896)
@@ -230,7 +230,7 @@ Float ZPP_MarchingSquares_obj::xlerp( Float x0,Float x1,Float y,Float v0,Float v
 			v0 = vm;
 		}
 		struct _Function_2_1{
-			inline static Float Block( Float &v1,Float &v0,Float &x1,Float &x0){
+			inline static Float Block( Float &x0,Float &v0,Float &x1,Float &v1){
 				HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1906);
 				{
 					HX_STACK_LINE(1906)
@@ -256,7 +256,7 @@ Float ZPP_MarchingSquares_obj::xlerp( Float x0,Float x1,Float y,Float v0,Float v
 			}
 		};
 		HX_STACK_LINE(1906)
-		xm = (  (((v0 == (int)0))) ? Float(x0) : Float((  (((v1 == (int)0))) ? Float(x1) : Float(_Function_2_1::Block(v1,v0,x1,x0)) )) );
+		xm = (  (((v0 == (int)0))) ? Float(x0) : Float((  (((v1 == (int)0))) ? Float(x1) : Float(_Function_2_1::Block(x0,v0,x1,v1)) )) );
 	}
 	HX_STACK_LINE(1908)
 	return xm;
@@ -330,81 +330,29 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 	HX_STACK_ARG(quality,"quality");
 	HX_STACK_LINE(955)
 	int key = (int)0;		HX_STACK_VAR(key,"key");
-	struct _Function_1_1{
-		inline static Float Block( ::zpp_nape::util::ZNPArray2_Float &isos,int &xn,int &yn){
-			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",956);
-			{
-				HX_STACK_LINE(956)
-				{
-				}
-				HX_STACK_LINE(956)
-				return isos->list->__get(((yn * isos->width) + xn));
-			}
-			return null();
-		}
-	};
 	HX_STACK_LINE(956)
-	Float v0 = _Function_1_1::Block(isos,xn,yn);		HX_STACK_VAR(v0,"v0");
+	Float v0 = isos->list->__get(((yn * isos->width) + xn));		HX_STACK_VAR(v0,"v0");
 	HX_STACK_LINE(957)
 	if (((v0 < (int)0))){
 		HX_STACK_LINE(957)
 		hx::OrEq(key,(int)8);
 	}
-	struct _Function_1_2{
-		inline static Float Block( ::zpp_nape::util::ZNPArray2_Float &isos,int &xn,int &yn){
-			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",958);
-			{
-				HX_STACK_LINE(958)
-				{
-				}
-				HX_STACK_LINE(958)
-				return isos->list->__get(((yn * isos->width) + ((xn + (int)1))));
-			}
-			return null();
-		}
-	};
 	HX_STACK_LINE(958)
-	Float v1 = _Function_1_2::Block(isos,xn,yn);		HX_STACK_VAR(v1,"v1");
+	Float v1 = isos->list->__get(((yn * isos->width) + ((xn + (int)1))));		HX_STACK_VAR(v1,"v1");
 	HX_STACK_LINE(959)
 	if (((v1 < (int)0))){
 		HX_STACK_LINE(959)
 		hx::OrEq(key,(int)4);
 	}
-	struct _Function_1_3{
-		inline static Float Block( ::zpp_nape::util::ZNPArray2_Float &isos,int &xn,int &yn){
-			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",960);
-			{
-				HX_STACK_LINE(960)
-				{
-				}
-				HX_STACK_LINE(960)
-				return isos->list->__get(((((yn + (int)1)) * isos->width) + ((xn + (int)1))));
-			}
-			return null();
-		}
-	};
 	HX_STACK_LINE(960)
-	Float v2 = _Function_1_3::Block(isos,xn,yn);		HX_STACK_VAR(v2,"v2");
+	Float v2 = isos->list->__get(((((yn + (int)1)) * isos->width) + ((xn + (int)1))));		HX_STACK_VAR(v2,"v2");
 	HX_STACK_LINE(961)
 	if (((v2 < (int)0))){
 		HX_STACK_LINE(961)
 		hx::OrEq(key,(int)2);
 	}
-	struct _Function_1_4{
-		inline static Float Block( ::zpp_nape::util::ZNPArray2_Float &isos,int &xn,int &yn){
-			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",962);
-			{
-				HX_STACK_LINE(962)
-				{
-				}
-				HX_STACK_LINE(962)
-				return isos->list->__get(((((yn + (int)1)) * isos->width) + xn));
-			}
-			return null();
-		}
-	};
 	HX_STACK_LINE(962)
-	Float v3 = _Function_1_4::Block(isos,xn,yn);		HX_STACK_VAR(v3,"v3");
+	Float v3 = isos->list->__get(((((yn + (int)1)) * isos->width) + xn));		HX_STACK_VAR(v3,"v3");
 	HX_STACK_LINE(963)
 	if (((v3 < (int)0))){
 		HX_STACK_LINE(963)
@@ -491,9 +439,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 												HX_STACK_LINE(992)
 												{
 												}
-												HX_STACK_LINE(992)
-												{
-												}
 											}
 											HX_STACK_LINE(992)
 											return ret1;
@@ -513,7 +458,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 								HX_STACK_LINE(995)
 								if (((i == (int)2))){
 									struct _Function_9_1{
-										inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &y0){
+										inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &y0,Float &x1){
 											HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",996);
 											{
 												HX_STACK_LINE(996)
@@ -545,9 +490,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 													HX_STACK_LINE(996)
 													{
 													}
-													HX_STACK_LINE(996)
-													{
-													}
 												}
 												HX_STACK_LINE(996)
 												return ret1;
@@ -556,7 +498,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 										}
 									};
 									HX_STACK_LINE(996)
-									p = _Function_9_1::Block(x1,y0);
+									p = _Function_9_1::Block(y0,x1);
 									HX_STACK_LINE(997)
 									if (((bool(sndx) || bool(fsty)))){
 										HX_STACK_LINE(997)
@@ -596,9 +538,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 														ret1->x = x1;
 														HX_STACK_LINE(1000)
 														ret1->y = y1;
-														HX_STACK_LINE(1000)
-														{
-														}
 														HX_STACK_LINE(1000)
 														{
 														}
@@ -653,9 +592,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 															HX_STACK_LINE(1004)
 															{
 															}
-															HX_STACK_LINE(1004)
-															{
-															}
 														}
 														HX_STACK_LINE(1004)
 														return ret1;
@@ -674,25 +610,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 										else{
 											HX_STACK_LINE(1007)
 											if (((i == (int)1))){
-												struct _Function_12_1{
-													inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-														HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1008);
-														{
-															HX_STACK_LINE(1008)
-															{
-															}
-															HX_STACK_LINE(1008)
-															return ints->list->__get(((((int(yn) << int((int)1))) * ints->width) + xn));
-														}
-														return null();
-													}
-												};
 												HX_STACK_LINE(1008)
-												p = _Function_12_1::Block(ints,xn,yn);
+												p = ints->list->__get(((((int(yn) << int((int)1))) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 												HX_STACK_LINE(1009)
 												if (((p == null()))){
 													struct _Function_13_1{
-														inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &x0,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v1,Float &v0,Dynamic &iso,int &quality){
+														inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,Float &x0,Float &y0,Float &v0,Float &x1,int &quality,Float &v1){
 															HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1010);
 															{
 																HX_STACK_LINE(1010)
@@ -724,9 +647,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	HX_STACK_LINE(1010)
 																	{
 																	}
-																	HX_STACK_LINE(1010)
-																	{
-																	}
 																}
 																HX_STACK_LINE(1010)
 																return ret1;
@@ -735,15 +655,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 														}
 													};
 													HX_STACK_LINE(1010)
-													p = _Function_13_1::Block(x1,x0,y0,this,v1,v0,iso,quality);
+													p = _Function_13_1::Block(this,iso,x0,y0,v0,x1,quality,v1);
 													HX_STACK_LINE(1011)
-													{
-														HX_STACK_LINE(1011)
-														{
-														}
-														HX_STACK_LINE(1011)
-														ints->list[((((int(yn) << int((int)1))) * ints->width) + xn)] = p;
-													}
+													ints->list[((((int(yn) << int((int)1))) * ints->width) + xn)] = p;
 												}
 												else{
 													struct _Function_13_1{
@@ -779,9 +693,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	HX_STACK_LINE(1013)
 																	{
 																	}
-																	HX_STACK_LINE(1013)
-																	{
-																	}
 																}
 																HX_STACK_LINE(1013)
 																return ret1;
@@ -809,25 +720,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 											else{
 												HX_STACK_LINE(1019)
 												if (((i == (int)5))){
-													struct _Function_13_1{
-														inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-															HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1020);
-															{
-																HX_STACK_LINE(1020)
-																{
-																}
-																HX_STACK_LINE(1020)
-																return ints->list->__get(((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn));
-															}
-															return null();
-														}
-													};
 													HX_STACK_LINE(1020)
-													p = _Function_13_1::Block(ints,xn,yn);
+													p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 													HX_STACK_LINE(1021)
 													if (((p == null()))){
 														struct _Function_14_1{
-															inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &x0,Float &v3,Float &v2,Float &y1,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,int &quality){
+															inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v2,Dynamic &iso,Float &x0,Float &v3,Float &x1,int &quality,Float &y1){
 																HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1022);
 																{
 																	HX_STACK_LINE(1022)
@@ -859,9 +757,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																		HX_STACK_LINE(1022)
 																		{
 																		}
-																		HX_STACK_LINE(1022)
-																		{
-																		}
 																	}
 																	HX_STACK_LINE(1022)
 																	return ret1;
@@ -870,15 +765,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 															}
 														};
 														HX_STACK_LINE(1022)
-														p = _Function_14_1::Block(x1,x0,v3,v2,y1,this,iso,quality);
+														p = _Function_14_1::Block(this,v2,iso,x0,v3,x1,quality,y1);
 														HX_STACK_LINE(1023)
-														{
-															HX_STACK_LINE(1023)
-															{
-															}
-															HX_STACK_LINE(1023)
-															ints->list[((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)] = p;
-														}
+														ints->list[((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)] = p;
 													}
 													else{
 														struct _Function_14_1{
@@ -914,9 +803,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																		HX_STACK_LINE(1025)
 																		{
 																		}
-																		HX_STACK_LINE(1025)
-																		{
-																		}
 																	}
 																	HX_STACK_LINE(1025)
 																	return ret1;
@@ -944,25 +830,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 												else{
 													HX_STACK_LINE(1031)
 													if (((i == (int)3))){
-														struct _Function_14_1{
-															inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1032);
-																{
-																	HX_STACK_LINE(1032)
-																	{
-																	}
-																	HX_STACK_LINE(1032)
-																	return ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1))));
-																}
-																return null();
-															}
-														};
 														HX_STACK_LINE(1032)
-														p = _Function_14_1::Block(ints,xn,yn);
+														p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 														HX_STACK_LINE(1033)
 														if (((p == null()))){
 															struct _Function_15_1{
-																inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &v2,Float &y1,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v1,Dynamic &iso,int &quality){
+																inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v2,Dynamic &iso,Float &y0,Float &x1,int &quality,Float &v1,Float &y1){
 																	HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1034);
 																	{
 																		HX_STACK_LINE(1034)
@@ -994,9 +867,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			HX_STACK_LINE(1034)
 																			{
 																			}
-																			HX_STACK_LINE(1034)
-																			{
-																			}
 																		}
 																		HX_STACK_LINE(1034)
 																		return ret1;
@@ -1005,15 +875,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																}
 															};
 															HX_STACK_LINE(1034)
-															p = _Function_15_1::Block(x1,v2,y1,y0,this,v1,iso,quality);
+															p = _Function_15_1::Block(this,v2,iso,y0,x1,quality,v1,y1);
 															HX_STACK_LINE(1035)
-															{
-																HX_STACK_LINE(1035)
-																{
-																}
-																HX_STACK_LINE(1035)
-																ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))] = p;
-															}
+															ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))] = p;
 														}
 														else{
 															struct _Function_15_1{
@@ -1049,9 +913,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			HX_STACK_LINE(1037)
 																			{
 																			}
-																			HX_STACK_LINE(1037)
-																			{
-																			}
 																		}
 																		HX_STACK_LINE(1037)
 																		return ret1;
@@ -1077,25 +938,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 														}
 													}
 													else{
-														struct _Function_14_1{
-															inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1044);
-																{
-																	HX_STACK_LINE(1044)
-																	{
-																	}
-																	HX_STACK_LINE(1044)
-																	return ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn));
-																}
-																return null();
-															}
-														};
 														HX_STACK_LINE(1044)
-														p = _Function_14_1::Block(ints,xn,yn);
+														p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 														HX_STACK_LINE(1045)
 														if (((p == null()))){
 															struct _Function_15_1{
-																inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x0,Float &v3,Float &y1,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v0,Dynamic &iso,int &quality){
+																inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,Float &x0,Float &v3,Float &y0,Float &v0,int &quality,Float &y1){
 																	HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1046);
 																	{
 																		HX_STACK_LINE(1046)
@@ -1127,9 +975,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			HX_STACK_LINE(1046)
 																			{
 																			}
-																			HX_STACK_LINE(1046)
-																			{
-																			}
 																		}
 																		HX_STACK_LINE(1046)
 																		return ret1;
@@ -1138,15 +983,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																}
 															};
 															HX_STACK_LINE(1046)
-															p = _Function_15_1::Block(x0,v3,y1,y0,this,v0,iso,quality);
+															p = _Function_15_1::Block(this,iso,x0,v3,y0,v0,quality,y1);
 															HX_STACK_LINE(1047)
-															{
-																HX_STACK_LINE(1047)
-																{
-																}
-																HX_STACK_LINE(1047)
-																ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)] = p;
-															}
+															ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)] = p;
 														}
 														else{
 															struct _Function_15_1{
@@ -1182,9 +1021,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			HX_STACK_LINE(1049)
 																			{
 																			}
-																			HX_STACK_LINE(1049)
-																			{
-																			}
 																		}
 																		HX_STACK_LINE(1049)
 																		return ret1;
@@ -1216,7 +1052,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 								}
 							}
 							struct _Function_7_1{
-								inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p,::zpp_nape::geom::ZPP_MarchPair &ret){
+								inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchPair &ret,::zpp_nape::geom::ZPP_GeomVert &p){
 									HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1055);
 									{
 										HX_STACK_LINE(1056)
@@ -1243,7 +1079,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 								}
 							};
 							HX_STACK_LINE(1055)
-							ret->p1 = _Function_7_1::Block(p,ret);
+							ret->p1 = _Function_7_1::Block(ret,p);
 						}
 					}
 				}
@@ -1335,9 +1171,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 														HX_STACK_LINE(1094)
 														{
 														}
-														HX_STACK_LINE(1094)
-														{
-														}
 													}
 													HX_STACK_LINE(1094)
 													return ret1;
@@ -1357,7 +1190,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 										HX_STACK_LINE(1097)
 										if (((i == (int)2))){
 											struct _Function_11_1{
-												inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &y0){
+												inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &y0,Float &x1){
 													HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1098);
 													{
 														HX_STACK_LINE(1098)
@@ -1389,9 +1222,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 															HX_STACK_LINE(1098)
 															{
 															}
-															HX_STACK_LINE(1098)
-															{
-															}
 														}
 														HX_STACK_LINE(1098)
 														return ret1;
@@ -1400,7 +1230,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 												}
 											};
 											HX_STACK_LINE(1098)
-											p = _Function_11_1::Block(x1,y0);
+											p = _Function_11_1::Block(y0,x1);
 											HX_STACK_LINE(1099)
 											if (((bool(sndx) || bool(fsty)))){
 												HX_STACK_LINE(1099)
@@ -1440,9 +1270,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																ret1->x = x1;
 																HX_STACK_LINE(1102)
 																ret1->y = y1;
-																HX_STACK_LINE(1102)
-																{
-																}
 																HX_STACK_LINE(1102)
 																{
 																}
@@ -1497,9 +1324,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	HX_STACK_LINE(1106)
 																	{
 																	}
-																	HX_STACK_LINE(1106)
-																	{
-																	}
 																}
 																HX_STACK_LINE(1106)
 																return ret1;
@@ -1518,25 +1342,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 												else{
 													HX_STACK_LINE(1109)
 													if (((i == (int)1))){
-														struct _Function_14_1{
-															inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1110);
-																{
-																	HX_STACK_LINE(1110)
-																	{
-																	}
-																	HX_STACK_LINE(1110)
-																	return ints->list->__get(((((int(yn) << int((int)1))) * ints->width) + xn));
-																}
-																return null();
-															}
-														};
 														HX_STACK_LINE(1110)
-														p = _Function_14_1::Block(ints,xn,yn);
+														p = ints->list->__get(((((int(yn) << int((int)1))) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 														HX_STACK_LINE(1111)
 														if (((p == null()))){
 															struct _Function_15_1{
-																inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &x0,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v1,Float &v0,Dynamic &iso,int &quality){
+																inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,Float &x0,Float &y0,Float &v0,Float &x1,int &quality,Float &v1){
 																	HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1112);
 																	{
 																		HX_STACK_LINE(1112)
@@ -1568,9 +1379,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			HX_STACK_LINE(1112)
 																			{
 																			}
-																			HX_STACK_LINE(1112)
-																			{
-																			}
 																		}
 																		HX_STACK_LINE(1112)
 																		return ret1;
@@ -1579,15 +1387,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																}
 															};
 															HX_STACK_LINE(1112)
-															p = _Function_15_1::Block(x1,x0,y0,this,v1,v0,iso,quality);
+															p = _Function_15_1::Block(this,iso,x0,y0,v0,x1,quality,v1);
 															HX_STACK_LINE(1113)
-															{
-																HX_STACK_LINE(1113)
-																{
-																}
-																HX_STACK_LINE(1113)
-																ints->list[((((int(yn) << int((int)1))) * ints->width) + xn)] = p;
-															}
+															ints->list[((((int(yn) << int((int)1))) * ints->width) + xn)] = p;
 														}
 														else{
 															struct _Function_15_1{
@@ -1623,9 +1425,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			HX_STACK_LINE(1115)
 																			{
 																			}
-																			HX_STACK_LINE(1115)
-																			{
-																			}
 																		}
 																		HX_STACK_LINE(1115)
 																		return ret1;
@@ -1653,25 +1452,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 													else{
 														HX_STACK_LINE(1121)
 														if (((i == (int)5))){
-															struct _Function_15_1{
-																inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																	HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1122);
-																	{
-																		HX_STACK_LINE(1122)
-																		{
-																		}
-																		HX_STACK_LINE(1122)
-																		return ints->list->__get(((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn));
-																	}
-																	return null();
-																}
-															};
 															HX_STACK_LINE(1122)
-															p = _Function_15_1::Block(ints,xn,yn);
+															p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 															HX_STACK_LINE(1123)
 															if (((p == null()))){
 																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &x0,Float &v3,Float &v2,Float &y1,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,int &quality){
+																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v2,Dynamic &iso,Float &x0,Float &v3,Float &x1,int &quality,Float &y1){
 																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1124);
 																		{
 																			HX_STACK_LINE(1124)
@@ -1703,9 +1489,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																				HX_STACK_LINE(1124)
 																				{
 																				}
-																				HX_STACK_LINE(1124)
-																				{
-																				}
 																			}
 																			HX_STACK_LINE(1124)
 																			return ret1;
@@ -1714,15 +1497,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	}
 																};
 																HX_STACK_LINE(1124)
-																p = _Function_16_1::Block(x1,x0,v3,v2,y1,this,iso,quality);
+																p = _Function_16_1::Block(this,v2,iso,x0,v3,x1,quality,y1);
 																HX_STACK_LINE(1125)
-																{
-																	HX_STACK_LINE(1125)
-																	{
-																	}
-																	HX_STACK_LINE(1125)
-																	ints->list[((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)] = p;
-																}
+																ints->list[((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)] = p;
 															}
 															else{
 																struct _Function_16_1{
@@ -1758,9 +1535,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																				HX_STACK_LINE(1127)
 																				{
 																				}
-																				HX_STACK_LINE(1127)
-																				{
-																				}
 																			}
 																			HX_STACK_LINE(1127)
 																			return ret1;
@@ -1788,25 +1562,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 														else{
 															HX_STACK_LINE(1133)
 															if (((i == (int)3))){
-																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1134);
-																		{
-																			HX_STACK_LINE(1134)
-																			{
-																			}
-																			HX_STACK_LINE(1134)
-																			return ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1))));
-																		}
-																		return null();
-																	}
-																};
 																HX_STACK_LINE(1134)
-																p = _Function_16_1::Block(ints,xn,yn);
+																p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																HX_STACK_LINE(1135)
 																if (((p == null()))){
 																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &v2,Float &y1,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v1,Dynamic &iso,int &quality){
+																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v2,Dynamic &iso,Float &y0,Float &x1,int &quality,Float &v1,Float &y1){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1136);
 																			{
 																				HX_STACK_LINE(1136)
@@ -1838,9 +1599,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1136)
 																					{
 																					}
-																					HX_STACK_LINE(1136)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1136)
 																				return ret1;
@@ -1849,15 +1607,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																		}
 																	};
 																	HX_STACK_LINE(1136)
-																	p = _Function_17_1::Block(x1,v2,y1,y0,this,v1,iso,quality);
+																	p = _Function_17_1::Block(this,v2,iso,y0,x1,quality,v1,y1);
 																	HX_STACK_LINE(1137)
-																	{
-																		HX_STACK_LINE(1137)
-																		{
-																		}
-																		HX_STACK_LINE(1137)
-																		ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))] = p;
-																	}
+																	ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))] = p;
 																}
 																else{
 																	struct _Function_17_1{
@@ -1893,9 +1645,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1139)
 																					{
 																					}
-																					HX_STACK_LINE(1139)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1139)
 																				return ret1;
@@ -1921,25 +1670,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																}
 															}
 															else{
-																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1146);
-																		{
-																			HX_STACK_LINE(1146)
-																			{
-																			}
-																			HX_STACK_LINE(1146)
-																			return ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn));
-																		}
-																		return null();
-																	}
-																};
 																HX_STACK_LINE(1146)
-																p = _Function_16_1::Block(ints,xn,yn);
+																p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																HX_STACK_LINE(1147)
 																if (((p == null()))){
 																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x0,Float &v3,Float &y1,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v0,Dynamic &iso,int &quality){
+																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,Float &x0,Float &v3,Float &y0,Float &v0,int &quality,Float &y1){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1148);
 																			{
 																				HX_STACK_LINE(1148)
@@ -1971,9 +1707,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1148)
 																					{
 																					}
-																					HX_STACK_LINE(1148)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1148)
 																				return ret1;
@@ -1982,15 +1715,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																		}
 																	};
 																	HX_STACK_LINE(1148)
-																	p = _Function_17_1::Block(x0,v3,y1,y0,this,v0,iso,quality);
+																	p = _Function_17_1::Block(this,iso,x0,v3,y0,v0,quality,y1);
 																	HX_STACK_LINE(1149)
-																	{
-																		HX_STACK_LINE(1149)
-																		{
-																		}
-																		HX_STACK_LINE(1149)
-																		ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)] = p;
-																	}
+																	ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)] = p;
 																}
 																else{
 																	struct _Function_17_1{
@@ -2026,9 +1753,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1151)
 																					{
 																					}
-																					HX_STACK_LINE(1151)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1151)
 																				return ret1;
@@ -2060,7 +1784,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 										}
 									}
 									struct _Function_9_1{
-										inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p,::zpp_nape::geom::ZPP_MarchPair &ret){
+										inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchPair &ret,::zpp_nape::geom::ZPP_GeomVert &p){
 											HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1157);
 											{
 												HX_STACK_LINE(1158)
@@ -2087,7 +1811,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 										}
 									};
 									HX_STACK_LINE(1157)
-									ret->p1 = _Function_9_1::Block(p,ret);
+									ret->p1 = _Function_9_1::Block(ret,p);
 								}
 							}
 						}
@@ -2173,9 +1897,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 														HX_STACK_LINE(1193)
 														{
 														}
-														HX_STACK_LINE(1193)
-														{
-														}
 													}
 													HX_STACK_LINE(1193)
 													return ret1;
@@ -2195,7 +1916,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 										HX_STACK_LINE(1196)
 										if (((i == (int)2))){
 											struct _Function_11_1{
-												inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &y0){
+												inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &y0,Float &x1){
 													HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1197);
 													{
 														HX_STACK_LINE(1197)
@@ -2227,9 +1948,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 															HX_STACK_LINE(1197)
 															{
 															}
-															HX_STACK_LINE(1197)
-															{
-															}
 														}
 														HX_STACK_LINE(1197)
 														return ret1;
@@ -2238,7 +1956,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 												}
 											};
 											HX_STACK_LINE(1197)
-											p = _Function_11_1::Block(x1,y0);
+											p = _Function_11_1::Block(y0,x1);
 											HX_STACK_LINE(1198)
 											if (((bool(sndx) || bool(fsty)))){
 												HX_STACK_LINE(1198)
@@ -2278,9 +1996,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																ret1->x = x1;
 																HX_STACK_LINE(1201)
 																ret1->y = y1;
-																HX_STACK_LINE(1201)
-																{
-																}
 																HX_STACK_LINE(1201)
 																{
 																}
@@ -2335,9 +2050,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	HX_STACK_LINE(1205)
 																	{
 																	}
-																	HX_STACK_LINE(1205)
-																	{
-																	}
 																}
 																HX_STACK_LINE(1205)
 																return ret1;
@@ -2356,25 +2068,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 												else{
 													HX_STACK_LINE(1208)
 													if (((i == (int)1))){
-														struct _Function_14_1{
-															inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1209);
-																{
-																	HX_STACK_LINE(1209)
-																	{
-																	}
-																	HX_STACK_LINE(1209)
-																	return ints->list->__get(((((int(yn) << int((int)1))) * ints->width) + xn));
-																}
-																return null();
-															}
-														};
 														HX_STACK_LINE(1209)
-														p = _Function_14_1::Block(ints,xn,yn);
+														p = ints->list->__get(((((int(yn) << int((int)1))) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 														HX_STACK_LINE(1210)
 														if (((p == null()))){
 															struct _Function_15_1{
-																inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &x0,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v1,Float &v0,Dynamic &iso,int &quality){
+																inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,Float &x0,Float &y0,Float &v0,Float &x1,int &quality,Float &v1){
 																	HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1211);
 																	{
 																		HX_STACK_LINE(1211)
@@ -2406,9 +2105,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			HX_STACK_LINE(1211)
 																			{
 																			}
-																			HX_STACK_LINE(1211)
-																			{
-																			}
 																		}
 																		HX_STACK_LINE(1211)
 																		return ret1;
@@ -2417,15 +2113,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																}
 															};
 															HX_STACK_LINE(1211)
-															p = _Function_15_1::Block(x1,x0,y0,this,v1,v0,iso,quality);
+															p = _Function_15_1::Block(this,iso,x0,y0,v0,x1,quality,v1);
 															HX_STACK_LINE(1212)
-															{
-																HX_STACK_LINE(1212)
-																{
-																}
-																HX_STACK_LINE(1212)
-																ints->list[((((int(yn) << int((int)1))) * ints->width) + xn)] = p;
-															}
+															ints->list[((((int(yn) << int((int)1))) * ints->width) + xn)] = p;
 														}
 														else{
 															struct _Function_15_1{
@@ -2461,9 +2151,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			HX_STACK_LINE(1214)
 																			{
 																			}
-																			HX_STACK_LINE(1214)
-																			{
-																			}
 																		}
 																		HX_STACK_LINE(1214)
 																		return ret1;
@@ -2491,25 +2178,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 													else{
 														HX_STACK_LINE(1220)
 														if (((i == (int)5))){
-															struct _Function_15_1{
-																inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																	HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1221);
-																	{
-																		HX_STACK_LINE(1221)
-																		{
-																		}
-																		HX_STACK_LINE(1221)
-																		return ints->list->__get(((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn));
-																	}
-																	return null();
-																}
-															};
 															HX_STACK_LINE(1221)
-															p = _Function_15_1::Block(ints,xn,yn);
+															p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 															HX_STACK_LINE(1222)
 															if (((p == null()))){
 																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &x0,Float &v3,Float &v2,Float &y1,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,int &quality){
+																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v2,Dynamic &iso,Float &x0,Float &v3,Float &x1,int &quality,Float &y1){
 																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1223);
 																		{
 																			HX_STACK_LINE(1223)
@@ -2541,9 +2215,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																				HX_STACK_LINE(1223)
 																				{
 																				}
-																				HX_STACK_LINE(1223)
-																				{
-																				}
 																			}
 																			HX_STACK_LINE(1223)
 																			return ret1;
@@ -2552,15 +2223,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	}
 																};
 																HX_STACK_LINE(1223)
-																p = _Function_16_1::Block(x1,x0,v3,v2,y1,this,iso,quality);
+																p = _Function_16_1::Block(this,v2,iso,x0,v3,x1,quality,y1);
 																HX_STACK_LINE(1224)
-																{
-																	HX_STACK_LINE(1224)
-																	{
-																	}
-																	HX_STACK_LINE(1224)
-																	ints->list[((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)] = p;
-																}
+																ints->list[((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)] = p;
 															}
 															else{
 																struct _Function_16_1{
@@ -2596,9 +2261,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																				HX_STACK_LINE(1226)
 																				{
 																				}
-																				HX_STACK_LINE(1226)
-																				{
-																				}
 																			}
 																			HX_STACK_LINE(1226)
 																			return ret1;
@@ -2626,25 +2288,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 														else{
 															HX_STACK_LINE(1232)
 															if (((i == (int)3))){
-																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1233);
-																		{
-																			HX_STACK_LINE(1233)
-																			{
-																			}
-																			HX_STACK_LINE(1233)
-																			return ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1))));
-																		}
-																		return null();
-																	}
-																};
 																HX_STACK_LINE(1233)
-																p = _Function_16_1::Block(ints,xn,yn);
+																p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																HX_STACK_LINE(1234)
 																if (((p == null()))){
 																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &v2,Float &y1,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v1,Dynamic &iso,int &quality){
+																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v2,Dynamic &iso,Float &y0,Float &x1,int &quality,Float &v1,Float &y1){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1235);
 																			{
 																				HX_STACK_LINE(1235)
@@ -2676,9 +2325,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1235)
 																					{
 																					}
-																					HX_STACK_LINE(1235)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1235)
 																				return ret1;
@@ -2687,15 +2333,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																		}
 																	};
 																	HX_STACK_LINE(1235)
-																	p = _Function_17_1::Block(x1,v2,y1,y0,this,v1,iso,quality);
+																	p = _Function_17_1::Block(this,v2,iso,y0,x1,quality,v1,y1);
 																	HX_STACK_LINE(1236)
-																	{
-																		HX_STACK_LINE(1236)
-																		{
-																		}
-																		HX_STACK_LINE(1236)
-																		ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))] = p;
-																	}
+																	ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))] = p;
 																}
 																else{
 																	struct _Function_17_1{
@@ -2731,9 +2371,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1238)
 																					{
 																					}
-																					HX_STACK_LINE(1238)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1238)
 																				return ret1;
@@ -2759,25 +2396,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																}
 															}
 															else{
-																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1245);
-																		{
-																			HX_STACK_LINE(1245)
-																			{
-																			}
-																			HX_STACK_LINE(1245)
-																			return ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn));
-																		}
-																		return null();
-																	}
-																};
 																HX_STACK_LINE(1245)
-																p = _Function_16_1::Block(ints,xn,yn);
+																p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																HX_STACK_LINE(1246)
 																if (((p == null()))){
 																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x0,Float &v3,Float &y1,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v0,Dynamic &iso,int &quality){
+																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,Float &x0,Float &v3,Float &y0,Float &v0,int &quality,Float &y1){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1247);
 																			{
 																				HX_STACK_LINE(1247)
@@ -2809,9 +2433,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1247)
 																					{
 																					}
-																					HX_STACK_LINE(1247)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1247)
 																				return ret1;
@@ -2820,15 +2441,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																		}
 																	};
 																	HX_STACK_LINE(1247)
-																	p = _Function_17_1::Block(x0,v3,y1,y0,this,v0,iso,quality);
+																	p = _Function_17_1::Block(this,iso,x0,v3,y0,v0,quality,y1);
 																	HX_STACK_LINE(1248)
-																	{
-																		HX_STACK_LINE(1248)
-																		{
-																		}
-																		HX_STACK_LINE(1248)
-																		ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)] = p;
-																	}
+																	ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)] = p;
 																}
 																else{
 																	struct _Function_17_1{
@@ -2864,9 +2479,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1250)
 																					{
 																					}
-																					HX_STACK_LINE(1250)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1250)
 																				return ret1;
@@ -2898,7 +2510,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 										}
 									}
 									struct _Function_9_1{
-										inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p,::zpp_nape::geom::ZPP_MarchPair &ret){
+										inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchPair &ret,::zpp_nape::geom::ZPP_GeomVert &p){
 											HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1256);
 											{
 												HX_STACK_LINE(1257)
@@ -2925,7 +2537,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 										}
 									};
 									HX_STACK_LINE(1256)
-									ret->p1 = _Function_9_1::Block(p,ret);
+									ret->p1 = _Function_9_1::Block(ret,p);
 								}
 							}
 						}
@@ -2998,9 +2610,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 															HX_STACK_LINE(1285)
 															{
 															}
-															HX_STACK_LINE(1285)
-															{
-															}
 														}
 														HX_STACK_LINE(1285)
 														return ret1;
@@ -3020,7 +2629,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 											HX_STACK_LINE(1288)
 											if (((i == (int)2))){
 												struct _Function_12_1{
-													inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &y0){
+													inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &y0,Float &x1){
 														HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1289);
 														{
 															HX_STACK_LINE(1289)
@@ -3052,9 +2661,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																HX_STACK_LINE(1289)
 																{
 																}
-																HX_STACK_LINE(1289)
-																{
-																}
 															}
 															HX_STACK_LINE(1289)
 															return ret1;
@@ -3063,7 +2669,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 													}
 												};
 												HX_STACK_LINE(1289)
-												p = _Function_12_1::Block(x1,y0);
+												p = _Function_12_1::Block(y0,x1);
 												HX_STACK_LINE(1290)
 												if (((bool(sndx) || bool(fsty)))){
 													HX_STACK_LINE(1290)
@@ -3103,9 +2709,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	ret1->x = x1;
 																	HX_STACK_LINE(1293)
 																	ret1->y = y1;
-																	HX_STACK_LINE(1293)
-																	{
-																	}
 																	HX_STACK_LINE(1293)
 																	{
 																	}
@@ -3160,9 +2763,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																		HX_STACK_LINE(1297)
 																		{
 																		}
-																		HX_STACK_LINE(1297)
-																		{
-																		}
 																	}
 																	HX_STACK_LINE(1297)
 																	return ret1;
@@ -3181,25 +2781,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 													else{
 														HX_STACK_LINE(1300)
 														if (((i == (int)1))){
-															struct _Function_15_1{
-																inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																	HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1301);
-																	{
-																		HX_STACK_LINE(1301)
-																		{
-																		}
-																		HX_STACK_LINE(1301)
-																		return ints->list->__get(((((int(yn) << int((int)1))) * ints->width) + xn));
-																	}
-																	return null();
-																}
-															};
 															HX_STACK_LINE(1301)
-															p = _Function_15_1::Block(ints,xn,yn);
+															p = ints->list->__get(((((int(yn) << int((int)1))) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 															HX_STACK_LINE(1302)
 															if (((p == null()))){
 																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &x0,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v1,Float &v0,Dynamic &iso,int &quality){
+																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,Float &x0,Float &y0,Float &v0,Float &x1,int &quality,Float &v1){
 																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1303);
 																		{
 																			HX_STACK_LINE(1303)
@@ -3231,9 +2818,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																				HX_STACK_LINE(1303)
 																				{
 																				}
-																				HX_STACK_LINE(1303)
-																				{
-																				}
 																			}
 																			HX_STACK_LINE(1303)
 																			return ret1;
@@ -3242,15 +2826,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	}
 																};
 																HX_STACK_LINE(1303)
-																p = _Function_16_1::Block(x1,x0,y0,this,v1,v0,iso,quality);
+																p = _Function_16_1::Block(this,iso,x0,y0,v0,x1,quality,v1);
 																HX_STACK_LINE(1304)
-																{
-																	HX_STACK_LINE(1304)
-																	{
-																	}
-																	HX_STACK_LINE(1304)
-																	ints->list[((((int(yn) << int((int)1))) * ints->width) + xn)] = p;
-																}
+																ints->list[((((int(yn) << int((int)1))) * ints->width) + xn)] = p;
 															}
 															else{
 																struct _Function_16_1{
@@ -3286,9 +2864,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																				HX_STACK_LINE(1306)
 																				{
 																				}
-																				HX_STACK_LINE(1306)
-																				{
-																				}
 																			}
 																			HX_STACK_LINE(1306)
 																			return ret1;
@@ -3316,25 +2891,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 														else{
 															HX_STACK_LINE(1312)
 															if (((i == (int)5))){
-																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1313);
-																		{
-																			HX_STACK_LINE(1313)
-																			{
-																			}
-																			HX_STACK_LINE(1313)
-																			return ints->list->__get(((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn));
-																		}
-																		return null();
-																	}
-																};
 																HX_STACK_LINE(1313)
-																p = _Function_16_1::Block(ints,xn,yn);
+																p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																HX_STACK_LINE(1314)
 																if (((p == null()))){
 																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &x0,Float &v3,Float &v2,Float &y1,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,int &quality){
+																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v2,Dynamic &iso,Float &x0,Float &v3,Float &x1,int &quality,Float &y1){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1315);
 																			{
 																				HX_STACK_LINE(1315)
@@ -3366,9 +2928,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1315)
 																					{
 																					}
-																					HX_STACK_LINE(1315)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1315)
 																				return ret1;
@@ -3377,15 +2936,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																		}
 																	};
 																	HX_STACK_LINE(1315)
-																	p = _Function_17_1::Block(x1,x0,v3,v2,y1,this,iso,quality);
+																	p = _Function_17_1::Block(this,v2,iso,x0,v3,x1,quality,y1);
 																	HX_STACK_LINE(1316)
-																	{
-																		HX_STACK_LINE(1316)
-																		{
-																		}
-																		HX_STACK_LINE(1316)
-																		ints->list[((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)] = p;
-																	}
+																	ints->list[((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)] = p;
 																}
 																else{
 																	struct _Function_17_1{
@@ -3421,9 +2974,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1318)
 																					{
 																					}
-																					HX_STACK_LINE(1318)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1318)
 																				return ret1;
@@ -3451,25 +3001,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 															else{
 																HX_STACK_LINE(1324)
 																if (((i == (int)3))){
-																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1325);
-																			{
-																				HX_STACK_LINE(1325)
-																				{
-																				}
-																				HX_STACK_LINE(1325)
-																				return ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1))));
-																			}
-																			return null();
-																		}
-																	};
 																	HX_STACK_LINE(1325)
-																	p = _Function_17_1::Block(ints,xn,yn);
+																	p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																	HX_STACK_LINE(1326)
 																	if (((p == null()))){
 																		struct _Function_18_1{
-																			inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &v2,Float &y1,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v1,Dynamic &iso,int &quality){
+																			inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v2,Dynamic &iso,Float &y0,Float &x1,int &quality,Float &v1,Float &y1){
 																				HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1327);
 																				{
 																					HX_STACK_LINE(1327)
@@ -3501,9 +3038,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																						HX_STACK_LINE(1327)
 																						{
 																						}
-																						HX_STACK_LINE(1327)
-																						{
-																						}
 																					}
 																					HX_STACK_LINE(1327)
 																					return ret1;
@@ -3512,15 +3046,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			}
 																		};
 																		HX_STACK_LINE(1327)
-																		p = _Function_18_1::Block(x1,v2,y1,y0,this,v1,iso,quality);
+																		p = _Function_18_1::Block(this,v2,iso,y0,x1,quality,v1,y1);
 																		HX_STACK_LINE(1328)
-																		{
-																			HX_STACK_LINE(1328)
-																			{
-																			}
-																			HX_STACK_LINE(1328)
-																			ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))] = p;
-																		}
+																		ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))] = p;
 																	}
 																	else{
 																		struct _Function_18_1{
@@ -3556,9 +3084,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																						HX_STACK_LINE(1330)
 																						{
 																						}
-																						HX_STACK_LINE(1330)
-																						{
-																						}
 																					}
 																					HX_STACK_LINE(1330)
 																					return ret1;
@@ -3584,25 +3109,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	}
 																}
 																else{
-																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1337);
-																			{
-																				HX_STACK_LINE(1337)
-																				{
-																				}
-																				HX_STACK_LINE(1337)
-																				return ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn));
-																			}
-																			return null();
-																		}
-																	};
 																	HX_STACK_LINE(1337)
-																	p = _Function_17_1::Block(ints,xn,yn);
+																	p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																	HX_STACK_LINE(1338)
 																	if (((p == null()))){
 																		struct _Function_18_1{
-																			inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x0,Float &v3,Float &y1,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v0,Dynamic &iso,int &quality){
+																			inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,Float &x0,Float &v3,Float &y0,Float &v0,int &quality,Float &y1){
 																				HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1339);
 																				{
 																					HX_STACK_LINE(1339)
@@ -3634,9 +3146,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																						HX_STACK_LINE(1339)
 																						{
 																						}
-																						HX_STACK_LINE(1339)
-																						{
-																						}
 																					}
 																					HX_STACK_LINE(1339)
 																					return ret1;
@@ -3645,15 +3154,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			}
 																		};
 																		HX_STACK_LINE(1339)
-																		p = _Function_18_1::Block(x0,v3,y1,y0,this,v0,iso,quality);
+																		p = _Function_18_1::Block(this,iso,x0,v3,y0,v0,quality,y1);
 																		HX_STACK_LINE(1340)
-																		{
-																			HX_STACK_LINE(1340)
-																			{
-																			}
-																			HX_STACK_LINE(1340)
-																			ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)] = p;
-																		}
+																		ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)] = p;
 																	}
 																	else{
 																		struct _Function_18_1{
@@ -3689,9 +3192,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																						HX_STACK_LINE(1342)
 																						{
 																						}
-																						HX_STACK_LINE(1342)
-																						{
-																						}
 																					}
 																					HX_STACK_LINE(1342)
 																					return ret1;
@@ -3723,7 +3223,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 											}
 										}
 										struct _Function_10_1{
-											inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p,::zpp_nape::geom::ZPP_MarchPair &ret){
+											inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchPair &ret,::zpp_nape::geom::ZPP_GeomVert &p){
 												HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1348);
 												{
 													HX_STACK_LINE(1349)
@@ -3750,7 +3250,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 											}
 										};
 										HX_STACK_LINE(1348)
-										ret->p2 = _Function_10_1::Block(p,ret);
+										ret->p2 = _Function_10_1::Block(ret,p);
 									}
 								}
 							}
@@ -3840,9 +3340,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 															HX_STACK_LINE(1388)
 															{
 															}
-															HX_STACK_LINE(1388)
-															{
-															}
 														}
 														HX_STACK_LINE(1388)
 														return ret1;
@@ -3862,7 +3359,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 											HX_STACK_LINE(1391)
 											if (((i == (int)2))){
 												struct _Function_12_1{
-													inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &y0){
+													inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &y0,Float &x1){
 														HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1392);
 														{
 															HX_STACK_LINE(1392)
@@ -3894,9 +3391,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																HX_STACK_LINE(1392)
 																{
 																}
-																HX_STACK_LINE(1392)
-																{
-																}
 															}
 															HX_STACK_LINE(1392)
 															return ret1;
@@ -3905,7 +3399,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 													}
 												};
 												HX_STACK_LINE(1392)
-												p = _Function_12_1::Block(x1,y0);
+												p = _Function_12_1::Block(y0,x1);
 												HX_STACK_LINE(1393)
 												if (((bool(sndx) || bool(fsty)))){
 													HX_STACK_LINE(1393)
@@ -3945,9 +3439,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	ret1->x = x1;
 																	HX_STACK_LINE(1396)
 																	ret1->y = y1;
-																	HX_STACK_LINE(1396)
-																	{
-																	}
 																	HX_STACK_LINE(1396)
 																	{
 																	}
@@ -4002,9 +3493,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																		HX_STACK_LINE(1400)
 																		{
 																		}
-																		HX_STACK_LINE(1400)
-																		{
-																		}
 																	}
 																	HX_STACK_LINE(1400)
 																	return ret1;
@@ -4023,25 +3511,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 													else{
 														HX_STACK_LINE(1403)
 														if (((i == (int)1))){
-															struct _Function_15_1{
-																inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																	HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1404);
-																	{
-																		HX_STACK_LINE(1404)
-																		{
-																		}
-																		HX_STACK_LINE(1404)
-																		return ints->list->__get(((((int(yn) << int((int)1))) * ints->width) + xn));
-																	}
-																	return null();
-																}
-															};
 															HX_STACK_LINE(1404)
-															p = _Function_15_1::Block(ints,xn,yn);
+															p = ints->list->__get(((((int(yn) << int((int)1))) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 															HX_STACK_LINE(1405)
 															if (((p == null()))){
 																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &x0,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v1,Float &v0,Dynamic &iso,int &quality){
+																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,Float &x0,Float &y0,Float &v0,Float &x1,int &quality,Float &v1){
 																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1406);
 																		{
 																			HX_STACK_LINE(1406)
@@ -4073,9 +3548,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																				HX_STACK_LINE(1406)
 																				{
 																				}
-																				HX_STACK_LINE(1406)
-																				{
-																				}
 																			}
 																			HX_STACK_LINE(1406)
 																			return ret1;
@@ -4084,15 +3556,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	}
 																};
 																HX_STACK_LINE(1406)
-																p = _Function_16_1::Block(x1,x0,y0,this,v1,v0,iso,quality);
+																p = _Function_16_1::Block(this,iso,x0,y0,v0,x1,quality,v1);
 																HX_STACK_LINE(1407)
-																{
-																	HX_STACK_LINE(1407)
-																	{
-																	}
-																	HX_STACK_LINE(1407)
-																	ints->list[((((int(yn) << int((int)1))) * ints->width) + xn)] = p;
-																}
+																ints->list[((((int(yn) << int((int)1))) * ints->width) + xn)] = p;
 															}
 															else{
 																struct _Function_16_1{
@@ -4128,9 +3594,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																				HX_STACK_LINE(1409)
 																				{
 																				}
-																				HX_STACK_LINE(1409)
-																				{
-																				}
 																			}
 																			HX_STACK_LINE(1409)
 																			return ret1;
@@ -4158,25 +3621,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 														else{
 															HX_STACK_LINE(1415)
 															if (((i == (int)5))){
-																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1416);
-																		{
-																			HX_STACK_LINE(1416)
-																			{
-																			}
-																			HX_STACK_LINE(1416)
-																			return ints->list->__get(((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn));
-																		}
-																		return null();
-																	}
-																};
 																HX_STACK_LINE(1416)
-																p = _Function_16_1::Block(ints,xn,yn);
+																p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																HX_STACK_LINE(1417)
 																if (((p == null()))){
 																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &x0,Float &v3,Float &v2,Float &y1,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,int &quality){
+																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v2,Dynamic &iso,Float &x0,Float &v3,Float &x1,int &quality,Float &y1){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1418);
 																			{
 																				HX_STACK_LINE(1418)
@@ -4208,9 +3658,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1418)
 																					{
 																					}
-																					HX_STACK_LINE(1418)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1418)
 																				return ret1;
@@ -4219,15 +3666,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																		}
 																	};
 																	HX_STACK_LINE(1418)
-																	p = _Function_17_1::Block(x1,x0,v3,v2,y1,this,iso,quality);
+																	p = _Function_17_1::Block(this,v2,iso,x0,v3,x1,quality,y1);
 																	HX_STACK_LINE(1419)
-																	{
-																		HX_STACK_LINE(1419)
-																		{
-																		}
-																		HX_STACK_LINE(1419)
-																		ints->list[((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)] = p;
-																	}
+																	ints->list[((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)] = p;
 																}
 																else{
 																	struct _Function_17_1{
@@ -4263,9 +3704,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1421)
 																					{
 																					}
-																					HX_STACK_LINE(1421)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1421)
 																				return ret1;
@@ -4293,25 +3731,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 															else{
 																HX_STACK_LINE(1427)
 																if (((i == (int)3))){
-																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1428);
-																			{
-																				HX_STACK_LINE(1428)
-																				{
-																				}
-																				HX_STACK_LINE(1428)
-																				return ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1))));
-																			}
-																			return null();
-																		}
-																	};
 																	HX_STACK_LINE(1428)
-																	p = _Function_17_1::Block(ints,xn,yn);
+																	p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																	HX_STACK_LINE(1429)
 																	if (((p == null()))){
 																		struct _Function_18_1{
-																			inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &v2,Float &y1,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v1,Dynamic &iso,int &quality){
+																			inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v2,Dynamic &iso,Float &y0,Float &x1,int &quality,Float &v1,Float &y1){
 																				HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1430);
 																				{
 																					HX_STACK_LINE(1430)
@@ -4343,9 +3768,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																						HX_STACK_LINE(1430)
 																						{
 																						}
-																						HX_STACK_LINE(1430)
-																						{
-																						}
 																					}
 																					HX_STACK_LINE(1430)
 																					return ret1;
@@ -4354,15 +3776,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			}
 																		};
 																		HX_STACK_LINE(1430)
-																		p = _Function_18_1::Block(x1,v2,y1,y0,this,v1,iso,quality);
+																		p = _Function_18_1::Block(this,v2,iso,y0,x1,quality,v1,y1);
 																		HX_STACK_LINE(1431)
-																		{
-																			HX_STACK_LINE(1431)
-																			{
-																			}
-																			HX_STACK_LINE(1431)
-																			ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))] = p;
-																		}
+																		ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))] = p;
 																	}
 																	else{
 																		struct _Function_18_1{
@@ -4398,9 +3814,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																						HX_STACK_LINE(1433)
 																						{
 																						}
-																						HX_STACK_LINE(1433)
-																						{
-																						}
 																					}
 																					HX_STACK_LINE(1433)
 																					return ret1;
@@ -4426,25 +3839,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	}
 																}
 																else{
-																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1440);
-																			{
-																				HX_STACK_LINE(1440)
-																				{
-																				}
-																				HX_STACK_LINE(1440)
-																				return ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn));
-																			}
-																			return null();
-																		}
-																	};
 																	HX_STACK_LINE(1440)
-																	p = _Function_17_1::Block(ints,xn,yn);
+																	p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																	HX_STACK_LINE(1441)
 																	if (((p == null()))){
 																		struct _Function_18_1{
-																			inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x0,Float &v3,Float &y1,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v0,Dynamic &iso,int &quality){
+																			inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,Float &x0,Float &v3,Float &y0,Float &v0,int &quality,Float &y1){
 																				HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1442);
 																				{
 																					HX_STACK_LINE(1442)
@@ -4476,9 +3876,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																						HX_STACK_LINE(1442)
 																						{
 																						}
-																						HX_STACK_LINE(1442)
-																						{
-																						}
 																					}
 																					HX_STACK_LINE(1442)
 																					return ret1;
@@ -4487,15 +3884,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			}
 																		};
 																		HX_STACK_LINE(1442)
-																		p = _Function_18_1::Block(x0,v3,y1,y0,this,v0,iso,quality);
+																		p = _Function_18_1::Block(this,iso,x0,v3,y0,v0,quality,y1);
 																		HX_STACK_LINE(1443)
-																		{
-																			HX_STACK_LINE(1443)
-																			{
-																			}
-																			HX_STACK_LINE(1443)
-																			ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)] = p;
-																		}
+																		ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)] = p;
 																	}
 																	else{
 																		struct _Function_18_1{
@@ -4531,9 +3922,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																						HX_STACK_LINE(1445)
 																						{
 																						}
-																						HX_STACK_LINE(1445)
-																						{
-																						}
 																					}
 																					HX_STACK_LINE(1445)
 																					return ret1;
@@ -4565,7 +3953,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 											}
 										}
 										struct _Function_10_1{
-											inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p,::zpp_nape::geom::ZPP_MarchPair &ret){
+											inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchPair &ret,::zpp_nape::geom::ZPP_GeomVert &p){
 												HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1451);
 												{
 													HX_STACK_LINE(1452)
@@ -4592,7 +3980,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 											}
 										};
 										HX_STACK_LINE(1451)
-										ret->p1 = _Function_10_1::Block(p,ret);
+										ret->p1 = _Function_10_1::Block(ret,p);
 									}
 								}
 							}
@@ -4682,9 +4070,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 														HX_STACK_LINE(1490)
 														{
 														}
-														HX_STACK_LINE(1490)
-														{
-														}
 													}
 													HX_STACK_LINE(1490)
 													return ret1;
@@ -4704,7 +4089,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 										HX_STACK_LINE(1493)
 										if (((i == (int)2))){
 											struct _Function_11_1{
-												inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &y0){
+												inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &y0,Float &x1){
 													HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1494);
 													{
 														HX_STACK_LINE(1494)
@@ -4736,9 +4121,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 															HX_STACK_LINE(1494)
 															{
 															}
-															HX_STACK_LINE(1494)
-															{
-															}
 														}
 														HX_STACK_LINE(1494)
 														return ret1;
@@ -4747,7 +4129,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 												}
 											};
 											HX_STACK_LINE(1494)
-											p = _Function_11_1::Block(x1,y0);
+											p = _Function_11_1::Block(y0,x1);
 											HX_STACK_LINE(1495)
 											if (((bool(sndx) || bool(fsty)))){
 												HX_STACK_LINE(1495)
@@ -4787,9 +4169,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																ret1->x = x1;
 																HX_STACK_LINE(1498)
 																ret1->y = y1;
-																HX_STACK_LINE(1498)
-																{
-																}
 																HX_STACK_LINE(1498)
 																{
 																}
@@ -4844,9 +4223,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	HX_STACK_LINE(1502)
 																	{
 																	}
-																	HX_STACK_LINE(1502)
-																	{
-																	}
 																}
 																HX_STACK_LINE(1502)
 																return ret1;
@@ -4865,25 +4241,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 												else{
 													HX_STACK_LINE(1505)
 													if (((i == (int)1))){
-														struct _Function_14_1{
-															inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1506);
-																{
-																	HX_STACK_LINE(1506)
-																	{
-																	}
-																	HX_STACK_LINE(1506)
-																	return ints->list->__get(((((int(yn) << int((int)1))) * ints->width) + xn));
-																}
-																return null();
-															}
-														};
 														HX_STACK_LINE(1506)
-														p = _Function_14_1::Block(ints,xn,yn);
+														p = ints->list->__get(((((int(yn) << int((int)1))) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 														HX_STACK_LINE(1507)
 														if (((p == null()))){
 															struct _Function_15_1{
-																inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &x0,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v1,Float &v0,Dynamic &iso,int &quality){
+																inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,Float &x0,Float &y0,Float &v0,Float &x1,int &quality,Float &v1){
 																	HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1508);
 																	{
 																		HX_STACK_LINE(1508)
@@ -4915,9 +4278,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			HX_STACK_LINE(1508)
 																			{
 																			}
-																			HX_STACK_LINE(1508)
-																			{
-																			}
 																		}
 																		HX_STACK_LINE(1508)
 																		return ret1;
@@ -4926,15 +4286,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																}
 															};
 															HX_STACK_LINE(1508)
-															p = _Function_15_1::Block(x1,x0,y0,this,v1,v0,iso,quality);
+															p = _Function_15_1::Block(this,iso,x0,y0,v0,x1,quality,v1);
 															HX_STACK_LINE(1509)
-															{
-																HX_STACK_LINE(1509)
-																{
-																}
-																HX_STACK_LINE(1509)
-																ints->list[((((int(yn) << int((int)1))) * ints->width) + xn)] = p;
-															}
+															ints->list[((((int(yn) << int((int)1))) * ints->width) + xn)] = p;
 														}
 														else{
 															struct _Function_15_1{
@@ -4970,9 +4324,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			HX_STACK_LINE(1511)
 																			{
 																			}
-																			HX_STACK_LINE(1511)
-																			{
-																			}
 																		}
 																		HX_STACK_LINE(1511)
 																		return ret1;
@@ -5000,25 +4351,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 													else{
 														HX_STACK_LINE(1517)
 														if (((i == (int)5))){
-															struct _Function_15_1{
-																inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																	HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1518);
-																	{
-																		HX_STACK_LINE(1518)
-																		{
-																		}
-																		HX_STACK_LINE(1518)
-																		return ints->list->__get(((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn));
-																	}
-																	return null();
-																}
-															};
 															HX_STACK_LINE(1518)
-															p = _Function_15_1::Block(ints,xn,yn);
+															p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 															HX_STACK_LINE(1519)
 															if (((p == null()))){
 																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &x0,Float &v3,Float &v2,Float &y1,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,int &quality){
+																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v2,Dynamic &iso,Float &x0,Float &v3,Float &x1,int &quality,Float &y1){
 																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1520);
 																		{
 																			HX_STACK_LINE(1520)
@@ -5050,9 +4388,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																				HX_STACK_LINE(1520)
 																				{
 																				}
-																				HX_STACK_LINE(1520)
-																				{
-																				}
 																			}
 																			HX_STACK_LINE(1520)
 																			return ret1;
@@ -5061,15 +4396,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	}
 																};
 																HX_STACK_LINE(1520)
-																p = _Function_16_1::Block(x1,x0,v3,v2,y1,this,iso,quality);
+																p = _Function_16_1::Block(this,v2,iso,x0,v3,x1,quality,y1);
 																HX_STACK_LINE(1521)
-																{
-																	HX_STACK_LINE(1521)
-																	{
-																	}
-																	HX_STACK_LINE(1521)
-																	ints->list[((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)] = p;
-																}
+																ints->list[((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)] = p;
 															}
 															else{
 																struct _Function_16_1{
@@ -5105,9 +4434,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																				HX_STACK_LINE(1523)
 																				{
 																				}
-																				HX_STACK_LINE(1523)
-																				{
-																				}
 																			}
 																			HX_STACK_LINE(1523)
 																			return ret1;
@@ -5135,25 +4461,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 														else{
 															HX_STACK_LINE(1529)
 															if (((i == (int)3))){
-																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1530);
-																		{
-																			HX_STACK_LINE(1530)
-																			{
-																			}
-																			HX_STACK_LINE(1530)
-																			return ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1))));
-																		}
-																		return null();
-																	}
-																};
 																HX_STACK_LINE(1530)
-																p = _Function_16_1::Block(ints,xn,yn);
+																p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																HX_STACK_LINE(1531)
 																if (((p == null()))){
 																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &v2,Float &y1,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v1,Dynamic &iso,int &quality){
+																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v2,Dynamic &iso,Float &y0,Float &x1,int &quality,Float &v1,Float &y1){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1532);
 																			{
 																				HX_STACK_LINE(1532)
@@ -5185,9 +4498,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1532)
 																					{
 																					}
-																					HX_STACK_LINE(1532)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1532)
 																				return ret1;
@@ -5196,15 +4506,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																		}
 																	};
 																	HX_STACK_LINE(1532)
-																	p = _Function_17_1::Block(x1,v2,y1,y0,this,v1,iso,quality);
+																	p = _Function_17_1::Block(this,v2,iso,y0,x1,quality,v1,y1);
 																	HX_STACK_LINE(1533)
-																	{
-																		HX_STACK_LINE(1533)
-																		{
-																		}
-																		HX_STACK_LINE(1533)
-																		ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))] = p;
-																	}
+																	ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))] = p;
 																}
 																else{
 																	struct _Function_17_1{
@@ -5240,9 +4544,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1535)
 																					{
 																					}
-																					HX_STACK_LINE(1535)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1535)
 																				return ret1;
@@ -5268,25 +4569,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																}
 															}
 															else{
-																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1542);
-																		{
-																			HX_STACK_LINE(1542)
-																			{
-																			}
-																			HX_STACK_LINE(1542)
-																			return ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn));
-																		}
-																		return null();
-																	}
-																};
 																HX_STACK_LINE(1542)
-																p = _Function_16_1::Block(ints,xn,yn);
+																p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																HX_STACK_LINE(1543)
 																if (((p == null()))){
 																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x0,Float &v3,Float &y1,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v0,Dynamic &iso,int &quality){
+																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,Float &x0,Float &v3,Float &y0,Float &v0,int &quality,Float &y1){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1544);
 																			{
 																				HX_STACK_LINE(1544)
@@ -5318,9 +4606,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1544)
 																					{
 																					}
-																					HX_STACK_LINE(1544)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1544)
 																				return ret1;
@@ -5329,15 +4614,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																		}
 																	};
 																	HX_STACK_LINE(1544)
-																	p = _Function_17_1::Block(x0,v3,y1,y0,this,v0,iso,quality);
+																	p = _Function_17_1::Block(this,iso,x0,v3,y0,v0,quality,y1);
 																	HX_STACK_LINE(1545)
-																	{
-																		HX_STACK_LINE(1545)
-																		{
-																		}
-																		HX_STACK_LINE(1545)
-																		ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)] = p;
-																	}
+																	ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)] = p;
 																}
 																else{
 																	struct _Function_17_1{
@@ -5373,9 +4652,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1547)
 																					{
 																					}
-																					HX_STACK_LINE(1547)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1547)
 																				return ret1;
@@ -5407,7 +4683,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 										}
 									}
 									struct _Function_9_1{
-										inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p,::zpp_nape::geom::ZPP_MarchPair &ret){
+										inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchPair &ret,::zpp_nape::geom::ZPP_GeomVert &p){
 											HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1553);
 											{
 												HX_STACK_LINE(1554)
@@ -5434,7 +4710,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 										}
 									};
 									HX_STACK_LINE(1553)
-									ret->p1 = _Function_9_1::Block(p,ret);
+									ret->p1 = _Function_9_1::Block(ret,p);
 								}
 							}
 						}
@@ -5520,9 +4796,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 														HX_STACK_LINE(1589)
 														{
 														}
-														HX_STACK_LINE(1589)
-														{
-														}
 													}
 													HX_STACK_LINE(1589)
 													return ret1;
@@ -5542,7 +4815,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 										HX_STACK_LINE(1592)
 										if (((i == (int)2))){
 											struct _Function_11_1{
-												inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &y0){
+												inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &y0,Float &x1){
 													HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1593);
 													{
 														HX_STACK_LINE(1593)
@@ -5574,9 +4847,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 															HX_STACK_LINE(1593)
 															{
 															}
-															HX_STACK_LINE(1593)
-															{
-															}
 														}
 														HX_STACK_LINE(1593)
 														return ret1;
@@ -5585,7 +4855,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 												}
 											};
 											HX_STACK_LINE(1593)
-											p = _Function_11_1::Block(x1,y0);
+											p = _Function_11_1::Block(y0,x1);
 											HX_STACK_LINE(1594)
 											if (((bool(sndx) || bool(fsty)))){
 												HX_STACK_LINE(1594)
@@ -5625,9 +4895,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																ret1->x = x1;
 																HX_STACK_LINE(1597)
 																ret1->y = y1;
-																HX_STACK_LINE(1597)
-																{
-																}
 																HX_STACK_LINE(1597)
 																{
 																}
@@ -5682,9 +4949,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	HX_STACK_LINE(1601)
 																	{
 																	}
-																	HX_STACK_LINE(1601)
-																	{
-																	}
 																}
 																HX_STACK_LINE(1601)
 																return ret1;
@@ -5703,25 +4967,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 												else{
 													HX_STACK_LINE(1604)
 													if (((i == (int)1))){
-														struct _Function_14_1{
-															inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1605);
-																{
-																	HX_STACK_LINE(1605)
-																	{
-																	}
-																	HX_STACK_LINE(1605)
-																	return ints->list->__get(((((int(yn) << int((int)1))) * ints->width) + xn));
-																}
-																return null();
-															}
-														};
 														HX_STACK_LINE(1605)
-														p = _Function_14_1::Block(ints,xn,yn);
+														p = ints->list->__get(((((int(yn) << int((int)1))) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 														HX_STACK_LINE(1606)
 														if (((p == null()))){
 															struct _Function_15_1{
-																inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &x0,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v1,Float &v0,Dynamic &iso,int &quality){
+																inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,Float &x0,Float &y0,Float &v0,Float &x1,int &quality,Float &v1){
 																	HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1607);
 																	{
 																		HX_STACK_LINE(1607)
@@ -5753,9 +5004,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			HX_STACK_LINE(1607)
 																			{
 																			}
-																			HX_STACK_LINE(1607)
-																			{
-																			}
 																		}
 																		HX_STACK_LINE(1607)
 																		return ret1;
@@ -5764,15 +5012,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																}
 															};
 															HX_STACK_LINE(1607)
-															p = _Function_15_1::Block(x1,x0,y0,this,v1,v0,iso,quality);
+															p = _Function_15_1::Block(this,iso,x0,y0,v0,x1,quality,v1);
 															HX_STACK_LINE(1608)
-															{
-																HX_STACK_LINE(1608)
-																{
-																}
-																HX_STACK_LINE(1608)
-																ints->list[((((int(yn) << int((int)1))) * ints->width) + xn)] = p;
-															}
+															ints->list[((((int(yn) << int((int)1))) * ints->width) + xn)] = p;
 														}
 														else{
 															struct _Function_15_1{
@@ -5808,9 +5050,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			HX_STACK_LINE(1610)
 																			{
 																			}
-																			HX_STACK_LINE(1610)
-																			{
-																			}
 																		}
 																		HX_STACK_LINE(1610)
 																		return ret1;
@@ -5838,25 +5077,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 													else{
 														HX_STACK_LINE(1616)
 														if (((i == (int)5))){
-															struct _Function_15_1{
-																inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																	HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1617);
-																	{
-																		HX_STACK_LINE(1617)
-																		{
-																		}
-																		HX_STACK_LINE(1617)
-																		return ints->list->__get(((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn));
-																	}
-																	return null();
-																}
-															};
 															HX_STACK_LINE(1617)
-															p = _Function_15_1::Block(ints,xn,yn);
+															p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 															HX_STACK_LINE(1618)
 															if (((p == null()))){
 																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &x0,Float &v3,Float &v2,Float &y1,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,int &quality){
+																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v2,Dynamic &iso,Float &x0,Float &v3,Float &x1,int &quality,Float &y1){
 																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1619);
 																		{
 																			HX_STACK_LINE(1619)
@@ -5888,9 +5114,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																				HX_STACK_LINE(1619)
 																				{
 																				}
-																				HX_STACK_LINE(1619)
-																				{
-																				}
 																			}
 																			HX_STACK_LINE(1619)
 																			return ret1;
@@ -5899,15 +5122,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	}
 																};
 																HX_STACK_LINE(1619)
-																p = _Function_16_1::Block(x1,x0,v3,v2,y1,this,iso,quality);
+																p = _Function_16_1::Block(this,v2,iso,x0,v3,x1,quality,y1);
 																HX_STACK_LINE(1620)
-																{
-																	HX_STACK_LINE(1620)
-																	{
-																	}
-																	HX_STACK_LINE(1620)
-																	ints->list[((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)] = p;
-																}
+																ints->list[((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)] = p;
 															}
 															else{
 																struct _Function_16_1{
@@ -5943,9 +5160,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																				HX_STACK_LINE(1622)
 																				{
 																				}
-																				HX_STACK_LINE(1622)
-																				{
-																				}
 																			}
 																			HX_STACK_LINE(1622)
 																			return ret1;
@@ -5973,25 +5187,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 														else{
 															HX_STACK_LINE(1628)
 															if (((i == (int)3))){
-																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1629);
-																		{
-																			HX_STACK_LINE(1629)
-																			{
-																			}
-																			HX_STACK_LINE(1629)
-																			return ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1))));
-																		}
-																		return null();
-																	}
-																};
 																HX_STACK_LINE(1629)
-																p = _Function_16_1::Block(ints,xn,yn);
+																p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																HX_STACK_LINE(1630)
 																if (((p == null()))){
 																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &v2,Float &y1,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v1,Dynamic &iso,int &quality){
+																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v2,Dynamic &iso,Float &y0,Float &x1,int &quality,Float &v1,Float &y1){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1631);
 																			{
 																				HX_STACK_LINE(1631)
@@ -6023,9 +5224,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1631)
 																					{
 																					}
-																					HX_STACK_LINE(1631)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1631)
 																				return ret1;
@@ -6034,15 +5232,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																		}
 																	};
 																	HX_STACK_LINE(1631)
-																	p = _Function_17_1::Block(x1,v2,y1,y0,this,v1,iso,quality);
+																	p = _Function_17_1::Block(this,v2,iso,y0,x1,quality,v1,y1);
 																	HX_STACK_LINE(1632)
-																	{
-																		HX_STACK_LINE(1632)
-																		{
-																		}
-																		HX_STACK_LINE(1632)
-																		ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))] = p;
-																	}
+																	ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))] = p;
 																}
 																else{
 																	struct _Function_17_1{
@@ -6078,9 +5270,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1634)
 																					{
 																					}
-																					HX_STACK_LINE(1634)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1634)
 																				return ret1;
@@ -6106,25 +5295,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																}
 															}
 															else{
-																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1641);
-																		{
-																			HX_STACK_LINE(1641)
-																			{
-																			}
-																			HX_STACK_LINE(1641)
-																			return ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn));
-																		}
-																		return null();
-																	}
-																};
 																HX_STACK_LINE(1641)
-																p = _Function_16_1::Block(ints,xn,yn);
+																p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																HX_STACK_LINE(1642)
 																if (((p == null()))){
 																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x0,Float &v3,Float &y1,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v0,Dynamic &iso,int &quality){
+																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,Float &x0,Float &v3,Float &y0,Float &v0,int &quality,Float &y1){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1643);
 																			{
 																				HX_STACK_LINE(1643)
@@ -6156,9 +5332,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1643)
 																					{
 																					}
-																					HX_STACK_LINE(1643)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1643)
 																				return ret1;
@@ -6167,15 +5340,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																		}
 																	};
 																	HX_STACK_LINE(1643)
-																	p = _Function_17_1::Block(x0,v3,y1,y0,this,v0,iso,quality);
+																	p = _Function_17_1::Block(this,iso,x0,v3,y0,v0,quality,y1);
 																	HX_STACK_LINE(1644)
-																	{
-																		HX_STACK_LINE(1644)
-																		{
-																		}
-																		HX_STACK_LINE(1644)
-																		ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)] = p;
-																	}
+																	ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)] = p;
 																}
 																else{
 																	struct _Function_17_1{
@@ -6211,9 +5378,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1646)
 																					{
 																					}
-																					HX_STACK_LINE(1646)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1646)
 																				return ret1;
@@ -6245,7 +5409,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 										}
 									}
 									struct _Function_9_1{
-										inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p,::zpp_nape::geom::ZPP_MarchPair &ret){
+										inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchPair &ret,::zpp_nape::geom::ZPP_GeomVert &p){
 											HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1652);
 											{
 												HX_STACK_LINE(1653)
@@ -6272,7 +5436,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 										}
 									};
 									HX_STACK_LINE(1652)
-									ret->p1 = _Function_9_1::Block(p,ret);
+									ret->p1 = _Function_9_1::Block(ret,p);
 								}
 							}
 						}
@@ -6345,9 +5509,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 															HX_STACK_LINE(1681)
 															{
 															}
-															HX_STACK_LINE(1681)
-															{
-															}
 														}
 														HX_STACK_LINE(1681)
 														return ret1;
@@ -6367,7 +5528,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 											HX_STACK_LINE(1684)
 											if (((i == (int)2))){
 												struct _Function_12_1{
-													inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &y0){
+													inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &y0,Float &x1){
 														HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1685);
 														{
 															HX_STACK_LINE(1685)
@@ -6399,9 +5560,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																HX_STACK_LINE(1685)
 																{
 																}
-																HX_STACK_LINE(1685)
-																{
-																}
 															}
 															HX_STACK_LINE(1685)
 															return ret1;
@@ -6410,7 +5568,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 													}
 												};
 												HX_STACK_LINE(1685)
-												p = _Function_12_1::Block(x1,y0);
+												p = _Function_12_1::Block(y0,x1);
 												HX_STACK_LINE(1686)
 												if (((bool(sndx) || bool(fsty)))){
 													HX_STACK_LINE(1686)
@@ -6450,9 +5608,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	ret1->x = x1;
 																	HX_STACK_LINE(1689)
 																	ret1->y = y1;
-																	HX_STACK_LINE(1689)
-																	{
-																	}
 																	HX_STACK_LINE(1689)
 																	{
 																	}
@@ -6507,9 +5662,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																		HX_STACK_LINE(1693)
 																		{
 																		}
-																		HX_STACK_LINE(1693)
-																		{
-																		}
 																	}
 																	HX_STACK_LINE(1693)
 																	return ret1;
@@ -6528,25 +5680,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 													else{
 														HX_STACK_LINE(1696)
 														if (((i == (int)1))){
-															struct _Function_15_1{
-																inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																	HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1697);
-																	{
-																		HX_STACK_LINE(1697)
-																		{
-																		}
-																		HX_STACK_LINE(1697)
-																		return ints->list->__get(((((int(yn) << int((int)1))) * ints->width) + xn));
-																	}
-																	return null();
-																}
-															};
 															HX_STACK_LINE(1697)
-															p = _Function_15_1::Block(ints,xn,yn);
+															p = ints->list->__get(((((int(yn) << int((int)1))) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 															HX_STACK_LINE(1698)
 															if (((p == null()))){
 																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &x0,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v1,Float &v0,Dynamic &iso,int &quality){
+																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,Float &x0,Float &y0,Float &v0,Float &x1,int &quality,Float &v1){
 																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1699);
 																		{
 																			HX_STACK_LINE(1699)
@@ -6578,9 +5717,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																				HX_STACK_LINE(1699)
 																				{
 																				}
-																				HX_STACK_LINE(1699)
-																				{
-																				}
 																			}
 																			HX_STACK_LINE(1699)
 																			return ret1;
@@ -6589,15 +5725,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	}
 																};
 																HX_STACK_LINE(1699)
-																p = _Function_16_1::Block(x1,x0,y0,this,v1,v0,iso,quality);
+																p = _Function_16_1::Block(this,iso,x0,y0,v0,x1,quality,v1);
 																HX_STACK_LINE(1700)
-																{
-																	HX_STACK_LINE(1700)
-																	{
-																	}
-																	HX_STACK_LINE(1700)
-																	ints->list[((((int(yn) << int((int)1))) * ints->width) + xn)] = p;
-																}
+																ints->list[((((int(yn) << int((int)1))) * ints->width) + xn)] = p;
 															}
 															else{
 																struct _Function_16_1{
@@ -6633,9 +5763,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																				HX_STACK_LINE(1702)
 																				{
 																				}
-																				HX_STACK_LINE(1702)
-																				{
-																				}
 																			}
 																			HX_STACK_LINE(1702)
 																			return ret1;
@@ -6663,25 +5790,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 														else{
 															HX_STACK_LINE(1708)
 															if (((i == (int)5))){
-																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1709);
-																		{
-																			HX_STACK_LINE(1709)
-																			{
-																			}
-																			HX_STACK_LINE(1709)
-																			return ints->list->__get(((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn));
-																		}
-																		return null();
-																	}
-																};
 																HX_STACK_LINE(1709)
-																p = _Function_16_1::Block(ints,xn,yn);
+																p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																HX_STACK_LINE(1710)
 																if (((p == null()))){
 																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &x0,Float &v3,Float &v2,Float &y1,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,int &quality){
+																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v2,Dynamic &iso,Float &x0,Float &v3,Float &x1,int &quality,Float &y1){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1711);
 																			{
 																				HX_STACK_LINE(1711)
@@ -6713,9 +5827,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1711)
 																					{
 																					}
-																					HX_STACK_LINE(1711)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1711)
 																				return ret1;
@@ -6724,15 +5835,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																		}
 																	};
 																	HX_STACK_LINE(1711)
-																	p = _Function_17_1::Block(x1,x0,v3,v2,y1,this,iso,quality);
+																	p = _Function_17_1::Block(this,v2,iso,x0,v3,x1,quality,y1);
 																	HX_STACK_LINE(1712)
-																	{
-																		HX_STACK_LINE(1712)
-																		{
-																		}
-																		HX_STACK_LINE(1712)
-																		ints->list[((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)] = p;
-																	}
+																	ints->list[((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)] = p;
 																}
 																else{
 																	struct _Function_17_1{
@@ -6768,9 +5873,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1714)
 																					{
 																					}
-																					HX_STACK_LINE(1714)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1714)
 																				return ret1;
@@ -6798,25 +5900,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 															else{
 																HX_STACK_LINE(1720)
 																if (((i == (int)3))){
-																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1721);
-																			{
-																				HX_STACK_LINE(1721)
-																				{
-																				}
-																				HX_STACK_LINE(1721)
-																				return ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1))));
-																			}
-																			return null();
-																		}
-																	};
 																	HX_STACK_LINE(1721)
-																	p = _Function_17_1::Block(ints,xn,yn);
+																	p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																	HX_STACK_LINE(1722)
 																	if (((p == null()))){
 																		struct _Function_18_1{
-																			inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &v2,Float &y1,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v1,Dynamic &iso,int &quality){
+																			inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v2,Dynamic &iso,Float &y0,Float &x1,int &quality,Float &v1,Float &y1){
 																				HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1723);
 																				{
 																					HX_STACK_LINE(1723)
@@ -6848,9 +5937,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																						HX_STACK_LINE(1723)
 																						{
 																						}
-																						HX_STACK_LINE(1723)
-																						{
-																						}
 																					}
 																					HX_STACK_LINE(1723)
 																					return ret1;
@@ -6859,15 +5945,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			}
 																		};
 																		HX_STACK_LINE(1723)
-																		p = _Function_18_1::Block(x1,v2,y1,y0,this,v1,iso,quality);
+																		p = _Function_18_1::Block(this,v2,iso,y0,x1,quality,v1,y1);
 																		HX_STACK_LINE(1724)
-																		{
-																			HX_STACK_LINE(1724)
-																			{
-																			}
-																			HX_STACK_LINE(1724)
-																			ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))] = p;
-																		}
+																		ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))] = p;
 																	}
 																	else{
 																		struct _Function_18_1{
@@ -6903,9 +5983,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																						HX_STACK_LINE(1726)
 																						{
 																						}
-																						HX_STACK_LINE(1726)
-																						{
-																						}
 																					}
 																					HX_STACK_LINE(1726)
 																					return ret1;
@@ -6931,25 +6008,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	}
 																}
 																else{
-																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1733);
-																			{
-																				HX_STACK_LINE(1733)
-																				{
-																				}
-																				HX_STACK_LINE(1733)
-																				return ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn));
-																			}
-																			return null();
-																		}
-																	};
 																	HX_STACK_LINE(1733)
-																	p = _Function_17_1::Block(ints,xn,yn);
+																	p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																	HX_STACK_LINE(1734)
 																	if (((p == null()))){
 																		struct _Function_18_1{
-																			inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x0,Float &v3,Float &y1,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v0,Dynamic &iso,int &quality){
+																			inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,Float &x0,Float &v3,Float &y0,Float &v0,int &quality,Float &y1){
 																				HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1735);
 																				{
 																					HX_STACK_LINE(1735)
@@ -6981,9 +6045,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																						HX_STACK_LINE(1735)
 																						{
 																						}
-																						HX_STACK_LINE(1735)
-																						{
-																						}
 																					}
 																					HX_STACK_LINE(1735)
 																					return ret1;
@@ -6992,15 +6053,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			}
 																		};
 																		HX_STACK_LINE(1735)
-																		p = _Function_18_1::Block(x0,v3,y1,y0,this,v0,iso,quality);
+																		p = _Function_18_1::Block(this,iso,x0,v3,y0,v0,quality,y1);
 																		HX_STACK_LINE(1736)
-																		{
-																			HX_STACK_LINE(1736)
-																			{
-																			}
-																			HX_STACK_LINE(1736)
-																			ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)] = p;
-																		}
+																		ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)] = p;
 																	}
 																	else{
 																		struct _Function_18_1{
@@ -7036,9 +6091,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																						HX_STACK_LINE(1738)
 																						{
 																						}
-																						HX_STACK_LINE(1738)
-																						{
-																						}
 																					}
 																					HX_STACK_LINE(1738)
 																					return ret1;
@@ -7070,7 +6122,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 											}
 										}
 										struct _Function_10_1{
-											inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p,::zpp_nape::geom::ZPP_MarchPair &ret){
+											inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchPair &ret,::zpp_nape::geom::ZPP_GeomVert &p){
 												HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1744);
 												{
 													HX_STACK_LINE(1745)
@@ -7097,7 +6149,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 											}
 										};
 										HX_STACK_LINE(1744)
-										ret->p2 = _Function_10_1::Block(p,ret);
+										ret->p2 = _Function_10_1::Block(ret,p);
 									}
 								}
 							}
@@ -7187,9 +6239,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 															HX_STACK_LINE(1784)
 															{
 															}
-															HX_STACK_LINE(1784)
-															{
-															}
 														}
 														HX_STACK_LINE(1784)
 														return ret1;
@@ -7209,7 +6258,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 											HX_STACK_LINE(1787)
 											if (((i == (int)2))){
 												struct _Function_12_1{
-													inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &y0){
+													inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &y0,Float &x1){
 														HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1788);
 														{
 															HX_STACK_LINE(1788)
@@ -7241,9 +6290,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																HX_STACK_LINE(1788)
 																{
 																}
-																HX_STACK_LINE(1788)
-																{
-																}
 															}
 															HX_STACK_LINE(1788)
 															return ret1;
@@ -7252,7 +6298,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 													}
 												};
 												HX_STACK_LINE(1788)
-												p = _Function_12_1::Block(x1,y0);
+												p = _Function_12_1::Block(y0,x1);
 												HX_STACK_LINE(1789)
 												if (((bool(sndx) || bool(fsty)))){
 													HX_STACK_LINE(1789)
@@ -7292,9 +6338,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	ret1->x = x1;
 																	HX_STACK_LINE(1792)
 																	ret1->y = y1;
-																	HX_STACK_LINE(1792)
-																	{
-																	}
 																	HX_STACK_LINE(1792)
 																	{
 																	}
@@ -7349,9 +6392,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																		HX_STACK_LINE(1796)
 																		{
 																		}
-																		HX_STACK_LINE(1796)
-																		{
-																		}
 																	}
 																	HX_STACK_LINE(1796)
 																	return ret1;
@@ -7370,25 +6410,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 													else{
 														HX_STACK_LINE(1799)
 														if (((i == (int)1))){
-															struct _Function_15_1{
-																inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																	HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1800);
-																	{
-																		HX_STACK_LINE(1800)
-																		{
-																		}
-																		HX_STACK_LINE(1800)
-																		return ints->list->__get(((((int(yn) << int((int)1))) * ints->width) + xn));
-																	}
-																	return null();
-																}
-															};
 															HX_STACK_LINE(1800)
-															p = _Function_15_1::Block(ints,xn,yn);
+															p = ints->list->__get(((((int(yn) << int((int)1))) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 															HX_STACK_LINE(1801)
 															if (((p == null()))){
 																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &x0,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v1,Float &v0,Dynamic &iso,int &quality){
+																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,Float &x0,Float &y0,Float &v0,Float &x1,int &quality,Float &v1){
 																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1802);
 																		{
 																			HX_STACK_LINE(1802)
@@ -7420,9 +6447,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																				HX_STACK_LINE(1802)
 																				{
 																				}
-																				HX_STACK_LINE(1802)
-																				{
-																				}
 																			}
 																			HX_STACK_LINE(1802)
 																			return ret1;
@@ -7431,15 +6455,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	}
 																};
 																HX_STACK_LINE(1802)
-																p = _Function_16_1::Block(x1,x0,y0,this,v1,v0,iso,quality);
+																p = _Function_16_1::Block(this,iso,x0,y0,v0,x1,quality,v1);
 																HX_STACK_LINE(1803)
-																{
-																	HX_STACK_LINE(1803)
-																	{
-																	}
-																	HX_STACK_LINE(1803)
-																	ints->list[((((int(yn) << int((int)1))) * ints->width) + xn)] = p;
-																}
+																ints->list[((((int(yn) << int((int)1))) * ints->width) + xn)] = p;
 															}
 															else{
 																struct _Function_16_1{
@@ -7475,9 +6493,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																				HX_STACK_LINE(1805)
 																				{
 																				}
-																				HX_STACK_LINE(1805)
-																				{
-																				}
 																			}
 																			HX_STACK_LINE(1805)
 																			return ret1;
@@ -7505,25 +6520,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 														else{
 															HX_STACK_LINE(1811)
 															if (((i == (int)5))){
-																struct _Function_16_1{
-																	inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																		HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1812);
-																		{
-																			HX_STACK_LINE(1812)
-																			{
-																			}
-																			HX_STACK_LINE(1812)
-																			return ints->list->__get(((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn));
-																		}
-																		return null();
-																	}
-																};
 																HX_STACK_LINE(1812)
-																p = _Function_16_1::Block(ints,xn,yn);
+																p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																HX_STACK_LINE(1813)
 																if (((p == null()))){
 																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &x0,Float &v3,Float &v2,Float &y1,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,int &quality){
+																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v2,Dynamic &iso,Float &x0,Float &v3,Float &x1,int &quality,Float &y1){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1814);
 																			{
 																				HX_STACK_LINE(1814)
@@ -7555,9 +6557,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1814)
 																					{
 																					}
-																					HX_STACK_LINE(1814)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1814)
 																				return ret1;
@@ -7566,15 +6565,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																		}
 																	};
 																	HX_STACK_LINE(1814)
-																	p = _Function_17_1::Block(x1,x0,v3,v2,y1,this,iso,quality);
+																	p = _Function_17_1::Block(this,v2,iso,x0,v3,x1,quality,y1);
 																	HX_STACK_LINE(1815)
-																	{
-																		HX_STACK_LINE(1815)
-																		{
-																		}
-																		HX_STACK_LINE(1815)
-																		ints->list[((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)] = p;
-																	}
+																	ints->list[((((((int(yn) << int((int)1))) + (int)2)) * ints->width) + xn)] = p;
 																}
 																else{
 																	struct _Function_17_1{
@@ -7610,9 +6603,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																					HX_STACK_LINE(1817)
 																					{
 																					}
-																					HX_STACK_LINE(1817)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(1817)
 																				return ret1;
@@ -7640,25 +6630,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 															else{
 																HX_STACK_LINE(1823)
 																if (((i == (int)3))){
-																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1824);
-																			{
-																				HX_STACK_LINE(1824)
-																				{
-																				}
-																				HX_STACK_LINE(1824)
-																				return ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1))));
-																			}
-																			return null();
-																		}
-																	};
 																	HX_STACK_LINE(1824)
-																	p = _Function_17_1::Block(ints,xn,yn);
+																	p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																	HX_STACK_LINE(1825)
 																	if (((p == null()))){
 																		struct _Function_18_1{
-																			inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x1,Float &v2,Float &y1,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v1,Dynamic &iso,int &quality){
+																			inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v2,Dynamic &iso,Float &y0,Float &x1,int &quality,Float &v1,Float &y1){
 																				HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1826);
 																				{
 																					HX_STACK_LINE(1826)
@@ -7690,9 +6667,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																						HX_STACK_LINE(1826)
 																						{
 																						}
-																						HX_STACK_LINE(1826)
-																						{
-																						}
 																					}
 																					HX_STACK_LINE(1826)
 																					return ret1;
@@ -7701,15 +6675,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			}
 																		};
 																		HX_STACK_LINE(1826)
-																		p = _Function_18_1::Block(x1,v2,y1,y0,this,v1,iso,quality);
+																		p = _Function_18_1::Block(this,v2,iso,y0,x1,quality,v1,y1);
 																		HX_STACK_LINE(1827)
-																		{
-																			HX_STACK_LINE(1827)
-																			{
-																			}
-																			HX_STACK_LINE(1827)
-																			ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))] = p;
-																		}
+																		ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + ((xn + (int)1)))] = p;
 																	}
 																	else{
 																		struct _Function_18_1{
@@ -7745,9 +6713,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																						HX_STACK_LINE(1829)
 																						{
 																						}
-																						HX_STACK_LINE(1829)
-																						{
-																						}
 																					}
 																					HX_STACK_LINE(1829)
 																					return ret1;
@@ -7773,25 +6738,12 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																	}
 																}
 																else{
-																	struct _Function_17_1{
-																		inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::util::ZNPArray2_ZPP_GeomVert &ints,int &xn,int &yn){
-																			HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1836);
-																			{
-																				HX_STACK_LINE(1836)
-																				{
-																				}
-																				HX_STACK_LINE(1836)
-																				return ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn));
-																			}
-																			return null();
-																		}
-																	};
 																	HX_STACK_LINE(1836)
-																	p = _Function_17_1::Block(ints,xn,yn);
+																	p = ints->list->__get(((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 																	HX_STACK_LINE(1837)
 																	if (((p == null()))){
 																		struct _Function_18_1{
-																			inline static ::zpp_nape::geom::ZPP_GeomVert Block( Float &x0,Float &v3,Float &y1,Float &y0,::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Float &v0,Dynamic &iso,int &quality){
+																			inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchingSquares_obj *__this,Dynamic &iso,Float &x0,Float &v3,Float &y0,Float &v0,int &quality,Float &y1){
 																				HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1838);
 																				{
 																					HX_STACK_LINE(1838)
@@ -7823,9 +6775,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																						HX_STACK_LINE(1838)
 																						{
 																						}
-																						HX_STACK_LINE(1838)
-																						{
-																						}
 																					}
 																					HX_STACK_LINE(1838)
 																					return ret1;
@@ -7834,15 +6783,9 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																			}
 																		};
 																		HX_STACK_LINE(1838)
-																		p = _Function_18_1::Block(x0,v3,y1,y0,this,v0,iso,quality);
+																		p = _Function_18_1::Block(this,iso,x0,v3,y0,v0,quality,y1);
 																		HX_STACK_LINE(1839)
-																		{
-																			HX_STACK_LINE(1839)
-																			{
-																			}
-																			HX_STACK_LINE(1839)
-																			ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)] = p;
-																		}
+																		ints->list[((((((int(yn) << int((int)1))) + (int)1)) * ints->width) + xn)] = p;
 																	}
 																	else{
 																		struct _Function_18_1{
@@ -7878,9 +6821,6 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 																						HX_STACK_LINE(1841)
 																						{
 																						}
-																						HX_STACK_LINE(1841)
-																						{
-																						}
 																					}
 																					HX_STACK_LINE(1841)
 																					return ret1;
@@ -7912,7 +6852,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 											}
 										}
 										struct _Function_10_1{
-											inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p,::zpp_nape::geom::ZPP_MarchPair &ret){
+											inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_MarchPair &ret,::zpp_nape::geom::ZPP_GeomVert &p){
 												HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",1847);
 												{
 													HX_STACK_LINE(1848)
@@ -7939,7 +6879,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_MarchingSquares_obj,lerp,return )
 											}
 										};
 										HX_STACK_LINE(1847)
-										ret->p1 = _Function_10_1::Block(p,ret);
+										ret->p1 = _Function_10_1::Block(ret,p);
 									}
 								}
 							}
@@ -8225,9 +7165,6 @@ Void ZPP_MarchingSquares_obj::combUD( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 		{
 			HX_STACK_LINE(874)
 			::zpp_nape::geom::ZPP_GeomVert o = ap;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(875)
-			{
-			}
 			HX_STACK_LINE(883)
 			{
 				HX_STACK_LINE(883)
@@ -8253,7 +7190,7 @@ Void ZPP_MarchingSquares_obj::combUD( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(883)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(883)
 								_this1->_isimmutable();
 							}
@@ -8274,9 +7211,6 @@ Void ZPP_MarchingSquares_obj::combUD( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 							HX_STACK_LINE(883)
 							::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
 							HX_STACK_LINE(883)
-							{
-							}
-							HX_STACK_LINE(883)
 							o1->zpp_pool = null();
 							HX_STACK_LINE(883)
 							if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -8296,9 +7230,6 @@ Void ZPP_MarchingSquares_obj::combUD( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 						{
 							HX_STACK_LINE(883)
 							::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-							HX_STACK_LINE(883)
-							{
-							}
 							HX_STACK_LINE(883)
 							{
 								HX_STACK_LINE(883)
@@ -8345,9 +7276,6 @@ Void ZPP_MarchingSquares_obj::combUD( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 		{
 			HX_STACK_LINE(894)
 			::zpp_nape::geom::ZPP_GeomVert o = ap2;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(895)
-			{
-			}
 			HX_STACK_LINE(903)
 			{
 				HX_STACK_LINE(903)
@@ -8373,7 +7301,7 @@ Void ZPP_MarchingSquares_obj::combUD( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(903)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(903)
 								_this1->_isimmutable();
 							}
@@ -8394,9 +7322,6 @@ Void ZPP_MarchingSquares_obj::combUD( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 							HX_STACK_LINE(903)
 							::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
 							HX_STACK_LINE(903)
-							{
-							}
-							HX_STACK_LINE(903)
 							o1->zpp_pool = null();
 							HX_STACK_LINE(903)
 							if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -8416,9 +7341,6 @@ Void ZPP_MarchingSquares_obj::combUD( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 						{
 							HX_STACK_LINE(903)
 							::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-							HX_STACK_LINE(903)
-							{
-							}
 							HX_STACK_LINE(903)
 							{
 								HX_STACK_LINE(903)
@@ -8516,9 +7438,6 @@ Void ZPP_MarchingSquares_obj::combLR( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 			{
 				HX_STACK_LINE(782)
 				::zpp_nape::geom::ZPP_GeomVert o = ap;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(783)
-				{
-				}
 				HX_STACK_LINE(791)
 				{
 					HX_STACK_LINE(791)
@@ -8544,7 +7463,7 @@ Void ZPP_MarchingSquares_obj::combLR( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(791)
-								if (((_this1->_isimmutable_dyn() != null()))){
+								if (((_this1->_isimmutable != null()))){
 									HX_STACK_LINE(791)
 									_this1->_isimmutable();
 								}
@@ -8565,9 +7484,6 @@ Void ZPP_MarchingSquares_obj::combLR( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 								HX_STACK_LINE(791)
 								::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
 								HX_STACK_LINE(791)
-								{
-								}
-								HX_STACK_LINE(791)
 								o1->zpp_pool = null();
 								HX_STACK_LINE(791)
 								if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -8587,9 +7503,6 @@ Void ZPP_MarchingSquares_obj::combLR( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 							{
 								HX_STACK_LINE(791)
 								::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-								HX_STACK_LINE(791)
-								{
-								}
 								HX_STACK_LINE(791)
 								{
 									HX_STACK_LINE(791)
@@ -8634,9 +7547,6 @@ Void ZPP_MarchingSquares_obj::combLR( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 		{
 			HX_STACK_LINE(804)
 			::zpp_nape::geom::ZPP_GeomVert o = bp;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(805)
-			{
-			}
 			HX_STACK_LINE(813)
 			{
 				HX_STACK_LINE(813)
@@ -8662,7 +7572,7 @@ Void ZPP_MarchingSquares_obj::combLR( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(813)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(813)
 								_this1->_isimmutable();
 							}
@@ -8683,9 +7593,6 @@ Void ZPP_MarchingSquares_obj::combLR( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 							HX_STACK_LINE(813)
 							::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
 							HX_STACK_LINE(813)
-							{
-							}
-							HX_STACK_LINE(813)
 							o1->zpp_pool = null();
 							HX_STACK_LINE(813)
 							if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -8705,9 +7612,6 @@ Void ZPP_MarchingSquares_obj::combLR( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 						{
 							HX_STACK_LINE(813)
 							::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-							HX_STACK_LINE(813)
-							{
-							}
 							HX_STACK_LINE(813)
 							{
 								HX_STACK_LINE(813)
@@ -8753,9 +7657,6 @@ Void ZPP_MarchingSquares_obj::combLR( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 			{
 				HX_STACK_LINE(825)
 				::zpp_nape::geom::ZPP_GeomVert o = ap2;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(826)
-				{
-				}
 				HX_STACK_LINE(834)
 				{
 					HX_STACK_LINE(834)
@@ -8781,7 +7682,7 @@ Void ZPP_MarchingSquares_obj::combLR( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(834)
-								if (((_this1->_isimmutable_dyn() != null()))){
+								if (((_this1->_isimmutable != null()))){
 									HX_STACK_LINE(834)
 									_this1->_isimmutable();
 								}
@@ -8802,9 +7703,6 @@ Void ZPP_MarchingSquares_obj::combLR( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 								HX_STACK_LINE(834)
 								::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
 								HX_STACK_LINE(834)
-								{
-								}
-								HX_STACK_LINE(834)
 								o1->zpp_pool = null();
 								HX_STACK_LINE(834)
 								if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -8824,9 +7722,6 @@ Void ZPP_MarchingSquares_obj::combLR( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 							{
 								HX_STACK_LINE(834)
 								::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-								HX_STACK_LINE(834)
-								{
-								}
 								HX_STACK_LINE(834)
 								{
 									HX_STACK_LINE(834)
@@ -8871,9 +7766,6 @@ Void ZPP_MarchingSquares_obj::combLR( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 		{
 			HX_STACK_LINE(847)
 			::zpp_nape::geom::ZPP_GeomVert o = bp2;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(848)
-			{
-			}
 			HX_STACK_LINE(856)
 			{
 				HX_STACK_LINE(856)
@@ -8899,7 +7791,7 @@ Void ZPP_MarchingSquares_obj::combLR( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(856)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(856)
 								_this1->_isimmutable();
 							}
@@ -8920,9 +7812,6 @@ Void ZPP_MarchingSquares_obj::combLR( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 							HX_STACK_LINE(856)
 							::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
 							HX_STACK_LINE(856)
-							{
-							}
-							HX_STACK_LINE(856)
 							o1->zpp_pool = null();
 							HX_STACK_LINE(856)
 							if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -8942,9 +7831,6 @@ Void ZPP_MarchingSquares_obj::combLR( ::zpp_nape::geom::ZPP_MarchPair a,::zpp_na
 						{
 							HX_STACK_LINE(856)
 							::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-							HX_STACK_LINE(856)
-							{
-							}
 							HX_STACK_LINE(856)
 							{
 								HX_STACK_LINE(856)
@@ -9065,9 +7951,6 @@ Void ZPP_MarchingSquares_obj::output( ::nape::geom::GeomPolyList ret,::zpp_nape:
 						inline static Float Block( ::zpp_nape::geom::ZPP_GeomVert &poly){
 							HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",668);
 							{
-								HX_STACK_LINE(669)
-								{
-								}
 								HX_STACK_LINE(693)
 								Float area = 0.0;		HX_STACK_VAR(area,"area");
 								HX_STACK_LINE(694)
@@ -9112,57 +7995,38 @@ while(((nite != L)));
 			while((!(((poly == null()))))){
 				struct _Function_3_1{
 					inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &poly){
-						HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",717);
+						HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",726);
 						{
-							HX_STACK_LINE(718)
-							{
-							}
-							struct _Function_4_1{
-								inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &poly){
-									HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",726);
-									{
-										HX_STACK_LINE(727)
-										poly->next = poly->prev = null();
-										HX_STACK_LINE(728)
-										{
-										}
-										HX_STACK_LINE(729)
-										return poly = null();
-									}
-									return null();
-								}
-							};
-							struct _Function_4_2{
-								inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &poly){
-									HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",731);
-									{
-										HX_STACK_LINE(732)
-										::zpp_nape::geom::ZPP_GeomVert retnodes = poly->next;		HX_STACK_VAR(retnodes,"retnodes");
-										HX_STACK_LINE(733)
-										poly->prev->next = poly->next;
-										HX_STACK_LINE(734)
-										poly->next->prev = poly->prev;
-										HX_STACK_LINE(735)
-										poly->next = poly->prev = null();
-										HX_STACK_LINE(736)
-										{
-										}
-										HX_STACK_LINE(737)
-										poly = null();
-										HX_STACK_LINE(738)
-										return retnodes;
-									}
-									return null();
-								}
-							};
-							HX_STACK_LINE(726)
-							return (  (((bool((poly != null())) && bool((poly->prev == poly))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_4_1::Block(poly)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_4_2::Block(poly)) );
+							HX_STACK_LINE(727)
+							poly->next = poly->prev = null();
+							HX_STACK_LINE(729)
+							return poly = null();
+						}
+						return null();
+					}
+				};
+				struct _Function_3_2{
+					inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &poly){
+						HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",731);
+						{
+							HX_STACK_LINE(732)
+							::zpp_nape::geom::ZPP_GeomVert retnodes = poly->next;		HX_STACK_VAR(retnodes,"retnodes");
+							HX_STACK_LINE(733)
+							poly->prev->next = poly->next;
+							HX_STACK_LINE(734)
+							poly->next->prev = poly->prev;
+							HX_STACK_LINE(735)
+							poly->next = poly->prev = null();
+							HX_STACK_LINE(737)
+							poly = null();
+							HX_STACK_LINE(738)
+							return retnodes;
 						}
 						return null();
 					}
 				};
 				HX_STACK_LINE(717)
-				poly = _Function_3_1::Block(poly);
+				poly = (  (((bool((poly != null())) && bool((poly->prev == poly))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_3_1::Block(poly)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_3_2::Block(poly)) );
 			}
 			HX_STACK_LINE(742)
 			return null();
@@ -9221,7 +8085,7 @@ Void ZPP_MarchingSquares_obj::run( Dynamic iso,Float bx0,Float by0,Float bx1,Flo
 						HX_STACK_LINE(277)
 						::zpp_nape::geom::ZPP_Vec2 _this = cell->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(277)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(277)
 							_this->_validate();
 						}
@@ -9250,7 +8114,7 @@ Void ZPP_MarchingSquares_obj::run( Dynamic iso,Float bx0,Float by0,Float bx1,Flo
 						HX_STACK_LINE(279)
 						::zpp_nape::geom::ZPP_Vec2 _this = cell->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(279)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(279)
 							_this->_validate();
 						}
@@ -9319,7 +8183,7 @@ Void ZPP_MarchingSquares_obj::run( Dynamic iso,Float bx0,Float by0,Float bx1,Flo
 								HX_STACK_LINE(298)
 								::zpp_nape::geom::ZPP_Vec2 _this = cell->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(298)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(298)
 									_this->_validate();
 								}
@@ -9355,7 +8219,7 @@ Void ZPP_MarchingSquares_obj::run( Dynamic iso,Float bx0,Float by0,Float bx1,Flo
 										HX_STACK_LINE(300)
 										::zpp_nape::geom::ZPP_Vec2 _this = cell->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(300)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(300)
 											_this->_validate();
 										}
@@ -9372,9 +8236,6 @@ Void ZPP_MarchingSquares_obj::run( Dynamic iso,Float bx0,Float by0,Float bx1,Flo
 						{
 							HX_STACK_LINE(301)
 							::zpp_nape::util::ZNPArray2_Float _this = ::zpp_nape::geom::ZPP_MarchingSquares_obj::isos;		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(301)
-							{
-							}
 							HX_STACK_LINE(301)
 							_this->list[((y * _this->width) + x)] = iso(xc,yc).Cast< Float >();
 						}
@@ -9442,7 +8303,7 @@ Void ZPP_MarchingSquares_obj::run( Dynamic iso,Float bx0,Float by0,Float bx1,Flo
 								HX_STACK_LINE(333)
 								::zpp_nape::geom::ZPP_Vec2 _this = cell->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(333)
-								if (((_this->_validate_dyn() != null()))){
+								if (((_this->_validate != null()))){
 									HX_STACK_LINE(333)
 									_this->_validate();
 								}
@@ -9485,7 +8346,7 @@ Void ZPP_MarchingSquares_obj::run( Dynamic iso,Float bx0,Float by0,Float bx1,Flo
 										HX_STACK_LINE(339)
 										::zpp_nape::geom::ZPP_Vec2 _this = cell->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(339)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(339)
 											_this->_validate();
 										}
@@ -9527,9 +8388,6 @@ Void ZPP_MarchingSquares_obj::run( Dynamic iso,Float bx0,Float by0,Float bx1,Flo
 							{
 								HX_STACK_LINE(353)
 								::zpp_nape::util::ZNPArray2_ZPP_MarchPair _this = ::zpp_nape::geom::ZPP_MarchingSquares_obj::map;		HX_STACK_VAR(_this,"_this");
-								HX_STACK_LINE(353)
-								{
-								}
 								HX_STACK_LINE(353)
 								_this->list[((y * _this->width) + x)] = pp;
 							}
@@ -9576,18 +8434,12 @@ Void ZPP_MarchingSquares_obj::run( Dynamic iso,Float bx0,Float by0,Float bx1,Flo
 							};
 							HX_STACK_LINE(354)
 							if (((bool((pre != null())) && bool(_Function_6_1::Block(pp))))){
-								HX_STACK_LINE(355)
-								{
-								}
 								HX_STACK_LINE(363)
 								::zpp_nape::geom::ZPP_MarchingSquares_obj::me->combLR(pre,pp);
 								HX_STACK_LINE(364)
 								pp->span1 = pre->spanr;
 							}
 							else{
-								HX_STACK_LINE(367)
-								{
-								}
 								HX_STACK_LINE(375)
 								{
 									HX_STACK_LINE(376)
@@ -9717,9 +8569,6 @@ Void ZPP_MarchingSquares_obj::run( Dynamic iso,Float bx0,Float by0,Float bx1,Flo
 							{
 								HX_STACK_LINE(425)
 								::zpp_nape::geom::ZPP_MarchPair o = pp;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(426)
-								{
-								}
 								HX_STACK_LINE(434)
 								{
 									HX_STACK_LINE(434)
@@ -9761,22 +8610,19 @@ Void ZPP_MarchingSquares_obj::run( Dynamic iso,Float bx0,Float by0,Float bx1,Flo
 						HX_STACK_LINE(449)
 						int x = (_g1)++;		HX_STACK_VAR(x,"x");
 						struct _Function_5_1{
-							inline static ::zpp_nape::geom::ZPP_MarchPair Block( int &y,int &x){
+							inline static ::zpp_nape::geom::ZPP_MarchPair Block( int &x,int &y){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",450);
 								{
 									HX_STACK_LINE(450)
 									::zpp_nape::util::ZNPArray2_ZPP_MarchPair _this = ::zpp_nape::geom::ZPP_MarchingSquares_obj::map;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(450)
-									{
-									}
-									HX_STACK_LINE(450)
-									return _this->list->__get(((y * _this->width) + x));
+									return _this->list->__get(((y * _this->width) + x)).StaticCast< ::zpp_nape::geom::ZPP_MarchPair >();
 								}
 								return null();
 							}
 						};
 						HX_STACK_LINE(450)
-						::zpp_nape::geom::ZPP_MarchPair b = _Function_5_1::Block(y,x);		HX_STACK_VAR(b,"b");
+						::zpp_nape::geom::ZPP_MarchPair b = _Function_5_1::Block(x,y);		HX_STACK_VAR(b,"b");
 						HX_STACK_LINE(451)
 						if (((b == null()))){
 							HX_STACK_LINE(452)
@@ -9833,22 +8679,19 @@ Void ZPP_MarchingSquares_obj::run( Dynamic iso,Float bx0,Float by0,Float bx1,Flo
 							continue;
 						}
 						struct _Function_5_3{
-							inline static ::zpp_nape::geom::ZPP_MarchPair Block( int &y,int &x){
+							inline static ::zpp_nape::geom::ZPP_MarchPair Block( int &x,int &y){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",460);
 								{
 									HX_STACK_LINE(460)
 									::zpp_nape::util::ZNPArray2_ZPP_MarchPair _this = ::zpp_nape::geom::ZPP_MarchingSquares_obj::map;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(460)
-									{
-									}
-									HX_STACK_LINE(460)
-									return _this->list->__get(((((y - (int)1)) * _this->width) + x));
+									return _this->list->__get(((((y - (int)1)) * _this->width) + x)).StaticCast< ::zpp_nape::geom::ZPP_MarchPair >();
 								}
 								return null();
 							}
 						};
 						HX_STACK_LINE(460)
-						::zpp_nape::geom::ZPP_MarchPair a = _Function_5_3::Block(y,x);		HX_STACK_VAR(a,"a");
+						::zpp_nape::geom::ZPP_MarchPair a = _Function_5_3::Block(x,y);		HX_STACK_VAR(a,"a");
 						HX_STACK_LINE(461)
 						if (((a == null()))){
 							HX_STACK_LINE(462)
@@ -10109,22 +8952,19 @@ Void ZPP_MarchingSquares_obj::run( Dynamic iso,Float bx0,Float by0,Float bx1,Flo
 						HX_STACK_LINE(569)
 						int x = (_g1)++;		HX_STACK_VAR(x,"x");
 						struct _Function_5_1{
-							inline static ::zpp_nape::geom::ZPP_MarchPair Block( int &y,int &x){
+							inline static ::zpp_nape::geom::ZPP_MarchPair Block( int &x,int &y){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/MarchingSquares.hx",570);
 								{
 									HX_STACK_LINE(570)
 									::zpp_nape::util::ZNPArray2_ZPP_MarchPair _this = ::zpp_nape::geom::ZPP_MarchingSquares_obj::map;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(570)
-									{
-									}
-									HX_STACK_LINE(570)
-									return _this->list->__get(((y * _this->width) + x));
+									return _this->list->__get(((y * _this->width) + x)).StaticCast< ::zpp_nape::geom::ZPP_MarchPair >();
 								}
 								return null();
 							}
 						};
 						HX_STACK_LINE(570)
-						::zpp_nape::geom::ZPP_MarchPair p = _Function_5_1::Block(y,x);		HX_STACK_VAR(p,"p");
+						::zpp_nape::geom::ZPP_MarchPair p = _Function_5_1::Block(x,y);		HX_STACK_VAR(p,"p");
 						HX_STACK_LINE(571)
 						if (((p == null()))){
 							HX_STACK_LINE(571)
@@ -10223,9 +9063,6 @@ Void ZPP_MarchingSquares_obj::run( Dynamic iso,Float bx0,Float by0,Float bx1,Flo
 						{
 							HX_STACK_LINE(621)
 							::zpp_nape::geom::ZPP_MarchPair o = p;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(622)
-							{
-							}
 							HX_STACK_LINE(630)
 							{
 								HX_STACK_LINE(630)
@@ -10243,9 +9080,6 @@ Void ZPP_MarchingSquares_obj::run( Dynamic iso,Float bx0,Float by0,Float bx1,Flo
 							HX_STACK_LINE(637)
 							::zpp_nape::util::ZNPArray2_ZPP_MarchPair _this = ::zpp_nape::geom::ZPP_MarchingSquares_obj::map;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(637)
-							{
-							}
-							HX_STACK_LINE(637)
 							_this->list[((y * _this->width) + x)] = null();
 						}
 					}
@@ -10262,9 +9096,6 @@ Void ZPP_MarchingSquares_obj::run( Dynamic iso,Float bx0,Float by0,Float bx1,Flo
 			{
 				HX_STACK_LINE(644)
 				::zpp_nape::geom::ZPP_MarchSpan o = t;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(645)
-				{
-				}
 				HX_STACK_LINE(653)
 				o->parent = o;
 				HX_STACK_LINE(654)
@@ -10435,7 +9266,7 @@ Class ZPP_MarchingSquares_obj::__mClass;
 
 void ZPP_MarchingSquares_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_MarchingSquares"), hx::TCanCast< ZPP_MarchingSquares_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_MarchingSquares"), hx::TCanCast< ZPP_MarchingSquares_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

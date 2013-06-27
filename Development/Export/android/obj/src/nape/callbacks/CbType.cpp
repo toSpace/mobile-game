@@ -155,8 +155,6 @@ int CbType_obj::get_id( ){
 
 HX_DEFINE_DYNAMIC_FUNC0(CbType_obj,get_id,return )
 
-::nape::callbacks::CbType CbType_obj::ANY_BODY;
-
 ::nape::callbacks::CbType CbType_obj::get_ANY_BODY( ){
 	HX_STACK_PUSH("CbType::get_ANY_BODY","nape/callbacks/CbType.hx",212);
 	HX_STACK_LINE(212)
@@ -165,8 +163,6 @@ HX_DEFINE_DYNAMIC_FUNC0(CbType_obj,get_id,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(CbType_obj,get_ANY_BODY,return )
-
-::nape::callbacks::CbType CbType_obj::ANY_CONSTRAINT;
 
 ::nape::callbacks::CbType CbType_obj::get_ANY_CONSTRAINT( ){
 	HX_STACK_PUSH("CbType::get_ANY_CONSTRAINT","nape/callbacks/CbType.hx",225);
@@ -177,8 +173,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(CbType_obj,get_ANY_BODY,return )
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(CbType_obj,get_ANY_CONSTRAINT,return )
 
-::nape::callbacks::CbType CbType_obj::ANY_SHAPE;
-
 ::nape::callbacks::CbType CbType_obj::get_ANY_SHAPE( ){
 	HX_STACK_PUSH("CbType::get_ANY_SHAPE","nape/callbacks/CbType.hx",238);
 	HX_STACK_LINE(238)
@@ -187,8 +181,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(CbType_obj,get_ANY_CONSTRAINT,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(CbType_obj,get_ANY_SHAPE,return )
-
-::nape::callbacks::CbType CbType_obj::ANY_COMPOUND;
 
 ::nape::callbacks::CbType CbType_obj::get_ANY_COMPOUND( ){
 	HX_STACK_PUSH("CbType::get_ANY_COMPOUND","nape/callbacks/CbType.hx",251);
@@ -207,20 +199,12 @@ CbType_obj::CbType_obj()
 void CbType_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(CbType);
-	HX_MARK_MEMBER_NAME(constraints,"constraints");
-	HX_MARK_MEMBER_NAME(interactors,"interactors");
-	HX_MARK_MEMBER_NAME(userData,"userData");
-	HX_MARK_MEMBER_NAME(id,"id");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	HX_MARK_END_CLASS();
 }
 
 void CbType_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(constraints,"constraints");
-	HX_VISIT_MEMBER_NAME(interactors,"interactors");
-	HX_VISIT_MEMBER_NAME(userData,"userData");
-	HX_VISIT_MEMBER_NAME(id,"id");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 }
 
@@ -228,36 +212,36 @@ Dynamic CbType_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 2:
-		if (HX_FIELD_EQ(inName,"id") ) { return inCallProp ? get_id() : id; }
+		if (HX_FIELD_EQ(inName,"id") ) { return get_id(); }
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"get_id") ) { return get_id_dyn(); }
 		break;
 	case 8:
-		if (HX_FIELD_EQ(inName,"ANY_BODY") ) { return inCallProp ? get_ANY_BODY() : ANY_BODY; }
+		if (HX_FIELD_EQ(inName,"ANY_BODY") ) { return get_ANY_BODY(); }
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
-		if (HX_FIELD_EQ(inName,"userData") ) { return inCallProp ? get_userData() : userData; }
+		if (HX_FIELD_EQ(inName,"userData") ) { return get_userData(); }
 		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"ANY_SHAPE") ) { return inCallProp ? get_ANY_SHAPE() : ANY_SHAPE; }
+		if (HX_FIELD_EQ(inName,"ANY_SHAPE") ) { return get_ANY_SHAPE(); }
 		if (HX_FIELD_EQ(inName,"excluding") ) { return excluding_dyn(); }
 		if (HX_FIELD_EQ(inName,"including") ) { return including_dyn(); }
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { return zpp_inner; }
 		break;
 	case 11:
-		if (HX_FIELD_EQ(inName,"constraints") ) { return inCallProp ? get_constraints() : constraints; }
-		if (HX_FIELD_EQ(inName,"interactors") ) { return inCallProp ? get_interactors() : interactors; }
+		if (HX_FIELD_EQ(inName,"constraints") ) { return get_constraints(); }
+		if (HX_FIELD_EQ(inName,"interactors") ) { return get_interactors(); }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"get_ANY_BODY") ) { return get_ANY_BODY_dyn(); }
-		if (HX_FIELD_EQ(inName,"ANY_COMPOUND") ) { return inCallProp ? get_ANY_COMPOUND() : ANY_COMPOUND; }
+		if (HX_FIELD_EQ(inName,"ANY_COMPOUND") ) { return get_ANY_COMPOUND(); }
 		if (HX_FIELD_EQ(inName,"get_userData") ) { return get_userData_dyn(); }
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"get_ANY_SHAPE") ) { return get_ANY_SHAPE_dyn(); }
 		break;
 	case 14:
-		if (HX_FIELD_EQ(inName,"ANY_CONSTRAINT") ) { return inCallProp ? get_ANY_CONSTRAINT() : ANY_CONSTRAINT; }
+		if (HX_FIELD_EQ(inName,"ANY_CONSTRAINT") ) { return get_ANY_CONSTRAINT(); }
 		break;
 	case 15:
 		if (HX_FIELD_EQ(inName,"get_constraints") ) { return get_constraints_dyn(); }
@@ -275,26 +259,8 @@ Dynamic CbType_obj::__Field(const ::String &inName,bool inCallProp)
 Dynamic CbType_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
 	switch(inName.length) {
-	case 2:
-		if (HX_FIELD_EQ(inName,"id") ) { id=inValue.Cast< int >(); return inValue; }
-		break;
-	case 8:
-		if (HX_FIELD_EQ(inName,"ANY_BODY") ) { ANY_BODY=inValue.Cast< ::nape::callbacks::CbType >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"userData") ) { userData=inValue.Cast< Dynamic >(); return inValue; }
-		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"ANY_SHAPE") ) { ANY_SHAPE=inValue.Cast< ::nape::callbacks::CbType >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::callbacks::ZPP_CbType >(); return inValue; }
-		break;
-	case 11:
-		if (HX_FIELD_EQ(inName,"constraints") ) { constraints=inValue.Cast< ::nape::constraint::ConstraintList >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"interactors") ) { interactors=inValue.Cast< ::nape::phys::InteractorList >(); return inValue; }
-		break;
-	case 12:
-		if (HX_FIELD_EQ(inName,"ANY_COMPOUND") ) { ANY_COMPOUND=inValue.Cast< ::nape::callbacks::CbType >(); return inValue; }
-		break;
-	case 14:
-		if (HX_FIELD_EQ(inName,"ANY_CONSTRAINT") ) { ANY_CONSTRAINT=inValue.Cast< ::nape::callbacks::CbType >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -310,52 +276,36 @@ void CbType_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("ANY_BODY"),
 	HX_CSTRING("get_ANY_BODY"),
-	HX_CSTRING("ANY_CONSTRAINT"),
 	HX_CSTRING("get_ANY_CONSTRAINT"),
-	HX_CSTRING("ANY_SHAPE"),
 	HX_CSTRING("get_ANY_SHAPE"),
-	HX_CSTRING("ANY_COMPOUND"),
 	HX_CSTRING("get_ANY_COMPOUND"),
 	String(null()) };
 
 static ::String sMemberFields[] = {
 	HX_CSTRING("toString"),
 	HX_CSTRING("get_constraints"),
-	HX_CSTRING("constraints"),
 	HX_CSTRING("get_interactors"),
-	HX_CSTRING("interactors"),
 	HX_CSTRING("get_userData"),
-	HX_CSTRING("userData"),
 	HX_CSTRING("excluding"),
 	HX_CSTRING("including"),
 	HX_CSTRING("get_id"),
-	HX_CSTRING("id"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(CbType_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(CbType_obj::ANY_BODY,"ANY_BODY");
-	HX_MARK_MEMBER_NAME(CbType_obj::ANY_CONSTRAINT,"ANY_CONSTRAINT");
-	HX_MARK_MEMBER_NAME(CbType_obj::ANY_SHAPE,"ANY_SHAPE");
-	HX_MARK_MEMBER_NAME(CbType_obj::ANY_COMPOUND,"ANY_COMPOUND");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(CbType_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(CbType_obj::ANY_BODY,"ANY_BODY");
-	HX_VISIT_MEMBER_NAME(CbType_obj::ANY_CONSTRAINT,"ANY_CONSTRAINT");
-	HX_VISIT_MEMBER_NAME(CbType_obj::ANY_SHAPE,"ANY_SHAPE");
-	HX_VISIT_MEMBER_NAME(CbType_obj::ANY_COMPOUND,"ANY_COMPOUND");
 };
 
 Class CbType_obj::__mClass;
 
 void CbType_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.CbType"), hx::TCanCast< CbType_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.CbType"), hx::TCanCast< CbType_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

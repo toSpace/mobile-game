@@ -14,7 +14,7 @@ namespace nape{
 namespace shape{
 
 
-class ShapeList_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ShapeList_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ShapeList_obj OBJ_;
@@ -85,9 +85,8 @@ class ShapeList_obj : public hx::Object{
 		virtual int get_length( );
 		Dynamic get_length_dyn();
 
-		int length; /* REM */ 
-		::zpp_nape::util::ZPP_ShapeList zpp_inner; /* REM */ 
-		static ::nape::shape::ShapeList fromArray( Array< ::nape::shape::Shape > array);
+		::zpp_nape::util::ZPP_ShapeList zpp_inner;
+		static ::nape::shape::ShapeList fromArray( Array< ::Dynamic > array);
 		static Dynamic fromArray_dyn();
 
 };

@@ -16,7 +16,7 @@ namespace nape{
 namespace dynamics{
 
 
-class FluidArbiter_obj : public ::nape::dynamics::Arbiter_obj{
+class HXCPP_CLASS_ATTRIBUTES  FluidArbiter_obj : public ::nape::dynamics::Arbiter_obj{
 	public:
 		typedef ::nape::dynamics::Arbiter_obj super;
 		typedef FluidArbiter_obj OBJ_;
@@ -50,14 +50,12 @@ class FluidArbiter_obj : public ::nape::dynamics::Arbiter_obj{
 		virtual Float get_overlap( );
 		Dynamic get_overlap_dyn();
 
-		Float overlap; /* REM */ 
 		virtual ::nape::geom::Vec2 set_position( ::nape::geom::Vec2 position);
 		Dynamic set_position_dyn();
 
 		virtual ::nape::geom::Vec2 get_position( );
 		Dynamic get_position_dyn();
 
-		::nape::geom::Vec2 position; /* REM */ 
 };
 
 } // end namespace nape

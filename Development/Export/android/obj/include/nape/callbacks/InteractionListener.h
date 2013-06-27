@@ -19,7 +19,7 @@ namespace nape{
 namespace callbacks{
 
 
-class InteractionListener_obj : public ::nape::callbacks::Listener_obj{
+class HXCPP_CLASS_ATTRIBUTES  InteractionListener_obj : public ::nape::callbacks::Listener_obj{
 	public:
 		typedef ::nape::callbacks::Listener_obj super;
 		typedef InteractionListener_obj OBJ_;
@@ -45,37 +45,31 @@ class InteractionListener_obj : public ::nape::callbacks::Listener_obj{
 		virtual bool get_allowSleepingCallbacks( );
 		Dynamic get_allowSleepingCallbacks_dyn();
 
-		bool allowSleepingCallbacks; /* REM */ 
 		virtual Dynamic set_handler( Dynamic handler);
 		Dynamic set_handler_dyn();
 
 		virtual Dynamic get_handler( );
 		Dynamic get_handler_dyn();
 
-		Dynamic handler; /* REM */ 
-		Dynamic &handler_dyn() { return handler;}
 		virtual ::nape::callbacks::InteractionType set_interactionType( ::nape::callbacks::InteractionType interactionType);
 		Dynamic set_interactionType_dyn();
 
 		virtual ::nape::callbacks::InteractionType get_interactionType( );
 		Dynamic get_interactionType_dyn();
 
-		::nape::callbacks::InteractionType interactionType; /* REM */ 
 		virtual ::nape::callbacks::OptionType set_options2( ::nape::callbacks::OptionType options2);
 		Dynamic set_options2_dyn();
 
 		virtual ::nape::callbacks::OptionType get_options2( );
 		Dynamic get_options2_dyn();
 
-		::nape::callbacks::OptionType options2; /* REM */ 
 		virtual ::nape::callbacks::OptionType set_options1( ::nape::callbacks::OptionType options1);
 		Dynamic set_options1_dyn();
 
 		virtual ::nape::callbacks::OptionType get_options1( );
 		Dynamic get_options1_dyn();
 
-		::nape::callbacks::OptionType options1; /* REM */ 
-		::zpp_nape::callbacks::ZPP_InteractionListener zpp_inner_zn; /* REM */ 
+		::zpp_nape::callbacks::ZPP_InteractionListener zpp_inner_zn;
 };
 
 } // end namespace nape

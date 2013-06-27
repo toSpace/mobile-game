@@ -11,7 +11,7 @@ namespace zpp_nape{
 namespace space{
 
 
-class ZPP_Island_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Island_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Island_obj OBJ_;
@@ -37,9 +37,9 @@ class ZPP_Island_obj : public hx::Object{
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		int waket; /* REM */ 
-		bool sleep; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Component comps; /* REM */ 
+		int waket;
+		bool sleep;
+		::zpp_nape::util::ZNPList_ZPP_Component comps;
 		virtual ::zpp_nape::space::ZPP_Island at( int ind);
 		Dynamic at_dyn();
 
@@ -124,18 +124,18 @@ class ZPP_Island_obj : public hx::Object{
 		virtual Void setbegin( ::zpp_nape::space::ZPP_Island i);
 		Dynamic setbegin_dyn();
 
-		int length; /* REM */ 
-		bool pushmod; /* REM */ 
-		bool modified; /* REM */ 
-		bool _inuse; /* REM */ 
+		int length;
+		bool pushmod;
+		bool modified;
+		bool _inuse;
 		virtual ::zpp_nape::space::ZPP_Island begin( );
 		Dynamic begin_dyn();
 
 		virtual ::zpp_nape::space::ZPP_Island elem( );
 		Dynamic elem_dyn();
 
-		::zpp_nape::space::ZPP_Island next; /* REM */ 
-		static ::zpp_nape::space::ZPP_Island zpp_pool; /* REM */ 
+		::zpp_nape::space::ZPP_Island next;
+		static ::zpp_nape::space::ZPP_Island zpp_pool;
 };
 
 } // end namespace zpp_nape

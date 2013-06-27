@@ -103,6 +103,7 @@ HX_STACK_PUSH("Compound::new","nape/phys/Compound.hx",196);
 	}
 	catch(Dynamic __e){
 		{
+			HX_STACK_BEGIN_CATCH
 			Dynamic e = __e;{
 			}
 		}
@@ -143,14 +144,14 @@ Dynamic Compound_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_LINE(463)
 	Array< Float > angle1 = Array_obj< Float >::__new().Add(angle);		HX_STACK_VAR(angle1,"angle1");
 	HX_STACK_LINE(463)
-	Array< ::nape::geom::Vec2 > centre1 = Array_obj< ::nape::geom::Vec2 >::__new().Add(centre);		HX_STACK_VAR(centre1,"centre1");
+	Array< ::Dynamic > centre1 = Array_obj< ::Dynamic >::__new().Add(centre);		HX_STACK_VAR(centre1,"centre1");
 	HX_STACK_LINE(464)
-	if (((bool((centre1->__get((int)0) != null())) && bool(centre1->__get((int)0)->zpp_disp)))){
+	if (((bool((centre1->__get((int)0).StaticCast< ::nape::geom::Vec2 >() != null())) && bool(centre1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_disp)))){
 		HX_STACK_LINE(466)
 		hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 	}
 	HX_STACK_LINE(470)
-	if (((centre1->__get((int)0) == null()))){
+	if (((centre1->__get((int)0).StaticCast< ::nape::geom::Vec2 >() == null()))){
 		HX_STACK_LINE(470)
 		hx::Throw (HX_CSTRING("Error: Cannot rotate about a null Vec2"));
 	}
@@ -160,68 +161,65 @@ Dynamic Compound_obj::__Create(hx::DynamicArray inArgs)
 		hx::Throw (HX_CSTRING("Error: Cannot rotate by NaN radians"));
 	}
 	HX_STACK_LINE(475)
-	bool weak = centre1->__get((int)0)->zpp_inner->weak;		HX_STACK_VAR(weak,"weak");
+	bool weak = centre1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_inner->weak;		HX_STACK_VAR(weak,"weak");
 	HX_STACK_LINE(476)
-	centre1->__get((int)0)->zpp_inner->weak = false;
+	centre1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_inner->weak = false;
 
-	HX_BEGIN_LOCAL_FUNC_S2(hx::LocalFunc,_Function_1_1,Array< ::nape::geom::Vec2 >,centre1,Array< Float >,angle1)
+	HX_BEGIN_LOCAL_FUNC_S2(hx::LocalFunc,_Function_1_1,Array< Float >,angle1,Array< ::Dynamic >,centre1)
 	Void run(::nape::phys::Body b){
 		HX_STACK_PUSH("*::_Function_1_1","nape/phys/Compound.hx",477);
 		HX_STACK_ARG(b,"b");
 		{
 			HX_STACK_LINE(477)
-			b->rotate(centre1->__get((int)0),angle1->__get((int)0));
+			b->rotate(centre1->__get((int)0).StaticCast< ::nape::geom::Vec2 >(),angle1->__get((int)0));
 		}
 		return null();
 	}
 	HX_END_LOCAL_FUNC1((void))
 
 	HX_STACK_LINE(477)
-	this->visitBodies( Dynamic(new _Function_1_1(centre1,angle1)));
+	this->visitBodies( Dynamic(new _Function_1_1(angle1,centre1)));
 	HX_STACK_LINE(478)
-	centre1->__get((int)0)->zpp_inner->weak = weak;
+	centre1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_inner->weak = weak;
 	HX_STACK_LINE(479)
-	if ((centre1->__get((int)0)->zpp_inner->weak)){
+	if ((centre1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_inner->weak)){
 		HX_STACK_LINE(483)
 		{
 			HX_STACK_LINE(483)
-			if (((bool((centre1->__get((int)0) != null())) && bool(centre1->__get((int)0)->zpp_disp)))){
+			if (((bool((centre1->__get((int)0).StaticCast< ::nape::geom::Vec2 >() != null())) && bool(centre1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_disp)))){
 				HX_STACK_LINE(483)
 				hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 			}
 			HX_STACK_LINE(483)
 			{
 				HX_STACK_LINE(483)
-				::zpp_nape::geom::ZPP_Vec2 _this = centre1->__get((int)0)->zpp_inner;		HX_STACK_VAR(_this,"_this");
+				::zpp_nape::geom::ZPP_Vec2 _this = centre1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_inner;		HX_STACK_VAR(_this,"_this");
 				HX_STACK_LINE(483)
 				if ((_this->_immutable)){
 					HX_STACK_LINE(483)
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(483)
-				if (((_this->_isimmutable_dyn() != null()))){
+				if (((_this->_isimmutable != null()))){
 					HX_STACK_LINE(483)
 					_this->_isimmutable();
 				}
 			}
 			HX_STACK_LINE(483)
-			if ((centre1->__get((int)0)->zpp_inner->_inuse)){
+			if ((centre1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_inner->_inuse)){
 				HX_STACK_LINE(483)
 				hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
 			}
 			HX_STACK_LINE(483)
-			::zpp_nape::geom::ZPP_Vec2 inner = centre1->__get((int)0)->zpp_inner;		HX_STACK_VAR(inner,"inner");
+			::zpp_nape::geom::ZPP_Vec2 inner = centre1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_inner;		HX_STACK_VAR(inner,"inner");
 			HX_STACK_LINE(483)
-			centre1->__get((int)0)->zpp_inner->outer = null();
+			centre1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_inner->outer = null();
 			HX_STACK_LINE(483)
-			centre1->__get((int)0)->zpp_inner = null();
+			centre1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_inner = null();
 			HX_STACK_LINE(483)
 			{
 				HX_STACK_LINE(483)
-				::nape::geom::Vec2 o = centre1->__get((int)0);		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(483)
-				{
-				}
+				::nape::geom::Vec2 o = centre1->__get((int)0).StaticCast< ::nape::geom::Vec2 >();		HX_STACK_VAR(o,"o");
 				HX_STACK_LINE(483)
 				o->zpp_pool = null();
 				HX_STACK_LINE(483)
@@ -242,9 +240,6 @@ Dynamic Compound_obj::__Create(hx::DynamicArray inArgs)
 			{
 				HX_STACK_LINE(483)
 				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(483)
-				{
-				}
 				HX_STACK_LINE(483)
 				{
 					HX_STACK_LINE(483)
@@ -286,23 +281,23 @@ HX_DEFINE_DYNAMIC_FUNC2(Compound_obj,rotate,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(translation,"translation");
 	HX_STACK_LINE(426)
-	Array< ::nape::geom::Vec2 > translation1 = Array_obj< ::nape::geom::Vec2 >::__new().Add(translation);		HX_STACK_VAR(translation1,"translation1");
+	Array< ::Dynamic > translation1 = Array_obj< ::Dynamic >::__new().Add(translation);		HX_STACK_VAR(translation1,"translation1");
 	HX_STACK_LINE(427)
-	if (((bool((translation1->__get((int)0) != null())) && bool(translation1->__get((int)0)->zpp_disp)))){
+	if (((bool((translation1->__get((int)0).StaticCast< ::nape::geom::Vec2 >() != null())) && bool(translation1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_disp)))){
 		HX_STACK_LINE(429)
 		hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 	}
 	HX_STACK_LINE(433)
-	if (((translation1->__get((int)0) == null()))){
+	if (((translation1->__get((int)0).StaticCast< ::nape::geom::Vec2 >() == null()))){
 		HX_STACK_LINE(433)
 		hx::Throw (HX_CSTRING("Error: Cannot translate by null Vec2"));
 	}
 	HX_STACK_LINE(435)
-	bool weak = translation1->__get((int)0)->zpp_inner->weak;		HX_STACK_VAR(weak,"weak");
+	bool weak = translation1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_inner->weak;		HX_STACK_VAR(weak,"weak");
 	HX_STACK_LINE(436)
-	translation1->__get((int)0)->zpp_inner->weak = false;
+	translation1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_inner->weak = false;
 
-	HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_1_1,Array< ::nape::geom::Vec2 >,translation1)
+	HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_1_1,Array< ::Dynamic >,translation1)
 	Void run(::nape::phys::Body b){
 		HX_STACK_PUSH("*::_Function_1_1","nape/phys/Compound.hx",437);
 		HX_STACK_ARG(b,"b");
@@ -323,7 +318,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Compound_obj,rotate,return )
 				}
 			};
 			HX_STACK_LINE(437)
-			(_Function_2_1::Block(b))->addeq(translation1->__get((int)0));
+			(_Function_2_1::Block(b))->addeq(translation1->__get((int)0).StaticCast< ::nape::geom::Vec2 >());
 		}
 		return null();
 	}
@@ -332,49 +327,46 @@ HX_DEFINE_DYNAMIC_FUNC2(Compound_obj,rotate,return )
 	HX_STACK_LINE(437)
 	this->visitBodies( Dynamic(new _Function_1_1(translation1)));
 	HX_STACK_LINE(438)
-	translation1->__get((int)0)->zpp_inner->weak = weak;
+	translation1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_inner->weak = weak;
 	HX_STACK_LINE(439)
-	if ((translation1->__get((int)0)->zpp_inner->weak)){
+	if ((translation1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_inner->weak)){
 		HX_STACK_LINE(443)
 		{
 			HX_STACK_LINE(443)
-			if (((bool((translation1->__get((int)0) != null())) && bool(translation1->__get((int)0)->zpp_disp)))){
+			if (((bool((translation1->__get((int)0).StaticCast< ::nape::geom::Vec2 >() != null())) && bool(translation1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_disp)))){
 				HX_STACK_LINE(443)
 				hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 			}
 			HX_STACK_LINE(443)
 			{
 				HX_STACK_LINE(443)
-				::zpp_nape::geom::ZPP_Vec2 _this = translation1->__get((int)0)->zpp_inner;		HX_STACK_VAR(_this,"_this");
+				::zpp_nape::geom::ZPP_Vec2 _this = translation1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_inner;		HX_STACK_VAR(_this,"_this");
 				HX_STACK_LINE(443)
 				if ((_this->_immutable)){
 					HX_STACK_LINE(443)
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(443)
-				if (((_this->_isimmutable_dyn() != null()))){
+				if (((_this->_isimmutable != null()))){
 					HX_STACK_LINE(443)
 					_this->_isimmutable();
 				}
 			}
 			HX_STACK_LINE(443)
-			if ((translation1->__get((int)0)->zpp_inner->_inuse)){
+			if ((translation1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_inner->_inuse)){
 				HX_STACK_LINE(443)
 				hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
 			}
 			HX_STACK_LINE(443)
-			::zpp_nape::geom::ZPP_Vec2 inner = translation1->__get((int)0)->zpp_inner;		HX_STACK_VAR(inner,"inner");
+			::zpp_nape::geom::ZPP_Vec2 inner = translation1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_inner;		HX_STACK_VAR(inner,"inner");
 			HX_STACK_LINE(443)
-			translation1->__get((int)0)->zpp_inner->outer = null();
+			translation1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_inner->outer = null();
 			HX_STACK_LINE(443)
-			translation1->__get((int)0)->zpp_inner = null();
+			translation1->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->zpp_inner = null();
 			HX_STACK_LINE(443)
 			{
 				HX_STACK_LINE(443)
-				::nape::geom::Vec2 o = translation1->__get((int)0);		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(443)
-				{
-				}
+				::nape::geom::Vec2 o = translation1->__get((int)0).StaticCast< ::nape::geom::Vec2 >();		HX_STACK_VAR(o,"o");
 				HX_STACK_LINE(443)
 				o->zpp_pool = null();
 				HX_STACK_LINE(443)
@@ -395,9 +387,6 @@ HX_DEFINE_DYNAMIC_FUNC2(Compound_obj,rotate,return )
 			{
 				HX_STACK_LINE(443)
 				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(443)
-				{
-				}
 				HX_STACK_LINE(443)
 				{
 					HX_STACK_LINE(443)
@@ -444,9 +433,6 @@ bool weak = __o_weak.Default(false);
 			inline static ::nape::geom::Vec2 Block( bool &weak){
 				HX_STACK_PUSH("*::closure","nape/phys/Compound.hx",402);
 				{
-					HX_STACK_LINE(402)
-					{
-					}
 					HX_STACK_LINE(402)
 					::nape::geom::Vec2 ret;		HX_STACK_VAR(ret,"ret");
 					HX_STACK_LINE(402)
@@ -508,9 +494,6 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(402)
 										{
 										}
-										HX_STACK_LINE(402)
-										{
-										}
 									}
 									HX_STACK_LINE(402)
 									return ret1;
@@ -539,13 +522,10 @@ bool weak = __o_weak.Default(false);
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(402)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(402)
 								_this->_isimmutable();
 							}
-						}
-						HX_STACK_LINE(402)
-						{
 						}
 						struct _Function_3_1{
 							inline static Float Block( ::nape::geom::Vec2 &ret){
@@ -561,7 +541,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(402)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(402)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(402)
 											_this->_validate();
 										}
@@ -586,7 +566,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(402)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(402)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(402)
 											_this->_validate();
 										}
@@ -608,16 +588,13 @@ bool weak = __o_weak.Default(false);
 								HX_STACK_LINE(402)
 								{
 								}
-								HX_STACK_LINE(402)
-								{
-								}
 							}
 							HX_STACK_LINE(402)
 							{
 								HX_STACK_LINE(402)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(402)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(402)
 									_this->_invalidate(_this);
 								}
@@ -635,11 +612,11 @@ bool weak = __o_weak.Default(false);
 			}
 		};
 		HX_STACK_LINE(402)
-		Array< ::nape::geom::Vec2 > ret = Array_obj< ::nape::geom::Vec2 >::__new().Add(_Function_1_1::Block(weak));		HX_STACK_VAR(ret,"ret");
+		Array< ::Dynamic > ret = Array_obj< ::Dynamic >::__new().Add(_Function_1_1::Block(weak));		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(403)
 		Array< Float > total = Array_obj< Float >::__new().Add(0.0);		HX_STACK_VAR(total,"total");
 
-		HX_BEGIN_LOCAL_FUNC_S2(hx::LocalFunc,_Function_1_2,Array< ::nape::geom::Vec2 >,ret,Array< Float >,total)
+		HX_BEGIN_LOCAL_FUNC_S2(hx::LocalFunc,_Function_1_2,Array< ::Dynamic >,ret,Array< Float >,total)
 		Void run(::nape::phys::Body b){
 			HX_STACK_PUSH("*::_Function_1_2","nape/phys/Compound.hx",404);
 			HX_STACK_ARG(b,"b");
@@ -743,9 +720,6 @@ bool weak = __o_weak.Default(false);
 																	HX_STACK_LINE(406)
 																	{
 																	}
-																	HX_STACK_LINE(406)
-																	{
-																	}
 																}
 																HX_STACK_LINE(406)
 																return ret2;
@@ -774,7 +748,7 @@ bool weak = __o_weak.Default(false);
 															hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 														}
 														HX_STACK_LINE(406)
-														if (((_this->_isimmutable_dyn() != null()))){
+														if (((_this->_isimmutable != null()))){
 															HX_STACK_LINE(406)
 															_this->_isimmutable();
 														}
@@ -798,7 +772,7 @@ bool weak = __o_weak.Default(false);
 																	HX_STACK_LINE(406)
 																	::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 																	HX_STACK_LINE(406)
-																	if (((_this->_validate_dyn() != null()))){
+																	if (((_this->_validate != null()))){
 																		HX_STACK_LINE(406)
 																		_this->_validate();
 																	}
@@ -823,7 +797,7 @@ bool weak = __o_weak.Default(false);
 																	HX_STACK_LINE(406)
 																	::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 																	HX_STACK_LINE(406)
-																	if (((_this->_validate_dyn() != null()))){
+																	if (((_this->_validate != null()))){
 																		HX_STACK_LINE(406)
 																		_this->_validate();
 																	}
@@ -845,16 +819,13 @@ bool weak = __o_weak.Default(false);
 															HX_STACK_LINE(406)
 															{
 															}
-															HX_STACK_LINE(406)
-															{
-															}
 														}
 														HX_STACK_LINE(406)
 														{
 															HX_STACK_LINE(406)
 															::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 															HX_STACK_LINE(406)
-															if (((_this->_invalidate_dyn() != null()))){
+															if (((_this->_invalidate != null()))){
 																HX_STACK_LINE(406)
 																_this->_invalidate(_this);
 															}
@@ -909,7 +880,7 @@ bool weak = __o_weak.Default(false);
 						}
 					};
 					HX_STACK_LINE(406)
-					ret->__get((int)0)->addeq((_Function_3_1::Block(b))->mul(_Function_3_2::Block(b),true));
+					ret->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->addeq((_Function_3_1::Block(b))->mul(_Function_3_2::Block(b),true));
 					struct _Function_3_3{
 						inline static Float Block( ::nape::phys::Body &b){
 							HX_STACK_PUSH("*::closure","nape/phys/Compound.hx",407);
@@ -948,9 +919,9 @@ bool weak = __o_weak.Default(false);
 			hx::Throw (HX_CSTRING("Error: COM of an empty Compound is undefined silly"));
 		}
 		HX_STACK_LINE(413)
-		ret->__get((int)0)->muleq((Float((int)1) / Float(total->__get((int)0))));
+		ret->__get((int)0).StaticCast< ::nape::geom::Vec2 >()->muleq((Float((int)1) / Float(total->__get((int)0))));
 		HX_STACK_LINE(414)
-		return ret->__get((int)0);
+		return ret->__get((int)0).StaticCast< ::nape::geom::Vec2 >();
 	}
 }
 
@@ -1279,11 +1250,6 @@ Compound_obj::Compound_obj()
 void Compound_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(Compound);
-	HX_MARK_MEMBER_NAME(space,"space");
-	HX_MARK_MEMBER_NAME(compound,"compound");
-	HX_MARK_MEMBER_NAME(compounds,"compounds");
-	HX_MARK_MEMBER_NAME(constraints,"constraints");
-	HX_MARK_MEMBER_NAME(bodies,"bodies");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	super::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
@@ -1291,11 +1257,6 @@ void Compound_obj::__Mark(HX_MARK_PARAMS)
 
 void Compound_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(space,"space");
-	HX_VISIT_MEMBER_NAME(compound,"compound");
-	HX_VISIT_MEMBER_NAME(compounds,"compounds");
-	HX_VISIT_MEMBER_NAME(constraints,"constraints");
-	HX_VISIT_MEMBER_NAME(bodies,"bodies");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 	super::__Visit(HX_VISIT_ARG);
 }
@@ -1310,21 +1271,21 @@ Dynamic Compound_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"copy") ) { return copy_dyn(); }
 		break;
 	case 5:
-		if (HX_FIELD_EQ(inName,"space") ) { return inCallProp ? get_space() : space; }
+		if (HX_FIELD_EQ(inName,"space") ) { return get_space(); }
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"rotate") ) { return rotate_dyn(); }
-		if (HX_FIELD_EQ(inName,"bodies") ) { return inCallProp ? get_bodies() : bodies; }
+		if (HX_FIELD_EQ(inName,"bodies") ) { return get_bodies(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
-		if (HX_FIELD_EQ(inName,"compound") ) { return inCallProp ? get_compound() : compound; }
+		if (HX_FIELD_EQ(inName,"compound") ) { return get_compound(); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"translate") ) { return translate_dyn(); }
 		if (HX_FIELD_EQ(inName,"set_space") ) { return set_space_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_space") ) { return get_space_dyn(); }
-		if (HX_FIELD_EQ(inName,"compounds") ) { return inCallProp ? get_compounds() : compounds; }
+		if (HX_FIELD_EQ(inName,"compounds") ) { return get_compounds(); }
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { return zpp_inner; }
 		break;
 	case 10:
@@ -1333,7 +1294,7 @@ Dynamic Compound_obj::__Field(const ::String &inName,bool inCallProp)
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"visitBodies") ) { return visitBodies_dyn(); }
-		if (HX_FIELD_EQ(inName,"constraints") ) { return inCallProp ? get_constraints() : constraints; }
+		if (HX_FIELD_EQ(inName,"constraints") ) { return get_constraints(); }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"set_compound") ) { return set_compound_dyn(); }
@@ -1358,20 +1319,13 @@ Dynamic Compound_obj::__SetField(const ::String &inName,const Dynamic &inValue,b
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"space") ) { if (inCallProp) return set_space(inValue);space=inValue.Cast< ::nape::space::Space >(); return inValue; }
-		break;
-	case 6:
-		if (HX_FIELD_EQ(inName,"bodies") ) { bodies=inValue.Cast< ::nape::phys::BodyList >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"space") ) { return set_space(inValue); }
 		break;
 	case 8:
-		if (HX_FIELD_EQ(inName,"compound") ) { if (inCallProp) return set_compound(inValue);compound=inValue.Cast< ::nape::phys::Compound >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"compound") ) { return set_compound(inValue); }
 		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"compounds") ) { compounds=inValue.Cast< ::nape::phys::CompoundList >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::phys::ZPP_Compound >(); return inValue; }
-		break;
-	case 11:
-		if (HX_FIELD_EQ(inName,"constraints") ) { constraints=inValue.Cast< ::nape::constraint::ConstraintList >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -1402,16 +1356,11 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("toString"),
 	HX_CSTRING("set_space"),
 	HX_CSTRING("get_space"),
-	HX_CSTRING("space"),
 	HX_CSTRING("set_compound"),
 	HX_CSTRING("get_compound"),
-	HX_CSTRING("compound"),
 	HX_CSTRING("get_compounds"),
-	HX_CSTRING("compounds"),
 	HX_CSTRING("get_constraints"),
-	HX_CSTRING("constraints"),
 	HX_CSTRING("get_bodies"),
-	HX_CSTRING("bodies"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
@@ -1427,7 +1376,7 @@ Class Compound_obj::__mClass;
 
 void Compound_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.phys.Compound"), hx::TCanCast< Compound_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.phys.Compound"), hx::TCanCast< Compound_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -5,24 +5,22 @@
 #include <hxcpp.h>
 #endif
 
-#include <haxe/Public.h>
 HX_DECLARE_CLASS2(aze,display,TileBase)
 HX_DECLARE_CLASS2(aze,display,TileGroup)
 HX_DECLARE_CLASS2(aze,display,TileLayer)
-HX_DECLARE_CLASS1(haxe,Public)
 namespace aze{
 namespace display{
 
 
-class TileBase_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  TileBase_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef TileBase_obj OBJ_;
 		TileBase_obj();
-		Void __construct();
+		Void __construct(::aze::display::TileLayer layer);
 
 	public:
-		static hx::ObjectPtr< TileBase_obj > __new();
+		static hx::ObjectPtr< TileBase_obj > __new(::aze::display::TileLayer layer);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		~TileBase_obj();
@@ -32,9 +30,6 @@ class TileBase_obj : public hx::Object{
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
 		void __Visit(HX_VISIT_PARAMS);
-		inline operator ::haxe::Public_obj *()
-			{ return new ::haxe::Public_delegate_< TileBase_obj >(this); }
-		hx::Object *__ToInterface(const type_info &inType);
 		::String __ToString() const { return HX_CSTRING("TileBase"); }
 
 		virtual Void step( int elapsed);
@@ -43,12 +38,12 @@ class TileBase_obj : public hx::Object{
 		virtual Void init( ::aze::display::TileLayer layer);
 		Dynamic init_dyn();
 
-		bool visible; /* REM */ 
-		bool animated; /* REM */ 
-		Float y; /* REM */ 
-		Float x; /* REM */ 
-		::aze::display::TileGroup parent; /* REM */ 
-		::aze::display::TileLayer layer; /* REM */ 
+		bool visible;
+		bool animated;
+		Float y;
+		Float x;
+		::aze::display::TileGroup parent;
+		::aze::display::TileLayer layer;
 };
 
 } // end namespace aze

@@ -10,7 +10,7 @@ namespace zpp_nape{
 namespace util{
 
 
-class ZNPArray2_Float_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZNPArray2_Float_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZNPArray2_Float_obj OBJ_;
@@ -39,8 +39,8 @@ class ZNPArray2_Float_obj : public hx::Object{
 		virtual Void resize( int width,int height,Float def);
 		Dynamic resize_dyn();
 
-		int width; /* REM */ 
-		Array< Float > list; /* REM */ 
+		int width;
+		Array< Float > list;
 };
 
 } // end namespace zpp_nape

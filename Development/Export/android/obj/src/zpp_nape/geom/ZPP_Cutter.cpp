@@ -101,7 +101,7 @@ Dynamic ZPP_Cutter_obj::__Create(hx::DynamicArray inArgs)
 						HX_STACK_LINE(328)
 						::zpp_nape::geom::ZPP_Vec2 _this = _start->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(328)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(328)
 							_this->_validate();
 						}
@@ -128,7 +128,7 @@ Dynamic ZPP_Cutter_obj::__Create(hx::DynamicArray inArgs)
 						HX_STACK_LINE(329)
 						::zpp_nape::geom::ZPP_Vec2 _this = _start->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(329)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(329)
 							_this->_validate();
 						}
@@ -141,9 +141,6 @@ Dynamic ZPP_Cutter_obj::__Create(hx::DynamicArray inArgs)
 		};
 		HX_STACK_LINE(329)
 		py = _Function_2_2::Block(_start);
-		HX_STACK_LINE(330)
-		{
-		}
 		HX_STACK_LINE(338)
 		{
 		}
@@ -168,7 +165,7 @@ Dynamic ZPP_Cutter_obj::__Create(hx::DynamicArray inArgs)
 						HX_STACK_LINE(350)
 						::zpp_nape::geom::ZPP_Vec2 _this = _end->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(350)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(350)
 							_this->_validate();
 						}
@@ -195,7 +192,7 @@ Dynamic ZPP_Cutter_obj::__Create(hx::DynamicArray inArgs)
 						HX_STACK_LINE(351)
 						::zpp_nape::geom::ZPP_Vec2 _this = _end->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(351)
-						if (((_this->_validate_dyn() != null()))){
+						if (((_this->_validate != null()))){
 							HX_STACK_LINE(351)
 							_this->_validate();
 						}
@@ -251,9 +248,6 @@ Dynamic ZPP_Cutter_obj::__Create(hx::DynamicArray inArgs)
 			c->posx = c->vert->x;
 			HX_STACK_LINE(381)
 			c->posy = c->vert->y;
-			HX_STACK_LINE(382)
-			{
-			}
 			HX_STACK_LINE(390)
 			{
 			}
@@ -268,7 +262,7 @@ Dynamic ZPP_Cutter_obj::__Create(hx::DynamicArray inArgs)
 			clashes = true;
 		}
 		struct _Function_2_1{
-			inline static ::zpp_nape::geom::ZPP_CutVert Block( ::zpp_nape::geom::ZPP_CutVert &c,::zpp_nape::geom::ZPP_CutVert &verts){
+			inline static ::zpp_nape::geom::ZPP_CutVert Block( ::zpp_nape::geom::ZPP_CutVert &verts,::zpp_nape::geom::ZPP_CutVert &c){
 				HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",402);
 				{
 					HX_STACK_LINE(403)
@@ -295,7 +289,7 @@ Dynamic ZPP_Cutter_obj::__Create(hx::DynamicArray inArgs)
 			}
 		};
 		HX_STACK_LINE(402)
-		verts = _Function_2_1::Block(c,verts);
+		verts = _Function_2_1::Block(verts,c);
 		HX_STACK_LINE(413)
 		p = p->next;
 	}
@@ -331,9 +325,6 @@ while(((p != P)));
 while(((nite != L)));
 			}
 		}
-		HX_STACK_LINE(438)
-		{
-		}
 		HX_STACK_LINE(446)
 		Float nx = 0.0;		HX_STACK_VAR(nx,"nx");
 		HX_STACK_LINE(447)
@@ -344,9 +335,6 @@ while(((nite != L)));
 			nx = dx;
 			HX_STACK_LINE(450)
 			ny = dy;
-			HX_STACK_LINE(451)
-			{
-			}
 			HX_STACK_LINE(459)
 			{
 			}
@@ -357,44 +345,12 @@ while(((nite != L)));
 			{
 				HX_STACK_LINE(470)
 				Float d = ((nx * nx) + (ny * ny));		HX_STACK_VAR(d,"d");
-				HX_STACK_LINE(471)
-				{
-				}
-				struct _Function_4_1{
-					inline static Float Block( Float &d){
-						HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",479);
-						{
-							HX_STACK_LINE(479)
-							{
-							}
-							struct _Function_5_1{
-								inline static Float Block( Float &d){
-									HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",479);
-									{
-										HX_STACK_LINE(479)
-										{
-										}
-										HX_STACK_LINE(479)
-										return ::Math_obj::sqrt(d);
-									}
-									return null();
-								}
-							};
-							HX_STACK_LINE(479)
-							return (Float(1.0) / Float(_Function_5_1::Block(d)));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(479)
-				Float imag = _Function_4_1::Block(d);		HX_STACK_VAR(imag,"imag");
+				Float imag = (Float(1.0) / Float(::Math_obj::sqrt(d)));		HX_STACK_VAR(imag,"imag");
 				HX_STACK_LINE(480)
 				{
 					HX_STACK_LINE(481)
 					Float t = imag;		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(482)
-					{
-					}
 					HX_STACK_LINE(490)
 					hx::MultEq(nx,t);
 					HX_STACK_LINE(491)
@@ -438,7 +394,7 @@ while(((nite != L)));
 			HX_STACK_LINE(513)
 			::zpp_nape::geom::ZPP_CutVert a = pre->next;		HX_STACK_VAR(a,"a");
 			struct _Function_3_1{
-				inline static bool Block( Float &nx,::zpp_nape::geom::ZPP_GeomVert &P,::zpp_nape::geom::ZPP_CutVert &a,Float &ny){
+				inline static bool Block( Float &ny,Float &nx,::zpp_nape::geom::ZPP_CutVert &a,::zpp_nape::geom::ZPP_GeomVert &P){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",515);
 					{
 						HX_STACK_LINE(516)
@@ -458,16 +414,13 @@ while(((nite != L)));
 						{
 							HX_STACK_LINE(524)
 							Float t = 0.5;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(525)
-							{
-							}
 							HX_STACK_LINE(533)
 							hx::MultEq(midx,t);
 							HX_STACK_LINE(534)
 							hx::MultEq(midy,t);
 						}
 						struct _Function_4_1{
-							inline static bool Block( Float &midx,Float &nx,::zpp_nape::geom::ZPP_GeomVert &P,Float &midy,Float &ny){
+							inline static bool Block( Float &midy,Float &ny,Float &nx,Float &midx,::zpp_nape::geom::ZPP_GeomVert &P){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",536);
 								{
 									HX_STACK_LINE(537)
@@ -516,13 +469,13 @@ while(((nite != L)));
 							}
 						};
 						HX_STACK_LINE(536)
-						return _Function_4_1::Block(midx,nx,P,midy,ny);
+						return _Function_4_1::Block(midy,ny,nx,midx,P);
 					}
 					return null();
 				}
 			};
 			HX_STACK_LINE(514)
-			bool positive = (  (((prod > (int)0))) ? bool(pre->positive) : bool(_Function_3_1::Block(nx,P,a,ny)) );		HX_STACK_VAR(positive,"positive");
+			bool positive = (  (((prod > (int)0))) ? bool(pre->positive) : bool(_Function_3_1::Block(ny,nx,a,P)) );		HX_STACK_VAR(positive,"positive");
 			HX_STACK_LINE(565)
 			{
 				HX_STACK_LINE(566)
@@ -574,7 +527,7 @@ while(((p1 != start)));
 			HX_STACK_LINE(595)
 			::zpp_nape::geom::ZPP_CutVert a = pre->next;		HX_STACK_VAR(a,"a");
 			struct _Function_3_1{
-				inline static bool Block( Float &nx,::zpp_nape::geom::ZPP_GeomVert &P,::zpp_nape::geom::ZPP_CutVert &a,Float &ny){
+				inline static bool Block( Float &ny,Float &nx,::zpp_nape::geom::ZPP_CutVert &a,::zpp_nape::geom::ZPP_GeomVert &P){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",597);
 					{
 						HX_STACK_LINE(598)
@@ -594,16 +547,13 @@ while(((p1 != start)));
 						{
 							HX_STACK_LINE(606)
 							Float t = 0.5;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(607)
-							{
-							}
 							HX_STACK_LINE(615)
 							hx::MultEq(midx,t);
 							HX_STACK_LINE(616)
 							hx::MultEq(midy,t);
 						}
 						struct _Function_4_1{
-							inline static bool Block( Float &midx,Float &nx,::zpp_nape::geom::ZPP_GeomVert &P,Float &midy,Float &ny){
+							inline static bool Block( Float &midy,Float &ny,Float &nx,Float &midx,::zpp_nape::geom::ZPP_GeomVert &P){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",618);
 								{
 									HX_STACK_LINE(619)
@@ -652,13 +602,13 @@ while(((nite != L)));
 							}
 						};
 						HX_STACK_LINE(618)
-						return _Function_4_1::Block(midx,nx,P,midy,ny);
+						return _Function_4_1::Block(midy,ny,nx,midx,P);
 					}
 					return null();
 				}
 			};
 			HX_STACK_LINE(596)
-			bool positive = (  (((prod > (int)0))) ? bool(pre->positive) : bool(_Function_3_1::Block(nx,P,a,ny)) );		HX_STACK_VAR(positive,"positive");
+			bool positive = (  (((prod > (int)0))) ? bool(pre->positive) : bool(_Function_3_1::Block(ny,nx,a,P)) );		HX_STACK_VAR(positive,"positive");
 			HX_STACK_LINE(647)
 			{
 				HX_STACK_LINE(648)
@@ -732,9 +682,6 @@ while((false));
 						ret->x = verts->posx;
 						HX_STACK_LINE(675)
 						ret->y = verts->posy;
-						HX_STACK_LINE(675)
-						{
-						}
 						HX_STACK_LINE(675)
 						{
 						}
@@ -848,9 +795,6 @@ while((false));
 						HX_STACK_LINE(691)
 						{
 						}
-						HX_STACK_LINE(691)
-						{
-						}
 					}
 					HX_STACK_LINE(691)
 					return ret;
@@ -896,9 +840,6 @@ while((false));
 			}
 			HX_STACK_LINE(712)
 			Float denom = ((dy * ux) - (dx * uy));		HX_STACK_VAR(denom,"denom");
-			HX_STACK_LINE(713)
-			{
-			}
 			HX_STACK_LINE(721)
 			denom = (Float((int)1) / Float(denom));
 			HX_STACK_LINE(722)
@@ -1026,9 +967,6 @@ while((false));
 										ret->x = endof->x;
 										HX_STACK_LINE(748)
 										ret->y = endof->y;
-										HX_STACK_LINE(748)
-										{
-										}
 										HX_STACK_LINE(748)
 										{
 										}
@@ -1238,9 +1176,6 @@ while((false));
 											HX_STACK_LINE(789)
 											{
 											}
-											HX_STACK_LINE(789)
-											{
-											}
 										}
 										HX_STACK_LINE(789)
 										return ret;
@@ -1374,9 +1309,6 @@ while((false));
 							qx = i->posx;
 							HX_STACK_LINE(810)
 							qy = i->posy;
-							HX_STACK_LINE(811)
-							{
-							}
 							HX_STACK_LINE(819)
 							{
 							}
@@ -1385,9 +1317,6 @@ while((false));
 						{
 							HX_STACK_LINE(829)
 							Float t1 = t;		HX_STACK_VAR(t1,"t1");
-							HX_STACK_LINE(830)
-							{
-							}
 							HX_STACK_LINE(838)
 							hx::AddEq(qx,(ux * t1));
 							HX_STACK_LINE(839)
@@ -1425,9 +1354,6 @@ while((false));
 											ret->x = qx;
 											HX_STACK_LINE(842)
 											ret->y = qy;
-											HX_STACK_LINE(842)
-											{
-											}
 											HX_STACK_LINE(842)
 											{
 											}
@@ -1494,9 +1420,6 @@ while((false));
 											ret->x = qx;
 											HX_STACK_LINE(855)
 											ret->y = qy;
-											HX_STACK_LINE(855)
-											{
-											}
 											HX_STACK_LINE(855)
 											{
 											}
@@ -1759,9 +1682,6 @@ while(((i != verts)));
 				}
 			}
 		}
-	}
-	HX_STACK_LINE(942)
-	{
 	}
 	HX_STACK_LINE(950)
 	{
@@ -2111,273 +2031,242 @@ while(((numMerges > (int)1)));
 			if (((bool(i1->virtualint) && bool(!(j->virtualint))))){
 				struct _Function_4_1{
 					inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_CutInt &j){
-						HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1121);
+						HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1130);
 						{
-							HX_STACK_LINE(1122)
+							HX_STACK_LINE(1131)
+							j->end->next = j->end->prev = null();
+							HX_STACK_LINE(1132)
 							{
-							}
-							struct _Function_5_1{
-								inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_CutInt &j){
-									HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1130);
-									{
-										HX_STACK_LINE(1131)
-										j->end->next = j->end->prev = null();
-										HX_STACK_LINE(1132)
+								HX_STACK_LINE(1133)
+								::zpp_nape::geom::ZPP_GeomVert o = j->end;		HX_STACK_VAR(o,"o");
+								HX_STACK_LINE(1142)
+								{
+									HX_STACK_LINE(1142)
+									if (((o->wrap != null()))){
+										HX_STACK_LINE(1142)
+										o->wrap->zpp_inner->_inuse = false;
+										HX_STACK_LINE(1142)
 										{
-											HX_STACK_LINE(1133)
-											::zpp_nape::geom::ZPP_GeomVert o = j->end;		HX_STACK_VAR(o,"o");
-											HX_STACK_LINE(1134)
-											{
+											HX_STACK_LINE(1142)
+											::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
+											HX_STACK_LINE(1142)
+											if (((bool((_this != null())) && bool(_this->zpp_disp)))){
+												HX_STACK_LINE(1142)
+												hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 											}
 											HX_STACK_LINE(1142)
 											{
 												HX_STACK_LINE(1142)
-												if (((o->wrap != null()))){
+												::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
+												HX_STACK_LINE(1142)
+												if ((_this1->_immutable)){
 													HX_STACK_LINE(1142)
-													o->wrap->zpp_inner->_inuse = false;
-													HX_STACK_LINE(1142)
-													{
-														HX_STACK_LINE(1142)
-														::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
-														HX_STACK_LINE(1142)
-														if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-															HX_STACK_LINE(1142)
-															hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-														}
-														HX_STACK_LINE(1142)
-														{
-															HX_STACK_LINE(1142)
-															::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-															HX_STACK_LINE(1142)
-															if ((_this1->_immutable)){
-																HX_STACK_LINE(1142)
-																hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-															}
-															HX_STACK_LINE(1142)
-															if (((_this1->_isimmutable_dyn() != null()))){
-																HX_STACK_LINE(1142)
-																_this1->_isimmutable();
-															}
-														}
-														HX_STACK_LINE(1142)
-														if ((_this->zpp_inner->_inuse)){
-															HX_STACK_LINE(1142)
-															hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-														}
-														HX_STACK_LINE(1142)
-														::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
-														HX_STACK_LINE(1142)
-														_this->zpp_inner->outer = null();
-														HX_STACK_LINE(1142)
-														_this->zpp_inner = null();
-														HX_STACK_LINE(1142)
-														{
-															HX_STACK_LINE(1142)
-															::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
-															HX_STACK_LINE(1142)
-															{
-															}
-															HX_STACK_LINE(1142)
-															o1->zpp_pool = null();
-															HX_STACK_LINE(1142)
-															if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-																HX_STACK_LINE(1142)
-																::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
-															}
-															else{
-																HX_STACK_LINE(1142)
-																::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
-															}
-															HX_STACK_LINE(1142)
-															::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
-															HX_STACK_LINE(1142)
-															o1->zpp_disp = true;
-														}
-														HX_STACK_LINE(1142)
-														{
-															HX_STACK_LINE(1142)
-															::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-															HX_STACK_LINE(1142)
-															{
-															}
-															HX_STACK_LINE(1142)
-															{
-																HX_STACK_LINE(1142)
-																if (((o1->outer != null()))){
-																	HX_STACK_LINE(1142)
-																	o1->outer->zpp_inner = null();
-																	HX_STACK_LINE(1142)
-																	o1->outer = null();
-																}
-																HX_STACK_LINE(1142)
-																o1->_isimmutable = null();
-																HX_STACK_LINE(1142)
-																o1->_validate = null();
-																HX_STACK_LINE(1142)
-																o1->_invalidate = null();
-															}
-															HX_STACK_LINE(1142)
-															o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-															HX_STACK_LINE(1142)
-															::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
-														}
-													}
-													HX_STACK_LINE(1142)
-													o->wrap = null();
+													hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 												}
 												HX_STACK_LINE(1142)
-												o->prev = o->next = null();
+												if (((_this1->_isimmutable != null()))){
+													HX_STACK_LINE(1142)
+													_this1->_isimmutable();
+												}
 											}
-											HX_STACK_LINE(1143)
-											o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
-											HX_STACK_LINE(1144)
-											::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
-										}
-										HX_STACK_LINE(1149)
-										return null();
-									}
-									return null();
-								}
-							};
-							struct _Function_5_2{
-								inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_CutInt &j){
-									HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1151);
-									{
-										HX_STACK_LINE(1152)
-										::zpp_nape::geom::ZPP_GeomVert retnodes = j->end->prev;		HX_STACK_VAR(retnodes,"retnodes");
-										HX_STACK_LINE(1153)
-										j->end->prev->next = j->end->next;
-										HX_STACK_LINE(1154)
-										j->end->next->prev = j->end->prev;
-										HX_STACK_LINE(1155)
-										j->end->next = j->end->prev = null();
-										HX_STACK_LINE(1156)
-										{
-											HX_STACK_LINE(1157)
-											::zpp_nape::geom::ZPP_GeomVert o = j->end;		HX_STACK_VAR(o,"o");
-											HX_STACK_LINE(1158)
+											HX_STACK_LINE(1142)
+											if ((_this->zpp_inner->_inuse)){
+												HX_STACK_LINE(1142)
+												hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
+											}
+											HX_STACK_LINE(1142)
+											::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
+											HX_STACK_LINE(1142)
+											_this->zpp_inner->outer = null();
+											HX_STACK_LINE(1142)
+											_this->zpp_inner = null();
+											HX_STACK_LINE(1142)
 											{
+												HX_STACK_LINE(1142)
+												::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
+												HX_STACK_LINE(1142)
+												o1->zpp_pool = null();
+												HX_STACK_LINE(1142)
+												if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
+													HX_STACK_LINE(1142)
+													::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
+												}
+												else{
+													HX_STACK_LINE(1142)
+													::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
+												}
+												HX_STACK_LINE(1142)
+												::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
+												HX_STACK_LINE(1142)
+												o1->zpp_disp = true;
+											}
+											HX_STACK_LINE(1142)
+											{
+												HX_STACK_LINE(1142)
+												::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
+												HX_STACK_LINE(1142)
+												{
+													HX_STACK_LINE(1142)
+													if (((o1->outer != null()))){
+														HX_STACK_LINE(1142)
+														o1->outer->zpp_inner = null();
+														HX_STACK_LINE(1142)
+														o1->outer = null();
+													}
+													HX_STACK_LINE(1142)
+													o1->_isimmutable = null();
+													HX_STACK_LINE(1142)
+													o1->_validate = null();
+													HX_STACK_LINE(1142)
+													o1->_invalidate = null();
+												}
+												HX_STACK_LINE(1142)
+												o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
+												HX_STACK_LINE(1142)
+												::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
+											}
+										}
+										HX_STACK_LINE(1142)
+										o->wrap = null();
+									}
+									HX_STACK_LINE(1142)
+									o->prev = o->next = null();
+								}
+								HX_STACK_LINE(1143)
+								o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
+								HX_STACK_LINE(1144)
+								::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
+							}
+							HX_STACK_LINE(1149)
+							return null();
+						}
+						return null();
+					}
+				};
+				struct _Function_4_2{
+					inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_CutInt &j){
+						HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1151);
+						{
+							HX_STACK_LINE(1152)
+							::zpp_nape::geom::ZPP_GeomVert retnodes = j->end->prev;		HX_STACK_VAR(retnodes,"retnodes");
+							HX_STACK_LINE(1153)
+							j->end->prev->next = j->end->next;
+							HX_STACK_LINE(1154)
+							j->end->next->prev = j->end->prev;
+							HX_STACK_LINE(1155)
+							j->end->next = j->end->prev = null();
+							HX_STACK_LINE(1156)
+							{
+								HX_STACK_LINE(1157)
+								::zpp_nape::geom::ZPP_GeomVert o = j->end;		HX_STACK_VAR(o,"o");
+								HX_STACK_LINE(1166)
+								{
+									HX_STACK_LINE(1166)
+									if (((o->wrap != null()))){
+										HX_STACK_LINE(1166)
+										o->wrap->zpp_inner->_inuse = false;
+										HX_STACK_LINE(1166)
+										{
+											HX_STACK_LINE(1166)
+											::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
+											HX_STACK_LINE(1166)
+											if (((bool((_this != null())) && bool(_this->zpp_disp)))){
+												HX_STACK_LINE(1166)
+												hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 											}
 											HX_STACK_LINE(1166)
 											{
 												HX_STACK_LINE(1166)
-												if (((o->wrap != null()))){
+												::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
+												HX_STACK_LINE(1166)
+												if ((_this1->_immutable)){
 													HX_STACK_LINE(1166)
-													o->wrap->zpp_inner->_inuse = false;
-													HX_STACK_LINE(1166)
-													{
-														HX_STACK_LINE(1166)
-														::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
-														HX_STACK_LINE(1166)
-														if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-															HX_STACK_LINE(1166)
-															hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-														}
-														HX_STACK_LINE(1166)
-														{
-															HX_STACK_LINE(1166)
-															::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-															HX_STACK_LINE(1166)
-															if ((_this1->_immutable)){
-																HX_STACK_LINE(1166)
-																hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-															}
-															HX_STACK_LINE(1166)
-															if (((_this1->_isimmutable_dyn() != null()))){
-																HX_STACK_LINE(1166)
-																_this1->_isimmutable();
-															}
-														}
-														HX_STACK_LINE(1166)
-														if ((_this->zpp_inner->_inuse)){
-															HX_STACK_LINE(1166)
-															hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-														}
-														HX_STACK_LINE(1166)
-														::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
-														HX_STACK_LINE(1166)
-														_this->zpp_inner->outer = null();
-														HX_STACK_LINE(1166)
-														_this->zpp_inner = null();
-														HX_STACK_LINE(1166)
-														{
-															HX_STACK_LINE(1166)
-															::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
-															HX_STACK_LINE(1166)
-															{
-															}
-															HX_STACK_LINE(1166)
-															o1->zpp_pool = null();
-															HX_STACK_LINE(1166)
-															if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-																HX_STACK_LINE(1166)
-																::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
-															}
-															else{
-																HX_STACK_LINE(1166)
-																::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
-															}
-															HX_STACK_LINE(1166)
-															::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
-															HX_STACK_LINE(1166)
-															o1->zpp_disp = true;
-														}
-														HX_STACK_LINE(1166)
-														{
-															HX_STACK_LINE(1166)
-															::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-															HX_STACK_LINE(1166)
-															{
-															}
-															HX_STACK_LINE(1166)
-															{
-																HX_STACK_LINE(1166)
-																if (((o1->outer != null()))){
-																	HX_STACK_LINE(1166)
-																	o1->outer->zpp_inner = null();
-																	HX_STACK_LINE(1166)
-																	o1->outer = null();
-																}
-																HX_STACK_LINE(1166)
-																o1->_isimmutable = null();
-																HX_STACK_LINE(1166)
-																o1->_validate = null();
-																HX_STACK_LINE(1166)
-																o1->_invalidate = null();
-															}
-															HX_STACK_LINE(1166)
-															o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-															HX_STACK_LINE(1166)
-															::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
-														}
-													}
-													HX_STACK_LINE(1166)
-													o->wrap = null();
+													hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 												}
 												HX_STACK_LINE(1166)
-												o->prev = o->next = null();
+												if (((_this1->_isimmutable != null()))){
+													HX_STACK_LINE(1166)
+													_this1->_isimmutable();
+												}
 											}
-											HX_STACK_LINE(1167)
-											o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
-											HX_STACK_LINE(1168)
-											::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
+											HX_STACK_LINE(1166)
+											if ((_this->zpp_inner->_inuse)){
+												HX_STACK_LINE(1166)
+												hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
+											}
+											HX_STACK_LINE(1166)
+											::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
+											HX_STACK_LINE(1166)
+											_this->zpp_inner->outer = null();
+											HX_STACK_LINE(1166)
+											_this->zpp_inner = null();
+											HX_STACK_LINE(1166)
+											{
+												HX_STACK_LINE(1166)
+												::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
+												HX_STACK_LINE(1166)
+												o1->zpp_pool = null();
+												HX_STACK_LINE(1166)
+												if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
+													HX_STACK_LINE(1166)
+													::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
+												}
+												else{
+													HX_STACK_LINE(1166)
+													::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
+												}
+												HX_STACK_LINE(1166)
+												::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
+												HX_STACK_LINE(1166)
+												o1->zpp_disp = true;
+											}
+											HX_STACK_LINE(1166)
+											{
+												HX_STACK_LINE(1166)
+												::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
+												HX_STACK_LINE(1166)
+												{
+													HX_STACK_LINE(1166)
+													if (((o1->outer != null()))){
+														HX_STACK_LINE(1166)
+														o1->outer->zpp_inner = null();
+														HX_STACK_LINE(1166)
+														o1->outer = null();
+													}
+													HX_STACK_LINE(1166)
+													o1->_isimmutable = null();
+													HX_STACK_LINE(1166)
+													o1->_validate = null();
+													HX_STACK_LINE(1166)
+													o1->_invalidate = null();
+												}
+												HX_STACK_LINE(1166)
+												o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
+												HX_STACK_LINE(1166)
+												::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
+											}
 										}
-										HX_STACK_LINE(1173)
-										j->end = null();
-										HX_STACK_LINE(1174)
-										return retnodes;
+										HX_STACK_LINE(1166)
+										o->wrap = null();
 									}
-									return null();
+									HX_STACK_LINE(1166)
+									o->prev = o->next = null();
 								}
-							};
-							HX_STACK_LINE(1130)
-							return (  (((bool((j->end != null())) && bool((j->end->prev == j->end))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_5_1::Block(j)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_5_2::Block(j)) );
+								HX_STACK_LINE(1167)
+								o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
+								HX_STACK_LINE(1168)
+								::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
+							}
+							HX_STACK_LINE(1173)
+							j->end = null();
+							HX_STACK_LINE(1174)
+							return retnodes;
 						}
 						return null();
 					}
 				};
 				HX_STACK_LINE(1121)
-				j->end = _Function_4_1::Block(j);
+				j->end = (  (((bool((j->end != null())) && bool((j->end->prev == j->end))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_4_1::Block(j)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_4_2::Block(j)) );
 				HX_STACK_LINE(1177)
 				if ((!(j->vertex))){
 					HX_STACK_LINE(1177)
@@ -2388,273 +2277,242 @@ while(((numMerges > (int)1)));
 						j->start->y = j->end->y;
 						struct _Function_6_1{
 							inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_CutInt &j){
-								HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1181);
+								HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1190);
 								{
-									HX_STACK_LINE(1182)
+									HX_STACK_LINE(1191)
+									j->end->next = j->end->prev = null();
+									HX_STACK_LINE(1192)
 									{
-									}
-									struct _Function_7_1{
-										inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_CutInt &j){
-											HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1190);
-											{
-												HX_STACK_LINE(1191)
-												j->end->next = j->end->prev = null();
-												HX_STACK_LINE(1192)
+										HX_STACK_LINE(1193)
+										::zpp_nape::geom::ZPP_GeomVert o = j->end;		HX_STACK_VAR(o,"o");
+										HX_STACK_LINE(1202)
+										{
+											HX_STACK_LINE(1202)
+											if (((o->wrap != null()))){
+												HX_STACK_LINE(1202)
+												o->wrap->zpp_inner->_inuse = false;
+												HX_STACK_LINE(1202)
 												{
-													HX_STACK_LINE(1193)
-													::zpp_nape::geom::ZPP_GeomVert o = j->end;		HX_STACK_VAR(o,"o");
-													HX_STACK_LINE(1194)
-													{
+													HX_STACK_LINE(1202)
+													::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
+													HX_STACK_LINE(1202)
+													if (((bool((_this != null())) && bool(_this->zpp_disp)))){
+														HX_STACK_LINE(1202)
+														hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 													}
 													HX_STACK_LINE(1202)
 													{
 														HX_STACK_LINE(1202)
-														if (((o->wrap != null()))){
+														::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
+														HX_STACK_LINE(1202)
+														if ((_this1->_immutable)){
 															HX_STACK_LINE(1202)
-															o->wrap->zpp_inner->_inuse = false;
-															HX_STACK_LINE(1202)
-															{
-																HX_STACK_LINE(1202)
-																::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
-																HX_STACK_LINE(1202)
-																if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-																	HX_STACK_LINE(1202)
-																	hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-																}
-																HX_STACK_LINE(1202)
-																{
-																	HX_STACK_LINE(1202)
-																	::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-																	HX_STACK_LINE(1202)
-																	if ((_this1->_immutable)){
-																		HX_STACK_LINE(1202)
-																		hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-																	}
-																	HX_STACK_LINE(1202)
-																	if (((_this1->_isimmutable_dyn() != null()))){
-																		HX_STACK_LINE(1202)
-																		_this1->_isimmutable();
-																	}
-																}
-																HX_STACK_LINE(1202)
-																if ((_this->zpp_inner->_inuse)){
-																	HX_STACK_LINE(1202)
-																	hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-																}
-																HX_STACK_LINE(1202)
-																::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
-																HX_STACK_LINE(1202)
-																_this->zpp_inner->outer = null();
-																HX_STACK_LINE(1202)
-																_this->zpp_inner = null();
-																HX_STACK_LINE(1202)
-																{
-																	HX_STACK_LINE(1202)
-																	::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
-																	HX_STACK_LINE(1202)
-																	{
-																	}
-																	HX_STACK_LINE(1202)
-																	o1->zpp_pool = null();
-																	HX_STACK_LINE(1202)
-																	if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-																		HX_STACK_LINE(1202)
-																		::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
-																	}
-																	else{
-																		HX_STACK_LINE(1202)
-																		::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
-																	}
-																	HX_STACK_LINE(1202)
-																	::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
-																	HX_STACK_LINE(1202)
-																	o1->zpp_disp = true;
-																}
-																HX_STACK_LINE(1202)
-																{
-																	HX_STACK_LINE(1202)
-																	::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-																	HX_STACK_LINE(1202)
-																	{
-																	}
-																	HX_STACK_LINE(1202)
-																	{
-																		HX_STACK_LINE(1202)
-																		if (((o1->outer != null()))){
-																			HX_STACK_LINE(1202)
-																			o1->outer->zpp_inner = null();
-																			HX_STACK_LINE(1202)
-																			o1->outer = null();
-																		}
-																		HX_STACK_LINE(1202)
-																		o1->_isimmutable = null();
-																		HX_STACK_LINE(1202)
-																		o1->_validate = null();
-																		HX_STACK_LINE(1202)
-																		o1->_invalidate = null();
-																	}
-																	HX_STACK_LINE(1202)
-																	o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-																	HX_STACK_LINE(1202)
-																	::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
-																}
-															}
-															HX_STACK_LINE(1202)
-															o->wrap = null();
+															hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 														}
 														HX_STACK_LINE(1202)
-														o->prev = o->next = null();
+														if (((_this1->_isimmutable != null()))){
+															HX_STACK_LINE(1202)
+															_this1->_isimmutable();
+														}
 													}
-													HX_STACK_LINE(1203)
-													o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
-													HX_STACK_LINE(1204)
-													::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
-												}
-												HX_STACK_LINE(1209)
-												return null();
-											}
-											return null();
-										}
-									};
-									struct _Function_7_2{
-										inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_CutInt &j){
-											HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1211);
-											{
-												HX_STACK_LINE(1212)
-												::zpp_nape::geom::ZPP_GeomVert retnodes = j->end->prev;		HX_STACK_VAR(retnodes,"retnodes");
-												HX_STACK_LINE(1213)
-												j->end->prev->next = j->end->next;
-												HX_STACK_LINE(1214)
-												j->end->next->prev = j->end->prev;
-												HX_STACK_LINE(1215)
-												j->end->next = j->end->prev = null();
-												HX_STACK_LINE(1216)
-												{
-													HX_STACK_LINE(1217)
-													::zpp_nape::geom::ZPP_GeomVert o = j->end;		HX_STACK_VAR(o,"o");
-													HX_STACK_LINE(1218)
+													HX_STACK_LINE(1202)
+													if ((_this->zpp_inner->_inuse)){
+														HX_STACK_LINE(1202)
+														hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
+													}
+													HX_STACK_LINE(1202)
+													::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
+													HX_STACK_LINE(1202)
+													_this->zpp_inner->outer = null();
+													HX_STACK_LINE(1202)
+													_this->zpp_inner = null();
+													HX_STACK_LINE(1202)
 													{
+														HX_STACK_LINE(1202)
+														::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
+														HX_STACK_LINE(1202)
+														o1->zpp_pool = null();
+														HX_STACK_LINE(1202)
+														if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
+															HX_STACK_LINE(1202)
+															::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
+														}
+														else{
+															HX_STACK_LINE(1202)
+															::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
+														}
+														HX_STACK_LINE(1202)
+														::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
+														HX_STACK_LINE(1202)
+														o1->zpp_disp = true;
+													}
+													HX_STACK_LINE(1202)
+													{
+														HX_STACK_LINE(1202)
+														::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
+														HX_STACK_LINE(1202)
+														{
+															HX_STACK_LINE(1202)
+															if (((o1->outer != null()))){
+																HX_STACK_LINE(1202)
+																o1->outer->zpp_inner = null();
+																HX_STACK_LINE(1202)
+																o1->outer = null();
+															}
+															HX_STACK_LINE(1202)
+															o1->_isimmutable = null();
+															HX_STACK_LINE(1202)
+															o1->_validate = null();
+															HX_STACK_LINE(1202)
+															o1->_invalidate = null();
+														}
+														HX_STACK_LINE(1202)
+														o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
+														HX_STACK_LINE(1202)
+														::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
+													}
+												}
+												HX_STACK_LINE(1202)
+												o->wrap = null();
+											}
+											HX_STACK_LINE(1202)
+											o->prev = o->next = null();
+										}
+										HX_STACK_LINE(1203)
+										o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
+										HX_STACK_LINE(1204)
+										::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
+									}
+									HX_STACK_LINE(1209)
+									return null();
+								}
+								return null();
+							}
+						};
+						struct _Function_6_2{
+							inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_CutInt &j){
+								HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1211);
+								{
+									HX_STACK_LINE(1212)
+									::zpp_nape::geom::ZPP_GeomVert retnodes = j->end->prev;		HX_STACK_VAR(retnodes,"retnodes");
+									HX_STACK_LINE(1213)
+									j->end->prev->next = j->end->next;
+									HX_STACK_LINE(1214)
+									j->end->next->prev = j->end->prev;
+									HX_STACK_LINE(1215)
+									j->end->next = j->end->prev = null();
+									HX_STACK_LINE(1216)
+									{
+										HX_STACK_LINE(1217)
+										::zpp_nape::geom::ZPP_GeomVert o = j->end;		HX_STACK_VAR(o,"o");
+										HX_STACK_LINE(1226)
+										{
+											HX_STACK_LINE(1226)
+											if (((o->wrap != null()))){
+												HX_STACK_LINE(1226)
+												o->wrap->zpp_inner->_inuse = false;
+												HX_STACK_LINE(1226)
+												{
+													HX_STACK_LINE(1226)
+													::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
+													HX_STACK_LINE(1226)
+													if (((bool((_this != null())) && bool(_this->zpp_disp)))){
+														HX_STACK_LINE(1226)
+														hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 													}
 													HX_STACK_LINE(1226)
 													{
 														HX_STACK_LINE(1226)
-														if (((o->wrap != null()))){
+														::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
+														HX_STACK_LINE(1226)
+														if ((_this1->_immutable)){
 															HX_STACK_LINE(1226)
-															o->wrap->zpp_inner->_inuse = false;
-															HX_STACK_LINE(1226)
-															{
-																HX_STACK_LINE(1226)
-																::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
-																HX_STACK_LINE(1226)
-																if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-																	HX_STACK_LINE(1226)
-																	hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-																}
-																HX_STACK_LINE(1226)
-																{
-																	HX_STACK_LINE(1226)
-																	::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-																	HX_STACK_LINE(1226)
-																	if ((_this1->_immutable)){
-																		HX_STACK_LINE(1226)
-																		hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-																	}
-																	HX_STACK_LINE(1226)
-																	if (((_this1->_isimmutable_dyn() != null()))){
-																		HX_STACK_LINE(1226)
-																		_this1->_isimmutable();
-																	}
-																}
-																HX_STACK_LINE(1226)
-																if ((_this->zpp_inner->_inuse)){
-																	HX_STACK_LINE(1226)
-																	hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-																}
-																HX_STACK_LINE(1226)
-																::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
-																HX_STACK_LINE(1226)
-																_this->zpp_inner->outer = null();
-																HX_STACK_LINE(1226)
-																_this->zpp_inner = null();
-																HX_STACK_LINE(1226)
-																{
-																	HX_STACK_LINE(1226)
-																	::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
-																	HX_STACK_LINE(1226)
-																	{
-																	}
-																	HX_STACK_LINE(1226)
-																	o1->zpp_pool = null();
-																	HX_STACK_LINE(1226)
-																	if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-																		HX_STACK_LINE(1226)
-																		::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
-																	}
-																	else{
-																		HX_STACK_LINE(1226)
-																		::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
-																	}
-																	HX_STACK_LINE(1226)
-																	::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
-																	HX_STACK_LINE(1226)
-																	o1->zpp_disp = true;
-																}
-																HX_STACK_LINE(1226)
-																{
-																	HX_STACK_LINE(1226)
-																	::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-																	HX_STACK_LINE(1226)
-																	{
-																	}
-																	HX_STACK_LINE(1226)
-																	{
-																		HX_STACK_LINE(1226)
-																		if (((o1->outer != null()))){
-																			HX_STACK_LINE(1226)
-																			o1->outer->zpp_inner = null();
-																			HX_STACK_LINE(1226)
-																			o1->outer = null();
-																		}
-																		HX_STACK_LINE(1226)
-																		o1->_isimmutable = null();
-																		HX_STACK_LINE(1226)
-																		o1->_validate = null();
-																		HX_STACK_LINE(1226)
-																		o1->_invalidate = null();
-																	}
-																	HX_STACK_LINE(1226)
-																	o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-																	HX_STACK_LINE(1226)
-																	::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
-																}
-															}
-															HX_STACK_LINE(1226)
-															o->wrap = null();
+															hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 														}
 														HX_STACK_LINE(1226)
-														o->prev = o->next = null();
+														if (((_this1->_isimmutable != null()))){
+															HX_STACK_LINE(1226)
+															_this1->_isimmutable();
+														}
 													}
-													HX_STACK_LINE(1227)
-													o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
-													HX_STACK_LINE(1228)
-													::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
+													HX_STACK_LINE(1226)
+													if ((_this->zpp_inner->_inuse)){
+														HX_STACK_LINE(1226)
+														hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
+													}
+													HX_STACK_LINE(1226)
+													::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
+													HX_STACK_LINE(1226)
+													_this->zpp_inner->outer = null();
+													HX_STACK_LINE(1226)
+													_this->zpp_inner = null();
+													HX_STACK_LINE(1226)
+													{
+														HX_STACK_LINE(1226)
+														::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
+														HX_STACK_LINE(1226)
+														o1->zpp_pool = null();
+														HX_STACK_LINE(1226)
+														if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
+															HX_STACK_LINE(1226)
+															::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
+														}
+														else{
+															HX_STACK_LINE(1226)
+															::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
+														}
+														HX_STACK_LINE(1226)
+														::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
+														HX_STACK_LINE(1226)
+														o1->zpp_disp = true;
+													}
+													HX_STACK_LINE(1226)
+													{
+														HX_STACK_LINE(1226)
+														::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
+														HX_STACK_LINE(1226)
+														{
+															HX_STACK_LINE(1226)
+															if (((o1->outer != null()))){
+																HX_STACK_LINE(1226)
+																o1->outer->zpp_inner = null();
+																HX_STACK_LINE(1226)
+																o1->outer = null();
+															}
+															HX_STACK_LINE(1226)
+															o1->_isimmutable = null();
+															HX_STACK_LINE(1226)
+															o1->_validate = null();
+															HX_STACK_LINE(1226)
+															o1->_invalidate = null();
+														}
+														HX_STACK_LINE(1226)
+														o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
+														HX_STACK_LINE(1226)
+														::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
+													}
 												}
-												HX_STACK_LINE(1233)
-												j->end = null();
-												HX_STACK_LINE(1234)
-												return retnodes;
+												HX_STACK_LINE(1226)
+												o->wrap = null();
 											}
-											return null();
+											HX_STACK_LINE(1226)
+											o->prev = o->next = null();
 										}
-									};
-									HX_STACK_LINE(1190)
-									return (  (((bool((j->end != null())) && bool((j->end->prev == j->end))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_7_1::Block(j)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_7_2::Block(j)) );
+										HX_STACK_LINE(1227)
+										o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
+										HX_STACK_LINE(1228)
+										::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
+									}
+									HX_STACK_LINE(1233)
+									j->end = null();
+									HX_STACK_LINE(1234)
+									return retnodes;
 								}
 								return null();
 							}
 						};
 						HX_STACK_LINE(1181)
-						j->end = _Function_6_1::Block(j);
+						j->end = (  (((bool((j->end != null())) && bool((j->end->prev == j->end))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_6_1::Block(j)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_6_2::Block(j)) );
 					}
 					else{
 						HX_STACK_LINE(1239)
@@ -2664,246 +2522,222 @@ while(((numMerges > (int)1)));
 						HX_STACK_LINE(1241)
 						j->start->y = n->y;
 						HX_STACK_LINE(1242)
-						{
-							HX_STACK_LINE(1243)
+						if (((bool((n != null())) && bool((n->prev == n))))){
+							HX_STACK_LINE(1252)
+							n->next = n->prev = null();
+							HX_STACK_LINE(1253)
 							{
-							}
-							HX_STACK_LINE(1251)
-							if (((bool((n != null())) && bool((n->prev == n))))){
-								HX_STACK_LINE(1252)
-								n->next = n->prev = null();
-								HX_STACK_LINE(1253)
+								HX_STACK_LINE(1254)
+								::zpp_nape::geom::ZPP_GeomVert o = n;		HX_STACK_VAR(o,"o");
+								HX_STACK_LINE(1263)
 								{
-									HX_STACK_LINE(1254)
-									::zpp_nape::geom::ZPP_GeomVert o = n;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1255)
-									{
+									HX_STACK_LINE(1263)
+									if (((o->wrap != null()))){
+										HX_STACK_LINE(1263)
+										o->wrap->zpp_inner->_inuse = false;
+										HX_STACK_LINE(1263)
+										{
+											HX_STACK_LINE(1263)
+											::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
+											HX_STACK_LINE(1263)
+											if (((bool((_this != null())) && bool(_this->zpp_disp)))){
+												HX_STACK_LINE(1263)
+												hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
+											}
+											HX_STACK_LINE(1263)
+											{
+												HX_STACK_LINE(1263)
+												::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
+												HX_STACK_LINE(1263)
+												if ((_this1->_immutable)){
+													HX_STACK_LINE(1263)
+													hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
+												}
+												HX_STACK_LINE(1263)
+												if (((_this1->_isimmutable != null()))){
+													HX_STACK_LINE(1263)
+													_this1->_isimmutable();
+												}
+											}
+											HX_STACK_LINE(1263)
+											if ((_this->zpp_inner->_inuse)){
+												HX_STACK_LINE(1263)
+												hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
+											}
+											HX_STACK_LINE(1263)
+											::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
+											HX_STACK_LINE(1263)
+											_this->zpp_inner->outer = null();
+											HX_STACK_LINE(1263)
+											_this->zpp_inner = null();
+											HX_STACK_LINE(1263)
+											{
+												HX_STACK_LINE(1263)
+												::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
+												HX_STACK_LINE(1263)
+												o1->zpp_pool = null();
+												HX_STACK_LINE(1263)
+												if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
+													HX_STACK_LINE(1263)
+													::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
+												}
+												else{
+													HX_STACK_LINE(1263)
+													::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
+												}
+												HX_STACK_LINE(1263)
+												::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
+												HX_STACK_LINE(1263)
+												o1->zpp_disp = true;
+											}
+											HX_STACK_LINE(1263)
+											{
+												HX_STACK_LINE(1263)
+												::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
+												HX_STACK_LINE(1263)
+												{
+													HX_STACK_LINE(1263)
+													if (((o1->outer != null()))){
+														HX_STACK_LINE(1263)
+														o1->outer->zpp_inner = null();
+														HX_STACK_LINE(1263)
+														o1->outer = null();
+													}
+													HX_STACK_LINE(1263)
+													o1->_isimmutable = null();
+													HX_STACK_LINE(1263)
+													o1->_validate = null();
+													HX_STACK_LINE(1263)
+													o1->_invalidate = null();
+												}
+												HX_STACK_LINE(1263)
+												o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
+												HX_STACK_LINE(1263)
+												::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
+											}
+										}
+										HX_STACK_LINE(1263)
+										o->wrap = null();
 									}
 									HX_STACK_LINE(1263)
-									{
-										HX_STACK_LINE(1263)
-										if (((o->wrap != null()))){
-											HX_STACK_LINE(1263)
-											o->wrap->zpp_inner->_inuse = false;
-											HX_STACK_LINE(1263)
+									o->prev = o->next = null();
+								}
+								HX_STACK_LINE(1264)
+								o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
+								HX_STACK_LINE(1265)
+								::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
+							}
+							HX_STACK_LINE(1270)
+							n = null();
+						}
+						else{
+							HX_STACK_LINE(1273)
+							n->prev->next = n->next;
+							HX_STACK_LINE(1274)
+							n->next->prev = n->prev;
+							HX_STACK_LINE(1275)
+							n->next = n->prev = null();
+							HX_STACK_LINE(1276)
+							{
+								HX_STACK_LINE(1277)
+								::zpp_nape::geom::ZPP_GeomVert o = n;		HX_STACK_VAR(o,"o");
+								HX_STACK_LINE(1286)
+								{
+									HX_STACK_LINE(1286)
+									if (((o->wrap != null()))){
+										HX_STACK_LINE(1286)
+										o->wrap->zpp_inner->_inuse = false;
+										HX_STACK_LINE(1286)
+										{
+											HX_STACK_LINE(1286)
+											::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
+											HX_STACK_LINE(1286)
+											if (((bool((_this != null())) && bool(_this->zpp_disp)))){
+												HX_STACK_LINE(1286)
+												hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
+											}
+											HX_STACK_LINE(1286)
 											{
-												HX_STACK_LINE(1263)
-												::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
-												HX_STACK_LINE(1263)
-												if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-													HX_STACK_LINE(1263)
-													hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
+												HX_STACK_LINE(1286)
+												::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
+												HX_STACK_LINE(1286)
+												if ((_this1->_immutable)){
+													HX_STACK_LINE(1286)
+													hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 												}
-												HX_STACK_LINE(1263)
-												{
-													HX_STACK_LINE(1263)
-													::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-													HX_STACK_LINE(1263)
-													if ((_this1->_immutable)){
-														HX_STACK_LINE(1263)
-														hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-													}
-													HX_STACK_LINE(1263)
-													if (((_this1->_isimmutable_dyn() != null()))){
-														HX_STACK_LINE(1263)
-														_this1->_isimmutable();
-													}
-												}
-												HX_STACK_LINE(1263)
-												if ((_this->zpp_inner->_inuse)){
-													HX_STACK_LINE(1263)
-													hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-												}
-												HX_STACK_LINE(1263)
-												::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
-												HX_STACK_LINE(1263)
-												_this->zpp_inner->outer = null();
-												HX_STACK_LINE(1263)
-												_this->zpp_inner = null();
-												HX_STACK_LINE(1263)
-												{
-													HX_STACK_LINE(1263)
-													::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
-													HX_STACK_LINE(1263)
-													{
-													}
-													HX_STACK_LINE(1263)
-													o1->zpp_pool = null();
-													HX_STACK_LINE(1263)
-													if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-														HX_STACK_LINE(1263)
-														::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
-													}
-													else{
-														HX_STACK_LINE(1263)
-														::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
-													}
-													HX_STACK_LINE(1263)
-													::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
-													HX_STACK_LINE(1263)
-													o1->zpp_disp = true;
-												}
-												HX_STACK_LINE(1263)
-												{
-													HX_STACK_LINE(1263)
-													::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-													HX_STACK_LINE(1263)
-													{
-													}
-													HX_STACK_LINE(1263)
-													{
-														HX_STACK_LINE(1263)
-														if (((o1->outer != null()))){
-															HX_STACK_LINE(1263)
-															o1->outer->zpp_inner = null();
-															HX_STACK_LINE(1263)
-															o1->outer = null();
-														}
-														HX_STACK_LINE(1263)
-														o1->_isimmutable = null();
-														HX_STACK_LINE(1263)
-														o1->_validate = null();
-														HX_STACK_LINE(1263)
-														o1->_invalidate = null();
-													}
-													HX_STACK_LINE(1263)
-													o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-													HX_STACK_LINE(1263)
-													::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
+												HX_STACK_LINE(1286)
+												if (((_this1->_isimmutable != null()))){
+													HX_STACK_LINE(1286)
+													_this1->_isimmutable();
 												}
 											}
-											HX_STACK_LINE(1263)
-											o->wrap = null();
+											HX_STACK_LINE(1286)
+											if ((_this->zpp_inner->_inuse)){
+												HX_STACK_LINE(1286)
+												hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
+											}
+											HX_STACK_LINE(1286)
+											::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
+											HX_STACK_LINE(1286)
+											_this->zpp_inner->outer = null();
+											HX_STACK_LINE(1286)
+											_this->zpp_inner = null();
+											HX_STACK_LINE(1286)
+											{
+												HX_STACK_LINE(1286)
+												::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
+												HX_STACK_LINE(1286)
+												o1->zpp_pool = null();
+												HX_STACK_LINE(1286)
+												if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
+													HX_STACK_LINE(1286)
+													::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
+												}
+												else{
+													HX_STACK_LINE(1286)
+													::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
+												}
+												HX_STACK_LINE(1286)
+												::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
+												HX_STACK_LINE(1286)
+												o1->zpp_disp = true;
+											}
+											HX_STACK_LINE(1286)
+											{
+												HX_STACK_LINE(1286)
+												::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
+												HX_STACK_LINE(1286)
+												{
+													HX_STACK_LINE(1286)
+													if (((o1->outer != null()))){
+														HX_STACK_LINE(1286)
+														o1->outer->zpp_inner = null();
+														HX_STACK_LINE(1286)
+														o1->outer = null();
+													}
+													HX_STACK_LINE(1286)
+													o1->_isimmutable = null();
+													HX_STACK_LINE(1286)
+													o1->_validate = null();
+													HX_STACK_LINE(1286)
+													o1->_invalidate = null();
+												}
+												HX_STACK_LINE(1286)
+												o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
+												HX_STACK_LINE(1286)
+												::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
+											}
 										}
-										HX_STACK_LINE(1263)
-										o->prev = o->next = null();
-									}
-									HX_STACK_LINE(1264)
-									o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
-									HX_STACK_LINE(1265)
-									::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
-								}
-								HX_STACK_LINE(1270)
-								n = null();
-							}
-							else{
-								HX_STACK_LINE(1273)
-								n->prev->next = n->next;
-								HX_STACK_LINE(1274)
-								n->next->prev = n->prev;
-								HX_STACK_LINE(1275)
-								n->next = n->prev = null();
-								HX_STACK_LINE(1276)
-								{
-									HX_STACK_LINE(1277)
-									::zpp_nape::geom::ZPP_GeomVert o = n;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1278)
-									{
+										HX_STACK_LINE(1286)
+										o->wrap = null();
 									}
 									HX_STACK_LINE(1286)
-									{
-										HX_STACK_LINE(1286)
-										if (((o->wrap != null()))){
-											HX_STACK_LINE(1286)
-											o->wrap->zpp_inner->_inuse = false;
-											HX_STACK_LINE(1286)
-											{
-												HX_STACK_LINE(1286)
-												::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
-												HX_STACK_LINE(1286)
-												if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-													HX_STACK_LINE(1286)
-													hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-												}
-												HX_STACK_LINE(1286)
-												{
-													HX_STACK_LINE(1286)
-													::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-													HX_STACK_LINE(1286)
-													if ((_this1->_immutable)){
-														HX_STACK_LINE(1286)
-														hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-													}
-													HX_STACK_LINE(1286)
-													if (((_this1->_isimmutable_dyn() != null()))){
-														HX_STACK_LINE(1286)
-														_this1->_isimmutable();
-													}
-												}
-												HX_STACK_LINE(1286)
-												if ((_this->zpp_inner->_inuse)){
-													HX_STACK_LINE(1286)
-													hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-												}
-												HX_STACK_LINE(1286)
-												::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
-												HX_STACK_LINE(1286)
-												_this->zpp_inner->outer = null();
-												HX_STACK_LINE(1286)
-												_this->zpp_inner = null();
-												HX_STACK_LINE(1286)
-												{
-													HX_STACK_LINE(1286)
-													::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
-													HX_STACK_LINE(1286)
-													{
-													}
-													HX_STACK_LINE(1286)
-													o1->zpp_pool = null();
-													HX_STACK_LINE(1286)
-													if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-														HX_STACK_LINE(1286)
-														::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
-													}
-													else{
-														HX_STACK_LINE(1286)
-														::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
-													}
-													HX_STACK_LINE(1286)
-													::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
-													HX_STACK_LINE(1286)
-													o1->zpp_disp = true;
-												}
-												HX_STACK_LINE(1286)
-												{
-													HX_STACK_LINE(1286)
-													::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-													HX_STACK_LINE(1286)
-													{
-													}
-													HX_STACK_LINE(1286)
-													{
-														HX_STACK_LINE(1286)
-														if (((o1->outer != null()))){
-															HX_STACK_LINE(1286)
-															o1->outer->zpp_inner = null();
-															HX_STACK_LINE(1286)
-															o1->outer = null();
-														}
-														HX_STACK_LINE(1286)
-														o1->_isimmutable = null();
-														HX_STACK_LINE(1286)
-														o1->_validate = null();
-														HX_STACK_LINE(1286)
-														o1->_invalidate = null();
-													}
-													HX_STACK_LINE(1286)
-													o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-													HX_STACK_LINE(1286)
-													::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
-												}
-											}
-											HX_STACK_LINE(1286)
-											o->wrap = null();
-										}
-										HX_STACK_LINE(1286)
-										o->prev = o->next = null();
-									}
-									HX_STACK_LINE(1287)
-									o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
-									HX_STACK_LINE(1288)
-									::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
+									o->prev = o->next = null();
 								}
+								HX_STACK_LINE(1287)
+								o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
+								HX_STACK_LINE(1288)
+								::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
 							}
 						}
 					}
@@ -3021,273 +2855,242 @@ while(((numMerges > (int)1)));
 				if (((bool(j->virtualint) && bool(!(i1->virtualint))))){
 					struct _Function_5_1{
 						inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_CutInt &i1){
-							HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1353);
+							HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1362);
 							{
-								HX_STACK_LINE(1354)
+								HX_STACK_LINE(1363)
+								i1->end->next = i1->end->prev = null();
+								HX_STACK_LINE(1364)
 								{
-								}
-								struct _Function_6_1{
-									inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_CutInt &i1){
-										HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1362);
-										{
-											HX_STACK_LINE(1363)
-											i1->end->next = i1->end->prev = null();
-											HX_STACK_LINE(1364)
+									HX_STACK_LINE(1365)
+									::zpp_nape::geom::ZPP_GeomVert o = i1->end;		HX_STACK_VAR(o,"o");
+									HX_STACK_LINE(1374)
+									{
+										HX_STACK_LINE(1374)
+										if (((o->wrap != null()))){
+											HX_STACK_LINE(1374)
+											o->wrap->zpp_inner->_inuse = false;
+											HX_STACK_LINE(1374)
 											{
-												HX_STACK_LINE(1365)
-												::zpp_nape::geom::ZPP_GeomVert o = i1->end;		HX_STACK_VAR(o,"o");
-												HX_STACK_LINE(1366)
-												{
+												HX_STACK_LINE(1374)
+												::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
+												HX_STACK_LINE(1374)
+												if (((bool((_this != null())) && bool(_this->zpp_disp)))){
+													HX_STACK_LINE(1374)
+													hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 												}
 												HX_STACK_LINE(1374)
 												{
 													HX_STACK_LINE(1374)
-													if (((o->wrap != null()))){
+													::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
+													HX_STACK_LINE(1374)
+													if ((_this1->_immutable)){
 														HX_STACK_LINE(1374)
-														o->wrap->zpp_inner->_inuse = false;
-														HX_STACK_LINE(1374)
-														{
-															HX_STACK_LINE(1374)
-															::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
-															HX_STACK_LINE(1374)
-															if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-																HX_STACK_LINE(1374)
-																hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-															}
-															HX_STACK_LINE(1374)
-															{
-																HX_STACK_LINE(1374)
-																::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-																HX_STACK_LINE(1374)
-																if ((_this1->_immutable)){
-																	HX_STACK_LINE(1374)
-																	hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-																}
-																HX_STACK_LINE(1374)
-																if (((_this1->_isimmutable_dyn() != null()))){
-																	HX_STACK_LINE(1374)
-																	_this1->_isimmutable();
-																}
-															}
-															HX_STACK_LINE(1374)
-															if ((_this->zpp_inner->_inuse)){
-																HX_STACK_LINE(1374)
-																hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-															}
-															HX_STACK_LINE(1374)
-															::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
-															HX_STACK_LINE(1374)
-															_this->zpp_inner->outer = null();
-															HX_STACK_LINE(1374)
-															_this->zpp_inner = null();
-															HX_STACK_LINE(1374)
-															{
-																HX_STACK_LINE(1374)
-																::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
-																HX_STACK_LINE(1374)
-																{
-																}
-																HX_STACK_LINE(1374)
-																o1->zpp_pool = null();
-																HX_STACK_LINE(1374)
-																if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-																	HX_STACK_LINE(1374)
-																	::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
-																}
-																else{
-																	HX_STACK_LINE(1374)
-																	::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
-																}
-																HX_STACK_LINE(1374)
-																::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
-																HX_STACK_LINE(1374)
-																o1->zpp_disp = true;
-															}
-															HX_STACK_LINE(1374)
-															{
-																HX_STACK_LINE(1374)
-																::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-																HX_STACK_LINE(1374)
-																{
-																}
-																HX_STACK_LINE(1374)
-																{
-																	HX_STACK_LINE(1374)
-																	if (((o1->outer != null()))){
-																		HX_STACK_LINE(1374)
-																		o1->outer->zpp_inner = null();
-																		HX_STACK_LINE(1374)
-																		o1->outer = null();
-																	}
-																	HX_STACK_LINE(1374)
-																	o1->_isimmutable = null();
-																	HX_STACK_LINE(1374)
-																	o1->_validate = null();
-																	HX_STACK_LINE(1374)
-																	o1->_invalidate = null();
-																}
-																HX_STACK_LINE(1374)
-																o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-																HX_STACK_LINE(1374)
-																::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
-															}
-														}
-														HX_STACK_LINE(1374)
-														o->wrap = null();
+														hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 													}
 													HX_STACK_LINE(1374)
-													o->prev = o->next = null();
+													if (((_this1->_isimmutable != null()))){
+														HX_STACK_LINE(1374)
+														_this1->_isimmutable();
+													}
 												}
-												HX_STACK_LINE(1375)
-												o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
-												HX_STACK_LINE(1376)
-												::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
-											}
-											HX_STACK_LINE(1381)
-											return null();
-										}
-										return null();
-									}
-								};
-								struct _Function_6_2{
-									inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_CutInt &i1){
-										HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1383);
-										{
-											HX_STACK_LINE(1384)
-											::zpp_nape::geom::ZPP_GeomVert retnodes = i1->end->prev;		HX_STACK_VAR(retnodes,"retnodes");
-											HX_STACK_LINE(1385)
-											i1->end->prev->next = i1->end->next;
-											HX_STACK_LINE(1386)
-											i1->end->next->prev = i1->end->prev;
-											HX_STACK_LINE(1387)
-											i1->end->next = i1->end->prev = null();
-											HX_STACK_LINE(1388)
-											{
-												HX_STACK_LINE(1389)
-												::zpp_nape::geom::ZPP_GeomVert o = i1->end;		HX_STACK_VAR(o,"o");
-												HX_STACK_LINE(1390)
+												HX_STACK_LINE(1374)
+												if ((_this->zpp_inner->_inuse)){
+													HX_STACK_LINE(1374)
+													hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
+												}
+												HX_STACK_LINE(1374)
+												::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
+												HX_STACK_LINE(1374)
+												_this->zpp_inner->outer = null();
+												HX_STACK_LINE(1374)
+												_this->zpp_inner = null();
+												HX_STACK_LINE(1374)
 												{
+													HX_STACK_LINE(1374)
+													::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
+													HX_STACK_LINE(1374)
+													o1->zpp_pool = null();
+													HX_STACK_LINE(1374)
+													if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
+														HX_STACK_LINE(1374)
+														::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
+													}
+													else{
+														HX_STACK_LINE(1374)
+														::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
+													}
+													HX_STACK_LINE(1374)
+													::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
+													HX_STACK_LINE(1374)
+													o1->zpp_disp = true;
+												}
+												HX_STACK_LINE(1374)
+												{
+													HX_STACK_LINE(1374)
+													::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
+													HX_STACK_LINE(1374)
+													{
+														HX_STACK_LINE(1374)
+														if (((o1->outer != null()))){
+															HX_STACK_LINE(1374)
+															o1->outer->zpp_inner = null();
+															HX_STACK_LINE(1374)
+															o1->outer = null();
+														}
+														HX_STACK_LINE(1374)
+														o1->_isimmutable = null();
+														HX_STACK_LINE(1374)
+														o1->_validate = null();
+														HX_STACK_LINE(1374)
+														o1->_invalidate = null();
+													}
+													HX_STACK_LINE(1374)
+													o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
+													HX_STACK_LINE(1374)
+													::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
+												}
+											}
+											HX_STACK_LINE(1374)
+											o->wrap = null();
+										}
+										HX_STACK_LINE(1374)
+										o->prev = o->next = null();
+									}
+									HX_STACK_LINE(1375)
+									o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
+									HX_STACK_LINE(1376)
+									::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
+								}
+								HX_STACK_LINE(1381)
+								return null();
+							}
+							return null();
+						}
+					};
+					struct _Function_5_2{
+						inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_CutInt &i1){
+							HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1383);
+							{
+								HX_STACK_LINE(1384)
+								::zpp_nape::geom::ZPP_GeomVert retnodes = i1->end->prev;		HX_STACK_VAR(retnodes,"retnodes");
+								HX_STACK_LINE(1385)
+								i1->end->prev->next = i1->end->next;
+								HX_STACK_LINE(1386)
+								i1->end->next->prev = i1->end->prev;
+								HX_STACK_LINE(1387)
+								i1->end->next = i1->end->prev = null();
+								HX_STACK_LINE(1388)
+								{
+									HX_STACK_LINE(1389)
+									::zpp_nape::geom::ZPP_GeomVert o = i1->end;		HX_STACK_VAR(o,"o");
+									HX_STACK_LINE(1398)
+									{
+										HX_STACK_LINE(1398)
+										if (((o->wrap != null()))){
+											HX_STACK_LINE(1398)
+											o->wrap->zpp_inner->_inuse = false;
+											HX_STACK_LINE(1398)
+											{
+												HX_STACK_LINE(1398)
+												::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
+												HX_STACK_LINE(1398)
+												if (((bool((_this != null())) && bool(_this->zpp_disp)))){
+													HX_STACK_LINE(1398)
+													hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 												}
 												HX_STACK_LINE(1398)
 												{
 													HX_STACK_LINE(1398)
-													if (((o->wrap != null()))){
+													::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
+													HX_STACK_LINE(1398)
+													if ((_this1->_immutable)){
 														HX_STACK_LINE(1398)
-														o->wrap->zpp_inner->_inuse = false;
-														HX_STACK_LINE(1398)
-														{
-															HX_STACK_LINE(1398)
-															::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
-															HX_STACK_LINE(1398)
-															if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-																HX_STACK_LINE(1398)
-																hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-															}
-															HX_STACK_LINE(1398)
-															{
-																HX_STACK_LINE(1398)
-																::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-																HX_STACK_LINE(1398)
-																if ((_this1->_immutable)){
-																	HX_STACK_LINE(1398)
-																	hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-																}
-																HX_STACK_LINE(1398)
-																if (((_this1->_isimmutable_dyn() != null()))){
-																	HX_STACK_LINE(1398)
-																	_this1->_isimmutable();
-																}
-															}
-															HX_STACK_LINE(1398)
-															if ((_this->zpp_inner->_inuse)){
-																HX_STACK_LINE(1398)
-																hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-															}
-															HX_STACK_LINE(1398)
-															::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
-															HX_STACK_LINE(1398)
-															_this->zpp_inner->outer = null();
-															HX_STACK_LINE(1398)
-															_this->zpp_inner = null();
-															HX_STACK_LINE(1398)
-															{
-																HX_STACK_LINE(1398)
-																::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
-																HX_STACK_LINE(1398)
-																{
-																}
-																HX_STACK_LINE(1398)
-																o1->zpp_pool = null();
-																HX_STACK_LINE(1398)
-																if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-																	HX_STACK_LINE(1398)
-																	::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
-																}
-																else{
-																	HX_STACK_LINE(1398)
-																	::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
-																}
-																HX_STACK_LINE(1398)
-																::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
-																HX_STACK_LINE(1398)
-																o1->zpp_disp = true;
-															}
-															HX_STACK_LINE(1398)
-															{
-																HX_STACK_LINE(1398)
-																::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-																HX_STACK_LINE(1398)
-																{
-																}
-																HX_STACK_LINE(1398)
-																{
-																	HX_STACK_LINE(1398)
-																	if (((o1->outer != null()))){
-																		HX_STACK_LINE(1398)
-																		o1->outer->zpp_inner = null();
-																		HX_STACK_LINE(1398)
-																		o1->outer = null();
-																	}
-																	HX_STACK_LINE(1398)
-																	o1->_isimmutable = null();
-																	HX_STACK_LINE(1398)
-																	o1->_validate = null();
-																	HX_STACK_LINE(1398)
-																	o1->_invalidate = null();
-																}
-																HX_STACK_LINE(1398)
-																o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-																HX_STACK_LINE(1398)
-																::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
-															}
-														}
-														HX_STACK_LINE(1398)
-														o->wrap = null();
+														hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 													}
 													HX_STACK_LINE(1398)
-													o->prev = o->next = null();
+													if (((_this1->_isimmutable != null()))){
+														HX_STACK_LINE(1398)
+														_this1->_isimmutable();
+													}
 												}
-												HX_STACK_LINE(1399)
-												o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
-												HX_STACK_LINE(1400)
-												::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
+												HX_STACK_LINE(1398)
+												if ((_this->zpp_inner->_inuse)){
+													HX_STACK_LINE(1398)
+													hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
+												}
+												HX_STACK_LINE(1398)
+												::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
+												HX_STACK_LINE(1398)
+												_this->zpp_inner->outer = null();
+												HX_STACK_LINE(1398)
+												_this->zpp_inner = null();
+												HX_STACK_LINE(1398)
+												{
+													HX_STACK_LINE(1398)
+													::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
+													HX_STACK_LINE(1398)
+													o1->zpp_pool = null();
+													HX_STACK_LINE(1398)
+													if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
+														HX_STACK_LINE(1398)
+														::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
+													}
+													else{
+														HX_STACK_LINE(1398)
+														::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
+													}
+													HX_STACK_LINE(1398)
+													::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
+													HX_STACK_LINE(1398)
+													o1->zpp_disp = true;
+												}
+												HX_STACK_LINE(1398)
+												{
+													HX_STACK_LINE(1398)
+													::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
+													HX_STACK_LINE(1398)
+													{
+														HX_STACK_LINE(1398)
+														if (((o1->outer != null()))){
+															HX_STACK_LINE(1398)
+															o1->outer->zpp_inner = null();
+															HX_STACK_LINE(1398)
+															o1->outer = null();
+														}
+														HX_STACK_LINE(1398)
+														o1->_isimmutable = null();
+														HX_STACK_LINE(1398)
+														o1->_validate = null();
+														HX_STACK_LINE(1398)
+														o1->_invalidate = null();
+													}
+													HX_STACK_LINE(1398)
+													o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
+													HX_STACK_LINE(1398)
+													::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
+												}
 											}
-											HX_STACK_LINE(1405)
-											i1->end = null();
-											HX_STACK_LINE(1406)
-											return retnodes;
+											HX_STACK_LINE(1398)
+											o->wrap = null();
 										}
-										return null();
+										HX_STACK_LINE(1398)
+										o->prev = o->next = null();
 									}
-								};
-								HX_STACK_LINE(1362)
-								return (  (((bool((i1->end != null())) && bool((i1->end->prev == i1->end))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_6_1::Block(i1)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_6_2::Block(i1)) );
+									HX_STACK_LINE(1399)
+									o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
+									HX_STACK_LINE(1400)
+									::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
+								}
+								HX_STACK_LINE(1405)
+								i1->end = null();
+								HX_STACK_LINE(1406)
+								return retnodes;
 							}
 							return null();
 						}
 					};
 					HX_STACK_LINE(1353)
-					i1->end = _Function_5_1::Block(i1);
+					i1->end = (  (((bool((i1->end != null())) && bool((i1->end->prev == i1->end))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_5_1::Block(i1)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_5_2::Block(i1)) );
 					HX_STACK_LINE(1409)
 					if ((!(i1->vertex))){
 						HX_STACK_LINE(1409)
@@ -3298,273 +3101,242 @@ while(((numMerges > (int)1)));
 							i1->start->y = i1->end->y;
 							struct _Function_7_1{
 								inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_CutInt &i1){
-									HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1413);
+									HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1422);
 									{
-										HX_STACK_LINE(1414)
+										HX_STACK_LINE(1423)
+										i1->end->next = i1->end->prev = null();
+										HX_STACK_LINE(1424)
 										{
-										}
-										struct _Function_8_1{
-											inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_CutInt &i1){
-												HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1422);
-												{
-													HX_STACK_LINE(1423)
-													i1->end->next = i1->end->prev = null();
-													HX_STACK_LINE(1424)
+											HX_STACK_LINE(1425)
+											::zpp_nape::geom::ZPP_GeomVert o = i1->end;		HX_STACK_VAR(o,"o");
+											HX_STACK_LINE(1434)
+											{
+												HX_STACK_LINE(1434)
+												if (((o->wrap != null()))){
+													HX_STACK_LINE(1434)
+													o->wrap->zpp_inner->_inuse = false;
+													HX_STACK_LINE(1434)
 													{
-														HX_STACK_LINE(1425)
-														::zpp_nape::geom::ZPP_GeomVert o = i1->end;		HX_STACK_VAR(o,"o");
-														HX_STACK_LINE(1426)
-														{
+														HX_STACK_LINE(1434)
+														::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
+														HX_STACK_LINE(1434)
+														if (((bool((_this != null())) && bool(_this->zpp_disp)))){
+															HX_STACK_LINE(1434)
+															hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 														}
 														HX_STACK_LINE(1434)
 														{
 															HX_STACK_LINE(1434)
-															if (((o->wrap != null()))){
+															::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
+															HX_STACK_LINE(1434)
+															if ((_this1->_immutable)){
 																HX_STACK_LINE(1434)
-																o->wrap->zpp_inner->_inuse = false;
-																HX_STACK_LINE(1434)
-																{
-																	HX_STACK_LINE(1434)
-																	::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
-																	HX_STACK_LINE(1434)
-																	if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-																		HX_STACK_LINE(1434)
-																		hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-																	}
-																	HX_STACK_LINE(1434)
-																	{
-																		HX_STACK_LINE(1434)
-																		::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-																		HX_STACK_LINE(1434)
-																		if ((_this1->_immutable)){
-																			HX_STACK_LINE(1434)
-																			hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-																		}
-																		HX_STACK_LINE(1434)
-																		if (((_this1->_isimmutable_dyn() != null()))){
-																			HX_STACK_LINE(1434)
-																			_this1->_isimmutable();
-																		}
-																	}
-																	HX_STACK_LINE(1434)
-																	if ((_this->zpp_inner->_inuse)){
-																		HX_STACK_LINE(1434)
-																		hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-																	}
-																	HX_STACK_LINE(1434)
-																	::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
-																	HX_STACK_LINE(1434)
-																	_this->zpp_inner->outer = null();
-																	HX_STACK_LINE(1434)
-																	_this->zpp_inner = null();
-																	HX_STACK_LINE(1434)
-																	{
-																		HX_STACK_LINE(1434)
-																		::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
-																		HX_STACK_LINE(1434)
-																		{
-																		}
-																		HX_STACK_LINE(1434)
-																		o1->zpp_pool = null();
-																		HX_STACK_LINE(1434)
-																		if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-																			HX_STACK_LINE(1434)
-																			::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
-																		}
-																		else{
-																			HX_STACK_LINE(1434)
-																			::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
-																		}
-																		HX_STACK_LINE(1434)
-																		::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
-																		HX_STACK_LINE(1434)
-																		o1->zpp_disp = true;
-																	}
-																	HX_STACK_LINE(1434)
-																	{
-																		HX_STACK_LINE(1434)
-																		::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-																		HX_STACK_LINE(1434)
-																		{
-																		}
-																		HX_STACK_LINE(1434)
-																		{
-																			HX_STACK_LINE(1434)
-																			if (((o1->outer != null()))){
-																				HX_STACK_LINE(1434)
-																				o1->outer->zpp_inner = null();
-																				HX_STACK_LINE(1434)
-																				o1->outer = null();
-																			}
-																			HX_STACK_LINE(1434)
-																			o1->_isimmutable = null();
-																			HX_STACK_LINE(1434)
-																			o1->_validate = null();
-																			HX_STACK_LINE(1434)
-																			o1->_invalidate = null();
-																		}
-																		HX_STACK_LINE(1434)
-																		o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-																		HX_STACK_LINE(1434)
-																		::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
-																	}
-																}
-																HX_STACK_LINE(1434)
-																o->wrap = null();
+																hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 															}
 															HX_STACK_LINE(1434)
-															o->prev = o->next = null();
+															if (((_this1->_isimmutable != null()))){
+																HX_STACK_LINE(1434)
+																_this1->_isimmutable();
+															}
 														}
-														HX_STACK_LINE(1435)
-														o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
-														HX_STACK_LINE(1436)
-														::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
-													}
-													HX_STACK_LINE(1441)
-													return null();
-												}
-												return null();
-											}
-										};
-										struct _Function_8_2{
-											inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_CutInt &i1){
-												HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1443);
-												{
-													HX_STACK_LINE(1444)
-													::zpp_nape::geom::ZPP_GeomVert retnodes = i1->end->prev;		HX_STACK_VAR(retnodes,"retnodes");
-													HX_STACK_LINE(1445)
-													i1->end->prev->next = i1->end->next;
-													HX_STACK_LINE(1446)
-													i1->end->next->prev = i1->end->prev;
-													HX_STACK_LINE(1447)
-													i1->end->next = i1->end->prev = null();
-													HX_STACK_LINE(1448)
-													{
-														HX_STACK_LINE(1449)
-														::zpp_nape::geom::ZPP_GeomVert o = i1->end;		HX_STACK_VAR(o,"o");
-														HX_STACK_LINE(1450)
+														HX_STACK_LINE(1434)
+														if ((_this->zpp_inner->_inuse)){
+															HX_STACK_LINE(1434)
+															hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
+														}
+														HX_STACK_LINE(1434)
+														::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
+														HX_STACK_LINE(1434)
+														_this->zpp_inner->outer = null();
+														HX_STACK_LINE(1434)
+														_this->zpp_inner = null();
+														HX_STACK_LINE(1434)
 														{
+															HX_STACK_LINE(1434)
+															::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
+															HX_STACK_LINE(1434)
+															o1->zpp_pool = null();
+															HX_STACK_LINE(1434)
+															if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
+																HX_STACK_LINE(1434)
+																::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
+															}
+															else{
+																HX_STACK_LINE(1434)
+																::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
+															}
+															HX_STACK_LINE(1434)
+															::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
+															HX_STACK_LINE(1434)
+															o1->zpp_disp = true;
+														}
+														HX_STACK_LINE(1434)
+														{
+															HX_STACK_LINE(1434)
+															::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
+															HX_STACK_LINE(1434)
+															{
+																HX_STACK_LINE(1434)
+																if (((o1->outer != null()))){
+																	HX_STACK_LINE(1434)
+																	o1->outer->zpp_inner = null();
+																	HX_STACK_LINE(1434)
+																	o1->outer = null();
+																}
+																HX_STACK_LINE(1434)
+																o1->_isimmutable = null();
+																HX_STACK_LINE(1434)
+																o1->_validate = null();
+																HX_STACK_LINE(1434)
+																o1->_invalidate = null();
+															}
+															HX_STACK_LINE(1434)
+															o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
+															HX_STACK_LINE(1434)
+															::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
+														}
+													}
+													HX_STACK_LINE(1434)
+													o->wrap = null();
+												}
+												HX_STACK_LINE(1434)
+												o->prev = o->next = null();
+											}
+											HX_STACK_LINE(1435)
+											o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
+											HX_STACK_LINE(1436)
+											::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
+										}
+										HX_STACK_LINE(1441)
+										return null();
+									}
+									return null();
+								}
+							};
+							struct _Function_7_2{
+								inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_CutInt &i1){
+									HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1443);
+									{
+										HX_STACK_LINE(1444)
+										::zpp_nape::geom::ZPP_GeomVert retnodes = i1->end->prev;		HX_STACK_VAR(retnodes,"retnodes");
+										HX_STACK_LINE(1445)
+										i1->end->prev->next = i1->end->next;
+										HX_STACK_LINE(1446)
+										i1->end->next->prev = i1->end->prev;
+										HX_STACK_LINE(1447)
+										i1->end->next = i1->end->prev = null();
+										HX_STACK_LINE(1448)
+										{
+											HX_STACK_LINE(1449)
+											::zpp_nape::geom::ZPP_GeomVert o = i1->end;		HX_STACK_VAR(o,"o");
+											HX_STACK_LINE(1458)
+											{
+												HX_STACK_LINE(1458)
+												if (((o->wrap != null()))){
+													HX_STACK_LINE(1458)
+													o->wrap->zpp_inner->_inuse = false;
+													HX_STACK_LINE(1458)
+													{
+														HX_STACK_LINE(1458)
+														::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
+														HX_STACK_LINE(1458)
+														if (((bool((_this != null())) && bool(_this->zpp_disp)))){
+															HX_STACK_LINE(1458)
+															hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
 														}
 														HX_STACK_LINE(1458)
 														{
 															HX_STACK_LINE(1458)
-															if (((o->wrap != null()))){
+															::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
+															HX_STACK_LINE(1458)
+															if ((_this1->_immutable)){
 																HX_STACK_LINE(1458)
-																o->wrap->zpp_inner->_inuse = false;
-																HX_STACK_LINE(1458)
-																{
-																	HX_STACK_LINE(1458)
-																	::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
-																	HX_STACK_LINE(1458)
-																	if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-																		HX_STACK_LINE(1458)
-																		hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-																	}
-																	HX_STACK_LINE(1458)
-																	{
-																		HX_STACK_LINE(1458)
-																		::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-																		HX_STACK_LINE(1458)
-																		if ((_this1->_immutable)){
-																			HX_STACK_LINE(1458)
-																			hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-																		}
-																		HX_STACK_LINE(1458)
-																		if (((_this1->_isimmutable_dyn() != null()))){
-																			HX_STACK_LINE(1458)
-																			_this1->_isimmutable();
-																		}
-																	}
-																	HX_STACK_LINE(1458)
-																	if ((_this->zpp_inner->_inuse)){
-																		HX_STACK_LINE(1458)
-																		hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-																	}
-																	HX_STACK_LINE(1458)
-																	::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
-																	HX_STACK_LINE(1458)
-																	_this->zpp_inner->outer = null();
-																	HX_STACK_LINE(1458)
-																	_this->zpp_inner = null();
-																	HX_STACK_LINE(1458)
-																	{
-																		HX_STACK_LINE(1458)
-																		::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
-																		HX_STACK_LINE(1458)
-																		{
-																		}
-																		HX_STACK_LINE(1458)
-																		o1->zpp_pool = null();
-																		HX_STACK_LINE(1458)
-																		if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-																			HX_STACK_LINE(1458)
-																			::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
-																		}
-																		else{
-																			HX_STACK_LINE(1458)
-																			::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
-																		}
-																		HX_STACK_LINE(1458)
-																		::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
-																		HX_STACK_LINE(1458)
-																		o1->zpp_disp = true;
-																	}
-																	HX_STACK_LINE(1458)
-																	{
-																		HX_STACK_LINE(1458)
-																		::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-																		HX_STACK_LINE(1458)
-																		{
-																		}
-																		HX_STACK_LINE(1458)
-																		{
-																			HX_STACK_LINE(1458)
-																			if (((o1->outer != null()))){
-																				HX_STACK_LINE(1458)
-																				o1->outer->zpp_inner = null();
-																				HX_STACK_LINE(1458)
-																				o1->outer = null();
-																			}
-																			HX_STACK_LINE(1458)
-																			o1->_isimmutable = null();
-																			HX_STACK_LINE(1458)
-																			o1->_validate = null();
-																			HX_STACK_LINE(1458)
-																			o1->_invalidate = null();
-																		}
-																		HX_STACK_LINE(1458)
-																		o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-																		HX_STACK_LINE(1458)
-																		::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
-																	}
-																}
-																HX_STACK_LINE(1458)
-																o->wrap = null();
+																hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 															}
 															HX_STACK_LINE(1458)
-															o->prev = o->next = null();
+															if (((_this1->_isimmutable != null()))){
+																HX_STACK_LINE(1458)
+																_this1->_isimmutable();
+															}
 														}
-														HX_STACK_LINE(1459)
-														o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
-														HX_STACK_LINE(1460)
-														::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
+														HX_STACK_LINE(1458)
+														if ((_this->zpp_inner->_inuse)){
+															HX_STACK_LINE(1458)
+															hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
+														}
+														HX_STACK_LINE(1458)
+														::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
+														HX_STACK_LINE(1458)
+														_this->zpp_inner->outer = null();
+														HX_STACK_LINE(1458)
+														_this->zpp_inner = null();
+														HX_STACK_LINE(1458)
+														{
+															HX_STACK_LINE(1458)
+															::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
+															HX_STACK_LINE(1458)
+															o1->zpp_pool = null();
+															HX_STACK_LINE(1458)
+															if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
+																HX_STACK_LINE(1458)
+																::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
+															}
+															else{
+																HX_STACK_LINE(1458)
+																::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
+															}
+															HX_STACK_LINE(1458)
+															::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
+															HX_STACK_LINE(1458)
+															o1->zpp_disp = true;
+														}
+														HX_STACK_LINE(1458)
+														{
+															HX_STACK_LINE(1458)
+															::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
+															HX_STACK_LINE(1458)
+															{
+																HX_STACK_LINE(1458)
+																if (((o1->outer != null()))){
+																	HX_STACK_LINE(1458)
+																	o1->outer->zpp_inner = null();
+																	HX_STACK_LINE(1458)
+																	o1->outer = null();
+																}
+																HX_STACK_LINE(1458)
+																o1->_isimmutable = null();
+																HX_STACK_LINE(1458)
+																o1->_validate = null();
+																HX_STACK_LINE(1458)
+																o1->_invalidate = null();
+															}
+															HX_STACK_LINE(1458)
+															o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
+															HX_STACK_LINE(1458)
+															::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
+														}
 													}
-													HX_STACK_LINE(1465)
-													i1->end = null();
-													HX_STACK_LINE(1466)
-													return retnodes;
+													HX_STACK_LINE(1458)
+													o->wrap = null();
 												}
-												return null();
+												HX_STACK_LINE(1458)
+												o->prev = o->next = null();
 											}
-										};
-										HX_STACK_LINE(1422)
-										return (  (((bool((i1->end != null())) && bool((i1->end->prev == i1->end))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_8_1::Block(i1)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_8_2::Block(i1)) );
+											HX_STACK_LINE(1459)
+											o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
+											HX_STACK_LINE(1460)
+											::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
+										}
+										HX_STACK_LINE(1465)
+										i1->end = null();
+										HX_STACK_LINE(1466)
+										return retnodes;
 									}
 									return null();
 								}
 							};
 							HX_STACK_LINE(1413)
-							i1->end = _Function_7_1::Block(i1);
+							i1->end = (  (((bool((i1->end != null())) && bool((i1->end->prev == i1->end))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_7_1::Block(i1)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_7_2::Block(i1)) );
 						}
 						else{
 							HX_STACK_LINE(1471)
@@ -3574,246 +3346,222 @@ while(((numMerges > (int)1)));
 							HX_STACK_LINE(1473)
 							i1->start->y = n->y;
 							HX_STACK_LINE(1474)
-							{
-								HX_STACK_LINE(1475)
+							if (((bool((n != null())) && bool((n->prev == n))))){
+								HX_STACK_LINE(1484)
+								n->next = n->prev = null();
+								HX_STACK_LINE(1485)
 								{
-								}
-								HX_STACK_LINE(1483)
-								if (((bool((n != null())) && bool((n->prev == n))))){
-									HX_STACK_LINE(1484)
-									n->next = n->prev = null();
-									HX_STACK_LINE(1485)
+									HX_STACK_LINE(1486)
+									::zpp_nape::geom::ZPP_GeomVert o = n;		HX_STACK_VAR(o,"o");
+									HX_STACK_LINE(1495)
 									{
-										HX_STACK_LINE(1486)
-										::zpp_nape::geom::ZPP_GeomVert o = n;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(1487)
-										{
+										HX_STACK_LINE(1495)
+										if (((o->wrap != null()))){
+											HX_STACK_LINE(1495)
+											o->wrap->zpp_inner->_inuse = false;
+											HX_STACK_LINE(1495)
+											{
+												HX_STACK_LINE(1495)
+												::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
+												HX_STACK_LINE(1495)
+												if (((bool((_this != null())) && bool(_this->zpp_disp)))){
+													HX_STACK_LINE(1495)
+													hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
+												}
+												HX_STACK_LINE(1495)
+												{
+													HX_STACK_LINE(1495)
+													::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
+													HX_STACK_LINE(1495)
+													if ((_this1->_immutable)){
+														HX_STACK_LINE(1495)
+														hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
+													}
+													HX_STACK_LINE(1495)
+													if (((_this1->_isimmutable != null()))){
+														HX_STACK_LINE(1495)
+														_this1->_isimmutable();
+													}
+												}
+												HX_STACK_LINE(1495)
+												if ((_this->zpp_inner->_inuse)){
+													HX_STACK_LINE(1495)
+													hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
+												}
+												HX_STACK_LINE(1495)
+												::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
+												HX_STACK_LINE(1495)
+												_this->zpp_inner->outer = null();
+												HX_STACK_LINE(1495)
+												_this->zpp_inner = null();
+												HX_STACK_LINE(1495)
+												{
+													HX_STACK_LINE(1495)
+													::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
+													HX_STACK_LINE(1495)
+													o1->zpp_pool = null();
+													HX_STACK_LINE(1495)
+													if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
+														HX_STACK_LINE(1495)
+														::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
+													}
+													else{
+														HX_STACK_LINE(1495)
+														::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
+													}
+													HX_STACK_LINE(1495)
+													::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
+													HX_STACK_LINE(1495)
+													o1->zpp_disp = true;
+												}
+												HX_STACK_LINE(1495)
+												{
+													HX_STACK_LINE(1495)
+													::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
+													HX_STACK_LINE(1495)
+													{
+														HX_STACK_LINE(1495)
+														if (((o1->outer != null()))){
+															HX_STACK_LINE(1495)
+															o1->outer->zpp_inner = null();
+															HX_STACK_LINE(1495)
+															o1->outer = null();
+														}
+														HX_STACK_LINE(1495)
+														o1->_isimmutable = null();
+														HX_STACK_LINE(1495)
+														o1->_validate = null();
+														HX_STACK_LINE(1495)
+														o1->_invalidate = null();
+													}
+													HX_STACK_LINE(1495)
+													o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
+													HX_STACK_LINE(1495)
+													::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
+												}
+											}
+											HX_STACK_LINE(1495)
+											o->wrap = null();
 										}
 										HX_STACK_LINE(1495)
-										{
-											HX_STACK_LINE(1495)
-											if (((o->wrap != null()))){
-												HX_STACK_LINE(1495)
-												o->wrap->zpp_inner->_inuse = false;
-												HX_STACK_LINE(1495)
+										o->prev = o->next = null();
+									}
+									HX_STACK_LINE(1496)
+									o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
+									HX_STACK_LINE(1497)
+									::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
+								}
+								HX_STACK_LINE(1502)
+								n = null();
+							}
+							else{
+								HX_STACK_LINE(1505)
+								n->prev->next = n->next;
+								HX_STACK_LINE(1506)
+								n->next->prev = n->prev;
+								HX_STACK_LINE(1507)
+								n->next = n->prev = null();
+								HX_STACK_LINE(1508)
+								{
+									HX_STACK_LINE(1509)
+									::zpp_nape::geom::ZPP_GeomVert o = n;		HX_STACK_VAR(o,"o");
+									HX_STACK_LINE(1518)
+									{
+										HX_STACK_LINE(1518)
+										if (((o->wrap != null()))){
+											HX_STACK_LINE(1518)
+											o->wrap->zpp_inner->_inuse = false;
+											HX_STACK_LINE(1518)
+											{
+												HX_STACK_LINE(1518)
+												::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
+												HX_STACK_LINE(1518)
+												if (((bool((_this != null())) && bool(_this->zpp_disp)))){
+													HX_STACK_LINE(1518)
+													hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
+												}
+												HX_STACK_LINE(1518)
 												{
-													HX_STACK_LINE(1495)
-													::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
-													HX_STACK_LINE(1495)
-													if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-														HX_STACK_LINE(1495)
-														hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
+													HX_STACK_LINE(1518)
+													::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
+													HX_STACK_LINE(1518)
+													if ((_this1->_immutable)){
+														HX_STACK_LINE(1518)
+														hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 													}
-													HX_STACK_LINE(1495)
-													{
-														HX_STACK_LINE(1495)
-														::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-														HX_STACK_LINE(1495)
-														if ((_this1->_immutable)){
-															HX_STACK_LINE(1495)
-															hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-														}
-														HX_STACK_LINE(1495)
-														if (((_this1->_isimmutable_dyn() != null()))){
-															HX_STACK_LINE(1495)
-															_this1->_isimmutable();
-														}
-													}
-													HX_STACK_LINE(1495)
-													if ((_this->zpp_inner->_inuse)){
-														HX_STACK_LINE(1495)
-														hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-													}
-													HX_STACK_LINE(1495)
-													::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
-													HX_STACK_LINE(1495)
-													_this->zpp_inner->outer = null();
-													HX_STACK_LINE(1495)
-													_this->zpp_inner = null();
-													HX_STACK_LINE(1495)
-													{
-														HX_STACK_LINE(1495)
-														::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
-														HX_STACK_LINE(1495)
-														{
-														}
-														HX_STACK_LINE(1495)
-														o1->zpp_pool = null();
-														HX_STACK_LINE(1495)
-														if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-															HX_STACK_LINE(1495)
-															::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
-														}
-														else{
-															HX_STACK_LINE(1495)
-															::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
-														}
-														HX_STACK_LINE(1495)
-														::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
-														HX_STACK_LINE(1495)
-														o1->zpp_disp = true;
-													}
-													HX_STACK_LINE(1495)
-													{
-														HX_STACK_LINE(1495)
-														::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-														HX_STACK_LINE(1495)
-														{
-														}
-														HX_STACK_LINE(1495)
-														{
-															HX_STACK_LINE(1495)
-															if (((o1->outer != null()))){
-																HX_STACK_LINE(1495)
-																o1->outer->zpp_inner = null();
-																HX_STACK_LINE(1495)
-																o1->outer = null();
-															}
-															HX_STACK_LINE(1495)
-															o1->_isimmutable = null();
-															HX_STACK_LINE(1495)
-															o1->_validate = null();
-															HX_STACK_LINE(1495)
-															o1->_invalidate = null();
-														}
-														HX_STACK_LINE(1495)
-														o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-														HX_STACK_LINE(1495)
-														::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
+													HX_STACK_LINE(1518)
+													if (((_this1->_isimmutable != null()))){
+														HX_STACK_LINE(1518)
+														_this1->_isimmutable();
 													}
 												}
-												HX_STACK_LINE(1495)
-												o->wrap = null();
+												HX_STACK_LINE(1518)
+												if ((_this->zpp_inner->_inuse)){
+													HX_STACK_LINE(1518)
+													hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
+												}
+												HX_STACK_LINE(1518)
+												::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
+												HX_STACK_LINE(1518)
+												_this->zpp_inner->outer = null();
+												HX_STACK_LINE(1518)
+												_this->zpp_inner = null();
+												HX_STACK_LINE(1518)
+												{
+													HX_STACK_LINE(1518)
+													::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
+													HX_STACK_LINE(1518)
+													o1->zpp_pool = null();
+													HX_STACK_LINE(1518)
+													if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
+														HX_STACK_LINE(1518)
+														::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
+													}
+													else{
+														HX_STACK_LINE(1518)
+														::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
+													}
+													HX_STACK_LINE(1518)
+													::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
+													HX_STACK_LINE(1518)
+													o1->zpp_disp = true;
+												}
+												HX_STACK_LINE(1518)
+												{
+													HX_STACK_LINE(1518)
+													::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
+													HX_STACK_LINE(1518)
+													{
+														HX_STACK_LINE(1518)
+														if (((o1->outer != null()))){
+															HX_STACK_LINE(1518)
+															o1->outer->zpp_inner = null();
+															HX_STACK_LINE(1518)
+															o1->outer = null();
+														}
+														HX_STACK_LINE(1518)
+														o1->_isimmutable = null();
+														HX_STACK_LINE(1518)
+														o1->_validate = null();
+														HX_STACK_LINE(1518)
+														o1->_invalidate = null();
+													}
+													HX_STACK_LINE(1518)
+													o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
+													HX_STACK_LINE(1518)
+													::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
+												}
 											}
-											HX_STACK_LINE(1495)
-											o->prev = o->next = null();
-										}
-										HX_STACK_LINE(1496)
-										o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
-										HX_STACK_LINE(1497)
-										::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
-									}
-									HX_STACK_LINE(1502)
-									n = null();
-								}
-								else{
-									HX_STACK_LINE(1505)
-									n->prev->next = n->next;
-									HX_STACK_LINE(1506)
-									n->next->prev = n->prev;
-									HX_STACK_LINE(1507)
-									n->next = n->prev = null();
-									HX_STACK_LINE(1508)
-									{
-										HX_STACK_LINE(1509)
-										::zpp_nape::geom::ZPP_GeomVert o = n;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(1510)
-										{
+											HX_STACK_LINE(1518)
+											o->wrap = null();
 										}
 										HX_STACK_LINE(1518)
-										{
-											HX_STACK_LINE(1518)
-											if (((o->wrap != null()))){
-												HX_STACK_LINE(1518)
-												o->wrap->zpp_inner->_inuse = false;
-												HX_STACK_LINE(1518)
-												{
-													HX_STACK_LINE(1518)
-													::nape::geom::Vec2 _this = o->wrap;		HX_STACK_VAR(_this,"_this");
-													HX_STACK_LINE(1518)
-													if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-														HX_STACK_LINE(1518)
-														hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-													}
-													HX_STACK_LINE(1518)
-													{
-														HX_STACK_LINE(1518)
-														::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-														HX_STACK_LINE(1518)
-														if ((_this1->_immutable)){
-															HX_STACK_LINE(1518)
-															hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-														}
-														HX_STACK_LINE(1518)
-														if (((_this1->_isimmutable_dyn() != null()))){
-															HX_STACK_LINE(1518)
-															_this1->_isimmutable();
-														}
-													}
-													HX_STACK_LINE(1518)
-													if ((_this->zpp_inner->_inuse)){
-														HX_STACK_LINE(1518)
-														hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-													}
-													HX_STACK_LINE(1518)
-													::zpp_nape::geom::ZPP_Vec2 inner = _this->zpp_inner;		HX_STACK_VAR(inner,"inner");
-													HX_STACK_LINE(1518)
-													_this->zpp_inner->outer = null();
-													HX_STACK_LINE(1518)
-													_this->zpp_inner = null();
-													HX_STACK_LINE(1518)
-													{
-														HX_STACK_LINE(1518)
-														::nape::geom::Vec2 o1 = _this;		HX_STACK_VAR(o1,"o1");
-														HX_STACK_LINE(1518)
-														{
-														}
-														HX_STACK_LINE(1518)
-														o1->zpp_pool = null();
-														HX_STACK_LINE(1518)
-														if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-															HX_STACK_LINE(1518)
-															::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o1;
-														}
-														else{
-															HX_STACK_LINE(1518)
-															::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o1;
-														}
-														HX_STACK_LINE(1518)
-														::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o1;
-														HX_STACK_LINE(1518)
-														o1->zpp_disp = true;
-													}
-													HX_STACK_LINE(1518)
-													{
-														HX_STACK_LINE(1518)
-														::zpp_nape::geom::ZPP_Vec2 o1 = inner;		HX_STACK_VAR(o1,"o1");
-														HX_STACK_LINE(1518)
-														{
-														}
-														HX_STACK_LINE(1518)
-														{
-															HX_STACK_LINE(1518)
-															if (((o1->outer != null()))){
-																HX_STACK_LINE(1518)
-																o1->outer->zpp_inner = null();
-																HX_STACK_LINE(1518)
-																o1->outer = null();
-															}
-															HX_STACK_LINE(1518)
-															o1->_isimmutable = null();
-															HX_STACK_LINE(1518)
-															o1->_validate = null();
-															HX_STACK_LINE(1518)
-															o1->_invalidate = null();
-														}
-														HX_STACK_LINE(1518)
-														o1->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-														HX_STACK_LINE(1518)
-														::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o1;
-													}
-												}
-												HX_STACK_LINE(1518)
-												o->wrap = null();
-											}
-											HX_STACK_LINE(1518)
-											o->prev = o->next = null();
-										}
-										HX_STACK_LINE(1519)
-										o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
-										HX_STACK_LINE(1520)
-										::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
+										o->prev = o->next = null();
 									}
+									HX_STACK_LINE(1519)
+									o->next = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool;
+									HX_STACK_LINE(1520)
+									::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = o;
 								}
 							}
 						}
@@ -3932,9 +3680,6 @@ while(((numMerges > (int)1)));
 		{
 			HX_STACK_LINE(1585)
 			::zpp_nape::geom::ZPP_CutInt o = i1;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(1586)
-			{
-			}
 			HX_STACK_LINE(1594)
 			{
 				HX_STACK_LINE(1594)
@@ -3951,9 +3696,6 @@ while(((numMerges > (int)1)));
 		{
 			HX_STACK_LINE(1602)
 			::zpp_nape::geom::ZPP_CutInt o = j;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(1603)
-			{
-			}
 			HX_STACK_LINE(1611)
 			{
 				HX_STACK_LINE(1611)
@@ -4045,57 +3787,38 @@ while(((numMerges > (int)1)));
 							}
 							struct _Function_7_1{
 								inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p2){
-									HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1659);
+									HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1668);
 									{
-										HX_STACK_LINE(1660)
-										{
-										}
-										struct _Function_8_1{
-											inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p2){
-												HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1668);
-												{
-													HX_STACK_LINE(1669)
-													p2->next = p2->prev = null();
-													HX_STACK_LINE(1670)
-													{
-													}
-													HX_STACK_LINE(1671)
-													return p2 = null();
-												}
-												return null();
-											}
-										};
-										struct _Function_8_2{
-											inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p2){
-												HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1673);
-												{
-													HX_STACK_LINE(1674)
-													::zpp_nape::geom::ZPP_GeomVert retnodes = p2->next;		HX_STACK_VAR(retnodes,"retnodes");
-													HX_STACK_LINE(1675)
-													p2->prev->next = p2->next;
-													HX_STACK_LINE(1676)
-													p2->next->prev = p2->prev;
-													HX_STACK_LINE(1677)
-													p2->next = p2->prev = null();
-													HX_STACK_LINE(1678)
-													{
-													}
-													HX_STACK_LINE(1679)
-													p2 = null();
-													HX_STACK_LINE(1680)
-													return retnodes;
-												}
-												return null();
-											}
-										};
-										HX_STACK_LINE(1668)
-										return (  (((bool((p2 != null())) && bool((p2->prev == p2))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_8_1::Block(p2)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_8_2::Block(p2)) );
+										HX_STACK_LINE(1669)
+										p2->next = p2->prev = null();
+										HX_STACK_LINE(1671)
+										return p2 = null();
+									}
+									return null();
+								}
+							};
+							struct _Function_7_2{
+								inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p2){
+									HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1673);
+									{
+										HX_STACK_LINE(1674)
+										::zpp_nape::geom::ZPP_GeomVert retnodes = p2->next;		HX_STACK_VAR(retnodes,"retnodes");
+										HX_STACK_LINE(1675)
+										p2->prev->next = p2->next;
+										HX_STACK_LINE(1676)
+										p2->next->prev = p2->prev;
+										HX_STACK_LINE(1677)
+										p2->next = p2->prev = null();
+										HX_STACK_LINE(1679)
+										p2 = null();
+										HX_STACK_LINE(1680)
+										return retnodes;
 									}
 									return null();
 								}
 							};
 							HX_STACK_LINE(1659)
-							p2 = _Function_7_1::Block(p2);
+							p2 = (  (((bool((p2 != null())) && bool((p2->prev == p2))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_7_1::Block(p2)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_7_2::Block(p2)) );
 						}
 						else{
 							HX_STACK_LINE(1684)
@@ -4132,9 +3855,6 @@ while(((numMerges > (int)1)));
 		{
 			HX_STACK_LINE(1700)
 			::zpp_nape::geom::ZPP_CutVert o = p1;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(1701)
-			{
-			}
 			HX_STACK_LINE(1709)
 			{
 				HX_STACK_LINE(1709)
@@ -4152,89 +3872,70 @@ while(((numMerges > (int)1)));
 	while((!(((verts == null()))))){
 		struct _Function_2_1{
 			inline static ::zpp_nape::geom::ZPP_CutVert Block( ::zpp_nape::geom::ZPP_CutVert &verts){
-				HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1719);
+				HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1728);
 				{
-					HX_STACK_LINE(1720)
+					HX_STACK_LINE(1729)
+					verts->next = verts->prev = null();
+					HX_STACK_LINE(1730)
 					{
+						HX_STACK_LINE(1731)
+						::zpp_nape::geom::ZPP_CutVert o = verts;		HX_STACK_VAR(o,"o");
+						HX_STACK_LINE(1740)
+						{
+							HX_STACK_LINE(1740)
+							o->vert = null();
+							HX_STACK_LINE(1740)
+							o->parent = null();
+						}
+						HX_STACK_LINE(1741)
+						o->next = ::zpp_nape::geom::ZPP_CutVert_obj::zpp_pool;
+						HX_STACK_LINE(1742)
+						::zpp_nape::geom::ZPP_CutVert_obj::zpp_pool = o;
 					}
-					struct _Function_3_1{
-						inline static ::zpp_nape::geom::ZPP_CutVert Block( ::zpp_nape::geom::ZPP_CutVert &verts){
-							HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1728);
-							{
-								HX_STACK_LINE(1729)
-								verts->next = verts->prev = null();
-								HX_STACK_LINE(1730)
-								{
-									HX_STACK_LINE(1731)
-									::zpp_nape::geom::ZPP_CutVert o = verts;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1732)
-									{
-									}
-									HX_STACK_LINE(1740)
-									{
-										HX_STACK_LINE(1740)
-										o->vert = null();
-										HX_STACK_LINE(1740)
-										o->parent = null();
-									}
-									HX_STACK_LINE(1741)
-									o->next = ::zpp_nape::geom::ZPP_CutVert_obj::zpp_pool;
-									HX_STACK_LINE(1742)
-									::zpp_nape::geom::ZPP_CutVert_obj::zpp_pool = o;
-								}
-								HX_STACK_LINE(1747)
-								return verts = null();
-							}
-							return null();
+					HX_STACK_LINE(1747)
+					return verts = null();
+				}
+				return null();
+			}
+		};
+		struct _Function_2_2{
+			inline static ::zpp_nape::geom::ZPP_CutVert Block( ::zpp_nape::geom::ZPP_CutVert &verts){
+				HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1749);
+				{
+					HX_STACK_LINE(1750)
+					::zpp_nape::geom::ZPP_CutVert retnodes = verts->next;		HX_STACK_VAR(retnodes,"retnodes");
+					HX_STACK_LINE(1751)
+					verts->prev->next = verts->next;
+					HX_STACK_LINE(1752)
+					verts->next->prev = verts->prev;
+					HX_STACK_LINE(1753)
+					verts->next = verts->prev = null();
+					HX_STACK_LINE(1754)
+					{
+						HX_STACK_LINE(1755)
+						::zpp_nape::geom::ZPP_CutVert o = verts;		HX_STACK_VAR(o,"o");
+						HX_STACK_LINE(1764)
+						{
+							HX_STACK_LINE(1764)
+							o->vert = null();
+							HX_STACK_LINE(1764)
+							o->parent = null();
 						}
-					};
-					struct _Function_3_2{
-						inline static ::zpp_nape::geom::ZPP_CutVert Block( ::zpp_nape::geom::ZPP_CutVert &verts){
-							HX_STACK_PUSH("*::closure","zpp_nape/geom/Cutter.hx",1749);
-							{
-								HX_STACK_LINE(1750)
-								::zpp_nape::geom::ZPP_CutVert retnodes = verts->next;		HX_STACK_VAR(retnodes,"retnodes");
-								HX_STACK_LINE(1751)
-								verts->prev->next = verts->next;
-								HX_STACK_LINE(1752)
-								verts->next->prev = verts->prev;
-								HX_STACK_LINE(1753)
-								verts->next = verts->prev = null();
-								HX_STACK_LINE(1754)
-								{
-									HX_STACK_LINE(1755)
-									::zpp_nape::geom::ZPP_CutVert o = verts;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1756)
-									{
-									}
-									HX_STACK_LINE(1764)
-									{
-										HX_STACK_LINE(1764)
-										o->vert = null();
-										HX_STACK_LINE(1764)
-										o->parent = null();
-									}
-									HX_STACK_LINE(1765)
-									o->next = ::zpp_nape::geom::ZPP_CutVert_obj::zpp_pool;
-									HX_STACK_LINE(1766)
-									::zpp_nape::geom::ZPP_CutVert_obj::zpp_pool = o;
-								}
-								HX_STACK_LINE(1771)
-								verts = null();
-								HX_STACK_LINE(1772)
-								return retnodes;
-							}
-							return null();
-						}
-					};
-					HX_STACK_LINE(1728)
-					return (  (((bool((verts != null())) && bool((verts->prev == verts))))) ? ::zpp_nape::geom::ZPP_CutVert(_Function_3_1::Block(verts)) : ::zpp_nape::geom::ZPP_CutVert(_Function_3_2::Block(verts)) );
+						HX_STACK_LINE(1765)
+						o->next = ::zpp_nape::geom::ZPP_CutVert_obj::zpp_pool;
+						HX_STACK_LINE(1766)
+						::zpp_nape::geom::ZPP_CutVert_obj::zpp_pool = o;
+					}
+					HX_STACK_LINE(1771)
+					verts = null();
+					HX_STACK_LINE(1772)
+					return retnodes;
 				}
 				return null();
 			}
 		};
 		HX_STACK_LINE(1719)
-		verts = _Function_2_1::Block(verts);
+		verts = (  (((bool((verts != null())) && bool((verts->prev == verts))))) ? ::zpp_nape::geom::ZPP_CutVert(_Function_2_1::Block(verts)) : ::zpp_nape::geom::ZPP_CutVert(_Function_2_2::Block(verts)) );
 	}
 	HX_STACK_LINE(1776)
 	return ret;
@@ -4315,7 +4016,7 @@ Class ZPP_Cutter_obj::__mClass;
 
 void ZPP_Cutter_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_Cutter"), hx::TCanCast< ZPP_Cutter_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_Cutter"), hx::TCanCast< ZPP_Cutter_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

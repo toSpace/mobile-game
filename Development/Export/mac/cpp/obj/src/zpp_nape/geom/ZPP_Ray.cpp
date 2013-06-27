@@ -183,9 +183,6 @@ HX_STACK_PUSH("ZPP_Ray::new","zpp_nape/geom/Ray.hx",174);
 									HX_STACK_LINE(238)
 									{
 									}
-									HX_STACK_LINE(238)
-									{
-									}
 								}
 								HX_STACK_LINE(238)
 								return ret1;
@@ -214,7 +211,7 @@ HX_STACK_PUSH("ZPP_Ray::new","zpp_nape/geom/Ray.hx",174);
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(238)
-						if (((_this->_isimmutable_dyn() != null()))){
+						if (((_this->_isimmutable != null()))){
 							HX_STACK_LINE(238)
 							_this->_isimmutable();
 						}
@@ -238,7 +235,7 @@ HX_STACK_PUSH("ZPP_Ray::new","zpp_nape/geom/Ray.hx",174);
 									HX_STACK_LINE(238)
 									::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(238)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(238)
 										_this->_validate();
 									}
@@ -263,7 +260,7 @@ HX_STACK_PUSH("ZPP_Ray::new","zpp_nape/geom/Ray.hx",174);
 									HX_STACK_LINE(238)
 									::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(238)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(238)
 										_this->_validate();
 									}
@@ -285,16 +282,13 @@ HX_STACK_PUSH("ZPP_Ray::new","zpp_nape/geom/Ray.hx",174);
 							HX_STACK_LINE(238)
 							{
 							}
-							HX_STACK_LINE(238)
-							{
-							}
 						}
 						HX_STACK_LINE(238)
 						{
 							HX_STACK_LINE(238)
 							::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(238)
-							if (((_this->_invalidate_dyn() != null()))){
+							if (((_this->_invalidate != null()))){
 								HX_STACK_LINE(238)
 								_this->_invalidate(_this);
 							}
@@ -389,9 +383,6 @@ HX_STACK_PUSH("ZPP_Ray::new","zpp_nape/geom/Ray.hx",174);
 									HX_STACK_LINE(240)
 									{
 									}
-									HX_STACK_LINE(240)
-									{
-									}
 								}
 								HX_STACK_LINE(240)
 								return ret1;
@@ -420,7 +411,7 @@ HX_STACK_PUSH("ZPP_Ray::new","zpp_nape/geom/Ray.hx",174);
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(240)
-						if (((_this->_isimmutable_dyn() != null()))){
+						if (((_this->_isimmutable != null()))){
 							HX_STACK_LINE(240)
 							_this->_isimmutable();
 						}
@@ -444,7 +435,7 @@ HX_STACK_PUSH("ZPP_Ray::new","zpp_nape/geom/Ray.hx",174);
 									HX_STACK_LINE(240)
 									::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(240)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(240)
 										_this->_validate();
 									}
@@ -469,7 +460,7 @@ HX_STACK_PUSH("ZPP_Ray::new","zpp_nape/geom/Ray.hx",174);
 									HX_STACK_LINE(240)
 									::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(240)
-									if (((_this->_validate_dyn() != null()))){
+									if (((_this->_validate != null()))){
 										HX_STACK_LINE(240)
 										_this->_validate();
 									}
@@ -491,16 +482,13 @@ HX_STACK_PUSH("ZPP_Ray::new","zpp_nape/geom/Ray.hx",174);
 							HX_STACK_LINE(240)
 							{
 							}
-							HX_STACK_LINE(240)
-							{
-							}
 						}
 						HX_STACK_LINE(240)
 						{
 							HX_STACK_LINE(240)
 							::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(240)
-							if (((_this->_invalidate_dyn() != null()))){
+							if (((_this->_invalidate != null()))){
 								HX_STACK_LINE(240)
 								_this->_invalidate(_this);
 							}
@@ -527,9 +515,6 @@ HX_STACK_PUSH("ZPP_Ray::new","zpp_nape/geom/Ray.hx",174);
 		this->originx = (int)0;
 		HX_STACK_LINE(244)
 		this->originy = (int)0;
-		HX_STACK_LINE(245)
-		{
-		}
 		HX_STACK_LINE(253)
 		{
 		}
@@ -540,9 +525,6 @@ HX_STACK_PUSH("ZPP_Ray::new","zpp_nape/geom/Ray.hx",174);
 		this->dirx = (int)0;
 		HX_STACK_LINE(264)
 		this->diry = (int)0;
-		HX_STACK_LINE(265)
-		{
-		}
 		HX_STACK_LINE(273)
 		{
 		}
@@ -758,9 +740,6 @@ while((false));
 				nx = edge->gnormx;
 				HX_STACK_LINE(1289)
 				ny = edge->gnormy;
-				HX_STACK_LINE(1290)
-				{
-				}
 				HX_STACK_LINE(1298)
 				{
 				}
@@ -775,7 +754,7 @@ while((false));
 				ny = -(ny);
 			}
 			struct _Function_2_1{
-				inline static ::nape::geom::Vec2 Block( Float &nx,Float &ny){
+				inline static ::nape::geom::Vec2 Block( Float &ny,Float &nx){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",1312);
 					{
 						HX_STACK_LINE(1312)
@@ -810,7 +789,7 @@ while((false));
 						HX_STACK_LINE(1312)
 						if (((ret->zpp_inner == null()))){
 							struct _Function_4_1{
-								inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &nx,Float &ny){
+								inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &ny,Float &nx){
 									HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",1312);
 									{
 										HX_STACK_LINE(1312)
@@ -846,9 +825,6 @@ while((false));
 											HX_STACK_LINE(1312)
 											{
 											}
-											HX_STACK_LINE(1312)
-											{
-											}
 										}
 										HX_STACK_LINE(1312)
 										return ret1;
@@ -857,7 +833,7 @@ while((false));
 								}
 							};
 							HX_STACK_LINE(1312)
-							ret->zpp_inner = _Function_4_1::Block(nx,ny);
+							ret->zpp_inner = _Function_4_1::Block(ny,nx);
 							HX_STACK_LINE(1312)
 							ret->zpp_inner->outer = ret;
 						}
@@ -877,7 +853,7 @@ while((false));
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(1312)
-								if (((_this->_isimmutable_dyn() != null()))){
+								if (((_this->_isimmutable != null()))){
 									HX_STACK_LINE(1312)
 									_this->_isimmutable();
 								}
@@ -901,7 +877,7 @@ while((false));
 											HX_STACK_LINE(1312)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(1312)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(1312)
 												_this->_validate();
 											}
@@ -926,7 +902,7 @@ while((false));
 											HX_STACK_LINE(1312)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(1312)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(1312)
 												_this->_validate();
 											}
@@ -948,16 +924,13 @@ while((false));
 									HX_STACK_LINE(1312)
 									{
 									}
-									HX_STACK_LINE(1312)
-									{
-									}
 								}
 								HX_STACK_LINE(1312)
 								{
 									HX_STACK_LINE(1312)
 									::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(1312)
-									if (((_this->_invalidate_dyn() != null()))){
+									if (((_this->_invalidate != null()))){
 										HX_STACK_LINE(1312)
 										_this->_invalidate(_this);
 									}
@@ -975,7 +948,7 @@ while((false));
 				}
 			};
 			HX_STACK_LINE(1312)
-			::nape::geom::RayResult ret = ::zpp_nape::geom::ZPP_ConvexRayResult_obj::getRay(_Function_2_1::Block(nx,ny),min,inner1,p->outer);		HX_STACK_VAR(ret,"ret");
+			::nape::geom::RayResult ret = ::zpp_nape::geom::ZPP_ConvexRayResult_obj::getRay(_Function_2_1::Block(ny,nx),min,inner1,p->outer);		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(1313)
 			{
 				HX_STACK_LINE(1314)
@@ -1036,9 +1009,6 @@ while((false));
 				{
 					HX_STACK_LINE(1326)
 					::zpp_nape::util::ZNPList_RayResult _this = list->zpp_inner->inner;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(1326)
-					{
-					}
 					struct _Function_4_1{
 						inline static ::zpp_nape::util::ZNPNode_RayResult Block( ::nape::geom::RayResult &ret){
 							HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",1326);
@@ -1107,9 +1077,6 @@ while((false));
 				nx = edgemax->gnormx;
 				HX_STACK_LINE(1334)
 				ny = edgemax->gnormy;
-				HX_STACK_LINE(1335)
-				{
-				}
 				HX_STACK_LINE(1343)
 				{
 				}
@@ -1124,7 +1091,7 @@ while((false));
 				ny = -(ny);
 			}
 			struct _Function_2_1{
-				inline static ::nape::geom::Vec2 Block( Float &nx,Float &ny){
+				inline static ::nape::geom::Vec2 Block( Float &ny,Float &nx){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",1357);
 					{
 						HX_STACK_LINE(1357)
@@ -1159,7 +1126,7 @@ while((false));
 						HX_STACK_LINE(1357)
 						if (((ret->zpp_inner == null()))){
 							struct _Function_4_1{
-								inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &nx,Float &ny){
+								inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &ny,Float &nx){
 									HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",1357);
 									{
 										HX_STACK_LINE(1357)
@@ -1195,9 +1162,6 @@ while((false));
 											HX_STACK_LINE(1357)
 											{
 											}
-											HX_STACK_LINE(1357)
-											{
-											}
 										}
 										HX_STACK_LINE(1357)
 										return ret1;
@@ -1206,7 +1170,7 @@ while((false));
 								}
 							};
 							HX_STACK_LINE(1357)
-							ret->zpp_inner = _Function_4_1::Block(nx,ny);
+							ret->zpp_inner = _Function_4_1::Block(ny,nx);
 							HX_STACK_LINE(1357)
 							ret->zpp_inner->outer = ret;
 						}
@@ -1226,7 +1190,7 @@ while((false));
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(1357)
-								if (((_this->_isimmutable_dyn() != null()))){
+								if (((_this->_isimmutable != null()))){
 									HX_STACK_LINE(1357)
 									_this->_isimmutable();
 								}
@@ -1250,7 +1214,7 @@ while((false));
 											HX_STACK_LINE(1357)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(1357)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(1357)
 												_this->_validate();
 											}
@@ -1275,7 +1239,7 @@ while((false));
 											HX_STACK_LINE(1357)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(1357)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(1357)
 												_this->_validate();
 											}
@@ -1297,16 +1261,13 @@ while((false));
 									HX_STACK_LINE(1357)
 									{
 									}
-									HX_STACK_LINE(1357)
-									{
-									}
 								}
 								HX_STACK_LINE(1357)
 								{
 									HX_STACK_LINE(1357)
 									::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(1357)
-									if (((_this->_invalidate_dyn() != null()))){
+									if (((_this->_invalidate != null()))){
 										HX_STACK_LINE(1357)
 										_this->_invalidate(_this);
 									}
@@ -1324,7 +1285,7 @@ while((false));
 				}
 			};
 			HX_STACK_LINE(1357)
-			::nape::geom::RayResult ret = ::zpp_nape::geom::ZPP_ConvexRayResult_obj::getRay(_Function_2_1::Block(nx,ny),max,inner1,p->outer);		HX_STACK_VAR(ret,"ret");
+			::nape::geom::RayResult ret = ::zpp_nape::geom::ZPP_ConvexRayResult_obj::getRay(_Function_2_1::Block(ny,nx),max,inner1,p->outer);		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(1358)
 			{
 				HX_STACK_LINE(1359)
@@ -1385,9 +1346,6 @@ while((false));
 				{
 					HX_STACK_LINE(1371)
 					::zpp_nape::util::ZNPList_RayResult _this = list->zpp_inner->inner;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(1371)
-					{
-					}
 					struct _Function_4_1{
 						inline static ::zpp_nape::util::ZNPNode_RayResult Block( ::nape::geom::RayResult &ret){
 							HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",1371);
@@ -1617,9 +1575,6 @@ while((false));
 			nx = edge->gnormx;
 			HX_STACK_LINE(1158)
 			ny = edge->gnormy;
-			HX_STACK_LINE(1159)
-			{
-			}
 			HX_STACK_LINE(1167)
 			{
 			}
@@ -1634,7 +1589,7 @@ while((false));
 			ny = -(ny);
 		}
 		struct _Function_2_1{
-			inline static ::nape::geom::Vec2 Block( Float &nx,Float &ny){
+			inline static ::nape::geom::Vec2 Block( Float &ny,Float &nx){
 				HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",1181);
 				{
 					HX_STACK_LINE(1181)
@@ -1669,7 +1624,7 @@ while((false));
 					HX_STACK_LINE(1181)
 					if (((ret->zpp_inner == null()))){
 						struct _Function_4_1{
-							inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &nx,Float &ny){
+							inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &ny,Float &nx){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",1181);
 								{
 									HX_STACK_LINE(1181)
@@ -1705,9 +1660,6 @@ while((false));
 										HX_STACK_LINE(1181)
 										{
 										}
-										HX_STACK_LINE(1181)
-										{
-										}
 									}
 									HX_STACK_LINE(1181)
 									return ret1;
@@ -1716,7 +1668,7 @@ while((false));
 							}
 						};
 						HX_STACK_LINE(1181)
-						ret->zpp_inner = _Function_4_1::Block(nx,ny);
+						ret->zpp_inner = _Function_4_1::Block(ny,nx);
 						HX_STACK_LINE(1181)
 						ret->zpp_inner->outer = ret;
 					}
@@ -1736,7 +1688,7 @@ while((false));
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(1181)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(1181)
 								_this->_isimmutable();
 							}
@@ -1760,7 +1712,7 @@ while((false));
 										HX_STACK_LINE(1181)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1181)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1181)
 											_this->_validate();
 										}
@@ -1785,7 +1737,7 @@ while((false));
 										HX_STACK_LINE(1181)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1181)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1181)
 											_this->_validate();
 										}
@@ -1807,16 +1759,13 @@ while((false));
 								HX_STACK_LINE(1181)
 								{
 								}
-								HX_STACK_LINE(1181)
-								{
-								}
 							}
 							HX_STACK_LINE(1181)
 							{
 								HX_STACK_LINE(1181)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1181)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(1181)
 									_this->_invalidate(_this);
 								}
@@ -1834,7 +1783,7 @@ while((false));
 			}
 		};
 		HX_STACK_LINE(1181)
-		return ::zpp_nape::geom::ZPP_ConvexRayResult_obj::getRay(_Function_2_1::Block(nx,ny),min,inner1,p->outer);
+		return ::zpp_nape::geom::ZPP_ConvexRayResult_obj::getRay(_Function_2_1::Block(ny,nx),min,inner1,p->outer);
 	}
 	else{
 		HX_STACK_LINE(1183)
@@ -1880,9 +1829,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 							HX_STACK_LINE(762)
 							_this->localCOMy = _this->lverts->next->y;
 							HX_STACK_LINE(762)
-							{
-							}
-							HX_STACK_LINE(762)
 							Dynamic();
 						}
 						else{
@@ -1897,17 +1843,11 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 									HX_STACK_LINE(762)
 									{
 									}
-									HX_STACK_LINE(762)
-									{
-									}
 								}
 								HX_STACK_LINE(762)
 								{
 									HX_STACK_LINE(762)
 									Float t = 1.0;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(762)
-									{
-									}
 									HX_STACK_LINE(762)
 									hx::AddEq(_this->localCOMx,(_this->lverts->next->next->x * t));
 									HX_STACK_LINE(762)
@@ -1917,9 +1857,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 								{
 									HX_STACK_LINE(762)
 									Float t = 0.5;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(762)
-									{
-									}
 									HX_STACK_LINE(762)
 									hx::MultEq(_this->localCOMx,t);
 									HX_STACK_LINE(762)
@@ -1933,9 +1870,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 									_this->localCOMx = (int)0;
 									HX_STACK_LINE(762)
 									_this->localCOMy = (int)0;
-									HX_STACK_LINE(762)
-									{
-									}
 									HX_STACK_LINE(762)
 									{
 									}
@@ -2018,9 +1952,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 									HX_STACK_LINE(762)
 									Float t = area;		HX_STACK_VAR(t,"t");
 									HX_STACK_LINE(762)
-									{
-									}
-									HX_STACK_LINE(762)
 									hx::MultEq(_this->localCOMx,t);
 									HX_STACK_LINE(762)
 									hx::MultEq(_this->localCOMy,t);
@@ -2043,9 +1974,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 							_this->axisx = ::Math_obj::sin(_this->rot);
 							HX_STACK_LINE(762)
 							_this->axisy = ::Math_obj::cos(_this->rot);
-							HX_STACK_LINE(762)
-							{
-							}
 							HX_STACK_LINE(762)
 							Dynamic();
 						}
@@ -2095,9 +2023,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 					nx = this->originx;
 					HX_STACK_LINE(780)
 					ny = this->originy;
-					HX_STACK_LINE(781)
-					{
-					}
 					HX_STACK_LINE(789)
 					{
 					}
@@ -2106,9 +2031,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 				{
 					HX_STACK_LINE(799)
 					Float t1 = t;		HX_STACK_VAR(t1,"t1");
-					HX_STACK_LINE(800)
-					{
-					}
 					HX_STACK_LINE(808)
 					hx::AddEq(nx,(this->dirx * t1));
 					HX_STACK_LINE(809)
@@ -2118,9 +2040,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 				{
 					HX_STACK_LINE(812)
 					Float t1 = 1.0;		HX_STACK_VAR(t1,"t1");
-					HX_STACK_LINE(813)
-					{
-					}
 					HX_STACK_LINE(821)
 					hx::SubEq(nx,(c->worldCOMx * t1));
 					HX_STACK_LINE(822)
@@ -2130,18 +2049,12 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 				{
 					HX_STACK_LINE(825)
 					Float d = ((nx * nx) + (ny * ny));		HX_STACK_VAR(d,"d");
-					HX_STACK_LINE(826)
-					{
-					}
 					HX_STACK_LINE(834)
 					Float imag = (Float(1.0) / Float(::Math_obj::sqrt(d)));		HX_STACK_VAR(imag,"imag");
 					HX_STACK_LINE(835)
 					{
 						HX_STACK_LINE(836)
 						Float t1 = imag;		HX_STACK_VAR(t1,"t1");
-						HX_STACK_LINE(837)
-						{
-						}
 						HX_STACK_LINE(845)
 						hx::MultEq(nx,t1);
 						HX_STACK_LINE(846)
@@ -2156,7 +2069,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 					ny = -(ny);
 				}
 				struct _Function_3_1{
-					inline static ::nape::geom::Vec2 Block( Float &nx,Float &ny){
+					inline static ::nape::geom::Vec2 Block( Float &ny,Float &nx){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",853);
 						{
 							HX_STACK_LINE(853)
@@ -2191,7 +2104,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 							HX_STACK_LINE(853)
 							if (((ret->zpp_inner == null()))){
 								struct _Function_5_1{
-									inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &nx,Float &ny){
+									inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &ny,Float &nx){
 										HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",853);
 										{
 											HX_STACK_LINE(853)
@@ -2227,9 +2140,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 												HX_STACK_LINE(853)
 												{
 												}
-												HX_STACK_LINE(853)
-												{
-												}
 											}
 											HX_STACK_LINE(853)
 											return ret1;
@@ -2238,7 +2148,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 									}
 								};
 								HX_STACK_LINE(853)
-								ret->zpp_inner = _Function_5_1::Block(nx,ny);
+								ret->zpp_inner = _Function_5_1::Block(ny,nx);
 								HX_STACK_LINE(853)
 								ret->zpp_inner->outer = ret;
 							}
@@ -2258,7 +2168,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 										hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 									}
 									HX_STACK_LINE(853)
-									if (((_this->_isimmutable_dyn() != null()))){
+									if (((_this->_isimmutable != null()))){
 										HX_STACK_LINE(853)
 										_this->_isimmutable();
 									}
@@ -2282,7 +2192,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 												HX_STACK_LINE(853)
 												::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(853)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(853)
 													_this->_validate();
 												}
@@ -2307,7 +2217,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 												HX_STACK_LINE(853)
 												::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(853)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(853)
 													_this->_validate();
 												}
@@ -2329,16 +2239,13 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 										HX_STACK_LINE(853)
 										{
 										}
-										HX_STACK_LINE(853)
-										{
-										}
 									}
 									HX_STACK_LINE(853)
 									{
 										HX_STACK_LINE(853)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(853)
-										if (((_this->_invalidate_dyn() != null()))){
+										if (((_this->_invalidate != null()))){
 											HX_STACK_LINE(853)
 											_this->_invalidate(_this);
 										}
@@ -2356,7 +2263,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 					}
 				};
 				HX_STACK_LINE(853)
-				::nape::geom::RayResult res = ::zpp_nape::geom::ZPP_ConvexRayResult_obj::getRay(_Function_3_1::Block(nx,ny),t,(C <= (int)0),c->outer);		HX_STACK_VAR(res,"res");
+				::nape::geom::RayResult res = ::zpp_nape::geom::ZPP_ConvexRayResult_obj::getRay(_Function_3_1::Block(ny,nx),t,(C <= (int)0),c->outer);		HX_STACK_VAR(res,"res");
 				HX_STACK_LINE(854)
 				{
 					HX_STACK_LINE(855)
@@ -2417,9 +2324,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 					{
 						HX_STACK_LINE(867)
 						::zpp_nape::util::ZNPList_RayResult _this = list->zpp_inner->inner;		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(867)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_RayResult Block( ::nape::geom::RayResult &res){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",867);
@@ -2498,9 +2402,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 					nx = this->originx;
 					HX_STACK_LINE(881)
 					ny = this->originy;
-					HX_STACK_LINE(882)
-					{
-					}
 					HX_STACK_LINE(890)
 					{
 					}
@@ -2509,9 +2410,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 				{
 					HX_STACK_LINE(900)
 					Float t = t0;		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(901)
-					{
-					}
 					HX_STACK_LINE(909)
 					hx::AddEq(nx,(this->dirx * t));
 					HX_STACK_LINE(910)
@@ -2521,9 +2419,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 				{
 					HX_STACK_LINE(913)
 					Float t = 1.0;		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(914)
-					{
-					}
 					HX_STACK_LINE(922)
 					hx::SubEq(nx,(c->worldCOMx * t));
 					HX_STACK_LINE(923)
@@ -2533,29 +2428,20 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 				{
 					HX_STACK_LINE(926)
 					Float d = ((nx * nx) + (ny * ny));		HX_STACK_VAR(d,"d");
-					HX_STACK_LINE(927)
-					{
-					}
 					HX_STACK_LINE(935)
 					Float imag = (Float(1.0) / Float(::Math_obj::sqrt(d)));		HX_STACK_VAR(imag,"imag");
 					HX_STACK_LINE(936)
 					{
 						HX_STACK_LINE(937)
 						Float t = imag;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(938)
-						{
-						}
 						HX_STACK_LINE(946)
 						hx::MultEq(nx,t);
 						HX_STACK_LINE(947)
 						hx::MultEq(ny,t);
 					}
 				}
-				HX_STACK_LINE(950)
-				{
-				}
 				struct _Function_3_1{
-					inline static ::nape::geom::Vec2 Block( Float &nx,Float &ny){
+					inline static ::nape::geom::Vec2 Block( Float &ny,Float &nx){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",954);
 						{
 							HX_STACK_LINE(954)
@@ -2590,7 +2476,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 							HX_STACK_LINE(954)
 							if (((ret->zpp_inner == null()))){
 								struct _Function_5_1{
-									inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &nx,Float &ny){
+									inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &ny,Float &nx){
 										HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",954);
 										{
 											HX_STACK_LINE(954)
@@ -2626,9 +2512,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 												HX_STACK_LINE(954)
 												{
 												}
-												HX_STACK_LINE(954)
-												{
-												}
 											}
 											HX_STACK_LINE(954)
 											return ret1;
@@ -2637,7 +2520,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 									}
 								};
 								HX_STACK_LINE(954)
-								ret->zpp_inner = _Function_5_1::Block(nx,ny);
+								ret->zpp_inner = _Function_5_1::Block(ny,nx);
 								HX_STACK_LINE(954)
 								ret->zpp_inner->outer = ret;
 							}
@@ -2657,7 +2540,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 										hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 									}
 									HX_STACK_LINE(954)
-									if (((_this->_isimmutable_dyn() != null()))){
+									if (((_this->_isimmutable != null()))){
 										HX_STACK_LINE(954)
 										_this->_isimmutable();
 									}
@@ -2681,7 +2564,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 												HX_STACK_LINE(954)
 												::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(954)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(954)
 													_this->_validate();
 												}
@@ -2706,7 +2589,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 												HX_STACK_LINE(954)
 												::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(954)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(954)
 													_this->_validate();
 												}
@@ -2728,16 +2611,13 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 										HX_STACK_LINE(954)
 										{
 										}
-										HX_STACK_LINE(954)
-										{
-										}
 									}
 									HX_STACK_LINE(954)
 									{
 										HX_STACK_LINE(954)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(954)
-										if (((_this->_invalidate_dyn() != null()))){
+										if (((_this->_invalidate != null()))){
 											HX_STACK_LINE(954)
 											_this->_invalidate(_this);
 										}
@@ -2755,7 +2635,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 					}
 				};
 				HX_STACK_LINE(954)
-				::nape::geom::RayResult res = ::zpp_nape::geom::ZPP_ConvexRayResult_obj::getRay(_Function_3_1::Block(nx,ny),t0,false,c->outer);		HX_STACK_VAR(res,"res");
+				::nape::geom::RayResult res = ::zpp_nape::geom::ZPP_ConvexRayResult_obj::getRay(_Function_3_1::Block(ny,nx),t0,false,c->outer);		HX_STACK_VAR(res,"res");
 				HX_STACK_LINE(955)
 				{
 					HX_STACK_LINE(956)
@@ -2816,9 +2696,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 					{
 						HX_STACK_LINE(968)
 						::zpp_nape::util::ZNPList_RayResult _this = list->zpp_inner->inner;		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(968)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_RayResult Block( ::nape::geom::RayResult &res){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",968);
@@ -2887,9 +2764,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 					nx = this->originx;
 					HX_STACK_LINE(976)
 					ny = this->originy;
-					HX_STACK_LINE(977)
-					{
-					}
 					HX_STACK_LINE(985)
 					{
 					}
@@ -2898,9 +2772,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 				{
 					HX_STACK_LINE(995)
 					Float t = t1;		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(996)
-					{
-					}
 					HX_STACK_LINE(1004)
 					hx::AddEq(nx,(this->dirx * t));
 					HX_STACK_LINE(1005)
@@ -2910,9 +2781,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 				{
 					HX_STACK_LINE(1008)
 					Float t = 1.0;		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(1009)
-					{
-					}
 					HX_STACK_LINE(1017)
 					hx::SubEq(nx,(c->worldCOMx * t));
 					HX_STACK_LINE(1018)
@@ -2922,18 +2790,12 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 				{
 					HX_STACK_LINE(1021)
 					Float d = ((nx * nx) + (ny * ny));		HX_STACK_VAR(d,"d");
-					HX_STACK_LINE(1022)
-					{
-					}
 					HX_STACK_LINE(1030)
 					Float imag = (Float(1.0) / Float(::Math_obj::sqrt(d)));		HX_STACK_VAR(imag,"imag");
 					HX_STACK_LINE(1031)
 					{
 						HX_STACK_LINE(1032)
 						Float t = imag;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(1033)
-						{
-						}
 						HX_STACK_LINE(1041)
 						hx::MultEq(nx,t);
 						HX_STACK_LINE(1042)
@@ -2948,7 +2810,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 					ny = -(ny);
 				}
 				struct _Function_3_1{
-					inline static ::nape::geom::Vec2 Block( Float &nx,Float &ny){
+					inline static ::nape::geom::Vec2 Block( Float &ny,Float &nx){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",1049);
 						{
 							HX_STACK_LINE(1049)
@@ -2983,7 +2845,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 							HX_STACK_LINE(1049)
 							if (((ret->zpp_inner == null()))){
 								struct _Function_5_1{
-									inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &nx,Float &ny){
+									inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &ny,Float &nx){
 										HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",1049);
 										{
 											HX_STACK_LINE(1049)
@@ -3019,9 +2881,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 												HX_STACK_LINE(1049)
 												{
 												}
-												HX_STACK_LINE(1049)
-												{
-												}
 											}
 											HX_STACK_LINE(1049)
 											return ret1;
@@ -3030,7 +2889,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 									}
 								};
 								HX_STACK_LINE(1049)
-								ret->zpp_inner = _Function_5_1::Block(nx,ny);
+								ret->zpp_inner = _Function_5_1::Block(ny,nx);
 								HX_STACK_LINE(1049)
 								ret->zpp_inner->outer = ret;
 							}
@@ -3050,7 +2909,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 										hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 									}
 									HX_STACK_LINE(1049)
-									if (((_this->_isimmutable_dyn() != null()))){
+									if (((_this->_isimmutable != null()))){
 										HX_STACK_LINE(1049)
 										_this->_isimmutable();
 									}
@@ -3074,7 +2933,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 												HX_STACK_LINE(1049)
 												::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(1049)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(1049)
 													_this->_validate();
 												}
@@ -3099,7 +2958,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 												HX_STACK_LINE(1049)
 												::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(1049)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(1049)
 													_this->_validate();
 												}
@@ -3121,16 +2980,13 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 										HX_STACK_LINE(1049)
 										{
 										}
-										HX_STACK_LINE(1049)
-										{
-										}
 									}
 									HX_STACK_LINE(1049)
 									{
 										HX_STACK_LINE(1049)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1049)
-										if (((_this->_invalidate_dyn() != null()))){
+										if (((_this->_invalidate != null()))){
 											HX_STACK_LINE(1049)
 											_this->_invalidate(_this);
 										}
@@ -3148,7 +3004,7 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 					}
 				};
 				HX_STACK_LINE(1049)
-				::nape::geom::RayResult res = ::zpp_nape::geom::ZPP_ConvexRayResult_obj::getRay(_Function_3_1::Block(nx,ny),t1,true,c->outer);		HX_STACK_VAR(res,"res");
+				::nape::geom::RayResult res = ::zpp_nape::geom::ZPP_ConvexRayResult_obj::getRay(_Function_3_1::Block(ny,nx),t1,true,c->outer);		HX_STACK_VAR(res,"res");
 				HX_STACK_LINE(1050)
 				{
 					HX_STACK_LINE(1051)
@@ -3209,9 +3065,6 @@ Void ZPP_Ray_obj::circlesect2( ::zpp_nape::shape::ZPP_Circle c,bool inner,::nape
 					{
 						HX_STACK_LINE(1063)
 						::zpp_nape::util::ZNPList_RayResult _this = list->zpp_inner->inner;		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(1063)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_RayResult Block( ::nape::geom::RayResult &res){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",1063);
@@ -3308,9 +3161,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 						HX_STACK_LINE(492)
 						_this->localCOMy = _this->lverts->next->y;
 						HX_STACK_LINE(492)
-						{
-						}
-						HX_STACK_LINE(492)
 						Dynamic();
 					}
 					else{
@@ -3325,17 +3175,11 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 								HX_STACK_LINE(492)
 								{
 								}
-								HX_STACK_LINE(492)
-								{
-								}
 							}
 							HX_STACK_LINE(492)
 							{
 								HX_STACK_LINE(492)
 								Float t = 1.0;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(492)
-								{
-								}
 								HX_STACK_LINE(492)
 								hx::AddEq(_this->localCOMx,(_this->lverts->next->next->x * t));
 								HX_STACK_LINE(492)
@@ -3345,9 +3189,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 							{
 								HX_STACK_LINE(492)
 								Float t = 0.5;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(492)
-								{
-								}
 								HX_STACK_LINE(492)
 								hx::MultEq(_this->localCOMx,t);
 								HX_STACK_LINE(492)
@@ -3361,9 +3202,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 								_this->localCOMx = (int)0;
 								HX_STACK_LINE(492)
 								_this->localCOMy = (int)0;
-								HX_STACK_LINE(492)
-								{
-								}
 								HX_STACK_LINE(492)
 								{
 								}
@@ -3446,9 +3284,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 								HX_STACK_LINE(492)
 								Float t = area;		HX_STACK_VAR(t,"t");
 								HX_STACK_LINE(492)
-								{
-								}
-								HX_STACK_LINE(492)
 								hx::MultEq(_this->localCOMx,t);
 								HX_STACK_LINE(492)
 								hx::MultEq(_this->localCOMy,t);
@@ -3471,9 +3306,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 						_this->axisx = ::Math_obj::sin(_this->rot);
 						HX_STACK_LINE(492)
 						_this->axisy = ::Math_obj::cos(_this->rot);
-						HX_STACK_LINE(492)
-						{
-						}
 						HX_STACK_LINE(492)
 						Dynamic();
 					}
@@ -3523,9 +3355,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 				nx = this->originx;
 				HX_STACK_LINE(510)
 				ny = this->originy;
-				HX_STACK_LINE(511)
-				{
-				}
 				HX_STACK_LINE(519)
 				{
 				}
@@ -3534,9 +3363,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 			{
 				HX_STACK_LINE(529)
 				Float t1 = t;		HX_STACK_VAR(t1,"t1");
-				HX_STACK_LINE(530)
-				{
-				}
 				HX_STACK_LINE(538)
 				hx::AddEq(nx,(this->dirx * t1));
 				HX_STACK_LINE(539)
@@ -3546,9 +3372,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 			{
 				HX_STACK_LINE(542)
 				Float t1 = 1.0;		HX_STACK_VAR(t1,"t1");
-				HX_STACK_LINE(543)
-				{
-				}
 				HX_STACK_LINE(551)
 				hx::SubEq(nx,(c->worldCOMx * t1));
 				HX_STACK_LINE(552)
@@ -3558,18 +3381,12 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 			{
 				HX_STACK_LINE(555)
 				Float d = ((nx * nx) + (ny * ny));		HX_STACK_VAR(d,"d");
-				HX_STACK_LINE(556)
-				{
-				}
 				HX_STACK_LINE(564)
 				Float imag = (Float(1.0) / Float(::Math_obj::sqrt(d)));		HX_STACK_VAR(imag,"imag");
 				HX_STACK_LINE(565)
 				{
 					HX_STACK_LINE(566)
 					Float t1 = imag;		HX_STACK_VAR(t1,"t1");
-					HX_STACK_LINE(567)
-					{
-					}
 					HX_STACK_LINE(575)
 					hx::MultEq(nx,t1);
 					HX_STACK_LINE(576)
@@ -3584,7 +3401,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 				ny = -(ny);
 			}
 			struct _Function_3_1{
-				inline static ::nape::geom::Vec2 Block( Float &nx,Float &ny){
+				inline static ::nape::geom::Vec2 Block( Float &ny,Float &nx){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",583);
 					{
 						HX_STACK_LINE(583)
@@ -3619,7 +3436,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 						HX_STACK_LINE(583)
 						if (((ret->zpp_inner == null()))){
 							struct _Function_5_1{
-								inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &nx,Float &ny){
+								inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &ny,Float &nx){
 									HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",583);
 									{
 										HX_STACK_LINE(583)
@@ -3655,9 +3472,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 											HX_STACK_LINE(583)
 											{
 											}
-											HX_STACK_LINE(583)
-											{
-											}
 										}
 										HX_STACK_LINE(583)
 										return ret1;
@@ -3666,7 +3480,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 								}
 							};
 							HX_STACK_LINE(583)
-							ret->zpp_inner = _Function_5_1::Block(nx,ny);
+							ret->zpp_inner = _Function_5_1::Block(ny,nx);
 							HX_STACK_LINE(583)
 							ret->zpp_inner->outer = ret;
 						}
@@ -3686,7 +3500,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(583)
-								if (((_this->_isimmutable_dyn() != null()))){
+								if (((_this->_isimmutable != null()))){
 									HX_STACK_LINE(583)
 									_this->_isimmutable();
 								}
@@ -3710,7 +3524,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 											HX_STACK_LINE(583)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(583)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(583)
 												_this->_validate();
 											}
@@ -3735,7 +3549,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 											HX_STACK_LINE(583)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(583)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(583)
 												_this->_validate();
 											}
@@ -3757,16 +3571,13 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 									HX_STACK_LINE(583)
 									{
 									}
-									HX_STACK_LINE(583)
-									{
-									}
 								}
 								HX_STACK_LINE(583)
 								{
 									HX_STACK_LINE(583)
 									::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(583)
-									if (((_this->_invalidate_dyn() != null()))){
+									if (((_this->_invalidate != null()))){
 										HX_STACK_LINE(583)
 										_this->_invalidate(_this);
 									}
@@ -3784,7 +3595,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 				}
 			};
 			HX_STACK_LINE(583)
-			return ::zpp_nape::geom::ZPP_ConvexRayResult_obj::getRay(_Function_3_1::Block(nx,ny),t,(C <= (int)0),c->outer);
+			return ::zpp_nape::geom::ZPP_ConvexRayResult_obj::getRay(_Function_3_1::Block(ny,nx),t,(C <= (int)0),c->outer);
 		}
 		else{
 			HX_STACK_LINE(585)
@@ -3814,9 +3625,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 					nx = this->originx;
 					HX_STACK_LINE(598)
 					ny = this->originy;
-					HX_STACK_LINE(599)
-					{
-					}
 					HX_STACK_LINE(607)
 					{
 					}
@@ -3825,9 +3633,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 				{
 					HX_STACK_LINE(617)
 					Float t = t0;		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(618)
-					{
-					}
 					HX_STACK_LINE(626)
 					hx::AddEq(nx,(this->dirx * t));
 					HX_STACK_LINE(627)
@@ -3837,9 +3642,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 				{
 					HX_STACK_LINE(630)
 					Float t = 1.0;		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(631)
-					{
-					}
 					HX_STACK_LINE(639)
 					hx::SubEq(nx,(c->worldCOMx * t));
 					HX_STACK_LINE(640)
@@ -3849,29 +3651,20 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 				{
 					HX_STACK_LINE(643)
 					Float d = ((nx * nx) + (ny * ny));		HX_STACK_VAR(d,"d");
-					HX_STACK_LINE(644)
-					{
-					}
 					HX_STACK_LINE(652)
 					Float imag = (Float(1.0) / Float(::Math_obj::sqrt(d)));		HX_STACK_VAR(imag,"imag");
 					HX_STACK_LINE(653)
 					{
 						HX_STACK_LINE(654)
 						Float t = imag;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(655)
-						{
-						}
 						HX_STACK_LINE(663)
 						hx::MultEq(nx,t);
 						HX_STACK_LINE(664)
 						hx::MultEq(ny,t);
 					}
 				}
-				HX_STACK_LINE(667)
-				{
-				}
 				struct _Function_4_1{
-					inline static ::nape::geom::Vec2 Block( Float &nx,Float &ny){
+					inline static ::nape::geom::Vec2 Block( Float &ny,Float &nx){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",671);
 						{
 							HX_STACK_LINE(671)
@@ -3906,7 +3699,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 							HX_STACK_LINE(671)
 							if (((ret->zpp_inner == null()))){
 								struct _Function_6_1{
-									inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &nx,Float &ny){
+									inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &ny,Float &nx){
 										HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",671);
 										{
 											HX_STACK_LINE(671)
@@ -3942,9 +3735,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 												HX_STACK_LINE(671)
 												{
 												}
-												HX_STACK_LINE(671)
-												{
-												}
 											}
 											HX_STACK_LINE(671)
 											return ret1;
@@ -3953,7 +3743,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 									}
 								};
 								HX_STACK_LINE(671)
-								ret->zpp_inner = _Function_6_1::Block(nx,ny);
+								ret->zpp_inner = _Function_6_1::Block(ny,nx);
 								HX_STACK_LINE(671)
 								ret->zpp_inner->outer = ret;
 							}
@@ -3973,7 +3763,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 										hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 									}
 									HX_STACK_LINE(671)
-									if (((_this->_isimmutable_dyn() != null()))){
+									if (((_this->_isimmutable != null()))){
 										HX_STACK_LINE(671)
 										_this->_isimmutable();
 									}
@@ -3997,7 +3787,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 												HX_STACK_LINE(671)
 												::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(671)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(671)
 													_this->_validate();
 												}
@@ -4022,7 +3812,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 												HX_STACK_LINE(671)
 												::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(671)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(671)
 													_this->_validate();
 												}
@@ -4044,16 +3834,13 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 										HX_STACK_LINE(671)
 										{
 										}
-										HX_STACK_LINE(671)
-										{
-										}
 									}
 									HX_STACK_LINE(671)
 									{
 										HX_STACK_LINE(671)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(671)
-										if (((_this->_invalidate_dyn() != null()))){
+										if (((_this->_invalidate != null()))){
 											HX_STACK_LINE(671)
 											_this->_invalidate(_this);
 										}
@@ -4071,7 +3858,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 					}
 				};
 				HX_STACK_LINE(671)
-				return ::zpp_nape::geom::ZPP_ConvexRayResult_obj::getRay(_Function_4_1::Block(nx,ny),t0,false,c->outer);
+				return ::zpp_nape::geom::ZPP_ConvexRayResult_obj::getRay(_Function_4_1::Block(ny,nx),t0,false,c->outer);
 			}
 			else{
 				HX_STACK_LINE(673)
@@ -4093,9 +3880,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 						nx = this->originx;
 						HX_STACK_LINE(681)
 						ny = this->originy;
-						HX_STACK_LINE(682)
-						{
-						}
 						HX_STACK_LINE(690)
 						{
 						}
@@ -4104,9 +3888,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 					{
 						HX_STACK_LINE(700)
 						Float t = t1;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(701)
-						{
-						}
 						HX_STACK_LINE(709)
 						hx::AddEq(nx,(this->dirx * t));
 						HX_STACK_LINE(710)
@@ -4116,9 +3897,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 					{
 						HX_STACK_LINE(713)
 						Float t = 1.0;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(714)
-						{
-						}
 						HX_STACK_LINE(722)
 						hx::SubEq(nx,(c->worldCOMx * t));
 						HX_STACK_LINE(723)
@@ -4128,18 +3906,12 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 					{
 						HX_STACK_LINE(726)
 						Float d = ((nx * nx) + (ny * ny));		HX_STACK_VAR(d,"d");
-						HX_STACK_LINE(727)
-						{
-						}
 						HX_STACK_LINE(735)
 						Float imag = (Float(1.0) / Float(::Math_obj::sqrt(d)));		HX_STACK_VAR(imag,"imag");
 						HX_STACK_LINE(736)
 						{
 							HX_STACK_LINE(737)
 							Float t = imag;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(738)
-							{
-							}
 							HX_STACK_LINE(746)
 							hx::MultEq(nx,t);
 							HX_STACK_LINE(747)
@@ -4154,7 +3926,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 						ny = -(ny);
 					}
 					struct _Function_5_1{
-						inline static ::nape::geom::Vec2 Block( Float &nx,Float &ny){
+						inline static ::nape::geom::Vec2 Block( Float &ny,Float &nx){
 							HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",754);
 							{
 								HX_STACK_LINE(754)
@@ -4189,7 +3961,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 								HX_STACK_LINE(754)
 								if (((ret->zpp_inner == null()))){
 									struct _Function_7_1{
-										inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &nx,Float &ny){
+										inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &ny,Float &nx){
 											HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",754);
 											{
 												HX_STACK_LINE(754)
@@ -4225,9 +3997,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 													HX_STACK_LINE(754)
 													{
 													}
-													HX_STACK_LINE(754)
-													{
-													}
 												}
 												HX_STACK_LINE(754)
 												return ret1;
@@ -4236,7 +4005,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 										}
 									};
 									HX_STACK_LINE(754)
-									ret->zpp_inner = _Function_7_1::Block(nx,ny);
+									ret->zpp_inner = _Function_7_1::Block(ny,nx);
 									HX_STACK_LINE(754)
 									ret->zpp_inner->outer = ret;
 								}
@@ -4256,7 +4025,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 											hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 										}
 										HX_STACK_LINE(754)
-										if (((_this->_isimmutable_dyn() != null()))){
+										if (((_this->_isimmutable != null()))){
 											HX_STACK_LINE(754)
 											_this->_isimmutable();
 										}
@@ -4280,7 +4049,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 													HX_STACK_LINE(754)
 													::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 													HX_STACK_LINE(754)
-													if (((_this->_validate_dyn() != null()))){
+													if (((_this->_validate != null()))){
 														HX_STACK_LINE(754)
 														_this->_validate();
 													}
@@ -4305,7 +4074,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 													HX_STACK_LINE(754)
 													::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 													HX_STACK_LINE(754)
-													if (((_this->_validate_dyn() != null()))){
+													if (((_this->_validate != null()))){
 														HX_STACK_LINE(754)
 														_this->_validate();
 													}
@@ -4327,16 +4096,13 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 											HX_STACK_LINE(754)
 											{
 											}
-											HX_STACK_LINE(754)
-											{
-											}
 										}
 										HX_STACK_LINE(754)
 										{
 											HX_STACK_LINE(754)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(754)
-											if (((_this->_invalidate_dyn() != null()))){
+											if (((_this->_invalidate != null()))){
 												HX_STACK_LINE(754)
 												_this->_invalidate(_this);
 											}
@@ -4354,7 +4120,7 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Ray_obj,circlesect2,(void))
 						}
 					};
 					HX_STACK_LINE(754)
-					return ::zpp_nape::geom::ZPP_ConvexRayResult_obj::getRay(_Function_5_1::Block(nx,ny),t1,true,c->outer);
+					return ::zpp_nape::geom::ZPP_ConvexRayResult_obj::getRay(_Function_5_1::Block(ny,nx),t1,true,c->outer);
 				}
 				else{
 					HX_STACK_LINE(756)
@@ -4586,7 +4352,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Ray_obj,aabbtest,return )
 		y1 = t;
 	}
 	struct _Function_1_1{
-		inline static ::zpp_nape::geom::ZPP_AABB Block( Float &y1,Float &y0,Float &x1,Float &x0){
+		inline static ::zpp_nape::geom::ZPP_AABB Block( Float &x0,Float &y0,Float &x1,Float &y1){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/Ray.hx",424);
 			{
 				HX_STACK_LINE(424)
@@ -4618,9 +4384,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Ray_obj,aabbtest,return )
 					HX_STACK_LINE(424)
 					{
 					}
-					HX_STACK_LINE(424)
-					{
-					}
 				}
 				HX_STACK_LINE(424)
 				{
@@ -4628,9 +4391,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Ray_obj,aabbtest,return )
 					ret->maxx = x1;
 					HX_STACK_LINE(424)
 					ret->maxy = y1;
-					HX_STACK_LINE(424)
-					{
-					}
 					HX_STACK_LINE(424)
 					{
 					}
@@ -4642,7 +4402,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Ray_obj,aabbtest,return )
 		}
 	};
 	HX_STACK_LINE(424)
-	::zpp_nape::geom::ZPP_AABB rayab = _Function_1_1::Block(y1,y0,x1,x0);		HX_STACK_VAR(rayab,"rayab");
+	::zpp_nape::geom::ZPP_AABB rayab = _Function_1_1::Block(x0,y0,x1,y1);		HX_STACK_VAR(rayab,"rayab");
 	HX_STACK_LINE(425)
 	return rayab;
 }
@@ -4667,18 +4427,12 @@ Void ZPP_Ray_obj::validate_dir( ){
 			{
 				HX_STACK_LINE(299)
 				Float d = ((this->dirx * this->dirx) + (this->diry * this->diry));		HX_STACK_VAR(d,"d");
-				HX_STACK_LINE(300)
-				{
-				}
 				HX_STACK_LINE(308)
 				Float imag = (Float(1.0) / Float(::Math_obj::sqrt(d)));		HX_STACK_VAR(imag,"imag");
 				HX_STACK_LINE(309)
 				{
 					HX_STACK_LINE(310)
 					Float t = imag;		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(311)
-					{
-					}
 					HX_STACK_LINE(319)
 					hx::MultEq(this->dirx,t);
 					HX_STACK_LINE(320)
@@ -4691,9 +4445,6 @@ Void ZPP_Ray_obj::validate_dir( ){
 				this->idirx = (Float((int)1) / Float(this->dirx));
 				HX_STACK_LINE(325)
 				this->idiry = (Float((int)1) / Float(this->diry));
-				HX_STACK_LINE(326)
-				{
-				}
 				HX_STACK_LINE(334)
 				{
 				}
@@ -4704,9 +4455,6 @@ Void ZPP_Ray_obj::validate_dir( ){
 				this->normalx = -(this->diry);
 				HX_STACK_LINE(345)
 				this->normaly = this->dirx;
-				HX_STACK_LINE(346)
-				{
-				}
 				HX_STACK_LINE(354)
 				{
 				}
@@ -4741,9 +4489,6 @@ Void ZPP_Ray_obj::validate_dir( ){
 				};
 				HX_STACK_LINE(368)
 				this->absnormaly = _Function_3_2::Block(this);
-				HX_STACK_LINE(372)
-				{
-				}
 				HX_STACK_LINE(380)
 				{
 				}
@@ -4780,9 +4525,6 @@ Void ZPP_Ray_obj::direction_invalidate( ::zpp_nape::geom::ZPP_Vec2 x){
 			this->dirx = x->x;
 			HX_STACK_LINE(217)
 			this->diry = x->y;
-			HX_STACK_LINE(218)
-			{
-			}
 			HX_STACK_LINE(226)
 			{
 			}
@@ -4805,9 +4547,6 @@ Void ZPP_Ray_obj::origin_invalidate( ::zpp_nape::geom::ZPP_Vec2 x){
 		this->originx = x->x;
 		HX_STACK_LINE(195)
 		this->originy = x->y;
-		HX_STACK_LINE(196)
-		{
-		}
 		HX_STACK_LINE(204)
 		{
 		}
@@ -5025,7 +4764,7 @@ Class ZPP_Ray_obj::__mClass;
 
 void ZPP_Ray_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_Ray"), hx::TCanCast< ZPP_Ray_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_Ray"), hx::TCanCast< ZPP_Ray_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

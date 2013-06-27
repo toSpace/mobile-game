@@ -17,13 +17,13 @@
    <depend name="include/zpp_nape/geom/ZPP_SimpleVert.h"/>
    <depend name="include/zpp_nape/util/ZPP_Set_ZPP_SimpleVert.h"/>
   </file>
-  <file name="src/zpp_nape/util/ZPP_Set_ZPP_PartitionPair.cpp">
-   <depend name="include/zpp_nape/geom/ZPP_PartitionPair.h"/>
-   <depend name="include/zpp_nape/util/ZPP_Set_ZPP_PartitionPair.h"/>
-  </file>
   <file name="src/zpp_nape/util/ZPP_Set_ZPP_PartitionVertex.cpp">
    <depend name="include/zpp_nape/geom/ZPP_PartitionVertex.h"/>
    <depend name="include/zpp_nape/util/ZPP_Set_ZPP_PartitionVertex.h"/>
+  </file>
+  <file name="src/zpp_nape/util/ZPP_Set_ZPP_PartitionPair.cpp">
+   <depend name="include/zpp_nape/geom/ZPP_PartitionPair.h"/>
+   <depend name="include/zpp_nape/util/ZPP_Set_ZPP_PartitionPair.h"/>
   </file>
   <file name="src/zpp_nape/util/ZPP_Set_ZPP_CbSetPair.cpp">
    <depend name="include/zpp_nape/callbacks/ZPP_CbSetPair.h"/>
@@ -63,13 +63,6 @@
    <depend name="include/zpp_nape/util/ZNPNode_ZPP_InteractionGroup.h"/>
    <depend name="include/zpp_nape/util/ZPP_InteractionGroupList.h"/>
   </file>
-  <file name="src/zpp_nape/util/ZPP_EdgeList.cpp">
-   <depend name="include/nape/shape/Edge.h"/>
-   <depend name="include/nape/shape/EdgeList.h"/>
-   <depend name="include/zpp_nape/util/ZNPList_ZPP_Edge.h"/>
-   <depend name="include/zpp_nape/util/ZNPNode_ZPP_Edge.h"/>
-   <depend name="include/zpp_nape/util/ZPP_EdgeList.h"/>
-  </file>
   <file name="src/zpp_nape/util/ZPP_ShapeList.cpp">
    <depend name="include/nape/phys/Interactor.h"/>
    <depend name="include/nape/shape/Shape.h"/>
@@ -77,6 +70,13 @@
    <depend name="include/zpp_nape/util/ZNPList_ZPP_Shape.h"/>
    <depend name="include/zpp_nape/util/ZNPNode_ZPP_Shape.h"/>
    <depend name="include/zpp_nape/util/ZPP_ShapeList.h"/>
+  </file>
+  <file name="src/zpp_nape/util/ZPP_EdgeList.cpp">
+   <depend name="include/nape/shape/Edge.h"/>
+   <depend name="include/nape/shape/EdgeList.h"/>
+   <depend name="include/zpp_nape/util/ZNPList_ZPP_Edge.h"/>
+   <depend name="include/zpp_nape/util/ZNPNode_ZPP_Edge.h"/>
+   <depend name="include/zpp_nape/util/ZPP_EdgeList.h"/>
   </file>
   <file name="src/zpp_nape/util/ZPP_ConvexResultList.cpp">
    <depend name="include/nape/geom/ConvexResult.h"/>
@@ -169,13 +169,13 @@
    <depend name="include/nape/geom/ConvexResult.h"/>
    <depend name="include/zpp_nape/util/ZNPNode_ConvexResult.h"/>
   </file>
-  <file name="src/zpp_nape/util/ZNPNode_ZPP_InteractionGroup.cpp">
-   <depend name="include/zpp_nape/dynamics/ZPP_InteractionGroup.h"/>
-   <depend name="include/zpp_nape/util/ZNPNode_ZPP_InteractionGroup.h"/>
-  </file>
   <file name="src/zpp_nape/util/ZNPNode_ZPP_ToiEvent.cpp">
    <depend name="include/zpp_nape/geom/ZPP_ToiEvent.h"/>
    <depend name="include/zpp_nape/util/ZNPNode_ZPP_ToiEvent.h"/>
+  </file>
+  <file name="src/zpp_nape/util/ZNPNode_ZPP_InteractionGroup.cpp">
+   <depend name="include/zpp_nape/dynamics/ZPP_InteractionGroup.h"/>
+   <depend name="include/zpp_nape/util/ZNPNode_ZPP_InteractionGroup.h"/>
   </file>
   <file name="src/zpp_nape/util/ZNPNode_ZPP_ColArbiter.cpp">
    <depend name="include/zpp_nape/dynamics/ZPP_Arbiter.h"/>
@@ -224,13 +224,13 @@
    <depend name="include/zpp_nape/geom/ZPP_SimpleVert.h"/>
    <depend name="include/zpp_nape/util/ZNPNode_ZPP_SimpleVert.h"/>
   </file>
-  <file name="src/zpp_nape/util/ZNPNode_ZPP_SimplifyP.cpp">
-   <depend name="include/zpp_nape/geom/ZPP_SimplifyP.h"/>
-   <depend name="include/zpp_nape/util/ZNPNode_ZPP_SimplifyP.h"/>
-  </file>
   <file name="src/zpp_nape/util/ZNPNode_ZPP_GeomVert.cpp">
    <depend name="include/zpp_nape/geom/ZPP_GeomVert.h"/>
    <depend name="include/zpp_nape/util/ZNPNode_ZPP_GeomVert.h"/>
+  </file>
+  <file name="src/zpp_nape/util/ZNPNode_ZPP_SimplifyP.cpp">
+   <depend name="include/zpp_nape/geom/ZPP_SimplifyP.h"/>
+   <depend name="include/zpp_nape/util/ZNPNode_ZPP_SimplifyP.h"/>
   </file>
   <file name="src/zpp_nape/util/ZNPNode_ZPP_PartitionedPoly.cpp">
    <depend name="include/zpp_nape/geom/ZPP_PartitionedPoly.h"/>
@@ -248,9 +248,9 @@
    <depend name="include/zpp_nape/geom/ZPP_CutInt.h"/>
    <depend name="include/zpp_nape/util/ZNPNode_ZPP_CutInt.h"/>
   </file>
-  <file name="src/zpp_nape/util/ZNPNode_ZPP_CbSetPair.cpp">
-   <depend name="include/zpp_nape/callbacks/ZPP_CbSetPair.h"/>
-   <depend name="include/zpp_nape/util/ZNPNode_ZPP_CbSetPair.h"/>
+  <file name="src/zpp_nape/util/ZNPNode_ZPP_Arbiter.cpp">
+   <depend name="include/zpp_nape/dynamics/ZPP_Arbiter.h"/>
+   <depend name="include/zpp_nape/util/ZNPNode_ZPP_Arbiter.h"/>
   </file>
   <file name="src/zpp_nape/util/ZNPNode_ZPP_ConstraintListener.cpp">
    <depend name="include/zpp_nape/callbacks/ZPP_ConstraintListener.h"/>
@@ -262,13 +262,13 @@
    <depend name="include/zpp_nape/callbacks/ZPP_Listener.h"/>
    <depend name="include/zpp_nape/util/ZNPNode_ZPP_BodyListener.h"/>
   </file>
+  <file name="src/zpp_nape/util/ZNPNode_ZPP_CbSetPair.cpp">
+   <depend name="include/zpp_nape/callbacks/ZPP_CbSetPair.h"/>
+   <depend name="include/zpp_nape/util/ZNPNode_ZPP_CbSetPair.h"/>
+  </file>
   <file name="src/zpp_nape/util/ZNPNode_ZPP_Interactor.cpp">
    <depend name="include/zpp_nape/phys/ZPP_Interactor.h"/>
    <depend name="include/zpp_nape/util/ZNPNode_ZPP_Interactor.h"/>
-  </file>
-  <file name="src/zpp_nape/util/ZNPNode_ZPP_Arbiter.cpp">
-   <depend name="include/zpp_nape/dynamics/ZPP_Arbiter.h"/>
-   <depend name="include/zpp_nape/util/ZNPNode_ZPP_Arbiter.h"/>
   </file>
   <file name="src/zpp_nape/util/ZNPNode_ZPP_CbSet.cpp">
    <depend name="include/zpp_nape/callbacks/ZPP_CbSet.h"/>
@@ -321,15 +321,15 @@
    <depend name="include/zpp_nape/util/ZNPList_ConvexResult.h"/>
    <depend name="include/zpp_nape/util/ZNPNode_ConvexResult.h"/>
   </file>
-  <file name="src/zpp_nape/util/ZNPList_ZPP_InteractionGroup.cpp">
-   <depend name="include/zpp_nape/dynamics/ZPP_InteractionGroup.h"/>
-   <depend name="include/zpp_nape/util/ZNPList_ZPP_InteractionGroup.h"/>
-   <depend name="include/zpp_nape/util/ZNPNode_ZPP_InteractionGroup.h"/>
-  </file>
   <file name="src/zpp_nape/util/ZNPList_ZPP_ToiEvent.cpp">
    <depend name="include/zpp_nape/geom/ZPP_ToiEvent.h"/>
    <depend name="include/zpp_nape/util/ZNPList_ZPP_ToiEvent.h"/>
    <depend name="include/zpp_nape/util/ZNPNode_ZPP_ToiEvent.h"/>
+  </file>
+  <file name="src/zpp_nape/util/ZNPList_ZPP_InteractionGroup.cpp">
+   <depend name="include/zpp_nape/dynamics/ZPP_InteractionGroup.h"/>
+   <depend name="include/zpp_nape/util/ZNPList_ZPP_InteractionGroup.h"/>
+   <depend name="include/zpp_nape/util/ZNPNode_ZPP_InteractionGroup.h"/>
   </file>
   <file name="src/zpp_nape/util/ZNPList_ZPP_ColArbiter.cpp">
    <depend name="include/zpp_nape/dynamics/ZPP_Arbiter.h"/>
@@ -384,15 +384,15 @@
    <depend name="include/zpp_nape/util/ZNPList_ZPP_SimpleVert.h"/>
    <depend name="include/zpp_nape/util/ZNPNode_ZPP_SimpleVert.h"/>
   </file>
-  <file name="src/zpp_nape/util/ZNPList_ZPP_SimplifyP.cpp">
-   <depend name="include/zpp_nape/geom/ZPP_SimplifyP.h"/>
-   <depend name="include/zpp_nape/util/ZNPList_ZPP_SimplifyP.h"/>
-   <depend name="include/zpp_nape/util/ZNPNode_ZPP_SimplifyP.h"/>
-  </file>
   <file name="src/zpp_nape/util/ZNPList_ZPP_GeomVert.cpp">
    <depend name="include/zpp_nape/geom/ZPP_GeomVert.h"/>
    <depend name="include/zpp_nape/util/ZNPList_ZPP_GeomVert.h"/>
    <depend name="include/zpp_nape/util/ZNPNode_ZPP_GeomVert.h"/>
+  </file>
+  <file name="src/zpp_nape/util/ZNPList_ZPP_SimplifyP.cpp">
+   <depend name="include/zpp_nape/geom/ZPP_SimplifyP.h"/>
+   <depend name="include/zpp_nape/util/ZNPList_ZPP_SimplifyP.h"/>
+   <depend name="include/zpp_nape/util/ZNPNode_ZPP_SimplifyP.h"/>
   </file>
   <file name="src/zpp_nape/util/ZNPList_ZPP_PartitionedPoly.cpp">
    <depend name="include/zpp_nape/geom/ZPP_PartitionedPoly.h"/>
@@ -414,15 +414,15 @@
    <depend name="include/zpp_nape/util/ZNPList_ZPP_CutInt.h"/>
    <depend name="include/zpp_nape/util/ZNPNode_ZPP_CutInt.h"/>
   </file>
-  <file name="src/zpp_nape/util/ZNPList_ZPP_CbSetPair.cpp">
-   <depend name="include/zpp_nape/callbacks/ZPP_CbSetPair.h"/>
-   <depend name="include/zpp_nape/util/ZNPList_ZPP_CbSetPair.h"/>
-   <depend name="include/zpp_nape/util/ZNPNode_ZPP_CbSetPair.h"/>
-  </file>
   <file name="src/zpp_nape/util/ZNPList_ZPP_Arbiter.cpp">
    <depend name="include/zpp_nape/dynamics/ZPP_Arbiter.h"/>
    <depend name="include/zpp_nape/util/ZNPList_ZPP_Arbiter.h"/>
    <depend name="include/zpp_nape/util/ZNPNode_ZPP_Arbiter.h"/>
+  </file>
+  <file name="src/zpp_nape/util/ZNPList_ZPP_CbSetPair.cpp">
+   <depend name="include/zpp_nape/callbacks/ZPP_CbSetPair.h"/>
+   <depend name="include/zpp_nape/util/ZNPList_ZPP_CbSetPair.h"/>
+   <depend name="include/zpp_nape/util/ZNPNode_ZPP_CbSetPair.h"/>
   </file>
   <file name="src/zpp_nape/util/ZNPList_ZPP_Compound.cpp">
    <depend name="include/zpp_nape/phys/ZPP_Compound.h"/>
@@ -469,80 +469,6 @@
   </file>
   <file name="src/zpp_nape/util/Hashable2_Boolfalse.cpp">
    <depend name="include/zpp_nape/util/Hashable2_Boolfalse.h"/>
-  </file>
-  <file name="src/zpp_nape/util/ZPP_ShapeDebug.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/nape/constraint/Constraint.h"/>
-   <depend name="include/nape/dynamics/Arbiter.h"/>
-   <depend name="include/nape/dynamics/ArbiterIterator.h"/>
-   <depend name="include/nape/dynamics/ArbiterList.h"/>
-   <depend name="include/nape/dynamics/CollisionArbiter.h"/>
-   <depend name="include/nape/dynamics/Contact.h"/>
-   <depend name="include/nape/dynamics/ContactList.h"/>
-   <depend name="include/nape/dynamics/FluidArbiter.h"/>
-   <depend name="include/nape/geom/Vec2.h"/>
-   <depend name="include/nape/phys/Body.h"/>
-   <depend name="include/nape/phys/BodyList.h"/>
-   <depend name="include/nape/phys/Interactor.h"/>
-   <depend name="include/nape/shape/Shape.h"/>
-   <depend name="include/nape/shape/ShapeList.h"/>
-   <depend name="include/nape/space/Space.h"/>
-   <depend name="include/nape/util/Debug.h"/>
-   <depend name="include/nape/util/ShapeDebug.h"/>
-   <depend name="include/native/display/CapsStyle.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/Graphics.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/JointStyle.h"/>
-   <depend name="include/native/display/LineScaleMode.h"/>
-   <depend name="include/native/display/Shape.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/zpp_nape/constraint/ZPP_Constraint.h"/>
-   <depend name="include/zpp_nape/dynamics/ZPP_Arbiter.h"/>
-   <depend name="include/zpp_nape/dynamics/ZPP_ColArbiter.h"/>
-   <depend name="include/zpp_nape/dynamics/ZPP_Contact.h"/>
-   <depend name="include/zpp_nape/dynamics/ZPP_FluidArbiter.h"/>
-   <depend name="include/zpp_nape/dynamics/ZPP_InteractionFilter.h"/>
-   <depend name="include/zpp_nape/dynamics/ZPP_SpaceArbiterList.h"/>
-   <depend name="include/zpp_nape/geom/ZPP_AABB.h"/>
-   <depend name="include/zpp_nape/geom/ZPP_Mat23.h"/>
-   <depend name="include/zpp_nape/geom/ZPP_Vec2.h"/>
-   <depend name="include/zpp_nape/phys/ZPP_Body.h"/>
-   <depend name="include/zpp_nape/phys/ZPP_Compound.h"/>
-   <depend name="include/zpp_nape/phys/ZPP_Interactor.h"/>
-   <depend name="include/zpp_nape/shape/ZPP_Circle.h"/>
-   <depend name="include/zpp_nape/shape/ZPP_Polygon.h"/>
-   <depend name="include/zpp_nape/shape/ZPP_Shape.h"/>
-   <depend name="include/zpp_nape/space/ZPP_Broadphase.h"/>
-   <depend name="include/zpp_nape/space/ZPP_Component.h"/>
-   <depend name="include/zpp_nape/space/ZPP_Space.h"/>
-   <depend name="include/zpp_nape/util/ZNPList_ZPP_Body.h"/>
-   <depend name="include/zpp_nape/util/ZNPList_ZPP_Compound.h"/>
-   <depend name="include/zpp_nape/util/ZNPList_ZPP_Constraint.h"/>
-   <depend name="include/zpp_nape/util/ZNPList_ZPP_Shape.h"/>
-   <depend name="include/zpp_nape/util/ZNPNode_ZPP_Body.h"/>
-   <depend name="include/zpp_nape/util/ZNPNode_ZPP_Compound.h"/>
-   <depend name="include/zpp_nape/util/ZNPNode_ZPP_Constraint.h"/>
-   <depend name="include/zpp_nape/util/ZNPNode_ZPP_Shape.h"/>
-   <depend name="include/zpp_nape/util/ZPP_BodyList.h"/>
-   <depend name="include/zpp_nape/util/ZPP_ContactList.h"/>
-   <depend name="include/zpp_nape/util/ZPP_Debug.h"/>
-   <depend name="include/zpp_nape/util/ZPP_Flags.h"/>
-   <depend name="include/zpp_nape/util/ZPP_PubPool.h"/>
-   <depend name="include/zpp_nape/util/ZPP_ShapeDebug.h"/>
-   <depend name="include/zpp_nape/util/ZPP_ShapeList.h"/>
-  </file>
-  <file name="src/zpp_nape/util/ZPP_Debug.cpp">
-   <depend name="include/nape/geom/Mat23.h"/>
-   <depend name="include/nape/geom/Vec2.h"/>
-   <depend name="include/nape/util/Debug.h"/>
-   <depend name="include/zpp_nape/geom/ZPP_AABB.h"/>
-   <depend name="include/zpp_nape/geom/ZPP_Mat23.h"/>
-   <depend name="include/zpp_nape/geom/ZPP_Vec2.h"/>
-   <depend name="include/zpp_nape/util/ZPP_Debug.h"/>
-   <depend name="include/zpp_nape/util/ZPP_PubPool.h"/>
-   <depend name="include/zpp_nape/util/ZPP_ShapeDebug.h"/>
   </file>
   <file name="src/zpp_nape/util/ZNPArray2_ZPP_MarchPair.cpp">
    <depend name="include/zpp_nape/geom/ZPP_MarchPair.h"/>
@@ -1508,9 +1434,7 @@
    <depend name="include/nape/geom/Vec3.h"/>
    <depend name="include/nape/phys/Body.h"/>
    <depend name="include/nape/phys/Interactor.h"/>
-   <depend name="include/nape/space/Space.h"/>
    <depend name="include/nape/util/Debug.h"/>
-   <depend name="include/zpp_nape/constraint/ZPP_AngleDraw.h"/>
    <depend name="include/zpp_nape/constraint/ZPP_Constraint.h"/>
    <depend name="include/zpp_nape/constraint/ZPP_CopyHelper.h"/>
    <depend name="include/zpp_nape/constraint/ZPP_PivotJoint.h"/>
@@ -1657,24 +1581,13 @@
    <depend name="include/nape/phys/Interactor.h"/>
    <depend name="include/zpp_nape/constraint/ZPP_CopyHelper.h"/>
   </file>
-  <file name="src/zpp_nape/constraint/ZPP_AngleDraw.cpp">
-   <depend name="include/nape/Config.h"/>
-   <depend name="include/nape/geom/Vec2.h"/>
-   <depend name="include/nape/util/Debug.h"/>
-   <depend name="include/zpp_nape/constraint/ZPP_AngleDraw.h"/>
-   <depend name="include/zpp_nape/geom/ZPP_Vec2.h"/>
-   <depend name="include/zpp_nape/util/ZPP_PubPool.h"/>
-  </file>
   <file name="src/zpp_nape/constraint/ZPP_AngleJoint.cpp">
    <depend name="include/nape/constraint/AngleJoint.h"/>
    <depend name="include/nape/constraint/Constraint.h"/>
-   <depend name="include/nape/geom/Vec2.h"/>
    <depend name="include/nape/geom/Vec3.h"/>
    <depend name="include/nape/phys/Body.h"/>
    <depend name="include/nape/phys/Interactor.h"/>
-   <depend name="include/nape/space/Space.h"/>
    <depend name="include/nape/util/Debug.h"/>
-   <depend name="include/zpp_nape/constraint/ZPP_AngleDraw.h"/>
    <depend name="include/zpp_nape/constraint/ZPP_AngleJoint.h"/>
    <depend name="include/zpp_nape/constraint/ZPP_Constraint.h"/>
    <depend name="include/zpp_nape/constraint/ZPP_CopyHelper.h"/>
@@ -1926,669 +1839,104 @@
   <file name="src/zpp_nape/ZPP_Const.cpp">
    <depend name="include/zpp_nape/ZPP_Const.h"/>
   </file>
-  <file name="src/sys/io/FileSeek.cpp">
-   <depend name="include/sys/io/FileSeek.h"/>
+  <file name="src/openfl/utils/WeakRef.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/openfl/utils/WeakRef.h"/>
   </file>
-  <file name="src/sys/io/FileOutput.cpp">
-   <depend name="include/cpp/Lib.h"/>
-   <depend name="include/haxe/io/Bytes.h"/>
-   <depend name="include/haxe/io/Error.h"/>
-   <depend name="include/haxe/io/Output.h"/>
-   <depend name="include/sys/io/FileOutput.h"/>
-   <depend name="include/sys/io/FileSeek.h"/>
+  <file name="src/openfl/events/SystemEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/openfl/events/SystemEvent.h"/>
   </file>
-  <file name="src/sys/io/FileInput.cpp">
-   <depend name="include/cpp/Lib.h"/>
-   <depend name="include/haxe/io/Bytes.h"/>
-   <depend name="include/haxe/io/Eof.h"/>
-   <depend name="include/haxe/io/Error.h"/>
-   <depend name="include/haxe/io/Input.h"/>
-   <depend name="include/sys/io/FileInput.h"/>
-   <depend name="include/sys/io/FileSeek.h"/>
+  <file name="src/openfl/events/JoystickEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/openfl/events/JoystickEvent.h"/>
   </file>
-  <file name="src/sys/io/File.cpp">
-   <depend name="include/cpp/Lib.h"/>
-   <depend name="include/haxe/io/Bytes.h"/>
-   <depend name="include/haxe/io/Input.h"/>
-   <depend name="include/haxe/io/Output.h"/>
-   <depend name="include/sys/io/File.h"/>
-   <depend name="include/sys/io/FileInput.h"/>
-   <depend name="include/sys/io/FileOutput.h"/>
+  <file name="src/openfl/display/ManagedStage.cpp">
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/Stage.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/openfl/display/ManagedStage.h"/>
   </file>
-  <file name="src/sys/FileSystem.cpp">
-   <depend name="include/Date.h"/>
-   <depend name="include/cpp/Lib.h"/>
-   <depend name="include/sys/FileSystem.h"/>
-   <depend name="include/sys/_FileSystem/FileKind.h"/>
-  </file>
-  <file name="src/sys/_FileSystem/FileKind.cpp">
-   <depend name="include/sys/_FileSystem/FileKind.h"/>
-  </file>
-  <file name="src/nme/installer/Assets.cpp">
-   <depend name="include/Hash.h"/>
-   <depend name="include/format/display/MovieClip.h"/>
-   <depend name="include/haxe/Log.h"/>
-   <depend name="include/haxe/io/Bytes.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/media/Sound.h"/>
-   <depend name="include/native/media/SoundLoaderContext.h"/>
-   <depend name="include/native/net/URLRequest.h"/>
-   <depend name="include/native/text/Font.h"/>
-   <depend name="include/native/utils/ByteArray.h"/>
-   <depend name="include/native/utils/IDataInput.h"/>
-   <depend name="include/native/utils/IMemoryRange.h"/>
-   <depend name="include/nme/installer/Assets.h"/>
-  </file>
-  <file name="src/nme/display/FPS.cpp">
+  <file name="src/openfl/display/FPS.cpp">
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/text/TextField.h"/>
+   <depend name="include/flash/text/TextFormat.h"/>
    <depend name="include/haxe/Timer.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/text/TextField.h"/>
-   <depend name="include/native/text/TextFormat.h"/>
-   <depend name="include/nme/display/FPS.h"/>
+   <depend name="include/openfl/display/FPS.h"/>
   </file>
-  <file name="src/nme/VectorHelper.cpp">
-   <depend name="include/nme/VectorHelper.h"/>
+  <file name="src/openfl/LibraryType.cpp">
+   <depend name="include/openfl/LibraryType.h"/>
   </file>
-  <file name="src/nme/Lib.cpp">
+  <file name="src/openfl/AssetType.cpp">
+   <depend name="include/openfl/AssetType.h"/>
+  </file>
+  <file name="src/openfl/Assets.cpp">
+   <depend name="include/IMap.h"/>
+   <depend name="include/flash/display/BitmapData.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/MovieClip.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/media/Sound.h"/>
+   <depend name="include/flash/media/SoundLoaderContext.h"/>
+   <depend name="include/flash/net/URLRequest.h"/>
+   <depend name="include/flash/text/Font.h"/>
+   <depend name="include/flash/text/FontStyle.h"/>
+   <depend name="include/flash/text/FontType.h"/>
+   <depend name="include/flash/utils/ByteArray.h"/>
+   <depend name="include/flash/utils/IDataInput.h"/>
    <depend name="include/haxe/Log.h"/>
-   <depend name="include/native/Lib.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/ManagedStage.h"/>
-   <depend name="include/native/display/MovieClip.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/display/Stage.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/net/URLRequest.h"/>
-   <depend name="include/nme/Lib.h"/>
-  </file>
-  <file name="src/native/utils/WeakRef.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/utils/WeakRef.h"/>
-  </file>
-  <file name="src/native/utils/Endian.cpp">
-   <depend name="include/native/utils/Endian.h"/>
-  </file>
-  <file name="src/native/utils/CompressionAlgorithm.cpp">
-   <depend name="include/native/utils/CompressionAlgorithm.h"/>
-  </file>
-  <file name="src/native/utils/ByteArray.cpp">
-   <depend name="include/cpp/Lib.h"/>
-   <depend name="include/cpp/zip/Compress.h"/>
-   <depend name="include/cpp/zip/Uncompress.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
    <depend name="include/haxe/io/Bytes.h"/>
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/errors/EOFError.h"/>
-   <depend name="include/native/errors/Error.h"/>
-   <depend name="include/native/utils/ByteArray.h"/>
-   <depend name="include/native/utils/CompressionAlgorithm.h"/>
-   <depend name="include/native/utils/IDataInput.h"/>
-   <depend name="include/native/utils/IMemoryRange.h"/>
+   <depend name="include/nme/AssetData.h"/>
+   <depend name="include/openfl/AssetType.h"/>
+   <depend name="include/openfl/Assets.h"/>
+   <depend name="include/openfl/utils/IMemoryRange.h"/>
   </file>
-  <file name="src/native/utils/IDataInput.cpp">
-   <depend name="include/haxe/io/Bytes.h"/>
-   <depend name="include/native/utils/ByteArray.h"/>
-   <depend name="include/native/utils/IDataInput.h"/>
-   <depend name="include/native/utils/IMemoryRange.h"/>
-  </file>
-  <file name="src/native/utils/IMemoryRange.cpp">
-   <depend name="include/haxe/io/Bytes.h"/>
-   <depend name="include/native/utils/ByteArray.h"/>
-   <depend name="include/native/utils/IDataInput.h"/>
-   <depend name="include/native/utils/IMemoryRange.h"/>
-  </file>
-  <file name="src/native/ui/Keyboard.cpp">
-   <depend name="include/native/ui/Keyboard.h"/>
-  </file>
-  <file name="src/native/text/TextFormat.cpp">
-   <depend name="include/native/text/TextFormat.h"/>
-  </file>
-  <file name="src/native/text/TextFieldType.cpp">
-   <depend name="include/native/text/TextFieldType.h"/>
-  </file>
-  <file name="src/native/text/TextFieldAutoSize.cpp">
-   <depend name="include/native/text/TextFieldAutoSize.h"/>
-  </file>
-  <file name="src/native/text/TextField.cpp">
-   <depend name="include/StringTools.h"/>
-   <depend name="include/Type.h"/>
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/text/AntiAliasType.h"/>
-   <depend name="include/native/text/TextField.h"/>
-   <depend name="include/native/text/TextFieldAutoSize.h"/>
-   <depend name="include/native/text/TextFieldType.h"/>
-   <depend name="include/native/text/TextFormat.h"/>
-  </file>
-  <file name="src/native/text/FontType.cpp">
-   <depend name="include/native/text/FontType.h"/>
-  </file>
-  <file name="src/native/text/FontStyle.cpp">
-   <depend name="include/native/text/FontStyle.h"/>
-  </file>
-  <file name="src/native/text/Font.cpp">
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/text/Font.h"/>
-   <depend name="include/native/text/FontStyle.h"/>
-   <depend name="include/native/text/FontType.h"/>
-  </file>
-  <file name="src/native/text/AntiAliasType.cpp">
-   <depend name="include/native/text/AntiAliasType.h"/>
-  </file>
-  <file name="src/native/system/Capabilities.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/system/Capabilities.h"/>
-  </file>
-  <file name="src/native/net/URLVariables.cpp">
+  <file name="src/nme/AssetData.cpp">
+   <depend name="include/IMap.h"/>
    <depend name="include/Reflect.h"/>
-   <depend name="include/StringTools.h"/>
-   <depend name="include/native/net/URLVariables.h"/>
-  </file>
-  <file name="src/native/net/URLRequestMethod.cpp">
-   <depend name="include/native/net/URLRequestMethod.h"/>
-  </file>
-  <file name="src/native/net/URLRequestHeader.cpp">
-   <depend name="include/native/net/URLRequestHeader.h"/>
-  </file>
-  <file name="src/native/net/URLRequest.cpp">
-   <depend name="include/Reflect.h"/>
-   <depend name="include/Std.h"/>
-   <depend name="include/haxe/io/Bytes.h"/>
-   <depend name="include/native/net/URLRequest.h"/>
-   <depend name="include/native/net/URLRequestHeader.h"/>
-   <depend name="include/native/net/URLVariables.h"/>
-   <depend name="include/native/utils/ByteArray.h"/>
-   <depend name="include/native/utils/IDataInput.h"/>
-   <depend name="include/native/utils/IMemoryRange.h"/>
-  </file>
-  <file name="src/native/net/URLLoaderDataFormat.cpp">
-   <depend name="include/native/net/URLLoaderDataFormat.h"/>
-  </file>
-  <file name="src/native/net/URLLoader.cpp">
-   <depend name="include/List.h"/>
-   <depend name="include/Std.h"/>
-   <depend name="include/haxe/io/Bytes.h"/>
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/events/ErrorEvent.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/HTTPStatusEvent.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/events/IOErrorEvent.h"/>
-   <depend name="include/native/events/ProgressEvent.h"/>
-   <depend name="include/native/events/TextEvent.h"/>
-   <depend name="include/native/net/URLLoader.h"/>
-   <depend name="include/native/net/URLLoaderDataFormat.h"/>
-   <depend name="include/native/net/URLRequest.h"/>
-   <depend name="include/native/net/URLVariables.h"/>
-   <depend name="include/native/utils/ByteArray.h"/>
-   <depend name="include/native/utils/IDataInput.h"/>
-   <depend name="include/native/utils/IMemoryRange.h"/>
-  </file>
-  <file name="src/native/media/SoundTransform.cpp">
-   <depend name="include/native/media/SoundTransform.h"/>
-  </file>
-  <file name="src/native/media/SoundLoaderContext.cpp">
-   <depend name="include/native/media/SoundLoaderContext.h"/>
-  </file>
-  <file name="src/native/media/SoundChannel.cpp">
-   <depend name="include/haxe/io/Bytes.h"/>
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/events/SampleDataEvent.h"/>
-   <depend name="include/native/media/SoundChannel.h"/>
-   <depend name="include/native/media/SoundTransform.h"/>
-   <depend name="include/native/utils/ByteArray.h"/>
-   <depend name="include/native/utils/IDataInput.h"/>
-   <depend name="include/native/utils/IMemoryRange.h"/>
-  </file>
-  <file name="src/native/media/Sound.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/haxe/io/Bytes.h"/>
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/errors/Error.h"/>
-   <depend name="include/native/events/ErrorEvent.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/events/IOErrorEvent.h"/>
-   <depend name="include/native/events/SampleDataEvent.h"/>
-   <depend name="include/native/events/TextEvent.h"/>
-   <depend name="include/native/media/ID3Info.h"/>
-   <depend name="include/native/media/Sound.h"/>
-   <depend name="include/native/media/SoundChannel.h"/>
-   <depend name="include/native/media/SoundLoaderContext.h"/>
-   <depend name="include/native/media/SoundTransform.h"/>
-   <depend name="include/native/net/URLRequest.h"/>
-   <depend name="include/native/utils/ByteArray.h"/>
-   <depend name="include/native/utils/IDataInput.h"/>
-   <depend name="include/native/utils/IMemoryRange.h"/>
-  </file>
-  <file name="src/native/media/ID3Info.cpp">
-   <depend name="include/native/media/ID3Info.h"/>
-  </file>
-  <file name="src/native/geom/Transform.cpp">
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/geom/ColorTransform.h"/>
-   <depend name="include/native/geom/Matrix.h"/>
-   <depend name="include/native/geom/Rectangle.h"/>
-   <depend name="include/native/geom/Transform.h"/>
-  </file>
-  <file name="src/native/geom/Rectangle.cpp">
-   <depend name="include/native/geom/Matrix.h"/>
-   <depend name="include/native/geom/Point.h"/>
-   <depend name="include/native/geom/Rectangle.h"/>
-  </file>
-  <file name="src/native/geom/Point.cpp">
-   <depend name="include/native/geom/Point.h"/>
-  </file>
-  <file name="src/native/geom/Matrix.cpp">
-   <depend name="include/native/geom/Matrix.h"/>
-   <depend name="include/native/geom/Point.h"/>
-  </file>
-  <file name="src/native/geom/ColorTransform.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/native/geom/ColorTransform.h"/>
-  </file>
-  <file name="src/native/filters/BitmapFilter.cpp">
-   <depend name="include/native/filters/BitmapFilter.h"/>
-  </file>
-  <file name="src/native/feedback/Haptic.cpp">
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/feedback/Haptic.h"/>
-  </file>
-  <file name="src/native/events/SampleDataEvent.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/haxe/io/Bytes.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/SampleDataEvent.h"/>
-   <depend name="include/native/utils/ByteArray.h"/>
-   <depend name="include/native/utils/IDataInput.h"/>
-   <depend name="include/native/utils/IMemoryRange.h"/>
-  </file>
-  <file name="src/native/events/ProgressEvent.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/ProgressEvent.h"/>
-  </file>
-  <file name="src/native/events/KeyboardEvent.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/KeyboardEvent.h"/>
-  </file>
-  <file name="src/native/events/JoystickEvent.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/JoystickEvent.h"/>
-  </file>
-  <file name="src/native/events/IOErrorEvent.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/native/events/ErrorEvent.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/IOErrorEvent.h"/>
-   <depend name="include/native/events/TextEvent.h"/>
-  </file>
-  <file name="src/native/events/HTTPStatusEvent.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/HTTPStatusEvent.h"/>
-  </file>
-  <file name="src/native/events/FocusEvent.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/FocusEvent.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-  </file>
-  <file name="src/native/events/EventPhase.cpp">
-   <depend name="include/native/events/EventPhase.h"/>
-  </file>
-  <file name="src/native/events/Listener.cpp">
-   <depend name="include/Reflect.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/Listener.h"/>
-  </file>
-  <file name="src/native/events/ErrorEvent.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/native/events/ErrorEvent.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/TextEvent.h"/>
-  </file>
-  <file name="src/native/events/TextEvent.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/TextEvent.h"/>
-  </file>
-  <file name="src/native/errors/RangeError.cpp">
-   <depend name="include/native/errors/Error.h"/>
-   <depend name="include/native/errors/RangeError.h"/>
-  </file>
-  <file name="src/native/errors/EOFError.cpp">
-   <depend name="include/native/errors/EOFError.h"/>
-   <depend name="include/native/errors/Error.h"/>
-  </file>
-  <file name="src/native/errors/ArgumentError.cpp">
-   <depend name="include/native/errors/ArgumentError.h"/>
-   <depend name="include/native/errors/Error.h"/>
-  </file>
-  <file name="src/native/errors/Error.cpp">
-   <depend name="include/native/errors/Error.h"/>
-  </file>
-  <file name="src/native/display/TriangleCulling.cpp">
-   <depend name="include/native/display/TriangleCulling.h"/>
-  </file>
-  <file name="src/native/display/StageScaleMode.cpp">
-   <depend name="include/native/display/StageScaleMode.h"/>
-  </file>
-  <file name="src/native/display/StageQuality.cpp">
-   <depend name="include/native/display/StageQuality.h"/>
-  </file>
-  <file name="src/native/display/StageDisplayState.cpp">
-   <depend name="include/native/display/StageDisplayState.h"/>
-  </file>
-  <file name="src/native/display/StageAlign.cpp">
-   <depend name="include/native/display/StageAlign.h"/>
-  </file>
-  <file name="src/native/display/TouchInfo.cpp">
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/TouchInfo.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-  </file>
-  <file name="src/native/display/SpreadMethod.cpp">
-   <depend name="include/native/display/SpreadMethod.h"/>
-  </file>
-  <file name="src/native/display/Shape.cpp">
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/Shape.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-  </file>
-  <file name="src/native/display/PixelSnapping.cpp">
-   <depend name="include/native/display/PixelSnapping.h"/>
-  </file>
-  <file name="src/native/display/MovieClip.cpp">
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/MovieClip.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-  </file>
-  <file name="src/native/display/ManagedStage.cpp">
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/ManagedStage.h"/>
-   <depend name="include/native/display/Stage.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-  </file>
-  <file name="src/native/display/Stage.cpp">
-   <depend name="include/IntHash.h"/>
-   <depend name="include/Reflect.h"/>
-   <depend name="include/Std.h"/>
-   <depend name="include/Type.h"/>
-   <depend name="include/haxe/Log.h"/>
-   <depend name="include/haxe/Timer.h"/>
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/display/Stage.h"/>
-   <depend name="include/native/display/StageAlign.h"/>
-   <depend name="include/native/display/StageDisplayState.h"/>
-   <depend name="include/native/display/StageQuality.h"/>
-   <depend name="include/native/display/StageScaleMode.h"/>
-   <depend name="include/native/display/TouchInfo.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/FocusEvent.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/events/JoystickEvent.h"/>
-   <depend name="include/native/events/KeyboardEvent.h"/>
-   <depend name="include/native/events/MouseEvent.h"/>
-   <depend name="include/native/events/TouchEvent.h"/>
-   <depend name="include/native/geom/Point.h"/>
-   <depend name="include/native/geom/Rectangle.h"/>
-   <depend name="include/native/media/SoundChannel.h"/>
-   <depend name="include/native/net/URLLoader.h"/>
-  </file>
-  <file name="src/native/events/TouchEvent.cpp">
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/events/MouseEvent.h"/>
-   <depend name="include/native/events/TouchEvent.h"/>
-   <depend name="include/native/geom/Point.h"/>
-  </file>
-  <file name="src/native/events/MouseEvent.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/events/MouseEvent.h"/>
-   <depend name="include/native/geom/Point.h"/>
-  </file>
-  <file name="src/native/events/Event.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/EventPhase.h"/>
-  </file>
-  <file name="src/native/display/LineScaleMode.cpp">
-   <depend name="include/native/display/LineScaleMode.h"/>
-  </file>
-  <file name="src/native/display/JointStyle.cpp">
-   <depend name="include/native/display/JointStyle.h"/>
-  </file>
-  <file name="src/native/display/InterpolationMethod.cpp">
-   <depend name="include/native/display/InterpolationMethod.h"/>
-  </file>
-  <file name="src/native/display/IGraphicsData.cpp">
-   <depend name="include/native/display/IGraphicsData.h"/>
-  </file>
-  <file name="src/native/display/GraphicsPathWinding.cpp">
-   <depend name="include/native/display/GraphicsPathWinding.h"/>
-  </file>
-  <file name="src/native/display/Graphics.cpp">
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/CapsStyle.h"/>
-   <depend name="include/native/display/GradientType.h"/>
-   <depend name="include/native/display/Graphics.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/IGraphicsData.h"/>
-   <depend name="include/native/display/InterpolationMethod.h"/>
-   <depend name="include/native/display/JointStyle.h"/>
-   <depend name="include/native/display/LineScaleMode.h"/>
-   <depend name="include/native/display/SpreadMethod.h"/>
-   <depend name="include/native/display/Tilesheet.h"/>
-   <depend name="include/native/display/TriangleCulling.h"/>
-   <depend name="include/native/geom/Matrix.h"/>
-  </file>
-  <file name="src/native/display/GradientType.cpp">
-   <depend name="include/native/display/GradientType.h"/>
-  </file>
-  <file name="src/native/display/CapsStyle.cpp">
-   <depend name="include/native/display/CapsStyle.h"/>
-  </file>
-  <file name="src/native/display/BlendMode.cpp">
-   <depend name="include/native/display/BlendMode.h"/>
-  </file>
-  <file name="src/native/display/OptimizedPerlin.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/OptimizedPerlin.h"/>
-  </file>
-  <file name="src/native/display/BitmapData.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/haxe/io/Bytes.h"/>
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/BlendMode.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/OptimizedPerlin.h"/>
-   <depend name="include/native/filters/BitmapFilter.h"/>
-   <depend name="include/native/geom/ColorTransform.h"/>
-   <depend name="include/native/geom/Matrix.h"/>
-   <depend name="include/native/geom/Point.h"/>
-   <depend name="include/native/geom/Rectangle.h"/>
-   <depend name="include/native/utils/ByteArray.h"/>
-   <depend name="include/native/utils/IDataInput.h"/>
-   <depend name="include/native/utils/IMemoryRange.h"/>
-  </file>
-  <file name="src/native/display/Bitmap.cpp">
-   <depend name="include/native/display/Bitmap.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/Graphics.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/PixelSnapping.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/geom/Matrix.h"/>
-  </file>
-  <file name="src/native/Lib.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/haxe/Timer.h"/>
-   <depend name="include/native/Lib.h"/>
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/ManagedStage.h"/>
-   <depend name="include/native/display/MovieClip.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/display/Stage.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/net/URLRequest.h"/>
-  </file>
-  <file name="src/nape/util/ShapeDebug.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/nape/constraint/Constraint.h"/>
-   <depend name="include/nape/geom/AABB.h"/>
-   <depend name="include/nape/geom/GeomPoly.h"/>
-   <depend name="include/nape/geom/Mat23.h"/>
-   <depend name="include/nape/geom/Vec2.h"/>
-   <depend name="include/nape/geom/Vec2Iterator.h"/>
-   <depend name="include/nape/geom/Vec2List.h"/>
-   <depend name="include/nape/phys/Body.h"/>
-   <depend name="include/nape/phys/Compound.h"/>
-   <depend name="include/nape/phys/Interactor.h"/>
-   <depend name="include/nape/shape/Shape.h"/>
-   <depend name="include/nape/space/Space.h"/>
-   <depend name="include/nape/util/Debug.h"/>
-   <depend name="include/nape/util/ShapeDebug.h"/>
-   <depend name="include/native/display/CapsStyle.h"/>
-   <depend name="include/native/display/Graphics.h"/>
-   <depend name="include/native/display/JointStyle.h"/>
-   <depend name="include/native/display/LineScaleMode.h"/>
-   <depend name="include/zpp_nape/constraint/ZPP_Constraint.h"/>
-   <depend name="include/zpp_nape/geom/ZPP_AABB.h"/>
-   <depend name="include/zpp_nape/geom/ZPP_GeomPoly.h"/>
-   <depend name="include/zpp_nape/geom/ZPP_GeomVert.h"/>
-   <depend name="include/zpp_nape/geom/ZPP_Mat23.h"/>
-   <depend name="include/zpp_nape/geom/ZPP_Vec2.h"/>
-   <depend name="include/zpp_nape/phys/ZPP_Body.h"/>
-   <depend name="include/zpp_nape/phys/ZPP_Compound.h"/>
-   <depend name="include/zpp_nape/phys/ZPP_Interactor.h"/>
-   <depend name="include/zpp_nape/shape/ZPP_Shape.h"/>
-   <depend name="include/zpp_nape/space/ZPP_Space.h"/>
-   <depend name="include/zpp_nape/util/ZNPList_ZPP_Vec2.h"/>
-   <depend name="include/zpp_nape/util/ZNPNode_ZPP_Vec2.h"/>
-   <depend name="include/zpp_nape/util/ZPP_Debug.h"/>
-   <depend name="include/zpp_nape/util/ZPP_PubPool.h"/>
-   <depend name="include/zpp_nape/util/ZPP_ShapeDebug.h"/>
-   <depend name="include/zpp_nape/util/ZPP_Vec2List.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/nme/AssetData.h"/>
+   <depend name="include/openfl/AssetType.h"/>
   </file>
   <file name="src/nape/util/Debug.cpp">
-   <depend name="include/Std.h"/>
    <depend name="include/nape/callbacks/CbTypeIterator.h"/>
    <depend name="include/nape/callbacks/ListenerIterator.h"/>
    <depend name="include/nape/constraint/ConstraintIterator.h"/>
    <depend name="include/nape/dynamics/ArbiterIterator.h"/>
    <depend name="include/nape/dynamics/ContactIterator.h"/>
    <depend name="include/nape/dynamics/InteractionGroupIterator.h"/>
-   <depend name="include/nape/geom/AABB.h"/>
    <depend name="include/nape/geom/ConvexResultIterator.h"/>
    <depend name="include/nape/geom/GeomPoly.h"/>
    <depend name="include/nape/geom/GeomPolyIterator.h"/>
-   <depend name="include/nape/geom/Mat23.h"/>
    <depend name="include/nape/geom/RayResultIterator.h"/>
    <depend name="include/nape/geom/Vec2.h"/>
    <depend name="include/nape/geom/Vec2Iterator.h"/>
-   <depend name="include/nape/geom/Vec2List.h"/>
    <depend name="include/nape/geom/Vec3.h"/>
-   <depend name="include/nape/phys/Body.h"/>
    <depend name="include/nape/phys/BodyIterator.h"/>
    <depend name="include/nape/phys/CompoundIterator.h"/>
-   <depend name="include/nape/phys/Interactor.h"/>
    <depend name="include/nape/phys/InteractorIterator.h"/>
-   <depend name="include/nape/shape/Circle.h"/>
    <depend name="include/nape/shape/EdgeIterator.h"/>
-   <depend name="include/nape/shape/Polygon.h"/>
-   <depend name="include/nape/shape/Shape.h"/>
    <depend name="include/nape/shape/ShapeIterator.h"/>
-   <depend name="include/nape/shape/ShapeList.h"/>
    <depend name="include/nape/util/Debug.h"/>
-   <depend name="include/native/display/CapsStyle.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/Graphics.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/JointStyle.h"/>
-   <depend name="include/native/display/LineScaleMode.h"/>
-   <depend name="include/native/display/Shape.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
    <depend name="include/zpp_nape/callbacks/ZPP_Callback.h"/>
    <depend name="include/zpp_nape/callbacks/ZPP_CbSet.h"/>
    <depend name="include/zpp_nape/callbacks/ZPP_CbSetPair.h"/>
@@ -2616,14 +1964,9 @@
    <depend name="include/zpp_nape/geom/ZPP_SimplifyV.h"/>
    <depend name="include/zpp_nape/geom/ZPP_ToiEvent.h"/>
    <depend name="include/zpp_nape/geom/ZPP_Vec2.h"/>
-   <depend name="include/zpp_nape/phys/ZPP_Body.h"/>
    <depend name="include/zpp_nape/phys/ZPP_FluidProperties.h"/>
-   <depend name="include/zpp_nape/phys/ZPP_Interactor.h"/>
    <depend name="include/zpp_nape/phys/ZPP_Material.h"/>
-   <depend name="include/zpp_nape/shape/ZPP_Circle.h"/>
    <depend name="include/zpp_nape/shape/ZPP_Edge.h"/>
-   <depend name="include/zpp_nape/shape/ZPP_Polygon.h"/>
-   <depend name="include/zpp_nape/shape/ZPP_Shape.h"/>
    <depend name="include/zpp_nape/space/ZPP_AABBNode.h"/>
    <depend name="include/zpp_nape/space/ZPP_AABBPair.h"/>
    <depend name="include/zpp_nape/space/ZPP_CallbackSet.h"/>
@@ -2666,8 +2009,6 @@
    <depend name="include/zpp_nape/util/ZNPNode_ZPP_SimplifyP.h"/>
    <depend name="include/zpp_nape/util/ZNPNode_ZPP_ToiEvent.h"/>
    <depend name="include/zpp_nape/util/ZNPNode_ZPP_Vec2.h"/>
-   <depend name="include/zpp_nape/util/ZPP_Debug.h"/>
-   <depend name="include/zpp_nape/util/ZPP_Flags.h"/>
    <depend name="include/zpp_nape/util/ZPP_PubPool.h"/>
    <depend name="include/zpp_nape/util/ZPP_Set_ZPP_Body.h"/>
    <depend name="include/zpp_nape/util/ZPP_Set_ZPP_CbSet.h"/>
@@ -2677,8 +2018,6 @@
    <depend name="include/zpp_nape/util/ZPP_Set_ZPP_SimpleEvent.h"/>
    <depend name="include/zpp_nape/util/ZPP_Set_ZPP_SimpleSeg.h"/>
    <depend name="include/zpp_nape/util/ZPP_Set_ZPP_SimpleVert.h"/>
-   <depend name="include/zpp_nape/util/ZPP_ShapeDebug.h"/>
-   <depend name="include/zpp_nape/util/ZPP_ShapeList.h"/>
   </file>
   <file name="src/nape/space/Space.cpp">
    <depend name="include/nape/callbacks/InteractionType.h"/>
@@ -3096,7 +2435,6 @@
   </file>
   <file name="src/nape/geom/Vec2.cpp">
    <depend name="include/nape/geom/Vec2.h"/>
-   <depend name="include/native/geom/Point.h"/>
    <depend name="include/zpp_nape/geom/ZPP_Vec2.h"/>
    <depend name="include/zpp_nape/util/ZPP_PubPool.h"/>
   </file>
@@ -3140,7 +2478,6 @@
    <depend name="include/nape/Config.h"/>
    <depend name="include/nape/geom/Mat23.h"/>
    <depend name="include/nape/geom/Vec2.h"/>
-   <depend name="include/native/geom/Matrix.h"/>
    <depend name="include/zpp_nape/geom/ZPP_Mat23.h"/>
    <depend name="include/zpp_nape/geom/ZPP_Vec2.h"/>
    <depend name="include/zpp_nape/util/ZPP_PubPool.h"/>
@@ -3267,7 +2604,6 @@
   <file name="src/nape/geom/AABB.cpp">
    <depend name="include/nape/geom/AABB.h"/>
    <depend name="include/nape/geom/Vec2.h"/>
-   <depend name="include/native/geom/Rectangle.h"/>
    <depend name="include/zpp_nape/geom/ZPP_AABB.h"/>
    <depend name="include/zpp_nape/geom/ZPP_Vec2.h"/>
    <depend name="include/zpp_nape/util/ZPP_PubPool.h"/>
@@ -3792,7 +3128,6 @@
   </file>
   <file name="src/haxe/xml/Fast.cpp">
    <depend name="include/Std.h"/>
-   <depend name="include/StringBuf.h"/>
    <depend name="include/StringTools.h"/>
    <depend name="include/Xml.h"/>
    <depend name="include/XmlType.h"/>
@@ -3838,119 +3173,645 @@
   <file name="src/haxe/io/BytesBuffer.cpp">
    <depend name="include/haxe/io/Bytes.h"/>
    <depend name="include/haxe/io/BytesBuffer.h"/>
-   <depend name="include/haxe/io/Error.h"/>
   </file>
-  <file name="src/haxe/Unserializer.cpp">
-   <depend name="include/Date.h"/>
-   <depend name="include/Hash.h"/>
-   <depend name="include/IntHash.h"/>
-   <depend name="include/List.h"/>
-   <depend name="include/Std.h"/>
-   <depend name="include/StringTools.h"/>
-   <depend name="include/Type.h"/>
-   <depend name="include/haxe/Unserializer.h"/>
-   <depend name="include/haxe/io/Bytes.h"/>
+  <file name="src/haxe/ds/StringMap.cpp">
+   <depend name="include/IMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+  </file>
+  <file name="src/haxe/ds/IntMap.cpp">
+   <depend name="include/IMap.h"/>
+   <depend name="include/haxe/ds/IntMap.h"/>
   </file>
   <file name="src/haxe/Timer.cpp">
+   <depend name="include/flash/Lib.h"/>
    <depend name="include/haxe/Log.h"/>
    <depend name="include/haxe/Timer.h"/>
-   <depend name="include/native/Loader.h"/>
+  </file>
+  <file name="src/haxe/Resource.cpp">
+   <depend name="include/haxe/Resource.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
   </file>
   <file name="src/haxe/Log.cpp">
+   <depend name="include/Std.h"/>
    <depend name="include/haxe/Log.h"/>
   </file>
-  <file name="src/format/display/MovieClip.cpp">
-   <depend name="include/format/display/FrameLabel.h"/>
-   <depend name="include/format/display/MovieClip.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
+  <file name="src/flash/utils/Endian.cpp">
+   <depend name="include/flash/utils/Endian.h"/>
   </file>
-  <file name="src/native/display/Sprite.cpp">
+  <file name="src/flash/utils/CompressionAlgorithm.cpp">
+   <depend name="include/flash/utils/CompressionAlgorithm.h"/>
+  </file>
+  <file name="src/flash/utils/ByteArray.cpp">
+   <depend name="include/cpp/zip/Compress.h"/>
+   <depend name="include/cpp/zip/Uncompress.h"/>
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/errors/EOFError.h"/>
+   <depend name="include/flash/errors/Error.h"/>
+   <depend name="include/flash/utils/ByteArray.h"/>
+   <depend name="include/flash/utils/CompressionAlgorithm.h"/>
+   <depend name="include/flash/utils/IDataInput.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/openfl/utils/IMemoryRange.h"/>
+  </file>
+  <file name="src/flash/utils/IDataInput.cpp">
+   <depend name="include/flash/utils/ByteArray.h"/>
+   <depend name="include/flash/utils/IDataInput.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/openfl/utils/IMemoryRange.h"/>
+  </file>
+  <file name="src/openfl/utils/IMemoryRange.cpp">
+   <depend name="include/flash/utils/ByteArray.h"/>
+   <depend name="include/flash/utils/IDataInput.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/openfl/utils/IMemoryRange.h"/>
+  </file>
+  <file name="src/flash/ui/Keyboard.cpp">
+   <depend name="include/flash/ui/Keyboard.h"/>
+  </file>
+  <file name="src/flash/text/TextLineMetrics.cpp">
+   <depend name="include/flash/text/TextLineMetrics.h"/>
+  </file>
+  <file name="src/flash/text/TextFormat.cpp">
+   <depend name="include/flash/text/TextFormat.h"/>
+  </file>
+  <file name="src/flash/text/TextFieldType.cpp">
+   <depend name="include/flash/text/TextFieldType.h"/>
+  </file>
+  <file name="src/flash/text/TextFieldAutoSize.cpp">
+   <depend name="include/flash/text/TextFieldAutoSize.h"/>
+  </file>
+  <file name="src/flash/text/TextField.cpp">
+   <depend name="include/StringTools.h"/>
    <depend name="include/Type.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/display/Stage.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/geom/Rectangle.h"/>
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/text/AntiAliasType.h"/>
+   <depend name="include/flash/text/GridFitType.h"/>
+   <depend name="include/flash/text/TextField.h"/>
+   <depend name="include/flash/text/TextFieldAutoSize.h"/>
+   <depend name="include/flash/text/TextFieldType.h"/>
+   <depend name="include/flash/text/TextFormat.h"/>
+   <depend name="include/flash/text/TextLineMetrics.h"/>
   </file>
-  <file name="src/native/display/DisplayObjectContainer.cpp">
+  <file name="src/flash/text/GridFitType.cpp">
+   <depend name="include/flash/text/GridFitType.h"/>
+  </file>
+  <file name="src/flash/text/FontType.cpp">
+   <depend name="include/flash/text/FontType.h"/>
+  </file>
+  <file name="src/flash/text/FontStyle.cpp">
+   <depend name="include/flash/text/FontStyle.h"/>
+  </file>
+  <file name="src/flash/text/Font.cpp">
+   <depend name="include/Reflect.h"/>
    <depend name="include/Std.h"/>
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/errors/ArgumentError.h"/>
-   <depend name="include/native/errors/Error.h"/>
-   <depend name="include/native/errors/RangeError.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/geom/Point.h"/>
-  </file>
-  <file name="src/native/display/InteractiveObject.cpp">
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-  </file>
-  <file name="src/native/display/DisplayObject.cpp">
    <depend name="include/Type.h"/>
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/display/BlendMode.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/Graphics.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/PixelSnapping.h"/>
-   <depend name="include/native/display/Stage.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/EventPhase.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/geom/ColorTransform.h"/>
-   <depend name="include/native/geom/Matrix.h"/>
-   <depend name="include/native/geom/Point.h"/>
-   <depend name="include/native/geom/Rectangle.h"/>
-   <depend name="include/native/geom/Transform.h"/>
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/text/Font.h"/>
+   <depend name="include/flash/text/FontStyle.h"/>
+   <depend name="include/flash/text/FontType.h"/>
+   <depend name="include/flash/utils/ByteArray.h"/>
+   <depend name="include/flash/utils/IDataInput.h"/>
+   <depend name="include/haxe/Resource.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/openfl/utils/IMemoryRange.h"/>
   </file>
-  <file name="src/native/display/IBitmapDrawable.cpp">
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/geom/ColorTransform.h"/>
-   <depend name="include/native/geom/Matrix.h"/>
-   <depend name="include/native/geom/Rectangle.h"/>
+  <file name="src/flash/text/AntiAliasType.cpp">
+   <depend name="include/flash/text/AntiAliasType.h"/>
   </file>
-  <file name="src/native/events/EventDispatcher.cpp">
-   <depend name="include/Hash.h"/>
+  <file name="src/flash/system/SecurityDomain.cpp">
+   <depend name="include/flash/system/SecurityDomain.h"/>
+  </file>
+  <file name="src/flash/system/LoaderContext.cpp">
+   <depend name="include/flash/system/ApplicationDomain.h"/>
+   <depend name="include/flash/system/LoaderContext.h"/>
+   <depend name="include/flash/system/SecurityDomain.h"/>
+  </file>
+  <file name="src/flash/system/Capabilities.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/system/Capabilities.h"/>
+  </file>
+  <file name="src/flash/system/ApplicationDomain.cpp">
    <depend name="include/Type.h"/>
-   <depend name="include/native/events/ErrorEvent.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/EventPhase.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/events/IOErrorEvent.h"/>
-   <depend name="include/native/events/Listener.h"/>
-   <depend name="include/native/events/TextEvent.h"/>
-   <depend name="include/native/utils/WeakRef.h"/>
+   <depend name="include/flash/system/ApplicationDomain.h"/>
   </file>
-  <file name="src/native/events/IEventDispatcher.cpp">
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
+  <file name="src/flash/net/URLVariables.cpp">
+   <depend name="include/Reflect.h"/>
+   <depend name="include/StringTools.h"/>
+   <depend name="include/flash/net/URLVariables.h"/>
   </file>
-  <file name="src/format/display/FrameLabel.cpp">
-   <depend name="include/format/display/FrameLabel.h"/>
+  <file name="src/flash/net/URLRequestMethod.cpp">
+   <depend name="include/flash/net/URLRequestMethod.h"/>
+  </file>
+  <file name="src/flash/net/URLRequestHeader.cpp">
+   <depend name="include/flash/net/URLRequestHeader.h"/>
+  </file>
+  <file name="src/flash/net/URLRequest.cpp">
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/net/URLRequest.h"/>
+   <depend name="include/flash/net/URLRequestHeader.h"/>
+   <depend name="include/flash/net/URLVariables.h"/>
+   <depend name="include/flash/utils/ByteArray.h"/>
+   <depend name="include/flash/utils/IDataInput.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/openfl/utils/IMemoryRange.h"/>
+  </file>
+  <file name="src/flash/net/URLLoaderDataFormat.cpp">
+   <depend name="include/flash/net/URLLoaderDataFormat.h"/>
+  </file>
+  <file name="src/flash/media/SoundTransform.cpp">
+   <depend name="include/flash/media/SoundTransform.h"/>
+  </file>
+  <file name="src/flash/media/SoundLoaderContext.cpp">
+   <depend name="include/flash/media/SoundLoaderContext.h"/>
+  </file>
+  <file name="src/flash/media/SoundChannel.cpp">
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/events/SampleDataEvent.h"/>
+   <depend name="include/flash/media/SoundChannel.h"/>
+   <depend name="include/flash/media/SoundTransform.h"/>
+   <depend name="include/flash/utils/ByteArray.h"/>
+   <depend name="include/flash/utils/IDataInput.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/openfl/utils/IMemoryRange.h"/>
+  </file>
+  <file name="src/flash/media/Sound.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/errors/Error.h"/>
+   <depend name="include/flash/events/ErrorEvent.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/events/IOErrorEvent.h"/>
+   <depend name="include/flash/events/SampleDataEvent.h"/>
+   <depend name="include/flash/events/TextEvent.h"/>
+   <depend name="include/flash/media/ID3Info.h"/>
+   <depend name="include/flash/media/Sound.h"/>
+   <depend name="include/flash/media/SoundChannel.h"/>
+   <depend name="include/flash/media/SoundLoaderContext.h"/>
+   <depend name="include/flash/media/SoundTransform.h"/>
+   <depend name="include/flash/net/URLRequest.h"/>
+   <depend name="include/flash/utils/ByteArray.h"/>
+   <depend name="include/flash/utils/IDataInput.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/openfl/utils/IMemoryRange.h"/>
+  </file>
+  <file name="src/flash/media/ID3Info.cpp">
+   <depend name="include/flash/media/ID3Info.h"/>
+  </file>
+  <file name="src/flash/geom/Transform.cpp">
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/geom/ColorTransform.h"/>
+   <depend name="include/flash/geom/Matrix.h"/>
+   <depend name="include/flash/geom/Rectangle.h"/>
+   <depend name="include/flash/geom/Transform.h"/>
+  </file>
+  <file name="src/flash/geom/Rectangle.cpp">
+   <depend name="include/flash/geom/Matrix.h"/>
+   <depend name="include/flash/geom/Point.h"/>
+   <depend name="include/flash/geom/Rectangle.h"/>
+  </file>
+  <file name="src/flash/geom/Point.cpp">
+   <depend name="include/flash/geom/Point.h"/>
+  </file>
+  <file name="src/flash/geom/Matrix.cpp">
+   <depend name="include/flash/geom/Matrix.h"/>
+   <depend name="include/flash/geom/Point.h"/>
+  </file>
+  <file name="src/flash/geom/ColorTransform.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/geom/ColorTransform.h"/>
+  </file>
+  <file name="src/flash/filters/BitmapFilter.cpp">
+   <depend name="include/flash/filters/BitmapFilter.h"/>
+  </file>
+  <file name="src/flash/events/SampleDataEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/SampleDataEvent.h"/>
+   <depend name="include/flash/utils/ByteArray.h"/>
+   <depend name="include/flash/utils/IDataInput.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/openfl/utils/IMemoryRange.h"/>
+  </file>
+  <file name="src/flash/events/ProgressEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/ProgressEvent.h"/>
+  </file>
+  <file name="src/flash/events/KeyboardEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/KeyboardEvent.h"/>
+  </file>
+  <file name="src/flash/events/IOErrorEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/events/ErrorEvent.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/IOErrorEvent.h"/>
+   <depend name="include/flash/events/TextEvent.h"/>
+  </file>
+  <file name="src/flash/events/HTTPStatusEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/HTTPStatusEvent.h"/>
+  </file>
+  <file name="src/flash/events/FocusEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/FocusEvent.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+  </file>
+  <file name="src/flash/events/EventPhase.cpp">
+   <depend name="include/flash/events/EventPhase.h"/>
+  </file>
+  <file name="src/flash/events/Listener.cpp">
+   <depend name="include/Reflect.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/Listener.h"/>
+  </file>
+  <file name="src/flash/events/ErrorEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/events/ErrorEvent.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/TextEvent.h"/>
+  </file>
+  <file name="src/flash/events/TextEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/TextEvent.h"/>
+  </file>
+  <file name="src/flash/errors/RangeError.cpp">
+   <depend name="include/flash/errors/Error.h"/>
+   <depend name="include/flash/errors/RangeError.h"/>
+  </file>
+  <file name="src/flash/errors/EOFError.cpp">
+   <depend name="include/flash/errors/EOFError.h"/>
+   <depend name="include/flash/errors/Error.h"/>
+  </file>
+  <file name="src/flash/errors/ArgumentError.cpp">
+   <depend name="include/flash/errors/ArgumentError.h"/>
+   <depend name="include/flash/errors/Error.h"/>
+  </file>
+  <file name="src/flash/errors/Error.cpp">
+   <depend name="include/flash/errors/Error.h"/>
+  </file>
+  <file name="src/flash/display/TriangleCulling.cpp">
+   <depend name="include/flash/display/TriangleCulling.h"/>
+  </file>
+  <file name="src/flash/display/StageScaleMode.cpp">
+   <depend name="include/flash/display/StageScaleMode.h"/>
+  </file>
+  <file name="src/flash/display/StageQuality.cpp">
+   <depend name="include/flash/display/StageQuality.h"/>
+  </file>
+  <file name="src/flash/display/StageDisplayState.cpp">
+   <depend name="include/flash/display/StageDisplayState.h"/>
+  </file>
+  <file name="src/flash/display/StageAlign.cpp">
+   <depend name="include/flash/display/StageAlign.h"/>
+  </file>
+  <file name="src/flash/display/TouchInfo.cpp">
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/TouchInfo.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+  </file>
+  <file name="src/flash/display/Stage.cpp">
+   <depend name="include/IMap.h"/>
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/display/Stage.h"/>
+   <depend name="include/flash/display/StageAlign.h"/>
+   <depend name="include/flash/display/StageDisplayState.h"/>
+   <depend name="include/flash/display/StageQuality.h"/>
+   <depend name="include/flash/display/StageScaleMode.h"/>
+   <depend name="include/flash/display/TouchInfo.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/FocusEvent.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/events/KeyboardEvent.h"/>
+   <depend name="include/flash/events/MouseEvent.h"/>
+   <depend name="include/flash/events/TouchEvent.h"/>
+   <depend name="include/flash/geom/Point.h"/>
+   <depend name="include/flash/geom/Rectangle.h"/>
+   <depend name="include/flash/media/SoundChannel.h"/>
+   <depend name="include/flash/net/URLLoader.h"/>
+   <depend name="include/haxe/Timer.h"/>
+   <depend name="include/haxe/ds/IntMap.h"/>
+   <depend name="include/openfl/events/JoystickEvent.h"/>
+   <depend name="include/openfl/events/SystemEvent.h"/>
+  </file>
+  <file name="src/flash/events/TouchEvent.cpp">
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/events/MouseEvent.h"/>
+   <depend name="include/flash/events/TouchEvent.h"/>
+   <depend name="include/flash/geom/Point.h"/>
+  </file>
+  <file name="src/flash/events/MouseEvent.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/events/MouseEvent.h"/>
+   <depend name="include/flash/geom/Point.h"/>
+  </file>
+  <file name="src/flash/events/Event.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventPhase.h"/>
+  </file>
+  <file name="src/flash/display/SpreadMethod.cpp">
+   <depend name="include/flash/display/SpreadMethod.h"/>
+  </file>
+  <file name="src/flash/display/Shape.cpp">
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/Shape.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+  </file>
+  <file name="src/flash/display/PixelSnapping.cpp">
+   <depend name="include/flash/display/PixelSnapping.h"/>
+  </file>
+  <file name="src/flash/display/MovieClip.cpp">
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/MovieClip.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+  </file>
+  <file name="src/flash/display/LoaderInfo.cpp">
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/Loader.h"/>
+   <depend name="include/flash/display/LoaderInfo.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/net/URLLoader.h"/>
+   <depend name="include/flash/net/URLLoaderDataFormat.h"/>
+   <depend name="include/flash/net/URLRequest.h"/>
+   <depend name="include/flash/system/ApplicationDomain.h"/>
+   <depend name="include/flash/utils/ByteArray.h"/>
+   <depend name="include/flash/utils/IDataInput.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/openfl/utils/IMemoryRange.h"/>
+  </file>
+  <file name="src/flash/net/URLLoader.cpp">
+   <depend name="include/List.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/events/ErrorEvent.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/HTTPStatusEvent.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/events/IOErrorEvent.h"/>
+   <depend name="include/flash/events/ProgressEvent.h"/>
+   <depend name="include/flash/events/TextEvent.h"/>
+   <depend name="include/flash/net/URLLoader.h"/>
+   <depend name="include/flash/net/URLLoaderDataFormat.h"/>
+   <depend name="include/flash/net/URLRequest.h"/>
+   <depend name="include/flash/net/URLVariables.h"/>
+   <depend name="include/flash/utils/ByteArray.h"/>
+   <depend name="include/flash/utils/IDataInput.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/openfl/utils/IMemoryRange.h"/>
+  </file>
+  <file name="src/flash/display/Loader.cpp">
+   <depend name="include/flash/display/Bitmap.h"/>
+   <depend name="include/flash/display/BitmapData.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/Loader.h"/>
+   <depend name="include/flash/display/LoaderInfo.h"/>
+   <depend name="include/flash/display/PixelSnapping.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/net/URLLoader.h"/>
+   <depend name="include/flash/net/URLRequest.h"/>
+   <depend name="include/flash/system/LoaderContext.h"/>
+   <depend name="include/flash/utils/ByteArray.h"/>
+   <depend name="include/flash/utils/IDataInput.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/openfl/utils/IMemoryRange.h"/>
+  </file>
+  <file name="src/flash/display/Sprite.cpp">
+   <depend name="include/Type.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/display/Stage.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/geom/Rectangle.h"/>
+  </file>
+  <file name="src/flash/display/LineScaleMode.cpp">
+   <depend name="include/flash/display/LineScaleMode.h"/>
+  </file>
+  <file name="src/flash/display/JointStyle.cpp">
+   <depend name="include/flash/display/JointStyle.h"/>
+  </file>
+  <file name="src/flash/display/InterpolationMethod.cpp">
+   <depend name="include/flash/display/InterpolationMethod.h"/>
+  </file>
+  <file name="src/flash/display/IGraphicsData.cpp">
+   <depend name="include/flash/display/IGraphicsData.h"/>
+  </file>
+  <file name="src/flash/display/GraphicsPathWinding.cpp">
+   <depend name="include/flash/display/GraphicsPathWinding.h"/>
+  </file>
+  <file name="src/flash/display/Graphics.cpp">
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/display/BitmapData.h"/>
+   <depend name="include/flash/display/CapsStyle.h"/>
+   <depend name="include/flash/display/GradientType.h"/>
+   <depend name="include/flash/display/Graphics.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/IGraphicsData.h"/>
+   <depend name="include/flash/display/InterpolationMethod.h"/>
+   <depend name="include/flash/display/JointStyle.h"/>
+   <depend name="include/flash/display/LineScaleMode.h"/>
+   <depend name="include/flash/display/SpreadMethod.h"/>
+   <depend name="include/flash/display/TriangleCulling.h"/>
+   <depend name="include/flash/geom/Matrix.h"/>
+   <depend name="include/openfl/display/Tilesheet.h"/>
+  </file>
+  <file name="src/flash/display/GradientType.cpp">
+   <depend name="include/flash/display/GradientType.h"/>
+  </file>
+  <file name="src/flash/display/DisplayObjectContainer.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/Stage.h"/>
+   <depend name="include/flash/errors/ArgumentError.h"/>
+   <depend name="include/flash/errors/Error.h"/>
+   <depend name="include/flash/errors/RangeError.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/geom/Point.h"/>
+  </file>
+  <file name="src/flash/display/InteractiveObject.cpp">
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+  </file>
+  <file name="src/flash/display/CapsStyle.cpp">
+   <depend name="include/flash/display/CapsStyle.h"/>
+  </file>
+  <file name="src/flash/display/BlendMode.cpp">
+   <depend name="include/flash/display/BlendMode.h"/>
+  </file>
+  <file name="src/flash/display/BitmapDataChannel.cpp">
+   <depend name="include/flash/display/BitmapDataChannel.h"/>
+  </file>
+  <file name="src/flash/display/OptimizedPerlin.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/display/BitmapData.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/OptimizedPerlin.h"/>
+  </file>
+  <file name="src/flash/display/BitmapData.cpp">
+   <depend name="include/Std.h"/>
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/Memory.h"/>
+   <depend name="include/flash/display/BitmapData.h"/>
+   <depend name="include/flash/display/BlendMode.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/OptimizedPerlin.h"/>
+   <depend name="include/flash/filters/BitmapFilter.h"/>
+   <depend name="include/flash/geom/ColorTransform.h"/>
+   <depend name="include/flash/geom/Matrix.h"/>
+   <depend name="include/flash/geom/Point.h"/>
+   <depend name="include/flash/geom/Rectangle.h"/>
+   <depend name="include/flash/utils/ByteArray.h"/>
+   <depend name="include/flash/utils/IDataInput.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/openfl/utils/IMemoryRange.h"/>
+  </file>
+  <file name="src/flash/display/Bitmap.cpp">
+   <depend name="include/flash/display/Bitmap.h"/>
+   <depend name="include/flash/display/BitmapData.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/Graphics.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/PixelSnapping.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/geom/Matrix.h"/>
+  </file>
+  <file name="src/flash/display/DisplayObject.cpp">
+   <depend name="include/Type.h"/>
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/display/BlendMode.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/Graphics.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/LoaderInfo.h"/>
+   <depend name="include/flash/display/PixelSnapping.h"/>
+   <depend name="include/flash/display/Stage.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/EventPhase.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/geom/ColorTransform.h"/>
+   <depend name="include/flash/geom/Matrix.h"/>
+   <depend name="include/flash/geom/Point.h"/>
+   <depend name="include/flash/geom/Rectangle.h"/>
+   <depend name="include/flash/geom/Transform.h"/>
+   <depend name="include/flash/net/URLLoader.h"/>
+  </file>
+  <file name="src/flash/display/IBitmapDrawable.cpp">
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/geom/ColorTransform.h"/>
+   <depend name="include/flash/geom/Matrix.h"/>
+   <depend name="include/flash/geom/Rectangle.h"/>
+  </file>
+  <file name="src/flash/events/EventDispatcher.cpp">
+   <depend name="include/IMap.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/flash/events/ErrorEvent.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/EventPhase.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/events/IOErrorEvent.h"/>
+   <depend name="include/flash/events/Listener.h"/>
+   <depend name="include/flash/events/TextEvent.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/openfl/utils/WeakRef.h"/>
+  </file>
+  <file name="src/flash/events/IEventDispatcher.cpp">
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+  </file>
+  <file name="src/flash/_Vector/Vector_Impl_.cpp">
+   <depend name="include/flash/_Vector/Vector_Impl_.h"/>
+  </file>
+  <file name="src/flash/Memory.cpp">
+   <depend name="include/flash/Memory.h"/>
+   <depend name="include/flash/utils/ByteArray.h"/>
+   <depend name="include/flash/utils/IDataInput.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/openfl/utils/IMemoryRange.h"/>
   </file>
   <file name="src/cpp/zip/Uncompress.cpp">
    <depend name="include/cpp/Lib.h"/>
@@ -3975,8 +3836,7 @@
   </file>
   <file name="src/aze/display/DrawList.cpp">
    <depend name="include/aze/display/DrawList.h"/>
-   <depend name="include/haxe/Public.h"/>
-   <depend name="include/native/Lib.h"/>
+   <depend name="include/flash/Lib.h"/>
   </file>
   <file name="src/aze/display/TileLayer.cpp">
    <depend name="include/aze/display/DrawList.h"/>
@@ -3985,16 +3845,16 @@
    <depend name="include/aze/display/TileLayer.h"/>
    <depend name="include/aze/display/TileSprite.h"/>
    <depend name="include/aze/display/TilesheetEx.h"/>
-   <depend name="include/haxe/Public.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/Graphics.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/display/Tilesheet.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/Graphics.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/geom/Point.h"/>
+   <depend name="include/openfl/display/Tilesheet.h"/>
   </file>
   <file name="src/aze/display/TileGroup.cpp">
    <depend name="include/Lambda.h"/>
@@ -4003,9 +3863,8 @@
    <depend name="include/aze/display/TileGroup.h"/>
    <depend name="include/aze/display/TileLayer.h"/>
    <depend name="include/aze/display/TileSprite.h"/>
+   <depend name="include/flash/geom/Rectangle.h"/>
    <depend name="include/haxe/Log.h"/>
-   <depend name="include/haxe/Public.h"/>
-   <depend name="include/native/geom/Rectangle.h"/>
   </file>
   <file name="src/aze/display/TileClip.cpp">
    <depend name="include/aze/display/TileBase.h"/>
@@ -4014,9 +3873,8 @@
    <depend name="include/aze/display/TileLayer.h"/>
    <depend name="include/aze/display/TileSprite.h"/>
    <depend name="include/aze/display/TilesheetEx.h"/>
-   <depend name="include/haxe/Public.h"/>
-   <depend name="include/native/display/Tilesheet.h"/>
-   <depend name="include/native/geom/Rectangle.h"/>
+   <depend name="include/flash/geom/Rectangle.h"/>
+   <depend name="include/openfl/display/Tilesheet.h"/>
   </file>
   <file name="src/aze/display/TileSprite.cpp">
    <depend name="include/Std.h"/>
@@ -4025,18 +3883,14 @@
    <depend name="include/aze/display/TileLayer.h"/>
    <depend name="include/aze/display/TileSprite.h"/>
    <depend name="include/aze/display/TilesheetEx.h"/>
-   <depend name="include/haxe/Public.h"/>
-   <depend name="include/native/display/Tilesheet.h"/>
-   <depend name="include/native/geom/Rectangle.h"/>
+   <depend name="include/flash/geom/Point.h"/>
+   <depend name="include/flash/geom/Rectangle.h"/>
+   <depend name="include/openfl/display/Tilesheet.h"/>
   </file>
   <file name="src/aze/display/TileBase.cpp">
    <depend name="include/aze/display/TileBase.h"/>
    <depend name="include/aze/display/TileGroup.h"/>
    <depend name="include/aze/display/TileLayer.h"/>
-   <depend name="include/haxe/Public.h"/>
-  </file>
-  <file name="src/haxe/Public.cpp">
-   <depend name="include/haxe/Public.h"/>
   </file>
   <file name="src/aze/display/SparrowTilesheet.cpp">
    <depend name="include/List.h"/>
@@ -4044,35 +3898,60 @@
    <depend name="include/Xml.h"/>
    <depend name="include/aze/display/SparrowTilesheet.h"/>
    <depend name="include/aze/display/TilesheetEx.h"/>
+   <depend name="include/flash/display/BitmapData.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/geom/Point.h"/>
+   <depend name="include/flash/geom/Rectangle.h"/>
    <depend name="include/haxe/xml/Fast.h"/>
    <depend name="include/haxe/xml/_Fast/AttribAccess.h"/>
    <depend name="include/haxe/xml/_Fast/HasAttribAccess.h"/>
    <depend name="include/haxe/xml/_Fast/NodeListAccess.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/Tilesheet.h"/>
-   <depend name="include/native/geom/Point.h"/>
-   <depend name="include/native/geom/Rectangle.h"/>
+   <depend name="include/openfl/display/Tilesheet.h"/>
   </file>
   <file name="src/aze/display/TilesheetEx.cpp">
-   <depend name="include/Hash.h"/>
+   <depend name="include/IMap.h"/>
    <depend name="include/StringTools.h"/>
    <depend name="include/aze/display/TilesheetEx.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/Tilesheet.h"/>
-   <depend name="include/native/geom/Point.h"/>
-   <depend name="include/native/geom/Rectangle.h"/>
-   <depend name="include/nme/installer/Assets.h"/>
+   <depend name="include/flash/display/BitmapData.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/geom/Point.h"/>
+   <depend name="include/flash/geom/Rectangle.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/openfl/Assets.h"/>
+   <depend name="include/openfl/display/Tilesheet.h"/>
   </file>
-  <file name="src/native/display/Tilesheet.cpp">
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/Graphics.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/Tilesheet.h"/>
-   <depend name="include/native/geom/Point.h"/>
-   <depend name="include/native/geom/Rectangle.h"/>
+  <file name="src/openfl/display/Tilesheet.cpp">
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/display/BitmapData.h"/>
+   <depend name="include/flash/display/Graphics.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/geom/Point.h"/>
+   <depend name="include/flash/geom/Rectangle.h"/>
+   <depend name="include/openfl/display/Tilesheet.h"/>
+  </file>
+  <file name="src/flash/Lib.cpp">
+   <depend name="include/IMap.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/Sys.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/display/BitmapData.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/MovieClip.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/display/Stage.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/net/URLRequest.h"/>
+   <depend name="include/haxe/Timer.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/haxe/io/Input.h"/>
+   <depend name="include/openfl/display/ManagedStage.h"/>
+   <depend name="include/sys/io/Process.h"/>
   </file>
   <file name="src/sys/io/_Process/Stdout.cpp">
    <depend name="include/cpp/Lib.h"/>
@@ -4084,31 +3963,19 @@
   </file>
   <file name="src/haxe/io/Input.cpp">
    <depend name="include/StringBuf.h"/>
-   <depend name="include/cpp/Lib.h"/>
-   <depend name="include/haxe/io/Bytes.h"/>
-   <depend name="include/haxe/io/BytesBuffer.h"/>
    <depend name="include/haxe/io/Eof.h"/>
-   <depend name="include/haxe/io/Error.h"/>
    <depend name="include/haxe/io/Input.h"/>
   </file>
   <file name="src/haxe/io/Bytes.cpp">
-   <depend name="include/StringBuf.h"/>
    <depend name="include/haxe/io/Bytes.h"/>
    <depend name="include/haxe/io/Error.h"/>
   </file>
   <file name="src/sys/io/_Process/Stdin.cpp">
-   <depend name="include/cpp/Lib.h"/>
    <depend name="include/haxe/io/Bytes.h"/>
-   <depend name="include/haxe/io/Eof.h"/>
    <depend name="include/haxe/io/Output.h"/>
    <depend name="include/sys/io/_Process/Stdin.h"/>
   </file>
   <file name="src/haxe/io/Output.cpp">
-   <depend name="include/cpp/Lib.h"/>
-   <depend name="include/haxe/io/Bytes.h"/>
-   <depend name="include/haxe/io/Eof.h"/>
-   <depend name="include/haxe/io/Error.h"/>
-   <depend name="include/haxe/io/Input.h"/>
    <depend name="include/haxe/io/Output.h"/>
   </file>
   <file name="src/sys/io/Process.cpp">
@@ -4119,16 +3986,8 @@
    <depend name="include/sys/io/_Process/Stdin.h"/>
    <depend name="include/sys/io/_Process/Stdout.h"/>
   </file>
-  <file name="src/native/Loader.cpp">
-   <depend name="include/Std.h"/>
-   <depend name="include/cpp/Lib.h"/>
-   <depend name="include/haxe/io/Input.h"/>
-   <depend name="include/native/Loader.h"/>
-   <depend name="include/sys/io/Process.h"/>
-  </file>
   <file name="src/Xml.cpp">
    <depend name="include/Reflect.h"/>
-   <depend name="include/StringBuf.h"/>
    <depend name="include/Type.h"/>
    <depend name="include/Xml.h"/>
    <depend name="include/XmlType.h"/>
@@ -4138,30 +3997,26 @@
    <depend name="include/XmlType.h"/>
   </file>
   <file name="src/World1Level1.cpp">
-   <depend name="include/BackgroundObject.h"/>
    <depend name="include/Character.h"/>
-   <depend name="include/DrawObject.h"/>
-   <depend name="include/GameObject.h"/>
    <depend name="include/Level.h"/>
    <depend name="include/Lucy.h"/>
+   <depend name="include/Main.h"/>
    <depend name="include/World1Level1.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/haxe/Log.h"/>
   </file>
   <file name="src/Type.cpp">
    <depend name="include/Reflect.h"/>
    <depend name="include/Type.h"/>
-   <depend name="include/ValueType.h"/>
-  </file>
-  <file name="src/ValueType.cpp">
-   <depend name="include/ValueType.h"/>
   </file>
   <file name="src/Sys.cpp">
-   <depend name="include/Hash.h"/>
    <depend name="include/Sys.h"/>
-   <depend name="include/cpp/Lib.h"/>
-   <depend name="include/haxe/io/Input.h"/>
-   <depend name="include/haxe/io/Output.h"/>
-   <depend name="include/sys/io/FileInput.h"/>
-   <depend name="include/sys/io/FileOutput.h"/>
   </file>
   <file name="src/cpp/Lib.cpp">
    <depend name="include/cpp/Lib.h"/>
@@ -4176,7 +4031,7 @@
    <depend name="include/Std.h"/>
   </file>
   <file name="src/SpriteObject.cpp">
-   <depend name="include/Hash.h"/>
+   <depend name="include/IMap.h"/>
    <depend name="include/Main.h"/>
    <depend name="include/Mobile.h"/>
    <depend name="include/RenderManager.h"/>
@@ -4190,7 +4045,17 @@
    <depend name="include/aze/display/TileLayer.h"/>
    <depend name="include/aze/display/TileSprite.h"/>
    <depend name="include/aze/display/TilesheetEx.h"/>
-   <depend name="include/haxe/Public.h"/>
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/display/BitmapData.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/geom/Rectangle.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
    <depend name="include/haxe/xml/Fast.h"/>
    <depend name="include/haxe/xml/_Fast/AttribAccess.h"/>
    <depend name="include/haxe/xml/_Fast/NodeAccess.h"/>
@@ -4205,18 +4070,8 @@
    <depend name="include/nape/shape/Shape.h"/>
    <depend name="include/nape/shape/ShapeList.h"/>
    <depend name="include/nape/space/Space.h"/>
-   <depend name="include/native/Lib.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/display/Tilesheet.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/geom/Rectangle.h"/>
-   <depend name="include/nme/installer/Assets.h"/>
+   <depend name="include/openfl/Assets.h"/>
+   <depend name="include/openfl/display/Tilesheet.h"/>
    <depend name="include/zpp_nape/geom/ZPP_Vec2.h"/>
    <depend name="include/zpp_nape/phys/ZPP_Body.h"/>
    <depend name="include/zpp_nape/phys/ZPP_Interactor.h"/>
@@ -4233,7 +4088,7 @@
    <depend name="include/Xml.h"/>
    <depend name="include/haxe/xml/Fast.h"/>
    <depend name="include/haxe/xml/_Fast/NodeAccess.h"/>
-   <depend name="include/nme/installer/Assets.h"/>
+   <depend name="include/openfl/Assets.h"/>
   </file>
   <file name="src/RenderManager.cpp">
    <depend name="include/Camera.h"/>
@@ -4241,15 +4096,15 @@
    <depend name="include/Garbage.h"/>
    <depend name="include/Main.h"/>
    <depend name="include/RenderManager.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/display/Stage.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
    <depend name="include/nape/space/Space.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/display/Stage.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
   </file>
   <file name="src/Reflect.cpp">
    <depend name="include/Reflect.h"/>
@@ -4257,64 +4112,70 @@
   <file name="src/Mobile.cpp">
    <depend name="include/Main.h"/>
    <depend name="include/Mobile.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/Stage.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/system/Capabilities.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/Stage.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/system/Capabilities.h"/>
   </file>
-  <file name="src/Main.cpp">
-   <depend name="include/Drawing.h"/>
-   <depend name="include/Level.h"/>
-   <depend name="include/Main.h"/>
-   <depend name="include/Mobile.h"/>
-   <depend name="include/RenderManager.h"/>
-   <depend name="include/Settings.h"/>
-   <depend name="include/nape/geom/Vec2.h"/>
-   <depend name="include/nape/space/Broadphase.h"/>
-   <depend name="include/nape/space/Space.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/MovieClip.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/display/Stage.h"/>
-   <depend name="include/native/display/StageAlign.h"/>
-   <depend name="include/native/display/StageScaleMode.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/text/TextField.h"/>
-   <depend name="include/nme/Lib.h"/>
-   <depend name="include/nme/display/FPS.h"/>
-   <depend name="include/zpp_nape/geom/ZPP_Vec2.h"/>
-   <depend name="include/zpp_nape/util/ZPP_PubPool.h"/>
+  <file name="src/IMap.cpp">
+   <depend name="include/IMap.h"/>
   </file>
   <file name="src/Lucy.cpp">
    <depend name="include/Camera.h"/>
    <depend name="include/Character.h"/>
+   <depend name="include/IMap.h"/>
    <depend name="include/Lucy.h"/>
+   <depend name="include/Main.h"/>
    <depend name="include/Settings.h"/>
    <depend name="include/SpriteObject.h"/>
    <depend name="include/aze/display/TileBase.h"/>
    <depend name="include/aze/display/TileClip.h"/>
+   <depend name="include/aze/display/TileGroup.h"/>
+   <depend name="include/aze/display/TileLayer.h"/>
    <depend name="include/aze/display/TileSprite.h"/>
-   <depend name="include/haxe/Public.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/geom/Rectangle.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/nape/dynamics/InteractionFilter.h"/>
+   <depend name="include/nape/geom/AABB.h"/>
    <depend name="include/nape/geom/Vec2.h"/>
    <depend name="include/nape/phys/Body.h"/>
+   <depend name="include/nape/phys/BodyList.h"/>
+   <depend name="include/nape/phys/BodyType.h"/>
    <depend name="include/nape/phys/Interactor.h"/>
+   <depend name="include/nape/phys/Material.h"/>
+   <depend name="include/nape/shape/Circle.h"/>
+   <depend name="include/nape/shape/Polygon.h"/>
+   <depend name="include/nape/shape/Shape.h"/>
+   <depend name="include/nape/shape/ShapeList.h"/>
+   <depend name="include/nape/space/Space.h"/>
+   <depend name="include/zpp_nape/geom/ZPP_AABB.h"/>
    <depend name="include/zpp_nape/geom/ZPP_Vec2.h"/>
    <depend name="include/zpp_nape/phys/ZPP_Body.h"/>
+   <depend name="include/zpp_nape/phys/ZPP_Compound.h"/>
    <depend name="include/zpp_nape/phys/ZPP_Interactor.h"/>
+   <depend name="include/zpp_nape/shape/ZPP_Circle.h"/>
+   <depend name="include/zpp_nape/shape/ZPP_Polygon.h"/>
+   <depend name="include/zpp_nape/shape/ZPP_Shape.h"/>
+   <depend name="include/zpp_nape/space/ZPP_Component.h"/>
+   <depend name="include/zpp_nape/space/ZPP_Space.h"/>
+   <depend name="include/zpp_nape/util/ZPP_BodyList.h"/>
+   <depend name="include/zpp_nape/util/ZPP_Flags.h"/>
+   <depend name="include/zpp_nape/util/ZPP_PubPool.h"/>
+   <depend name="include/zpp_nape/util/ZPP_ShapeList.h"/>
   </file>
   <file name="src/List.cpp">
    <depend name="include/List.h"/>
-   <depend name="include/Std.h"/>
-   <depend name="include/StringBuf.h"/>
   </file>
   <file name="src/LineDrawing.cpp">
    <depend name="include/DrawObject.h"/>
@@ -4325,24 +4186,24 @@
    <depend name="include/RenderManager.h"/>
    <depend name="include/Settings.h"/>
    <depend name="include/Std.h"/>
-   <depend name="include/native/display/Bitmap.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/BlendMode.h"/>
-   <depend name="include/native/display/CapsStyle.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/Graphics.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/JointStyle.h"/>
-   <depend name="include/native/display/LineScaleMode.h"/>
-   <depend name="include/native/display/PixelSnapping.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/geom/ColorTransform.h"/>
-   <depend name="include/native/geom/Matrix.h"/>
-   <depend name="include/native/geom/Rectangle.h"/>
+   <depend name="include/flash/display/Bitmap.h"/>
+   <depend name="include/flash/display/BitmapData.h"/>
+   <depend name="include/flash/display/BlendMode.h"/>
+   <depend name="include/flash/display/CapsStyle.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/Graphics.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/JointStyle.h"/>
+   <depend name="include/flash/display/LineScaleMode.h"/>
+   <depend name="include/flash/display/PixelSnapping.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/geom/ColorTransform.h"/>
+   <depend name="include/flash/geom/Matrix.h"/>
+   <depend name="include/flash/geom/Rectangle.h"/>
   </file>
   <file name="src/Level.cpp">
    <depend name="include/Camera.h"/>
@@ -4353,17 +4214,16 @@
    <depend name="include/RenderManager.h"/>
    <depend name="include/Type.h"/>
    <depend name="include/UIobject.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
   </file>
   <file name="src/Lambda.cpp">
    <depend name="include/Lambda.h"/>
-   <depend name="include/List.h"/>
   </file>
   <file name="src/IsoBody.cpp">
    <depend name="include/IsoBody.h"/>
@@ -4388,19 +4248,6 @@
    <depend name="include/zpp_nape/util/ZPP_PubPool.h"/>
    <depend name="include/zpp_nape/util/ZPP_ShapeList.h"/>
   </file>
-  <file name="src/IntIter.cpp">
-   <depend name="include/IntIter.h"/>
-  </file>
-  <file name="src/IntHash.cpp">
-   <depend name="include/IntHash.h"/>
-   <depend name="include/Std.h"/>
-   <depend name="include/StringBuf.h"/>
-  </file>
-  <file name="src/Hash.cpp">
-   <depend name="include/Hash.h"/>
-   <depend name="include/Std.h"/>
-   <depend name="include/StringBuf.h"/>
-  </file>
   <file name="src/Garbage.cpp">
    <depend name="include/Garbage.h"/>
   </file>
@@ -4408,21 +4255,21 @@
    <depend name="include/Drawing.h"/>
    <depend name="include/LineDrawing.h"/>
    <depend name="include/Main.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/events/MouseEvent.h"/>
    <depend name="include/nape/dynamics/InteractionFilter.h"/>
    <depend name="include/nape/geom/Vec2.h"/>
    <depend name="include/nape/phys/Body.h"/>
    <depend name="include/nape/phys/BodyList.h"/>
    <depend name="include/nape/phys/Interactor.h"/>
    <depend name="include/nape/space/Space.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/events/MouseEvent.h"/>
    <depend name="include/zpp_nape/util/ZNPList_ZPP_Body.h"/>
    <depend name="include/zpp_nape/util/ZPP_BodyList.h"/>
   </file>
@@ -4431,12 +4278,31 @@
    <depend name="include/DrawObject.h"/>
    <depend name="include/Drawing.h"/>
    <depend name="include/GameObject.h"/>
-   <depend name="include/Hash.h"/>
+   <depend name="include/IMap.h"/>
    <depend name="include/IsoBody.h"/>
    <depend name="include/Main.h"/>
    <depend name="include/RenderManager.h"/>
    <depend name="include/Settings.h"/>
    <depend name="include/Std.h"/>
+   <depend name="include/flash/_Vector/Vector_Impl_.h"/>
+   <depend name="include/flash/display/Bitmap.h"/>
+   <depend name="include/flash/display/BitmapData.h"/>
+   <depend name="include/flash/display/BlendMode.h"/>
+   <depend name="include/flash/display/CapsStyle.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/Graphics.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/JointStyle.h"/>
+   <depend name="include/flash/display/LineScaleMode.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/geom/ColorTransform.h"/>
+   <depend name="include/flash/geom/Matrix.h"/>
+   <depend name="include/flash/geom/Rectangle.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
    <depend name="include/nape/geom/AABB.h"/>
    <depend name="include/nape/geom/Vec2.h"/>
    <depend name="include/nape/phys/Body.h"/>
@@ -4444,23 +4310,6 @@
    <depend name="include/nape/phys/BodyType.h"/>
    <depend name="include/nape/phys/Interactor.h"/>
    <depend name="include/nape/space/Space.h"/>
-   <depend name="include/native/display/Bitmap.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/BlendMode.h"/>
-   <depend name="include/native/display/CapsStyle.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/Graphics.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/JointStyle.h"/>
-   <depend name="include/native/display/LineScaleMode.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/geom/ColorTransform.h"/>
-   <depend name="include/native/geom/Matrix.h"/>
-   <depend name="include/native/geom/Rectangle.h"/>
    <depend name="include/zpp_nape/phys/ZPP_Body.h"/>
    <depend name="include/zpp_nape/phys/ZPP_Compound.h"/>
    <depend name="include/zpp_nape/phys/ZPP_Interactor.h"/>
@@ -4474,12 +4323,24 @@
   <file name="src/GameObject.cpp">
    <depend name="include/Camera.h"/>
    <depend name="include/GameObject.h"/>
-   <depend name="include/Hash.h"/>
+   <depend name="include/IMap.h"/>
    <depend name="include/Main.h"/>
    <depend name="include/Mobile.h"/>
    <depend name="include/RenderManager.h"/>
    <depend name="include/Settings.h"/>
    <depend name="include/Xml.h"/>
+   <depend name="include/flash/display/Bitmap.h"/>
+   <depend name="include/flash/display/BitmapData.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/PixelSnapping.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/geom/Point.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
    <depend name="include/haxe/xml/Fast.h"/>
    <depend name="include/haxe/xml/_Fast/AttribAccess.h"/>
    <depend name="include/haxe/xml/_Fast/NodeAccess.h"/>
@@ -4489,18 +4350,7 @@
    <depend name="include/nape/phys/Interactor.h"/>
    <depend name="include/nape/phys/Material.h"/>
    <depend name="include/nape/space/Space.h"/>
-   <depend name="include/native/display/Bitmap.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/PixelSnapping.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/geom/Point.h"/>
-   <depend name="include/nme/installer/Assets.h"/>
+   <depend name="include/openfl/Assets.h"/>
    <depend name="include/zpp_nape/geom/ZPP_AABB.h"/>
    <depend name="include/zpp_nape/geom/ZPP_Vec2.h"/>
    <depend name="include/zpp_nape/phys/ZPP_Body.h"/>
@@ -4512,42 +4362,38 @@
    <depend name="include/Drawing.h"/>
    <depend name="include/Mobile.h"/>
    <depend name="include/UIobject.h"/>
-   <depend name="include/native/display/Bitmap.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/PixelSnapping.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/events/MouseEvent.h"/>
-   <depend name="include/nme/installer/Assets.h"/>
+   <depend name="include/flash/display/Bitmap.h"/>
+   <depend name="include/flash/display/BitmapData.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/PixelSnapping.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/events/MouseEvent.h"/>
+   <depend name="include/openfl/Assets.h"/>
   </file>
   <file name="src/UIobject.cpp">
    <depend name="include/Main.h"/>
    <depend name="include/Mobile.h"/>
    <depend name="include/UIobject.h"/>
-   <depend name="include/native/display/Bitmap.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/PixelSnapping.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/display/Stage.h"/>
-   <depend name="include/native/events/Event.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/events/MouseEvent.h"/>
-   <depend name="include/nme/installer/Assets.h"/>
-  </file>
-  <file name="src/Date.cpp">
-   <depend name="include/Date.h"/>
-   <depend name="include/Std.h"/>
+   <depend name="include/flash/display/Bitmap.h"/>
+   <depend name="include/flash/display/BitmapData.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/PixelSnapping.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/display/Stage.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/events/MouseEvent.h"/>
+   <depend name="include/openfl/Assets.h"/>
   </file>
   <file name="src/Character.cpp">
    <depend name="include/Character.h"/>
@@ -4563,17 +4409,19 @@
    <depend name="include/Camera.h"/>
    <depend name="include/Main.h"/>
    <depend name="include/Mobile.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/events/KeyboardEvent.h"/>
+   <depend name="include/flash/geom/Point.h"/>
    <depend name="include/nape/geom/Vec2.h"/>
    <depend name="include/nape/phys/Body.h"/>
    <depend name="include/nape/phys/Interactor.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/geom/Point.h"/>
    <depend name="include/zpp_nape/geom/ZPP_Vec2.h"/>
    <depend name="include/zpp_nape/phys/ZPP_Body.h"/>
    <depend name="include/zpp_nape/phys/ZPP_Interactor.h"/>
@@ -4581,64 +4429,81 @@
   <file name="src/BitmapDataIso.cpp">
    <depend name="include/BitmapDataIso.h"/>
    <depend name="include/Std.h"/>
+   <depend name="include/flash/display/Bitmap.h"/>
+   <depend name="include/flash/display/BitmapData.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/PixelSnapping.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
    <depend name="include/nape/geom/AABB.h"/>
-   <depend name="include/native/display/Bitmap.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/PixelSnapping.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
   </file>
-  <file name="src/BackgroundObject.cpp">
-   <depend name="include/BackgroundObject.h"/>
+  <file name="src/DocumentClass.cpp">
+   <depend name="include/DocumentClass.h"/>
+   <depend name="include/Main.h"/>
+  </file>
+  <file name="src/Main.cpp">
    <depend name="include/Camera.h"/>
-   <depend name="include/Hash.h"/>
+   <depend name="include/Drawing.h"/>
+   <depend name="include/Level.h"/>
    <depend name="include/Main.h"/>
    <depend name="include/Mobile.h"/>
    <depend name="include/RenderManager.h"/>
-   <depend name="include/Xml.h"/>
-   <depend name="include/haxe/xml/Fast.h"/>
-   <depend name="include/haxe/xml/_Fast/AttribAccess.h"/>
-   <depend name="include/haxe/xml/_Fast/NodeAccess.h"/>
-   <depend name="include/native/display/Bitmap.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/BlendMode.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/PixelSnapping.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/geom/Point.h"/>
-   <depend name="include/nme/installer/Assets.h"/>
+   <depend name="include/Settings.h"/>
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/MovieClip.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/display/Stage.h"/>
+   <depend name="include/flash/display/StageAlign.h"/>
+   <depend name="include/flash/display/StageScaleMode.h"/>
+   <depend name="include/flash/events/Event.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/events/KeyboardEvent.h"/>
+   <depend name="include/nape/geom/Vec2.h"/>
+   <depend name="include/nape/space/Broadphase.h"/>
+   <depend name="include/nape/space/Space.h"/>
+   <depend name="include/zpp_nape/geom/ZPP_Vec2.h"/>
+   <depend name="include/zpp_nape/util/ZPP_PubPool.h"/>
   </file>
   <file name="src/ApplicationMain.cpp">
    <depend name="include/ApplicationMain.h"/>
+   <depend name="include/DocumentClass.h"/>
+   <depend name="include/IMap.h"/>
    <depend name="include/Main.h"/>
    <depend name="include/Reflect.h"/>
    <depend name="include/Std.h"/>
    <depend name="include/Type.h"/>
+   <depend name="include/flash/Lib.h"/>
+   <depend name="include/flash/display/BitmapData.h"/>
+   <depend name="include/flash/display/DisplayObject.h"/>
+   <depend name="include/flash/display/DisplayObjectContainer.h"/>
+   <depend name="include/flash/display/Graphics.h"/>
+   <depend name="include/flash/display/IBitmapDrawable.h"/>
+   <depend name="include/flash/display/InteractiveObject.h"/>
+   <depend name="include/flash/display/Loader.h"/>
+   <depend name="include/flash/display/LoaderInfo.h"/>
+   <depend name="include/flash/display/MovieClip.h"/>
+   <depend name="include/flash/display/Sprite.h"/>
+   <depend name="include/flash/display/Stage.h"/>
+   <depend name="include/flash/display/StageAlign.h"/>
+   <depend name="include/flash/display/StageScaleMode.h"/>
+   <depend name="include/flash/events/EventDispatcher.h"/>
+   <depend name="include/flash/events/IEventDispatcher.h"/>
+   <depend name="include/flash/media/Sound.h"/>
+   <depend name="include/flash/net/URLLoader.h"/>
+   <depend name="include/flash/text/Font.h"/>
+   <depend name="include/flash/utils/ByteArray.h"/>
+   <depend name="include/flash/utils/IDataInput.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
    <depend name="include/haxe/io/Bytes.h"/>
-   <depend name="include/native/display/BitmapData.h"/>
-   <depend name="include/native/display/DisplayObject.h"/>
-   <depend name="include/native/display/DisplayObjectContainer.h"/>
-   <depend name="include/native/display/IBitmapDrawable.h"/>
-   <depend name="include/native/display/InteractiveObject.h"/>
-   <depend name="include/native/display/MovieClip.h"/>
-   <depend name="include/native/display/Sprite.h"/>
-   <depend name="include/native/display/Stage.h"/>
-   <depend name="include/native/display/StageAlign.h"/>
-   <depend name="include/native/display/StageScaleMode.h"/>
-   <depend name="include/native/events/EventDispatcher.h"/>
-   <depend name="include/native/events/IEventDispatcher.h"/>
-   <depend name="include/native/utils/ByteArray.h"/>
-   <depend name="include/native/utils/IDataInput.h"/>
-   <depend name="include/native/utils/IMemoryRange.h"/>
-   <depend name="include/nme/Lib.h"/>
-   <depend name="include/nme/installer/Assets.h"/>
+   <depend name="include/openfl/AssetType.h"/>
+   <depend name="include/openfl/Assets.h"/>
+   <depend name="include/openfl/utils/IMemoryRange.h"/>
   </file>
   <file name="src/__boot__.cpp">
   </file>

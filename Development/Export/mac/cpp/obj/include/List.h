@@ -8,7 +8,7 @@
 HX_DECLARE_CLASS0(List)
 
 
-class List_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  List_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef List_obj OBJ_;
@@ -28,38 +28,14 @@ class List_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("List"); }
 
-		virtual ::List map( Dynamic f);
-		Dynamic map_dyn();
-
-		virtual ::List filter( Dynamic f);
-		Dynamic filter_dyn();
-
-		virtual ::String join( ::String sep);
-		Dynamic join_dyn();
-
-		virtual ::String toString( );
-		Dynamic toString_dyn();
-
 		virtual Dynamic iterator( );
 		Dynamic iterator_dyn();
 
 		virtual bool remove( Dynamic v);
 		Dynamic remove_dyn();
 
-		virtual Void clear( );
-		Dynamic clear_dyn();
-
 		virtual bool isEmpty( );
 		Dynamic isEmpty_dyn();
-
-		virtual Dynamic pop( );
-		Dynamic pop_dyn();
-
-		virtual Dynamic last( );
-		Dynamic last_dyn();
-
-		virtual Dynamic first( );
-		Dynamic first_dyn();
 
 		virtual Void push( Dynamic item);
 		Dynamic push_dyn();
@@ -67,9 +43,9 @@ class List_obj : public hx::Object{
 		virtual Void add( Dynamic item);
 		Dynamic add_dyn();
 
-		int length; /* REM */ 
-		Dynamic q; /* REM */ 
-		Dynamic h; /* REM */ 
+		int length;
+		Dynamic q;
+		Dynamic h;
 };
 
 

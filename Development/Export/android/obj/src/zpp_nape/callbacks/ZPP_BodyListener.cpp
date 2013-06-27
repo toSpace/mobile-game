@@ -179,9 +179,6 @@ Void ZPP_BodyListener_obj::cbtype_change( ::zpp_nape::callbacks::ZPP_CbType cb,b
 					{
 						HX_STACK_LINE(247)
 						::zpp_nape::util::ZNPList_ZPP_CbType _this1 = _this->includes;		HX_STACK_VAR(_this1,"_this1");
-						HX_STACK_LINE(247)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &cb){
 								HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",247);
@@ -273,9 +270,6 @@ Void ZPP_BodyListener_obj::cbtype_change( ::zpp_nape::callbacks::ZPP_CbType cb,b
 					{
 						HX_STACK_LINE(247)
 						::zpp_nape::util::ZNPList_ZPP_CbType _this1 = _this->excludes;		HX_STACK_VAR(_this1,"_this1");
-						HX_STACK_LINE(247)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &cb){
 								HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",247);
@@ -406,9 +400,6 @@ Void ZPP_BodyListener_obj::addedToSpace( ){
 				{
 					HX_STACK_LINE(226)
 					{
-					}
-					HX_STACK_LINE(226)
-					{
 						HX_STACK_LINE(226)
 						::zpp_nape::util::ZNPNode_ZPP_BodyListener pre = null();		HX_STACK_VAR(pre,"pre");
 						HX_STACK_LINE(226)
@@ -437,9 +428,6 @@ Void ZPP_BodyListener_obj::addedToSpace( ){
 						{
 							HX_STACK_LINE(226)
 							::zpp_nape::util::ZNPList_ZPP_BodyListener _this = cb->bodylisteners;		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(226)
-							{
-							}
 							struct _Function_6_1{
 								inline static ::zpp_nape::util::ZNPNode_ZPP_BodyListener Block( ::zpp_nape::callbacks::ZPP_BodyListener_obj *__this){
 									HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",226);
@@ -636,7 +624,7 @@ Class ZPP_BodyListener_obj::__mClass;
 
 void ZPP_BodyListener_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.callbacks.ZPP_BodyListener"), hx::TCanCast< ZPP_BodyListener_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.callbacks.ZPP_BodyListener"), hx::TCanCast< ZPP_BodyListener_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

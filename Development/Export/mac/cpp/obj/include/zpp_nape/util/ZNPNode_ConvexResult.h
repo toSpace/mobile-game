@@ -11,7 +11,7 @@ namespace zpp_nape{
 namespace util{
 
 
-class ZNPNode_ConvexResult_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZNPNode_ConvexResult_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZNPNode_ConvexResult_obj OBJ_;
@@ -34,15 +34,15 @@ class ZNPNode_ConvexResult_obj : public hx::Object{
 		virtual ::nape::geom::ConvexResult elem( );
 		Dynamic elem_dyn();
 
-		::nape::geom::ConvexResult elt; /* REM */ 
+		::nape::geom::ConvexResult elt;
 		virtual Void free( );
 		Dynamic free_dyn();
 
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
-		::zpp_nape::util::ZNPNode_ConvexResult next; /* REM */ 
-		static ::zpp_nape::util::ZNPNode_ConvexResult zpp_pool; /* REM */ 
+		::zpp_nape::util::ZNPNode_ConvexResult next;
+		static ::zpp_nape::util::ZNPNode_ConvexResult zpp_pool;
 };
 
 } // end namespace zpp_nape

@@ -14,7 +14,7 @@ namespace nape{
 namespace geom{
 
 
-class Geom_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Geom_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Geom_obj OBJ_;

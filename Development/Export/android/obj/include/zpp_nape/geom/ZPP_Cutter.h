@@ -15,7 +15,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_Cutter_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Cutter_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Cutter_obj OBJ_;
@@ -35,8 +35,8 @@ class ZPP_Cutter_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("ZPP_Cutter"); }
 
-		static ::zpp_nape::util::ZNPList_ZPP_CutInt ints; /* REM */ 
-		static ::zpp_nape::util::ZNPList_ZPP_CutVert paths; /* REM */ 
+		static ::zpp_nape::util::ZNPList_ZPP_CutInt ints;
+		static ::zpp_nape::util::ZNPList_ZPP_CutVert paths;
 		static ::nape::geom::GeomPolyList run( ::zpp_nape::geom::ZPP_GeomVert P,::nape::geom::Vec2 _start,::nape::geom::Vec2 _end,bool bstart,bool bend,::nape::geom::GeomPolyList output);
 		static Dynamic run_dyn();
 

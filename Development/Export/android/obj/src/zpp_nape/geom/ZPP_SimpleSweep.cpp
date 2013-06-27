@@ -179,7 +179,7 @@ Dynamic ZPP_SimpleSweep_obj::__Create(hx::DynamicArray inArgs)
 			}
 			else{
 				struct _Function_4_1{
-					inline static ::zpp_nape::geom::ZPP_SimpleVert Block( Float &uy,Float &ux,Float &t,Float &vy,Float &vx,Float &s,::zpp_nape::geom::ZPP_SimpleSeg &q,::zpp_nape::geom::ZPP_SimpleSeg &p){
+					inline static ::zpp_nape::geom::ZPP_SimpleVert Block( Float &vx,Float &uy,Float &ux,Float &s,::zpp_nape::geom::ZPP_SimpleSeg &p,Float &t,Float &vy,::zpp_nape::geom::ZPP_SimpleSeg &q){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",777);
 						{
 							HX_STACK_LINE(777)
@@ -211,9 +211,6 @@ Dynamic ZPP_SimpleSweep_obj::__Create(hx::DynamicArray inArgs)
 								HX_STACK_LINE(777)
 								{
 								}
-								HX_STACK_LINE(777)
-								{
-								}
 							}
 							HX_STACK_LINE(777)
 							return ret;
@@ -222,7 +219,7 @@ Dynamic ZPP_SimpleSweep_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				HX_STACK_LINE(777)
-				vet = _Function_4_1::Block(uy,ux,t,vy,vx,s,q,p);
+				vet = _Function_4_1::Block(vx,uy,ux,s,p,t,vy,q);
 			}
 			struct _Function_3_1{
 				inline static ::zpp_nape::geom::ZPP_SimpleEvent Block( ::zpp_nape::geom::ZPP_SimpleVert &vet){
@@ -440,7 +437,7 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 				}
 			};
 			struct _Function_3_2{
-				inline static Float Block( Float &uy,Float &ux,Float &vy,Float &vx,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q,::zpp_nape::geom::ZPP_SimpleSeg &p){
+				inline static Float Block( Float &vx,Float &uy,Float &ux,::zpp_nape::geom::ZPP_SimpleSeg &p,Float &vy,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",505);
 					{
 						HX_STACK_LINE(506)
@@ -466,13 +463,13 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 				}
 			};
 			HX_STACK_LINE(500)
-			return (  (((p->left->x == p->right->x))) ? bool(_Function_3_1::Block(p,q)) : bool((_Function_3_2::Block(uy,ux,vy,vx,flip,q,p) < (int)0)) );
+			return (  (((p->left->x == p->right->x))) ? bool(_Function_3_1::Block(p,q)) : bool((_Function_3_2::Block(vx,uy,ux,p,vy,flip,q) < (int)0)) );
 		}
 		else{
 			HX_STACK_LINE(518)
 			if (((p->right == q->left))){
 				struct _Function_4_1{
-					inline static bool Block( ::zpp_nape::geom::ZPP_SimpleSeg &q,::zpp_nape::geom::ZPP_SimpleSeg &p){
+					inline static bool Block( ::zpp_nape::geom::ZPP_SimpleSeg &p,::zpp_nape::geom::ZPP_SimpleSeg &q){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",519);
 						{
 							HX_STACK_LINE(519)
@@ -482,7 +479,7 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 					}
 				};
 				struct _Function_4_2{
-					inline static Float Block( Float &uy,Float &ux,Float &vy,Float &vx,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q,::zpp_nape::geom::ZPP_SimpleSeg &p){
+					inline static Float Block( Float &vx,Float &uy,Float &ux,::zpp_nape::geom::ZPP_SimpleSeg &p,Float &vy,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",523);
 						{
 							HX_STACK_LINE(524)
@@ -508,7 +505,7 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 					}
 				};
 				HX_STACK_LINE(518)
-				return !(((  (((q->left->x == q->right->x))) ? bool(_Function_4_1::Block(q,p)) : bool((_Function_4_2::Block(uy,ux,vy,vx,flip,q,p) < (int)0)) )));
+				return !(((  (((q->left->x == q->right->x))) ? bool(_Function_4_1::Block(p,q)) : bool((_Function_4_2::Block(vx,uy,ux,p,vy,flip,q) < (int)0)) )));
 			}
 			else{
 				HX_STACK_LINE(536)
@@ -524,7 +521,7 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 						}
 					};
 					struct _Function_5_2{
-						inline static Float Block( Float &uy,Float &ux,Float &vy,Float &vx,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q,::zpp_nape::geom::ZPP_SimpleSeg &p){
+						inline static Float Block( Float &vx,Float &uy,Float &ux,::zpp_nape::geom::ZPP_SimpleSeg &p,Float &vy,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q){
 							HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",541);
 							{
 								HX_STACK_LINE(542)
@@ -550,7 +547,7 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 						}
 					};
 					HX_STACK_LINE(536)
-					return (  (((p->left->x == p->right->x))) ? bool(_Function_5_1::Block(p,q)) : bool((_Function_5_2::Block(uy,ux,vy,vx,flip,q,p) < (int)0)) );
+					return (  (((p->left->x == p->right->x))) ? bool(_Function_5_1::Block(p,q)) : bool((_Function_5_2::Block(vx,uy,ux,p,vy,flip,q) < (int)0)) );
 				}
 				else{
 					HX_STACK_LINE(554)
@@ -566,7 +563,7 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 							}
 						};
 						struct _Function_6_2{
-							inline static Float Block( Float &uy,Float &ux,Float &vy,Float &vx,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q,::zpp_nape::geom::ZPP_SimpleSeg &p){
+							inline static Float Block( Float &vx,Float &uy,Float &ux,::zpp_nape::geom::ZPP_SimpleSeg &p,Float &vy,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",559);
 								{
 									HX_STACK_LINE(560)
@@ -592,7 +589,7 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 							}
 						};
 						HX_STACK_LINE(554)
-						return (  (((p->left->x == p->right->x))) ? bool(_Function_6_1::Block(p,q)) : bool((_Function_6_2::Block(uy,ux,vy,vx,flip,q,p) < (int)0)) );
+						return (  (((p->left->x == p->right->x))) ? bool(_Function_6_1::Block(p,q)) : bool((_Function_6_2::Block(vx,uy,ux,p,vy,flip,q) < (int)0)) );
 					}
 				}
 			}
@@ -611,7 +608,7 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 		}
 		else{
 			struct _Function_3_1{
-				inline static Float Block( Float &uy,Float &ux,Float &vy,Float &vx,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q,::zpp_nape::geom::ZPP_SimpleSeg &p){
+				inline static Float Block( Float &vx,Float &uy,Float &ux,::zpp_nape::geom::ZPP_SimpleSeg &p,Float &vy,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",579);
 					{
 						HX_STACK_LINE(580)
@@ -637,9 +634,9 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 				}
 			};
 			HX_STACK_LINE(579)
-			Float plrg = _Function_3_1::Block(uy,ux,vy,vx,flip,q,p);		HX_STACK_VAR(plrg,"plrg");
+			Float plrg = _Function_3_1::Block(vx,uy,ux,p,vy,flip,q);		HX_STACK_VAR(plrg,"plrg");
 			struct _Function_3_2{
-				inline static Float Block( Float &uy,Float &ux,Float &vy,Float &vx,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q,::zpp_nape::geom::ZPP_SimpleSeg &p){
+				inline static Float Block( Float &vx,Float &uy,Float &ux,::zpp_nape::geom::ZPP_SimpleSeg &p,Float &vy,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",591);
 					{
 						HX_STACK_LINE(592)
@@ -665,7 +662,7 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 				}
 			};
 			HX_STACK_LINE(591)
-			Float aplrg = _Function_3_2::Block(uy,ux,vy,vx,flip,q,p);		HX_STACK_VAR(aplrg,"aplrg");
+			Float aplrg = _Function_3_2::Block(vx,uy,ux,p,vy,flip,q);		HX_STACK_VAR(aplrg,"aplrg");
 			HX_STACK_LINE(603)
 			if ((((plrg * aplrg) >= (int)0))){
 				HX_STACK_LINE(603)
@@ -681,7 +678,7 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 		HX_STACK_LINE(607)
 		if (((q->left->x == q->right->x))){
 			struct _Function_3_1{
-				inline static Float Block( Float &uy,Float &ux,Float &vy,Float &vx,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q,::zpp_nape::geom::ZPP_SimpleSeg &p){
+				inline static Float Block( Float &vx,Float &uy,Float &ux,::zpp_nape::geom::ZPP_SimpleSeg &p,Float &vy,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",608);
 					{
 						HX_STACK_LINE(609)
@@ -707,9 +704,9 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 				}
 			};
 			HX_STACK_LINE(608)
-			Float qlrg = _Function_3_1::Block(uy,ux,vy,vx,flip,q,p);		HX_STACK_VAR(qlrg,"qlrg");
+			Float qlrg = _Function_3_1::Block(vx,uy,ux,p,vy,flip,q);		HX_STACK_VAR(qlrg,"qlrg");
 			struct _Function_3_2{
-				inline static Float Block( Float &uy,Float &ux,Float &vy,Float &vx,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q,::zpp_nape::geom::ZPP_SimpleSeg &p){
+				inline static Float Block( Float &vx,Float &uy,Float &ux,::zpp_nape::geom::ZPP_SimpleSeg &p,Float &vy,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",620);
 					{
 						HX_STACK_LINE(621)
@@ -735,7 +732,7 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 				}
 			};
 			HX_STACK_LINE(620)
-			Float aqlrg = _Function_3_2::Block(uy,ux,vy,vx,flip,q,p);		HX_STACK_VAR(aqlrg,"aqlrg");
+			Float aqlrg = _Function_3_2::Block(vx,uy,ux,p,vy,flip,q);		HX_STACK_VAR(aqlrg,"aqlrg");
 			HX_STACK_LINE(632)
 			if ((((qlrg * aqlrg) >= (int)0))){
 				HX_STACK_LINE(632)
@@ -748,7 +745,7 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 		}
 		else{
 			struct _Function_3_1{
-				inline static Float Block( Float &uy,Float &ux,Float &vy,Float &vx,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q,::zpp_nape::geom::ZPP_SimpleSeg &p){
+				inline static Float Block( Float &vx,Float &uy,Float &ux,::zpp_nape::geom::ZPP_SimpleSeg &p,Float &vy,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",636);
 					{
 						HX_STACK_LINE(637)
@@ -774,9 +771,9 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 				}
 			};
 			HX_STACK_LINE(636)
-			bool qlrg = (_Function_3_1::Block(uy,ux,vy,vx,flip,q,p) < 0.0);		HX_STACK_VAR(qlrg,"qlrg");
+			bool qlrg = (_Function_3_1::Block(vx,uy,ux,p,vy,flip,q) < 0.0);		HX_STACK_VAR(qlrg,"qlrg");
 			struct _Function_3_2{
-				inline static Float Block( Float &uy,Float &ux,Float &vy,Float &vx,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q,::zpp_nape::geom::ZPP_SimpleSeg &p){
+				inline static Float Block( Float &vx,Float &uy,Float &ux,::zpp_nape::geom::ZPP_SimpleSeg &p,Float &vy,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",648);
 					{
 						HX_STACK_LINE(649)
@@ -802,7 +799,7 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 				}
 			};
 			HX_STACK_LINE(648)
-			bool aqlrg = (_Function_3_2::Block(uy,ux,vy,vx,flip,q,p) < 0.0);		HX_STACK_VAR(aqlrg,"aqlrg");
+			bool aqlrg = (_Function_3_2::Block(vx,uy,ux,p,vy,flip,q) < 0.0);		HX_STACK_VAR(aqlrg,"aqlrg");
 			HX_STACK_LINE(660)
 			if (((qlrg == aqlrg))){
 				HX_STACK_LINE(660)
@@ -810,7 +807,7 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 			}
 			else{
 				struct _Function_4_1{
-					inline static Float Block( Float &uy,Float &ux,Float &vy,Float &vx,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q,::zpp_nape::geom::ZPP_SimpleSeg &p){
+					inline static Float Block( Float &vx,Float &uy,Float &ux,::zpp_nape::geom::ZPP_SimpleSeg &p,Float &vy,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",662);
 						{
 							HX_STACK_LINE(663)
@@ -836,9 +833,9 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 					}
 				};
 				HX_STACK_LINE(662)
-				bool plrg = (_Function_4_1::Block(uy,ux,vy,vx,flip,q,p) >= 0.0);		HX_STACK_VAR(plrg,"plrg");
+				bool plrg = (_Function_4_1::Block(vx,uy,ux,p,vy,flip,q) >= 0.0);		HX_STACK_VAR(plrg,"plrg");
 				struct _Function_4_2{
-					inline static Float Block( Float &uy,Float &ux,Float &vy,Float &vx,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q,::zpp_nape::geom::ZPP_SimpleSeg &p){
+					inline static Float Block( Float &vx,Float &uy,Float &ux,::zpp_nape::geom::ZPP_SimpleSeg &p,Float &vy,bool &flip,::zpp_nape::geom::ZPP_SimpleSeg &q){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Simple.hx",674);
 						{
 							HX_STACK_LINE(675)
@@ -864,7 +861,7 @@ bool ZPP_SimpleSweep_obj::edge_lt( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape:
 					}
 				};
 				HX_STACK_LINE(674)
-				bool aplrg = (_Function_4_2::Block(uy,ux,vy,vx,flip,q,p) >= 0.0);		HX_STACK_VAR(aplrg,"aplrg");
+				bool aplrg = (_Function_4_2::Block(vx,uy,ux,p,vy,flip,q) >= 0.0);		HX_STACK_VAR(aplrg,"aplrg");
 				HX_STACK_LINE(686)
 				if (((plrg == aplrg))){
 					HX_STACK_LINE(686)
@@ -1001,7 +998,7 @@ Class ZPP_SimpleSweep_obj::__mClass;
 
 void ZPP_SimpleSweep_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_SimpleSweep"), hx::TCanCast< ZPP_SimpleSweep_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_SimpleSweep"), hx::TCanCast< ZPP_SimpleSweep_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

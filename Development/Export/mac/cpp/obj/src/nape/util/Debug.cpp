@@ -1,11 +1,5 @@
 #include <hxcpp.h>
 
-#ifndef INCLUDED_hxMath
-#include <hxMath.h>
-#endif
-#ifndef INCLUDED_Std
-#include <Std.h>
-#endif
 #ifndef INCLUDED_nape_callbacks_CbTypeIterator
 #include <nape/callbacks/CbTypeIterator.h>
 #endif
@@ -24,9 +18,6 @@
 #ifndef INCLUDED_nape_dynamics_InteractionGroupIterator
 #include <nape/dynamics/InteractionGroupIterator.h>
 #endif
-#ifndef INCLUDED_nape_geom_AABB
-#include <nape/geom/AABB.h>
-#endif
 #ifndef INCLUDED_nape_geom_ConvexResultIterator
 #include <nape/geom/ConvexResultIterator.h>
 #endif
@@ -35,9 +26,6 @@
 #endif
 #ifndef INCLUDED_nape_geom_GeomPolyIterator
 #include <nape/geom/GeomPolyIterator.h>
-#endif
-#ifndef INCLUDED_nape_geom_Mat23
-#include <nape/geom/Mat23.h>
 #endif
 #ifndef INCLUDED_nape_geom_RayResultIterator
 #include <nape/geom/RayResultIterator.h>
@@ -48,14 +36,8 @@
 #ifndef INCLUDED_nape_geom_Vec2Iterator
 #include <nape/geom/Vec2Iterator.h>
 #endif
-#ifndef INCLUDED_nape_geom_Vec2List
-#include <nape/geom/Vec2List.h>
-#endif
 #ifndef INCLUDED_nape_geom_Vec3
 #include <nape/geom/Vec3.h>
-#endif
-#ifndef INCLUDED_nape_phys_Body
-#include <nape/phys/Body.h>
 #endif
 #ifndef INCLUDED_nape_phys_BodyIterator
 #include <nape/phys/BodyIterator.h>
@@ -63,59 +45,17 @@
 #ifndef INCLUDED_nape_phys_CompoundIterator
 #include <nape/phys/CompoundIterator.h>
 #endif
-#ifndef INCLUDED_nape_phys_Interactor
-#include <nape/phys/Interactor.h>
-#endif
 #ifndef INCLUDED_nape_phys_InteractorIterator
 #include <nape/phys/InteractorIterator.h>
-#endif
-#ifndef INCLUDED_nape_shape_Circle
-#include <nape/shape/Circle.h>
 #endif
 #ifndef INCLUDED_nape_shape_EdgeIterator
 #include <nape/shape/EdgeIterator.h>
 #endif
-#ifndef INCLUDED_nape_shape_Polygon
-#include <nape/shape/Polygon.h>
-#endif
-#ifndef INCLUDED_nape_shape_Shape
-#include <nape/shape/Shape.h>
-#endif
 #ifndef INCLUDED_nape_shape_ShapeIterator
 #include <nape/shape/ShapeIterator.h>
 #endif
-#ifndef INCLUDED_nape_shape_ShapeList
-#include <nape/shape/ShapeList.h>
-#endif
 #ifndef INCLUDED_nape_util_Debug
 #include <nape/util/Debug.h>
-#endif
-#ifndef INCLUDED_native_display_CapsStyle
-#include <native/display/CapsStyle.h>
-#endif
-#ifndef INCLUDED_native_display_DisplayObject
-#include <native/display/DisplayObject.h>
-#endif
-#ifndef INCLUDED_native_display_Graphics
-#include <native/display/Graphics.h>
-#endif
-#ifndef INCLUDED_native_display_IBitmapDrawable
-#include <native/display/IBitmapDrawable.h>
-#endif
-#ifndef INCLUDED_native_display_JointStyle
-#include <native/display/JointStyle.h>
-#endif
-#ifndef INCLUDED_native_display_LineScaleMode
-#include <native/display/LineScaleMode.h>
-#endif
-#ifndef INCLUDED_native_display_Shape
-#include <native/display/Shape.h>
-#endif
-#ifndef INCLUDED_native_events_EventDispatcher
-#include <native/events/EventDispatcher.h>
-#endif
-#ifndef INCLUDED_native_events_IEventDispatcher
-#include <native/events/IEventDispatcher.h>
 #endif
 #ifndef INCLUDED_zpp_nape_callbacks_ZPP_Callback
 #include <zpp_nape/callbacks/ZPP_Callback.h>
@@ -198,29 +138,14 @@
 #ifndef INCLUDED_zpp_nape_geom_ZPP_Vec2
 #include <zpp_nape/geom/ZPP_Vec2.h>
 #endif
-#ifndef INCLUDED_zpp_nape_phys_ZPP_Body
-#include <zpp_nape/phys/ZPP_Body.h>
-#endif
 #ifndef INCLUDED_zpp_nape_phys_ZPP_FluidProperties
 #include <zpp_nape/phys/ZPP_FluidProperties.h>
-#endif
-#ifndef INCLUDED_zpp_nape_phys_ZPP_Interactor
-#include <zpp_nape/phys/ZPP_Interactor.h>
 #endif
 #ifndef INCLUDED_zpp_nape_phys_ZPP_Material
 #include <zpp_nape/phys/ZPP_Material.h>
 #endif
-#ifndef INCLUDED_zpp_nape_shape_ZPP_Circle
-#include <zpp_nape/shape/ZPP_Circle.h>
-#endif
 #ifndef INCLUDED_zpp_nape_shape_ZPP_Edge
 #include <zpp_nape/shape/ZPP_Edge.h>
-#endif
-#ifndef INCLUDED_zpp_nape_shape_ZPP_Polygon
-#include <zpp_nape/shape/ZPP_Polygon.h>
-#endif
-#ifndef INCLUDED_zpp_nape_shape_ZPP_Shape
-#include <zpp_nape/shape/ZPP_Shape.h>
 #endif
 #ifndef INCLUDED_zpp_nape_space_ZPP_AABBNode
 #include <zpp_nape/space/ZPP_AABBNode.h>
@@ -348,12 +273,6 @@
 #ifndef INCLUDED_zpp_nape_util_ZNPNode_ZPP_Vec2
 #include <zpp_nape/util/ZNPNode_ZPP_Vec2.h>
 #endif
-#ifndef INCLUDED_zpp_nape_util_ZPP_Debug
-#include <zpp_nape/util/ZPP_Debug.h>
-#endif
-#ifndef INCLUDED_zpp_nape_util_ZPP_Flags
-#include <zpp_nape/util/ZPP_Flags.h>
-#endif
 #ifndef INCLUDED_zpp_nape_util_ZPP_PubPool
 #include <zpp_nape/util/ZPP_PubPool.h>
 #endif
@@ -381,68 +300,11 @@
 #ifndef INCLUDED_zpp_nape_util_ZPP_Set_ZPP_SimpleVert
 #include <zpp_nape/util/ZPP_Set_ZPP_SimpleVert.h>
 #endif
-#ifndef INCLUDED_zpp_nape_util_ZPP_ShapeDebug
-#include <zpp_nape/util/ZPP_ShapeDebug.h>
-#endif
-#ifndef INCLUDED_zpp_nape_util_ZPP_ShapeList
-#include <zpp_nape/util/ZPP_ShapeList.h>
-#endif
 namespace nape{
 namespace util{
 
 Void Debug_obj::__construct()
 {
-HX_STACK_PUSH("Debug::new","nape/util/Debug.hx",179);
-{
-	HX_STACK_LINE(1259)
-	this->cullingEnabled = false;
-	HX_STACK_LINE(1213)
-	this->colour = null();
-	HX_STACK_LINE(1181)
-	this->drawConstraints = false;
-	HX_STACK_LINE(1176)
-	this->drawShapeAngleIndicators = false;
-	HX_STACK_LINE(1169)
-	this->drawShapeDetail = false;
-	HX_STACK_LINE(1162)
-	this->drawBodyDetail = false;
-	HX_STACK_LINE(1155)
-	this->drawBodies = false;
-	HX_STACK_LINE(1150)
-	this->drawSensorArbiters = false;
-	HX_STACK_LINE(1143)
-	this->drawFluidArbiters = false;
-	HX_STACK_LINE(1136)
-	this->drawCollisionArbiters = false;
-	HX_STACK_LINE(1129)
-	this->zpp_inner = null();
-	HX_STACK_LINE(1219)
-	if ((!(::zpp_nape::util::ZPP_Debug_obj::internal))){
-		HX_STACK_LINE(1219)
-		hx::Throw (HX_CSTRING("Error: Cannot instantiate Debug derp! Use ShapeDebug, or BitmapDebug on flash10+"));
-	}
-	HX_STACK_LINE(1221)
-	this->drawCollisionArbiters = false;
-	HX_STACK_LINE(1222)
-	this->drawFluidArbiters = false;
-	HX_STACK_LINE(1223)
-	this->drawSensorArbiters = false;
-	HX_STACK_LINE(1224)
-	this->drawBodies = true;
-	HX_STACK_LINE(1225)
-	this->drawShapeAngleIndicators = true;
-	HX_STACK_LINE(1226)
-	this->drawBodyDetail = false;
-	HX_STACK_LINE(1227)
-	this->drawShapeDetail = false;
-	HX_STACK_LINE(1228)
-	this->drawConstraints = false;
-	HX_STACK_LINE(1229)
-	this->cullingEnabled = false;
-	HX_STACK_LINE(1230)
-	this->colour = null();
-}
-;
 	return null();
 }
 
@@ -459,272 +321,10 @@ Dynamic Debug_obj::__Create(hx::DynamicArray inArgs)
 	result->__construct();
 	return result;}
 
-Void Debug_obj::drawSpring( ::nape::geom::Vec2 start,::nape::geom::Vec2 end,int colour,hx::Null< int >  __o_coils,hx::Null< Float >  __o_radius){
-int coils = __o_coils.Default(3);
-Float radius = __o_radius.Default(3.0);
-	HX_STACK_PUSH("Debug::drawSpring","nape/util/Debug.hx",1423);
-	HX_STACK_THIS(this);
-	HX_STACK_ARG(start,"start");
-	HX_STACK_ARG(end,"end");
-	HX_STACK_ARG(colour,"colour");
-	HX_STACK_ARG(coils,"coils");
-	HX_STACK_ARG(radius,"radius");
-{
-	}
-return null();
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC5(Debug_obj,drawSpring,(void))
-
-Void Debug_obj::drawFilledPolygon( Dynamic polygon,int colour){
-{
-		HX_STACK_PUSH("Debug::drawFilledPolygon","nape/util/Debug.hx",1409);
-		HX_STACK_THIS(this);
-		HX_STACK_ARG(polygon,"polygon");
-		HX_STACK_ARG(colour,"colour");
-	}
-return null();
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC2(Debug_obj,drawFilledPolygon,(void))
-
-Void Debug_obj::drawPolygon( Dynamic polygon,int colour){
-{
-		HX_STACK_PUSH("Debug::drawPolygon","nape/util/Debug.hx",1395);
-		HX_STACK_THIS(this);
-		HX_STACK_ARG(polygon,"polygon");
-		HX_STACK_ARG(colour,"colour");
-	}
-return null();
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC2(Debug_obj,drawPolygon,(void))
-
-Void Debug_obj::drawFilledCircle( ::nape::geom::Vec2 position,Float radius,int colour){
-{
-		HX_STACK_PUSH("Debug::drawFilledCircle","nape/util/Debug.hx",1381);
-		HX_STACK_THIS(this);
-		HX_STACK_ARG(position,"position");
-		HX_STACK_ARG(radius,"radius");
-		HX_STACK_ARG(colour,"colour");
-	}
-return null();
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC3(Debug_obj,drawFilledCircle,(void))
-
-Void Debug_obj::drawFilledTriangle( ::nape::geom::Vec2 p0,::nape::geom::Vec2 p1,::nape::geom::Vec2 p2,int colour){
-{
-		HX_STACK_PUSH("Debug::drawFilledTriangle","nape/util/Debug.hx",1368);
-		HX_STACK_THIS(this);
-		HX_STACK_ARG(p0,"p0");
-		HX_STACK_ARG(p1,"p1");
-		HX_STACK_ARG(p2,"p2");
-		HX_STACK_ARG(colour,"colour");
-	}
-return null();
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC4(Debug_obj,drawFilledTriangle,(void))
-
-Void Debug_obj::drawAABB( ::nape::geom::AABB aabb,int colour){
-{
-		HX_STACK_PUSH("Debug::drawAABB","nape/util/Debug.hx",1356);
-		HX_STACK_THIS(this);
-		HX_STACK_ARG(aabb,"aabb");
-		HX_STACK_ARG(colour,"colour");
-	}
-return null();
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC2(Debug_obj,drawAABB,(void))
-
-Void Debug_obj::drawCircle( ::nape::geom::Vec2 position,Float radius,int colour){
-{
-		HX_STACK_PUSH("Debug::drawCircle","nape/util/Debug.hx",1346);
-		HX_STACK_THIS(this);
-		HX_STACK_ARG(position,"position");
-		HX_STACK_ARG(radius,"radius");
-		HX_STACK_ARG(colour,"colour");
-	}
-return null();
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC3(Debug_obj,drawCircle,(void))
-
-Void Debug_obj::drawCurve( ::nape::geom::Vec2 start,::nape::geom::Vec2 control,::nape::geom::Vec2 end,int colour){
-{
-		HX_STACK_PUSH("Debug::drawCurve","nape/util/Debug.hx",1333);
-		HX_STACK_THIS(this);
-		HX_STACK_ARG(start,"start");
-		HX_STACK_ARG(control,"control");
-		HX_STACK_ARG(end,"end");
-		HX_STACK_ARG(colour,"colour");
-	}
-return null();
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC4(Debug_obj,drawCurve,(void))
-
-Void Debug_obj::drawLine( ::nape::geom::Vec2 start,::nape::geom::Vec2 end,int colour){
-{
-		HX_STACK_PUSH("Debug::drawLine","nape/util/Debug.hx",1321);
-		HX_STACK_THIS(this);
-		HX_STACK_ARG(start,"start");
-		HX_STACK_ARG(end,"end");
-		HX_STACK_ARG(colour,"colour");
-	}
-return null();
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC3(Debug_obj,drawLine,(void))
-
-Void Debug_obj::draw( Dynamic object){
-{
-		HX_STACK_PUSH("Debug::draw","nape/util/Debug.hx",1310);
-		HX_STACK_THIS(this);
-		HX_STACK_ARG(object,"object");
-	}
-return null();
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(Debug_obj,draw,(void))
-
-Void Debug_obj::flush( ){
-{
-		HX_STACK_PUSH("Debug::flush","nape/util/Debug.hx",1295);
-		HX_STACK_THIS(this);
-	}
-return null();
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(Debug_obj,flush,(void))
-
-Void Debug_obj::clear( ){
-{
-		HX_STACK_PUSH("Debug::clear","nape/util/Debug.hx",1289);
-		HX_STACK_THIS(this);
-	}
-return null();
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(Debug_obj,clear,(void))
-
-::nape::geom::Mat23 Debug_obj::set_transform( ::nape::geom::Mat23 transform){
-	HX_STACK_PUSH("Debug::set_transform","nape/util/Debug.hx",1277);
-	HX_STACK_THIS(this);
-	HX_STACK_ARG(transform,"transform");
-	HX_STACK_LINE(1278)
-	{
-		HX_STACK_LINE(1280)
-		if (((transform == null()))){
-			HX_STACK_LINE(1280)
-			hx::Throw (HX_CSTRING("Error: Cannot set Debug::transform to null"));
-		}
-		struct _Function_2_1{
-			inline static ::nape::geom::Mat23 Block( ::nape::util::Debug_obj *__this){
-				HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1282);
-				{
-					HX_STACK_LINE(1282)
-					if (((__this->zpp_inner->xform == null()))){
-						HX_STACK_LINE(1282)
-						__this->zpp_inner->setform();
-					}
-					HX_STACK_LINE(1282)
-					return __this->zpp_inner->xform->outer;
-				}
-				return null();
-			}
-		};
-		HX_STACK_LINE(1282)
-		(_Function_2_1::Block(this))->set(transform);
-	}
-	struct _Function_1_1{
-		inline static ::nape::geom::Mat23 Block( ::nape::util::Debug_obj *__this){
-			HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1284);
-			{
-				HX_STACK_LINE(1284)
-				if (((__this->zpp_inner->xform == null()))){
-					HX_STACK_LINE(1284)
-					__this->zpp_inner->setform();
-				}
-				HX_STACK_LINE(1284)
-				return __this->zpp_inner->xform->outer;
-			}
-			return null();
-		}
-	};
-	HX_STACK_LINE(1284)
-	return _Function_1_1::Block(this);
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(Debug_obj,set_transform,return )
-
-::nape::geom::Mat23 Debug_obj::get_transform( ){
-	HX_STACK_PUSH("Debug::get_transform","nape/util/Debug.hx",1273);
-	HX_STACK_THIS(this);
-	HX_STACK_LINE(1274)
-	if (((this->zpp_inner->xform == null()))){
-		HX_STACK_LINE(1274)
-		this->zpp_inner->setform();
-	}
-	HX_STACK_LINE(1275)
-	return this->zpp_inner->xform->outer;
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(Debug_obj,get_transform,return )
-
-::native::display::DisplayObject Debug_obj::get_display( ){
-	HX_STACK_PUSH("Debug::get_display","nape/util/Debug.hx",1239);
-	HX_STACK_THIS(this);
-	HX_STACK_LINE(1239)
-	return this->zpp_inner->d_shape->shape;
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(Debug_obj,get_display,return )
-
-int Debug_obj::set_bgColour( int bgColour){
-	HX_STACK_PUSH("Debug::set_bgColour","nape/util/Debug.hx",1194);
-	HX_STACK_THIS(this);
-	HX_STACK_ARG(bgColour,"bgColour");
-	HX_STACK_LINE(1195)
-	this->zpp_inner->d_shape->setbg(bgColour);
-	HX_STACK_LINE(1201)
-	return this->zpp_inner->bg_col;
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(Debug_obj,set_bgColour,return )
-
-int Debug_obj::get_bgColour( ){
-	HX_STACK_PUSH("Debug::get_bgColour","nape/util/Debug.hx",1191);
-	HX_STACK_THIS(this);
-	HX_STACK_LINE(1191)
-	return this->zpp_inner->bg_col;
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC0(Debug_obj,get_bgColour,return )
-
 ::String Debug_obj::version( ){
 	HX_STACK_PUSH("Debug::version","nape/util/Debug.hx",183);
 	HX_STACK_LINE(183)
-	return HX_CSTRING("Nape 2.0.8");
+	return HX_CSTRING("Nape 2.0.9");
 }
 
 
@@ -968,31 +568,31 @@ Void Debug_obj::clearObjectPools( ){
 			::zpp_nape::util::ZNPNode_ZPP_CbSet_obj::zpp_pool = nxt;
 		}
 		HX_STACK_LINE(396)
-		while(((::zpp_nape::util::ZNPNode_ZPP_Arbiter_obj::zpp_pool != null()))){
-			HX_STACK_LINE(398)
-			::zpp_nape::util::ZNPNode_ZPP_Arbiter nxt = ::zpp_nape::util::ZNPNode_ZPP_Arbiter_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(399)
-			::zpp_nape::util::ZNPNode_ZPP_Arbiter_obj::zpp_pool->next = null();
-			HX_STACK_LINE(400)
-			::zpp_nape::util::ZNPNode_ZPP_Arbiter_obj::zpp_pool = nxt;
-		}
-		HX_STACK_LINE(405)
 		while(((::zpp_nape::util::ZNPNode_ZPP_Interactor_obj::zpp_pool != null()))){
-			HX_STACK_LINE(407)
+			HX_STACK_LINE(398)
 			::zpp_nape::util::ZNPNode_ZPP_Interactor nxt = ::zpp_nape::util::ZNPNode_ZPP_Interactor_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(408)
+			HX_STACK_LINE(399)
 			::zpp_nape::util::ZNPNode_ZPP_Interactor_obj::zpp_pool->next = null();
-			HX_STACK_LINE(409)
+			HX_STACK_LINE(400)
 			::zpp_nape::util::ZNPNode_ZPP_Interactor_obj::zpp_pool = nxt;
 		}
+		HX_STACK_LINE(405)
+		while(((::zpp_nape::callbacks::ZPP_CbSet_obj::zpp_pool != null()))){
+			HX_STACK_LINE(407)
+			::zpp_nape::callbacks::ZPP_CbSet nxt = ::zpp_nape::callbacks::ZPP_CbSet_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			HX_STACK_LINE(408)
+			::zpp_nape::callbacks::ZPP_CbSet_obj::zpp_pool->next = null();
+			HX_STACK_LINE(409)
+			::zpp_nape::callbacks::ZPP_CbSet_obj::zpp_pool = nxt;
+		}
 		HX_STACK_LINE(414)
-		while(((::zpp_nape::util::ZPP_Set_ZPP_Body_obj::zpp_pool != null()))){
+		while(((::zpp_nape::util::ZNPNode_ZPP_CbSetPair_obj::zpp_pool != null()))){
 			HX_STACK_LINE(416)
-			::zpp_nape::util::ZPP_Set_ZPP_Body nxt = ::zpp_nape::util::ZPP_Set_ZPP_Body_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			::zpp_nape::util::ZNPNode_ZPP_CbSetPair nxt = ::zpp_nape::util::ZNPNode_ZPP_CbSetPair_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
 			HX_STACK_LINE(417)
-			::zpp_nape::util::ZPP_Set_ZPP_Body_obj::zpp_pool->next = null();
+			::zpp_nape::util::ZNPNode_ZPP_CbSetPair_obj::zpp_pool->next = null();
 			HX_STACK_LINE(418)
-			::zpp_nape::util::ZPP_Set_ZPP_Body_obj::zpp_pool = nxt;
+			::zpp_nape::util::ZNPNode_ZPP_CbSetPair_obj::zpp_pool = nxt;
 		}
 		HX_STACK_LINE(423)
 		while(((::zpp_nape::util::ZNPNode_ZPP_BodyListener_obj::zpp_pool != null()))){
@@ -1013,211 +613,211 @@ Void Debug_obj::clearObjectPools( ){
 			::zpp_nape::util::ZNPNode_ZPP_ConstraintListener_obj::zpp_pool = nxt;
 		}
 		HX_STACK_LINE(441)
-		while(((::zpp_nape::callbacks::ZPP_CbSet_obj::zpp_pool != null()))){
-			HX_STACK_LINE(443)
-			::zpp_nape::callbacks::ZPP_CbSet nxt = ::zpp_nape::callbacks::ZPP_CbSet_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(444)
-			::zpp_nape::callbacks::ZPP_CbSet_obj::zpp_pool->next = null();
-			HX_STACK_LINE(445)
-			::zpp_nape::callbacks::ZPP_CbSet_obj::zpp_pool = nxt;
-		}
-		HX_STACK_LINE(450)
-		while(((::zpp_nape::util::ZNPNode_ZPP_CbSetPair_obj::zpp_pool != null()))){
-			HX_STACK_LINE(452)
-			::zpp_nape::util::ZNPNode_ZPP_CbSetPair nxt = ::zpp_nape::util::ZNPNode_ZPP_CbSetPair_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(453)
-			::zpp_nape::util::ZNPNode_ZPP_CbSetPair_obj::zpp_pool->next = null();
-			HX_STACK_LINE(454)
-			::zpp_nape::util::ZNPNode_ZPP_CbSetPair_obj::zpp_pool = nxt;
-		}
-		HX_STACK_LINE(459)
-		while(((::zpp_nape::util::ZPP_Set_ZPP_CbSetPair_obj::zpp_pool != null()))){
-			HX_STACK_LINE(461)
-			::zpp_nape::util::ZPP_Set_ZPP_CbSetPair nxt = ::zpp_nape::util::ZPP_Set_ZPP_CbSetPair_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(462)
-			::zpp_nape::util::ZPP_Set_ZPP_CbSetPair_obj::zpp_pool->next = null();
-			HX_STACK_LINE(463)
-			::zpp_nape::util::ZPP_Set_ZPP_CbSetPair_obj::zpp_pool = nxt;
-		}
-		HX_STACK_LINE(468)
-		while(((::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool != null()))){
-			HX_STACK_LINE(470)
-			::zpp_nape::geom::ZPP_GeomVert nxt = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(471)
-			::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool->next = null();
-			HX_STACK_LINE(472)
-			::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = nxt;
-		}
-		HX_STACK_LINE(477)
-		while(((::zpp_nape::geom::ZPP_GeomVertexIterator_obj::zpp_pool != null()))){
-			HX_STACK_LINE(479)
-			::zpp_nape::geom::ZPP_GeomVertexIterator nxt = ::zpp_nape::geom::ZPP_GeomVertexIterator_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(480)
-			::zpp_nape::geom::ZPP_GeomVertexIterator_obj::zpp_pool->next = null();
-			HX_STACK_LINE(481)
-			::zpp_nape::geom::ZPP_GeomVertexIterator_obj::zpp_pool = nxt;
-		}
-		HX_STACK_LINE(486)
 		while(((::zpp_nape::callbacks::ZPP_Callback_obj::zpp_pool != null()))){
-			HX_STACK_LINE(488)
+			HX_STACK_LINE(443)
 			::zpp_nape::callbacks::ZPP_Callback nxt = ::zpp_nape::callbacks::ZPP_Callback_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(489)
+			HX_STACK_LINE(444)
 			::zpp_nape::callbacks::ZPP_Callback_obj::zpp_pool->next = null();
-			HX_STACK_LINE(490)
+			HX_STACK_LINE(445)
 			::zpp_nape::callbacks::ZPP_Callback_obj::zpp_pool = nxt;
 		}
-		HX_STACK_LINE(495)
+		HX_STACK_LINE(450)
+		while(((::zpp_nape::util::ZNPNode_ZPP_Arbiter_obj::zpp_pool != null()))){
+			HX_STACK_LINE(452)
+			::zpp_nape::util::ZNPNode_ZPP_Arbiter nxt = ::zpp_nape::util::ZNPNode_ZPP_Arbiter_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			HX_STACK_LINE(453)
+			::zpp_nape::util::ZNPNode_ZPP_Arbiter_obj::zpp_pool->next = null();
+			HX_STACK_LINE(454)
+			::zpp_nape::util::ZNPNode_ZPP_Arbiter_obj::zpp_pool = nxt;
+		}
+		HX_STACK_LINE(459)
+		while(((::zpp_nape::util::ZPP_Set_ZPP_Body_obj::zpp_pool != null()))){
+			HX_STACK_LINE(461)
+			::zpp_nape::util::ZPP_Set_ZPP_Body nxt = ::zpp_nape::util::ZPP_Set_ZPP_Body_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			HX_STACK_LINE(462)
+			::zpp_nape::util::ZPP_Set_ZPP_Body_obj::zpp_pool->next = null();
+			HX_STACK_LINE(463)
+			::zpp_nape::util::ZPP_Set_ZPP_Body_obj::zpp_pool = nxt;
+		}
+		HX_STACK_LINE(468)
+		while(((::zpp_nape::util::ZPP_Set_ZPP_CbSetPair_obj::zpp_pool != null()))){
+			HX_STACK_LINE(470)
+			::zpp_nape::util::ZPP_Set_ZPP_CbSetPair nxt = ::zpp_nape::util::ZPP_Set_ZPP_CbSetPair_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			HX_STACK_LINE(471)
+			::zpp_nape::util::ZPP_Set_ZPP_CbSetPair_obj::zpp_pool->next = null();
+			HX_STACK_LINE(472)
+			::zpp_nape::util::ZPP_Set_ZPP_CbSetPair_obj::zpp_pool = nxt;
+		}
+		HX_STACK_LINE(477)
 		while(((::zpp_nape::geom::ZPP_Mat23_obj::zpp_pool != null()))){
-			HX_STACK_LINE(497)
+			HX_STACK_LINE(479)
 			::zpp_nape::geom::ZPP_Mat23 nxt = ::zpp_nape::geom::ZPP_Mat23_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(498)
+			HX_STACK_LINE(480)
 			::zpp_nape::geom::ZPP_Mat23_obj::zpp_pool->next = null();
-			HX_STACK_LINE(499)
+			HX_STACK_LINE(481)
 			::zpp_nape::geom::ZPP_Mat23_obj::zpp_pool = nxt;
 		}
+		HX_STACK_LINE(486)
+		while(((::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool != null()))){
+			HX_STACK_LINE(488)
+			::zpp_nape::geom::ZPP_GeomVert nxt = ::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			HX_STACK_LINE(489)
+			::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool->next = null();
+			HX_STACK_LINE(490)
+			::zpp_nape::geom::ZPP_GeomVert_obj::zpp_pool = nxt;
+		}
+		HX_STACK_LINE(495)
+		while(((::zpp_nape::geom::ZPP_GeomVertexIterator_obj::zpp_pool != null()))){
+			HX_STACK_LINE(497)
+			::zpp_nape::geom::ZPP_GeomVertexIterator nxt = ::zpp_nape::geom::ZPP_GeomVertexIterator_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			HX_STACK_LINE(498)
+			::zpp_nape::geom::ZPP_GeomVertexIterator_obj::zpp_pool->next = null();
+			HX_STACK_LINE(499)
+			::zpp_nape::geom::ZPP_GeomVertexIterator_obj::zpp_pool = nxt;
+		}
 		HX_STACK_LINE(504)
-		while(((::zpp_nape::geom::ZPP_CutVert_obj::zpp_pool != null()))){
-			HX_STACK_LINE(506)
-			::zpp_nape::geom::ZPP_CutVert nxt = ::zpp_nape::geom::ZPP_CutVert_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(507)
-			::zpp_nape::geom::ZPP_CutVert_obj::zpp_pool->next = null();
-			HX_STACK_LINE(508)
-			::zpp_nape::geom::ZPP_CutVert_obj::zpp_pool = nxt;
-		}
-		HX_STACK_LINE(513)
-		while(((::zpp_nape::geom::ZPP_CutInt_obj::zpp_pool != null()))){
-			HX_STACK_LINE(515)
-			::zpp_nape::geom::ZPP_CutInt nxt = ::zpp_nape::geom::ZPP_CutInt_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(516)
-			::zpp_nape::geom::ZPP_CutInt_obj::zpp_pool->next = null();
-			HX_STACK_LINE(517)
-			::zpp_nape::geom::ZPP_CutInt_obj::zpp_pool = nxt;
-		}
-		HX_STACK_LINE(522)
-		while(((::zpp_nape::util::ZNPNode_ZPP_CutInt_obj::zpp_pool != null()))){
-			HX_STACK_LINE(524)
-			::zpp_nape::util::ZNPNode_ZPP_CutInt nxt = ::zpp_nape::util::ZNPNode_ZPP_CutInt_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(525)
-			::zpp_nape::util::ZNPNode_ZPP_CutInt_obj::zpp_pool->next = null();
-			HX_STACK_LINE(526)
-			::zpp_nape::util::ZNPNode_ZPP_CutInt_obj::zpp_pool = nxt;
-		}
-		HX_STACK_LINE(531)
-		while(((::zpp_nape::util::ZNPNode_ZPP_CutVert_obj::zpp_pool != null()))){
-			HX_STACK_LINE(533)
-			::zpp_nape::util::ZNPNode_ZPP_CutVert nxt = ::zpp_nape::util::ZNPNode_ZPP_CutVert_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(534)
-			::zpp_nape::util::ZNPNode_ZPP_CutVert_obj::zpp_pool->next = null();
-			HX_STACK_LINE(535)
-			::zpp_nape::util::ZNPNode_ZPP_CutVert_obj::zpp_pool = nxt;
-		}
-		HX_STACK_LINE(540)
 		while(((::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool != null()))){
-			HX_STACK_LINE(542)
+			HX_STACK_LINE(506)
 			::zpp_nape::geom::ZPP_Vec2 nxt = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(543)
+			HX_STACK_LINE(507)
 			::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool->next = null();
-			HX_STACK_LINE(544)
+			HX_STACK_LINE(508)
 			::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = nxt;
 		}
-		HX_STACK_LINE(549)
-		while(((::zpp_nape::util::ZNPNode_ZPP_PartitionVertex_obj::zpp_pool != null()))){
-			HX_STACK_LINE(551)
-			::zpp_nape::util::ZNPNode_ZPP_PartitionVertex nxt = ::zpp_nape::util::ZNPNode_ZPP_PartitionVertex_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(552)
-			::zpp_nape::util::ZNPNode_ZPP_PartitionVertex_obj::zpp_pool->next = null();
-			HX_STACK_LINE(553)
-			::zpp_nape::util::ZNPNode_ZPP_PartitionVertex_obj::zpp_pool = nxt;
+		HX_STACK_LINE(513)
+		while(((::zpp_nape::geom::ZPP_CutVert_obj::zpp_pool != null()))){
+			HX_STACK_LINE(515)
+			::zpp_nape::geom::ZPP_CutVert nxt = ::zpp_nape::geom::ZPP_CutVert_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			HX_STACK_LINE(516)
+			::zpp_nape::geom::ZPP_CutVert_obj::zpp_pool->next = null();
+			HX_STACK_LINE(517)
+			::zpp_nape::geom::ZPP_CutVert_obj::zpp_pool = nxt;
 		}
-		HX_STACK_LINE(558)
-		while(((::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool != null()))){
-			HX_STACK_LINE(560)
-			::zpp_nape::geom::ZPP_PartitionVertex nxt = ::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(561)
-			::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool->next = null();
-			HX_STACK_LINE(562)
-			::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool = nxt;
-		}
-		HX_STACK_LINE(567)
-		while(((::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex_obj::zpp_pool != null()))){
-			HX_STACK_LINE(569)
-			::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex nxt = ::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(570)
-			::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex_obj::zpp_pool->next = null();
-			HX_STACK_LINE(571)
-			::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex_obj::zpp_pool = nxt;
-		}
-		HX_STACK_LINE(576)
-		while(((::zpp_nape::geom::ZPP_PartitionedPoly_obj::zpp_pool != null()))){
-			HX_STACK_LINE(578)
-			::zpp_nape::geom::ZPP_PartitionedPoly nxt = ::zpp_nape::geom::ZPP_PartitionedPoly_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(579)
-			::zpp_nape::geom::ZPP_PartitionedPoly_obj::zpp_pool->next = null();
-			HX_STACK_LINE(580)
-			::zpp_nape::geom::ZPP_PartitionedPoly_obj::zpp_pool = nxt;
-		}
-		HX_STACK_LINE(585)
-		while(((::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly_obj::zpp_pool != null()))){
-			HX_STACK_LINE(587)
-			::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly nxt = ::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(588)
-			::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly_obj::zpp_pool->next = null();
-			HX_STACK_LINE(589)
-			::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly_obj::zpp_pool = nxt;
-		}
-		HX_STACK_LINE(594)
+		HX_STACK_LINE(522)
 		while(((::zpp_nape::geom::ZPP_PartitionPair_obj::zpp_pool != null()))){
-			HX_STACK_LINE(596)
+			HX_STACK_LINE(524)
 			::zpp_nape::geom::ZPP_PartitionPair nxt = ::zpp_nape::geom::ZPP_PartitionPair_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(597)
+			HX_STACK_LINE(525)
 			::zpp_nape::geom::ZPP_PartitionPair_obj::zpp_pool->next = null();
-			HX_STACK_LINE(598)
+			HX_STACK_LINE(526)
 			::zpp_nape::geom::ZPP_PartitionPair_obj::zpp_pool = nxt;
 		}
-		HX_STACK_LINE(603)
+		HX_STACK_LINE(531)
+		while(((::zpp_nape::geom::ZPP_CutInt_obj::zpp_pool != null()))){
+			HX_STACK_LINE(533)
+			::zpp_nape::geom::ZPP_CutInt nxt = ::zpp_nape::geom::ZPP_CutInt_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			HX_STACK_LINE(534)
+			::zpp_nape::geom::ZPP_CutInt_obj::zpp_pool->next = null();
+			HX_STACK_LINE(535)
+			::zpp_nape::geom::ZPP_CutInt_obj::zpp_pool = nxt;
+		}
+		HX_STACK_LINE(540)
+		while(((::zpp_nape::util::ZNPNode_ZPP_CutInt_obj::zpp_pool != null()))){
+			HX_STACK_LINE(542)
+			::zpp_nape::util::ZNPNode_ZPP_CutInt nxt = ::zpp_nape::util::ZNPNode_ZPP_CutInt_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			HX_STACK_LINE(543)
+			::zpp_nape::util::ZNPNode_ZPP_CutInt_obj::zpp_pool->next = null();
+			HX_STACK_LINE(544)
+			::zpp_nape::util::ZNPNode_ZPP_CutInt_obj::zpp_pool = nxt;
+		}
+		HX_STACK_LINE(549)
+		while(((::zpp_nape::util::ZNPNode_ZPP_CutVert_obj::zpp_pool != null()))){
+			HX_STACK_LINE(551)
+			::zpp_nape::util::ZNPNode_ZPP_CutVert nxt = ::zpp_nape::util::ZNPNode_ZPP_CutVert_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			HX_STACK_LINE(552)
+			::zpp_nape::util::ZNPNode_ZPP_CutVert_obj::zpp_pool->next = null();
+			HX_STACK_LINE(553)
+			::zpp_nape::util::ZNPNode_ZPP_CutVert_obj::zpp_pool = nxt;
+		}
+		HX_STACK_LINE(558)
 		while(((::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool != null()))){
-			HX_STACK_LINE(605)
+			HX_STACK_LINE(560)
 			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair nxt = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(606)
+			HX_STACK_LINE(561)
 			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool->next = null();
-			HX_STACK_LINE(607)
+			HX_STACK_LINE(562)
 			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool = nxt;
 		}
-		HX_STACK_LINE(612)
-		while(((::zpp_nape::util::ZNPNode_ZPP_GeomVert_obj::zpp_pool != null()))){
-			HX_STACK_LINE(614)
-			::zpp_nape::util::ZNPNode_ZPP_GeomVert nxt = ::zpp_nape::util::ZNPNode_ZPP_GeomVert_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(615)
-			::zpp_nape::util::ZNPNode_ZPP_GeomVert_obj::zpp_pool->next = null();
-			HX_STACK_LINE(616)
-			::zpp_nape::util::ZNPNode_ZPP_GeomVert_obj::zpp_pool = nxt;
+		HX_STACK_LINE(567)
+		while(((::zpp_nape::util::ZNPNode_ZPP_PartitionVertex_obj::zpp_pool != null()))){
+			HX_STACK_LINE(569)
+			::zpp_nape::util::ZNPNode_ZPP_PartitionVertex nxt = ::zpp_nape::util::ZNPNode_ZPP_PartitionVertex_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			HX_STACK_LINE(570)
+			::zpp_nape::util::ZNPNode_ZPP_PartitionVertex_obj::zpp_pool->next = null();
+			HX_STACK_LINE(571)
+			::zpp_nape::util::ZNPNode_ZPP_PartitionVertex_obj::zpp_pool = nxt;
 		}
-		HX_STACK_LINE(621)
+		HX_STACK_LINE(576)
+		while(((::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool != null()))){
+			HX_STACK_LINE(578)
+			::zpp_nape::geom::ZPP_PartitionVertex nxt = ::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			HX_STACK_LINE(579)
+			::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool->next = null();
+			HX_STACK_LINE(580)
+			::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool = nxt;
+		}
+		HX_STACK_LINE(585)
+		while(((::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex_obj::zpp_pool != null()))){
+			HX_STACK_LINE(587)
+			::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex nxt = ::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			HX_STACK_LINE(588)
+			::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex_obj::zpp_pool->next = null();
+			HX_STACK_LINE(589)
+			::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex_obj::zpp_pool = nxt;
+		}
+		HX_STACK_LINE(594)
+		while(((::zpp_nape::geom::ZPP_PartitionedPoly_obj::zpp_pool != null()))){
+			HX_STACK_LINE(596)
+			::zpp_nape::geom::ZPP_PartitionedPoly nxt = ::zpp_nape::geom::ZPP_PartitionedPoly_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			HX_STACK_LINE(597)
+			::zpp_nape::geom::ZPP_PartitionedPoly_obj::zpp_pool->next = null();
+			HX_STACK_LINE(598)
+			::zpp_nape::geom::ZPP_PartitionedPoly_obj::zpp_pool = nxt;
+		}
+		HX_STACK_LINE(603)
+		while(((::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly_obj::zpp_pool != null()))){
+			HX_STACK_LINE(605)
+			::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly nxt = ::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			HX_STACK_LINE(606)
+			::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly_obj::zpp_pool->next = null();
+			HX_STACK_LINE(607)
+			::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly_obj::zpp_pool = nxt;
+		}
+		HX_STACK_LINE(612)
 		while(((::zpp_nape::geom::ZPP_SimplifyV_obj::zpp_pool != null()))){
-			HX_STACK_LINE(623)
+			HX_STACK_LINE(614)
 			::zpp_nape::geom::ZPP_SimplifyV nxt = ::zpp_nape::geom::ZPP_SimplifyV_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(624)
+			HX_STACK_LINE(615)
 			::zpp_nape::geom::ZPP_SimplifyV_obj::zpp_pool->next = null();
-			HX_STACK_LINE(625)
+			HX_STACK_LINE(616)
 			::zpp_nape::geom::ZPP_SimplifyV_obj::zpp_pool = nxt;
 		}
-		HX_STACK_LINE(630)
+		HX_STACK_LINE(621)
 		while(((::zpp_nape::geom::ZPP_SimplifyP_obj::zpp_pool != null()))){
-			HX_STACK_LINE(632)
+			HX_STACK_LINE(623)
 			::zpp_nape::geom::ZPP_SimplifyP nxt = ::zpp_nape::geom::ZPP_SimplifyP_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(633)
+			HX_STACK_LINE(624)
 			::zpp_nape::geom::ZPP_SimplifyP_obj::zpp_pool->next = null();
-			HX_STACK_LINE(634)
+			HX_STACK_LINE(625)
 			::zpp_nape::geom::ZPP_SimplifyP_obj::zpp_pool = nxt;
 		}
-		HX_STACK_LINE(639)
+		HX_STACK_LINE(630)
 		while(((::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool != null()))){
-			HX_STACK_LINE(641)
+			HX_STACK_LINE(632)
 			::zpp_nape::util::ZNPNode_ZPP_SimplifyP nxt = ::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(642)
+			HX_STACK_LINE(633)
 			::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool->next = null();
-			HX_STACK_LINE(643)
+			HX_STACK_LINE(634)
 			::zpp_nape::util::ZNPNode_ZPP_SimplifyP_obj::zpp_pool = nxt;
+		}
+		HX_STACK_LINE(639)
+		while(((::zpp_nape::util::ZNPNode_ZPP_GeomVert_obj::zpp_pool != null()))){
+			HX_STACK_LINE(641)
+			::zpp_nape::util::ZNPNode_ZPP_GeomVert nxt = ::zpp_nape::util::ZNPNode_ZPP_GeomVert_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			HX_STACK_LINE(642)
+			::zpp_nape::util::ZNPNode_ZPP_GeomVert_obj::zpp_pool->next = null();
+			HX_STACK_LINE(643)
+			::zpp_nape::util::ZNPNode_ZPP_GeomVert_obj::zpp_pool = nxt;
 		}
 		HX_STACK_LINE(648)
 		while(((::zpp_nape::geom::ZPP_AABB_obj::zpp_pool != null()))){
@@ -1274,31 +874,31 @@ Void Debug_obj::clearObjectPools( ){
 			::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent_obj::zpp_pool = nxt;
 		}
 		HX_STACK_LINE(702)
-		while(((::zpp_nape::geom::ZPP_ToiEvent_obj::zpp_pool != null()))){
-			HX_STACK_LINE(704)
-			::zpp_nape::geom::ZPP_ToiEvent nxt = ::zpp_nape::geom::ZPP_ToiEvent_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(705)
-			::zpp_nape::geom::ZPP_ToiEvent_obj::zpp_pool->next = null();
-			HX_STACK_LINE(706)
-			::zpp_nape::geom::ZPP_ToiEvent_obj::zpp_pool = nxt;
-		}
-		HX_STACK_LINE(711)
 		while(((::zpp_nape::geom::ZPP_SimpleEvent_obj::zpp_pool != null()))){
-			HX_STACK_LINE(713)
+			HX_STACK_LINE(704)
 			::zpp_nape::geom::ZPP_SimpleEvent nxt = ::zpp_nape::geom::ZPP_SimpleEvent_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(714)
+			HX_STACK_LINE(705)
 			::zpp_nape::geom::ZPP_SimpleEvent_obj::zpp_pool->next = null();
-			HX_STACK_LINE(715)
+			HX_STACK_LINE(706)
 			::zpp_nape::geom::ZPP_SimpleEvent_obj::zpp_pool = nxt;
 		}
-		HX_STACK_LINE(720)
+		HX_STACK_LINE(711)
 		while(((::zpp_nape::util::Hashable2_Boolfalse_obj::zpp_pool != null()))){
-			HX_STACK_LINE(722)
+			HX_STACK_LINE(713)
 			::zpp_nape::util::Hashable2_Boolfalse nxt = ::zpp_nape::util::Hashable2_Boolfalse_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(723)
+			HX_STACK_LINE(714)
 			::zpp_nape::util::Hashable2_Boolfalse_obj::zpp_pool->next = null();
-			HX_STACK_LINE(724)
+			HX_STACK_LINE(715)
 			::zpp_nape::util::Hashable2_Boolfalse_obj::zpp_pool = nxt;
+		}
+		HX_STACK_LINE(720)
+		while(((::zpp_nape::geom::ZPP_ToiEvent_obj::zpp_pool != null()))){
+			HX_STACK_LINE(722)
+			::zpp_nape::geom::ZPP_ToiEvent nxt = ::zpp_nape::geom::ZPP_ToiEvent_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			HX_STACK_LINE(723)
+			::zpp_nape::geom::ZPP_ToiEvent_obj::zpp_pool->next = null();
+			HX_STACK_LINE(724)
+			::zpp_nape::geom::ZPP_ToiEvent_obj::zpp_pool = nxt;
 		}
 		HX_STACK_LINE(729)
 		while(((::zpp_nape::util::ZNPNode_ZPP_SimpleVert_obj::zpp_pool != null()))){
@@ -1445,31 +1045,31 @@ Void Debug_obj::clearObjectPools( ){
 			::zpp_nape::space::ZPP_Component_obj::zpp_pool = nxt;
 		}
 		HX_STACK_LINE(873)
-		while(((::zpp_nape::space::ZPP_CallbackSet_obj::zpp_pool != null()))){
-			HX_STACK_LINE(875)
-			::zpp_nape::space::ZPP_CallbackSet nxt = ::zpp_nape::space::ZPP_CallbackSet_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(876)
-			::zpp_nape::space::ZPP_CallbackSet_obj::zpp_pool->next = null();
-			HX_STACK_LINE(877)
-			::zpp_nape::space::ZPP_CallbackSet_obj::zpp_pool = nxt;
-		}
-		HX_STACK_LINE(882)
 		while(((::zpp_nape::dynamics::ZPP_SensorArbiter_obj::zpp_pool != null()))){
-			HX_STACK_LINE(884)
+			HX_STACK_LINE(875)
 			::zpp_nape::dynamics::ZPP_SensorArbiter nxt = ::zpp_nape::dynamics::ZPP_SensorArbiter_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(885)
+			HX_STACK_LINE(876)
 			::zpp_nape::dynamics::ZPP_SensorArbiter_obj::zpp_pool->next = null();
-			HX_STACK_LINE(886)
+			HX_STACK_LINE(877)
 			::zpp_nape::dynamics::ZPP_SensorArbiter_obj::zpp_pool = nxt;
 		}
-		HX_STACK_LINE(891)
+		HX_STACK_LINE(882)
 		while(((::zpp_nape::dynamics::ZPP_FluidArbiter_obj::zpp_pool != null()))){
-			HX_STACK_LINE(893)
+			HX_STACK_LINE(884)
 			::zpp_nape::dynamics::ZPP_FluidArbiter nxt = ::zpp_nape::dynamics::ZPP_FluidArbiter_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
-			HX_STACK_LINE(894)
+			HX_STACK_LINE(885)
 			::zpp_nape::dynamics::ZPP_FluidArbiter_obj::zpp_pool->next = null();
-			HX_STACK_LINE(895)
+			HX_STACK_LINE(886)
 			::zpp_nape::dynamics::ZPP_FluidArbiter_obj::zpp_pool = nxt;
+		}
+		HX_STACK_LINE(891)
+		while(((::zpp_nape::space::ZPP_CallbackSet_obj::zpp_pool != null()))){
+			HX_STACK_LINE(893)
+			::zpp_nape::space::ZPP_CallbackSet nxt = ::zpp_nape::space::ZPP_CallbackSet_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			HX_STACK_LINE(894)
+			::zpp_nape::space::ZPP_CallbackSet_obj::zpp_pool->next = null();
+			HX_STACK_LINE(895)
+			::zpp_nape::space::ZPP_CallbackSet_obj::zpp_pool = nxt;
 		}
 		HX_STACK_LINE(900)
 		while(((::zpp_nape::util::ZPP_Set_ZPP_CbSet_obj::zpp_pool != null()))){
@@ -1481,31 +1081,31 @@ Void Debug_obj::clearObjectPools( ){
 			::zpp_nape::util::ZPP_Set_ZPP_CbSet_obj::zpp_pool = nxt;
 		}
 		HX_STACK_LINE(909)
-		while(((::zpp_nape::util::ZNPNode_ZPP_FluidArbiter_obj::zpp_pool != null()))){
+		while(((::zpp_nape::dynamics::ZPP_ColArbiter_obj::zpp_pool != null()))){
 			HX_STACK_LINE(911)
-			::zpp_nape::util::ZNPNode_ZPP_FluidArbiter nxt = ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			::zpp_nape::dynamics::ZPP_ColArbiter nxt = ::zpp_nape::dynamics::ZPP_ColArbiter_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
 			HX_STACK_LINE(912)
-			::zpp_nape::util::ZNPNode_ZPP_FluidArbiter_obj::zpp_pool->next = null();
+			::zpp_nape::dynamics::ZPP_ColArbiter_obj::zpp_pool->next = null();
 			HX_STACK_LINE(913)
-			::zpp_nape::util::ZNPNode_ZPP_FluidArbiter_obj::zpp_pool = nxt;
+			::zpp_nape::dynamics::ZPP_ColArbiter_obj::zpp_pool = nxt;
 		}
 		HX_STACK_LINE(918)
-		while(((::zpp_nape::util::ZNPNode_ZPP_SensorArbiter_obj::zpp_pool != null()))){
+		while(((::zpp_nape::util::ZNPNode_ZPP_FluidArbiter_obj::zpp_pool != null()))){
 			HX_STACK_LINE(920)
-			::zpp_nape::util::ZNPNode_ZPP_SensorArbiter nxt = ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			::zpp_nape::util::ZNPNode_ZPP_FluidArbiter nxt = ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
 			HX_STACK_LINE(921)
-			::zpp_nape::util::ZNPNode_ZPP_SensorArbiter_obj::zpp_pool->next = null();
+			::zpp_nape::util::ZNPNode_ZPP_FluidArbiter_obj::zpp_pool->next = null();
 			HX_STACK_LINE(922)
-			::zpp_nape::util::ZNPNode_ZPP_SensorArbiter_obj::zpp_pool = nxt;
+			::zpp_nape::util::ZNPNode_ZPP_FluidArbiter_obj::zpp_pool = nxt;
 		}
 		HX_STACK_LINE(927)
-		while(((::zpp_nape::dynamics::ZPP_ColArbiter_obj::zpp_pool != null()))){
+		while(((::zpp_nape::util::ZNPNode_ZPP_SensorArbiter_obj::zpp_pool != null()))){
 			HX_STACK_LINE(929)
-			::zpp_nape::dynamics::ZPP_ColArbiter nxt = ::zpp_nape::dynamics::ZPP_ColArbiter_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			::zpp_nape::util::ZNPNode_ZPP_SensorArbiter nxt = ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
 			HX_STACK_LINE(930)
-			::zpp_nape::dynamics::ZPP_ColArbiter_obj::zpp_pool->next = null();
+			::zpp_nape::util::ZNPNode_ZPP_SensorArbiter_obj::zpp_pool->next = null();
 			HX_STACK_LINE(931)
-			::zpp_nape::dynamics::ZPP_ColArbiter_obj::zpp_pool = nxt;
+			::zpp_nape::util::ZNPNode_ZPP_SensorArbiter_obj::zpp_pool = nxt;
 		}
 		HX_STACK_LINE(936)
 		while(((::zpp_nape::util::ZNPNode_ZPP_Listener_obj::zpp_pool != null()))){
@@ -1526,22 +1126,22 @@ Void Debug_obj::clearObjectPools( ){
 			::zpp_nape::util::ZNPNode_ZPP_ColArbiter_obj::zpp_pool = nxt;
 		}
 		HX_STACK_LINE(954)
-		while(((::zpp_nape::util::ZNPNode_ZPP_ToiEvent_obj::zpp_pool != null()))){
+		while(((::zpp_nape::util::ZNPNode_ZPP_InteractionGroup_obj::zpp_pool != null()))){
 			HX_STACK_LINE(956)
-			::zpp_nape::util::ZNPNode_ZPP_ToiEvent nxt = ::zpp_nape::util::ZNPNode_ZPP_ToiEvent_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			::zpp_nape::util::ZNPNode_ZPP_InteractionGroup nxt = ::zpp_nape::util::ZNPNode_ZPP_InteractionGroup_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
 			HX_STACK_LINE(957)
-			::zpp_nape::util::ZNPNode_ZPP_ToiEvent_obj::zpp_pool->next = null();
+			::zpp_nape::util::ZNPNode_ZPP_InteractionGroup_obj::zpp_pool->next = null();
 			HX_STACK_LINE(958)
-			::zpp_nape::util::ZNPNode_ZPP_ToiEvent_obj::zpp_pool = nxt;
+			::zpp_nape::util::ZNPNode_ZPP_InteractionGroup_obj::zpp_pool = nxt;
 		}
 		HX_STACK_LINE(963)
-		while(((::zpp_nape::util::ZNPNode_ZPP_InteractionGroup_obj::zpp_pool != null()))){
+		while(((::zpp_nape::util::ZNPNode_ZPP_ToiEvent_obj::zpp_pool != null()))){
 			HX_STACK_LINE(965)
-			::zpp_nape::util::ZNPNode_ZPP_InteractionGroup nxt = ::zpp_nape::util::ZNPNode_ZPP_InteractionGroup_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
+			::zpp_nape::util::ZNPNode_ZPP_ToiEvent nxt = ::zpp_nape::util::ZNPNode_ZPP_ToiEvent_obj::zpp_pool->next;		HX_STACK_VAR(nxt,"nxt");
 			HX_STACK_LINE(966)
-			::zpp_nape::util::ZNPNode_ZPP_InteractionGroup_obj::zpp_pool->next = null();
+			::zpp_nape::util::ZNPNode_ZPP_ToiEvent_obj::zpp_pool->next = null();
 			HX_STACK_LINE(967)
-			::zpp_nape::util::ZNPNode_ZPP_InteractionGroup_obj::zpp_pool = nxt;
+			::zpp_nape::util::ZNPNode_ZPP_ToiEvent_obj::zpp_pool = nxt;
 		}
 		HX_STACK_LINE(972)
 		while(((::zpp_nape::dynamics::ZPP_InteractionFilter_obj::zpp_pool != null()))){
@@ -1613,636 +1213,6 @@ return null();
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Debug_obj,clearObjectPools,(void))
 
-::native::display::Shape Debug_obj::createGraphic( ::nape::phys::Body body){
-	HX_STACK_PUSH("Debug::createGraphic","nape/util/Debug.hx",1091);
-	HX_STACK_ARG(body,"body");
-	HX_STACK_LINE(1093)
-	if (((body == null()))){
-		HX_STACK_LINE(1093)
-		hx::Throw (HX_CSTRING("Error: Cannot create debug graphic for null Body"));
-	}
-	HX_STACK_LINE(1095)
-	::native::display::Shape ret = ::native::display::Shape_obj::__new();		HX_STACK_VAR(ret,"ret");
-	HX_STACK_LINE(1096)
-	::native::display::Graphics graphics = ret->get_graphics();		HX_STACK_VAR(graphics,"graphics");
-	HX_STACK_LINE(1097)
-	int idc = ::Std_obj::_int(((int)16777215 * ::Math_obj::exp((Float(-(body->zpp_inner_i->id)) / Float((int)1500)))));		HX_STACK_VAR(idc,"idc");
-	HX_STACK_LINE(1098)
-	Float _r = (((int(((int(idc) & int((int)16711680)))) >> int((int)16))) * 0.7);		HX_STACK_VAR(_r,"_r");
-	HX_STACK_LINE(1099)
-	Float _g = (((int(((int(idc) & int((int)65280)))) >> int((int)8))) * 0.7);		HX_STACK_VAR(_g,"_g");
-	HX_STACK_LINE(1100)
-	Float _b = (((int(idc) & int((int)255))) * 0.7);		HX_STACK_VAR(_b,"_b");
-	HX_STACK_LINE(1101)
-	int col = (int((int((int(::Std_obj::_int(_r)) << int((int)16))) | int((int(::Std_obj::_int(_g)) << int((int)8))))) | int(::Std_obj::_int(_b)));		HX_STACK_VAR(col,"col");
-	HX_STACK_LINE(1102)
-	graphics->lineStyle(0.1,col,(int)1,null(),null(),null(),null(),null());
-	struct _Function_1_1{
-		inline static Dynamic Block( ::nape::phys::Body &body){
-			HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1103);
-			{
-				HX_STACK_LINE(1103)
-				::nape::shape::ShapeList _this = body->zpp_inner->wrap_shapes;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(1103)
-				_this->zpp_inner->valmod();
-				HX_STACK_LINE(1103)
-				return ::nape::shape::ShapeIterator_obj::get(_this);
-			}
-			return null();
-		}
-	};
-	HX_STACK_LINE(1103)
-	for(::cpp::FastIterator_obj< ::nape::shape::Shape > *__it = ::cpp::CreateFastIterator< ::nape::shape::Shape >(_Function_1_1::Block(body));  __it->hasNext(); ){
-		::nape::shape::Shape s = __it->next();
-		{
-			HX_STACK_LINE(1104)
-			if (((s->zpp_inner->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
-				HX_STACK_LINE(1105)
-				::nape::shape::Circle c = (  (((s->zpp_inner->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))) ? ::nape::shape::Circle(s->zpp_inner->circle->outer_zn) : ::nape::shape::Circle(null()) );		HX_STACK_VAR(c,"c");
-				struct _Function_3_1{
-					inline static Float Block( ::nape::shape::Circle &c){
-						HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1106);
-						{
-							struct _Function_4_1{
-								inline static ::nape::geom::Vec2 Block( ::nape::shape::Circle &c){
-									HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1106);
-									{
-										HX_STACK_LINE(1106)
-										if (((c->zpp_inner->wrap_localCOM == null()))){
-											HX_STACK_LINE(1106)
-											if (((c->zpp_inner->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
-												HX_STACK_LINE(1106)
-												c->zpp_inner->circle->setupLocalCOM();
-											}
-											else{
-												HX_STACK_LINE(1106)
-												c->zpp_inner->polygon->setupLocalCOM();
-											}
-										}
-										HX_STACK_LINE(1106)
-										return c->zpp_inner->wrap_localCOM;
-									}
-									return null();
-								}
-							};
-							HX_STACK_LINE(1106)
-							::nape::geom::Vec2 _this = _Function_4_1::Block(c);		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(1106)
-							if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-								HX_STACK_LINE(1106)
-								hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-							}
-							HX_STACK_LINE(1106)
-							{
-								HX_STACK_LINE(1106)
-								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-								HX_STACK_LINE(1106)
-								if (((_this1->_validate_dyn() != null()))){
-									HX_STACK_LINE(1106)
-									_this1->_validate();
-								}
-							}
-							HX_STACK_LINE(1106)
-							return _this->zpp_inner->x;
-						}
-						return null();
-					}
-				};
-				struct _Function_3_2{
-					inline static Float Block( ::nape::shape::Circle &c){
-						HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1106);
-						{
-							struct _Function_4_1{
-								inline static ::nape::geom::Vec2 Block( ::nape::shape::Circle &c){
-									HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1106);
-									{
-										HX_STACK_LINE(1106)
-										if (((c->zpp_inner->wrap_localCOM == null()))){
-											HX_STACK_LINE(1106)
-											if (((c->zpp_inner->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
-												HX_STACK_LINE(1106)
-												c->zpp_inner->circle->setupLocalCOM();
-											}
-											else{
-												HX_STACK_LINE(1106)
-												c->zpp_inner->polygon->setupLocalCOM();
-											}
-										}
-										HX_STACK_LINE(1106)
-										return c->zpp_inner->wrap_localCOM;
-									}
-									return null();
-								}
-							};
-							HX_STACK_LINE(1106)
-							::nape::geom::Vec2 _this = _Function_4_1::Block(c);		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(1106)
-							if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-								HX_STACK_LINE(1106)
-								hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-							}
-							HX_STACK_LINE(1106)
-							{
-								HX_STACK_LINE(1106)
-								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-								HX_STACK_LINE(1106)
-								if (((_this1->_validate_dyn() != null()))){
-									HX_STACK_LINE(1106)
-									_this1->_validate();
-								}
-							}
-							HX_STACK_LINE(1106)
-							return _this->zpp_inner->y;
-						}
-						return null();
-					}
-				};
-				HX_STACK_LINE(1106)
-				graphics->drawCircle(_Function_3_1::Block(c),_Function_3_2::Block(c),c->zpp_inner_zn->radius);
-			}
-			else{
-				HX_STACK_LINE(1109)
-				::nape::shape::Polygon p = (  (((s->zpp_inner->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_POLYGON))) ? ::nape::shape::Polygon(s->zpp_inner->polygon->outer_zn) : ::nape::shape::Polygon(null()) );		HX_STACK_VAR(p,"p");
-				struct _Function_3_1{
-					inline static Float Block( ::nape::shape::Shape &s){
-						HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1110);
-						{
-							struct _Function_4_1{
-								inline static ::nape::geom::Vec2 Block( ::nape::shape::Shape &s){
-									HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1110);
-									{
-										HX_STACK_LINE(1110)
-										if (((s->zpp_inner->wrap_localCOM == null()))){
-											HX_STACK_LINE(1110)
-											if (((s->zpp_inner->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
-												HX_STACK_LINE(1110)
-												s->zpp_inner->circle->setupLocalCOM();
-											}
-											else{
-												HX_STACK_LINE(1110)
-												s->zpp_inner->polygon->setupLocalCOM();
-											}
-										}
-										HX_STACK_LINE(1110)
-										return s->zpp_inner->wrap_localCOM;
-									}
-									return null();
-								}
-							};
-							HX_STACK_LINE(1110)
-							::nape::geom::Vec2 _this = _Function_4_1::Block(s);		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(1110)
-							if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-								HX_STACK_LINE(1110)
-								hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-							}
-							HX_STACK_LINE(1110)
-							{
-								HX_STACK_LINE(1110)
-								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-								HX_STACK_LINE(1110)
-								if (((_this1->_validate_dyn() != null()))){
-									HX_STACK_LINE(1110)
-									_this1->_validate();
-								}
-							}
-							HX_STACK_LINE(1110)
-							return _this->zpp_inner->x;
-						}
-						return null();
-					}
-				};
-				struct _Function_3_2{
-					inline static Float Block( ::nape::shape::Shape &s){
-						HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1110);
-						{
-							struct _Function_4_1{
-								inline static ::nape::geom::Vec2 Block( ::nape::shape::Shape &s){
-									HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1110);
-									{
-										HX_STACK_LINE(1110)
-										if (((s->zpp_inner->wrap_localCOM == null()))){
-											HX_STACK_LINE(1110)
-											if (((s->zpp_inner->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
-												HX_STACK_LINE(1110)
-												s->zpp_inner->circle->setupLocalCOM();
-											}
-											else{
-												HX_STACK_LINE(1110)
-												s->zpp_inner->polygon->setupLocalCOM();
-											}
-										}
-										HX_STACK_LINE(1110)
-										return s->zpp_inner->wrap_localCOM;
-									}
-									return null();
-								}
-							};
-							HX_STACK_LINE(1110)
-							::nape::geom::Vec2 _this = _Function_4_1::Block(s);		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(1110)
-							if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-								HX_STACK_LINE(1110)
-								hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-							}
-							HX_STACK_LINE(1110)
-							{
-								HX_STACK_LINE(1110)
-								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-								HX_STACK_LINE(1110)
-								if (((_this1->_validate_dyn() != null()))){
-									HX_STACK_LINE(1110)
-									_this1->_validate();
-								}
-							}
-							HX_STACK_LINE(1110)
-							return _this->zpp_inner->y;
-						}
-						return null();
-					}
-				};
-				HX_STACK_LINE(1110)
-				graphics->moveTo(_Function_3_1::Block(s),_Function_3_2::Block(s));
-				HX_STACK_LINE(1111)
-				{
-					struct _Function_4_1{
-						inline static ::nape::geom::Vec2List Block( ::nape::shape::Polygon &p){
-							HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1111);
-							{
-								HX_STACK_LINE(1111)
-								if (((p->zpp_inner_zn->wrap_gverts == null()))){
-									HX_STACK_LINE(1111)
-									p->zpp_inner_zn->getgverts();
-								}
-								HX_STACK_LINE(1111)
-								return p->zpp_inner_zn->wrap_gverts;
-							}
-							return null();
-						}
-					};
-					HX_STACK_LINE(1111)
-					int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
-					int _g2 = (_Function_4_1::Block(p))->zpp_gl();		HX_STACK_VAR(_g2,"_g2");
-					HX_STACK_LINE(1111)
-					while(((_g1 < _g2))){
-						HX_STACK_LINE(1111)
-						int i = (_g1)++;		HX_STACK_VAR(i,"i");
-						struct _Function_5_1{
-							inline static ::nape::geom::Vec2List Block( ::nape::shape::Polygon &p){
-								HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1112);
-								{
-									HX_STACK_LINE(1112)
-									if (((p->zpp_inner_zn->wrap_lverts == null()))){
-										HX_STACK_LINE(1112)
-										p->zpp_inner_zn->getlverts();
-									}
-									HX_STACK_LINE(1112)
-									return p->zpp_inner_zn->wrap_lverts;
-								}
-								return null();
-							}
-						};
-						HX_STACK_LINE(1112)
-						::nape::geom::Vec2 px = (_Function_5_1::Block(p))->at(i);		HX_STACK_VAR(px,"px");
-						struct _Function_5_2{
-							inline static Float Block( ::nape::geom::Vec2 &px){
-								HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1113);
-								{
-									HX_STACK_LINE(1113)
-									if (((bool((px != null())) && bool(px->zpp_disp)))){
-										HX_STACK_LINE(1113)
-										hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-									}
-									HX_STACK_LINE(1113)
-									{
-										HX_STACK_LINE(1113)
-										::zpp_nape::geom::ZPP_Vec2 _this = px->zpp_inner;		HX_STACK_VAR(_this,"_this");
-										HX_STACK_LINE(1113)
-										if (((_this->_validate_dyn() != null()))){
-											HX_STACK_LINE(1113)
-											_this->_validate();
-										}
-									}
-									HX_STACK_LINE(1113)
-									return px->zpp_inner->x;
-								}
-								return null();
-							}
-						};
-						struct _Function_5_3{
-							inline static Float Block( ::nape::geom::Vec2 &px){
-								HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1113);
-								{
-									HX_STACK_LINE(1113)
-									if (((bool((px != null())) && bool(px->zpp_disp)))){
-										HX_STACK_LINE(1113)
-										hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-									}
-									HX_STACK_LINE(1113)
-									{
-										HX_STACK_LINE(1113)
-										::zpp_nape::geom::ZPP_Vec2 _this = px->zpp_inner;		HX_STACK_VAR(_this,"_this");
-										HX_STACK_LINE(1113)
-										if (((_this->_validate_dyn() != null()))){
-											HX_STACK_LINE(1113)
-											_this->_validate();
-										}
-									}
-									HX_STACK_LINE(1113)
-									return px->zpp_inner->y;
-								}
-								return null();
-							}
-						};
-						HX_STACK_LINE(1113)
-						graphics->lineTo(_Function_5_2::Block(px),_Function_5_3::Block(px));
-					}
-				}
-				struct _Function_3_3{
-					inline static ::nape::geom::Vec2List Block( ::nape::shape::Polygon &p){
-						HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1115);
-						{
-							HX_STACK_LINE(1115)
-							if (((p->zpp_inner_zn->wrap_lverts == null()))){
-								HX_STACK_LINE(1115)
-								p->zpp_inner_zn->getlverts();
-							}
-							HX_STACK_LINE(1115)
-							return p->zpp_inner_zn->wrap_lverts;
-						}
-						return null();
-					}
-				};
-				HX_STACK_LINE(1115)
-				::nape::geom::Vec2 px = (_Function_3_3::Block(p))->at((int)0);		HX_STACK_VAR(px,"px");
-				struct _Function_3_4{
-					inline static Float Block( ::nape::geom::Vec2 &px){
-						HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1116);
-						{
-							HX_STACK_LINE(1116)
-							if (((bool((px != null())) && bool(px->zpp_disp)))){
-								HX_STACK_LINE(1116)
-								hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-							}
-							HX_STACK_LINE(1116)
-							{
-								HX_STACK_LINE(1116)
-								::zpp_nape::geom::ZPP_Vec2 _this = px->zpp_inner;		HX_STACK_VAR(_this,"_this");
-								HX_STACK_LINE(1116)
-								if (((_this->_validate_dyn() != null()))){
-									HX_STACK_LINE(1116)
-									_this->_validate();
-								}
-							}
-							HX_STACK_LINE(1116)
-							return px->zpp_inner->x;
-						}
-						return null();
-					}
-				};
-				struct _Function_3_5{
-					inline static Float Block( ::nape::geom::Vec2 &px){
-						HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1116);
-						{
-							HX_STACK_LINE(1116)
-							if (((bool((px != null())) && bool(px->zpp_disp)))){
-								HX_STACK_LINE(1116)
-								hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-							}
-							HX_STACK_LINE(1116)
-							{
-								HX_STACK_LINE(1116)
-								::zpp_nape::geom::ZPP_Vec2 _this = px->zpp_inner;		HX_STACK_VAR(_this,"_this");
-								HX_STACK_LINE(1116)
-								if (((_this->_validate_dyn() != null()))){
-									HX_STACK_LINE(1116)
-									_this->_validate();
-								}
-							}
-							HX_STACK_LINE(1116)
-							return px->zpp_inner->y;
-						}
-						return null();
-					}
-				};
-				HX_STACK_LINE(1116)
-				graphics->lineTo(_Function_3_4::Block(px),_Function_3_5::Block(px));
-			}
-			HX_STACK_LINE(1118)
-			if (((s->zpp_inner->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
-				HX_STACK_LINE(1119)
-				::nape::shape::Circle c = (  (((s->zpp_inner->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))) ? ::nape::shape::Circle(s->zpp_inner->circle->outer_zn) : ::nape::shape::Circle(null()) );		HX_STACK_VAR(c,"c");
-				struct _Function_3_1{
-					inline static Float Block( ::nape::shape::Circle &c){
-						HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1120);
-						{
-							struct _Function_4_1{
-								inline static ::nape::geom::Vec2 Block( ::nape::shape::Circle &c){
-									HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1120);
-									{
-										HX_STACK_LINE(1120)
-										if (((c->zpp_inner->wrap_localCOM == null()))){
-											HX_STACK_LINE(1120)
-											if (((c->zpp_inner->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
-												HX_STACK_LINE(1120)
-												c->zpp_inner->circle->setupLocalCOM();
-											}
-											else{
-												HX_STACK_LINE(1120)
-												c->zpp_inner->polygon->setupLocalCOM();
-											}
-										}
-										HX_STACK_LINE(1120)
-										return c->zpp_inner->wrap_localCOM;
-									}
-									return null();
-								}
-							};
-							HX_STACK_LINE(1120)
-							::nape::geom::Vec2 _this = _Function_4_1::Block(c);		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(1120)
-							if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-								HX_STACK_LINE(1120)
-								hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-							}
-							HX_STACK_LINE(1120)
-							{
-								HX_STACK_LINE(1120)
-								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-								HX_STACK_LINE(1120)
-								if (((_this1->_validate_dyn() != null()))){
-									HX_STACK_LINE(1120)
-									_this1->_validate();
-								}
-							}
-							HX_STACK_LINE(1120)
-							return _this->zpp_inner->x;
-						}
-						return null();
-					}
-				};
-				struct _Function_3_2{
-					inline static Float Block( ::nape::shape::Circle &c){
-						HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1120);
-						{
-							struct _Function_4_1{
-								inline static ::nape::geom::Vec2 Block( ::nape::shape::Circle &c){
-									HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1120);
-									{
-										HX_STACK_LINE(1120)
-										if (((c->zpp_inner->wrap_localCOM == null()))){
-											HX_STACK_LINE(1120)
-											if (((c->zpp_inner->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
-												HX_STACK_LINE(1120)
-												c->zpp_inner->circle->setupLocalCOM();
-											}
-											else{
-												HX_STACK_LINE(1120)
-												c->zpp_inner->polygon->setupLocalCOM();
-											}
-										}
-										HX_STACK_LINE(1120)
-										return c->zpp_inner->wrap_localCOM;
-									}
-									return null();
-								}
-							};
-							HX_STACK_LINE(1120)
-							::nape::geom::Vec2 _this = _Function_4_1::Block(c);		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(1120)
-							if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-								HX_STACK_LINE(1120)
-								hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-							}
-							HX_STACK_LINE(1120)
-							{
-								HX_STACK_LINE(1120)
-								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-								HX_STACK_LINE(1120)
-								if (((_this1->_validate_dyn() != null()))){
-									HX_STACK_LINE(1120)
-									_this1->_validate();
-								}
-							}
-							HX_STACK_LINE(1120)
-							return _this->zpp_inner->y;
-						}
-						return null();
-					}
-				};
-				HX_STACK_LINE(1120)
-				graphics->moveTo((_Function_3_1::Block(c) + (c->zpp_inner_zn->radius * 0.3)),_Function_3_2::Block(c));
-				struct _Function_3_3{
-					inline static Float Block( ::nape::shape::Circle &c){
-						HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1121);
-						{
-							struct _Function_4_1{
-								inline static ::nape::geom::Vec2 Block( ::nape::shape::Circle &c){
-									HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1121);
-									{
-										HX_STACK_LINE(1121)
-										if (((c->zpp_inner->wrap_localCOM == null()))){
-											HX_STACK_LINE(1121)
-											if (((c->zpp_inner->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
-												HX_STACK_LINE(1121)
-												c->zpp_inner->circle->setupLocalCOM();
-											}
-											else{
-												HX_STACK_LINE(1121)
-												c->zpp_inner->polygon->setupLocalCOM();
-											}
-										}
-										HX_STACK_LINE(1121)
-										return c->zpp_inner->wrap_localCOM;
-									}
-									return null();
-								}
-							};
-							HX_STACK_LINE(1121)
-							::nape::geom::Vec2 _this = _Function_4_1::Block(c);		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(1121)
-							if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-								HX_STACK_LINE(1121)
-								hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-							}
-							HX_STACK_LINE(1121)
-							{
-								HX_STACK_LINE(1121)
-								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-								HX_STACK_LINE(1121)
-								if (((_this1->_validate_dyn() != null()))){
-									HX_STACK_LINE(1121)
-									_this1->_validate();
-								}
-							}
-							HX_STACK_LINE(1121)
-							return _this->zpp_inner->x;
-						}
-						return null();
-					}
-				};
-				struct _Function_3_4{
-					inline static Float Block( ::nape::shape::Circle &c){
-						HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1121);
-						{
-							struct _Function_4_1{
-								inline static ::nape::geom::Vec2 Block( ::nape::shape::Circle &c){
-									HX_STACK_PUSH("*::closure","nape/util/Debug.hx",1121);
-									{
-										HX_STACK_LINE(1121)
-										if (((c->zpp_inner->wrap_localCOM == null()))){
-											HX_STACK_LINE(1121)
-											if (((c->zpp_inner->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
-												HX_STACK_LINE(1121)
-												c->zpp_inner->circle->setupLocalCOM();
-											}
-											else{
-												HX_STACK_LINE(1121)
-												c->zpp_inner->polygon->setupLocalCOM();
-											}
-										}
-										HX_STACK_LINE(1121)
-										return c->zpp_inner->wrap_localCOM;
-									}
-									return null();
-								}
-							};
-							HX_STACK_LINE(1121)
-							::nape::geom::Vec2 _this = _Function_4_1::Block(c);		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(1121)
-							if (((bool((_this != null())) && bool(_this->zpp_disp)))){
-								HX_STACK_LINE(1121)
-								hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-							}
-							HX_STACK_LINE(1121)
-							{
-								HX_STACK_LINE(1121)
-								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
-								HX_STACK_LINE(1121)
-								if (((_this1->_validate_dyn() != null()))){
-									HX_STACK_LINE(1121)
-									_this1->_validate();
-								}
-							}
-							HX_STACK_LINE(1121)
-							return _this->zpp_inner->y;
-						}
-						return null();
-					}
-				};
-				HX_STACK_LINE(1121)
-				graphics->lineTo((_Function_3_3::Block(c) + c->zpp_inner_zn->radius),_Function_3_4::Block(c));
-			}
-		}
-;
-	}
-	HX_STACK_LINE(1124)
-	return ret;
-}
-
-
-STATIC_HX_DEFINE_DYNAMIC_FUNC1(Debug_obj,createGraphic,return )
-
 
 Debug_obj::Debug_obj()
 {
@@ -2251,213 +1221,41 @@ Debug_obj::Debug_obj()
 void Debug_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(Debug);
-	HX_MARK_MEMBER_NAME(transform,"transform");
-	HX_MARK_MEMBER_NAME(cullingEnabled,"cullingEnabled");
-	HX_MARK_MEMBER_NAME(display,"display");
-	HX_MARK_MEMBER_NAME(colour,"colour");
-	HX_MARK_MEMBER_NAME(bgColour,"bgColour");
-	HX_MARK_MEMBER_NAME(drawConstraints,"drawConstraints");
-	HX_MARK_MEMBER_NAME(drawShapeAngleIndicators,"drawShapeAngleIndicators");
-	HX_MARK_MEMBER_NAME(drawShapeDetail,"drawShapeDetail");
-	HX_MARK_MEMBER_NAME(drawBodyDetail,"drawBodyDetail");
-	HX_MARK_MEMBER_NAME(drawBodies,"drawBodies");
-	HX_MARK_MEMBER_NAME(drawSensorArbiters,"drawSensorArbiters");
-	HX_MARK_MEMBER_NAME(drawFluidArbiters,"drawFluidArbiters");
-	HX_MARK_MEMBER_NAME(drawCollisionArbiters,"drawCollisionArbiters");
-	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	HX_MARK_END_CLASS();
 }
 
 void Debug_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(transform,"transform");
-	HX_VISIT_MEMBER_NAME(cullingEnabled,"cullingEnabled");
-	HX_VISIT_MEMBER_NAME(display,"display");
-	HX_VISIT_MEMBER_NAME(colour,"colour");
-	HX_VISIT_MEMBER_NAME(bgColour,"bgColour");
-	HX_VISIT_MEMBER_NAME(drawConstraints,"drawConstraints");
-	HX_VISIT_MEMBER_NAME(drawShapeAngleIndicators,"drawShapeAngleIndicators");
-	HX_VISIT_MEMBER_NAME(drawShapeDetail,"drawShapeDetail");
-	HX_VISIT_MEMBER_NAME(drawBodyDetail,"drawBodyDetail");
-	HX_VISIT_MEMBER_NAME(drawBodies,"drawBodies");
-	HX_VISIT_MEMBER_NAME(drawSensorArbiters,"drawSensorArbiters");
-	HX_VISIT_MEMBER_NAME(drawFluidArbiters,"drawFluidArbiters");
-	HX_VISIT_MEMBER_NAME(drawCollisionArbiters,"drawCollisionArbiters");
-	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 }
 
 Dynamic Debug_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
-	case 4:
-		if (HX_FIELD_EQ(inName,"draw") ) { return draw_dyn(); }
-		break;
-	case 5:
-		if (HX_FIELD_EQ(inName,"flush") ) { return flush_dyn(); }
-		if (HX_FIELD_EQ(inName,"clear") ) { return clear_dyn(); }
-		break;
-	case 6:
-		if (HX_FIELD_EQ(inName,"colour") ) { return colour; }
-		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"version") ) { return version_dyn(); }
-		if (HX_FIELD_EQ(inName,"display") ) { return inCallProp ? get_display() : display; }
-		break;
-	case 8:
-		if (HX_FIELD_EQ(inName,"drawAABB") ) { return drawAABB_dyn(); }
-		if (HX_FIELD_EQ(inName,"drawLine") ) { return drawLine_dyn(); }
-		if (HX_FIELD_EQ(inName,"bgColour") ) { return inCallProp ? get_bgColour() : bgColour; }
-		break;
-	case 9:
-		if (HX_FIELD_EQ(inName,"drawCurve") ) { return drawCurve_dyn(); }
-		if (HX_FIELD_EQ(inName,"transform") ) { return inCallProp ? get_transform() : transform; }
-		if (HX_FIELD_EQ(inName,"zpp_inner") ) { return zpp_inner; }
-		break;
-	case 10:
-		if (HX_FIELD_EQ(inName,"drawSpring") ) { return drawSpring_dyn(); }
-		if (HX_FIELD_EQ(inName,"drawCircle") ) { return drawCircle_dyn(); }
-		if (HX_FIELD_EQ(inName,"drawBodies") ) { return drawBodies; }
-		break;
-	case 11:
-		if (HX_FIELD_EQ(inName,"drawPolygon") ) { return drawPolygon_dyn(); }
-		if (HX_FIELD_EQ(inName,"get_display") ) { return get_display_dyn(); }
-		break;
-	case 12:
-		if (HX_FIELD_EQ(inName,"set_bgColour") ) { return set_bgColour_dyn(); }
-		if (HX_FIELD_EQ(inName,"get_bgColour") ) { return get_bgColour_dyn(); }
-		break;
-	case 13:
-		if (HX_FIELD_EQ(inName,"createGraphic") ) { return createGraphic_dyn(); }
-		if (HX_FIELD_EQ(inName,"set_transform") ) { return set_transform_dyn(); }
-		if (HX_FIELD_EQ(inName,"get_transform") ) { return get_transform_dyn(); }
-		break;
-	case 14:
-		if (HX_FIELD_EQ(inName,"cullingEnabled") ) { return cullingEnabled; }
-		if (HX_FIELD_EQ(inName,"drawBodyDetail") ) { return drawBodyDetail; }
-		break;
-	case 15:
-		if (HX_FIELD_EQ(inName,"drawConstraints") ) { return drawConstraints; }
-		if (HX_FIELD_EQ(inName,"drawShapeDetail") ) { return drawShapeDetail; }
 		break;
 	case 16:
 		if (HX_FIELD_EQ(inName,"clearObjectPools") ) { return clearObjectPools_dyn(); }
-		if (HX_FIELD_EQ(inName,"drawFilledCircle") ) { return drawFilledCircle_dyn(); }
-		break;
-	case 17:
-		if (HX_FIELD_EQ(inName,"drawFilledPolygon") ) { return drawFilledPolygon_dyn(); }
-		if (HX_FIELD_EQ(inName,"drawFluidArbiters") ) { return drawFluidArbiters; }
-		break;
-	case 18:
-		if (HX_FIELD_EQ(inName,"drawFilledTriangle") ) { return drawFilledTriangle_dyn(); }
-		if (HX_FIELD_EQ(inName,"drawSensorArbiters") ) { return drawSensorArbiters; }
-		break;
-	case 21:
-		if (HX_FIELD_EQ(inName,"drawCollisionArbiters") ) { return drawCollisionArbiters; }
-		break;
-	case 24:
-		if (HX_FIELD_EQ(inName,"drawShapeAngleIndicators") ) { return drawShapeAngleIndicators; }
 	}
 	return super::__Field(inName,inCallProp);
 }
 
 Dynamic Debug_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 6:
-		if (HX_FIELD_EQ(inName,"colour") ) { colour=inValue.Cast< Dynamic >(); return inValue; }
-		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"display") ) { display=inValue.Cast< ::native::display::DisplayObject >(); return inValue; }
-		break;
-	case 8:
-		if (HX_FIELD_EQ(inName,"bgColour") ) { if (inCallProp) return set_bgColour(inValue);bgColour=inValue.Cast< int >(); return inValue; }
-		break;
-	case 9:
-		if (HX_FIELD_EQ(inName,"transform") ) { if (inCallProp) return set_transform(inValue);transform=inValue.Cast< ::nape::geom::Mat23 >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::util::ZPP_Debug >(); return inValue; }
-		break;
-	case 10:
-		if (HX_FIELD_EQ(inName,"drawBodies") ) { drawBodies=inValue.Cast< bool >(); return inValue; }
-		break;
-	case 14:
-		if (HX_FIELD_EQ(inName,"cullingEnabled") ) { cullingEnabled=inValue.Cast< bool >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"drawBodyDetail") ) { drawBodyDetail=inValue.Cast< bool >(); return inValue; }
-		break;
-	case 15:
-		if (HX_FIELD_EQ(inName,"drawConstraints") ) { drawConstraints=inValue.Cast< bool >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"drawShapeDetail") ) { drawShapeDetail=inValue.Cast< bool >(); return inValue; }
-		break;
-	case 17:
-		if (HX_FIELD_EQ(inName,"drawFluidArbiters") ) { drawFluidArbiters=inValue.Cast< bool >(); return inValue; }
-		break;
-	case 18:
-		if (HX_FIELD_EQ(inName,"drawSensorArbiters") ) { drawSensorArbiters=inValue.Cast< bool >(); return inValue; }
-		break;
-	case 21:
-		if (HX_FIELD_EQ(inName,"drawCollisionArbiters") ) { drawCollisionArbiters=inValue.Cast< bool >(); return inValue; }
-		break;
-	case 24:
-		if (HX_FIELD_EQ(inName,"drawShapeAngleIndicators") ) { drawShapeAngleIndicators=inValue.Cast< bool >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
 void Debug_obj::__GetFields(Array< ::String> &outFields)
 {
-	outFields->push(HX_CSTRING("transform"));
-	outFields->push(HX_CSTRING("cullingEnabled"));
-	outFields->push(HX_CSTRING("display"));
-	outFields->push(HX_CSTRING("bgColour"));
-	outFields->push(HX_CSTRING("drawConstraints"));
-	outFields->push(HX_CSTRING("drawShapeAngleIndicators"));
-	outFields->push(HX_CSTRING("drawShapeDetail"));
-	outFields->push(HX_CSTRING("drawBodyDetail"));
-	outFields->push(HX_CSTRING("drawBodies"));
-	outFields->push(HX_CSTRING("drawSensorArbiters"));
-	outFields->push(HX_CSTRING("drawFluidArbiters"));
-	outFields->push(HX_CSTRING("drawCollisionArbiters"));
-	outFields->push(HX_CSTRING("zpp_inner"));
 	super::__GetFields(outFields);
 };
 
 static ::String sStaticFields[] = {
 	HX_CSTRING("version"),
 	HX_CSTRING("clearObjectPools"),
-	HX_CSTRING("createGraphic"),
 	String(null()) };
 
 static ::String sMemberFields[] = {
-	HX_CSTRING("drawSpring"),
-	HX_CSTRING("drawFilledPolygon"),
-	HX_CSTRING("drawPolygon"),
-	HX_CSTRING("drawFilledCircle"),
-	HX_CSTRING("drawFilledTriangle"),
-	HX_CSTRING("drawAABB"),
-	HX_CSTRING("drawCircle"),
-	HX_CSTRING("drawCurve"),
-	HX_CSTRING("drawLine"),
-	HX_CSTRING("draw"),
-	HX_CSTRING("flush"),
-	HX_CSTRING("clear"),
-	HX_CSTRING("set_transform"),
-	HX_CSTRING("get_transform"),
-	HX_CSTRING("transform"),
-	HX_CSTRING("cullingEnabled"),
-	HX_CSTRING("get_display"),
-	HX_CSTRING("display"),
-	HX_CSTRING("colour"),
-	HX_CSTRING("set_bgColour"),
-	HX_CSTRING("get_bgColour"),
-	HX_CSTRING("bgColour"),
-	HX_CSTRING("drawConstraints"),
-	HX_CSTRING("drawShapeAngleIndicators"),
-	HX_CSTRING("drawShapeDetail"),
-	HX_CSTRING("drawBodyDetail"),
-	HX_CSTRING("drawBodies"),
-	HX_CSTRING("drawSensorArbiters"),
-	HX_CSTRING("drawFluidArbiters"),
-	HX_CSTRING("drawCollisionArbiters"),
-	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
 static void sMarkStatics(HX_MARK_PARAMS) {
@@ -2472,7 +1270,7 @@ Class Debug_obj::__mClass;
 
 void Debug_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.util.Debug"), hx::TCanCast< Debug_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.util.Debug"), hx::TCanCast< Debug_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

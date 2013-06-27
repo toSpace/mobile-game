@@ -12,9 +12,6 @@
 #ifndef INCLUDED_nape_geom_Vec2
 #include <nape/geom/Vec2.h>
 #endif
-#ifndef INCLUDED_native_geom_Matrix
-#include <native/geom/Matrix.h>
-#endif
 #ifndef INCLUDED_zpp_nape_geom_ZPP_Mat23
 #include <zpp_nape/geom/ZPP_Mat23.h>
 #endif
@@ -59,7 +56,7 @@ Float ty = __o_ty.Default(0.0);
 				HX_STACK_LINE(373)
 				::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 				HX_STACK_LINE(373)
-				if (((_this->_invalidate_dyn() != null()))){
+				if (((_this->_invalidate != null()))){
 					HX_STACK_LINE(373)
 					_this->_invalidate();
 				}
@@ -84,7 +81,7 @@ Float ty = __o_ty.Default(0.0);
 				HX_STACK_LINE(374)
 				::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 				HX_STACK_LINE(374)
-				if (((_this->_invalidate_dyn() != null()))){
+				if (((_this->_invalidate != null()))){
 					HX_STACK_LINE(374)
 					_this->_invalidate();
 				}
@@ -109,7 +106,7 @@ Float ty = __o_ty.Default(0.0);
 				HX_STACK_LINE(375)
 				::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 				HX_STACK_LINE(375)
-				if (((_this->_invalidate_dyn() != null()))){
+				if (((_this->_invalidate != null()))){
 					HX_STACK_LINE(375)
 					_this->_invalidate();
 				}
@@ -134,7 +131,7 @@ Float ty = __o_ty.Default(0.0);
 				HX_STACK_LINE(376)
 				::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 				HX_STACK_LINE(376)
-				if (((_this->_invalidate_dyn() != null()))){
+				if (((_this->_invalidate != null()))){
 					HX_STACK_LINE(376)
 					_this->_invalidate();
 				}
@@ -159,7 +156,7 @@ Float ty = __o_ty.Default(0.0);
 				HX_STACK_LINE(377)
 				::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 				HX_STACK_LINE(377)
-				if (((_this->_invalidate_dyn() != null()))){
+				if (((_this->_invalidate != null()))){
 					HX_STACK_LINE(377)
 					_this->_invalidate();
 				}
@@ -184,7 +181,7 @@ Float ty = __o_ty.Default(0.0);
 				HX_STACK_LINE(378)
 				::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 				HX_STACK_LINE(378)
-				if (((_this->_invalidate_dyn() != null()))){
+				if (((_this->_invalidate != null()))){
 					HX_STACK_LINE(378)
 					_this->_invalidate();
 				}
@@ -253,7 +250,7 @@ Dynamic Mat23_obj::__Create(hx::DynamicArray inArgs)
 						HX_STACK_LINE(874)
 						::zpp_nape::geom::ZPP_Mat23 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(874)
-						if (((_this->_invalidate_dyn() != null()))){
+						if (((_this->_invalidate != null()))){
 							HX_STACK_LINE(874)
 							_this->_invalidate();
 						}
@@ -285,7 +282,7 @@ Dynamic Mat23_obj::__Create(hx::DynamicArray inArgs)
 						HX_STACK_LINE(875)
 						::zpp_nape::geom::ZPP_Mat23 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(875)
-						if (((_this->_invalidate_dyn() != null()))){
+						if (((_this->_invalidate != null()))){
 							HX_STACK_LINE(875)
 							_this->_invalidate();
 						}
@@ -317,7 +314,7 @@ Dynamic Mat23_obj::__Create(hx::DynamicArray inArgs)
 						HX_STACK_LINE(876)
 						::zpp_nape::geom::ZPP_Mat23 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(876)
-						if (((_this->_invalidate_dyn() != null()))){
+						if (((_this->_invalidate != null()))){
 							HX_STACK_LINE(876)
 							_this->_invalidate();
 						}
@@ -349,7 +346,7 @@ Dynamic Mat23_obj::__Create(hx::DynamicArray inArgs)
 						HX_STACK_LINE(877)
 						::zpp_nape::geom::ZPP_Mat23 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(877)
-						if (((_this->_invalidate_dyn() != null()))){
+						if (((_this->_invalidate != null()))){
 							HX_STACK_LINE(877)
 							_this->_invalidate();
 						}
@@ -394,7 +391,7 @@ Dynamic Mat23_obj::__Create(hx::DynamicArray inArgs)
 					HX_STACK_LINE(887)
 					::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(887)
-					if (((_this->_invalidate_dyn() != null()))){
+					if (((_this->_invalidate != null()))){
 						HX_STACK_LINE(887)
 						_this->_invalidate();
 					}
@@ -419,7 +416,7 @@ Dynamic Mat23_obj::__Create(hx::DynamicArray inArgs)
 					HX_STACK_LINE(888)
 					::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(888)
-					if (((_this->_invalidate_dyn() != null()))){
+					if (((_this->_invalidate != null()))){
 						HX_STACK_LINE(888)
 						_this->_invalidate();
 					}
@@ -446,7 +443,7 @@ Dynamic Mat23_obj::__Create(hx::DynamicArray inArgs)
 					HX_STACK_LINE(889)
 					::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(889)
-					if (((_this->_invalidate_dyn() != null()))){
+					if (((_this->_invalidate != null()))){
 						HX_STACK_LINE(889)
 						_this->_invalidate();
 					}
@@ -471,7 +468,7 @@ Dynamic Mat23_obj::__Create(hx::DynamicArray inArgs)
 					HX_STACK_LINE(890)
 					::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(890)
-					if (((_this->_invalidate_dyn() != null()))){
+					if (((_this->_invalidate != null()))){
 						HX_STACK_LINE(890)
 						_this->_invalidate();
 					}
@@ -485,7 +482,7 @@ Dynamic Mat23_obj::__Create(hx::DynamicArray inArgs)
 			HX_STACK_LINE(891)
 			::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 			HX_STACK_LINE(891)
-			if (((_this->_invalidate_dyn() != null()))){
+			if (((_this->_invalidate != null()))){
 				HX_STACK_LINE(891)
 				_this->_invalidate();
 			}
@@ -540,7 +537,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Mat23_obj,orthogonalise,return )
 						HX_STACK_LINE(829)
 						::zpp_nape::geom::ZPP_Mat23 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(829)
-						if (((_this->_invalidate_dyn() != null()))){
+						if (((_this->_invalidate != null()))){
 							HX_STACK_LINE(829)
 							_this->_invalidate();
 						}
@@ -572,7 +569,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Mat23_obj,orthogonalise,return )
 						HX_STACK_LINE(830)
 						::zpp_nape::geom::ZPP_Mat23 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(830)
-						if (((_this->_invalidate_dyn() != null()))){
+						if (((_this->_invalidate != null()))){
 							HX_STACK_LINE(830)
 							_this->_invalidate();
 						}
@@ -604,7 +601,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Mat23_obj,orthogonalise,return )
 						HX_STACK_LINE(831)
 						::zpp_nape::geom::ZPP_Mat23 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(831)
-						if (((_this->_invalidate_dyn() != null()))){
+						if (((_this->_invalidate != null()))){
 							HX_STACK_LINE(831)
 							_this->_invalidate();
 						}
@@ -636,7 +633,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Mat23_obj,orthogonalise,return )
 						HX_STACK_LINE(832)
 						::zpp_nape::geom::ZPP_Mat23 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(832)
-						if (((_this->_invalidate_dyn() != null()))){
+						if (((_this->_invalidate != null()))){
 							HX_STACK_LINE(832)
 							_this->_invalidate();
 						}
@@ -681,7 +678,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Mat23_obj,orthogonalise,return )
 					HX_STACK_LINE(842)
 					::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(842)
-					if (((_this->_invalidate_dyn() != null()))){
+					if (((_this->_invalidate != null()))){
 						HX_STACK_LINE(842)
 						_this->_invalidate();
 					}
@@ -706,7 +703,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Mat23_obj,orthogonalise,return )
 					HX_STACK_LINE(843)
 					::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(843)
-					if (((_this->_invalidate_dyn() != null()))){
+					if (((_this->_invalidate != null()))){
 						HX_STACK_LINE(843)
 						_this->_invalidate();
 					}
@@ -733,7 +730,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Mat23_obj,orthogonalise,return )
 					HX_STACK_LINE(844)
 					::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(844)
-					if (((_this->_invalidate_dyn() != null()))){
+					if (((_this->_invalidate != null()))){
 						HX_STACK_LINE(844)
 						_this->_invalidate();
 					}
@@ -758,7 +755,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Mat23_obj,orthogonalise,return )
 					HX_STACK_LINE(845)
 					::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(845)
-					if (((_this->_invalidate_dyn() != null()))){
+					if (((_this->_invalidate != null()))){
 						HX_STACK_LINE(845)
 						_this->_invalidate();
 					}
@@ -772,7 +769,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Mat23_obj,orthogonalise,return )
 			HX_STACK_LINE(846)
 			::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 			HX_STACK_LINE(846)
-			if (((_this->_invalidate_dyn() != null()))){
+			if (((_this->_invalidate != null()))){
 				HX_STACK_LINE(846)
 				_this->_invalidate();
 			}
@@ -881,7 +878,7 @@ bool weak = __o_weak.Default(false);
 		HX_STACK_LINE(718)
 		if ((noTranslation)){
 			struct _Function_2_1{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &point,::nape::geom::Mat23_obj *__this,Float &idet,bool &weak){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Mat23_obj *__this,::nape::geom::Vec2 &point,bool &weak,Float &idet){
 					HX_STACK_PUSH("*::closure","nape/geom/Mat23.hx",719);
 					{
 						struct _Function_3_1{
@@ -898,7 +895,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(719)
 										::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(719)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(719)
 											_this->_validate();
 										}
@@ -923,7 +920,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(719)
 										::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(719)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(719)
 											_this->_validate();
 										}
@@ -948,7 +945,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(719)
 										::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(719)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(719)
 											_this->_validate();
 										}
@@ -973,7 +970,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(719)
 										::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(719)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(719)
 											_this->_validate();
 										}
@@ -1053,9 +1050,6 @@ bool weak = __o_weak.Default(false);
 											HX_STACK_LINE(719)
 											{
 											}
-											HX_STACK_LINE(719)
-											{
-											}
 										}
 										HX_STACK_LINE(719)
 										return ret2;
@@ -1084,7 +1078,7 @@ bool weak = __o_weak.Default(false);
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(719)
-								if (((_this->_isimmutable_dyn() != null()))){
+								if (((_this->_isimmutable != null()))){
 									HX_STACK_LINE(719)
 									_this->_isimmutable();
 								}
@@ -1108,7 +1102,7 @@ bool weak = __o_weak.Default(false);
 											HX_STACK_LINE(719)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(719)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(719)
 												_this->_validate();
 											}
@@ -1133,7 +1127,7 @@ bool weak = __o_weak.Default(false);
 											HX_STACK_LINE(719)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(719)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(719)
 												_this->_validate();
 											}
@@ -1155,16 +1149,13 @@ bool weak = __o_weak.Default(false);
 									HX_STACK_LINE(719)
 									{
 									}
-									HX_STACK_LINE(719)
-									{
-									}
 								}
 								HX_STACK_LINE(719)
 								{
 									HX_STACK_LINE(719)
 									::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(719)
-									if (((_this->_invalidate_dyn() != null()))){
+									if (((_this->_invalidate != null()))){
 										HX_STACK_LINE(719)
 										_this->_invalidate(_this);
 									}
@@ -1182,7 +1173,7 @@ bool weak = __o_weak.Default(false);
 				}
 			};
 			HX_STACK_LINE(718)
-			ret = _Function_2_1::Block(point,this,idet,weak);
+			ret = _Function_2_1::Block(this,point,weak,idet);
 		}
 		else{
 			struct _Function_2_1{
@@ -1199,7 +1190,7 @@ bool weak = __o_weak.Default(false);
 							HX_STACK_LINE(722)
 							::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(722)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(722)
 								_this->_validate();
 							}
@@ -1226,7 +1217,7 @@ bool weak = __o_weak.Default(false);
 							HX_STACK_LINE(723)
 							::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(723)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(723)
 								_this->_validate();
 							}
@@ -1240,7 +1231,7 @@ bool weak = __o_weak.Default(false);
 			HX_STACK_LINE(723)
 			Float dy = (_Function_2_2::Block(point) - this->zpp_inner->ty);		HX_STACK_VAR(dy,"dy");
 			struct _Function_2_3{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Mat23_obj *__this,Float &dy,Float &idet,Float &dx,bool &weak){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Mat23_obj *__this,Float &dy,Float &dx,bool &weak,Float &idet){
 					HX_STACK_PUSH("*::closure","nape/geom/Mat23.hx",724);
 					{
 						HX_STACK_LINE(724)
@@ -1312,9 +1303,6 @@ bool weak = __o_weak.Default(false);
 											HX_STACK_LINE(724)
 											{
 											}
-											HX_STACK_LINE(724)
-											{
-											}
 										}
 										HX_STACK_LINE(724)
 										return ret2;
@@ -1343,7 +1331,7 @@ bool weak = __o_weak.Default(false);
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(724)
-								if (((_this->_isimmutable_dyn() != null()))){
+								if (((_this->_isimmutable != null()))){
 									HX_STACK_LINE(724)
 									_this->_isimmutable();
 								}
@@ -1367,7 +1355,7 @@ bool weak = __o_weak.Default(false);
 											HX_STACK_LINE(724)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(724)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(724)
 												_this->_validate();
 											}
@@ -1392,7 +1380,7 @@ bool weak = __o_weak.Default(false);
 											HX_STACK_LINE(724)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(724)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(724)
 												_this->_validate();
 											}
@@ -1414,16 +1402,13 @@ bool weak = __o_weak.Default(false);
 									HX_STACK_LINE(724)
 									{
 									}
-									HX_STACK_LINE(724)
-									{
-									}
 								}
 								HX_STACK_LINE(724)
 								{
 									HX_STACK_LINE(724)
 									::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(724)
-									if (((_this->_invalidate_dyn() != null()))){
+									if (((_this->_invalidate != null()))){
 										HX_STACK_LINE(724)
 										_this->_invalidate(_this);
 									}
@@ -1441,7 +1426,7 @@ bool weak = __o_weak.Default(false);
 				}
 			};
 			HX_STACK_LINE(724)
-			ret = _Function_2_3::Block(this,dy,idet,dx,weak);
+			ret = _Function_2_3::Block(this,dy,dx,weak,idet);
 		}
 		HX_STACK_LINE(726)
 		if ((point->zpp_inner->weak)){
@@ -1462,7 +1447,7 @@ bool weak = __o_weak.Default(false);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(730)
-					if (((_this->_isimmutable_dyn() != null()))){
+					if (((_this->_isimmutable != null()))){
 						HX_STACK_LINE(730)
 						_this->_isimmutable();
 					}
@@ -1483,9 +1468,6 @@ bool weak = __o_weak.Default(false);
 					HX_STACK_LINE(730)
 					::nape::geom::Vec2 o = point;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(730)
-					{
-					}
-					HX_STACK_LINE(730)
 					o->zpp_pool = null();
 					HX_STACK_LINE(730)
 					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -1505,9 +1487,6 @@ bool weak = __o_weak.Default(false);
 				{
 					HX_STACK_LINE(730)
 					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(730)
-					{
-					}
 					HX_STACK_LINE(730)
 					{
 						HX_STACK_LINE(730)
@@ -1569,7 +1548,7 @@ bool weak = __o_weak.Default(false);
 		HX_STACK_LINE(660)
 		if ((noTranslation)){
 			struct _Function_2_1{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &point,::nape::geom::Mat23_obj *__this,bool &weak){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Mat23_obj *__this,::nape::geom::Vec2 &point,bool &weak){
 					HX_STACK_PUSH("*::closure","nape/geom/Mat23.hx",661);
 					{
 						struct _Function_3_1{
@@ -1586,7 +1565,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(661)
 										::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(661)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(661)
 											_this->_validate();
 										}
@@ -1611,7 +1590,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(661)
 										::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(661)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(661)
 											_this->_validate();
 										}
@@ -1636,7 +1615,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(661)
 										::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(661)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(661)
 											_this->_validate();
 										}
@@ -1661,7 +1640,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(661)
 										::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(661)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(661)
 											_this->_validate();
 										}
@@ -1741,9 +1720,6 @@ bool weak = __o_weak.Default(false);
 											HX_STACK_LINE(661)
 											{
 											}
-											HX_STACK_LINE(661)
-											{
-											}
 										}
 										HX_STACK_LINE(661)
 										return ret2;
@@ -1772,7 +1748,7 @@ bool weak = __o_weak.Default(false);
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(661)
-								if (((_this->_isimmutable_dyn() != null()))){
+								if (((_this->_isimmutable != null()))){
 									HX_STACK_LINE(661)
 									_this->_isimmutable();
 								}
@@ -1796,7 +1772,7 @@ bool weak = __o_weak.Default(false);
 											HX_STACK_LINE(661)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(661)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(661)
 												_this->_validate();
 											}
@@ -1821,7 +1797,7 @@ bool weak = __o_weak.Default(false);
 											HX_STACK_LINE(661)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(661)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(661)
 												_this->_validate();
 											}
@@ -1843,16 +1819,13 @@ bool weak = __o_weak.Default(false);
 									HX_STACK_LINE(661)
 									{
 									}
-									HX_STACK_LINE(661)
-									{
-									}
 								}
 								HX_STACK_LINE(661)
 								{
 									HX_STACK_LINE(661)
 									::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(661)
-									if (((_this->_invalidate_dyn() != null()))){
+									if (((_this->_invalidate != null()))){
 										HX_STACK_LINE(661)
 										_this->_invalidate(_this);
 									}
@@ -1870,11 +1843,11 @@ bool weak = __o_weak.Default(false);
 				}
 			};
 			HX_STACK_LINE(660)
-			ret = _Function_2_1::Block(point,this,weak);
+			ret = _Function_2_1::Block(this,point,weak);
 		}
 		else{
 			struct _Function_2_1{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &point,::nape::geom::Mat23_obj *__this,bool &weak){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Mat23_obj *__this,::nape::geom::Vec2 &point,bool &weak){
 					HX_STACK_PUSH("*::closure","nape/geom/Mat23.hx",664);
 					{
 						struct _Function_3_1{
@@ -1891,7 +1864,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(664)
 										::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(664)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(664)
 											_this->_validate();
 										}
@@ -1916,7 +1889,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(664)
 										::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(664)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(664)
 											_this->_validate();
 										}
@@ -1941,7 +1914,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(664)
 										::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(664)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(664)
 											_this->_validate();
 										}
@@ -1966,7 +1939,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(664)
 										::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(664)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(664)
 											_this->_validate();
 										}
@@ -2046,9 +2019,6 @@ bool weak = __o_weak.Default(false);
 											HX_STACK_LINE(664)
 											{
 											}
-											HX_STACK_LINE(664)
-											{
-											}
 										}
 										HX_STACK_LINE(664)
 										return ret2;
@@ -2077,7 +2047,7 @@ bool weak = __o_weak.Default(false);
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(664)
-								if (((_this->_isimmutable_dyn() != null()))){
+								if (((_this->_isimmutable != null()))){
 									HX_STACK_LINE(664)
 									_this->_isimmutable();
 								}
@@ -2101,7 +2071,7 @@ bool weak = __o_weak.Default(false);
 											HX_STACK_LINE(664)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(664)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(664)
 												_this->_validate();
 											}
@@ -2126,7 +2096,7 @@ bool weak = __o_weak.Default(false);
 											HX_STACK_LINE(664)
 											::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 											HX_STACK_LINE(664)
-											if (((_this->_validate_dyn() != null()))){
+											if (((_this->_validate != null()))){
 												HX_STACK_LINE(664)
 												_this->_validate();
 											}
@@ -2148,16 +2118,13 @@ bool weak = __o_weak.Default(false);
 									HX_STACK_LINE(664)
 									{
 									}
-									HX_STACK_LINE(664)
-									{
-									}
 								}
 								HX_STACK_LINE(664)
 								{
 									HX_STACK_LINE(664)
 									::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(664)
-									if (((_this->_invalidate_dyn() != null()))){
+									if (((_this->_invalidate != null()))){
 										HX_STACK_LINE(664)
 										_this->_invalidate(_this);
 									}
@@ -2175,7 +2142,7 @@ bool weak = __o_weak.Default(false);
 				}
 			};
 			HX_STACK_LINE(663)
-			ret = _Function_2_1::Block(point,this,weak);
+			ret = _Function_2_1::Block(this,point,weak);
 		}
 		HX_STACK_LINE(666)
 		if ((point->zpp_inner->weak)){
@@ -2196,7 +2163,7 @@ bool weak = __o_weak.Default(false);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(670)
-					if (((_this->_isimmutable_dyn() != null()))){
+					if (((_this->_isimmutable != null()))){
 						HX_STACK_LINE(670)
 						_this->_isimmutable();
 					}
@@ -2217,9 +2184,6 @@ bool weak = __o_weak.Default(false);
 					HX_STACK_LINE(670)
 					::nape::geom::Vec2 o = point;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(670)
-					{
-					}
-					HX_STACK_LINE(670)
 					o->zpp_pool = null();
 					HX_STACK_LINE(670)
 					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -2239,9 +2203,6 @@ bool weak = __o_weak.Default(false);
 				{
 					HX_STACK_LINE(670)
 					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(670)
-					{
-					}
 					HX_STACK_LINE(670)
 					{
 						HX_STACK_LINE(670)
@@ -2353,34 +2314,6 @@ Float Mat23_obj::get_determinant( ){
 
 HX_DEFINE_DYNAMIC_FUNC0(Mat23_obj,get_determinant,return )
 
-::native::geom::Matrix Mat23_obj::toMatrix( ::native::geom::Matrix output){
-	HX_STACK_PUSH("Mat23::toMatrix","nape/geom/Mat23.hx",467);
-	HX_STACK_THIS(this);
-	HX_STACK_ARG(output,"output");
-	HX_STACK_LINE(468)
-	if (((output == null()))){
-		HX_STACK_LINE(468)
-		output = ::native::geom::Matrix_obj::__new(null(),null(),null(),null(),null(),null());
-	}
-	HX_STACK_LINE(469)
-	output->a = this->zpp_inner->a;
-	HX_STACK_LINE(470)
-	output->b = this->zpp_inner->c;
-	HX_STACK_LINE(471)
-	output->c = this->zpp_inner->b;
-	HX_STACK_LINE(472)
-	output->d = this->zpp_inner->d;
-	HX_STACK_LINE(473)
-	output->tx = this->zpp_inner->tx;
-	HX_STACK_LINE(474)
-	output->ty = this->zpp_inner->ty;
-	HX_STACK_LINE(475)
-	return output;
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(Mat23_obj,toMatrix,return )
-
 ::nape::geom::Mat23 Mat23_obj::reset( ){
 	HX_STACK_PUSH("Mat23::reset","nape/geom/Mat23.hx",433);
 	HX_STACK_THIS(this);
@@ -2414,7 +2347,7 @@ Float ty = __o_ty.Default(0.0);
 			HX_STACK_LINE(422)
 			::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 			HX_STACK_LINE(422)
-			if (((_this->_invalidate_dyn() != null()))){
+			if (((_this->_invalidate != null()))){
 				HX_STACK_LINE(422)
 				_this->_invalidate();
 			}
@@ -2448,7 +2381,7 @@ HX_DEFINE_DYNAMIC_FUNC6(Mat23_obj,setAs,return )
 		HX_STACK_LINE(403)
 		::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 		HX_STACK_LINE(403)
-		if (((_this->_invalidate_dyn() != null()))){
+		if (((_this->_invalidate != null()))){
 			HX_STACK_LINE(403)
 			_this->_invalidate();
 		}
@@ -2488,7 +2421,7 @@ Float Mat23_obj::set_ty( Float ty){
 			HX_STACK_LINE(350)
 			::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 			HX_STACK_LINE(350)
-			if (((_this->_invalidate_dyn() != null()))){
+			if (((_this->_invalidate != null()))){
 				HX_STACK_LINE(350)
 				_this->_invalidate();
 			}
@@ -2529,7 +2462,7 @@ Float Mat23_obj::set_tx( Float tx){
 			HX_STACK_LINE(323)
 			::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 			HX_STACK_LINE(323)
-			if (((_this->_invalidate_dyn() != null()))){
+			if (((_this->_invalidate != null()))){
 				HX_STACK_LINE(323)
 				_this->_invalidate();
 			}
@@ -2570,7 +2503,7 @@ Float Mat23_obj::set_d( Float d){
 			HX_STACK_LINE(296)
 			::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 			HX_STACK_LINE(296)
-			if (((_this->_invalidate_dyn() != null()))){
+			if (((_this->_invalidate != null()))){
 				HX_STACK_LINE(296)
 				_this->_invalidate();
 			}
@@ -2611,7 +2544,7 @@ Float Mat23_obj::set_c( Float c){
 			HX_STACK_LINE(269)
 			::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 			HX_STACK_LINE(269)
-			if (((_this->_invalidate_dyn() != null()))){
+			if (((_this->_invalidate != null()))){
 				HX_STACK_LINE(269)
 				_this->_invalidate();
 			}
@@ -2652,7 +2585,7 @@ Float Mat23_obj::set_b( Float b){
 			HX_STACK_LINE(242)
 			::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 			HX_STACK_LINE(242)
-			if (((_this->_invalidate_dyn() != null()))){
+			if (((_this->_invalidate != null()))){
 				HX_STACK_LINE(242)
 				_this->_invalidate();
 			}
@@ -2693,7 +2626,7 @@ Float Mat23_obj::set_a( Float a){
 			HX_STACK_LINE(215)
 			::zpp_nape::geom::ZPP_Mat23 _this = this->zpp_inner;		HX_STACK_VAR(_this,"_this");
 			HX_STACK_LINE(215)
-			if (((_this->_invalidate_dyn() != null()))){
+			if (((_this->_invalidate != null()))){
 				HX_STACK_LINE(215)
 				_this->_invalidate();
 			}
@@ -2715,18 +2648,6 @@ Float Mat23_obj::get_a( ){
 
 
 HX_DEFINE_DYNAMIC_FUNC0(Mat23_obj,get_a,return )
-
-::nape::geom::Mat23 Mat23_obj::fromMatrix( ::native::geom::Matrix matrix){
-	HX_STACK_PUSH("Mat23::fromMatrix","nape/geom/Mat23.hx",451);
-	HX_STACK_ARG(matrix,"matrix");
-	HX_STACK_LINE(452)
-	::native::geom::Matrix m = matrix;		HX_STACK_VAR(m,"m");
-	HX_STACK_LINE(453)
-	return ::nape::geom::Mat23_obj::__new(m->a,m->c,m->b,m->d,m->tx,m->ty);
-}
-
-
-STATIC_HX_DEFINE_DYNAMIC_FUNC1(Mat23_obj,fromMatrix,return )
 
 ::nape::geom::Mat23 Mat23_obj::rotation( Float angle){
 	HX_STACK_PUSH("Mat23::rotation","nape/geom/Mat23.hx",490);
@@ -2777,26 +2698,12 @@ Mat23_obj::Mat23_obj()
 void Mat23_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(Mat23);
-	HX_MARK_MEMBER_NAME(determinant,"determinant");
-	HX_MARK_MEMBER_NAME(ty,"ty");
-	HX_MARK_MEMBER_NAME(tx,"tx");
-	HX_MARK_MEMBER_NAME(d,"d");
-	HX_MARK_MEMBER_NAME(c,"c");
-	HX_MARK_MEMBER_NAME(b,"b");
-	HX_MARK_MEMBER_NAME(a,"a");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	HX_MARK_END_CLASS();
 }
 
 void Mat23_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(determinant,"determinant");
-	HX_VISIT_MEMBER_NAME(ty,"ty");
-	HX_VISIT_MEMBER_NAME(tx,"tx");
-	HX_VISIT_MEMBER_NAME(d,"d");
-	HX_VISIT_MEMBER_NAME(c,"c");
-	HX_VISIT_MEMBER_NAME(b,"b");
-	HX_VISIT_MEMBER_NAME(a,"a");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 }
 
@@ -2804,14 +2711,14 @@ Dynamic Mat23_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 1:
-		if (HX_FIELD_EQ(inName,"d") ) { return inCallProp ? get_d() : d; }
-		if (HX_FIELD_EQ(inName,"c") ) { return inCallProp ? get_c() : c; }
-		if (HX_FIELD_EQ(inName,"b") ) { return inCallProp ? get_b() : b; }
-		if (HX_FIELD_EQ(inName,"a") ) { return inCallProp ? get_a() : a; }
+		if (HX_FIELD_EQ(inName,"d") ) { return get_d(); }
+		if (HX_FIELD_EQ(inName,"c") ) { return get_c(); }
+		if (HX_FIELD_EQ(inName,"b") ) { return get_b(); }
+		if (HX_FIELD_EQ(inName,"a") ) { return get_a(); }
 		break;
 	case 2:
-		if (HX_FIELD_EQ(inName,"ty") ) { return inCallProp ? get_ty() : ty; }
-		if (HX_FIELD_EQ(inName,"tx") ) { return inCallProp ? get_tx() : tx; }
+		if (HX_FIELD_EQ(inName,"ty") ) { return get_ty(); }
+		if (HX_FIELD_EQ(inName,"tx") ) { return get_tx(); }
 		break;
 	case 3:
 		if (HX_FIELD_EQ(inName,"set") ) { return set_dyn(); }
@@ -2846,7 +2753,6 @@ Dynamic Mat23_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"rotation") ) { return rotation_dyn(); }
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
 		if (HX_FIELD_EQ(inName,"singular") ) { return singular_dyn(); }
-		if (HX_FIELD_EQ(inName,"toMatrix") ) { return toMatrix_dyn(); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"transform") ) { return transform_dyn(); }
@@ -2854,12 +2760,11 @@ Dynamic Mat23_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { return zpp_inner; }
 		break;
 	case 10:
-		if (HX_FIELD_EQ(inName,"fromMatrix") ) { return fromMatrix_dyn(); }
 		if (HX_FIELD_EQ(inName,"orthogonal") ) { return orthogonal_dyn(); }
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"translation") ) { return translation_dyn(); }
-		if (HX_FIELD_EQ(inName,"determinant") ) { return inCallProp ? get_determinant() : determinant; }
+		if (HX_FIELD_EQ(inName,"determinant") ) { return get_determinant(); }
 		break;
 	case 13:
 		if (HX_FIELD_EQ(inName,"orthogonalise") ) { return orthogonalise_dyn(); }
@@ -2883,20 +2788,17 @@ Dynamic Mat23_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool
 {
 	switch(inName.length) {
 	case 1:
-		if (HX_FIELD_EQ(inName,"d") ) { if (inCallProp) return set_d(inValue);d=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"c") ) { if (inCallProp) return set_c(inValue);c=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"b") ) { if (inCallProp) return set_b(inValue);b=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"a") ) { if (inCallProp) return set_a(inValue);a=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"d") ) { return set_d(inValue); }
+		if (HX_FIELD_EQ(inName,"c") ) { return set_c(inValue); }
+		if (HX_FIELD_EQ(inName,"b") ) { return set_b(inValue); }
+		if (HX_FIELD_EQ(inName,"a") ) { return set_a(inValue); }
 		break;
 	case 2:
-		if (HX_FIELD_EQ(inName,"ty") ) { if (inCallProp) return set_ty(inValue);ty=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"tx") ) { if (inCallProp) return set_tx(inValue);tx=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"ty") ) { return set_ty(inValue); }
+		if (HX_FIELD_EQ(inName,"tx") ) { return set_tx(inValue); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::geom::ZPP_Mat23 >(); return inValue; }
-		break;
-	case 11:
-		if (HX_FIELD_EQ(inName,"determinant") ) { determinant=inValue.Cast< Float >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -2915,7 +2817,6 @@ void Mat23_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("fromMatrix"),
 	HX_CSTRING("rotation"),
 	HX_CSTRING("translation"),
 	HX_CSTRING("scale"),
@@ -2934,30 +2835,22 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("inverse"),
 	HX_CSTRING("singular"),
 	HX_CSTRING("get_determinant"),
-	HX_CSTRING("determinant"),
-	HX_CSTRING("toMatrix"),
 	HX_CSTRING("reset"),
 	HX_CSTRING("setAs"),
 	HX_CSTRING("set"),
 	HX_CSTRING("copy"),
 	HX_CSTRING("set_ty"),
 	HX_CSTRING("get_ty"),
-	HX_CSTRING("ty"),
 	HX_CSTRING("set_tx"),
 	HX_CSTRING("get_tx"),
-	HX_CSTRING("tx"),
 	HX_CSTRING("set_d"),
 	HX_CSTRING("get_d"),
-	HX_CSTRING("d"),
 	HX_CSTRING("set_c"),
 	HX_CSTRING("get_c"),
-	HX_CSTRING("c"),
 	HX_CSTRING("set_b"),
 	HX_CSTRING("get_b"),
-	HX_CSTRING("b"),
 	HX_CSTRING("set_a"),
 	HX_CSTRING("get_a"),
-	HX_CSTRING("a"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
@@ -2973,7 +2866,7 @@ Class Mat23_obj::__mClass;
 
 void Mat23_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.Mat23"), hx::TCanCast< Mat23_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.Mat23"), hx::TCanCast< Mat23_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -19,7 +19,7 @@ namespace nape{
 namespace constraint{
 
 
-class WeldJoint_obj : public ::nape::constraint::Constraint_obj{
+class HXCPP_CLASS_ATTRIBUTES  WeldJoint_obj : public ::nape::constraint::Constraint_obj{
 	public:
 		typedef ::nape::constraint::Constraint_obj super;
 		typedef WeldJoint_obj OBJ_;
@@ -51,36 +51,31 @@ class WeldJoint_obj : public ::nape::constraint::Constraint_obj{
 		virtual Float get_phase( );
 		Dynamic get_phase_dyn();
 
-		Float phase; /* REM */ 
 		virtual ::nape::geom::Vec2 set_anchor2( ::nape::geom::Vec2 anchor2);
 		Dynamic set_anchor2_dyn();
 
 		virtual ::nape::geom::Vec2 get_anchor2( );
 		Dynamic get_anchor2_dyn();
 
-		::nape::geom::Vec2 anchor2; /* REM */ 
 		virtual ::nape::geom::Vec2 set_anchor1( ::nape::geom::Vec2 anchor1);
 		Dynamic set_anchor1_dyn();
 
 		virtual ::nape::geom::Vec2 get_anchor1( );
 		Dynamic get_anchor1_dyn();
 
-		::nape::geom::Vec2 anchor1; /* REM */ 
 		virtual ::nape::phys::Body set_body2( ::nape::phys::Body body2);
 		Dynamic set_body2_dyn();
 
 		virtual ::nape::phys::Body get_body2( );
 		Dynamic get_body2_dyn();
 
-		::nape::phys::Body body2; /* REM */ 
 		virtual ::nape::phys::Body set_body1( ::nape::phys::Body body1);
 		Dynamic set_body1_dyn();
 
 		virtual ::nape::phys::Body get_body1( );
 		Dynamic get_body1_dyn();
 
-		::nape::phys::Body body1; /* REM */ 
-		::zpp_nape::constraint::ZPP_WeldJoint zpp_inner_zn; /* REM */ 
+		::zpp_nape::constraint::ZPP_WeldJoint zpp_inner_zn;
 };
 
 } // end namespace nape

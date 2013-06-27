@@ -15,32 +15,32 @@
 #ifndef INCLUDED_RenderManager
 #include <RenderManager.h>
 #endif
+#ifndef INCLUDED_flash_display_DisplayObject
+#include <flash/display/DisplayObject.h>
+#endif
+#ifndef INCLUDED_flash_display_DisplayObjectContainer
+#include <flash/display/DisplayObjectContainer.h>
+#endif
+#ifndef INCLUDED_flash_display_IBitmapDrawable
+#include <flash/display/IBitmapDrawable.h>
+#endif
+#ifndef INCLUDED_flash_display_InteractiveObject
+#include <flash/display/InteractiveObject.h>
+#endif
+#ifndef INCLUDED_flash_display_Sprite
+#include <flash/display/Sprite.h>
+#endif
+#ifndef INCLUDED_flash_display_Stage
+#include <flash/display/Stage.h>
+#endif
+#ifndef INCLUDED_flash_events_EventDispatcher
+#include <flash/events/EventDispatcher.h>
+#endif
+#ifndef INCLUDED_flash_events_IEventDispatcher
+#include <flash/events/IEventDispatcher.h>
+#endif
 #ifndef INCLUDED_nape_space_Space
 #include <nape/space/Space.h>
-#endif
-#ifndef INCLUDED_native_display_DisplayObject
-#include <native/display/DisplayObject.h>
-#endif
-#ifndef INCLUDED_native_display_DisplayObjectContainer
-#include <native/display/DisplayObjectContainer.h>
-#endif
-#ifndef INCLUDED_native_display_IBitmapDrawable
-#include <native/display/IBitmapDrawable.h>
-#endif
-#ifndef INCLUDED_native_display_InteractiveObject
-#include <native/display/InteractiveObject.h>
-#endif
-#ifndef INCLUDED_native_display_Sprite
-#include <native/display/Sprite.h>
-#endif
-#ifndef INCLUDED_native_display_Stage
-#include <native/display/Stage.h>
-#endif
-#ifndef INCLUDED_native_events_EventDispatcher
-#include <native/events/EventDispatcher.h>
-#endif
-#ifndef INCLUDED_native_events_IEventDispatcher
-#include <native/events/IEventDispatcher.h>
 #endif
 
 Void RenderManager_obj::__construct()
@@ -252,7 +252,7 @@ Class RenderManager_obj::__mClass;
 
 void RenderManager_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("RenderManager"), hx::TCanCast< RenderManager_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("RenderManager"), hx::TCanCast< RenderManager_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

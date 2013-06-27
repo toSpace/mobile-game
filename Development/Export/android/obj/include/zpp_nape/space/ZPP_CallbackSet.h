@@ -13,7 +13,7 @@ namespace zpp_nape{
 namespace space{
 
 
-class ZPP_CallbackSet_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_CallbackSet_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_CallbackSet_obj OBJ_;
@@ -57,8 +57,8 @@ class ZPP_CallbackSet_obj : public hx::Object{
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		bool lazydel; /* REM */ 
-		bool freed; /* REM */ 
+		bool lazydel;
+		bool freed;
 		virtual ::zpp_nape::space::ZPP_CallbackSet at( int ind);
 		Dynamic at_dyn();
 
@@ -143,32 +143,32 @@ class ZPP_CallbackSet_obj : public hx::Object{
 		virtual Void setbegin( ::zpp_nape::space::ZPP_CallbackSet i);
 		Dynamic setbegin_dyn();
 
-		int length; /* REM */ 
-		bool pushmod; /* REM */ 
-		bool modified; /* REM */ 
-		bool _inuse; /* REM */ 
+		int length;
+		bool pushmod;
+		bool modified;
+		bool _inuse;
 		virtual ::zpp_nape::space::ZPP_CallbackSet begin( );
 		Dynamic begin_dyn();
 
 		virtual ::zpp_nape::space::ZPP_CallbackSet elem( );
 		Dynamic elem_dyn();
 
-		::zpp_nape::space::ZPP_CallbackSet next; /* REM */ 
-		int FLUIDstamp; /* REM */ 
-		int FLUIDstate; /* REM */ 
-		int SENSORstamp; /* REM */ 
-		int SENSORstate; /* REM */ 
-		int COLLISIONstamp; /* REM */ 
-		int COLLISIONstate; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_Arbiter arbiters; /* REM */ 
-		::zpp_nape::phys::ZPP_Interactor int2; /* REM */ 
-		::zpp_nape::phys::ZPP_Interactor int1; /* REM */ 
-		int di; /* REM */ 
-		int id; /* REM */ 
+		::zpp_nape::space::ZPP_CallbackSet next;
+		int FLUIDstamp;
+		int FLUIDstate;
+		int SENSORstamp;
+		int SENSORstate;
+		int COLLISIONstamp;
+		int COLLISIONstate;
+		::zpp_nape::util::ZNPList_ZPP_Arbiter arbiters;
+		::zpp_nape::phys::ZPP_Interactor int2;
+		::zpp_nape::phys::ZPP_Interactor int1;
+		int di;
+		int id;
 		static ::zpp_nape::space::ZPP_CallbackSet get( ::zpp_nape::phys::ZPP_Interactor i1,::zpp_nape::phys::ZPP_Interactor i2);
 		static Dynamic get_dyn();
 
-		static ::zpp_nape::space::ZPP_CallbackSet zpp_pool; /* REM */ 
+		static ::zpp_nape::space::ZPP_CallbackSet zpp_pool;
 };
 
 } // end namespace zpp_nape

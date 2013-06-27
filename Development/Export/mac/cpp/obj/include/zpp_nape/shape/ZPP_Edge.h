@@ -16,7 +16,7 @@ namespace zpp_nape{
 namespace shape{
 
 
-class ZPP_Edge_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Edge_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Edge_obj OBJ_;
@@ -48,35 +48,35 @@ class ZPP_Edge_obj : public hx::Object{
 		virtual Void lnorm_validate( );
 		Dynamic lnorm_validate_dyn();
 
-		Float tp1; /* REM */ 
-		Float tp0; /* REM */ 
-		::zpp_nape::geom::ZPP_Vec2 gp1; /* REM */ 
-		::zpp_nape::geom::ZPP_Vec2 lp1; /* REM */ 
-		::zpp_nape::geom::ZPP_Vec2 gp0; /* REM */ 
-		::zpp_nape::geom::ZPP_Vec2 lp0; /* REM */ 
-		Float gprojection; /* REM */ 
-		Float lprojection; /* REM */ 
-		Float length; /* REM */ 
-		::nape::geom::Vec2 wrap_gnorm; /* REM */ 
-		Float gnormy; /* REM */ 
-		Float gnormx; /* REM */ 
-		::nape::geom::Vec2 wrap_lnorm; /* REM */ 
-		Float lnormy; /* REM */ 
-		Float lnormx; /* REM */ 
+		Float tp1;
+		Float tp0;
+		::zpp_nape::geom::ZPP_Vec2 gp1;
+		::zpp_nape::geom::ZPP_Vec2 lp1;
+		::zpp_nape::geom::ZPP_Vec2 gp0;
+		::zpp_nape::geom::ZPP_Vec2 lp0;
+		Float gprojection;
+		Float lprojection;
+		Float length;
+		::nape::geom::Vec2 wrap_gnorm;
+		Float gnormy;
+		Float gnormx;
+		::nape::geom::Vec2 wrap_lnorm;
+		Float lnormy;
+		Float lnormx;
 		virtual ::nape::shape::Edge wrapper( );
 		Dynamic wrapper_dyn();
 
-		::nape::shape::Edge outer; /* REM */ 
-		::zpp_nape::shape::ZPP_Polygon polygon; /* REM */ 
+		::nape::shape::Edge outer;
+		::zpp_nape::shape::ZPP_Polygon polygon;
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		::zpp_nape::shape::ZPP_Edge next; /* REM */ 
-		static ::zpp_nape::shape::ZPP_Edge zpp_pool; /* REM */ 
-		static bool internal; /* REM */ 
+		::zpp_nape::shape::ZPP_Edge next;
+		static ::zpp_nape::shape::ZPP_Edge zpp_pool;
+		static bool internal;
 };
 
 } // end namespace zpp_nape

@@ -11,7 +11,7 @@ namespace nape{
 namespace geom{
 
 
-class MatMN_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  MatMN_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef MatMN_obj OBJ_;
@@ -49,12 +49,10 @@ class MatMN_obj : public hx::Object{
 		virtual int get_cols( );
 		Dynamic get_cols_dyn();
 
-		int cols; /* REM */ 
 		virtual int get_rows( );
 		Dynamic get_rows_dyn();
 
-		int rows; /* REM */ 
-		::zpp_nape::geom::ZPP_MatMN zpp_inner; /* REM */ 
+		::zpp_nape::geom::ZPP_MatMN zpp_inner;
 };
 
 } // end namespace nape

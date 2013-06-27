@@ -10,7 +10,7 @@ HX_DECLARE_CLASS0(Level)
 HX_DECLARE_CLASS0(World1Level1)
 
 
-class World1Level1_obj : public ::Level_obj{
+class HXCPP_CLASS_ATTRIBUTES  World1Level1_obj : public ::Level_obj{
 	public:
 		typedef ::Level_obj super;
 		typedef World1Level1_obj OBJ_;

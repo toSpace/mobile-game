@@ -19,7 +19,7 @@ namespace nape{
 namespace shape{
 
 
-class Circle_obj : public ::nape::shape::Shape_obj{
+class HXCPP_CLASS_ATTRIBUTES  Circle_obj : public ::nape::shape::Shape_obj{
 	public:
 		typedef ::nape::shape::Shape_obj super;
 		typedef Circle_obj OBJ_;
@@ -45,8 +45,7 @@ class Circle_obj : public ::nape::shape::Shape_obj{
 		virtual Float get_radius( );
 		Dynamic get_radius_dyn();
 
-		Float radius; /* REM */ 
-		::zpp_nape::shape::ZPP_Circle zpp_inner_zn; /* REM */ 
+		::zpp_nape::shape::ZPP_Circle zpp_inner_zn;
 };
 
 } // end namespace nape

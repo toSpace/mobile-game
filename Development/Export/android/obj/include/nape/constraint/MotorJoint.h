@@ -18,7 +18,7 @@ namespace nape{
 namespace constraint{
 
 
-class MotorJoint_obj : public ::nape::constraint::Constraint_obj{
+class HXCPP_CLASS_ATTRIBUTES  MotorJoint_obj : public ::nape::constraint::Constraint_obj{
 	public:
 		typedef ::nape::constraint::Constraint_obj super;
 		typedef MotorJoint_obj OBJ_;
@@ -50,29 +50,25 @@ class MotorJoint_obj : public ::nape::constraint::Constraint_obj{
 		virtual Float get_rate( );
 		Dynamic get_rate_dyn();
 
-		Float rate; /* REM */ 
 		virtual Float set_ratio( Float ratio);
 		Dynamic set_ratio_dyn();
 
 		virtual Float get_ratio( );
 		Dynamic get_ratio_dyn();
 
-		Float ratio; /* REM */ 
 		virtual ::nape::phys::Body set_body2( ::nape::phys::Body body2);
 		Dynamic set_body2_dyn();
 
 		virtual ::nape::phys::Body get_body2( );
 		Dynamic get_body2_dyn();
 
-		::nape::phys::Body body2; /* REM */ 
 		virtual ::nape::phys::Body set_body1( ::nape::phys::Body body1);
 		Dynamic set_body1_dyn();
 
 		virtual ::nape::phys::Body get_body1( );
 		Dynamic get_body1_dyn();
 
-		::nape::phys::Body body1; /* REM */ 
-		::zpp_nape::constraint::ZPP_MotorJoint zpp_inner_zn; /* REM */ 
+		::zpp_nape::constraint::ZPP_MotorJoint zpp_inner_zn;
 };
 
 } // end namespace nape

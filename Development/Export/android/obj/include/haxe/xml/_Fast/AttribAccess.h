@@ -12,7 +12,7 @@ namespace xml{
 namespace _Fast{
 
 
-class AttribAccess_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  AttribAccess_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef AttribAccess_obj OBJ_;
@@ -36,7 +36,7 @@ class AttribAccess_obj : public hx::Object{
 		virtual ::String resolve( ::String name);
 		Dynamic resolve_dyn();
 
-		::Xml __x; /* REM */ 
+		::Xml __x;
 };
 
 } // end namespace haxe

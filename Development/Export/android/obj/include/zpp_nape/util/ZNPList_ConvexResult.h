@@ -12,7 +12,7 @@ namespace zpp_nape{
 namespace util{
 
 
-class ZNPList_ConvexResult_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZNPList_ConvexResult_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZNPList_ConvexResult_obj OBJ_;
@@ -116,13 +116,13 @@ class ZNPList_ConvexResult_obj : public hx::Object{
 		virtual Void setbegin( ::zpp_nape::util::ZNPNode_ConvexResult i);
 		Dynamic setbegin_dyn();
 
-		int length; /* REM */ 
-		bool pushmod; /* REM */ 
-		bool modified; /* REM */ 
+		int length;
+		bool pushmod;
+		bool modified;
 		virtual ::zpp_nape::util::ZNPNode_ConvexResult begin( );
 		Dynamic begin_dyn();
 
-		::zpp_nape::util::ZNPNode_ConvexResult head; /* REM */ 
+		::zpp_nape::util::ZNPNode_ConvexResult head;
 };
 
 } // end namespace zpp_nape

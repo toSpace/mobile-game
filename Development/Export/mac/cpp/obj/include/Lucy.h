@@ -9,9 +9,11 @@
 HX_DECLARE_CLASS0(Character)
 HX_DECLARE_CLASS0(Lucy)
 HX_DECLARE_CLASS0(SpriteObject)
+HX_DECLARE_CLASS2(nape,phys,Body)
+HX_DECLARE_CLASS2(nape,phys,Interactor)
 
 
-class Lucy_obj : public ::Character_obj{
+class HXCPP_CLASS_ATTRIBUTES  Lucy_obj : public ::Character_obj{
 	public:
 		typedef ::Character_obj super;
 		typedef Lucy_obj OBJ_;
@@ -31,11 +33,14 @@ class Lucy_obj : public ::Character_obj{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("Lucy"); }
 
+		virtual ::nape::phys::Body generateBody( Float x,Float y);
+		Dynamic generateBody_dyn();
+
 		virtual Void render( );
 
-		bool stopped; /* REM */ 
-		Float prevX; /* REM */ 
-		::SpriteObject lucy; /* REM */ 
+		bool stopped;
+		Float prevX;
+		::SpriteObject lucy;
 };
 
 

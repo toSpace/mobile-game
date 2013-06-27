@@ -70,7 +70,7 @@ Dynamic ZPP_PartitionedPoly_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_LINE(1221)
 	do{
 		struct _Function_2_1{
-			inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_PartitionVertex &next,::zpp_nape::geom::ZPP_GeomVert &poly){
+			inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &poly,::zpp_nape::geom::ZPP_PartitionVertex &next){
 				HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1222);
 				{
 					struct _Function_3_1{
@@ -106,9 +106,6 @@ Dynamic ZPP_PartitionedPoly_obj::__Create(hx::DynamicArray inArgs)
 									HX_STACK_LINE(1223)
 									{
 									}
-									HX_STACK_LINE(1223)
-									{
-									}
 								}
 								HX_STACK_LINE(1223)
 								return ret1;
@@ -140,7 +137,7 @@ Dynamic ZPP_PartitionedPoly_obj::__Create(hx::DynamicArray inArgs)
 			}
 		};
 		HX_STACK_LINE(1222)
-		poly = _Function_2_1::Block(next,poly);
+		poly = _Function_2_1::Block(poly,next);
 		HX_STACK_LINE(1233)
 		poly->forced = next->forced;
 		HX_STACK_LINE(1234)
@@ -151,9 +148,6 @@ Dynamic ZPP_PartitionedPoly_obj::__Create(hx::DynamicArray inArgs)
 					{
 						HX_STACK_LINE(1235)
 						::zpp_nape::util::ZNPList_ZPP_PartitionVertex _this = next->diagonals;		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(1235)
-						{
-						}
 						HX_STACK_LINE(1235)
 						::zpp_nape::geom::ZPP_PartitionVertex ret1 = _this->head->elt;		HX_STACK_VAR(ret1,"ret1");
 						HX_STACK_LINE(1235)
@@ -182,16 +176,10 @@ Dynamic ZPP_PartitionedPoly_obj::__Create(hx::DynamicArray inArgs)
 		}
 	}
 while(((next != start)));
-	HX_STACK_LINE(1244)
-	{
-	}
 	struct _Function_1_1{
 		inline static Float Block( ::zpp_nape::geom::ZPP_GeomVert &poly){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1298);
 			{
-				HX_STACK_LINE(1299)
-				{
-				}
 				HX_STACK_LINE(1323)
 				Float area = 0.0;		HX_STACK_VAR(area,"area");
 				HX_STACK_LINE(1324)
@@ -275,57 +263,38 @@ while(((nite != L)));
 							}
 							struct _Function_5_1{
 								inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p){
-									HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1355);
+									HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1364);
 									{
-										HX_STACK_LINE(1356)
-										{
-										}
-										struct _Function_6_1{
-											inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p){
-												HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1364);
-												{
-													HX_STACK_LINE(1365)
-													p->next = p->prev = null();
-													HX_STACK_LINE(1366)
-													{
-													}
-													HX_STACK_LINE(1367)
-													return p = null();
-												}
-												return null();
-											}
-										};
-										struct _Function_6_2{
-											inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p){
-												HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1369);
-												{
-													HX_STACK_LINE(1370)
-													::zpp_nape::geom::ZPP_GeomVert retnodes = p->next;		HX_STACK_VAR(retnodes,"retnodes");
-													HX_STACK_LINE(1371)
-													p->prev->next = p->next;
-													HX_STACK_LINE(1372)
-													p->next->prev = p->prev;
-													HX_STACK_LINE(1373)
-													p->next = p->prev = null();
-													HX_STACK_LINE(1374)
-													{
-													}
-													HX_STACK_LINE(1375)
-													p = null();
-													HX_STACK_LINE(1376)
-													return retnodes;
-												}
-												return null();
-											}
-										};
-										HX_STACK_LINE(1364)
-										return (  (((bool((p != null())) && bool((p->prev == p))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_6_1::Block(p)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_6_2::Block(p)) );
+										HX_STACK_LINE(1365)
+										p->next = p->prev = null();
+										HX_STACK_LINE(1367)
+										return p = null();
+									}
+									return null();
+								}
+							};
+							struct _Function_5_2{
+								inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p){
+									HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1369);
+									{
+										HX_STACK_LINE(1370)
+										::zpp_nape::geom::ZPP_GeomVert retnodes = p->next;		HX_STACK_VAR(retnodes,"retnodes");
+										HX_STACK_LINE(1371)
+										p->prev->next = p->next;
+										HX_STACK_LINE(1372)
+										p->next->prev = p->prev;
+										HX_STACK_LINE(1373)
+										p->next = p->prev = null();
+										HX_STACK_LINE(1375)
+										p = null();
+										HX_STACK_LINE(1376)
+										return retnodes;
 									}
 									return null();
 								}
 							};
 							HX_STACK_LINE(1355)
-							p = _Function_5_1::Block(p);
+							p = (  (((bool((p != null())) && bool((p->prev == p))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_5_1::Block(p)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_5_2::Block(p)) );
 							HX_STACK_LINE(1379)
 							if (((p == null()))){
 								HX_STACK_LINE(1380)
@@ -396,57 +365,38 @@ while(((nite != L)));
 									}
 									struct _Function_7_1{
 										inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p){
-											HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1416);
+											HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1425);
 											{
-												HX_STACK_LINE(1417)
-												{
-												}
-												struct _Function_8_1{
-													inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p){
-														HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1425);
-														{
-															HX_STACK_LINE(1426)
-															p->next = p->prev = null();
-															HX_STACK_LINE(1427)
-															{
-															}
-															HX_STACK_LINE(1428)
-															return p = null();
-														}
-														return null();
-													}
-												};
-												struct _Function_8_2{
-													inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p){
-														HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1430);
-														{
-															HX_STACK_LINE(1431)
-															::zpp_nape::geom::ZPP_GeomVert retnodes = p->next;		HX_STACK_VAR(retnodes,"retnodes");
-															HX_STACK_LINE(1432)
-															p->prev->next = p->next;
-															HX_STACK_LINE(1433)
-															p->next->prev = p->prev;
-															HX_STACK_LINE(1434)
-															p->next = p->prev = null();
-															HX_STACK_LINE(1435)
-															{
-															}
-															HX_STACK_LINE(1436)
-															p = null();
-															HX_STACK_LINE(1437)
-															return retnodes;
-														}
-														return null();
-													}
-												};
-												HX_STACK_LINE(1425)
-												return (  (((bool((p != null())) && bool((p->prev == p))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_8_1::Block(p)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_8_2::Block(p)) );
+												HX_STACK_LINE(1426)
+												p->next = p->prev = null();
+												HX_STACK_LINE(1428)
+												return p = null();
+											}
+											return null();
+										}
+									};
+									struct _Function_7_2{
+										inline static ::zpp_nape::geom::ZPP_GeomVert Block( ::zpp_nape::geom::ZPP_GeomVert &p){
+											HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1430);
+											{
+												HX_STACK_LINE(1431)
+												::zpp_nape::geom::ZPP_GeomVert retnodes = p->next;		HX_STACK_VAR(retnodes,"retnodes");
+												HX_STACK_LINE(1432)
+												p->prev->next = p->next;
+												HX_STACK_LINE(1433)
+												p->next->prev = p->prev;
+												HX_STACK_LINE(1434)
+												p->next = p->prev = null();
+												HX_STACK_LINE(1436)
+												p = null();
+												HX_STACK_LINE(1437)
+												return retnodes;
 											}
 											return null();
 										}
 									};
 									HX_STACK_LINE(1416)
-									p = _Function_7_1::Block(p);
+									p = (  (((bool((p != null())) && bool((p->prev == p))))) ? ::zpp_nape::geom::ZPP_GeomVert(_Function_7_1::Block(p)) : ::zpp_nape::geom::ZPP_GeomVert(_Function_7_2::Block(p)) );
 									HX_STACK_LINE(1440)
 									removed = true;
 									HX_STACK_LINE(1441)
@@ -521,89 +471,70 @@ while(((nite != L)));
 		while((!(((this->vertices == null()))))){
 			struct _Function_3_1{
 				inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionedPoly_obj *__this){
-					HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1158);
+					HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1167);
 					{
-						HX_STACK_LINE(1159)
+						HX_STACK_LINE(1168)
+						__this->vertices->next = __this->vertices->prev = null();
+						HX_STACK_LINE(1169)
 						{
+							HX_STACK_LINE(1170)
+							::zpp_nape::geom::ZPP_PartitionVertex o = __this->vertices;		HX_STACK_VAR(o,"o");
+							HX_STACK_LINE(1179)
+							{
+								HX_STACK_LINE(1179)
+								o->helper = null();
+								HX_STACK_LINE(1179)
+								Dynamic();
+							}
+							HX_STACK_LINE(1180)
+							o->next = ::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool;
+							HX_STACK_LINE(1181)
+							::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool = o;
 						}
-						struct _Function_4_1{
-							inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionedPoly_obj *__this){
-								HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1167);
-								{
-									HX_STACK_LINE(1168)
-									__this->vertices->next = __this->vertices->prev = null();
-									HX_STACK_LINE(1169)
-									{
-										HX_STACK_LINE(1170)
-										::zpp_nape::geom::ZPP_PartitionVertex o = __this->vertices;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(1171)
-										{
-										}
-										HX_STACK_LINE(1179)
-										{
-											HX_STACK_LINE(1179)
-											o->helper = null();
-											HX_STACK_LINE(1179)
-											Dynamic();
-										}
-										HX_STACK_LINE(1180)
-										o->next = ::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool;
-										HX_STACK_LINE(1181)
-										::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool = o;
-									}
-									HX_STACK_LINE(1186)
-									return __this->vertices = null();
-								}
-								return null();
+						HX_STACK_LINE(1186)
+						return __this->vertices = null();
+					}
+					return null();
+				}
+			};
+			struct _Function_3_2{
+				inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionedPoly_obj *__this){
+					HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1188);
+					{
+						HX_STACK_LINE(1189)
+						::zpp_nape::geom::ZPP_PartitionVertex retnodes = __this->vertices->next;		HX_STACK_VAR(retnodes,"retnodes");
+						HX_STACK_LINE(1190)
+						__this->vertices->prev->next = __this->vertices->next;
+						HX_STACK_LINE(1191)
+						__this->vertices->next->prev = __this->vertices->prev;
+						HX_STACK_LINE(1192)
+						__this->vertices->next = __this->vertices->prev = null();
+						HX_STACK_LINE(1193)
+						{
+							HX_STACK_LINE(1194)
+							::zpp_nape::geom::ZPP_PartitionVertex o = __this->vertices;		HX_STACK_VAR(o,"o");
+							HX_STACK_LINE(1203)
+							{
+								HX_STACK_LINE(1203)
+								o->helper = null();
+								HX_STACK_LINE(1203)
+								Dynamic();
 							}
-						};
-						struct _Function_4_2{
-							inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionedPoly_obj *__this){
-								HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1188);
-								{
-									HX_STACK_LINE(1189)
-									::zpp_nape::geom::ZPP_PartitionVertex retnodes = __this->vertices->next;		HX_STACK_VAR(retnodes,"retnodes");
-									HX_STACK_LINE(1190)
-									__this->vertices->prev->next = __this->vertices->next;
-									HX_STACK_LINE(1191)
-									__this->vertices->next->prev = __this->vertices->prev;
-									HX_STACK_LINE(1192)
-									__this->vertices->next = __this->vertices->prev = null();
-									HX_STACK_LINE(1193)
-									{
-										HX_STACK_LINE(1194)
-										::zpp_nape::geom::ZPP_PartitionVertex o = __this->vertices;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(1195)
-										{
-										}
-										HX_STACK_LINE(1203)
-										{
-											HX_STACK_LINE(1203)
-											o->helper = null();
-											HX_STACK_LINE(1203)
-											Dynamic();
-										}
-										HX_STACK_LINE(1204)
-										o->next = ::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool;
-										HX_STACK_LINE(1205)
-										::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool = o;
-									}
-									HX_STACK_LINE(1210)
-									__this->vertices = null();
-									HX_STACK_LINE(1211)
-									return retnodes;
-								}
-								return null();
-							}
-						};
-						HX_STACK_LINE(1167)
-						return (  (((bool((__this->vertices != null())) && bool((__this->vertices->prev == __this->vertices))))) ? ::zpp_nape::geom::ZPP_PartitionVertex(_Function_4_1::Block(__this)) : ::zpp_nape::geom::ZPP_PartitionVertex(_Function_4_2::Block(__this)) );
+							HX_STACK_LINE(1204)
+							o->next = ::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool;
+							HX_STACK_LINE(1205)
+							::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool = o;
+						}
+						HX_STACK_LINE(1210)
+						__this->vertices = null();
+						HX_STACK_LINE(1211)
+						return retnodes;
 					}
 					return null();
 				}
 			};
 			HX_STACK_LINE(1158)
-			this->vertices = _Function_3_1::Block(this);
+			this->vertices = (  (((bool((this->vertices != null())) && bool((this->vertices->prev == this->vertices))))) ? ::zpp_nape::geom::ZPP_PartitionVertex(_Function_3_1::Block(this)) : ::zpp_nape::geom::ZPP_PartitionVertex(_Function_3_2::Block(this)) );
 		}
 	}
 	HX_STACK_LINE(1216)
@@ -643,7 +574,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_PartitionedPoly_obj,extract,return )
 	HX_STACK_LINE(1010)
 	do{
 		struct _Function_2_1{
-			inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionVertex &next,::zpp_nape::geom::ZPP_PartitionedPoly &poly){
+			inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionedPoly &poly,::zpp_nape::geom::ZPP_PartitionVertex &next){
 				HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1011);
 				{
 					struct _Function_3_1{
@@ -676,9 +607,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_PartitionedPoly_obj,extract,return )
 									ret1->x = next->x;
 									HX_STACK_LINE(1012)
 									ret1->y = next->y;
-									HX_STACK_LINE(1012)
-									{
-									}
 									HX_STACK_LINE(1012)
 									{
 									}
@@ -715,7 +643,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_PartitionedPoly_obj,extract,return )
 			}
 		};
 		HX_STACK_LINE(1011)
-		poly->vertices = _Function_2_1::Block(next,poly);
+		poly->vertices = _Function_2_1::Block(poly,next);
 		HX_STACK_LINE(1022)
 		poly->vertices->forced = next->forced;
 		HX_STACK_LINE(1023)
@@ -726,9 +654,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_PartitionedPoly_obj,extract,return )
 					{
 						HX_STACK_LINE(1024)
 						::zpp_nape::util::ZNPList_ZPP_PartitionVertex _this = next->diagonals;		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(1024)
-						{
-						}
 						HX_STACK_LINE(1024)
 						::zpp_nape::geom::ZPP_PartitionVertex ret1 = _this->head->elt;		HX_STACK_VAR(ret1,"ret1");
 						HX_STACK_LINE(1024)
@@ -757,16 +682,10 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_PartitionedPoly_obj,extract,return )
 		}
 	}
 while(((next != start)));
-	HX_STACK_LINE(1031)
-	{
-	}
 	struct _Function_1_1{
 		inline static Float Block( ::zpp_nape::geom::ZPP_PartitionedPoly &poly){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",1085);
 			{
-				HX_STACK_LINE(1086)
-				{
-				}
 				HX_STACK_LINE(1110)
 				Float area = 0.0;		HX_STACK_VAR(area,"area");
 				HX_STACK_LINE(1111)
@@ -848,89 +767,70 @@ while(((nite != L)));
 		while((!(((this->vertices == null()))))){
 			struct _Function_3_1{
 				inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionedPoly_obj *__this){
-					HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",915);
+					HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",924);
 					{
-						HX_STACK_LINE(916)
+						HX_STACK_LINE(925)
+						__this->vertices->next = __this->vertices->prev = null();
+						HX_STACK_LINE(926)
 						{
+							HX_STACK_LINE(927)
+							::zpp_nape::geom::ZPP_PartitionVertex o = __this->vertices;		HX_STACK_VAR(o,"o");
+							HX_STACK_LINE(936)
+							{
+								HX_STACK_LINE(936)
+								o->helper = null();
+								HX_STACK_LINE(936)
+								Dynamic();
+							}
+							HX_STACK_LINE(937)
+							o->next = ::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool;
+							HX_STACK_LINE(938)
+							::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool = o;
 						}
-						struct _Function_4_1{
-							inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionedPoly_obj *__this){
-								HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",924);
-								{
-									HX_STACK_LINE(925)
-									__this->vertices->next = __this->vertices->prev = null();
-									HX_STACK_LINE(926)
-									{
-										HX_STACK_LINE(927)
-										::zpp_nape::geom::ZPP_PartitionVertex o = __this->vertices;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(928)
-										{
-										}
-										HX_STACK_LINE(936)
-										{
-											HX_STACK_LINE(936)
-											o->helper = null();
-											HX_STACK_LINE(936)
-											Dynamic();
-										}
-										HX_STACK_LINE(937)
-										o->next = ::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool;
-										HX_STACK_LINE(938)
-										::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool = o;
-									}
-									HX_STACK_LINE(943)
-									return __this->vertices = null();
-								}
-								return null();
+						HX_STACK_LINE(943)
+						return __this->vertices = null();
+					}
+					return null();
+				}
+			};
+			struct _Function_3_2{
+				inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionedPoly_obj *__this){
+					HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",945);
+					{
+						HX_STACK_LINE(946)
+						::zpp_nape::geom::ZPP_PartitionVertex retnodes = __this->vertices->next;		HX_STACK_VAR(retnodes,"retnodes");
+						HX_STACK_LINE(947)
+						__this->vertices->prev->next = __this->vertices->next;
+						HX_STACK_LINE(948)
+						__this->vertices->next->prev = __this->vertices->prev;
+						HX_STACK_LINE(949)
+						__this->vertices->next = __this->vertices->prev = null();
+						HX_STACK_LINE(950)
+						{
+							HX_STACK_LINE(951)
+							::zpp_nape::geom::ZPP_PartitionVertex o = __this->vertices;		HX_STACK_VAR(o,"o");
+							HX_STACK_LINE(960)
+							{
+								HX_STACK_LINE(960)
+								o->helper = null();
+								HX_STACK_LINE(960)
+								Dynamic();
 							}
-						};
-						struct _Function_4_2{
-							inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionedPoly_obj *__this){
-								HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",945);
-								{
-									HX_STACK_LINE(946)
-									::zpp_nape::geom::ZPP_PartitionVertex retnodes = __this->vertices->next;		HX_STACK_VAR(retnodes,"retnodes");
-									HX_STACK_LINE(947)
-									__this->vertices->prev->next = __this->vertices->next;
-									HX_STACK_LINE(948)
-									__this->vertices->next->prev = __this->vertices->prev;
-									HX_STACK_LINE(949)
-									__this->vertices->next = __this->vertices->prev = null();
-									HX_STACK_LINE(950)
-									{
-										HX_STACK_LINE(951)
-										::zpp_nape::geom::ZPP_PartitionVertex o = __this->vertices;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(952)
-										{
-										}
-										HX_STACK_LINE(960)
-										{
-											HX_STACK_LINE(960)
-											o->helper = null();
-											HX_STACK_LINE(960)
-											Dynamic();
-										}
-										HX_STACK_LINE(961)
-										o->next = ::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool;
-										HX_STACK_LINE(962)
-										::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool = o;
-									}
-									HX_STACK_LINE(967)
-									__this->vertices = null();
-									HX_STACK_LINE(968)
-									return retnodes;
-								}
-								return null();
-							}
-						};
-						HX_STACK_LINE(924)
-						return (  (((bool((__this->vertices != null())) && bool((__this->vertices->prev == __this->vertices))))) ? ::zpp_nape::geom::ZPP_PartitionVertex(_Function_4_1::Block(__this)) : ::zpp_nape::geom::ZPP_PartitionVertex(_Function_4_2::Block(__this)) );
+							HX_STACK_LINE(961)
+							o->next = ::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool;
+							HX_STACK_LINE(962)
+							::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool = o;
+						}
+						HX_STACK_LINE(967)
+						__this->vertices = null();
+						HX_STACK_LINE(968)
+						return retnodes;
 					}
 					return null();
 				}
 			};
 			HX_STACK_LINE(915)
-			this->vertices = _Function_3_1::Block(this);
+			this->vertices = (  (((bool((this->vertices != null())) && bool((this->vertices->prev == this->vertices))))) ? ::zpp_nape::geom::ZPP_PartitionVertex(_Function_3_1::Block(this)) : ::zpp_nape::geom::ZPP_PartitionVertex(_Function_3_2::Block(this)) );
 		}
 		HX_STACK_LINE(972)
 		::zpp_nape::util::ZNPNode_ZPP_PartitionedPoly pre = null();		HX_STACK_VAR(pre,"pre");
@@ -1012,89 +912,70 @@ bool ZPP_PartitionedPoly_obj::remove_collinear_vertices( ){
 			}
 			struct _Function_3_1{
 				inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionVertex &p){
-					HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",723);
+					HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",732);
 					{
-						HX_STACK_LINE(724)
+						HX_STACK_LINE(733)
+						p->next = p->prev = null();
+						HX_STACK_LINE(734)
 						{
+							HX_STACK_LINE(735)
+							::zpp_nape::geom::ZPP_PartitionVertex o = p;		HX_STACK_VAR(o,"o");
+							HX_STACK_LINE(744)
+							{
+								HX_STACK_LINE(744)
+								o->helper = null();
+								HX_STACK_LINE(744)
+								Dynamic();
+							}
+							HX_STACK_LINE(745)
+							o->next = ::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool;
+							HX_STACK_LINE(746)
+							::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool = o;
 						}
-						struct _Function_4_1{
-							inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionVertex &p){
-								HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",732);
-								{
-									HX_STACK_LINE(733)
-									p->next = p->prev = null();
-									HX_STACK_LINE(734)
-									{
-										HX_STACK_LINE(735)
-										::zpp_nape::geom::ZPP_PartitionVertex o = p;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(736)
-										{
-										}
-										HX_STACK_LINE(744)
-										{
-											HX_STACK_LINE(744)
-											o->helper = null();
-											HX_STACK_LINE(744)
-											Dynamic();
-										}
-										HX_STACK_LINE(745)
-										o->next = ::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool;
-										HX_STACK_LINE(746)
-										::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool = o;
-									}
-									HX_STACK_LINE(751)
-									return p = null();
-								}
-								return null();
+						HX_STACK_LINE(751)
+						return p = null();
+					}
+					return null();
+				}
+			};
+			struct _Function_3_2{
+				inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionVertex &p){
+					HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",753);
+					{
+						HX_STACK_LINE(754)
+						::zpp_nape::geom::ZPP_PartitionVertex retnodes = p->next;		HX_STACK_VAR(retnodes,"retnodes");
+						HX_STACK_LINE(755)
+						p->prev->next = p->next;
+						HX_STACK_LINE(756)
+						p->next->prev = p->prev;
+						HX_STACK_LINE(757)
+						p->next = p->prev = null();
+						HX_STACK_LINE(758)
+						{
+							HX_STACK_LINE(759)
+							::zpp_nape::geom::ZPP_PartitionVertex o = p;		HX_STACK_VAR(o,"o");
+							HX_STACK_LINE(768)
+							{
+								HX_STACK_LINE(768)
+								o->helper = null();
+								HX_STACK_LINE(768)
+								Dynamic();
 							}
-						};
-						struct _Function_4_2{
-							inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionVertex &p){
-								HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",753);
-								{
-									HX_STACK_LINE(754)
-									::zpp_nape::geom::ZPP_PartitionVertex retnodes = p->next;		HX_STACK_VAR(retnodes,"retnodes");
-									HX_STACK_LINE(755)
-									p->prev->next = p->next;
-									HX_STACK_LINE(756)
-									p->next->prev = p->prev;
-									HX_STACK_LINE(757)
-									p->next = p->prev = null();
-									HX_STACK_LINE(758)
-									{
-										HX_STACK_LINE(759)
-										::zpp_nape::geom::ZPP_PartitionVertex o = p;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(760)
-										{
-										}
-										HX_STACK_LINE(768)
-										{
-											HX_STACK_LINE(768)
-											o->helper = null();
-											HX_STACK_LINE(768)
-											Dynamic();
-										}
-										HX_STACK_LINE(769)
-										o->next = ::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool;
-										HX_STACK_LINE(770)
-										::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool = o;
-									}
-									HX_STACK_LINE(775)
-									p = null();
-									HX_STACK_LINE(776)
-									return retnodes;
-								}
-								return null();
-							}
-						};
-						HX_STACK_LINE(732)
-						return (  (((bool((p != null())) && bool((p->prev == p))))) ? ::zpp_nape::geom::ZPP_PartitionVertex(_Function_4_1::Block(p)) : ::zpp_nape::geom::ZPP_PartitionVertex(_Function_4_2::Block(p)) );
+							HX_STACK_LINE(769)
+							o->next = ::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool;
+							HX_STACK_LINE(770)
+							::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool = o;
+						}
+						HX_STACK_LINE(775)
+						p = null();
+						HX_STACK_LINE(776)
+						return retnodes;
 					}
 					return null();
 				}
 			};
 			HX_STACK_LINE(723)
-			p = _Function_3_1::Block(p);
+			p = (  (((bool((p != null())) && bool((p->prev == p))))) ? ::zpp_nape::geom::ZPP_PartitionVertex(_Function_3_1::Block(p)) : ::zpp_nape::geom::ZPP_PartitionVertex(_Function_3_2::Block(p)) );
 			HX_STACK_LINE(779)
 			if (((p == null()))){
 				HX_STACK_LINE(780)
@@ -1168,89 +1049,70 @@ bool ZPP_PartitionedPoly_obj::remove_collinear_vertices( ){
 				}
 				struct _Function_4_1{
 					inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionVertex &p){
-						HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",816);
+						HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",825);
 						{
-							HX_STACK_LINE(817)
+							HX_STACK_LINE(826)
+							p->next = p->prev = null();
+							HX_STACK_LINE(827)
 							{
+								HX_STACK_LINE(828)
+								::zpp_nape::geom::ZPP_PartitionVertex o = p;		HX_STACK_VAR(o,"o");
+								HX_STACK_LINE(837)
+								{
+									HX_STACK_LINE(837)
+									o->helper = null();
+									HX_STACK_LINE(837)
+									Dynamic();
+								}
+								HX_STACK_LINE(838)
+								o->next = ::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool;
+								HX_STACK_LINE(839)
+								::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool = o;
 							}
-							struct _Function_5_1{
-								inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionVertex &p){
-									HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",825);
-									{
-										HX_STACK_LINE(826)
-										p->next = p->prev = null();
-										HX_STACK_LINE(827)
-										{
-											HX_STACK_LINE(828)
-											::zpp_nape::geom::ZPP_PartitionVertex o = p;		HX_STACK_VAR(o,"o");
-											HX_STACK_LINE(829)
-											{
-											}
-											HX_STACK_LINE(837)
-											{
-												HX_STACK_LINE(837)
-												o->helper = null();
-												HX_STACK_LINE(837)
-												Dynamic();
-											}
-											HX_STACK_LINE(838)
-											o->next = ::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool;
-											HX_STACK_LINE(839)
-											::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool = o;
-										}
-										HX_STACK_LINE(844)
-										return p = null();
-									}
-									return null();
+							HX_STACK_LINE(844)
+							return p = null();
+						}
+						return null();
+					}
+				};
+				struct _Function_4_2{
+					inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionVertex &p){
+						HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",846);
+						{
+							HX_STACK_LINE(847)
+							::zpp_nape::geom::ZPP_PartitionVertex retnodes = p->next;		HX_STACK_VAR(retnodes,"retnodes");
+							HX_STACK_LINE(848)
+							p->prev->next = p->next;
+							HX_STACK_LINE(849)
+							p->next->prev = p->prev;
+							HX_STACK_LINE(850)
+							p->next = p->prev = null();
+							HX_STACK_LINE(851)
+							{
+								HX_STACK_LINE(852)
+								::zpp_nape::geom::ZPP_PartitionVertex o = p;		HX_STACK_VAR(o,"o");
+								HX_STACK_LINE(861)
+								{
+									HX_STACK_LINE(861)
+									o->helper = null();
+									HX_STACK_LINE(861)
+									Dynamic();
 								}
-							};
-							struct _Function_5_2{
-								inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionVertex &p){
-									HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",846);
-									{
-										HX_STACK_LINE(847)
-										::zpp_nape::geom::ZPP_PartitionVertex retnodes = p->next;		HX_STACK_VAR(retnodes,"retnodes");
-										HX_STACK_LINE(848)
-										p->prev->next = p->next;
-										HX_STACK_LINE(849)
-										p->next->prev = p->prev;
-										HX_STACK_LINE(850)
-										p->next = p->prev = null();
-										HX_STACK_LINE(851)
-										{
-											HX_STACK_LINE(852)
-											::zpp_nape::geom::ZPP_PartitionVertex o = p;		HX_STACK_VAR(o,"o");
-											HX_STACK_LINE(853)
-											{
-											}
-											HX_STACK_LINE(861)
-											{
-												HX_STACK_LINE(861)
-												o->helper = null();
-												HX_STACK_LINE(861)
-												Dynamic();
-											}
-											HX_STACK_LINE(862)
-											o->next = ::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool;
-											HX_STACK_LINE(863)
-											::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool = o;
-										}
-										HX_STACK_LINE(868)
-										p = null();
-										HX_STACK_LINE(869)
-										return retnodes;
-									}
-									return null();
-								}
-							};
-							HX_STACK_LINE(825)
-							return (  (((bool((p != null())) && bool((p->prev == p))))) ? ::zpp_nape::geom::ZPP_PartitionVertex(_Function_5_1::Block(p)) : ::zpp_nape::geom::ZPP_PartitionVertex(_Function_5_2::Block(p)) );
+								HX_STACK_LINE(862)
+								o->next = ::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool;
+								HX_STACK_LINE(863)
+								::zpp_nape::geom::ZPP_PartitionVertex_obj::zpp_pool = o;
+							}
+							HX_STACK_LINE(868)
+							p = null();
+							HX_STACK_LINE(869)
+							return retnodes;
 						}
 						return null();
 					}
 				};
 				HX_STACK_LINE(816)
-				p = _Function_4_1::Block(p);
+				p = (  (((bool((p != null())) && bool((p->prev == p))))) ? ::zpp_nape::geom::ZPP_PartitionVertex(_Function_4_1::Block(p)) : ::zpp_nape::geom::ZPP_PartitionVertex(_Function_4_2::Block(p)) );
 				HX_STACK_LINE(872)
 				removed = true;
 				HX_STACK_LINE(873)
@@ -1287,9 +1149,6 @@ Void ZPP_PartitionedPoly_obj::init( ::zpp_nape::geom::ZPP_GeomVert P){
 			inline static Float Block( ::zpp_nape::geom::ZPP_GeomVert &P){
 				HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",636);
 				{
-					HX_STACK_LINE(637)
-					{
-					}
 					HX_STACK_LINE(661)
 					Float area = 0.0;		HX_STACK_VAR(area,"area");
 					HX_STACK_LINE(662)
@@ -1327,7 +1186,7 @@ while(((nite != L)));
 		HX_STACK_LINE(683)
 		do{
 			struct _Function_2_1{
-				inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_GeomVert &p,::zpp_nape::geom::ZPP_PartitionedPoly_obj *__this){
+				inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionedPoly_obj *__this,::zpp_nape::geom::ZPP_GeomVert &p){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",684);
 					{
 						struct _Function_3_1{
@@ -1363,9 +1222,6 @@ while(((nite != L)));
 										HX_STACK_LINE(685)
 										{
 										}
-										HX_STACK_LINE(685)
-										{
-										}
 									}
 									HX_STACK_LINE(685)
 									return ret;
@@ -1397,7 +1253,7 @@ while(((nite != L)));
 				}
 			};
 			struct _Function_2_2{
-				inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_GeomVert &p,::zpp_nape::geom::ZPP_PartitionedPoly_obj *__this){
+				inline static ::zpp_nape::geom::ZPP_PartitionVertex Block( ::zpp_nape::geom::ZPP_PartitionedPoly_obj *__this,::zpp_nape::geom::ZPP_GeomVert &p){
 					HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",695);
 					{
 						struct _Function_3_1{
@@ -1433,9 +1289,6 @@ while(((nite != L)));
 										HX_STACK_LINE(696)
 										{
 										}
-										HX_STACK_LINE(696)
-										{
-										}
 									}
 									HX_STACK_LINE(696)
 									return ret;
@@ -1467,7 +1320,7 @@ while(((nite != L)));
 				}
 			};
 			HX_STACK_LINE(684)
-			this->vertices = (  ((cw)) ? ::zpp_nape::geom::ZPP_PartitionVertex(_Function_2_1::Block(p,this)) : ::zpp_nape::geom::ZPP_PartitionVertex(_Function_2_2::Block(p,this)) );
+			this->vertices = (  ((cw)) ? ::zpp_nape::geom::ZPP_PartitionVertex(_Function_2_1::Block(this,p)) : ::zpp_nape::geom::ZPP_PartitionVertex(_Function_2_2::Block(this,p)) );
 			HX_STACK_LINE(706)
 			this->vertices->forced = p->forced;
 			HX_STACK_LINE(707)
@@ -1511,7 +1364,7 @@ bool ZPP_PartitionedPoly_obj::eq( ::zpp_nape::geom::ZPP_PartitionVertex a,::zpp_
 	HX_STACK_ARG(a,"a");
 	HX_STACK_ARG(b,"b");
 	struct _Function_1_1{
-		inline static Float Block( ::zpp_nape::geom::ZPP_PartitionVertex &a,::zpp_nape::geom::ZPP_PartitionVertex &b){
+		inline static Float Block( ::zpp_nape::geom::ZPP_PartitionVertex &b,::zpp_nape::geom::ZPP_PartitionVertex &a){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/PartitionedPoly.hx",590);
 			{
 				HX_STACK_LINE(590)
@@ -1532,7 +1385,7 @@ bool ZPP_PartitionedPoly_obj::eq( ::zpp_nape::geom::ZPP_PartitionVertex a,::zpp_
 		}
 	};
 	HX_STACK_LINE(589)
-	return (_Function_1_1::Block(a,b) < (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon));
+	return (_Function_1_1::Block(b,a) < (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon));
 }
 
 
@@ -1701,7 +1554,7 @@ Class ZPP_PartitionedPoly_obj::__mClass;
 
 void ZPP_PartitionedPoly_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_PartitionedPoly"), hx::TCanCast< ZPP_PartitionedPoly_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_PartitionedPoly"), hx::TCanCast< ZPP_PartitionedPoly_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

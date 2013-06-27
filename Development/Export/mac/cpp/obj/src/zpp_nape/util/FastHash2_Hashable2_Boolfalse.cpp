@@ -20,7 +20,7 @@ HX_STACK_PUSH("FastHash2_Hashable2_Boolfalse::new","zpp_nape/util/FastHash.hx",2
 	HX_STACK_LINE(260)
 	this->cnt = (int)0;
 	HX_STACK_LINE(262)
-	this->table = Array_obj< ::zpp_nape::util::Hashable2_Boolfalse >::__new();
+	this->table = Array_obj< ::Dynamic >::__new();
 	HX_STACK_LINE(263)
 	{
 		HX_STACK_LINE(263)
@@ -69,13 +69,10 @@ Void FastHash2_Hashable2_Boolfalse_obj::remove( ::zpp_nape::util::Hashable2_Bool
 		HX_STACK_PUSH("FastHash2_Hashable2_Boolfalse::remove","zpp_nape/util/FastHash.hx",382);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(arb,"arb");
-		HX_STACK_LINE(383)
-		{
-		}
 		HX_STACK_LINE(391)
 		int h = (int(((arb->id * (int)106039) + arb->di)) & int((int)1048575));		HX_STACK_VAR(h,"h");
 		HX_STACK_LINE(392)
-		::zpp_nape::util::Hashable2_Boolfalse n = this->table->__get(h);		HX_STACK_VAR(n,"n");
+		::zpp_nape::util::Hashable2_Boolfalse n = this->table->__get(h).StaticCast< ::zpp_nape::util::Hashable2_Boolfalse >();		HX_STACK_VAR(n,"n");
 		HX_STACK_LINE(393)
 		if (((n == arb))){
 			HX_STACK_LINE(393)
@@ -94,9 +91,6 @@ Void FastHash2_Hashable2_Boolfalse_obj::remove( ::zpp_nape::util::Hashable2_Bool
 					n = n->hnext;
 				}
 while(((bool((n != null())) && bool((n != arb)))));
-				HX_STACK_LINE(401)
-				{
-				}
 				HX_STACK_LINE(409)
 				pre->hnext = n->hnext;
 			}
@@ -117,13 +111,10 @@ Void FastHash2_Hashable2_Boolfalse_obj::add( ::zpp_nape::util::Hashable2_Boolfal
 		HX_STACK_PUSH("FastHash2_Hashable2_Boolfalse::add","zpp_nape/util/FastHash.hx",350);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(arb,"arb");
-		HX_STACK_LINE(351)
-		{
-		}
 		HX_STACK_LINE(359)
 		int h = (int(((arb->id * (int)106039) + arb->di)) & int((int)1048575));		HX_STACK_VAR(h,"h");
 		HX_STACK_LINE(360)
-		::zpp_nape::util::Hashable2_Boolfalse n = this->table->__get(h);		HX_STACK_VAR(n,"n");
+		::zpp_nape::util::Hashable2_Boolfalse n = this->table->__get(h).StaticCast< ::zpp_nape::util::Hashable2_Boolfalse >();		HX_STACK_VAR(n,"n");
 		HX_STACK_LINE(361)
 		if (((n == null()))){
 			HX_STACK_LINE(362)
@@ -151,13 +142,10 @@ Void FastHash2_Hashable2_Boolfalse_obj::maybeAdd( ::zpp_nape::util::Hashable2_Bo
 		HX_STACK_PUSH("FastHash2_Hashable2_Boolfalse::maybeAdd","zpp_nape/util/FastHash.hx",316);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(arb,"arb");
-		HX_STACK_LINE(317)
-		{
-		}
 		HX_STACK_LINE(325)
 		int h = (int(((arb->id * (int)106039) + arb->di)) & int((int)1048575));		HX_STACK_VAR(h,"h");
 		HX_STACK_LINE(326)
-		::zpp_nape::util::Hashable2_Boolfalse n = this->table->__get(h);		HX_STACK_VAR(n,"n");
+		::zpp_nape::util::Hashable2_Boolfalse n = this->table->__get(h).StaticCast< ::zpp_nape::util::Hashable2_Boolfalse >();		HX_STACK_VAR(n,"n");
 		HX_STACK_LINE(327)
 		bool cont = true;		HX_STACK_VAR(cont,"cont");
 		HX_STACK_LINE(328)
@@ -194,7 +182,7 @@ bool FastHash2_Hashable2_Boolfalse_obj::has( int id,int di){
 	HX_STACK_ARG(id,"id");
 	HX_STACK_ARG(di,"di");
 	HX_STACK_LINE(308)
-	::zpp_nape::util::Hashable2_Boolfalse n = this->table->__get((int(((id * (int)106039) + di)) & int((int)1048575)));		HX_STACK_VAR(n,"n");
+	::zpp_nape::util::Hashable2_Boolfalse n = this->table->__get((int(((id * (int)106039) + di)) & int((int)1048575))).StaticCast< ::zpp_nape::util::Hashable2_Boolfalse >();		HX_STACK_VAR(n,"n");
 	HX_STACK_LINE(309)
 	if (((n == null()))){
 		HX_STACK_LINE(309)
@@ -239,13 +227,13 @@ HX_DEFINE_DYNAMIC_FUNC2(FastHash2_Hashable2_Boolfalse_obj,has,return )
 		di = t;
 	}
 	struct _Function_1_1{
-		inline static ::zpp_nape::util::Hashable2_Boolfalse Block( ::zpp_nape::util::FastHash2_Hashable2_Boolfalse_obj *__this,int &id,int &di){
+		inline static ::zpp_nape::util::Hashable2_Boolfalse Block( ::zpp_nape::util::FastHash2_Hashable2_Boolfalse_obj *__this,int &di,int &id){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/FastHash.hx",305);
 			{
 				HX_STACK_LINE(305)
-				::zpp_nape::util::Hashable2_Boolfalse n = __this->table->__get((int(((id * (int)106039) + di)) & int((int)1048575)));		HX_STACK_VAR(n,"n");
+				::zpp_nape::util::Hashable2_Boolfalse n = __this->table->__get((int(((id * (int)106039) + di)) & int((int)1048575))).StaticCast< ::zpp_nape::util::Hashable2_Boolfalse >();		HX_STACK_VAR(n,"n");
 				struct _Function_2_1{
-					inline static ::zpp_nape::util::Hashable2_Boolfalse Block( ::zpp_nape::util::Hashable2_Boolfalse &n,int &id,int &di){
+					inline static ::zpp_nape::util::Hashable2_Boolfalse Block( int &di,::zpp_nape::util::Hashable2_Boolfalse &n,int &id){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/FastHash.hx",305);
 						{
 							HX_STACK_LINE(305)
@@ -261,13 +249,13 @@ while(((bool((n != null())) && bool(((bool((n->id != id)) || bool((n->di != di))
 					}
 				};
 				HX_STACK_LINE(305)
-				return (  (((n == null()))) ? ::zpp_nape::util::Hashable2_Boolfalse(null()) : ::zpp_nape::util::Hashable2_Boolfalse((  (((bool((n->id == id)) && bool((n->di == di))))) ? ::zpp_nape::util::Hashable2_Boolfalse(n) : ::zpp_nape::util::Hashable2_Boolfalse(_Function_2_1::Block(n,id,di)) )) );
+				return (  (((n == null()))) ? ::zpp_nape::util::Hashable2_Boolfalse(null()) : ::zpp_nape::util::Hashable2_Boolfalse((  (((bool((n->id == id)) && bool((n->di == di))))) ? ::zpp_nape::util::Hashable2_Boolfalse(n) : ::zpp_nape::util::Hashable2_Boolfalse(_Function_2_1::Block(di,n,id)) )) );
 			}
 			return null();
 		}
 	};
 	HX_STACK_LINE(305)
-	return _Function_1_1::Block(this,id,di);
+	return _Function_1_1::Block(this,di,id);
 }
 
 
@@ -279,7 +267,7 @@ HX_DEFINE_DYNAMIC_FUNC2(FastHash2_Hashable2_Boolfalse_obj,ordered_get,return )
 	HX_STACK_ARG(id,"id");
 	HX_STACK_ARG(di,"di");
 	HX_STACK_LINE(289)
-	::zpp_nape::util::Hashable2_Boolfalse n = this->table->__get((int(((id * (int)106039) + di)) & int((int)1048575)));		HX_STACK_VAR(n,"n");
+	::zpp_nape::util::Hashable2_Boolfalse n = this->table->__get((int(((id * (int)106039) + di)) & int((int)1048575))).StaticCast< ::zpp_nape::util::Hashable2_Boolfalse >();		HX_STACK_VAR(n,"n");
 	HX_STACK_LINE(290)
 	if (((n == null()))){
 		HX_STACK_LINE(290)
@@ -321,7 +309,7 @@ Void FastHash2_Hashable2_Boolfalse_obj::clear( ){
 			HX_STACK_LINE(273)
 			int i = (_g1)++;		HX_STACK_VAR(i,"i");
 			HX_STACK_LINE(274)
-			::zpp_nape::util::Hashable2_Boolfalse n = this->table->__get(i);		HX_STACK_VAR(n,"n");
+			::zpp_nape::util::Hashable2_Boolfalse n = this->table->__get(i).StaticCast< ::zpp_nape::util::Hashable2_Boolfalse >();		HX_STACK_VAR(n,"n");
 			HX_STACK_LINE(275)
 			if (((n == null()))){
 				HX_STACK_LINE(275)
@@ -413,7 +401,7 @@ Dynamic FastHash2_Hashable2_Boolfalse_obj::__SetField(const ::String &inName,con
 		if (HX_FIELD_EQ(inName,"cnt") ) { cnt=inValue.Cast< int >(); return inValue; }
 		break;
 	case 5:
-		if (HX_FIELD_EQ(inName,"table") ) { table=inValue.Cast< Array< ::zpp_nape::util::Hashable2_Boolfalse > >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"table") ) { table=inValue.Cast< Array< ::Dynamic > >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -454,7 +442,7 @@ Class FastHash2_Hashable2_Boolfalse_obj::__mClass;
 
 void FastHash2_Hashable2_Boolfalse_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.FastHash2_Hashable2_Boolfalse"), hx::TCanCast< FastHash2_Hashable2_Boolfalse_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.FastHash2_Hashable2_Boolfalse"), hx::TCanCast< FastHash2_Hashable2_Boolfalse_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -20,7 +20,7 @@ HX_STACK_PUSH("ZNPArray2_ZPP_GeomVert::new","zpp_nape/util/Array2.hx",235);
 	HX_STACK_LINE(243)
 	this->width = width;
 	HX_STACK_LINE(248)
-	this->list = Array_obj< ::zpp_nape::geom::ZPP_GeomVert >::__new();
+	this->list = Array_obj< ::Dynamic >::__new();
 }
 ;
 	return null();
@@ -45,10 +45,7 @@ Dynamic ZNPArray2_ZPP_GeomVert_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_ARG(x,"x");
 	HX_STACK_ARG(y,"y");
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(283)
-	{
-	}
-	HX_STACK_LINE(291)
+	HX_STACK_LINE(282)
 	return this->list[((y * this->width) + x)] = obj;
 }
 
@@ -60,11 +57,8 @@ HX_DEFINE_DYNAMIC_FUNC3(ZNPArray2_ZPP_GeomVert_obj,set,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(x,"x");
 	HX_STACK_ARG(y,"y");
-	HX_STACK_LINE(270)
-	{
-	}
-	HX_STACK_LINE(278)
-	return this->list->__get(((y * this->width) + x));
+	HX_STACK_LINE(269)
+	return this->list->__get(((y * this->width) + x)).StaticCast< ::zpp_nape::geom::ZPP_GeomVert >();
 }
 
 
@@ -141,7 +135,7 @@ Dynamic ZNPArray2_ZPP_GeomVert_obj::__SetField(const ::String &inName,const Dyna
 {
 	switch(inName.length) {
 	case 4:
-		if (HX_FIELD_EQ(inName,"list") ) { list=inValue.Cast< Array< ::zpp_nape::geom::ZPP_GeomVert > >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"list") ) { list=inValue.Cast< Array< ::Dynamic > >(); return inValue; }
 		break;
 	case 5:
 		if (HX_FIELD_EQ(inName,"width") ) { width=inValue.Cast< int >(); return inValue; }
@@ -179,7 +173,7 @@ Class ZNPArray2_ZPP_GeomVert_obj::__mClass;
 
 void ZNPArray2_ZPP_GeomVert_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPArray2_ZPP_GeomVert"), hx::TCanCast< ZNPArray2_ZPP_GeomVert_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPArray2_ZPP_GeomVert"), hx::TCanCast< ZNPArray2_ZPP_GeomVert_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -15,7 +15,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_ToiEvent_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_ToiEvent_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_ToiEvent_obj OBJ_;
@@ -35,26 +35,26 @@ class ZPP_ToiEvent_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("ZPP_ToiEvent"); }
 
-		bool kinematic; /* REM */ 
-		bool failed; /* REM */ 
-		bool slipped; /* REM */ 
-		::zpp_nape::geom::ZPP_Vec2 axis; /* REM */ 
-		::zpp_nape::geom::ZPP_Vec2 c2; /* REM */ 
-		::zpp_nape::geom::ZPP_Vec2 c1; /* REM */ 
-		bool frozen2; /* REM */ 
-		bool frozen1; /* REM */ 
-		::zpp_nape::dynamics::ZPP_ColArbiter arbiter; /* REM */ 
-		::zpp_nape::shape::ZPP_Shape s2; /* REM */ 
-		::zpp_nape::shape::ZPP_Shape s1; /* REM */ 
-		Float toi; /* REM */ 
+		bool kinematic;
+		bool failed;
+		bool slipped;
+		::zpp_nape::geom::ZPP_Vec2 axis;
+		::zpp_nape::geom::ZPP_Vec2 c2;
+		::zpp_nape::geom::ZPP_Vec2 c1;
+		bool frozen2;
+		bool frozen1;
+		::zpp_nape::dynamics::ZPP_ColArbiter arbiter;
+		::zpp_nape::shape::ZPP_Shape s2;
+		::zpp_nape::shape::ZPP_Shape s1;
+		Float toi;
 		virtual Void free( );
 		Dynamic free_dyn();
 
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
-		::zpp_nape::geom::ZPP_ToiEvent next; /* REM */ 
-		static ::zpp_nape::geom::ZPP_ToiEvent zpp_pool; /* REM */ 
+		::zpp_nape::geom::ZPP_ToiEvent next;
+		static ::zpp_nape::geom::ZPP_ToiEvent zpp_pool;
 };
 
 } // end namespace zpp_nape

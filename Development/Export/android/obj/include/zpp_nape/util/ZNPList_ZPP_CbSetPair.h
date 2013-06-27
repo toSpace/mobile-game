@@ -12,7 +12,7 @@ namespace zpp_nape{
 namespace util{
 
 
-class ZNPList_ZPP_CbSetPair_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZNPList_ZPP_CbSetPair_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZNPList_ZPP_CbSetPair_obj OBJ_;
@@ -116,13 +116,13 @@ class ZNPList_ZPP_CbSetPair_obj : public hx::Object{
 		virtual Void setbegin( ::zpp_nape::util::ZNPNode_ZPP_CbSetPair i);
 		Dynamic setbegin_dyn();
 
-		int length; /* REM */ 
-		bool pushmod; /* REM */ 
-		bool modified; /* REM */ 
+		int length;
+		bool pushmod;
+		bool modified;
 		virtual ::zpp_nape::util::ZNPNode_ZPP_CbSetPair begin( );
 		Dynamic begin_dyn();
 
-		::zpp_nape::util::ZNPNode_ZPP_CbSetPair head; /* REM */ 
+		::zpp_nape::util::ZNPNode_ZPP_CbSetPair head;
 };
 
 } // end namespace zpp_nape

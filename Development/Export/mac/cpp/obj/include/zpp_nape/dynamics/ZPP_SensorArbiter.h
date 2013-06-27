@@ -14,7 +14,7 @@ namespace zpp_nape{
 namespace dynamics{
 
 
-class ZPP_SensorArbiter_obj : public ::zpp_nape::dynamics::ZPP_Arbiter_obj{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_SensorArbiter_obj : public ::zpp_nape::dynamics::ZPP_Arbiter_obj{
 	public:
 		typedef ::zpp_nape::dynamics::ZPP_Arbiter_obj super;
 		typedef ZPP_SensorArbiter_obj OBJ_;
@@ -52,8 +52,8 @@ class ZPP_SensorArbiter_obj : public ::zpp_nape::dynamics::ZPP_Arbiter_obj{
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
-		::zpp_nape::dynamics::ZPP_SensorArbiter next; /* REM */ 
-		static ::zpp_nape::dynamics::ZPP_SensorArbiter zpp_pool; /* REM */ 
+		::zpp_nape::dynamics::ZPP_SensorArbiter next;
+		static ::zpp_nape::dynamics::ZPP_SensorArbiter zpp_pool;
 };
 
 } // end namespace zpp_nape

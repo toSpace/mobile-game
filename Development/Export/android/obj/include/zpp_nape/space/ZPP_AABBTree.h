@@ -12,7 +12,7 @@ namespace zpp_nape{
 namespace space{
 
 
-class ZPP_AABBTree_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_AABBTree_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_AABBTree_obj OBJ_;
@@ -50,8 +50,8 @@ class ZPP_AABBTree_obj : public hx::Object{
 		virtual Void clear( );
 		Dynamic clear_dyn();
 
-		::zpp_nape::space::ZPP_AABBNode root; /* REM */ 
-		static ::zpp_nape::geom::ZPP_AABB tmpaabb; /* REM */ 
+		::zpp_nape::space::ZPP_AABBNode root;
+		static ::zpp_nape::geom::ZPP_AABB tmpaabb;
 };
 
 } // end namespace zpp_nape

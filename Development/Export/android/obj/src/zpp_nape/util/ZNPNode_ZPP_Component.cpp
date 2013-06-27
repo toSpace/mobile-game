@@ -158,7 +158,7 @@ Class ZNPNode_ZPP_Component_obj::__mClass;
 
 void ZNPNode_ZPP_Component_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPNode_ZPP_Component"), hx::TCanCast< ZNPNode_ZPP_Component_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPNode_ZPP_Component"), hx::TCanCast< ZNPNode_ZPP_Component_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

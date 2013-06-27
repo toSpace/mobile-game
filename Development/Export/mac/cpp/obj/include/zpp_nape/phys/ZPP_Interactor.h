@@ -26,7 +26,7 @@ namespace zpp_nape{
 namespace phys{
 
 
-class ZPP_Interactor_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Interactor_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Interactor_obj OBJ_;
@@ -79,14 +79,14 @@ class ZPP_Interactor_obj : public hx::Object{
 		virtual Void setupcbTypes( );
 		Dynamic setupcbTypes_dyn();
 
-		::nape::callbacks::CbTypeList wrap_cbTypes; /* REM */ 
-		::zpp_nape::callbacks::ZPP_CbSet cbSet; /* REM */ 
-		::zpp_nape::util::ZNPList_ZPP_CbType cbTypes; /* REM */ 
-		::zpp_nape::dynamics::ZPP_InteractionGroup group; /* REM */ 
+		::nape::callbacks::CbTypeList wrap_cbTypes;
+		::zpp_nape::callbacks::ZPP_CbSet cbSet;
+		::zpp_nape::util::ZNPList_ZPP_CbType cbTypes;
+		::zpp_nape::dynamics::ZPP_InteractionGroup group;
 		virtual ::zpp_nape::space::ZPP_Space getSpace( );
 		Dynamic getSpace_dyn();
 
-		::zpp_nape::util::ZNPList_ZPP_CallbackSet cbsets; /* REM */ 
+		::zpp_nape::util::ZNPList_ZPP_CallbackSet cbsets;
 		virtual Void wake( );
 		Dynamic wake_dyn();
 
@@ -105,12 +105,12 @@ class ZPP_Interactor_obj : public hx::Object{
 		virtual bool isShape( );
 		Dynamic isShape_dyn();
 
-		::zpp_nape::phys::ZPP_Compound icompound; /* REM */ 
-		::zpp_nape::phys::ZPP_Body ibody; /* REM */ 
-		::zpp_nape::shape::ZPP_Shape ishape; /* REM */ 
-		Dynamic userData; /* REM */ 
-		int id; /* REM */ 
-		::nape::phys::Interactor outer_i; /* REM */ 
+		::zpp_nape::phys::ZPP_Compound icompound;
+		::zpp_nape::phys::ZPP_Body ibody;
+		::zpp_nape::shape::ZPP_Shape ishape;
+		Dynamic userData;
+		int id;
+		::nape::phys::Interactor outer_i;
 		static ::zpp_nape::space::ZPP_CallbackSet get( ::zpp_nape::phys::ZPP_Interactor i1,::zpp_nape::phys::ZPP_Interactor i2);
 		static Dynamic get_dyn();
 

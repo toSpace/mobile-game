@@ -19,7 +19,7 @@ namespace zpp_nape{
 namespace callbacks{
 
 
-class ZPP_BodyListener_obj : public ::zpp_nape::callbacks::ZPP_Listener_obj{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_BodyListener_obj : public ::zpp_nape::callbacks::ZPP_Listener_obj{
 	public:
 		typedef ::zpp_nape::callbacks::ZPP_Listener_obj super;
 		typedef ZPP_BodyListener_obj OBJ_;
@@ -53,10 +53,10 @@ class ZPP_BodyListener_obj : public ::zpp_nape::callbacks::ZPP_Listener_obj{
 		virtual Void immutable_options( );
 		Dynamic immutable_options_dyn();
 
-		Dynamic handler; /* REM */ 
+		Dynamic handler;
 		Dynamic &handler_dyn() { return handler;}
-		::zpp_nape::callbacks::ZPP_OptionType options; /* REM */ 
-		::nape::callbacks::BodyListener outer_zn; /* REM */ 
+		::zpp_nape::callbacks::ZPP_OptionType options;
+		::nape::callbacks::BodyListener outer_zn;
 };
 
 } // end namespace zpp_nape

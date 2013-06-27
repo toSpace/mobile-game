@@ -46,9 +46,6 @@ Dynamic ZNPList_ConvexResult_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_PUSH("ZNPList_ConvexResult::at","zpp_nape/util/Lists.hx",13922);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(13923)
-	{
-	}
 	HX_STACK_LINE(13931)
 	::zpp_nape::util::ZNPNode_ConvexResult it = this->iterator_at(ind);		HX_STACK_VAR(it,"it");
 	HX_STACK_LINE(13932)
@@ -62,9 +59,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ConvexResult_obj,at,return )
 	HX_STACK_PUSH("ZNPList_ConvexResult::iterator_at","zpp_nape/util/Lists.hx",13909);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(13910)
-	{
-	}
 	HX_STACK_LINE(13918)
 	::zpp_nape::util::ZNPNode_ConvexResult ret = this->head;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(13919)
@@ -114,9 +108,6 @@ bool ZNPList_ConvexResult_obj::inlined_has( ::nape::geom::ConvexResult obj){
 	HX_STACK_PUSH("ZNPList_ConvexResult::inlined_has","zpp_nape/util/Lists.hx",13867);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(13868)
-	{
-	}
 	HX_STACK_LINE(13876)
 	bool ret;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(13877)
@@ -158,9 +149,6 @@ bool ZNPList_ConvexResult_obj::has( ::nape::geom::ConvexResult obj){
 		inline static bool Block( ::zpp_nape::util::ZNPList_ConvexResult_obj *__this,::nape::geom::ConvexResult &obj){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",13863);
 			{
-				HX_STACK_LINE(13863)
-				{
-				}
 				HX_STACK_LINE(13863)
 				bool ret;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(13863)
@@ -259,22 +247,13 @@ Void ZNPList_ConvexResult_obj::inlined_clear( ){
 		HX_STACK_LINE(13835)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(13835)
-			{
-			}
-			HX_STACK_LINE(13835)
 			::zpp_nape::util::ZNPNode_ConvexResult ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(13835)
 			this->head = ret->next;
 			HX_STACK_LINE(13835)
 			{
-			}
-			HX_STACK_LINE(13835)
-			{
 				HX_STACK_LINE(13835)
 				::zpp_nape::util::ZNPNode_ConvexResult o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(13835)
-				{
-				}
 				HX_STACK_LINE(13835)
 				o->elt = null();
 				HX_STACK_LINE(13835)
@@ -308,22 +287,13 @@ Void ZNPList_ConvexResult_obj::clear( ){
 		HX_STACK_LINE(13829)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(13829)
-			{
-			}
-			HX_STACK_LINE(13829)
 			::zpp_nape::util::ZNPNode_ConvexResult ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(13829)
 			this->head = ret->next;
 			HX_STACK_LINE(13829)
 			{
-			}
-			HX_STACK_LINE(13829)
-			{
 				HX_STACK_LINE(13829)
 				::zpp_nape::util::ZNPNode_ConvexResult o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(13829)
-				{
-				}
 				HX_STACK_LINE(13829)
 				o->elt = null();
 				HX_STACK_LINE(13829)
@@ -371,9 +341,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ConvexResult_obj,splice,return )
 	HX_STACK_PUSH("ZNPList_ConvexResult::inlined_erase","zpp_nape/util/Lists.hx",13778);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
-	HX_STACK_LINE(13779)
-	{
-	}
 	HX_STACK_LINE(13787)
 	::zpp_nape::util::ZNPNode_ConvexResult old;		HX_STACK_VAR(old,"old");
 	HX_STACK_LINE(13788)
@@ -405,16 +372,10 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ConvexResult_obj,splice,return )
 			this->pushmod = true;
 		}
 	}
-	HX_STACK_LINE(13801)
-	{
-	}
 	HX_STACK_LINE(13802)
 	{
 		HX_STACK_LINE(13803)
 		::zpp_nape::util::ZNPNode_ConvexResult o = old;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(13804)
-		{
-		}
 		HX_STACK_LINE(13812)
 		o->elt = null();
 		HX_STACK_LINE(13813)
@@ -440,12 +401,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ConvexResult_obj,inlined_erase,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
 	struct _Function_1_1{
-		inline static ::zpp_nape::util::ZNPNode_ConvexResult Block( ::zpp_nape::util::ZNPNode_ConvexResult &pre,::zpp_nape::util::ZNPList_ConvexResult_obj *__this){
+		inline static ::zpp_nape::util::ZNPNode_ConvexResult Block( ::zpp_nape::util::ZNPList_ConvexResult_obj *__this,::zpp_nape::util::ZNPNode_ConvexResult &pre){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",13774);
 			{
-				HX_STACK_LINE(13774)
-				{
-				}
 				HX_STACK_LINE(13774)
 				::zpp_nape::util::ZNPNode_ConvexResult old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(13774)
@@ -479,14 +437,8 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ConvexResult_obj,inlined_erase,return )
 				}
 				HX_STACK_LINE(13774)
 				{
-				}
-				HX_STACK_LINE(13774)
-				{
 					HX_STACK_LINE(13774)
 					::zpp_nape::util::ZNPNode_ConvexResult o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(13774)
-					{
-					}
 					HX_STACK_LINE(13774)
 					o->elt = null();
 					HX_STACK_LINE(13774)
@@ -507,7 +459,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ConvexResult_obj,inlined_erase,return )
 		}
 	};
 	HX_STACK_LINE(13773)
-	return _Function_1_1::Block(pre,this);
+	return _Function_1_1::Block(this,pre);
 }
 
 
@@ -517,9 +469,6 @@ bool ZNPList_ConvexResult_obj::inlined_try_remove( ::nape::geom::ConvexResult ob
 	HX_STACK_PUSH("ZNPList_ConvexResult::inlined_try_remove","zpp_nape/util/Lists.hx",13750);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(13751)
-	{
-	}
 	HX_STACK_LINE(13759)
 	::zpp_nape::util::ZNPNode_ConvexResult pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(13760)
@@ -532,9 +481,6 @@ bool ZNPList_ConvexResult_obj::inlined_try_remove( ::nape::geom::ConvexResult ob
 		if (((cur->elt == obj))){
 			HX_STACK_LINE(13764)
 			{
-				HX_STACK_LINE(13764)
-				{
-				}
 				HX_STACK_LINE(13764)
 				::zpp_nape::util::ZNPNode_ConvexResult old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(13764)
@@ -568,14 +514,8 @@ bool ZNPList_ConvexResult_obj::inlined_try_remove( ::nape::geom::ConvexResult ob
 				}
 				HX_STACK_LINE(13764)
 				{
-				}
-				HX_STACK_LINE(13764)
-				{
 					HX_STACK_LINE(13764)
 					::zpp_nape::util::ZNPNode_ConvexResult o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(13764)
-					{
-					}
 					HX_STACK_LINE(13764)
 					o->elt = null();
 					HX_STACK_LINE(13764)
@@ -614,99 +554,81 @@ Void ZNPList_ConvexResult_obj::inlined_remove( ::nape::geom::ConvexResult obj){
 		HX_STACK_PUSH("ZNPList_ConvexResult::inlined_remove","zpp_nape/util/Lists.hx",13737);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(13738)
-		{
-		}
 		HX_STACK_LINE(13746)
-		{
+		::zpp_nape::util::ZNPNode_ConvexResult pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(13746)
+		::zpp_nape::util::ZNPNode_ConvexResult cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(13746)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(13746)
+		while(((cur != null()))){
 			HX_STACK_LINE(13746)
-			{
-			}
-			HX_STACK_LINE(13746)
-			::zpp_nape::util::ZNPNode_ConvexResult pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(13746)
-			::zpp_nape::util::ZNPNode_ConvexResult cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(13746)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(13746)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(13746)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(13746)
+					::zpp_nape::util::ZNPNode_ConvexResult old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(13746)
+					::zpp_nape::util::ZNPNode_ConvexResult ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(13746)
+					if (((pre == null()))){
+						HX_STACK_LINE(13746)
+						old = this->head;
+						HX_STACK_LINE(13746)
+						ret1 = old->next;
+						HX_STACK_LINE(13746)
+						this->head = ret1;
+						HX_STACK_LINE(13746)
+						if (((this->head == null()))){
+							HX_STACK_LINE(13746)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(13746)
+						old = pre->next;
+						HX_STACK_LINE(13746)
+						ret1 = old->next;
+						HX_STACK_LINE(13746)
+						pre->next = ret1;
+						HX_STACK_LINE(13746)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(13746)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(13746)
 					{
 						HX_STACK_LINE(13746)
-						{
-						}
+						::zpp_nape::util::ZNPNode_ConvexResult o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(13746)
-						::zpp_nape::util::ZNPNode_ConvexResult old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(13746)
-						::zpp_nape::util::ZNPNode_ConvexResult ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_ConvexResult_obj::zpp_pool;
 						HX_STACK_LINE(13746)
-						if (((pre == null()))){
-							HX_STACK_LINE(13746)
-							old = this->head;
-							HX_STACK_LINE(13746)
-							ret1 = old->next;
-							HX_STACK_LINE(13746)
-							this->head = ret1;
-							HX_STACK_LINE(13746)
-							if (((this->head == null()))){
-								HX_STACK_LINE(13746)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(13746)
-							old = pre->next;
-							HX_STACK_LINE(13746)
-							ret1 = old->next;
-							HX_STACK_LINE(13746)
-							pre->next = ret1;
-							HX_STACK_LINE(13746)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(13746)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(13746)
-						{
-						}
-						HX_STACK_LINE(13746)
-						{
-							HX_STACK_LINE(13746)
-							::zpp_nape::util::ZNPNode_ConvexResult o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(13746)
-							{
-							}
-							HX_STACK_LINE(13746)
-							o->elt = null();
-							HX_STACK_LINE(13746)
-							o->next = ::zpp_nape::util::ZNPNode_ConvexResult_obj::zpp_pool;
-							HX_STACK_LINE(13746)
-							::zpp_nape::util::ZNPNode_ConvexResult_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(13746)
-						this->modified = true;
-						HX_STACK_LINE(13746)
-						(this->length)--;
-						HX_STACK_LINE(13746)
-						this->pushmod = true;
-						HX_STACK_LINE(13746)
-						ret1;
+						::zpp_nape::util::ZNPNode_ConvexResult_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(13746)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(13746)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(13746)
+					this->pushmod = true;
+					HX_STACK_LINE(13746)
+					ret1;
 				}
 				HX_STACK_LINE(13746)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(13746)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(13746)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(13746)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(13746)
+		ret;
 	}
 return null();
 }
@@ -718,9 +640,6 @@ bool ZNPList_ConvexResult_obj::try_remove( ::nape::geom::ConvexResult obj){
 	HX_STACK_PUSH("ZNPList_ConvexResult::try_remove","zpp_nape/util/Lists.hx",13712);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(13713)
-	{
-	}
 	HX_STACK_LINE(13721)
 	::zpp_nape::util::ZNPNode_ConvexResult pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(13722)
@@ -755,99 +674,81 @@ Void ZNPList_ConvexResult_obj::remove( ::nape::geom::ConvexResult obj){
 		HX_STACK_PUSH("ZNPList_ConvexResult::remove","zpp_nape/util/Lists.hx",13701);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(13702)
-		{
-		}
 		HX_STACK_LINE(13710)
-		{
+		::zpp_nape::util::ZNPNode_ConvexResult pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(13710)
+		::zpp_nape::util::ZNPNode_ConvexResult cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(13710)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(13710)
+		while(((cur != null()))){
 			HX_STACK_LINE(13710)
-			{
-			}
-			HX_STACK_LINE(13710)
-			::zpp_nape::util::ZNPNode_ConvexResult pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(13710)
-			::zpp_nape::util::ZNPNode_ConvexResult cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(13710)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(13710)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(13710)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(13710)
+					::zpp_nape::util::ZNPNode_ConvexResult old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(13710)
+					::zpp_nape::util::ZNPNode_ConvexResult ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(13710)
+					if (((pre == null()))){
+						HX_STACK_LINE(13710)
+						old = this->head;
+						HX_STACK_LINE(13710)
+						ret1 = old->next;
+						HX_STACK_LINE(13710)
+						this->head = ret1;
+						HX_STACK_LINE(13710)
+						if (((this->head == null()))){
+							HX_STACK_LINE(13710)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(13710)
+						old = pre->next;
+						HX_STACK_LINE(13710)
+						ret1 = old->next;
+						HX_STACK_LINE(13710)
+						pre->next = ret1;
+						HX_STACK_LINE(13710)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(13710)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(13710)
 					{
 						HX_STACK_LINE(13710)
-						{
-						}
+						::zpp_nape::util::ZNPNode_ConvexResult o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(13710)
-						::zpp_nape::util::ZNPNode_ConvexResult old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(13710)
-						::zpp_nape::util::ZNPNode_ConvexResult ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_ConvexResult_obj::zpp_pool;
 						HX_STACK_LINE(13710)
-						if (((pre == null()))){
-							HX_STACK_LINE(13710)
-							old = this->head;
-							HX_STACK_LINE(13710)
-							ret1 = old->next;
-							HX_STACK_LINE(13710)
-							this->head = ret1;
-							HX_STACK_LINE(13710)
-							if (((this->head == null()))){
-								HX_STACK_LINE(13710)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(13710)
-							old = pre->next;
-							HX_STACK_LINE(13710)
-							ret1 = old->next;
-							HX_STACK_LINE(13710)
-							pre->next = ret1;
-							HX_STACK_LINE(13710)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(13710)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(13710)
-						{
-						}
-						HX_STACK_LINE(13710)
-						{
-							HX_STACK_LINE(13710)
-							::zpp_nape::util::ZNPNode_ConvexResult o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(13710)
-							{
-							}
-							HX_STACK_LINE(13710)
-							o->elt = null();
-							HX_STACK_LINE(13710)
-							o->next = ::zpp_nape::util::ZNPNode_ConvexResult_obj::zpp_pool;
-							HX_STACK_LINE(13710)
-							::zpp_nape::util::ZNPNode_ConvexResult_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(13710)
-						this->modified = true;
-						HX_STACK_LINE(13710)
-						(this->length)--;
-						HX_STACK_LINE(13710)
-						this->pushmod = true;
-						HX_STACK_LINE(13710)
-						ret1;
+						::zpp_nape::util::ZNPNode_ConvexResult_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(13710)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(13710)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(13710)
+					this->pushmod = true;
+					HX_STACK_LINE(13710)
+					ret1;
 				}
 				HX_STACK_LINE(13710)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(13710)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(13710)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(13710)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(13710)
+		ret;
 	}
 return null();
 }
@@ -858,9 +759,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ConvexResult_obj,remove,(void))
 ::nape::geom::ConvexResult ZNPList_ConvexResult_obj::inlined_pop_unsafe( ){
 	HX_STACK_PUSH("ZNPList_ConvexResult::inlined_pop_unsafe","zpp_nape/util/Lists.hx",13688);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(13689)
-	{
-	}
 	HX_STACK_LINE(13697)
 	::nape::geom::ConvexResult ret = this->head->elt;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(13698)
@@ -879,9 +777,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ConvexResult_obj,inlined_pop_unsafe,return )
 		inline static ::nape::geom::ConvexResult Block( ::zpp_nape::util::ZNPList_ConvexResult_obj *__this){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",13684);
 			{
-				HX_STACK_LINE(13684)
-				{
-				}
 				HX_STACK_LINE(13684)
 				::nape::geom::ConvexResult ret = __this->head->elt;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(13684)
@@ -903,23 +798,14 @@ Void ZNPList_ConvexResult_obj::inlined_pop( ){
 {
 		HX_STACK_PUSH("ZNPList_ConvexResult::inlined_pop","zpp_nape/util/Lists.hx",13650);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(13651)
-		{
-		}
 		HX_STACK_LINE(13659)
 		::zpp_nape::util::ZNPNode_ConvexResult ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(13660)
 		this->head = ret->next;
-		HX_STACK_LINE(13661)
-		{
-		}
 		HX_STACK_LINE(13662)
 		{
 			HX_STACK_LINE(13663)
 			::zpp_nape::util::ZNPNode_ConvexResult o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(13664)
-			{
-			}
 			HX_STACK_LINE(13672)
 			o->elt = null();
 			HX_STACK_LINE(13673)
@@ -948,22 +834,13 @@ Void ZNPList_ConvexResult_obj::pop( ){
 		HX_STACK_PUSH("ZNPList_ConvexResult::pop","zpp_nape/util/Lists.hx",13645);
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(13646)
-		{
-		}
-		HX_STACK_LINE(13646)
 		::zpp_nape::util::ZNPNode_ConvexResult ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(13646)
 		this->head = ret->next;
 		HX_STACK_LINE(13646)
 		{
-		}
-		HX_STACK_LINE(13646)
-		{
 			HX_STACK_LINE(13646)
 			::zpp_nape::util::ZNPNode_ConvexResult o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(13646)
-			{
-			}
 			HX_STACK_LINE(13646)
 			o->elt = null();
 			HX_STACK_LINE(13646)
@@ -992,9 +869,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ConvexResult_obj,pop,(void))
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(13603)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ConvexResult Block( ::nape::geom::ConvexResult &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",13611);
@@ -1062,9 +936,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ConvexResult_obj,inlined_insert,return )
 		inline static ::zpp_nape::util::ZNPNode_ConvexResult Block( ::zpp_nape::util::ZNPList_ConvexResult_obj *__this,::nape::geom::ConvexResult &o,::zpp_nape::util::ZNPNode_ConvexResult &cur){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",13598);
 			{
-				HX_STACK_LINE(13598)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ConvexResult Block( ::nape::geom::ConvexResult &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",13598);
@@ -1134,22 +1005,16 @@ Void ZNPList_ConvexResult_obj::addAll( ::zpp_nape::util::ZNPList_ConvexResult x)
 		HX_STACK_PUSH("ZNPList_ConvexResult::addAll","zpp_nape/util/Lists.hx",13579);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(13580)
-		{
-		}
-		HX_STACK_LINE(13588)
-		{
-			HX_STACK_LINE(13589)
-			::zpp_nape::util::ZNPNode_ConvexResult cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
-			HX_STACK_LINE(13590)
-			while(((cx_ite != null()))){
-				HX_STACK_LINE(13591)
-				::nape::geom::ConvexResult i = cx_ite->elt;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(13592)
-				this->add(i);
-				HX_STACK_LINE(13593)
-				cx_ite = cx_ite->next;
-			}
+		HX_STACK_LINE(13589)
+		::zpp_nape::util::ZNPNode_ConvexResult cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+		HX_STACK_LINE(13590)
+		while(((cx_ite != null()))){
+			HX_STACK_LINE(13591)
+			::nape::geom::ConvexResult i = cx_ite->elt;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(13592)
+			this->add(i);
+			HX_STACK_LINE(13593)
+			cx_ite = cx_ite->next;
 		}
 	}
 return null();
@@ -1162,9 +1027,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ConvexResult_obj,addAll,(void))
 	HX_STACK_PUSH("ZNPList_ConvexResult::inlined_add","zpp_nape/util/Lists.hx",13542);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(13543)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ConvexResult Block( ::nape::geom::ConvexResult &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",13551);
@@ -1219,12 +1081,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ConvexResult_obj,inlined_add,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
 	struct _Function_1_1{
-		inline static ::nape::geom::ConvexResult Block( ::nape::geom::ConvexResult &o,::zpp_nape::util::ZNPList_ConvexResult_obj *__this){
+		inline static ::nape::geom::ConvexResult Block( ::zpp_nape::util::ZNPList_ConvexResult_obj *__this,::nape::geom::ConvexResult &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",13538);
 			{
-				HX_STACK_LINE(13538)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ConvexResult Block( ::nape::geom::ConvexResult &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",13538);
@@ -1274,7 +1133,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ConvexResult_obj,inlined_add,return )
 		}
 	};
 	HX_STACK_LINE(13537)
-	return _Function_1_1::Block(o,this);
+	return _Function_1_1::Block(this,o);
 }
 
 
@@ -1472,7 +1331,7 @@ Class ZNPList_ConvexResult_obj::__mClass;
 
 void ZNPList_ConvexResult_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ConvexResult"), hx::TCanCast< ZNPList_ConvexResult_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ConvexResult"), hx::TCanCast< ZNPList_ConvexResult_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

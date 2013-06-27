@@ -1,23 +1,23 @@
 //nme
-import nme.display.FPS;
-import nme.display.Stage;
-import nme.display.StageAlign;
-import nme.display.StageScaleMode;
-import nme.display.DisplayObject;
-import nme.display.Sprite;
-import nme.events.Event;
-import nme.events.EventDispatcher;
-import nme.events.MouseEvent;
-import nme.events.KeyboardEvent;
-import nme.Lib;
+import openfl.display.FPS;
+import flash.display.Stage;
+import flash.display.StageAlign;
+import flash.display.StageScaleMode;
+import flash.display.DisplayObject;
+import flash.display.Sprite;
+import flash.events.Event;
+import flash.events.EventDispatcher;
+import flash.events.MouseEvent;
+import flash.events.KeyboardEvent;
+import flash.Lib;
 
 //nape
 import nape.space.Space;
 import nape.geom.Vec2;
 
 #if (flash && debug)
-import nape.util.Debug;
-import nape.util.BitmapDebug;
+//import nape.util.Debug;
+//import nape.util.BitmapDebug;
 #end
 
 class Main 
@@ -29,12 +29,11 @@ class Main
     public static var activeLevel:Dynamic;
 
     #if (flash && debug)
-	   public static var debug:Debug;
+	   //public static var debug:Debug;
     #end
 
     public function new() 
     {
-
         stage = Lib.current.stage;
         stage.scaleMode = StageScaleMode.NO_SCALE;
         stage.align = StageAlign.TOP_LEFT;
@@ -45,7 +44,7 @@ class Main
 
         //make canvas
         canvas = new Sprite();
-        Lib.current.addChild( canvas );
+        stage.addChild( canvas );
 
         //Initialize tools
         Mobile.setSizes();
@@ -59,15 +58,18 @@ class Main
 
         //add debugtools
         #if (debug || tools)
-            canvas.addChild( debug.display );
+            //canvas.addChild( debug.display );
             stage.addEventListener(KeyboardEvent.KEY_DOWN, Camera.keyboard);
         #end
 
         //load first level
         Level.load('World1Level1');
 
+        /*
         //FPS
-        stage.addChild( new FPS(0,0) );
+        //stage.addChild( new FPS(0,0) );
+
+        */
 
     }
 

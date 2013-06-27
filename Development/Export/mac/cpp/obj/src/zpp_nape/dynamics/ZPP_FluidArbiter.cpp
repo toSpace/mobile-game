@@ -140,9 +140,6 @@ HX_STACK_PUSH("ZPP_FluidArbiter::new","zpp_nape/dynamics/Arbiter.hx",445);
 		this->buoyx = (int)0;
 		HX_STACK_LINE(578)
 		this->buoyy = (int)0;
-		HX_STACK_LINE(579)
-		{
-		}
 		HX_STACK_LINE(587)
 		{
 		}
@@ -181,12 +178,6 @@ Void ZPP_FluidArbiter_obj::applyImpulseVel( ){
 			Float jx = (((this->b1->velx + this->b1->kinvelx) - (this->r1y * w1)) - (((this->b2->velx + this->b2->kinvelx) - (this->r2y * w2))));		HX_STACK_VAR(jx,"jx");
 			HX_STACK_LINE(1306)
 			Float jy = (((this->b1->vely + this->b1->kinvely) + (this->r1x * w1)) - (((this->b2->vely + this->b2->kinvely) + (this->r2x * w2))));		HX_STACK_VAR(jy,"jy");
-			HX_STACK_LINE(1307)
-			{
-			}
-			HX_STACK_LINE(1315)
-			{
-			}
 			HX_STACK_LINE(1323)
 			{
 				HX_STACK_LINE(1324)
@@ -200,9 +191,6 @@ Void ZPP_FluidArbiter_obj::applyImpulseVel( ){
 			{
 				HX_STACK_LINE(1329)
 				Float t = this->lgamma;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(1330)
-				{
-				}
 				HX_STACK_LINE(1338)
 				hx::SubEq(jx,(this->dampx * t));
 				HX_STACK_LINE(1339)
@@ -212,9 +200,6 @@ Void ZPP_FluidArbiter_obj::applyImpulseVel( ){
 			{
 				HX_STACK_LINE(1342)
 				Float t = 1.0;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(1343)
-				{
-				}
 				HX_STACK_LINE(1351)
 				hx::AddEq(this->dampx,(jx * t));
 				HX_STACK_LINE(1352)
@@ -224,9 +209,6 @@ Void ZPP_FluidArbiter_obj::applyImpulseVel( ){
 			{
 				HX_STACK_LINE(1355)
 				Float t = this->b1->imass;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(1356)
-				{
-				}
 				HX_STACK_LINE(1364)
 				hx::SubEq(this->b1->velx,(jx * t));
 				HX_STACK_LINE(1365)
@@ -236,9 +218,6 @@ Void ZPP_FluidArbiter_obj::applyImpulseVel( ){
 			{
 				HX_STACK_LINE(1368)
 				Float t = this->b2->imass;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(1369)
-				{
-				}
 				HX_STACK_LINE(1377)
 				hx::AddEq(this->b2->velx,(jx * t));
 				HX_STACK_LINE(1378)
@@ -272,9 +251,6 @@ Void ZPP_FluidArbiter_obj::warmStart( ){
 		{
 			HX_STACK_LINE(1269)
 			Float t = this->b1->imass;		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(1270)
-			{
-			}
 			HX_STACK_LINE(1278)
 			hx::SubEq(this->b1->velx,(this->dampx * t));
 			HX_STACK_LINE(1279)
@@ -284,9 +260,6 @@ Void ZPP_FluidArbiter_obj::warmStart( ){
 		{
 			HX_STACK_LINE(1282)
 			Float t = this->b2->imass;		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(1283)
-			{
-			}
 			HX_STACK_LINE(1291)
 			hx::AddEq(this->b2->velx,(this->dampx * t));
 			HX_STACK_LINE(1292)
@@ -346,9 +319,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 			g1x = this->ws1->fluidProperties->gravityx;
 			HX_STACK_LINE(724)
 			g1y = this->ws1->fluidProperties->gravityy;
-			HX_STACK_LINE(725)
-			{
-			}
 			HX_STACK_LINE(733)
 			{
 			}
@@ -358,9 +328,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 			g1x = s->gravityx;
 			HX_STACK_LINE(744)
 			g1y = s->gravityy;
-			HX_STACK_LINE(745)
-			{
-			}
 			HX_STACK_LINE(753)
 			{
 			}
@@ -375,9 +342,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 			g2x = this->ws2->fluidProperties->gravityx;
 			HX_STACK_LINE(766)
 			g2y = this->ws2->fluidProperties->gravityy;
-			HX_STACK_LINE(767)
-			{
-			}
 			HX_STACK_LINE(775)
 			{
 			}
@@ -387,9 +351,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 			g2x = s->gravityx;
 			HX_STACK_LINE(786)
 			g2y = s->gravityy;
-			HX_STACK_LINE(787)
-			{
-			}
 			HX_STACK_LINE(795)
 			{
 			}
@@ -398,12 +359,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 		Float buoyx = (int)0;		HX_STACK_VAR(buoyx,"buoyx");
 		HX_STACK_LINE(805)
 		Float buoyy = (int)0;		HX_STACK_VAR(buoyy,"buoyy");
-		HX_STACK_LINE(806)
-		{
-		}
-		HX_STACK_LINE(814)
-		{
-		}
 		HX_STACK_LINE(822)
 		if (((bool(this->ws1->fluidEnabled) && bool(this->ws2->fluidEnabled)))){
 			HX_STACK_LINE(823)
@@ -414,9 +369,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 			if (((mass1 > mass2))){
 				HX_STACK_LINE(826)
 				Float t = (mass1 + mass2);		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(827)
-				{
-				}
 				HX_STACK_LINE(835)
 				hx::SubEq(buoyx,(g1x * t));
 				HX_STACK_LINE(836)
@@ -427,9 +379,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 				if (((mass1 < mass2))){
 					HX_STACK_LINE(839)
 					Float t = (mass1 + mass2);		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(840)
-					{
-					}
 					HX_STACK_LINE(848)
 					hx::AddEq(buoyx,(g2x * t));
 					HX_STACK_LINE(849)
@@ -451,9 +400,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 					{
 						HX_STACK_LINE(859)
 						Float t = 0.5;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(860)
-						{
-						}
 						HX_STACK_LINE(868)
 						hx::MultEq(gx,t);
 						HX_STACK_LINE(869)
@@ -463,9 +409,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 					if (((((this->ws1->worldCOMx * gx) + (this->ws1->worldCOMy * gy)) > ((this->ws2->worldCOMx * gx) + (this->ws2->worldCOMy * gy))))){
 						HX_STACK_LINE(872)
 						Float t = (mass1 + mass2);		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(873)
-						{
-						}
 						HX_STACK_LINE(881)
 						hx::SubEq(buoyx,(gx * t));
 						HX_STACK_LINE(882)
@@ -474,9 +417,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 					else{
 						HX_STACK_LINE(885)
 						Float t = (mass1 + mass2);		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(886)
-						{
-						}
 						HX_STACK_LINE(894)
 						hx::AddEq(buoyx,(gx * t));
 						HX_STACK_LINE(895)
@@ -494,9 +434,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 				{
 					HX_STACK_LINE(902)
 					Float t = mass;		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(903)
-					{
-					}
 					HX_STACK_LINE(911)
 					hx::SubEq(buoyx,(g1x * t));
 					HX_STACK_LINE(912)
@@ -512,9 +449,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 					{
 						HX_STACK_LINE(918)
 						Float t = mass;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(919)
-						{
-						}
 						HX_STACK_LINE(927)
 						hx::AddEq(buoyx,(g2x * t));
 						HX_STACK_LINE(928)
@@ -527,9 +461,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 		{
 			HX_STACK_LINE(932)
 			Float t = dt;		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(933)
-			{
-			}
 			HX_STACK_LINE(941)
 			hx::MultEq(buoyx,t);
 			HX_STACK_LINE(942)
@@ -541,9 +472,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 			this->buoyx = buoyx;
 			HX_STACK_LINE(946)
 			this->buoyy = buoyy;
-			HX_STACK_LINE(947)
-			{
-			}
 			HX_STACK_LINE(955)
 			{
 			}
@@ -554,9 +482,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 			{
 				HX_STACK_LINE(966)
 				Float t = this->b1->imass;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(967)
-				{
-				}
 				HX_STACK_LINE(975)
 				hx::SubEq(this->b1->velx,(buoyx * t));
 				HX_STACK_LINE(976)
@@ -571,9 +496,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 			{
 				HX_STACK_LINE(982)
 				Float t = this->b2->imass;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(983)
-				{
-				}
 				HX_STACK_LINE(991)
 				hx::AddEq(this->b2->velx,(buoyx * t));
 				HX_STACK_LINE(992)
@@ -592,9 +514,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 				this->dampx = (int)0;
 				HX_STACK_LINE(1000)
 				this->dampy = (int)0;
-				HX_STACK_LINE(1001)
-				{
-				}
 				HX_STACK_LINE(1009)
 				{
 				}
@@ -639,7 +558,7 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 				HX_STACK_LINE(1036)
 				hx::MultEq(tViscosity,0.0004);
 				struct _Function_3_1{
-					inline static Float Block( ::zpp_nape::dynamics::ZPP_FluidArbiter_obj *__this,Float &biasCoef,Float &tViscosity,Float &dt){
+					inline static Float Block( ::zpp_nape::dynamics::ZPP_FluidArbiter_obj *__this,Float &tViscosity,Float &dt,Float &biasCoef){
 						HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1037);
 						{
 							HX_STACK_LINE(1038)
@@ -659,7 +578,7 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 					}
 				};
 				HX_STACK_LINE(1037)
-				hx::MultEq(this->wMass,_Function_3_1::Block(this,biasCoef,tViscosity,dt));
+				hx::MultEq(this->wMass,_Function_3_1::Block(this,tViscosity,dt,biasCoef));
 			}
 			else{
 				HX_STACK_LINE(1047)
@@ -671,12 +590,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 			Float vrnx = (((this->b2->velx + this->b2->kinvelx) - (this->r2y * ((this->b2->angvel + this->b2->kinangvel)))) - (((this->b1->velx + this->b1->kinvelx) - (this->r1y * ((this->b2->angvel + this->b2->kinangvel))))));		HX_STACK_VAR(vrnx,"vrnx");
 			HX_STACK_LINE(1051)
 			Float vrny = (((this->b2->vely + this->b2->kinvely) + (this->r2x * ((this->b2->angvel + this->b2->kinangvel)))) - (((this->b1->vely + this->b1->kinvely) + (this->r1x * ((this->b1->angvel + this->b1->kinangvel))))));		HX_STACK_VAR(vrny,"vrny");
-			HX_STACK_LINE(1052)
-			{
-			}
-			HX_STACK_LINE(1060)
-			{
-			}
 			HX_STACK_LINE(1068)
 			if (((((vrnx * vrnx) + (vrny * vrny)) < (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))){
 			}
@@ -685,44 +598,12 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 				{
 					HX_STACK_LINE(1071)
 					Float d = ((vrnx * vrnx) + (vrny * vrny));		HX_STACK_VAR(d,"d");
-					HX_STACK_LINE(1072)
-					{
-					}
-					struct _Function_4_1{
-						inline static Float Block( Float &d){
-							HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1080);
-							{
-								HX_STACK_LINE(1080)
-								{
-								}
-								struct _Function_5_1{
-									inline static Float Block( Float &d){
-										HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1080);
-										{
-											HX_STACK_LINE(1080)
-											{
-											}
-											HX_STACK_LINE(1080)
-											return ::Math_obj::sqrt(d);
-										}
-										return null();
-									}
-								};
-								HX_STACK_LINE(1080)
-								return (Float(1.0) / Float(_Function_5_1::Block(d)));
-							}
-							return null();
-						}
-					};
 					HX_STACK_LINE(1080)
-					Float imag = _Function_4_1::Block(d);		HX_STACK_VAR(imag,"imag");
+					Float imag = (Float(1.0) / Float(::Math_obj::sqrt(d)));		HX_STACK_VAR(imag,"imag");
 					HX_STACK_LINE(1081)
 					{
 						HX_STACK_LINE(1082)
 						Float t = imag;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(1083)
-						{
-						}
 						HX_STACK_LINE(1091)
 						hx::MultEq(vrnx,t);
 						HX_STACK_LINE(1092)
@@ -735,9 +616,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 					this->nx = vrnx;
 					HX_STACK_LINE(1097)
 					this->ny = vrny;
-					HX_STACK_LINE(1098)
-					{
-					}
 					HX_STACK_LINE(1106)
 					{
 					}
@@ -961,7 +839,7 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 				HX_STACK_LINE(1227)
 				{
 					struct _Function_4_1{
-						inline static Float Block( Float &tViscosity1,::zpp_nape::dynamics::ZPP_FluidArbiter_obj *__this,Float &biasCoef,Float &dt){
+						inline static Float Block( Float &tViscosity1,::zpp_nape::dynamics::ZPP_FluidArbiter_obj *__this,Float &dt,Float &biasCoef){
 							HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",1228);
 							{
 								HX_STACK_LINE(1229)
@@ -981,7 +859,7 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 						}
 					};
 					HX_STACK_LINE(1228)
-					Float X = _Function_4_1::Block(tViscosity1,this,biasCoef,dt);		HX_STACK_VAR(X,"X");
+					Float X = _Function_4_1::Block(tViscosity1,this,dt,biasCoef);		HX_STACK_VAR(X,"X");
 					HX_STACK_LINE(1236)
 					hx::MultEq(this->vMassa,X);
 					HX_STACK_LINE(1237)
@@ -1008,9 +886,6 @@ Void ZPP_FluidArbiter_obj::preStep( ::zpp_nape::space::ZPP_Space s,Float dt){
 		{
 			HX_STACK_LINE(1251)
 			Float t = dtratio;		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(1252)
-			{
-			}
 			HX_STACK_LINE(1260)
 			hx::MultEq(this->dampx,t);
 			HX_STACK_LINE(1261)
@@ -1040,9 +915,6 @@ Void ZPP_FluidArbiter_obj::inject( Float area,Float cx,Float cy){
 			this->centroidx = cx;
 			HX_STACK_LINE(686)
 			this->centroidy = cy;
-			HX_STACK_LINE(687)
-			{
-			}
 			HX_STACK_LINE(695)
 			{
 			}
@@ -1097,18 +969,6 @@ Void ZPP_FluidArbiter_obj::retire( ){
 		HX_STACK_LINE(647)
 		{
 			HX_STACK_LINE(647)
-			{
-			}
-			HX_STACK_LINE(647)
-			{
-			}
-			HX_STACK_LINE(647)
-			{
-			}
-			HX_STACK_LINE(647)
-			{
-			}
-			HX_STACK_LINE(647)
 			if ((!(this->cleared))){
 				HX_STACK_LINE(647)
 				{
@@ -1116,12 +976,6 @@ Void ZPP_FluidArbiter_obj::retire( ){
 					::zpp_nape::util::ZNPList_ZPP_Arbiter _this = this->b1->arbiters;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(647)
 					{
-					}
-					HX_STACK_LINE(647)
-					{
-						HX_STACK_LINE(647)
-						{
-						}
 						HX_STACK_LINE(647)
 						::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 						HX_STACK_LINE(647)
@@ -1134,9 +988,6 @@ Void ZPP_FluidArbiter_obj::retire( ){
 							if (((cur->elt == hx::ObjectPtr<OBJ_>(this)))){
 								HX_STACK_LINE(647)
 								{
-									HX_STACK_LINE(647)
-									{
-									}
 									HX_STACK_LINE(647)
 									::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 									HX_STACK_LINE(647)
@@ -1170,14 +1021,8 @@ Void ZPP_FluidArbiter_obj::retire( ){
 									}
 									HX_STACK_LINE(647)
 									{
-									}
-									HX_STACK_LINE(647)
-									{
 										HX_STACK_LINE(647)
 										::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(647)
-										{
-										}
 										HX_STACK_LINE(647)
 										o->elt = null();
 										HX_STACK_LINE(647)
@@ -1214,12 +1059,6 @@ Void ZPP_FluidArbiter_obj::retire( ){
 					::zpp_nape::util::ZNPList_ZPP_Arbiter _this = this->b2->arbiters;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(647)
 					{
-					}
-					HX_STACK_LINE(647)
-					{
-						HX_STACK_LINE(647)
-						{
-						}
 						HX_STACK_LINE(647)
 						::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 						HX_STACK_LINE(647)
@@ -1232,9 +1071,6 @@ Void ZPP_FluidArbiter_obj::retire( ){
 							if (((cur->elt == hx::ObjectPtr<OBJ_>(this)))){
 								HX_STACK_LINE(647)
 								{
-									HX_STACK_LINE(647)
-									{
-									}
 									HX_STACK_LINE(647)
 									::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 									HX_STACK_LINE(647)
@@ -1268,14 +1104,8 @@ Void ZPP_FluidArbiter_obj::retire( ){
 									}
 									HX_STACK_LINE(647)
 									{
-									}
-									HX_STACK_LINE(647)
-									{
 										HX_STACK_LINE(647)
 										::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(647)
-										{
-										}
 										HX_STACK_LINE(647)
 										o->elt = null();
 										HX_STACK_LINE(647)
@@ -1325,9 +1155,6 @@ Void ZPP_FluidArbiter_obj::retire( ){
 		{
 			HX_STACK_LINE(649)
 			::zpp_nape::dynamics::ZPP_FluidArbiter o = hx::ObjectPtr<OBJ_>(this);		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(650)
-			{
-			}
 			HX_STACK_LINE(659)
 			o->next = ::zpp_nape::dynamics::ZPP_FluidArbiter_obj::zpp_pool;
 			HX_STACK_LINE(660)
@@ -1368,9 +1195,6 @@ Void ZPP_FluidArbiter_obj::assign( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 			{
 				HX_STACK_LINE(601)
 				::zpp_nape::util::ZNPList_ZPP_Arbiter _this = this->b1->arbiters;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(601)
-				{
-				}
 				struct _Function_3_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_FluidArbiter_obj *__this){
 						HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",601);
@@ -1420,9 +1244,6 @@ Void ZPP_FluidArbiter_obj::assign( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 			{
 				HX_STACK_LINE(601)
 				::zpp_nape::util::ZNPList_ZPP_Arbiter _this = this->b2->arbiters;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(601)
-				{
-				}
 				struct _Function_3_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_FluidArbiter_obj *__this){
 						HX_STACK_PUSH("*::closure","zpp_nape/dynamics/Arbiter.hx",601);
@@ -1487,9 +1308,6 @@ Void ZPP_FluidArbiter_obj::assign( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 			this->nx = (int)0;
 			HX_STACK_LINE(604)
 			this->ny = (int)1;
-			HX_STACK_LINE(605)
-			{
-			}
 			HX_STACK_LINE(613)
 			{
 			}
@@ -1500,9 +1318,6 @@ Void ZPP_FluidArbiter_obj::assign( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 			this->dampx = (int)0;
 			HX_STACK_LINE(624)
 			this->dampy = (int)0;
-			HX_STACK_LINE(625)
-			{
-			}
 			HX_STACK_LINE(633)
 			{
 			}
@@ -1594,9 +1409,6 @@ Void ZPP_FluidArbiter_obj::getposition( ){
 										HX_STACK_LINE(566)
 										{
 										}
-										HX_STACK_LINE(566)
-										{
-										}
 									}
 									HX_STACK_LINE(566)
 									return ret1;
@@ -1625,7 +1437,7 @@ Void ZPP_FluidArbiter_obj::getposition( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(566)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(566)
 								_this->_isimmutable();
 							}
@@ -1649,7 +1461,7 @@ Void ZPP_FluidArbiter_obj::getposition( ){
 										HX_STACK_LINE(566)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(566)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(566)
 											_this->_validate();
 										}
@@ -1674,7 +1486,7 @@ Void ZPP_FluidArbiter_obj::getposition( ){
 										HX_STACK_LINE(566)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(566)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(566)
 											_this->_validate();
 										}
@@ -1696,16 +1508,13 @@ Void ZPP_FluidArbiter_obj::getposition( ){
 								HX_STACK_LINE(566)
 								{
 								}
-								HX_STACK_LINE(566)
-								{
-								}
 							}
 							HX_STACK_LINE(566)
 							{
 								HX_STACK_LINE(566)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(566)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(566)
 									_this->_invalidate(_this);
 								}
@@ -1748,9 +1557,6 @@ Void ZPP_FluidArbiter_obj::position_invalidate( ::zpp_nape::geom::ZPP_Vec2 x){
 		this->centroidx = x->x;
 		HX_STACK_LINE(545)
 		this->centroidy = x->y;
-		HX_STACK_LINE(546)
-		{
-		}
 		HX_STACK_LINE(554)
 		{
 		}
@@ -1776,9 +1582,6 @@ Void ZPP_FluidArbiter_obj::position_validate( ){
 			this->wrap_position->zpp_inner->x = this->centroidx;
 			HX_STACK_LINE(523)
 			this->wrap_position->zpp_inner->y = this->centroidy;
-			HX_STACK_LINE(524)
-			{
-			}
 			HX_STACK_LINE(532)
 			{
 			}
@@ -2097,7 +1900,7 @@ Class ZPP_FluidArbiter_obj::__mClass;
 
 void ZPP_FluidArbiter_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.dynamics.ZPP_FluidArbiter"), hx::TCanCast< ZPP_FluidArbiter_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.dynamics.ZPP_FluidArbiter"), hx::TCanCast< ZPP_FluidArbiter_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

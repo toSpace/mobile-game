@@ -1,10 +1,10 @@
 #include <hxcpp.h>
 
-#ifndef INCLUDED_hxMath
-#include <hxMath.h>
-#endif
 #ifndef INCLUDED_Std
 #include <Std.h>
+#endif
+#ifndef INCLUDED_hxMath
+#include <hxMath.h>
 #endif
 #ifndef INCLUDED_nape_Config
 #include <nape/Config.h>
@@ -550,9 +550,6 @@ HX_STACK_PUSH("ZPP_Space::new","zpp_nape/space/Space.hx",1379);
 		this->gravityx = gravity->x;
 		HX_STACK_LINE(1908)
 		this->gravityy = gravity->y;
-		HX_STACK_LINE(1909)
-		{
-		}
 		HX_STACK_LINE(1917)
 		{
 		}
@@ -562,9 +559,6 @@ HX_STACK_PUSH("ZPP_Space::new","zpp_nape/space/Space.hx",1379);
 		this->gravityx = (int)0;
 		HX_STACK_LINE(1928)
 		this->gravityy = (int)0;
-		HX_STACK_LINE(1929)
-		{
-		}
 		HX_STACK_LINE(1937)
 		{
 		}
@@ -673,9 +667,6 @@ Void ZPP_Space_obj::inlined_MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_n
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(s1,"s1");
 		HX_STACK_ARG(s2,"s2");
-		HX_STACK_LINE(7221)
-		{
-		}
 		HX_STACK_LINE(7229)
 		{
 			HX_STACK_LINE(7229)
@@ -685,22 +676,13 @@ Void ZPP_Space_obj::inlined_MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_n
 				HX_STACK_LINE(7229)
 				while((!(((_this->head == null()))))){
 					HX_STACK_LINE(7229)
-					{
-					}
-					HX_STACK_LINE(7229)
 					::zpp_nape::util::ZNPNode_ZPP_Interactor ret = _this->head;		HX_STACK_VAR(ret,"ret");
 					HX_STACK_LINE(7229)
 					_this->head = ret->next;
 					HX_STACK_LINE(7229)
 					{
-					}
-					HX_STACK_LINE(7229)
-					{
 						HX_STACK_LINE(7229)
 						::zpp_nape::util::ZNPNode_ZPP_Interactor o = ret;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(7229)
-						{
-						}
 						HX_STACK_LINE(7229)
 						o->elt = null();
 						HX_STACK_LINE(7229)
@@ -731,22 +713,13 @@ Void ZPP_Space_obj::inlined_MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_n
 				HX_STACK_LINE(7230)
 				while((!(((_this->head == null()))))){
 					HX_STACK_LINE(7230)
-					{
-					}
-					HX_STACK_LINE(7230)
 					::zpp_nape::util::ZNPNode_ZPP_Interactor ret = _this->head;		HX_STACK_VAR(ret,"ret");
 					HX_STACK_LINE(7230)
 					_this->head = ret->next;
 					HX_STACK_LINE(7230)
 					{
-					}
-					HX_STACK_LINE(7230)
-					{
 						HX_STACK_LINE(7230)
 						::zpp_nape::util::ZNPNode_ZPP_Interactor o = ret;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(7230)
-						{
-						}
 						HX_STACK_LINE(7230)
 						o->elt = null();
 						HX_STACK_LINE(7230)
@@ -772,9 +745,6 @@ Void ZPP_Space_obj::inlined_MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_n
 		if (((s1->cbSet != null()))){
 			HX_STACK_LINE(7231)
 			::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca1;		HX_STACK_VAR(_this,"_this");
-			HX_STACK_LINE(7231)
-			{
-			}
 			struct _Function_2_1{
 				inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::shape::ZPP_Shape &s1){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",7231);
@@ -825,9 +795,6 @@ Void ZPP_Space_obj::inlined_MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_n
 			HX_STACK_LINE(7232)
 			::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca1;		HX_STACK_VAR(_this,"_this");
 			::zpp_nape::phys::ZPP_Interactor o = s1->body;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(7232)
-			{
-			}
 			struct _Function_2_1{
 				inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Interactor &o){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",7232);
@@ -877,9 +844,6 @@ Void ZPP_Space_obj::inlined_MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_n
 		if (((s2->cbSet != null()))){
 			HX_STACK_LINE(7233)
 			::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca2;		HX_STACK_VAR(_this,"_this");
-			HX_STACK_LINE(7233)
-			{
-			}
 			struct _Function_2_1{
 				inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::shape::ZPP_Shape &s2){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",7233);
@@ -930,9 +894,6 @@ Void ZPP_Space_obj::inlined_MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_n
 			HX_STACK_LINE(7234)
 			::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca2;		HX_STACK_VAR(_this,"_this");
 			::zpp_nape::phys::ZPP_Interactor o = s2->body;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(7234)
-			{
-			}
 			struct _Function_2_1{
 				inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Interactor &o){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",7234);
@@ -994,9 +955,6 @@ Void ZPP_Space_obj::inlined_MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_n
 				if (((c2->cbSet != null()))){
 					HX_STACK_LINE(7241)
 					::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca2;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(7241)
-					{
-					}
 					struct _Function_4_1{
 						inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Compound &c2){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",7241);
@@ -1050,9 +1008,6 @@ Void ZPP_Space_obj::inlined_MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_n
 				if (((c1->cbSet != null()))){
 					HX_STACK_LINE(7245)
 					::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca1;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(7245)
-					{
-					}
 					struct _Function_4_1{
 						inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Compound &c1){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",7245);
@@ -1117,9 +1072,6 @@ Void ZPP_Space_obj::MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::sha
 		HX_STACK_ARG(s2,"s2");
 		HX_STACK_LINE(7216)
 		{
-		}
-		HX_STACK_LINE(7216)
-		{
 			HX_STACK_LINE(7216)
 			::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca1;		HX_STACK_VAR(_this,"_this");
 			HX_STACK_LINE(7216)
@@ -1127,22 +1079,13 @@ Void ZPP_Space_obj::MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::sha
 				HX_STACK_LINE(7216)
 				while((!(((_this->head == null()))))){
 					HX_STACK_LINE(7216)
-					{
-					}
-					HX_STACK_LINE(7216)
 					::zpp_nape::util::ZNPNode_ZPP_Interactor ret = _this->head;		HX_STACK_VAR(ret,"ret");
 					HX_STACK_LINE(7216)
 					_this->head = ret->next;
 					HX_STACK_LINE(7216)
 					{
-					}
-					HX_STACK_LINE(7216)
-					{
 						HX_STACK_LINE(7216)
 						::zpp_nape::util::ZNPNode_ZPP_Interactor o = ret;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(7216)
-						{
-						}
 						HX_STACK_LINE(7216)
 						o->elt = null();
 						HX_STACK_LINE(7216)
@@ -1173,22 +1116,13 @@ Void ZPP_Space_obj::MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::sha
 				HX_STACK_LINE(7216)
 				while((!(((_this->head == null()))))){
 					HX_STACK_LINE(7216)
-					{
-					}
-					HX_STACK_LINE(7216)
 					::zpp_nape::util::ZNPNode_ZPP_Interactor ret = _this->head;		HX_STACK_VAR(ret,"ret");
 					HX_STACK_LINE(7216)
 					_this->head = ret->next;
 					HX_STACK_LINE(7216)
 					{
-					}
-					HX_STACK_LINE(7216)
-					{
 						HX_STACK_LINE(7216)
 						::zpp_nape::util::ZNPNode_ZPP_Interactor o = ret;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(7216)
-						{
-						}
 						HX_STACK_LINE(7216)
 						o->elt = null();
 						HX_STACK_LINE(7216)
@@ -1214,9 +1148,6 @@ Void ZPP_Space_obj::MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::sha
 		if (((s1->cbSet != null()))){
 			HX_STACK_LINE(7216)
 			::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca1;		HX_STACK_VAR(_this,"_this");
-			HX_STACK_LINE(7216)
-			{
-			}
 			struct _Function_2_1{
 				inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::shape::ZPP_Shape &s1){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",7216);
@@ -1267,9 +1198,6 @@ Void ZPP_Space_obj::MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::sha
 			HX_STACK_LINE(7216)
 			::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca1;		HX_STACK_VAR(_this,"_this");
 			::zpp_nape::phys::ZPP_Interactor o = s1->body;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(7216)
-			{
-			}
 			struct _Function_2_1{
 				inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Interactor &o){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",7216);
@@ -1319,9 +1247,6 @@ Void ZPP_Space_obj::MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::sha
 		if (((s2->cbSet != null()))){
 			HX_STACK_LINE(7216)
 			::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca2;		HX_STACK_VAR(_this,"_this");
-			HX_STACK_LINE(7216)
-			{
-			}
 			struct _Function_2_1{
 				inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::shape::ZPP_Shape &s2){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",7216);
@@ -1372,9 +1297,6 @@ Void ZPP_Space_obj::MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::sha
 			HX_STACK_LINE(7216)
 			::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca2;		HX_STACK_VAR(_this,"_this");
 			::zpp_nape::phys::ZPP_Interactor o = s2->body;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(7216)
-			{
-			}
 			struct _Function_2_1{
 				inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Interactor &o){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",7216);
@@ -1436,9 +1358,6 @@ Void ZPP_Space_obj::MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::sha
 				if (((c2->cbSet != null()))){
 					HX_STACK_LINE(7216)
 					::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca2;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(7216)
-					{
-					}
 					struct _Function_4_1{
 						inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Compound &c2){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",7216);
@@ -1492,9 +1411,6 @@ Void ZPP_Space_obj::MRCA_chains( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::sha
 				if (((c1->cbSet != null()))){
 					HX_STACK_LINE(7216)
 					::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca1;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(7216)
-					{
-					}
 					struct _Function_4_1{
 						inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Compound &c1){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",7216);
@@ -1568,15 +1484,9 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 	HX_STACK_LINE(5865)
 	::zpp_nape::phys::ZPP_Body b2 = s2->body;		HX_STACK_VAR(b2,"b2");
 	struct _Function_1_1{
-		inline static int Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::phys::ZPP_Body &b2,::zpp_nape::phys::ZPP_Body &b1,::zpp_nape::shape::ZPP_Shape &s2){
+		inline static int Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::phys::ZPP_Body &b2,::zpp_nape::phys::ZPP_Body &b1,::zpp_nape::shape::ZPP_Shape &s1){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5866);
 			{
-				HX_STACK_LINE(5866)
-				{
-				}
-				HX_STACK_LINE(5866)
-				{
-				}
 				HX_STACK_LINE(5866)
 				bool con_ignore;		HX_STACK_VAR(con_ignore,"con_ignore");
 				HX_STACK_LINE(5866)
@@ -1604,7 +1514,7 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 					}
 				}
 				struct _Function_2_1{
-					inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+					inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5866);
 						{
 							struct _Function_3_1{
@@ -1721,11 +1631,11 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 					}
 				};
 				struct _Function_2_2{
-					inline static int Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::phys::ZPP_Body &b2,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::phys::ZPP_Body &b1){
+					inline static int Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::phys::ZPP_Body &b2,::zpp_nape::phys::ZPP_Body &b1,::zpp_nape::shape::ZPP_Shape &s1){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5866);
 						{
 							struct _Function_3_1{
-								inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+								inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 									HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5866);
 									{
 										HX_STACK_LINE(5866)
@@ -1738,7 +1648,7 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 								}
 							};
 							struct _Function_3_2{
-								inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+								inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 									HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5866);
 									{
 										HX_STACK_LINE(5866)
@@ -1751,7 +1661,7 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 								}
 							};
 							struct _Function_3_3{
-								inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+								inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 									HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5866);
 									{
 										HX_STACK_LINE(5866)
@@ -1764,19 +1674,19 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 								}
 							};
 							HX_STACK_LINE(5866)
-							return (  (((bool(((bool(s1->sensorEnabled) || bool(s2->sensorEnabled)))) && bool(_Function_3_1::Block(s1,s2))))) ? int((int)2) : int((  (((bool((bool(((bool(s1->fluidEnabled) || bool(s2->fluidEnabled)))) && bool(_Function_3_2::Block(s1,s2)))) && bool(!(((bool((bool((bool((b1->imass == (int)0)) && bool((b2->imass == (int)0)))) && bool((b1->iinertia == (int)0)))) && bool((b2->iinertia == (int)0))))))))) ? int((int)0) : int((  (((bool(_Function_3_3::Block(s1,s2)) && bool(!(((bool((bool((bool((b1->imass == (int)0)) && bool((b2->imass == (int)0)))) && bool((b1->iinertia == (int)0)))) && bool((b2->iinertia == (int)0))))))))) ? int((int)1) : int((int)-1) )) )) );
+							return (  (((bool(((bool(s1->sensorEnabled) || bool(s2->sensorEnabled)))) && bool(_Function_3_1::Block(s2,s1))))) ? int((int)2) : int((  (((bool((bool(((bool(s1->fluidEnabled) || bool(s2->fluidEnabled)))) && bool(_Function_3_2::Block(s2,s1)))) && bool(!(((bool((bool((bool((b1->imass == (int)0)) && bool((b2->imass == (int)0)))) && bool((b1->iinertia == (int)0)))) && bool((b2->iinertia == (int)0))))))))) ? int((int)0) : int((  (((bool(_Function_3_3::Block(s2,s1)) && bool(!(((bool((bool((bool((b1->imass == (int)0)) && bool((b2->imass == (int)0)))) && bool((b1->iinertia == (int)0)))) && bool((b2->iinertia == (int)0))))))))) ? int((int)1) : int((int)-1) )) )) );
 						}
 						return null();
 					}
 				};
 				HX_STACK_LINE(5866)
-				return (  (((bool(!(con_ignore)) && bool(!(_Function_2_1::Block(s1,s2)))))) ? int(_Function_2_2::Block(s1,b2,s2,b1)) : int((int)-1) );
+				return (  (((bool(!(con_ignore)) && bool(!(_Function_2_1::Block(s2,s1)))))) ? int(_Function_2_2::Block(s2,b2,b1,s1)) : int((int)-1) );
 			}
 			return null();
 		}
 	};
 	HX_STACK_LINE(5866)
-	int itype = _Function_1_1::Block(s1,b2,b1,s2);		HX_STACK_VAR(itype,"itype");
+	int itype = _Function_1_1::Block(s2,b2,b1,s1);		HX_STACK_VAR(itype,"itype");
 	HX_STACK_LINE(5867)
 	if (((itype != (int)-1))){
 		HX_STACK_LINE(5868)
@@ -1818,7 +1728,7 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 		HX_STACK_LINE(5888)
 		if (((itype == (int)0))){
 			struct _Function_3_1{
-				inline static ::zpp_nape::dynamics::ZPP_Arbiter Block( ::zpp_nape::shape::ZPP_Shape &sa,::zpp_nape::phys::ZPP_Body &b2,::zpp_nape::phys::ZPP_Body &b1,::zpp_nape::shape::ZPP_Shape &sb){
+				inline static ::zpp_nape::dynamics::ZPP_Arbiter Block( ::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::phys::ZPP_Body &b2,::zpp_nape::shape::ZPP_Shape &sa,::zpp_nape::phys::ZPP_Body &b1){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5889);
 					{
 						HX_STACK_LINE(5890)
@@ -1834,17 +1744,11 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 								HX_STACK_LINE(5895)
 								::zpp_nape::dynamics::ZPP_Arbiter arb = cx_ite->elt;		HX_STACK_VAR(arb,"arb");
 								HX_STACK_LINE(5896)
-								{
-									HX_STACK_LINE(5897)
-									{
-									}
-									HX_STACK_LINE(5905)
-									if (((bool((arb->id == sa->id)) && bool((arb->di == sb->id))))){
-										HX_STACK_LINE(5906)
-										ret1 = arb;
-										HX_STACK_LINE(5907)
-										break;
-									}
+								if (((bool((arb->id == sa->id)) && bool((arb->di == sb->id))))){
+									HX_STACK_LINE(5906)
+									ret1 = arb;
+									HX_STACK_LINE(5907)
+									break;
 								}
 								HX_STACK_LINE(5910)
 								cx_ite = cx_ite->next;
@@ -1857,7 +1761,7 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 				}
 			};
 			HX_STACK_LINE(5889)
-			::zpp_nape::dynamics::ZPP_Arbiter xarb = (  (((in_arb == null()))) ? ::zpp_nape::dynamics::ZPP_Arbiter(_Function_3_1::Block(sa,b2,b1,sb)) : ::zpp_nape::dynamics::ZPP_Arbiter(in_arb) );		HX_STACK_VAR(xarb,"xarb");
+			::zpp_nape::dynamics::ZPP_Arbiter xarb = (  (((in_arb == null()))) ? ::zpp_nape::dynamics::ZPP_Arbiter(_Function_3_1::Block(sb,b2,sa,b1)) : ::zpp_nape::dynamics::ZPP_Arbiter(in_arb) );		HX_STACK_VAR(xarb,"xarb");
 			HX_STACK_LINE(5915)
 			bool first = (xarb == null());		HX_STACK_VAR(first,"first");
 			HX_STACK_LINE(5916)
@@ -1888,9 +1792,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 					HX_STACK_LINE(5937)
 					{
 						HX_STACK_LINE(5937)
-						{
-						}
-						HX_STACK_LINE(5937)
 						xarb->cleared = true;
 						HX_STACK_LINE(5937)
 						{
@@ -1898,12 +1799,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 							::zpp_nape::util::ZNPList_ZPP_Arbiter _this = xarb->b1->arbiters;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(5937)
 							{
-							}
-							HX_STACK_LINE(5937)
-							{
-								HX_STACK_LINE(5937)
-								{
-								}
 								HX_STACK_LINE(5937)
 								::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 								HX_STACK_LINE(5937)
@@ -1916,9 +1811,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 									if (((cur->elt == xarb))){
 										HX_STACK_LINE(5937)
 										{
-											HX_STACK_LINE(5937)
-											{
-											}
 											HX_STACK_LINE(5937)
 											::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 											HX_STACK_LINE(5937)
@@ -1952,14 +1844,8 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 											}
 											HX_STACK_LINE(5937)
 											{
-											}
-											HX_STACK_LINE(5937)
-											{
 												HX_STACK_LINE(5937)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-												HX_STACK_LINE(5937)
-												{
-												}
 												HX_STACK_LINE(5937)
 												o->elt = null();
 												HX_STACK_LINE(5937)
@@ -1996,12 +1882,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 							::zpp_nape::util::ZNPList_ZPP_Arbiter _this = xarb->b2->arbiters;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(5937)
 							{
-							}
-							HX_STACK_LINE(5937)
-							{
-								HX_STACK_LINE(5937)
-								{
-								}
 								HX_STACK_LINE(5937)
 								::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 								HX_STACK_LINE(5937)
@@ -2014,9 +1894,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 									if (((cur->elt == xarb))){
 										HX_STACK_LINE(5937)
 										{
-											HX_STACK_LINE(5937)
-											{
-											}
 											HX_STACK_LINE(5937)
 											::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 											HX_STACK_LINE(5937)
@@ -2050,14 +1927,8 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 											}
 											HX_STACK_LINE(5937)
 											{
-											}
-											HX_STACK_LINE(5937)
-											{
 												HX_STACK_LINE(5937)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-												HX_STACK_LINE(5937)
-												{
-												}
 												HX_STACK_LINE(5937)
 												o->elt = null();
 												HX_STACK_LINE(5937)
@@ -2131,19 +2002,19 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 				}
 			}
 			struct _Function_3_2{
-				inline static ::zpp_nape::dynamics::ZPP_FluidArbiter Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &arb,bool &swapped,bool &continuous,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::space::ZPP_Space_obj *__this,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::shape::ZPP_Shape &s1,bool &first,::zpp_nape::shape::ZPP_Shape &sa){
+				inline static ::zpp_nape::dynamics::ZPP_Arbiter Block( bool &first,::zpp_nape::space::ZPP_Space_obj *__this,bool &swapped,::zpp_nape::dynamics::ZPP_FluidArbiter &arb,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::shape::ZPP_Shape &sa,bool &continuous,::zpp_nape::shape::ZPP_Shape &s1){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5961);
 					{
 						HX_STACK_LINE(5962)
 						int inttype = ::zpp_nape::util::ZPP_Flags_obj::id_InteractionType_FLUID;		HX_STACK_VAR(inttype,"inttype");
 						struct _Function_4_1{
-							inline static ::zpp_nape::dynamics::ZPP_FluidArbiter Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &arb,bool &swapped,bool &continuous,int &inttype,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::space::ZPP_Space_obj *__this,::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::shape::ZPP_Shape &s1,bool &first,::zpp_nape::shape::ZPP_Shape &sa){
+							inline static ::zpp_nape::dynamics::ZPP_Arbiter Block( ::zpp_nape::space::ZPP_Space_obj *__this,bool &first,bool &swapped,::zpp_nape::dynamics::ZPP_FluidArbiter &arb,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::shape::ZPP_Shape &sa,bool &continuous,::zpp_nape::shape::ZPP_Shape &s1,int &inttype){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5963);
 								{
 									HX_STACK_LINE(5964)
 									arb->stamp = __this->stamp;
 									struct _Function_5_1{
-										inline static ::zpp_nape::dynamics::ZPP_FluidArbiter Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &arb,bool &swapped,bool &continuous,int &inttype,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::space::ZPP_Space_obj *__this,::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::shape::ZPP_Shape &s1,bool &first,::zpp_nape::shape::ZPP_Shape &sa){
+										inline static ::zpp_nape::dynamics::ZPP_FluidArbiter Block( bool &first,::zpp_nape::space::ZPP_Space_obj *__this,bool &swapped,::zpp_nape::dynamics::ZPP_FluidArbiter &arb,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::shape::ZPP_Shape &sa,bool &continuous,::zpp_nape::shape::ZPP_Shape &s1,int &inttype){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5965);
 											{
 												HX_STACK_LINE(5966)
@@ -2168,9 +2039,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 															{
 																HX_STACK_LINE(5967)
 																::zpp_nape::util::ZNPList_ZPP_Arbiter _this = arb->b1->arbiters;		HX_STACK_VAR(_this,"_this");
-																HX_STACK_LINE(5967)
-																{
-																}
 																struct _Function_10_1{
 																	inline static ::zpp_nape::util::ZNPNode_ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &arb){
 																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5967);
@@ -2220,9 +2088,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 															{
 																HX_STACK_LINE(5967)
 																::zpp_nape::util::ZNPList_ZPP_Arbiter _this = arb->b2->arbiters;		HX_STACK_VAR(_this,"_this");
-																HX_STACK_LINE(5967)
-																{
-																}
 																struct _Function_10_1{
 																	inline static ::zpp_nape::util::ZNPNode_ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &arb){
 																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5967);
@@ -2290,9 +2155,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 															HX_STACK_LINE(5967)
 															{
 															}
-															HX_STACK_LINE(5967)
-															{
-															}
 														}
 														HX_STACK_LINE(5967)
 														{
@@ -2300,9 +2162,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 															arb->dampx = (int)0;
 															HX_STACK_LINE(5967)
 															arb->dampy = (int)0;
-															HX_STACK_LINE(5967)
-															{
-															}
 															HX_STACK_LINE(5967)
 															{
 															}
@@ -2314,9 +2173,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 													{
 														HX_STACK_LINE(5968)
 														::zpp_nape::util::ZNPList_ZPP_FluidArbiter _this = __this->f_arbiters;		HX_STACK_VAR(_this,"_this");
-														HX_STACK_LINE(5968)
-														{
-														}
 														struct _Function_8_1{
 															inline static ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &arb){
 																HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5968);
@@ -2381,9 +2237,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 													{
 														HX_STACK_LINE(5978)
 														{
-														}
-														HX_STACK_LINE(5978)
-														{
 															HX_STACK_LINE(5978)
 															::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca1;		HX_STACK_VAR(_this,"_this");
 															HX_STACK_LINE(5978)
@@ -2391,22 +2244,13 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																HX_STACK_LINE(5978)
 																while((!(((_this->head == null()))))){
 																	HX_STACK_LINE(5978)
-																	{
-																	}
-																	HX_STACK_LINE(5978)
 																	::zpp_nape::util::ZNPNode_ZPP_Interactor ret1 = _this->head;		HX_STACK_VAR(ret1,"ret1");
 																	HX_STACK_LINE(5978)
 																	_this->head = ret1->next;
 																	HX_STACK_LINE(5978)
 																	{
-																	}
-																	HX_STACK_LINE(5978)
-																	{
 																		HX_STACK_LINE(5978)
 																		::zpp_nape::util::ZNPNode_ZPP_Interactor o = ret1;		HX_STACK_VAR(o,"o");
-																		HX_STACK_LINE(5978)
-																		{
-																		}
 																		HX_STACK_LINE(5978)
 																		o->elt = null();
 																		HX_STACK_LINE(5978)
@@ -2437,22 +2281,13 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																HX_STACK_LINE(5978)
 																while((!(((_this->head == null()))))){
 																	HX_STACK_LINE(5978)
-																	{
-																	}
-																	HX_STACK_LINE(5978)
 																	::zpp_nape::util::ZNPNode_ZPP_Interactor ret1 = _this->head;		HX_STACK_VAR(ret1,"ret1");
 																	HX_STACK_LINE(5978)
 																	_this->head = ret1->next;
 																	HX_STACK_LINE(5978)
 																	{
-																	}
-																	HX_STACK_LINE(5978)
-																	{
 																		HX_STACK_LINE(5978)
 																		::zpp_nape::util::ZNPNode_ZPP_Interactor o = ret1;		HX_STACK_VAR(o,"o");
-																		HX_STACK_LINE(5978)
-																		{
-																		}
 																		HX_STACK_LINE(5978)
 																		o->elt = null();
 																		HX_STACK_LINE(5978)
@@ -2478,9 +2313,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 														if (((s1->cbSet != null()))){
 															HX_STACK_LINE(5978)
 															::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca1;		HX_STACK_VAR(_this,"_this");
-															HX_STACK_LINE(5978)
-															{
-															}
 															struct _Function_9_1{
 																inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::shape::ZPP_Shape &s1){
 																	HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5978);
@@ -2531,9 +2363,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 															HX_STACK_LINE(5978)
 															::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca1;		HX_STACK_VAR(_this,"_this");
 															::zpp_nape::phys::ZPP_Interactor o = s1->body;		HX_STACK_VAR(o,"o");
-															HX_STACK_LINE(5978)
-															{
-															}
 															struct _Function_9_1{
 																inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Interactor &o){
 																	HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5978);
@@ -2583,9 +2412,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 														if (((s2->cbSet != null()))){
 															HX_STACK_LINE(5978)
 															::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca2;		HX_STACK_VAR(_this,"_this");
-															HX_STACK_LINE(5978)
-															{
-															}
 															struct _Function_9_1{
 																inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::shape::ZPP_Shape &s2){
 																	HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5978);
@@ -2636,9 +2462,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 															HX_STACK_LINE(5978)
 															::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca2;		HX_STACK_VAR(_this,"_this");
 															::zpp_nape::phys::ZPP_Interactor o = s2->body;		HX_STACK_VAR(o,"o");
-															HX_STACK_LINE(5978)
-															{
-															}
 															struct _Function_9_1{
 																inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Interactor &o){
 																	HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5978);
@@ -2700,9 +2523,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																if (((c2->cbSet != null()))){
 																	HX_STACK_LINE(5978)
 																	::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca2;		HX_STACK_VAR(_this,"_this");
-																	HX_STACK_LINE(5978)
-																	{
-																	}
 																	struct _Function_11_1{
 																		inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Compound &c2){
 																			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5978);
@@ -2756,9 +2576,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																if (((c1->cbSet != null()))){
 																	HX_STACK_LINE(5978)
 																	::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca1;		HX_STACK_VAR(_this,"_this");
-																	HX_STACK_LINE(5978)
-																	{
-																	}
 																	struct _Function_11_1{
 																		inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Compound &c1){
 																			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5978);
@@ -2831,119 +2648,103 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																		::zpp_nape::callbacks::ZPP_CbSet cb1 = i1->cbSet;		HX_STACK_VAR(cb1,"cb1");
 																		HX_STACK_LINE(5990)
 																		::zpp_nape::callbacks::ZPP_CbSet cb2 = i2->cbSet;		HX_STACK_VAR(cb2,"cb2");
-																		HX_STACK_LINE(5991)
-																		{
-																		}
 																		struct _Function_12_1{
-																			inline static bool Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
+																			inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
 																				HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5999);
 																				{
 																					HX_STACK_LINE(5999)
+																					::zpp_nape::callbacks::ZPP_CbSetPair ret1 = null();		HX_STACK_VAR(ret1,"ret1");
+																					HX_STACK_LINE(5999)
+																					::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
+																					HX_STACK_LINE(5999)
 																					{
+																						HX_STACK_LINE(5999)
+																						::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite2 = pairs->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
+																						HX_STACK_LINE(5999)
+																						while(((cx_ite2 != null()))){
+																							HX_STACK_LINE(5999)
+																							::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite2->elt;		HX_STACK_VAR(p,"p");
+																							HX_STACK_LINE(5999)
+																							if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
+																								HX_STACK_LINE(5999)
+																								ret1 = p;
+																								HX_STACK_LINE(5999)
+																								break;
+																							}
+																							HX_STACK_LINE(5999)
+																							cx_ite2 = cx_ite2->next;
+																						}
 																					}
-																					struct _Function_13_1{
-																						inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																							HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5999);
-																							{
-																								HX_STACK_LINE(5999)
-																								::zpp_nape::callbacks::ZPP_CbSetPair ret1 = null();		HX_STACK_VAR(ret1,"ret1");
-																								HX_STACK_LINE(5999)
-																								::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
-																								HX_STACK_LINE(5999)
+																					HX_STACK_LINE(5999)
+																					if (((ret1 == null()))){
+																						struct _Function_14_1{
+																							inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
+																								HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5999);
 																								{
 																									HX_STACK_LINE(5999)
-																									::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite2 = pairs->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
+																									::zpp_nape::callbacks::ZPP_CbSetPair ret2;		HX_STACK_VAR(ret2,"ret2");
 																									HX_STACK_LINE(5999)
-																									while(((cx_ite2 != null()))){
+																									{
 																										HX_STACK_LINE(5999)
-																										::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite2->elt;		HX_STACK_VAR(p,"p");
-																										HX_STACK_LINE(5999)
-																										if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
+																										if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
 																											HX_STACK_LINE(5999)
-																											ret1 = p;
+																											ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
+																										}
+																										else{
 																											HX_STACK_LINE(5999)
-																											break;
+																											ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
+																											HX_STACK_LINE(5999)
+																											::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret2->next;
+																											HX_STACK_LINE(5999)
+																											ret2->next = null();
 																										}
 																										HX_STACK_LINE(5999)
-																										cx_ite2 = cx_ite2->next;
+																										ret2->zip_listeners = true;
 																									}
-																								}
-																								HX_STACK_LINE(5999)
-																								if (((ret1 == null()))){
-																									struct _Function_15_1{
-																										inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																											HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5999);
-																											{
-																												HX_STACK_LINE(5999)
-																												::zpp_nape::callbacks::ZPP_CbSetPair ret2;		HX_STACK_VAR(ret2,"ret2");
-																												HX_STACK_LINE(5999)
-																												{
-																													HX_STACK_LINE(5999)
-																													if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
-																														HX_STACK_LINE(5999)
-																														ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
-																													}
-																													else{
-																														HX_STACK_LINE(5999)
-																														ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
-																														HX_STACK_LINE(5999)
-																														::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret2->next;
-																														HX_STACK_LINE(5999)
-																														ret2->next = null();
-																													}
-																													HX_STACK_LINE(5999)
-																													ret2->zip_listeners = true;
-																												}
-																												HX_STACK_LINE(5999)
-																												if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
-																													HX_STACK_LINE(5999)
-																													ret2->a = cb1;
-																													HX_STACK_LINE(5999)
-																													ret2->b = cb2;
-																												}
-																												else{
-																													HX_STACK_LINE(5999)
-																													ret2->a = cb2;
-																													HX_STACK_LINE(5999)
-																													ret2->b = cb1;
-																												}
-																												HX_STACK_LINE(5999)
-																												return ret2;
-																											}
-																											return null();
-																										}
-																									};
 																									HX_STACK_LINE(5999)
-																									ret1 = _Function_15_1::Block(cb1,cb2);
-																									HX_STACK_LINE(5999)
-																									cb1->cbpairs->add(ret1);
-																									HX_STACK_LINE(5999)
-																									if (((cb2 != cb1))){
+																									if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
 																										HX_STACK_LINE(5999)
-																										cb2->cbpairs->add(ret1);
+																										ret2->a = cb1;
+																										HX_STACK_LINE(5999)
+																										ret2->b = cb2;
 																									}
-																								}
-																								HX_STACK_LINE(5999)
-																								if ((ret1->zip_listeners)){
+																									else{
+																										HX_STACK_LINE(5999)
+																										ret2->a = cb2;
+																										HX_STACK_LINE(5999)
+																										ret2->b = cb1;
+																									}
 																									HX_STACK_LINE(5999)
-																									ret1->zip_listeners = false;
-																									HX_STACK_LINE(5999)
-																									ret1->__validate();
+																									return ret2;
 																								}
-																								HX_STACK_LINE(5999)
-																								return ret1;
+																								return null();
 																							}
-																							return null();
+																						};
+																						HX_STACK_LINE(5999)
+																						ret1 = _Function_14_1::Block(cb2,cb1);
+																						HX_STACK_LINE(5999)
+																						cb1->cbpairs->add(ret1);
+																						HX_STACK_LINE(5999)
+																						if (((cb2 != cb1))){
+																							HX_STACK_LINE(5999)
+																							cb2->cbpairs->add(ret1);
 																						}
-																					};
+																					}
 																					HX_STACK_LINE(5999)
-																					return ((_Function_13_1::Block(cb1,cb2))->listeners->head == null());
+																					if ((ret1->zip_listeners)){
+																						HX_STACK_LINE(5999)
+																						ret1->zip_listeners = false;
+																						HX_STACK_LINE(5999)
+																						ret1->__validate();
+																					}
+																					HX_STACK_LINE(5999)
+																					return ret1;
 																				}
 																				return null();
 																			}
 																		};
 																		HX_STACK_LINE(5999)
-																		if ((_Function_12_1::Block(cb1,cb2))){
+																		if ((((_Function_12_1::Block(cb2,cb1))->listeners->head == null()))){
 																			HX_STACK_LINE(6000)
 																			cx_ite1 = cx_ite1->next;
 																			HX_STACK_LINE(6001)
@@ -2962,22 +2763,13 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																				HX_STACK_LINE(6005)
 																				while((!(((_this->head == null()))))){
 																					HX_STACK_LINE(6005)
-																					{
-																					}
-																					HX_STACK_LINE(6005)
 																					::zpp_nape::util::ZNPNode_ZPP_InteractionListener ret1 = _this->head;		HX_STACK_VAR(ret1,"ret1");
 																					HX_STACK_LINE(6005)
 																					_this->head = ret1->next;
 																					HX_STACK_LINE(6005)
 																					{
-																					}
-																					HX_STACK_LINE(6005)
-																					{
 																						HX_STACK_LINE(6005)
 																						::zpp_nape::util::ZNPNode_ZPP_InteractionListener o = ret1;		HX_STACK_VAR(o,"o");
-																						HX_STACK_LINE(6005)
-																						{
-																						}
 																						HX_STACK_LINE(6005)
 																						o->elt = null();
 																						HX_STACK_LINE(6005)
@@ -3007,191 +2799,182 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																			int event = ::zpp_nape::util::ZPP_Flags_obj::id_CbEvent_PRE;		HX_STACK_VAR(event,"event");
 																			HX_STACK_LINE(6007)
 																			{
-																				HX_STACK_LINE(6007)
-																				{
-																				}
-																				HX_STACK_LINE(6007)
-																				{
-																					struct _Function_15_1{
-																						inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																							HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6007);
+																				struct _Function_14_1{
+																					inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
+																						HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6007);
+																						{
+																							HX_STACK_LINE(6007)
+																							::zpp_nape::callbacks::ZPP_CbSetPair ret1 = null();		HX_STACK_VAR(ret1,"ret1");
+																							HX_STACK_LINE(6007)
+																							::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
+																							HX_STACK_LINE(6007)
 																							{
 																								HX_STACK_LINE(6007)
-																								::zpp_nape::callbacks::ZPP_CbSetPair ret1 = null();		HX_STACK_VAR(ret1,"ret1");
+																								::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite2 = pairs->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
 																								HX_STACK_LINE(6007)
-																								::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
-																								HX_STACK_LINE(6007)
-																								{
+																								while(((cx_ite2 != null()))){
 																									HX_STACK_LINE(6007)
-																									::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite2 = pairs->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
+																									::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite2->elt;		HX_STACK_VAR(p,"p");
 																									HX_STACK_LINE(6007)
-																									while(((cx_ite2 != null()))){
+																									if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
 																										HX_STACK_LINE(6007)
-																										::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite2->elt;		HX_STACK_VAR(p,"p");
+																										ret1 = p;
 																										HX_STACK_LINE(6007)
-																										if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
-																											HX_STACK_LINE(6007)
-																											ret1 = p;
-																											HX_STACK_LINE(6007)
-																											break;
-																										}
-																										HX_STACK_LINE(6007)
-																										cx_ite2 = cx_ite2->next;
+																										break;
 																									}
+																									HX_STACK_LINE(6007)
+																									cx_ite2 = cx_ite2->next;
 																								}
-																								HX_STACK_LINE(6007)
-																								if (((ret1 == null()))){
-																									struct _Function_17_1{
-																										inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																											HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6007);
-																											{
-																												HX_STACK_LINE(6007)
-																												::zpp_nape::callbacks::ZPP_CbSetPair ret2;		HX_STACK_VAR(ret2,"ret2");
-																												HX_STACK_LINE(6007)
-																												{
-																													HX_STACK_LINE(6007)
-																													if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
-																														HX_STACK_LINE(6007)
-																														ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
-																													}
-																													else{
-																														HX_STACK_LINE(6007)
-																														ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
-																														HX_STACK_LINE(6007)
-																														::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret2->next;
-																														HX_STACK_LINE(6007)
-																														ret2->next = null();
-																													}
-																													HX_STACK_LINE(6007)
-																													ret2->zip_listeners = true;
-																												}
-																												HX_STACK_LINE(6007)
-																												if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
-																													HX_STACK_LINE(6007)
-																													ret2->a = cb1;
-																													HX_STACK_LINE(6007)
-																													ret2->b = cb2;
-																												}
-																												else{
-																													HX_STACK_LINE(6007)
-																													ret2->a = cb2;
-																													HX_STACK_LINE(6007)
-																													ret2->b = cb1;
-																												}
-																												HX_STACK_LINE(6007)
-																												return ret2;
-																											}
-																											return null();
-																										}
-																									};
-																									HX_STACK_LINE(6007)
-																									ret1 = _Function_17_1::Block(cb1,cb2);
-																									HX_STACK_LINE(6007)
-																									cb1->cbpairs->add(ret1);
-																									HX_STACK_LINE(6007)
-																									if (((cb2 != cb1))){
-																										HX_STACK_LINE(6007)
-																										cb2->cbpairs->add(ret1);
-																									}
-																								}
-																								HX_STACK_LINE(6007)
-																								if ((ret1->zip_listeners)){
-																									HX_STACK_LINE(6007)
-																									ret1->zip_listeners = false;
-																									HX_STACK_LINE(6007)
-																									ret1->__validate();
-																								}
-																								HX_STACK_LINE(6007)
-																								return ret1;
 																							}
-																							return null();
-																						}
-																					};
-																					HX_STACK_LINE(6007)
-																					::zpp_nape::util::ZNPNode_ZPP_InteractionListener cx_ite2 = (_Function_15_1::Block(cb1,cb2))->listeners->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
-																					HX_STACK_LINE(6007)
-																					while(((cx_ite2 != null()))){
-																						HX_STACK_LINE(6007)
-																						::zpp_nape::callbacks::ZPP_InteractionListener x = cx_ite2->elt;		HX_STACK_VAR(x,"x");
-																						HX_STACK_LINE(6007)
-																						if (((x->event == event))){
 																							HX_STACK_LINE(6007)
-																							if (((((int(x->itype) & int(inttype))) != (int)0))){
-																								struct _Function_18_1{
-																									inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::util::ZNPNode_ZPP_InteractionListener &lite,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::callbacks::ZPP_InteractionListener &x){
+																							if (((ret1 == null()))){
+																								struct _Function_16_1{
+																									inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
 																										HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6007);
 																										{
 																											HX_STACK_LINE(6007)
-																											::zpp_nape::util::ZNPList_ZPP_InteractionListener _this = _g->prelisteners;		HX_STACK_VAR(_this,"_this");
+																											::zpp_nape::callbacks::ZPP_CbSetPair ret2;		HX_STACK_VAR(ret2,"ret2");
 																											HX_STACK_LINE(6007)
 																											{
-																											}
-																											struct _Function_19_1{
-																												inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x){
-																													HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6007);
-																													{
-																														HX_STACK_LINE(6007)
-																														::zpp_nape::util::ZNPNode_ZPP_InteractionListener ret1;		HX_STACK_VAR(ret1,"ret1");
-																														HX_STACK_LINE(6007)
-																														{
-																															HX_STACK_LINE(6007)
-																															if (((::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool == null()))){
-																																HX_STACK_LINE(6007)
-																																ret1 = ::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::__new();
-																															}
-																															else{
-																																HX_STACK_LINE(6007)
-																																ret1 = ::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool;
-																																HX_STACK_LINE(6007)
-																																::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool = ret1->next;
-																																HX_STACK_LINE(6007)
-																																ret1->next = null();
-																															}
-																															HX_STACK_LINE(6007)
-																															Dynamic();
-																														}
-																														HX_STACK_LINE(6007)
-																														ret1->elt = x;
-																														HX_STACK_LINE(6007)
-																														return ret1;
-																													}
-																													return null();
+																												HX_STACK_LINE(6007)
+																												if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
+																													HX_STACK_LINE(6007)
+																													ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
 																												}
-																											};
-																											HX_STACK_LINE(6007)
-																											::zpp_nape::util::ZNPNode_ZPP_InteractionListener temp = _Function_19_1::Block(x);		HX_STACK_VAR(temp,"temp");
-																											HX_STACK_LINE(6007)
-																											if (((lite == null()))){
+																												else{
+																													HX_STACK_LINE(6007)
+																													ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
+																													HX_STACK_LINE(6007)
+																													::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret2->next;
+																													HX_STACK_LINE(6007)
+																													ret2->next = null();
+																												}
 																												HX_STACK_LINE(6007)
-																												temp->next = _this->head;
+																												ret2->zip_listeners = true;
+																											}
+																											HX_STACK_LINE(6007)
+																											if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
 																												HX_STACK_LINE(6007)
-																												_this->head = temp;
+																												ret2->a = cb1;
+																												HX_STACK_LINE(6007)
+																												ret2->b = cb2;
 																											}
 																											else{
 																												HX_STACK_LINE(6007)
-																												temp->next = lite->next;
+																												ret2->a = cb2;
 																												HX_STACK_LINE(6007)
-																												lite->next = temp;
+																												ret2->b = cb1;
 																											}
 																											HX_STACK_LINE(6007)
-																											_this->pushmod = _this->modified = true;
-																											HX_STACK_LINE(6007)
-																											(_this->length)++;
-																											HX_STACK_LINE(6007)
-																											return temp;
+																											return ret2;
 																										}
 																										return null();
 																									}
 																								};
 																								HX_STACK_LINE(6007)
-																								lite = _Function_18_1::Block(lite,_g,x);
+																								ret1 = _Function_16_1::Block(cb2,cb1);
 																								HX_STACK_LINE(6007)
-																								anyimpure = (bool(anyimpure) || bool(!(x->pure)));
+																								cb1->cbpairs->add(ret1);
+																								HX_STACK_LINE(6007)
+																								if (((cb2 != cb1))){
+																									HX_STACK_LINE(6007)
+																									cb2->cbpairs->add(ret1);
+																								}
 																							}
+																							HX_STACK_LINE(6007)
+																							if ((ret1->zip_listeners)){
+																								HX_STACK_LINE(6007)
+																								ret1->zip_listeners = false;
+																								HX_STACK_LINE(6007)
+																								ret1->__validate();
+																							}
+																							HX_STACK_LINE(6007)
+																							return ret1;
 																						}
-																						HX_STACK_LINE(6007)
-																						cx_ite2 = cx_ite2->next;
+																						return null();
 																					}
+																				};
+																				HX_STACK_LINE(6007)
+																				::zpp_nape::util::ZNPNode_ZPP_InteractionListener cx_ite2 = (_Function_14_1::Block(cb2,cb1))->listeners->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
+																				HX_STACK_LINE(6007)
+																				while(((cx_ite2 != null()))){
+																					HX_STACK_LINE(6007)
+																					::zpp_nape::callbacks::ZPP_InteractionListener x = cx_ite2->elt;		HX_STACK_VAR(x,"x");
+																					HX_STACK_LINE(6007)
+																					if (((x->event == event))){
+																						HX_STACK_LINE(6007)
+																						if (((((int(x->itype) & int(inttype))) != (int)0))){
+																							struct _Function_17_1{
+																								inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::util::ZNPNode_ZPP_InteractionListener &lite,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::callbacks::ZPP_InteractionListener &x){
+																									HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6007);
+																									{
+																										HX_STACK_LINE(6007)
+																										::zpp_nape::util::ZNPList_ZPP_InteractionListener _this = _g->prelisteners;		HX_STACK_VAR(_this,"_this");
+																										struct _Function_18_1{
+																											inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x){
+																												HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6007);
+																												{
+																													HX_STACK_LINE(6007)
+																													::zpp_nape::util::ZNPNode_ZPP_InteractionListener ret1;		HX_STACK_VAR(ret1,"ret1");
+																													HX_STACK_LINE(6007)
+																													{
+																														HX_STACK_LINE(6007)
+																														if (((::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool == null()))){
+																															HX_STACK_LINE(6007)
+																															ret1 = ::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::__new();
+																														}
+																														else{
+																															HX_STACK_LINE(6007)
+																															ret1 = ::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool;
+																															HX_STACK_LINE(6007)
+																															::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool = ret1->next;
+																															HX_STACK_LINE(6007)
+																															ret1->next = null();
+																														}
+																														HX_STACK_LINE(6007)
+																														Dynamic();
+																													}
+																													HX_STACK_LINE(6007)
+																													ret1->elt = x;
+																													HX_STACK_LINE(6007)
+																													return ret1;
+																												}
+																												return null();
+																											}
+																										};
+																										HX_STACK_LINE(6007)
+																										::zpp_nape::util::ZNPNode_ZPP_InteractionListener temp = _Function_18_1::Block(x);		HX_STACK_VAR(temp,"temp");
+																										HX_STACK_LINE(6007)
+																										if (((lite == null()))){
+																											HX_STACK_LINE(6007)
+																											temp->next = _this->head;
+																											HX_STACK_LINE(6007)
+																											_this->head = temp;
+																										}
+																										else{
+																											HX_STACK_LINE(6007)
+																											temp->next = lite->next;
+																											HX_STACK_LINE(6007)
+																											lite->next = temp;
+																										}
+																										HX_STACK_LINE(6007)
+																										_this->pushmod = _this->modified = true;
+																										HX_STACK_LINE(6007)
+																										(_this->length)++;
+																										HX_STACK_LINE(6007)
+																										return temp;
+																									}
+																									return null();
+																								}
+																							};
+																							HX_STACK_LINE(6007)
+																							lite = _Function_17_1::Block(lite,_g,x);
+																							HX_STACK_LINE(6007)
+																							anyimpure = (bool(anyimpure) || bool(!(x->pure)));
+																						}
+																					}
+																					HX_STACK_LINE(6007)
+																					cx_ite2 = cx_ite2->next;
 																				}
 																			}
 																		}
@@ -3284,7 +3067,7 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																							HX_STACK_LINE(6083)
 																							::zpp_nape::phys::ZPP_Interactor o2 = callbackset->int2;		HX_STACK_VAR(o2,"o2");
 																							struct _Function_17_1{
-																								inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &listener,::zpp_nape::phys::ZPP_Interactor &o1){
+																								inline static bool Block( ::zpp_nape::phys::ZPP_Interactor &o1,::zpp_nape::callbacks::ZPP_InteractionListener &listener){
 																									HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6083);
 																									{
 																										HX_STACK_LINE(6083)
@@ -3297,7 +3080,7 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																								}
 																							};
 																							struct _Function_17_2{
-																								inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &listener,::zpp_nape::phys::ZPP_Interactor &o2){
+																								inline static bool Block( ::zpp_nape::phys::ZPP_Interactor &o2,::zpp_nape::callbacks::ZPP_InteractionListener &listener){
 																									HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6083);
 																									{
 																										HX_STACK_LINE(6083)
@@ -3310,7 +3093,7 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																								}
 																							};
 																							HX_STACK_LINE(6083)
-																							if (((bool(_Function_17_1::Block(listener,o1)) && bool(_Function_17_2::Block(listener,o2))))){
+																							if (((bool(_Function_17_1::Block(o1,listener)) && bool(_Function_17_2::Block(o2,listener))))){
 																								HX_STACK_LINE(6083)
 																								cb->int1 = o1;
 																								HX_STACK_LINE(6083)
@@ -3461,14 +3244,8 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 														if (((arb->b1->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC))){
 															HX_STACK_LINE(6130)
 															::zpp_nape::phys::ZPP_Body o = arb->b1;		HX_STACK_VAR(o,"o");
-															HX_STACK_LINE(6131)
-															{
-															}
 															HX_STACK_LINE(6139)
 															if ((!(o->world))){
-																HX_STACK_LINE(6140)
-																{
-																}
 																HX_STACK_LINE(6148)
 																o->component->waket = (__this->stamp + ((  ((__this->midstep)) ? int((int)0) : int((int)1) )));
 																HX_STACK_LINE(6149)
@@ -3487,14 +3264,8 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 														if (((arb->b1->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC))){
 															HX_STACK_LINE(6156)
 															::zpp_nape::phys::ZPP_Body o = arb->b2;		HX_STACK_VAR(o,"o");
-															HX_STACK_LINE(6157)
-															{
-															}
 															HX_STACK_LINE(6165)
 															if ((!(o->world))){
-																HX_STACK_LINE(6166)
-																{
-																}
 																HX_STACK_LINE(6174)
 																o->component->waket = (__this->stamp + ((  ((__this->midstep)) ? int((int)0) : int((int)1) )));
 																HX_STACK_LINE(6175)
@@ -3517,14 +3288,8 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 													if (((bool((arb->b1->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC)) && bool(arb->b1->component->sleeping)))){
 														HX_STACK_LINE(6240)
 														::zpp_nape::phys::ZPP_Body o = arb->b1;		HX_STACK_VAR(o,"o");
-														HX_STACK_LINE(6241)
-														{
-														}
 														HX_STACK_LINE(6249)
 														if ((!(o->world))){
-															HX_STACK_LINE(6250)
-															{
-															}
 															HX_STACK_LINE(6258)
 															o->component->waket = (__this->stamp + ((  ((__this->midstep)) ? int((int)0) : int((int)1) )));
 															HX_STACK_LINE(6259)
@@ -3543,14 +3308,8 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 													if (((bool((arb->b2->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC)) && bool(arb->b2->component->sleeping)))){
 														HX_STACK_LINE(6266)
 														::zpp_nape::phys::ZPP_Body o = arb->b2;		HX_STACK_VAR(o,"o");
-														HX_STACK_LINE(6267)
-														{
-														}
 														HX_STACK_LINE(6275)
 														if ((!(o->world))){
-															HX_STACK_LINE(6276)
-															{
-															}
 															HX_STACK_LINE(6284)
 															o->component->waket = (__this->stamp + ((  ((__this->midstep)) ? int((int)0) : int((int)1) )));
 															HX_STACK_LINE(6285)
@@ -3574,9 +3333,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 													{
 														HX_STACK_LINE(6294)
 														::zpp_nape::util::ZNPList_ZPP_FluidArbiter _this = __this->f_arbiters;		HX_STACK_VAR(_this,"_this");
-														HX_STACK_LINE(6294)
-														{
-														}
 														struct _Function_8_1{
 															inline static ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &arb){
 																HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6294);
@@ -3630,16 +3386,13 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 										}
 									};
 									struct _Function_5_2{
-										inline static ::zpp_nape::dynamics::ZPP_FluidArbiter Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &arb){
+										inline static ::zpp_nape::dynamics::ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &arb){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6298);
 											{
 												HX_STACK_LINE(6299)
 												{
 													HX_STACK_LINE(6300)
 													::zpp_nape::dynamics::ZPP_FluidArbiter o = arb;		HX_STACK_VAR(o,"o");
-													HX_STACK_LINE(6301)
-													{
-													}
 													HX_STACK_LINE(6310)
 													o->next = ::zpp_nape::dynamics::ZPP_FluidArbiter_obj::zpp_pool;
 													HX_STACK_LINE(6311)
@@ -3652,19 +3405,19 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 										}
 									};
 									HX_STACK_LINE(5965)
-									return (  ((::zpp_nape::geom::ZPP_Collide_obj::flowCollide(sa,sb,arb))) ? ::zpp_nape::dynamics::ZPP_FluidArbiter(_Function_5_1::Block(arb,swapped,continuous,inttype,_g,s2,__this,sb,s1,first,sa)) : ::zpp_nape::dynamics::ZPP_FluidArbiter((  ((first)) ? ::zpp_nape::dynamics::ZPP_FluidArbiter(_Function_5_2::Block(arb)) : ::zpp_nape::dynamics::ZPP_FluidArbiter(arb) )) );
+									return (  ((::zpp_nape::geom::ZPP_Collide_obj::flowCollide(sa,sb,arb))) ? ::zpp_nape::dynamics::ZPP_Arbiter(_Function_5_1::Block(first,__this,swapped,arb,s2,_g,sb,sa,continuous,s1,inttype)) : ::zpp_nape::dynamics::ZPP_Arbiter((  ((first)) ? ::zpp_nape::dynamics::ZPP_Arbiter(_Function_5_2::Block(arb)) : ::zpp_nape::dynamics::ZPP_Arbiter(arb) )) );
 								}
 								return null();
 							}
 						};
 						HX_STACK_LINE(5963)
-						return (  (((bool((bool(first) || bool((arb->stamp != __this->stamp)))) || bool(continuous)))) ? ::zpp_nape::dynamics::ZPP_FluidArbiter(_Function_4_1::Block(arb,swapped,continuous,inttype,_g,s2,__this,sb,s1,first,sa)) : ::zpp_nape::dynamics::ZPP_FluidArbiter(arb) );
+						return (  (((bool((bool(first) || bool((arb->stamp != __this->stamp)))) || bool(continuous)))) ? ::zpp_nape::dynamics::ZPP_Arbiter(_Function_4_1::Block(__this,first,swapped,arb,s2,_g,sb,sa,continuous,s1,inttype)) : ::zpp_nape::dynamics::ZPP_Arbiter(arb) );
 					}
 					return null();
 				}
 			};
 			HX_STACK_LINE(5961)
-			ret = _Function_3_2::Block(arb,swapped,continuous,_g,this,s2,sb,s1,first,sa);
+			ret = _Function_3_2::Block(first,this,swapped,arb,s2,_g,sb,sa,continuous,s1);
 		}
 		else{
 			HX_STACK_LINE(6323)
@@ -3672,7 +3425,7 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 				HX_STACK_LINE(6324)
 				::zpp_nape::util::ZNPList_ZPP_ColArbiter carbs = (  ((stat)) ? ::zpp_nape::util::ZNPList_ZPP_ColArbiter(this->c_arbiters_true) : ::zpp_nape::util::ZNPList_ZPP_ColArbiter(this->c_arbiters_false) );		HX_STACK_VAR(carbs,"carbs");
 				struct _Function_4_1{
-					inline static ::zpp_nape::dynamics::ZPP_Arbiter Block( ::zpp_nape::shape::ZPP_Shape &sa,::zpp_nape::phys::ZPP_Body &b2,::zpp_nape::phys::ZPP_Body &b1,::zpp_nape::shape::ZPP_Shape &sb){
+					inline static ::zpp_nape::dynamics::ZPP_Arbiter Block( ::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::phys::ZPP_Body &b2,::zpp_nape::shape::ZPP_Shape &sa,::zpp_nape::phys::ZPP_Body &b1){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6325);
 						{
 							HX_STACK_LINE(6326)
@@ -3688,17 +3441,11 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 									HX_STACK_LINE(6331)
 									::zpp_nape::dynamics::ZPP_Arbiter arb = cx_ite->elt;		HX_STACK_VAR(arb,"arb");
 									HX_STACK_LINE(6332)
-									{
-										HX_STACK_LINE(6333)
-										{
-										}
-										HX_STACK_LINE(6341)
-										if (((bool((arb->id == sa->id)) && bool((arb->di == sb->id))))){
-											HX_STACK_LINE(6342)
-											ret1 = arb;
-											HX_STACK_LINE(6343)
-											break;
-										}
+									if (((bool((arb->id == sa->id)) && bool((arb->di == sb->id))))){
+										HX_STACK_LINE(6342)
+										ret1 = arb;
+										HX_STACK_LINE(6343)
+										break;
 									}
 									HX_STACK_LINE(6346)
 									cx_ite = cx_ite->next;
@@ -3711,7 +3458,7 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 					}
 				};
 				HX_STACK_LINE(6325)
-				::zpp_nape::dynamics::ZPP_Arbiter xarb = (  (((in_arb == null()))) ? ::zpp_nape::dynamics::ZPP_Arbiter(_Function_4_1::Block(sa,b2,b1,sb)) : ::zpp_nape::dynamics::ZPP_Arbiter(in_arb) );		HX_STACK_VAR(xarb,"xarb");
+				::zpp_nape::dynamics::ZPP_Arbiter xarb = (  (((in_arb == null()))) ? ::zpp_nape::dynamics::ZPP_Arbiter(_Function_4_1::Block(sb,b2,sa,b1)) : ::zpp_nape::dynamics::ZPP_Arbiter(in_arb) );		HX_STACK_VAR(xarb,"xarb");
 				HX_STACK_LINE(6351)
 				bool first = (xarb == null());		HX_STACK_VAR(first,"first");
 				HX_STACK_LINE(6352)
@@ -3747,9 +3494,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 						HX_STACK_LINE(6376)
 						{
 							HX_STACK_LINE(6376)
-							{
-							}
-							HX_STACK_LINE(6376)
 							xarb->cleared = true;
 							HX_STACK_LINE(6376)
 							{
@@ -3757,12 +3501,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 								::zpp_nape::util::ZNPList_ZPP_Arbiter _this = xarb->b1->arbiters;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(6376)
 								{
-								}
-								HX_STACK_LINE(6376)
-								{
-									HX_STACK_LINE(6376)
-									{
-									}
 									HX_STACK_LINE(6376)
 									::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 									HX_STACK_LINE(6376)
@@ -3775,9 +3513,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 										if (((cur->elt == xarb))){
 											HX_STACK_LINE(6376)
 											{
-												HX_STACK_LINE(6376)
-												{
-												}
 												HX_STACK_LINE(6376)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 												HX_STACK_LINE(6376)
@@ -3811,14 +3546,8 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 												}
 												HX_STACK_LINE(6376)
 												{
-												}
-												HX_STACK_LINE(6376)
-												{
 													HX_STACK_LINE(6376)
 													::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-													HX_STACK_LINE(6376)
-													{
-													}
 													HX_STACK_LINE(6376)
 													o->elt = null();
 													HX_STACK_LINE(6376)
@@ -3855,12 +3584,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 								::zpp_nape::util::ZNPList_ZPP_Arbiter _this = xarb->b2->arbiters;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(6376)
 								{
-								}
-								HX_STACK_LINE(6376)
-								{
-									HX_STACK_LINE(6376)
-									{
-									}
 									HX_STACK_LINE(6376)
 									::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 									HX_STACK_LINE(6376)
@@ -3873,9 +3596,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 										if (((cur->elt == xarb))){
 											HX_STACK_LINE(6376)
 											{
-												HX_STACK_LINE(6376)
-												{
-												}
 												HX_STACK_LINE(6376)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 												HX_STACK_LINE(6376)
@@ -3909,14 +3629,8 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 												}
 												HX_STACK_LINE(6376)
 												{
-												}
-												HX_STACK_LINE(6376)
-												{
 													HX_STACK_LINE(6376)
 													::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-													HX_STACK_LINE(6376)
-													{
-													}
 													HX_STACK_LINE(6376)
 													o->elt = null();
 													HX_STACK_LINE(6376)
@@ -4006,19 +3720,19 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 					}
 				}
 				struct _Function_4_2{
-					inline static ::zpp_nape::dynamics::ZPP_ColArbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,bool &reverse,bool &swapped,bool &continuous,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::space::ZPP_Space_obj *__this,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::shape::ZPP_Shape &s1,bool &first,::zpp_nape::shape::ZPP_Shape &sa,::zpp_nape::util::ZNPList_ZPP_ColArbiter &carbs){
+					inline static ::zpp_nape::dynamics::ZPP_Arbiter Block( bool &first,::zpp_nape::space::ZPP_Space_obj *__this,bool &swapped,::zpp_nape::dynamics::ZPP_ColArbiter &arb,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::shape::ZPP_Shape &sa,bool &continuous,::zpp_nape::util::ZNPList_ZPP_ColArbiter &carbs,::zpp_nape::shape::ZPP_Shape &s1,bool &reverse){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6411);
 						{
 							HX_STACK_LINE(6412)
 							int inttype = ::zpp_nape::util::ZPP_Flags_obj::id_InteractionType_COLLISION;		HX_STACK_VAR(inttype,"inttype");
 							struct _Function_5_1{
-								inline static ::zpp_nape::dynamics::ZPP_ColArbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,bool &reverse,bool &swapped,bool &continuous,int &inttype,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::space::ZPP_Space_obj *__this,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::shape::ZPP_Shape &s1,bool &first,::zpp_nape::shape::ZPP_Shape &sa,::zpp_nape::util::ZNPList_ZPP_ColArbiter &carbs){
+								inline static ::zpp_nape::dynamics::ZPP_Arbiter Block( ::zpp_nape::space::ZPP_Space_obj *__this,bool &first,bool &swapped,::zpp_nape::dynamics::ZPP_ColArbiter &arb,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::shape::ZPP_Shape &sa,bool &continuous,::zpp_nape::util::ZNPList_ZPP_ColArbiter &carbs,::zpp_nape::shape::ZPP_Shape &s1,bool &reverse,int &inttype){
 									HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6413);
 									{
 										HX_STACK_LINE(6414)
 										arb->stamp = __this->stamp;
 										struct _Function_6_1{
-											inline static ::zpp_nape::dynamics::ZPP_ColArbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,bool &swapped,bool &continuous,int &inttype,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::space::ZPP_Space_obj *__this,::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::shape::ZPP_Shape &s1,bool &first,::zpp_nape::util::ZNPList_ZPP_ColArbiter &carbs,::zpp_nape::shape::ZPP_Shape &sa){
+											inline static ::zpp_nape::dynamics::ZPP_ColArbiter Block( bool &first,::zpp_nape::space::ZPP_Space_obj *__this,bool &swapped,::zpp_nape::dynamics::ZPP_ColArbiter &arb,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::shape::ZPP_Shape &sa,bool &continuous,::zpp_nape::util::ZNPList_ZPP_ColArbiter &carbs,::zpp_nape::shape::ZPP_Shape &s1,int &inttype){
 												HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6415);
 												{
 													HX_STACK_LINE(6416)
@@ -4043,9 +3757,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																{
 																	HX_STACK_LINE(6417)
 																	::zpp_nape::util::ZNPList_ZPP_Arbiter _this = arb->b1->arbiters;		HX_STACK_VAR(_this,"_this");
-																	HX_STACK_LINE(6417)
-																	{
-																	}
 																	struct _Function_11_1{
 																		inline static ::zpp_nape::util::ZNPNode_ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb){
 																			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6417);
@@ -4095,9 +3806,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																{
 																	HX_STACK_LINE(6417)
 																	::zpp_nape::util::ZNPList_ZPP_Arbiter _this = arb->b2->arbiters;		HX_STACK_VAR(_this,"_this");
-																	HX_STACK_LINE(6417)
-																	{
-																	}
 																	struct _Function_11_1{
 																		inline static ::zpp_nape::util::ZNPNode_ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb){
 																			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6417);
@@ -4193,65 +3901,23 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																}
 																HX_STACK_LINE(6417)
 																if ((!(arb->userdef_dyn_fric))){
-																	struct _Function_11_1{
-																		inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb){
-																			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6417);
-																			{
-																				HX_STACK_LINE(6417)
-																				{
-																				}
-																				HX_STACK_LINE(6417)
-																				return ::Math_obj::sqrt((arb->s1->material->dynamicFriction * arb->s2->material->dynamicFriction));
-																			}
-																			return null();
-																		}
-																	};
 																	HX_STACK_LINE(6417)
-																	arb->dyn_fric = _Function_11_1::Block(arb);
+																	arb->dyn_fric = ::Math_obj::sqrt((arb->s1->material->dynamicFriction * arb->s2->material->dynamicFriction));
 																}
 																HX_STACK_LINE(6417)
 																if ((!(arb->userdef_stat_fric))){
-																	struct _Function_11_1{
-																		inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb){
-																			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6417);
-																			{
-																				HX_STACK_LINE(6417)
-																				{
-																				}
-																				HX_STACK_LINE(6417)
-																				return ::Math_obj::sqrt((arb->s1->material->staticFriction * arb->s2->material->staticFriction));
-																			}
-																			return null();
-																		}
-																	};
 																	HX_STACK_LINE(6417)
-																	arb->stat_fric = _Function_11_1::Block(arb);
+																	arb->stat_fric = ::Math_obj::sqrt((arb->s1->material->staticFriction * arb->s2->material->staticFriction));
 																}
 																HX_STACK_LINE(6417)
 																if ((!(arb->userdef_rfric))){
-																	struct _Function_11_1{
-																		inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb){
-																			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6417);
-																			{
-																				HX_STACK_LINE(6417)
-																				{
-																				}
-																				HX_STACK_LINE(6417)
-																				return ::Math_obj::sqrt((arb->s1->material->rollingFriction * arb->s2->material->rollingFriction));
-																			}
-																			return null();
-																		}
-																	};
 																	HX_STACK_LINE(6417)
-																	arb->rfric = _Function_11_1::Block(arb);
+																	arb->rfric = ::Math_obj::sqrt((arb->s1->material->rollingFriction * arb->s2->material->rollingFriction));
 																}
 															}
 														}
 														HX_STACK_LINE(6418)
 														{
-															HX_STACK_LINE(6418)
-															{
-															}
 															struct _Function_9_1{
 																inline static ::zpp_nape::util::ZNPNode_ZPP_ColArbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb){
 																	HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6418);
@@ -4316,9 +3982,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 														{
 															HX_STACK_LINE(6428)
 															{
-															}
-															HX_STACK_LINE(6428)
-															{
 																HX_STACK_LINE(6428)
 																::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca1;		HX_STACK_VAR(_this,"_this");
 																HX_STACK_LINE(6428)
@@ -4326,22 +3989,13 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																	HX_STACK_LINE(6428)
 																	while((!(((_this->head == null()))))){
 																		HX_STACK_LINE(6428)
-																		{
-																		}
-																		HX_STACK_LINE(6428)
 																		::zpp_nape::util::ZNPNode_ZPP_Interactor ret1 = _this->head;		HX_STACK_VAR(ret1,"ret1");
 																		HX_STACK_LINE(6428)
 																		_this->head = ret1->next;
 																		HX_STACK_LINE(6428)
 																		{
-																		}
-																		HX_STACK_LINE(6428)
-																		{
 																			HX_STACK_LINE(6428)
 																			::zpp_nape::util::ZNPNode_ZPP_Interactor o = ret1;		HX_STACK_VAR(o,"o");
-																			HX_STACK_LINE(6428)
-																			{
-																			}
 																			HX_STACK_LINE(6428)
 																			o->elt = null();
 																			HX_STACK_LINE(6428)
@@ -4372,22 +4026,13 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																	HX_STACK_LINE(6428)
 																	while((!(((_this->head == null()))))){
 																		HX_STACK_LINE(6428)
-																		{
-																		}
-																		HX_STACK_LINE(6428)
 																		::zpp_nape::util::ZNPNode_ZPP_Interactor ret1 = _this->head;		HX_STACK_VAR(ret1,"ret1");
 																		HX_STACK_LINE(6428)
 																		_this->head = ret1->next;
 																		HX_STACK_LINE(6428)
 																		{
-																		}
-																		HX_STACK_LINE(6428)
-																		{
 																			HX_STACK_LINE(6428)
 																			::zpp_nape::util::ZNPNode_ZPP_Interactor o = ret1;		HX_STACK_VAR(o,"o");
-																			HX_STACK_LINE(6428)
-																			{
-																			}
 																			HX_STACK_LINE(6428)
 																			o->elt = null();
 																			HX_STACK_LINE(6428)
@@ -4413,9 +4058,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 															if (((s1->cbSet != null()))){
 																HX_STACK_LINE(6428)
 																::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca1;		HX_STACK_VAR(_this,"_this");
-																HX_STACK_LINE(6428)
-																{
-																}
 																struct _Function_10_1{
 																	inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::shape::ZPP_Shape &s1){
 																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6428);
@@ -4466,9 +4108,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																HX_STACK_LINE(6428)
 																::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca1;		HX_STACK_VAR(_this,"_this");
 																::zpp_nape::phys::ZPP_Interactor o = s1->body;		HX_STACK_VAR(o,"o");
-																HX_STACK_LINE(6428)
-																{
-																}
 																struct _Function_10_1{
 																	inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Interactor &o){
 																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6428);
@@ -4518,9 +4157,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 															if (((s2->cbSet != null()))){
 																HX_STACK_LINE(6428)
 																::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca2;		HX_STACK_VAR(_this,"_this");
-																HX_STACK_LINE(6428)
-																{
-																}
 																struct _Function_10_1{
 																	inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::shape::ZPP_Shape &s2){
 																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6428);
@@ -4571,9 +4207,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																HX_STACK_LINE(6428)
 																::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca2;		HX_STACK_VAR(_this,"_this");
 																::zpp_nape::phys::ZPP_Interactor o = s2->body;		HX_STACK_VAR(o,"o");
-																HX_STACK_LINE(6428)
-																{
-																}
 																struct _Function_10_1{
 																	inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Interactor &o){
 																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6428);
@@ -4635,9 +4268,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																	if (((c2->cbSet != null()))){
 																		HX_STACK_LINE(6428)
 																		::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca2;		HX_STACK_VAR(_this,"_this");
-																		HX_STACK_LINE(6428)
-																		{
-																		}
 																		struct _Function_12_1{
 																			inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Compound &c2){
 																				HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6428);
@@ -4691,9 +4321,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																	if (((c1->cbSet != null()))){
 																		HX_STACK_LINE(6428)
 																		::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca1;		HX_STACK_VAR(_this,"_this");
-																		HX_STACK_LINE(6428)
-																		{
-																		}
 																		struct _Function_12_1{
 																			inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Compound &c1){
 																				HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6428);
@@ -4766,119 +4393,103 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																			::zpp_nape::callbacks::ZPP_CbSet cb1 = i1->cbSet;		HX_STACK_VAR(cb1,"cb1");
 																			HX_STACK_LINE(6440)
 																			::zpp_nape::callbacks::ZPP_CbSet cb2 = i2->cbSet;		HX_STACK_VAR(cb2,"cb2");
-																			HX_STACK_LINE(6441)
-																			{
-																			}
 																			struct _Function_13_1{
-																				inline static bool Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
+																				inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
 																					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6449);
 																					{
 																						HX_STACK_LINE(6449)
+																						::zpp_nape::callbacks::ZPP_CbSetPair ret1 = null();		HX_STACK_VAR(ret1,"ret1");
+																						HX_STACK_LINE(6449)
+																						::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
+																						HX_STACK_LINE(6449)
 																						{
+																							HX_STACK_LINE(6449)
+																							::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite2 = pairs->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
+																							HX_STACK_LINE(6449)
+																							while(((cx_ite2 != null()))){
+																								HX_STACK_LINE(6449)
+																								::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite2->elt;		HX_STACK_VAR(p,"p");
+																								HX_STACK_LINE(6449)
+																								if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
+																									HX_STACK_LINE(6449)
+																									ret1 = p;
+																									HX_STACK_LINE(6449)
+																									break;
+																								}
+																								HX_STACK_LINE(6449)
+																								cx_ite2 = cx_ite2->next;
+																							}
 																						}
-																						struct _Function_14_1{
-																							inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																								HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6449);
-																								{
-																									HX_STACK_LINE(6449)
-																									::zpp_nape::callbacks::ZPP_CbSetPair ret1 = null();		HX_STACK_VAR(ret1,"ret1");
-																									HX_STACK_LINE(6449)
-																									::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
-																									HX_STACK_LINE(6449)
+																						HX_STACK_LINE(6449)
+																						if (((ret1 == null()))){
+																							struct _Function_15_1{
+																								inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
+																									HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6449);
 																									{
 																										HX_STACK_LINE(6449)
-																										::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite2 = pairs->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
+																										::zpp_nape::callbacks::ZPP_CbSetPair ret2;		HX_STACK_VAR(ret2,"ret2");
 																										HX_STACK_LINE(6449)
-																										while(((cx_ite2 != null()))){
+																										{
 																											HX_STACK_LINE(6449)
-																											::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite2->elt;		HX_STACK_VAR(p,"p");
-																											HX_STACK_LINE(6449)
-																											if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
+																											if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
 																												HX_STACK_LINE(6449)
-																												ret1 = p;
+																												ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
+																											}
+																											else{
 																												HX_STACK_LINE(6449)
-																												break;
+																												ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
+																												HX_STACK_LINE(6449)
+																												::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret2->next;
+																												HX_STACK_LINE(6449)
+																												ret2->next = null();
 																											}
 																											HX_STACK_LINE(6449)
-																											cx_ite2 = cx_ite2->next;
+																											ret2->zip_listeners = true;
 																										}
-																									}
-																									HX_STACK_LINE(6449)
-																									if (((ret1 == null()))){
-																										struct _Function_16_1{
-																											inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																												HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6449);
-																												{
-																													HX_STACK_LINE(6449)
-																													::zpp_nape::callbacks::ZPP_CbSetPair ret2;		HX_STACK_VAR(ret2,"ret2");
-																													HX_STACK_LINE(6449)
-																													{
-																														HX_STACK_LINE(6449)
-																														if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
-																															HX_STACK_LINE(6449)
-																															ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
-																														}
-																														else{
-																															HX_STACK_LINE(6449)
-																															ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
-																															HX_STACK_LINE(6449)
-																															::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret2->next;
-																															HX_STACK_LINE(6449)
-																															ret2->next = null();
-																														}
-																														HX_STACK_LINE(6449)
-																														ret2->zip_listeners = true;
-																													}
-																													HX_STACK_LINE(6449)
-																													if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
-																														HX_STACK_LINE(6449)
-																														ret2->a = cb1;
-																														HX_STACK_LINE(6449)
-																														ret2->b = cb2;
-																													}
-																													else{
-																														HX_STACK_LINE(6449)
-																														ret2->a = cb2;
-																														HX_STACK_LINE(6449)
-																														ret2->b = cb1;
-																													}
-																													HX_STACK_LINE(6449)
-																													return ret2;
-																												}
-																												return null();
-																											}
-																										};
 																										HX_STACK_LINE(6449)
-																										ret1 = _Function_16_1::Block(cb1,cb2);
-																										HX_STACK_LINE(6449)
-																										cb1->cbpairs->add(ret1);
-																										HX_STACK_LINE(6449)
-																										if (((cb2 != cb1))){
+																										if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
 																											HX_STACK_LINE(6449)
-																											cb2->cbpairs->add(ret1);
+																											ret2->a = cb1;
+																											HX_STACK_LINE(6449)
+																											ret2->b = cb2;
 																										}
-																									}
-																									HX_STACK_LINE(6449)
-																									if ((ret1->zip_listeners)){
+																										else{
+																											HX_STACK_LINE(6449)
+																											ret2->a = cb2;
+																											HX_STACK_LINE(6449)
+																											ret2->b = cb1;
+																										}
 																										HX_STACK_LINE(6449)
-																										ret1->zip_listeners = false;
-																										HX_STACK_LINE(6449)
-																										ret1->__validate();
+																										return ret2;
 																									}
-																									HX_STACK_LINE(6449)
-																									return ret1;
+																									return null();
 																								}
-																								return null();
+																							};
+																							HX_STACK_LINE(6449)
+																							ret1 = _Function_15_1::Block(cb2,cb1);
+																							HX_STACK_LINE(6449)
+																							cb1->cbpairs->add(ret1);
+																							HX_STACK_LINE(6449)
+																							if (((cb2 != cb1))){
+																								HX_STACK_LINE(6449)
+																								cb2->cbpairs->add(ret1);
 																							}
-																						};
+																						}
 																						HX_STACK_LINE(6449)
-																						return ((_Function_14_1::Block(cb1,cb2))->listeners->head == null());
+																						if ((ret1->zip_listeners)){
+																							HX_STACK_LINE(6449)
+																							ret1->zip_listeners = false;
+																							HX_STACK_LINE(6449)
+																							ret1->__validate();
+																						}
+																						HX_STACK_LINE(6449)
+																						return ret1;
 																					}
 																					return null();
 																				}
 																			};
 																			HX_STACK_LINE(6449)
-																			if ((_Function_13_1::Block(cb1,cb2))){
+																			if ((((_Function_13_1::Block(cb2,cb1))->listeners->head == null()))){
 																				HX_STACK_LINE(6450)
 																				cx_ite1 = cx_ite1->next;
 																				HX_STACK_LINE(6451)
@@ -4897,22 +4508,13 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																					HX_STACK_LINE(6455)
 																					while((!(((_this->head == null()))))){
 																						HX_STACK_LINE(6455)
-																						{
-																						}
-																						HX_STACK_LINE(6455)
 																						::zpp_nape::util::ZNPNode_ZPP_InteractionListener ret1 = _this->head;		HX_STACK_VAR(ret1,"ret1");
 																						HX_STACK_LINE(6455)
 																						_this->head = ret1->next;
 																						HX_STACK_LINE(6455)
 																						{
-																						}
-																						HX_STACK_LINE(6455)
-																						{
 																							HX_STACK_LINE(6455)
 																							::zpp_nape::util::ZNPNode_ZPP_InteractionListener o = ret1;		HX_STACK_VAR(o,"o");
-																							HX_STACK_LINE(6455)
-																							{
-																							}
 																							HX_STACK_LINE(6455)
 																							o->elt = null();
 																							HX_STACK_LINE(6455)
@@ -4942,191 +4544,182 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																				int event = ::zpp_nape::util::ZPP_Flags_obj::id_CbEvent_PRE;		HX_STACK_VAR(event,"event");
 																				HX_STACK_LINE(6457)
 																				{
-																					HX_STACK_LINE(6457)
-																					{
-																					}
-																					HX_STACK_LINE(6457)
-																					{
-																						struct _Function_16_1{
-																							inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																								HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6457);
+																					struct _Function_15_1{
+																						inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
+																							HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6457);
+																							{
+																								HX_STACK_LINE(6457)
+																								::zpp_nape::callbacks::ZPP_CbSetPair ret1 = null();		HX_STACK_VAR(ret1,"ret1");
+																								HX_STACK_LINE(6457)
+																								::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
+																								HX_STACK_LINE(6457)
 																								{
 																									HX_STACK_LINE(6457)
-																									::zpp_nape::callbacks::ZPP_CbSetPair ret1 = null();		HX_STACK_VAR(ret1,"ret1");
+																									::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite2 = pairs->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
 																									HX_STACK_LINE(6457)
-																									::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
-																									HX_STACK_LINE(6457)
-																									{
+																									while(((cx_ite2 != null()))){
 																										HX_STACK_LINE(6457)
-																										::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite2 = pairs->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
+																										::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite2->elt;		HX_STACK_VAR(p,"p");
 																										HX_STACK_LINE(6457)
-																										while(((cx_ite2 != null()))){
+																										if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
 																											HX_STACK_LINE(6457)
-																											::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite2->elt;		HX_STACK_VAR(p,"p");
+																											ret1 = p;
 																											HX_STACK_LINE(6457)
-																											if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
-																												HX_STACK_LINE(6457)
-																												ret1 = p;
-																												HX_STACK_LINE(6457)
-																												break;
-																											}
-																											HX_STACK_LINE(6457)
-																											cx_ite2 = cx_ite2->next;
+																											break;
 																										}
+																										HX_STACK_LINE(6457)
+																										cx_ite2 = cx_ite2->next;
 																									}
-																									HX_STACK_LINE(6457)
-																									if (((ret1 == null()))){
-																										struct _Function_18_1{
-																											inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																												HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6457);
-																												{
-																													HX_STACK_LINE(6457)
-																													::zpp_nape::callbacks::ZPP_CbSetPair ret2;		HX_STACK_VAR(ret2,"ret2");
-																													HX_STACK_LINE(6457)
-																													{
-																														HX_STACK_LINE(6457)
-																														if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
-																															HX_STACK_LINE(6457)
-																															ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
-																														}
-																														else{
-																															HX_STACK_LINE(6457)
-																															ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
-																															HX_STACK_LINE(6457)
-																															::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret2->next;
-																															HX_STACK_LINE(6457)
-																															ret2->next = null();
-																														}
-																														HX_STACK_LINE(6457)
-																														ret2->zip_listeners = true;
-																													}
-																													HX_STACK_LINE(6457)
-																													if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
-																														HX_STACK_LINE(6457)
-																														ret2->a = cb1;
-																														HX_STACK_LINE(6457)
-																														ret2->b = cb2;
-																													}
-																													else{
-																														HX_STACK_LINE(6457)
-																														ret2->a = cb2;
-																														HX_STACK_LINE(6457)
-																														ret2->b = cb1;
-																													}
-																													HX_STACK_LINE(6457)
-																													return ret2;
-																												}
-																												return null();
-																											}
-																										};
-																										HX_STACK_LINE(6457)
-																										ret1 = _Function_18_1::Block(cb1,cb2);
-																										HX_STACK_LINE(6457)
-																										cb1->cbpairs->add(ret1);
-																										HX_STACK_LINE(6457)
-																										if (((cb2 != cb1))){
-																											HX_STACK_LINE(6457)
-																											cb2->cbpairs->add(ret1);
-																										}
-																									}
-																									HX_STACK_LINE(6457)
-																									if ((ret1->zip_listeners)){
-																										HX_STACK_LINE(6457)
-																										ret1->zip_listeners = false;
-																										HX_STACK_LINE(6457)
-																										ret1->__validate();
-																									}
-																									HX_STACK_LINE(6457)
-																									return ret1;
 																								}
-																								return null();
-																							}
-																						};
-																						HX_STACK_LINE(6457)
-																						::zpp_nape::util::ZNPNode_ZPP_InteractionListener cx_ite2 = (_Function_16_1::Block(cb1,cb2))->listeners->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
-																						HX_STACK_LINE(6457)
-																						while(((cx_ite2 != null()))){
-																							HX_STACK_LINE(6457)
-																							::zpp_nape::callbacks::ZPP_InteractionListener x = cx_ite2->elt;		HX_STACK_VAR(x,"x");
-																							HX_STACK_LINE(6457)
-																							if (((x->event == event))){
 																								HX_STACK_LINE(6457)
-																								if (((((int(x->itype) & int(inttype))) != (int)0))){
-																									struct _Function_19_1{
-																										inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::util::ZNPNode_ZPP_InteractionListener &lite,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::callbacks::ZPP_InteractionListener &x){
+																								if (((ret1 == null()))){
+																									struct _Function_17_1{
+																										inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
 																											HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6457);
 																											{
 																												HX_STACK_LINE(6457)
-																												::zpp_nape::util::ZNPList_ZPP_InteractionListener _this = _g->prelisteners;		HX_STACK_VAR(_this,"_this");
+																												::zpp_nape::callbacks::ZPP_CbSetPair ret2;		HX_STACK_VAR(ret2,"ret2");
 																												HX_STACK_LINE(6457)
 																												{
-																												}
-																												struct _Function_20_1{
-																													inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x){
-																														HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6457);
-																														{
-																															HX_STACK_LINE(6457)
-																															::zpp_nape::util::ZNPNode_ZPP_InteractionListener ret1;		HX_STACK_VAR(ret1,"ret1");
-																															HX_STACK_LINE(6457)
-																															{
-																																HX_STACK_LINE(6457)
-																																if (((::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool == null()))){
-																																	HX_STACK_LINE(6457)
-																																	ret1 = ::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::__new();
-																																}
-																																else{
-																																	HX_STACK_LINE(6457)
-																																	ret1 = ::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool;
-																																	HX_STACK_LINE(6457)
-																																	::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool = ret1->next;
-																																	HX_STACK_LINE(6457)
-																																	ret1->next = null();
-																																}
-																																HX_STACK_LINE(6457)
-																																Dynamic();
-																															}
-																															HX_STACK_LINE(6457)
-																															ret1->elt = x;
-																															HX_STACK_LINE(6457)
-																															return ret1;
-																														}
-																														return null();
+																													HX_STACK_LINE(6457)
+																													if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
+																														HX_STACK_LINE(6457)
+																														ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
 																													}
-																												};
-																												HX_STACK_LINE(6457)
-																												::zpp_nape::util::ZNPNode_ZPP_InteractionListener temp = _Function_20_1::Block(x);		HX_STACK_VAR(temp,"temp");
-																												HX_STACK_LINE(6457)
-																												if (((lite == null()))){
+																													else{
+																														HX_STACK_LINE(6457)
+																														ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
+																														HX_STACK_LINE(6457)
+																														::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret2->next;
+																														HX_STACK_LINE(6457)
+																														ret2->next = null();
+																													}
 																													HX_STACK_LINE(6457)
-																													temp->next = _this->head;
+																													ret2->zip_listeners = true;
+																												}
+																												HX_STACK_LINE(6457)
+																												if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
 																													HX_STACK_LINE(6457)
-																													_this->head = temp;
+																													ret2->a = cb1;
+																													HX_STACK_LINE(6457)
+																													ret2->b = cb2;
 																												}
 																												else{
 																													HX_STACK_LINE(6457)
-																													temp->next = lite->next;
+																													ret2->a = cb2;
 																													HX_STACK_LINE(6457)
-																													lite->next = temp;
+																													ret2->b = cb1;
 																												}
 																												HX_STACK_LINE(6457)
-																												_this->pushmod = _this->modified = true;
-																												HX_STACK_LINE(6457)
-																												(_this->length)++;
-																												HX_STACK_LINE(6457)
-																												return temp;
+																												return ret2;
 																											}
 																											return null();
 																										}
 																									};
 																									HX_STACK_LINE(6457)
-																									lite = _Function_19_1::Block(lite,_g,x);
+																									ret1 = _Function_17_1::Block(cb2,cb1);
 																									HX_STACK_LINE(6457)
-																									anyimpure = (bool(anyimpure) || bool(!(x->pure)));
+																									cb1->cbpairs->add(ret1);
+																									HX_STACK_LINE(6457)
+																									if (((cb2 != cb1))){
+																										HX_STACK_LINE(6457)
+																										cb2->cbpairs->add(ret1);
+																									}
 																								}
+																								HX_STACK_LINE(6457)
+																								if ((ret1->zip_listeners)){
+																									HX_STACK_LINE(6457)
+																									ret1->zip_listeners = false;
+																									HX_STACK_LINE(6457)
+																									ret1->__validate();
+																								}
+																								HX_STACK_LINE(6457)
+																								return ret1;
 																							}
-																							HX_STACK_LINE(6457)
-																							cx_ite2 = cx_ite2->next;
+																							return null();
 																						}
+																					};
+																					HX_STACK_LINE(6457)
+																					::zpp_nape::util::ZNPNode_ZPP_InteractionListener cx_ite2 = (_Function_15_1::Block(cb2,cb1))->listeners->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
+																					HX_STACK_LINE(6457)
+																					while(((cx_ite2 != null()))){
+																						HX_STACK_LINE(6457)
+																						::zpp_nape::callbacks::ZPP_InteractionListener x = cx_ite2->elt;		HX_STACK_VAR(x,"x");
+																						HX_STACK_LINE(6457)
+																						if (((x->event == event))){
+																							HX_STACK_LINE(6457)
+																							if (((((int(x->itype) & int(inttype))) != (int)0))){
+																								struct _Function_18_1{
+																									inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::util::ZNPNode_ZPP_InteractionListener &lite,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::callbacks::ZPP_InteractionListener &x){
+																										HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6457);
+																										{
+																											HX_STACK_LINE(6457)
+																											::zpp_nape::util::ZNPList_ZPP_InteractionListener _this = _g->prelisteners;		HX_STACK_VAR(_this,"_this");
+																											struct _Function_19_1{
+																												inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x){
+																													HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6457);
+																													{
+																														HX_STACK_LINE(6457)
+																														::zpp_nape::util::ZNPNode_ZPP_InteractionListener ret1;		HX_STACK_VAR(ret1,"ret1");
+																														HX_STACK_LINE(6457)
+																														{
+																															HX_STACK_LINE(6457)
+																															if (((::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool == null()))){
+																																HX_STACK_LINE(6457)
+																																ret1 = ::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::__new();
+																															}
+																															else{
+																																HX_STACK_LINE(6457)
+																																ret1 = ::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool;
+																																HX_STACK_LINE(6457)
+																																::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool = ret1->next;
+																																HX_STACK_LINE(6457)
+																																ret1->next = null();
+																															}
+																															HX_STACK_LINE(6457)
+																															Dynamic();
+																														}
+																														HX_STACK_LINE(6457)
+																														ret1->elt = x;
+																														HX_STACK_LINE(6457)
+																														return ret1;
+																													}
+																													return null();
+																												}
+																											};
+																											HX_STACK_LINE(6457)
+																											::zpp_nape::util::ZNPNode_ZPP_InteractionListener temp = _Function_19_1::Block(x);		HX_STACK_VAR(temp,"temp");
+																											HX_STACK_LINE(6457)
+																											if (((lite == null()))){
+																												HX_STACK_LINE(6457)
+																												temp->next = _this->head;
+																												HX_STACK_LINE(6457)
+																												_this->head = temp;
+																											}
+																											else{
+																												HX_STACK_LINE(6457)
+																												temp->next = lite->next;
+																												HX_STACK_LINE(6457)
+																												lite->next = temp;
+																											}
+																											HX_STACK_LINE(6457)
+																											_this->pushmod = _this->modified = true;
+																											HX_STACK_LINE(6457)
+																											(_this->length)++;
+																											HX_STACK_LINE(6457)
+																											return temp;
+																										}
+																										return null();
+																									}
+																								};
+																								HX_STACK_LINE(6457)
+																								lite = _Function_18_1::Block(lite,_g,x);
+																								HX_STACK_LINE(6457)
+																								anyimpure = (bool(anyimpure) || bool(!(x->pure)));
+																							}
+																						}
+																						HX_STACK_LINE(6457)
+																						cx_ite2 = cx_ite2->next;
 																					}
 																				}
 																			}
@@ -5230,9 +4823,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																												HX_STACK_LINE(6497)
 																												::zpp_nape::dynamics::ZPP_Contact _this = arb->contacts;		HX_STACK_VAR(_this,"_this");
 																												HX_STACK_LINE(6497)
-																												{
-																												}
-																												HX_STACK_LINE(6497)
 																												::zpp_nape::dynamics::ZPP_Contact old;		HX_STACK_VAR(old,"old");
 																												HX_STACK_LINE(6497)
 																												::zpp_nape::dynamics::ZPP_Contact ret1;		HX_STACK_VAR(ret1,"ret1");
@@ -5266,9 +4856,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																												HX_STACK_LINE(6497)
 																												old->_inuse = false;
 																												HX_STACK_LINE(6497)
-																												{
-																												}
-																												HX_STACK_LINE(6497)
 																												_this->modified = true;
 																												HX_STACK_LINE(6497)
 																												(_this->length)--;
@@ -5288,9 +4875,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																											{
 																												HX_STACK_LINE(6497)
 																												::zpp_nape::dynamics::ZPP_IContact _this = arb->innards;		HX_STACK_VAR(_this,"_this");
-																												HX_STACK_LINE(6497)
-																												{
-																												}
 																												HX_STACK_LINE(6497)
 																												::zpp_nape::dynamics::ZPP_IContact old;		HX_STACK_VAR(old,"old");
 																												HX_STACK_LINE(6497)
@@ -5325,9 +4909,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																												HX_STACK_LINE(6497)
 																												old->_inuse = false;
 																												HX_STACK_LINE(6497)
-																												{
-																												}
-																												HX_STACK_LINE(6497)
 																												_this->modified = true;
 																												HX_STACK_LINE(6497)
 																												(_this->length)--;
@@ -5345,9 +4926,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																									{
 																										HX_STACK_LINE(6497)
 																										::zpp_nape::dynamics::ZPP_Contact o = c;		HX_STACK_VAR(o,"o");
-																										HX_STACK_LINE(6497)
-																										{
-																										}
 																										HX_STACK_LINE(6497)
 																										o->arbiter = null();
 																										HX_STACK_LINE(6497)
@@ -5376,9 +4954,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																										arb->oc1 = c;
 																									}
 																									else{
-																										HX_STACK_LINE(6497)
-																										{
-																										}
 																										HX_STACK_LINE(6497)
 																										arb->hc2 = true;
 																										HX_STACK_LINE(6497)
@@ -5469,7 +5044,7 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																								HX_STACK_LINE(6533)
 																								::zpp_nape::phys::ZPP_Interactor o2 = callbackset->int2;		HX_STACK_VAR(o2,"o2");
 																								struct _Function_18_1{
-																									inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &listener,::zpp_nape::phys::ZPP_Interactor &o1){
+																									inline static bool Block( ::zpp_nape::phys::ZPP_Interactor &o1,::zpp_nape::callbacks::ZPP_InteractionListener &listener){
 																										HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6533);
 																										{
 																											HX_STACK_LINE(6533)
@@ -5482,7 +5057,7 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																									}
 																								};
 																								struct _Function_18_2{
-																									inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &listener,::zpp_nape::phys::ZPP_Interactor &o2){
+																									inline static bool Block( ::zpp_nape::phys::ZPP_Interactor &o2,::zpp_nape::callbacks::ZPP_InteractionListener &listener){
 																										HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6533);
 																										{
 																											HX_STACK_LINE(6533)
@@ -5495,7 +5070,7 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																									}
 																								};
 																								HX_STACK_LINE(6533)
-																								if (((bool(_Function_18_1::Block(listener,o1)) && bool(_Function_18_2::Block(listener,o2))))){
+																								if (((bool(_Function_18_1::Block(o1,listener)) && bool(_Function_18_2::Block(o2,listener))))){
 																									HX_STACK_LINE(6533)
 																									cb->int1 = o1;
 																									HX_STACK_LINE(6533)
@@ -5651,14 +5226,8 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 															if (((arb->b1->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC))){
 																HX_STACK_LINE(6580)
 																::zpp_nape::phys::ZPP_Body o = arb->b1;		HX_STACK_VAR(o,"o");
-																HX_STACK_LINE(6581)
-																{
-																}
 																HX_STACK_LINE(6589)
 																if ((!(o->world))){
-																	HX_STACK_LINE(6590)
-																	{
-																	}
 																	HX_STACK_LINE(6598)
 																	o->component->waket = (__this->stamp + ((  ((__this->midstep)) ? int((int)0) : int((int)1) )));
 																	HX_STACK_LINE(6599)
@@ -5677,14 +5246,8 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 															if (((arb->b1->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC))){
 																HX_STACK_LINE(6606)
 																::zpp_nape::phys::ZPP_Body o = arb->b2;		HX_STACK_VAR(o,"o");
-																HX_STACK_LINE(6607)
-																{
-																}
 																HX_STACK_LINE(6615)
 																if ((!(o->world))){
-																	HX_STACK_LINE(6616)
-																	{
-																	}
 																	HX_STACK_LINE(6624)
 																	o->component->waket = (__this->stamp + ((  ((__this->midstep)) ? int((int)0) : int((int)1) )));
 																	HX_STACK_LINE(6625)
@@ -5707,14 +5270,8 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 														if (((bool((arb->b1->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC)) && bool(arb->b1->component->sleeping)))){
 															HX_STACK_LINE(6690)
 															::zpp_nape::phys::ZPP_Body o = arb->b1;		HX_STACK_VAR(o,"o");
-															HX_STACK_LINE(6691)
-															{
-															}
 															HX_STACK_LINE(6699)
 															if ((!(o->world))){
-																HX_STACK_LINE(6700)
-																{
-																}
 																HX_STACK_LINE(6708)
 																o->component->waket = (__this->stamp + ((  ((__this->midstep)) ? int((int)0) : int((int)1) )));
 																HX_STACK_LINE(6709)
@@ -5733,14 +5290,8 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 														if (((bool((arb->b2->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC)) && bool(arb->b2->component->sleeping)))){
 															HX_STACK_LINE(6716)
 															::zpp_nape::phys::ZPP_Body o = arb->b2;		HX_STACK_VAR(o,"o");
-															HX_STACK_LINE(6717)
-															{
-															}
 															HX_STACK_LINE(6725)
 															if ((!(o->world))){
-																HX_STACK_LINE(6726)
-																{
-																}
 																HX_STACK_LINE(6734)
 																o->component->waket = (__this->stamp + ((  ((__this->midstep)) ? int((int)0) : int((int)1) )));
 																HX_STACK_LINE(6735)
@@ -5762,9 +5313,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 														arb->sleeping = false;
 														HX_STACK_LINE(6744)
 														{
-															HX_STACK_LINE(6744)
-															{
-															}
 															struct _Function_9_1{
 																inline static ::zpp_nape::util::ZNPNode_ZPP_ColArbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb){
 																	HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6744);
@@ -5818,24 +5366,15 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 											}
 										};
 										struct _Function_6_2{
-											inline static ::zpp_nape::dynamics::ZPP_ColArbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb){
+											inline static ::zpp_nape::dynamics::ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb){
 												HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6748);
 												{
 													HX_STACK_LINE(6749)
 													{
 														HX_STACK_LINE(6750)
 														::zpp_nape::dynamics::ZPP_ColArbiter o = arb;		HX_STACK_VAR(o,"o");
-														HX_STACK_LINE(6751)
-														{
-														}
 														HX_STACK_LINE(6759)
 														{
-															HX_STACK_LINE(6759)
-															{
-															}
-															HX_STACK_LINE(6759)
-															{
-															}
 															HX_STACK_LINE(6759)
 															o->userdef_dyn_fric = false;
 															HX_STACK_LINE(6759)
@@ -5859,23 +5398,23 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 											}
 										};
 										HX_STACK_LINE(6415)
-										return (  ((::zpp_nape::geom::ZPP_Collide_obj::contactCollide(sa,sb,arb,reverse))) ? ::zpp_nape::dynamics::ZPP_ColArbiter(_Function_6_1::Block(arb,swapped,continuous,inttype,_g,s2,__this,sb,s1,first,carbs,sa)) : ::zpp_nape::dynamics::ZPP_ColArbiter((  ((first)) ? ::zpp_nape::dynamics::ZPP_ColArbiter(_Function_6_2::Block(arb)) : ::zpp_nape::dynamics::ZPP_ColArbiter(arb) )) );
+										return (  ((::zpp_nape::geom::ZPP_Collide_obj::contactCollide(sa,sb,arb,reverse))) ? ::zpp_nape::dynamics::ZPP_Arbiter(_Function_6_1::Block(first,__this,swapped,arb,s2,_g,sb,sa,continuous,carbs,s1,inttype)) : ::zpp_nape::dynamics::ZPP_Arbiter((  ((first)) ? ::zpp_nape::dynamics::ZPP_Arbiter(_Function_6_2::Block(arb)) : ::zpp_nape::dynamics::ZPP_Arbiter(arb) )) );
 									}
 									return null();
 								}
 							};
 							HX_STACK_LINE(6413)
-							return (  (((bool((bool(first) || bool((arb->stamp != __this->stamp)))) || bool(continuous)))) ? ::zpp_nape::dynamics::ZPP_ColArbiter(_Function_5_1::Block(arb,reverse,swapped,continuous,inttype,_g,__this,s2,sb,s1,first,sa,carbs)) : ::zpp_nape::dynamics::ZPP_ColArbiter(arb) );
+							return (  (((bool((bool(first) || bool((arb->stamp != __this->stamp)))) || bool(continuous)))) ? ::zpp_nape::dynamics::ZPP_Arbiter(_Function_5_1::Block(__this,first,swapped,arb,s2,_g,sb,sa,continuous,carbs,s1,reverse,inttype)) : ::zpp_nape::dynamics::ZPP_Arbiter(arb) );
 						}
 						return null();
 					}
 				};
 				HX_STACK_LINE(6411)
-				ret = _Function_4_2::Block(arb,reverse,swapped,continuous,_g,this,s2,sb,s1,first,sa,carbs);
+				ret = _Function_4_2::Block(first,this,swapped,arb,s2,_g,sb,sa,continuous,carbs,s1,reverse);
 			}
 			else{
 				struct _Function_4_1{
-					inline static ::zpp_nape::dynamics::ZPP_Arbiter Block( ::zpp_nape::shape::ZPP_Shape &sa,::zpp_nape::phys::ZPP_Body &b2,::zpp_nape::phys::ZPP_Body &b1,::zpp_nape::shape::ZPP_Shape &sb){
+					inline static ::zpp_nape::dynamics::ZPP_Arbiter Block( ::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::phys::ZPP_Body &b2,::zpp_nape::shape::ZPP_Shape &sa,::zpp_nape::phys::ZPP_Body &b1){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6774);
 						{
 							HX_STACK_LINE(6775)
@@ -5891,17 +5430,11 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 									HX_STACK_LINE(6780)
 									::zpp_nape::dynamics::ZPP_Arbiter arb = cx_ite->elt;		HX_STACK_VAR(arb,"arb");
 									HX_STACK_LINE(6781)
-									{
-										HX_STACK_LINE(6782)
-										{
-										}
-										HX_STACK_LINE(6790)
-										if (((bool((arb->id == sa->id)) && bool((arb->di == sb->id))))){
-											HX_STACK_LINE(6791)
-											ret1 = arb;
-											HX_STACK_LINE(6792)
-											break;
-										}
+									if (((bool((arb->id == sa->id)) && bool((arb->di == sb->id))))){
+										HX_STACK_LINE(6791)
+										ret1 = arb;
+										HX_STACK_LINE(6792)
+										break;
 									}
 									HX_STACK_LINE(6795)
 									cx_ite = cx_ite->next;
@@ -5914,7 +5447,7 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 					}
 				};
 				HX_STACK_LINE(6774)
-				::zpp_nape::dynamics::ZPP_Arbiter xarb = (  (((in_arb == null()))) ? ::zpp_nape::dynamics::ZPP_Arbiter(_Function_4_1::Block(sa,b2,b1,sb)) : ::zpp_nape::dynamics::ZPP_Arbiter(in_arb) );		HX_STACK_VAR(xarb,"xarb");
+				::zpp_nape::dynamics::ZPP_Arbiter xarb = (  (((in_arb == null()))) ? ::zpp_nape::dynamics::ZPP_Arbiter(_Function_4_1::Block(sb,b2,sa,b1)) : ::zpp_nape::dynamics::ZPP_Arbiter(in_arb) );		HX_STACK_VAR(xarb,"xarb");
 				HX_STACK_LINE(6800)
 				bool first = (xarb == null());		HX_STACK_VAR(first,"first");
 				HX_STACK_LINE(6801)
@@ -5945,9 +5478,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 						HX_STACK_LINE(6822)
 						{
 							HX_STACK_LINE(6822)
-							{
-							}
-							HX_STACK_LINE(6822)
 							xarb->cleared = true;
 							HX_STACK_LINE(6822)
 							{
@@ -5955,12 +5485,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 								::zpp_nape::util::ZNPList_ZPP_Arbiter _this = xarb->b1->arbiters;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(6822)
 								{
-								}
-								HX_STACK_LINE(6822)
-								{
-									HX_STACK_LINE(6822)
-									{
-									}
 									HX_STACK_LINE(6822)
 									::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 									HX_STACK_LINE(6822)
@@ -5973,9 +5497,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 										if (((cur->elt == xarb))){
 											HX_STACK_LINE(6822)
 											{
-												HX_STACK_LINE(6822)
-												{
-												}
 												HX_STACK_LINE(6822)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 												HX_STACK_LINE(6822)
@@ -6009,14 +5530,8 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 												}
 												HX_STACK_LINE(6822)
 												{
-												}
-												HX_STACK_LINE(6822)
-												{
 													HX_STACK_LINE(6822)
 													::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-													HX_STACK_LINE(6822)
-													{
-													}
 													HX_STACK_LINE(6822)
 													o->elt = null();
 													HX_STACK_LINE(6822)
@@ -6053,12 +5568,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 								::zpp_nape::util::ZNPList_ZPP_Arbiter _this = xarb->b2->arbiters;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(6822)
 								{
-								}
-								HX_STACK_LINE(6822)
-								{
-									HX_STACK_LINE(6822)
-									{
-									}
 									HX_STACK_LINE(6822)
 									::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 									HX_STACK_LINE(6822)
@@ -6071,9 +5580,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 										if (((cur->elt == xarb))){
 											HX_STACK_LINE(6822)
 											{
-												HX_STACK_LINE(6822)
-												{
-												}
 												HX_STACK_LINE(6822)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 												HX_STACK_LINE(6822)
@@ -6107,14 +5613,8 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 												}
 												HX_STACK_LINE(6822)
 												{
-												}
-												HX_STACK_LINE(6822)
-												{
 													HX_STACK_LINE(6822)
 													::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-													HX_STACK_LINE(6822)
-													{
-													}
 													HX_STACK_LINE(6822)
 													o->elt = null();
 													HX_STACK_LINE(6822)
@@ -6188,19 +5688,19 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 					}
 				}
 				struct _Function_4_2{
-					inline static ::zpp_nape::dynamics::ZPP_SensorArbiter Block( ::zpp_nape::dynamics::ZPP_SensorArbiter &arb,bool &swapped,bool &continuous,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::space::ZPP_Space_obj *__this,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::shape::ZPP_Shape &s1,bool &first,::zpp_nape::shape::ZPP_Shape &sa){
+					inline static ::zpp_nape::dynamics::ZPP_Arbiter Block( bool &first,::zpp_nape::space::ZPP_Space_obj *__this,bool &swapped,::zpp_nape::dynamics::ZPP_SensorArbiter &arb,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::shape::ZPP_Shape &sa,bool &continuous,::zpp_nape::shape::ZPP_Shape &s1){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6846);
 						{
 							HX_STACK_LINE(6847)
 							int inttype = ::zpp_nape::util::ZPP_Flags_obj::id_InteractionType_SENSOR;		HX_STACK_VAR(inttype,"inttype");
 							struct _Function_5_1{
-								inline static ::zpp_nape::dynamics::ZPP_SensorArbiter Block( ::zpp_nape::dynamics::ZPP_SensorArbiter &arb,bool &swapped,bool &continuous,int &inttype,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::space::ZPP_Space_obj *__this,::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::shape::ZPP_Shape &s1,bool &first,::zpp_nape::shape::ZPP_Shape &sa){
+								inline static ::zpp_nape::dynamics::ZPP_Arbiter Block( ::zpp_nape::space::ZPP_Space_obj *__this,bool &first,bool &swapped,::zpp_nape::dynamics::ZPP_SensorArbiter &arb,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::shape::ZPP_Shape &sa,bool &continuous,::zpp_nape::shape::ZPP_Shape &s1,int &inttype){
 									HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6848);
 									{
 										HX_STACK_LINE(6849)
 										arb->stamp = __this->stamp;
 										struct _Function_6_1{
-											inline static ::zpp_nape::dynamics::ZPP_SensorArbiter Block( ::zpp_nape::dynamics::ZPP_SensorArbiter &arb,bool &swapped,bool &continuous,int &inttype,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::space::ZPP_Space_obj *__this,::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::shape::ZPP_Shape &s1,bool &first,::zpp_nape::shape::ZPP_Shape &sa){
+											inline static ::zpp_nape::dynamics::ZPP_SensorArbiter Block( bool &first,::zpp_nape::space::ZPP_Space_obj *__this,bool &swapped,::zpp_nape::dynamics::ZPP_SensorArbiter &arb,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::shape::ZPP_Shape &sb,::zpp_nape::shape::ZPP_Shape &sa,bool &continuous,::zpp_nape::shape::ZPP_Shape &s1,int &inttype){
 												HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6850);
 												{
 													HX_STACK_LINE(6851)
@@ -6223,9 +5723,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 															{
 																HX_STACK_LINE(6852)
 																::zpp_nape::util::ZNPList_ZPP_Arbiter _this = arb->b1->arbiters;		HX_STACK_VAR(_this,"_this");
-																HX_STACK_LINE(6852)
-																{
-																}
 																struct _Function_10_1{
 																	inline static ::zpp_nape::util::ZNPNode_ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_SensorArbiter &arb){
 																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6852);
@@ -6275,9 +5772,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 															{
 																HX_STACK_LINE(6852)
 																::zpp_nape::util::ZNPList_ZPP_Arbiter _this = arb->b2->arbiters;		HX_STACK_VAR(_this,"_this");
-																HX_STACK_LINE(6852)
-																{
-																}
 																struct _Function_10_1{
 																	inline static ::zpp_nape::util::ZNPNode_ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_SensorArbiter &arb){
 																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6852);
@@ -6340,9 +5834,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 														{
 															HX_STACK_LINE(6853)
 															::zpp_nape::util::ZNPList_ZPP_SensorArbiter _this = __this->s_arbiters;		HX_STACK_VAR(_this,"_this");
-															HX_STACK_LINE(6853)
-															{
-															}
 															struct _Function_9_1{
 																inline static ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter Block( ::zpp_nape::dynamics::ZPP_SensorArbiter &arb){
 																	HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6853);
@@ -6407,9 +5898,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 														{
 															HX_STACK_LINE(6863)
 															{
-															}
-															HX_STACK_LINE(6863)
-															{
 																HX_STACK_LINE(6863)
 																::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca1;		HX_STACK_VAR(_this,"_this");
 																HX_STACK_LINE(6863)
@@ -6417,22 +5905,13 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																	HX_STACK_LINE(6863)
 																	while((!(((_this->head == null()))))){
 																		HX_STACK_LINE(6863)
-																		{
-																		}
-																		HX_STACK_LINE(6863)
 																		::zpp_nape::util::ZNPNode_ZPP_Interactor ret1 = _this->head;		HX_STACK_VAR(ret1,"ret1");
 																		HX_STACK_LINE(6863)
 																		_this->head = ret1->next;
 																		HX_STACK_LINE(6863)
 																		{
-																		}
-																		HX_STACK_LINE(6863)
-																		{
 																			HX_STACK_LINE(6863)
 																			::zpp_nape::util::ZNPNode_ZPP_Interactor o = ret1;		HX_STACK_VAR(o,"o");
-																			HX_STACK_LINE(6863)
-																			{
-																			}
 																			HX_STACK_LINE(6863)
 																			o->elt = null();
 																			HX_STACK_LINE(6863)
@@ -6463,22 +5942,13 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																	HX_STACK_LINE(6863)
 																	while((!(((_this->head == null()))))){
 																		HX_STACK_LINE(6863)
-																		{
-																		}
-																		HX_STACK_LINE(6863)
 																		::zpp_nape::util::ZNPNode_ZPP_Interactor ret1 = _this->head;		HX_STACK_VAR(ret1,"ret1");
 																		HX_STACK_LINE(6863)
 																		_this->head = ret1->next;
 																		HX_STACK_LINE(6863)
 																		{
-																		}
-																		HX_STACK_LINE(6863)
-																		{
 																			HX_STACK_LINE(6863)
 																			::zpp_nape::util::ZNPNode_ZPP_Interactor o = ret1;		HX_STACK_VAR(o,"o");
-																			HX_STACK_LINE(6863)
-																			{
-																			}
 																			HX_STACK_LINE(6863)
 																			o->elt = null();
 																			HX_STACK_LINE(6863)
@@ -6504,9 +5974,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 															if (((s1->cbSet != null()))){
 																HX_STACK_LINE(6863)
 																::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca1;		HX_STACK_VAR(_this,"_this");
-																HX_STACK_LINE(6863)
-																{
-																}
 																struct _Function_10_1{
 																	inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::shape::ZPP_Shape &s1){
 																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6863);
@@ -6557,9 +6024,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																HX_STACK_LINE(6863)
 																::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca1;		HX_STACK_VAR(_this,"_this");
 																::zpp_nape::phys::ZPP_Interactor o = s1->body;		HX_STACK_VAR(o,"o");
-																HX_STACK_LINE(6863)
-																{
-																}
 																struct _Function_10_1{
 																	inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Interactor &o){
 																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6863);
@@ -6609,9 +6073,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 															if (((s2->cbSet != null()))){
 																HX_STACK_LINE(6863)
 																::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca2;		HX_STACK_VAR(_this,"_this");
-																HX_STACK_LINE(6863)
-																{
-																}
 																struct _Function_10_1{
 																	inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::shape::ZPP_Shape &s2){
 																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6863);
@@ -6662,9 +6123,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																HX_STACK_LINE(6863)
 																::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca2;		HX_STACK_VAR(_this,"_this");
 																::zpp_nape::phys::ZPP_Interactor o = s2->body;		HX_STACK_VAR(o,"o");
-																HX_STACK_LINE(6863)
-																{
-																}
 																struct _Function_10_1{
 																	inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Interactor &o){
 																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6863);
@@ -6726,9 +6184,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																	if (((c2->cbSet != null()))){
 																		HX_STACK_LINE(6863)
 																		::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca2;		HX_STACK_VAR(_this,"_this");
-																		HX_STACK_LINE(6863)
-																		{
-																		}
 																		struct _Function_12_1{
 																			inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Compound &c2){
 																				HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6863);
@@ -6782,9 +6237,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																	if (((c1->cbSet != null()))){
 																		HX_STACK_LINE(6863)
 																		::zpp_nape::util::ZNPList_ZPP_Interactor _this = __this->mrca1;		HX_STACK_VAR(_this,"_this");
-																		HX_STACK_LINE(6863)
-																		{
-																		}
 																		struct _Function_12_1{
 																			inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Compound &c1){
 																				HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6863);
@@ -6857,119 +6309,103 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																			::zpp_nape::callbacks::ZPP_CbSet cb1 = i1->cbSet;		HX_STACK_VAR(cb1,"cb1");
 																			HX_STACK_LINE(6875)
 																			::zpp_nape::callbacks::ZPP_CbSet cb2 = i2->cbSet;		HX_STACK_VAR(cb2,"cb2");
-																			HX_STACK_LINE(6876)
-																			{
-																			}
 																			struct _Function_13_1{
-																				inline static bool Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
+																				inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
 																					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6884);
 																					{
 																						HX_STACK_LINE(6884)
+																						::zpp_nape::callbacks::ZPP_CbSetPair ret1 = null();		HX_STACK_VAR(ret1,"ret1");
+																						HX_STACK_LINE(6884)
+																						::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
+																						HX_STACK_LINE(6884)
 																						{
+																							HX_STACK_LINE(6884)
+																							::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite2 = pairs->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
+																							HX_STACK_LINE(6884)
+																							while(((cx_ite2 != null()))){
+																								HX_STACK_LINE(6884)
+																								::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite2->elt;		HX_STACK_VAR(p,"p");
+																								HX_STACK_LINE(6884)
+																								if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
+																									HX_STACK_LINE(6884)
+																									ret1 = p;
+																									HX_STACK_LINE(6884)
+																									break;
+																								}
+																								HX_STACK_LINE(6884)
+																								cx_ite2 = cx_ite2->next;
+																							}
 																						}
-																						struct _Function_14_1{
-																							inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																								HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6884);
-																								{
-																									HX_STACK_LINE(6884)
-																									::zpp_nape::callbacks::ZPP_CbSetPair ret1 = null();		HX_STACK_VAR(ret1,"ret1");
-																									HX_STACK_LINE(6884)
-																									::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
-																									HX_STACK_LINE(6884)
+																						HX_STACK_LINE(6884)
+																						if (((ret1 == null()))){
+																							struct _Function_15_1{
+																								inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
+																									HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6884);
 																									{
 																										HX_STACK_LINE(6884)
-																										::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite2 = pairs->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
+																										::zpp_nape::callbacks::ZPP_CbSetPair ret2;		HX_STACK_VAR(ret2,"ret2");
 																										HX_STACK_LINE(6884)
-																										while(((cx_ite2 != null()))){
+																										{
 																											HX_STACK_LINE(6884)
-																											::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite2->elt;		HX_STACK_VAR(p,"p");
-																											HX_STACK_LINE(6884)
-																											if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
+																											if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
 																												HX_STACK_LINE(6884)
-																												ret1 = p;
+																												ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
+																											}
+																											else{
 																												HX_STACK_LINE(6884)
-																												break;
+																												ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
+																												HX_STACK_LINE(6884)
+																												::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret2->next;
+																												HX_STACK_LINE(6884)
+																												ret2->next = null();
 																											}
 																											HX_STACK_LINE(6884)
-																											cx_ite2 = cx_ite2->next;
+																											ret2->zip_listeners = true;
 																										}
-																									}
-																									HX_STACK_LINE(6884)
-																									if (((ret1 == null()))){
-																										struct _Function_16_1{
-																											inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																												HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6884);
-																												{
-																													HX_STACK_LINE(6884)
-																													::zpp_nape::callbacks::ZPP_CbSetPair ret2;		HX_STACK_VAR(ret2,"ret2");
-																													HX_STACK_LINE(6884)
-																													{
-																														HX_STACK_LINE(6884)
-																														if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
-																															HX_STACK_LINE(6884)
-																															ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
-																														}
-																														else{
-																															HX_STACK_LINE(6884)
-																															ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
-																															HX_STACK_LINE(6884)
-																															::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret2->next;
-																															HX_STACK_LINE(6884)
-																															ret2->next = null();
-																														}
-																														HX_STACK_LINE(6884)
-																														ret2->zip_listeners = true;
-																													}
-																													HX_STACK_LINE(6884)
-																													if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
-																														HX_STACK_LINE(6884)
-																														ret2->a = cb1;
-																														HX_STACK_LINE(6884)
-																														ret2->b = cb2;
-																													}
-																													else{
-																														HX_STACK_LINE(6884)
-																														ret2->a = cb2;
-																														HX_STACK_LINE(6884)
-																														ret2->b = cb1;
-																													}
-																													HX_STACK_LINE(6884)
-																													return ret2;
-																												}
-																												return null();
-																											}
-																										};
 																										HX_STACK_LINE(6884)
-																										ret1 = _Function_16_1::Block(cb1,cb2);
-																										HX_STACK_LINE(6884)
-																										cb1->cbpairs->add(ret1);
-																										HX_STACK_LINE(6884)
-																										if (((cb2 != cb1))){
+																										if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
 																											HX_STACK_LINE(6884)
-																											cb2->cbpairs->add(ret1);
+																											ret2->a = cb1;
+																											HX_STACK_LINE(6884)
+																											ret2->b = cb2;
 																										}
-																									}
-																									HX_STACK_LINE(6884)
-																									if ((ret1->zip_listeners)){
+																										else{
+																											HX_STACK_LINE(6884)
+																											ret2->a = cb2;
+																											HX_STACK_LINE(6884)
+																											ret2->b = cb1;
+																										}
 																										HX_STACK_LINE(6884)
-																										ret1->zip_listeners = false;
-																										HX_STACK_LINE(6884)
-																										ret1->__validate();
+																										return ret2;
 																									}
-																									HX_STACK_LINE(6884)
-																									return ret1;
+																									return null();
 																								}
-																								return null();
+																							};
+																							HX_STACK_LINE(6884)
+																							ret1 = _Function_15_1::Block(cb2,cb1);
+																							HX_STACK_LINE(6884)
+																							cb1->cbpairs->add(ret1);
+																							HX_STACK_LINE(6884)
+																							if (((cb2 != cb1))){
+																								HX_STACK_LINE(6884)
+																								cb2->cbpairs->add(ret1);
 																							}
-																						};
+																						}
 																						HX_STACK_LINE(6884)
-																						return ((_Function_14_1::Block(cb1,cb2))->listeners->head == null());
+																						if ((ret1->zip_listeners)){
+																							HX_STACK_LINE(6884)
+																							ret1->zip_listeners = false;
+																							HX_STACK_LINE(6884)
+																							ret1->__validate();
+																						}
+																						HX_STACK_LINE(6884)
+																						return ret1;
 																					}
 																					return null();
 																				}
 																			};
 																			HX_STACK_LINE(6884)
-																			if ((_Function_13_1::Block(cb1,cb2))){
+																			if ((((_Function_13_1::Block(cb2,cb1))->listeners->head == null()))){
 																				HX_STACK_LINE(6885)
 																				cx_ite1 = cx_ite1->next;
 																				HX_STACK_LINE(6886)
@@ -6988,22 +6424,13 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																					HX_STACK_LINE(6890)
 																					while((!(((_this->head == null()))))){
 																						HX_STACK_LINE(6890)
-																						{
-																						}
-																						HX_STACK_LINE(6890)
 																						::zpp_nape::util::ZNPNode_ZPP_InteractionListener ret1 = _this->head;		HX_STACK_VAR(ret1,"ret1");
 																						HX_STACK_LINE(6890)
 																						_this->head = ret1->next;
 																						HX_STACK_LINE(6890)
 																						{
-																						}
-																						HX_STACK_LINE(6890)
-																						{
 																							HX_STACK_LINE(6890)
 																							::zpp_nape::util::ZNPNode_ZPP_InteractionListener o = ret1;		HX_STACK_VAR(o,"o");
-																							HX_STACK_LINE(6890)
-																							{
-																							}
 																							HX_STACK_LINE(6890)
 																							o->elt = null();
 																							HX_STACK_LINE(6890)
@@ -7033,191 +6460,182 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																				int event = ::zpp_nape::util::ZPP_Flags_obj::id_CbEvent_PRE;		HX_STACK_VAR(event,"event");
 																				HX_STACK_LINE(6892)
 																				{
-																					HX_STACK_LINE(6892)
-																					{
-																					}
-																					HX_STACK_LINE(6892)
-																					{
-																						struct _Function_16_1{
-																							inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																								HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6892);
+																					struct _Function_15_1{
+																						inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
+																							HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6892);
+																							{
+																								HX_STACK_LINE(6892)
+																								::zpp_nape::callbacks::ZPP_CbSetPair ret1 = null();		HX_STACK_VAR(ret1,"ret1");
+																								HX_STACK_LINE(6892)
+																								::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
+																								HX_STACK_LINE(6892)
 																								{
 																									HX_STACK_LINE(6892)
-																									::zpp_nape::callbacks::ZPP_CbSetPair ret1 = null();		HX_STACK_VAR(ret1,"ret1");
+																									::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite2 = pairs->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
 																									HX_STACK_LINE(6892)
-																									::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
-																									HX_STACK_LINE(6892)
-																									{
+																									while(((cx_ite2 != null()))){
 																										HX_STACK_LINE(6892)
-																										::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite2 = pairs->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
+																										::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite2->elt;		HX_STACK_VAR(p,"p");
 																										HX_STACK_LINE(6892)
-																										while(((cx_ite2 != null()))){
+																										if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
 																											HX_STACK_LINE(6892)
-																											::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite2->elt;		HX_STACK_VAR(p,"p");
+																											ret1 = p;
 																											HX_STACK_LINE(6892)
-																											if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
-																												HX_STACK_LINE(6892)
-																												ret1 = p;
-																												HX_STACK_LINE(6892)
-																												break;
-																											}
-																											HX_STACK_LINE(6892)
-																											cx_ite2 = cx_ite2->next;
+																											break;
 																										}
+																										HX_STACK_LINE(6892)
+																										cx_ite2 = cx_ite2->next;
 																									}
-																									HX_STACK_LINE(6892)
-																									if (((ret1 == null()))){
-																										struct _Function_18_1{
-																											inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																												HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6892);
-																												{
-																													HX_STACK_LINE(6892)
-																													::zpp_nape::callbacks::ZPP_CbSetPair ret2;		HX_STACK_VAR(ret2,"ret2");
-																													HX_STACK_LINE(6892)
-																													{
-																														HX_STACK_LINE(6892)
-																														if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
-																															HX_STACK_LINE(6892)
-																															ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
-																														}
-																														else{
-																															HX_STACK_LINE(6892)
-																															ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
-																															HX_STACK_LINE(6892)
-																															::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret2->next;
-																															HX_STACK_LINE(6892)
-																															ret2->next = null();
-																														}
-																														HX_STACK_LINE(6892)
-																														ret2->zip_listeners = true;
-																													}
-																													HX_STACK_LINE(6892)
-																													if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
-																														HX_STACK_LINE(6892)
-																														ret2->a = cb1;
-																														HX_STACK_LINE(6892)
-																														ret2->b = cb2;
-																													}
-																													else{
-																														HX_STACK_LINE(6892)
-																														ret2->a = cb2;
-																														HX_STACK_LINE(6892)
-																														ret2->b = cb1;
-																													}
-																													HX_STACK_LINE(6892)
-																													return ret2;
-																												}
-																												return null();
-																											}
-																										};
-																										HX_STACK_LINE(6892)
-																										ret1 = _Function_18_1::Block(cb1,cb2);
-																										HX_STACK_LINE(6892)
-																										cb1->cbpairs->add(ret1);
-																										HX_STACK_LINE(6892)
-																										if (((cb2 != cb1))){
-																											HX_STACK_LINE(6892)
-																											cb2->cbpairs->add(ret1);
-																										}
-																									}
-																									HX_STACK_LINE(6892)
-																									if ((ret1->zip_listeners)){
-																										HX_STACK_LINE(6892)
-																										ret1->zip_listeners = false;
-																										HX_STACK_LINE(6892)
-																										ret1->__validate();
-																									}
-																									HX_STACK_LINE(6892)
-																									return ret1;
 																								}
-																								return null();
-																							}
-																						};
-																						HX_STACK_LINE(6892)
-																						::zpp_nape::util::ZNPNode_ZPP_InteractionListener cx_ite2 = (_Function_16_1::Block(cb1,cb2))->listeners->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
-																						HX_STACK_LINE(6892)
-																						while(((cx_ite2 != null()))){
-																							HX_STACK_LINE(6892)
-																							::zpp_nape::callbacks::ZPP_InteractionListener x = cx_ite2->elt;		HX_STACK_VAR(x,"x");
-																							HX_STACK_LINE(6892)
-																							if (((x->event == event))){
 																								HX_STACK_LINE(6892)
-																								if (((((int(x->itype) & int(inttype))) != (int)0))){
-																									struct _Function_19_1{
-																										inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::util::ZNPNode_ZPP_InteractionListener &lite,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::callbacks::ZPP_InteractionListener &x){
+																								if (((ret1 == null()))){
+																									struct _Function_17_1{
+																										inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
 																											HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6892);
 																											{
 																												HX_STACK_LINE(6892)
-																												::zpp_nape::util::ZNPList_ZPP_InteractionListener _this = _g->prelisteners;		HX_STACK_VAR(_this,"_this");
+																												::zpp_nape::callbacks::ZPP_CbSetPair ret2;		HX_STACK_VAR(ret2,"ret2");
 																												HX_STACK_LINE(6892)
 																												{
-																												}
-																												struct _Function_20_1{
-																													inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x){
-																														HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6892);
-																														{
-																															HX_STACK_LINE(6892)
-																															::zpp_nape::util::ZNPNode_ZPP_InteractionListener ret1;		HX_STACK_VAR(ret1,"ret1");
-																															HX_STACK_LINE(6892)
-																															{
-																																HX_STACK_LINE(6892)
-																																if (((::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool == null()))){
-																																	HX_STACK_LINE(6892)
-																																	ret1 = ::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::__new();
-																																}
-																																else{
-																																	HX_STACK_LINE(6892)
-																																	ret1 = ::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool;
-																																	HX_STACK_LINE(6892)
-																																	::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool = ret1->next;
-																																	HX_STACK_LINE(6892)
-																																	ret1->next = null();
-																																}
-																																HX_STACK_LINE(6892)
-																																Dynamic();
-																															}
-																															HX_STACK_LINE(6892)
-																															ret1->elt = x;
-																															HX_STACK_LINE(6892)
-																															return ret1;
-																														}
-																														return null();
+																													HX_STACK_LINE(6892)
+																													if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
+																														HX_STACK_LINE(6892)
+																														ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
 																													}
-																												};
-																												HX_STACK_LINE(6892)
-																												::zpp_nape::util::ZNPNode_ZPP_InteractionListener temp = _Function_20_1::Block(x);		HX_STACK_VAR(temp,"temp");
-																												HX_STACK_LINE(6892)
-																												if (((lite == null()))){
+																													else{
+																														HX_STACK_LINE(6892)
+																														ret2 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
+																														HX_STACK_LINE(6892)
+																														::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret2->next;
+																														HX_STACK_LINE(6892)
+																														ret2->next = null();
+																													}
 																													HX_STACK_LINE(6892)
-																													temp->next = _this->head;
+																													ret2->zip_listeners = true;
+																												}
+																												HX_STACK_LINE(6892)
+																												if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
 																													HX_STACK_LINE(6892)
-																													_this->head = temp;
+																													ret2->a = cb1;
+																													HX_STACK_LINE(6892)
+																													ret2->b = cb2;
 																												}
 																												else{
 																													HX_STACK_LINE(6892)
-																													temp->next = lite->next;
+																													ret2->a = cb2;
 																													HX_STACK_LINE(6892)
-																													lite->next = temp;
+																													ret2->b = cb1;
 																												}
 																												HX_STACK_LINE(6892)
-																												_this->pushmod = _this->modified = true;
-																												HX_STACK_LINE(6892)
-																												(_this->length)++;
-																												HX_STACK_LINE(6892)
-																												return temp;
+																												return ret2;
 																											}
 																											return null();
 																										}
 																									};
 																									HX_STACK_LINE(6892)
-																									lite = _Function_19_1::Block(lite,_g,x);
+																									ret1 = _Function_17_1::Block(cb2,cb1);
 																									HX_STACK_LINE(6892)
-																									anyimpure = (bool(anyimpure) || bool(!(x->pure)));
+																									cb1->cbpairs->add(ret1);
+																									HX_STACK_LINE(6892)
+																									if (((cb2 != cb1))){
+																										HX_STACK_LINE(6892)
+																										cb2->cbpairs->add(ret1);
+																									}
 																								}
+																								HX_STACK_LINE(6892)
+																								if ((ret1->zip_listeners)){
+																									HX_STACK_LINE(6892)
+																									ret1->zip_listeners = false;
+																									HX_STACK_LINE(6892)
+																									ret1->__validate();
+																								}
+																								HX_STACK_LINE(6892)
+																								return ret1;
 																							}
-																							HX_STACK_LINE(6892)
-																							cx_ite2 = cx_ite2->next;
+																							return null();
 																						}
+																					};
+																					HX_STACK_LINE(6892)
+																					::zpp_nape::util::ZNPNode_ZPP_InteractionListener cx_ite2 = (_Function_15_1::Block(cb2,cb1))->listeners->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
+																					HX_STACK_LINE(6892)
+																					while(((cx_ite2 != null()))){
+																						HX_STACK_LINE(6892)
+																						::zpp_nape::callbacks::ZPP_InteractionListener x = cx_ite2->elt;		HX_STACK_VAR(x,"x");
+																						HX_STACK_LINE(6892)
+																						if (((x->event == event))){
+																							HX_STACK_LINE(6892)
+																							if (((((int(x->itype) & int(inttype))) != (int)0))){
+																								struct _Function_18_1{
+																									inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::util::ZNPNode_ZPP_InteractionListener &lite,::zpp_nape::space::ZPP_Space &_g,::zpp_nape::callbacks::ZPP_InteractionListener &x){
+																										HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6892);
+																										{
+																											HX_STACK_LINE(6892)
+																											::zpp_nape::util::ZNPList_ZPP_InteractionListener _this = _g->prelisteners;		HX_STACK_VAR(_this,"_this");
+																											struct _Function_19_1{
+																												inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x){
+																													HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6892);
+																													{
+																														HX_STACK_LINE(6892)
+																														::zpp_nape::util::ZNPNode_ZPP_InteractionListener ret1;		HX_STACK_VAR(ret1,"ret1");
+																														HX_STACK_LINE(6892)
+																														{
+																															HX_STACK_LINE(6892)
+																															if (((::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool == null()))){
+																																HX_STACK_LINE(6892)
+																																ret1 = ::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::__new();
+																															}
+																															else{
+																																HX_STACK_LINE(6892)
+																																ret1 = ::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool;
+																																HX_STACK_LINE(6892)
+																																::zpp_nape::util::ZNPNode_ZPP_InteractionListener_obj::zpp_pool = ret1->next;
+																																HX_STACK_LINE(6892)
+																																ret1->next = null();
+																															}
+																															HX_STACK_LINE(6892)
+																															Dynamic();
+																														}
+																														HX_STACK_LINE(6892)
+																														ret1->elt = x;
+																														HX_STACK_LINE(6892)
+																														return ret1;
+																													}
+																													return null();
+																												}
+																											};
+																											HX_STACK_LINE(6892)
+																											::zpp_nape::util::ZNPNode_ZPP_InteractionListener temp = _Function_19_1::Block(x);		HX_STACK_VAR(temp,"temp");
+																											HX_STACK_LINE(6892)
+																											if (((lite == null()))){
+																												HX_STACK_LINE(6892)
+																												temp->next = _this->head;
+																												HX_STACK_LINE(6892)
+																												_this->head = temp;
+																											}
+																											else{
+																												HX_STACK_LINE(6892)
+																												temp->next = lite->next;
+																												HX_STACK_LINE(6892)
+																												lite->next = temp;
+																											}
+																											HX_STACK_LINE(6892)
+																											_this->pushmod = _this->modified = true;
+																											HX_STACK_LINE(6892)
+																											(_this->length)++;
+																											HX_STACK_LINE(6892)
+																											return temp;
+																										}
+																										return null();
+																									}
+																								};
+																								HX_STACK_LINE(6892)
+																								lite = _Function_18_1::Block(lite,_g,x);
+																								HX_STACK_LINE(6892)
+																								anyimpure = (bool(anyimpure) || bool(!(x->pure)));
+																							}
+																						}
+																						HX_STACK_LINE(6892)
+																						cx_ite2 = cx_ite2->next;
 																					}
 																				}
 																			}
@@ -7300,7 +6718,7 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																								HX_STACK_LINE(6968)
 																								::zpp_nape::phys::ZPP_Interactor o2 = callbackset->int2;		HX_STACK_VAR(o2,"o2");
 																								struct _Function_18_1{
-																									inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &listener,::zpp_nape::phys::ZPP_Interactor &o1){
+																									inline static bool Block( ::zpp_nape::phys::ZPP_Interactor &o1,::zpp_nape::callbacks::ZPP_InteractionListener &listener){
 																										HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6968);
 																										{
 																											HX_STACK_LINE(6968)
@@ -7313,7 +6731,7 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																									}
 																								};
 																								struct _Function_18_2{
-																									inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &listener,::zpp_nape::phys::ZPP_Interactor &o2){
+																									inline static bool Block( ::zpp_nape::phys::ZPP_Interactor &o2,::zpp_nape::callbacks::ZPP_InteractionListener &listener){
 																										HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",6968);
 																										{
 																											HX_STACK_LINE(6968)
@@ -7326,7 +6744,7 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 																									}
 																								};
 																								HX_STACK_LINE(6968)
-																								if (((bool(_Function_18_1::Block(listener,o1)) && bool(_Function_18_2::Block(listener,o2))))){
+																								if (((bool(_Function_18_1::Block(o1,listener)) && bool(_Function_18_2::Block(o2,listener))))){
 																									HX_STACK_LINE(6968)
 																									cb->int1 = o1;
 																									HX_STACK_LINE(6968)
@@ -7467,14 +6885,8 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 															if ((!(((arb->b1->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_STATIC))))){
 																HX_STACK_LINE(7069)
 																::zpp_nape::phys::ZPP_Body o = arb->b1;		HX_STACK_VAR(o,"o");
-																HX_STACK_LINE(7070)
-																{
-																}
 																HX_STACK_LINE(7078)
 																if ((!(o->world))){
-																	HX_STACK_LINE(7079)
-																	{
-																	}
 																	HX_STACK_LINE(7087)
 																	o->component->waket = (__this->stamp + ((  ((__this->midstep)) ? int((int)0) : int((int)1) )));
 																	HX_STACK_LINE(7088)
@@ -7493,14 +6905,8 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 															if ((!(((arb->b2->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_STATIC))))){
 																HX_STACK_LINE(7095)
 																::zpp_nape::phys::ZPP_Body o = arb->b2;		HX_STACK_VAR(o,"o");
-																HX_STACK_LINE(7096)
-																{
-																}
 																HX_STACK_LINE(7104)
 																if ((!(o->world))){
-																	HX_STACK_LINE(7105)
-																	{
-																	}
 																	HX_STACK_LINE(7113)
 																	o->component->waket = (__this->stamp + ((  ((__this->midstep)) ? int((int)0) : int((int)1) )));
 																	HX_STACK_LINE(7114)
@@ -7517,9 +6923,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 															}
 														}
 													}
-													HX_STACK_LINE(7123)
-													{
-													}
 													HX_STACK_LINE(7177)
 													if ((arb->sleeping)){
 														HX_STACK_LINE(7178)
@@ -7528,9 +6931,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 														{
 															HX_STACK_LINE(7179)
 															::zpp_nape::util::ZNPList_ZPP_SensorArbiter _this = __this->s_arbiters;		HX_STACK_VAR(_this,"_this");
-															HX_STACK_LINE(7179)
-															{
-															}
 															struct _Function_9_1{
 																inline static ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter Block( ::zpp_nape::dynamics::ZPP_SensorArbiter &arb){
 																	HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",7179);
@@ -7584,16 +6984,13 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 											}
 										};
 										struct _Function_6_2{
-											inline static ::zpp_nape::dynamics::ZPP_SensorArbiter Block( ::zpp_nape::dynamics::ZPP_SensorArbiter &arb){
+											inline static ::zpp_nape::dynamics::ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_SensorArbiter &arb){
 												HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",7183);
 												{
 													HX_STACK_LINE(7184)
 													{
 														HX_STACK_LINE(7185)
 														::zpp_nape::dynamics::ZPP_SensorArbiter o = arb;		HX_STACK_VAR(o,"o");
-														HX_STACK_LINE(7186)
-														{
-														}
 														HX_STACK_LINE(7195)
 														o->next = ::zpp_nape::dynamics::ZPP_SensorArbiter_obj::zpp_pool;
 														HX_STACK_LINE(7196)
@@ -7606,19 +7003,19 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Space_obj,MRCA_chains,(void))
 											}
 										};
 										HX_STACK_LINE(6850)
-										return (  ((::zpp_nape::geom::ZPP_Collide_obj::testCollide(sa,sb))) ? ::zpp_nape::dynamics::ZPP_SensorArbiter(_Function_6_1::Block(arb,swapped,continuous,inttype,_g,s2,__this,sb,s1,first,sa)) : ::zpp_nape::dynamics::ZPP_SensorArbiter((  ((first)) ? ::zpp_nape::dynamics::ZPP_SensorArbiter(_Function_6_2::Block(arb)) : ::zpp_nape::dynamics::ZPP_SensorArbiter(arb) )) );
+										return (  ((::zpp_nape::geom::ZPP_Collide_obj::testCollide(sa,sb))) ? ::zpp_nape::dynamics::ZPP_Arbiter(_Function_6_1::Block(first,__this,swapped,arb,s2,_g,sb,sa,continuous,s1,inttype)) : ::zpp_nape::dynamics::ZPP_Arbiter((  ((first)) ? ::zpp_nape::dynamics::ZPP_Arbiter(_Function_6_2::Block(arb)) : ::zpp_nape::dynamics::ZPP_Arbiter(arb) )) );
 									}
 									return null();
 								}
 							};
 							HX_STACK_LINE(6848)
-							return (  (((bool((bool(first) || bool((arb->stamp != __this->stamp)))) || bool(continuous)))) ? ::zpp_nape::dynamics::ZPP_SensorArbiter(_Function_5_1::Block(arb,swapped,continuous,inttype,_g,s2,__this,sb,s1,first,sa)) : ::zpp_nape::dynamics::ZPP_SensorArbiter(arb) );
+							return (  (((bool((bool(first) || bool((arb->stamp != __this->stamp)))) || bool(continuous)))) ? ::zpp_nape::dynamics::ZPP_Arbiter(_Function_5_1::Block(__this,first,swapped,arb,s2,_g,sb,sa,continuous,s1,inttype)) : ::zpp_nape::dynamics::ZPP_Arbiter(arb) );
 						}
 						return null();
 					}
 				};
 				HX_STACK_LINE(6846)
-				ret = _Function_4_2::Block(arb,swapped,continuous,_g,this,s2,sb,s1,first,sa);
+				ret = _Function_4_2::Block(first,this,swapped,arb,s2,_g,sb,sa,continuous,s1);
 			}
 		}
 	}
@@ -7636,12 +7033,6 @@ int ZPP_Space_obj::interactionType( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::
 	HX_STACK_ARG(s2,"s2");
 	HX_STACK_ARG(b1,"b1");
 	HX_STACK_ARG(b2,"b2");
-	HX_STACK_LINE(5811)
-	{
-	}
-	HX_STACK_LINE(5819)
-	{
-	}
 	HX_STACK_LINE(5827)
 	bool con_ignore;		HX_STACK_VAR(con_ignore,"con_ignore");
 	HX_STACK_LINE(5828)
@@ -7669,7 +7060,7 @@ int ZPP_Space_obj::interactionType( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::
 		}
 	}
 	struct _Function_1_1{
-		inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+		inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5844);
 			{
 				struct _Function_2_1{
@@ -7786,9 +7177,9 @@ int ZPP_Space_obj::interactionType( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::
 		}
 	};
 	HX_STACK_LINE(5844)
-	if (((bool(!(con_ignore)) && bool(!(_Function_1_1::Block(s1,s2)))))){
+	if (((bool(!(con_ignore)) && bool(!(_Function_1_1::Block(s2,s1)))))){
 		struct _Function_2_1{
-			inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+			inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 				HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5845);
 				{
 					HX_STACK_LINE(5845)
@@ -7801,13 +7192,13 @@ int ZPP_Space_obj::interactionType( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::
 			}
 		};
 		HX_STACK_LINE(5844)
-		if (((bool(((bool(s1->sensorEnabled) || bool(s2->sensorEnabled)))) && bool(_Function_2_1::Block(s1,s2))))){
+		if (((bool(((bool(s1->sensorEnabled) || bool(s2->sensorEnabled)))) && bool(_Function_2_1::Block(s2,s1))))){
 			HX_STACK_LINE(5845)
 			return (int)2;
 		}
 		else{
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+				inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5848);
 					{
 						HX_STACK_LINE(5848)
@@ -7820,13 +7211,13 @@ int ZPP_Space_obj::interactionType( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::
 				}
 			};
 			HX_STACK_LINE(5848)
-			if (((bool((bool(((bool(s1->fluidEnabled) || bool(s2->fluidEnabled)))) && bool(_Function_3_1::Block(s1,s2)))) && bool(!(((bool((bool((bool((b1->imass == (int)0)) && bool((b2->imass == (int)0)))) && bool((b1->iinertia == (int)0)))) && bool((b2->iinertia == (int)0))))))))){
+			if (((bool((bool(((bool(s1->fluidEnabled) || bool(s2->fluidEnabled)))) && bool(_Function_3_1::Block(s2,s1)))) && bool(!(((bool((bool((bool((b1->imass == (int)0)) && bool((b2->imass == (int)0)))) && bool((b1->iinertia == (int)0)))) && bool((b2->iinertia == (int)0))))))))){
 				HX_STACK_LINE(5848)
 				return (int)0;
 			}
 			else{
 				struct _Function_4_1{
-					inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+					inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5851);
 						{
 							HX_STACK_LINE(5851)
@@ -7839,7 +7230,7 @@ int ZPP_Space_obj::interactionType( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::
 					}
 				};
 				HX_STACK_LINE(5851)
-				if (((bool(_Function_4_1::Block(s1,s2)) && bool(!(((bool((bool((bool((b1->imass == (int)0)) && bool((b2->imass == (int)0)))) && bool((b1->iinertia == (int)0)))) && bool((b2->iinertia == (int)0))))))))){
+				if (((bool(_Function_4_1::Block(s2,s1)) && bool(!(((bool((bool((bool((b1->imass == (int)0)) && bool((b2->imass == (int)0)))) && bool((b1->iinertia == (int)0)))) && bool((b2->iinertia == (int)0))))))))){
 					HX_STACK_LINE(5851)
 					return (int)1;
 				}
@@ -8087,9 +7478,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 								HX_STACK_LINE(5773)
 								Float t = 1.0;		HX_STACK_VAR(t,"t");
 								HX_STACK_LINE(5773)
-								{
-								}
-								HX_STACK_LINE(5773)
 								hx::AddEq(r2x,(arb->b2->posx * t));
 								HX_STACK_LINE(5773)
 								hx::AddEq(r2y,(arb->b2->posy * t));
@@ -8110,9 +7498,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 								HX_STACK_LINE(5773)
 								Float t = 1.0;		HX_STACK_VAR(t,"t");
 								HX_STACK_LINE(5773)
-								{
-								}
-								HX_STACK_LINE(5773)
 								hx::AddEq(r1x,(arb->b1->posx * t));
 								HX_STACK_LINE(5773)
 								hx::AddEq(r1y,(arb->b1->posy * t));
@@ -8128,21 +7513,8 @@ Void ZPP_Space_obj::iteratePos( int times){
 								HX_STACK_LINE(5773)
 								dy1 = (r2y - r1y);
 							}
-							struct _Function_6_1{
-								inline static Float Block( Float &dx1,Float &dy1){
-									HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5773);
-									{
-										HX_STACK_LINE(5773)
-										{
-										}
-										HX_STACK_LINE(5773)
-										return ::Math_obj::sqrt(((dx1 * dx1) + (dy1 * dy1)));
-									}
-									return null();
-								}
-							};
 							HX_STACK_LINE(5773)
-							Float dl = _Function_6_1::Block(dx1,dy1);		HX_STACK_VAR(dl,"dl");
+							Float dl = ::Math_obj::sqrt(((dx1 * dx1) + (dy1 * dy1)));		HX_STACK_VAR(dl,"dl");
 							HX_STACK_LINE(5773)
 							Float r = (arb->radius - ::nape::Config_obj::collisionSlop);		HX_STACK_VAR(r,"r");
 							HX_STACK_LINE(5773)
@@ -8179,9 +7551,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 										HX_STACK_LINE(5773)
 										Float t = (Float(1.0) / Float(dl));		HX_STACK_VAR(t,"t");
 										HX_STACK_LINE(5773)
-										{
-										}
-										HX_STACK_LINE(5773)
 										hx::MultEq(dx1,t);
 										HX_STACK_LINE(5773)
 										hx::MultEq(dy1,t);
@@ -8190,12 +7559,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 									Float px = (0.5 * ((r1x + r2x)));		HX_STACK_VAR(px,"px");
 									HX_STACK_LINE(5773)
 									Float py = (0.5 * ((r1y + r2y)));		HX_STACK_VAR(py,"py");
-									HX_STACK_LINE(5773)
-									{
-									}
-									HX_STACK_LINE(5773)
-									{
-									}
 									HX_STACK_LINE(5773)
 									Float pen = (dl - r);		HX_STACK_VAR(pen,"pen");
 									HX_STACK_LINE(5773)
@@ -8231,9 +7594,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 											HX_STACK_LINE(5773)
 											Float t = jn;		HX_STACK_VAR(t,"t");
 											HX_STACK_LINE(5773)
-											{
-											}
-											HX_STACK_LINE(5773)
 											Jx = (dx1 * t);
 											HX_STACK_LINE(5773)
 											Jy = (dy1 * t);
@@ -8242,9 +7602,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 										{
 											HX_STACK_LINE(5773)
 											Float t = arb->b1->imass;		HX_STACK_VAR(t,"t");
-											HX_STACK_LINE(5773)
-											{
-											}
 											HX_STACK_LINE(5773)
 											hx::SubEq(arb->b1->posx,(Jx * t));
 											HX_STACK_LINE(5773)
@@ -8263,9 +7620,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 												_this->axisx = ::Math_obj::sin(_this->rot);
 												HX_STACK_LINE(5773)
 												_this->axisy = ::Math_obj::cos(_this->rot);
-												HX_STACK_LINE(5773)
-												{
-												}
 												HX_STACK_LINE(5773)
 												Dynamic();
 											}
@@ -8289,9 +7643,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 											HX_STACK_LINE(5773)
 											Float t = arb->b2->imass;		HX_STACK_VAR(t,"t");
 											HX_STACK_LINE(5773)
-											{
-											}
-											HX_STACK_LINE(5773)
 											hx::AddEq(arb->b2->posx,(Jx * t));
 											HX_STACK_LINE(5773)
 											hx::AddEq(arb->b2->posy,(Jy * t));
@@ -8309,9 +7660,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 												_this->axisx = ::Math_obj::sin(_this->rot);
 												HX_STACK_LINE(5773)
 												_this->axisy = ::Math_obj::cos(_this->rot);
-												HX_STACK_LINE(5773)
-												{
-												}
 												HX_STACK_LINE(5773)
 												Dynamic();
 											}
@@ -8350,12 +7698,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 							HX_STACK_LINE(5773)
 							Float clip2y = (int)0;		HX_STACK_VAR(clip2y,"clip2y");
 							HX_STACK_LINE(5773)
-							{
-							}
-							HX_STACK_LINE(5773)
-							{
-							}
-							HX_STACK_LINE(5773)
 							if (((arb->ptype == (int)0))){
 								HX_STACK_LINE(5773)
 								{
@@ -8378,9 +7720,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 									HX_STACK_LINE(5773)
 									Float t = 1.0;		HX_STACK_VAR(t,"t");
 									HX_STACK_LINE(5773)
-									{
-									}
-									HX_STACK_LINE(5773)
 									hx::AddEq(clip1x,(arb->b2->posx * t));
 									HX_STACK_LINE(5773)
 									hx::AddEq(clip1y,(arb->b2->posy * t));
@@ -8398,9 +7737,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 									{
 										HX_STACK_LINE(5773)
 										Float t = 1.0;		HX_STACK_VAR(t,"t");
-										HX_STACK_LINE(5773)
-										{
-										}
 										HX_STACK_LINE(5773)
 										hx::AddEq(clip2x,(arb->b2->posx * t));
 										HX_STACK_LINE(5773)
@@ -8430,9 +7766,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 									HX_STACK_LINE(5773)
 									Float t = 1.0;		HX_STACK_VAR(t,"t");
 									HX_STACK_LINE(5773)
-									{
-									}
-									HX_STACK_LINE(5773)
 									hx::AddEq(clip1x,(arb->b1->posx * t));
 									HX_STACK_LINE(5773)
 									hx::AddEq(clip1y,(arb->b1->posy * t));
@@ -8450,9 +7783,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 									{
 										HX_STACK_LINE(5773)
 										Float t = 1.0;		HX_STACK_VAR(t,"t");
-										HX_STACK_LINE(5773)
-										{
-										}
 										HX_STACK_LINE(5773)
 										hx::AddEq(clip2x,(arb->b1->posx * t));
 										HX_STACK_LINE(5773)
@@ -8509,21 +7839,9 @@ Void ZPP_Space_obj::iteratePos( int times){
 								HX_STACK_LINE(5773)
 								Float c2r1y = (int)0;		HX_STACK_VAR(c2r1y,"c2r1y");
 								HX_STACK_LINE(5773)
-								{
-								}
-								HX_STACK_LINE(5773)
-								{
-								}
-								HX_STACK_LINE(5773)
 								Float c2r2x = (int)0;		HX_STACK_VAR(c2r2x,"c2r2x");
 								HX_STACK_LINE(5773)
 								Float c2r2y = (int)0;		HX_STACK_VAR(c2r2y,"c2r2y");
-								HX_STACK_LINE(5773)
-								{
-								}
-								HX_STACK_LINE(5773)
-								{
-								}
 								HX_STACK_LINE(5773)
 								if ((arb->hpc2)){
 									HX_STACK_LINE(5773)
@@ -8579,12 +7897,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 									HX_STACK_LINE(5773)
 									Float by = (err2 * arb->biasCoef);		HX_STACK_VAR(by,"by");
 									HX_STACK_LINE(5773)
-									{
-									}
-									HX_STACK_LINE(5773)
-									{
-									}
-									HX_STACK_LINE(5773)
 									do{
 										HX_STACK_LINE(5773)
 										Float xx = 0.0;		HX_STACK_VAR(xx,"xx");
@@ -8596,9 +7908,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 											xx = bx;
 											HX_STACK_LINE(5773)
 											xy = by;
-											HX_STACK_LINE(5773)
-											{
-											}
 											HX_STACK_LINE(5773)
 											{
 											}
@@ -8660,9 +7969,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 												HX_STACK_LINE(5773)
 												Float t = (((xx + xy)) * arb->b1->imass);		HX_STACK_VAR(t,"t");
 												HX_STACK_LINE(5773)
-												{
-												}
-												HX_STACK_LINE(5773)
 												hx::SubEq(arb->b1->posx,(gnormx * t));
 												HX_STACK_LINE(5773)
 												hx::SubEq(arb->b1->posy,(gnormy * t));
@@ -8680,9 +7986,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 													_this->axisx = ::Math_obj::sin(_this->rot);
 													HX_STACK_LINE(5773)
 													_this->axisy = ::Math_obj::cos(_this->rot);
-													HX_STACK_LINE(5773)
-													{
-													}
 													HX_STACK_LINE(5773)
 													Dynamic();
 												}
@@ -8706,9 +8009,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 												HX_STACK_LINE(5773)
 												Float t = (((xx + xy)) * arb->b2->imass);		HX_STACK_VAR(t,"t");
 												HX_STACK_LINE(5773)
-												{
-												}
-												HX_STACK_LINE(5773)
 												hx::AddEq(arb->b2->posx,(gnormx * t));
 												HX_STACK_LINE(5773)
 												hx::AddEq(arb->b2->posy,(gnormy * t));
@@ -8726,9 +8026,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 													_this->axisx = ::Math_obj::sin(_this->rot);
 													HX_STACK_LINE(5773)
 													_this->axisy = ::Math_obj::cos(_this->rot);
-													HX_STACK_LINE(5773)
-													{
-													}
 													HX_STACK_LINE(5773)
 													Dynamic();
 												}
@@ -8759,9 +8056,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 											HX_STACK_LINE(5773)
 											{
 											}
-											HX_STACK_LINE(5773)
-											{
-											}
 										}
 										HX_STACK_LINE(5773)
 										Float vn2 = ((Kb * xx) + by);		HX_STACK_VAR(vn2,"vn2");
@@ -8771,9 +8065,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 											{
 												HX_STACK_LINE(5773)
 												Float t = (((xx + xy)) * arb->b1->imass);		HX_STACK_VAR(t,"t");
-												HX_STACK_LINE(5773)
-												{
-												}
 												HX_STACK_LINE(5773)
 												hx::SubEq(arb->b1->posx,(gnormx * t));
 												HX_STACK_LINE(5773)
@@ -8792,9 +8083,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 													_this->axisx = ::Math_obj::sin(_this->rot);
 													HX_STACK_LINE(5773)
 													_this->axisy = ::Math_obj::cos(_this->rot);
-													HX_STACK_LINE(5773)
-													{
-													}
 													HX_STACK_LINE(5773)
 													Dynamic();
 												}
@@ -8818,9 +8106,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 												HX_STACK_LINE(5773)
 												Float t = (((xx + xy)) * arb->b2->imass);		HX_STACK_VAR(t,"t");
 												HX_STACK_LINE(5773)
-												{
-												}
-												HX_STACK_LINE(5773)
 												hx::AddEq(arb->b2->posx,(gnormx * t));
 												HX_STACK_LINE(5773)
 												hx::AddEq(arb->b2->posy,(gnormy * t));
@@ -8838,9 +8123,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 													_this->axisx = ::Math_obj::sin(_this->rot);
 													HX_STACK_LINE(5773)
 													_this->axisy = ::Math_obj::cos(_this->rot);
-													HX_STACK_LINE(5773)
-													{
-													}
 													HX_STACK_LINE(5773)
 													Dynamic();
 												}
@@ -8871,9 +8153,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 											HX_STACK_LINE(5773)
 											{
 											}
-											HX_STACK_LINE(5773)
-											{
-											}
 										}
 										HX_STACK_LINE(5773)
 										Float vn1 = ((Kb * xy) + bx);		HX_STACK_VAR(vn1,"vn1");
@@ -8883,9 +8162,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 											{
 												HX_STACK_LINE(5773)
 												Float t = (((xx + xy)) * arb->b1->imass);		HX_STACK_VAR(t,"t");
-												HX_STACK_LINE(5773)
-												{
-												}
 												HX_STACK_LINE(5773)
 												hx::SubEq(arb->b1->posx,(gnormx * t));
 												HX_STACK_LINE(5773)
@@ -8904,9 +8180,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 													_this->axisx = ::Math_obj::sin(_this->rot);
 													HX_STACK_LINE(5773)
 													_this->axisy = ::Math_obj::cos(_this->rot);
-													HX_STACK_LINE(5773)
-													{
-													}
 													HX_STACK_LINE(5773)
 													Dynamic();
 												}
@@ -8930,9 +8203,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 												HX_STACK_LINE(5773)
 												Float t = (((xx + xy)) * arb->b2->imass);		HX_STACK_VAR(t,"t");
 												HX_STACK_LINE(5773)
-												{
-												}
-												HX_STACK_LINE(5773)
 												hx::AddEq(arb->b2->posx,(gnormx * t));
 												HX_STACK_LINE(5773)
 												hx::AddEq(arb->b2->posy,(gnormy * t));
@@ -8950,9 +8220,6 @@ Void ZPP_Space_obj::iteratePos( int times){
 													_this->axisx = ::Math_obj::sin(_this->rot);
 													HX_STACK_LINE(5773)
 													_this->axisy = ::Math_obj::cos(_this->rot);
-													HX_STACK_LINE(5773)
-													{
-													}
 													HX_STACK_LINE(5773)
 													Dynamic();
 												}
@@ -8997,9 +8264,6 @@ while((false));
 											HX_STACK_LINE(5773)
 											Float t = jn;		HX_STACK_VAR(t,"t");
 											HX_STACK_LINE(5773)
-											{
-											}
-											HX_STACK_LINE(5773)
 											Jx = (gnormx * t);
 											HX_STACK_LINE(5773)
 											Jy = (gnormy * t);
@@ -9008,9 +8272,6 @@ while((false));
 										{
 											HX_STACK_LINE(5773)
 											Float t = arb->b1->imass;		HX_STACK_VAR(t,"t");
-											HX_STACK_LINE(5773)
-											{
-											}
 											HX_STACK_LINE(5773)
 											hx::SubEq(arb->b1->posx,(Jx * t));
 											HX_STACK_LINE(5773)
@@ -9029,9 +8290,6 @@ while((false));
 												_this->axisx = ::Math_obj::sin(_this->rot);
 												HX_STACK_LINE(5773)
 												_this->axisy = ::Math_obj::cos(_this->rot);
-												HX_STACK_LINE(5773)
-												{
-												}
 												HX_STACK_LINE(5773)
 												Dynamic();
 											}
@@ -9055,9 +8313,6 @@ while((false));
 											HX_STACK_LINE(5773)
 											Float t = arb->b2->imass;		HX_STACK_VAR(t,"t");
 											HX_STACK_LINE(5773)
-											{
-											}
-											HX_STACK_LINE(5773)
 											hx::AddEq(arb->b2->posx,(Jx * t));
 											HX_STACK_LINE(5773)
 											hx::AddEq(arb->b2->posy,(Jy * t));
@@ -9075,9 +8330,6 @@ while((false));
 												_this->axisx = ::Math_obj::sin(_this->rot);
 												HX_STACK_LINE(5773)
 												_this->axisy = ::Math_obj::cos(_this->rot);
-												HX_STACK_LINE(5773)
-												{
-												}
 												HX_STACK_LINE(5773)
 												Dynamic();
 											}
@@ -9153,12 +8405,6 @@ Void ZPP_Space_obj::iterateVel( int times){
 							Float jy = (((arb->b1->vely + arb->b1->kinvely) + (arb->r1x * w1)) - (((arb->b2->vely + arb->b2->kinvely) + (arb->r2x * w2))));		HX_STACK_VAR(jy,"jy");
 							HX_STACK_LINE(5680)
 							{
-							}
-							HX_STACK_LINE(5680)
-							{
-							}
-							HX_STACK_LINE(5680)
-							{
 								HX_STACK_LINE(5680)
 								Float t = ((arb->vMassa * jx) + (arb->vMassb * jy));		HX_STACK_VAR(t,"t");
 								HX_STACK_LINE(5680)
@@ -9171,9 +8417,6 @@ Void ZPP_Space_obj::iterateVel( int times){
 								HX_STACK_LINE(5680)
 								Float t = arb->lgamma;		HX_STACK_VAR(t,"t");
 								HX_STACK_LINE(5680)
-								{
-								}
-								HX_STACK_LINE(5680)
 								hx::SubEq(jx,(arb->dampx * t));
 								HX_STACK_LINE(5680)
 								hx::SubEq(jy,(arb->dampy * t));
@@ -9182,9 +8425,6 @@ Void ZPP_Space_obj::iterateVel( int times){
 							{
 								HX_STACK_LINE(5680)
 								Float t = 1.0;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(5680)
-								{
-								}
 								HX_STACK_LINE(5680)
 								hx::AddEq(arb->dampx,(jx * t));
 								HX_STACK_LINE(5680)
@@ -9195,9 +8435,6 @@ Void ZPP_Space_obj::iterateVel( int times){
 								HX_STACK_LINE(5680)
 								Float t = arb->b1->imass;		HX_STACK_VAR(t,"t");
 								HX_STACK_LINE(5680)
-								{
-								}
-								HX_STACK_LINE(5680)
 								hx::SubEq(arb->b1->velx,(jx * t));
 								HX_STACK_LINE(5680)
 								hx::SubEq(arb->b1->vely,(jy * t));
@@ -9206,9 +8443,6 @@ Void ZPP_Space_obj::iterateVel( int times){
 							{
 								HX_STACK_LINE(5680)
 								Float t = arb->b2->imass;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(5680)
-								{
-								}
 								HX_STACK_LINE(5680)
 								hx::AddEq(arb->b2->velx,(jx * t));
 								HX_STACK_LINE(5680)
@@ -9420,12 +8654,6 @@ Void ZPP_Space_obj::iterateVel( int times){
 							HX_STACK_LINE(5720)
 							Float ay = arb->c2->jnAcc;		HX_STACK_VAR(ay,"ay");
 							HX_STACK_LINE(5720)
-							{
-							}
-							HX_STACK_LINE(5720)
-							{
-							}
-							HX_STACK_LINE(5720)
 							Float jnx = (((((v1x * arb->nx) + (v1y * arb->ny)) + arb->surfacey) + arb->c1->bounce) - (((arb->Ka * ax) + (arb->Kb * ay))));		HX_STACK_VAR(jnx,"jnx");
 							HX_STACK_LINE(5720)
 							Float jny = (((((v2x * arb->nx) + (v2y * arb->ny)) + arb->surfacey) + arb->c2->bounce) - (((arb->Kb * ax) + (arb->Kc * ay))));		HX_STACK_VAR(jny,"jny");
@@ -9618,38 +8846,29 @@ Void ZPP_Space_obj::warmStart( ){
 					HX_STACK_LINE(5642)
 					{
 						HX_STACK_LINE(5642)
-						{
-							HX_STACK_LINE(5642)
-							Float t = arb->b1->imass;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(5642)
-							{
-							}
-							HX_STACK_LINE(5642)
-							hx::SubEq(arb->b1->velx,(arb->dampx * t));
-							HX_STACK_LINE(5642)
-							hx::SubEq(arb->b1->vely,(arb->dampy * t));
-						}
+						Float t = arb->b1->imass;		HX_STACK_VAR(t,"t");
 						HX_STACK_LINE(5642)
-						{
-							HX_STACK_LINE(5642)
-							Float t = arb->b2->imass;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(5642)
-							{
-							}
-							HX_STACK_LINE(5642)
-							hx::AddEq(arb->b2->velx,(arb->dampx * t));
-							HX_STACK_LINE(5642)
-							hx::AddEq(arb->b2->vely,(arb->dampy * t));
-						}
+						hx::SubEq(arb->b1->velx,(arb->dampx * t));
 						HX_STACK_LINE(5642)
-						hx::SubEq(arb->b1->angvel,(arb->b1->iinertia * (((arb->dampy * arb->r1x) - (arb->dampx * arb->r1y)))));
-						HX_STACK_LINE(5642)
-						hx::AddEq(arb->b2->angvel,(arb->b2->iinertia * (((arb->dampy * arb->r2x) - (arb->dampx * arb->r2y)))));
-						HX_STACK_LINE(5642)
-						hx::SubEq(arb->b1->angvel,(arb->adamp * arb->b1->iinertia));
-						HX_STACK_LINE(5642)
-						hx::AddEq(arb->b2->angvel,(arb->adamp * arb->b2->iinertia));
+						hx::SubEq(arb->b1->vely,(arb->dampy * t));
 					}
+					HX_STACK_LINE(5642)
+					{
+						HX_STACK_LINE(5642)
+						Float t = arb->b2->imass;		HX_STACK_VAR(t,"t");
+						HX_STACK_LINE(5642)
+						hx::AddEq(arb->b2->velx,(arb->dampx * t));
+						HX_STACK_LINE(5642)
+						hx::AddEq(arb->b2->vely,(arb->dampy * t));
+					}
+					HX_STACK_LINE(5642)
+					hx::SubEq(arb->b1->angvel,(arb->b1->iinertia * (((arb->dampy * arb->r1x) - (arb->dampx * arb->r1y)))));
+					HX_STACK_LINE(5642)
+					hx::AddEq(arb->b2->angvel,(arb->b2->iinertia * (((arb->dampy * arb->r2x) - (arb->dampx * arb->r2y)))));
+					HX_STACK_LINE(5642)
+					hx::SubEq(arb->b1->angvel,(arb->adamp * arb->b1->iinertia));
+					HX_STACK_LINE(5642)
+					hx::AddEq(arb->b2->angvel,(arb->adamp * arb->b2->iinertia));
 				}
 				HX_STACK_LINE(5643)
 				cx_ite = cx_ite->next;
@@ -9677,80 +8896,65 @@ Void ZPP_Space_obj::warmStart( ){
 					HX_STACK_LINE(5656)
 					{
 						HX_STACK_LINE(5656)
+						Float jx = ((arb->nx * arb->c1->jnAcc) - (arb->ny * arb->c1->jtAcc));		HX_STACK_VAR(jx,"jx");
+						HX_STACK_LINE(5656)
+						Float jy = ((arb->ny * arb->c1->jnAcc) + (arb->nx * arb->c1->jtAcc));		HX_STACK_VAR(jy,"jy");
+						HX_STACK_LINE(5656)
 						{
 							HX_STACK_LINE(5656)
-							Float jx = ((arb->nx * arb->c1->jnAcc) - (arb->ny * arb->c1->jtAcc));		HX_STACK_VAR(jx,"jx");
+							Float t = arb->b1->imass;		HX_STACK_VAR(t,"t");
 							HX_STACK_LINE(5656)
-							Float jy = ((arb->ny * arb->c1->jnAcc) + (arb->nx * arb->c1->jtAcc));		HX_STACK_VAR(jy,"jy");
+							hx::SubEq(arb->b1->velx,(jx * t));
 							HX_STACK_LINE(5656)
-							{
-								HX_STACK_LINE(5656)
-								Float t = arb->b1->imass;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(5656)
-								{
-								}
-								HX_STACK_LINE(5656)
-								hx::SubEq(arb->b1->velx,(jx * t));
-								HX_STACK_LINE(5656)
-								hx::SubEq(arb->b1->vely,(jy * t));
-							}
-							HX_STACK_LINE(5656)
-							hx::SubEq(arb->b1->angvel,(arb->b1->iinertia * (((jy * arb->c1->r1x) - (jx * arb->c1->r1y)))));
-							HX_STACK_LINE(5656)
-							{
-								HX_STACK_LINE(5656)
-								Float t = arb->b2->imass;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(5656)
-								{
-								}
-								HX_STACK_LINE(5656)
-								hx::AddEq(arb->b2->velx,(jx * t));
-								HX_STACK_LINE(5656)
-								hx::AddEq(arb->b2->vely,(jy * t));
-							}
-							HX_STACK_LINE(5656)
-							hx::AddEq(arb->b2->angvel,(arb->b2->iinertia * (((jy * arb->c1->r2x) - (jx * arb->c1->r2y)))));
+							hx::SubEq(arb->b1->vely,(jy * t));
 						}
 						HX_STACK_LINE(5656)
-						if ((arb->hc2)){
+						hx::SubEq(arb->b1->angvel,(arb->b1->iinertia * (((jy * arb->c1->r1x) - (jx * arb->c1->r1y)))));
+						HX_STACK_LINE(5656)
+						{
 							HX_STACK_LINE(5656)
-							Float jx = ((arb->nx * arb->c2->jnAcc) - (arb->ny * arb->c2->jtAcc));		HX_STACK_VAR(jx,"jx");
+							Float t = arb->b2->imass;		HX_STACK_VAR(t,"t");
 							HX_STACK_LINE(5656)
-							Float jy = ((arb->ny * arb->c2->jnAcc) + (arb->nx * arb->c2->jtAcc));		HX_STACK_VAR(jy,"jy");
+							hx::AddEq(arb->b2->velx,(jx * t));
 							HX_STACK_LINE(5656)
-							{
-								HX_STACK_LINE(5656)
-								Float t = arb->b1->imass;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(5656)
-								{
-								}
-								HX_STACK_LINE(5656)
-								hx::SubEq(arb->b1->velx,(jx * t));
-								HX_STACK_LINE(5656)
-								hx::SubEq(arb->b1->vely,(jy * t));
-							}
-							HX_STACK_LINE(5656)
-							hx::SubEq(arb->b1->angvel,(arb->b1->iinertia * (((jy * arb->c2->r1x) - (jx * arb->c2->r1y)))));
-							HX_STACK_LINE(5656)
-							{
-								HX_STACK_LINE(5656)
-								Float t = arb->b2->imass;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(5656)
-								{
-								}
-								HX_STACK_LINE(5656)
-								hx::AddEq(arb->b2->velx,(jx * t));
-								HX_STACK_LINE(5656)
-								hx::AddEq(arb->b2->vely,(jy * t));
-							}
-							HX_STACK_LINE(5656)
-							hx::AddEq(arb->b2->angvel,(arb->b2->iinertia * (((jy * arb->c2->r2x) - (jx * arb->c2->r2y)))));
+							hx::AddEq(arb->b2->vely,(jy * t));
 						}
 						HX_STACK_LINE(5656)
-						hx::AddEq(arb->b2->angvel,(arb->jrAcc * arb->b2->iinertia));
-						HX_STACK_LINE(5656)
-						hx::SubEq(arb->b1->angvel,(arb->jrAcc * arb->b1->iinertia));
+						hx::AddEq(arb->b2->angvel,(arb->b2->iinertia * (((jy * arb->c1->r2x) - (jx * arb->c1->r2y)))));
 					}
+					HX_STACK_LINE(5656)
+					if ((arb->hc2)){
+						HX_STACK_LINE(5656)
+						Float jx = ((arb->nx * arb->c2->jnAcc) - (arb->ny * arb->c2->jtAcc));		HX_STACK_VAR(jx,"jx");
+						HX_STACK_LINE(5656)
+						Float jy = ((arb->ny * arb->c2->jnAcc) + (arb->nx * arb->c2->jtAcc));		HX_STACK_VAR(jy,"jy");
+						HX_STACK_LINE(5656)
+						{
+							HX_STACK_LINE(5656)
+							Float t = arb->b1->imass;		HX_STACK_VAR(t,"t");
+							HX_STACK_LINE(5656)
+							hx::SubEq(arb->b1->velx,(jx * t));
+							HX_STACK_LINE(5656)
+							hx::SubEq(arb->b1->vely,(jy * t));
+						}
+						HX_STACK_LINE(5656)
+						hx::SubEq(arb->b1->angvel,(arb->b1->iinertia * (((jy * arb->c2->r1x) - (jx * arb->c2->r1y)))));
+						HX_STACK_LINE(5656)
+						{
+							HX_STACK_LINE(5656)
+							Float t = arb->b2->imass;		HX_STACK_VAR(t,"t");
+							HX_STACK_LINE(5656)
+							hx::AddEq(arb->b2->velx,(jx * t));
+							HX_STACK_LINE(5656)
+							hx::AddEq(arb->b2->vely,(jy * t));
+						}
+						HX_STACK_LINE(5656)
+						hx::AddEq(arb->b2->angvel,(arb->b2->iinertia * (((jy * arb->c2->r2x) - (jx * arb->c2->r2y)))));
+					}
+					HX_STACK_LINE(5656)
+					hx::AddEq(arb->b2->angvel,(arb->jrAcc * arb->b2->iinertia));
+					HX_STACK_LINE(5656)
+					hx::SubEq(arb->b1->angvel,(arb->jrAcc * arb->b1->iinertia));
 				}
 				HX_STACK_LINE(5658)
 				arbi = arbi->next;
@@ -9871,12 +9075,9 @@ Void ZPP_Space_obj::prestep( Float dt){
 				HX_STACK_LINE(5534)
 				if ((this->presteparb(arb,dt,null()))){
 					struct _Function_4_1{
-						inline static ::zpp_nape::util::ZNPNode_ZPP_ColArbiter Block( ::zpp_nape::util::ZNPNode_ZPP_ColArbiter &pre1,::zpp_nape::util::ZNPList_ZPP_ColArbiter &arbs){
+						inline static ::zpp_nape::util::ZNPNode_ZPP_ColArbiter Block( ::zpp_nape::util::ZNPList_ZPP_ColArbiter &arbs,::zpp_nape::util::ZNPNode_ZPP_ColArbiter &pre1){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5535);
 							{
-								HX_STACK_LINE(5535)
-								{
-								}
 								HX_STACK_LINE(5535)
 								::zpp_nape::util::ZNPNode_ZPP_ColArbiter old;		HX_STACK_VAR(old,"old");
 								HX_STACK_LINE(5535)
@@ -9910,14 +9111,8 @@ Void ZPP_Space_obj::prestep( Float dt){
 								}
 								HX_STACK_LINE(5535)
 								{
-								}
-								HX_STACK_LINE(5535)
-								{
 									HX_STACK_LINE(5535)
 									::zpp_nape::util::ZNPNode_ZPP_ColArbiter o = old;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(5535)
-									{
-									}
 									HX_STACK_LINE(5535)
 									o->elt = null();
 									HX_STACK_LINE(5535)
@@ -9938,7 +9133,7 @@ Void ZPP_Space_obj::prestep( Float dt){
 						}
 					};
 					HX_STACK_LINE(5535)
-					arbite = _Function_4_1::Block(pre1,arbs);
+					arbite = _Function_4_1::Block(arbs,pre1);
 					HX_STACK_LINE(5536)
 					if (((bool(fst) && bool((arbite == null()))))){
 						HX_STACK_LINE(5538)
@@ -9998,12 +9193,9 @@ Void ZPP_Space_obj::prestep( Float dt){
 				HX_STACK_LINE(5573)
 				if ((this->presteparb(arb,dt,null()))){
 					struct _Function_4_1{
-						inline static ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter Block( ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter &pre1,::zpp_nape::util::ZNPList_ZPP_FluidArbiter &arbs){
+						inline static ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter Block( ::zpp_nape::util::ZNPList_ZPP_FluidArbiter &arbs,::zpp_nape::util::ZNPNode_ZPP_FluidArbiter &pre1){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5574);
 							{
-								HX_STACK_LINE(5574)
-								{
-								}
 								HX_STACK_LINE(5574)
 								::zpp_nape::util::ZNPNode_ZPP_FluidArbiter old;		HX_STACK_VAR(old,"old");
 								HX_STACK_LINE(5574)
@@ -10037,14 +9229,8 @@ Void ZPP_Space_obj::prestep( Float dt){
 								}
 								HX_STACK_LINE(5574)
 								{
-								}
-								HX_STACK_LINE(5574)
-								{
 									HX_STACK_LINE(5574)
 									::zpp_nape::util::ZNPNode_ZPP_FluidArbiter o = old;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(5574)
-									{
-									}
 									HX_STACK_LINE(5574)
 									o->elt = null();
 									HX_STACK_LINE(5574)
@@ -10065,7 +9251,7 @@ Void ZPP_Space_obj::prestep( Float dt){
 						}
 					};
 					HX_STACK_LINE(5574)
-					arbite = _Function_4_1::Block(pre1,arbs);
+					arbite = _Function_4_1::Block(arbs,pre1);
 					HX_STACK_LINE(5575)
 					if (((bool(fst) && bool((arbite == null()))))){
 						HX_STACK_LINE(5577)
@@ -10125,12 +9311,9 @@ Void ZPP_Space_obj::prestep( Float dt){
 				HX_STACK_LINE(5612)
 				if ((this->presteparb(arb,dt,null()))){
 					struct _Function_4_1{
-						inline static ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter Block( ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter &pre1,::zpp_nape::util::ZNPList_ZPP_SensorArbiter &arbs){
+						inline static ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter Block( ::zpp_nape::util::ZNPList_ZPP_SensorArbiter &arbs,::zpp_nape::util::ZNPNode_ZPP_SensorArbiter &pre1){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5613);
 							{
-								HX_STACK_LINE(5613)
-								{
-								}
 								HX_STACK_LINE(5613)
 								::zpp_nape::util::ZNPNode_ZPP_SensorArbiter old;		HX_STACK_VAR(old,"old");
 								HX_STACK_LINE(5613)
@@ -10164,14 +9347,8 @@ Void ZPP_Space_obj::prestep( Float dt){
 								}
 								HX_STACK_LINE(5613)
 								{
-								}
-								HX_STACK_LINE(5613)
-								{
 									HX_STACK_LINE(5613)
 									::zpp_nape::util::ZNPNode_ZPP_SensorArbiter o = old;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(5613)
-									{
-									}
 									HX_STACK_LINE(5613)
 									o->elt = null();
 									HX_STACK_LINE(5613)
@@ -10192,7 +9369,7 @@ Void ZPP_Space_obj::prestep( Float dt){
 						}
 					};
 					HX_STACK_LINE(5613)
-					arbite = _Function_4_1::Block(pre1,arbs);
+					arbite = _Function_4_1::Block(arbs,pre1);
 					HX_STACK_LINE(5614)
 					if (((bool(fst) && bool((arbite == null()))))){
 						HX_STACK_LINE(5616)
@@ -10243,9 +9420,6 @@ Dynamic cont = __o_cont.Default(false);
 		::zpp_nape::space::ZPP_Space _g = hx::ObjectPtr<OBJ_>(this);		HX_STACK_VAR(_g,"_g");
 		HX_STACK_LINE(5349)
 		if (((bool(!(arb->cleared)) && bool(((bool(arb->b1->component->sleeping) && bool(arb->b2->component->sleeping))))))){
-			HX_STACK_LINE(5350)
-			{
-			}
 			HX_STACK_LINE(5358)
 			arb->sleep_stamp = this->stamp;
 			HX_STACK_LINE(5359)
@@ -10259,9 +9433,6 @@ Dynamic cont = __o_cont.Default(false);
 			bool endcb = (bool((bool((bool(!(cont)) && bool((arb->up_stamp == (this->stamp - (int)1))))) && bool(!(arb->cleared)))) && bool(!(arb->intchange)));		HX_STACK_VAR(endcb,"endcb");
 			HX_STACK_LINE(5366)
 			bool begcb = (bool((bool(arb->fresh) && bool(!(arb->cleared)))) && bool(!(arb->intchange)));		HX_STACK_VAR(begcb,"begcb");
-			HX_STACK_LINE(5367)
-			{
-			}
 			HX_STACK_LINE(5375)
 			if ((endcb)){
 				HX_STACK_LINE(5375)
@@ -10276,9 +9447,6 @@ Dynamic cont = __o_cont.Default(false);
 					::zpp_nape::shape::ZPP_Shape s2 = arb->ws2;		HX_STACK_VAR(s2,"s2");
 					HX_STACK_LINE(5379)
 					{
-					}
-					HX_STACK_LINE(5379)
-					{
 						HX_STACK_LINE(5379)
 						::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca1;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(5379)
@@ -10286,22 +9454,13 @@ Dynamic cont = __o_cont.Default(false);
 							HX_STACK_LINE(5379)
 							while((!(((_this->head == null()))))){
 								HX_STACK_LINE(5379)
-								{
-								}
-								HX_STACK_LINE(5379)
 								::zpp_nape::util::ZNPNode_ZPP_Interactor ret = _this->head;		HX_STACK_VAR(ret,"ret");
 								HX_STACK_LINE(5379)
 								_this->head = ret->next;
 								HX_STACK_LINE(5379)
 								{
-								}
-								HX_STACK_LINE(5379)
-								{
 									HX_STACK_LINE(5379)
 									::zpp_nape::util::ZNPNode_ZPP_Interactor o = ret;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(5379)
-									{
-									}
 									HX_STACK_LINE(5379)
 									o->elt = null();
 									HX_STACK_LINE(5379)
@@ -10332,22 +9491,13 @@ Dynamic cont = __o_cont.Default(false);
 							HX_STACK_LINE(5379)
 							while((!(((_this->head == null()))))){
 								HX_STACK_LINE(5379)
-								{
-								}
-								HX_STACK_LINE(5379)
 								::zpp_nape::util::ZNPNode_ZPP_Interactor ret = _this->head;		HX_STACK_VAR(ret,"ret");
 								HX_STACK_LINE(5379)
 								_this->head = ret->next;
 								HX_STACK_LINE(5379)
 								{
-								}
-								HX_STACK_LINE(5379)
-								{
 									HX_STACK_LINE(5379)
 									::zpp_nape::util::ZNPNode_ZPP_Interactor o = ret;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(5379)
-									{
-									}
 									HX_STACK_LINE(5379)
 									o->elt = null();
 									HX_STACK_LINE(5379)
@@ -10373,9 +9523,6 @@ Dynamic cont = __o_cont.Default(false);
 					if (((s1->cbSet != null()))){
 						HX_STACK_LINE(5379)
 						::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca1;		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(5379)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::shape::ZPP_Shape &s1){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5379);
@@ -10426,9 +9573,6 @@ Dynamic cont = __o_cont.Default(false);
 						HX_STACK_LINE(5379)
 						::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca1;		HX_STACK_VAR(_this,"_this");
 						::zpp_nape::phys::ZPP_Interactor o = s1->body;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(5379)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Interactor &o){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5379);
@@ -10478,9 +9622,6 @@ Dynamic cont = __o_cont.Default(false);
 					if (((s2->cbSet != null()))){
 						HX_STACK_LINE(5379)
 						::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca2;		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(5379)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::shape::ZPP_Shape &s2){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5379);
@@ -10531,9 +9672,6 @@ Dynamic cont = __o_cont.Default(false);
 						HX_STACK_LINE(5379)
 						::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca2;		HX_STACK_VAR(_this,"_this");
 						::zpp_nape::phys::ZPP_Interactor o = s2->body;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(5379)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Interactor &o){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5379);
@@ -10595,9 +9733,6 @@ Dynamic cont = __o_cont.Default(false);
 							if (((c2->cbSet != null()))){
 								HX_STACK_LINE(5379)
 								::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca2;		HX_STACK_VAR(_this,"_this");
-								HX_STACK_LINE(5379)
-								{
-								}
 								struct _Function_7_1{
 									inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Compound &c2){
 										HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5379);
@@ -10651,9 +9786,6 @@ Dynamic cont = __o_cont.Default(false);
 							if (((c1->cbSet != null()))){
 								HX_STACK_LINE(5379)
 								::zpp_nape::util::ZNPList_ZPP_Interactor _this = this->mrca1;		HX_STACK_VAR(_this,"_this");
-								HX_STACK_LINE(5379)
-								{
-								}
 								struct _Function_7_1{
 									inline static ::zpp_nape::util::ZNPNode_ZPP_Interactor Block( ::zpp_nape::phys::ZPP_Compound &c1){
 										HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5379);
@@ -10726,119 +9858,103 @@ Dynamic cont = __o_cont.Default(false);
 									::zpp_nape::callbacks::ZPP_CbSet cb1 = i1->cbSet;		HX_STACK_VAR(cb1,"cb1");
 									HX_STACK_LINE(5391)
 									::zpp_nape::callbacks::ZPP_CbSet cb2 = i2->cbSet;		HX_STACK_VAR(cb2,"cb2");
-									HX_STACK_LINE(5392)
-									{
-									}
 									struct _Function_8_1{
-										inline static bool Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
+										inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5400);
 											{
 												HX_STACK_LINE(5400)
+												::zpp_nape::callbacks::ZPP_CbSetPair ret = null();		HX_STACK_VAR(ret,"ret");
+												HX_STACK_LINE(5400)
+												::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
+												HX_STACK_LINE(5400)
 												{
+													HX_STACK_LINE(5400)
+													::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite2 = pairs->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
+													HX_STACK_LINE(5400)
+													while(((cx_ite2 != null()))){
+														HX_STACK_LINE(5400)
+														::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite2->elt;		HX_STACK_VAR(p,"p");
+														HX_STACK_LINE(5400)
+														if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
+															HX_STACK_LINE(5400)
+															ret = p;
+															HX_STACK_LINE(5400)
+															break;
+														}
+														HX_STACK_LINE(5400)
+														cx_ite2 = cx_ite2->next;
+													}
 												}
-												struct _Function_9_1{
-													inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-														HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5400);
-														{
-															HX_STACK_LINE(5400)
-															::zpp_nape::callbacks::ZPP_CbSetPair ret = null();		HX_STACK_VAR(ret,"ret");
-															HX_STACK_LINE(5400)
-															::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
-															HX_STACK_LINE(5400)
+												HX_STACK_LINE(5400)
+												if (((ret == null()))){
+													struct _Function_10_1{
+														inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
+															HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5400);
 															{
 																HX_STACK_LINE(5400)
-																::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite2 = pairs->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
+																::zpp_nape::callbacks::ZPP_CbSetPair ret1;		HX_STACK_VAR(ret1,"ret1");
 																HX_STACK_LINE(5400)
-																while(((cx_ite2 != null()))){
+																{
 																	HX_STACK_LINE(5400)
-																	::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite2->elt;		HX_STACK_VAR(p,"p");
-																	HX_STACK_LINE(5400)
-																	if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
+																	if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
 																		HX_STACK_LINE(5400)
-																		ret = p;
+																		ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
+																	}
+																	else{
 																		HX_STACK_LINE(5400)
-																		break;
+																		ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
+																		HX_STACK_LINE(5400)
+																		::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret1->next;
+																		HX_STACK_LINE(5400)
+																		ret1->next = null();
 																	}
 																	HX_STACK_LINE(5400)
-																	cx_ite2 = cx_ite2->next;
+																	ret1->zip_listeners = true;
 																}
-															}
-															HX_STACK_LINE(5400)
-															if (((ret == null()))){
-																struct _Function_11_1{
-																	inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5400);
-																		{
-																			HX_STACK_LINE(5400)
-																			::zpp_nape::callbacks::ZPP_CbSetPair ret1;		HX_STACK_VAR(ret1,"ret1");
-																			HX_STACK_LINE(5400)
-																			{
-																				HX_STACK_LINE(5400)
-																				if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
-																					HX_STACK_LINE(5400)
-																					ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
-																				}
-																				else{
-																					HX_STACK_LINE(5400)
-																					ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
-																					HX_STACK_LINE(5400)
-																					::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret1->next;
-																					HX_STACK_LINE(5400)
-																					ret1->next = null();
-																				}
-																				HX_STACK_LINE(5400)
-																				ret1->zip_listeners = true;
-																			}
-																			HX_STACK_LINE(5400)
-																			if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
-																				HX_STACK_LINE(5400)
-																				ret1->a = cb1;
-																				HX_STACK_LINE(5400)
-																				ret1->b = cb2;
-																			}
-																			else{
-																				HX_STACK_LINE(5400)
-																				ret1->a = cb2;
-																				HX_STACK_LINE(5400)
-																				ret1->b = cb1;
-																			}
-																			HX_STACK_LINE(5400)
-																			return ret1;
-																		}
-																		return null();
-																	}
-																};
 																HX_STACK_LINE(5400)
-																ret = _Function_11_1::Block(cb1,cb2);
-																HX_STACK_LINE(5400)
-																cb1->cbpairs->add(ret);
-																HX_STACK_LINE(5400)
-																if (((cb2 != cb1))){
+																if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
 																	HX_STACK_LINE(5400)
-																	cb2->cbpairs->add(ret);
+																	ret1->a = cb1;
+																	HX_STACK_LINE(5400)
+																	ret1->b = cb2;
 																}
-															}
-															HX_STACK_LINE(5400)
-															if ((ret->zip_listeners)){
+																else{
+																	HX_STACK_LINE(5400)
+																	ret1->a = cb2;
+																	HX_STACK_LINE(5400)
+																	ret1->b = cb1;
+																}
 																HX_STACK_LINE(5400)
-																ret->zip_listeners = false;
-																HX_STACK_LINE(5400)
-																ret->__validate();
+																return ret1;
 															}
-															HX_STACK_LINE(5400)
-															return ret;
+															return null();
 														}
-														return null();
+													};
+													HX_STACK_LINE(5400)
+													ret = _Function_10_1::Block(cb2,cb1);
+													HX_STACK_LINE(5400)
+													cb1->cbpairs->add(ret);
+													HX_STACK_LINE(5400)
+													if (((cb2 != cb1))){
+														HX_STACK_LINE(5400)
+														cb2->cbpairs->add(ret);
 													}
-												};
+												}
 												HX_STACK_LINE(5400)
-												return ((_Function_9_1::Block(cb1,cb2))->listeners->head == null());
+												if ((ret->zip_listeners)){
+													HX_STACK_LINE(5400)
+													ret->zip_listeners = false;
+													HX_STACK_LINE(5400)
+													ret->__validate();
+												}
+												HX_STACK_LINE(5400)
+												return ret;
 											}
 											return null();
 										}
 									};
 									HX_STACK_LINE(5400)
-									if ((_Function_8_1::Block(cb1,cb2))){
+									if ((((_Function_8_1::Block(cb2,cb1))->listeners->head == null()))){
 										HX_STACK_LINE(5401)
 										cx_ite1 = cx_ite1->next;
 										HX_STACK_LINE(5402)
@@ -10861,173 +9977,167 @@ Dynamic cont = __o_cont.Default(false);
 											int event = ::zpp_nape::util::ZPP_Flags_obj::id_CbEvent_BEGIN;		HX_STACK_VAR(event,"event");
 											HX_STACK_LINE(5410)
 											{
-												HX_STACK_LINE(5410)
-												{
-												}
-												HX_STACK_LINE(5410)
-												{
-													struct _Function_12_1{
-														inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-															HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5410);
+												struct _Function_11_1{
+													inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
+														HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5410);
+														{
+															HX_STACK_LINE(5410)
+															::zpp_nape::callbacks::ZPP_CbSetPair ret = null();		HX_STACK_VAR(ret,"ret");
+															HX_STACK_LINE(5410)
+															::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
+															HX_STACK_LINE(5410)
 															{
 																HX_STACK_LINE(5410)
-																::zpp_nape::callbacks::ZPP_CbSetPair ret = null();		HX_STACK_VAR(ret,"ret");
+																::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite2 = pairs->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
 																HX_STACK_LINE(5410)
-																::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
-																HX_STACK_LINE(5410)
-																{
+																while(((cx_ite2 != null()))){
 																	HX_STACK_LINE(5410)
-																	::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite2 = pairs->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
+																	::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite2->elt;		HX_STACK_VAR(p,"p");
 																	HX_STACK_LINE(5410)
-																	while(((cx_ite2 != null()))){
+																	if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
 																		HX_STACK_LINE(5410)
-																		::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite2->elt;		HX_STACK_VAR(p,"p");
+																		ret = p;
 																		HX_STACK_LINE(5410)
-																		if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
-																			HX_STACK_LINE(5410)
-																			ret = p;
-																			HX_STACK_LINE(5410)
-																			break;
-																		}
-																		HX_STACK_LINE(5410)
-																		cx_ite2 = cx_ite2->next;
+																		break;
 																	}
+																	HX_STACK_LINE(5410)
+																	cx_ite2 = cx_ite2->next;
 																}
-																HX_STACK_LINE(5410)
-																if (((ret == null()))){
-																	struct _Function_14_1{
-																		inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5410);
+															}
+															HX_STACK_LINE(5410)
+															if (((ret == null()))){
+																struct _Function_13_1{
+																	inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
+																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5410);
+																		{
+																			HX_STACK_LINE(5410)
+																			::zpp_nape::callbacks::ZPP_CbSetPair ret1;		HX_STACK_VAR(ret1,"ret1");
+																			HX_STACK_LINE(5410)
 																			{
 																				HX_STACK_LINE(5410)
-																				::zpp_nape::callbacks::ZPP_CbSetPair ret1;		HX_STACK_VAR(ret1,"ret1");
-																				HX_STACK_LINE(5410)
-																				{
+																				if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
 																					HX_STACK_LINE(5410)
-																					if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
-																						HX_STACK_LINE(5410)
-																						ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
-																					}
-																					else{
-																						HX_STACK_LINE(5410)
-																						ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
-																						HX_STACK_LINE(5410)
-																						::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret1->next;
-																						HX_STACK_LINE(5410)
-																						ret1->next = null();
-																					}
-																					HX_STACK_LINE(5410)
-																					ret1->zip_listeners = true;
-																				}
-																				HX_STACK_LINE(5410)
-																				if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
-																					HX_STACK_LINE(5410)
-																					ret1->a = cb1;
-																					HX_STACK_LINE(5410)
-																					ret1->b = cb2;
+																					ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
 																				}
 																				else{
 																					HX_STACK_LINE(5410)
-																					ret1->a = cb2;
+																					ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
 																					HX_STACK_LINE(5410)
-																					ret1->b = cb1;
+																					::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret1->next;
+																					HX_STACK_LINE(5410)
+																					ret1->next = null();
 																				}
 																				HX_STACK_LINE(5410)
-																				return ret1;
+																				ret1->zip_listeners = true;
 																			}
-																			return null();
+																			HX_STACK_LINE(5410)
+																			if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
+																				HX_STACK_LINE(5410)
+																				ret1->a = cb1;
+																				HX_STACK_LINE(5410)
+																				ret1->b = cb2;
+																			}
+																			else{
+																				HX_STACK_LINE(5410)
+																				ret1->a = cb2;
+																				HX_STACK_LINE(5410)
+																				ret1->b = cb1;
+																			}
+																			HX_STACK_LINE(5410)
+																			return ret1;
 																		}
-																	};
-																	HX_STACK_LINE(5410)
-																	ret = _Function_14_1::Block(cb1,cb2);
-																	HX_STACK_LINE(5410)
-																	cb1->cbpairs->add(ret);
-																	HX_STACK_LINE(5410)
-																	if (((cb2 != cb1))){
-																		HX_STACK_LINE(5410)
-																		cb2->cbpairs->add(ret);
+																		return null();
 																	}
-																}
+																};
 																HX_STACK_LINE(5410)
-																if ((ret->zip_listeners)){
-																	HX_STACK_LINE(5410)
-																	ret->zip_listeners = false;
-																	HX_STACK_LINE(5410)
-																	ret->__validate();
-																}
+																ret = _Function_13_1::Block(cb2,cb1);
 																HX_STACK_LINE(5410)
-																return ret;
+																cb1->cbpairs->add(ret);
+																HX_STACK_LINE(5410)
+																if (((cb2 != cb1))){
+																	HX_STACK_LINE(5410)
+																	cb2->cbpairs->add(ret);
+																}
 															}
-															return null();
-														}
-													};
-													HX_STACK_LINE(5410)
-													::zpp_nape::util::ZNPNode_ZPP_InteractionListener cx_ite2 = (_Function_12_1::Block(cb1,cb2))->listeners->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
-													HX_STACK_LINE(5410)
-													while(((cx_ite2 != null()))){
-														HX_STACK_LINE(5410)
-														::zpp_nape::callbacks::ZPP_InteractionListener x = cx_ite2->elt;		HX_STACK_VAR(x,"x");
-														HX_STACK_LINE(5410)
-														if (((x->event == event))){
 															HX_STACK_LINE(5410)
-															if (((bool((((int(x->itype) & int(arb->type))) != (int)0)) && bool(callbackset->empty_arb(x->itype))))){
+															if ((ret->zip_listeners)){
 																HX_STACK_LINE(5410)
-																::zpp_nape::callbacks::ZPP_Callback cb = _g->push_callback(x);		HX_STACK_VAR(cb,"cb");
+																ret->zip_listeners = false;
 																HX_STACK_LINE(5410)
-																cb->event = ::zpp_nape::util::ZPP_Flags_obj::id_CbEvent_BEGIN;
-																HX_STACK_LINE(5410)
-																{
-																	HX_STACK_LINE(5410)
-																	::zpp_nape::phys::ZPP_Interactor o1 = callbackset->int1;		HX_STACK_VAR(o1,"o1");
-																	HX_STACK_LINE(5410)
-																	::zpp_nape::phys::ZPP_Interactor o2 = callbackset->int2;		HX_STACK_VAR(o2,"o2");
-																	struct _Function_16_1{
-																		inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x,::zpp_nape::phys::ZPP_Interactor &o1){
-																			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5410);
-																			{
-																				HX_STACK_LINE(5410)
-																				::zpp_nape::callbacks::ZPP_OptionType _this = x->options1;		HX_STACK_VAR(_this,"_this");
-																				::zpp_nape::util::ZNPList_ZPP_CbType xs = o1->cbTypes;		HX_STACK_VAR(xs,"xs");
-																				HX_STACK_LINE(5410)
-																				return (bool(_this->nonemptyintersection(xs,_this->includes)) && bool(!(_this->nonemptyintersection(xs,_this->excludes))));
-																			}
-																			return null();
-																		}
-																	};
-																	struct _Function_16_2{
-																		inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x,::zpp_nape::phys::ZPP_Interactor &o2){
-																			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5410);
-																			{
-																				HX_STACK_LINE(5410)
-																				::zpp_nape::callbacks::ZPP_OptionType _this = x->options2;		HX_STACK_VAR(_this,"_this");
-																				::zpp_nape::util::ZNPList_ZPP_CbType xs = o2->cbTypes;		HX_STACK_VAR(xs,"xs");
-																				HX_STACK_LINE(5410)
-																				return (bool(_this->nonemptyintersection(xs,_this->includes)) && bool(!(_this->nonemptyintersection(xs,_this->excludes))));
-																			}
-																			return null();
-																		}
-																	};
-																	HX_STACK_LINE(5410)
-																	if (((bool(_Function_16_1::Block(x,o1)) && bool(_Function_16_2::Block(x,o2))))){
-																		HX_STACK_LINE(5410)
-																		cb->int1 = o1;
-																		HX_STACK_LINE(5410)
-																		cb->int2 = o2;
-																	}
-																	else{
-																		HX_STACK_LINE(5410)
-																		cb->int1 = o2;
-																		HX_STACK_LINE(5410)
-																		cb->int2 = o1;
-																	}
-																}
-																HX_STACK_LINE(5410)
-																cb->set = callbackset;
+																ret->__validate();
 															}
+															HX_STACK_LINE(5410)
+															return ret;
 														}
-														HX_STACK_LINE(5410)
-														cx_ite2 = cx_ite2->next;
+														return null();
 													}
+												};
+												HX_STACK_LINE(5410)
+												::zpp_nape::util::ZNPNode_ZPP_InteractionListener cx_ite2 = (_Function_11_1::Block(cb2,cb1))->listeners->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
+												HX_STACK_LINE(5410)
+												while(((cx_ite2 != null()))){
+													HX_STACK_LINE(5410)
+													::zpp_nape::callbacks::ZPP_InteractionListener x = cx_ite2->elt;		HX_STACK_VAR(x,"x");
+													HX_STACK_LINE(5410)
+													if (((x->event == event))){
+														HX_STACK_LINE(5410)
+														if (((bool((((int(x->itype) & int(arb->type))) != (int)0)) && bool(callbackset->empty_arb(x->itype))))){
+															HX_STACK_LINE(5410)
+															::zpp_nape::callbacks::ZPP_Callback cb = _g->push_callback(x);		HX_STACK_VAR(cb,"cb");
+															HX_STACK_LINE(5410)
+															cb->event = ::zpp_nape::util::ZPP_Flags_obj::id_CbEvent_BEGIN;
+															HX_STACK_LINE(5410)
+															{
+																HX_STACK_LINE(5410)
+																::zpp_nape::phys::ZPP_Interactor o1 = callbackset->int1;		HX_STACK_VAR(o1,"o1");
+																HX_STACK_LINE(5410)
+																::zpp_nape::phys::ZPP_Interactor o2 = callbackset->int2;		HX_STACK_VAR(o2,"o2");
+																struct _Function_15_1{
+																	inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x,::zpp_nape::phys::ZPP_Interactor &o1){
+																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5410);
+																		{
+																			HX_STACK_LINE(5410)
+																			::zpp_nape::callbacks::ZPP_OptionType _this = x->options1;		HX_STACK_VAR(_this,"_this");
+																			::zpp_nape::util::ZNPList_ZPP_CbType xs = o1->cbTypes;		HX_STACK_VAR(xs,"xs");
+																			HX_STACK_LINE(5410)
+																			return (bool(_this->nonemptyintersection(xs,_this->includes)) && bool(!(_this->nonemptyintersection(xs,_this->excludes))));
+																		}
+																		return null();
+																	}
+																};
+																struct _Function_15_2{
+																	inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x,::zpp_nape::phys::ZPP_Interactor &o2){
+																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5410);
+																		{
+																			HX_STACK_LINE(5410)
+																			::zpp_nape::callbacks::ZPP_OptionType _this = x->options2;		HX_STACK_VAR(_this,"_this");
+																			::zpp_nape::util::ZNPList_ZPP_CbType xs = o2->cbTypes;		HX_STACK_VAR(xs,"xs");
+																			HX_STACK_LINE(5410)
+																			return (bool(_this->nonemptyintersection(xs,_this->includes)) && bool(!(_this->nonemptyintersection(xs,_this->excludes))));
+																		}
+																		return null();
+																	}
+																};
+																HX_STACK_LINE(5410)
+																if (((bool(_Function_15_1::Block(x,o1)) && bool(_Function_15_2::Block(x,o2))))){
+																	HX_STACK_LINE(5410)
+																	cb->int1 = o1;
+																	HX_STACK_LINE(5410)
+																	cb->int2 = o2;
+																}
+																else{
+																	HX_STACK_LINE(5410)
+																	cb->int1 = o2;
+																	HX_STACK_LINE(5410)
+																	cb->int2 = o1;
+																}
+															}
+															HX_STACK_LINE(5410)
+															cb->set = callbackset;
+														}
+													}
+													HX_STACK_LINE(5410)
+													cx_ite2 = cx_ite2->next;
 												}
 											}
 										}
@@ -11035,9 +10145,6 @@ Dynamic cont = __o_cont.Default(false);
 											inline static bool Block( ::zpp_nape::space::ZPP_CallbackSet &callbackset,::zpp_nape::dynamics::ZPP_Arbiter &arb){
 												HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5418);
 												{
-													HX_STACK_LINE(5418)
-													{
-													}
 													HX_STACK_LINE(5418)
 													bool ret;		HX_STACK_VAR(ret,"ret");
 													HX_STACK_LINE(5418)
@@ -11078,9 +10185,6 @@ Dynamic cont = __o_cont.Default(false);
 													{
 														HX_STACK_LINE(5418)
 														::zpp_nape::util::ZNPList_ZPP_Arbiter _this = callbackset->arbiters;		HX_STACK_VAR(_this,"_this");
-														HX_STACK_LINE(5418)
-														{
-														}
 														struct _Function_11_1{
 															inline static ::zpp_nape::util::ZNPNode_ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_Arbiter &arb){
 																HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5418);
@@ -11141,12 +10245,6 @@ Dynamic cont = __o_cont.Default(false);
 									else{
 										HX_STACK_LINE(5421)
 										(arb->present)--;
-										HX_STACK_LINE(5422)
-										{
-										}
-										HX_STACK_LINE(5430)
-										{
-										}
 										HX_STACK_LINE(5438)
 										callbackset->remove_arb(arb);
 										HX_STACK_LINE(5439)
@@ -11155,173 +10253,167 @@ Dynamic cont = __o_cont.Default(false);
 											int event = ::zpp_nape::util::ZPP_Flags_obj::id_CbEvent_END;		HX_STACK_VAR(event,"event");
 											HX_STACK_LINE(5439)
 											{
-												HX_STACK_LINE(5439)
-												{
-												}
-												HX_STACK_LINE(5439)
-												{
-													struct _Function_12_1{
-														inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-															HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5439);
+												struct _Function_11_1{
+													inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
+														HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5439);
+														{
+															HX_STACK_LINE(5439)
+															::zpp_nape::callbacks::ZPP_CbSetPair ret = null();		HX_STACK_VAR(ret,"ret");
+															HX_STACK_LINE(5439)
+															::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
+															HX_STACK_LINE(5439)
 															{
 																HX_STACK_LINE(5439)
-																::zpp_nape::callbacks::ZPP_CbSetPair ret = null();		HX_STACK_VAR(ret,"ret");
+																::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite2 = pairs->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
 																HX_STACK_LINE(5439)
-																::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
-																HX_STACK_LINE(5439)
-																{
+																while(((cx_ite2 != null()))){
 																	HX_STACK_LINE(5439)
-																	::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite2 = pairs->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
+																	::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite2->elt;		HX_STACK_VAR(p,"p");
 																	HX_STACK_LINE(5439)
-																	while(((cx_ite2 != null()))){
+																	if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
 																		HX_STACK_LINE(5439)
-																		::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite2->elt;		HX_STACK_VAR(p,"p");
+																		ret = p;
 																		HX_STACK_LINE(5439)
-																		if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
-																			HX_STACK_LINE(5439)
-																			ret = p;
-																			HX_STACK_LINE(5439)
-																			break;
-																		}
-																		HX_STACK_LINE(5439)
-																		cx_ite2 = cx_ite2->next;
+																		break;
 																	}
+																	HX_STACK_LINE(5439)
+																	cx_ite2 = cx_ite2->next;
 																}
-																HX_STACK_LINE(5439)
-																if (((ret == null()))){
-																	struct _Function_14_1{
-																		inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5439);
+															}
+															HX_STACK_LINE(5439)
+															if (((ret == null()))){
+																struct _Function_13_1{
+																	inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
+																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5439);
+																		{
+																			HX_STACK_LINE(5439)
+																			::zpp_nape::callbacks::ZPP_CbSetPair ret1;		HX_STACK_VAR(ret1,"ret1");
+																			HX_STACK_LINE(5439)
 																			{
 																				HX_STACK_LINE(5439)
-																				::zpp_nape::callbacks::ZPP_CbSetPair ret1;		HX_STACK_VAR(ret1,"ret1");
-																				HX_STACK_LINE(5439)
-																				{
+																				if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
 																					HX_STACK_LINE(5439)
-																					if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
-																						HX_STACK_LINE(5439)
-																						ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
-																					}
-																					else{
-																						HX_STACK_LINE(5439)
-																						ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
-																						HX_STACK_LINE(5439)
-																						::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret1->next;
-																						HX_STACK_LINE(5439)
-																						ret1->next = null();
-																					}
-																					HX_STACK_LINE(5439)
-																					ret1->zip_listeners = true;
-																				}
-																				HX_STACK_LINE(5439)
-																				if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
-																					HX_STACK_LINE(5439)
-																					ret1->a = cb1;
-																					HX_STACK_LINE(5439)
-																					ret1->b = cb2;
+																					ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
 																				}
 																				else{
 																					HX_STACK_LINE(5439)
-																					ret1->a = cb2;
+																					ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
 																					HX_STACK_LINE(5439)
-																					ret1->b = cb1;
+																					::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret1->next;
+																					HX_STACK_LINE(5439)
+																					ret1->next = null();
 																				}
 																				HX_STACK_LINE(5439)
-																				return ret1;
+																				ret1->zip_listeners = true;
 																			}
-																			return null();
+																			HX_STACK_LINE(5439)
+																			if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
+																				HX_STACK_LINE(5439)
+																				ret1->a = cb1;
+																				HX_STACK_LINE(5439)
+																				ret1->b = cb2;
+																			}
+																			else{
+																				HX_STACK_LINE(5439)
+																				ret1->a = cb2;
+																				HX_STACK_LINE(5439)
+																				ret1->b = cb1;
+																			}
+																			HX_STACK_LINE(5439)
+																			return ret1;
 																		}
-																	};
-																	HX_STACK_LINE(5439)
-																	ret = _Function_14_1::Block(cb1,cb2);
-																	HX_STACK_LINE(5439)
-																	cb1->cbpairs->add(ret);
-																	HX_STACK_LINE(5439)
-																	if (((cb2 != cb1))){
-																		HX_STACK_LINE(5439)
-																		cb2->cbpairs->add(ret);
+																		return null();
 																	}
-																}
+																};
 																HX_STACK_LINE(5439)
-																if ((ret->zip_listeners)){
-																	HX_STACK_LINE(5439)
-																	ret->zip_listeners = false;
-																	HX_STACK_LINE(5439)
-																	ret->__validate();
-																}
+																ret = _Function_13_1::Block(cb2,cb1);
 																HX_STACK_LINE(5439)
-																return ret;
+																cb1->cbpairs->add(ret);
+																HX_STACK_LINE(5439)
+																if (((cb2 != cb1))){
+																	HX_STACK_LINE(5439)
+																	cb2->cbpairs->add(ret);
+																}
 															}
-															return null();
-														}
-													};
-													HX_STACK_LINE(5439)
-													::zpp_nape::util::ZNPNode_ZPP_InteractionListener cx_ite2 = (_Function_12_1::Block(cb1,cb2))->listeners->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
-													HX_STACK_LINE(5439)
-													while(((cx_ite2 != null()))){
-														HX_STACK_LINE(5439)
-														::zpp_nape::callbacks::ZPP_InteractionListener x = cx_ite2->elt;		HX_STACK_VAR(x,"x");
-														HX_STACK_LINE(5439)
-														if (((x->event == event))){
 															HX_STACK_LINE(5439)
-															if (((bool((((int(x->itype) & int(arb->type))) != (int)0)) && bool(callbackset->empty_arb(x->itype))))){
+															if ((ret->zip_listeners)){
 																HX_STACK_LINE(5439)
-																::zpp_nape::callbacks::ZPP_Callback cb = _g->push_callback(x);		HX_STACK_VAR(cb,"cb");
+																ret->zip_listeners = false;
 																HX_STACK_LINE(5439)
-																cb->event = ::zpp_nape::util::ZPP_Flags_obj::id_CbEvent_END;
-																HX_STACK_LINE(5439)
-																{
-																	HX_STACK_LINE(5439)
-																	::zpp_nape::phys::ZPP_Interactor o1 = callbackset->int1;		HX_STACK_VAR(o1,"o1");
-																	HX_STACK_LINE(5439)
-																	::zpp_nape::phys::ZPP_Interactor o2 = callbackset->int2;		HX_STACK_VAR(o2,"o2");
-																	struct _Function_16_1{
-																		inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x,::zpp_nape::phys::ZPP_Interactor &o1){
-																			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5439);
-																			{
-																				HX_STACK_LINE(5439)
-																				::zpp_nape::callbacks::ZPP_OptionType _this = x->options1;		HX_STACK_VAR(_this,"_this");
-																				::zpp_nape::util::ZNPList_ZPP_CbType xs = o1->cbTypes;		HX_STACK_VAR(xs,"xs");
-																				HX_STACK_LINE(5439)
-																				return (bool(_this->nonemptyintersection(xs,_this->includes)) && bool(!(_this->nonemptyintersection(xs,_this->excludes))));
-																			}
-																			return null();
-																		}
-																	};
-																	struct _Function_16_2{
-																		inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x,::zpp_nape::phys::ZPP_Interactor &o2){
-																			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5439);
-																			{
-																				HX_STACK_LINE(5439)
-																				::zpp_nape::callbacks::ZPP_OptionType _this = x->options2;		HX_STACK_VAR(_this,"_this");
-																				::zpp_nape::util::ZNPList_ZPP_CbType xs = o2->cbTypes;		HX_STACK_VAR(xs,"xs");
-																				HX_STACK_LINE(5439)
-																				return (bool(_this->nonemptyintersection(xs,_this->includes)) && bool(!(_this->nonemptyintersection(xs,_this->excludes))));
-																			}
-																			return null();
-																		}
-																	};
-																	HX_STACK_LINE(5439)
-																	if (((bool(_Function_16_1::Block(x,o1)) && bool(_Function_16_2::Block(x,o2))))){
-																		HX_STACK_LINE(5439)
-																		cb->int1 = o1;
-																		HX_STACK_LINE(5439)
-																		cb->int2 = o2;
-																	}
-																	else{
-																		HX_STACK_LINE(5439)
-																		cb->int1 = o2;
-																		HX_STACK_LINE(5439)
-																		cb->int2 = o1;
-																	}
-																}
-																HX_STACK_LINE(5439)
-																cb->set = callbackset;
+																ret->__validate();
 															}
+															HX_STACK_LINE(5439)
+															return ret;
 														}
-														HX_STACK_LINE(5439)
-														cx_ite2 = cx_ite2->next;
+														return null();
 													}
+												};
+												HX_STACK_LINE(5439)
+												::zpp_nape::util::ZNPNode_ZPP_InteractionListener cx_ite2 = (_Function_11_1::Block(cb2,cb1))->listeners->head;		HX_STACK_VAR(cx_ite2,"cx_ite2");
+												HX_STACK_LINE(5439)
+												while(((cx_ite2 != null()))){
+													HX_STACK_LINE(5439)
+													::zpp_nape::callbacks::ZPP_InteractionListener x = cx_ite2->elt;		HX_STACK_VAR(x,"x");
+													HX_STACK_LINE(5439)
+													if (((x->event == event))){
+														HX_STACK_LINE(5439)
+														if (((bool((((int(x->itype) & int(arb->type))) != (int)0)) && bool(callbackset->empty_arb(x->itype))))){
+															HX_STACK_LINE(5439)
+															::zpp_nape::callbacks::ZPP_Callback cb = _g->push_callback(x);		HX_STACK_VAR(cb,"cb");
+															HX_STACK_LINE(5439)
+															cb->event = ::zpp_nape::util::ZPP_Flags_obj::id_CbEvent_END;
+															HX_STACK_LINE(5439)
+															{
+																HX_STACK_LINE(5439)
+																::zpp_nape::phys::ZPP_Interactor o1 = callbackset->int1;		HX_STACK_VAR(o1,"o1");
+																HX_STACK_LINE(5439)
+																::zpp_nape::phys::ZPP_Interactor o2 = callbackset->int2;		HX_STACK_VAR(o2,"o2");
+																struct _Function_15_1{
+																	inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x,::zpp_nape::phys::ZPP_Interactor &o1){
+																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5439);
+																		{
+																			HX_STACK_LINE(5439)
+																			::zpp_nape::callbacks::ZPP_OptionType _this = x->options1;		HX_STACK_VAR(_this,"_this");
+																			::zpp_nape::util::ZNPList_ZPP_CbType xs = o1->cbTypes;		HX_STACK_VAR(xs,"xs");
+																			HX_STACK_LINE(5439)
+																			return (bool(_this->nonemptyintersection(xs,_this->includes)) && bool(!(_this->nonemptyintersection(xs,_this->excludes))));
+																		}
+																		return null();
+																	}
+																};
+																struct _Function_15_2{
+																	inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x,::zpp_nape::phys::ZPP_Interactor &o2){
+																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5439);
+																		{
+																			HX_STACK_LINE(5439)
+																			::zpp_nape::callbacks::ZPP_OptionType _this = x->options2;		HX_STACK_VAR(_this,"_this");
+																			::zpp_nape::util::ZNPList_ZPP_CbType xs = o2->cbTypes;		HX_STACK_VAR(xs,"xs");
+																			HX_STACK_LINE(5439)
+																			return (bool(_this->nonemptyintersection(xs,_this->includes)) && bool(!(_this->nonemptyintersection(xs,_this->excludes))));
+																		}
+																		return null();
+																	}
+																};
+																HX_STACK_LINE(5439)
+																if (((bool(_Function_15_1::Block(x,o1)) && bool(_Function_15_2::Block(x,o2))))){
+																	HX_STACK_LINE(5439)
+																	cb->int1 = o1;
+																	HX_STACK_LINE(5439)
+																	cb->int2 = o2;
+																}
+																else{
+																	HX_STACK_LINE(5439)
+																	cb->int1 = o2;
+																	HX_STACK_LINE(5439)
+																	cb->int2 = o1;
+																}
+															}
+															HX_STACK_LINE(5439)
+															cb->set = callbackset;
+														}
+													}
+													HX_STACK_LINE(5439)
+													cx_ite2 = cx_ite2->next;
 												}
 											}
 										}
@@ -11355,18 +10447,6 @@ Dynamic cont = __o_cont.Default(false);
 				HX_STACK_LINE(5464)
 				{
 					HX_STACK_LINE(5464)
-					{
-					}
-					HX_STACK_LINE(5464)
-					{
-					}
-					HX_STACK_LINE(5464)
-					{
-					}
-					HX_STACK_LINE(5464)
-					{
-					}
-					HX_STACK_LINE(5464)
 					if ((!(_this->cleared))){
 						HX_STACK_LINE(5464)
 						{
@@ -11374,12 +10454,6 @@ Dynamic cont = __o_cont.Default(false);
 							::zpp_nape::util::ZNPList_ZPP_Arbiter _this1 = _this->b1->arbiters;		HX_STACK_VAR(_this1,"_this1");
 							HX_STACK_LINE(5464)
 							{
-							}
-							HX_STACK_LINE(5464)
-							{
-								HX_STACK_LINE(5464)
-								{
-								}
 								HX_STACK_LINE(5464)
 								::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 								HX_STACK_LINE(5464)
@@ -11392,9 +10466,6 @@ Dynamic cont = __o_cont.Default(false);
 									if (((cur->elt == _this))){
 										HX_STACK_LINE(5464)
 										{
-											HX_STACK_LINE(5464)
-											{
-											}
 											HX_STACK_LINE(5464)
 											::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 											HX_STACK_LINE(5464)
@@ -11428,14 +10499,8 @@ Dynamic cont = __o_cont.Default(false);
 											}
 											HX_STACK_LINE(5464)
 											{
-											}
-											HX_STACK_LINE(5464)
-											{
 												HX_STACK_LINE(5464)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-												HX_STACK_LINE(5464)
-												{
-												}
 												HX_STACK_LINE(5464)
 												o->elt = null();
 												HX_STACK_LINE(5464)
@@ -11472,12 +10537,6 @@ Dynamic cont = __o_cont.Default(false);
 							::zpp_nape::util::ZNPList_ZPP_Arbiter _this1 = _this->b2->arbiters;		HX_STACK_VAR(_this1,"_this1");
 							HX_STACK_LINE(5464)
 							{
-							}
-							HX_STACK_LINE(5464)
-							{
-								HX_STACK_LINE(5464)
-								{
-								}
 								HX_STACK_LINE(5464)
 								::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 								HX_STACK_LINE(5464)
@@ -11490,9 +10549,6 @@ Dynamic cont = __o_cont.Default(false);
 									if (((cur->elt == _this))){
 										HX_STACK_LINE(5464)
 										{
-											HX_STACK_LINE(5464)
-											{
-											}
 											HX_STACK_LINE(5464)
 											::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 											HX_STACK_LINE(5464)
@@ -11526,14 +10582,8 @@ Dynamic cont = __o_cont.Default(false);
 											}
 											HX_STACK_LINE(5464)
 											{
-											}
-											HX_STACK_LINE(5464)
-											{
 												HX_STACK_LINE(5464)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-												HX_STACK_LINE(5464)
-												{
-												}
 												HX_STACK_LINE(5464)
 												o->elt = null();
 												HX_STACK_LINE(5464)
@@ -11584,9 +10634,6 @@ Dynamic cont = __o_cont.Default(false);
 					HX_STACK_LINE(5464)
 					::zpp_nape::dynamics::ZPP_SensorArbiter o = _this;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(5464)
-					{
-					}
-					HX_STACK_LINE(5464)
 					o->next = ::zpp_nape::dynamics::ZPP_SensorArbiter_obj::zpp_pool;
 					HX_STACK_LINE(5464)
 					::zpp_nape::dynamics::ZPP_SensorArbiter_obj::zpp_pool = o;
@@ -11600,18 +10647,6 @@ Dynamic cont = __o_cont.Default(false);
 					HX_STACK_LINE(5465)
 					{
 						HX_STACK_LINE(5465)
-						{
-						}
-						HX_STACK_LINE(5465)
-						{
-						}
-						HX_STACK_LINE(5465)
-						{
-						}
-						HX_STACK_LINE(5465)
-						{
-						}
-						HX_STACK_LINE(5465)
 						if ((!(_this->cleared))){
 							HX_STACK_LINE(5465)
 							{
@@ -11619,12 +10654,6 @@ Dynamic cont = __o_cont.Default(false);
 								::zpp_nape::util::ZNPList_ZPP_Arbiter _this1 = _this->b1->arbiters;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(5465)
 								{
-								}
-								HX_STACK_LINE(5465)
-								{
-									HX_STACK_LINE(5465)
-									{
-									}
 									HX_STACK_LINE(5465)
 									::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 									HX_STACK_LINE(5465)
@@ -11637,9 +10666,6 @@ Dynamic cont = __o_cont.Default(false);
 										if (((cur->elt == _this))){
 											HX_STACK_LINE(5465)
 											{
-												HX_STACK_LINE(5465)
-												{
-												}
 												HX_STACK_LINE(5465)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 												HX_STACK_LINE(5465)
@@ -11673,14 +10699,8 @@ Dynamic cont = __o_cont.Default(false);
 												}
 												HX_STACK_LINE(5465)
 												{
-												}
-												HX_STACK_LINE(5465)
-												{
 													HX_STACK_LINE(5465)
 													::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-													HX_STACK_LINE(5465)
-													{
-													}
 													HX_STACK_LINE(5465)
 													o->elt = null();
 													HX_STACK_LINE(5465)
@@ -11717,12 +10737,6 @@ Dynamic cont = __o_cont.Default(false);
 								::zpp_nape::util::ZNPList_ZPP_Arbiter _this1 = _this->b2->arbiters;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(5465)
 								{
-								}
-								HX_STACK_LINE(5465)
-								{
-									HX_STACK_LINE(5465)
-									{
-									}
 									HX_STACK_LINE(5465)
 									::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 									HX_STACK_LINE(5465)
@@ -11735,9 +10749,6 @@ Dynamic cont = __o_cont.Default(false);
 										if (((cur->elt == _this))){
 											HX_STACK_LINE(5465)
 											{
-												HX_STACK_LINE(5465)
-												{
-												}
 												HX_STACK_LINE(5465)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 												HX_STACK_LINE(5465)
@@ -11771,14 +10782,8 @@ Dynamic cont = __o_cont.Default(false);
 												}
 												HX_STACK_LINE(5465)
 												{
-												}
-												HX_STACK_LINE(5465)
-												{
 													HX_STACK_LINE(5465)
 													::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-													HX_STACK_LINE(5465)
-													{
-													}
 													HX_STACK_LINE(5465)
 													o->elt = null();
 													HX_STACK_LINE(5465)
@@ -11829,9 +10834,6 @@ Dynamic cont = __o_cont.Default(false);
 						HX_STACK_LINE(5465)
 						::zpp_nape::dynamics::ZPP_FluidArbiter o = _this;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(5465)
-						{
-						}
-						HX_STACK_LINE(5465)
 						o->next = ::zpp_nape::dynamics::ZPP_FluidArbiter_obj::zpp_pool;
 						HX_STACK_LINE(5465)
 						::zpp_nape::dynamics::ZPP_FluidArbiter_obj::zpp_pool = o;
@@ -11845,18 +10847,6 @@ Dynamic cont = __o_cont.Default(false);
 					HX_STACK_LINE(5466)
 					{
 						HX_STACK_LINE(5466)
-						{
-						}
-						HX_STACK_LINE(5466)
-						{
-						}
-						HX_STACK_LINE(5466)
-						{
-						}
-						HX_STACK_LINE(5466)
-						{
-						}
-						HX_STACK_LINE(5466)
 						if ((!(_this->cleared))){
 							HX_STACK_LINE(5466)
 							{
@@ -11864,12 +10854,6 @@ Dynamic cont = __o_cont.Default(false);
 								::zpp_nape::util::ZNPList_ZPP_Arbiter _this1 = _this->b1->arbiters;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(5466)
 								{
-								}
-								HX_STACK_LINE(5466)
-								{
-									HX_STACK_LINE(5466)
-									{
-									}
 									HX_STACK_LINE(5466)
 									::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 									HX_STACK_LINE(5466)
@@ -11882,9 +10866,6 @@ Dynamic cont = __o_cont.Default(false);
 										if (((cur->elt == _this))){
 											HX_STACK_LINE(5466)
 											{
-												HX_STACK_LINE(5466)
-												{
-												}
 												HX_STACK_LINE(5466)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 												HX_STACK_LINE(5466)
@@ -11918,14 +10899,8 @@ Dynamic cont = __o_cont.Default(false);
 												}
 												HX_STACK_LINE(5466)
 												{
-												}
-												HX_STACK_LINE(5466)
-												{
 													HX_STACK_LINE(5466)
 													::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-													HX_STACK_LINE(5466)
-													{
-													}
 													HX_STACK_LINE(5466)
 													o->elt = null();
 													HX_STACK_LINE(5466)
@@ -11962,12 +10937,6 @@ Dynamic cont = __o_cont.Default(false);
 								::zpp_nape::util::ZNPList_ZPP_Arbiter _this1 = _this->b2->arbiters;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(5466)
 								{
-								}
-								HX_STACK_LINE(5466)
-								{
-									HX_STACK_LINE(5466)
-									{
-									}
 									HX_STACK_LINE(5466)
 									::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 									HX_STACK_LINE(5466)
@@ -11980,9 +10949,6 @@ Dynamic cont = __o_cont.Default(false);
 										if (((cur->elt == _this))){
 											HX_STACK_LINE(5466)
 											{
-												HX_STACK_LINE(5466)
-												{
-												}
 												HX_STACK_LINE(5466)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 												HX_STACK_LINE(5466)
@@ -12016,14 +10982,8 @@ Dynamic cont = __o_cont.Default(false);
 												}
 												HX_STACK_LINE(5466)
 												{
-												}
-												HX_STACK_LINE(5466)
-												{
 													HX_STACK_LINE(5466)
 													::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-													HX_STACK_LINE(5466)
-													{
-													}
 													HX_STACK_LINE(5466)
 													o->elt = null();
 													HX_STACK_LINE(5466)
@@ -12074,14 +11034,11 @@ Dynamic cont = __o_cont.Default(false);
 						HX_STACK_LINE(5466)
 						{
 							struct _Function_6_1{
-								inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &_this){
+								inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter _this){
 									HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5466);
 									{
 										HX_STACK_LINE(5466)
 										::zpp_nape::dynamics::ZPP_Contact _this1 = _this->contacts;		HX_STACK_VAR(_this1,"_this1");
-										HX_STACK_LINE(5466)
-										{
-										}
 										HX_STACK_LINE(5466)
 										::zpp_nape::dynamics::ZPP_Contact ret = _this1->next;		HX_STACK_VAR(ret,"ret");
 										HX_STACK_LINE(5466)
@@ -12095,9 +11052,6 @@ Dynamic cont = __o_cont.Default(false);
 							HX_STACK_LINE(5466)
 							::zpp_nape::dynamics::ZPP_Contact o = _Function_6_1::Block(_this);		HX_STACK_VAR(o,"o");
 							HX_STACK_LINE(5466)
-							{
-							}
-							HX_STACK_LINE(5466)
 							o->arbiter = null();
 							HX_STACK_LINE(5466)
 							o->next = ::zpp_nape::dynamics::ZPP_Contact_obj::zpp_pool;
@@ -12109,17 +11063,11 @@ Dynamic cont = __o_cont.Default(false);
 							HX_STACK_LINE(5466)
 							::zpp_nape::dynamics::ZPP_IContact _this1 = _this->innards;		HX_STACK_VAR(_this1,"_this1");
 							HX_STACK_LINE(5466)
-							{
-							}
-							HX_STACK_LINE(5466)
 							::zpp_nape::dynamics::ZPP_IContact ret = _this1->next;		HX_STACK_VAR(ret,"ret");
 							HX_STACK_LINE(5466)
 							_this1->next = ret->next;
 							HX_STACK_LINE(5466)
 							ret->_inuse = false;
-							HX_STACK_LINE(5466)
-							{
-							}
 							HX_STACK_LINE(5466)
 							if (((_this1->next == null()))){
 								HX_STACK_LINE(5466)
@@ -12137,15 +11085,6 @@ Dynamic cont = __o_cont.Default(false);
 						::zpp_nape::dynamics::ZPP_ColArbiter o = _this;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(5466)
 						{
-						}
-						HX_STACK_LINE(5466)
-						{
-							HX_STACK_LINE(5466)
-							{
-							}
-							HX_STACK_LINE(5466)
-							{
-							}
 							HX_STACK_LINE(5466)
 							o->userdef_dyn_fric = false;
 							HX_STACK_LINE(5466)
@@ -12222,57 +11161,18 @@ Dynamic cont = __o_cont.Default(false);
 										}
 										HX_STACK_LINE(5474)
 										if ((!(_this->userdef_dyn_fric))){
-											struct _Function_8_1{
-												inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &_this){
-													HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5474);
-													{
-														HX_STACK_LINE(5474)
-														{
-														}
-														HX_STACK_LINE(5474)
-														return ::Math_obj::sqrt((_this->s1->material->dynamicFriction * _this->s2->material->dynamicFriction));
-													}
-													return null();
-												}
-											};
 											HX_STACK_LINE(5474)
-											_this->dyn_fric = _Function_8_1::Block(_this);
+											_this->dyn_fric = ::Math_obj::sqrt((_this->s1->material->dynamicFriction * _this->s2->material->dynamicFriction));
 										}
 										HX_STACK_LINE(5474)
 										if ((!(_this->userdef_stat_fric))){
-											struct _Function_8_1{
-												inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &_this){
-													HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5474);
-													{
-														HX_STACK_LINE(5474)
-														{
-														}
-														HX_STACK_LINE(5474)
-														return ::Math_obj::sqrt((_this->s1->material->staticFriction * _this->s2->material->staticFriction));
-													}
-													return null();
-												}
-											};
 											HX_STACK_LINE(5474)
-											_this->stat_fric = _Function_8_1::Block(_this);
+											_this->stat_fric = ::Math_obj::sqrt((_this->s1->material->staticFriction * _this->s2->material->staticFriction));
 										}
 										HX_STACK_LINE(5474)
 										if ((!(_this->userdef_rfric))){
-											struct _Function_8_1{
-												inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &_this){
-													HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5474);
-													{
-														HX_STACK_LINE(5474)
-														{
-														}
-														HX_STACK_LINE(5474)
-														return ::Math_obj::sqrt((_this->s1->material->rollingFriction * _this->s2->material->rollingFriction));
-													}
-													return null();
-												}
-											};
 											HX_STACK_LINE(5474)
-											_this->rfric = _Function_8_1::Block(_this);
+											_this->rfric = ::Math_obj::sqrt((_this->s1->material->rollingFriction * _this->s2->material->rollingFriction));
 										}
 									}
 								}
@@ -12294,7 +11194,7 @@ Dynamic cont = __o_cont.Default(false);
 								HX_STACK_LINE(5474)
 								bool statType = (bool(!(((_this->b1->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC)))) || bool(!(((_this->b2->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC)))));		HX_STACK_VAR(statType,"statType");
 								struct _Function_5_1{
-									inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &_this){
+									inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter _this){
 										HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5474);
 										{
 											HX_STACK_LINE(5474)
@@ -12328,14 +11228,11 @@ Dynamic cont = __o_cont.Default(false);
 											HX_STACK_LINE(5474)
 											if ((((c->stamp + ::nape::Config_obj::arbiterExpirationDelay) < _this->stamp))){
 												struct _Function_9_1{
-													inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &_this,::zpp_nape::dynamics::ZPP_Contact &pre){
+													inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &pre,::zpp_nape::dynamics::ZPP_ColArbiter _this){
 														HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5474);
 														{
 															HX_STACK_LINE(5474)
 															::zpp_nape::dynamics::ZPP_Contact _this1 = _this->contacts;		HX_STACK_VAR(_this1,"_this1");
-															HX_STACK_LINE(5474)
-															{
-															}
 															HX_STACK_LINE(5474)
 															::zpp_nape::dynamics::ZPP_Contact old;		HX_STACK_VAR(old,"old");
 															HX_STACK_LINE(5474)
@@ -12370,9 +11267,6 @@ Dynamic cont = __o_cont.Default(false);
 															HX_STACK_LINE(5474)
 															old->_inuse = false;
 															HX_STACK_LINE(5474)
-															{
-															}
-															HX_STACK_LINE(5474)
 															_this1->modified = true;
 															HX_STACK_LINE(5474)
 															(_this1->length)--;
@@ -12385,16 +11279,13 @@ Dynamic cont = __o_cont.Default(false);
 													}
 												};
 												HX_STACK_LINE(5474)
-												cx_ite = _Function_9_1::Block(_this,pre);
+												cx_ite = _Function_9_1::Block(pre,_this);
 												struct _Function_9_2{
-													inline static ::zpp_nape::dynamics::ZPP_IContact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &_this,::zpp_nape::dynamics::ZPP_IContact &prei){
+													inline static ::zpp_nape::dynamics::ZPP_IContact Block( ::zpp_nape::dynamics::ZPP_ColArbiter _this,::zpp_nape::dynamics::ZPP_IContact &prei){
 														HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5474);
 														{
 															HX_STACK_LINE(5474)
 															::zpp_nape::dynamics::ZPP_IContact _this1 = _this->innards;		HX_STACK_VAR(_this1,"_this1");
-															HX_STACK_LINE(5474)
-															{
-															}
 															HX_STACK_LINE(5474)
 															::zpp_nape::dynamics::ZPP_IContact old;		HX_STACK_VAR(old,"old");
 															HX_STACK_LINE(5474)
@@ -12429,9 +11320,6 @@ Dynamic cont = __o_cont.Default(false);
 															HX_STACK_LINE(5474)
 															old->_inuse = false;
 															HX_STACK_LINE(5474)
-															{
-															}
-															HX_STACK_LINE(5474)
 															_this1->modified = true;
 															HX_STACK_LINE(5474)
 															(_this1->length)--;
@@ -12449,9 +11337,6 @@ Dynamic cont = __o_cont.Default(false);
 												{
 													HX_STACK_LINE(5474)
 													::zpp_nape::dynamics::ZPP_Contact o = c;		HX_STACK_VAR(o,"o");
-													HX_STACK_LINE(5474)
-													{
-													}
 													HX_STACK_LINE(5474)
 													o->arbiter = null();
 													HX_STACK_LINE(5474)
@@ -12502,50 +11387,41 @@ Dynamic cont = __o_cont.Default(false);
 													ci->r1y = (c->py - _this->b1->posy);
 												}
 												struct _Function_9_1{
-													inline static Float Block( ::zpp_nape::dynamics::ZPP_IContact &ci,::zpp_nape::dynamics::ZPP_ColArbiter &_this){
+													inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter _this,::zpp_nape::dynamics::ZPP_IContact &ci){
 														HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5474);
 														{
 															HX_STACK_LINE(5474)
 															Float x = ((ci->r2x * _this->nx) + (ci->r2y * _this->ny));		HX_STACK_VAR(x,"x");
 															HX_STACK_LINE(5474)
-															{
-															}
-															HX_STACK_LINE(5474)
 															return (x * x);
 														}
 														return null();
 													}
 												};
 												HX_STACK_LINE(5474)
-												Float kt = (mass_sum + (_this->b2->sinertia * _Function_9_1::Block(ci,_this)));		HX_STACK_VAR(kt,"kt");
+												Float kt = (mass_sum + (_this->b2->sinertia * _Function_9_1::Block(_this,ci)));		HX_STACK_VAR(kt,"kt");
 												struct _Function_9_2{
-													inline static Float Block( ::zpp_nape::dynamics::ZPP_IContact &ci,::zpp_nape::dynamics::ZPP_ColArbiter &_this){
+													inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter _this,::zpp_nape::dynamics::ZPP_IContact &ci){
 														HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5474);
 														{
 															HX_STACK_LINE(5474)
 															Float x = ((ci->r1x * _this->nx) + (ci->r1y * _this->ny));		HX_STACK_VAR(x,"x");
 															HX_STACK_LINE(5474)
-															{
-															}
-															HX_STACK_LINE(5474)
 															return (x * x);
 														}
 														return null();
 													}
 												};
 												HX_STACK_LINE(5474)
-												hx::AddEq(kt,(_this->b1->sinertia * _Function_9_2::Block(ci,_this)));
+												hx::AddEq(kt,(_this->b1->sinertia * _Function_9_2::Block(_this,ci)));
 												HX_STACK_LINE(5474)
 												ci->tMass = (  (((kt < (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? Float((int)0) : Float((Float(1.0) / Float(kt))) );
 												struct _Function_9_3{
-													inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &_this,::zpp_nape::dynamics::ZPP_IContact &ci){
+													inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter _this,::zpp_nape::dynamics::ZPP_IContact &ci){
 														HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5474);
 														{
 															HX_STACK_LINE(5474)
 															Float x = ((_this->ny * ci->r2x) - (_this->nx * ci->r2y));		HX_STACK_VAR(x,"x");
-															HX_STACK_LINE(5474)
-															{
-															}
 															HX_STACK_LINE(5474)
 															return (x * x);
 														}
@@ -12555,14 +11431,11 @@ Dynamic cont = __o_cont.Default(false);
 												HX_STACK_LINE(5474)
 												Float nt = (mass_sum + (_this->b2->sinertia * _Function_9_3::Block(_this,ci)));		HX_STACK_VAR(nt,"nt");
 												struct _Function_9_4{
-													inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter &_this,::zpp_nape::dynamics::ZPP_IContact &ci){
+													inline static Float Block( ::zpp_nape::dynamics::ZPP_ColArbiter _this,::zpp_nape::dynamics::ZPP_IContact &ci){
 														HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5474);
 														{
 															HX_STACK_LINE(5474)
 															Float x = ((_this->ny * ci->r1x) - (_this->nx * ci->r1y));		HX_STACK_VAR(x,"x");
-															HX_STACK_LINE(5474)
-															{
-															}
 															HX_STACK_LINE(5474)
 															return (x * x);
 														}
@@ -12815,17 +11688,11 @@ Dynamic cont = __o_cont.Default(false);
 									HX_STACK_LINE(5474)
 									{
 									}
-									HX_STACK_LINE(5474)
-									{
-									}
 								}
 								HX_STACK_LINE(5474)
 								{
 									HX_STACK_LINE(5474)
 									Float t = 1.0;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(5474)
-									{
-									}
 									HX_STACK_LINE(5474)
 									hx::AddEq(_this->surfacex,(_this->b1->svelx * t));
 									HX_STACK_LINE(5474)
@@ -12896,18 +11763,12 @@ Dynamic cont = __o_cont.Default(false);
 						HX_STACK_LINE(5478)
 						{
 						}
-						HX_STACK_LINE(5478)
-						{
-						}
 					}
 					else{
 						HX_STACK_LINE(5478)
 						g1x = this->gravityx;
 						HX_STACK_LINE(5478)
 						g1y = this->gravityy;
-						HX_STACK_LINE(5478)
-						{
-						}
 						HX_STACK_LINE(5478)
 						{
 						}
@@ -12925,9 +11786,6 @@ Dynamic cont = __o_cont.Default(false);
 						HX_STACK_LINE(5478)
 						{
 						}
-						HX_STACK_LINE(5478)
-						{
-						}
 					}
 					else{
 						HX_STACK_LINE(5478)
@@ -12937,20 +11795,11 @@ Dynamic cont = __o_cont.Default(false);
 						HX_STACK_LINE(5478)
 						{
 						}
-						HX_STACK_LINE(5478)
-						{
-						}
 					}
 					HX_STACK_LINE(5478)
 					Float buoyx = (int)0;		HX_STACK_VAR(buoyx,"buoyx");
 					HX_STACK_LINE(5478)
 					Float buoyy = (int)0;		HX_STACK_VAR(buoyy,"buoyy");
-					HX_STACK_LINE(5478)
-					{
-					}
-					HX_STACK_LINE(5478)
-					{
-					}
 					HX_STACK_LINE(5478)
 					if (((bool(_this->ws1->fluidEnabled) && bool(_this->ws2->fluidEnabled)))){
 						HX_STACK_LINE(5478)
@@ -12962,9 +11811,6 @@ Dynamic cont = __o_cont.Default(false);
 							HX_STACK_LINE(5478)
 							Float t = (mass1 + mass2);		HX_STACK_VAR(t,"t");
 							HX_STACK_LINE(5478)
-							{
-							}
-							HX_STACK_LINE(5478)
 							hx::SubEq(buoyx,(g1x * t));
 							HX_STACK_LINE(5478)
 							hx::SubEq(buoyy,(g1y * t));
@@ -12974,9 +11820,6 @@ Dynamic cont = __o_cont.Default(false);
 							if (((mass1 < mass2))){
 								HX_STACK_LINE(5478)
 								Float t = (mass1 + mass2);		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(5478)
-								{
-								}
 								HX_STACK_LINE(5478)
 								hx::AddEq(buoyx,(g2x * t));
 								HX_STACK_LINE(5478)
@@ -12999,9 +11842,6 @@ Dynamic cont = __o_cont.Default(false);
 									HX_STACK_LINE(5478)
 									Float t = 0.5;		HX_STACK_VAR(t,"t");
 									HX_STACK_LINE(5478)
-									{
-									}
-									HX_STACK_LINE(5478)
 									hx::MultEq(gx,t);
 									HX_STACK_LINE(5478)
 									hx::MultEq(gy,t);
@@ -13011,9 +11851,6 @@ Dynamic cont = __o_cont.Default(false);
 									HX_STACK_LINE(5478)
 									Float t = (mass1 + mass2);		HX_STACK_VAR(t,"t");
 									HX_STACK_LINE(5478)
-									{
-									}
-									HX_STACK_LINE(5478)
 									hx::SubEq(buoyx,(gx * t));
 									HX_STACK_LINE(5478)
 									hx::SubEq(buoyy,(gy * t));
@@ -13021,9 +11858,6 @@ Dynamic cont = __o_cont.Default(false);
 								else{
 									HX_STACK_LINE(5478)
 									Float t = (mass1 + mass2);		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(5478)
-									{
-									}
 									HX_STACK_LINE(5478)
 									hx::AddEq(buoyx,(gx * t));
 									HX_STACK_LINE(5478)
@@ -13042,9 +11876,6 @@ Dynamic cont = __o_cont.Default(false);
 								HX_STACK_LINE(5478)
 								Float t = mass;		HX_STACK_VAR(t,"t");
 								HX_STACK_LINE(5478)
-								{
-								}
-								HX_STACK_LINE(5478)
 								hx::SubEq(buoyx,(g1x * t));
 								HX_STACK_LINE(5478)
 								hx::SubEq(buoyy,(g1y * t));
@@ -13060,9 +11891,6 @@ Dynamic cont = __o_cont.Default(false);
 									HX_STACK_LINE(5478)
 									Float t = mass;		HX_STACK_VAR(t,"t");
 									HX_STACK_LINE(5478)
-									{
-									}
-									HX_STACK_LINE(5478)
 									hx::AddEq(buoyx,(g2x * t));
 									HX_STACK_LINE(5478)
 									hx::AddEq(buoyy,(g2y * t));
@@ -13074,9 +11902,6 @@ Dynamic cont = __o_cont.Default(false);
 					{
 						HX_STACK_LINE(5478)
 						Float t = dt;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(5478)
-						{
-						}
 						HX_STACK_LINE(5478)
 						hx::MultEq(buoyx,t);
 						HX_STACK_LINE(5478)
@@ -13091,9 +11916,6 @@ Dynamic cont = __o_cont.Default(false);
 						HX_STACK_LINE(5478)
 						{
 						}
-						HX_STACK_LINE(5478)
-						{
-						}
 					}
 					HX_STACK_LINE(5478)
 					if (((_this->b1->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC))){
@@ -13101,9 +11923,6 @@ Dynamic cont = __o_cont.Default(false);
 						{
 							HX_STACK_LINE(5478)
 							Float t = _this->b1->imass;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(5478)
-							{
-							}
 							HX_STACK_LINE(5478)
 							hx::SubEq(_this->b1->velx,(buoyx * t));
 							HX_STACK_LINE(5478)
@@ -13118,9 +11937,6 @@ Dynamic cont = __o_cont.Default(false);
 						{
 							HX_STACK_LINE(5478)
 							Float t = _this->b2->imass;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(5478)
-							{
-							}
 							HX_STACK_LINE(5478)
 							hx::AddEq(_this->b2->velx,(buoyx * t));
 							HX_STACK_LINE(5478)
@@ -13139,9 +11955,6 @@ Dynamic cont = __o_cont.Default(false);
 							_this->dampx = (int)0;
 							HX_STACK_LINE(5478)
 							_this->dampy = (int)0;
-							HX_STACK_LINE(5478)
-							{
-							}
 							HX_STACK_LINE(5478)
 							{
 							}
@@ -13186,7 +11999,7 @@ Dynamic cont = __o_cont.Default(false);
 							HX_STACK_LINE(5478)
 							hx::MultEq(tViscosity,0.0004);
 							struct _Function_6_1{
-								inline static Float Block( Float &biasCoef,Float &tViscosity,::zpp_nape::dynamics::ZPP_FluidArbiter &_this,Float &dt){
+								inline static Float Block( Float &tViscosity,Float &dt,::zpp_nape::dynamics::ZPP_FluidArbiter _this,Float &biasCoef){
 									HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5478);
 									{
 										HX_STACK_LINE(5478)
@@ -13206,7 +12019,7 @@ Dynamic cont = __o_cont.Default(false);
 								}
 							};
 							HX_STACK_LINE(5478)
-							hx::MultEq(_this->wMass,_Function_6_1::Block(biasCoef,tViscosity,_this,dt));
+							hx::MultEq(_this->wMass,_Function_6_1::Block(tViscosity,dt,_this,biasCoef));
 						}
 						else{
 							HX_STACK_LINE(5478)
@@ -13219,12 +12032,6 @@ Dynamic cont = __o_cont.Default(false);
 						HX_STACK_LINE(5478)
 						Float vrny = (((_this->b2->vely + _this->b2->kinvely) + (_this->r2x * ((_this->b2->angvel + _this->b2->kinangvel)))) - (((_this->b1->vely + _this->b1->kinvely) + (_this->r1x * ((_this->b1->angvel + _this->b1->kinangvel))))));		HX_STACK_VAR(vrny,"vrny");
 						HX_STACK_LINE(5478)
-						{
-						}
-						HX_STACK_LINE(5478)
-						{
-						}
-						HX_STACK_LINE(5478)
 						if (((((vrnx * vrnx) + (vrny * vrny)) < (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))){
 						}
 						else{
@@ -13233,43 +12040,11 @@ Dynamic cont = __o_cont.Default(false);
 								HX_STACK_LINE(5478)
 								Float d = ((vrnx * vrnx) + (vrny * vrny));		HX_STACK_VAR(d,"d");
 								HX_STACK_LINE(5478)
-								{
-								}
-								struct _Function_7_1{
-									inline static Float Block( Float &d){
-										HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5478);
-										{
-											HX_STACK_LINE(5478)
-											{
-											}
-											struct _Function_8_1{
-												inline static Float Block( Float &d){
-													HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5478);
-													{
-														HX_STACK_LINE(5478)
-														{
-														}
-														HX_STACK_LINE(5478)
-														return ::Math_obj::sqrt(d);
-													}
-													return null();
-												}
-											};
-											HX_STACK_LINE(5478)
-											return (Float(1.0) / Float(_Function_8_1::Block(d)));
-										}
-										return null();
-									}
-								};
-								HX_STACK_LINE(5478)
-								Float imag = _Function_7_1::Block(d);		HX_STACK_VAR(imag,"imag");
+								Float imag = (Float(1.0) / Float(::Math_obj::sqrt(d)));		HX_STACK_VAR(imag,"imag");
 								HX_STACK_LINE(5478)
 								{
 									HX_STACK_LINE(5478)
 									Float t = imag;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(5478)
-									{
-									}
 									HX_STACK_LINE(5478)
 									hx::MultEq(vrnx,t);
 									HX_STACK_LINE(5478)
@@ -13282,9 +12057,6 @@ Dynamic cont = __o_cont.Default(false);
 								_this->nx = vrnx;
 								HX_STACK_LINE(5478)
 								_this->ny = vrny;
-								HX_STACK_LINE(5478)
-								{
-								}
 								HX_STACK_LINE(5478)
 								{
 								}
@@ -13508,7 +12280,7 @@ Dynamic cont = __o_cont.Default(false);
 							HX_STACK_LINE(5478)
 							{
 								struct _Function_7_1{
-									inline static Float Block( Float &tViscosity1,Float &biasCoef,::zpp_nape::dynamics::ZPP_FluidArbiter &_this,Float &dt){
+									inline static Float Block( Float &tViscosity1,Float &dt,::zpp_nape::dynamics::ZPP_FluidArbiter _this,Float &biasCoef){
 										HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5478);
 										{
 											HX_STACK_LINE(5478)
@@ -13528,7 +12300,7 @@ Dynamic cont = __o_cont.Default(false);
 									}
 								};
 								HX_STACK_LINE(5478)
-								Float X = _Function_7_1::Block(tViscosity1,biasCoef,_this,dt);		HX_STACK_VAR(X,"X");
+								Float X = _Function_7_1::Block(tViscosity1,dt,_this,biasCoef);		HX_STACK_VAR(X,"X");
 								HX_STACK_LINE(5478)
 								hx::MultEq(_this->vMassa,X);
 								HX_STACK_LINE(5478)
@@ -13555,9 +12327,6 @@ Dynamic cont = __o_cont.Default(false);
 					{
 						HX_STACK_LINE(5478)
 						Float t = dtratio;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(5478)
-						{
-						}
 						HX_STACK_LINE(5478)
 						hx::MultEq(_this->dampx,t);
 						HX_STACK_LINE(5478)
@@ -13600,14 +12369,11 @@ Dynamic cont = __o_cont.Default(false);
 										HX_STACK_LINE(5482)
 										if ((((c->stamp + ::nape::Config_obj::arbiterExpirationDelay) < _this->stamp))){
 											struct _Function_8_1{
-												inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &_this,::zpp_nape::dynamics::ZPP_Contact &pre){
+												inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &pre,::zpp_nape::dynamics::ZPP_ColArbiter _this){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5482);
 													{
 														HX_STACK_LINE(5482)
 														::zpp_nape::dynamics::ZPP_Contact _this1 = _this->contacts;		HX_STACK_VAR(_this1,"_this1");
-														HX_STACK_LINE(5482)
-														{
-														}
 														HX_STACK_LINE(5482)
 														::zpp_nape::dynamics::ZPP_Contact old;		HX_STACK_VAR(old,"old");
 														HX_STACK_LINE(5482)
@@ -13642,9 +12408,6 @@ Dynamic cont = __o_cont.Default(false);
 														HX_STACK_LINE(5482)
 														old->_inuse = false;
 														HX_STACK_LINE(5482)
-														{
-														}
-														HX_STACK_LINE(5482)
 														_this1->modified = true;
 														HX_STACK_LINE(5482)
 														(_this1->length)--;
@@ -13657,16 +12420,13 @@ Dynamic cont = __o_cont.Default(false);
 												}
 											};
 											HX_STACK_LINE(5482)
-											cx_ite = _Function_8_1::Block(_this,pre);
+											cx_ite = _Function_8_1::Block(pre,_this);
 											struct _Function_8_2{
-												inline static ::zpp_nape::dynamics::ZPP_IContact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &_this,::zpp_nape::dynamics::ZPP_IContact &prei){
+												inline static ::zpp_nape::dynamics::ZPP_IContact Block( ::zpp_nape::dynamics::ZPP_ColArbiter _this,::zpp_nape::dynamics::ZPP_IContact &prei){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",5482);
 													{
 														HX_STACK_LINE(5482)
 														::zpp_nape::dynamics::ZPP_IContact _this1 = _this->innards;		HX_STACK_VAR(_this1,"_this1");
-														HX_STACK_LINE(5482)
-														{
-														}
 														HX_STACK_LINE(5482)
 														::zpp_nape::dynamics::ZPP_IContact old;		HX_STACK_VAR(old,"old");
 														HX_STACK_LINE(5482)
@@ -13701,9 +12461,6 @@ Dynamic cont = __o_cont.Default(false);
 														HX_STACK_LINE(5482)
 														old->_inuse = false;
 														HX_STACK_LINE(5482)
-														{
-														}
-														HX_STACK_LINE(5482)
 														_this1->modified = true;
 														HX_STACK_LINE(5482)
 														(_this1->length)--;
@@ -13721,9 +12478,6 @@ Dynamic cont = __o_cont.Default(false);
 											{
 												HX_STACK_LINE(5482)
 												::zpp_nape::dynamics::ZPP_Contact o = c;		HX_STACK_VAR(o,"o");
-												HX_STACK_LINE(5482)
-												{
-												}
 												HX_STACK_LINE(5482)
 												o->arbiter = null();
 												HX_STACK_LINE(5482)
@@ -13752,9 +12506,6 @@ Dynamic cont = __o_cont.Default(false);
 												_this->oc1 = c;
 											}
 											else{
-												HX_STACK_LINE(5482)
-												{
-												}
 												HX_STACK_LINE(5482)
 												_this->hc2 = true;
 												HX_STACK_LINE(5482)
@@ -13872,9 +12623,6 @@ Void ZPP_Space_obj::updatePos( Float dt){
 						cur->pre_posx = cur->posx;
 						HX_STACK_LINE(5168)
 						cur->pre_posy = cur->posy;
-						HX_STACK_LINE(5169)
-						{
-						}
 						HX_STACK_LINE(5177)
 						{
 						}
@@ -13892,17 +12640,11 @@ Void ZPP_Space_obj::updatePos( Float dt){
 						HX_STACK_LINE(5189)
 						if (((delta != (int)0))){
 							HX_STACK_LINE(5189)
-							{
-							}
-							HX_STACK_LINE(5189)
 							cur->sweepTime = dt;
 							HX_STACK_LINE(5189)
 							{
 								HX_STACK_LINE(5189)
 								Float t = delta;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(5189)
-								{
-								}
 								HX_STACK_LINE(5189)
 								hx::AddEq(cur->posx,(cur->velx * t));
 								HX_STACK_LINE(5189)
@@ -13920,9 +12662,6 @@ Void ZPP_Space_obj::updatePos( Float dt){
 									cur->axisx = ::Math_obj::sin(cur->rot);
 									HX_STACK_LINE(5189)
 									cur->axisy = ::Math_obj::cos(cur->rot);
-									HX_STACK_LINE(5189)
-									{
-									}
 									HX_STACK_LINE(5189)
 									Dynamic();
 								}
@@ -13998,17 +12737,11 @@ Void ZPP_Space_obj::updatePos( Float dt){
 											HX_STACK_LINE(5211)
 											if (((delta != (int)0))){
 												HX_STACK_LINE(5211)
-												{
-												}
-												HX_STACK_LINE(5211)
 												cur->sweepTime = dt;
 												HX_STACK_LINE(5211)
 												{
 													HX_STACK_LINE(5211)
 													Float t = delta;		HX_STACK_VAR(t,"t");
-													HX_STACK_LINE(5211)
-													{
-													}
 													HX_STACK_LINE(5211)
 													hx::AddEq(cur->posx,(cur->velx * t));
 													HX_STACK_LINE(5211)
@@ -14026,9 +12759,6 @@ Void ZPP_Space_obj::updatePos( Float dt){
 														cur->axisx = ::Math_obj::sin(cur->rot);
 														HX_STACK_LINE(5211)
 														cur->axisy = ::Math_obj::cos(cur->rot);
-														HX_STACK_LINE(5211)
-														{
-														}
 														HX_STACK_LINE(5211)
 														Dynamic();
 													}
@@ -14096,9 +12826,6 @@ Void ZPP_Space_obj::updatePos( Float dt){
 												HX_STACK_LINE(5212)
 												{
 												}
-												HX_STACK_LINE(5212)
-												{
-												}
 											}
 											HX_STACK_LINE(5212)
 											{
@@ -14106,9 +12833,6 @@ Void ZPP_Space_obj::updatePos( Float dt){
 												_this->aabb->maxx = p0->x;
 												HX_STACK_LINE(5212)
 												_this->aabb->maxy = p0->y;
-												HX_STACK_LINE(5212)
-												{
-												}
 												HX_STACK_LINE(5212)
 												{
 												}
@@ -14213,17 +12937,11 @@ Void ZPP_Space_obj::updatePos( Float dt){
 													HX_STACK_LINE(5218)
 													if (((delta != (int)0))){
 														HX_STACK_LINE(5218)
-														{
-														}
-														HX_STACK_LINE(5218)
 														cur->sweepTime = dt1;
 														HX_STACK_LINE(5218)
 														{
 															HX_STACK_LINE(5218)
 															Float t = delta;		HX_STACK_VAR(t,"t");
-															HX_STACK_LINE(5218)
-															{
-															}
 															HX_STACK_LINE(5218)
 															hx::AddEq(cur->posx,(cur->velx * t));
 															HX_STACK_LINE(5218)
@@ -14241,9 +12959,6 @@ Void ZPP_Space_obj::updatePos( Float dt){
 																cur->axisx = ::Math_obj::sin(cur->rot);
 																HX_STACK_LINE(5218)
 																cur->axisy = ::Math_obj::cos(cur->rot);
-																HX_STACK_LINE(5218)
-																{
-																}
 																HX_STACK_LINE(5218)
 																Dynamic();
 															}
@@ -14311,9 +13026,6 @@ Void ZPP_Space_obj::updatePos( Float dt){
 														HX_STACK_LINE(5219)
 														{
 														}
-														HX_STACK_LINE(5219)
-														{
-														}
 													}
 													HX_STACK_LINE(5219)
 													{
@@ -14321,9 +13033,6 @@ Void ZPP_Space_obj::updatePos( Float dt){
 														_this->aabb->maxx = p0->x;
 														HX_STACK_LINE(5219)
 														_this->aabb->maxy = p0->y;
-														HX_STACK_LINE(5219)
-														{
-														}
 														HX_STACK_LINE(5219)
 														{
 														}
@@ -14469,9 +13178,6 @@ Void ZPP_Space_obj::updatePos( Float dt){
 						cur->pre_posx = cur->posx;
 						HX_STACK_LINE(5261)
 						cur->pre_posy = cur->posy;
-						HX_STACK_LINE(5262)
-						{
-						}
 						HX_STACK_LINE(5270)
 						{
 						}
@@ -14489,17 +13195,11 @@ Void ZPP_Space_obj::updatePos( Float dt){
 						HX_STACK_LINE(5282)
 						if (((delta != (int)0))){
 							HX_STACK_LINE(5282)
-							{
-							}
-							HX_STACK_LINE(5282)
 							cur->sweepTime = dt;
 							HX_STACK_LINE(5282)
 							{
 								HX_STACK_LINE(5282)
 								Float t = delta;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(5282)
-								{
-								}
 								HX_STACK_LINE(5282)
 								hx::AddEq(cur->posx,(cur->velx * t));
 								HX_STACK_LINE(5282)
@@ -14517,9 +13217,6 @@ Void ZPP_Space_obj::updatePos( Float dt){
 									cur->axisx = ::Math_obj::sin(cur->rot);
 									HX_STACK_LINE(5282)
 									cur->axisy = ::Math_obj::cos(cur->rot);
-									HX_STACK_LINE(5282)
-									{
-									}
 									HX_STACK_LINE(5282)
 									Dynamic();
 								}
@@ -14595,17 +13292,11 @@ Void ZPP_Space_obj::updatePos( Float dt){
 											HX_STACK_LINE(5304)
 											if (((delta != (int)0))){
 												HX_STACK_LINE(5304)
-												{
-												}
-												HX_STACK_LINE(5304)
 												cur->sweepTime = dt;
 												HX_STACK_LINE(5304)
 												{
 													HX_STACK_LINE(5304)
 													Float t = delta;		HX_STACK_VAR(t,"t");
-													HX_STACK_LINE(5304)
-													{
-													}
 													HX_STACK_LINE(5304)
 													hx::AddEq(cur->posx,(cur->velx * t));
 													HX_STACK_LINE(5304)
@@ -14623,9 +13314,6 @@ Void ZPP_Space_obj::updatePos( Float dt){
 														cur->axisx = ::Math_obj::sin(cur->rot);
 														HX_STACK_LINE(5304)
 														cur->axisy = ::Math_obj::cos(cur->rot);
-														HX_STACK_LINE(5304)
-														{
-														}
 														HX_STACK_LINE(5304)
 														Dynamic();
 													}
@@ -14693,9 +13381,6 @@ Void ZPP_Space_obj::updatePos( Float dt){
 												HX_STACK_LINE(5305)
 												{
 												}
-												HX_STACK_LINE(5305)
-												{
-												}
 											}
 											HX_STACK_LINE(5305)
 											{
@@ -14703,9 +13388,6 @@ Void ZPP_Space_obj::updatePos( Float dt){
 												_this->aabb->maxx = p0->x;
 												HX_STACK_LINE(5305)
 												_this->aabb->maxy = p0->y;
-												HX_STACK_LINE(5305)
-												{
-												}
 												HX_STACK_LINE(5305)
 												{
 												}
@@ -14810,17 +13492,11 @@ Void ZPP_Space_obj::updatePos( Float dt){
 													HX_STACK_LINE(5311)
 													if (((delta != (int)0))){
 														HX_STACK_LINE(5311)
-														{
-														}
-														HX_STACK_LINE(5311)
 														cur->sweepTime = dt1;
 														HX_STACK_LINE(5311)
 														{
 															HX_STACK_LINE(5311)
 															Float t = delta;		HX_STACK_VAR(t,"t");
-															HX_STACK_LINE(5311)
-															{
-															}
 															HX_STACK_LINE(5311)
 															hx::AddEq(cur->posx,(cur->velx * t));
 															HX_STACK_LINE(5311)
@@ -14838,9 +13514,6 @@ Void ZPP_Space_obj::updatePos( Float dt){
 																cur->axisx = ::Math_obj::sin(cur->rot);
 																HX_STACK_LINE(5311)
 																cur->axisy = ::Math_obj::cos(cur->rot);
-																HX_STACK_LINE(5311)
-																{
-																}
 																HX_STACK_LINE(5311)
 																Dynamic();
 															}
@@ -14908,9 +13581,6 @@ Void ZPP_Space_obj::updatePos( Float dt){
 														HX_STACK_LINE(5312)
 														{
 														}
-														HX_STACK_LINE(5312)
-														{
-														}
 													}
 													HX_STACK_LINE(5312)
 													{
@@ -14918,9 +13588,6 @@ Void ZPP_Space_obj::updatePos( Float dt){
 														_this->aabb->maxx = p0->x;
 														HX_STACK_LINE(5312)
 														_this->aabb->maxy = p0->y;
-														HX_STACK_LINE(5312)
-														{
-														}
 														HX_STACK_LINE(5312)
 														{
 														}
@@ -15128,44 +13795,38 @@ Void ZPP_Space_obj::validation( ){
 			HX_STACK_LINE(4937)
 			::zpp_nape::space::ZPP_CbSetManager _this = this->cbsets;		HX_STACK_VAR(_this,"_this");
 			HX_STACK_LINE(4937)
-			{
+			if ((!(_this->cbsets->empty()))){
 				HX_STACK_LINE(4937)
-				{
+				::zpp_nape::util::ZPP_Set_ZPP_CbSet set_ite = _this->cbsets->parent;		HX_STACK_VAR(set_ite,"set_ite");
+				HX_STACK_LINE(4937)
+				while(((set_ite->prev != null()))){
+					HX_STACK_LINE(4937)
+					set_ite = set_ite->prev;
 				}
 				HX_STACK_LINE(4937)
-				if ((!(_this->cbsets->empty()))){
+				while(((set_ite != null()))){
 					HX_STACK_LINE(4937)
-					::zpp_nape::util::ZPP_Set_ZPP_CbSet set_ite = _this->cbsets->parent;		HX_STACK_VAR(set_ite,"set_ite");
+					::zpp_nape::callbacks::ZPP_CbSet cb = set_ite->data;		HX_STACK_VAR(cb,"cb");
 					HX_STACK_LINE(4937)
-					while(((set_ite->prev != null()))){
-						HX_STACK_LINE(4937)
-						set_ite = set_ite->prev;
-					}
+					cb->validate();
 					HX_STACK_LINE(4937)
-					while(((set_ite != null()))){
+					if (((set_ite->next != null()))){
 						HX_STACK_LINE(4937)
-						::zpp_nape::callbacks::ZPP_CbSet cb = set_ite->data;		HX_STACK_VAR(cb,"cb");
+						set_ite = set_ite->next;
 						HX_STACK_LINE(4937)
-						cb->validate();
-						HX_STACK_LINE(4937)
-						if (((set_ite->next != null()))){
+						while(((set_ite->prev != null()))){
 							HX_STACK_LINE(4937)
-							set_ite = set_ite->next;
-							HX_STACK_LINE(4937)
-							while(((set_ite->prev != null()))){
-								HX_STACK_LINE(4937)
-								set_ite = set_ite->prev;
-							}
+							set_ite = set_ite->prev;
 						}
-						else{
-							HX_STACK_LINE(4937)
-							while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
-								HX_STACK_LINE(4937)
-								set_ite = set_ite->parent;
-							}
+					}
+					else{
+						HX_STACK_LINE(4937)
+						while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
 							HX_STACK_LINE(4937)
 							set_ite = set_ite->parent;
 						}
+						HX_STACK_LINE(4937)
+						set_ite = set_ite->parent;
 					}
 				}
 			}
@@ -15259,9 +13920,6 @@ Void ZPP_Space_obj::validation( ){
 															HX_STACK_LINE(4958)
 															_this1->axisy = ::Math_obj::cos(_this1->rot);
 															HX_STACK_LINE(4958)
-															{
-															}
-															HX_STACK_LINE(4958)
 															Dynamic();
 														}
 													}
@@ -15288,9 +13946,6 @@ Void ZPP_Space_obj::validation( ){
 																	_this1->axisx = ::Math_obj::sin(_this1->rot);
 																	HX_STACK_LINE(4958)
 																	_this1->axisy = ::Math_obj::cos(_this1->rot);
-																	HX_STACK_LINE(4958)
-																	{
-																	}
 																	HX_STACK_LINE(4958)
 																	Dynamic();
 																}
@@ -15368,9 +14023,6 @@ Void ZPP_Space_obj::validation( ){
 																HX_STACK_LINE(4958)
 																{
 																}
-																HX_STACK_LINE(4958)
-																{
-																}
 															}
 															HX_STACK_LINE(4958)
 															e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -15409,9 +14061,6 @@ Void ZPP_Space_obj::validation( ){
 															e->wrap_gnorm->zpp_inner->x = e->gnormx;
 															HX_STACK_LINE(4958)
 															e->wrap_gnorm->zpp_inner->y = e->gnormy;
-															HX_STACK_LINE(4958)
-															{
-															}
 															HX_STACK_LINE(4958)
 															{
 															}
@@ -15464,9 +14113,6 @@ Void ZPP_Space_obj::validation( ){
 									HX_STACK_LINE(4969)
 									{
 									}
-									HX_STACK_LINE(4969)
-									{
-									}
 								}
 								HX_STACK_LINE(4969)
 								{
@@ -15474,9 +14120,6 @@ Void ZPP_Space_obj::validation( ){
 									cur->aabb->maxx = ::Math_obj::NEGATIVE_INFINITY;
 									HX_STACK_LINE(4969)
 									cur->aabb->maxy = ::Math_obj::NEGATIVE_INFINITY;
-									HX_STACK_LINE(4969)
-									{
-									}
 									HX_STACK_LINE(4969)
 									{
 									}
@@ -15527,9 +14170,6 @@ Void ZPP_Space_obj::validation( ){
 																			HX_STACK_LINE(4969)
 																			_this1->localCOMy = _this1->lverts->next->y;
 																			HX_STACK_LINE(4969)
-																			{
-																			}
-																			HX_STACK_LINE(4969)
 																			Dynamic();
 																		}
 																		else{
@@ -15544,17 +14184,11 @@ Void ZPP_Space_obj::validation( ){
 																					HX_STACK_LINE(4969)
 																					{
 																					}
-																					HX_STACK_LINE(4969)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(4969)
 																				{
 																					HX_STACK_LINE(4969)
 																					Float t = 1.0;		HX_STACK_VAR(t,"t");
-																					HX_STACK_LINE(4969)
-																					{
-																					}
 																					HX_STACK_LINE(4969)
 																					hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 																					HX_STACK_LINE(4969)
@@ -15564,9 +14198,6 @@ Void ZPP_Space_obj::validation( ){
 																				{
 																					HX_STACK_LINE(4969)
 																					Float t = 0.5;		HX_STACK_VAR(t,"t");
-																					HX_STACK_LINE(4969)
-																					{
-																					}
 																					HX_STACK_LINE(4969)
 																					hx::MultEq(_this1->localCOMx,t);
 																					HX_STACK_LINE(4969)
@@ -15580,9 +14211,6 @@ Void ZPP_Space_obj::validation( ){
 																					_this1->localCOMx = (int)0;
 																					HX_STACK_LINE(4969)
 																					_this1->localCOMy = (int)0;
-																					HX_STACK_LINE(4969)
-																					{
-																					}
 																					HX_STACK_LINE(4969)
 																					{
 																					}
@@ -15665,9 +14293,6 @@ Void ZPP_Space_obj::validation( ){
 																					HX_STACK_LINE(4969)
 																					Float t = area;		HX_STACK_VAR(t,"t");
 																					HX_STACK_LINE(4969)
-																					{
-																					}
-																					HX_STACK_LINE(4969)
 																					hx::MultEq(_this1->localCOMx,t);
 																					HX_STACK_LINE(4969)
 																					hx::MultEq(_this1->localCOMy,t);
@@ -15691,9 +14316,6 @@ Void ZPP_Space_obj::validation( ){
 																			HX_STACK_LINE(4969)
 																			_this1->axisy = ::Math_obj::cos(_this1->rot);
 																			HX_STACK_LINE(4969)
-																			{
-																			}
-																			HX_STACK_LINE(4969)
 																			Dynamic();
 																		}
 																	}
@@ -15711,12 +14333,6 @@ Void ZPP_Space_obj::validation( ){
 														Float rx = _this->radius;		HX_STACK_VAR(rx,"rx");
 														HX_STACK_LINE(4969)
 														Float ry = _this->radius;		HX_STACK_VAR(ry,"ry");
-														HX_STACK_LINE(4969)
-														{
-														}
-														HX_STACK_LINE(4969)
-														{
-														}
 														HX_STACK_LINE(4969)
 														{
 															HX_STACK_LINE(4969)
@@ -15757,9 +14373,6 @@ Void ZPP_Space_obj::validation( ){
 																			_this1->axisx = ::Math_obj::sin(_this1->rot);
 																			HX_STACK_LINE(4969)
 																			_this1->axisy = ::Math_obj::cos(_this1->rot);
-																			HX_STACK_LINE(4969)
-																			{
-																			}
 																			HX_STACK_LINE(4969)
 																			Dynamic();
 																		}
@@ -15811,9 +14424,6 @@ Void ZPP_Space_obj::validation( ){
 															HX_STACK_LINE(4969)
 															{
 															}
-															HX_STACK_LINE(4969)
-															{
-															}
 														}
 														HX_STACK_LINE(4969)
 														{
@@ -15821,9 +14431,6 @@ Void ZPP_Space_obj::validation( ){
 															_this->aabb->maxx = p0->x;
 															HX_STACK_LINE(4969)
 															_this->aabb->maxy = p0->y;
-															HX_STACK_LINE(4969)
-															{
-															}
 															HX_STACK_LINE(4969)
 															{
 															}
@@ -15914,9 +14521,6 @@ Void ZPP_Space_obj::validation( ){
 							cur->axisx = ::Math_obj::sin(cur->rot);
 							HX_STACK_LINE(4973)
 							cur->axisy = ::Math_obj::cos(cur->rot);
-							HX_STACK_LINE(4973)
-							{
-							}
 							HX_STACK_LINE(4973)
 							Dynamic();
 						}
@@ -16072,9 +14676,6 @@ Void ZPP_Space_obj::validation( ){
 															HX_STACK_LINE(5036)
 															_this1->axisy = ::Math_obj::cos(_this1->rot);
 															HX_STACK_LINE(5036)
-															{
-															}
-															HX_STACK_LINE(5036)
 															Dynamic();
 														}
 													}
@@ -16101,9 +14702,6 @@ Void ZPP_Space_obj::validation( ){
 																	_this1->axisx = ::Math_obj::sin(_this1->rot);
 																	HX_STACK_LINE(5036)
 																	_this1->axisy = ::Math_obj::cos(_this1->rot);
-																	HX_STACK_LINE(5036)
-																	{
-																	}
 																	HX_STACK_LINE(5036)
 																	Dynamic();
 																}
@@ -16181,9 +14779,6 @@ Void ZPP_Space_obj::validation( ){
 																HX_STACK_LINE(5036)
 																{
 																}
-																HX_STACK_LINE(5036)
-																{
-																}
 															}
 															HX_STACK_LINE(5036)
 															e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -16222,9 +14817,6 @@ Void ZPP_Space_obj::validation( ){
 															e->wrap_gnorm->zpp_inner->x = e->gnormx;
 															HX_STACK_LINE(5036)
 															e->wrap_gnorm->zpp_inner->y = e->gnormy;
-															HX_STACK_LINE(5036)
-															{
-															}
 															HX_STACK_LINE(5036)
 															{
 															}
@@ -16277,9 +14869,6 @@ Void ZPP_Space_obj::validation( ){
 									HX_STACK_LINE(5047)
 									{
 									}
-									HX_STACK_LINE(5047)
-									{
-									}
 								}
 								HX_STACK_LINE(5047)
 								{
@@ -16287,9 +14876,6 @@ Void ZPP_Space_obj::validation( ){
 									cur->aabb->maxx = ::Math_obj::NEGATIVE_INFINITY;
 									HX_STACK_LINE(5047)
 									cur->aabb->maxy = ::Math_obj::NEGATIVE_INFINITY;
-									HX_STACK_LINE(5047)
-									{
-									}
 									HX_STACK_LINE(5047)
 									{
 									}
@@ -16340,9 +14926,6 @@ Void ZPP_Space_obj::validation( ){
 																			HX_STACK_LINE(5047)
 																			_this1->localCOMy = _this1->lverts->next->y;
 																			HX_STACK_LINE(5047)
-																			{
-																			}
-																			HX_STACK_LINE(5047)
 																			Dynamic();
 																		}
 																		else{
@@ -16357,17 +14940,11 @@ Void ZPP_Space_obj::validation( ){
 																					HX_STACK_LINE(5047)
 																					{
 																					}
-																					HX_STACK_LINE(5047)
-																					{
-																					}
 																				}
 																				HX_STACK_LINE(5047)
 																				{
 																					HX_STACK_LINE(5047)
 																					Float t = 1.0;		HX_STACK_VAR(t,"t");
-																					HX_STACK_LINE(5047)
-																					{
-																					}
 																					HX_STACK_LINE(5047)
 																					hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 																					HX_STACK_LINE(5047)
@@ -16377,9 +14954,6 @@ Void ZPP_Space_obj::validation( ){
 																				{
 																					HX_STACK_LINE(5047)
 																					Float t = 0.5;		HX_STACK_VAR(t,"t");
-																					HX_STACK_LINE(5047)
-																					{
-																					}
 																					HX_STACK_LINE(5047)
 																					hx::MultEq(_this1->localCOMx,t);
 																					HX_STACK_LINE(5047)
@@ -16393,9 +14967,6 @@ Void ZPP_Space_obj::validation( ){
 																					_this1->localCOMx = (int)0;
 																					HX_STACK_LINE(5047)
 																					_this1->localCOMy = (int)0;
-																					HX_STACK_LINE(5047)
-																					{
-																					}
 																					HX_STACK_LINE(5047)
 																					{
 																					}
@@ -16478,9 +15049,6 @@ Void ZPP_Space_obj::validation( ){
 																					HX_STACK_LINE(5047)
 																					Float t = area;		HX_STACK_VAR(t,"t");
 																					HX_STACK_LINE(5047)
-																					{
-																					}
-																					HX_STACK_LINE(5047)
 																					hx::MultEq(_this1->localCOMx,t);
 																					HX_STACK_LINE(5047)
 																					hx::MultEq(_this1->localCOMy,t);
@@ -16504,9 +15072,6 @@ Void ZPP_Space_obj::validation( ){
 																			HX_STACK_LINE(5047)
 																			_this1->axisy = ::Math_obj::cos(_this1->rot);
 																			HX_STACK_LINE(5047)
-																			{
-																			}
-																			HX_STACK_LINE(5047)
 																			Dynamic();
 																		}
 																	}
@@ -16524,12 +15089,6 @@ Void ZPP_Space_obj::validation( ){
 														Float rx = _this->radius;		HX_STACK_VAR(rx,"rx");
 														HX_STACK_LINE(5047)
 														Float ry = _this->radius;		HX_STACK_VAR(ry,"ry");
-														HX_STACK_LINE(5047)
-														{
-														}
-														HX_STACK_LINE(5047)
-														{
-														}
 														HX_STACK_LINE(5047)
 														{
 															HX_STACK_LINE(5047)
@@ -16570,9 +15129,6 @@ Void ZPP_Space_obj::validation( ){
 																			_this1->axisx = ::Math_obj::sin(_this1->rot);
 																			HX_STACK_LINE(5047)
 																			_this1->axisy = ::Math_obj::cos(_this1->rot);
-																			HX_STACK_LINE(5047)
-																			{
-																			}
 																			HX_STACK_LINE(5047)
 																			Dynamic();
 																		}
@@ -16624,9 +15180,6 @@ Void ZPP_Space_obj::validation( ){
 															HX_STACK_LINE(5047)
 															{
 															}
-															HX_STACK_LINE(5047)
-															{
-															}
 														}
 														HX_STACK_LINE(5047)
 														{
@@ -16634,9 +15187,6 @@ Void ZPP_Space_obj::validation( ){
 															_this->aabb->maxx = p0->x;
 															HX_STACK_LINE(5047)
 															_this->aabb->maxy = p0->y;
-															HX_STACK_LINE(5047)
-															{
-															}
 															HX_STACK_LINE(5047)
 															{
 															}
@@ -16728,9 +15278,6 @@ Void ZPP_Space_obj::validation( ){
 							HX_STACK_LINE(5051)
 							cur->axisy = ::Math_obj::cos(cur->rot);
 							HX_STACK_LINE(5051)
-							{
-							}
-							HX_STACK_LINE(5051)
 							Dynamic();
 						}
 					}
@@ -16743,9 +15290,6 @@ Void ZPP_Space_obj::validation( ){
 					if (((bool((bool(!(cur->norotate)) && bool((cur->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC)))) && bool((cur->inertia == (int)0))))){
 						HX_STACK_LINE(5056)
 						hx::Throw (HX_CSTRING("Error: Dynamic Body cannot be simulated with 0 inertia unless allowRotation is false"));
-					}
-					HX_STACK_LINE(5060)
-					{
 					}
 					HX_STACK_LINE(5081)
 					{
@@ -16845,9 +15389,6 @@ Void ZPP_Space_obj::static_validation( ::zpp_nape::phys::ZPP_Body body){
 					HX_STACK_LINE(4908)
 					{
 					}
-					HX_STACK_LINE(4908)
-					{
-					}
 				}
 				HX_STACK_LINE(4908)
 				{
@@ -16855,9 +15396,6 @@ Void ZPP_Space_obj::static_validation( ::zpp_nape::phys::ZPP_Body body){
 					body->aabb->maxx = ::Math_obj::NEGATIVE_INFINITY;
 					HX_STACK_LINE(4908)
 					body->aabb->maxy = ::Math_obj::NEGATIVE_INFINITY;
-					HX_STACK_LINE(4908)
-					{
-					}
 					HX_STACK_LINE(4908)
 					{
 					}
@@ -16908,9 +15446,6 @@ Void ZPP_Space_obj::static_validation( ::zpp_nape::phys::ZPP_Body body){
 															HX_STACK_LINE(4908)
 															_this1->localCOMy = _this1->lverts->next->y;
 															HX_STACK_LINE(4908)
-															{
-															}
-															HX_STACK_LINE(4908)
 															Dynamic();
 														}
 														else{
@@ -16925,17 +15460,11 @@ Void ZPP_Space_obj::static_validation( ::zpp_nape::phys::ZPP_Body body){
 																	HX_STACK_LINE(4908)
 																	{
 																	}
-																	HX_STACK_LINE(4908)
-																	{
-																	}
 																}
 																HX_STACK_LINE(4908)
 																{
 																	HX_STACK_LINE(4908)
 																	Float t = 1.0;		HX_STACK_VAR(t,"t");
-																	HX_STACK_LINE(4908)
-																	{
-																	}
 																	HX_STACK_LINE(4908)
 																	hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 																	HX_STACK_LINE(4908)
@@ -16945,9 +15474,6 @@ Void ZPP_Space_obj::static_validation( ::zpp_nape::phys::ZPP_Body body){
 																{
 																	HX_STACK_LINE(4908)
 																	Float t = 0.5;		HX_STACK_VAR(t,"t");
-																	HX_STACK_LINE(4908)
-																	{
-																	}
 																	HX_STACK_LINE(4908)
 																	hx::MultEq(_this1->localCOMx,t);
 																	HX_STACK_LINE(4908)
@@ -16961,9 +15487,6 @@ Void ZPP_Space_obj::static_validation( ::zpp_nape::phys::ZPP_Body body){
 																	_this1->localCOMx = (int)0;
 																	HX_STACK_LINE(4908)
 																	_this1->localCOMy = (int)0;
-																	HX_STACK_LINE(4908)
-																	{
-																	}
 																	HX_STACK_LINE(4908)
 																	{
 																	}
@@ -17046,9 +15569,6 @@ Void ZPP_Space_obj::static_validation( ::zpp_nape::phys::ZPP_Body body){
 																	HX_STACK_LINE(4908)
 																	Float t = area;		HX_STACK_VAR(t,"t");
 																	HX_STACK_LINE(4908)
-																	{
-																	}
-																	HX_STACK_LINE(4908)
 																	hx::MultEq(_this1->localCOMx,t);
 																	HX_STACK_LINE(4908)
 																	hx::MultEq(_this1->localCOMy,t);
@@ -17072,9 +15592,6 @@ Void ZPP_Space_obj::static_validation( ::zpp_nape::phys::ZPP_Body body){
 															HX_STACK_LINE(4908)
 															_this1->axisy = ::Math_obj::cos(_this1->rot);
 															HX_STACK_LINE(4908)
-															{
-															}
-															HX_STACK_LINE(4908)
 															Dynamic();
 														}
 													}
@@ -17092,12 +15609,6 @@ Void ZPP_Space_obj::static_validation( ::zpp_nape::phys::ZPP_Body body){
 										Float rx = _this->radius;		HX_STACK_VAR(rx,"rx");
 										HX_STACK_LINE(4908)
 										Float ry = _this->radius;		HX_STACK_VAR(ry,"ry");
-										HX_STACK_LINE(4908)
-										{
-										}
-										HX_STACK_LINE(4908)
-										{
-										}
 										HX_STACK_LINE(4908)
 										{
 											HX_STACK_LINE(4908)
@@ -17138,9 +15649,6 @@ Void ZPP_Space_obj::static_validation( ::zpp_nape::phys::ZPP_Body body){
 															_this1->axisx = ::Math_obj::sin(_this1->rot);
 															HX_STACK_LINE(4908)
 															_this1->axisy = ::Math_obj::cos(_this1->rot);
-															HX_STACK_LINE(4908)
-															{
-															}
 															HX_STACK_LINE(4908)
 															Dynamic();
 														}
@@ -17192,9 +15700,6 @@ Void ZPP_Space_obj::static_validation( ::zpp_nape::phys::ZPP_Body body){
 											HX_STACK_LINE(4908)
 											{
 											}
-											HX_STACK_LINE(4908)
-											{
-											}
 										}
 										HX_STACK_LINE(4908)
 										{
@@ -17202,9 +15707,6 @@ Void ZPP_Space_obj::static_validation( ::zpp_nape::phys::ZPP_Body body){
 											_this->aabb->maxx = p0->x;
 											HX_STACK_LINE(4908)
 											_this->aabb->maxy = p0->y;
-											HX_STACK_LINE(4908)
-											{
-											}
 											HX_STACK_LINE(4908)
 											{
 											}
@@ -17364,9 +15866,6 @@ Void ZPP_Space_obj::static_validation( ::zpp_nape::phys::ZPP_Body body){
 											HX_STACK_LINE(4928)
 											_this1->axisy = ::Math_obj::cos(_this1->rot);
 											HX_STACK_LINE(4928)
-											{
-											}
-											HX_STACK_LINE(4928)
 											Dynamic();
 										}
 									}
@@ -17393,9 +15892,6 @@ Void ZPP_Space_obj::static_validation( ::zpp_nape::phys::ZPP_Body body){
 													_this1->axisx = ::Math_obj::sin(_this1->rot);
 													HX_STACK_LINE(4928)
 													_this1->axisy = ::Math_obj::cos(_this1->rot);
-													HX_STACK_LINE(4928)
-													{
-													}
 													HX_STACK_LINE(4928)
 													Dynamic();
 												}
@@ -17473,9 +15969,6 @@ Void ZPP_Space_obj::static_validation( ::zpp_nape::phys::ZPP_Body body){
 												HX_STACK_LINE(4928)
 												{
 												}
-												HX_STACK_LINE(4928)
-												{
-												}
 											}
 											HX_STACK_LINE(4928)
 											e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -17514,9 +16007,6 @@ Void ZPP_Space_obj::static_validation( ::zpp_nape::phys::ZPP_Body body){
 											e->wrap_gnorm->zpp_inner->x = e->gnormx;
 											HX_STACK_LINE(4928)
 											e->wrap_gnorm->zpp_inner->y = e->gnormy;
-											HX_STACK_LINE(4928)
-											{
-											}
 											HX_STACK_LINE(4928)
 											{
 											}
@@ -17573,9 +16063,6 @@ Void ZPP_Space_obj::sleepArbiters( ){
 			while(((arbite != null()))){
 				HX_STACK_LINE(4772)
 				::zpp_nape::dynamics::ZPP_ColArbiter arb = arbite->elt;		HX_STACK_VAR(arb,"arb");
-				HX_STACK_LINE(4773)
-				{
-				}
 				HX_STACK_LINE(4781)
 				if (((bool(arb->b1->component->sleeping) && bool(arb->b2->component->sleeping)))){
 					HX_STACK_LINE(4782)
@@ -17583,12 +16070,9 @@ Void ZPP_Space_obj::sleepArbiters( ){
 					HX_STACK_LINE(4783)
 					arb->sleeping = true;
 					struct _Function_4_1{
-						inline static ::zpp_nape::util::ZNPNode_ZPP_ColArbiter Block( ::zpp_nape::util::ZNPNode_ZPP_ColArbiter &pre,::zpp_nape::util::ZNPList_ZPP_ColArbiter &arbs){
+						inline static ::zpp_nape::util::ZNPNode_ZPP_ColArbiter Block( ::zpp_nape::util::ZNPList_ZPP_ColArbiter &arbs,::zpp_nape::util::ZNPNode_ZPP_ColArbiter &pre){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4784);
 							{
-								HX_STACK_LINE(4784)
-								{
-								}
 								HX_STACK_LINE(4784)
 								::zpp_nape::util::ZNPNode_ZPP_ColArbiter old;		HX_STACK_VAR(old,"old");
 								HX_STACK_LINE(4784)
@@ -17622,14 +16106,8 @@ Void ZPP_Space_obj::sleepArbiters( ){
 								}
 								HX_STACK_LINE(4784)
 								{
-								}
-								HX_STACK_LINE(4784)
-								{
 									HX_STACK_LINE(4784)
 									::zpp_nape::util::ZNPNode_ZPP_ColArbiter o = old;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(4784)
-									{
-									}
 									HX_STACK_LINE(4784)
 									o->elt = null();
 									HX_STACK_LINE(4784)
@@ -17650,7 +16128,7 @@ Void ZPP_Space_obj::sleepArbiters( ){
 						}
 					};
 					HX_STACK_LINE(4784)
-					arbite = _Function_4_1::Block(pre,arbs);
+					arbite = _Function_4_1::Block(arbs,pre);
 					HX_STACK_LINE(4785)
 					if (((bool(fst) && bool((arbite == null()))))){
 						HX_STACK_LINE(4787)
@@ -17707,9 +16185,6 @@ Void ZPP_Space_obj::sleepArbiters( ){
 			while(((arbite != null()))){
 				HX_STACK_LINE(4821)
 				::zpp_nape::dynamics::ZPP_FluidArbiter arb = arbite->elt;		HX_STACK_VAR(arb,"arb");
-				HX_STACK_LINE(4822)
-				{
-				}
 				HX_STACK_LINE(4830)
 				if (((bool(arb->b1->component->sleeping) && bool(arb->b2->component->sleeping)))){
 					HX_STACK_LINE(4831)
@@ -17717,12 +16192,9 @@ Void ZPP_Space_obj::sleepArbiters( ){
 					HX_STACK_LINE(4832)
 					arb->sleeping = true;
 					struct _Function_4_1{
-						inline static ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter Block( ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter &pre,::zpp_nape::util::ZNPList_ZPP_FluidArbiter &arbs){
+						inline static ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter Block( ::zpp_nape::util::ZNPList_ZPP_FluidArbiter &arbs,::zpp_nape::util::ZNPNode_ZPP_FluidArbiter &pre){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4833);
 							{
-								HX_STACK_LINE(4833)
-								{
-								}
 								HX_STACK_LINE(4833)
 								::zpp_nape::util::ZNPNode_ZPP_FluidArbiter old;		HX_STACK_VAR(old,"old");
 								HX_STACK_LINE(4833)
@@ -17756,14 +16228,8 @@ Void ZPP_Space_obj::sleepArbiters( ){
 								}
 								HX_STACK_LINE(4833)
 								{
-								}
-								HX_STACK_LINE(4833)
-								{
 									HX_STACK_LINE(4833)
 									::zpp_nape::util::ZNPNode_ZPP_FluidArbiter o = old;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(4833)
-									{
-									}
 									HX_STACK_LINE(4833)
 									o->elt = null();
 									HX_STACK_LINE(4833)
@@ -17784,7 +16250,7 @@ Void ZPP_Space_obj::sleepArbiters( ){
 						}
 					};
 					HX_STACK_LINE(4833)
-					arbite = _Function_4_1::Block(pre,arbs);
+					arbite = _Function_4_1::Block(arbs,pre);
 					HX_STACK_LINE(4834)
 					if (((bool(fst) && bool((arbite == null()))))){
 						HX_STACK_LINE(4836)
@@ -17841,9 +16307,6 @@ Void ZPP_Space_obj::sleepArbiters( ){
 			while(((arbite != null()))){
 				HX_STACK_LINE(4870)
 				::zpp_nape::dynamics::ZPP_SensorArbiter arb = arbite->elt;		HX_STACK_VAR(arb,"arb");
-				HX_STACK_LINE(4871)
-				{
-				}
 				HX_STACK_LINE(4879)
 				if (((bool(arb->b1->component->sleeping) && bool(arb->b2->component->sleeping)))){
 					HX_STACK_LINE(4880)
@@ -17851,12 +16314,9 @@ Void ZPP_Space_obj::sleepArbiters( ){
 					HX_STACK_LINE(4881)
 					arb->sleeping = true;
 					struct _Function_4_1{
-						inline static ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter Block( ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter &pre,::zpp_nape::util::ZNPList_ZPP_SensorArbiter &arbs){
+						inline static ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter Block( ::zpp_nape::util::ZNPList_ZPP_SensorArbiter &arbs,::zpp_nape::util::ZNPNode_ZPP_SensorArbiter &pre){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4882);
 							{
-								HX_STACK_LINE(4882)
-								{
-								}
 								HX_STACK_LINE(4882)
 								::zpp_nape::util::ZNPNode_ZPP_SensorArbiter old;		HX_STACK_VAR(old,"old");
 								HX_STACK_LINE(4882)
@@ -17890,14 +16350,8 @@ Void ZPP_Space_obj::sleepArbiters( ){
 								}
 								HX_STACK_LINE(4882)
 								{
-								}
-								HX_STACK_LINE(4882)
-								{
 									HX_STACK_LINE(4882)
 									::zpp_nape::util::ZNPNode_ZPP_SensorArbiter o = old;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(4882)
-									{
-									}
 									HX_STACK_LINE(4882)
 									o->elt = null();
 									HX_STACK_LINE(4882)
@@ -17918,7 +16372,7 @@ Void ZPP_Space_obj::sleepArbiters( ){
 						}
 					};
 					HX_STACK_LINE(4882)
-					arbite = _Function_4_1::Block(pre,arbs);
+					arbite = _Function_4_1::Block(arbs,pre);
 					HX_STACK_LINE(4883)
 					if (((bool(fst) && bool((arbite == null()))))){
 						HX_STACK_LINE(4885)
@@ -18207,9 +16661,6 @@ Void ZPP_Space_obj::doForests( Float dt){
 						HX_STACK_LINE(4595)
 						::zpp_nape::util::ZNPList_ZPP_Body _this = __this->live;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(4595)
-						{
-						}
-						HX_STACK_LINE(4595)
 						::zpp_nape::phys::ZPP_Body ret = _this->head->elt;		HX_STACK_VAR(ret,"ret");
 						HX_STACK_LINE(4595)
 						_this->pop();
@@ -18284,9 +16735,6 @@ Void ZPP_Space_obj::doForests( Float dt){
 					HX_STACK_LINE(4634)
 					::zpp_nape::space::ZPP_Island _this = this->islands;		HX_STACK_VAR(_this,"_this");
 					::zpp_nape::space::ZPP_Island o1 = root->island;		HX_STACK_VAR(o1,"o1");
-					HX_STACK_LINE(4634)
-					{
-					}
 					struct _Function_4_1{
 						inline static ::zpp_nape::space::ZPP_Island Block( ::zpp_nape::space::ZPP_Island &o1){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4634);
@@ -18321,9 +16769,6 @@ Void ZPP_Space_obj::doForests( Float dt){
 			{
 				HX_STACK_LINE(4638)
 				::zpp_nape::util::ZNPList_ZPP_Component _this = oc->island->comps;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(4638)
-				{
-				}
 				struct _Function_3_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_Component Block( ::zpp_nape::space::ZPP_Component &oc){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4638);
@@ -18388,9 +16833,6 @@ Void ZPP_Space_obj::doForests( Float dt){
 						HX_STACK_LINE(4644)
 						::zpp_nape::util::ZNPList_ZPP_Constraint _this = __this->live_constraints;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(4644)
-						{
-						}
-						HX_STACK_LINE(4644)
 						::zpp_nape::constraint::ZPP_Constraint ret = _this->head->elt;		HX_STACK_VAR(ret,"ret");
 						HX_STACK_LINE(4644)
 						_this->pop();
@@ -18440,18 +16882,12 @@ Void ZPP_Space_obj::doForests( Float dt){
 			};
 			HX_STACK_LINE(4646)
 			::zpp_nape::space::ZPP_Component root = (  (((oc == oc->parent))) ? ::zpp_nape::space::ZPP_Component(oc) : ::zpp_nape::space::ZPP_Component(_Function_2_2::Block(oc)) );		HX_STACK_VAR(root,"root");
-			HX_STACK_LINE(4665)
-			{
-			}
 			HX_STACK_LINE(4673)
 			oc->island = root->island;
 			HX_STACK_LINE(4674)
 			{
 				HX_STACK_LINE(4674)
 				::zpp_nape::util::ZNPList_ZPP_Component _this = oc->island->comps;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(4674)
-				{
-				}
 				struct _Function_3_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_Component Block( ::zpp_nape::space::ZPP_Component &oc){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4674);
@@ -18512,9 +16948,6 @@ Void ZPP_Space_obj::doForests( Float dt){
 						HX_STACK_LINE(4678)
 						::zpp_nape::space::ZPP_Island _this = __this->islands;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(4678)
-						{
-						}
-						HX_STACK_LINE(4678)
 						::zpp_nape::space::ZPP_Island ret = _this->next;		HX_STACK_VAR(ret,"ret");
 						HX_STACK_LINE(4678)
 						_this->pop();
@@ -18544,9 +16977,6 @@ Void ZPP_Space_obj::doForests( Float dt){
 							b->velx = (int)0;
 							HX_STACK_LINE(4689)
 							b->vely = (int)0;
-							HX_STACK_LINE(4690)
-							{
-							}
 							HX_STACK_LINE(4698)
 							{
 							}
@@ -18594,9 +17024,6 @@ Void ZPP_Space_obj::doForests( Float dt){
 								HX_STACK_LINE(4731)
 								::zpp_nape::util::ZNPList_ZPP_Component _this = i->comps;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(4731)
-								{
-								}
-								HX_STACK_LINE(4731)
 								::zpp_nape::space::ZPP_Component ret = _this->head->elt;		HX_STACK_VAR(ret,"ret");
 								HX_STACK_LINE(4731)
 								_this->pop();
@@ -18615,9 +17042,6 @@ Void ZPP_Space_obj::doForests( Float dt){
 						HX_STACK_LINE(4733)
 						::zpp_nape::util::ZNPList_ZPP_Body _this = this->live;		HX_STACK_VAR(_this,"_this");
 						::zpp_nape::phys::ZPP_Body o = c->body;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(4733)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_ZPP_Body Block( ::zpp_nape::phys::ZPP_Body &o){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4733);
@@ -18667,9 +17091,6 @@ Void ZPP_Space_obj::doForests( Float dt){
 						HX_STACK_LINE(4734)
 						::zpp_nape::util::ZNPList_ZPP_Constraint _this = this->live_constraints;		HX_STACK_VAR(_this,"_this");
 						::zpp_nape::constraint::ZPP_Constraint o = c->constraint;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(4734)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_ZPP_Constraint Block( ::zpp_nape::constraint::ZPP_Constraint &o){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4734);
@@ -18731,9 +17152,6 @@ Void ZPP_Space_obj::doForests( Float dt){
 				{
 					HX_STACK_LINE(4738)
 					::zpp_nape::space::ZPP_Island o = i;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(4739)
-					{
-					}
 					HX_STACK_LINE(4748)
 					o->next = ::zpp_nape::space::ZPP_Island_obj::zpp_pool;
 					HX_STACK_LINE(4749)
@@ -18755,14 +17173,8 @@ bool fst = __o_fst.Default(false);
 	HX_STACK_ARG(con,"con");
 	HX_STACK_ARG(fst,"fst");
 {
-		HX_STACK_LINE(4425)
-		{
-		}
-		HX_STACK_LINE(4433)
+		HX_STACK_LINE(4424)
 		if ((con->active)){
-			HX_STACK_LINE(4434)
-			{
-			}
 			HX_STACK_LINE(4442)
 			con->component->waket = (this->stamp + ((  ((this->midstep)) ? int((int)0) : int((int)1) )));
 			HX_STACK_LINE(4443)
@@ -18775,9 +17187,6 @@ bool fst = __o_fst.Default(false);
 					{
 						HX_STACK_LINE(4446)
 						::zpp_nape::util::ZNPList_ZPP_Constraint _this = this->live_constraints;		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(4446)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_ZPP_Constraint Block( ::zpp_nape::constraint::ZPP_Constraint &con){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4446);
@@ -18835,9 +17244,6 @@ bool fst = __o_fst.Default(false);
 					HX_STACK_LINE(4450)
 					this->wakeIsland(con->component->island);
 				}
-				HX_STACK_LINE(4453)
-				{
-				}
 				HX_STACK_LINE(4461)
 				return true;
 			}
@@ -18850,7 +17256,7 @@ bool fst = __o_fst.Default(false);
 			HX_STACK_LINE(4465)
 			return false;
 		}
-		HX_STACK_LINE(4433)
+		HX_STACK_LINE(4424)
 		return false;
 	}
 }
@@ -18873,9 +17279,6 @@ bool fst = __o_fst.Default(false);
 			if (((bool((o->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_KINEMATIC)) || bool((o->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_STATIC))))){
 				HX_STACK_LINE(4318)
 				::zpp_nape::util::ZNPList_ZPP_Body _this = this->staticsleep;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(4318)
-				{
-				}
 				struct _Function_3_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_Body Block( ::zpp_nape::phys::ZPP_Body &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4318);
@@ -18924,9 +17327,6 @@ bool fst = __o_fst.Default(false);
 			else{
 				HX_STACK_LINE(4319)
 				::zpp_nape::util::ZNPList_ZPP_Body _this = this->live;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(4319)
-				{
-				}
 				struct _Function_3_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_Body Block( ::zpp_nape::phys::ZPP_Body &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4319);
@@ -19013,9 +17413,6 @@ bool fst = __o_fst.Default(false);
 								if ((carb->stat)){
 									HX_STACK_LINE(4338)
 									::zpp_nape::util::ZNPList_ZPP_ColArbiter _this = this->c_arbiters_true;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(4338)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_ColArbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter &carb){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4338);
@@ -19064,9 +17461,6 @@ bool fst = __o_fst.Default(false);
 								else{
 									HX_STACK_LINE(4339)
 									::zpp_nape::util::ZNPList_ZPP_ColArbiter _this = this->c_arbiters_false;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(4339)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_ColArbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter &carb){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4339);
@@ -19119,9 +17513,6 @@ bool fst = __o_fst.Default(false);
 									HX_STACK_LINE(4341)
 									::zpp_nape::util::ZNPList_ZPP_FluidArbiter _this = this->f_arbiters;		HX_STACK_VAR(_this,"_this");
 									::zpp_nape::dynamics::ZPP_FluidArbiter o1 = arb->fluidarb;		HX_STACK_VAR(o1,"o1");
-									HX_STACK_LINE(4341)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &o1){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4341);
@@ -19171,9 +17562,6 @@ bool fst = __o_fst.Default(false);
 									HX_STACK_LINE(4342)
 									::zpp_nape::util::ZNPList_ZPP_SensorArbiter _this = this->s_arbiters;		HX_STACK_VAR(_this,"_this");
 									::zpp_nape::dynamics::ZPP_SensorArbiter o1 = arb->sensorarb;		HX_STACK_VAR(o1,"o1");
-									HX_STACK_LINE(4342)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter Block( ::zpp_nape::dynamics::ZPP_SensorArbiter &o1){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4342);
@@ -19227,14 +17615,8 @@ bool fst = __o_fst.Default(false);
 							if (((bool((arb->b1->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC)) && bool(arb->b1->component->sleeping)))){
 								HX_STACK_LINE(4346)
 								::zpp_nape::phys::ZPP_Body o1 = arb->b1;		HX_STACK_VAR(o1,"o1");
-								HX_STACK_LINE(4347)
-								{
-								}
 								HX_STACK_LINE(4355)
 								if ((!(o1->world))){
-									HX_STACK_LINE(4356)
-									{
-									}
 									HX_STACK_LINE(4364)
 									o1->component->waket = (this->stamp + ((  ((this->midstep)) ? int((int)0) : int((int)1) )));
 									HX_STACK_LINE(4365)
@@ -19253,14 +17635,8 @@ bool fst = __o_fst.Default(false);
 							if (((bool((arb->b2->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC)) && bool(arb->b2->component->sleeping)))){
 								HX_STACK_LINE(4372)
 								::zpp_nape::phys::ZPP_Body o1 = arb->b2;		HX_STACK_VAR(o1,"o1");
-								HX_STACK_LINE(4373)
-								{
-								}
 								HX_STACK_LINE(4381)
 								if ((!(o1->world))){
-									HX_STACK_LINE(4382)
-									{
-									}
 									HX_STACK_LINE(4390)
 									o1->component->waket = (this->stamp + ((  ((this->midstep)) ? int((int)0) : int((int)1) )));
 									HX_STACK_LINE(4391)
@@ -19327,14 +17703,8 @@ bool fst = __o_fst.Default(false);
 {
 		HX_STACK_LINE(4289)
 		::zpp_nape::phys::ZPP_Body o1 = o;		HX_STACK_VAR(o1,"o1");
-		HX_STACK_LINE(4290)
-		{
-		}
 		HX_STACK_LINE(4298)
 		if ((!(o1->world))){
-			HX_STACK_LINE(4299)
-			{
-			}
 			HX_STACK_LINE(4307)
 			o1->component->waket = (this->stamp + ((  ((this->midstep)) ? int((int)0) : int((int)1) )));
 			HX_STACK_LINE(4308)
@@ -19360,28 +17730,16 @@ Void ZPP_Space_obj::wakeIsland( ::zpp_nape::space::ZPP_Island i){
 		HX_STACK_PUSH("ZPP_Space::wakeIsland","zpp_nape/space/Space.hx",4184);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(i,"i");
-		HX_STACK_LINE(4185)
-		{
-		}
 		HX_STACK_LINE(4193)
 		while((!(((i->comps->head == null()))))){
 			HX_STACK_LINE(4194)
 			::zpp_nape::space::ZPP_Component c = i->comps->pop_unsafe();		HX_STACK_VAR(c,"c");
-			HX_STACK_LINE(4195)
-			{
-			}
 			HX_STACK_LINE(4203)
 			c->waket = (this->stamp + ((  ((this->midstep)) ? int((int)0) : int((int)1) )));
 			HX_STACK_LINE(4204)
 			if ((c->isBody)){
 				HX_STACK_LINE(4205)
 				::zpp_nape::phys::ZPP_Body b = c->body;		HX_STACK_VAR(b,"b");
-				HX_STACK_LINE(4206)
-				{
-				}
-				HX_STACK_LINE(4214)
-				{
-				}
 				HX_STACK_LINE(4222)
 				this->live->add(b);
 				HX_STACK_LINE(4223)
@@ -19406,9 +17764,6 @@ Void ZPP_Space_obj::wakeIsland( ::zpp_nape::space::ZPP_Island i){
 								if ((carb->stat)){
 									HX_STACK_LINE(4233)
 									::zpp_nape::util::ZNPList_ZPP_ColArbiter _this = this->c_arbiters_true;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(4233)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_ColArbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter &carb){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4233);
@@ -19457,9 +17812,6 @@ Void ZPP_Space_obj::wakeIsland( ::zpp_nape::space::ZPP_Island i){
 								else{
 									HX_STACK_LINE(4234)
 									::zpp_nape::util::ZNPList_ZPP_ColArbiter _this = this->c_arbiters_false;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(4234)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_ColArbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter &carb){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4234);
@@ -19512,9 +17864,6 @@ Void ZPP_Space_obj::wakeIsland( ::zpp_nape::space::ZPP_Island i){
 									HX_STACK_LINE(4236)
 									::zpp_nape::util::ZNPList_ZPP_FluidArbiter _this = this->f_arbiters;		HX_STACK_VAR(_this,"_this");
 									::zpp_nape::dynamics::ZPP_FluidArbiter o = arb->fluidarb;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(4236)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_FluidArbiter Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &o){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4236);
@@ -19564,9 +17913,6 @@ Void ZPP_Space_obj::wakeIsland( ::zpp_nape::space::ZPP_Island i){
 									HX_STACK_LINE(4237)
 									::zpp_nape::util::ZNPList_ZPP_SensorArbiter _this = this->s_arbiters;		HX_STACK_VAR(_this,"_this");
 									::zpp_nape::dynamics::ZPP_SensorArbiter o = arb->sensorarb;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(4237)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_SensorArbiter Block( ::zpp_nape::dynamics::ZPP_SensorArbiter &o){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4237);
@@ -19652,16 +17998,10 @@ Void ZPP_Space_obj::wakeIsland( ::zpp_nape::space::ZPP_Island i){
 			else{
 				HX_STACK_LINE(4255)
 				::zpp_nape::constraint::ZPP_Constraint con = c->constraint;		HX_STACK_VAR(con,"con");
-				HX_STACK_LINE(4256)
-				{
-				}
 				HX_STACK_LINE(4264)
 				{
 					HX_STACK_LINE(4264)
 					::zpp_nape::util::ZNPList_ZPP_Constraint _this = this->live_constraints;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(4264)
-					{
-					}
 					struct _Function_4_1{
 						inline static ::zpp_nape::util::ZNPNode_ZPP_Constraint Block( ::zpp_nape::constraint::ZPP_Constraint &con){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4264);
@@ -19726,9 +18066,6 @@ Void ZPP_Space_obj::wakeIsland( ::zpp_nape::space::ZPP_Island i){
 		{
 			HX_STACK_LINE(4270)
 			::zpp_nape::space::ZPP_Island o = i;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(4271)
-			{
-			}
 			HX_STACK_LINE(4280)
 			o->next = ::zpp_nape::space::ZPP_Island_obj::zpp_pool;
 			HX_STACK_LINE(4281)
@@ -19758,14 +18095,8 @@ Void ZPP_Space_obj::wakeCompound( ::zpp_nape::phys::ZPP_Compound x){
 				{
 					HX_STACK_LINE(4139)
 					::zpp_nape::phys::ZPP_Body o = y;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(4140)
-					{
-					}
 					HX_STACK_LINE(4148)
 					if ((!(o->world))){
-						HX_STACK_LINE(4149)
-						{
-						}
 						HX_STACK_LINE(4157)
 						o->component->waket = (this->stamp + ((  ((this->midstep)) ? int((int)0) : int((int)1) )));
 						HX_STACK_LINE(4158)
@@ -19923,123 +18254,107 @@ Void ZPP_Space_obj::freshInteractorType( ::zpp_nape::phys::ZPP_Interactor intx,:
 											::zpp_nape::callbacks::ZPP_CbSet cb1 = i1->cbSet;		HX_STACK_VAR(cb1,"cb1");
 											HX_STACK_LINE(4098)
 											::zpp_nape::callbacks::ZPP_CbSet cb2 = i2->cbSet;		HX_STACK_VAR(cb2,"cb2");
-											HX_STACK_LINE(4099)
-											{
-											}
 											HX_STACK_LINE(4107)
 											cb1->validate();
 											HX_STACK_LINE(4108)
 											cb2->validate();
 											struct _Function_10_1{
-												inline static bool Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
+												inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4109);
 													{
 														HX_STACK_LINE(4109)
+														::zpp_nape::callbacks::ZPP_CbSetPair ret = null();		HX_STACK_VAR(ret,"ret");
+														HX_STACK_LINE(4109)
+														::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
+														HX_STACK_LINE(4109)
 														{
+															HX_STACK_LINE(4109)
+															::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite3 = pairs->head;		HX_STACK_VAR(cx_ite3,"cx_ite3");
+															HX_STACK_LINE(4109)
+															while(((cx_ite3 != null()))){
+																HX_STACK_LINE(4109)
+																::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite3->elt;		HX_STACK_VAR(p,"p");
+																HX_STACK_LINE(4109)
+																if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
+																	HX_STACK_LINE(4109)
+																	ret = p;
+																	HX_STACK_LINE(4109)
+																	break;
+																}
+																HX_STACK_LINE(4109)
+																cx_ite3 = cx_ite3->next;
+															}
 														}
-														struct _Function_11_1{
-															inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4109);
-																{
-																	HX_STACK_LINE(4109)
-																	::zpp_nape::callbacks::ZPP_CbSetPair ret = null();		HX_STACK_VAR(ret,"ret");
-																	HX_STACK_LINE(4109)
-																	::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
-																	HX_STACK_LINE(4109)
+														HX_STACK_LINE(4109)
+														if (((ret == null()))){
+															struct _Function_12_1{
+																inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
+																	HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4109);
 																	{
 																		HX_STACK_LINE(4109)
-																		::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite3 = pairs->head;		HX_STACK_VAR(cx_ite3,"cx_ite3");
+																		::zpp_nape::callbacks::ZPP_CbSetPair ret1;		HX_STACK_VAR(ret1,"ret1");
 																		HX_STACK_LINE(4109)
-																		while(((cx_ite3 != null()))){
+																		{
 																			HX_STACK_LINE(4109)
-																			::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite3->elt;		HX_STACK_VAR(p,"p");
-																			HX_STACK_LINE(4109)
-																			if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
+																			if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
 																				HX_STACK_LINE(4109)
-																				ret = p;
+																				ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
+																			}
+																			else{
 																				HX_STACK_LINE(4109)
-																				break;
+																				ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
+																				HX_STACK_LINE(4109)
+																				::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret1->next;
+																				HX_STACK_LINE(4109)
+																				ret1->next = null();
 																			}
 																			HX_STACK_LINE(4109)
-																			cx_ite3 = cx_ite3->next;
+																			ret1->zip_listeners = true;
 																		}
-																	}
-																	HX_STACK_LINE(4109)
-																	if (((ret == null()))){
-																		struct _Function_13_1{
-																			inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																				HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4109);
-																				{
-																					HX_STACK_LINE(4109)
-																					::zpp_nape::callbacks::ZPP_CbSetPair ret1;		HX_STACK_VAR(ret1,"ret1");
-																					HX_STACK_LINE(4109)
-																					{
-																						HX_STACK_LINE(4109)
-																						if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
-																							HX_STACK_LINE(4109)
-																							ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
-																						}
-																						else{
-																							HX_STACK_LINE(4109)
-																							ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
-																							HX_STACK_LINE(4109)
-																							::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret1->next;
-																							HX_STACK_LINE(4109)
-																							ret1->next = null();
-																						}
-																						HX_STACK_LINE(4109)
-																						ret1->zip_listeners = true;
-																					}
-																					HX_STACK_LINE(4109)
-																					if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
-																						HX_STACK_LINE(4109)
-																						ret1->a = cb1;
-																						HX_STACK_LINE(4109)
-																						ret1->b = cb2;
-																					}
-																					else{
-																						HX_STACK_LINE(4109)
-																						ret1->a = cb2;
-																						HX_STACK_LINE(4109)
-																						ret1->b = cb1;
-																					}
-																					HX_STACK_LINE(4109)
-																					return ret1;
-																				}
-																				return null();
-																			}
-																		};
 																		HX_STACK_LINE(4109)
-																		ret = _Function_13_1::Block(cb1,cb2);
-																		HX_STACK_LINE(4109)
-																		cb1->cbpairs->add(ret);
-																		HX_STACK_LINE(4109)
-																		if (((cb2 != cb1))){
+																		if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
 																			HX_STACK_LINE(4109)
-																			cb2->cbpairs->add(ret);
+																			ret1->a = cb1;
+																			HX_STACK_LINE(4109)
+																			ret1->b = cb2;
 																		}
-																	}
-																	HX_STACK_LINE(4109)
-																	if ((ret->zip_listeners)){
+																		else{
+																			HX_STACK_LINE(4109)
+																			ret1->a = cb2;
+																			HX_STACK_LINE(4109)
+																			ret1->b = cb1;
+																		}
 																		HX_STACK_LINE(4109)
-																		ret->zip_listeners = false;
-																		HX_STACK_LINE(4109)
-																		ret->__validate();
+																		return ret1;
 																	}
-																	HX_STACK_LINE(4109)
-																	return ret;
+																	return null();
 																}
-																return null();
+															};
+															HX_STACK_LINE(4109)
+															ret = _Function_12_1::Block(cb2,cb1);
+															HX_STACK_LINE(4109)
+															cb1->cbpairs->add(ret);
+															HX_STACK_LINE(4109)
+															if (((cb2 != cb1))){
+																HX_STACK_LINE(4109)
+																cb2->cbpairs->add(ret);
 															}
-														};
+														}
 														HX_STACK_LINE(4109)
-														return ((_Function_11_1::Block(cb1,cb2))->listeners->head == null());
+														if ((ret->zip_listeners)){
+															HX_STACK_LINE(4109)
+															ret->zip_listeners = false;
+															HX_STACK_LINE(4109)
+															ret->__validate();
+														}
+														HX_STACK_LINE(4109)
+														return ret;
 													}
 													return null();
 												}
 											};
 											HX_STACK_LINE(4109)
-											if ((!(_Function_10_1::Block(cb1,cb2)))){
+											if ((!((((_Function_10_1::Block(cb2,cb1))->listeners->head == null()))))){
 												HX_STACK_LINE(4110)
 												::zpp_nape::space::ZPP_CallbackSet callbackset = ::zpp_nape::phys::ZPP_Interactor_obj::get(i1,i2);		HX_STACK_VAR(callbackset,"callbackset");
 												HX_STACK_LINE(4111)
@@ -20053,9 +18368,6 @@ Void ZPP_Space_obj::freshInteractorType( ::zpp_nape::phys::ZPP_Interactor intx,:
 													inline static bool Block( ::zpp_nape::space::ZPP_CallbackSet &callbackset,::zpp_nape::dynamics::ZPP_Arbiter &xarb){
 														HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4115);
 														{
-															HX_STACK_LINE(4115)
-															{
-															}
 															HX_STACK_LINE(4115)
 															bool ret;		HX_STACK_VAR(ret,"ret");
 															HX_STACK_LINE(4115)
@@ -20096,9 +18408,6 @@ Void ZPP_Space_obj::freshInteractorType( ::zpp_nape::phys::ZPP_Interactor intx,:
 															{
 																HX_STACK_LINE(4115)
 																::zpp_nape::util::ZNPList_ZPP_Arbiter _this = callbackset->arbiters;		HX_STACK_VAR(_this,"_this");
-																HX_STACK_LINE(4115)
-																{
-																}
 																struct _Function_13_1{
 																	inline static ::zpp_nape::util::ZNPNode_ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_Arbiter &xarb){
 																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4115);
@@ -20330,9 +18639,6 @@ Void ZPP_Space_obj::freshListenerType( ::zpp_nape::callbacks::ZPP_CbSet cb1,::zp
 															HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4027);
 															{
 																HX_STACK_LINE(4027)
-																{
-																}
-																HX_STACK_LINE(4027)
 																bool ret;		HX_STACK_VAR(ret,"ret");
 																HX_STACK_LINE(4027)
 																{
@@ -20372,9 +18678,6 @@ Void ZPP_Space_obj::freshListenerType( ::zpp_nape::callbacks::ZPP_CbSet cb1,::zp
 																{
 																	HX_STACK_LINE(4027)
 																	::zpp_nape::util::ZNPList_ZPP_Arbiter _this = callbackset->arbiters;		HX_STACK_VAR(_this,"_this");
-																	HX_STACK_LINE(4027)
-																	{
-																	}
 																	struct _Function_14_1{
 																		inline static ::zpp_nape::util::ZNPNode_ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_Arbiter &xarb){
 																			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",4027);
@@ -20561,9 +18864,6 @@ Void ZPP_Space_obj::nullInteractorType( ::zpp_nape::phys::ZPP_Interactor intx,::
 											if (((callbackset != null()))){
 												HX_STACK_LINE(3920)
 												(xarb->present)--;
-												HX_STACK_LINE(3921)
-												{
-												}
 												HX_STACK_LINE(3929)
 												callbackset->remove_arb(xarb);
 												HX_STACK_LINE(3930)
@@ -21009,18 +19309,12 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,bodyCbWake,(void))
 		return in_arb;
 	}
 	struct _Function_1_1{
-		inline static int Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+		inline static int Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",3568);
 			{
 				HX_STACK_LINE(3568)
 				::zpp_nape::phys::ZPP_Body b1 = s1->body;		HX_STACK_VAR(b1,"b1");
 				::zpp_nape::phys::ZPP_Body b2 = s2->body;		HX_STACK_VAR(b2,"b2");
-				HX_STACK_LINE(3568)
-				{
-				}
-				HX_STACK_LINE(3568)
-				{
-				}
 				HX_STACK_LINE(3568)
 				bool con_ignore;		HX_STACK_VAR(con_ignore,"con_ignore");
 				HX_STACK_LINE(3568)
@@ -21048,7 +19342,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,bodyCbWake,(void))
 					}
 				}
 				struct _Function_2_1{
-					inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+					inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",3568);
 						{
 							struct _Function_3_1{
@@ -21165,11 +19459,11 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,bodyCbWake,(void))
 					}
 				};
 				struct _Function_2_2{
-					inline static int Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::phys::ZPP_Body &b2,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::phys::ZPP_Body &b1){
+					inline static int Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::phys::ZPP_Body &b2,::zpp_nape::phys::ZPP_Body &b1,::zpp_nape::shape::ZPP_Shape &s1){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",3568);
 						{
 							struct _Function_3_1{
-								inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+								inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 									HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",3568);
 									{
 										HX_STACK_LINE(3568)
@@ -21182,7 +19476,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,bodyCbWake,(void))
 								}
 							};
 							struct _Function_3_2{
-								inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+								inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 									HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",3568);
 									{
 										HX_STACK_LINE(3568)
@@ -21195,7 +19489,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,bodyCbWake,(void))
 								}
 							};
 							struct _Function_3_3{
-								inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+								inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 									HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",3568);
 									{
 										HX_STACK_LINE(3568)
@@ -21208,19 +19502,19 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,bodyCbWake,(void))
 								}
 							};
 							HX_STACK_LINE(3568)
-							return (  (((bool(((bool(s1->sensorEnabled) || bool(s2->sensorEnabled)))) && bool(_Function_3_1::Block(s1,s2))))) ? int((int)2) : int((  (((bool((bool(((bool(s1->fluidEnabled) || bool(s2->fluidEnabled)))) && bool(_Function_3_2::Block(s1,s2)))) && bool(!(((bool((bool((bool((b1->imass == (int)0)) && bool((b2->imass == (int)0)))) && bool((b1->iinertia == (int)0)))) && bool((b2->iinertia == (int)0))))))))) ? int((int)0) : int((  (((bool(_Function_3_3::Block(s1,s2)) && bool(!(((bool((bool((bool((b1->imass == (int)0)) && bool((b2->imass == (int)0)))) && bool((b1->iinertia == (int)0)))) && bool((b2->iinertia == (int)0))))))))) ? int((int)1) : int((int)-1) )) )) );
+							return (  (((bool(((bool(s1->sensorEnabled) || bool(s2->sensorEnabled)))) && bool(_Function_3_1::Block(s2,s1))))) ? int((int)2) : int((  (((bool((bool(((bool(s1->fluidEnabled) || bool(s2->fluidEnabled)))) && bool(_Function_3_2::Block(s2,s1)))) && bool(!(((bool((bool((bool((b1->imass == (int)0)) && bool((b2->imass == (int)0)))) && bool((b1->iinertia == (int)0)))) && bool((b2->iinertia == (int)0))))))))) ? int((int)0) : int((  (((bool(_Function_3_3::Block(s2,s1)) && bool(!(((bool((bool((bool((b1->imass == (int)0)) && bool((b2->imass == (int)0)))) && bool((b1->iinertia == (int)0)))) && bool((b2->iinertia == (int)0))))))))) ? int((int)1) : int((int)-1) )) )) );
 						}
 						return null();
 					}
 				};
 				HX_STACK_LINE(3568)
-				return (  (((bool(!(con_ignore)) && bool(!(_Function_2_1::Block(s1,s2)))))) ? int(_Function_2_2::Block(s1,b2,s2,b1)) : int((int)-1) );
+				return (  (((bool(!(con_ignore)) && bool(!(_Function_2_1::Block(s2,s1)))))) ? int(_Function_2_2::Block(s2,b2,b1,s1)) : int((int)-1) );
 			}
 			return null();
 		}
 	};
 	HX_STACK_LINE(3568)
-	if (((bool((bool((in_arb != null())) && bool((in_arb->colarb == null())))) || bool((_Function_1_1::Block(s1,s2) == (int)0))))){
+	if (((bool((bool((in_arb != null())) && bool((in_arb->colarb == null())))) || bool((_Function_1_1::Block(s2,s1) == (int)0))))){
 		HX_STACK_LINE(3568)
 		return in_arb;
 	}
@@ -21313,9 +19607,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,bodyCbWake,(void))
 		if (((bool((bool(stat) && bool((toi->toi < (int)0)))) || bool(toi->failed)))){
 			HX_STACK_LINE(3625)
 			::zpp_nape::geom::ZPP_ToiEvent o = toi;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(3626)
-			{
-			}
 			HX_STACK_LINE(3635)
 			o->next = ::zpp_nape::geom::ZPP_ToiEvent_obj::zpp_pool;
 			HX_STACK_LINE(3636)
@@ -21390,9 +19681,6 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 								{
 									HX_STACK_LINE(3379)
 									::zpp_nape::geom::ZPP_ToiEvent o = toi;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(3380)
-									{
-									}
 									HX_STACK_LINE(3389)
 									o->next = ::zpp_nape::geom::ZPP_ToiEvent_obj::zpp_pool;
 									HX_STACK_LINE(3390)
@@ -21433,9 +19721,6 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 									{
 										HX_STACK_LINE(3413)
 										::zpp_nape::geom::ZPP_ToiEvent o = toi;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(3414)
-										{
-										}
 										HX_STACK_LINE(3423)
 										o->next = ::zpp_nape::geom::ZPP_ToiEvent_obj::zpp_pool;
 										HX_STACK_LINE(3424)
@@ -21452,9 +19737,6 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 								{
 									HX_STACK_LINE(3435)
 									::zpp_nape::geom::ZPP_ToiEvent o = toi;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(3436)
-									{
-									}
 									HX_STACK_LINE(3445)
 									o->next = ::zpp_nape::geom::ZPP_ToiEvent_obj::zpp_pool;
 									HX_STACK_LINE(3446)
@@ -21506,17 +19788,11 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 					HX_STACK_LINE(3473)
 					if (((delta != (int)0))){
 						HX_STACK_LINE(3473)
-						{
-						}
-						HX_STACK_LINE(3473)
 						b1->sweepTime = dt;
 						HX_STACK_LINE(3473)
 						{
 							HX_STACK_LINE(3473)
 							Float t = delta;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(3473)
-							{
-							}
 							HX_STACK_LINE(3473)
 							hx::AddEq(b1->posx,(b1->velx * t));
 							HX_STACK_LINE(3473)
@@ -21534,9 +19810,6 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 								b1->axisx = ::Math_obj::sin(b1->rot);
 								HX_STACK_LINE(3473)
 								b1->axisy = ::Math_obj::cos(b1->rot);
-								HX_STACK_LINE(3473)
-								{
-								}
 								HX_STACK_LINE(3473)
 								Dynamic();
 							}
@@ -21561,9 +19834,6 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 				{
 					HX_STACK_LINE(3474)
 					::zpp_nape::shape::ZPP_Shape s = minTOI->s1;		HX_STACK_VAR(s,"s");
-					HX_STACK_LINE(3474)
-					{
-					}
 					HX_STACK_LINE(3474)
 					if (((s->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 						HX_STACK_LINE(3474)
@@ -21678,17 +19948,11 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 					HX_STACK_LINE(3477)
 					if (((delta != (int)0))){
 						HX_STACK_LINE(3477)
-						{
-						}
-						HX_STACK_LINE(3477)
 						b2->sweepTime = dt;
 						HX_STACK_LINE(3477)
 						{
 							HX_STACK_LINE(3477)
 							Float t = delta;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(3477)
-							{
-							}
 							HX_STACK_LINE(3477)
 							hx::AddEq(b2->posx,(b2->velx * t));
 							HX_STACK_LINE(3477)
@@ -21706,9 +19970,6 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 								b2->axisx = ::Math_obj::sin(b2->rot);
 								HX_STACK_LINE(3477)
 								b2->axisy = ::Math_obj::cos(b2->rot);
-								HX_STACK_LINE(3477)
-								{
-								}
 								HX_STACK_LINE(3477)
 								Dynamic();
 							}
@@ -21733,9 +19994,6 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 				{
 					HX_STACK_LINE(3478)
 					::zpp_nape::shape::ZPP_Shape s = minTOI->s2;		HX_STACK_VAR(s,"s");
-					HX_STACK_LINE(3478)
-					{
-					}
 					HX_STACK_LINE(3478)
 					if (((s->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 						HX_STACK_LINE(3478)
@@ -21873,9 +20131,6 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 									HX_STACK_LINE(3491)
 									Float t = _this->b1->imass;		HX_STACK_VAR(t,"t");
 									HX_STACK_LINE(3491)
-									{
-									}
-									HX_STACK_LINE(3491)
 									hx::SubEq(_this->b1->velx,(jx * t));
 									HX_STACK_LINE(3491)
 									hx::SubEq(_this->b1->vely,(jy * t));
@@ -21886,9 +20141,6 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 								{
 									HX_STACK_LINE(3491)
 									Float t = _this->b2->imass;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(3491)
-									{
-									}
 									HX_STACK_LINE(3491)
 									hx::AddEq(_this->b2->velx,(jx * t));
 									HX_STACK_LINE(3491)
@@ -21908,9 +20160,6 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 									HX_STACK_LINE(3491)
 									Float t = _this->b1->imass;		HX_STACK_VAR(t,"t");
 									HX_STACK_LINE(3491)
-									{
-									}
-									HX_STACK_LINE(3491)
 									hx::SubEq(_this->b1->velx,(jx * t));
 									HX_STACK_LINE(3491)
 									hx::SubEq(_this->b1->vely,(jy * t));
@@ -21921,9 +20170,6 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 								{
 									HX_STACK_LINE(3491)
 									Float t = _this->b2->imass;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(3491)
-									{
-									}
 									HX_STACK_LINE(3491)
 									hx::AddEq(_this->b2->velx,(jx * t));
 									HX_STACK_LINE(3491)
@@ -22055,12 +20301,6 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 								Float ax = _this->c1->jnAcc;		HX_STACK_VAR(ax,"ax");
 								HX_STACK_LINE(3492)
 								Float ay = _this->c2->jnAcc;		HX_STACK_VAR(ay,"ay");
-								HX_STACK_LINE(3492)
-								{
-								}
-								HX_STACK_LINE(3492)
-								{
-								}
 								HX_STACK_LINE(3492)
 								Float jnx = (((((v1x * _this->nx) + (v1y * _this->ny)) + _this->surfacey) + _this->c1->bounce) - (((_this->Ka * ax) + (_this->Kb * ay))));		HX_STACK_VAR(jnx,"jnx");
 								HX_STACK_LINE(3492)
@@ -22337,12 +20577,6 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 								HX_STACK_LINE(3493)
 								Float ay = _this->c2->jnAcc;		HX_STACK_VAR(ay,"ay");
 								HX_STACK_LINE(3493)
-								{
-								}
-								HX_STACK_LINE(3493)
-								{
-								}
-								HX_STACK_LINE(3493)
 								Float jnx = (((((v1x * _this->nx) + (v1y * _this->ny)) + _this->surfacey) + _this->c1->bounce) - (((_this->Ka * ax) + (_this->Kb * ay))));		HX_STACK_VAR(jnx,"jnx");
 								HX_STACK_LINE(3493)
 								Float jny = (((((v2x * _this->nx) + (v2y * _this->ny)) + _this->surfacey) + _this->c2->bounce) - (((_this->Kb * ax) + (_this->Kc * ay))));		HX_STACK_VAR(jny,"jny");
@@ -22617,12 +20851,6 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 								Float ax = _this->c1->jnAcc;		HX_STACK_VAR(ax,"ax");
 								HX_STACK_LINE(3494)
 								Float ay = _this->c2->jnAcc;		HX_STACK_VAR(ay,"ay");
-								HX_STACK_LINE(3494)
-								{
-								}
-								HX_STACK_LINE(3494)
-								{
-								}
 								HX_STACK_LINE(3494)
 								Float jnx = (((((v1x * _this->nx) + (v1y * _this->ny)) + _this->surfacey) + _this->c1->bounce) - (((_this->Ka * ax) + (_this->Kb * ay))));		HX_STACK_VAR(jnx,"jnx");
 								HX_STACK_LINE(3494)
@@ -22899,12 +21127,6 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 								HX_STACK_LINE(3495)
 								Float ay = _this->c2->jnAcc;		HX_STACK_VAR(ay,"ay");
 								HX_STACK_LINE(3495)
-								{
-								}
-								HX_STACK_LINE(3495)
-								{
-								}
-								HX_STACK_LINE(3495)
 								Float jnx = (((((v1x * _this->nx) + (v1y * _this->ny)) + _this->surfacey) + _this->c1->bounce) - (((_this->Ka * ax) + (_this->Kb * ay))));		HX_STACK_VAR(jnx,"jnx");
 								HX_STACK_LINE(3495)
 								Float jny = (((((v2x * _this->nx) + (v2y * _this->ny)) + _this->surfacey) + _this->c2->bounce) - (((_this->Kb * ax) + (_this->Kc * ay))));		HX_STACK_VAR(jny,"jny");
@@ -23122,9 +21344,6 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 			{
 				HX_STACK_LINE(3521)
 				::zpp_nape::geom::ZPP_ToiEvent o = toi;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(3522)
-				{
-				}
 				HX_STACK_LINE(3531)
 				o->next = ::zpp_nape::geom::ZPP_ToiEvent_obj::zpp_pool;
 				HX_STACK_LINE(3532)
@@ -23148,17 +21367,11 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 						HX_STACK_LINE(3545)
 						if (((delta != (int)0))){
 							HX_STACK_LINE(3545)
-							{
-							}
-							HX_STACK_LINE(3545)
 							cur->sweepTime = deltaTime;
 							HX_STACK_LINE(3545)
 							{
 								HX_STACK_LINE(3545)
 								Float t = delta;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(3545)
-								{
-								}
 								HX_STACK_LINE(3545)
 								hx::AddEq(cur->posx,(cur->velx * t));
 								HX_STACK_LINE(3545)
@@ -23176,9 +21389,6 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 									cur->axisx = ::Math_obj::sin(cur->rot);
 									HX_STACK_LINE(3545)
 									cur->axisy = ::Math_obj::cos(cur->rot);
-									HX_STACK_LINE(3545)
-									{
-									}
 									HX_STACK_LINE(3545)
 									Dynamic();
 								}
@@ -23223,17 +21433,11 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 						HX_STACK_LINE(3557)
 						if (((delta != (int)0))){
 							HX_STACK_LINE(3557)
-							{
-							}
-							HX_STACK_LINE(3557)
 							cur->sweepTime = deltaTime;
 							HX_STACK_LINE(3557)
 							{
 								HX_STACK_LINE(3557)
 								Float t = delta;		HX_STACK_VAR(t,"t");
-								HX_STACK_LINE(3557)
-								{
-								}
 								HX_STACK_LINE(3557)
 								hx::AddEq(cur->posx,(cur->velx * t));
 								HX_STACK_LINE(3557)
@@ -23251,9 +21455,6 @@ Void ZPP_Space_obj::continuousCollisions( Float deltaTime){
 									cur->axisx = ::Math_obj::sin(cur->rot);
 									HX_STACK_LINE(3557)
 									cur->axisy = ::Math_obj::cos(cur->rot);
-									HX_STACK_LINE(3557)
-									{
-									}
 									HX_STACK_LINE(3557)
 									Dynamic();
 								}
@@ -23458,9 +21659,6 @@ while(((numMerges > (int)1)));
 						cur->pre_posx = cur->posx;
 						HX_STACK_LINE(3122)
 						cur->pre_posy = cur->posy;
-						HX_STACK_LINE(3123)
-						{
-						}
 						HX_STACK_LINE(3131)
 						{
 						}
@@ -23488,9 +21686,6 @@ while(((numMerges > (int)1)));
 						cur->pre_posx = cur->posx;
 						HX_STACK_LINE(3154)
 						cur->pre_posy = cur->posy;
-						HX_STACK_LINE(3155)
-						{
-						}
 						HX_STACK_LINE(3163)
 						{
 						}
@@ -23682,9 +21877,6 @@ while(((numMerges > (int)1)));
 				::zpp_nape::phys::ZPP_Body b = cx_ite->elt;		HX_STACK_VAR(b,"b");
 				HX_STACK_LINE(3222)
 				{
-					HX_STACK_LINE(3223)
-					{
-					}
 					HX_STACK_LINE(3231)
 					if (((bool(!(((b->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_KINEMATIC)))) || bool((bool((bool((b->velx == (int)0)) && bool((b->vely == (int)0)))) && bool((b->angvel == (int)0))))))){
 						HX_STACK_LINE(3232)
@@ -23707,9 +21899,6 @@ while(((numMerges > (int)1)));
 								{
 									HX_STACK_LINE(3240)
 									::zpp_nape::util::ZNPList_ZPP_Body _this = __this->staticsleep;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(3240)
-									{
-									}
 									HX_STACK_LINE(3240)
 									::zpp_nape::util::ZNPNode_ZPP_Body old;		HX_STACK_VAR(old,"old");
 									HX_STACK_LINE(3240)
@@ -23743,14 +21932,8 @@ while(((numMerges > (int)1)));
 									}
 									HX_STACK_LINE(3240)
 									{
-									}
-									HX_STACK_LINE(3240)
-									{
 										HX_STACK_LINE(3240)
 										::zpp_nape::util::ZNPNode_ZPP_Body o = old;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(3240)
-										{
-										}
 										HX_STACK_LINE(3240)
 										o->elt = null();
 										HX_STACK_LINE(3240)
@@ -23809,9 +21992,6 @@ while(((numMerges > (int)1)));
 									HX_STACK_LINE(3262)
 									::zpp_nape::space::ZPP_CallbackSet _this = __this->callbackset_list;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(3262)
-									{
-									}
-									HX_STACK_LINE(3262)
 									::zpp_nape::space::ZPP_CallbackSet old;		HX_STACK_VAR(old,"old");
 									HX_STACK_LINE(3262)
 									::zpp_nape::space::ZPP_CallbackSet ret;		HX_STACK_VAR(ret,"ret");
@@ -23845,9 +22025,6 @@ while(((numMerges > (int)1)));
 									HX_STACK_LINE(3262)
 									old->_inuse = false;
 									HX_STACK_LINE(3262)
-									{
-									}
-									HX_STACK_LINE(3262)
 									_this->modified = true;
 									HX_STACK_LINE(3262)
 									(_this->length)--;
@@ -23863,22 +22040,10 @@ while(((numMerges > (int)1)));
 						cx_ite = _Function_5_1::Block(this,pre1);
 						HX_STACK_LINE(3263)
 						::String inf = ((set->int1->id + HX_CSTRING(" ")) + set->int2->id);		HX_STACK_VAR(inf,"inf");
-						HX_STACK_LINE(3264)
-						{
-						}
-						HX_STACK_LINE(3272)
-						{
-						}
-						HX_STACK_LINE(3280)
-						{
-						}
 						HX_STACK_LINE(3288)
 						{
 							HX_STACK_LINE(3289)
 							::zpp_nape::space::ZPP_CallbackSet o = set;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(3290)
-							{
-							}
 							HX_STACK_LINE(3298)
 							{
 								HX_STACK_LINE(3298)
@@ -23950,173 +22115,167 @@ while(((numMerges > (int)1)));
 						int event = ::zpp_nape::util::ZPP_Flags_obj::id_CbEvent_ONGOING;		HX_STACK_VAR(event,"event");
 						HX_STACK_LINE(3308)
 						{
-							HX_STACK_LINE(3308)
-							{
-							}
-							HX_STACK_LINE(3308)
-							{
-								struct _Function_7_1{
-									inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &a,::zpp_nape::callbacks::ZPP_CbSet &b){
-										HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",3308);
+							struct _Function_6_1{
+								inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &b,::zpp_nape::callbacks::ZPP_CbSet &a){
+									HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",3308);
+									{
+										HX_STACK_LINE(3308)
+										::zpp_nape::callbacks::ZPP_CbSetPair ret = null();		HX_STACK_VAR(ret,"ret");
+										HX_STACK_LINE(3308)
+										::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((a->cbpairs->length < b->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(a->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(b->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
+										HX_STACK_LINE(3308)
 										{
 											HX_STACK_LINE(3308)
-											::zpp_nape::callbacks::ZPP_CbSetPair ret = null();		HX_STACK_VAR(ret,"ret");
+											::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite1 = pairs->head;		HX_STACK_VAR(cx_ite1,"cx_ite1");
 											HX_STACK_LINE(3308)
-											::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((a->cbpairs->length < b->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(a->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(b->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
-											HX_STACK_LINE(3308)
-											{
+											while(((cx_ite1 != null()))){
 												HX_STACK_LINE(3308)
-												::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite1 = pairs->head;		HX_STACK_VAR(cx_ite1,"cx_ite1");
+												::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite1->elt;		HX_STACK_VAR(p,"p");
 												HX_STACK_LINE(3308)
-												while(((cx_ite1 != null()))){
+												if (((bool((bool((p->a == a)) && bool((p->b == b)))) || bool((bool((p->a == b)) && bool((p->b == a))))))){
 													HX_STACK_LINE(3308)
-													::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite1->elt;		HX_STACK_VAR(p,"p");
+													ret = p;
 													HX_STACK_LINE(3308)
-													if (((bool((bool((p->a == a)) && bool((p->b == b)))) || bool((bool((p->a == b)) && bool((p->b == a))))))){
-														HX_STACK_LINE(3308)
-														ret = p;
-														HX_STACK_LINE(3308)
-														break;
-													}
-													HX_STACK_LINE(3308)
-													cx_ite1 = cx_ite1->next;
+													break;
 												}
+												HX_STACK_LINE(3308)
+												cx_ite1 = cx_ite1->next;
 											}
-											HX_STACK_LINE(3308)
-											if (((ret == null()))){
-												struct _Function_9_1{
-													inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &a,::zpp_nape::callbacks::ZPP_CbSet &b){
-														HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",3308);
+										}
+										HX_STACK_LINE(3308)
+										if (((ret == null()))){
+											struct _Function_8_1{
+												inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &b,::zpp_nape::callbacks::ZPP_CbSet &a){
+													HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",3308);
+													{
+														HX_STACK_LINE(3308)
+														::zpp_nape::callbacks::ZPP_CbSetPair ret1;		HX_STACK_VAR(ret1,"ret1");
+														HX_STACK_LINE(3308)
 														{
 															HX_STACK_LINE(3308)
-															::zpp_nape::callbacks::ZPP_CbSetPair ret1;		HX_STACK_VAR(ret1,"ret1");
-															HX_STACK_LINE(3308)
-															{
+															if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
 																HX_STACK_LINE(3308)
-																if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
-																	HX_STACK_LINE(3308)
-																	ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
-																}
-																else{
-																	HX_STACK_LINE(3308)
-																	ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
-																	HX_STACK_LINE(3308)
-																	::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret1->next;
-																	HX_STACK_LINE(3308)
-																	ret1->next = null();
-																}
-																HX_STACK_LINE(3308)
-																ret1->zip_listeners = true;
-															}
-															HX_STACK_LINE(3308)
-															if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(a,b))){
-																HX_STACK_LINE(3308)
-																ret1->a = a;
-																HX_STACK_LINE(3308)
-																ret1->b = b;
+																ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
 															}
 															else{
 																HX_STACK_LINE(3308)
-																ret1->a = b;
+																ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
 																HX_STACK_LINE(3308)
-																ret1->b = a;
+																::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret1->next;
+																HX_STACK_LINE(3308)
+																ret1->next = null();
 															}
 															HX_STACK_LINE(3308)
-															return ret1;
+															ret1->zip_listeners = true;
 														}
-														return null();
+														HX_STACK_LINE(3308)
+														if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(a,b))){
+															HX_STACK_LINE(3308)
+															ret1->a = a;
+															HX_STACK_LINE(3308)
+															ret1->b = b;
+														}
+														else{
+															HX_STACK_LINE(3308)
+															ret1->a = b;
+															HX_STACK_LINE(3308)
+															ret1->b = a;
+														}
+														HX_STACK_LINE(3308)
+														return ret1;
 													}
-												};
-												HX_STACK_LINE(3308)
-												ret = _Function_9_1::Block(a,b);
-												HX_STACK_LINE(3308)
-												a->cbpairs->add(ret);
-												HX_STACK_LINE(3308)
-												if (((b != a))){
-													HX_STACK_LINE(3308)
-													b->cbpairs->add(ret);
+													return null();
 												}
-											}
+											};
 											HX_STACK_LINE(3308)
-											if ((ret->zip_listeners)){
-												HX_STACK_LINE(3308)
-												ret->zip_listeners = false;
-												HX_STACK_LINE(3308)
-												ret->__validate();
-											}
+											ret = _Function_8_1::Block(b,a);
 											HX_STACK_LINE(3308)
-											return ret;
+											a->cbpairs->add(ret);
+											HX_STACK_LINE(3308)
+											if (((b != a))){
+												HX_STACK_LINE(3308)
+												b->cbpairs->add(ret);
+											}
 										}
-										return null();
-									}
-								};
-								HX_STACK_LINE(3308)
-								::zpp_nape::util::ZNPNode_ZPP_InteractionListener cx_ite1 = (_Function_7_1::Block(a,b))->listeners->head;		HX_STACK_VAR(cx_ite1,"cx_ite1");
-								HX_STACK_LINE(3308)
-								while(((cx_ite1 != null()))){
-									HX_STACK_LINE(3308)
-									::zpp_nape::callbacks::ZPP_InteractionListener x = cx_ite1->elt;		HX_STACK_VAR(x,"x");
-									HX_STACK_LINE(3308)
-									if (((x->event == event))){
 										HX_STACK_LINE(3308)
-										if (((bool(((bool(!(sleeping)) || bool(x->allowSleepingCallbacks)))) && bool(!(set->empty_arb(x->itype)))))){
+										if ((ret->zip_listeners)){
 											HX_STACK_LINE(3308)
-											::zpp_nape::callbacks::ZPP_Callback cb = _g->push_callback(x);		HX_STACK_VAR(cb,"cb");
+											ret->zip_listeners = false;
 											HX_STACK_LINE(3308)
-											cb->event = ::zpp_nape::util::ZPP_Flags_obj::id_CbEvent_ONGOING;
-											HX_STACK_LINE(3308)
-											{
-												HX_STACK_LINE(3308)
-												::zpp_nape::phys::ZPP_Interactor o1 = set->int1;		HX_STACK_VAR(o1,"o1");
-												HX_STACK_LINE(3308)
-												::zpp_nape::phys::ZPP_Interactor o2 = set->int2;		HX_STACK_VAR(o2,"o2");
-												struct _Function_11_1{
-													inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x,::zpp_nape::phys::ZPP_Interactor &o1){
-														HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",3308);
-														{
-															HX_STACK_LINE(3308)
-															::zpp_nape::callbacks::ZPP_OptionType _this = x->options1;		HX_STACK_VAR(_this,"_this");
-															::zpp_nape::util::ZNPList_ZPP_CbType xs = o1->cbTypes;		HX_STACK_VAR(xs,"xs");
-															HX_STACK_LINE(3308)
-															return (bool(_this->nonemptyintersection(xs,_this->includes)) && bool(!(_this->nonemptyintersection(xs,_this->excludes))));
-														}
-														return null();
-													}
-												};
-												struct _Function_11_2{
-													inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x,::zpp_nape::phys::ZPP_Interactor &o2){
-														HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",3308);
-														{
-															HX_STACK_LINE(3308)
-															::zpp_nape::callbacks::ZPP_OptionType _this = x->options2;		HX_STACK_VAR(_this,"_this");
-															::zpp_nape::util::ZNPList_ZPP_CbType xs = o2->cbTypes;		HX_STACK_VAR(xs,"xs");
-															HX_STACK_LINE(3308)
-															return (bool(_this->nonemptyintersection(xs,_this->includes)) && bool(!(_this->nonemptyintersection(xs,_this->excludes))));
-														}
-														return null();
-													}
-												};
-												HX_STACK_LINE(3308)
-												if (((bool(_Function_11_1::Block(x,o1)) && bool(_Function_11_2::Block(x,o2))))){
-													HX_STACK_LINE(3308)
-													cb->int1 = o1;
-													HX_STACK_LINE(3308)
-													cb->int2 = o2;
-												}
-												else{
-													HX_STACK_LINE(3308)
-													cb->int1 = o2;
-													HX_STACK_LINE(3308)
-													cb->int2 = o1;
-												}
-											}
-											HX_STACK_LINE(3308)
-											cb->set = set;
+											ret->__validate();
 										}
+										HX_STACK_LINE(3308)
+										return ret;
 									}
-									HX_STACK_LINE(3308)
-									cx_ite1 = cx_ite1->next;
+									return null();
 								}
+							};
+							HX_STACK_LINE(3308)
+							::zpp_nape::util::ZNPNode_ZPP_InteractionListener cx_ite1 = (_Function_6_1::Block(b,a))->listeners->head;		HX_STACK_VAR(cx_ite1,"cx_ite1");
+							HX_STACK_LINE(3308)
+							while(((cx_ite1 != null()))){
+								HX_STACK_LINE(3308)
+								::zpp_nape::callbacks::ZPP_InteractionListener x = cx_ite1->elt;		HX_STACK_VAR(x,"x");
+								HX_STACK_LINE(3308)
+								if (((x->event == event))){
+									HX_STACK_LINE(3308)
+									if (((bool(((bool(!(sleeping)) || bool(x->allowSleepingCallbacks)))) && bool(!(set->empty_arb(x->itype)))))){
+										HX_STACK_LINE(3308)
+										::zpp_nape::callbacks::ZPP_Callback cb = _g->push_callback(x);		HX_STACK_VAR(cb,"cb");
+										HX_STACK_LINE(3308)
+										cb->event = ::zpp_nape::util::ZPP_Flags_obj::id_CbEvent_ONGOING;
+										HX_STACK_LINE(3308)
+										{
+											HX_STACK_LINE(3308)
+											::zpp_nape::phys::ZPP_Interactor o1 = set->int1;		HX_STACK_VAR(o1,"o1");
+											HX_STACK_LINE(3308)
+											::zpp_nape::phys::ZPP_Interactor o2 = set->int2;		HX_STACK_VAR(o2,"o2");
+											struct _Function_10_1{
+												inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x,::zpp_nape::phys::ZPP_Interactor &o1){
+													HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",3308);
+													{
+														HX_STACK_LINE(3308)
+														::zpp_nape::callbacks::ZPP_OptionType _this = x->options1;		HX_STACK_VAR(_this,"_this");
+														::zpp_nape::util::ZNPList_ZPP_CbType xs = o1->cbTypes;		HX_STACK_VAR(xs,"xs");
+														HX_STACK_LINE(3308)
+														return (bool(_this->nonemptyintersection(xs,_this->includes)) && bool(!(_this->nonemptyintersection(xs,_this->excludes))));
+													}
+													return null();
+												}
+											};
+											struct _Function_10_2{
+												inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x,::zpp_nape::phys::ZPP_Interactor &o2){
+													HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",3308);
+													{
+														HX_STACK_LINE(3308)
+														::zpp_nape::callbacks::ZPP_OptionType _this = x->options2;		HX_STACK_VAR(_this,"_this");
+														::zpp_nape::util::ZNPList_ZPP_CbType xs = o2->cbTypes;		HX_STACK_VAR(xs,"xs");
+														HX_STACK_LINE(3308)
+														return (bool(_this->nonemptyintersection(xs,_this->includes)) && bool(!(_this->nonemptyintersection(xs,_this->excludes))));
+													}
+													return null();
+												}
+											};
+											HX_STACK_LINE(3308)
+											if (((bool(_Function_10_1::Block(x,o1)) && bool(_Function_10_2::Block(x,o2))))){
+												HX_STACK_LINE(3308)
+												cb->int1 = o1;
+												HX_STACK_LINE(3308)
+												cb->int2 = o2;
+											}
+											else{
+												HX_STACK_LINE(3308)
+												cb->int1 = o2;
+												HX_STACK_LINE(3308)
+												cb->int2 = o1;
+											}
+										}
+										HX_STACK_LINE(3308)
+										cb->set = set;
+									}
+								}
+								HX_STACK_LINE(3308)
+								cx_ite1 = cx_ite1->next;
 							}
 						}
 					}
@@ -24160,9 +22319,6 @@ while(((numMerges > (int)1)));
 			{
 				HX_STACK_LINE(3336)
 				::zpp_nape::callbacks::ZPP_Callback o = cb;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(3337)
-				{
-				}
 				HX_STACK_LINE(3345)
 				{
 					HX_STACK_LINE(3345)
@@ -24198,9 +22354,6 @@ HX_DEFINE_DYNAMIC_FUNC3(ZPP_Space_obj,step,(void))
 	HX_STACK_PUSH("ZPP_Space::push_callback","zpp_nape/space/Space.hx",2982);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(i,"i");
-	HX_STACK_LINE(2983)
-	{
-	}
 	HX_STACK_LINE(2991)
 	::zpp_nape::callbacks::ZPP_Callback cb;		HX_STACK_VAR(cb,"cb");
 	HX_STACK_LINE(2992)
@@ -24297,9 +22450,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 							HX_STACK_LINE(2856)
 							_this1->localCOMy = _this1->lverts->next->y;
 							HX_STACK_LINE(2856)
-							{
-							}
-							HX_STACK_LINE(2856)
 							Dynamic();
 						}
 						else{
@@ -24314,17 +22464,11 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 									HX_STACK_LINE(2856)
 									{
 									}
-									HX_STACK_LINE(2856)
-									{
-									}
 								}
 								HX_STACK_LINE(2856)
 								{
 									HX_STACK_LINE(2856)
 									Float t = 1.0;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(2856)
-									{
-									}
 									HX_STACK_LINE(2856)
 									hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 									HX_STACK_LINE(2856)
@@ -24334,9 +22478,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 								{
 									HX_STACK_LINE(2856)
 									Float t = 0.5;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(2856)
-									{
-									}
 									HX_STACK_LINE(2856)
 									hx::MultEq(_this1->localCOMx,t);
 									HX_STACK_LINE(2856)
@@ -24350,9 +22491,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 									_this1->localCOMx = (int)0;
 									HX_STACK_LINE(2856)
 									_this1->localCOMy = (int)0;
-									HX_STACK_LINE(2856)
-									{
-									}
 									HX_STACK_LINE(2856)
 									{
 									}
@@ -24435,9 +22573,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 									HX_STACK_LINE(2856)
 									Float t = area;		HX_STACK_VAR(t,"t");
 									HX_STACK_LINE(2856)
-									{
-									}
-									HX_STACK_LINE(2856)
 									hx::MultEq(_this1->localCOMx,t);
 									HX_STACK_LINE(2856)
 									hx::MultEq(_this1->localCOMy,t);
@@ -24460,9 +22595,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 							_this1->axisx = ::Math_obj::sin(_this1->rot);
 							HX_STACK_LINE(2856)
 							_this1->axisy = ::Math_obj::cos(_this1->rot);
-							HX_STACK_LINE(2856)
-							{
-							}
 							HX_STACK_LINE(2856)
 							Dynamic();
 						}
@@ -24504,9 +22636,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 							HX_STACK_LINE(2856)
 							_this1->axisy = ::Math_obj::cos(_this1->rot);
 							HX_STACK_LINE(2856)
-							{
-							}
-							HX_STACK_LINE(2856)
 							Dynamic();
 						}
 					}
@@ -24533,9 +22662,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 									_this1->axisx = ::Math_obj::sin(_this1->rot);
 									HX_STACK_LINE(2856)
 									_this1->axisy = ::Math_obj::cos(_this1->rot);
-									HX_STACK_LINE(2856)
-									{
-									}
 									HX_STACK_LINE(2856)
 									Dynamic();
 								}
@@ -24613,9 +22739,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 								HX_STACK_LINE(2856)
 								{
 								}
-								HX_STACK_LINE(2856)
-								{
-								}
 							}
 							HX_STACK_LINE(2856)
 							e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -24657,9 +22780,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 							HX_STACK_LINE(2856)
 							{
 							}
-							HX_STACK_LINE(2856)
-							{
-							}
 						}
 						HX_STACK_LINE(2856)
 						e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -24687,17 +22807,11 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 		HX_STACK_LINE(2862)
 		if (((delta != (int)0))){
 			HX_STACK_LINE(2862)
-			{
-			}
-			HX_STACK_LINE(2862)
 			body->sweepTime = deltaTime;
 			HX_STACK_LINE(2862)
 			{
 				HX_STACK_LINE(2862)
 				Float t = delta;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(2862)
-				{
-				}
 				HX_STACK_LINE(2862)
 				hx::AddEq(body->posx,(body->velx * t));
 				HX_STACK_LINE(2862)
@@ -24715,9 +22829,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 					body->axisx = ::Math_obj::sin(body->rot);
 					HX_STACK_LINE(2862)
 					body->axisy = ::Math_obj::cos(body->rot);
-					HX_STACK_LINE(2862)
-					{
-					}
 					HX_STACK_LINE(2862)
 					Dynamic();
 				}
@@ -24767,7 +22878,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 		Dynamic();
 	}
 	struct _Function_1_1{
-		inline static Float Block( Float &prex,Float &postx){
+		inline static Float Block( Float &postx,Float &prex){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2885);
 			{
 				HX_STACK_LINE(2886)
@@ -24781,9 +22892,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 		}
 	};
 	HX_STACK_LINE(2885)
-	aabb->minx = (_Function_1_1::Block(prex,postx) - rad);
+	aabb->minx = (_Function_1_1::Block(postx,prex) - rad);
 	struct _Function_1_2{
-		inline static Float Block( Float &prex,Float &postx){
+		inline static Float Block( Float &postx,Float &prex){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2890);
 			{
 				HX_STACK_LINE(2891)
@@ -24797,7 +22908,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 		}
 	};
 	HX_STACK_LINE(2890)
-	aabb->maxx = (_Function_1_2::Block(prex,postx) + rad);
+	aabb->maxx = (_Function_1_2::Block(postx,prex) + rad);
 	struct _Function_1_3{
 		inline static Float Block( Float &prey,Float &posty){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2895);
@@ -24836,9 +22947,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 	{
 		HX_STACK_LINE(2907)
 		::zpp_nape::geom::ZPP_AABB o = aabb;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(2908)
-		{
-		}
 		HX_STACK_LINE(2916)
 		{
 			HX_STACK_LINE(2916)
@@ -24901,17 +23009,11 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 					HX_STACK_LINE(2933)
 					if (((delta != (int)0))){
 						HX_STACK_LINE(2933)
-						{
-						}
-						HX_STACK_LINE(2933)
 						_this->sweepTime = (int)0;
 						HX_STACK_LINE(2933)
 						{
 							HX_STACK_LINE(2933)
 							Float t = delta;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(2933)
-							{
-							}
 							HX_STACK_LINE(2933)
 							hx::AddEq(_this->posx,(_this->velx * t));
 							HX_STACK_LINE(2933)
@@ -24929,9 +23031,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 								_this->axisx = ::Math_obj::sin(_this->rot);
 								HX_STACK_LINE(2933)
 								_this->axisy = ::Math_obj::cos(_this->rot);
-								HX_STACK_LINE(2933)
-								{
-								}
 								HX_STACK_LINE(2933)
 								Dynamic();
 							}
@@ -24957,9 +23056,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 					HX_STACK_LINE(2934)
 					::zpp_nape::phys::ZPP_Body _this = ((  (((s->zpp_inner->body != null()))) ? ::nape::phys::Body(s->zpp_inner->body->outer) : ::nape::phys::Body(null()) ))->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					::zpp_nape::shape::ZPP_Shape s1 = s->zpp_inner;		HX_STACK_VAR(s1,"s1");
-					HX_STACK_LINE(2934)
-					{
-					}
 					HX_STACK_LINE(2934)
 					if (((s1->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 						HX_STACK_LINE(2934)
@@ -25145,9 +23241,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 												HX_STACK_LINE(2941)
 												{
 												}
-												HX_STACK_LINE(2941)
-												{
-												}
 											}
 											HX_STACK_LINE(2941)
 											return ret2;
@@ -25176,7 +23269,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 										hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 									}
 									HX_STACK_LINE(2941)
-									if (((_this->_isimmutable_dyn() != null()))){
+									if (((_this->_isimmutable != null()))){
 										HX_STACK_LINE(2941)
 										_this->_isimmutable();
 									}
@@ -25200,7 +23293,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 												HX_STACK_LINE(2941)
 												::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(2941)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(2941)
 													_this->_validate();
 												}
@@ -25225,7 +23318,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 												HX_STACK_LINE(2941)
 												::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(2941)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(2941)
 													_this->_validate();
 												}
@@ -25247,16 +23340,13 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 										HX_STACK_LINE(2941)
 										{
 										}
-										HX_STACK_LINE(2941)
-										{
-										}
 									}
 									HX_STACK_LINE(2941)
 									{
 										HX_STACK_LINE(2941)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(2941)
-										if (((_this->_invalidate_dyn() != null()))){
+										if (((_this->_invalidate != null()))){
 											HX_STACK_LINE(2941)
 											_this->_invalidate(_this);
 										}
@@ -25347,9 +23437,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 												HX_STACK_LINE(2941)
 												{
 												}
-												HX_STACK_LINE(2941)
-												{
-												}
 											}
 											HX_STACK_LINE(2941)
 											return ret2;
@@ -25378,7 +23465,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 										hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 									}
 									HX_STACK_LINE(2941)
-									if (((_this->_isimmutable_dyn() != null()))){
+									if (((_this->_isimmutable != null()))){
 										HX_STACK_LINE(2941)
 										_this->_isimmutable();
 									}
@@ -25402,7 +23489,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 												HX_STACK_LINE(2941)
 												::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(2941)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(2941)
 													_this->_validate();
 												}
@@ -25427,7 +23514,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 												HX_STACK_LINE(2941)
 												::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 												HX_STACK_LINE(2941)
-												if (((_this->_validate_dyn() != null()))){
+												if (((_this->_validate != null()))){
 													HX_STACK_LINE(2941)
 													_this->_validate();
 												}
@@ -25449,16 +23536,13 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 										HX_STACK_LINE(2941)
 										{
 										}
-										HX_STACK_LINE(2941)
-										{
-										}
 									}
 									HX_STACK_LINE(2941)
 									{
 										HX_STACK_LINE(2941)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret1->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(2941)
-										if (((_this->_invalidate_dyn() != null()))){
+										if (((_this->_invalidate != null()))){
 											HX_STACK_LINE(2941)
 											_this->_invalidate(_this);
 										}
@@ -25537,9 +23621,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 					{
 						HX_STACK_LINE(2955)
 						::zpp_nape::util::ZNPList_ConvexResult _this = ret->zpp_inner->inner;		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(2955)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_ConvexResult Block( ::nape::geom::ConvexResult &res){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2955);
@@ -25605,9 +23686,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 	{
 		HX_STACK_LINE(2962)
 		::zpp_nape::geom::ZPP_ToiEvent o = toi;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(2963)
-		{
-		}
 		HX_STACK_LINE(2972)
 		o->next = ::zpp_nape::geom::ZPP_ToiEvent_obj::zpp_pool;
 		HX_STACK_LINE(2973)
@@ -25620,17 +23698,11 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 		HX_STACK_LINE(2978)
 		if (((delta != (int)0))){
 			HX_STACK_LINE(2978)
-			{
-			}
-			HX_STACK_LINE(2978)
 			body->sweepTime = (int)0;
 			HX_STACK_LINE(2978)
 			{
 				HX_STACK_LINE(2978)
 				Float t = delta;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(2978)
-				{
-				}
 				HX_STACK_LINE(2978)
 				hx::AddEq(body->posx,(body->velx * t));
 				HX_STACK_LINE(2978)
@@ -25648,9 +23720,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 					body->axisx = ::Math_obj::sin(body->rot);
 					HX_STACK_LINE(2978)
 					body->axisy = ::Math_obj::cos(body->rot);
-					HX_STACK_LINE(2978)
-					{
-					}
 					HX_STACK_LINE(2978)
 					Dynamic();
 				}
@@ -25672,89 +23741,57 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 		}
 	}
 	HX_STACK_LINE(2979)
-	{
+	if (((shape->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
+		HX_STACK_LINE(2979)
+		shape->worldCOMx = (body->posx + (((body->axisy * shape->localCOMx) - (body->axisx * shape->localCOMy))));
+		HX_STACK_LINE(2979)
+		shape->worldCOMy = (body->posy + (((shape->localCOMx * body->axisx) + (shape->localCOMy * body->axisy))));
+	}
+	else{
+		HX_STACK_LINE(2979)
+		::zpp_nape::shape::ZPP_Polygon p = shape->polygon;		HX_STACK_VAR(p,"p");
+		HX_STACK_LINE(2979)
+		::zpp_nape::geom::ZPP_Vec2 li = p->lverts->next;		HX_STACK_VAR(li,"li");
 		HX_STACK_LINE(2979)
 		{
-		}
-		HX_STACK_LINE(2979)
-		if (((shape->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 			HX_STACK_LINE(2979)
-			shape->worldCOMx = (body->posx + (((body->axisy * shape->localCOMx) - (body->axisx * shape->localCOMy))));
+			::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
 			HX_STACK_LINE(2979)
-			shape->worldCOMy = (body->posy + (((shape->localCOMx * body->axisx) + (shape->localCOMy * body->axisy))));
-		}
-		else{
-			HX_STACK_LINE(2979)
-			::zpp_nape::shape::ZPP_Polygon p = shape->polygon;		HX_STACK_VAR(p,"p");
-			HX_STACK_LINE(2979)
-			::zpp_nape::geom::ZPP_Vec2 li = p->lverts->next;		HX_STACK_VAR(li,"li");
-			HX_STACK_LINE(2979)
-			{
+			while(((cx_ite != null()))){
 				HX_STACK_LINE(2979)
-				::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+				::zpp_nape::geom::ZPP_Vec2 g = cx_ite;		HX_STACK_VAR(g,"g");
 				HX_STACK_LINE(2979)
-				while(((cx_ite != null()))){
+				{
 					HX_STACK_LINE(2979)
-					::zpp_nape::geom::ZPP_Vec2 g = cx_ite;		HX_STACK_VAR(g,"g");
+					::zpp_nape::geom::ZPP_Vec2 l = li;		HX_STACK_VAR(l,"l");
+					HX_STACK_LINE(2979)
+					li = li->next;
 					HX_STACK_LINE(2979)
 					{
 						HX_STACK_LINE(2979)
-						::zpp_nape::geom::ZPP_Vec2 l = li;		HX_STACK_VAR(l,"l");
+						g->x = (body->posx + (((body->axisy * l->x) - (body->axisx * l->y))));
 						HX_STACK_LINE(2979)
-						li = li->next;
-						HX_STACK_LINE(2979)
-						{
-							HX_STACK_LINE(2979)
-							g->x = (body->posx + (((body->axisy * l->x) - (body->axisx * l->y))));
-							HX_STACK_LINE(2979)
-							g->y = (body->posy + (((l->x * body->axisx) + (l->y * body->axisy))));
-						}
+						g->y = (body->posy + (((l->x * body->axisx) + (l->y * body->axisy))));
 					}
-					HX_STACK_LINE(2979)
-					cx_ite = cx_ite->next;
 				}
-			}
-			HX_STACK_LINE(2979)
-			::zpp_nape::util::ZNPNode_ZPP_Edge ite = p->edges->head;		HX_STACK_VAR(ite,"ite");
-			HX_STACK_LINE(2979)
-			{
-				HX_STACK_LINE(2979)
-				::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
-				HX_STACK_LINE(2979)
-				::zpp_nape::geom::ZPP_Vec2 u = cx_ite;		HX_STACK_VAR(u,"u");
 				HX_STACK_LINE(2979)
 				cx_ite = cx_ite->next;
+			}
+		}
+		HX_STACK_LINE(2979)
+		::zpp_nape::util::ZNPNode_ZPP_Edge ite = p->edges->head;		HX_STACK_VAR(ite,"ite");
+		HX_STACK_LINE(2979)
+		{
+			HX_STACK_LINE(2979)
+			::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+			HX_STACK_LINE(2979)
+			::zpp_nape::geom::ZPP_Vec2 u = cx_ite;		HX_STACK_VAR(u,"u");
+			HX_STACK_LINE(2979)
+			cx_ite = cx_ite->next;
+			HX_STACK_LINE(2979)
+			while(((cx_ite != null()))){
 				HX_STACK_LINE(2979)
-				while(((cx_ite != null()))){
-					HX_STACK_LINE(2979)
-					::zpp_nape::geom::ZPP_Vec2 v = cx_ite;		HX_STACK_VAR(v,"v");
-					HX_STACK_LINE(2979)
-					{
-						HX_STACK_LINE(2979)
-						::zpp_nape::shape::ZPP_Edge e = ite->elt;		HX_STACK_VAR(e,"e");
-						HX_STACK_LINE(2979)
-						ite = ite->next;
-						HX_STACK_LINE(2979)
-						{
-							HX_STACK_LINE(2979)
-							e->gnormx = ((body->axisy * e->lnormx) - (body->axisx * e->lnormy));
-							HX_STACK_LINE(2979)
-							e->gnormy = ((e->lnormx * body->axisx) + (e->lnormy * body->axisy));
-						}
-						HX_STACK_LINE(2979)
-						e->gprojection = (((body->posx * e->gnormx) + (body->posy * e->gnormy)) + e->lprojection);
-						HX_STACK_LINE(2979)
-						e->tp0 = ((u->y * e->gnormx) - (u->x * e->gnormy));
-						HX_STACK_LINE(2979)
-						e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
-					}
-					HX_STACK_LINE(2979)
-					u = v;
-					HX_STACK_LINE(2979)
-					cx_ite = cx_ite->next;
-				}
-				HX_STACK_LINE(2979)
-				::zpp_nape::geom::ZPP_Vec2 v = p->gverts->next;		HX_STACK_VAR(v,"v");
+				::zpp_nape::geom::ZPP_Vec2 v = cx_ite;		HX_STACK_VAR(v,"v");
 				HX_STACK_LINE(2979)
 				{
 					HX_STACK_LINE(2979)
@@ -25775,6 +23812,32 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,push_callback,return )
 					HX_STACK_LINE(2979)
 					e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
 				}
+				HX_STACK_LINE(2979)
+				u = v;
+				HX_STACK_LINE(2979)
+				cx_ite = cx_ite->next;
+			}
+			HX_STACK_LINE(2979)
+			::zpp_nape::geom::ZPP_Vec2 v = p->gverts->next;		HX_STACK_VAR(v,"v");
+			HX_STACK_LINE(2979)
+			{
+				HX_STACK_LINE(2979)
+				::zpp_nape::shape::ZPP_Edge e = ite->elt;		HX_STACK_VAR(e,"e");
+				HX_STACK_LINE(2979)
+				ite = ite->next;
+				HX_STACK_LINE(2979)
+				{
+					HX_STACK_LINE(2979)
+					e->gnormx = ((body->axisy * e->lnormx) - (body->axisx * e->lnormy));
+					HX_STACK_LINE(2979)
+					e->gnormy = ((e->lnormx * body->axisx) + (e->lnormy * body->axisy));
+				}
+				HX_STACK_LINE(2979)
+				e->gprojection = (((body->posx * e->gnormx) + (body->posy * e->gnormy)) + e->lprojection);
+				HX_STACK_LINE(2979)
+				e->tp0 = ((u->y * e->gnormx) - (u->x * e->gnormy));
+				HX_STACK_LINE(2979)
+				e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
 			}
 		}
 	}
@@ -25820,9 +23883,6 @@ Void ZPP_Space_obj::prepareCast( ::zpp_nape::shape::ZPP_Shape s){
 								HX_STACK_LINE(2834)
 								_this1->localCOMy = _this1->lverts->next->y;
 								HX_STACK_LINE(2834)
-								{
-								}
-								HX_STACK_LINE(2834)
 								Dynamic();
 							}
 							else{
@@ -25837,17 +23897,11 @@ Void ZPP_Space_obj::prepareCast( ::zpp_nape::shape::ZPP_Shape s){
 										HX_STACK_LINE(2834)
 										{
 										}
-										HX_STACK_LINE(2834)
-										{
-										}
 									}
 									HX_STACK_LINE(2834)
 									{
 										HX_STACK_LINE(2834)
 										Float t = 1.0;		HX_STACK_VAR(t,"t");
-										HX_STACK_LINE(2834)
-										{
-										}
 										HX_STACK_LINE(2834)
 										hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 										HX_STACK_LINE(2834)
@@ -25857,9 +23911,6 @@ Void ZPP_Space_obj::prepareCast( ::zpp_nape::shape::ZPP_Shape s){
 									{
 										HX_STACK_LINE(2834)
 										Float t = 0.5;		HX_STACK_VAR(t,"t");
-										HX_STACK_LINE(2834)
-										{
-										}
 										HX_STACK_LINE(2834)
 										hx::MultEq(_this1->localCOMx,t);
 										HX_STACK_LINE(2834)
@@ -25873,9 +23924,6 @@ Void ZPP_Space_obj::prepareCast( ::zpp_nape::shape::ZPP_Shape s){
 										_this1->localCOMx = (int)0;
 										HX_STACK_LINE(2834)
 										_this1->localCOMy = (int)0;
-										HX_STACK_LINE(2834)
-										{
-										}
 										HX_STACK_LINE(2834)
 										{
 										}
@@ -25958,9 +24006,6 @@ Void ZPP_Space_obj::prepareCast( ::zpp_nape::shape::ZPP_Shape s){
 										HX_STACK_LINE(2834)
 										Float t = area;		HX_STACK_VAR(t,"t");
 										HX_STACK_LINE(2834)
-										{
-										}
-										HX_STACK_LINE(2834)
 										hx::MultEq(_this1->localCOMx,t);
 										HX_STACK_LINE(2834)
 										hx::MultEq(_this1->localCOMy,t);
@@ -25983,9 +24028,6 @@ Void ZPP_Space_obj::prepareCast( ::zpp_nape::shape::ZPP_Shape s){
 								_this1->axisx = ::Math_obj::sin(_this1->rot);
 								HX_STACK_LINE(2834)
 								_this1->axisy = ::Math_obj::cos(_this1->rot);
-								HX_STACK_LINE(2834)
-								{
-								}
 								HX_STACK_LINE(2834)
 								Dynamic();
 							}
@@ -26027,9 +24069,6 @@ Void ZPP_Space_obj::prepareCast( ::zpp_nape::shape::ZPP_Shape s){
 								HX_STACK_LINE(2835)
 								_this1->axisy = ::Math_obj::cos(_this1->rot);
 								HX_STACK_LINE(2835)
-								{
-								}
-								HX_STACK_LINE(2835)
 								Dynamic();
 							}
 						}
@@ -26056,9 +24095,6 @@ Void ZPP_Space_obj::prepareCast( ::zpp_nape::shape::ZPP_Shape s){
 										_this1->axisx = ::Math_obj::sin(_this1->rot);
 										HX_STACK_LINE(2835)
 										_this1->axisy = ::Math_obj::cos(_this1->rot);
-										HX_STACK_LINE(2835)
-										{
-										}
 										HX_STACK_LINE(2835)
 										Dynamic();
 									}
@@ -26136,9 +24172,6 @@ Void ZPP_Space_obj::prepareCast( ::zpp_nape::shape::ZPP_Shape s){
 									HX_STACK_LINE(2835)
 									{
 									}
-									HX_STACK_LINE(2835)
-									{
-									}
 								}
 								HX_STACK_LINE(2835)
 								e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -26177,9 +24210,6 @@ Void ZPP_Space_obj::prepareCast( ::zpp_nape::shape::ZPP_Shape s){
 								e->wrap_gnorm->zpp_inner->x = e->gnormx;
 								HX_STACK_LINE(2835)
 								e->wrap_gnorm->zpp_inner->y = e->gnormy;
-								HX_STACK_LINE(2835)
-								{
-								}
 								HX_STACK_LINE(2835)
 								{
 								}
@@ -26264,9 +24294,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 							HX_STACK_LINE(2631)
 							_this1->localCOMy = _this1->lverts->next->y;
 							HX_STACK_LINE(2631)
-							{
-							}
-							HX_STACK_LINE(2631)
 							Dynamic();
 						}
 						else{
@@ -26281,17 +24308,11 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 									HX_STACK_LINE(2631)
 									{
 									}
-									HX_STACK_LINE(2631)
-									{
-									}
 								}
 								HX_STACK_LINE(2631)
 								{
 									HX_STACK_LINE(2631)
 									Float t = 1.0;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(2631)
-									{
-									}
 									HX_STACK_LINE(2631)
 									hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 									HX_STACK_LINE(2631)
@@ -26301,9 +24322,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 								{
 									HX_STACK_LINE(2631)
 									Float t = 0.5;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(2631)
-									{
-									}
 									HX_STACK_LINE(2631)
 									hx::MultEq(_this1->localCOMx,t);
 									HX_STACK_LINE(2631)
@@ -26317,9 +24335,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 									_this1->localCOMx = (int)0;
 									HX_STACK_LINE(2631)
 									_this1->localCOMy = (int)0;
-									HX_STACK_LINE(2631)
-									{
-									}
 									HX_STACK_LINE(2631)
 									{
 									}
@@ -26402,9 +24417,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 									HX_STACK_LINE(2631)
 									Float t = area;		HX_STACK_VAR(t,"t");
 									HX_STACK_LINE(2631)
-									{
-									}
-									HX_STACK_LINE(2631)
 									hx::MultEq(_this1->localCOMx,t);
 									HX_STACK_LINE(2631)
 									hx::MultEq(_this1->localCOMy,t);
@@ -26427,9 +24439,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 							_this1->axisx = ::Math_obj::sin(_this1->rot);
 							HX_STACK_LINE(2631)
 							_this1->axisy = ::Math_obj::cos(_this1->rot);
-							HX_STACK_LINE(2631)
-							{
-							}
 							HX_STACK_LINE(2631)
 							Dynamic();
 						}
@@ -26471,9 +24480,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 							HX_STACK_LINE(2631)
 							_this1->axisy = ::Math_obj::cos(_this1->rot);
 							HX_STACK_LINE(2631)
-							{
-							}
-							HX_STACK_LINE(2631)
 							Dynamic();
 						}
 					}
@@ -26500,9 +24506,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 									_this1->axisx = ::Math_obj::sin(_this1->rot);
 									HX_STACK_LINE(2631)
 									_this1->axisy = ::Math_obj::cos(_this1->rot);
-									HX_STACK_LINE(2631)
-									{
-									}
 									HX_STACK_LINE(2631)
 									Dynamic();
 								}
@@ -26580,9 +24583,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 								HX_STACK_LINE(2631)
 								{
 								}
-								HX_STACK_LINE(2631)
-								{
-								}
 							}
 							HX_STACK_LINE(2631)
 							e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -26624,9 +24624,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 							HX_STACK_LINE(2631)
 							{
 							}
-							HX_STACK_LINE(2631)
-							{
-							}
 						}
 						HX_STACK_LINE(2631)
 						e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -26654,17 +24651,11 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 		HX_STACK_LINE(2637)
 		if (((delta != (int)0))){
 			HX_STACK_LINE(2637)
-			{
-			}
-			HX_STACK_LINE(2637)
 			body->sweepTime = deltaTime;
 			HX_STACK_LINE(2637)
 			{
 				HX_STACK_LINE(2637)
 				Float t = delta;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(2637)
-				{
-				}
 				HX_STACK_LINE(2637)
 				hx::AddEq(body->posx,(body->velx * t));
 				HX_STACK_LINE(2637)
@@ -26682,9 +24673,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 					body->axisx = ::Math_obj::sin(body->rot);
 					HX_STACK_LINE(2637)
 					body->axisy = ::Math_obj::cos(body->rot);
-					HX_STACK_LINE(2637)
-					{
-					}
 					HX_STACK_LINE(2637)
 					Dynamic();
 				}
@@ -26734,7 +24722,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 		Dynamic();
 	}
 	struct _Function_1_1{
-		inline static Float Block( Float &prex,Float &postx){
+		inline static Float Block( Float &postx,Float &prex){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2660);
 			{
 				HX_STACK_LINE(2661)
@@ -26748,9 +24736,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 		}
 	};
 	HX_STACK_LINE(2660)
-	aabb->minx = (_Function_1_1::Block(prex,postx) - rad);
+	aabb->minx = (_Function_1_1::Block(postx,prex) - rad);
 	struct _Function_1_2{
-		inline static Float Block( Float &prex,Float &postx){
+		inline static Float Block( Float &postx,Float &prex){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2665);
 			{
 				HX_STACK_LINE(2666)
@@ -26764,7 +24752,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 		}
 	};
 	HX_STACK_LINE(2665)
-	aabb->maxx = (_Function_1_2::Block(prex,postx) + rad);
+	aabb->maxx = (_Function_1_2::Block(postx,prex) + rad);
 	struct _Function_1_3{
 		inline static Float Block( Float &prey,Float &posty){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2670);
@@ -26803,9 +24791,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 	{
 		HX_STACK_LINE(2682)
 		::zpp_nape::geom::ZPP_AABB o = aabb;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(2683)
-		{
-		}
 		HX_STACK_LINE(2691)
 		{
 			HX_STACK_LINE(2691)
@@ -26837,9 +24822,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 		minAxisx = (int)0;
 		HX_STACK_LINE(2702)
 		minAxisy = (int)0;
-		HX_STACK_LINE(2703)
-		{
-		}
 		HX_STACK_LINE(2711)
 		{
 		}
@@ -26854,9 +24836,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 		minPosx = (int)0;
 		HX_STACK_LINE(2724)
 		minPosy = (int)0;
-		HX_STACK_LINE(2725)
-		{
-		}
 		HX_STACK_LINE(2733)
 		{
 		}
@@ -26904,17 +24883,11 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 					HX_STACK_LINE(2753)
 					if (((delta != (int)0))){
 						HX_STACK_LINE(2753)
-						{
-						}
-						HX_STACK_LINE(2753)
 						_this->sweepTime = (int)0;
 						HX_STACK_LINE(2753)
 						{
 							HX_STACK_LINE(2753)
 							Float t = delta;		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(2753)
-							{
-							}
 							HX_STACK_LINE(2753)
 							hx::AddEq(_this->posx,(_this->velx * t));
 							HX_STACK_LINE(2753)
@@ -26932,9 +24905,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 								_this->axisx = ::Math_obj::sin(_this->rot);
 								HX_STACK_LINE(2753)
 								_this->axisy = ::Math_obj::cos(_this->rot);
-								HX_STACK_LINE(2753)
-								{
-								}
 								HX_STACK_LINE(2753)
 								Dynamic();
 							}
@@ -26960,9 +24930,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 					HX_STACK_LINE(2754)
 					::zpp_nape::phys::ZPP_Body _this = ((  (((s->zpp_inner->body != null()))) ? ::nape::phys::Body(s->zpp_inner->body->outer) : ::nape::phys::Body(null()) ))->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					::zpp_nape::shape::ZPP_Shape s1 = s->zpp_inner;		HX_STACK_VAR(s1,"s1");
-					HX_STACK_LINE(2754)
-					{
-					}
 					HX_STACK_LINE(2754)
 					if (((s1->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 						HX_STACK_LINE(2754)
@@ -27082,9 +25049,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 					minAxisx = toi->axis->x;
 					HX_STACK_LINE(2764)
 					minAxisy = toi->axis->y;
-					HX_STACK_LINE(2765)
-					{
-					}
 					HX_STACK_LINE(2773)
 					{
 					}
@@ -27095,9 +25059,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 					minPosx = toi->c2->x;
 					HX_STACK_LINE(2784)
 					minPosy = toi->c2->y;
-					HX_STACK_LINE(2785)
-					{
-					}
 					HX_STACK_LINE(2793)
 					{
 					}
@@ -27114,9 +25075,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 	{
 		HX_STACK_LINE(2808)
 		::zpp_nape::geom::ZPP_ToiEvent o = toi;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(2809)
-		{
-		}
 		HX_STACK_LINE(2818)
 		o->next = ::zpp_nape::geom::ZPP_ToiEvent_obj::zpp_pool;
 		HX_STACK_LINE(2819)
@@ -27129,17 +25087,11 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 		HX_STACK_LINE(2824)
 		if (((delta != (int)0))){
 			HX_STACK_LINE(2824)
-			{
-			}
-			HX_STACK_LINE(2824)
 			body->sweepTime = (int)0;
 			HX_STACK_LINE(2824)
 			{
 				HX_STACK_LINE(2824)
 				Float t = delta;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(2824)
-				{
-				}
 				HX_STACK_LINE(2824)
 				hx::AddEq(body->posx,(body->velx * t));
 				HX_STACK_LINE(2824)
@@ -27157,9 +25109,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 					body->axisx = ::Math_obj::sin(body->rot);
 					HX_STACK_LINE(2824)
 					body->axisy = ::Math_obj::cos(body->rot);
-					HX_STACK_LINE(2824)
-					{
-					}
 					HX_STACK_LINE(2824)
 					Dynamic();
 				}
@@ -27181,89 +25130,57 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 		}
 	}
 	HX_STACK_LINE(2825)
-	{
+	if (((shape->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
+		HX_STACK_LINE(2825)
+		shape->worldCOMx = (body->posx + (((body->axisy * shape->localCOMx) - (body->axisx * shape->localCOMy))));
+		HX_STACK_LINE(2825)
+		shape->worldCOMy = (body->posy + (((shape->localCOMx * body->axisx) + (shape->localCOMy * body->axisy))));
+	}
+	else{
+		HX_STACK_LINE(2825)
+		::zpp_nape::shape::ZPP_Polygon p = shape->polygon;		HX_STACK_VAR(p,"p");
+		HX_STACK_LINE(2825)
+		::zpp_nape::geom::ZPP_Vec2 li = p->lverts->next;		HX_STACK_VAR(li,"li");
 		HX_STACK_LINE(2825)
 		{
-		}
-		HX_STACK_LINE(2825)
-		if (((shape->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 			HX_STACK_LINE(2825)
-			shape->worldCOMx = (body->posx + (((body->axisy * shape->localCOMx) - (body->axisx * shape->localCOMy))));
+			::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
 			HX_STACK_LINE(2825)
-			shape->worldCOMy = (body->posy + (((shape->localCOMx * body->axisx) + (shape->localCOMy * body->axisy))));
-		}
-		else{
-			HX_STACK_LINE(2825)
-			::zpp_nape::shape::ZPP_Polygon p = shape->polygon;		HX_STACK_VAR(p,"p");
-			HX_STACK_LINE(2825)
-			::zpp_nape::geom::ZPP_Vec2 li = p->lverts->next;		HX_STACK_VAR(li,"li");
-			HX_STACK_LINE(2825)
-			{
+			while(((cx_ite != null()))){
 				HX_STACK_LINE(2825)
-				::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+				::zpp_nape::geom::ZPP_Vec2 g = cx_ite;		HX_STACK_VAR(g,"g");
 				HX_STACK_LINE(2825)
-				while(((cx_ite != null()))){
+				{
 					HX_STACK_LINE(2825)
-					::zpp_nape::geom::ZPP_Vec2 g = cx_ite;		HX_STACK_VAR(g,"g");
+					::zpp_nape::geom::ZPP_Vec2 l = li;		HX_STACK_VAR(l,"l");
+					HX_STACK_LINE(2825)
+					li = li->next;
 					HX_STACK_LINE(2825)
 					{
 						HX_STACK_LINE(2825)
-						::zpp_nape::geom::ZPP_Vec2 l = li;		HX_STACK_VAR(l,"l");
+						g->x = (body->posx + (((body->axisy * l->x) - (body->axisx * l->y))));
 						HX_STACK_LINE(2825)
-						li = li->next;
-						HX_STACK_LINE(2825)
-						{
-							HX_STACK_LINE(2825)
-							g->x = (body->posx + (((body->axisy * l->x) - (body->axisx * l->y))));
-							HX_STACK_LINE(2825)
-							g->y = (body->posy + (((l->x * body->axisx) + (l->y * body->axisy))));
-						}
+						g->y = (body->posy + (((l->x * body->axisx) + (l->y * body->axisy))));
 					}
-					HX_STACK_LINE(2825)
-					cx_ite = cx_ite->next;
 				}
-			}
-			HX_STACK_LINE(2825)
-			::zpp_nape::util::ZNPNode_ZPP_Edge ite = p->edges->head;		HX_STACK_VAR(ite,"ite");
-			HX_STACK_LINE(2825)
-			{
-				HX_STACK_LINE(2825)
-				::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
-				HX_STACK_LINE(2825)
-				::zpp_nape::geom::ZPP_Vec2 u = cx_ite;		HX_STACK_VAR(u,"u");
 				HX_STACK_LINE(2825)
 				cx_ite = cx_ite->next;
+			}
+		}
+		HX_STACK_LINE(2825)
+		::zpp_nape::util::ZNPNode_ZPP_Edge ite = p->edges->head;		HX_STACK_VAR(ite,"ite");
+		HX_STACK_LINE(2825)
+		{
+			HX_STACK_LINE(2825)
+			::zpp_nape::geom::ZPP_Vec2 cx_ite = p->gverts->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+			HX_STACK_LINE(2825)
+			::zpp_nape::geom::ZPP_Vec2 u = cx_ite;		HX_STACK_VAR(u,"u");
+			HX_STACK_LINE(2825)
+			cx_ite = cx_ite->next;
+			HX_STACK_LINE(2825)
+			while(((cx_ite != null()))){
 				HX_STACK_LINE(2825)
-				while(((cx_ite != null()))){
-					HX_STACK_LINE(2825)
-					::zpp_nape::geom::ZPP_Vec2 v = cx_ite;		HX_STACK_VAR(v,"v");
-					HX_STACK_LINE(2825)
-					{
-						HX_STACK_LINE(2825)
-						::zpp_nape::shape::ZPP_Edge e = ite->elt;		HX_STACK_VAR(e,"e");
-						HX_STACK_LINE(2825)
-						ite = ite->next;
-						HX_STACK_LINE(2825)
-						{
-							HX_STACK_LINE(2825)
-							e->gnormx = ((body->axisy * e->lnormx) - (body->axisx * e->lnormy));
-							HX_STACK_LINE(2825)
-							e->gnormy = ((e->lnormx * body->axisx) + (e->lnormy * body->axisy));
-						}
-						HX_STACK_LINE(2825)
-						e->gprojection = (((body->posx * e->gnormx) + (body->posy * e->gnormy)) + e->lprojection);
-						HX_STACK_LINE(2825)
-						e->tp0 = ((u->y * e->gnormx) - (u->x * e->gnormy));
-						HX_STACK_LINE(2825)
-						e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
-					}
-					HX_STACK_LINE(2825)
-					u = v;
-					HX_STACK_LINE(2825)
-					cx_ite = cx_ite->next;
-				}
-				HX_STACK_LINE(2825)
-				::zpp_nape::geom::ZPP_Vec2 v = p->gverts->next;		HX_STACK_VAR(v,"v");
+				::zpp_nape::geom::ZPP_Vec2 v = cx_ite;		HX_STACK_VAR(v,"v");
 				HX_STACK_LINE(2825)
 				{
 					HX_STACK_LINE(2825)
@@ -27284,6 +25201,32 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 					HX_STACK_LINE(2825)
 					e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
 				}
+				HX_STACK_LINE(2825)
+				u = v;
+				HX_STACK_LINE(2825)
+				cx_ite = cx_ite->next;
+			}
+			HX_STACK_LINE(2825)
+			::zpp_nape::geom::ZPP_Vec2 v = p->gverts->next;		HX_STACK_VAR(v,"v");
+			HX_STACK_LINE(2825)
+			{
+				HX_STACK_LINE(2825)
+				::zpp_nape::shape::ZPP_Edge e = ite->elt;		HX_STACK_VAR(e,"e");
+				HX_STACK_LINE(2825)
+				ite = ite->next;
+				HX_STACK_LINE(2825)
+				{
+					HX_STACK_LINE(2825)
+					e->gnormx = ((body->axisy * e->lnormx) - (body->axisx * e->lnormy));
+					HX_STACK_LINE(2825)
+					e->gnormy = ((e->lnormx * body->axisx) + (e->lnormy * body->axisy));
+				}
+				HX_STACK_LINE(2825)
+				e->gprojection = (((body->posx * e->gnormx) + (body->posy * e->gnormy)) + e->lprojection);
+				HX_STACK_LINE(2825)
+				e->tp0 = ((u->y * e->gnormx) - (u->x * e->gnormy));
+				HX_STACK_LINE(2825)
+				e->tp1 = ((v->y * e->gnormx) - (v->x * e->gnormy));
 			}
 		}
 	}
@@ -27363,9 +25306,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 										HX_STACK_LINE(2827)
 										{
 										}
-										HX_STACK_LINE(2827)
-										{
-										}
 									}
 									HX_STACK_LINE(2827)
 									return ret1;
@@ -27394,7 +25334,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(2827)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(2827)
 								_this->_isimmutable();
 							}
@@ -27418,7 +25358,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 										HX_STACK_LINE(2827)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(2827)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(2827)
 											_this->_validate();
 										}
@@ -27443,7 +25383,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 										HX_STACK_LINE(2827)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(2827)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(2827)
 											_this->_validate();
 										}
@@ -27465,16 +25405,13 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 								HX_STACK_LINE(2827)
 								{
 								}
-								HX_STACK_LINE(2827)
-								{
-								}
 							}
 							HX_STACK_LINE(2827)
 							{
 								HX_STACK_LINE(2827)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(2827)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(2827)
 									_this->_invalidate(_this);
 								}
@@ -27563,9 +25500,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 										HX_STACK_LINE(2827)
 										{
 										}
-										HX_STACK_LINE(2827)
-										{
-										}
 									}
 									HX_STACK_LINE(2827)
 									return ret1;
@@ -27594,7 +25528,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(2827)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(2827)
 								_this->_isimmutable();
 							}
@@ -27618,7 +25552,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 										HX_STACK_LINE(2827)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(2827)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(2827)
 											_this->_validate();
 										}
@@ -27643,7 +25577,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 										HX_STACK_LINE(2827)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(2827)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(2827)
 											_this->_validate();
 										}
@@ -27665,16 +25599,13 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Space_obj,prepareCast,(void))
 								HX_STACK_LINE(2827)
 								{
 								}
-								HX_STACK_LINE(2827)
-								{
-								}
 							}
 							HX_STACK_LINE(2827)
 							{
 								HX_STACK_LINE(2827)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(2827)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(2827)
 									_this->_invalidate(_this);
 								}
@@ -27782,7 +25713,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_Space_obj,shapesInShape,return )
 					HX_STACK_LINE(2597)
 					::zpp_nape::geom::ZPP_Vec2 _this = pos->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(2597)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(2597)
 						_this->_validate();
 					}
@@ -27807,7 +25738,7 @@ HX_DEFINE_DYNAMIC_FUNC4(ZPP_Space_obj,shapesInShape,return )
 					HX_STACK_LINE(2597)
 					::zpp_nape::geom::ZPP_Vec2 _this = pos->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(2597)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(2597)
 						_this->_validate();
 					}
@@ -27847,7 +25778,7 @@ HX_DEFINE_DYNAMIC_FUNC5(ZPP_Space_obj,bodiesInCircle,return )
 					HX_STACK_LINE(2594)
 					::zpp_nape::geom::ZPP_Vec2 _this = pos->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(2594)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(2594)
 						_this->_validate();
 					}
@@ -27872,7 +25803,7 @@ HX_DEFINE_DYNAMIC_FUNC5(ZPP_Space_obj,bodiesInCircle,return )
 					HX_STACK_LINE(2594)
 					::zpp_nape::geom::ZPP_Vec2 _this = pos->zpp_inner;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(2594)
-					if (((_this->_validate_dyn() != null()))){
+					if (((_this->_validate != null()))){
 						HX_STACK_LINE(2594)
 						_this->_validate();
 					}
@@ -27961,14 +25892,8 @@ int flag = __o_flag.Default(-1);
 			{
 				HX_STACK_LINE(2442)
 				::zpp_nape::phys::ZPP_Body o = body;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2443)
-				{
-				}
 				HX_STACK_LINE(2451)
 				if ((!(o->world))){
-					HX_STACK_LINE(2452)
-					{
-					}
 					HX_STACK_LINE(2460)
 					o->component->waket = (this->stamp + ((  ((this->midstep)) ? int((int)0) : int((int)1) )));
 					HX_STACK_LINE(2461)
@@ -27983,12 +25908,6 @@ int flag = __o_flag.Default(-1);
 					}
 				}
 			}
-			HX_STACK_LINE(2467)
-			{
-			}
-			HX_STACK_LINE(2475)
-			{
-			}
 			HX_STACK_LINE(2483)
 			this->staticsleep->remove(body);
 			HX_STACK_LINE(2484)
@@ -28002,14 +25921,8 @@ int flag = __o_flag.Default(-1);
 				{
 					HX_STACK_LINE(2496)
 					::zpp_nape::phys::ZPP_Body o = body;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2497)
-					{
-					}
 					HX_STACK_LINE(2505)
 					if ((!(o->world))){
-						HX_STACK_LINE(2506)
-						{
-						}
 						HX_STACK_LINE(2514)
 						o->component->waket = (this->stamp + ((  ((this->midstep)) ? int((int)0) : int((int)1) )));
 						HX_STACK_LINE(2515)
@@ -28040,14 +25953,8 @@ int flag = __o_flag.Default(-1);
 				{
 					HX_STACK_LINE(2534)
 					::zpp_nape::phys::ZPP_Body o = body;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2535)
-					{
-					}
 					HX_STACK_LINE(2543)
 					if ((!(o->world))){
-						HX_STACK_LINE(2544)
-						{
-						}
 						HX_STACK_LINE(2552)
 						o->component->waket = (this->stamp + ((  ((this->midstep)) ? int((int)0) : int((int)1) )));
 						HX_STACK_LINE(2553)
@@ -28105,23 +26012,14 @@ int flag = __o_flag.Default(-1);
 		body->space = hx::ObjectPtr<OBJ_>(this);
 		HX_STACK_LINE(2360)
 		body->addedToSpace();
-		HX_STACK_LINE(2361)
-		{
-		}
 		HX_STACK_LINE(2369)
 		body->component->sleeping = true;
 		HX_STACK_LINE(2370)
 		{
 			HX_STACK_LINE(2371)
 			::zpp_nape::phys::ZPP_Body o = body;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(2372)
-			{
-			}
 			HX_STACK_LINE(2380)
 			if ((!(o->world))){
-				HX_STACK_LINE(2381)
-				{
-				}
 				HX_STACK_LINE(2389)
 				o->component->waket = (this->stamp + ((  ((this->midstep)) ? int((int)0) : int((int)1) )));
 				HX_STACK_LINE(2390)
@@ -28146,9 +26044,6 @@ int flag = __o_flag.Default(-1);
 				::zpp_nape::shape::ZPP_Shape shape = cx_ite->elt;		HX_STACK_VAR(shape,"shape");
 				HX_STACK_LINE(2400)
 				{
-					HX_STACK_LINE(2400)
-					{
-					}
 					HX_STACK_LINE(2400)
 					this->bphase->insert(shape);
 					HX_STACK_LINE(2400)
@@ -28338,9 +26233,6 @@ Void ZPP_Space_obj::addConstraint( ::zpp_nape::constraint::ZPP_Constraint con){
 		con->addedToSpace();
 		HX_STACK_LINE(2281)
 		if ((con->active)){
-			HX_STACK_LINE(2282)
-			{
-			}
 			HX_STACK_LINE(2290)
 			con->component->sleeping = true;
 			HX_STACK_LINE(2291)
@@ -28411,123 +26303,107 @@ bool deleting = __o_deleting.Default(false);
 												::zpp_nape::callbacks::ZPP_CbSet cb1 = i1->cbSet;		HX_STACK_VAR(cb1,"cb1");
 												HX_STACK_LINE(2160)
 												::zpp_nape::callbacks::ZPP_CbSet cb2 = i2->cbSet;		HX_STACK_VAR(cb2,"cb2");
-												HX_STACK_LINE(2161)
-												{
-												}
 												HX_STACK_LINE(2169)
 												cb1->validate();
 												HX_STACK_LINE(2170)
 												cb2->validate();
 												struct _Function_11_1{
-													inline static bool Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
+													inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
 														HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2171);
 														{
 															HX_STACK_LINE(2171)
+															::zpp_nape::callbacks::ZPP_CbSetPair ret = null();		HX_STACK_VAR(ret,"ret");
+															HX_STACK_LINE(2171)
+															::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
+															HX_STACK_LINE(2171)
 															{
+																HX_STACK_LINE(2171)
+																::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite3 = pairs->head;		HX_STACK_VAR(cx_ite3,"cx_ite3");
+																HX_STACK_LINE(2171)
+																while(((cx_ite3 != null()))){
+																	HX_STACK_LINE(2171)
+																	::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite3->elt;		HX_STACK_VAR(p,"p");
+																	HX_STACK_LINE(2171)
+																	if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
+																		HX_STACK_LINE(2171)
+																		ret = p;
+																		HX_STACK_LINE(2171)
+																		break;
+																	}
+																	HX_STACK_LINE(2171)
+																	cx_ite3 = cx_ite3->next;
+																}
 															}
-															struct _Function_12_1{
-																inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																	HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2171);
-																	{
-																		HX_STACK_LINE(2171)
-																		::zpp_nape::callbacks::ZPP_CbSetPair ret = null();		HX_STACK_VAR(ret,"ret");
-																		HX_STACK_LINE(2171)
-																		::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
-																		HX_STACK_LINE(2171)
+															HX_STACK_LINE(2171)
+															if (((ret == null()))){
+																struct _Function_13_1{
+																	inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
+																		HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2171);
 																		{
 																			HX_STACK_LINE(2171)
-																			::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite3 = pairs->head;		HX_STACK_VAR(cx_ite3,"cx_ite3");
+																			::zpp_nape::callbacks::ZPP_CbSetPair ret1;		HX_STACK_VAR(ret1,"ret1");
 																			HX_STACK_LINE(2171)
-																			while(((cx_ite3 != null()))){
+																			{
 																				HX_STACK_LINE(2171)
-																				::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite3->elt;		HX_STACK_VAR(p,"p");
-																				HX_STACK_LINE(2171)
-																				if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
+																				if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
 																					HX_STACK_LINE(2171)
-																					ret = p;
+																					ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
+																				}
+																				else{
 																					HX_STACK_LINE(2171)
-																					break;
+																					ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
+																					HX_STACK_LINE(2171)
+																					::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret1->next;
+																					HX_STACK_LINE(2171)
+																					ret1->next = null();
 																				}
 																				HX_STACK_LINE(2171)
-																				cx_ite3 = cx_ite3->next;
+																				ret1->zip_listeners = true;
 																			}
-																		}
-																		HX_STACK_LINE(2171)
-																		if (((ret == null()))){
-																			struct _Function_14_1{
-																				inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2171);
-																					{
-																						HX_STACK_LINE(2171)
-																						::zpp_nape::callbacks::ZPP_CbSetPair ret1;		HX_STACK_VAR(ret1,"ret1");
-																						HX_STACK_LINE(2171)
-																						{
-																							HX_STACK_LINE(2171)
-																							if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
-																								HX_STACK_LINE(2171)
-																								ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
-																							}
-																							else{
-																								HX_STACK_LINE(2171)
-																								ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
-																								HX_STACK_LINE(2171)
-																								::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret1->next;
-																								HX_STACK_LINE(2171)
-																								ret1->next = null();
-																							}
-																							HX_STACK_LINE(2171)
-																							ret1->zip_listeners = true;
-																						}
-																						HX_STACK_LINE(2171)
-																						if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
-																							HX_STACK_LINE(2171)
-																							ret1->a = cb1;
-																							HX_STACK_LINE(2171)
-																							ret1->b = cb2;
-																						}
-																						else{
-																							HX_STACK_LINE(2171)
-																							ret1->a = cb2;
-																							HX_STACK_LINE(2171)
-																							ret1->b = cb1;
-																						}
-																						HX_STACK_LINE(2171)
-																						return ret1;
-																					}
-																					return null();
-																				}
-																			};
 																			HX_STACK_LINE(2171)
-																			ret = _Function_14_1::Block(cb1,cb2);
-																			HX_STACK_LINE(2171)
-																			cb1->cbpairs->add(ret);
-																			HX_STACK_LINE(2171)
-																			if (((cb2 != cb1))){
+																			if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
 																				HX_STACK_LINE(2171)
-																				cb2->cbpairs->add(ret);
+																				ret1->a = cb1;
+																				HX_STACK_LINE(2171)
+																				ret1->b = cb2;
 																			}
-																		}
-																		HX_STACK_LINE(2171)
-																		if ((ret->zip_listeners)){
+																			else{
+																				HX_STACK_LINE(2171)
+																				ret1->a = cb2;
+																				HX_STACK_LINE(2171)
+																				ret1->b = cb1;
+																			}
 																			HX_STACK_LINE(2171)
-																			ret->zip_listeners = false;
-																			HX_STACK_LINE(2171)
-																			ret->__validate();
+																			return ret1;
 																		}
-																		HX_STACK_LINE(2171)
-																		return ret;
+																		return null();
 																	}
-																	return null();
+																};
+																HX_STACK_LINE(2171)
+																ret = _Function_13_1::Block(cb2,cb1);
+																HX_STACK_LINE(2171)
+																cb1->cbpairs->add(ret);
+																HX_STACK_LINE(2171)
+																if (((cb2 != cb1))){
+																	HX_STACK_LINE(2171)
+																	cb2->cbpairs->add(ret);
 																}
-															};
+															}
 															HX_STACK_LINE(2171)
-															return ((_Function_12_1::Block(cb1,cb2))->listeners->head == null());
+															if ((ret->zip_listeners)){
+																HX_STACK_LINE(2171)
+																ret->zip_listeners = false;
+																HX_STACK_LINE(2171)
+																ret->__validate();
+															}
+															HX_STACK_LINE(2171)
+															return ret;
 														}
 														return null();
 													}
 												};
 												HX_STACK_LINE(2171)
-												if ((_Function_11_1::Block(cb1,cb2))){
+												if ((((_Function_11_1::Block(cb2,cb1))->listeners->head == null()))){
 													HX_STACK_LINE(2172)
 													cx_ite2 = cx_ite2->next;
 													HX_STACK_LINE(2173)
@@ -28535,9 +26411,6 @@ bool deleting = __o_deleting.Default(false);
 												}
 												HX_STACK_LINE(2175)
 												::zpp_nape::space::ZPP_CallbackSet callbackset = ::zpp_nape::phys::ZPP_Interactor_obj::get(i1,i2);		HX_STACK_VAR(callbackset,"callbackset");
-												HX_STACK_LINE(2176)
-												{
-												}
 												HX_STACK_LINE(2184)
 												callbackset->remove_arb(xarb);
 												HX_STACK_LINE(2185)
@@ -28548,173 +26421,167 @@ bool deleting = __o_deleting.Default(false);
 													int event = ::zpp_nape::util::ZPP_Flags_obj::id_CbEvent_END;		HX_STACK_VAR(event,"event");
 													HX_STACK_LINE(2186)
 													{
-														HX_STACK_LINE(2186)
-														{
-														}
-														HX_STACK_LINE(2186)
-														{
-															struct _Function_14_1{
-																inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																	HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2186);
+														struct _Function_13_1{
+															inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
+																HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2186);
+																{
+																	HX_STACK_LINE(2186)
+																	::zpp_nape::callbacks::ZPP_CbSetPair ret = null();		HX_STACK_VAR(ret,"ret");
+																	HX_STACK_LINE(2186)
+																	::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
+																	HX_STACK_LINE(2186)
 																	{
 																		HX_STACK_LINE(2186)
-																		::zpp_nape::callbacks::ZPP_CbSetPair ret = null();		HX_STACK_VAR(ret,"ret");
+																		::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite3 = pairs->head;		HX_STACK_VAR(cx_ite3,"cx_ite3");
 																		HX_STACK_LINE(2186)
-																		::zpp_nape::util::ZNPList_ZPP_CbSetPair pairs = (  (((cb1->cbpairs->length < cb2->cbpairs->length))) ? ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb1->cbpairs) : ::zpp_nape::util::ZNPList_ZPP_CbSetPair(cb2->cbpairs) );		HX_STACK_VAR(pairs,"pairs");
-																		HX_STACK_LINE(2186)
-																		{
+																		while(((cx_ite3 != null()))){
 																			HX_STACK_LINE(2186)
-																			::zpp_nape::util::ZNPNode_ZPP_CbSetPair cx_ite3 = pairs->head;		HX_STACK_VAR(cx_ite3,"cx_ite3");
+																			::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite3->elt;		HX_STACK_VAR(p,"p");
 																			HX_STACK_LINE(2186)
-																			while(((cx_ite3 != null()))){
+																			if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
 																				HX_STACK_LINE(2186)
-																				::zpp_nape::callbacks::ZPP_CbSetPair p = cx_ite3->elt;		HX_STACK_VAR(p,"p");
+																				ret = p;
 																				HX_STACK_LINE(2186)
-																				if (((bool((bool((p->a == cb1)) && bool((p->b == cb2)))) || bool((bool((p->a == cb2)) && bool((p->b == cb1))))))){
-																					HX_STACK_LINE(2186)
-																					ret = p;
-																					HX_STACK_LINE(2186)
-																					break;
-																				}
-																				HX_STACK_LINE(2186)
-																				cx_ite3 = cx_ite3->next;
+																				break;
 																			}
+																			HX_STACK_LINE(2186)
+																			cx_ite3 = cx_ite3->next;
 																		}
-																		HX_STACK_LINE(2186)
-																		if (((ret == null()))){
-																			struct _Function_16_1{
-																				inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb1,::zpp_nape::callbacks::ZPP_CbSet &cb2){
-																					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2186);
+																	}
+																	HX_STACK_LINE(2186)
+																	if (((ret == null()))){
+																		struct _Function_15_1{
+																			inline static ::zpp_nape::callbacks::ZPP_CbSetPair Block( ::zpp_nape::callbacks::ZPP_CbSet &cb2,::zpp_nape::callbacks::ZPP_CbSet &cb1){
+																				HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2186);
+																				{
+																					HX_STACK_LINE(2186)
+																					::zpp_nape::callbacks::ZPP_CbSetPair ret1;		HX_STACK_VAR(ret1,"ret1");
+																					HX_STACK_LINE(2186)
 																					{
 																						HX_STACK_LINE(2186)
-																						::zpp_nape::callbacks::ZPP_CbSetPair ret1;		HX_STACK_VAR(ret1,"ret1");
-																						HX_STACK_LINE(2186)
-																						{
+																						if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
 																							HX_STACK_LINE(2186)
-																							if (((::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool == null()))){
-																								HX_STACK_LINE(2186)
-																								ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
-																							}
-																							else{
-																								HX_STACK_LINE(2186)
-																								ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
-																								HX_STACK_LINE(2186)
-																								::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret1->next;
-																								HX_STACK_LINE(2186)
-																								ret1->next = null();
-																							}
-																							HX_STACK_LINE(2186)
-																							ret1->zip_listeners = true;
-																						}
-																						HX_STACK_LINE(2186)
-																						if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
-																							HX_STACK_LINE(2186)
-																							ret1->a = cb1;
-																							HX_STACK_LINE(2186)
-																							ret1->b = cb2;
+																							ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::__new();
 																						}
 																						else{
 																							HX_STACK_LINE(2186)
-																							ret1->a = cb2;
+																							ret1 = ::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool;
 																							HX_STACK_LINE(2186)
-																							ret1->b = cb1;
+																							::zpp_nape::callbacks::ZPP_CbSetPair_obj::zpp_pool = ret1->next;
+																							HX_STACK_LINE(2186)
+																							ret1->next = null();
 																						}
 																						HX_STACK_LINE(2186)
-																						return ret1;
+																						ret1->zip_listeners = true;
 																					}
-																					return null();
+																					HX_STACK_LINE(2186)
+																					if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(cb1,cb2))){
+																						HX_STACK_LINE(2186)
+																						ret1->a = cb1;
+																						HX_STACK_LINE(2186)
+																						ret1->b = cb2;
+																					}
+																					else{
+																						HX_STACK_LINE(2186)
+																						ret1->a = cb2;
+																						HX_STACK_LINE(2186)
+																						ret1->b = cb1;
+																					}
+																					HX_STACK_LINE(2186)
+																					return ret1;
 																				}
-																			};
-																			HX_STACK_LINE(2186)
-																			ret = _Function_16_1::Block(cb1,cb2);
-																			HX_STACK_LINE(2186)
-																			cb1->cbpairs->add(ret);
-																			HX_STACK_LINE(2186)
-																			if (((cb2 != cb1))){
-																				HX_STACK_LINE(2186)
-																				cb2->cbpairs->add(ret);
+																				return null();
 																			}
-																		}
+																		};
 																		HX_STACK_LINE(2186)
-																		if ((ret->zip_listeners)){
-																			HX_STACK_LINE(2186)
-																			ret->zip_listeners = false;
-																			HX_STACK_LINE(2186)
-																			ret->__validate();
-																		}
+																		ret = _Function_15_1::Block(cb2,cb1);
 																		HX_STACK_LINE(2186)
-																		return ret;
+																		cb1->cbpairs->add(ret);
+																		HX_STACK_LINE(2186)
+																		if (((cb2 != cb1))){
+																			HX_STACK_LINE(2186)
+																			cb2->cbpairs->add(ret);
+																		}
 																	}
-																	return null();
-																}
-															};
-															HX_STACK_LINE(2186)
-															::zpp_nape::util::ZNPNode_ZPP_InteractionListener cx_ite3 = (_Function_14_1::Block(cb1,cb2))->listeners->head;		HX_STACK_VAR(cx_ite3,"cx_ite3");
-															HX_STACK_LINE(2186)
-															while(((cx_ite3 != null()))){
-																HX_STACK_LINE(2186)
-																::zpp_nape::callbacks::ZPP_InteractionListener x = cx_ite3->elt;		HX_STACK_VAR(x,"x");
-																HX_STACK_LINE(2186)
-																if (((x->event == event))){
 																	HX_STACK_LINE(2186)
-																	if (((bool((((int(x->itype) & int(xarb->type))) != (int)0)) && bool(callbackset->empty_arb(x->itype))))){
+																	if ((ret->zip_listeners)){
 																		HX_STACK_LINE(2186)
-																		::zpp_nape::callbacks::ZPP_Callback cb = _g->push_callback(x);		HX_STACK_VAR(cb,"cb");
+																		ret->zip_listeners = false;
 																		HX_STACK_LINE(2186)
-																		cb->event = ::zpp_nape::util::ZPP_Flags_obj::id_CbEvent_END;
-																		HX_STACK_LINE(2186)
-																		{
-																			HX_STACK_LINE(2186)
-																			::zpp_nape::phys::ZPP_Interactor o1 = callbackset->int1;		HX_STACK_VAR(o1,"o1");
-																			HX_STACK_LINE(2186)
-																			::zpp_nape::phys::ZPP_Interactor o2 = callbackset->int2;		HX_STACK_VAR(o2,"o2");
-																			struct _Function_18_1{
-																				inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x,::zpp_nape::phys::ZPP_Interactor &o1){
-																					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2186);
-																					{
-																						HX_STACK_LINE(2186)
-																						::zpp_nape::callbacks::ZPP_OptionType _this = x->options1;		HX_STACK_VAR(_this,"_this");
-																						::zpp_nape::util::ZNPList_ZPP_CbType xs = o1->cbTypes;		HX_STACK_VAR(xs,"xs");
-																						HX_STACK_LINE(2186)
-																						return (bool(_this->nonemptyintersection(xs,_this->includes)) && bool(!(_this->nonemptyintersection(xs,_this->excludes))));
-																					}
-																					return null();
-																				}
-																			};
-																			struct _Function_18_2{
-																				inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x,::zpp_nape::phys::ZPP_Interactor &o2){
-																					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2186);
-																					{
-																						HX_STACK_LINE(2186)
-																						::zpp_nape::callbacks::ZPP_OptionType _this = x->options2;		HX_STACK_VAR(_this,"_this");
-																						::zpp_nape::util::ZNPList_ZPP_CbType xs = o2->cbTypes;		HX_STACK_VAR(xs,"xs");
-																						HX_STACK_LINE(2186)
-																						return (bool(_this->nonemptyintersection(xs,_this->includes)) && bool(!(_this->nonemptyintersection(xs,_this->excludes))));
-																					}
-																					return null();
-																				}
-																			};
-																			HX_STACK_LINE(2186)
-																			if (((bool(_Function_18_1::Block(x,o1)) && bool(_Function_18_2::Block(x,o2))))){
-																				HX_STACK_LINE(2186)
-																				cb->int1 = o1;
-																				HX_STACK_LINE(2186)
-																				cb->int2 = o2;
-																			}
-																			else{
-																				HX_STACK_LINE(2186)
-																				cb->int1 = o2;
-																				HX_STACK_LINE(2186)
-																				cb->int2 = o1;
-																			}
-																		}
-																		HX_STACK_LINE(2186)
-																		cb->set = callbackset;
+																		ret->__validate();
 																	}
+																	HX_STACK_LINE(2186)
+																	return ret;
 																}
-																HX_STACK_LINE(2186)
-																cx_ite3 = cx_ite3->next;
+																return null();
 															}
+														};
+														HX_STACK_LINE(2186)
+														::zpp_nape::util::ZNPNode_ZPP_InteractionListener cx_ite3 = (_Function_13_1::Block(cb2,cb1))->listeners->head;		HX_STACK_VAR(cx_ite3,"cx_ite3");
+														HX_STACK_LINE(2186)
+														while(((cx_ite3 != null()))){
+															HX_STACK_LINE(2186)
+															::zpp_nape::callbacks::ZPP_InteractionListener x = cx_ite3->elt;		HX_STACK_VAR(x,"x");
+															HX_STACK_LINE(2186)
+															if (((x->event == event))){
+																HX_STACK_LINE(2186)
+																if (((bool((((int(x->itype) & int(xarb->type))) != (int)0)) && bool(callbackset->empty_arb(x->itype))))){
+																	HX_STACK_LINE(2186)
+																	::zpp_nape::callbacks::ZPP_Callback cb = _g->push_callback(x);		HX_STACK_VAR(cb,"cb");
+																	HX_STACK_LINE(2186)
+																	cb->event = ::zpp_nape::util::ZPP_Flags_obj::id_CbEvent_END;
+																	HX_STACK_LINE(2186)
+																	{
+																		HX_STACK_LINE(2186)
+																		::zpp_nape::phys::ZPP_Interactor o1 = callbackset->int1;		HX_STACK_VAR(o1,"o1");
+																		HX_STACK_LINE(2186)
+																		::zpp_nape::phys::ZPP_Interactor o2 = callbackset->int2;		HX_STACK_VAR(o2,"o2");
+																		struct _Function_17_1{
+																			inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x,::zpp_nape::phys::ZPP_Interactor &o1){
+																				HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2186);
+																				{
+																					HX_STACK_LINE(2186)
+																					::zpp_nape::callbacks::ZPP_OptionType _this = x->options1;		HX_STACK_VAR(_this,"_this");
+																					::zpp_nape::util::ZNPList_ZPP_CbType xs = o1->cbTypes;		HX_STACK_VAR(xs,"xs");
+																					HX_STACK_LINE(2186)
+																					return (bool(_this->nonemptyintersection(xs,_this->includes)) && bool(!(_this->nonemptyintersection(xs,_this->excludes))));
+																				}
+																				return null();
+																			}
+																		};
+																		struct _Function_17_2{
+																			inline static bool Block( ::zpp_nape::callbacks::ZPP_InteractionListener &x,::zpp_nape::phys::ZPP_Interactor &o2){
+																				HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2186);
+																				{
+																					HX_STACK_LINE(2186)
+																					::zpp_nape::callbacks::ZPP_OptionType _this = x->options2;		HX_STACK_VAR(_this,"_this");
+																					::zpp_nape::util::ZNPList_ZPP_CbType xs = o2->cbTypes;		HX_STACK_VAR(xs,"xs");
+																					HX_STACK_LINE(2186)
+																					return (bool(_this->nonemptyintersection(xs,_this->includes)) && bool(!(_this->nonemptyintersection(xs,_this->excludes))));
+																				}
+																				return null();
+																			}
+																		};
+																		HX_STACK_LINE(2186)
+																		if (((bool(_Function_17_1::Block(x,o1)) && bool(_Function_17_2::Block(x,o2))))){
+																			HX_STACK_LINE(2186)
+																			cb->int1 = o1;
+																			HX_STACK_LINE(2186)
+																			cb->int2 = o2;
+																		}
+																		else{
+																			HX_STACK_LINE(2186)
+																			cb->int1 = o2;
+																			HX_STACK_LINE(2186)
+																			cb->int2 = o1;
+																		}
+																	}
+																	HX_STACK_LINE(2186)
+																	cb->set = callbackset;
+																}
+															}
+															HX_STACK_LINE(2186)
+															cx_ite3 = cx_ite3->next;
 														}
 													}
 												}
@@ -28740,14 +26607,8 @@ bool deleting = __o_deleting.Default(false);
 						if (((bool((xarb->b1 != body)) && bool((xarb->b1->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC))))){
 							HX_STACK_LINE(2215)
 							::zpp_nape::phys::ZPP_Body o = xarb->b1;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(2216)
-							{
-							}
 							HX_STACK_LINE(2224)
 							if ((!(o->world))){
-								HX_STACK_LINE(2225)
-								{
-								}
 								HX_STACK_LINE(2233)
 								o->component->waket = (this->stamp + ((  ((this->midstep)) ? int((int)0) : int((int)1) )));
 								HX_STACK_LINE(2234)
@@ -28766,14 +26627,8 @@ bool deleting = __o_deleting.Default(false);
 						if (((bool((xarb->b2 != body)) && bool((xarb->b2->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_DYNAMIC))))){
 							HX_STACK_LINE(2241)
 							::zpp_nape::phys::ZPP_Body o = xarb->b2;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(2242)
-							{
-							}
 							HX_STACK_LINE(2250)
 							if ((!(o->world))){
-								HX_STACK_LINE(2251)
-								{
-								}
 								HX_STACK_LINE(2259)
 								o->component->waket = (this->stamp + ((  ((this->midstep)) ? int((int)0) : int((int)1) )));
 								HX_STACK_LINE(2260)
@@ -28791,9 +26646,6 @@ bool deleting = __o_deleting.Default(false);
 						HX_STACK_LINE(2266)
 						{
 							HX_STACK_LINE(2266)
-							{
-							}
-							HX_STACK_LINE(2266)
 							xarb->cleared = true;
 							HX_STACK_LINE(2266)
 							if (((bool((body == null())) || bool((xarb->b2 == body))))){
@@ -28801,12 +26653,6 @@ bool deleting = __o_deleting.Default(false);
 								::zpp_nape::util::ZNPList_ZPP_Arbiter _this = xarb->b1->arbiters;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(2266)
 								{
-								}
-								HX_STACK_LINE(2266)
-								{
-									HX_STACK_LINE(2266)
-									{
-									}
 									HX_STACK_LINE(2266)
 									::zpp_nape::util::ZNPNode_ZPP_Arbiter pre1 = null();		HX_STACK_VAR(pre1,"pre1");
 									HX_STACK_LINE(2266)
@@ -28819,9 +26665,6 @@ bool deleting = __o_deleting.Default(false);
 										if (((cur->elt == xarb))){
 											HX_STACK_LINE(2266)
 											{
-												HX_STACK_LINE(2266)
-												{
-												}
 												HX_STACK_LINE(2266)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 												HX_STACK_LINE(2266)
@@ -28855,14 +26698,8 @@ bool deleting = __o_deleting.Default(false);
 												}
 												HX_STACK_LINE(2266)
 												{
-												}
-												HX_STACK_LINE(2266)
-												{
 													HX_STACK_LINE(2266)
 													::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-													HX_STACK_LINE(2266)
-													{
-													}
 													HX_STACK_LINE(2266)
 													o->elt = null();
 													HX_STACK_LINE(2266)
@@ -28899,12 +26736,6 @@ bool deleting = __o_deleting.Default(false);
 								::zpp_nape::util::ZNPList_ZPP_Arbiter _this = xarb->b2->arbiters;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(2266)
 								{
-								}
-								HX_STACK_LINE(2266)
-								{
-									HX_STACK_LINE(2266)
-									{
-									}
 									HX_STACK_LINE(2266)
 									::zpp_nape::util::ZNPNode_ZPP_Arbiter pre1 = null();		HX_STACK_VAR(pre1,"pre1");
 									HX_STACK_LINE(2266)
@@ -28917,9 +26748,6 @@ bool deleting = __o_deleting.Default(false);
 										if (((cur->elt == xarb))){
 											HX_STACK_LINE(2266)
 											{
-												HX_STACK_LINE(2266)
-												{
-												}
 												HX_STACK_LINE(2266)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 												HX_STACK_LINE(2266)
@@ -28953,14 +26781,8 @@ bool deleting = __o_deleting.Default(false);
 												}
 												HX_STACK_LINE(2266)
 												{
-												}
-												HX_STACK_LINE(2266)
-												{
 													HX_STACK_LINE(2266)
 													::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-													HX_STACK_LINE(2266)
-													{
-													}
 													HX_STACK_LINE(2266)
 													o->elt = null();
 													HX_STACK_LINE(2266)
@@ -29037,14 +26859,8 @@ bool dontwake = __o_dontwake.Default(false);
 		if ((!(dontwake))){
 			HX_STACK_LINE(2105)
 			::zpp_nape::phys::ZPP_Body o = s->body;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(2106)
-			{
-			}
 			HX_STACK_LINE(2114)
 			if ((!(o->world))){
-				HX_STACK_LINE(2115)
-				{
-				}
 				HX_STACK_LINE(2123)
 				o->component->waket = (this->stamp + ((  ((this->midstep)) ? int((int)0) : int((int)1) )));
 				HX_STACK_LINE(2124)
@@ -29080,14 +26896,8 @@ Void ZPP_Space_obj::transmitType( ::zpp_nape::phys::ZPP_Body p,int new_type){
 		{
 			HX_STACK_LINE(2035)
 			::zpp_nape::phys::ZPP_Body o = p;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(2036)
-			{
-			}
 			HX_STACK_LINE(2044)
 			if ((!(o->world))){
-				HX_STACK_LINE(2045)
-				{
-				}
 				HX_STACK_LINE(2053)
 				o->component->waket = (this->stamp + ((  ((this->midstep)) ? int((int)0) : int((int)1) )));
 				HX_STACK_LINE(2054)
@@ -29141,14 +26951,8 @@ Void ZPP_Space_obj::transmitType( ::zpp_nape::phys::ZPP_Body p,int new_type){
 		{
 			HX_STACK_LINE(2075)
 			::zpp_nape::phys::ZPP_Body o = p;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(2076)
-			{
-			}
 			HX_STACK_LINE(2084)
 			if ((!(o->world))){
-				HX_STACK_LINE(2085)
-				{
-				}
 				HX_STACK_LINE(2093)
 				o->component->waket = (this->stamp + ((  ((this->midstep)) ? int((int)0) : int((int)1) )));
 				HX_STACK_LINE(2094)
@@ -29183,12 +26987,6 @@ Void ZPP_Space_obj::remove_callbackset( ::zpp_nape::space::ZPP_CallbackSet cb){
 			::zpp_nape::util::ZNPList_ZPP_CallbackSet _this = cb->int1->cbsets;		HX_STACK_VAR(_this,"_this");
 			HX_STACK_LINE(2030)
 			{
-			}
-			HX_STACK_LINE(2030)
-			{
-				HX_STACK_LINE(2030)
-				{
-				}
 				HX_STACK_LINE(2030)
 				::zpp_nape::util::ZNPNode_ZPP_CallbackSet pre = null();		HX_STACK_VAR(pre,"pre");
 				HX_STACK_LINE(2030)
@@ -29201,9 +26999,6 @@ Void ZPP_Space_obj::remove_callbackset( ::zpp_nape::space::ZPP_CallbackSet cb){
 					if (((cur->elt == cb))){
 						HX_STACK_LINE(2030)
 						{
-							HX_STACK_LINE(2030)
-							{
-							}
 							HX_STACK_LINE(2030)
 							::zpp_nape::util::ZNPNode_ZPP_CallbackSet old;		HX_STACK_VAR(old,"old");
 							HX_STACK_LINE(2030)
@@ -29237,14 +27032,8 @@ Void ZPP_Space_obj::remove_callbackset( ::zpp_nape::space::ZPP_CallbackSet cb){
 							}
 							HX_STACK_LINE(2030)
 							{
-							}
-							HX_STACK_LINE(2030)
-							{
 								HX_STACK_LINE(2030)
 								::zpp_nape::util::ZNPNode_ZPP_CallbackSet o = old;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(2030)
-								{
-								}
 								HX_STACK_LINE(2030)
 								o->elt = null();
 								HX_STACK_LINE(2030)
@@ -29281,12 +27070,6 @@ Void ZPP_Space_obj::remove_callbackset( ::zpp_nape::space::ZPP_CallbackSet cb){
 			::zpp_nape::util::ZNPList_ZPP_CallbackSet _this = cb->int2->cbsets;		HX_STACK_VAR(_this,"_this");
 			HX_STACK_LINE(2031)
 			{
-			}
-			HX_STACK_LINE(2031)
-			{
-				HX_STACK_LINE(2031)
-				{
-				}
 				HX_STACK_LINE(2031)
 				::zpp_nape::util::ZNPNode_ZPP_CallbackSet pre = null();		HX_STACK_VAR(pre,"pre");
 				HX_STACK_LINE(2031)
@@ -29299,9 +27082,6 @@ Void ZPP_Space_obj::remove_callbackset( ::zpp_nape::space::ZPP_CallbackSet cb){
 					if (((cur->elt == cb))){
 						HX_STACK_LINE(2031)
 						{
-							HX_STACK_LINE(2031)
-							{
-							}
 							HX_STACK_LINE(2031)
 							::zpp_nape::util::ZNPNode_ZPP_CallbackSet old;		HX_STACK_VAR(old,"old");
 							HX_STACK_LINE(2031)
@@ -29335,14 +27115,8 @@ Void ZPP_Space_obj::remove_callbackset( ::zpp_nape::space::ZPP_CallbackSet cb){
 							}
 							HX_STACK_LINE(2031)
 							{
-							}
-							HX_STACK_LINE(2031)
-							{
 								HX_STACK_LINE(2031)
 								::zpp_nape::util::ZNPNode_ZPP_CallbackSet o = old;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(2031)
-								{
-								}
 								HX_STACK_LINE(2031)
 								o->elt = null();
 								HX_STACK_LINE(2031)
@@ -29385,16 +27159,10 @@ Void ZPP_Space_obj::add_callbackset( ::zpp_nape::space::ZPP_CallbackSet cb){
 		HX_STACK_PUSH("ZPP_Space::add_callbackset","zpp_nape/space/Space.hx",2015);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(cb,"cb");
-		HX_STACK_LINE(2016)
-		{
-		}
 		HX_STACK_LINE(2024)
 		{
 			HX_STACK_LINE(2024)
 			::zpp_nape::util::ZNPList_ZPP_CallbackSet _this = cb->int1->cbsets;		HX_STACK_VAR(_this,"_this");
-			HX_STACK_LINE(2024)
-			{
-			}
 			struct _Function_2_1{
 				inline static ::zpp_nape::util::ZNPNode_ZPP_CallbackSet Block( ::zpp_nape::space::ZPP_CallbackSet &cb){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2024);
@@ -29444,9 +27212,6 @@ Void ZPP_Space_obj::add_callbackset( ::zpp_nape::space::ZPP_CallbackSet cb){
 		{
 			HX_STACK_LINE(2025)
 			::zpp_nape::util::ZNPList_ZPP_CallbackSet _this = cb->int2->cbsets;		HX_STACK_VAR(_this,"_this");
-			HX_STACK_LINE(2025)
-			{
-			}
 			struct _Function_2_1{
 				inline static ::zpp_nape::util::ZNPNode_ZPP_CallbackSet Block( ::zpp_nape::space::ZPP_CallbackSet &cb){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2025);
@@ -29496,9 +27261,6 @@ Void ZPP_Space_obj::add_callbackset( ::zpp_nape::space::ZPP_CallbackSet cb){
 		{
 			HX_STACK_LINE(2026)
 			::zpp_nape::space::ZPP_CallbackSet _this = this->callbackset_list;		HX_STACK_VAR(_this,"_this");
-			HX_STACK_LINE(2026)
-			{
-			}
 			struct _Function_2_1{
 				inline static ::zpp_nape::space::ZPP_CallbackSet Block( ::zpp_nape::space::ZPP_CallbackSet &cb){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",2026);
@@ -29863,9 +27625,6 @@ Void ZPP_Space_obj::clear( ){
 				{
 					HX_STACK_LINE(1569)
 					::zpp_nape::space::ZPP_CallbackSet o = c;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(1570)
-					{
-					}
 					HX_STACK_LINE(1578)
 					{
 						HX_STACK_LINE(1578)
@@ -29893,18 +27652,6 @@ Void ZPP_Space_obj::clear( ){
 				HX_STACK_LINE(1591)
 				{
 					HX_STACK_LINE(1591)
-					{
-					}
-					HX_STACK_LINE(1591)
-					{
-					}
-					HX_STACK_LINE(1591)
-					{
-					}
-					HX_STACK_LINE(1591)
-					{
-					}
-					HX_STACK_LINE(1591)
 					if ((!(arb->cleared))){
 						HX_STACK_LINE(1591)
 						{
@@ -29912,12 +27659,6 @@ Void ZPP_Space_obj::clear( ){
 							::zpp_nape::util::ZNPList_ZPP_Arbiter _this = arb->b1->arbiters;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1591)
 							{
-							}
-							HX_STACK_LINE(1591)
-							{
-								HX_STACK_LINE(1591)
-								{
-								}
 								HX_STACK_LINE(1591)
 								::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 								HX_STACK_LINE(1591)
@@ -29930,9 +27671,6 @@ Void ZPP_Space_obj::clear( ){
 									if (((cur->elt == arb))){
 										HX_STACK_LINE(1591)
 										{
-											HX_STACK_LINE(1591)
-											{
-											}
 											HX_STACK_LINE(1591)
 											::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 											HX_STACK_LINE(1591)
@@ -29966,14 +27704,8 @@ Void ZPP_Space_obj::clear( ){
 											}
 											HX_STACK_LINE(1591)
 											{
-											}
-											HX_STACK_LINE(1591)
-											{
 												HX_STACK_LINE(1591)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-												HX_STACK_LINE(1591)
-												{
-												}
 												HX_STACK_LINE(1591)
 												o->elt = null();
 												HX_STACK_LINE(1591)
@@ -30010,12 +27742,6 @@ Void ZPP_Space_obj::clear( ){
 							::zpp_nape::util::ZNPList_ZPP_Arbiter _this = arb->b2->arbiters;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1591)
 							{
-							}
-							HX_STACK_LINE(1591)
-							{
-								HX_STACK_LINE(1591)
-								{
-								}
 								HX_STACK_LINE(1591)
 								::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 								HX_STACK_LINE(1591)
@@ -30028,9 +27754,6 @@ Void ZPP_Space_obj::clear( ){
 									if (((cur->elt == arb))){
 										HX_STACK_LINE(1591)
 										{
-											HX_STACK_LINE(1591)
-											{
-											}
 											HX_STACK_LINE(1591)
 											::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 											HX_STACK_LINE(1591)
@@ -30064,14 +27787,8 @@ Void ZPP_Space_obj::clear( ){
 											}
 											HX_STACK_LINE(1591)
 											{
-											}
-											HX_STACK_LINE(1591)
-											{
 												HX_STACK_LINE(1591)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-												HX_STACK_LINE(1591)
-												{
-												}
 												HX_STACK_LINE(1591)
 												o->elt = null();
 												HX_STACK_LINE(1591)
@@ -30128,9 +27845,6 @@ Void ZPP_Space_obj::clear( ){
 									HX_STACK_LINE(1591)
 									::zpp_nape::dynamics::ZPP_Contact _this = arb->contacts;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(1591)
-									{
-									}
-									HX_STACK_LINE(1591)
 									::zpp_nape::dynamics::ZPP_Contact ret = _this->next;		HX_STACK_VAR(ret,"ret");
 									HX_STACK_LINE(1591)
 									_this->pop();
@@ -30143,9 +27857,6 @@ Void ZPP_Space_obj::clear( ){
 						HX_STACK_LINE(1591)
 						::zpp_nape::dynamics::ZPP_Contact o = _Function_5_1::Block(arb);		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(1591)
-						{
-						}
-						HX_STACK_LINE(1591)
 						o->arbiter = null();
 						HX_STACK_LINE(1591)
 						o->next = ::zpp_nape::dynamics::ZPP_Contact_obj::zpp_pool;
@@ -30157,17 +27868,11 @@ Void ZPP_Space_obj::clear( ){
 						HX_STACK_LINE(1591)
 						::zpp_nape::dynamics::ZPP_IContact _this = arb->innards;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(1591)
-						{
-						}
-						HX_STACK_LINE(1591)
 						::zpp_nape::dynamics::ZPP_IContact ret = _this->next;		HX_STACK_VAR(ret,"ret");
 						HX_STACK_LINE(1591)
 						_this->next = ret->next;
 						HX_STACK_LINE(1591)
 						ret->_inuse = false;
-						HX_STACK_LINE(1591)
-						{
-						}
 						HX_STACK_LINE(1591)
 						if (((_this->next == null()))){
 							HX_STACK_LINE(1591)
@@ -30185,15 +27890,6 @@ Void ZPP_Space_obj::clear( ){
 					::zpp_nape::dynamics::ZPP_ColArbiter o = arb;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(1591)
 					{
-					}
-					HX_STACK_LINE(1591)
-					{
-						HX_STACK_LINE(1591)
-						{
-						}
-						HX_STACK_LINE(1591)
-						{
-						}
 						HX_STACK_LINE(1591)
 						o->userdef_dyn_fric = false;
 						HX_STACK_LINE(1591)
@@ -30223,18 +27919,6 @@ Void ZPP_Space_obj::clear( ){
 				HX_STACK_LINE(1597)
 				{
 					HX_STACK_LINE(1597)
-					{
-					}
-					HX_STACK_LINE(1597)
-					{
-					}
-					HX_STACK_LINE(1597)
-					{
-					}
-					HX_STACK_LINE(1597)
-					{
-					}
-					HX_STACK_LINE(1597)
 					if ((!(arb->cleared))){
 						HX_STACK_LINE(1597)
 						{
@@ -30242,12 +27926,6 @@ Void ZPP_Space_obj::clear( ){
 							::zpp_nape::util::ZNPList_ZPP_Arbiter _this = arb->b1->arbiters;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1597)
 							{
-							}
-							HX_STACK_LINE(1597)
-							{
-								HX_STACK_LINE(1597)
-								{
-								}
 								HX_STACK_LINE(1597)
 								::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 								HX_STACK_LINE(1597)
@@ -30260,9 +27938,6 @@ Void ZPP_Space_obj::clear( ){
 									if (((cur->elt == arb))){
 										HX_STACK_LINE(1597)
 										{
-											HX_STACK_LINE(1597)
-											{
-											}
 											HX_STACK_LINE(1597)
 											::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 											HX_STACK_LINE(1597)
@@ -30296,14 +27971,8 @@ Void ZPP_Space_obj::clear( ){
 											}
 											HX_STACK_LINE(1597)
 											{
-											}
-											HX_STACK_LINE(1597)
-											{
 												HX_STACK_LINE(1597)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-												HX_STACK_LINE(1597)
-												{
-												}
 												HX_STACK_LINE(1597)
 												o->elt = null();
 												HX_STACK_LINE(1597)
@@ -30340,12 +28009,6 @@ Void ZPP_Space_obj::clear( ){
 							::zpp_nape::util::ZNPList_ZPP_Arbiter _this = arb->b2->arbiters;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1597)
 							{
-							}
-							HX_STACK_LINE(1597)
-							{
-								HX_STACK_LINE(1597)
-								{
-								}
 								HX_STACK_LINE(1597)
 								::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 								HX_STACK_LINE(1597)
@@ -30358,9 +28021,6 @@ Void ZPP_Space_obj::clear( ){
 									if (((cur->elt == arb))){
 										HX_STACK_LINE(1597)
 										{
-											HX_STACK_LINE(1597)
-											{
-											}
 											HX_STACK_LINE(1597)
 											::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 											HX_STACK_LINE(1597)
@@ -30394,14 +28054,8 @@ Void ZPP_Space_obj::clear( ){
 											}
 											HX_STACK_LINE(1597)
 											{
-											}
-											HX_STACK_LINE(1597)
-											{
 												HX_STACK_LINE(1597)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-												HX_STACK_LINE(1597)
-												{
-												}
 												HX_STACK_LINE(1597)
 												o->elt = null();
 												HX_STACK_LINE(1597)
@@ -30458,9 +28112,6 @@ Void ZPP_Space_obj::clear( ){
 									HX_STACK_LINE(1597)
 									::zpp_nape::dynamics::ZPP_Contact _this = arb->contacts;		HX_STACK_VAR(_this,"_this");
 									HX_STACK_LINE(1597)
-									{
-									}
-									HX_STACK_LINE(1597)
 									::zpp_nape::dynamics::ZPP_Contact ret = _this->next;		HX_STACK_VAR(ret,"ret");
 									HX_STACK_LINE(1597)
 									_this->pop();
@@ -30473,9 +28124,6 @@ Void ZPP_Space_obj::clear( ){
 						HX_STACK_LINE(1597)
 						::zpp_nape::dynamics::ZPP_Contact o = _Function_5_1::Block(arb);		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(1597)
-						{
-						}
-						HX_STACK_LINE(1597)
 						o->arbiter = null();
 						HX_STACK_LINE(1597)
 						o->next = ::zpp_nape::dynamics::ZPP_Contact_obj::zpp_pool;
@@ -30487,17 +28135,11 @@ Void ZPP_Space_obj::clear( ){
 						HX_STACK_LINE(1597)
 						::zpp_nape::dynamics::ZPP_IContact _this = arb->innards;		HX_STACK_VAR(_this,"_this");
 						HX_STACK_LINE(1597)
-						{
-						}
-						HX_STACK_LINE(1597)
 						::zpp_nape::dynamics::ZPP_IContact ret = _this->next;		HX_STACK_VAR(ret,"ret");
 						HX_STACK_LINE(1597)
 						_this->next = ret->next;
 						HX_STACK_LINE(1597)
 						ret->_inuse = false;
-						HX_STACK_LINE(1597)
-						{
-						}
 						HX_STACK_LINE(1597)
 						if (((_this->next == null()))){
 							HX_STACK_LINE(1597)
@@ -30515,15 +28157,6 @@ Void ZPP_Space_obj::clear( ){
 					::zpp_nape::dynamics::ZPP_ColArbiter o = arb;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(1597)
 					{
-					}
-					HX_STACK_LINE(1597)
-					{
-						HX_STACK_LINE(1597)
-						{
-						}
-						HX_STACK_LINE(1597)
-						{
-						}
 						HX_STACK_LINE(1597)
 						o->userdef_dyn_fric = false;
 						HX_STACK_LINE(1597)
@@ -30553,18 +28186,6 @@ Void ZPP_Space_obj::clear( ){
 				HX_STACK_LINE(1603)
 				{
 					HX_STACK_LINE(1603)
-					{
-					}
-					HX_STACK_LINE(1603)
-					{
-					}
-					HX_STACK_LINE(1603)
-					{
-					}
-					HX_STACK_LINE(1603)
-					{
-					}
-					HX_STACK_LINE(1603)
 					if ((!(arb->cleared))){
 						HX_STACK_LINE(1603)
 						{
@@ -30572,12 +28193,6 @@ Void ZPP_Space_obj::clear( ){
 							::zpp_nape::util::ZNPList_ZPP_Arbiter _this = arb->b1->arbiters;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1603)
 							{
-							}
-							HX_STACK_LINE(1603)
-							{
-								HX_STACK_LINE(1603)
-								{
-								}
 								HX_STACK_LINE(1603)
 								::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 								HX_STACK_LINE(1603)
@@ -30590,9 +28205,6 @@ Void ZPP_Space_obj::clear( ){
 									if (((cur->elt == arb))){
 										HX_STACK_LINE(1603)
 										{
-											HX_STACK_LINE(1603)
-											{
-											}
 											HX_STACK_LINE(1603)
 											::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 											HX_STACK_LINE(1603)
@@ -30626,14 +28238,8 @@ Void ZPP_Space_obj::clear( ){
 											}
 											HX_STACK_LINE(1603)
 											{
-											}
-											HX_STACK_LINE(1603)
-											{
 												HX_STACK_LINE(1603)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-												HX_STACK_LINE(1603)
-												{
-												}
 												HX_STACK_LINE(1603)
 												o->elt = null();
 												HX_STACK_LINE(1603)
@@ -30670,12 +28276,6 @@ Void ZPP_Space_obj::clear( ){
 							::zpp_nape::util::ZNPList_ZPP_Arbiter _this = arb->b2->arbiters;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1603)
 							{
-							}
-							HX_STACK_LINE(1603)
-							{
-								HX_STACK_LINE(1603)
-								{
-								}
 								HX_STACK_LINE(1603)
 								::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 								HX_STACK_LINE(1603)
@@ -30688,9 +28288,6 @@ Void ZPP_Space_obj::clear( ){
 									if (((cur->elt == arb))){
 										HX_STACK_LINE(1603)
 										{
-											HX_STACK_LINE(1603)
-											{
-											}
 											HX_STACK_LINE(1603)
 											::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 											HX_STACK_LINE(1603)
@@ -30724,14 +28321,8 @@ Void ZPP_Space_obj::clear( ){
 											}
 											HX_STACK_LINE(1603)
 											{
-											}
-											HX_STACK_LINE(1603)
-											{
 												HX_STACK_LINE(1603)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-												HX_STACK_LINE(1603)
-												{
-												}
 												HX_STACK_LINE(1603)
 												o->elt = null();
 												HX_STACK_LINE(1603)
@@ -30782,9 +28373,6 @@ Void ZPP_Space_obj::clear( ){
 					HX_STACK_LINE(1603)
 					::zpp_nape::dynamics::ZPP_SensorArbiter o = arb;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(1603)
-					{
-					}
-					HX_STACK_LINE(1603)
 					o->next = ::zpp_nape::dynamics::ZPP_SensorArbiter_obj::zpp_pool;
 					HX_STACK_LINE(1603)
 					::zpp_nape::dynamics::ZPP_SensorArbiter_obj::zpp_pool = o;
@@ -30800,18 +28388,6 @@ Void ZPP_Space_obj::clear( ){
 				HX_STACK_LINE(1609)
 				{
 					HX_STACK_LINE(1609)
-					{
-					}
-					HX_STACK_LINE(1609)
-					{
-					}
-					HX_STACK_LINE(1609)
-					{
-					}
-					HX_STACK_LINE(1609)
-					{
-					}
-					HX_STACK_LINE(1609)
 					if ((!(arb->cleared))){
 						HX_STACK_LINE(1609)
 						{
@@ -30819,12 +28395,6 @@ Void ZPP_Space_obj::clear( ){
 							::zpp_nape::util::ZNPList_ZPP_Arbiter _this = arb->b1->arbiters;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1609)
 							{
-							}
-							HX_STACK_LINE(1609)
-							{
-								HX_STACK_LINE(1609)
-								{
-								}
 								HX_STACK_LINE(1609)
 								::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 								HX_STACK_LINE(1609)
@@ -30837,9 +28407,6 @@ Void ZPP_Space_obj::clear( ){
 									if (((cur->elt == arb))){
 										HX_STACK_LINE(1609)
 										{
-											HX_STACK_LINE(1609)
-											{
-											}
 											HX_STACK_LINE(1609)
 											::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 											HX_STACK_LINE(1609)
@@ -30873,14 +28440,8 @@ Void ZPP_Space_obj::clear( ){
 											}
 											HX_STACK_LINE(1609)
 											{
-											}
-											HX_STACK_LINE(1609)
-											{
 												HX_STACK_LINE(1609)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-												HX_STACK_LINE(1609)
-												{
-												}
 												HX_STACK_LINE(1609)
 												o->elt = null();
 												HX_STACK_LINE(1609)
@@ -30917,12 +28478,6 @@ Void ZPP_Space_obj::clear( ){
 							::zpp_nape::util::ZNPList_ZPP_Arbiter _this = arb->b2->arbiters;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(1609)
 							{
-							}
-							HX_STACK_LINE(1609)
-							{
-								HX_STACK_LINE(1609)
-								{
-								}
 								HX_STACK_LINE(1609)
 								::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 								HX_STACK_LINE(1609)
@@ -30935,9 +28490,6 @@ Void ZPP_Space_obj::clear( ){
 									if (((cur->elt == arb))){
 										HX_STACK_LINE(1609)
 										{
-											HX_STACK_LINE(1609)
-											{
-											}
 											HX_STACK_LINE(1609)
 											::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 											HX_STACK_LINE(1609)
@@ -30971,14 +28523,8 @@ Void ZPP_Space_obj::clear( ){
 											}
 											HX_STACK_LINE(1609)
 											{
-											}
-											HX_STACK_LINE(1609)
-											{
 												HX_STACK_LINE(1609)
 												::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-												HX_STACK_LINE(1609)
-												{
-												}
 												HX_STACK_LINE(1609)
 												o->elt = null();
 												HX_STACK_LINE(1609)
@@ -31029,9 +28575,6 @@ Void ZPP_Space_obj::clear( ){
 					HX_STACK_LINE(1609)
 					::zpp_nape::dynamics::ZPP_FluidArbiter o = arb;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(1609)
-					{
-					}
-					HX_STACK_LINE(1609)
 					o->next = ::zpp_nape::dynamics::ZPP_FluidArbiter_obj::zpp_pool;
 					HX_STACK_LINE(1609)
 					::zpp_nape::dynamics::ZPP_FluidArbiter_obj::zpp_pool = o;
@@ -31074,9 +28617,6 @@ Void ZPP_Space_obj::clear( ){
 						{
 							HX_STACK_LINE(1628)
 							::zpp_nape::space::ZPP_Island o = i;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(1629)
-							{
-							}
 							HX_STACK_LINE(1638)
 							o->next = ::zpp_nape::space::ZPP_Island_obj::zpp_pool;
 							HX_STACK_LINE(1639)
@@ -31122,9 +28662,6 @@ Void ZPP_Space_obj::clear( ){
 						{
 							HX_STACK_LINE(1667)
 							::zpp_nape::space::ZPP_Island o = i;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(1668)
-							{
-							}
 							HX_STACK_LINE(1677)
 							o->next = ::zpp_nape::space::ZPP_Island_obj::zpp_pool;
 							HX_STACK_LINE(1678)
@@ -31193,9 +28730,6 @@ Void ZPP_Space_obj::clear( ){
 								{
 									HX_STACK_LINE(1719)
 									::zpp_nape::space::ZPP_Island o = i;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1720)
-									{
-									}
 									HX_STACK_LINE(1729)
 									o->next = ::zpp_nape::space::ZPP_Island_obj::zpp_pool;
 									HX_STACK_LINE(1730)
@@ -31248,9 +28782,6 @@ Void ZPP_Space_obj::clear( ){
 								{
 									HX_STACK_LINE(1760)
 									::zpp_nape::space::ZPP_Island o = i;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1761)
-									{
-									}
 									HX_STACK_LINE(1770)
 									o->next = ::zpp_nape::space::ZPP_Island_obj::zpp_pool;
 									HX_STACK_LINE(1771)
@@ -31281,9 +28812,6 @@ Void ZPP_Space_obj::clear( ){
 					cx_ite = cx_ite->next;
 				}
 			}
-		}
-		HX_STACK_LINE(1794)
-		{
 		}
 		HX_STACK_LINE(1802)
 		this->staticsleep->clear();
@@ -31318,9 +28846,6 @@ Void ZPP_Space_obj::gravity_validate( ){
 		this->wrap_gravity->zpp_inner->x = this->gravityx;
 		HX_STACK_LINE(1505)
 		this->wrap_gravity->zpp_inner->y = this->gravityy;
-		HX_STACK_LINE(1506)
-		{
-		}
 		HX_STACK_LINE(1514)
 		{
 		}
@@ -31347,9 +28872,6 @@ Void ZPP_Space_obj::gravity_invalidate( ::zpp_nape::geom::ZPP_Vec2 x){
 			this->gravityx = x->x;
 			HX_STACK_LINE(1397)
 			this->gravityy = x->y;
-			HX_STACK_LINE(1398)
-			{
-			}
 			HX_STACK_LINE(1406)
 			{
 			}
@@ -31368,14 +28890,8 @@ Void ZPP_Space_obj::gravity_invalidate( ::zpp_nape::geom::ZPP_Vec2 x){
 				{
 					HX_STACK_LINE(1421)
 					::zpp_nape::phys::ZPP_Body o = x1;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(1422)
-					{
-					}
 					HX_STACK_LINE(1430)
 					if ((!(o->world))){
-						HX_STACK_LINE(1431)
-						{
-						}
 						HX_STACK_LINE(1439)
 						o->component->waket = (this->stamp + ((  ((this->midstep)) ? int((int)0) : int((int)1) )));
 						HX_STACK_LINE(1440)
@@ -31424,14 +28940,8 @@ Void ZPP_Space_obj::gravity_invalidate( ::zpp_nape::geom::ZPP_Vec2 x){
 					{
 						HX_STACK_LINE(1464)
 						::zpp_nape::phys::ZPP_Body o = x1;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(1465)
-						{
-						}
 						HX_STACK_LINE(1473)
 						if ((!(o->world))){
-							HX_STACK_LINE(1474)
-							{
-							}
 							HX_STACK_LINE(1482)
 							o->component->waket = (this->stamp + ((  ((this->midstep)) ? int((int)0) : int((int)1) )));
 							HX_STACK_LINE(1483)
@@ -31550,9 +29060,6 @@ Void ZPP_Space_obj::getgravity( ){
 										HX_STACK_LINE(1386)
 										{
 										}
-										HX_STACK_LINE(1386)
-										{
-										}
 									}
 									HX_STACK_LINE(1386)
 									return ret1;
@@ -31581,7 +29088,7 @@ Void ZPP_Space_obj::getgravity( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(1386)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(1386)
 								_this->_isimmutable();
 							}
@@ -31605,7 +29112,7 @@ Void ZPP_Space_obj::getgravity( ){
 										HX_STACK_LINE(1386)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1386)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1386)
 											_this->_validate();
 										}
@@ -31630,7 +29137,7 @@ Void ZPP_Space_obj::getgravity( ){
 										HX_STACK_LINE(1386)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(1386)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(1386)
 											_this->_validate();
 										}
@@ -31652,16 +29159,13 @@ Void ZPP_Space_obj::getgravity( ){
 								HX_STACK_LINE(1386)
 								{
 								}
-								HX_STACK_LINE(1386)
-								{
-								}
 							}
 							HX_STACK_LINE(1386)
 							{
 								HX_STACK_LINE(1386)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(1386)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(1386)
 									_this->_invalidate(_this);
 								}
@@ -32225,7 +29729,7 @@ Class ZPP_Space_obj::__mClass;
 
 void ZPP_Space_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_Space"), hx::TCanCast< ZPP_Space_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_Space"), hx::TCanCast< ZPP_Space_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

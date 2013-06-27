@@ -118,9 +118,6 @@ Dynamic Edge_obj::__Create(hx::DynamicArray inArgs)
 									HX_STACK_LINE(328)
 									_this1->axisy = ::Math_obj::cos(_this1->rot);
 									HX_STACK_LINE(328)
-									{
-									}
-									HX_STACK_LINE(328)
 									Dynamic();
 								}
 							}
@@ -147,9 +144,6 @@ Dynamic Edge_obj::__Create(hx::DynamicArray inArgs)
 											_this1->axisx = ::Math_obj::sin(_this1->rot);
 											HX_STACK_LINE(328)
 											_this1->axisy = ::Math_obj::cos(_this1->rot);
-											HX_STACK_LINE(328)
-											{
-											}
 											HX_STACK_LINE(328)
 											Dynamic();
 										}
@@ -227,9 +221,6 @@ Dynamic Edge_obj::__Create(hx::DynamicArray inArgs)
 										HX_STACK_LINE(328)
 										{
 										}
-										HX_STACK_LINE(328)
-										{
-										}
 									}
 									HX_STACK_LINE(328)
 									e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -268,9 +259,6 @@ Dynamic Edge_obj::__Create(hx::DynamicArray inArgs)
 									e->wrap_gnorm->zpp_inner->x = e->gnormx;
 									HX_STACK_LINE(328)
 									e->wrap_gnorm->zpp_inner->y = e->gnormy;
-									HX_STACK_LINE(328)
-									{
-									}
 									HX_STACK_LINE(328)
 									{
 									}
@@ -330,9 +318,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Edge_obj,toString,return )
 							HX_STACK_LINE(315)
 							_this1->axisy = ::Math_obj::cos(_this1->rot);
 							HX_STACK_LINE(315)
-							{
-							}
-							HX_STACK_LINE(315)
 							Dynamic();
 						}
 					}
@@ -359,9 +344,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Edge_obj,toString,return )
 									_this1->axisx = ::Math_obj::sin(_this1->rot);
 									HX_STACK_LINE(315)
 									_this1->axisy = ::Math_obj::cos(_this1->rot);
-									HX_STACK_LINE(315)
-									{
-									}
 									HX_STACK_LINE(315)
 									Dynamic();
 								}
@@ -439,9 +421,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Edge_obj,toString,return )
 								HX_STACK_LINE(315)
 								{
 								}
-								HX_STACK_LINE(315)
-								{
-								}
 							}
 							HX_STACK_LINE(315)
 							e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -483,9 +462,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Edge_obj,toString,return )
 							HX_STACK_LINE(315)
 							{
 							}
-							HX_STACK_LINE(315)
-							{
-							}
 						}
 						HX_STACK_LINE(315)
 						e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -510,9 +486,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Edge_obj,toString,return )
 					{
 						HX_STACK_LINE(316)
 						::zpp_nape::geom::ZPP_Vec2 o = _this->outer->zpp_inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(316)
-						{
-						}
 						HX_STACK_LINE(316)
 						{
 							HX_STACK_LINE(316)
@@ -585,9 +558,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Edge_obj,get_worldVertex2,return )
 							HX_STACK_LINE(303)
 							_this1->axisy = ::Math_obj::cos(_this1->rot);
 							HX_STACK_LINE(303)
-							{
-							}
-							HX_STACK_LINE(303)
 							Dynamic();
 						}
 					}
@@ -614,9 +584,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Edge_obj,get_worldVertex2,return )
 									_this1->axisx = ::Math_obj::sin(_this1->rot);
 									HX_STACK_LINE(303)
 									_this1->axisy = ::Math_obj::cos(_this1->rot);
-									HX_STACK_LINE(303)
-									{
-									}
 									HX_STACK_LINE(303)
 									Dynamic();
 								}
@@ -694,9 +661,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Edge_obj,get_worldVertex2,return )
 								HX_STACK_LINE(303)
 								{
 								}
-								HX_STACK_LINE(303)
-								{
-								}
 							}
 							HX_STACK_LINE(303)
 							e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -738,9 +702,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Edge_obj,get_worldVertex2,return )
 							HX_STACK_LINE(303)
 							{
 							}
-							HX_STACK_LINE(303)
-							{
-							}
 						}
 						HX_STACK_LINE(303)
 						e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -765,9 +726,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Edge_obj,get_worldVertex2,return )
 					{
 						HX_STACK_LINE(304)
 						::zpp_nape::geom::ZPP_Vec2 o = _this->outer->zpp_inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(304)
-						{
-						}
 						HX_STACK_LINE(304)
 						{
 							HX_STACK_LINE(304)
@@ -831,9 +789,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Edge_obj,get_worldVertex1,return )
 						::zpp_nape::geom::ZPP_Vec2 o = _this->outer->zpp_inner;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(292)
 						{
-						}
-						HX_STACK_LINE(292)
-						{
 							HX_STACK_LINE(292)
 							if (((o->outer != null()))){
 								HX_STACK_LINE(292)
@@ -893,9 +848,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Edge_obj,get_localVertex2,return )
 					{
 						HX_STACK_LINE(280)
 						::zpp_nape::geom::ZPP_Vec2 o = _this->outer->zpp_inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(280)
-						{
-						}
 						HX_STACK_LINE(280)
 						{
 							HX_STACK_LINE(280)
@@ -973,9 +925,6 @@ Float Edge_obj::get_worldProjection( ){
 							HX_STACK_LINE(267)
 							_this1->axisy = ::Math_obj::cos(_this1->rot);
 							HX_STACK_LINE(267)
-							{
-							}
-							HX_STACK_LINE(267)
 							Dynamic();
 						}
 					}
@@ -1002,9 +951,6 @@ Float Edge_obj::get_worldProjection( ){
 									_this1->axisx = ::Math_obj::sin(_this1->rot);
 									HX_STACK_LINE(267)
 									_this1->axisy = ::Math_obj::cos(_this1->rot);
-									HX_STACK_LINE(267)
-									{
-									}
 									HX_STACK_LINE(267)
 									Dynamic();
 								}
@@ -1082,9 +1028,6 @@ Float Edge_obj::get_worldProjection( ){
 								HX_STACK_LINE(267)
 								{
 								}
-								HX_STACK_LINE(267)
-								{
-								}
 							}
 							HX_STACK_LINE(267)
 							e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -1123,9 +1066,6 @@ Float Edge_obj::get_worldProjection( ){
 							e->wrap_gnorm->zpp_inner->x = e->gnormx;
 							HX_STACK_LINE(267)
 							e->wrap_gnorm->zpp_inner->y = e->gnormy;
-							HX_STACK_LINE(267)
-							{
-							}
 							HX_STACK_LINE(267)
 							{
 							}
@@ -1243,32 +1183,12 @@ Edge_obj::Edge_obj()
 void Edge_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(Edge);
-	HX_MARK_MEMBER_NAME(worldVertex2,"worldVertex2");
-	HX_MARK_MEMBER_NAME(worldVertex1,"worldVertex1");
-	HX_MARK_MEMBER_NAME(localVertex2,"localVertex2");
-	HX_MARK_MEMBER_NAME(localVertex1,"localVertex1");
-	HX_MARK_MEMBER_NAME(worldProjection,"worldProjection");
-	HX_MARK_MEMBER_NAME(localProjection,"localProjection");
-	HX_MARK_MEMBER_NAME(length,"length");
-	HX_MARK_MEMBER_NAME(worldNormal,"worldNormal");
-	HX_MARK_MEMBER_NAME(localNormal,"localNormal");
-	HX_MARK_MEMBER_NAME(polygon,"polygon");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	HX_MARK_END_CLASS();
 }
 
 void Edge_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(worldVertex2,"worldVertex2");
-	HX_VISIT_MEMBER_NAME(worldVertex1,"worldVertex1");
-	HX_VISIT_MEMBER_NAME(localVertex2,"localVertex2");
-	HX_VISIT_MEMBER_NAME(localVertex1,"localVertex1");
-	HX_VISIT_MEMBER_NAME(worldProjection,"worldProjection");
-	HX_VISIT_MEMBER_NAME(localProjection,"localProjection");
-	HX_VISIT_MEMBER_NAME(length,"length");
-	HX_VISIT_MEMBER_NAME(worldNormal,"worldNormal");
-	HX_VISIT_MEMBER_NAME(localNormal,"localNormal");
-	HX_VISIT_MEMBER_NAME(polygon,"polygon");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 }
 
@@ -1276,10 +1196,10 @@ Dynamic Edge_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 6:
-		if (HX_FIELD_EQ(inName,"length") ) { return inCallProp ? get_length() : length; }
+		if (HX_FIELD_EQ(inName,"length") ) { return get_length(); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"polygon") ) { return inCallProp ? get_polygon() : polygon; }
+		if (HX_FIELD_EQ(inName,"polygon") ) { return get_polygon(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
@@ -1291,19 +1211,19 @@ Dynamic Edge_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"get_length") ) { return get_length_dyn(); }
 		break;
 	case 11:
-		if (HX_FIELD_EQ(inName,"worldNormal") ) { return inCallProp ? get_worldNormal() : worldNormal; }
-		if (HX_FIELD_EQ(inName,"localNormal") ) { return inCallProp ? get_localNormal() : localNormal; }
+		if (HX_FIELD_EQ(inName,"worldNormal") ) { return get_worldNormal(); }
+		if (HX_FIELD_EQ(inName,"localNormal") ) { return get_localNormal(); }
 		if (HX_FIELD_EQ(inName,"get_polygon") ) { return get_polygon_dyn(); }
 		break;
 	case 12:
-		if (HX_FIELD_EQ(inName,"worldVertex2") ) { return inCallProp ? get_worldVertex2() : worldVertex2; }
-		if (HX_FIELD_EQ(inName,"worldVertex1") ) { return inCallProp ? get_worldVertex1() : worldVertex1; }
-		if (HX_FIELD_EQ(inName,"localVertex2") ) { return inCallProp ? get_localVertex2() : localVertex2; }
-		if (HX_FIELD_EQ(inName,"localVertex1") ) { return inCallProp ? get_localVertex1() : localVertex1; }
+		if (HX_FIELD_EQ(inName,"worldVertex2") ) { return get_worldVertex2(); }
+		if (HX_FIELD_EQ(inName,"worldVertex1") ) { return get_worldVertex1(); }
+		if (HX_FIELD_EQ(inName,"localVertex2") ) { return get_localVertex2(); }
+		if (HX_FIELD_EQ(inName,"localVertex1") ) { return get_localVertex1(); }
 		break;
 	case 15:
-		if (HX_FIELD_EQ(inName,"worldProjection") ) { return inCallProp ? get_worldProjection() : worldProjection; }
-		if (HX_FIELD_EQ(inName,"localProjection") ) { return inCallProp ? get_localProjection() : localProjection; }
+		if (HX_FIELD_EQ(inName,"worldProjection") ) { return get_worldProjection(); }
+		if (HX_FIELD_EQ(inName,"localProjection") ) { return get_localProjection(); }
 		if (HX_FIELD_EQ(inName,"get_worldNormal") ) { return get_worldNormal_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_localNormal") ) { return get_localNormal_dyn(); }
 		break;
@@ -1323,28 +1243,8 @@ Dynamic Edge_obj::__Field(const ::String &inName,bool inCallProp)
 Dynamic Edge_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
 	switch(inName.length) {
-	case 6:
-		if (HX_FIELD_EQ(inName,"length") ) { length=inValue.Cast< Float >(); return inValue; }
-		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"polygon") ) { polygon=inValue.Cast< ::nape::shape::Polygon >(); return inValue; }
-		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::shape::ZPP_Edge >(); return inValue; }
-		break;
-	case 11:
-		if (HX_FIELD_EQ(inName,"worldNormal") ) { worldNormal=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"localNormal") ) { localNormal=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		break;
-	case 12:
-		if (HX_FIELD_EQ(inName,"worldVertex2") ) { worldVertex2=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"worldVertex1") ) { worldVertex1=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"localVertex2") ) { localVertex2=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"localVertex1") ) { localVertex1=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		break;
-	case 15:
-		if (HX_FIELD_EQ(inName,"worldProjection") ) { worldProjection=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"localProjection") ) { localProjection=inValue.Cast< Float >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -1371,25 +1271,15 @@ static ::String sStaticFields[] = {
 static ::String sMemberFields[] = {
 	HX_CSTRING("toString"),
 	HX_CSTRING("get_worldVertex2"),
-	HX_CSTRING("worldVertex2"),
 	HX_CSTRING("get_worldVertex1"),
-	HX_CSTRING("worldVertex1"),
 	HX_CSTRING("get_localVertex2"),
-	HX_CSTRING("localVertex2"),
 	HX_CSTRING("get_localVertex1"),
-	HX_CSTRING("localVertex1"),
 	HX_CSTRING("get_worldProjection"),
-	HX_CSTRING("worldProjection"),
 	HX_CSTRING("get_localProjection"),
-	HX_CSTRING("localProjection"),
 	HX_CSTRING("get_length"),
-	HX_CSTRING("length"),
 	HX_CSTRING("get_worldNormal"),
-	HX_CSTRING("worldNormal"),
 	HX_CSTRING("get_localNormal"),
-	HX_CSTRING("localNormal"),
 	HX_CSTRING("get_polygon"),
-	HX_CSTRING("polygon"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
@@ -1405,7 +1295,7 @@ Class Edge_obj::__mClass;
 
 void Edge_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.shape.Edge"), hx::TCanCast< Edge_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.shape.Edge"), hx::TCanCast< Edge_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

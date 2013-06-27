@@ -1,12 +1,12 @@
 //nme
-import nme.display.Sprite;
-import nme.Assets;
-import nme.events.Event;
-import nme.events.EventDispatcher;
-import nme.display.DisplayObject;
-import nme.display.Bitmap;
-import nme.display.BitmapData;
-import nme.geom.Point;
+import flash.display.Sprite;
+import openfl.Assets;
+import flash.events.Event;
+import flash.events.EventDispatcher;
+import flash.display.DisplayObject;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.geom.Point;
 
 //nape
 import nape.phys.Body;
@@ -21,7 +21,7 @@ class GameObject {
 	public var space:Space;
 	public var canvas:Sprite;
 	public var asset:Bitmap;
-	public var xml:Hash<Dynamic>;
+	public var xml:Map<String, Dynamic>;
 
 	public function new(xmlUrl:String):Void{
 
@@ -30,7 +30,7 @@ class GameObject {
 		canvas = Main.canvas;
 
 		//read xml
-		xml = readXml(xmlUrl);
+		readXml(xmlUrl);
 		asset = new Bitmap( Assets.getBitmapData( xml.get('img') ) );
 		xml.set('y', Mobile.getY(asset) - xml.get('y') );
 
@@ -44,28 +44,28 @@ class GameObject {
 		canvas.addChild(asset);
 	}
 
-	private function readXml(url:String):Hash<Dynamic>{
-		var p = new Hash<Dynamic>();
+	private function readXml(url:String):Void{
+
 		var xmlFile = Assets.getText(Mobile.xml + url);
 		var read = new haxe.xml.Fast( Xml.parse(xmlFile) );
 
 		var asset = read.node.asset;
-		p.set('img', Mobile.asset + asset.node.img.innerData);
+		xml.set('img', Mobile.asset + asset.node.img.innerData);
 
 		//position
-		p.set('x', asset.node.pos.att.x);
-		p.set('y', asset.node.pos.att.y);
-		p.set('rotation', asset.node.pos.att.rotation);
+		xml.set('x', asset.node.pos.att.x);
+		xml.set('y', asset.node.pos.att.y);
+		xml.set('rotation', asset.node.pos.att.rotation);
 
 		//physics
-		p.set('physics', asset.node.physics.innerData);
-		p.set('elasticity', asset.node.material.att.elasticity);
-		p.set('dynamicFriction', asset.node.material.att.dynamicFriction);
-		p.set('staticFriction', asset.node.material.att.staticFriction);
-		p.set('density', asset.node.material.att.density);
-		p.set('rollingFriction', asset.node.material.att.rollingFriction);
+		xml.set('physics', asset.node.physics.innerData);
+		xml.set('elasticity', asset.node.material.att.elasticity);
+		xml.set('dynamicFriction', asset.node.material.att.dynamicFriction);
+		xml.set('staticFriction', asset.node.material.att.staticFriction);
+		xml.set('density', asset.node.material.att.density);
+		xml.set('rollingFriction', asset.node.material.att.rollingFriction);
 
-		return p;
+
 	}
 
 	public function physicsObject(physic:String){

@@ -3,9 +3,6 @@
 #ifndef INCLUDED_Xml
 #include <Xml.h>
 #endif
-#ifndef INCLUDED_XmlType
-#include <XmlType.h>
-#endif
 #ifndef INCLUDED_haxe_xml__Fast_HasAttribAccess
 #include <haxe/xml/_Fast/HasAttribAccess.h>
 #endif
@@ -15,9 +12,9 @@ namespace _Fast{
 
 Void HasAttribAccess_obj::__construct(::Xml x)
 {
-HX_STACK_PUSH("HasAttribAccess::new","/usr/lib/haxe/std/haxe/xml/Fast.hx",69);
+HX_STACK_PUSH("HasAttribAccess::new","/usr/lib/haxe/std/haxe/xml/Fast.hx",66);
 {
-	HX_STACK_LINE(69)
+	HX_STACK_LINE(66)
 	this->__x = x;
 }
 ;
@@ -36,22 +33,6 @@ Dynamic HasAttribAccess_obj::__Create(hx::DynamicArray inArgs)
 {  hx::ObjectPtr< HasAttribAccess_obj > result = new HasAttribAccess_obj();
 	result->__construct(inArgs[0]);
 	return result;}
-
-bool HasAttribAccess_obj::resolve( ::String name){
-	HX_STACK_PUSH("HasAttribAccess::resolve","/usr/lib/haxe/std/haxe/xml/Fast.hx",73);
-	HX_STACK_THIS(this);
-	HX_STACK_ARG(name,"name");
-	HX_STACK_LINE(74)
-	if (((this->__x->nodeType == ::Xml_obj::Document))){
-		HX_STACK_LINE(75)
-		hx::Throw ((HX_CSTRING("Cannot access document attribute ") + name));
-	}
-	HX_STACK_LINE(76)
-	return this->__x->exists(name);
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(HasAttribAccess_obj,resolve,return )
 
 
 HasAttribAccess_obj::HasAttribAccess_obj()
@@ -78,9 +59,6 @@ Dynamic HasAttribAccess_obj::__Field(const ::String &inName,bool inCallProp)
 	switch(inName.length) {
 	case 3:
 		if (HX_FIELD_EQ(inName,"__x") ) { return __x; }
-		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"resolve") ) { return resolve_dyn(); }
 	}
 	HX_CHECK_DYNAMIC_GET_FIELD(inName);
 	return super::__Field(inName,inCallProp);
@@ -108,7 +86,6 @@ static ::String sStaticFields[] = {
 	String(null()) };
 
 static ::String sMemberFields[] = {
-	HX_CSTRING("resolve"),
 	HX_CSTRING("__x"),
 	String(null()) };
 
@@ -124,7 +101,7 @@ Class HasAttribAccess_obj::__mClass;
 
 void HasAttribAccess_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("haxe.xml._Fast.HasAttribAccess"), hx::TCanCast< HasAttribAccess_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("haxe.xml._Fast.HasAttribAccess"), hx::TCanCast< HasAttribAccess_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

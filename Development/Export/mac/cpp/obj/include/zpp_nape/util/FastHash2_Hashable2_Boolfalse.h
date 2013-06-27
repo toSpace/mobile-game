@@ -11,7 +11,7 @@ namespace zpp_nape{
 namespace util{
 
 
-class FastHash2_Hashable2_Boolfalse_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  FastHash2_Hashable2_Boolfalse_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef FastHash2_Hashable2_Boolfalse_obj OBJ_;
@@ -58,8 +58,8 @@ class FastHash2_Hashable2_Boolfalse_obj : public hx::Object{
 		virtual bool empty( );
 		Dynamic empty_dyn();
 
-		int cnt; /* REM */ 
-		Array< ::zpp_nape::util::Hashable2_Boolfalse > table; /* REM */ 
+		int cnt;
+		Array< ::Dynamic > table;
 };
 
 } // end namespace zpp_nape

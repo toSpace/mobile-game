@@ -10,7 +10,7 @@ namespace nape{
 namespace callbacks{
 
 
-class PreFlag_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  PreFlag_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef PreFlag_obj OBJ_;
@@ -33,19 +33,15 @@ class PreFlag_obj : public hx::Object{
 		virtual ::String toString( );
 		Dynamic toString_dyn();
 
-		static ::nape::callbacks::PreFlag ACCEPT; /* REM */ 
 		static ::nape::callbacks::PreFlag get_ACCEPT( );
 		static Dynamic get_ACCEPT_dyn();
 
-		static ::nape::callbacks::PreFlag IGNORE; /* REM */ 
 		static ::nape::callbacks::PreFlag get_IGNORE( );
 		static Dynamic get_IGNORE_dyn();
 
-		static ::nape::callbacks::PreFlag ACCEPT_ONCE; /* REM */ 
 		static ::nape::callbacks::PreFlag get_ACCEPT_ONCE( );
 		static Dynamic get_ACCEPT_ONCE_dyn();
 
-		static ::nape::callbacks::PreFlag IGNORE_ONCE; /* REM */ 
 		static ::nape::callbacks::PreFlag get_IGNORE_ONCE( );
 		static Dynamic get_IGNORE_ONCE_dyn();
 

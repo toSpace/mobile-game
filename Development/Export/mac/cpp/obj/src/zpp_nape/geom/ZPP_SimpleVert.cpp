@@ -159,9 +159,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(ZPP_SimpleVert_obj,swap_nodes,(void))
 		ret->x = x;
 		HX_STACK_LINE(267)
 		ret->y = y;
-		HX_STACK_LINE(268)
-		{
-		}
 		HX_STACK_LINE(276)
 		{
 		}
@@ -310,7 +307,7 @@ Class ZPP_SimpleVert_obj::__mClass;
 
 void ZPP_SimpleVert_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_SimpleVert"), hx::TCanCast< ZPP_SimpleVert_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_SimpleVert"), hx::TCanCast< ZPP_SimpleVert_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

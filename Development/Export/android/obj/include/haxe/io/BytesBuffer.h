@@ -11,7 +11,7 @@ namespace haxe{
 namespace io{
 
 
-class BytesBuffer_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  BytesBuffer_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef BytesBuffer_obj OBJ_;
@@ -34,16 +34,7 @@ class BytesBuffer_obj : public hx::Object{
 		virtual ::haxe::io::Bytes getBytes( );
 		Dynamic getBytes_dyn();
 
-		virtual Void addBytes( ::haxe::io::Bytes src,int pos,int len);
-		Dynamic addBytes_dyn();
-
-		virtual Void add( ::haxe::io::Bytes src);
-		Dynamic add_dyn();
-
-		virtual Void addByte( int byte);
-		Dynamic addByte_dyn();
-
-		Array< unsigned char > b; /* REM */ 
+		Array< unsigned char > b;
 };
 
 } // end namespace haxe

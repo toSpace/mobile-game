@@ -12,7 +12,7 @@ namespace nape{
 namespace dynamics{
 
 
-class InteractionFilter_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  InteractionFilter_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef InteractionFilter_obj OBJ_;
@@ -53,51 +53,43 @@ class InteractionFilter_obj : public hx::Object{
 		virtual int get_fluidMask( );
 		Dynamic get_fluidMask_dyn();
 
-		int fluidMask; /* REM */ 
 		virtual int set_fluidGroup( int fluidGroup);
 		Dynamic set_fluidGroup_dyn();
 
 		virtual int get_fluidGroup( );
 		Dynamic get_fluidGroup_dyn();
 
-		int fluidGroup; /* REM */ 
 		virtual int set_sensorMask( int sensorMask);
 		Dynamic set_sensorMask_dyn();
 
 		virtual int get_sensorMask( );
 		Dynamic get_sensorMask_dyn();
 
-		int sensorMask; /* REM */ 
 		virtual int set_sensorGroup( int sensorGroup);
 		Dynamic set_sensorGroup_dyn();
 
 		virtual int get_sensorGroup( );
 		Dynamic get_sensorGroup_dyn();
 
-		int sensorGroup; /* REM */ 
 		virtual int set_collisionMask( int collisionMask);
 		Dynamic set_collisionMask_dyn();
 
 		virtual int get_collisionMask( );
 		Dynamic get_collisionMask_dyn();
 
-		int collisionMask; /* REM */ 
 		virtual int set_collisionGroup( int collisionGroup);
 		Dynamic set_collisionGroup_dyn();
 
 		virtual int get_collisionGroup( );
 		Dynamic get_collisionGroup_dyn();
 
-		int collisionGroup; /* REM */ 
 		virtual ::nape::shape::ShapeList get_shapes( );
 		Dynamic get_shapes_dyn();
 
-		::nape::shape::ShapeList shapes; /* REM */ 
 		virtual Dynamic get_userData( );
 		Dynamic get_userData_dyn();
 
-		Dynamic userData; /* REM */ 
-		::zpp_nape::dynamics::ZPP_InteractionFilter zpp_inner; /* REM */ 
+		::zpp_nape::dynamics::ZPP_InteractionFilter zpp_inner;
 };
 
 } // end namespace nape

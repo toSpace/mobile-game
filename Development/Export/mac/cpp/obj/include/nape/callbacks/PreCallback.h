@@ -14,7 +14,7 @@ namespace nape{
 namespace callbacks{
 
 
-class PreCallback_obj : public ::nape::callbacks::Callback_obj{
+class HXCPP_CLASS_ATTRIBUTES  PreCallback_obj : public ::nape::callbacks::Callback_obj{
 	public:
 		typedef ::nape::callbacks::Callback_obj super;
 		typedef PreCallback_obj OBJ_;
@@ -39,19 +39,15 @@ class PreCallback_obj : public ::nape::callbacks::Callback_obj{
 		virtual bool get_swapped( );
 		Dynamic get_swapped_dyn();
 
-		bool swapped; /* REM */ 
 		virtual ::nape::phys::Interactor get_int2( );
 		Dynamic get_int2_dyn();
 
-		::nape::phys::Interactor int2; /* REM */ 
 		virtual ::nape::phys::Interactor get_int1( );
 		Dynamic get_int1_dyn();
 
-		::nape::phys::Interactor int1; /* REM */ 
 		virtual ::nape::dynamics::Arbiter get_arbiter( );
 		Dynamic get_arbiter_dyn();
 
-		::nape::dynamics::Arbiter arbiter; /* REM */ 
 };
 
 } // end namespace nape

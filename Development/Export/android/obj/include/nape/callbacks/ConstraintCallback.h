@@ -13,7 +13,7 @@ namespace nape{
 namespace callbacks{
 
 
-class ConstraintCallback_obj : public ::nape::callbacks::Callback_obj{
+class HXCPP_CLASS_ATTRIBUTES  ConstraintCallback_obj : public ::nape::callbacks::Callback_obj{
 	public:
 		typedef ::nape::callbacks::Callback_obj super;
 		typedef ConstraintCallback_obj OBJ_;
@@ -38,7 +38,6 @@ class ConstraintCallback_obj : public ::nape::callbacks::Callback_obj{
 		virtual ::nape::constraint::Constraint get_constraint( );
 		Dynamic get_constraint_dyn();
 
-		::nape::constraint::Constraint constraint; /* REM */ 
 };
 
 } // end namespace nape

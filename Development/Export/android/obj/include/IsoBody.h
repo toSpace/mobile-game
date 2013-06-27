@@ -12,7 +12,7 @@ HX_DECLARE_CLASS2(nape,phys,Body)
 HX_DECLARE_CLASS2(nape,phys,Interactor)
 
 
-class IsoBody_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  IsoBody_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef IsoBody_obj OBJ_;

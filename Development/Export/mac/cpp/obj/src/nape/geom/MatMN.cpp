@@ -85,7 +85,7 @@ Dynamic MatMN_obj::__Create(hx::DynamicArray inArgs)
 							HX_STACK_LINE(305)
 							int k = (_g5)++;		HX_STACK_VAR(k,"k");
 							struct _Function_7_1{
-								inline static Float Block( int &k,::nape::geom::MatMN_obj *__this,int &i){
+								inline static Float Block( int &i,::nape::geom::MatMN_obj *__this,int &k){
 									HX_STACK_PUSH("*::closure","nape/geom/MatMN.hx",305);
 									{
 										HX_STACK_LINE(305)
@@ -100,7 +100,7 @@ Dynamic MatMN_obj::__Create(hx::DynamicArray inArgs)
 								}
 							};
 							struct _Function_7_2{
-								inline static Float Block( int &k,int &j,::nape::geom::MatMN &y){
+								inline static Float Block( int &j,::nape::geom::MatMN &y,int &k){
 									HX_STACK_PUSH("*::closure","nape/geom/MatMN.hx",305);
 									{
 										HX_STACK_LINE(305)
@@ -115,7 +115,7 @@ Dynamic MatMN_obj::__Create(hx::DynamicArray inArgs)
 								}
 							};
 							HX_STACK_LINE(305)
-							hx::AddEq(v,(_Function_7_1::Block(k,this,i) * _Function_7_2::Block(k,j,y)));
+							hx::AddEq(v,(_Function_7_1::Block(i,this,k) * _Function_7_2::Block(j,y,k)));
 						}
 					}
 					HX_STACK_LINE(306)
@@ -168,7 +168,7 @@ HX_DEFINE_DYNAMIC_FUNC1(MatMN_obj,mul,return )
 						hx::Throw (HX_CSTRING("Error: MatMN indices out of range"));
 					}
 					struct _Function_5_1{
-						inline static Float Block( ::nape::geom::MatMN_obj *__this,int &j,int &i){
+						inline static Float Block( int &i,::nape::geom::MatMN_obj *__this,int &j){
 							HX_STACK_PUSH("*::closure","nape/geom/MatMN.hx",277);
 							{
 								HX_STACK_LINE(277)
@@ -183,7 +183,7 @@ HX_DEFINE_DYNAMIC_FUNC1(MatMN_obj,mul,return )
 						}
 					};
 					HX_STACK_LINE(277)
-					ret->zpp_inner->x[((j * ret->zpp_inner->n) + i)] = _Function_5_1::Block(this,j,i);
+					ret->zpp_inner->x[((j * ret->zpp_inner->n) + i)] = _Function_5_1::Block(i,this,j);
 				}
 			}
 		}
@@ -228,7 +228,7 @@ HX_DEFINE_DYNAMIC_FUNC0(MatMN_obj,transpose,return )
 					HX_STACK_LINE(264)
 					int j = (_g3)++;		HX_STACK_VAR(j,"j");
 					struct _Function_5_1{
-						inline static Float Block( ::nape::geom::MatMN_obj *__this,int &j,int &i){
+						inline static Float Block( int &i,::nape::geom::MatMN_obj *__this,int &j){
 							HX_STACK_PUSH("*::closure","nape/geom/MatMN.hx",264);
 							{
 								HX_STACK_LINE(264)
@@ -243,7 +243,7 @@ HX_DEFINE_DYNAMIC_FUNC0(MatMN_obj,transpose,return )
 						}
 					};
 					HX_STACK_LINE(264)
-					hx::AddEq(ret,(_Function_5_1::Block(this,j,i) + HX_CSTRING(" ")));
+					hx::AddEq(ret,(_Function_5_1::Block(i,this,j) + HX_CSTRING(" ")));
 				}
 			}
 		}
@@ -320,16 +320,12 @@ MatMN_obj::MatMN_obj()
 void MatMN_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(MatMN);
-	HX_MARK_MEMBER_NAME(cols,"cols");
-	HX_MARK_MEMBER_NAME(rows,"rows");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	HX_MARK_END_CLASS();
 }
 
 void MatMN_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(cols,"cols");
-	HX_VISIT_MEMBER_NAME(rows,"rows");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 }
 
@@ -344,8 +340,8 @@ Dynamic MatMN_obj::__Field(const ::String &inName,bool inCallProp)
 		break;
 	case 4:
 		if (HX_FIELD_EQ(inName,"setx") ) { return setx_dyn(); }
-		if (HX_FIELD_EQ(inName,"cols") ) { return inCallProp ? get_cols() : cols; }
-		if (HX_FIELD_EQ(inName,"rows") ) { return inCallProp ? get_rows() : rows; }
+		if (HX_FIELD_EQ(inName,"cols") ) { return get_cols(); }
+		if (HX_FIELD_EQ(inName,"rows") ) { return get_rows(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
@@ -362,10 +358,6 @@ Dynamic MatMN_obj::__Field(const ::String &inName,bool inCallProp)
 Dynamic MatMN_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
 	switch(inName.length) {
-	case 4:
-		if (HX_FIELD_EQ(inName,"cols") ) { cols=inValue.Cast< int >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"rows") ) { rows=inValue.Cast< int >(); return inValue; }
-		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::geom::ZPP_MatMN >(); return inValue; }
 	}
@@ -390,9 +382,7 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("setx"),
 	HX_CSTRING("x"),
 	HX_CSTRING("get_cols"),
-	HX_CSTRING("cols"),
 	HX_CSTRING("get_rows"),
-	HX_CSTRING("rows"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
@@ -408,7 +398,7 @@ Class MatMN_obj::__mClass;
 
 void MatMN_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.MatMN"), hx::TCanCast< MatMN_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.MatMN"), hx::TCanCast< MatMN_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -10,7 +10,7 @@ namespace nape{
 namespace shape{
 
 
-class ShapeType_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ShapeType_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ShapeType_obj OBJ_;
@@ -33,11 +33,9 @@ class ShapeType_obj : public hx::Object{
 		virtual ::String toString( );
 		Dynamic toString_dyn();
 
-		static ::nape::shape::ShapeType CIRCLE; /* REM */ 
 		static ::nape::shape::ShapeType get_CIRCLE( );
 		static Dynamic get_CIRCLE_dyn();
 
-		static ::nape::shape::ShapeType POLYGON; /* REM */ 
 		static ::nape::shape::ShapeType get_POLYGON( );
 		static Dynamic get_POLYGON_dyn();
 

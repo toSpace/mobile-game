@@ -1,11 +1,11 @@
 //nme
-import nme.display.Sprite;
-import nme.geom.Point;
-import nme.display.BitmapData;
-import nme.display.Bitmap;
-import nme.geom.Rectangle;
-import nme.geom.Matrix;
-import nme.geom.ColorTransform;
+import flash.display.Sprite;
+import flash.geom.Point;
+import flash.display.BitmapData;
+import flash.display.Bitmap;
+import flash.geom.Rectangle;
+import flash.geom.Matrix;
+import flash.geom.ColorTransform;
 
 //nape
 

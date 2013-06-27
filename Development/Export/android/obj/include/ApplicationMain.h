@@ -6,9 +6,16 @@
 #endif
 
 HX_DECLARE_CLASS0(ApplicationMain)
+HX_DECLARE_CLASS2(flash,display,DisplayObject)
+HX_DECLARE_CLASS2(flash,display,DisplayObjectContainer)
+HX_DECLARE_CLASS2(flash,display,IBitmapDrawable)
+HX_DECLARE_CLASS2(flash,display,InteractiveObject)
+HX_DECLARE_CLASS2(flash,display,Sprite)
+HX_DECLARE_CLASS2(flash,events,EventDispatcher)
+HX_DECLARE_CLASS2(flash,events,IEventDispatcher)
 
 
-class ApplicationMain_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ApplicationMain_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ApplicationMain_obj OBJ_;
@@ -28,8 +35,16 @@ class ApplicationMain_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("ApplicationMain"); }
 
+		static ::flash::display::Sprite barA;
+		static ::flash::display::Sprite barB;
+		static ::flash::display::Sprite container;
+		static int forceHeight;
+		static int forceWidth;
 		static Void main( );
 		static Dynamic main_dyn();
+
+		static Void applyScale( Dynamic _);
+		static Dynamic applyScale_dyn();
 
 		static Dynamic getAsset( ::String inName);
 		static Dynamic getAsset_dyn();

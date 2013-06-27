@@ -1,11 +1,11 @@
 //nme
-import nme.display.Sprite;
-import nme.Assets;
-import nme.events.Event;
-import nme.events.EventDispatcher;
-import nme.display.DisplayObject;
-import nme.display.Bitmap;
-import nme.events.MouseEvent;
+import flash.display.Sprite;
+import openfl.Assets;
+import flash.events.Event;
+import flash.events.EventDispatcher;
+import flash.display.DisplayObject;
+import flash.display.Bitmap;
+import flash.events.MouseEvent;
 
 class UIobject {
 

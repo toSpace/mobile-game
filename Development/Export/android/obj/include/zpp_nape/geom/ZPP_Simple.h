@@ -18,7 +18,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_Simple_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Simple_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Simple_obj OBJ_;
@@ -38,19 +38,19 @@ class ZPP_Simple_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("ZPP_Simple"); }
 
-		static ::zpp_nape::geom::ZPP_SimpleSweep sweep; /* REM */ 
-		static ::zpp_nape::util::FastHash2_Hashable2_Boolfalse inthash; /* REM */ 
-		static ::zpp_nape::util::ZPP_Set_ZPP_SimpleVert vertices; /* REM */ 
-		static ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent queue; /* REM */ 
-		static ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent ints; /* REM */ 
+		static ::zpp_nape::geom::ZPP_SimpleSweep sweep;
+		static ::zpp_nape::util::FastHash2_Hashable2_Boolfalse inthash;
+		static ::zpp_nape::util::ZPP_Set_ZPP_SimpleVert vertices;
+		static ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent queue;
+		static ::zpp_nape::util::ZPP_Set_ZPP_SimpleEvent ints;
 		static ::zpp_nape::util::ZNPList_ZPP_GeomVert decompose( ::zpp_nape::geom::ZPP_GeomVert poly,::zpp_nape::util::ZNPList_ZPP_GeomVert rets);
 		static Dynamic decompose_dyn();
 
 		static Void clip_polygon( ::zpp_nape::util::ZPP_Set_ZPP_SimpleVert vertices,::zpp_nape::util::ZNPList_ZPP_GeomVert rets);
 		static Dynamic clip_polygon_dyn();
 
-		static ::zpp_nape::util::ZNPList_ZPP_SimpleVert list_vertices; /* REM */ 
-		static ::zpp_nape::util::ZNPList_ZPP_SimpleEvent list_queue; /* REM */ 
+		static ::zpp_nape::util::ZNPList_ZPP_SimpleVert list_vertices;
+		static ::zpp_nape::util::ZNPList_ZPP_SimpleEvent list_queue;
 		static bool isSimple( ::zpp_nape::geom::ZPP_GeomVert poly);
 		static Dynamic isSimple_dyn();
 

@@ -1,28 +1,29 @@
 //nme
-import nme.display.Sprite;
-import nme.Assets;
-import nme.events.Event;
-import nme.events.EventDispatcher;
-import nme.display.DisplayObject;
-import nme.display.Bitmap;
-import nme.display.BitmapData;
-import nme.display.BlendMode;
+import flash.display.Sprite;
+import openfl.Assets;
+import flash.events.Event;
+import flash.events.EventDispatcher;
+import flash.display.DisplayObject;
+import flash.display.Bitmap;
+import flash.display.BitmapData;
+import flash.display.BlendMode;
 
 class BackgroundObject{
 
 	public var canvas:Sprite;
 	public var asset:Bitmap;
-	public var xml:Hash<Dynamic>;
+	public var xml:Map<String, Dynamic>;
 	public var startX:Float;
 	public var speed:Float;
 	private var x:Float;
+
 	
-	public function new(xmlUrl:String){
+	public function new(xmlUrl:String):Void{
 		//setting correct stages
 		canvas = Main.canvas;
 
 		//read xml
-		xml = readXml(xmlUrl);
+		readXml(xmlUrl);
 
 		//get image
 		asset = new Bitmap( Assets.getBitmapData(xml.get('img')) );
@@ -40,21 +41,21 @@ class BackgroundObject{
 		RenderManager.add(this);
 	}
 
-	private function readXml(url:String):Hash<Dynamic>{
-		var p = new Hash<Dynamic>();
+	private function readXml(url:String):Void{
+		//var p = new Map<String>();
 		var xmlFile = Assets.getText(Mobile.xml + url);
 		var read = new haxe.xml.Fast( Xml.parse(xmlFile) );
 
 		var asset = read.node.asset;
-		p.set('img', Mobile.asset + asset.node.img.innerData);
-		p.set('x', asset.node.pos.att.x);
-		p.set('y', asset.node.pos.att.y);
-		p.set('blendmode', asset.node.blendmode.innerData);
-		p.set('speed', asset.node.paralax.innerData);
-		p.set('startX', asset.node.paralax.att.startX);
-		p.set('endX', asset.node.paralax.att.endX);
+		xml.set('img', Mobile.asset + asset.node.img.innerData);
+		xml.set('x', asset.node.pos.att.x);
+		xml.set('y', asset.node.pos.att.y);
+		xml.set('blendmode', asset.node.blendmode.innerData);
+		xml.set('speed', asset.node.paralax.innerData);
+		xml.set('startX', asset.node.paralax.att.startX);
+		xml.set('endX', asset.node.paralax.att.endX);
 
-		return p;
+		//return p;
 	}
 
 	public function render():Void{

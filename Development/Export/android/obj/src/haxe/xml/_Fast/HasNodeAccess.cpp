@@ -12,9 +12,9 @@ namespace _Fast{
 
 Void HasNodeAccess_obj::__construct(::Xml x)
 {
-HX_STACK_PUSH("HasNodeAccess::new","/usr/lib/haxe/std/haxe/xml/Fast.hx",85);
+HX_STACK_PUSH("HasNodeAccess::new","/usr/lib/haxe/std/haxe/xml/Fast.hx",82);
 {
-	HX_STACK_LINE(85)
+	HX_STACK_LINE(82)
 	this->__x = x;
 }
 ;
@@ -33,17 +33,6 @@ Dynamic HasNodeAccess_obj::__Create(hx::DynamicArray inArgs)
 {  hx::ObjectPtr< HasNodeAccess_obj > result = new HasNodeAccess_obj();
 	result->__construct(inArgs[0]);
 	return result;}
-
-bool HasNodeAccess_obj::resolve( ::String name){
-	HX_STACK_PUSH("HasNodeAccess::resolve","/usr/lib/haxe/std/haxe/xml/Fast.hx",89);
-	HX_STACK_THIS(this);
-	HX_STACK_ARG(name,"name");
-	HX_STACK_LINE(89)
-	return this->__x->elementsNamed(name)->__Field(HX_CSTRING("hasNext"),true)();
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC1(HasNodeAccess_obj,resolve,return )
 
 
 HasNodeAccess_obj::HasNodeAccess_obj()
@@ -70,9 +59,6 @@ Dynamic HasNodeAccess_obj::__Field(const ::String &inName,bool inCallProp)
 	switch(inName.length) {
 	case 3:
 		if (HX_FIELD_EQ(inName,"__x") ) { return __x; }
-		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"resolve") ) { return resolve_dyn(); }
 	}
 	HX_CHECK_DYNAMIC_GET_FIELD(inName);
 	return super::__Field(inName,inCallProp);
@@ -100,7 +86,6 @@ static ::String sStaticFields[] = {
 	String(null()) };
 
 static ::String sMemberFields[] = {
-	HX_CSTRING("resolve"),
 	HX_CSTRING("__x"),
 	String(null()) };
 
@@ -116,7 +101,7 @@ Class HasNodeAccess_obj::__mClass;
 
 void HasNodeAccess_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("haxe.xml._Fast.HasNodeAccess"), hx::TCanCast< HasNodeAccess_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("haxe.xml._Fast.HasNodeAccess"), hx::TCanCast< HasNodeAccess_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -25,7 +25,7 @@ namespace zpp_nape{
 namespace callbacks{
 
 
-class ZPP_InteractionListener_obj : public ::zpp_nape::callbacks::ZPP_Listener_obj{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_InteractionListener_obj : public ::zpp_nape::callbacks::ZPP_Listener_obj{
 	public:
 		typedef ::zpp_nape::callbacks::ZPP_Listener_obj super;
 		typedef ZPP_InteractionListener_obj OBJ_;
@@ -80,23 +80,23 @@ class ZPP_InteractionListener_obj : public ::zpp_nape::callbacks::ZPP_Listener_o
 		virtual Void setInteractionType( int itype);
 		Dynamic setInteractionType_dyn();
 
-		Dynamic handlerp; /* REM */ 
+		Dynamic handlerp;
 		Dynamic &handlerp_dyn() { return handlerp;}
-		bool pure; /* REM */ 
-		bool allowSleepingCallbacks; /* REM */ 
-		Dynamic handleri; /* REM */ 
+		bool pure;
+		bool allowSleepingCallbacks;
+		Dynamic handleri;
 		Dynamic &handleri_dyn() { return handleri;}
-		::zpp_nape::callbacks::ZPP_OptionType options2; /* REM */ 
-		::zpp_nape::callbacks::ZPP_OptionType options1; /* REM */ 
-		int itype; /* REM */ 
-		::nape::callbacks::PreListener outer_znp; /* REM */ 
-		::nape::callbacks::InteractionListener outer_zni; /* REM */ 
-		static ::zpp_nape::util::ZNPList_ZPP_CbSet UCbSet; /* REM */ 
-		static ::zpp_nape::util::ZNPList_ZPP_CbSet VCbSet; /* REM */ 
-		static ::zpp_nape::util::ZNPList_ZPP_CbSet WCbSet; /* REM */ 
-		static ::zpp_nape::util::ZNPList_ZPP_CbType UCbType; /* REM */ 
-		static ::zpp_nape::util::ZNPList_ZPP_CbType VCbType; /* REM */ 
-		static ::zpp_nape::util::ZNPList_ZPP_CbType WCbType; /* REM */ 
+		::zpp_nape::callbacks::ZPP_OptionType options2;
+		::zpp_nape::callbacks::ZPP_OptionType options1;
+		int itype;
+		::nape::callbacks::PreListener outer_znp;
+		::nape::callbacks::InteractionListener outer_zni;
+		static ::zpp_nape::util::ZNPList_ZPP_CbSet UCbSet;
+		static ::zpp_nape::util::ZNPList_ZPP_CbSet VCbSet;
+		static ::zpp_nape::util::ZNPList_ZPP_CbSet WCbSet;
+		static ::zpp_nape::util::ZNPList_ZPP_CbType UCbType;
+		static ::zpp_nape::util::ZNPList_ZPP_CbType VCbType;
+		static ::zpp_nape::util::ZNPList_ZPP_CbType WCbType;
 };
 
 } // end namespace zpp_nape

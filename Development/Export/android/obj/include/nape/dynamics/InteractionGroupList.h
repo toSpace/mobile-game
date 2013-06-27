@@ -13,7 +13,7 @@ namespace nape{
 namespace dynamics{
 
 
-class InteractionGroupList_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  InteractionGroupList_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef InteractionGroupList_obj OBJ_;
@@ -84,9 +84,8 @@ class InteractionGroupList_obj : public hx::Object{
 		virtual int get_length( );
 		Dynamic get_length_dyn();
 
-		int length; /* REM */ 
-		::zpp_nape::util::ZPP_InteractionGroupList zpp_inner; /* REM */ 
-		static ::nape::dynamics::InteractionGroupList fromArray( Array< ::nape::dynamics::InteractionGroup > array);
+		::zpp_nape::util::ZPP_InteractionGroupList zpp_inner;
+		static ::nape::dynamics::InteractionGroupList fromArray( Array< ::Dynamic > array);
 		static Dynamic fromArray_dyn();
 
 };

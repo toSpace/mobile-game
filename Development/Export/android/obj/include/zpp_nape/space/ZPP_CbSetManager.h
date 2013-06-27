@@ -16,7 +16,7 @@ namespace zpp_nape{
 namespace space{
 
 
-class ZPP_CbSetManager_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_CbSetManager_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_CbSetManager_obj OBJ_;
@@ -54,8 +54,8 @@ class ZPP_CbSetManager_obj : public hx::Object{
 		virtual ::zpp_nape::callbacks::ZPP_CbSet get( ::zpp_nape::util::ZNPList_ZPP_CbType cbTypes);
 		Dynamic get_dyn();
 
-		::zpp_nape::space::ZPP_Space space; /* REM */ 
-		::zpp_nape::util::ZPP_Set_ZPP_CbSet cbsets; /* REM */ 
+		::zpp_nape::space::ZPP_Space space;
+		::zpp_nape::util::ZPP_Set_ZPP_CbSet cbsets;
 };
 
 } // end namespace zpp_nape

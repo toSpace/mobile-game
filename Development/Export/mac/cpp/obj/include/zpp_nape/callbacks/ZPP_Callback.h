@@ -22,7 +22,7 @@ namespace zpp_nape{
 namespace callbacks{
 
 
-class ZPP_Callback_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Callback_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Callback_obj OBJ_;
@@ -42,17 +42,17 @@ class ZPP_Callback_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("ZPP_Callback"); }
 
-		::zpp_nape::constraint::ZPP_Constraint constraint; /* REM */ 
-		::zpp_nape::phys::ZPP_Body body; /* REM */ 
+		::zpp_nape::constraint::ZPP_Constraint constraint;
+		::zpp_nape::phys::ZPP_Body body;
 		virtual Void genarbs( );
 		Dynamic genarbs_dyn();
 
-		bool pre_swapped; /* REM */ 
-		::zpp_nape::dynamics::ZPP_Arbiter pre_arbiter; /* REM */ 
-		::nape::dynamics::ArbiterList wrap_arbiters; /* REM */ 
-		::zpp_nape::space::ZPP_CallbackSet set; /* REM */ 
-		::zpp_nape::phys::ZPP_Interactor int2; /* REM */ 
-		::zpp_nape::phys::ZPP_Interactor int1; /* REM */ 
+		bool pre_swapped;
+		::zpp_nape::dynamics::ZPP_Arbiter pre_arbiter;
+		::nape::dynamics::ArbiterList wrap_arbiters;
+		::zpp_nape::space::ZPP_CallbackSet set;
+		::zpp_nape::phys::ZPP_Interactor int2;
+		::zpp_nape::phys::ZPP_Interactor int1;
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
@@ -98,13 +98,13 @@ class ZPP_Callback_obj : public hx::Object{
 		virtual Void push( ::zpp_nape::callbacks::ZPP_Callback obj);
 		Dynamic push_dyn();
 
-		int length; /* REM */ 
-		::zpp_nape::callbacks::ZPP_Callback prev; /* REM */ 
-		::zpp_nape::callbacks::ZPP_Callback next; /* REM */ 
-		int index; /* REM */ 
-		::zpp_nape::space::ZPP_Space space; /* REM */ 
-		::zpp_nape::callbacks::ZPP_Listener listener; /* REM */ 
-		int event; /* REM */ 
+		int length;
+		::zpp_nape::callbacks::ZPP_Callback prev;
+		::zpp_nape::callbacks::ZPP_Callback next;
+		int index;
+		::zpp_nape::space::ZPP_Space space;
+		::zpp_nape::callbacks::ZPP_Listener listener;
+		int event;
 		virtual ::nape::callbacks::InteractionCallback wrapper_int( );
 		Dynamic wrapper_int_dyn();
 
@@ -114,11 +114,11 @@ class ZPP_Callback_obj : public hx::Object{
 		virtual ::nape::callbacks::BodyCallback wrapper_body( );
 		Dynamic wrapper_body_dyn();
 
-		::nape::callbacks::InteractionCallback outer_int; /* REM */ 
-		::nape::callbacks::ConstraintCallback outer_con; /* REM */ 
-		::nape::callbacks::BodyCallback outer_body; /* REM */ 
-		static bool internal; /* REM */ 
-		static ::zpp_nape::callbacks::ZPP_Callback zpp_pool; /* REM */ 
+		::nape::callbacks::InteractionCallback outer_int;
+		::nape::callbacks::ConstraintCallback outer_con;
+		::nape::callbacks::BodyCallback outer_body;
+		static bool internal;
+		static ::zpp_nape::callbacks::ZPP_Callback zpp_pool;
 };
 
 } // end namespace zpp_nape

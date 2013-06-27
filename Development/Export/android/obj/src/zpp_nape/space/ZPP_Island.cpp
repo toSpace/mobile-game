@@ -77,9 +77,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Island_obj,free,(void))
 	HX_STACK_PUSH("ZPP_Island::at","zpp_nape/space/Space.hx",518);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(519)
-	{
-	}
 	HX_STACK_LINE(527)
 	::zpp_nape::space::ZPP_Island it = this->iterator_at(ind);		HX_STACK_VAR(it,"it");
 	HX_STACK_LINE(528)
@@ -93,9 +90,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Island_obj,at,return )
 	HX_STACK_PUSH("ZPP_Island::iterator_at","zpp_nape/space/Space.hx",505);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(506)
-	{
-	}
 	HX_STACK_LINE(514)
 	::zpp_nape::space::ZPP_Island ret = this->next;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(515)
@@ -145,9 +139,6 @@ bool ZPP_Island_obj::inlined_has( ::zpp_nape::space::ZPP_Island obj){
 	HX_STACK_PUSH("ZPP_Island::inlined_has","zpp_nape/space/Space.hx",463);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(464)
-	{
-	}
 	HX_STACK_LINE(472)
 	bool ret;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(473)
@@ -189,9 +180,6 @@ bool ZPP_Island_obj::has( ::zpp_nape::space::ZPP_Island obj){
 		inline static bool Block( ::zpp_nape::space::ZPP_Island_obj *__this,::zpp_nape::space::ZPP_Island &obj){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",459);
 			{
-				HX_STACK_LINE(459)
-				{
-				}
 				HX_STACK_LINE(459)
 				bool ret;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(459)
@@ -326,9 +314,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Island_obj,splice,return )
 	HX_STACK_PUSH("ZPP_Island::inlined_erase","zpp_nape/space/Space.hx",388);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
-	HX_STACK_LINE(389)
-	{
-	}
 	HX_STACK_LINE(397)
 	::zpp_nape::space::ZPP_Island old;		HX_STACK_VAR(old,"old");
 	HX_STACK_LINE(398)
@@ -362,9 +347,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Island_obj,splice,return )
 	}
 	HX_STACK_LINE(411)
 	old->_inuse = false;
-	HX_STACK_LINE(414)
-	{
-	}
 	HX_STACK_LINE(415)
 	this->modified = true;
 	HX_STACK_LINE(416)
@@ -383,12 +365,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Island_obj,inlined_erase,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
 	struct _Function_1_1{
-		inline static ::zpp_nape::space::ZPP_Island Block( ::zpp_nape::space::ZPP_Island &pre,::zpp_nape::space::ZPP_Island_obj *__this){
+		inline static ::zpp_nape::space::ZPP_Island Block( ::zpp_nape::space::ZPP_Island_obj *__this,::zpp_nape::space::ZPP_Island &pre){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",384);
 			{
-				HX_STACK_LINE(384)
-				{
-				}
 				HX_STACK_LINE(384)
 				::zpp_nape::space::ZPP_Island old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(384)
@@ -423,9 +402,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Island_obj,inlined_erase,return )
 				HX_STACK_LINE(384)
 				old->_inuse = false;
 				HX_STACK_LINE(384)
-				{
-				}
-				HX_STACK_LINE(384)
 				__this->modified = true;
 				HX_STACK_LINE(384)
 				(__this->length)--;
@@ -438,7 +414,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Island_obj,inlined_erase,return )
 		}
 	};
 	HX_STACK_LINE(383)
-	return _Function_1_1::Block(pre,this);
+	return _Function_1_1::Block(this,pre);
 }
 
 
@@ -448,9 +424,6 @@ bool ZPP_Island_obj::inlined_try_remove( ::zpp_nape::space::ZPP_Island obj){
 	HX_STACK_PUSH("ZPP_Island::inlined_try_remove","zpp_nape/space/Space.hx",360);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(361)
-	{
-	}
 	HX_STACK_LINE(369)
 	::zpp_nape::space::ZPP_Island pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(370)
@@ -463,9 +436,6 @@ bool ZPP_Island_obj::inlined_try_remove( ::zpp_nape::space::ZPP_Island obj){
 		if (((cur == obj))){
 			HX_STACK_LINE(374)
 			{
-				HX_STACK_LINE(374)
-				{
-				}
 				HX_STACK_LINE(374)
 				::zpp_nape::space::ZPP_Island old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(374)
@@ -500,9 +470,6 @@ bool ZPP_Island_obj::inlined_try_remove( ::zpp_nape::space::ZPP_Island obj){
 				HX_STACK_LINE(374)
 				old->_inuse = false;
 				HX_STACK_LINE(374)
-				{
-				}
-				HX_STACK_LINE(374)
 				this->modified = true;
 				HX_STACK_LINE(374)
 				(this->length)--;
@@ -533,87 +500,72 @@ Void ZPP_Island_obj::inlined_remove( ::zpp_nape::space::ZPP_Island obj){
 		HX_STACK_PUSH("ZPP_Island::inlined_remove","zpp_nape/space/Space.hx",347);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(348)
-		{
-		}
 		HX_STACK_LINE(356)
-		{
+		::zpp_nape::space::ZPP_Island pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(356)
+		::zpp_nape::space::ZPP_Island cur = this->next;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(356)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(356)
+		while(((cur != null()))){
 			HX_STACK_LINE(356)
-			{
-			}
-			HX_STACK_LINE(356)
-			::zpp_nape::space::ZPP_Island pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(356)
-			::zpp_nape::space::ZPP_Island cur = this->next;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(356)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(356)
-			while(((cur != null()))){
+			if (((cur == obj))){
 				HX_STACK_LINE(356)
-				if (((cur == obj))){
+				{
 					HX_STACK_LINE(356)
-					{
+					::zpp_nape::space::ZPP_Island old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(356)
+					::zpp_nape::space::ZPP_Island ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(356)
+					if (((pre == null()))){
 						HX_STACK_LINE(356)
-						{
+						old = this->next;
+						HX_STACK_LINE(356)
+						ret1 = old->next;
+						HX_STACK_LINE(356)
+						this->next = ret1;
+						HX_STACK_LINE(356)
+						if (((this->next == null()))){
+							HX_STACK_LINE(356)
+							this->pushmod = true;
 						}
+					}
+					else{
 						HX_STACK_LINE(356)
-						::zpp_nape::space::ZPP_Island old;		HX_STACK_VAR(old,"old");
+						old = pre->next;
 						HX_STACK_LINE(356)
-						::zpp_nape::space::ZPP_Island ret1;		HX_STACK_VAR(ret1,"ret1");
+						ret1 = old->next;
 						HX_STACK_LINE(356)
-						if (((pre == null()))){
+						pre->next = ret1;
+						HX_STACK_LINE(356)
+						if (((ret1 == null()))){
 							HX_STACK_LINE(356)
-							old = this->next;
-							HX_STACK_LINE(356)
-							ret1 = old->next;
-							HX_STACK_LINE(356)
-							this->next = ret1;
-							HX_STACK_LINE(356)
-							if (((this->next == null()))){
-								HX_STACK_LINE(356)
-								this->pushmod = true;
-							}
+							this->pushmod = true;
 						}
-						else{
-							HX_STACK_LINE(356)
-							old = pre->next;
-							HX_STACK_LINE(356)
-							ret1 = old->next;
-							HX_STACK_LINE(356)
-							pre->next = ret1;
-							HX_STACK_LINE(356)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(356)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(356)
-						old->_inuse = false;
-						HX_STACK_LINE(356)
-						{
-						}
-						HX_STACK_LINE(356)
-						this->modified = true;
-						HX_STACK_LINE(356)
-						(this->length)--;
-						HX_STACK_LINE(356)
-						this->pushmod = true;
-						HX_STACK_LINE(356)
-						ret1;
 					}
 					HX_STACK_LINE(356)
-					ret = true;
+					old->_inuse = false;
 					HX_STACK_LINE(356)
-					break;
+					this->modified = true;
+					HX_STACK_LINE(356)
+					(this->length)--;
+					HX_STACK_LINE(356)
+					this->pushmod = true;
+					HX_STACK_LINE(356)
+					ret1;
 				}
 				HX_STACK_LINE(356)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(356)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(356)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(356)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(356)
+		ret;
 	}
 return null();
 }
@@ -625,9 +577,6 @@ bool ZPP_Island_obj::try_remove( ::zpp_nape::space::ZPP_Island obj){
 	HX_STACK_PUSH("ZPP_Island::try_remove","zpp_nape/space/Space.hx",322);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(323)
-	{
-	}
 	HX_STACK_LINE(331)
 	::zpp_nape::space::ZPP_Island pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(332)
@@ -662,87 +611,72 @@ Void ZPP_Island_obj::remove( ::zpp_nape::space::ZPP_Island obj){
 		HX_STACK_PUSH("ZPP_Island::remove","zpp_nape/space/Space.hx",311);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(312)
-		{
-		}
 		HX_STACK_LINE(320)
-		{
+		::zpp_nape::space::ZPP_Island pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(320)
+		::zpp_nape::space::ZPP_Island cur = this->next;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(320)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(320)
+		while(((cur != null()))){
 			HX_STACK_LINE(320)
-			{
-			}
-			HX_STACK_LINE(320)
-			::zpp_nape::space::ZPP_Island pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(320)
-			::zpp_nape::space::ZPP_Island cur = this->next;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(320)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(320)
-			while(((cur != null()))){
+			if (((cur == obj))){
 				HX_STACK_LINE(320)
-				if (((cur == obj))){
+				{
 					HX_STACK_LINE(320)
-					{
+					::zpp_nape::space::ZPP_Island old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(320)
+					::zpp_nape::space::ZPP_Island ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(320)
+					if (((pre == null()))){
 						HX_STACK_LINE(320)
-						{
+						old = this->next;
+						HX_STACK_LINE(320)
+						ret1 = old->next;
+						HX_STACK_LINE(320)
+						this->next = ret1;
+						HX_STACK_LINE(320)
+						if (((this->next == null()))){
+							HX_STACK_LINE(320)
+							this->pushmod = true;
 						}
+					}
+					else{
 						HX_STACK_LINE(320)
-						::zpp_nape::space::ZPP_Island old;		HX_STACK_VAR(old,"old");
+						old = pre->next;
 						HX_STACK_LINE(320)
-						::zpp_nape::space::ZPP_Island ret1;		HX_STACK_VAR(ret1,"ret1");
+						ret1 = old->next;
 						HX_STACK_LINE(320)
-						if (((pre == null()))){
+						pre->next = ret1;
+						HX_STACK_LINE(320)
+						if (((ret1 == null()))){
 							HX_STACK_LINE(320)
-							old = this->next;
-							HX_STACK_LINE(320)
-							ret1 = old->next;
-							HX_STACK_LINE(320)
-							this->next = ret1;
-							HX_STACK_LINE(320)
-							if (((this->next == null()))){
-								HX_STACK_LINE(320)
-								this->pushmod = true;
-							}
+							this->pushmod = true;
 						}
-						else{
-							HX_STACK_LINE(320)
-							old = pre->next;
-							HX_STACK_LINE(320)
-							ret1 = old->next;
-							HX_STACK_LINE(320)
-							pre->next = ret1;
-							HX_STACK_LINE(320)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(320)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(320)
-						old->_inuse = false;
-						HX_STACK_LINE(320)
-						{
-						}
-						HX_STACK_LINE(320)
-						this->modified = true;
-						HX_STACK_LINE(320)
-						(this->length)--;
-						HX_STACK_LINE(320)
-						this->pushmod = true;
-						HX_STACK_LINE(320)
-						ret1;
 					}
 					HX_STACK_LINE(320)
-					ret = true;
+					old->_inuse = false;
 					HX_STACK_LINE(320)
-					break;
+					this->modified = true;
+					HX_STACK_LINE(320)
+					(this->length)--;
+					HX_STACK_LINE(320)
+					this->pushmod = true;
+					HX_STACK_LINE(320)
+					ret1;
 				}
 				HX_STACK_LINE(320)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(320)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(320)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(320)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(320)
+		ret;
 	}
 return null();
 }
@@ -753,9 +687,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Island_obj,remove,(void))
 ::zpp_nape::space::ZPP_Island ZPP_Island_obj::inlined_pop_unsafe( ){
 	HX_STACK_PUSH("ZPP_Island::inlined_pop_unsafe","zpp_nape/space/Space.hx",298);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(299)
-	{
-	}
 	HX_STACK_LINE(307)
 	::zpp_nape::space::ZPP_Island ret = this->next;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(308)
@@ -774,9 +705,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Island_obj,inlined_pop_unsafe,return )
 		inline static ::zpp_nape::space::ZPP_Island Block( ::zpp_nape::space::ZPP_Island_obj *__this){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",294);
 			{
-				HX_STACK_LINE(294)
-				{
-				}
 				HX_STACK_LINE(294)
 				::zpp_nape::space::ZPP_Island ret = __this->next;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(294)
@@ -798,18 +726,12 @@ Void ZPP_Island_obj::inlined_pop( ){
 {
 		HX_STACK_PUSH("ZPP_Island::inlined_pop","zpp_nape/space/Space.hx",274);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(275)
-		{
-		}
 		HX_STACK_LINE(283)
 		::zpp_nape::space::ZPP_Island ret = this->next;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(284)
 		this->next = ret->next;
 		HX_STACK_LINE(285)
 		ret->_inuse = false;
-		HX_STACK_LINE(288)
-		{
-		}
 		HX_STACK_LINE(289)
 		if (((this->next == null()))){
 			HX_STACK_LINE(289)
@@ -831,17 +753,11 @@ Void ZPP_Island_obj::pop( ){
 		HX_STACK_PUSH("ZPP_Island::pop","zpp_nape/space/Space.hx",269);
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(270)
-		{
-		}
-		HX_STACK_LINE(270)
 		::zpp_nape::space::ZPP_Island ret = this->next;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(270)
 		this->next = ret->next;
 		HX_STACK_LINE(270)
 		ret->_inuse = false;
-		HX_STACK_LINE(270)
-		{
-		}
 		HX_STACK_LINE(270)
 		if (((this->next == null()))){
 			HX_STACK_LINE(270)
@@ -863,9 +779,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Island_obj,pop,(void))
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(245)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::space::ZPP_Island Block( ::zpp_nape::space::ZPP_Island &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",253);
@@ -913,9 +826,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Island_obj,inlined_insert,return )
 		inline static ::zpp_nape::space::ZPP_Island Block( ::zpp_nape::space::ZPP_Island_obj *__this,::zpp_nape::space::ZPP_Island &o,::zpp_nape::space::ZPP_Island &cur){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",240);
 			{
-				HX_STACK_LINE(240)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::space::ZPP_Island Block( ::zpp_nape::space::ZPP_Island &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",240);
@@ -965,22 +875,16 @@ Void ZPP_Island_obj::addAll( ::zpp_nape::space::ZPP_Island x){
 		HX_STACK_PUSH("ZPP_Island::addAll","zpp_nape/space/Space.hx",221);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(222)
-		{
-		}
-		HX_STACK_LINE(230)
-		{
-			HX_STACK_LINE(231)
-			::zpp_nape::space::ZPP_Island cx_ite = x->next;		HX_STACK_VAR(cx_ite,"cx_ite");
-			HX_STACK_LINE(232)
-			while(((cx_ite != null()))){
-				HX_STACK_LINE(233)
-				::zpp_nape::space::ZPP_Island i = cx_ite;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(234)
-				this->add(i);
-				HX_STACK_LINE(235)
-				cx_ite = cx_ite->next;
-			}
+		HX_STACK_LINE(231)
+		::zpp_nape::space::ZPP_Island cx_ite = x->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+		HX_STACK_LINE(232)
+		while(((cx_ite != null()))){
+			HX_STACK_LINE(233)
+			::zpp_nape::space::ZPP_Island i = cx_ite;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(234)
+			this->add(i);
+			HX_STACK_LINE(235)
+			cx_ite = cx_ite->next;
 		}
 	}
 return null();
@@ -993,9 +897,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Island_obj,addAll,(void))
 	HX_STACK_PUSH("ZPP_Island::inlined_add","zpp_nape/space/Space.hx",202);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(203)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::space::ZPP_Island Block( ::zpp_nape::space::ZPP_Island &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",211);
@@ -1030,12 +931,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Island_obj,inlined_add,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
 	struct _Function_1_1{
-		inline static ::zpp_nape::space::ZPP_Island Block( ::zpp_nape::space::ZPP_Island &o,::zpp_nape::space::ZPP_Island_obj *__this){
+		inline static ::zpp_nape::space::ZPP_Island Block( ::zpp_nape::space::ZPP_Island_obj *__this,::zpp_nape::space::ZPP_Island &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",198);
 			{
-				HX_STACK_LINE(198)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::space::ZPP_Island Block( ::zpp_nape::space::ZPP_Island &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",198);
@@ -1065,7 +963,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Island_obj,inlined_add,return )
 		}
 	};
 	HX_STACK_LINE(197)
-	return _Function_1_1::Block(o,this);
+	return _Function_1_1::Block(this,o);
 }
 
 
@@ -1312,7 +1210,7 @@ Class ZPP_Island_obj::__mClass;
 
 void ZPP_Island_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_Island"), hx::TCanCast< ZPP_Island_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_Island"), hx::TCanCast< ZPP_Island_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

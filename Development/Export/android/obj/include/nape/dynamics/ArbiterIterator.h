@@ -12,7 +12,7 @@ namespace nape{
 namespace dynamics{
 
 
-class ArbiterIterator_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ArbiterIterator_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ArbiterIterator_obj OBJ_;
@@ -38,11 +38,11 @@ class ArbiterIterator_obj : public hx::Object{
 		virtual bool hasNext( );
 		Dynamic hasNext_dyn();
 
-		::nape::dynamics::ArbiterIterator zpp_next; /* REM */ 
-		bool zpp_critical; /* REM */ 
-		int zpp_i; /* REM */ 
-		::nape::dynamics::ArbiterList zpp_inner; /* REM */ 
-		static ::nape::dynamics::ArbiterIterator zpp_pool; /* REM */ 
+		::nape::dynamics::ArbiterIterator zpp_next;
+		bool zpp_critical;
+		int zpp_i;
+		::nape::dynamics::ArbiterList zpp_inner;
+		static ::nape::dynamics::ArbiterIterator zpp_pool;
 		static ::nape::dynamics::ArbiterIterator get( ::nape::dynamics::ArbiterList list);
 		static Dynamic get_dyn();
 

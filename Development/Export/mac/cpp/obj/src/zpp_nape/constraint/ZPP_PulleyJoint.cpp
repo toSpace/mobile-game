@@ -168,9 +168,6 @@ HX_STACK_PUSH("ZPP_PulleyJoint::new","zpp_nape/constraint/PulleyJoint.hx",174);
 			this->a1localx = (int)0;
 			HX_STACK_LINE(740)
 			this->a1localy = (int)0;
-			HX_STACK_LINE(741)
-			{
-			}
 			HX_STACK_LINE(749)
 			{
 			}
@@ -181,9 +178,6 @@ HX_STACK_PUSH("ZPP_PulleyJoint::new","zpp_nape/constraint/PulleyJoint.hx",174);
 			this->a1relx = (int)0;
 			HX_STACK_LINE(760)
 			this->a1rely = (int)0;
-			HX_STACK_LINE(761)
-			{
-			}
 			HX_STACK_LINE(769)
 			{
 			}
@@ -197,9 +191,6 @@ HX_STACK_PUSH("ZPP_PulleyJoint::new","zpp_nape/constraint/PulleyJoint.hx",174);
 			this->a2localx = (int)0;
 			HX_STACK_LINE(782)
 			this->a2localy = (int)0;
-			HX_STACK_LINE(783)
-			{
-			}
 			HX_STACK_LINE(791)
 			{
 			}
@@ -210,9 +201,6 @@ HX_STACK_PUSH("ZPP_PulleyJoint::new","zpp_nape/constraint/PulleyJoint.hx",174);
 			this->a2relx = (int)0;
 			HX_STACK_LINE(802)
 			this->a2rely = (int)0;
-			HX_STACK_LINE(803)
-			{
-			}
 			HX_STACK_LINE(811)
 			{
 			}
@@ -226,9 +214,6 @@ HX_STACK_PUSH("ZPP_PulleyJoint::new","zpp_nape/constraint/PulleyJoint.hx",174);
 			this->a3localx = (int)0;
 			HX_STACK_LINE(824)
 			this->a3localy = (int)0;
-			HX_STACK_LINE(825)
-			{
-			}
 			HX_STACK_LINE(833)
 			{
 			}
@@ -239,9 +224,6 @@ HX_STACK_PUSH("ZPP_PulleyJoint::new","zpp_nape/constraint/PulleyJoint.hx",174);
 			this->a3relx = (int)0;
 			HX_STACK_LINE(844)
 			this->a3rely = (int)0;
-			HX_STACK_LINE(845)
-			{
-			}
 			HX_STACK_LINE(853)
 			{
 			}
@@ -255,9 +237,6 @@ HX_STACK_PUSH("ZPP_PulleyJoint::new","zpp_nape/constraint/PulleyJoint.hx",174);
 			this->a4localx = (int)0;
 			HX_STACK_LINE(866)
 			this->a4localy = (int)0;
-			HX_STACK_LINE(867)
-			{
-			}
 			HX_STACK_LINE(875)
 			{
 			}
@@ -268,9 +247,6 @@ HX_STACK_PUSH("ZPP_PulleyJoint::new","zpp_nape/constraint/PulleyJoint.hx",174);
 			this->a4relx = (int)0;
 			HX_STACK_LINE(886)
 			this->a4rely = (int)0;
-			HX_STACK_LINE(887)
-			{
-			}
 			HX_STACK_LINE(895)
 			{
 			}
@@ -282,9 +258,6 @@ HX_STACK_PUSH("ZPP_PulleyJoint::new","zpp_nape/constraint/PulleyJoint.hx",174);
 		this->n12x = (int)1;
 		HX_STACK_LINE(907)
 		this->n12y = (int)0;
-		HX_STACK_LINE(908)
-		{
-		}
 		HX_STACK_LINE(916)
 		{
 		}
@@ -295,9 +268,6 @@ HX_STACK_PUSH("ZPP_PulleyJoint::new","zpp_nape/constraint/PulleyJoint.hx",174);
 		this->n34x = (int)1;
 		HX_STACK_LINE(927)
 		this->n34y = (int)0;
-		HX_STACK_LINE(928)
-		{
-		}
 		HX_STACK_LINE(936)
 		{
 		}
@@ -328,1340 +298,11 @@ Dynamic ZPP_PulleyJoint_obj::__Create(hx::DynamicArray inArgs)
 	result->__construct();
 	return result;}
 
-Void ZPP_PulleyJoint_obj::drawLink( ::nape::util::Debug g,::nape::geom::Vec2 a1,::nape::geom::Vec2 a2,::nape::geom::Vec2 n,Float nl,Float bias,Float scale,int ca,int cb){
-{
-		HX_STACK_PUSH("ZPP_PulleyJoint::drawLink","zpp_nape/constraint/PulleyJoint.hx",2216);
-		HX_STACK_THIS(this);
-		HX_STACK_ARG(g,"g");
-		HX_STACK_ARG(a1,"a1");
-		HX_STACK_ARG(a2,"a2");
-		HX_STACK_ARG(n,"n");
-		HX_STACK_ARG(nl,"nl");
-		HX_STACK_ARG(bias,"bias");
-		HX_STACK_ARG(scale,"scale");
-		HX_STACK_ARG(ca,"ca");
-		HX_STACK_ARG(cb,"cb");
-		HX_STACK_LINE(2216)
-		if (((nl != (int)0))){
-			HX_STACK_LINE(2218)
-			n->muleq((Float((int)1) / Float(nl)));
-			HX_STACK_LINE(2219)
-			::nape::geom::Vec2 mid = a1->add(a2,null())->muleq(0.5);		HX_STACK_VAR(mid,"mid");
-			HX_STACK_LINE(2220)
-			Float cmin = (((this->jointMin - bias)) * scale);		HX_STACK_VAR(cmin,"cmin");
-			HX_STACK_LINE(2221)
-			if (((cmin < (int)0))){
-				HX_STACK_LINE(2221)
-				cmin = (int)0;
-			}
-			HX_STACK_LINE(2222)
-			Float cmax = (((this->jointMax - bias)) * scale);		HX_STACK_VAR(cmax,"cmax");
-			HX_STACK_LINE(2223)
-			if (((cmax < (int)0))){
-				HX_STACK_LINE(2223)
-				cmax = (int)0;
-			}
-			HX_STACK_LINE(2224)
-			::nape::geom::Vec2 min1 = mid->sub(n->mul((cmin * 0.5),true),null());		HX_STACK_VAR(min1,"min1");
-			HX_STACK_LINE(2225)
-			::nape::geom::Vec2 min2 = mid->add(n->mul((cmin * 0.5),true),null());		HX_STACK_VAR(min2,"min2");
-			HX_STACK_LINE(2226)
-			::nape::geom::Vec2 max1 = mid->sub(n->mul((cmax * 0.5),true),null());		HX_STACK_VAR(max1,"max1");
-			HX_STACK_LINE(2227)
-			::nape::geom::Vec2 max2 = mid->add(n->mul((cmax * 0.5),true),null());		HX_STACK_VAR(max2,"max2");
-			HX_STACK_LINE(2228)
-			g->drawLine(min1,min2,ca);
-			HX_STACK_LINE(2229)
-			g->drawLine(max1,min1,cb);
-			HX_STACK_LINE(2230)
-			g->drawLine(max2,min2,cb);
-			HX_STACK_LINE(2231)
-			if ((!(this->stiff))){
-				HX_STACK_LINE(2231)
-				if (((nl > cmax))){
-					HX_STACK_LINE(2233)
-					g->drawSpring(max1,a1,cb,null(),null());
-					HX_STACK_LINE(2234)
-					g->drawSpring(max2,a2,cb,null(),null());
-				}
-				else{
-					HX_STACK_LINE(2236)
-					if (((nl < cmin))){
-						HX_STACK_LINE(2237)
-						g->drawSpring(min1,a1,ca,null(),null());
-						HX_STACK_LINE(2238)
-						g->drawSpring(min2,a2,ca,null(),null());
-					}
-				}
-			}
-			HX_STACK_LINE(2241)
-			{
-				HX_STACK_LINE(2241)
-				if (((bool((mid != null())) && bool(mid->zpp_disp)))){
-					HX_STACK_LINE(2241)
-					hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-				}
-				HX_STACK_LINE(2241)
-				{
-					HX_STACK_LINE(2241)
-					::zpp_nape::geom::ZPP_Vec2 _this = mid->zpp_inner;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(2241)
-					if ((_this->_immutable)){
-						HX_STACK_LINE(2241)
-						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-					}
-					HX_STACK_LINE(2241)
-					if (((_this->_isimmutable_dyn() != null()))){
-						HX_STACK_LINE(2241)
-						_this->_isimmutable();
-					}
-				}
-				HX_STACK_LINE(2241)
-				if ((mid->zpp_inner->_inuse)){
-					HX_STACK_LINE(2241)
-					hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-				}
-				HX_STACK_LINE(2241)
-				::zpp_nape::geom::ZPP_Vec2 inner = mid->zpp_inner;		HX_STACK_VAR(inner,"inner");
-				HX_STACK_LINE(2241)
-				mid->zpp_inner->outer = null();
-				HX_STACK_LINE(2241)
-				mid->zpp_inner = null();
-				HX_STACK_LINE(2241)
-				{
-					HX_STACK_LINE(2241)
-					::nape::geom::Vec2 o = mid;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2241)
-					{
-					}
-					HX_STACK_LINE(2241)
-					o->zpp_pool = null();
-					HX_STACK_LINE(2241)
-					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-						HX_STACK_LINE(2241)
-						::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o;
-					}
-					else{
-						HX_STACK_LINE(2241)
-						::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o;
-					}
-					HX_STACK_LINE(2241)
-					::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o;
-					HX_STACK_LINE(2241)
-					o->zpp_disp = true;
-				}
-				HX_STACK_LINE(2241)
-				{
-					HX_STACK_LINE(2241)
-					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2241)
-					{
-					}
-					HX_STACK_LINE(2241)
-					{
-						HX_STACK_LINE(2241)
-						if (((o->outer != null()))){
-							HX_STACK_LINE(2241)
-							o->outer->zpp_inner = null();
-							HX_STACK_LINE(2241)
-							o->outer = null();
-						}
-						HX_STACK_LINE(2241)
-						o->_isimmutable = null();
-						HX_STACK_LINE(2241)
-						o->_validate = null();
-						HX_STACK_LINE(2241)
-						o->_invalidate = null();
-					}
-					HX_STACK_LINE(2241)
-					o->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-					HX_STACK_LINE(2241)
-					::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o;
-				}
-			}
-			HX_STACK_LINE(2242)
-			{
-				HX_STACK_LINE(2242)
-				if (((bool((min1 != null())) && bool(min1->zpp_disp)))){
-					HX_STACK_LINE(2242)
-					hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-				}
-				HX_STACK_LINE(2242)
-				{
-					HX_STACK_LINE(2242)
-					::zpp_nape::geom::ZPP_Vec2 _this = min1->zpp_inner;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(2242)
-					if ((_this->_immutable)){
-						HX_STACK_LINE(2242)
-						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-					}
-					HX_STACK_LINE(2242)
-					if (((_this->_isimmutable_dyn() != null()))){
-						HX_STACK_LINE(2242)
-						_this->_isimmutable();
-					}
-				}
-				HX_STACK_LINE(2242)
-				if ((min1->zpp_inner->_inuse)){
-					HX_STACK_LINE(2242)
-					hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-				}
-				HX_STACK_LINE(2242)
-				::zpp_nape::geom::ZPP_Vec2 inner = min1->zpp_inner;		HX_STACK_VAR(inner,"inner");
-				HX_STACK_LINE(2242)
-				min1->zpp_inner->outer = null();
-				HX_STACK_LINE(2242)
-				min1->zpp_inner = null();
-				HX_STACK_LINE(2242)
-				{
-					HX_STACK_LINE(2242)
-					::nape::geom::Vec2 o = min1;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2242)
-					{
-					}
-					HX_STACK_LINE(2242)
-					o->zpp_pool = null();
-					HX_STACK_LINE(2242)
-					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-						HX_STACK_LINE(2242)
-						::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o;
-					}
-					else{
-						HX_STACK_LINE(2242)
-						::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o;
-					}
-					HX_STACK_LINE(2242)
-					::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o;
-					HX_STACK_LINE(2242)
-					o->zpp_disp = true;
-				}
-				HX_STACK_LINE(2242)
-				{
-					HX_STACK_LINE(2242)
-					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2242)
-					{
-					}
-					HX_STACK_LINE(2242)
-					{
-						HX_STACK_LINE(2242)
-						if (((o->outer != null()))){
-							HX_STACK_LINE(2242)
-							o->outer->zpp_inner = null();
-							HX_STACK_LINE(2242)
-							o->outer = null();
-						}
-						HX_STACK_LINE(2242)
-						o->_isimmutable = null();
-						HX_STACK_LINE(2242)
-						o->_validate = null();
-						HX_STACK_LINE(2242)
-						o->_invalidate = null();
-					}
-					HX_STACK_LINE(2242)
-					o->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-					HX_STACK_LINE(2242)
-					::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o;
-				}
-			}
-			HX_STACK_LINE(2243)
-			{
-				HX_STACK_LINE(2243)
-				if (((bool((min2 != null())) && bool(min2->zpp_disp)))){
-					HX_STACK_LINE(2243)
-					hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-				}
-				HX_STACK_LINE(2243)
-				{
-					HX_STACK_LINE(2243)
-					::zpp_nape::geom::ZPP_Vec2 _this = min2->zpp_inner;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(2243)
-					if ((_this->_immutable)){
-						HX_STACK_LINE(2243)
-						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-					}
-					HX_STACK_LINE(2243)
-					if (((_this->_isimmutable_dyn() != null()))){
-						HX_STACK_LINE(2243)
-						_this->_isimmutable();
-					}
-				}
-				HX_STACK_LINE(2243)
-				if ((min2->zpp_inner->_inuse)){
-					HX_STACK_LINE(2243)
-					hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-				}
-				HX_STACK_LINE(2243)
-				::zpp_nape::geom::ZPP_Vec2 inner = min2->zpp_inner;		HX_STACK_VAR(inner,"inner");
-				HX_STACK_LINE(2243)
-				min2->zpp_inner->outer = null();
-				HX_STACK_LINE(2243)
-				min2->zpp_inner = null();
-				HX_STACK_LINE(2243)
-				{
-					HX_STACK_LINE(2243)
-					::nape::geom::Vec2 o = min2;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2243)
-					{
-					}
-					HX_STACK_LINE(2243)
-					o->zpp_pool = null();
-					HX_STACK_LINE(2243)
-					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-						HX_STACK_LINE(2243)
-						::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o;
-					}
-					else{
-						HX_STACK_LINE(2243)
-						::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o;
-					}
-					HX_STACK_LINE(2243)
-					::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o;
-					HX_STACK_LINE(2243)
-					o->zpp_disp = true;
-				}
-				HX_STACK_LINE(2243)
-				{
-					HX_STACK_LINE(2243)
-					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2243)
-					{
-					}
-					HX_STACK_LINE(2243)
-					{
-						HX_STACK_LINE(2243)
-						if (((o->outer != null()))){
-							HX_STACK_LINE(2243)
-							o->outer->zpp_inner = null();
-							HX_STACK_LINE(2243)
-							o->outer = null();
-						}
-						HX_STACK_LINE(2243)
-						o->_isimmutable = null();
-						HX_STACK_LINE(2243)
-						o->_validate = null();
-						HX_STACK_LINE(2243)
-						o->_invalidate = null();
-					}
-					HX_STACK_LINE(2243)
-					o->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-					HX_STACK_LINE(2243)
-					::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o;
-				}
-			}
-			HX_STACK_LINE(2244)
-			{
-				HX_STACK_LINE(2244)
-				if (((bool((max1 != null())) && bool(max1->zpp_disp)))){
-					HX_STACK_LINE(2244)
-					hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-				}
-				HX_STACK_LINE(2244)
-				{
-					HX_STACK_LINE(2244)
-					::zpp_nape::geom::ZPP_Vec2 _this = max1->zpp_inner;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(2244)
-					if ((_this->_immutable)){
-						HX_STACK_LINE(2244)
-						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-					}
-					HX_STACK_LINE(2244)
-					if (((_this->_isimmutable_dyn() != null()))){
-						HX_STACK_LINE(2244)
-						_this->_isimmutable();
-					}
-				}
-				HX_STACK_LINE(2244)
-				if ((max1->zpp_inner->_inuse)){
-					HX_STACK_LINE(2244)
-					hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-				}
-				HX_STACK_LINE(2244)
-				::zpp_nape::geom::ZPP_Vec2 inner = max1->zpp_inner;		HX_STACK_VAR(inner,"inner");
-				HX_STACK_LINE(2244)
-				max1->zpp_inner->outer = null();
-				HX_STACK_LINE(2244)
-				max1->zpp_inner = null();
-				HX_STACK_LINE(2244)
-				{
-					HX_STACK_LINE(2244)
-					::nape::geom::Vec2 o = max1;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2244)
-					{
-					}
-					HX_STACK_LINE(2244)
-					o->zpp_pool = null();
-					HX_STACK_LINE(2244)
-					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-						HX_STACK_LINE(2244)
-						::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o;
-					}
-					else{
-						HX_STACK_LINE(2244)
-						::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o;
-					}
-					HX_STACK_LINE(2244)
-					::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o;
-					HX_STACK_LINE(2244)
-					o->zpp_disp = true;
-				}
-				HX_STACK_LINE(2244)
-				{
-					HX_STACK_LINE(2244)
-					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2244)
-					{
-					}
-					HX_STACK_LINE(2244)
-					{
-						HX_STACK_LINE(2244)
-						if (((o->outer != null()))){
-							HX_STACK_LINE(2244)
-							o->outer->zpp_inner = null();
-							HX_STACK_LINE(2244)
-							o->outer = null();
-						}
-						HX_STACK_LINE(2244)
-						o->_isimmutable = null();
-						HX_STACK_LINE(2244)
-						o->_validate = null();
-						HX_STACK_LINE(2244)
-						o->_invalidate = null();
-					}
-					HX_STACK_LINE(2244)
-					o->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-					HX_STACK_LINE(2244)
-					::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o;
-				}
-			}
-			HX_STACK_LINE(2245)
-			{
-				HX_STACK_LINE(2245)
-				if (((bool((max2 != null())) && bool(max2->zpp_disp)))){
-					HX_STACK_LINE(2245)
-					hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-				}
-				HX_STACK_LINE(2245)
-				{
-					HX_STACK_LINE(2245)
-					::zpp_nape::geom::ZPP_Vec2 _this = max2->zpp_inner;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(2245)
-					if ((_this->_immutable)){
-						HX_STACK_LINE(2245)
-						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-					}
-					HX_STACK_LINE(2245)
-					if (((_this->_isimmutable_dyn() != null()))){
-						HX_STACK_LINE(2245)
-						_this->_isimmutable();
-					}
-				}
-				HX_STACK_LINE(2245)
-				if ((max2->zpp_inner->_inuse)){
-					HX_STACK_LINE(2245)
-					hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-				}
-				HX_STACK_LINE(2245)
-				::zpp_nape::geom::ZPP_Vec2 inner = max2->zpp_inner;		HX_STACK_VAR(inner,"inner");
-				HX_STACK_LINE(2245)
-				max2->zpp_inner->outer = null();
-				HX_STACK_LINE(2245)
-				max2->zpp_inner = null();
-				HX_STACK_LINE(2245)
-				{
-					HX_STACK_LINE(2245)
-					::nape::geom::Vec2 o = max2;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2245)
-					{
-					}
-					HX_STACK_LINE(2245)
-					o->zpp_pool = null();
-					HX_STACK_LINE(2245)
-					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-						HX_STACK_LINE(2245)
-						::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o;
-					}
-					else{
-						HX_STACK_LINE(2245)
-						::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o;
-					}
-					HX_STACK_LINE(2245)
-					::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o;
-					HX_STACK_LINE(2245)
-					o->zpp_disp = true;
-				}
-				HX_STACK_LINE(2245)
-				{
-					HX_STACK_LINE(2245)
-					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(2245)
-					{
-					}
-					HX_STACK_LINE(2245)
-					{
-						HX_STACK_LINE(2245)
-						if (((o->outer != null()))){
-							HX_STACK_LINE(2245)
-							o->outer->zpp_inner = null();
-							HX_STACK_LINE(2245)
-							o->outer = null();
-						}
-						HX_STACK_LINE(2245)
-						o->_isimmutable = null();
-						HX_STACK_LINE(2245)
-						o->_validate = null();
-						HX_STACK_LINE(2245)
-						o->_invalidate = null();
-					}
-					HX_STACK_LINE(2245)
-					o->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-					HX_STACK_LINE(2245)
-					::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o;
-				}
-			}
-		}
-	}
-return null();
-}
-
-
-HX_DEFINE_DYNAMIC_FUNC9(ZPP_PulleyJoint_obj,drawLink,(void))
-
 Void ZPP_PulleyJoint_obj::draw( ::nape::util::Debug g){
 {
 		HX_STACK_PUSH("ZPP_PulleyJoint::draw","zpp_nape/constraint/PulleyJoint.hx",2192);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(g,"g");
-		HX_STACK_LINE(2193)
-		::nape::constraint::PulleyJoint me = this->outer_zn;		HX_STACK_VAR(me,"me");
-		struct _Function_1_1{
-			inline static ::nape::geom::Vec2 Block( ::nape::constraint::PulleyJoint &me){
-				HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",2194);
-				{
-					HX_STACK_LINE(2194)
-					if (((me->zpp_inner_zn->wrap_a1 == null()))){
-						HX_STACK_LINE(2194)
-						me->zpp_inner_zn->setup_a1();
-					}
-					HX_STACK_LINE(2194)
-					return me->zpp_inner_zn->wrap_a1;
-				}
-				return null();
-			}
-		};
-		HX_STACK_LINE(2194)
-		::nape::geom::Vec2 a1 = ((  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) ))->localPointToWorld(_Function_1_1::Block(me),null());		HX_STACK_VAR(a1,"a1");
-		struct _Function_1_2{
-			inline static ::nape::geom::Vec2 Block( ::nape::constraint::PulleyJoint &me){
-				HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",2195);
-				{
-					HX_STACK_LINE(2195)
-					if (((me->zpp_inner_zn->wrap_a2 == null()))){
-						HX_STACK_LINE(2195)
-						me->zpp_inner_zn->setup_a2();
-					}
-					HX_STACK_LINE(2195)
-					return me->zpp_inner_zn->wrap_a2;
-				}
-				return null();
-			}
-		};
-		HX_STACK_LINE(2195)
-		::nape::geom::Vec2 a2 = ((  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) ))->localPointToWorld(_Function_1_2::Block(me),null());		HX_STACK_VAR(a2,"a2");
-		struct _Function_1_3{
-			inline static ::nape::geom::Vec2 Block( ::nape::constraint::PulleyJoint &me){
-				HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",2196);
-				{
-					HX_STACK_LINE(2196)
-					if (((me->zpp_inner_zn->wrap_a3 == null()))){
-						HX_STACK_LINE(2196)
-						me->zpp_inner_zn->setup_a3();
-					}
-					HX_STACK_LINE(2196)
-					return me->zpp_inner_zn->wrap_a3;
-				}
-				return null();
-			}
-		};
-		HX_STACK_LINE(2196)
-		::nape::geom::Vec2 a3 = ((  (((me->zpp_inner_zn->b3 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b3->outer) ))->localPointToWorld(_Function_1_3::Block(me),null());		HX_STACK_VAR(a3,"a3");
-		struct _Function_1_4{
-			inline static ::nape::geom::Vec2 Block( ::nape::constraint::PulleyJoint &me){
-				HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",2197);
-				{
-					HX_STACK_LINE(2197)
-					if (((me->zpp_inner_zn->wrap_a4 == null()))){
-						HX_STACK_LINE(2197)
-						me->zpp_inner_zn->setup_a4();
-					}
-					HX_STACK_LINE(2197)
-					return me->zpp_inner_zn->wrap_a4;
-				}
-				return null();
-			}
-		};
-		HX_STACK_LINE(2197)
-		::nape::geom::Vec2 a4 = ((  (((me->zpp_inner_zn->b4 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b4->outer) ))->localPointToWorld(_Function_1_4::Block(me),null());		HX_STACK_VAR(a4,"a4");
-		HX_STACK_LINE(2198)
-		::nape::geom::Vec2 n12 = a2->sub(a1,null());		HX_STACK_VAR(n12,"n12");
-		HX_STACK_LINE(2199)
-		::nape::geom::Vec2 n34 = a4->sub(a3,null());		HX_STACK_VAR(n34,"n34");
-		struct _Function_1_5{
-			inline static Float Block( ::nape::geom::Vec2 &n12){
-				HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",2200);
-				{
-					HX_STACK_LINE(2200)
-					if (((bool((n12 != null())) && bool(n12->zpp_disp)))){
-						HX_STACK_LINE(2200)
-						hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-					}
-					struct _Function_2_1{
-						inline static Float Block( ::nape::geom::Vec2 &n12){
-							HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",2200);
-							{
-								HX_STACK_LINE(2200)
-								if (((bool((n12 != null())) && bool(n12->zpp_disp)))){
-									HX_STACK_LINE(2200)
-									hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-								}
-								HX_STACK_LINE(2200)
-								{
-									HX_STACK_LINE(2200)
-									::zpp_nape::geom::ZPP_Vec2 _this = n12->zpp_inner;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(2200)
-									if (((_this->_validate_dyn() != null()))){
-										HX_STACK_LINE(2200)
-										_this->_validate();
-									}
-								}
-								HX_STACK_LINE(2200)
-								return n12->zpp_inner->x;
-							}
-							return null();
-						}
-					};
-					struct _Function_2_2{
-						inline static Float Block( ::nape::geom::Vec2 &n12){
-							HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",2200);
-							{
-								HX_STACK_LINE(2200)
-								if (((bool((n12 != null())) && bool(n12->zpp_disp)))){
-									HX_STACK_LINE(2200)
-									hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-								}
-								HX_STACK_LINE(2200)
-								{
-									HX_STACK_LINE(2200)
-									::zpp_nape::geom::ZPP_Vec2 _this = n12->zpp_inner;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(2200)
-									if (((_this->_validate_dyn() != null()))){
-										HX_STACK_LINE(2200)
-										_this->_validate();
-									}
-								}
-								HX_STACK_LINE(2200)
-								return n12->zpp_inner->x;
-							}
-							return null();
-						}
-					};
-					struct _Function_2_3{
-						inline static Float Block( ::nape::geom::Vec2 &n12){
-							HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",2200);
-							{
-								HX_STACK_LINE(2200)
-								if (((bool((n12 != null())) && bool(n12->zpp_disp)))){
-									HX_STACK_LINE(2200)
-									hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-								}
-								HX_STACK_LINE(2200)
-								{
-									HX_STACK_LINE(2200)
-									::zpp_nape::geom::ZPP_Vec2 _this = n12->zpp_inner;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(2200)
-									if (((_this->_validate_dyn() != null()))){
-										HX_STACK_LINE(2200)
-										_this->_validate();
-									}
-								}
-								HX_STACK_LINE(2200)
-								return n12->zpp_inner->y;
-							}
-							return null();
-						}
-					};
-					struct _Function_2_4{
-						inline static Float Block( ::nape::geom::Vec2 &n12){
-							HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",2200);
-							{
-								HX_STACK_LINE(2200)
-								if (((bool((n12 != null())) && bool(n12->zpp_disp)))){
-									HX_STACK_LINE(2200)
-									hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-								}
-								HX_STACK_LINE(2200)
-								{
-									HX_STACK_LINE(2200)
-									::zpp_nape::geom::ZPP_Vec2 _this = n12->zpp_inner;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(2200)
-									if (((_this->_validate_dyn() != null()))){
-										HX_STACK_LINE(2200)
-										_this->_validate();
-									}
-								}
-								HX_STACK_LINE(2200)
-								return n12->zpp_inner->y;
-							}
-							return null();
-						}
-					};
-					HX_STACK_LINE(2200)
-					return ::Math_obj::sqrt(((_Function_2_1::Block(n12) * _Function_2_2::Block(n12)) + (_Function_2_3::Block(n12) * _Function_2_4::Block(n12))));
-				}
-				return null();
-			}
-		};
-		HX_STACK_LINE(2200)
-		Float nl12 = _Function_1_5::Block(n12);		HX_STACK_VAR(nl12,"nl12");
-		struct _Function_1_6{
-			inline static Float Block( ::nape::geom::Vec2 &n34){
-				HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",2201);
-				{
-					HX_STACK_LINE(2201)
-					if (((bool((n34 != null())) && bool(n34->zpp_disp)))){
-						HX_STACK_LINE(2201)
-						hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-					}
-					struct _Function_2_1{
-						inline static Float Block( ::nape::geom::Vec2 &n34){
-							HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",2201);
-							{
-								HX_STACK_LINE(2201)
-								if (((bool((n34 != null())) && bool(n34->zpp_disp)))){
-									HX_STACK_LINE(2201)
-									hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-								}
-								HX_STACK_LINE(2201)
-								{
-									HX_STACK_LINE(2201)
-									::zpp_nape::geom::ZPP_Vec2 _this = n34->zpp_inner;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(2201)
-									if (((_this->_validate_dyn() != null()))){
-										HX_STACK_LINE(2201)
-										_this->_validate();
-									}
-								}
-								HX_STACK_LINE(2201)
-								return n34->zpp_inner->x;
-							}
-							return null();
-						}
-					};
-					struct _Function_2_2{
-						inline static Float Block( ::nape::geom::Vec2 &n34){
-							HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",2201);
-							{
-								HX_STACK_LINE(2201)
-								if (((bool((n34 != null())) && bool(n34->zpp_disp)))){
-									HX_STACK_LINE(2201)
-									hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-								}
-								HX_STACK_LINE(2201)
-								{
-									HX_STACK_LINE(2201)
-									::zpp_nape::geom::ZPP_Vec2 _this = n34->zpp_inner;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(2201)
-									if (((_this->_validate_dyn() != null()))){
-										HX_STACK_LINE(2201)
-										_this->_validate();
-									}
-								}
-								HX_STACK_LINE(2201)
-								return n34->zpp_inner->x;
-							}
-							return null();
-						}
-					};
-					struct _Function_2_3{
-						inline static Float Block( ::nape::geom::Vec2 &n34){
-							HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",2201);
-							{
-								HX_STACK_LINE(2201)
-								if (((bool((n34 != null())) && bool(n34->zpp_disp)))){
-									HX_STACK_LINE(2201)
-									hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-								}
-								HX_STACK_LINE(2201)
-								{
-									HX_STACK_LINE(2201)
-									::zpp_nape::geom::ZPP_Vec2 _this = n34->zpp_inner;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(2201)
-									if (((_this->_validate_dyn() != null()))){
-										HX_STACK_LINE(2201)
-										_this->_validate();
-									}
-								}
-								HX_STACK_LINE(2201)
-								return n34->zpp_inner->y;
-							}
-							return null();
-						}
-					};
-					struct _Function_2_4{
-						inline static Float Block( ::nape::geom::Vec2 &n34){
-							HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",2201);
-							{
-								HX_STACK_LINE(2201)
-								if (((bool((n34 != null())) && bool(n34->zpp_disp)))){
-									HX_STACK_LINE(2201)
-									hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-								}
-								HX_STACK_LINE(2201)
-								{
-									HX_STACK_LINE(2201)
-									::zpp_nape::geom::ZPP_Vec2 _this = n34->zpp_inner;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(2201)
-									if (((_this->_validate_dyn() != null()))){
-										HX_STACK_LINE(2201)
-										_this->_validate();
-									}
-								}
-								HX_STACK_LINE(2201)
-								return n34->zpp_inner->y;
-							}
-							return null();
-						}
-					};
-					HX_STACK_LINE(2201)
-					return ::Math_obj::sqrt(((_Function_2_1::Block(n34) * _Function_2_2::Block(n34)) + (_Function_2_3::Block(n34) * _Function_2_4::Block(n34))));
-				}
-				return null();
-			}
-		};
-		HX_STACK_LINE(2201)
-		Float nl34 = _Function_1_6::Block(n34);		HX_STACK_VAR(nl34,"nl34");
-		HX_STACK_LINE(2202)
-		this->drawLink(g,a1,a2,n12,nl12,(nl34 * this->ratio),1.0,(int)16776960,(int)65535);
-		HX_STACK_LINE(2203)
-		this->drawLink(g,a3,a4,n34,nl34,nl12,(Float((int)1) / Float(this->ratio)),(int)65535,(int)16711935);
-		HX_STACK_LINE(2204)
-		g->drawFilledCircle(a1,(int)2,(int)255);
-		HX_STACK_LINE(2205)
-		g->drawFilledCircle(a2,(int)2,(int)16711680);
-		HX_STACK_LINE(2206)
-		g->drawFilledCircle(a3,(int)2,(int)65280);
-		HX_STACK_LINE(2207)
-		g->drawFilledCircle(a4,(int)2,(int)16711935);
-		HX_STACK_LINE(2208)
-		{
-			HX_STACK_LINE(2208)
-			if (((bool((a1 != null())) && bool(a1->zpp_disp)))){
-				HX_STACK_LINE(2208)
-				hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-			}
-			HX_STACK_LINE(2208)
-			{
-				HX_STACK_LINE(2208)
-				::zpp_nape::geom::ZPP_Vec2 _this = a1->zpp_inner;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(2208)
-				if ((_this->_immutable)){
-					HX_STACK_LINE(2208)
-					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-				}
-				HX_STACK_LINE(2208)
-				if (((_this->_isimmutable_dyn() != null()))){
-					HX_STACK_LINE(2208)
-					_this->_isimmutable();
-				}
-			}
-			HX_STACK_LINE(2208)
-			if ((a1->zpp_inner->_inuse)){
-				HX_STACK_LINE(2208)
-				hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-			}
-			HX_STACK_LINE(2208)
-			::zpp_nape::geom::ZPP_Vec2 inner = a1->zpp_inner;		HX_STACK_VAR(inner,"inner");
-			HX_STACK_LINE(2208)
-			a1->zpp_inner->outer = null();
-			HX_STACK_LINE(2208)
-			a1->zpp_inner = null();
-			HX_STACK_LINE(2208)
-			{
-				HX_STACK_LINE(2208)
-				::nape::geom::Vec2 o = a1;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2208)
-				{
-				}
-				HX_STACK_LINE(2208)
-				o->zpp_pool = null();
-				HX_STACK_LINE(2208)
-				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-					HX_STACK_LINE(2208)
-					::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o;
-				}
-				else{
-					HX_STACK_LINE(2208)
-					::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o;
-				}
-				HX_STACK_LINE(2208)
-				::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o;
-				HX_STACK_LINE(2208)
-				o->zpp_disp = true;
-			}
-			HX_STACK_LINE(2208)
-			{
-				HX_STACK_LINE(2208)
-				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2208)
-				{
-				}
-				HX_STACK_LINE(2208)
-				{
-					HX_STACK_LINE(2208)
-					if (((o->outer != null()))){
-						HX_STACK_LINE(2208)
-						o->outer->zpp_inner = null();
-						HX_STACK_LINE(2208)
-						o->outer = null();
-					}
-					HX_STACK_LINE(2208)
-					o->_isimmutable = null();
-					HX_STACK_LINE(2208)
-					o->_validate = null();
-					HX_STACK_LINE(2208)
-					o->_invalidate = null();
-				}
-				HX_STACK_LINE(2208)
-				o->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-				HX_STACK_LINE(2208)
-				::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o;
-			}
-		}
-		HX_STACK_LINE(2209)
-		{
-			HX_STACK_LINE(2209)
-			if (((bool((a2 != null())) && bool(a2->zpp_disp)))){
-				HX_STACK_LINE(2209)
-				hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-			}
-			HX_STACK_LINE(2209)
-			{
-				HX_STACK_LINE(2209)
-				::zpp_nape::geom::ZPP_Vec2 _this = a2->zpp_inner;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(2209)
-				if ((_this->_immutable)){
-					HX_STACK_LINE(2209)
-					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-				}
-				HX_STACK_LINE(2209)
-				if (((_this->_isimmutable_dyn() != null()))){
-					HX_STACK_LINE(2209)
-					_this->_isimmutable();
-				}
-			}
-			HX_STACK_LINE(2209)
-			if ((a2->zpp_inner->_inuse)){
-				HX_STACK_LINE(2209)
-				hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-			}
-			HX_STACK_LINE(2209)
-			::zpp_nape::geom::ZPP_Vec2 inner = a2->zpp_inner;		HX_STACK_VAR(inner,"inner");
-			HX_STACK_LINE(2209)
-			a2->zpp_inner->outer = null();
-			HX_STACK_LINE(2209)
-			a2->zpp_inner = null();
-			HX_STACK_LINE(2209)
-			{
-				HX_STACK_LINE(2209)
-				::nape::geom::Vec2 o = a2;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2209)
-				{
-				}
-				HX_STACK_LINE(2209)
-				o->zpp_pool = null();
-				HX_STACK_LINE(2209)
-				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-					HX_STACK_LINE(2209)
-					::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o;
-				}
-				else{
-					HX_STACK_LINE(2209)
-					::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o;
-				}
-				HX_STACK_LINE(2209)
-				::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o;
-				HX_STACK_LINE(2209)
-				o->zpp_disp = true;
-			}
-			HX_STACK_LINE(2209)
-			{
-				HX_STACK_LINE(2209)
-				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2209)
-				{
-				}
-				HX_STACK_LINE(2209)
-				{
-					HX_STACK_LINE(2209)
-					if (((o->outer != null()))){
-						HX_STACK_LINE(2209)
-						o->outer->zpp_inner = null();
-						HX_STACK_LINE(2209)
-						o->outer = null();
-					}
-					HX_STACK_LINE(2209)
-					o->_isimmutable = null();
-					HX_STACK_LINE(2209)
-					o->_validate = null();
-					HX_STACK_LINE(2209)
-					o->_invalidate = null();
-				}
-				HX_STACK_LINE(2209)
-				o->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-				HX_STACK_LINE(2209)
-				::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o;
-			}
-		}
-		HX_STACK_LINE(2210)
-		{
-			HX_STACK_LINE(2210)
-			if (((bool((a3 != null())) && bool(a3->zpp_disp)))){
-				HX_STACK_LINE(2210)
-				hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-			}
-			HX_STACK_LINE(2210)
-			{
-				HX_STACK_LINE(2210)
-				::zpp_nape::geom::ZPP_Vec2 _this = a3->zpp_inner;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(2210)
-				if ((_this->_immutable)){
-					HX_STACK_LINE(2210)
-					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-				}
-				HX_STACK_LINE(2210)
-				if (((_this->_isimmutable_dyn() != null()))){
-					HX_STACK_LINE(2210)
-					_this->_isimmutable();
-				}
-			}
-			HX_STACK_LINE(2210)
-			if ((a3->zpp_inner->_inuse)){
-				HX_STACK_LINE(2210)
-				hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-			}
-			HX_STACK_LINE(2210)
-			::zpp_nape::geom::ZPP_Vec2 inner = a3->zpp_inner;		HX_STACK_VAR(inner,"inner");
-			HX_STACK_LINE(2210)
-			a3->zpp_inner->outer = null();
-			HX_STACK_LINE(2210)
-			a3->zpp_inner = null();
-			HX_STACK_LINE(2210)
-			{
-				HX_STACK_LINE(2210)
-				::nape::geom::Vec2 o = a3;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2210)
-				{
-				}
-				HX_STACK_LINE(2210)
-				o->zpp_pool = null();
-				HX_STACK_LINE(2210)
-				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-					HX_STACK_LINE(2210)
-					::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o;
-				}
-				else{
-					HX_STACK_LINE(2210)
-					::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o;
-				}
-				HX_STACK_LINE(2210)
-				::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o;
-				HX_STACK_LINE(2210)
-				o->zpp_disp = true;
-			}
-			HX_STACK_LINE(2210)
-			{
-				HX_STACK_LINE(2210)
-				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2210)
-				{
-				}
-				HX_STACK_LINE(2210)
-				{
-					HX_STACK_LINE(2210)
-					if (((o->outer != null()))){
-						HX_STACK_LINE(2210)
-						o->outer->zpp_inner = null();
-						HX_STACK_LINE(2210)
-						o->outer = null();
-					}
-					HX_STACK_LINE(2210)
-					o->_isimmutable = null();
-					HX_STACK_LINE(2210)
-					o->_validate = null();
-					HX_STACK_LINE(2210)
-					o->_invalidate = null();
-				}
-				HX_STACK_LINE(2210)
-				o->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-				HX_STACK_LINE(2210)
-				::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o;
-			}
-		}
-		HX_STACK_LINE(2211)
-		{
-			HX_STACK_LINE(2211)
-			if (((bool((a4 != null())) && bool(a4->zpp_disp)))){
-				HX_STACK_LINE(2211)
-				hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-			}
-			HX_STACK_LINE(2211)
-			{
-				HX_STACK_LINE(2211)
-				::zpp_nape::geom::ZPP_Vec2 _this = a4->zpp_inner;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(2211)
-				if ((_this->_immutable)){
-					HX_STACK_LINE(2211)
-					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-				}
-				HX_STACK_LINE(2211)
-				if (((_this->_isimmutable_dyn() != null()))){
-					HX_STACK_LINE(2211)
-					_this->_isimmutable();
-				}
-			}
-			HX_STACK_LINE(2211)
-			if ((a4->zpp_inner->_inuse)){
-				HX_STACK_LINE(2211)
-				hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-			}
-			HX_STACK_LINE(2211)
-			::zpp_nape::geom::ZPP_Vec2 inner = a4->zpp_inner;		HX_STACK_VAR(inner,"inner");
-			HX_STACK_LINE(2211)
-			a4->zpp_inner->outer = null();
-			HX_STACK_LINE(2211)
-			a4->zpp_inner = null();
-			HX_STACK_LINE(2211)
-			{
-				HX_STACK_LINE(2211)
-				::nape::geom::Vec2 o = a4;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2211)
-				{
-				}
-				HX_STACK_LINE(2211)
-				o->zpp_pool = null();
-				HX_STACK_LINE(2211)
-				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-					HX_STACK_LINE(2211)
-					::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o;
-				}
-				else{
-					HX_STACK_LINE(2211)
-					::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o;
-				}
-				HX_STACK_LINE(2211)
-				::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o;
-				HX_STACK_LINE(2211)
-				o->zpp_disp = true;
-			}
-			HX_STACK_LINE(2211)
-			{
-				HX_STACK_LINE(2211)
-				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2211)
-				{
-				}
-				HX_STACK_LINE(2211)
-				{
-					HX_STACK_LINE(2211)
-					if (((o->outer != null()))){
-						HX_STACK_LINE(2211)
-						o->outer->zpp_inner = null();
-						HX_STACK_LINE(2211)
-						o->outer = null();
-					}
-					HX_STACK_LINE(2211)
-					o->_isimmutable = null();
-					HX_STACK_LINE(2211)
-					o->_validate = null();
-					HX_STACK_LINE(2211)
-					o->_invalidate = null();
-				}
-				HX_STACK_LINE(2211)
-				o->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-				HX_STACK_LINE(2211)
-				::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o;
-			}
-		}
-		HX_STACK_LINE(2212)
-		{
-			HX_STACK_LINE(2212)
-			if (((bool((n12 != null())) && bool(n12->zpp_disp)))){
-				HX_STACK_LINE(2212)
-				hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-			}
-			HX_STACK_LINE(2212)
-			{
-				HX_STACK_LINE(2212)
-				::zpp_nape::geom::ZPP_Vec2 _this = n12->zpp_inner;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(2212)
-				if ((_this->_immutable)){
-					HX_STACK_LINE(2212)
-					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-				}
-				HX_STACK_LINE(2212)
-				if (((_this->_isimmutable_dyn() != null()))){
-					HX_STACK_LINE(2212)
-					_this->_isimmutable();
-				}
-			}
-			HX_STACK_LINE(2212)
-			if ((n12->zpp_inner->_inuse)){
-				HX_STACK_LINE(2212)
-				hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-			}
-			HX_STACK_LINE(2212)
-			::zpp_nape::geom::ZPP_Vec2 inner = n12->zpp_inner;		HX_STACK_VAR(inner,"inner");
-			HX_STACK_LINE(2212)
-			n12->zpp_inner->outer = null();
-			HX_STACK_LINE(2212)
-			n12->zpp_inner = null();
-			HX_STACK_LINE(2212)
-			{
-				HX_STACK_LINE(2212)
-				::nape::geom::Vec2 o = n12;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2212)
-				{
-				}
-				HX_STACK_LINE(2212)
-				o->zpp_pool = null();
-				HX_STACK_LINE(2212)
-				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-					HX_STACK_LINE(2212)
-					::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o;
-				}
-				else{
-					HX_STACK_LINE(2212)
-					::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o;
-				}
-				HX_STACK_LINE(2212)
-				::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o;
-				HX_STACK_LINE(2212)
-				o->zpp_disp = true;
-			}
-			HX_STACK_LINE(2212)
-			{
-				HX_STACK_LINE(2212)
-				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2212)
-				{
-				}
-				HX_STACK_LINE(2212)
-				{
-					HX_STACK_LINE(2212)
-					if (((o->outer != null()))){
-						HX_STACK_LINE(2212)
-						o->outer->zpp_inner = null();
-						HX_STACK_LINE(2212)
-						o->outer = null();
-					}
-					HX_STACK_LINE(2212)
-					o->_isimmutable = null();
-					HX_STACK_LINE(2212)
-					o->_validate = null();
-					HX_STACK_LINE(2212)
-					o->_invalidate = null();
-				}
-				HX_STACK_LINE(2212)
-				o->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-				HX_STACK_LINE(2212)
-				::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o;
-			}
-		}
-		HX_STACK_LINE(2213)
-		{
-			HX_STACK_LINE(2213)
-			if (((bool((n34 != null())) && bool(n34->zpp_disp)))){
-				HX_STACK_LINE(2213)
-				hx::Throw (((HX_CSTRING("Error: ") + HX_CSTRING("Vec2")) + HX_CSTRING(" has been disposed and cannot be used!")));
-			}
-			HX_STACK_LINE(2213)
-			{
-				HX_STACK_LINE(2213)
-				::zpp_nape::geom::ZPP_Vec2 _this = n34->zpp_inner;		HX_STACK_VAR(_this,"_this");
-				HX_STACK_LINE(2213)
-				if ((_this->_immutable)){
-					HX_STACK_LINE(2213)
-					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
-				}
-				HX_STACK_LINE(2213)
-				if (((_this->_isimmutable_dyn() != null()))){
-					HX_STACK_LINE(2213)
-					_this->_isimmutable();
-				}
-			}
-			HX_STACK_LINE(2213)
-			if ((n34->zpp_inner->_inuse)){
-				HX_STACK_LINE(2213)
-				hx::Throw (HX_CSTRING("Error: This Vec2 is not disposable"));
-			}
-			HX_STACK_LINE(2213)
-			::zpp_nape::geom::ZPP_Vec2 inner = n34->zpp_inner;		HX_STACK_VAR(inner,"inner");
-			HX_STACK_LINE(2213)
-			n34->zpp_inner->outer = null();
-			HX_STACK_LINE(2213)
-			n34->zpp_inner = null();
-			HX_STACK_LINE(2213)
-			{
-				HX_STACK_LINE(2213)
-				::nape::geom::Vec2 o = n34;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2213)
-				{
-				}
-				HX_STACK_LINE(2213)
-				o->zpp_pool = null();
-				HX_STACK_LINE(2213)
-				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
-					HX_STACK_LINE(2213)
-					::zpp_nape::util::ZPP_PubPool_obj::nextVec2->zpp_pool = o;
-				}
-				else{
-					HX_STACK_LINE(2213)
-					::zpp_nape::util::ZPP_PubPool_obj::poolVec2 = o;
-				}
-				HX_STACK_LINE(2213)
-				::zpp_nape::util::ZPP_PubPool_obj::nextVec2 = o;
-				HX_STACK_LINE(2213)
-				o->zpp_disp = true;
-			}
-			HX_STACK_LINE(2213)
-			{
-				HX_STACK_LINE(2213)
-				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(2213)
-				{
-				}
-				HX_STACK_LINE(2213)
-				{
-					HX_STACK_LINE(2213)
-					if (((o->outer != null()))){
-						HX_STACK_LINE(2213)
-						o->outer->zpp_inner = null();
-						HX_STACK_LINE(2213)
-						o->outer = null();
-					}
-					HX_STACK_LINE(2213)
-					o->_isimmutable = null();
-					HX_STACK_LINE(2213)
-					o->_validate = null();
-					HX_STACK_LINE(2213)
-					o->_invalidate = null();
-				}
-				HX_STACK_LINE(2213)
-				o->next = ::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool;
-				HX_STACK_LINE(2213)
-				::zpp_nape::geom::ZPP_Vec2_obj::zpp_pool = o;
-			}
-		}
 	}
 return null();
 }
@@ -1734,9 +375,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 		n12x = this->n12x;
 		HX_STACK_LINE(1675)
 		n12y = this->n12y;
-		HX_STACK_LINE(1676)
-		{
-		}
 		HX_STACK_LINE(1684)
 		{
 		}
@@ -1747,15 +385,12 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 		n34x = this->n34x;
 		HX_STACK_LINE(1695)
 		n34y = this->n34y;
-		HX_STACK_LINE(1696)
-		{
-		}
 		HX_STACK_LINE(1704)
 		{
 		}
 	}
 	struct _Function_1_1{
-		inline static Float Block( Float &r3y,Float &n34y,bool &slack,Float &r3x,Float &n34x,Float &r4y,Float &r4x,Float &r1y,Float &r1x,::zpp_nape::constraint::ZPP_PulleyJoint_obj *__this,Float &n12y,Float &r2y,Float &n12x,Float &r2x){
+		inline static Float Block( ::zpp_nape::constraint::ZPP_PulleyJoint_obj *__this,Float &r1y,Float &r3x,Float &r3y,Float &r4x,bool &slack,Float &r1x,Float &r2y,Float &n34x,Float &n12y,Float &r2x,Float &n12x,Float &n34y,Float &r4y){
 			HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",1713);
 			{
 				HX_STACK_LINE(1714)
@@ -1774,43 +409,14 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 				t34x = ((__this->b4->posx + r4x) - ((__this->b3->posx + r3x)));
 				HX_STACK_LINE(1721)
 				t34y = ((__this->b4->posy + r4y) - ((__this->b3->posy + r3y)));
-				struct _Function_2_1{
-					inline static Float Block( Float &t12x,Float &t12y){
-						HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",1722);
-						{
-							HX_STACK_LINE(1722)
-							{
-							}
-							HX_STACK_LINE(1722)
-							return ::Math_obj::sqrt(((t12x * t12x) + (t12y * t12y)));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(1722)
-				Float C12 = _Function_2_1::Block(t12x,t12y);		HX_STACK_VAR(C12,"C12");
-				struct _Function_2_2{
-					inline static Float Block( Float &t34x,Float &t34y){
-						HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",1723);
-						{
-							HX_STACK_LINE(1723)
-							{
-							}
-							HX_STACK_LINE(1723)
-							return ::Math_obj::sqrt(((t34x * t34x) + (t34y * t34y)));
-						}
-						return null();
-					}
-				};
+				Float C12 = ::Math_obj::sqrt(((t12x * t12x) + (t12y * t12y)));		HX_STACK_VAR(C12,"C12");
 				HX_STACK_LINE(1723)
-				Float C34 = _Function_2_2::Block(t34x,t34y);		HX_STACK_VAR(C34,"C34");
+				Float C34 = ::Math_obj::sqrt(((t34x * t34x) + (t34y * t34y)));		HX_STACK_VAR(C34,"C34");
 				HX_STACK_LINE(1724)
 				if (((C12 != (int)0))){
 					HX_STACK_LINE(1726)
 					Float t = (Float(1.0) / Float(C12));		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(1727)
-					{
-					}
 					HX_STACK_LINE(1735)
 					n12x = (t12x * t);
 					HX_STACK_LINE(1736)
@@ -1822,9 +428,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 					{
 						HX_STACK_LINE(1741)
 						Float t = (Float(1.0) / Float(C34));		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(1742)
-						{
-						}
 						HX_STACK_LINE(1750)
 						n34x = (t34x * t);
 						HX_STACK_LINE(1751)
@@ -1834,9 +437,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 					{
 						HX_STACK_LINE(1754)
 						Float t = __this->ratio;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(1755)
-						{
-						}
 						HX_STACK_LINE(1763)
 						hx::MultEq(n34x,t);
 						HX_STACK_LINE(1764)
@@ -1844,24 +444,8 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 					}
 				}
 				else{
-					struct _Function_3_1{
-						inline static Float Block( Float &n34x,Float &n34y){
-							HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",1769);
-							{
-								HX_STACK_LINE(1769)
-								{
-								}
-								HX_STACK_LINE(1769)
-								return ::Math_obj::sqrt(((n34x * n34x) + (n34y * n34y)));
-							}
-							return null();
-						}
-					};
 					HX_STACK_LINE(1769)
-					Float t = (Float(__this->ratio) / Float(_Function_3_1::Block(n34x,n34y)));		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(1770)
-					{
-					}
+					Float t = (Float(__this->ratio) / Float(::Math_obj::sqrt(((n34x * n34x) + (n34y * n34y)))));		HX_STACK_VAR(t,"t");
 					HX_STACK_LINE(1778)
 					hx::MultEq(n34x,t);
 					HX_STACK_LINE(1779)
@@ -1913,9 +497,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 								n12x = (int)0;
 								HX_STACK_LINE(1807)
 								n12y = (int)0;
-								HX_STACK_LINE(1808)
-								{
-								}
 								HX_STACK_LINE(1816)
 								{
 								}
@@ -1926,9 +507,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 								n34x = (int)0;
 								HX_STACK_LINE(1827)
 								n34y = (int)0;
-								HX_STACK_LINE(1828)
-								{
-								}
 								HX_STACK_LINE(1836)
 								{
 								}
@@ -1947,7 +525,7 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 		}
 	};
 	HX_STACK_LINE(1713)
-	E = _Function_1_1::Block(r3y,n34y,slack,r3x,n34x,r4y,r4x,r1y,r1x,this,n12y,r2y,n12x,r2x);
+	E = _Function_1_1::Block(this,r1y,r3x,r3y,r4x,slack,r1x,r2y,n34x,n12y,r2x,n12x,n34y,r4y);
 	HX_STACK_LINE(1851)
 	if ((!(slack))){
 		HX_STACK_LINE(1852)
@@ -1978,9 +556,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 					{
 						HX_STACK_LINE(1862)
 						Float t = (j * this->b1->imass);		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(1863)
-						{
-						}
 						HX_STACK_LINE(1871)
 						hx::SubEq(this->b1->posx,(n12x * t));
 						HX_STACK_LINE(1872)
@@ -1990,9 +565,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 					{
 						HX_STACK_LINE(1875)
 						Float t = (j * this->b2->imass);		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(1876)
-						{
-						}
 						HX_STACK_LINE(1884)
 						hx::AddEq(this->b2->posx,(n12x * t));
 						HX_STACK_LINE(1885)
@@ -2002,9 +574,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 					{
 						HX_STACK_LINE(1888)
 						Float t = (j * this->b3->imass);		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(1889)
-						{
-						}
 						HX_STACK_LINE(1897)
 						hx::SubEq(this->b3->posx,(n34x * t));
 						HX_STACK_LINE(1898)
@@ -2014,16 +583,13 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 					{
 						HX_STACK_LINE(1901)
 						Float t = (j * this->b4->imass);		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(1902)
-						{
-						}
 						HX_STACK_LINE(1910)
 						hx::AddEq(this->b4->posx,(n34x * t));
 						HX_STACK_LINE(1911)
 						hx::AddEq(this->b4->posy,(n34y * t));
 					}
 					struct _Function_5_1{
-						inline static Float Block( Float &r3y,Float &n34y,bool &slack,Float &r3x,Float &n34x,Float &r4y,Float &r4x,Float &r1y,Float &r1x,::zpp_nape::constraint::ZPP_PulleyJoint_obj *__this,Float &n12y,Float &r2y,Float &n12x,Float &r2x){
+						inline static Float Block( ::zpp_nape::constraint::ZPP_PulleyJoint_obj *__this,Float &r1y,Float &r3x,Float &r3y,Float &r4x,bool &slack,Float &r1x,Float &r2y,Float &n34x,Float &n12y,Float &r2x,Float &n12x,Float &n34y,Float &r4y){
 							HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",1913);
 							{
 								HX_STACK_LINE(1914)
@@ -2042,43 +608,14 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 								t34x = ((__this->b4->posx + r4x) - ((__this->b3->posx + r3x)));
 								HX_STACK_LINE(1921)
 								t34y = ((__this->b4->posy + r4y) - ((__this->b3->posy + r3y)));
-								struct _Function_6_1{
-									inline static Float Block( Float &t12x,Float &t12y){
-										HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",1922);
-										{
-											HX_STACK_LINE(1922)
-											{
-											}
-											HX_STACK_LINE(1922)
-											return ::Math_obj::sqrt(((t12x * t12x) + (t12y * t12y)));
-										}
-										return null();
-									}
-								};
 								HX_STACK_LINE(1922)
-								Float C12 = _Function_6_1::Block(t12x,t12y);		HX_STACK_VAR(C12,"C12");
-								struct _Function_6_2{
-									inline static Float Block( Float &t34x,Float &t34y){
-										HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",1923);
-										{
-											HX_STACK_LINE(1923)
-											{
-											}
-											HX_STACK_LINE(1923)
-											return ::Math_obj::sqrt(((t34x * t34x) + (t34y * t34y)));
-										}
-										return null();
-									}
-								};
+								Float C12 = ::Math_obj::sqrt(((t12x * t12x) + (t12y * t12y)));		HX_STACK_VAR(C12,"C12");
 								HX_STACK_LINE(1923)
-								Float C34 = _Function_6_2::Block(t34x,t34y);		HX_STACK_VAR(C34,"C34");
+								Float C34 = ::Math_obj::sqrt(((t34x * t34x) + (t34y * t34y)));		HX_STACK_VAR(C34,"C34");
 								HX_STACK_LINE(1924)
 								if (((C12 != (int)0))){
 									HX_STACK_LINE(1926)
 									Float t = (Float(1.0) / Float(C12));		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(1927)
-									{
-									}
 									HX_STACK_LINE(1935)
 									n12x = (t12x * t);
 									HX_STACK_LINE(1936)
@@ -2090,9 +627,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 									{
 										HX_STACK_LINE(1941)
 										Float t = (Float(1.0) / Float(C34));		HX_STACK_VAR(t,"t");
-										HX_STACK_LINE(1942)
-										{
-										}
 										HX_STACK_LINE(1950)
 										n34x = (t34x * t);
 										HX_STACK_LINE(1951)
@@ -2102,9 +636,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 									{
 										HX_STACK_LINE(1954)
 										Float t = __this->ratio;		HX_STACK_VAR(t,"t");
-										HX_STACK_LINE(1955)
-										{
-										}
 										HX_STACK_LINE(1963)
 										hx::MultEq(n34x,t);
 										HX_STACK_LINE(1964)
@@ -2112,24 +643,8 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 									}
 								}
 								else{
-									struct _Function_7_1{
-										inline static Float Block( Float &n34x,Float &n34y){
-											HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",1969);
-											{
-												HX_STACK_LINE(1969)
-												{
-												}
-												HX_STACK_LINE(1969)
-												return ::Math_obj::sqrt(((n34x * n34x) + (n34y * n34y)));
-											}
-											return null();
-										}
-									};
 									HX_STACK_LINE(1969)
-									Float t = (Float(__this->ratio) / Float(_Function_7_1::Block(n34x,n34y)));		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(1970)
-									{
-									}
+									Float t = (Float(__this->ratio) / Float(::Math_obj::sqrt(((n34x * n34x) + (n34y * n34y)))));		HX_STACK_VAR(t,"t");
 									HX_STACK_LINE(1978)
 									hx::MultEq(n34x,t);
 									HX_STACK_LINE(1979)
@@ -2181,9 +696,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 												n12x = (int)0;
 												HX_STACK_LINE(2007)
 												n12y = (int)0;
-												HX_STACK_LINE(2008)
-												{
-												}
 												HX_STACK_LINE(2016)
 												{
 												}
@@ -2194,9 +706,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 												n34x = (int)0;
 												HX_STACK_LINE(2027)
 												n34y = (int)0;
-												HX_STACK_LINE(2028)
-												{
-												}
 												HX_STACK_LINE(2036)
 												{
 												}
@@ -2215,7 +724,7 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 						}
 					};
 					HX_STACK_LINE(1913)
-					E = _Function_5_1::Block(r3y,n34y,slack,r3x,n34x,r4y,r4x,r1y,r1x,this,n12y,r2y,n12x,r2x);
+					E = _Function_5_1::Block(this,r1y,r3x,r3y,r4x,slack,r1x,r2y,n34x,n12y,r2x,n12x,n34y,r4y);
 					HX_STACK_LINE(2051)
 					hx::MultEq(E,0.5);
 				}
@@ -2227,7 +736,7 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 		Float cx3;		HX_STACK_VAR(cx3,"cx3");
 		Float cx4;		HX_STACK_VAR(cx4,"cx4");
 		struct _Function_2_1{
-			inline static Float Block( Float &r2x,Float &n12x,Float &cx2,Float &cx1,Float &r1y,Float &r1x,Float &n34y,Float &n34x,Float &r4y,::zpp_nape::constraint::ZPP_PulleyJoint_obj *__this,Float &r4x,Float &r3y,Float &r3x,Float &cx4,Float &r2y,Float &n12y,Float &cx3){
+			inline static Float Block( Float &r1y,::zpp_nape::constraint::ZPP_PulleyJoint_obj *__this,Float &r3x,Float &r3y,Float &r4x,Float &r1x,Float &r2y,Float &n34x,Float &n12y,Float &cx1,Float &n12x,Float &r2x,Float &cx3,Float &n34y,Float &cx4,Float &r4y,Float &cx2){
 				HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",2056);
 				{
 					HX_STACK_LINE(2057)
@@ -2269,7 +778,7 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 			}
 		};
 		HX_STACK_LINE(2056)
-		Float k = _Function_2_1::Block(r2x,n12x,cx2,cx1,r1y,r1x,n34y,n34x,r4y,this,r4x,r3y,r3x,cx4,r2y,n12y,cx3);		HX_STACK_VAR(k,"k");
+		Float k = _Function_2_1::Block(r1y,this,r3x,r3y,r4x,r1x,r2y,n34x,n12y,cx1,n12x,r2x,cx3,n34y,cx4,r4y,cx2);		HX_STACK_VAR(k,"k");
 		HX_STACK_LINE(2069)
 		if (((k != (int)0))){
 			HX_STACK_LINE(2069)
@@ -2283,9 +792,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 			{
 				HX_STACK_LINE(2074)
 				Float t = (this->b1->imass * j);		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(2075)
-				{
-				}
 				HX_STACK_LINE(2083)
 				hx::SubEq(this->b1->posx,(n12x * t));
 				HX_STACK_LINE(2084)
@@ -2295,9 +801,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 			{
 				HX_STACK_LINE(2087)
 				Float t = (this->b2->imass * j);		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(2088)
-				{
-				}
 				HX_STACK_LINE(2096)
 				hx::AddEq(this->b2->posx,(n12x * t));
 				HX_STACK_LINE(2097)
@@ -2307,9 +810,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 			{
 				HX_STACK_LINE(2100)
 				Float t = (this->b3->imass * j);		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(2101)
-				{
-				}
 				HX_STACK_LINE(2109)
 				hx::SubEq(this->b3->posx,(n34x * t));
 				HX_STACK_LINE(2110)
@@ -2319,9 +819,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 			{
 				HX_STACK_LINE(2113)
 				Float t = (this->b4->imass * j);		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(2114)
-				{
-				}
 				HX_STACK_LINE(2122)
 				hx::AddEq(this->b4->posx,(n34x * t));
 				HX_STACK_LINE(2123)
@@ -2340,9 +837,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 					_this->axisx = ::Math_obj::sin(_this->rot);
 					HX_STACK_LINE(2125)
 					_this->axisy = ::Math_obj::cos(_this->rot);
-					HX_STACK_LINE(2125)
-					{
-					}
 					HX_STACK_LINE(2125)
 					Dynamic();
 				}
@@ -2375,9 +869,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 					HX_STACK_LINE(2126)
 					_this->axisy = ::Math_obj::cos(_this->rot);
 					HX_STACK_LINE(2126)
-					{
-					}
-					HX_STACK_LINE(2126)
 					Dynamic();
 				}
 				else{
@@ -2409,9 +900,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 					HX_STACK_LINE(2127)
 					_this->axisy = ::Math_obj::cos(_this->rot);
 					HX_STACK_LINE(2127)
-					{
-					}
-					HX_STACK_LINE(2127)
 					Dynamic();
 				}
 				else{
@@ -2442,9 +930,6 @@ bool ZPP_PulleyJoint_obj::applyImpulsePos( ){
 					_this->axisx = ::Math_obj::sin(_this->rot);
 					HX_STACK_LINE(2128)
 					_this->axisy = ::Math_obj::cos(_this->rot);
-					HX_STACK_LINE(2128)
-					{
-					}
 					HX_STACK_LINE(2128)
 					Dynamic();
 				}
@@ -2484,9 +969,6 @@ bool ZPP_PulleyJoint_obj::applyImpulseVel( ){
 	Float j = ((this->kMass * ((this->bias - E))) - (this->jAcc * this->gamma));		HX_STACK_VAR(j,"j");
 	HX_STACK_LINE(1493)
 	{
-		HX_STACK_LINE(1494)
-		{
-		}
 		HX_STACK_LINE(1502)
 		Float jOld = this->jAcc;		HX_STACK_VAR(jOld,"jOld");
 		HX_STACK_LINE(1503)
@@ -2521,9 +1003,6 @@ bool ZPP_PulleyJoint_obj::applyImpulseVel( ){
 		{
 			HX_STACK_LINE(1574)
 			Float t = (this->b1->imass * j);		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(1575)
-			{
-			}
 			HX_STACK_LINE(1583)
 			hx::SubEq(this->b1->velx,(this->n12x * t));
 			HX_STACK_LINE(1584)
@@ -2533,9 +1012,6 @@ bool ZPP_PulleyJoint_obj::applyImpulseVel( ){
 		{
 			HX_STACK_LINE(1587)
 			Float t = (this->b2->imass * j);		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(1588)
-			{
-			}
 			HX_STACK_LINE(1596)
 			hx::AddEq(this->b2->velx,(this->n12x * t));
 			HX_STACK_LINE(1597)
@@ -2545,9 +1021,6 @@ bool ZPP_PulleyJoint_obj::applyImpulseVel( ){
 		{
 			HX_STACK_LINE(1600)
 			Float t = (this->b3->imass * j);		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(1601)
-			{
-			}
 			HX_STACK_LINE(1609)
 			hx::SubEq(this->b3->velx,(this->n34x * t));
 			HX_STACK_LINE(1610)
@@ -2557,9 +1030,6 @@ bool ZPP_PulleyJoint_obj::applyImpulseVel( ){
 		{
 			HX_STACK_LINE(1613)
 			Float t = (this->b4->imass * j);		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(1614)
-			{
-			}
 			HX_STACK_LINE(1622)
 			hx::AddEq(this->b4->velx,(this->n34x * t));
 			HX_STACK_LINE(1623)
@@ -2589,9 +1059,6 @@ Void ZPP_PulleyJoint_obj::warmStart( ){
 			{
 				HX_STACK_LINE(1429)
 				Float t = (this->b1->imass * this->jAcc);		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(1430)
-				{
-				}
 				HX_STACK_LINE(1438)
 				hx::SubEq(this->b1->velx,(this->n12x * t));
 				HX_STACK_LINE(1439)
@@ -2601,9 +1068,6 @@ Void ZPP_PulleyJoint_obj::warmStart( ){
 			{
 				HX_STACK_LINE(1442)
 				Float t = (this->b2->imass * this->jAcc);		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(1443)
-				{
-				}
 				HX_STACK_LINE(1451)
 				hx::AddEq(this->b2->velx,(this->n12x * t));
 				HX_STACK_LINE(1452)
@@ -2613,9 +1077,6 @@ Void ZPP_PulleyJoint_obj::warmStart( ){
 			{
 				HX_STACK_LINE(1455)
 				Float t = (this->b3->imass * this->jAcc);		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(1456)
-				{
-				}
 				HX_STACK_LINE(1464)
 				hx::SubEq(this->b3->velx,(this->n34x * t));
 				HX_STACK_LINE(1465)
@@ -2625,9 +1086,6 @@ Void ZPP_PulleyJoint_obj::warmStart( ){
 			{
 				HX_STACK_LINE(1468)
 				Float t = (this->b4->imass * this->jAcc);		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(1469)
-				{
-				}
 				HX_STACK_LINE(1477)
 				hx::AddEq(this->b4->velx,(this->n34x * t));
 				HX_STACK_LINE(1478)
@@ -2712,43 +1170,14 @@ bool ZPP_PulleyJoint_obj::preStep( Float dt){
 				t34x = ((__this->b4->posx + __this->a4relx) - ((__this->b3->posx + __this->a3relx)));
 				HX_STACK_LINE(1195)
 				t34y = ((__this->b4->posy + __this->a4rely) - ((__this->b3->posy + __this->a3rely)));
-				struct _Function_2_1{
-					inline static Float Block( Float &t12x,Float &t12y){
-						HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",1196);
-						{
-							HX_STACK_LINE(1196)
-							{
-							}
-							HX_STACK_LINE(1196)
-							return ::Math_obj::sqrt(((t12x * t12x) + (t12y * t12y)));
-						}
-						return null();
-					}
-				};
 				HX_STACK_LINE(1196)
-				Float C12 = _Function_2_1::Block(t12x,t12y);		HX_STACK_VAR(C12,"C12");
-				struct _Function_2_2{
-					inline static Float Block( Float &t34x,Float &t34y){
-						HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",1197);
-						{
-							HX_STACK_LINE(1197)
-							{
-							}
-							HX_STACK_LINE(1197)
-							return ::Math_obj::sqrt(((t34x * t34x) + (t34y * t34y)));
-						}
-						return null();
-					}
-				};
+				Float C12 = ::Math_obj::sqrt(((t12x * t12x) + (t12y * t12y)));		HX_STACK_VAR(C12,"C12");
 				HX_STACK_LINE(1197)
-				Float C34 = _Function_2_2::Block(t34x,t34y);		HX_STACK_VAR(C34,"C34");
+				Float C34 = ::Math_obj::sqrt(((t34x * t34x) + (t34y * t34y)));		HX_STACK_VAR(C34,"C34");
 				HX_STACK_LINE(1198)
 				if (((C12 != (int)0))){
 					HX_STACK_LINE(1200)
 					Float t = (Float(1.0) / Float(C12));		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(1201)
-					{
-					}
 					HX_STACK_LINE(1209)
 					__this->n12x = (t12x * t);
 					HX_STACK_LINE(1210)
@@ -2760,9 +1189,6 @@ bool ZPP_PulleyJoint_obj::preStep( Float dt){
 					{
 						HX_STACK_LINE(1215)
 						Float t = (Float(1.0) / Float(C34));		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(1216)
-						{
-						}
 						HX_STACK_LINE(1224)
 						__this->n34x = (t34x * t);
 						HX_STACK_LINE(1225)
@@ -2772,9 +1198,6 @@ bool ZPP_PulleyJoint_obj::preStep( Float dt){
 					{
 						HX_STACK_LINE(1228)
 						Float t = __this->ratio;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(1229)
-						{
-						}
 						HX_STACK_LINE(1237)
 						hx::MultEq(__this->n34x,t);
 						HX_STACK_LINE(1238)
@@ -2782,24 +1205,8 @@ bool ZPP_PulleyJoint_obj::preStep( Float dt){
 					}
 				}
 				else{
-					struct _Function_3_1{
-						inline static Float Block( ::zpp_nape::constraint::ZPP_PulleyJoint_obj *__this){
-							HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",1243);
-							{
-								HX_STACK_LINE(1243)
-								{
-								}
-								HX_STACK_LINE(1243)
-								return ::Math_obj::sqrt(((__this->n34x * __this->n34x) + (__this->n34y * __this->n34y)));
-							}
-							return null();
-						}
-					};
 					HX_STACK_LINE(1243)
-					Float t = (Float(__this->ratio) / Float(_Function_3_1::Block(__this)));		HX_STACK_VAR(t,"t");
-					HX_STACK_LINE(1244)
-					{
-					}
+					Float t = (Float(__this->ratio) / Float(::Math_obj::sqrt(((__this->n34x * __this->n34x) + (__this->n34y * __this->n34y)))));		HX_STACK_VAR(t,"t");
 					HX_STACK_LINE(1252)
 					hx::MultEq(__this->n34x,t);
 					HX_STACK_LINE(1253)
@@ -2851,9 +1258,6 @@ bool ZPP_PulleyJoint_obj::preStep( Float dt){
 								__this->n12x = (int)0;
 								HX_STACK_LINE(1281)
 								__this->n12y = (int)0;
-								HX_STACK_LINE(1282)
-								{
-								}
 								HX_STACK_LINE(1290)
 								{
 								}
@@ -2864,9 +1268,6 @@ bool ZPP_PulleyJoint_obj::preStep( Float dt){
 								__this->n34x = (int)0;
 								HX_STACK_LINE(1301)
 								__this->n34y = (int)0;
-								HX_STACK_LINE(1302)
-								{
-								}
 								HX_STACK_LINE(1310)
 								{
 								}
@@ -2951,7 +1352,7 @@ bool ZPP_PulleyJoint_obj::preStep( Float dt){
 			HX_STACK_LINE(1343)
 			Float biasCoef;		HX_STACK_VAR(biasCoef,"biasCoef");
 			struct _Function_3_1{
-				inline static Float Block( ::zpp_nape::constraint::ZPP_PulleyJoint_obj *__this,Float &biasCoef,Float &dt){
+				inline static Float Block( ::zpp_nape::constraint::ZPP_PulleyJoint_obj *__this,Float &dt,Float &biasCoef){
 					HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",1344);
 					{
 						HX_STACK_LINE(1345)
@@ -2971,7 +1372,7 @@ bool ZPP_PulleyJoint_obj::preStep( Float dt){
 				}
 			};
 			HX_STACK_LINE(1344)
-			hx::MultEq(this->kMass,_Function_3_1::Block(this,biasCoef,dt));
+			hx::MultEq(this->kMass,_Function_3_1::Block(this,dt,biasCoef));
 			HX_STACK_LINE(1352)
 			this->bias = (-(C) * biasCoef);
 			HX_STACK_LINE(1353)
@@ -3487,7 +1888,7 @@ return null();
 }
 
 
-::nape::constraint::Constraint ZPP_PulleyJoint_obj::copy( Array< ::zpp_nape::constraint::ZPP_CopyHelper > dict,Array< ::zpp_nape::constraint::ZPP_CopyHelper > todo){
+::nape::constraint::Constraint ZPP_PulleyJoint_obj::copy( Array< ::Dynamic > dict,Array< ::Dynamic > todo){
 	HX_STACK_PUSH("ZPP_PulleyJoint::copy","zpp_nape/constraint/PulleyJoint.hx",646);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(dict,"dict");
@@ -3561,14 +1962,11 @@ return null();
 		}
 	};
 	HX_STACK_LINE(647)
-	Array< ::nape::constraint::PulleyJoint > ret = Array_obj< ::nape::constraint::PulleyJoint >::__new().Add(::nape::constraint::PulleyJoint_obj::__new(null(),null(),null(),null(),_Function_1_1::Block(this),_Function_1_2::Block(this),_Function_1_3::Block(this),_Function_1_4::Block(this),this->jointMin,this->jointMax,this->ratio));		HX_STACK_VAR(ret,"ret");
+	Array< ::Dynamic > ret = Array_obj< ::Dynamic >::__new().Add(::nape::constraint::PulleyJoint_obj::__new(null(),null(),null(),null(),_Function_1_1::Block(this),_Function_1_2::Block(this),_Function_1_3::Block(this),_Function_1_4::Block(this),this->jointMin,this->jointMax,this->ratio));		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(648)
-	this->copyto(ret->__get((int)0));
+	this->copyto(ret->__get((int)0).StaticCast< ::nape::constraint::PulleyJoint >());
 	HX_STACK_LINE(649)
 	if (((bool((dict != null())) && bool((this->b1 != null()))))){
-		HX_STACK_LINE(651)
-		{
-		}
 		HX_STACK_LINE(659)
 		::nape::phys::Body b = null();		HX_STACK_VAR(b,"b");
 		HX_STACK_LINE(660)
@@ -3578,7 +1976,7 @@ return null();
 			HX_STACK_LINE(660)
 			while(((_g < dict->length))){
 				HX_STACK_LINE(660)
-				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g);		HX_STACK_VAR(idc,"idc");
+				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_CopyHelper >();		HX_STACK_VAR(idc,"idc");
 				HX_STACK_LINE(660)
 				++(_g);
 				HX_STACK_LINE(661)
@@ -3593,17 +1991,17 @@ return null();
 		HX_STACK_LINE(666)
 		if (((b != null()))){
 			HX_STACK_LINE(666)
-			ret->__get((int)0)->zpp_inner_zn->b1 = b->zpp_inner;
+			ret->__get((int)0).StaticCast< ::nape::constraint::PulleyJoint >()->zpp_inner_zn->b1 = b->zpp_inner;
 		}
 		else{
 
-			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::nape::constraint::PulleyJoint >,ret)
+			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::Dynamic >,ret)
 			Void run(::nape::phys::Body b1){
 				HX_STACK_PUSH("*::_Function_3_1","zpp_nape/constraint/PulleyJoint.hx",667);
 				HX_STACK_ARG(b1,"b1");
 				{
 					HX_STACK_LINE(667)
-					ret->__get((int)0)->zpp_inner_zn->b1 = b1->zpp_inner;
+					ret->__get((int)0).StaticCast< ::nape::constraint::PulleyJoint >()->zpp_inner_zn->b1 = b1->zpp_inner;
 				}
 				return null();
 			}
@@ -3615,9 +2013,6 @@ return null();
 	}
 	HX_STACK_LINE(670)
 	if (((bool((dict != null())) && bool((this->b2 != null()))))){
-		HX_STACK_LINE(672)
-		{
-		}
 		HX_STACK_LINE(680)
 		::nape::phys::Body b = null();		HX_STACK_VAR(b,"b");
 		HX_STACK_LINE(681)
@@ -3627,7 +2022,7 @@ return null();
 			HX_STACK_LINE(681)
 			while(((_g < dict->length))){
 				HX_STACK_LINE(681)
-				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g);		HX_STACK_VAR(idc,"idc");
+				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_CopyHelper >();		HX_STACK_VAR(idc,"idc");
 				HX_STACK_LINE(681)
 				++(_g);
 				HX_STACK_LINE(682)
@@ -3642,17 +2037,17 @@ return null();
 		HX_STACK_LINE(687)
 		if (((b != null()))){
 			HX_STACK_LINE(687)
-			ret->__get((int)0)->zpp_inner_zn->b2 = b->zpp_inner;
+			ret->__get((int)0).StaticCast< ::nape::constraint::PulleyJoint >()->zpp_inner_zn->b2 = b->zpp_inner;
 		}
 		else{
 
-			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::nape::constraint::PulleyJoint >,ret)
+			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::Dynamic >,ret)
 			Void run(::nape::phys::Body b1){
 				HX_STACK_PUSH("*::_Function_3_1","zpp_nape/constraint/PulleyJoint.hx",688);
 				HX_STACK_ARG(b1,"b1");
 				{
 					HX_STACK_LINE(688)
-					ret->__get((int)0)->zpp_inner_zn->b2 = b1->zpp_inner;
+					ret->__get((int)0).StaticCast< ::nape::constraint::PulleyJoint >()->zpp_inner_zn->b2 = b1->zpp_inner;
 				}
 				return null();
 			}
@@ -3664,9 +2059,6 @@ return null();
 	}
 	HX_STACK_LINE(691)
 	if (((bool((dict != null())) && bool((this->b3 != null()))))){
-		HX_STACK_LINE(693)
-		{
-		}
 		HX_STACK_LINE(701)
 		::nape::phys::Body b = null();		HX_STACK_VAR(b,"b");
 		HX_STACK_LINE(702)
@@ -3676,7 +2068,7 @@ return null();
 			HX_STACK_LINE(702)
 			while(((_g < dict->length))){
 				HX_STACK_LINE(702)
-				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g);		HX_STACK_VAR(idc,"idc");
+				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_CopyHelper >();		HX_STACK_VAR(idc,"idc");
 				HX_STACK_LINE(702)
 				++(_g);
 				HX_STACK_LINE(703)
@@ -3691,17 +2083,17 @@ return null();
 		HX_STACK_LINE(708)
 		if (((b != null()))){
 			HX_STACK_LINE(708)
-			ret->__get((int)0)->zpp_inner_zn->b3 = b->zpp_inner;
+			ret->__get((int)0).StaticCast< ::nape::constraint::PulleyJoint >()->zpp_inner_zn->b3 = b->zpp_inner;
 		}
 		else{
 
-			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::nape::constraint::PulleyJoint >,ret)
+			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::Dynamic >,ret)
 			Void run(::nape::phys::Body b1){
 				HX_STACK_PUSH("*::_Function_3_1","zpp_nape/constraint/PulleyJoint.hx",709);
 				HX_STACK_ARG(b1,"b1");
 				{
 					HX_STACK_LINE(709)
-					ret->__get((int)0)->zpp_inner_zn->b3 = b1->zpp_inner;
+					ret->__get((int)0).StaticCast< ::nape::constraint::PulleyJoint >()->zpp_inner_zn->b3 = b1->zpp_inner;
 				}
 				return null();
 			}
@@ -3713,9 +2105,6 @@ return null();
 	}
 	HX_STACK_LINE(712)
 	if (((bool((dict != null())) && bool((this->b4 != null()))))){
-		HX_STACK_LINE(714)
-		{
-		}
 		HX_STACK_LINE(722)
 		::nape::phys::Body b = null();		HX_STACK_VAR(b,"b");
 		HX_STACK_LINE(723)
@@ -3725,7 +2114,7 @@ return null();
 			HX_STACK_LINE(723)
 			while(((_g < dict->length))){
 				HX_STACK_LINE(723)
-				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g);		HX_STACK_VAR(idc,"idc");
+				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_CopyHelper >();		HX_STACK_VAR(idc,"idc");
 				HX_STACK_LINE(723)
 				++(_g);
 				HX_STACK_LINE(724)
@@ -3740,17 +2129,17 @@ return null();
 		HX_STACK_LINE(729)
 		if (((b != null()))){
 			HX_STACK_LINE(729)
-			ret->__get((int)0)->zpp_inner_zn->b4 = b->zpp_inner;
+			ret->__get((int)0).StaticCast< ::nape::constraint::PulleyJoint >()->zpp_inner_zn->b4 = b->zpp_inner;
 		}
 		else{
 
-			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::nape::constraint::PulleyJoint >,ret)
+			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::Dynamic >,ret)
 			Void run(::nape::phys::Body b1){
 				HX_STACK_PUSH("*::_Function_3_1","zpp_nape/constraint/PulleyJoint.hx",730);
 				HX_STACK_ARG(b1,"b1");
 				{
 					HX_STACK_LINE(730)
-					ret->__get((int)0)->zpp_inner_zn->b4 = b1->zpp_inner;
+					ret->__get((int)0).StaticCast< ::nape::constraint::PulleyJoint >()->zpp_inner_zn->b4 = b1->zpp_inner;
 				}
 				return null();
 			}
@@ -3761,7 +2150,7 @@ return null();
 		}
 	}
 	HX_STACK_LINE(733)
-	return ret->__get((int)0);
+	return ret->__get((int)0).StaticCast< ::nape::constraint::PulleyJoint >();
 }
 
 
@@ -3843,9 +2232,6 @@ Void ZPP_PulleyJoint_obj::setup_a4( ){
 										HX_STACK_LINE(634)
 										{
 										}
-										HX_STACK_LINE(634)
-										{
-										}
 									}
 									HX_STACK_LINE(634)
 									return ret1;
@@ -3874,7 +2260,7 @@ Void ZPP_PulleyJoint_obj::setup_a4( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(634)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(634)
 								_this->_isimmutable();
 							}
@@ -3898,7 +2284,7 @@ Void ZPP_PulleyJoint_obj::setup_a4( ){
 										HX_STACK_LINE(634)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(634)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(634)
 											_this->_validate();
 										}
@@ -3923,7 +2309,7 @@ Void ZPP_PulleyJoint_obj::setup_a4( ){
 										HX_STACK_LINE(634)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(634)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(634)
 											_this->_validate();
 										}
@@ -3945,16 +2331,13 @@ Void ZPP_PulleyJoint_obj::setup_a4( ){
 								HX_STACK_LINE(634)
 								{
 								}
-								HX_STACK_LINE(634)
-								{
-								}
 							}
 							HX_STACK_LINE(634)
 							{
 								HX_STACK_LINE(634)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(634)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(634)
 									_this->_invalidate(_this);
 								}
@@ -3999,9 +2382,6 @@ Void ZPP_PulleyJoint_obj::invalidate_a4( ::zpp_nape::geom::ZPP_Vec2 x){
 			this->a4localx = x->x;
 			HX_STACK_LINE(613)
 			this->a4localy = x->y;
-			HX_STACK_LINE(614)
-			{
-			}
 			HX_STACK_LINE(622)
 			{
 			}
@@ -4023,9 +2403,6 @@ Void ZPP_PulleyJoint_obj::validate_a4( ){
 		this->wrap_a4->zpp_inner->x = this->a4localx;
 		HX_STACK_LINE(590)
 		this->wrap_a4->zpp_inner->y = this->a4localy;
-		HX_STACK_LINE(591)
-		{
-		}
 		HX_STACK_LINE(599)
 		{
 		}
@@ -4114,9 +2491,6 @@ Void ZPP_PulleyJoint_obj::setup_a3( ){
 										HX_STACK_LINE(576)
 										{
 										}
-										HX_STACK_LINE(576)
-										{
-										}
 									}
 									HX_STACK_LINE(576)
 									return ret1;
@@ -4145,7 +2519,7 @@ Void ZPP_PulleyJoint_obj::setup_a3( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(576)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(576)
 								_this->_isimmutable();
 							}
@@ -4169,7 +2543,7 @@ Void ZPP_PulleyJoint_obj::setup_a3( ){
 										HX_STACK_LINE(576)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(576)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(576)
 											_this->_validate();
 										}
@@ -4194,7 +2568,7 @@ Void ZPP_PulleyJoint_obj::setup_a3( ){
 										HX_STACK_LINE(576)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(576)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(576)
 											_this->_validate();
 										}
@@ -4216,16 +2590,13 @@ Void ZPP_PulleyJoint_obj::setup_a3( ){
 								HX_STACK_LINE(576)
 								{
 								}
-								HX_STACK_LINE(576)
-								{
-								}
 							}
 							HX_STACK_LINE(576)
 							{
 								HX_STACK_LINE(576)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(576)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(576)
 									_this->_invalidate(_this);
 								}
@@ -4270,9 +2641,6 @@ Void ZPP_PulleyJoint_obj::invalidate_a3( ::zpp_nape::geom::ZPP_Vec2 x){
 			this->a3localx = x->x;
 			HX_STACK_LINE(555)
 			this->a3localy = x->y;
-			HX_STACK_LINE(556)
-			{
-			}
 			HX_STACK_LINE(564)
 			{
 			}
@@ -4294,9 +2662,6 @@ Void ZPP_PulleyJoint_obj::validate_a3( ){
 		this->wrap_a3->zpp_inner->x = this->a3localx;
 		HX_STACK_LINE(532)
 		this->wrap_a3->zpp_inner->y = this->a3localy;
-		HX_STACK_LINE(533)
-		{
-		}
 		HX_STACK_LINE(541)
 		{
 		}
@@ -4385,9 +2750,6 @@ Void ZPP_PulleyJoint_obj::setup_a2( ){
 										HX_STACK_LINE(518)
 										{
 										}
-										HX_STACK_LINE(518)
-										{
-										}
 									}
 									HX_STACK_LINE(518)
 									return ret1;
@@ -4416,7 +2778,7 @@ Void ZPP_PulleyJoint_obj::setup_a2( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(518)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(518)
 								_this->_isimmutable();
 							}
@@ -4440,7 +2802,7 @@ Void ZPP_PulleyJoint_obj::setup_a2( ){
 										HX_STACK_LINE(518)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(518)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(518)
 											_this->_validate();
 										}
@@ -4465,7 +2827,7 @@ Void ZPP_PulleyJoint_obj::setup_a2( ){
 										HX_STACK_LINE(518)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(518)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(518)
 											_this->_validate();
 										}
@@ -4487,16 +2849,13 @@ Void ZPP_PulleyJoint_obj::setup_a2( ){
 								HX_STACK_LINE(518)
 								{
 								}
-								HX_STACK_LINE(518)
-								{
-								}
 							}
 							HX_STACK_LINE(518)
 							{
 								HX_STACK_LINE(518)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(518)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(518)
 									_this->_invalidate(_this);
 								}
@@ -4541,9 +2900,6 @@ Void ZPP_PulleyJoint_obj::invalidate_a2( ::zpp_nape::geom::ZPP_Vec2 x){
 			this->a2localx = x->x;
 			HX_STACK_LINE(497)
 			this->a2localy = x->y;
-			HX_STACK_LINE(498)
-			{
-			}
 			HX_STACK_LINE(506)
 			{
 			}
@@ -4565,9 +2921,6 @@ Void ZPP_PulleyJoint_obj::validate_a2( ){
 		this->wrap_a2->zpp_inner->x = this->a2localx;
 		HX_STACK_LINE(474)
 		this->wrap_a2->zpp_inner->y = this->a2localy;
-		HX_STACK_LINE(475)
-		{
-		}
 		HX_STACK_LINE(483)
 		{
 		}
@@ -4656,9 +3009,6 @@ Void ZPP_PulleyJoint_obj::setup_a1( ){
 										HX_STACK_LINE(460)
 										{
 										}
-										HX_STACK_LINE(460)
-										{
-										}
 									}
 									HX_STACK_LINE(460)
 									return ret1;
@@ -4687,7 +3037,7 @@ Void ZPP_PulleyJoint_obj::setup_a1( ){
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(460)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(460)
 								_this->_isimmutable();
 							}
@@ -4711,7 +3061,7 @@ Void ZPP_PulleyJoint_obj::setup_a1( ){
 										HX_STACK_LINE(460)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(460)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(460)
 											_this->_validate();
 										}
@@ -4736,7 +3086,7 @@ Void ZPP_PulleyJoint_obj::setup_a1( ){
 										HX_STACK_LINE(460)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(460)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(460)
 											_this->_validate();
 										}
@@ -4758,16 +3108,13 @@ Void ZPP_PulleyJoint_obj::setup_a1( ){
 								HX_STACK_LINE(460)
 								{
 								}
-								HX_STACK_LINE(460)
-								{
-								}
 							}
 							HX_STACK_LINE(460)
 							{
 								HX_STACK_LINE(460)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(460)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(460)
 									_this->_invalidate(_this);
 								}
@@ -4812,9 +3159,6 @@ Void ZPP_PulleyJoint_obj::invalidate_a1( ::zpp_nape::geom::ZPP_Vec2 x){
 			this->a1localx = x->x;
 			HX_STACK_LINE(439)
 			this->a1localy = x->y;
-			HX_STACK_LINE(440)
-			{
-			}
 			HX_STACK_LINE(448)
 			{
 			}
@@ -4836,9 +3180,6 @@ Void ZPP_PulleyJoint_obj::validate_a1( ){
 		this->wrap_a1->zpp_inner->x = this->a1localx;
 		HX_STACK_LINE(416)
 		this->wrap_a1->zpp_inner->y = this->a1localy;
-		HX_STACK_LINE(417)
-		{
-		}
 		HX_STACK_LINE(425)
 		{
 		}
@@ -4967,7 +3308,7 @@ return null();
 										HX_STACK_LINE(357)
 										::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(357)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(357)
 											_this->_validate();
 										}
@@ -4993,7 +3334,7 @@ return null();
 							HX_STACK_LINE(357)
 							::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(357)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(357)
 								_this->_validate();
 							}
@@ -5035,7 +3376,7 @@ return null();
 										HX_STACK_LINE(358)
 										::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(358)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(358)
 											_this->_validate();
 										}
@@ -5061,7 +3402,7 @@ return null();
 							HX_STACK_LINE(358)
 							::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(358)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(358)
 								_this->_validate();
 							}
@@ -5103,7 +3444,7 @@ return null();
 										HX_STACK_LINE(359)
 										::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(359)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(359)
 											_this->_validate();
 										}
@@ -5129,7 +3470,7 @@ return null();
 							HX_STACK_LINE(359)
 							::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(359)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(359)
 								_this->_validate();
 							}
@@ -5174,7 +3515,7 @@ return null();
 										HX_STACK_LINE(362)
 										::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(362)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(362)
 											_this->_validate();
 										}
@@ -5200,7 +3541,7 @@ return null();
 							HX_STACK_LINE(362)
 							::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(362)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(362)
 								_this->_validate();
 							}
@@ -5242,7 +3583,7 @@ return null();
 										HX_STACK_LINE(363)
 										::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(363)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(363)
 											_this->_validate();
 										}
@@ -5268,7 +3609,7 @@ return null();
 							HX_STACK_LINE(363)
 							::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(363)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(363)
 								_this->_validate();
 							}
@@ -5310,7 +3651,7 @@ return null();
 										HX_STACK_LINE(364)
 										::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(364)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(364)
 											_this->_validate();
 										}
@@ -5336,7 +3677,7 @@ return null();
 							HX_STACK_LINE(364)
 							::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(364)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(364)
 								_this->_validate();
 							}
@@ -5381,7 +3722,7 @@ return null();
 										HX_STACK_LINE(367)
 										::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(367)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(367)
 											_this->_validate();
 										}
@@ -5407,7 +3748,7 @@ return null();
 							HX_STACK_LINE(367)
 							::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(367)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(367)
 								_this->_validate();
 							}
@@ -5449,7 +3790,7 @@ return null();
 										HX_STACK_LINE(368)
 										::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(368)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(368)
 											_this->_validate();
 										}
@@ -5475,7 +3816,7 @@ return null();
 							HX_STACK_LINE(368)
 							::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(368)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(368)
 								_this->_validate();
 							}
@@ -5517,7 +3858,7 @@ return null();
 										HX_STACK_LINE(369)
 										::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(369)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(369)
 											_this->_validate();
 										}
@@ -5543,7 +3884,7 @@ return null();
 							HX_STACK_LINE(369)
 							::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(369)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(369)
 								_this->_validate();
 							}
@@ -5588,7 +3929,7 @@ return null();
 										HX_STACK_LINE(372)
 										::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(372)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(372)
 											_this->_validate();
 										}
@@ -5614,7 +3955,7 @@ return null();
 							HX_STACK_LINE(372)
 							::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(372)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(372)
 								_this->_validate();
 							}
@@ -5656,7 +3997,7 @@ return null();
 										HX_STACK_LINE(373)
 										::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(373)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(373)
 											_this->_validate();
 										}
@@ -5682,7 +4023,7 @@ return null();
 							HX_STACK_LINE(373)
 							::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(373)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(373)
 								_this->_validate();
 							}
@@ -5724,7 +4065,7 @@ return null();
 										HX_STACK_LINE(374)
 										::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(374)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(374)
 											_this->_validate();
 										}
@@ -5750,7 +4091,7 @@ return null();
 							HX_STACK_LINE(374)
 							::zpp_nape::geom::ZPP_Vec3 _this = _g->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(374)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(374)
 								_this->_validate();
 							}
@@ -5834,43 +4175,14 @@ bool ZPP_PulleyJoint_obj::is_slack( ){
 		t34x = ((this->b4->posx + this->a4relx) - ((this->b3->posx + this->a3relx)));
 		HX_STACK_LINE(213)
 		t34y = ((this->b4->posy + this->a4rely) - ((this->b3->posy + this->a3rely)));
-		struct _Function_2_1{
-			inline static Float Block( Float &t12x,Float &t12y){
-				HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",214);
-				{
-					HX_STACK_LINE(214)
-					{
-					}
-					HX_STACK_LINE(214)
-					return ::Math_obj::sqrt(((t12x * t12x) + (t12y * t12y)));
-				}
-				return null();
-			}
-		};
 		HX_STACK_LINE(214)
-		Float C12 = _Function_2_1::Block(t12x,t12y);		HX_STACK_VAR(C12,"C12");
-		struct _Function_2_2{
-			inline static Float Block( Float &t34x,Float &t34y){
-				HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",215);
-				{
-					HX_STACK_LINE(215)
-					{
-					}
-					HX_STACK_LINE(215)
-					return ::Math_obj::sqrt(((t34x * t34x) + (t34y * t34y)));
-				}
-				return null();
-			}
-		};
+		Float C12 = ::Math_obj::sqrt(((t12x * t12x) + (t12y * t12y)));		HX_STACK_VAR(C12,"C12");
 		HX_STACK_LINE(215)
-		Float C34 = _Function_2_2::Block(t34x,t34y);		HX_STACK_VAR(C34,"C34");
+		Float C34 = ::Math_obj::sqrt(((t34x * t34x) + (t34y * t34y)));		HX_STACK_VAR(C34,"C34");
 		HX_STACK_LINE(216)
 		if (((C12 != (int)0))){
 			HX_STACK_LINE(218)
 			Float t = (Float(1.0) / Float(C12));		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(219)
-			{
-			}
 			HX_STACK_LINE(227)
 			n12x = (t12x * t);
 			HX_STACK_LINE(228)
@@ -5882,9 +4194,6 @@ bool ZPP_PulleyJoint_obj::is_slack( ){
 			{
 				HX_STACK_LINE(233)
 				Float t = (Float(1.0) / Float(C34));		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(234)
-				{
-				}
 				HX_STACK_LINE(242)
 				n34x = (t34x * t);
 				HX_STACK_LINE(243)
@@ -5894,9 +4203,6 @@ bool ZPP_PulleyJoint_obj::is_slack( ){
 			{
 				HX_STACK_LINE(246)
 				Float t = this->ratio;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(247)
-				{
-				}
 				HX_STACK_LINE(255)
 				hx::MultEq(n34x,t);
 				HX_STACK_LINE(256)
@@ -5904,24 +4210,8 @@ bool ZPP_PulleyJoint_obj::is_slack( ){
 			}
 		}
 		else{
-			struct _Function_3_1{
-				inline static Float Block( Float &n34x,Float &n34y){
-					HX_STACK_PUSH("*::closure","zpp_nape/constraint/PulleyJoint.hx",261);
-					{
-						HX_STACK_LINE(261)
-						{
-						}
-						HX_STACK_LINE(261)
-						return ::Math_obj::sqrt(((n34x * n34x) + (n34y * n34y)));
-					}
-					return null();
-				}
-			};
 			HX_STACK_LINE(261)
-			Float t = (Float(this->ratio) / Float(_Function_3_1::Block(n34x,n34y)));		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(262)
-			{
-			}
+			Float t = (Float(this->ratio) / Float(::Math_obj::sqrt(((n34x * n34x) + (n34y * n34y)))));		HX_STACK_VAR(t,"t");
 			HX_STACK_LINE(270)
 			hx::MultEq(n34x,t);
 			HX_STACK_LINE(271)
@@ -5973,9 +4263,6 @@ bool ZPP_PulleyJoint_obj::is_slack( ){
 						n12x = (int)0;
 						HX_STACK_LINE(299)
 						n12y = (int)0;
-						HX_STACK_LINE(300)
-						{
-						}
 						HX_STACK_LINE(308)
 						{
 						}
@@ -5986,9 +4273,6 @@ bool ZPP_PulleyJoint_obj::is_slack( ){
 						n34x = (int)0;
 						HX_STACK_LINE(319)
 						n34y = (int)0;
-						HX_STACK_LINE(320)
-						{
-						}
 						HX_STACK_LINE(328)
 						{
 						}
@@ -6168,7 +4452,6 @@ Dynamic ZPP_PulleyJoint_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"wrap_a1") ) { return wrap_a1; }
 		break;
 	case 8:
-		if (HX_FIELD_EQ(inName,"drawLink") ) { return drawLink_dyn(); }
 		if (HX_FIELD_EQ(inName,"validate") ) { return validate_dyn(); }
 		if (HX_FIELD_EQ(inName,"setup_a4") ) { return setup_a4_dyn(); }
 		if (HX_FIELD_EQ(inName,"a4localy") ) { return a4localy; }
@@ -6338,7 +4621,6 @@ static ::String sStaticFields[] = {
 	String(null()) };
 
 static ::String sMemberFields[] = {
-	HX_CSTRING("drawLink"),
 	HX_CSTRING("draw"),
 	HX_CSTRING("applyImpulsePos"),
 	HX_CSTRING("applyImpulseVel"),
@@ -6424,7 +4706,7 @@ Class ZPP_PulleyJoint_obj::__mClass;
 
 void ZPP_PulleyJoint_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.constraint.ZPP_PulleyJoint"), hx::TCanCast< ZPP_PulleyJoint_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.constraint.ZPP_PulleyJoint"), hx::TCanCast< ZPP_PulleyJoint_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -19,7 +19,7 @@ namespace zpp_nape{
 namespace dynamics{
 
 
-class ZPP_Arbiter_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Arbiter_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Arbiter_obj OBJ_;
@@ -48,49 +48,49 @@ class ZPP_Arbiter_obj : public hx::Object{
 		virtual Void lazyRetire( ::zpp_nape::space::ZPP_Space s,::zpp_nape::phys::ZPP_Body b);
 		Dynamic lazyRetire_dyn();
 
-		::zpp_nape::dynamics::ZPP_SensorArbiter sensorarb; /* REM */ 
-		::zpp_nape::dynamics::ZPP_FluidArbiter fluidarb; /* REM */ 
-		::zpp_nape::dynamics::ZPP_ColArbiter colarb; /* REM */ 
-		int type; /* REM */ 
+		::zpp_nape::dynamics::ZPP_SensorArbiter sensorarb;
+		::zpp_nape::dynamics::ZPP_FluidArbiter fluidarb;
+		::zpp_nape::dynamics::ZPP_ColArbiter colarb;
+		int type;
 		virtual Void swap_features( );
 		Dynamic swap_features_dyn();
 
-		::zpp_nape::space::ZPP_AABBPair pair; /* REM */ 
-		::zpp_nape::shape::ZPP_Shape ws2; /* REM */ 
-		::zpp_nape::shape::ZPP_Shape ws1; /* REM */ 
-		::zpp_nape::phys::ZPP_Body b2; /* REM */ 
-		::zpp_nape::phys::ZPP_Body b1; /* REM */ 
-		bool invalidated; /* REM */ 
+		::zpp_nape::space::ZPP_AABBPair pair;
+		::zpp_nape::shape::ZPP_Shape ws2;
+		::zpp_nape::shape::ZPP_Shape ws1;
+		::zpp_nape::phys::ZPP_Body b2;
+		::zpp_nape::phys::ZPP_Body b1;
+		bool invalidated;
 		virtual bool acting( );
 		Dynamic acting_dyn();
 
-		int immState; /* REM */ 
-		bool fresh; /* REM */ 
-		bool continuous; /* REM */ 
-		bool presentable; /* REM */ 
-		bool intchange; /* REM */ 
-		int present; /* REM */ 
-		bool sleeping; /* REM */ 
-		bool cleared; /* REM */ 
-		bool active; /* REM */ 
-		int endGenerated; /* REM */ 
-		int sleep_stamp; /* REM */ 
-		int up_stamp; /* REM */ 
-		int stamp; /* REM */ 
-		int di; /* REM */ 
-		int id; /* REM */ 
-		::zpp_nape::dynamics::ZPP_Arbiter hnext; /* REM */ 
+		int immState;
+		bool fresh;
+		bool continuous;
+		bool presentable;
+		bool intchange;
+		int present;
+		bool sleeping;
+		bool cleared;
+		bool active;
+		int endGenerated;
+		int sleep_stamp;
+		int up_stamp;
+		int stamp;
+		int di;
+		int id;
+		::zpp_nape::dynamics::ZPP_Arbiter hnext;
 		virtual bool inactiveme( );
 		Dynamic inactiveme_dyn();
 
 		virtual ::nape::dynamics::Arbiter wrapper( );
 		Dynamic wrapper_dyn();
 
-		::nape::dynamics::Arbiter outer; /* REM */ 
-		static bool internal; /* REM */ 
-		static int COL; /* REM */ 
-		static int FLUID; /* REM */ 
-		static int SENSOR; /* REM */ 
+		::nape::dynamics::Arbiter outer;
+		static bool internal;
+		static int COL;
+		static int FLUID;
+		static int SENSOR;
 };
 
 } // end namespace zpp_nape

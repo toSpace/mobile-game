@@ -253,7 +253,7 @@ Class ArbiterIterator_obj::__mClass;
 
 void ArbiterIterator_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.dynamics.ArbiterIterator"), hx::TCanCast< ArbiterIterator_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.dynamics.ArbiterIterator"), hx::TCanCast< ArbiterIterator_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

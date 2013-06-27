@@ -15,7 +15,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_ConvexRayResult_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_ConvexRayResult_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_ConvexRayResult_obj OBJ_;
@@ -41,17 +41,17 @@ class ZPP_ConvexRayResult_obj : public hx::Object{
 		virtual Void disposed( );
 		Dynamic disposed_dyn();
 
-		Float toiDistance; /* REM */ 
-		::zpp_nape::geom::ZPP_ConvexRayResult next; /* REM */ 
-		bool inner; /* REM */ 
-		::nape::geom::RayResult ray; /* REM */ 
-		::nape::geom::Vec2 position; /* REM */ 
-		::nape::geom::ConvexResult convex; /* REM */ 
-		::nape::shape::Shape shape; /* REM */ 
-		::nape::geom::Vec2 normal; /* REM */ 
-		static ::zpp_nape::geom::ZPP_ConvexRayResult convexPool; /* REM */ 
-		static ::zpp_nape::geom::ZPP_ConvexRayResult rayPool; /* REM */ 
-		static bool internal; /* REM */ 
+		Float toiDistance;
+		::zpp_nape::geom::ZPP_ConvexRayResult next;
+		bool inner;
+		::nape::geom::RayResult ray;
+		::nape::geom::Vec2 position;
+		::nape::geom::ConvexResult convex;
+		::nape::shape::Shape shape;
+		::nape::geom::Vec2 normal;
+		static ::zpp_nape::geom::ZPP_ConvexRayResult convexPool;
+		static ::zpp_nape::geom::ZPP_ConvexRayResult rayPool;
+		static bool internal;
 		static ::nape::geom::RayResult getRay( ::nape::geom::Vec2 normal,Float time,bool inner,::nape::shape::Shape shape);
 		static Dynamic getRay_dyn();
 

@@ -12,7 +12,7 @@ namespace nape{
 namespace dynamics{
 
 
-class ContactIterator_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ContactIterator_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ContactIterator_obj OBJ_;
@@ -38,11 +38,11 @@ class ContactIterator_obj : public hx::Object{
 		virtual bool hasNext( );
 		Dynamic hasNext_dyn();
 
-		::nape::dynamics::ContactIterator zpp_next; /* REM */ 
-		bool zpp_critical; /* REM */ 
-		int zpp_i; /* REM */ 
-		::nape::dynamics::ContactList zpp_inner; /* REM */ 
-		static ::nape::dynamics::ContactIterator zpp_pool; /* REM */ 
+		::nape::dynamics::ContactIterator zpp_next;
+		bool zpp_critical;
+		int zpp_i;
+		::nape::dynamics::ContactList zpp_inner;
+		static ::nape::dynamics::ContactIterator zpp_pool;
 		static ::nape::dynamics::ContactIterator get( ::nape::dynamics::ContactList list);
 		static Dynamic get_dyn();
 

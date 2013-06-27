@@ -10,7 +10,7 @@ namespace nape{
 namespace phys{
 
 
-class InertiaMode_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  InertiaMode_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef InertiaMode_obj OBJ_;
@@ -33,11 +33,9 @@ class InertiaMode_obj : public hx::Object{
 		virtual ::String toString( );
 		Dynamic toString_dyn();
 
-		static ::nape::phys::InertiaMode DEFAULT; /* REM */ 
 		static ::nape::phys::InertiaMode get_DEFAULT( );
 		static Dynamic get_DEFAULT_dyn();
 
-		static ::nape::phys::InertiaMode FIXED; /* REM */ 
 		static ::nape::phys::InertiaMode get_FIXED( );
 		static Dynamic get_FIXED_dyn();
 

@@ -12,7 +12,7 @@ namespace zpp_nape{
 namespace constraint{
 
 
-class ZPP_UserBody_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_UserBody_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_UserBody_obj OBJ_;
@@ -32,8 +32,8 @@ class ZPP_UserBody_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("ZPP_UserBody"); }
 
-		::zpp_nape::phys::ZPP_Body body; /* REM */ 
-		int cnt; /* REM */ 
+		::zpp_nape::phys::ZPP_Body body;
+		int cnt;
 };
 
 } // end namespace zpp_nape

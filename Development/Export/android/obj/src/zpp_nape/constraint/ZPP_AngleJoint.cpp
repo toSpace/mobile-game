@@ -9,9 +9,6 @@
 #ifndef INCLUDED_nape_constraint_Constraint
 #include <nape/constraint/Constraint.h>
 #endif
-#ifndef INCLUDED_nape_geom_Vec2
-#include <nape/geom/Vec2.h>
-#endif
 #ifndef INCLUDED_nape_geom_Vec3
 #include <nape/geom/Vec3.h>
 #endif
@@ -21,14 +18,8 @@
 #ifndef INCLUDED_nape_phys_Interactor
 #include <nape/phys/Interactor.h>
 #endif
-#ifndef INCLUDED_nape_space_Space
-#include <nape/space/Space.h>
-#endif
 #ifndef INCLUDED_nape_util_Debug
 #include <nape/util/Debug.h>
-#endif
-#ifndef INCLUDED_zpp_nape_constraint_ZPP_AngleDraw
-#include <zpp_nape/constraint/ZPP_AngleDraw.h>
 #endif
 #ifndef INCLUDED_zpp_nape_constraint_ZPP_AngleJoint
 #include <zpp_nape/constraint/ZPP_AngleJoint.h>
@@ -129,354 +120,6 @@ Void ZPP_AngleJoint_obj::draw( ::nape::util::Debug g){
 		HX_STACK_PUSH("ZPP_AngleJoint::draw","zpp_nape/constraint/AngleJoint.hx",579);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(g,"g");
-		HX_STACK_LINE(580)
-		::nape::constraint::AngleJoint me = this->outer_zn;		HX_STACK_VAR(me,"me");
-		HX_STACK_LINE(581)
-		int minrad = (int)10;		HX_STACK_VAR(minrad,"minrad");
-		HX_STACK_LINE(582)
-		Float delrad = (Float((Float((int)5) / Float(::Math_obj::PI))) / Float((int)2));		HX_STACK_VAR(delrad,"delrad");
-		struct _Function_1_1{
-			inline static ::nape::space::Space Block( ::nape::constraint::AngleJoint &me){
-				HX_STACK_PUSH("*::closure","zpp_nape/constraint/AngleJoint.hx",583);
-				{
-					HX_STACK_LINE(583)
-					::nape::phys::Body _this = (  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) );		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(583)
-					return (  (((_this->zpp_inner->space == null()))) ? ::nape::space::Space(null()) : ::nape::space::Space(_this->zpp_inner->space->outer) );
-				}
-				return null();
-			}
-		};
-		HX_STACK_LINE(583)
-		if (((((  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) )) != (_Function_1_1::Block(me))->zpp_inner->__static))){
-			HX_STACK_LINE(584)
-			Float min = ((me->zpp_inner_zn->ratio * ((  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) ))->zpp_inner->rot) - this->jointMin);		HX_STACK_VAR(min,"min");
-			HX_STACK_LINE(585)
-			Float max = ((me->zpp_inner_zn->ratio * ((  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) ))->zpp_inner->rot) - this->jointMax);		HX_STACK_VAR(max,"max");
-			HX_STACK_LINE(586)
-			if (((min > max))){
-				HX_STACK_LINE(587)
-				Float t = min;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(588)
-				min = max;
-				HX_STACK_LINE(589)
-				max = t;
-			}
-			HX_STACK_LINE(591)
-			if (((((  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) ))->zpp_inner->rot > min))){
-				struct _Function_3_1{
-					inline static Float Block( ::nape::constraint::AngleJoint &me,Float &max){
-						HX_STACK_PUSH("*::closure","zpp_nape/constraint/AngleJoint.hx",592);
-						{
-							HX_STACK_LINE(593)
-							Float x = ((  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) ))->zpp_inner->rot;		HX_STACK_VAR(x,"x");
-							HX_STACK_LINE(594)
-							Float y = max;		HX_STACK_VAR(y,"y");
-							HX_STACK_LINE(595)
-							return (  (((x < y))) ? Float(x) : Float(y) );
-						}
-						return null();
-					}
-				};
-				HX_STACK_LINE(592)
-				Float dr = _Function_3_1::Block(me,max);		HX_STACK_VAR(dr,"dr");
-				struct _Function_3_2{
-					inline static ::nape::geom::Vec2 Block( ::nape::constraint::AngleJoint &me){
-						HX_STACK_PUSH("*::closure","zpp_nape/constraint/AngleJoint.hx",597);
-						{
-							HX_STACK_LINE(597)
-							::nape::phys::Body _this = (  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) );		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(597)
-							if (((_this->zpp_inner->wrap_pos == null()))){
-								HX_STACK_LINE(597)
-								_this->zpp_inner->setupPosition();
-							}
-							HX_STACK_LINE(597)
-							return _this->zpp_inner->wrap_pos;
-						}
-						return null();
-					}
-				};
-				HX_STACK_LINE(597)
-				::zpp_nape::constraint::ZPP_AngleDraw_obj::drawSpiral(g,_Function_3_2::Block(me),min,dr,(minrad + (((min - min)) * delrad)),(minrad + (((dr - min)) * delrad)),(int)16776960);
-			}
-			else{
-				HX_STACK_LINE(599)
-				if (((bool(!(this->stiff)) && bool((((  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) ))->zpp_inner->rot < min))))){
-					struct _Function_4_1{
-						inline static ::nape::geom::Vec2 Block( ::nape::constraint::AngleJoint &me){
-							HX_STACK_PUSH("*::closure","zpp_nape/constraint/AngleJoint.hx",600);
-							{
-								HX_STACK_LINE(600)
-								::nape::phys::Body _this = (  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) );		HX_STACK_VAR(_this,"_this");
-								HX_STACK_LINE(600)
-								if (((_this->zpp_inner->wrap_pos == null()))){
-									HX_STACK_LINE(600)
-									_this->zpp_inner->setupPosition();
-								}
-								HX_STACK_LINE(600)
-								return _this->zpp_inner->wrap_pos;
-							}
-							return null();
-						}
-					};
-					HX_STACK_LINE(599)
-					::zpp_nape::constraint::ZPP_AngleDraw_obj::drawSpiralSpring(g,_Function_4_1::Block(me),((  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) ))->zpp_inner->rot,min,(minrad + (((((  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) ))->zpp_inner->rot - min)) * delrad)),(minrad + (((min - min)) * delrad)),(int)16776960,null());
-				}
-			}
-			HX_STACK_LINE(602)
-			if (((((  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) ))->zpp_inner->rot < max))){
-				struct _Function_3_1{
-					inline static Float Block( ::nape::constraint::AngleJoint &me,Float &min){
-						HX_STACK_PUSH("*::closure","zpp_nape/constraint/AngleJoint.hx",603);
-						{
-							HX_STACK_LINE(604)
-							Float x = ((  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) ))->zpp_inner->rot;		HX_STACK_VAR(x,"x");
-							HX_STACK_LINE(605)
-							Float y = min;		HX_STACK_VAR(y,"y");
-							HX_STACK_LINE(606)
-							return (  (((x > y))) ? Float(x) : Float(y) );
-						}
-						return null();
-					}
-				};
-				HX_STACK_LINE(603)
-				Float dr = _Function_3_1::Block(me,min);		HX_STACK_VAR(dr,"dr");
-				struct _Function_3_2{
-					inline static ::nape::geom::Vec2 Block( ::nape::constraint::AngleJoint &me){
-						HX_STACK_PUSH("*::closure","zpp_nape/constraint/AngleJoint.hx",608);
-						{
-							HX_STACK_LINE(608)
-							::nape::phys::Body _this = (  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) );		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(608)
-							if (((_this->zpp_inner->wrap_pos == null()))){
-								HX_STACK_LINE(608)
-								_this->zpp_inner->setupPosition();
-							}
-							HX_STACK_LINE(608)
-							return _this->zpp_inner->wrap_pos;
-						}
-						return null();
-					}
-				};
-				HX_STACK_LINE(608)
-				::zpp_nape::constraint::ZPP_AngleDraw_obj::drawSpiral(g,_Function_3_2::Block(me),dr,max,(minrad + (((dr - min)) * delrad)),(minrad + (((max - min)) * delrad)),(int)65535);
-			}
-			else{
-				HX_STACK_LINE(610)
-				if (((bool(!(this->stiff)) && bool((((  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) ))->zpp_inner->rot > max))))){
-					struct _Function_4_1{
-						inline static ::nape::geom::Vec2 Block( ::nape::constraint::AngleJoint &me){
-							HX_STACK_PUSH("*::closure","zpp_nape/constraint/AngleJoint.hx",611);
-							{
-								HX_STACK_LINE(611)
-								::nape::phys::Body _this = (  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) );		HX_STACK_VAR(_this,"_this");
-								HX_STACK_LINE(611)
-								if (((_this->zpp_inner->wrap_pos == null()))){
-									HX_STACK_LINE(611)
-									_this->zpp_inner->setupPosition();
-								}
-								HX_STACK_LINE(611)
-								return _this->zpp_inner->wrap_pos;
-							}
-							return null();
-						}
-					};
-					HX_STACK_LINE(610)
-					::zpp_nape::constraint::ZPP_AngleDraw_obj::drawSpiralSpring(g,_Function_4_1::Block(me),((  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) ))->zpp_inner->rot,max,(minrad + (((((  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) ))->zpp_inner->rot - min)) * delrad)),(minrad + (((max - min)) * delrad)),(int)65535,null());
-				}
-			}
-			struct _Function_2_1{
-				inline static ::nape::geom::Vec2 Block( ::nape::constraint::AngleJoint &me){
-					HX_STACK_PUSH("*::closure","zpp_nape/constraint/AngleJoint.hx",613);
-					{
-						HX_STACK_LINE(613)
-						::nape::phys::Body _this = (  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) );		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(613)
-						if (((_this->zpp_inner->wrap_pos == null()))){
-							HX_STACK_LINE(613)
-							_this->zpp_inner->setupPosition();
-						}
-						HX_STACK_LINE(613)
-						return _this->zpp_inner->wrap_pos;
-					}
-					return null();
-				}
-			};
-			HX_STACK_LINE(613)
-			::zpp_nape::constraint::ZPP_AngleDraw_obj::indicator(g,_Function_2_1::Block(me),((  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) ))->zpp_inner->rot,(minrad + (((((  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) ))->zpp_inner->rot - min)) * delrad)),(int)255);
-		}
-		struct _Function_1_2{
-			inline static ::nape::space::Space Block( ::nape::constraint::AngleJoint &me){
-				HX_STACK_PUSH("*::closure","zpp_nape/constraint/AngleJoint.hx",615);
-				{
-					HX_STACK_LINE(615)
-					::nape::phys::Body _this = (  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) );		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(615)
-					return (  (((_this->zpp_inner->space == null()))) ? ::nape::space::Space(null()) : ::nape::space::Space(_this->zpp_inner->space->outer) );
-				}
-				return null();
-			}
-		};
-		HX_STACK_LINE(615)
-		if (((((  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) )) != (_Function_1_2::Block(me))->zpp_inner->__static))){
-			HX_STACK_LINE(616)
-			Float min = (Float(((this->jointMin + ((  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) ))->zpp_inner->rot))) / Float(me->zpp_inner_zn->ratio));		HX_STACK_VAR(min,"min");
-			HX_STACK_LINE(617)
-			Float max = (Float(((this->jointMax + ((  (((me->zpp_inner_zn->b1 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b1->outer) ))->zpp_inner->rot))) / Float(me->zpp_inner_zn->ratio));		HX_STACK_VAR(max,"max");
-			HX_STACK_LINE(618)
-			if (((min > max))){
-				HX_STACK_LINE(619)
-				Float t = min;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(620)
-				min = max;
-				HX_STACK_LINE(621)
-				max = t;
-			}
-			HX_STACK_LINE(623)
-			if (((((  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) ))->zpp_inner->rot > min))){
-				struct _Function_3_1{
-					inline static Float Block( ::nape::constraint::AngleJoint &me,Float &max){
-						HX_STACK_PUSH("*::closure","zpp_nape/constraint/AngleJoint.hx",624);
-						{
-							HX_STACK_LINE(625)
-							Float x = ((  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) ))->zpp_inner->rot;		HX_STACK_VAR(x,"x");
-							HX_STACK_LINE(626)
-							Float y = max;		HX_STACK_VAR(y,"y");
-							HX_STACK_LINE(627)
-							return (  (((x < y))) ? Float(x) : Float(y) );
-						}
-						return null();
-					}
-				};
-				HX_STACK_LINE(624)
-				Float dr = _Function_3_1::Block(me,max);		HX_STACK_VAR(dr,"dr");
-				struct _Function_3_2{
-					inline static ::nape::geom::Vec2 Block( ::nape::constraint::AngleJoint &me){
-						HX_STACK_PUSH("*::closure","zpp_nape/constraint/AngleJoint.hx",629);
-						{
-							HX_STACK_LINE(629)
-							::nape::phys::Body _this = (  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) );		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(629)
-							if (((_this->zpp_inner->wrap_pos == null()))){
-								HX_STACK_LINE(629)
-								_this->zpp_inner->setupPosition();
-							}
-							HX_STACK_LINE(629)
-							return _this->zpp_inner->wrap_pos;
-						}
-						return null();
-					}
-				};
-				HX_STACK_LINE(629)
-				::zpp_nape::constraint::ZPP_AngleDraw_obj::drawSpiral(g,_Function_3_2::Block(me),min,dr,(minrad + (((min - min)) * delrad)),(minrad + (((dr - min)) * delrad)),(int)16776960);
-			}
-			else{
-				HX_STACK_LINE(631)
-				if (((bool(!(this->stiff)) && bool((((  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) ))->zpp_inner->rot < min))))){
-					struct _Function_4_1{
-						inline static ::nape::geom::Vec2 Block( ::nape::constraint::AngleJoint &me){
-							HX_STACK_PUSH("*::closure","zpp_nape/constraint/AngleJoint.hx",632);
-							{
-								HX_STACK_LINE(632)
-								::nape::phys::Body _this = (  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) );		HX_STACK_VAR(_this,"_this");
-								HX_STACK_LINE(632)
-								if (((_this->zpp_inner->wrap_pos == null()))){
-									HX_STACK_LINE(632)
-									_this->zpp_inner->setupPosition();
-								}
-								HX_STACK_LINE(632)
-								return _this->zpp_inner->wrap_pos;
-							}
-							return null();
-						}
-					};
-					HX_STACK_LINE(631)
-					::zpp_nape::constraint::ZPP_AngleDraw_obj::drawSpiralSpring(g,_Function_4_1::Block(me),((  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) ))->zpp_inner->rot,min,(minrad + (((((  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) ))->zpp_inner->rot - min)) * delrad)),(minrad + (((min - min)) * delrad)),(int)16776960,null());
-				}
-			}
-			HX_STACK_LINE(634)
-			if (((((  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) ))->zpp_inner->rot < max))){
-				struct _Function_3_1{
-					inline static Float Block( ::nape::constraint::AngleJoint &me,Float &min){
-						HX_STACK_PUSH("*::closure","zpp_nape/constraint/AngleJoint.hx",635);
-						{
-							HX_STACK_LINE(636)
-							Float x = ((  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) ))->zpp_inner->rot;		HX_STACK_VAR(x,"x");
-							HX_STACK_LINE(637)
-							Float y = min;		HX_STACK_VAR(y,"y");
-							HX_STACK_LINE(638)
-							return (  (((x > y))) ? Float(x) : Float(y) );
-						}
-						return null();
-					}
-				};
-				HX_STACK_LINE(635)
-				Float dr = _Function_3_1::Block(me,min);		HX_STACK_VAR(dr,"dr");
-				struct _Function_3_2{
-					inline static ::nape::geom::Vec2 Block( ::nape::constraint::AngleJoint &me){
-						HX_STACK_PUSH("*::closure","zpp_nape/constraint/AngleJoint.hx",640);
-						{
-							HX_STACK_LINE(640)
-							::nape::phys::Body _this = (  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) );		HX_STACK_VAR(_this,"_this");
-							HX_STACK_LINE(640)
-							if (((_this->zpp_inner->wrap_pos == null()))){
-								HX_STACK_LINE(640)
-								_this->zpp_inner->setupPosition();
-							}
-							HX_STACK_LINE(640)
-							return _this->zpp_inner->wrap_pos;
-						}
-						return null();
-					}
-				};
-				HX_STACK_LINE(640)
-				::zpp_nape::constraint::ZPP_AngleDraw_obj::drawSpiral(g,_Function_3_2::Block(me),dr,max,(minrad + (((dr - min)) * delrad)),(minrad + (((max - min)) * delrad)),(int)65535);
-			}
-			else{
-				HX_STACK_LINE(642)
-				if (((bool(!(this->stiff)) && bool((((  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) ))->zpp_inner->rot > max))))){
-					struct _Function_4_1{
-						inline static ::nape::geom::Vec2 Block( ::nape::constraint::AngleJoint &me){
-							HX_STACK_PUSH("*::closure","zpp_nape/constraint/AngleJoint.hx",643);
-							{
-								HX_STACK_LINE(643)
-								::nape::phys::Body _this = (  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) );		HX_STACK_VAR(_this,"_this");
-								HX_STACK_LINE(643)
-								if (((_this->zpp_inner->wrap_pos == null()))){
-									HX_STACK_LINE(643)
-									_this->zpp_inner->setupPosition();
-								}
-								HX_STACK_LINE(643)
-								return _this->zpp_inner->wrap_pos;
-							}
-							return null();
-						}
-					};
-					HX_STACK_LINE(642)
-					::zpp_nape::constraint::ZPP_AngleDraw_obj::drawSpiralSpring(g,_Function_4_1::Block(me),((  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) ))->zpp_inner->rot,max,(minrad + (((((  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) ))->zpp_inner->rot - min)) * delrad)),(minrad + (((max - min)) * delrad)),(int)65535,null());
-				}
-			}
-			struct _Function_2_1{
-				inline static ::nape::geom::Vec2 Block( ::nape::constraint::AngleJoint &me){
-					HX_STACK_PUSH("*::closure","zpp_nape/constraint/AngleJoint.hx",645);
-					{
-						HX_STACK_LINE(645)
-						::nape::phys::Body _this = (  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) );		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(645)
-						if (((_this->zpp_inner->wrap_pos == null()))){
-							HX_STACK_LINE(645)
-							_this->zpp_inner->setupPosition();
-						}
-						HX_STACK_LINE(645)
-						return _this->zpp_inner->wrap_pos;
-					}
-					return null();
-				}
-			};
-			HX_STACK_LINE(645)
-			::zpp_nape::constraint::ZPP_AngleDraw_obj::indicator(g,_Function_2_1::Block(me),((  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) ))->zpp_inner->rot,(minrad + (((((  (((me->zpp_inner_zn->b2 == null()))) ? ::nape::phys::Body(null()) : ::nape::phys::Body(me->zpp_inner_zn->b2->outer) ))->zpp_inner->rot - min)) * delrad)),(int)16711680);
-		}
 	}
 return null();
 }
@@ -571,9 +214,6 @@ bool ZPP_AngleJoint_obj::applyImpulsePos( ){
 					HX_STACK_LINE(568)
 					_this->axisy = ::Math_obj::cos(_this->rot);
 					HX_STACK_LINE(568)
-					{
-					}
-					HX_STACK_LINE(568)
 					Dynamic();
 				}
 				else{
@@ -604,9 +244,6 @@ bool ZPP_AngleJoint_obj::applyImpulsePos( ){
 					_this->axisx = ::Math_obj::sin(_this->rot);
 					HX_STACK_LINE(569)
 					_this->axisy = ::Math_obj::cos(_this->rot);
-					HX_STACK_LINE(569)
-					{
-					}
 					HX_STACK_LINE(569)
 					Dynamic();
 				}
@@ -646,9 +283,6 @@ bool ZPP_AngleJoint_obj::applyImpulseVel( ){
 	Float j = ((this->kMass * ((this->bias - E))) - (this->jAcc * this->gamma));		HX_STACK_VAR(j,"j");
 	HX_STACK_LINE(499)
 	{
-		HX_STACK_LINE(500)
-		{
-		}
 		HX_STACK_LINE(508)
 		Float jOld = this->jAcc;		HX_STACK_VAR(jOld,"jOld");
 		HX_STACK_LINE(509)
@@ -805,7 +439,7 @@ bool ZPP_AngleJoint_obj::preStep( Float dt){
 			HX_STACK_LINE(457)
 			Float biasCoef;		HX_STACK_VAR(biasCoef,"biasCoef");
 			struct _Function_3_1{
-				inline static Float Block( ::zpp_nape::constraint::ZPP_AngleJoint_obj *__this,Float &biasCoef,Float &dt){
+				inline static Float Block( ::zpp_nape::constraint::ZPP_AngleJoint_obj *__this,Float &dt,Float &biasCoef){
 					HX_STACK_PUSH("*::closure","zpp_nape/constraint/AngleJoint.hx",458);
 					{
 						HX_STACK_LINE(459)
@@ -825,7 +459,7 @@ bool ZPP_AngleJoint_obj::preStep( Float dt){
 				}
 			};
 			HX_STACK_LINE(458)
-			hx::MultEq(this->kMass,_Function_3_1::Block(this,biasCoef,dt));
+			hx::MultEq(this->kMass,_Function_3_1::Block(this,dt,biasCoef));
 			HX_STACK_LINE(466)
 			this->bias = (-(C) * biasCoef);
 			HX_STACK_LINE(467)
@@ -1136,20 +770,17 @@ return null();
 }
 
 
-::nape::constraint::Constraint ZPP_AngleJoint_obj::copy( Array< ::zpp_nape::constraint::ZPP_CopyHelper > dict,Array< ::zpp_nape::constraint::ZPP_CopyHelper > todo){
+::nape::constraint::Constraint ZPP_AngleJoint_obj::copy( Array< ::Dynamic > dict,Array< ::Dynamic > todo){
 	HX_STACK_PUSH("ZPP_AngleJoint::copy","zpp_nape/constraint/AngleJoint.hx",245);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(dict,"dict");
 	HX_STACK_ARG(todo,"todo");
 	HX_STACK_LINE(246)
-	Array< ::nape::constraint::AngleJoint > ret = Array_obj< ::nape::constraint::AngleJoint >::__new().Add(::nape::constraint::AngleJoint_obj::__new(null(),null(),this->jointMin,this->jointMax,this->ratio));		HX_STACK_VAR(ret,"ret");
+	Array< ::Dynamic > ret = Array_obj< ::Dynamic >::__new().Add(::nape::constraint::AngleJoint_obj::__new(null(),null(),this->jointMin,this->jointMax,this->ratio));		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(247)
-	this->copyto(ret->__get((int)0));
+	this->copyto(ret->__get((int)0).StaticCast< ::nape::constraint::AngleJoint >());
 	HX_STACK_LINE(248)
 	if (((bool((dict != null())) && bool((this->b1 != null()))))){
-		HX_STACK_LINE(250)
-		{
-		}
 		HX_STACK_LINE(258)
 		::nape::phys::Body b = null();		HX_STACK_VAR(b,"b");
 		HX_STACK_LINE(259)
@@ -1159,7 +790,7 @@ return null();
 			HX_STACK_LINE(259)
 			while(((_g < dict->length))){
 				HX_STACK_LINE(259)
-				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g);		HX_STACK_VAR(idc,"idc");
+				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_CopyHelper >();		HX_STACK_VAR(idc,"idc");
 				HX_STACK_LINE(259)
 				++(_g);
 				HX_STACK_LINE(260)
@@ -1174,17 +805,17 @@ return null();
 		HX_STACK_LINE(265)
 		if (((b != null()))){
 			HX_STACK_LINE(265)
-			ret->__get((int)0)->zpp_inner_zn->b1 = b->zpp_inner;
+			ret->__get((int)0).StaticCast< ::nape::constraint::AngleJoint >()->zpp_inner_zn->b1 = b->zpp_inner;
 		}
 		else{
 
-			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::nape::constraint::AngleJoint >,ret)
+			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::Dynamic >,ret)
 			Void run(::nape::phys::Body b1){
 				HX_STACK_PUSH("*::_Function_3_1","zpp_nape/constraint/AngleJoint.hx",266);
 				HX_STACK_ARG(b1,"b1");
 				{
 					HX_STACK_LINE(266)
-					ret->__get((int)0)->zpp_inner_zn->b1 = b1->zpp_inner;
+					ret->__get((int)0).StaticCast< ::nape::constraint::AngleJoint >()->zpp_inner_zn->b1 = b1->zpp_inner;
 				}
 				return null();
 			}
@@ -1196,9 +827,6 @@ return null();
 	}
 	HX_STACK_LINE(269)
 	if (((bool((dict != null())) && bool((this->b2 != null()))))){
-		HX_STACK_LINE(271)
-		{
-		}
 		HX_STACK_LINE(279)
 		::nape::phys::Body b = null();		HX_STACK_VAR(b,"b");
 		HX_STACK_LINE(280)
@@ -1208,7 +836,7 @@ return null();
 			HX_STACK_LINE(280)
 			while(((_g < dict->length))){
 				HX_STACK_LINE(280)
-				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g);		HX_STACK_VAR(idc,"idc");
+				::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_CopyHelper >();		HX_STACK_VAR(idc,"idc");
 				HX_STACK_LINE(280)
 				++(_g);
 				HX_STACK_LINE(281)
@@ -1223,17 +851,17 @@ return null();
 		HX_STACK_LINE(286)
 		if (((b != null()))){
 			HX_STACK_LINE(286)
-			ret->__get((int)0)->zpp_inner_zn->b2 = b->zpp_inner;
+			ret->__get((int)0).StaticCast< ::nape::constraint::AngleJoint >()->zpp_inner_zn->b2 = b->zpp_inner;
 		}
 		else{
 
-			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::nape::constraint::AngleJoint >,ret)
+			HX_BEGIN_LOCAL_FUNC_S1(hx::LocalFunc,_Function_3_1,Array< ::Dynamic >,ret)
 			Void run(::nape::phys::Body b1){
 				HX_STACK_PUSH("*::_Function_3_1","zpp_nape/constraint/AngleJoint.hx",287);
 				HX_STACK_ARG(b1,"b1");
 				{
 					HX_STACK_LINE(287)
-					ret->__get((int)0)->zpp_inner_zn->b2 = b1->zpp_inner;
+					ret->__get((int)0).StaticCast< ::nape::constraint::AngleJoint >()->zpp_inner_zn->b2 = b1->zpp_inner;
 				}
 				return null();
 			}
@@ -1244,7 +872,7 @@ return null();
 		}
 	}
 	HX_STACK_LINE(290)
-	return ret->__get((int)0);
+	return ret->__get((int)0).StaticCast< ::nape::constraint::AngleJoint >();
 }
 
 
@@ -1583,7 +1211,7 @@ Class ZPP_AngleJoint_obj::__mClass;
 
 void ZPP_AngleJoint_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.constraint.ZPP_AngleJoint"), hx::TCanCast< ZPP_AngleJoint_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.constraint.ZPP_AngleJoint"), hx::TCanCast< ZPP_AngleJoint_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

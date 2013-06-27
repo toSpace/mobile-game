@@ -224,7 +224,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 			HX_STACK_LINE(2981)
 			::zpp_nape::shape::ZPP_Shape shape = cnode->shape;		HX_STACK_VAR(shape,"shape");
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::shape::ZPP_Shape &shape,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+				inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::shape::ZPP_Shape &shape){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2982);
 					{
 						HX_STACK_LINE(2982)
@@ -236,7 +236,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(2982)
-			if (((bool((filter == null())) || bool(_Function_3_1::Block(shape,filter))))){
+			if (((bool((filter == null())) || bool(_Function_3_1::Block(filter,shape))))){
 				HX_STACK_LINE(2982)
 				if (((shape->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 					HX_STACK_LINE(2983)
@@ -358,9 +358,6 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 					{
 						HX_STACK_LINE(2845)
 						::zpp_nape::util::ZNPList_ZPP_AABBNode _this = this->openlist;		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(2845)
-						{
-						}
 						struct _Function_6_1{
 							inline static ::zpp_nape::util::ZNPNode_ZPP_AABBNode Block( ::zpp_nape::space::ZPP_DynAABBPhase_obj *__this){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2845);
@@ -459,9 +456,6 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 					{
 						HX_STACK_LINE(2870)
 						::zpp_nape::util::ZNPList_ZPP_AABBNode _this = this->openlist;		HX_STACK_VAR(_this,"_this");
-						HX_STACK_LINE(2870)
-						{
-						}
 						struct _Function_6_1{
 							inline static ::zpp_nape::util::ZNPNode_ZPP_AABBNode Block( ::zpp_nape::space::ZPP_DynAABBPhase_obj *__this){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2870);
@@ -536,7 +530,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 			HX_STACK_LINE(2881)
 			::zpp_nape::shape::ZPP_Shape shape = cnode->shape;		HX_STACK_VAR(shape,"shape");
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::shape::ZPP_Shape &shape,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+				inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::shape::ZPP_Shape &shape){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2882);
 					{
 						HX_STACK_LINE(2882)
@@ -548,7 +542,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(2882)
-			if (((bool((filter == null())) || bool(_Function_3_1::Block(shape,filter))))){
+			if (((bool((filter == null())) || bool(_Function_3_1::Block(filter,shape))))){
 				HX_STACK_LINE(2883)
 				::nape::geom::RayResult result = (  (((shape->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))) ? ::nape::geom::RayResult(ray->circlesect(shape->circle,inner,mint)) : ::nape::geom::RayResult((  ((ray->aabbtest(shape->aabb))) ? ::nape::geom::RayResult(ray->polysect(shape->polygon,inner,mint)) : ::nape::geom::RayResult(null()) )) );		HX_STACK_VAR(result,"result");
 				HX_STACK_LINE(2885)
@@ -626,9 +620,6 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 							{
 								HX_STACK_LINE(2914)
 								::zpp_nape::util::ZNPList_ZPP_AABBNode _this = this->openlist;		HX_STACK_VAR(_this,"_this");
-								HX_STACK_LINE(2914)
-								{
-								}
 								struct _Function_8_1{
 									inline static ::zpp_nape::util::ZNPNode_ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &cnode){
 										HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2914);
@@ -727,9 +718,6 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 							{
 								HX_STACK_LINE(2939)
 								::zpp_nape::util::ZNPList_ZPP_AABBNode _this = this->openlist;		HX_STACK_VAR(_this,"_this");
-								HX_STACK_LINE(2939)
-								{
-								}
 								struct _Function_8_1{
 									inline static ::zpp_nape::util::ZNPNode_ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &cnode){
 										HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2939);
@@ -830,11 +818,8 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 		while((!(((this->treeStack->head == null()))))){
 			HX_STACK_LINE(2733)
 			::zpp_nape::space::ZPP_AABBNode node = this->treeStack->pop_unsafe();		HX_STACK_VAR(node,"node");
-			HX_STACK_LINE(2734)
-			{
-			}
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+				inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2742);
 					{
 						HX_STACK_LINE(2742)
@@ -846,13 +831,13 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(2742)
-			if ((_Function_3_1::Block(node,ab))){
+			if ((_Function_3_1::Block(ab,node))){
 				HX_STACK_LINE(2742)
 				if (((node->child1 == null()))){
 					HX_STACK_LINE(2745)
 					::nape::phys::Body body = node->shape->body->outer;		HX_STACK_VAR(body,"body");
 					struct _Function_5_1{
-						inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+						inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2746);
 							{
 								HX_STACK_LINE(2746)
@@ -864,7 +849,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 						}
 					};
 					HX_STACK_LINE(2746)
-					if (((bool((filter == null())) || bool(_Function_5_1::Block(node,filter))))){
+					if (((bool((filter == null())) || bool(_Function_5_1::Block(filter,node))))){
 						HX_STACK_LINE(2746)
 						if ((containment)){
 							HX_STACK_LINE(2747)
@@ -924,11 +909,8 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 		while((!(((this->treeStack->head == null()))))){
 			HX_STACK_LINE(2778)
 			::zpp_nape::space::ZPP_AABBNode node = this->treeStack->pop_unsafe();		HX_STACK_VAR(node,"node");
-			HX_STACK_LINE(2779)
-			{
-			}
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+				inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2787);
 					{
 						HX_STACK_LINE(2787)
@@ -940,13 +922,13 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(2787)
-			if ((_Function_3_1::Block(node,ab))){
+			if ((_Function_3_1::Block(ab,node))){
 				HX_STACK_LINE(2787)
 				if (((node->child1 == null()))){
 					HX_STACK_LINE(2790)
 					::nape::phys::Body body = node->shape->body->outer;		HX_STACK_VAR(body,"body");
 					struct _Function_5_1{
-						inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+						inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2791);
 							{
 								HX_STACK_LINE(2791)
@@ -958,7 +940,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 						}
 					};
 					HX_STACK_LINE(2791)
-					if (((bool((filter == null())) || bool(_Function_5_1::Block(node,filter))))){
+					if (((bool((filter == null())) || bool(_Function_5_1::Block(filter,node))))){
 						HX_STACK_LINE(2791)
 						if ((containment)){
 							HX_STACK_LINE(2792)
@@ -1040,11 +1022,8 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 		while((!(((this->treeStack->head == null()))))){
 			HX_STACK_LINE(2655)
 			::zpp_nape::space::ZPP_AABBNode node = this->treeStack->pop_unsafe();		HX_STACK_VAR(node,"node");
-			HX_STACK_LINE(2656)
-			{
-			}
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+				inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2664);
 					{
 						HX_STACK_LINE(2664)
@@ -1056,11 +1035,11 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(2664)
-			if ((_Function_3_1::Block(node,ab))){
+			if ((_Function_3_1::Block(ab,node))){
 				HX_STACK_LINE(2664)
 				if (((node->child1 == null()))){
 					struct _Function_5_1{
-						inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+						inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2667);
 							{
 								HX_STACK_LINE(2667)
@@ -1072,7 +1051,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 						}
 					};
 					HX_STACK_LINE(2665)
-					if (((bool((filter == null())) || bool(_Function_5_1::Block(node,filter))))){
+					if (((bool((filter == null())) || bool(_Function_5_1::Block(filter,node))))){
 						HX_STACK_LINE(2667)
 						if ((containment)){
 							HX_STACK_LINE(2668)
@@ -1118,11 +1097,8 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 		while((!(((this->treeStack->head == null()))))){
 			HX_STACK_LINE(2690)
 			::zpp_nape::space::ZPP_AABBNode node = this->treeStack->pop_unsafe();		HX_STACK_VAR(node,"node");
-			HX_STACK_LINE(2691)
-			{
-			}
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+				inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2699);
 					{
 						HX_STACK_LINE(2699)
@@ -1134,11 +1110,11 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(2699)
-			if ((_Function_3_1::Block(node,ab))){
+			if ((_Function_3_1::Block(ab,node))){
 				HX_STACK_LINE(2699)
 				if (((node->child1 == null()))){
 					struct _Function_5_1{
-						inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+						inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2702);
 							{
 								HX_STACK_LINE(2702)
@@ -1150,7 +1126,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 						}
 					};
 					HX_STACK_LINE(2700)
-					if (((bool((filter == null())) || bool(_Function_5_1::Block(node,filter))))){
+					if (((bool((filter == null())) || bool(_Function_5_1::Block(filter,node))))){
 						HX_STACK_LINE(2702)
 						if ((containment)){
 							HX_STACK_LINE(2703)
@@ -1223,11 +1199,8 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 		while((!(((this->treeStack->head == null()))))){
 			HX_STACK_LINE(2557)
 			::zpp_nape::space::ZPP_AABBNode node = this->treeStack->pop_unsafe();		HX_STACK_VAR(node,"node");
-			HX_STACK_LINE(2558)
-			{
-			}
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+				inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2566);
 					{
 						HX_STACK_LINE(2566)
@@ -1239,13 +1212,13 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(2566)
-			if ((_Function_3_1::Block(node,ab))){
+			if ((_Function_3_1::Block(ab,node))){
 				HX_STACK_LINE(2566)
 				if (((node->child1 == null()))){
 					HX_STACK_LINE(2569)
 					::nape::phys::Body body = node->shape->body->outer;		HX_STACK_VAR(body,"body");
 					struct _Function_5_1{
-						inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+						inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2570);
 							{
 								HX_STACK_LINE(2570)
@@ -1257,7 +1230,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 						}
 					};
 					HX_STACK_LINE(2570)
-					if (((bool((filter == null())) || bool(_Function_5_1::Block(node,filter))))){
+					if (((bool((filter == null())) || bool(_Function_5_1::Block(filter,node))))){
 						HX_STACK_LINE(2570)
 						if ((containment)){
 							HX_STACK_LINE(2571)
@@ -1317,11 +1290,8 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 		while((!(((this->treeStack->head == null()))))){
 			HX_STACK_LINE(2602)
 			::zpp_nape::space::ZPP_AABBNode node = this->treeStack->pop_unsafe();		HX_STACK_VAR(node,"node");
-			HX_STACK_LINE(2603)
-			{
-			}
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+				inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2611);
 					{
 						HX_STACK_LINE(2611)
@@ -1333,13 +1303,13 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(2611)
-			if ((_Function_3_1::Block(node,ab))){
+			if ((_Function_3_1::Block(ab,node))){
 				HX_STACK_LINE(2611)
 				if (((node->child1 == null()))){
 					HX_STACK_LINE(2614)
 					::nape::phys::Body body = node->shape->body->outer;		HX_STACK_VAR(body,"body");
 					struct _Function_5_1{
-						inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+						inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2615);
 							{
 								HX_STACK_LINE(2615)
@@ -1351,7 +1321,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 						}
 					};
 					HX_STACK_LINE(2615)
-					if (((bool((filter == null())) || bool(_Function_5_1::Block(node,filter))))){
+					if (((bool((filter == null())) || bool(_Function_5_1::Block(filter,node))))){
 						HX_STACK_LINE(2615)
 						if ((containment)){
 							HX_STACK_LINE(2616)
@@ -1435,11 +1405,8 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 		while((!(((this->treeStack->head == null()))))){
 			HX_STACK_LINE(2479)
 			::zpp_nape::space::ZPP_AABBNode node = this->treeStack->pop_unsafe();		HX_STACK_VAR(node,"node");
-			HX_STACK_LINE(2480)
-			{
-			}
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+				inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2488);
 					{
 						HX_STACK_LINE(2488)
@@ -1451,11 +1418,11 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(2488)
-			if ((_Function_3_1::Block(node,ab))){
+			if ((_Function_3_1::Block(ab,node))){
 				HX_STACK_LINE(2488)
 				if (((node->child1 == null()))){
 					struct _Function_5_1{
-						inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+						inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2491);
 							{
 								HX_STACK_LINE(2491)
@@ -1467,7 +1434,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 						}
 					};
 					HX_STACK_LINE(2489)
-					if (((bool((filter == null())) || bool(_Function_5_1::Block(node,filter))))){
+					if (((bool((filter == null())) || bool(_Function_5_1::Block(filter,node))))){
 						HX_STACK_LINE(2491)
 						if ((containment)){
 							HX_STACK_LINE(2492)
@@ -1513,11 +1480,8 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 		while((!(((this->treeStack->head == null()))))){
 			HX_STACK_LINE(2514)
 			::zpp_nape::space::ZPP_AABBNode node = this->treeStack->pop_unsafe();		HX_STACK_VAR(node,"node");
-			HX_STACK_LINE(2515)
-			{
-			}
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+				inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2523);
 					{
 						HX_STACK_LINE(2523)
@@ -1529,11 +1493,11 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(2523)
-			if ((_Function_3_1::Block(node,ab))){
+			if ((_Function_3_1::Block(ab,node))){
 				HX_STACK_LINE(2523)
 				if (((node->child1 == null()))){
 					struct _Function_5_1{
-						inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+						inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2526);
 							{
 								HX_STACK_LINE(2526)
@@ -1545,7 +1509,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 						}
 					};
 					HX_STACK_LINE(2524)
-					if (((bool((filter == null())) || bool(_Function_5_1::Block(node,filter))))){
+					if (((bool((filter == null())) || bool(_Function_5_1::Block(filter,node))))){
 						HX_STACK_LINE(2526)
 						if ((containment)){
 							HX_STACK_LINE(2527)
@@ -1617,11 +1581,8 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 		while((!(((this->treeStack->head == null()))))){
 			HX_STACK_LINE(2289)
 			::zpp_nape::space::ZPP_AABBNode node = this->treeStack->pop_unsafe();		HX_STACK_VAR(node,"node");
-			HX_STACK_LINE(2290)
-			{
-			}
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+				inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2298);
 					{
 						HX_STACK_LINE(2298)
@@ -1633,11 +1594,11 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(2298)
-			if ((_Function_3_1::Block(node,ab))){
+			if ((_Function_3_1::Block(ab,node))){
 				HX_STACK_LINE(2298)
 				if (((node->child1 == null()))){
 					struct _Function_5_1{
-						inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+						inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2301);
 							{
 								HX_STACK_LINE(2301)
@@ -1649,7 +1610,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 						}
 					};
 					HX_STACK_LINE(2299)
-					if (((bool((filter == null())) || bool(_Function_5_1::Block(node,filter))))){
+					if (((bool((filter == null())) || bool(_Function_5_1::Block(filter,node))))){
 						HX_STACK_LINE(2302)
 						::nape::phys::Body body = node->shape->body->outer;		HX_STACK_VAR(body,"body");
 						HX_STACK_LINE(2303)
@@ -1713,7 +1674,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 			}
 			else{
 				struct _Function_4_1{
-					inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+					inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2327);
 						{
 							HX_STACK_LINE(2327)
@@ -1725,13 +1686,13 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				HX_STACK_LINE(2327)
-				if ((_Function_4_1::Block(node,ab))){
+				if ((_Function_4_1::Block(ab,node))){
 					HX_STACK_LINE(2327)
 					if (((node->child1 == null()))){
 						HX_STACK_LINE(2330)
 						::nape::phys::Body body = node->shape->body->outer;		HX_STACK_VAR(body,"body");
 						struct _Function_6_1{
-							inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+							inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2331);
 								{
 									HX_STACK_LINE(2331)
@@ -1743,7 +1704,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 							}
 						};
 						HX_STACK_LINE(2331)
-						if (((bool((filter == null())) || bool(_Function_6_1::Block(node,filter))))){
+						if (((bool((filter == null())) || bool(_Function_6_1::Block(filter,node))))){
 							HX_STACK_LINE(2331)
 							if ((strict)){
 								HX_STACK_LINE(2332)
@@ -1782,7 +1743,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 									HX_STACK_LINE(2348)
 									if ((!(this->failed->has(body)))){
 										struct _Function_10_1{
-											inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+											inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 												HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2350);
 												{
 													HX_STACK_LINE(2350)
@@ -1794,7 +1755,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 											}
 										};
 										HX_STACK_LINE(2350)
-										bool col = _Function_10_1::Block(node,ab);		HX_STACK_VAR(col,"col");
+										bool col = _Function_10_1::Block(ab,node);		HX_STACK_VAR(col,"col");
 										HX_STACK_LINE(2351)
 										if (((bool(!(ret->has(body))) && bool(col)))){
 											HX_STACK_LINE(2351)
@@ -1813,7 +1774,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 								}
 								else{
 									struct _Function_9_1{
-										inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+										inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2358);
 											{
 												HX_STACK_LINE(2358)
@@ -1825,7 +1786,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 										}
 									};
 									HX_STACK_LINE(2358)
-									if (((bool(!(ret->has(body))) && bool(_Function_9_1::Block(node,ab))))){
+									if (((bool(!(ret->has(body))) && bool(_Function_9_1::Block(ab,node))))){
 										HX_STACK_LINE(2358)
 										ret->push(body);
 									}
@@ -1862,11 +1823,8 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 		while((!(((this->treeStack->head == null()))))){
 			HX_STACK_LINE(2380)
 			::zpp_nape::space::ZPP_AABBNode node = this->treeStack->pop_unsafe();		HX_STACK_VAR(node,"node");
-			HX_STACK_LINE(2381)
-			{
-			}
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+				inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2389);
 					{
 						HX_STACK_LINE(2389)
@@ -1878,11 +1836,11 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(2389)
-			if ((_Function_3_1::Block(node,ab))){
+			if ((_Function_3_1::Block(ab,node))){
 				HX_STACK_LINE(2389)
 				if (((node->child1 == null()))){
 					struct _Function_5_1{
-						inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+						inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2392);
 							{
 								HX_STACK_LINE(2392)
@@ -1894,7 +1852,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 						}
 					};
 					HX_STACK_LINE(2390)
-					if (((bool((filter == null())) || bool(_Function_5_1::Block(node,filter))))){
+					if (((bool((filter == null())) || bool(_Function_5_1::Block(filter,node))))){
 						HX_STACK_LINE(2393)
 						::nape::phys::Body body = node->shape->body->outer;		HX_STACK_VAR(body,"body");
 						HX_STACK_LINE(2394)
@@ -1958,7 +1916,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 			}
 			else{
 				struct _Function_4_1{
-					inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+					inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2418);
 						{
 							HX_STACK_LINE(2418)
@@ -1970,13 +1928,13 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				HX_STACK_LINE(2418)
-				if ((_Function_4_1::Block(node,ab))){
+				if ((_Function_4_1::Block(ab,node))){
 					HX_STACK_LINE(2418)
 					if (((node->child1 == null()))){
 						HX_STACK_LINE(2421)
 						::nape::phys::Body body = node->shape->body->outer;		HX_STACK_VAR(body,"body");
 						struct _Function_6_1{
-							inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+							inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2422);
 								{
 									HX_STACK_LINE(2422)
@@ -1988,7 +1946,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 							}
 						};
 						HX_STACK_LINE(2422)
-						if (((bool((filter == null())) || bool(_Function_6_1::Block(node,filter))))){
+						if (((bool((filter == null())) || bool(_Function_6_1::Block(filter,node))))){
 							HX_STACK_LINE(2422)
 							if ((strict)){
 								HX_STACK_LINE(2423)
@@ -2027,7 +1985,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 									HX_STACK_LINE(2439)
 									if ((!(this->failed->has(body)))){
 										struct _Function_10_1{
-											inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+											inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 												HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2441);
 												{
 													HX_STACK_LINE(2441)
@@ -2039,7 +1997,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 											}
 										};
 										HX_STACK_LINE(2441)
-										bool col = _Function_10_1::Block(node,ab);		HX_STACK_VAR(col,"col");
+										bool col = _Function_10_1::Block(ab,node);		HX_STACK_VAR(col,"col");
 										HX_STACK_LINE(2442)
 										if (((bool(!(ret->has(body))) && bool(col)))){
 											HX_STACK_LINE(2442)
@@ -2058,7 +2016,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 								}
 								else{
 									struct _Function_9_1{
-										inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+										inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2449);
 											{
 												HX_STACK_LINE(2449)
@@ -2070,7 +2028,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 										}
 									};
 									HX_STACK_LINE(2449)
-									if (((bool(!(ret->has(body))) && bool(_Function_9_1::Block(node,ab))))){
+									if (((bool(!(ret->has(body))) && bool(_Function_9_1::Block(ab,node))))){
 										HX_STACK_LINE(2449)
 										ret->push(body);
 									}
@@ -2130,11 +2088,8 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 		while((!(((this->treeStack->head == null()))))){
 			HX_STACK_LINE(2144)
 			::zpp_nape::space::ZPP_AABBNode node = this->treeStack->pop_unsafe();		HX_STACK_VAR(node,"node");
-			HX_STACK_LINE(2145)
-			{
-			}
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+				inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2153);
 					{
 						HX_STACK_LINE(2153)
@@ -2146,11 +2101,11 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(2153)
-			if ((_Function_3_1::Block(node,ab))){
+			if ((_Function_3_1::Block(ab,node))){
 				HX_STACK_LINE(2153)
 				if (((node->child1 == null()))){
 					struct _Function_5_1{
-						inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+						inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2156);
 							{
 								HX_STACK_LINE(2156)
@@ -2162,7 +2117,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 						}
 					};
 					HX_STACK_LINE(2154)
-					if (((bool((filter == null())) || bool(_Function_5_1::Block(node,filter))))){
+					if (((bool((filter == null())) || bool(_Function_5_1::Block(filter,node))))){
 						HX_STACK_LINE(2156)
 						ret->push(node->shape->outer);
 					}
@@ -2216,7 +2171,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 			}
 			else{
 				struct _Function_4_1{
-					inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+					inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2180);
 						{
 							HX_STACK_LINE(2180)
@@ -2228,11 +2183,11 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				HX_STACK_LINE(2180)
-				if ((_Function_4_1::Block(node,ab))){
+				if ((_Function_4_1::Block(ab,node))){
 					HX_STACK_LINE(2180)
 					if (((node->child1 == null()))){
 						struct _Function_6_1{
-							inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+							inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2183);
 								{
 									HX_STACK_LINE(2183)
@@ -2244,7 +2199,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 							}
 						};
 						HX_STACK_LINE(2181)
-						if (((bool((filter == null())) || bool(_Function_6_1::Block(node,filter))))){
+						if (((bool((filter == null())) || bool(_Function_6_1::Block(filter,node))))){
 							HX_STACK_LINE(2183)
 							if ((strict)){
 								HX_STACK_LINE(2184)
@@ -2257,7 +2212,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 								}
 								else{
 									struct _Function_9_1{
-										inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+										inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2189);
 											{
 												HX_STACK_LINE(2189)
@@ -2269,7 +2224,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 										}
 									};
 									HX_STACK_LINE(2188)
-									if ((_Function_9_1::Block(node,ab))){
+									if ((_Function_9_1::Block(ab,node))){
 										HX_STACK_LINE(2189)
 										ret->push(node->shape->outer);
 									}
@@ -2284,7 +2239,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 							}
 							else{
 								struct _Function_8_1{
-									inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+									inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 										HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2193);
 										{
 											HX_STACK_LINE(2193)
@@ -2296,7 +2251,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 									}
 								};
 								HX_STACK_LINE(2193)
-								if (((bool(!(containment)) || bool(_Function_8_1::Block(node,ab))))){
+								if (((bool(!(containment)) || bool(_Function_8_1::Block(ab,node))))){
 									HX_STACK_LINE(2193)
 									ret->push(node->shape->outer);
 								}
@@ -2332,11 +2287,8 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 		while((!(((this->treeStack->head == null()))))){
 			HX_STACK_LINE(2212)
 			::zpp_nape::space::ZPP_AABBNode node = this->treeStack->pop_unsafe();		HX_STACK_VAR(node,"node");
-			HX_STACK_LINE(2213)
-			{
-			}
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+				inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2221);
 					{
 						HX_STACK_LINE(2221)
@@ -2348,11 +2300,11 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(2221)
-			if ((_Function_3_1::Block(node,ab))){
+			if ((_Function_3_1::Block(ab,node))){
 				HX_STACK_LINE(2221)
 				if (((node->child1 == null()))){
 					struct _Function_5_1{
-						inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+						inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2224);
 							{
 								HX_STACK_LINE(2224)
@@ -2364,7 +2316,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 						}
 					};
 					HX_STACK_LINE(2222)
-					if (((bool((filter == null())) || bool(_Function_5_1::Block(node,filter))))){
+					if (((bool((filter == null())) || bool(_Function_5_1::Block(filter,node))))){
 						HX_STACK_LINE(2224)
 						ret->push(node->shape->outer);
 					}
@@ -2418,7 +2370,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 			}
 			else{
 				struct _Function_4_1{
-					inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+					inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2248);
 						{
 							HX_STACK_LINE(2248)
@@ -2430,11 +2382,11 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				HX_STACK_LINE(2248)
-				if ((_Function_4_1::Block(node,ab))){
+				if ((_Function_4_1::Block(ab,node))){
 					HX_STACK_LINE(2248)
 					if (((node->child1 == null()))){
 						struct _Function_6_1{
-							inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+							inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2251);
 								{
 									HX_STACK_LINE(2251)
@@ -2446,7 +2398,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 							}
 						};
 						HX_STACK_LINE(2249)
-						if (((bool((filter == null())) || bool(_Function_6_1::Block(node,filter))))){
+						if (((bool((filter == null())) || bool(_Function_6_1::Block(filter,node))))){
 							HX_STACK_LINE(2251)
 							if ((strict)){
 								HX_STACK_LINE(2252)
@@ -2459,7 +2411,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 								}
 								else{
 									struct _Function_9_1{
-										inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+										inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2257);
 											{
 												HX_STACK_LINE(2257)
@@ -2471,7 +2423,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 										}
 									};
 									HX_STACK_LINE(2256)
-									if ((_Function_9_1::Block(node,ab))){
+									if ((_Function_9_1::Block(ab,node))){
 										HX_STACK_LINE(2257)
 										ret->push(node->shape->outer);
 									}
@@ -2486,7 +2438,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 							}
 							else{
 								struct _Function_8_1{
-									inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_AABB &ab){
+									inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_AABBNode &node){
 										HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2261);
 										{
 											HX_STACK_LINE(2261)
@@ -2498,7 +2450,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 									}
 								};
 								HX_STACK_LINE(2261)
-								if (((bool(!(containment)) || bool(_Function_8_1::Block(node,ab))))){
+								if (((bool(!(containment)) || bool(_Function_8_1::Block(ab,node))))){
 									HX_STACK_LINE(2261)
 									ret->push(node->shape->outer);
 								}
@@ -2572,9 +2524,6 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 					HX_STACK_LINE(2031)
 					{
 					}
-					HX_STACK_LINE(2031)
-					{
-					}
 				}
 				HX_STACK_LINE(2031)
 				return ret;
@@ -2599,11 +2548,8 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 		while((!(((this->treeStack->head == null()))))){
 			HX_STACK_LINE(2039)
 			::zpp_nape::space::ZPP_AABBNode node = this->treeStack->pop_unsafe();		HX_STACK_VAR(node,"node");
-			HX_STACK_LINE(2040)
-			{
-			}
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_Vec2 &v){
+				inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::space::ZPP_AABBNode &node){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2048);
 					{
 						HX_STACK_LINE(2048)
@@ -2615,7 +2561,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(2048)
-			if ((_Function_3_1::Block(node,v))){
+			if ((_Function_3_1::Block(v,node))){
 				HX_STACK_LINE(2048)
 				if (((node->child1 == null()))){
 					HX_STACK_LINE(2051)
@@ -2623,7 +2569,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 					HX_STACK_LINE(2052)
 					if ((!(ret->has(body)))){
 						struct _Function_6_1{
-							inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+							inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2053);
 								{
 									HX_STACK_LINE(2053)
@@ -2635,7 +2581,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 							}
 						};
 						HX_STACK_LINE(2052)
-						if (((bool((filter == null())) || bool(_Function_6_1::Block(node,filter))))){
+						if (((bool((filter == null())) || bool(_Function_6_1::Block(filter,node))))){
 							HX_STACK_LINE(2053)
 							if (((node->shape->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 								HX_STACK_LINE(2054)
@@ -2682,11 +2628,8 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 		while((!(((this->treeStack->head == null()))))){
 			HX_STACK_LINE(2079)
 			::zpp_nape::space::ZPP_AABBNode node = this->treeStack->pop_unsafe();		HX_STACK_VAR(node,"node");
-			HX_STACK_LINE(2080)
-			{
-			}
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_Vec2 &v){
+				inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::space::ZPP_AABBNode &node){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2088);
 					{
 						HX_STACK_LINE(2088)
@@ -2698,7 +2641,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(2088)
-			if ((_Function_3_1::Block(node,v))){
+			if ((_Function_3_1::Block(v,node))){
 				HX_STACK_LINE(2088)
 				if (((node->child1 == null()))){
 					HX_STACK_LINE(2091)
@@ -2706,7 +2649,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 					HX_STACK_LINE(2092)
 					if ((!(ret->has(body)))){
 						struct _Function_6_1{
-							inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+							inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",2093);
 								{
 									HX_STACK_LINE(2093)
@@ -2718,7 +2661,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 							}
 						};
 						HX_STACK_LINE(2092)
-						if (((bool((filter == null())) || bool(_Function_6_1::Block(node,filter))))){
+						if (((bool((filter == null())) || bool(_Function_6_1::Block(filter,node))))){
 							HX_STACK_LINE(2093)
 							if (((node->shape->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 								HX_STACK_LINE(2094)
@@ -2756,9 +2699,6 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 	{
 		HX_STACK_LINE(2114)
 		::zpp_nape::geom::ZPP_Vec2 o = v;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(2115)
-		{
-		}
 		HX_STACK_LINE(2123)
 		{
 			HX_STACK_LINE(2123)
@@ -2831,9 +2771,6 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 					HX_STACK_LINE(1934)
 					{
 					}
-					HX_STACK_LINE(1934)
-					{
-					}
 				}
 				HX_STACK_LINE(1934)
 				return ret;
@@ -2858,11 +2795,8 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 		while((!(((this->treeStack->head == null()))))){
 			HX_STACK_LINE(1942)
 			::zpp_nape::space::ZPP_AABBNode node = this->treeStack->pop_unsafe();		HX_STACK_VAR(node,"node");
-			HX_STACK_LINE(1943)
-			{
-			}
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_Vec2 &v){
+				inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::space::ZPP_AABBNode &node){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1951);
 					{
 						HX_STACK_LINE(1951)
@@ -2874,11 +2808,11 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(1951)
-			if ((_Function_3_1::Block(node,v))){
+			if ((_Function_3_1::Block(v,node))){
 				HX_STACK_LINE(1951)
 				if (((node->child1 == null()))){
 					struct _Function_5_1{
-						inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+						inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1954);
 							{
 								HX_STACK_LINE(1954)
@@ -2890,7 +2824,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 						}
 					};
 					HX_STACK_LINE(1952)
-					if (((bool((filter == null())) || bool(_Function_5_1::Block(node,filter))))){
+					if (((bool((filter == null())) || bool(_Function_5_1::Block(filter,node))))){
 						HX_STACK_LINE(1954)
 						if (((node->shape->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 							HX_STACK_LINE(1955)
@@ -2936,11 +2870,8 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 		while((!(((this->treeStack->head == null()))))){
 			HX_STACK_LINE(1979)
 			::zpp_nape::space::ZPP_AABBNode node = this->treeStack->pop_unsafe();		HX_STACK_VAR(node,"node");
-			HX_STACK_LINE(1980)
-			{
-			}
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::geom::ZPP_Vec2 &v){
+				inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::space::ZPP_AABBNode &node){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1988);
 					{
 						HX_STACK_LINE(1988)
@@ -2952,11 +2883,11 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(1988)
-			if ((_Function_3_1::Block(node,v))){
+			if ((_Function_3_1::Block(v,node))){
 				HX_STACK_LINE(1988)
 				if (((node->child1 == null()))){
 					struct _Function_5_1{
-						inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+						inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_AABBNode &node){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1991);
 							{
 								HX_STACK_LINE(1991)
@@ -2968,7 +2899,7 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 						}
 					};
 					HX_STACK_LINE(1989)
-					if (((bool((filter == null())) || bool(_Function_5_1::Block(node,filter))))){
+					if (((bool((filter == null())) || bool(_Function_5_1::Block(filter,node))))){
 						HX_STACK_LINE(1991)
 						if (((node->shape->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 							HX_STACK_LINE(1992)
@@ -3005,9 +2936,6 @@ Dynamic ZPP_DynAABBPhase_obj::__Create(hx::DynamicArray inArgs)
 	{
 		HX_STACK_LINE(2011)
 		::zpp_nape::geom::ZPP_Vec2 o = v;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(2012)
-		{
-		}
 		HX_STACK_LINE(2020)
 		{
 			HX_STACK_LINE(2020)
@@ -3092,12 +3020,6 @@ Void ZPP_DynAABBPhase_obj::clear( ){
 				::zpp_nape::space::ZPP_AABBPair obj = this->pairs;		HX_STACK_VAR(obj,"obj");
 				HX_STACK_LINE(1907)
 				{
-				}
-				HX_STACK_LINE(1907)
-				{
-					HX_STACK_LINE(1907)
-					{
-					}
 					HX_STACK_LINE(1907)
 					::zpp_nape::util::ZNPNode_ZPP_AABBPair pre = null();		HX_STACK_VAR(pre,"pre");
 					HX_STACK_LINE(1907)
@@ -3110,9 +3032,6 @@ Void ZPP_DynAABBPhase_obj::clear( ){
 						if (((cur->elt == obj))){
 							HX_STACK_LINE(1907)
 							{
-								HX_STACK_LINE(1907)
-								{
-								}
 								HX_STACK_LINE(1907)
 								::zpp_nape::util::ZNPNode_ZPP_AABBPair old;		HX_STACK_VAR(old,"old");
 								HX_STACK_LINE(1907)
@@ -3146,14 +3065,8 @@ Void ZPP_DynAABBPhase_obj::clear( ){
 								}
 								HX_STACK_LINE(1907)
 								{
-								}
-								HX_STACK_LINE(1907)
-								{
 									HX_STACK_LINE(1907)
 									::zpp_nape::util::ZNPNode_ZPP_AABBPair o = old;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1907)
-									{
-									}
 									HX_STACK_LINE(1907)
 									o->elt = null();
 									HX_STACK_LINE(1907)
@@ -3191,12 +3104,6 @@ Void ZPP_DynAABBPhase_obj::clear( ){
 				::zpp_nape::space::ZPP_AABBPair obj = this->pairs;		HX_STACK_VAR(obj,"obj");
 				HX_STACK_LINE(1908)
 				{
-				}
-				HX_STACK_LINE(1908)
-				{
-					HX_STACK_LINE(1908)
-					{
-					}
 					HX_STACK_LINE(1908)
 					::zpp_nape::util::ZNPNode_ZPP_AABBPair pre = null();		HX_STACK_VAR(pre,"pre");
 					HX_STACK_LINE(1908)
@@ -3209,9 +3116,6 @@ Void ZPP_DynAABBPhase_obj::clear( ){
 						if (((cur->elt == obj))){
 							HX_STACK_LINE(1908)
 							{
-								HX_STACK_LINE(1908)
-								{
-								}
 								HX_STACK_LINE(1908)
 								::zpp_nape::util::ZNPNode_ZPP_AABBPair old;		HX_STACK_VAR(old,"old");
 								HX_STACK_LINE(1908)
@@ -3245,14 +3149,8 @@ Void ZPP_DynAABBPhase_obj::clear( ){
 								}
 								HX_STACK_LINE(1908)
 								{
-								}
-								HX_STACK_LINE(1908)
-								{
 									HX_STACK_LINE(1908)
 									::zpp_nape::util::ZNPNode_ZPP_AABBPair o = old;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(1908)
-									{
-									}
 									HX_STACK_LINE(1908)
 									o->elt = null();
 									HX_STACK_LINE(1908)
@@ -3287,14 +3185,8 @@ Void ZPP_DynAABBPhase_obj::clear( ){
 			{
 				HX_STACK_LINE(1910)
 				::zpp_nape::space::ZPP_AABBPair o = this->pairs;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(1911)
-				{
-				}
 				HX_STACK_LINE(1919)
 				{
-					HX_STACK_LINE(1919)
-					{
-					}
 					HX_STACK_LINE(1919)
 					o->n1 = o->n2 = null();
 					HX_STACK_LINE(1919)
@@ -3331,12 +3223,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 			{
 				HX_STACK_LINE(1110)
 				::zpp_nape::shape::ZPP_Shape shape = node->shape;		HX_STACK_VAR(shape,"shape");
-				HX_STACK_LINE(1111)
-				{
-				}
-				HX_STACK_LINE(1119)
-				{
-				}
 				HX_STACK_LINE(1127)
 				if ((!(node->first_sync))){
 					HX_STACK_LINE(1128)
@@ -3374,18 +3260,12 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 								::zpp_nape::space::ZPP_AABBNode o = parent;		HX_STACK_VAR(o,"o");
 								HX_STACK_LINE(1129)
 								{
-								}
-								HX_STACK_LINE(1129)
-								{
 									HX_STACK_LINE(1129)
 									o->height = (int)-1;
 									HX_STACK_LINE(1129)
 									{
 										HX_STACK_LINE(1129)
 										::zpp_nape::geom::ZPP_AABB o1 = o->aabb;		HX_STACK_VAR(o1,"o1");
-										HX_STACK_LINE(1129)
-										{
-										}
 										HX_STACK_LINE(1129)
 										{
 											HX_STACK_LINE(1129)
@@ -3436,7 +3316,7 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 											HX_STACK_LINE(1129)
 											int balance = (c->height - b->height);		HX_STACK_VAR(balance,"balance");
 											struct _Function_8_1{
-												inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBTree &tree){
+												inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBTree &tree,::zpp_nape::space::ZPP_AABBNode &b){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1129);
 													{
 														HX_STACK_LINE(1129)
@@ -3504,7 +3384,7 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 																_this->maxy = (  (((a->maxy > b1->maxy))) ? Float(a->maxy) : Float(b1->maxy) );
 															}
 															struct _Function_10_1{
-																inline static int Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &g){
+																inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &b){
 																	HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1129);
 																	{
 																		HX_STACK_LINE(1129)
@@ -3518,7 +3398,7 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 																}
 															};
 															HX_STACK_LINE(1129)
-															node1->height = ((int)1 + _Function_10_1::Block(b,g));
+															node1->height = ((int)1 + _Function_10_1::Block(g,b));
 															struct _Function_10_2{
 																inline static int Block( ::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBNode &f){
 																	HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1129);
@@ -3613,7 +3493,7 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 												}
 											};
 											struct _Function_8_2{
-												inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBTree &tree,::zpp_nape::space::ZPP_AABBNode &c){
+												inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBTree &tree){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1129);
 													{
 														HX_STACK_LINE(1129)
@@ -3790,7 +3670,7 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 												}
 											};
 											HX_STACK_LINE(1129)
-											return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_8_1::Block(b,c,node1,tree)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_8_2::Block(b,node1,tree,c)) : ::zpp_nape::space::ZPP_AABBNode(node1) )) );
+											return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_8_1::Block(node1,c,tree,b)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_8_2::Block(node1,c,b,tree)) : ::zpp_nape::space::ZPP_AABBNode(node1) )) );
 										}
 										return null();
 									}
@@ -3847,18 +3727,12 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 								::zpp_nape::space::ZPP_AABBNode o = parent;		HX_STACK_VAR(o,"o");
 								HX_STACK_LINE(1129)
 								{
-								}
-								HX_STACK_LINE(1129)
-								{
 									HX_STACK_LINE(1129)
 									o->height = (int)-1;
 									HX_STACK_LINE(1129)
 									{
 										HX_STACK_LINE(1129)
 										::zpp_nape::geom::ZPP_AABB o1 = o->aabb;		HX_STACK_VAR(o1,"o1");
-										HX_STACK_LINE(1129)
-										{
-										}
 										HX_STACK_LINE(1129)
 										{
 											HX_STACK_LINE(1129)
@@ -3941,9 +3815,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 													HX_STACK_LINE(1133)
 													_this1->localCOMy = _this1->lverts->next->y;
 													HX_STACK_LINE(1133)
-													{
-													}
-													HX_STACK_LINE(1133)
 													Dynamic();
 												}
 												else{
@@ -3958,17 +3829,11 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 															HX_STACK_LINE(1133)
 															{
 															}
-															HX_STACK_LINE(1133)
-															{
-															}
 														}
 														HX_STACK_LINE(1133)
 														{
 															HX_STACK_LINE(1133)
 															Float t = 1.0;		HX_STACK_VAR(t,"t");
-															HX_STACK_LINE(1133)
-															{
-															}
 															HX_STACK_LINE(1133)
 															hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 															HX_STACK_LINE(1133)
@@ -3978,9 +3843,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 														{
 															HX_STACK_LINE(1133)
 															Float t = 0.5;		HX_STACK_VAR(t,"t");
-															HX_STACK_LINE(1133)
-															{
-															}
 															HX_STACK_LINE(1133)
 															hx::MultEq(_this1->localCOMx,t);
 															HX_STACK_LINE(1133)
@@ -3994,9 +3856,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 															_this1->localCOMx = (int)0;
 															HX_STACK_LINE(1133)
 															_this1->localCOMy = (int)0;
-															HX_STACK_LINE(1133)
-															{
-															}
 															HX_STACK_LINE(1133)
 															{
 															}
@@ -4079,9 +3938,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 															HX_STACK_LINE(1133)
 															Float t = area;		HX_STACK_VAR(t,"t");
 															HX_STACK_LINE(1133)
-															{
-															}
-															HX_STACK_LINE(1133)
 															hx::MultEq(_this1->localCOMx,t);
 															HX_STACK_LINE(1133)
 															hx::MultEq(_this1->localCOMy,t);
@@ -4105,9 +3961,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 													HX_STACK_LINE(1133)
 													_this1->axisy = ::Math_obj::cos(_this1->rot);
 													HX_STACK_LINE(1133)
-													{
-													}
-													HX_STACK_LINE(1133)
 													Dynamic();
 												}
 											}
@@ -4125,12 +3978,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 								Float rx = _this->radius;		HX_STACK_VAR(rx,"rx");
 								HX_STACK_LINE(1133)
 								Float ry = _this->radius;		HX_STACK_VAR(ry,"ry");
-								HX_STACK_LINE(1133)
-								{
-								}
-								HX_STACK_LINE(1133)
-								{
-								}
 								HX_STACK_LINE(1133)
 								{
 									HX_STACK_LINE(1133)
@@ -4171,9 +4018,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 													_this1->axisx = ::Math_obj::sin(_this1->rot);
 													HX_STACK_LINE(1133)
 													_this1->axisy = ::Math_obj::cos(_this1->rot);
-													HX_STACK_LINE(1133)
-													{
-													}
 													HX_STACK_LINE(1133)
 													Dynamic();
 												}
@@ -4225,9 +4069,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 									HX_STACK_LINE(1133)
 									{
 									}
-									HX_STACK_LINE(1133)
-									{
-									}
 								}
 								HX_STACK_LINE(1133)
 								{
@@ -4235,9 +4076,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 									_this->aabb->maxx = p0->x;
 									HX_STACK_LINE(1133)
 									_this->aabb->maxy = p0->y;
-									HX_STACK_LINE(1133)
-									{
-									}
 									HX_STACK_LINE(1133)
 									{
 									}
@@ -4361,7 +4199,7 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 						HX_STACK_LINE(1136)
 						Float icost = ((int)2 * ((carea - area)));		HX_STACK_VAR(icost,"icost");
 						struct _Function_5_3{
-							inline static Float Block( ::zpp_nape::geom::ZPP_AABB &leafaabb,::zpp_nape::space::ZPP_AABBNode &child1,Float &icost){
+							inline static Float Block( ::zpp_nape::space::ZPP_AABBNode &child1,::zpp_nape::geom::ZPP_AABB &leafaabb,Float &icost){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1136);
 								{
 									HX_STACK_LINE(1136)
@@ -4435,9 +4273,9 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 							}
 						};
 						HX_STACK_LINE(1136)
-						Float cost1 = _Function_5_3::Block(leafaabb,child1,icost);		HX_STACK_VAR(cost1,"cost1");
+						Float cost1 = _Function_5_3::Block(child1,leafaabb,icost);		HX_STACK_VAR(cost1,"cost1");
 						struct _Function_5_4{
-							inline static Float Block( ::zpp_nape::space::ZPP_AABBNode &child2,::zpp_nape::geom::ZPP_AABB &leafaabb,Float &icost){
+							inline static Float Block( ::zpp_nape::geom::ZPP_AABB &leafaabb,Float &icost,::zpp_nape::space::ZPP_AABBNode &child2){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1136);
 								{
 									HX_STACK_LINE(1136)
@@ -4467,7 +4305,7 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 										}
 									};
 									struct _Function_6_2{
-										inline static Float Block( ::zpp_nape::space::ZPP_AABBNode &child2,Float &icost){
+										inline static Float Block( Float &icost,::zpp_nape::space::ZPP_AABBNode &child2){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1136);
 											{
 												struct _Function_7_1{
@@ -4505,13 +4343,13 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 										}
 									};
 									HX_STACK_LINE(1136)
-									return (  (((child2->child1 == null()))) ? Float((_Function_6_1::Block() + icost)) : Float(_Function_6_2::Block(child2,icost)) );
+									return (  (((child2->child1 == null()))) ? Float((_Function_6_1::Block() + icost)) : Float(_Function_6_2::Block(icost,child2)) );
 								}
 								return null();
 							}
 						};
 						HX_STACK_LINE(1136)
-						Float cost2 = _Function_5_4::Block(child2,leafaabb,icost);		HX_STACK_VAR(cost2,"cost2");
+						Float cost2 = _Function_5_4::Block(leafaabb,icost,child2);		HX_STACK_VAR(cost2,"cost2");
 						HX_STACK_LINE(1136)
 						if (((bool((cost < cost1)) && bool((cost < cost2))))){
 							HX_STACK_LINE(1136)
@@ -4636,7 +4474,7 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 									HX_STACK_LINE(1136)
 									int balance = (c->height - b->height);		HX_STACK_VAR(balance,"balance");
 									struct _Function_6_1{
-										inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBTree &tree){
+										inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBTree &tree,::zpp_nape::space::ZPP_AABBNode &b){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1136);
 											{
 												HX_STACK_LINE(1136)
@@ -4704,7 +4542,7 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 														_this->maxy = (  (((a->maxy > b1->maxy))) ? Float(a->maxy) : Float(b1->maxy) );
 													}
 													struct _Function_8_1{
-														inline static int Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &g){
+														inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &b){
 															HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1136);
 															{
 																HX_STACK_LINE(1136)
@@ -4718,7 +4556,7 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 														}
 													};
 													HX_STACK_LINE(1136)
-													node1->height = ((int)1 + _Function_8_1::Block(b,g));
+													node1->height = ((int)1 + _Function_8_1::Block(g,b));
 													struct _Function_8_2{
 														inline static int Block( ::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBNode &f){
 															HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1136);
@@ -4813,7 +4651,7 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 										}
 									};
 									struct _Function_6_2{
-										inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBTree &tree,::zpp_nape::space::ZPP_AABBNode &c){
+										inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBTree &tree){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1136);
 											{
 												HX_STACK_LINE(1136)
@@ -4990,7 +4828,7 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 										}
 									};
 									HX_STACK_LINE(1136)
-									return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_6_1::Block(b,c,node1,tree)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_6_2::Block(b,node1,tree,c)) : ::zpp_nape::space::ZPP_AABBNode(node1) )) );
+									return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_6_1::Block(node1,c,tree,b)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_6_2::Block(node1,c,b,tree)) : ::zpp_nape::space::ZPP_AABBNode(node1) )) );
 								}
 								return null();
 							}
@@ -5048,9 +4886,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 				inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_DynAABBPhase_obj *__this){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1143);
 					{
-						HX_STACK_LINE(1144)
-						{
-						}
 						HX_STACK_LINE(1152)
 						::zpp_nape::space::ZPP_AABBNode ret = __this->syncs;		HX_STACK_VAR(ret,"ret");
 						HX_STACK_LINE(1153)
@@ -5076,9 +4911,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 			::zpp_nape::shape::ZPP_Shape lshape = leaf->shape;		HX_STACK_VAR(lshape,"lshape");
 			HX_STACK_LINE(1160)
 			::zpp_nape::phys::ZPP_Body lbody = lshape->body;		HX_STACK_VAR(lbody,"lbody");
-			HX_STACK_LINE(1161)
-			{
-			}
 			HX_STACK_LINE(1169)
 			if ((lbody->component->sleeping)){
 				HX_STACK_LINE(1169)
@@ -5092,9 +4924,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 			{
 				HX_STACK_LINE(1173)
 				if (((this->dtree->root != null()))){
-					HX_STACK_LINE(1174)
-					{
-					}
 					HX_STACK_LINE(1182)
 					this->dtree->root->next = stack;
 					HX_STACK_LINE(1183)
@@ -5106,9 +4935,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 						inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &stack){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1186);
 							{
-								HX_STACK_LINE(1187)
-								{
-								}
 								HX_STACK_LINE(1195)
 								::zpp_nape::space::ZPP_AABBNode ret = stack;		HX_STACK_VAR(ret,"ret");
 								HX_STACK_LINE(1196)
@@ -5152,9 +4978,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 								int id;		HX_STACK_VAR(id,"id");
 								HX_STACK_LINE(1206)
 								int di;		HX_STACK_VAR(di,"di");
-								HX_STACK_LINE(1207)
-								{
-								}
 								HX_STACK_LINE(1215)
 								if (((lshape->id < shape->id))){
 									HX_STACK_LINE(1216)
@@ -5167,9 +4990,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 									id = shape->id;
 									HX_STACK_LINE(1221)
 									di = lshape->id;
-								}
-								HX_STACK_LINE(1223)
-								{
 								}
 								HX_STACK_LINE(1231)
 								::zpp_nape::shape::ZPP_Shape s = (  (((lshape->pairs->length < shape->pairs->length))) ? ::zpp_nape::shape::ZPP_Shape(lshape) : ::zpp_nape::shape::ZPP_Shape(shape) );		HX_STACK_VAR(s,"s");
@@ -5184,17 +5004,11 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 										HX_STACK_LINE(1236)
 										::zpp_nape::space::ZPP_AABBPair px = cx_ite->elt;		HX_STACK_VAR(px,"px");
 										HX_STACK_LINE(1237)
-										{
-											HX_STACK_LINE(1238)
-											{
-											}
-											HX_STACK_LINE(1246)
-											if (((bool((px->id == id)) && bool((px->di == di))))){
-												HX_STACK_LINE(1247)
-												p = px;
-												HX_STACK_LINE(1248)
-												break;
-											}
+										if (((bool((px->id == id)) && bool((px->di == di))))){
+											HX_STACK_LINE(1247)
+											p = px;
+											HX_STACK_LINE(1248)
+											break;
 										}
 										HX_STACK_LINE(1251)
 										cx_ite = cx_ite->next;
@@ -5252,9 +5066,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 								{
 									HX_STACK_LINE(1287)
 									::zpp_nape::util::ZNPList_ZPP_AABBPair _this = lshape->pairs;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(1287)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_AABBPair Block( ::zpp_nape::space::ZPP_AABBPair &p){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1287);
@@ -5304,9 +5115,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 								{
 									HX_STACK_LINE(1288)
 									::zpp_nape::util::ZNPList_ZPP_AABBPair _this = shape->pairs;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(1288)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_AABBPair Block( ::zpp_nape::space::ZPP_AABBPair &p){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1288);
@@ -5372,9 +5180,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 						if ((_Function_5_1::Block(node1,ab))){
 							HX_STACK_LINE(1293)
 							if (((node1->child1 != null()))){
-								HX_STACK_LINE(1294)
-								{
-								}
 								HX_STACK_LINE(1302)
 								node1->child1->next = stack;
 								HX_STACK_LINE(1303)
@@ -5382,9 +5187,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 							}
 							HX_STACK_LINE(1305)
 							if (((node1->child2 != null()))){
-								HX_STACK_LINE(1306)
-								{
-								}
 								HX_STACK_LINE(1314)
 								node1->child2->next = stack;
 								HX_STACK_LINE(1315)
@@ -5398,9 +5200,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 			{
 				HX_STACK_LINE(1321)
 				if (((this->stree->root != null()))){
-					HX_STACK_LINE(1322)
-					{
-					}
 					HX_STACK_LINE(1330)
 					this->stree->root->next = stack;
 					HX_STACK_LINE(1331)
@@ -5412,9 +5211,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 						inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &stack){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1334);
 							{
-								HX_STACK_LINE(1335)
-								{
-								}
 								HX_STACK_LINE(1343)
 								::zpp_nape::space::ZPP_AABBNode ret = stack;		HX_STACK_VAR(ret,"ret");
 								HX_STACK_LINE(1344)
@@ -5458,9 +5254,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 								int id;		HX_STACK_VAR(id,"id");
 								HX_STACK_LINE(1354)
 								int di;		HX_STACK_VAR(di,"di");
-								HX_STACK_LINE(1355)
-								{
-								}
 								HX_STACK_LINE(1363)
 								if (((lshape->id < shape->id))){
 									HX_STACK_LINE(1364)
@@ -5473,9 +5266,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 									id = shape->id;
 									HX_STACK_LINE(1369)
 									di = lshape->id;
-								}
-								HX_STACK_LINE(1371)
-								{
 								}
 								HX_STACK_LINE(1379)
 								::zpp_nape::shape::ZPP_Shape s = (  (((lshape->pairs->length < shape->pairs->length))) ? ::zpp_nape::shape::ZPP_Shape(lshape) : ::zpp_nape::shape::ZPP_Shape(shape) );		HX_STACK_VAR(s,"s");
@@ -5490,17 +5280,11 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 										HX_STACK_LINE(1384)
 										::zpp_nape::space::ZPP_AABBPair px = cx_ite->elt;		HX_STACK_VAR(px,"px");
 										HX_STACK_LINE(1385)
-										{
-											HX_STACK_LINE(1386)
-											{
-											}
-											HX_STACK_LINE(1394)
-											if (((bool((px->id == id)) && bool((px->di == di))))){
-												HX_STACK_LINE(1395)
-												p = px;
-												HX_STACK_LINE(1396)
-												break;
-											}
+										if (((bool((px->id == id)) && bool((px->di == di))))){
+											HX_STACK_LINE(1395)
+											p = px;
+											HX_STACK_LINE(1396)
+											break;
 										}
 										HX_STACK_LINE(1399)
 										cx_ite = cx_ite->next;
@@ -5558,9 +5342,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 								{
 									HX_STACK_LINE(1435)
 									::zpp_nape::util::ZNPList_ZPP_AABBPair _this = lshape->pairs;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(1435)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_AABBPair Block( ::zpp_nape::space::ZPP_AABBPair &p){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1435);
@@ -5610,9 +5391,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 								{
 									HX_STACK_LINE(1436)
 									::zpp_nape::util::ZNPList_ZPP_AABBPair _this = shape->pairs;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(1436)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_AABBPair Block( ::zpp_nape::space::ZPP_AABBPair &p){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1436);
@@ -5678,9 +5456,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 						if ((_Function_5_1::Block(node1,ab))){
 							HX_STACK_LINE(1441)
 							if (((node1->child1 != null()))){
-								HX_STACK_LINE(1442)
-								{
-								}
 								HX_STACK_LINE(1450)
 								node1->child1->next = stack;
 								HX_STACK_LINE(1451)
@@ -5688,9 +5463,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 							}
 							HX_STACK_LINE(1453)
 							if (((node1->child2 != null()))){
-								HX_STACK_LINE(1454)
-								{
-								}
 								HX_STACK_LINE(1462)
 								node1->child2->next = stack;
 								HX_STACK_LINE(1463)
@@ -5707,9 +5479,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 				inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_DynAABBPhase_obj *__this){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1472);
 					{
-						HX_STACK_LINE(1473)
-						{
-						}
 						HX_STACK_LINE(1481)
 						::zpp_nape::space::ZPP_AABBNode ret = __this->moves;		HX_STACK_VAR(ret,"ret");
 						HX_STACK_LINE(1482)
@@ -5724,18 +5493,12 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 			};
 			HX_STACK_LINE(1472)
 			::zpp_nape::space::ZPP_AABBNode leaf = _Function_2_1::Block(this);		HX_STACK_VAR(leaf,"leaf");
-			HX_STACK_LINE(1486)
-			{
-			}
 			HX_STACK_LINE(1487)
 			leaf->moved = false;
 			HX_STACK_LINE(1488)
 			::zpp_nape::shape::ZPP_Shape lshape = leaf->shape;		HX_STACK_VAR(lshape,"lshape");
 			HX_STACK_LINE(1489)
 			::zpp_nape::phys::ZPP_Body lbody = lshape->body;		HX_STACK_VAR(lbody,"lbody");
-			HX_STACK_LINE(1490)
-			{
-			}
 			HX_STACK_LINE(1498)
 			if ((lbody->component->sleeping)){
 				HX_STACK_LINE(1498)
@@ -5749,9 +5512,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 			{
 				HX_STACK_LINE(1502)
 				if (((this->dtree->root != null()))){
-					HX_STACK_LINE(1503)
-					{
-					}
 					HX_STACK_LINE(1511)
 					this->dtree->root->next = stack;
 					HX_STACK_LINE(1512)
@@ -5763,9 +5523,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 						inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &stack){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1515);
 							{
-								HX_STACK_LINE(1516)
-								{
-								}
 								HX_STACK_LINE(1524)
 								::zpp_nape::space::ZPP_AABBNode ret = stack;		HX_STACK_VAR(ret,"ret");
 								HX_STACK_LINE(1525)
@@ -5809,9 +5566,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 								int id;		HX_STACK_VAR(id,"id");
 								HX_STACK_LINE(1535)
 								int di;		HX_STACK_VAR(di,"di");
-								HX_STACK_LINE(1536)
-								{
-								}
 								HX_STACK_LINE(1544)
 								if (((lshape->id < shape->id))){
 									HX_STACK_LINE(1545)
@@ -5824,9 +5578,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 									id = shape->id;
 									HX_STACK_LINE(1550)
 									di = lshape->id;
-								}
-								HX_STACK_LINE(1552)
-								{
 								}
 								HX_STACK_LINE(1560)
 								::zpp_nape::shape::ZPP_Shape s = (  (((lshape->pairs->length < shape->pairs->length))) ? ::zpp_nape::shape::ZPP_Shape(lshape) : ::zpp_nape::shape::ZPP_Shape(shape) );		HX_STACK_VAR(s,"s");
@@ -5841,17 +5592,11 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 										HX_STACK_LINE(1565)
 										::zpp_nape::space::ZPP_AABBPair px = cx_ite->elt;		HX_STACK_VAR(px,"px");
 										HX_STACK_LINE(1566)
-										{
-											HX_STACK_LINE(1567)
-											{
-											}
-											HX_STACK_LINE(1575)
-											if (((bool((px->id == id)) && bool((px->di == di))))){
-												HX_STACK_LINE(1576)
-												p = px;
-												HX_STACK_LINE(1577)
-												break;
-											}
+										if (((bool((px->id == id)) && bool((px->di == di))))){
+											HX_STACK_LINE(1576)
+											p = px;
+											HX_STACK_LINE(1577)
+											break;
 										}
 										HX_STACK_LINE(1580)
 										cx_ite = cx_ite->next;
@@ -5909,9 +5654,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 								{
 									HX_STACK_LINE(1616)
 									::zpp_nape::util::ZNPList_ZPP_AABBPair _this = lshape->pairs;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(1616)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_AABBPair Block( ::zpp_nape::space::ZPP_AABBPair &p){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1616);
@@ -5961,9 +5703,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 								{
 									HX_STACK_LINE(1617)
 									::zpp_nape::util::ZNPList_ZPP_AABBPair _this = shape->pairs;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(1617)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_AABBPair Block( ::zpp_nape::space::ZPP_AABBPair &p){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1617);
@@ -6029,9 +5768,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 						if ((_Function_5_1::Block(node1,ab))){
 							HX_STACK_LINE(1622)
 							if (((node1->child1 != null()))){
-								HX_STACK_LINE(1623)
-								{
-								}
 								HX_STACK_LINE(1631)
 								node1->child1->next = stack;
 								HX_STACK_LINE(1632)
@@ -6039,9 +5775,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 							}
 							HX_STACK_LINE(1634)
 							if (((node1->child2 != null()))){
-								HX_STACK_LINE(1635)
-								{
-								}
 								HX_STACK_LINE(1643)
 								node1->child2->next = stack;
 								HX_STACK_LINE(1644)
@@ -6055,9 +5788,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 			{
 				HX_STACK_LINE(1650)
 				if (((this->stree->root != null()))){
-					HX_STACK_LINE(1651)
-					{
-					}
 					HX_STACK_LINE(1659)
 					this->stree->root->next = stack;
 					HX_STACK_LINE(1660)
@@ -6069,9 +5799,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 						inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &stack){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1663);
 							{
-								HX_STACK_LINE(1664)
-								{
-								}
 								HX_STACK_LINE(1672)
 								::zpp_nape::space::ZPP_AABBNode ret = stack;		HX_STACK_VAR(ret,"ret");
 								HX_STACK_LINE(1673)
@@ -6115,9 +5842,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 								int id;		HX_STACK_VAR(id,"id");
 								HX_STACK_LINE(1683)
 								int di;		HX_STACK_VAR(di,"di");
-								HX_STACK_LINE(1684)
-								{
-								}
 								HX_STACK_LINE(1692)
 								if (((lshape->id < shape->id))){
 									HX_STACK_LINE(1693)
@@ -6130,9 +5854,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 									id = shape->id;
 									HX_STACK_LINE(1698)
 									di = lshape->id;
-								}
-								HX_STACK_LINE(1700)
-								{
 								}
 								HX_STACK_LINE(1708)
 								::zpp_nape::shape::ZPP_Shape s = (  (((lshape->pairs->length < shape->pairs->length))) ? ::zpp_nape::shape::ZPP_Shape(lshape) : ::zpp_nape::shape::ZPP_Shape(shape) );		HX_STACK_VAR(s,"s");
@@ -6147,17 +5868,11 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 										HX_STACK_LINE(1713)
 										::zpp_nape::space::ZPP_AABBPair px = cx_ite->elt;		HX_STACK_VAR(px,"px");
 										HX_STACK_LINE(1714)
-										{
-											HX_STACK_LINE(1715)
-											{
-											}
-											HX_STACK_LINE(1723)
-											if (((bool((px->id == id)) && bool((px->di == di))))){
-												HX_STACK_LINE(1724)
-												p = px;
-												HX_STACK_LINE(1725)
-												break;
-											}
+										if (((bool((px->id == id)) && bool((px->di == di))))){
+											HX_STACK_LINE(1724)
+											p = px;
+											HX_STACK_LINE(1725)
+											break;
 										}
 										HX_STACK_LINE(1728)
 										cx_ite = cx_ite->next;
@@ -6215,9 +5930,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 								{
 									HX_STACK_LINE(1764)
 									::zpp_nape::util::ZNPList_ZPP_AABBPair _this = lshape->pairs;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(1764)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_AABBPair Block( ::zpp_nape::space::ZPP_AABBPair &p){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1764);
@@ -6267,9 +5979,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 								{
 									HX_STACK_LINE(1765)
 									::zpp_nape::util::ZNPList_ZPP_AABBPair _this = shape->pairs;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(1765)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_AABBPair Block( ::zpp_nape::space::ZPP_AABBPair &p){
 											HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1765);
@@ -6335,9 +6044,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 						if ((_Function_5_1::Block(node1,ab))){
 							HX_STACK_LINE(1770)
 							if (((node1->child1 != null()))){
-								HX_STACK_LINE(1771)
-								{
-								}
 								HX_STACK_LINE(1779)
 								node1->child1->next = stack;
 								HX_STACK_LINE(1780)
@@ -6345,9 +6051,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 							}
 							HX_STACK_LINE(1782)
 							if (((node1->child2 != null()))){
-								HX_STACK_LINE(1783)
-								{
-								}
 								HX_STACK_LINE(1791)
 								node1->child2->next = stack;
 								HX_STACK_LINE(1792)
@@ -6364,9 +6067,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 		::zpp_nape::space::ZPP_AABBPair cur = this->pairs;		HX_STACK_VAR(cur,"cur");
 		HX_STACK_LINE(1801)
 		while(((cur != null()))){
-			HX_STACK_LINE(1802)
-			{
-			}
 			struct _Function_2_1{
 				inline static bool Block( ::zpp_nape::space::ZPP_AABBPair &cur){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1810);
@@ -6397,12 +6097,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 					::zpp_nape::util::ZNPList_ZPP_AABBPair _this = cur->n1->shape->pairs;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(1813)
 					{
-					}
-					HX_STACK_LINE(1813)
-					{
-						HX_STACK_LINE(1813)
-						{
-						}
 						HX_STACK_LINE(1813)
 						::zpp_nape::util::ZNPNode_ZPP_AABBPair pre1 = null();		HX_STACK_VAR(pre1,"pre1");
 						HX_STACK_LINE(1813)
@@ -6415,9 +6109,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 							if (((cur1->elt == cur))){
 								HX_STACK_LINE(1813)
 								{
-									HX_STACK_LINE(1813)
-									{
-									}
 									HX_STACK_LINE(1813)
 									::zpp_nape::util::ZNPNode_ZPP_AABBPair old;		HX_STACK_VAR(old,"old");
 									HX_STACK_LINE(1813)
@@ -6451,14 +6142,8 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 									}
 									HX_STACK_LINE(1813)
 									{
-									}
-									HX_STACK_LINE(1813)
-									{
 										HX_STACK_LINE(1813)
 										::zpp_nape::util::ZNPNode_ZPP_AABBPair o = old;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(1813)
-										{
-										}
 										HX_STACK_LINE(1813)
 										o->elt = null();
 										HX_STACK_LINE(1813)
@@ -6495,12 +6180,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 					::zpp_nape::util::ZNPList_ZPP_AABBPair _this = cur->n2->shape->pairs;		HX_STACK_VAR(_this,"_this");
 					HX_STACK_LINE(1814)
 					{
-					}
-					HX_STACK_LINE(1814)
-					{
-						HX_STACK_LINE(1814)
-						{
-						}
 						HX_STACK_LINE(1814)
 						::zpp_nape::util::ZNPNode_ZPP_AABBPair pre1 = null();		HX_STACK_VAR(pre1,"pre1");
 						HX_STACK_LINE(1814)
@@ -6513,9 +6192,6 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 							if (((cur1->elt == cur))){
 								HX_STACK_LINE(1814)
 								{
-									HX_STACK_LINE(1814)
-									{
-									}
 									HX_STACK_LINE(1814)
 									::zpp_nape::util::ZNPNode_ZPP_AABBPair old;		HX_STACK_VAR(old,"old");
 									HX_STACK_LINE(1814)
@@ -6549,14 +6225,8 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 									}
 									HX_STACK_LINE(1814)
 									{
-									}
-									HX_STACK_LINE(1814)
-									{
 										HX_STACK_LINE(1814)
 										::zpp_nape::util::ZNPNode_ZPP_AABBPair o = old;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(1814)
-										{
-										}
 										HX_STACK_LINE(1814)
 										o->elt = null();
 										HX_STACK_LINE(1814)
@@ -6600,14 +6270,8 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 				{
 					HX_STACK_LINE(1819)
 					::zpp_nape::space::ZPP_AABBPair o = cur;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(1820)
-					{
-					}
 					HX_STACK_LINE(1828)
 					{
-						HX_STACK_LINE(1828)
-						{
-						}
 						HX_STACK_LINE(1828)
 						o->n1 = o->n2 = null();
 						HX_STACK_LINE(1828)
@@ -6655,7 +6319,7 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 			HX_STACK_LINE(1851)
 			cur->first = false;
 			struct _Function_2_2{
-				inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+				inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1852);
 					{
 						HX_STACK_LINE(1852)
@@ -6668,10 +6332,7 @@ Void ZPP_DynAABBPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool d
 				}
 			};
 			HX_STACK_LINE(1852)
-			if ((_Function_2_2::Block(s1,s2))){
-				HX_STACK_LINE(1853)
-				{
-				}
+			if ((_Function_2_2::Block(s2,s1))){
 				HX_STACK_LINE(1861)
 				::zpp_nape::dynamics::ZPP_Arbiter oarb = cur->arb;		HX_STACK_VAR(oarb,"oarb");
 				HX_STACK_LINE(1862)
@@ -6724,12 +6385,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 					{
 						HX_STACK_LINE(993)
 						::zpp_nape::shape::ZPP_Shape shape = node->shape;		HX_STACK_VAR(shape,"shape");
-						HX_STACK_LINE(994)
-						{
-						}
-						HX_STACK_LINE(1002)
-						{
-						}
 						HX_STACK_LINE(1010)
 						if ((!(node->first_sync))){
 							HX_STACK_LINE(1011)
@@ -6767,18 +6422,12 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 										::zpp_nape::space::ZPP_AABBNode o = parent;		HX_STACK_VAR(o,"o");
 										HX_STACK_LINE(1012)
 										{
-										}
-										HX_STACK_LINE(1012)
-										{
 											HX_STACK_LINE(1012)
 											o->height = (int)-1;
 											HX_STACK_LINE(1012)
 											{
 												HX_STACK_LINE(1012)
 												::zpp_nape::geom::ZPP_AABB o1 = o->aabb;		HX_STACK_VAR(o1,"o1");
-												HX_STACK_LINE(1012)
-												{
-												}
 												HX_STACK_LINE(1012)
 												{
 													HX_STACK_LINE(1012)
@@ -6829,7 +6478,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 													HX_STACK_LINE(1012)
 													int balance = (c->height - b->height);		HX_STACK_VAR(balance,"balance");
 													struct _Function_10_1{
-														inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBTree &tree){
+														inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBTree &tree,::zpp_nape::space::ZPP_AABBNode &b){
 															HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1012);
 															{
 																HX_STACK_LINE(1012)
@@ -6897,7 +6546,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 																		_this->maxy = (  (((a->maxy > b1->maxy))) ? Float(a->maxy) : Float(b1->maxy) );
 																	}
 																	struct _Function_12_1{
-																		inline static int Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &g){
+																		inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &b){
 																			HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1012);
 																			{
 																				HX_STACK_LINE(1012)
@@ -6911,7 +6560,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 																		}
 																	};
 																	HX_STACK_LINE(1012)
-																	node1->height = ((int)1 + _Function_12_1::Block(b,g));
+																	node1->height = ((int)1 + _Function_12_1::Block(g,b));
 																	struct _Function_12_2{
 																		inline static int Block( ::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBNode &f){
 																			HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1012);
@@ -7006,7 +6655,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 														}
 													};
 													struct _Function_10_2{
-														inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBTree &tree,::zpp_nape::space::ZPP_AABBNode &c){
+														inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBTree &tree){
 															HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1012);
 															{
 																HX_STACK_LINE(1012)
@@ -7183,7 +6832,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 														}
 													};
 													HX_STACK_LINE(1012)
-													return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_10_1::Block(b,c,node1,tree)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_10_2::Block(b,node1,tree,c)) : ::zpp_nape::space::ZPP_AABBNode(node1) )) );
+													return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_10_1::Block(node1,c,tree,b)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_10_2::Block(node1,c,b,tree)) : ::zpp_nape::space::ZPP_AABBNode(node1) )) );
 												}
 												return null();
 											}
@@ -7240,18 +6889,12 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 										::zpp_nape::space::ZPP_AABBNode o = parent;		HX_STACK_VAR(o,"o");
 										HX_STACK_LINE(1012)
 										{
-										}
-										HX_STACK_LINE(1012)
-										{
 											HX_STACK_LINE(1012)
 											o->height = (int)-1;
 											HX_STACK_LINE(1012)
 											{
 												HX_STACK_LINE(1012)
 												::zpp_nape::geom::ZPP_AABB o1 = o->aabb;		HX_STACK_VAR(o1,"o1");
-												HX_STACK_LINE(1012)
-												{
-												}
 												HX_STACK_LINE(1012)
 												{
 													HX_STACK_LINE(1012)
@@ -7334,9 +6977,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 															HX_STACK_LINE(1016)
 															_this1->localCOMy = _this1->lverts->next->y;
 															HX_STACK_LINE(1016)
-															{
-															}
-															HX_STACK_LINE(1016)
 															Dynamic();
 														}
 														else{
@@ -7351,17 +6991,11 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 																	HX_STACK_LINE(1016)
 																	{
 																	}
-																	HX_STACK_LINE(1016)
-																	{
-																	}
 																}
 																HX_STACK_LINE(1016)
 																{
 																	HX_STACK_LINE(1016)
 																	Float t = 1.0;		HX_STACK_VAR(t,"t");
-																	HX_STACK_LINE(1016)
-																	{
-																	}
 																	HX_STACK_LINE(1016)
 																	hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 																	HX_STACK_LINE(1016)
@@ -7371,9 +7005,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 																{
 																	HX_STACK_LINE(1016)
 																	Float t = 0.5;		HX_STACK_VAR(t,"t");
-																	HX_STACK_LINE(1016)
-																	{
-																	}
 																	HX_STACK_LINE(1016)
 																	hx::MultEq(_this1->localCOMx,t);
 																	HX_STACK_LINE(1016)
@@ -7387,9 +7018,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 																	_this1->localCOMx = (int)0;
 																	HX_STACK_LINE(1016)
 																	_this1->localCOMy = (int)0;
-																	HX_STACK_LINE(1016)
-																	{
-																	}
 																	HX_STACK_LINE(1016)
 																	{
 																	}
@@ -7472,9 +7100,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 																	HX_STACK_LINE(1016)
 																	Float t = area;		HX_STACK_VAR(t,"t");
 																	HX_STACK_LINE(1016)
-																	{
-																	}
-																	HX_STACK_LINE(1016)
 																	hx::MultEq(_this1->localCOMx,t);
 																	HX_STACK_LINE(1016)
 																	hx::MultEq(_this1->localCOMy,t);
@@ -7498,9 +7123,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 															HX_STACK_LINE(1016)
 															_this1->axisy = ::Math_obj::cos(_this1->rot);
 															HX_STACK_LINE(1016)
-															{
-															}
-															HX_STACK_LINE(1016)
 															Dynamic();
 														}
 													}
@@ -7518,12 +7140,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 										Float rx = _this->radius;		HX_STACK_VAR(rx,"rx");
 										HX_STACK_LINE(1016)
 										Float ry = _this->radius;		HX_STACK_VAR(ry,"ry");
-										HX_STACK_LINE(1016)
-										{
-										}
-										HX_STACK_LINE(1016)
-										{
-										}
 										HX_STACK_LINE(1016)
 										{
 											HX_STACK_LINE(1016)
@@ -7564,9 +7180,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 															_this1->axisx = ::Math_obj::sin(_this1->rot);
 															HX_STACK_LINE(1016)
 															_this1->axisy = ::Math_obj::cos(_this1->rot);
-															HX_STACK_LINE(1016)
-															{
-															}
 															HX_STACK_LINE(1016)
 															Dynamic();
 														}
@@ -7618,9 +7231,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 											HX_STACK_LINE(1016)
 											{
 											}
-											HX_STACK_LINE(1016)
-											{
-											}
 										}
 										HX_STACK_LINE(1016)
 										{
@@ -7628,9 +7238,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 											_this->aabb->maxx = p0->x;
 											HX_STACK_LINE(1016)
 											_this->aabb->maxy = p0->y;
-											HX_STACK_LINE(1016)
-											{
-											}
 											HX_STACK_LINE(1016)
 											{
 											}
@@ -7754,7 +7361,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 								HX_STACK_LINE(1019)
 								Float icost = ((int)2 * ((carea - area)));		HX_STACK_VAR(icost,"icost");
 								struct _Function_7_3{
-									inline static Float Block( ::zpp_nape::geom::ZPP_AABB &leafaabb,::zpp_nape::space::ZPP_AABBNode &child1,Float &icost){
+									inline static Float Block( ::zpp_nape::space::ZPP_AABBNode &child1,::zpp_nape::geom::ZPP_AABB &leafaabb,Float &icost){
 										HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1019);
 										{
 											HX_STACK_LINE(1019)
@@ -7828,9 +7435,9 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 									}
 								};
 								HX_STACK_LINE(1019)
-								Float cost1 = _Function_7_3::Block(leafaabb,child1,icost);		HX_STACK_VAR(cost1,"cost1");
+								Float cost1 = _Function_7_3::Block(child1,leafaabb,icost);		HX_STACK_VAR(cost1,"cost1");
 								struct _Function_7_4{
-									inline static Float Block( ::zpp_nape::space::ZPP_AABBNode &child2,::zpp_nape::geom::ZPP_AABB &leafaabb,Float &icost){
+									inline static Float Block( ::zpp_nape::geom::ZPP_AABB &leafaabb,Float &icost,::zpp_nape::space::ZPP_AABBNode &child2){
 										HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1019);
 										{
 											HX_STACK_LINE(1019)
@@ -7860,7 +7467,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 												}
 											};
 											struct _Function_8_2{
-												inline static Float Block( ::zpp_nape::space::ZPP_AABBNode &child2,Float &icost){
+												inline static Float Block( Float &icost,::zpp_nape::space::ZPP_AABBNode &child2){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1019);
 													{
 														struct _Function_9_1{
@@ -7898,13 +7505,13 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 												}
 											};
 											HX_STACK_LINE(1019)
-											return (  (((child2->child1 == null()))) ? Float((_Function_8_1::Block() + icost)) : Float(_Function_8_2::Block(child2,icost)) );
+											return (  (((child2->child1 == null()))) ? Float((_Function_8_1::Block() + icost)) : Float(_Function_8_2::Block(icost,child2)) );
 										}
 										return null();
 									}
 								};
 								HX_STACK_LINE(1019)
-								Float cost2 = _Function_7_4::Block(child2,leafaabb,icost);		HX_STACK_VAR(cost2,"cost2");
+								Float cost2 = _Function_7_4::Block(leafaabb,icost,child2);		HX_STACK_VAR(cost2,"cost2");
 								HX_STACK_LINE(1019)
 								if (((bool((cost < cost1)) && bool((cost < cost2))))){
 									HX_STACK_LINE(1019)
@@ -8029,7 +7636,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 											HX_STACK_LINE(1019)
 											int balance = (c->height - b->height);		HX_STACK_VAR(balance,"balance");
 											struct _Function_8_1{
-												inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBTree &tree){
+												inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBTree &tree,::zpp_nape::space::ZPP_AABBNode &b){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1019);
 													{
 														HX_STACK_LINE(1019)
@@ -8097,7 +7704,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 																_this->maxy = (  (((a->maxy > b1->maxy))) ? Float(a->maxy) : Float(b1->maxy) );
 															}
 															struct _Function_10_1{
-																inline static int Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &g){
+																inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &b){
 																	HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1019);
 																	{
 																		HX_STACK_LINE(1019)
@@ -8111,7 +7718,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 																}
 															};
 															HX_STACK_LINE(1019)
-															node1->height = ((int)1 + _Function_10_1::Block(b,g));
+															node1->height = ((int)1 + _Function_10_1::Block(g,b));
 															struct _Function_10_2{
 																inline static int Block( ::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBNode &f){
 																	HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1019);
@@ -8206,7 +7813,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 												}
 											};
 											struct _Function_8_2{
-												inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBTree &tree,::zpp_nape::space::ZPP_AABBNode &c){
+												inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBTree &tree){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1019);
 													{
 														HX_STACK_LINE(1019)
@@ -8383,7 +7990,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 												}
 											};
 											HX_STACK_LINE(1019)
-											return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_8_1::Block(b,c,node1,tree)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_8_2::Block(b,node1,tree,c)) : ::zpp_nape::space::ZPP_AABBNode(node1) )) );
+											return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_8_1::Block(node1,c,tree,b)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_8_2::Block(node1,c,b,tree)) : ::zpp_nape::space::ZPP_AABBNode(node1) )) );
 										}
 										return null();
 									}
@@ -8432,9 +8039,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 						HX_STACK_LINE(1020)
 						node->synced = false;
 					}
-					HX_STACK_LINE(1022)
-					{
-					}
 					HX_STACK_LINE(1030)
 					node->moved = true;
 					HX_STACK_LINE(1031)
@@ -8461,9 +8065,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 						inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_DynAABBPhase_obj *__this){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1043);
 							{
-								HX_STACK_LINE(1044)
-								{
-								}
 								HX_STACK_LINE(1052)
 								::zpp_nape::space::ZPP_AABBNode ret = __this->syncs;		HX_STACK_VAR(ret,"ret");
 								HX_STACK_LINE(1053)
@@ -8482,12 +8083,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 					{
 						HX_STACK_LINE(1058)
 						::zpp_nape::shape::ZPP_Shape shape = node->shape;		HX_STACK_VAR(shape,"shape");
-						HX_STACK_LINE(1059)
-						{
-						}
-						HX_STACK_LINE(1067)
-						{
-						}
 						HX_STACK_LINE(1075)
 						if ((!(node->first_sync))){
 							HX_STACK_LINE(1076)
@@ -8525,18 +8120,12 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 										::zpp_nape::space::ZPP_AABBNode o = parent;		HX_STACK_VAR(o,"o");
 										HX_STACK_LINE(1077)
 										{
-										}
-										HX_STACK_LINE(1077)
-										{
 											HX_STACK_LINE(1077)
 											o->height = (int)-1;
 											HX_STACK_LINE(1077)
 											{
 												HX_STACK_LINE(1077)
 												::zpp_nape::geom::ZPP_AABB o1 = o->aabb;		HX_STACK_VAR(o1,"o1");
-												HX_STACK_LINE(1077)
-												{
-												}
 												HX_STACK_LINE(1077)
 												{
 													HX_STACK_LINE(1077)
@@ -8587,7 +8176,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 													HX_STACK_LINE(1077)
 													int balance = (c->height - b->height);		HX_STACK_VAR(balance,"balance");
 													struct _Function_10_1{
-														inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBTree &tree){
+														inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBTree &tree,::zpp_nape::space::ZPP_AABBNode &b){
 															HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1077);
 															{
 																HX_STACK_LINE(1077)
@@ -8655,7 +8244,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 																		_this->maxy = (  (((a->maxy > b1->maxy))) ? Float(a->maxy) : Float(b1->maxy) );
 																	}
 																	struct _Function_12_1{
-																		inline static int Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &g){
+																		inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &b){
 																			HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1077);
 																			{
 																				HX_STACK_LINE(1077)
@@ -8669,7 +8258,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 																		}
 																	};
 																	HX_STACK_LINE(1077)
-																	node1->height = ((int)1 + _Function_12_1::Block(b,g));
+																	node1->height = ((int)1 + _Function_12_1::Block(g,b));
 																	struct _Function_12_2{
 																		inline static int Block( ::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBNode &f){
 																			HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1077);
@@ -8764,7 +8353,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 														}
 													};
 													struct _Function_10_2{
-														inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBTree &tree,::zpp_nape::space::ZPP_AABBNode &c){
+														inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBTree &tree){
 															HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1077);
 															{
 																HX_STACK_LINE(1077)
@@ -8941,7 +8530,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 														}
 													};
 													HX_STACK_LINE(1077)
-													return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_10_1::Block(b,c,node1,tree)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_10_2::Block(b,node1,tree,c)) : ::zpp_nape::space::ZPP_AABBNode(node1) )) );
+													return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_10_1::Block(node1,c,tree,b)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_10_2::Block(node1,c,b,tree)) : ::zpp_nape::space::ZPP_AABBNode(node1) )) );
 												}
 												return null();
 											}
@@ -8998,18 +8587,12 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 										::zpp_nape::space::ZPP_AABBNode o = parent;		HX_STACK_VAR(o,"o");
 										HX_STACK_LINE(1077)
 										{
-										}
-										HX_STACK_LINE(1077)
-										{
 											HX_STACK_LINE(1077)
 											o->height = (int)-1;
 											HX_STACK_LINE(1077)
 											{
 												HX_STACK_LINE(1077)
 												::zpp_nape::geom::ZPP_AABB o1 = o->aabb;		HX_STACK_VAR(o1,"o1");
-												HX_STACK_LINE(1077)
-												{
-												}
 												HX_STACK_LINE(1077)
 												{
 													HX_STACK_LINE(1077)
@@ -9092,9 +8675,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 															HX_STACK_LINE(1081)
 															_this1->localCOMy = _this1->lverts->next->y;
 															HX_STACK_LINE(1081)
-															{
-															}
-															HX_STACK_LINE(1081)
 															Dynamic();
 														}
 														else{
@@ -9109,17 +8689,11 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 																	HX_STACK_LINE(1081)
 																	{
 																	}
-																	HX_STACK_LINE(1081)
-																	{
-																	}
 																}
 																HX_STACK_LINE(1081)
 																{
 																	HX_STACK_LINE(1081)
 																	Float t = 1.0;		HX_STACK_VAR(t,"t");
-																	HX_STACK_LINE(1081)
-																	{
-																	}
 																	HX_STACK_LINE(1081)
 																	hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 																	HX_STACK_LINE(1081)
@@ -9129,9 +8703,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 																{
 																	HX_STACK_LINE(1081)
 																	Float t = 0.5;		HX_STACK_VAR(t,"t");
-																	HX_STACK_LINE(1081)
-																	{
-																	}
 																	HX_STACK_LINE(1081)
 																	hx::MultEq(_this1->localCOMx,t);
 																	HX_STACK_LINE(1081)
@@ -9145,9 +8716,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 																	_this1->localCOMx = (int)0;
 																	HX_STACK_LINE(1081)
 																	_this1->localCOMy = (int)0;
-																	HX_STACK_LINE(1081)
-																	{
-																	}
 																	HX_STACK_LINE(1081)
 																	{
 																	}
@@ -9230,9 +8798,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 																	HX_STACK_LINE(1081)
 																	Float t = area;		HX_STACK_VAR(t,"t");
 																	HX_STACK_LINE(1081)
-																	{
-																	}
-																	HX_STACK_LINE(1081)
 																	hx::MultEq(_this1->localCOMx,t);
 																	HX_STACK_LINE(1081)
 																	hx::MultEq(_this1->localCOMy,t);
@@ -9256,9 +8821,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 															HX_STACK_LINE(1081)
 															_this1->axisy = ::Math_obj::cos(_this1->rot);
 															HX_STACK_LINE(1081)
-															{
-															}
-															HX_STACK_LINE(1081)
 															Dynamic();
 														}
 													}
@@ -9276,12 +8838,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 										Float rx = _this->radius;		HX_STACK_VAR(rx,"rx");
 										HX_STACK_LINE(1081)
 										Float ry = _this->radius;		HX_STACK_VAR(ry,"ry");
-										HX_STACK_LINE(1081)
-										{
-										}
-										HX_STACK_LINE(1081)
-										{
-										}
 										HX_STACK_LINE(1081)
 										{
 											HX_STACK_LINE(1081)
@@ -9322,9 +8878,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 															_this1->axisx = ::Math_obj::sin(_this1->rot);
 															HX_STACK_LINE(1081)
 															_this1->axisy = ::Math_obj::cos(_this1->rot);
-															HX_STACK_LINE(1081)
-															{
-															}
 															HX_STACK_LINE(1081)
 															Dynamic();
 														}
@@ -9376,9 +8929,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 											HX_STACK_LINE(1081)
 											{
 											}
-											HX_STACK_LINE(1081)
-											{
-											}
 										}
 										HX_STACK_LINE(1081)
 										{
@@ -9386,9 +8936,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 											_this->aabb->maxx = p0->x;
 											HX_STACK_LINE(1081)
 											_this->aabb->maxy = p0->y;
-											HX_STACK_LINE(1081)
-											{
-											}
 											HX_STACK_LINE(1081)
 											{
 											}
@@ -9512,7 +9059,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 								HX_STACK_LINE(1084)
 								Float icost = ((int)2 * ((carea - area)));		HX_STACK_VAR(icost,"icost");
 								struct _Function_7_3{
-									inline static Float Block( ::zpp_nape::geom::ZPP_AABB &leafaabb,::zpp_nape::space::ZPP_AABBNode &child1,Float &icost){
+									inline static Float Block( ::zpp_nape::space::ZPP_AABBNode &child1,::zpp_nape::geom::ZPP_AABB &leafaabb,Float &icost){
 										HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1084);
 										{
 											HX_STACK_LINE(1084)
@@ -9586,9 +9133,9 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 									}
 								};
 								HX_STACK_LINE(1084)
-								Float cost1 = _Function_7_3::Block(leafaabb,child1,icost);		HX_STACK_VAR(cost1,"cost1");
+								Float cost1 = _Function_7_3::Block(child1,leafaabb,icost);		HX_STACK_VAR(cost1,"cost1");
 								struct _Function_7_4{
-									inline static Float Block( ::zpp_nape::space::ZPP_AABBNode &child2,::zpp_nape::geom::ZPP_AABB &leafaabb,Float &icost){
+									inline static Float Block( ::zpp_nape::geom::ZPP_AABB &leafaabb,Float &icost,::zpp_nape::space::ZPP_AABBNode &child2){
 										HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1084);
 										{
 											HX_STACK_LINE(1084)
@@ -9618,7 +9165,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 												}
 											};
 											struct _Function_8_2{
-												inline static Float Block( ::zpp_nape::space::ZPP_AABBNode &child2,Float &icost){
+												inline static Float Block( Float &icost,::zpp_nape::space::ZPP_AABBNode &child2){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1084);
 													{
 														struct _Function_9_1{
@@ -9656,13 +9203,13 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 												}
 											};
 											HX_STACK_LINE(1084)
-											return (  (((child2->child1 == null()))) ? Float((_Function_8_1::Block() + icost)) : Float(_Function_8_2::Block(child2,icost)) );
+											return (  (((child2->child1 == null()))) ? Float((_Function_8_1::Block() + icost)) : Float(_Function_8_2::Block(icost,child2)) );
 										}
 										return null();
 									}
 								};
 								HX_STACK_LINE(1084)
-								Float cost2 = _Function_7_4::Block(child2,leafaabb,icost);		HX_STACK_VAR(cost2,"cost2");
+								Float cost2 = _Function_7_4::Block(leafaabb,icost,child2);		HX_STACK_VAR(cost2,"cost2");
 								HX_STACK_LINE(1084)
 								if (((bool((cost < cost1)) && bool((cost < cost2))))){
 									HX_STACK_LINE(1084)
@@ -9787,7 +9334,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 											HX_STACK_LINE(1084)
 											int balance = (c->height - b->height);		HX_STACK_VAR(balance,"balance");
 											struct _Function_8_1{
-												inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBTree &tree){
+												inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBTree &tree,::zpp_nape::space::ZPP_AABBNode &b){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1084);
 													{
 														HX_STACK_LINE(1084)
@@ -9855,7 +9402,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 																_this->maxy = (  (((a->maxy > b1->maxy))) ? Float(a->maxy) : Float(b1->maxy) );
 															}
 															struct _Function_10_1{
-																inline static int Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &g){
+																inline static int Block( ::zpp_nape::space::ZPP_AABBNode &g,::zpp_nape::space::ZPP_AABBNode &b){
 																	HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1084);
 																	{
 																		HX_STACK_LINE(1084)
@@ -9869,7 +9416,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 																}
 															};
 															HX_STACK_LINE(1084)
-															node1->height = ((int)1 + _Function_10_1::Block(b,g));
+															node1->height = ((int)1 + _Function_10_1::Block(g,b));
 															struct _Function_10_2{
 																inline static int Block( ::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBNode &f){
 																	HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1084);
@@ -9964,7 +9511,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 												}
 											};
 											struct _Function_8_2{
-												inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBTree &tree,::zpp_nape::space::ZPP_AABBNode &c){
+												inline static ::zpp_nape::space::ZPP_AABBNode Block( ::zpp_nape::space::ZPP_AABBNode &node1,::zpp_nape::space::ZPP_AABBNode &c,::zpp_nape::space::ZPP_AABBNode &b,::zpp_nape::space::ZPP_AABBTree &tree){
 													HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",1084);
 													{
 														HX_STACK_LINE(1084)
@@ -10141,7 +9688,7 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 												}
 											};
 											HX_STACK_LINE(1084)
-											return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_8_1::Block(b,c,node1,tree)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_8_2::Block(b,node1,tree,c)) : ::zpp_nape::space::ZPP_AABBNode(node1) )) );
+											return (  (((balance > (int)1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_8_1::Block(node1,c,tree,b)) : ::zpp_nape::space::ZPP_AABBNode((  (((balance < (int)-1))) ? ::zpp_nape::space::ZPP_AABBNode(_Function_8_2::Block(node1,c,b,tree)) : ::zpp_nape::space::ZPP_AABBNode(node1) )) );
 										}
 										return null();
 									}
@@ -10196,9 +9743,6 @@ Void ZPP_DynAABBPhase_obj::sync_broadphase( ){
 						node->moved = true;
 						HX_STACK_LINE(1089)
 						{
-							HX_STACK_LINE(1090)
-							{
-							}
 							HX_STACK_LINE(1098)
 							node->mnext = this->moves;
 							HX_STACK_LINE(1099)
@@ -10220,14 +9764,8 @@ Void ZPP_DynAABBPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 		HX_STACK_PUSH("ZPP_DynAABBPhase::__sync","zpp_nape/space/DynAABBPhase.hx",944);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(shape,"shape");
-		HX_STACK_LINE(945)
-		{
-		}
 		HX_STACK_LINE(953)
 		::zpp_nape::space::ZPP_AABBNode node = shape->node;		HX_STACK_VAR(node,"node");
-		HX_STACK_LINE(954)
-		{
-		}
 		HX_STACK_LINE(962)
 		if ((!(node->synced))){
 			HX_STACK_LINE(963)
@@ -10268,9 +9806,6 @@ Void ZPP_DynAABBPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 												HX_STACK_LINE(963)
 												_this1->localCOMy = _this1->lverts->next->y;
 												HX_STACK_LINE(963)
-												{
-												}
-												HX_STACK_LINE(963)
 												Dynamic();
 											}
 											else{
@@ -10285,17 +9820,11 @@ Void ZPP_DynAABBPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 														HX_STACK_LINE(963)
 														{
 														}
-														HX_STACK_LINE(963)
-														{
-														}
 													}
 													HX_STACK_LINE(963)
 													{
 														HX_STACK_LINE(963)
 														Float t = 1.0;		HX_STACK_VAR(t,"t");
-														HX_STACK_LINE(963)
-														{
-														}
 														HX_STACK_LINE(963)
 														hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 														HX_STACK_LINE(963)
@@ -10305,9 +9834,6 @@ Void ZPP_DynAABBPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 													{
 														HX_STACK_LINE(963)
 														Float t = 0.5;		HX_STACK_VAR(t,"t");
-														HX_STACK_LINE(963)
-														{
-														}
 														HX_STACK_LINE(963)
 														hx::MultEq(_this1->localCOMx,t);
 														HX_STACK_LINE(963)
@@ -10321,9 +9847,6 @@ Void ZPP_DynAABBPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 														_this1->localCOMx = (int)0;
 														HX_STACK_LINE(963)
 														_this1->localCOMy = (int)0;
-														HX_STACK_LINE(963)
-														{
-														}
 														HX_STACK_LINE(963)
 														{
 														}
@@ -10406,9 +9929,6 @@ Void ZPP_DynAABBPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 														HX_STACK_LINE(963)
 														Float t = area;		HX_STACK_VAR(t,"t");
 														HX_STACK_LINE(963)
-														{
-														}
-														HX_STACK_LINE(963)
 														hx::MultEq(_this1->localCOMx,t);
 														HX_STACK_LINE(963)
 														hx::MultEq(_this1->localCOMy,t);
@@ -10432,9 +9952,6 @@ Void ZPP_DynAABBPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 												HX_STACK_LINE(963)
 												_this1->axisy = ::Math_obj::cos(_this1->rot);
 												HX_STACK_LINE(963)
-												{
-												}
-												HX_STACK_LINE(963)
 												Dynamic();
 											}
 										}
@@ -10452,12 +9969,6 @@ Void ZPP_DynAABBPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 							Float rx = _this->radius;		HX_STACK_VAR(rx,"rx");
 							HX_STACK_LINE(963)
 							Float ry = _this->radius;		HX_STACK_VAR(ry,"ry");
-							HX_STACK_LINE(963)
-							{
-							}
-							HX_STACK_LINE(963)
-							{
-							}
 							HX_STACK_LINE(963)
 							{
 								HX_STACK_LINE(963)
@@ -10498,9 +10009,6 @@ Void ZPP_DynAABBPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 												_this1->axisx = ::Math_obj::sin(_this1->rot);
 												HX_STACK_LINE(963)
 												_this1->axisy = ::Math_obj::cos(_this1->rot);
-												HX_STACK_LINE(963)
-												{
-												}
 												HX_STACK_LINE(963)
 												Dynamic();
 											}
@@ -10552,9 +10060,6 @@ Void ZPP_DynAABBPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 								HX_STACK_LINE(963)
 								{
 								}
-								HX_STACK_LINE(963)
-								{
-								}
 							}
 							HX_STACK_LINE(963)
 							{
@@ -10562,9 +10067,6 @@ Void ZPP_DynAABBPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 								_this->aabb->maxx = p0->x;
 								HX_STACK_LINE(963)
 								_this->aabb->maxy = p0->y;
-								HX_STACK_LINE(963)
-								{
-								}
 								HX_STACK_LINE(963)
 								{
 								}
@@ -10609,7 +10111,7 @@ Void ZPP_DynAABBPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 				}
 			}
 			struct _Function_2_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::shape::ZPP_Shape &shape){
+				inline static bool Block( ::zpp_nape::shape::ZPP_Shape &shape,::zpp_nape::space::ZPP_AABBNode &node){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/DynAABBPhase.hx",964);
 					{
 						HX_STACK_LINE(964)
@@ -10622,16 +10124,13 @@ Void ZPP_DynAABBPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 				}
 			};
 			HX_STACK_LINE(964)
-			bool sync = (bool((node->dyn != ((  (((shape->body->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_STATIC))) ? bool(false) : bool(!(shape->body->component->sleeping)) )))) || bool(!(_Function_2_1::Block(node,shape))));		HX_STACK_VAR(sync,"sync");
+			bool sync = (bool((node->dyn != ((  (((shape->body->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_STATIC))) ? bool(false) : bool(!(shape->body->component->sleeping)) )))) || bool(!(_Function_2_1::Block(shape,node))));		HX_STACK_VAR(sync,"sync");
 			HX_STACK_LINE(965)
 			if ((sync)){
 				HX_STACK_LINE(968)
 				node->synced = true;
 				HX_STACK_LINE(969)
 				{
-					HX_STACK_LINE(970)
-					{
-					}
 					HX_STACK_LINE(978)
 					node->snext = this->syncs;
 					HX_STACK_LINE(979)
@@ -10651,12 +10150,6 @@ Void ZPP_DynAABBPhase_obj::__remove( ::zpp_nape::shape::ZPP_Shape shape){
 		HX_STACK_PUSH("ZPP_DynAABBPhase::__remove","zpp_nape/space/DynAABBPhase.hx",777);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(shape,"shape");
-		HX_STACK_LINE(778)
-		{
-		}
-		HX_STACK_LINE(786)
-		{
-		}
 		HX_STACK_LINE(794)
 		::zpp_nape::space::ZPP_AABBNode node = shape->node;		HX_STACK_VAR(node,"node");
 		HX_STACK_LINE(795)
@@ -10695,9 +10188,6 @@ Void ZPP_DynAABBPhase_obj::__remove( ::zpp_nape::shape::ZPP_Shape shape){
 				}
 				HX_STACK_LINE(809)
 				{
-					HX_STACK_LINE(810)
-					{
-					}
 					HX_STACK_LINE(818)
 					if (((pre == null()))){
 						HX_STACK_LINE(818)
@@ -10736,9 +10226,6 @@ Void ZPP_DynAABBPhase_obj::__remove( ::zpp_nape::shape::ZPP_Shape shape){
 				}
 				HX_STACK_LINE(834)
 				{
-					HX_STACK_LINE(835)
-					{
-					}
 					HX_STACK_LINE(843)
 					if (((pre == null()))){
 						HX_STACK_LINE(843)
@@ -10761,9 +10248,6 @@ Void ZPP_DynAABBPhase_obj::__remove( ::zpp_nape::shape::ZPP_Shape shape){
 		::zpp_nape::space::ZPP_AABBPair cur = this->pairs;		HX_STACK_VAR(cur,"cur");
 		HX_STACK_LINE(852)
 		while(((cur != null()))){
-			HX_STACK_LINE(853)
-			{
-			}
 			HX_STACK_LINE(861)
 			::zpp_nape::space::ZPP_AABBPair nxt = cur->next;		HX_STACK_VAR(nxt,"nxt");
 			HX_STACK_LINE(862)
@@ -10792,14 +10276,8 @@ Void ZPP_DynAABBPhase_obj::__remove( ::zpp_nape::shape::ZPP_Shape shape){
 				{
 					HX_STACK_LINE(870)
 					::zpp_nape::space::ZPP_AABBPair o = cur;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(871)
-					{
-					}
 					HX_STACK_LINE(879)
 					{
-						HX_STACK_LINE(879)
-						{
-						}
 						HX_STACK_LINE(879)
 						o->n1 = o->n2 = null();
 						HX_STACK_LINE(879)
@@ -10824,9 +10302,6 @@ Void ZPP_DynAABBPhase_obj::__remove( ::zpp_nape::shape::ZPP_Shape shape){
 		while((!(((shape->pairs->head == null()))))){
 			HX_STACK_LINE(893)
 			::zpp_nape::space::ZPP_AABBPair cur1 = shape->pairs->pop_unsafe();		HX_STACK_VAR(cur1,"cur1");
-			HX_STACK_LINE(894)
-			{
-			}
 			HX_STACK_LINE(902)
 			if (((cur1->n1 == node))){
 				HX_STACK_LINE(902)
@@ -10847,14 +10322,8 @@ Void ZPP_DynAABBPhase_obj::__remove( ::zpp_nape::shape::ZPP_Shape shape){
 			{
 				HX_STACK_LINE(907)
 				::zpp_nape::space::ZPP_AABBPair o = cur1;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(908)
-				{
-				}
 				HX_STACK_LINE(916)
 				{
-					HX_STACK_LINE(916)
-					{
-					}
 					HX_STACK_LINE(916)
 					o->n1 = o->n2 = null();
 					HX_STACK_LINE(916)
@@ -10870,9 +10339,6 @@ Void ZPP_DynAABBPhase_obj::__remove( ::zpp_nape::shape::ZPP_Shape shape){
 		{
 			HX_STACK_LINE(925)
 			::zpp_nape::space::ZPP_AABBNode o = node;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(926)
-			{
-			}
 			HX_STACK_LINE(934)
 			{
 				HX_STACK_LINE(934)
@@ -10881,9 +10347,6 @@ Void ZPP_DynAABBPhase_obj::__remove( ::zpp_nape::shape::ZPP_Shape shape){
 				{
 					HX_STACK_LINE(934)
 					::zpp_nape::geom::ZPP_AABB o1 = o->aabb;		HX_STACK_VAR(o1,"o1");
-					HX_STACK_LINE(934)
-					{
-					}
 					HX_STACK_LINE(934)
 					{
 						HX_STACK_LINE(934)
@@ -10931,12 +10394,6 @@ Void ZPP_DynAABBPhase_obj::__insert( ::zpp_nape::shape::ZPP_Shape shape){
 		HX_STACK_PUSH("ZPP_DynAABBPhase::__insert","zpp_nape/space/DynAABBPhase.hx",717);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(shape,"shape");
-		HX_STACK_LINE(718)
-		{
-		}
-		HX_STACK_LINE(726)
-		{
-		}
 		HX_STACK_LINE(734)
 		::zpp_nape::space::ZPP_AABBNode node;		HX_STACK_VAR(node,"node");
 		HX_STACK_LINE(735)
@@ -10986,18 +10443,12 @@ Void ZPP_DynAABBPhase_obj::__insert( ::zpp_nape::shape::ZPP_Shape shape){
 		node->shape = shape;
 		HX_STACK_LINE(753)
 		shape->node = node;
-		HX_STACK_LINE(754)
-		{
-		}
 		HX_STACK_LINE(762)
 		node->synced = true;
 		HX_STACK_LINE(763)
 		node->first_sync = true;
 		HX_STACK_LINE(764)
 		{
-			HX_STACK_LINE(765)
-			{
-			}
 			HX_STACK_LINE(773)
 			node->snext = this->syncs;
 			HX_STACK_LINE(774)
@@ -11029,10 +10480,6 @@ bool ZPP_DynAABBPhase_obj::dyn( ::zpp_nape::shape::ZPP_Shape shape){
 
 
 HX_DEFINE_DYNAMIC_FUNC1(ZPP_DynAABBPhase_obj,dyn,return )
-
-Float ZPP_DynAABBPhase_obj::FATTEN;
-
-Float ZPP_DynAABBPhase_obj::VEL_STEPS;
 
 
 ZPP_DynAABBPhase_obj::ZPP_DynAABBPhase_obj()
@@ -11084,7 +10531,6 @@ Dynamic ZPP_DynAABBPhase_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"stree") ) { return stree; }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"FATTEN") ) { return FATTEN; }
 		if (HX_FIELD_EQ(inName,"failed") ) { return failed; }
 		if (HX_FIELD_EQ(inName,"__sync") ) { return __sync_dyn(); }
 		break;
@@ -11097,7 +10543,6 @@ Dynamic ZPP_DynAABBPhase_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"__insert") ) { return __insert_dyn(); }
 		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"VEL_STEPS") ) { return VEL_STEPS; }
 		if (HX_FIELD_EQ(inName,"treeStack") ) { return treeStack; }
 		break;
 	case 10:
@@ -11138,14 +10583,12 @@ Dynamic ZPP_DynAABBPhase_obj::__SetField(const ::String &inName,const Dynamic &i
 		if (HX_FIELD_EQ(inName,"stree") ) { stree=inValue.Cast< ::zpp_nape::space::ZPP_AABBTree >(); return inValue; }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"FATTEN") ) { FATTEN=inValue.Cast< Float >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"failed") ) { failed=inValue.Cast< ::nape::phys::BodyList >(); return inValue; }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"openlist") ) { openlist=inValue.Cast< ::zpp_nape::util::ZNPList_ZPP_AABBNode >(); return inValue; }
 		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"VEL_STEPS") ) { VEL_STEPS=inValue.Cast< Float >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"treeStack") ) { treeStack=inValue.Cast< ::zpp_nape::util::ZNPList_ZPP_AABBNode >(); return inValue; }
 		break;
 	case 10:
@@ -11169,8 +10612,6 @@ void ZPP_DynAABBPhase_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("FATTEN"),
-	HX_CSTRING("VEL_STEPS"),
 	String(null()) };
 
 static ::String sMemberFields[] = {
@@ -11204,29 +10645,23 @@ static ::String sMemberFields[] = {
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(ZPP_DynAABBPhase_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(ZPP_DynAABBPhase_obj::FATTEN,"FATTEN");
-	HX_MARK_MEMBER_NAME(ZPP_DynAABBPhase_obj::VEL_STEPS,"VEL_STEPS");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(ZPP_DynAABBPhase_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(ZPP_DynAABBPhase_obj::FATTEN,"FATTEN");
-	HX_VISIT_MEMBER_NAME(ZPP_DynAABBPhase_obj::VEL_STEPS,"VEL_STEPS");
 };
 
 Class ZPP_DynAABBPhase_obj::__mClass;
 
 void ZPP_DynAABBPhase_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_DynAABBPhase"), hx::TCanCast< ZPP_DynAABBPhase_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_DynAABBPhase"), hx::TCanCast< ZPP_DynAABBPhase_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }
 
 void ZPP_DynAABBPhase_obj::__boot()
 {
-	FATTEN= 3.0;
-	VEL_STEPS= 2.0;
 }
 
 } // end namespace zpp_nape

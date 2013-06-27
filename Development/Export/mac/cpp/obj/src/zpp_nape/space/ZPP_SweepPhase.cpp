@@ -141,7 +141,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 		HX_STACK_LINE(752)
 		while(((bool((a != null())) && bool((a->aabb->minx <= rayab->minx))))){
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::geom::ZPP_AABB &rayab){
+				inline static bool Block( ::zpp_nape::geom::ZPP_AABB &rayab,::zpp_nape::space::ZPP_SweepData &a){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",753);
 					{
 						HX_STACK_LINE(753)
@@ -153,7 +153,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			struct _Function_3_2{
-				inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+				inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_SweepData &a){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",753);
 					{
 						HX_STACK_LINE(753)
@@ -165,7 +165,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(753)
-			if (((bool(_Function_3_1::Block(a,rayab)) && bool(((bool((filter == null())) || bool(_Function_3_2::Block(a,filter)))))))){
+			if (((bool(_Function_3_1::Block(rayab,a)) && bool(((bool((filter == null())) || bool(_Function_3_2::Block(filter,a)))))))){
 				HX_STACK_LINE(754)
 				Float t = ray->aabbsect(a->aabb);		HX_STACK_VAR(t,"t");
 				HX_STACK_LINE(755)
@@ -204,7 +204,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 			HX_STACK_LINE(771)
 			while(((a != null()))){
 				struct _Function_4_1{
-					inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::geom::ZPP_AABB &rayab){
+					inline static bool Block( ::zpp_nape::geom::ZPP_AABB &rayab,::zpp_nape::space::ZPP_SweepData &a){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",772);
 						{
 							HX_STACK_LINE(772)
@@ -216,7 +216,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				struct _Function_4_2{
-					inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+					inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_SweepData &a){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",772);
 						{
 							HX_STACK_LINE(772)
@@ -228,7 +228,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				HX_STACK_LINE(772)
-				if (((bool(_Function_4_1::Block(a,rayab)) && bool(((bool((filter == null())) || bool(_Function_4_2::Block(a,filter)))))))){
+				if (((bool(_Function_4_1::Block(rayab,a)) && bool(((bool((filter == null())) || bool(_Function_4_2::Block(filter,a)))))))){
 					HX_STACK_LINE(773)
 					Float t = ray->aabbsect(a->aabb);		HX_STACK_VAR(t,"t");
 					HX_STACK_LINE(774)
@@ -254,7 +254,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 			HX_STACK_LINE(784)
 			while(((bool((a != null())) && bool((a->aabb->minx <= rayab->maxx))))){
 				struct _Function_4_1{
-					inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::geom::ZPP_AABB &rayab){
+					inline static bool Block( ::zpp_nape::geom::ZPP_AABB &rayab,::zpp_nape::space::ZPP_SweepData &a){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",785);
 						{
 							HX_STACK_LINE(785)
@@ -266,7 +266,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				struct _Function_4_2{
-					inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+					inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_SweepData &a){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",785);
 						{
 							HX_STACK_LINE(785)
@@ -278,7 +278,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				HX_STACK_LINE(785)
-				if (((bool(_Function_4_1::Block(a,rayab)) && bool(((bool((filter == null())) || bool(_Function_4_2::Block(a,filter)))))))){
+				if (((bool(_Function_4_1::Block(rayab,a)) && bool(((bool((filter == null())) || bool(_Function_4_2::Block(filter,a)))))))){
 					HX_STACK_LINE(786)
 					Float t = ray->aabbsect(a->aabb);		HX_STACK_VAR(t,"t");
 					HX_STACK_LINE(787)
@@ -303,9 +303,6 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 	{
 		HX_STACK_LINE(796)
 		::zpp_nape::geom::ZPP_AABB o = rayab;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(797)
-		{
-		}
 		HX_STACK_LINE(805)
 		{
 			HX_STACK_LINE(805)
@@ -355,7 +352,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 		HX_STACK_LINE(665)
 		while(((bool((a != null())) && bool((a->aabb->minx <= rayab->minx))))){
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::geom::ZPP_AABB &rayab){
+				inline static bool Block( ::zpp_nape::geom::ZPP_AABB &rayab,::zpp_nape::space::ZPP_SweepData &a){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",666);
 					{
 						HX_STACK_LINE(666)
@@ -367,7 +364,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			struct _Function_3_2{
-				inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+				inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_SweepData &a){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",666);
 					{
 						HX_STACK_LINE(666)
@@ -379,7 +376,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(666)
-			if (((bool(_Function_3_1::Block(a,rayab)) && bool(((bool((filter == null())) || bool(_Function_3_2::Block(a,filter)))))))){
+			if (((bool(_Function_3_1::Block(rayab,a)) && bool(((bool((filter == null())) || bool(_Function_3_2::Block(filter,a)))))))){
 				HX_STACK_LINE(667)
 				Float t = ray->aabbsect(a->aabb);		HX_STACK_VAR(t,"t");
 				HX_STACK_LINE(668)
@@ -443,7 +440,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 			HX_STACK_LINE(690)
 			while(((a != null()))){
 				struct _Function_4_1{
-					inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::geom::ZPP_AABB &rayab){
+					inline static bool Block( ::zpp_nape::geom::ZPP_AABB &rayab,::zpp_nape::space::ZPP_SweepData &a){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",691);
 						{
 							HX_STACK_LINE(691)
@@ -455,7 +452,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				struct _Function_4_2{
-					inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+					inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_SweepData &a){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",691);
 						{
 							HX_STACK_LINE(691)
@@ -467,7 +464,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				HX_STACK_LINE(691)
-				if (((bool(_Function_4_1::Block(a,rayab)) && bool(((bool((filter == null())) || bool(_Function_4_2::Block(a,filter)))))))){
+				if (((bool(_Function_4_1::Block(rayab,a)) && bool(((bool((filter == null())) || bool(_Function_4_2::Block(filter,a)))))))){
 					HX_STACK_LINE(692)
 					Float t = ray->aabbsect(a->aabb);		HX_STACK_VAR(t,"t");
 					HX_STACK_LINE(693)
@@ -518,7 +515,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 			HX_STACK_LINE(709)
 			while(((bool((bool((a != null())) && bool((a->aabb->minx <= rayab->maxx)))) && bool((a->aabb->minx < (ray->originx + (ray->dirx * mint))))))){
 				struct _Function_4_1{
-					inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::geom::ZPP_AABB &rayab){
+					inline static bool Block( ::zpp_nape::geom::ZPP_AABB &rayab,::zpp_nape::space::ZPP_SweepData &a){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",710);
 						{
 							HX_STACK_LINE(710)
@@ -530,7 +527,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				struct _Function_4_2{
-					inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+					inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::space::ZPP_SweepData &a){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",710);
 						{
 							HX_STACK_LINE(710)
@@ -542,7 +539,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				HX_STACK_LINE(710)
-				if (((bool(_Function_4_1::Block(a,rayab)) && bool(((bool((filter == null())) || bool(_Function_4_2::Block(a,filter)))))))){
+				if (((bool(_Function_4_1::Block(rayab,a)) && bool(((bool((filter == null())) || bool(_Function_4_2::Block(filter,a)))))))){
 					HX_STACK_LINE(711)
 					Float t = ray->aabbsect(a->aabb);		HX_STACK_VAR(t,"t");
 					HX_STACK_LINE(712)
@@ -592,9 +589,6 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 	{
 		HX_STACK_LINE(727)
 		::zpp_nape::geom::ZPP_AABB o = rayab;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(728)
-		{
-		}
 		HX_STACK_LINE(736)
 		{
 			HX_STACK_LINE(736)
@@ -651,7 +645,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_LINE(632)
 	while(((bool((a != null())) && bool((a->aabb->minx <= ab->maxx))))){
 		struct _Function_2_1{
-			inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::geom::ZPP_AABB &ab){
+			inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_SweepData &a){
 				HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",633);
 				{
 					HX_STACK_LINE(633)
@@ -663,13 +657,13 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 			}
 		};
 		HX_STACK_LINE(633)
-		if ((_Function_2_1::Block(a,ab))){
+		if ((_Function_2_1::Block(ab,a))){
 			HX_STACK_LINE(634)
 			::zpp_nape::shape::ZPP_Shape shape2 = a->shape;		HX_STACK_VAR(shape2,"shape2");
 			HX_STACK_LINE(635)
 			::nape::phys::Body body = shape2->body->outer;		HX_STACK_VAR(body,"body");
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::shape::ZPP_Shape &shape2,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+				inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::shape::ZPP_Shape &shape2){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",636);
 					{
 						HX_STACK_LINE(636)
@@ -681,7 +675,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(636)
-			if (((bool((filter == null())) || bool(_Function_3_1::Block(shape2,filter))))){
+			if (((bool((filter == null())) || bool(_Function_3_1::Block(filter,shape2))))){
 				HX_STACK_LINE(636)
 				if ((containment)){
 					HX_STACK_LINE(637)
@@ -748,7 +742,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_LINE(610)
 	while(((bool((a != null())) && bool((a->aabb->minx <= ab->maxx))))){
 		struct _Function_2_1{
-			inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::geom::ZPP_AABB &ab){
+			inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_SweepData &a){
 				HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",611);
 				{
 					HX_STACK_LINE(611)
@@ -760,11 +754,11 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 			}
 		};
 		HX_STACK_LINE(611)
-		if ((_Function_2_1::Block(a,ab))){
+		if ((_Function_2_1::Block(ab,a))){
 			HX_STACK_LINE(612)
 			::zpp_nape::shape::ZPP_Shape shape2 = a->shape;		HX_STACK_VAR(shape2,"shape2");
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::shape::ZPP_Shape &shape2,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+				inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::shape::ZPP_Shape &shape2){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",613);
 					{
 						HX_STACK_LINE(613)
@@ -776,7 +770,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(613)
-			if (((bool((filter == null())) || bool(_Function_3_1::Block(shape2,filter))))){
+			if (((bool((filter == null())) || bool(_Function_3_1::Block(filter,shape2))))){
 				HX_STACK_LINE(613)
 				if ((containment)){
 					HX_STACK_LINE(614)
@@ -834,7 +828,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_LINE(578)
 	while(((bool((a != null())) && bool((a->aabb->minx <= ab->maxx))))){
 		struct _Function_2_1{
-			inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::geom::ZPP_AABB &ab){
+			inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_SweepData &a){
 				HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",579);
 				{
 					HX_STACK_LINE(579)
@@ -846,13 +840,13 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 			}
 		};
 		HX_STACK_LINE(579)
-		if ((_Function_2_1::Block(a,ab))){
+		if ((_Function_2_1::Block(ab,a))){
 			HX_STACK_LINE(580)
 			::zpp_nape::shape::ZPP_Shape shape = a->shape;		HX_STACK_VAR(shape,"shape");
 			HX_STACK_LINE(581)
 			::nape::phys::Body body = shape->body->outer;		HX_STACK_VAR(body,"body");
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::shape::ZPP_Shape &shape,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+				inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::shape::ZPP_Shape &shape){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",582);
 					{
 						HX_STACK_LINE(582)
@@ -864,7 +858,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(582)
-			if (((bool((filter == null())) || bool(_Function_3_1::Block(shape,filter))))){
+			if (((bool((filter == null())) || bool(_Function_3_1::Block(filter,shape))))){
 				HX_STACK_LINE(582)
 				if ((containment)){
 					HX_STACK_LINE(583)
@@ -933,7 +927,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_LINE(556)
 	while(((bool((a != null())) && bool((a->aabb->minx <= ab->maxx))))){
 		struct _Function_2_1{
-			inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::geom::ZPP_AABB &ab){
+			inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_SweepData &a){
 				HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",557);
 				{
 					HX_STACK_LINE(557)
@@ -945,11 +939,11 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 			}
 		};
 		HX_STACK_LINE(557)
-		if ((_Function_2_1::Block(a,ab))){
+		if ((_Function_2_1::Block(ab,a))){
 			HX_STACK_LINE(558)
 			::zpp_nape::shape::ZPP_Shape shape = a->shape;		HX_STACK_VAR(shape,"shape");
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::shape::ZPP_Shape &shape,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+				inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::shape::ZPP_Shape &shape){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",559);
 					{
 						HX_STACK_LINE(559)
@@ -961,7 +955,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(559)
-			if (((bool((filter == null())) || bool(_Function_3_1::Block(shape,filter))))){
+			if (((bool((filter == null())) || bool(_Function_3_1::Block(filter,shape))))){
 				HX_STACK_LINE(559)
 				if ((containment)){
 					HX_STACK_LINE(560)
@@ -1022,7 +1016,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 		HX_STACK_LINE(509)
 		::nape::phys::Body body = shape->body->outer;		HX_STACK_VAR(body,"body");
 		struct _Function_2_1{
-			inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::geom::ZPP_AABB &ab){
+			inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_SweepData &a){
 				HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",510);
 				{
 					HX_STACK_LINE(510)
@@ -1034,9 +1028,9 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 			}
 		};
 		HX_STACK_LINE(510)
-		if ((_Function_2_1::Block(a,ab))){
+		if ((_Function_2_1::Block(ab,a))){
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::shape::ZPP_Shape &shape,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+				inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::shape::ZPP_Shape &shape){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",511);
 					{
 						HX_STACK_LINE(511)
@@ -1048,7 +1042,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(510)
-			if (((bool((filter == null())) || bool(_Function_3_1::Block(shape,filter))))){
+			if (((bool((filter == null())) || bool(_Function_3_1::Block(filter,shape))))){
 				HX_STACK_LINE(511)
 				if ((strict)){
 					HX_STACK_LINE(512)
@@ -1087,7 +1081,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 						HX_STACK_LINE(528)
 						if ((!(this->failed->has(body)))){
 							struct _Function_7_1{
-								inline static bool Block( ::zpp_nape::shape::ZPP_Shape &shape,::zpp_nape::geom::ZPP_AABB &ab){
+								inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::shape::ZPP_Shape &shape){
 									HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",530);
 									{
 										HX_STACK_LINE(530)
@@ -1099,7 +1093,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 								}
 							};
 							HX_STACK_LINE(530)
-							bool col = _Function_7_1::Block(shape,ab);		HX_STACK_VAR(col,"col");
+							bool col = _Function_7_1::Block(ab,shape);		HX_STACK_VAR(col,"col");
 							HX_STACK_LINE(531)
 							if (((bool(!(ret->has(body))) && bool(col)))){
 								HX_STACK_LINE(531)
@@ -1118,7 +1112,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 					}
 					else{
 						struct _Function_6_1{
-							inline static bool Block( ::zpp_nape::shape::ZPP_Shape &shape,::zpp_nape::geom::ZPP_AABB &ab){
+							inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::shape::ZPP_Shape &shape){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",538);
 								{
 									HX_STACK_LINE(538)
@@ -1130,7 +1124,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 							}
 						};
 						HX_STACK_LINE(538)
-						if (((bool(!(ret->has(body))) && bool(_Function_6_1::Block(shape,ab))))){
+						if (((bool(!(ret->has(body))) && bool(_Function_6_1::Block(ab,shape))))){
 							HX_STACK_LINE(538)
 							ret->push(body);
 						}
@@ -1176,7 +1170,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 		HX_STACK_LINE(479)
 		::zpp_nape::shape::ZPP_Shape shape = a->shape;		HX_STACK_VAR(shape,"shape");
 		struct _Function_2_1{
-			inline static bool Block( ::zpp_nape::shape::ZPP_Shape &shape,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+			inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::shape::ZPP_Shape &shape){
 				HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",480);
 				{
 					HX_STACK_LINE(480)
@@ -1188,7 +1182,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 			}
 		};
 		HX_STACK_LINE(480)
-		if (((bool((filter == null())) || bool(_Function_2_1::Block(shape,filter))))){
+		if (((bool((filter == null())) || bool(_Function_2_1::Block(filter,shape))))){
 			HX_STACK_LINE(480)
 			if ((strict)){
 				HX_STACK_LINE(481)
@@ -1201,7 +1195,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 				else{
 					struct _Function_5_1{
-						inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::geom::ZPP_AABB &ab){
+						inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_SweepData &a){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",486);
 							{
 								HX_STACK_LINE(486)
@@ -1213,13 +1207,13 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 						}
 					};
 					HX_STACK_LINE(485)
-					if ((_Function_5_1::Block(a,ab))){
+					if ((_Function_5_1::Block(ab,a))){
 						HX_STACK_LINE(486)
 						ret->push(shape->outer);
 					}
 					else{
 						struct _Function_6_1{
-							inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::geom::ZPP_AABB &ab){
+							inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_SweepData &a){
 								HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",487);
 								{
 									HX_STACK_LINE(487)
@@ -1231,7 +1225,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 							}
 						};
 						HX_STACK_LINE(487)
-						if ((_Function_6_1::Block(a,ab))){
+						if ((_Function_6_1::Block(ab,a))){
 							HX_STACK_LINE(487)
 							if ((::zpp_nape::geom::ZPP_Collide_obj::testCollide_safe(shape,this->aabbShape->zpp_inner))){
 								HX_STACK_LINE(488)
@@ -1243,7 +1237,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 			}
 			else{
 				struct _Function_4_1{
-					inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::geom::ZPP_AABB &ab){
+					inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_SweepData &a){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",492);
 						{
 							HX_STACK_LINE(492)
@@ -1255,7 +1249,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				struct _Function_4_2{
-					inline static bool Block( ::zpp_nape::space::ZPP_SweepData &a,::zpp_nape::geom::ZPP_AABB &ab){
+					inline static bool Block( ::zpp_nape::geom::ZPP_AABB &ab,::zpp_nape::space::ZPP_SweepData &a){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",492);
 						{
 							HX_STACK_LINE(492)
@@ -1267,7 +1261,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				HX_STACK_LINE(492)
-				if (((  ((containment)) ? bool(_Function_4_1::Block(a,ab)) : bool(_Function_4_2::Block(a,ab)) ))){
+				if (((  ((containment)) ? bool(_Function_4_1::Block(ab,a)) : bool(_Function_4_2::Block(ab,a)) ))){
 					HX_STACK_LINE(492)
 					ret->push(shape->outer);
 				}
@@ -1327,9 +1321,6 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 					HX_STACK_LINE(431)
 					{
 					}
-					HX_STACK_LINE(431)
-					{
-					}
 				}
 				HX_STACK_LINE(431)
 				return ret;
@@ -1359,7 +1350,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 			HX_STACK_LINE(439)
 			if ((!(ret->has(body)))){
 				struct _Function_4_1{
-					inline static bool Block( ::zpp_nape::shape::ZPP_Shape &shape,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+					inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::shape::ZPP_Shape &shape){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",440);
 						{
 							HX_STACK_LINE(440)
@@ -1371,7 +1362,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 					}
 				};
 				HX_STACK_LINE(439)
-				if (((bool((filter == null())) || bool(_Function_4_1::Block(shape,filter))))){
+				if (((bool((filter == null())) || bool(_Function_4_1::Block(filter,shape))))){
 					HX_STACK_LINE(440)
 					if (((shape->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 						HX_STACK_LINE(441)
@@ -1397,9 +1388,6 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 	{
 		HX_STACK_LINE(453)
 		::zpp_nape::geom::ZPP_Vec2 o = v;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(454)
-		{
-		}
 		HX_STACK_LINE(462)
 		{
 			HX_STACK_LINE(462)
@@ -1472,9 +1460,6 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 					HX_STACK_LINE(392)
 					{
 					}
-					HX_STACK_LINE(392)
-					{
-					}
 				}
 				HX_STACK_LINE(392)
 				return ret;
@@ -1500,7 +1485,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 			HX_STACK_LINE(398)
 			::zpp_nape::shape::ZPP_Shape shape = a->shape;		HX_STACK_VAR(shape,"shape");
 			struct _Function_3_1{
-				inline static bool Block( ::zpp_nape::shape::ZPP_Shape &shape,::zpp_nape::dynamics::ZPP_InteractionFilter &filter){
+				inline static bool Block( ::zpp_nape::dynamics::ZPP_InteractionFilter &filter,::zpp_nape::shape::ZPP_Shape &shape){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",399);
 					{
 						HX_STACK_LINE(399)
@@ -1512,7 +1497,7 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 				}
 			};
 			HX_STACK_LINE(399)
-			if (((bool((filter == null())) || bool(_Function_3_1::Block(shape,filter))))){
+			if (((bool((filter == null())) || bool(_Function_3_1::Block(filter,shape))))){
 				HX_STACK_LINE(399)
 				if (((shape->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))){
 					HX_STACK_LINE(400)
@@ -1537,9 +1522,6 @@ Dynamic ZPP_SweepPhase_obj::__Create(hx::DynamicArray inArgs)
 	{
 		HX_STACK_LINE(411)
 		::zpp_nape::geom::ZPP_Vec2 o = v;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(412)
-		{
-		}
 		HX_STACK_LINE(420)
 		{
 			HX_STACK_LINE(420)
@@ -1691,7 +1673,7 @@ Void ZPP_SweepPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool dis
 						continue;
 					}
 					struct _Function_4_1{
-						inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+						inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 							HX_STACK_PUSH("*::closure","zpp_nape/space/SweepPhase.hx",370);
 							{
 								HX_STACK_LINE(370)
@@ -1704,7 +1686,7 @@ Void ZPP_SweepPhase_obj::broadphase( ::zpp_nape::space::ZPP_Space space,bool dis
 						}
 					};
 					HX_STACK_LINE(370)
-					if ((_Function_4_1::Block(s1,s2))){
+					if ((_Function_4_1::Block(s2,s1))){
 						HX_STACK_LINE(370)
 						if ((discrete)){
 							HX_STACK_LINE(371)
@@ -1865,10 +1847,7 @@ Void ZPP_SweepPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 		HX_STACK_PUSH("ZPP_SweepPhase::__sync","zpp_nape/space/SweepPhase.hx",296);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(shape,"shape");
-		HX_STACK_LINE(297)
-		{
-		}
-		HX_STACK_LINE(305)
+		HX_STACK_LINE(296)
 		if ((!(this->space->continuous))){
 			HX_STACK_LINE(305)
 			if ((shape->zip_aabb)){
@@ -1906,9 +1885,6 @@ Void ZPP_SweepPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 											HX_STACK_LINE(305)
 											_this1->localCOMy = _this1->lverts->next->y;
 											HX_STACK_LINE(305)
-											{
-											}
-											HX_STACK_LINE(305)
 											Dynamic();
 										}
 										else{
@@ -1923,17 +1899,11 @@ Void ZPP_SweepPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 													HX_STACK_LINE(305)
 													{
 													}
-													HX_STACK_LINE(305)
-													{
-													}
 												}
 												HX_STACK_LINE(305)
 												{
 													HX_STACK_LINE(305)
 													Float t = 1.0;		HX_STACK_VAR(t,"t");
-													HX_STACK_LINE(305)
-													{
-													}
 													HX_STACK_LINE(305)
 													hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 													HX_STACK_LINE(305)
@@ -1943,9 +1913,6 @@ Void ZPP_SweepPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 												{
 													HX_STACK_LINE(305)
 													Float t = 0.5;		HX_STACK_VAR(t,"t");
-													HX_STACK_LINE(305)
-													{
-													}
 													HX_STACK_LINE(305)
 													hx::MultEq(_this1->localCOMx,t);
 													HX_STACK_LINE(305)
@@ -1959,9 +1926,6 @@ Void ZPP_SweepPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 													_this1->localCOMx = (int)0;
 													HX_STACK_LINE(305)
 													_this1->localCOMy = (int)0;
-													HX_STACK_LINE(305)
-													{
-													}
 													HX_STACK_LINE(305)
 													{
 													}
@@ -2044,9 +2008,6 @@ Void ZPP_SweepPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 													HX_STACK_LINE(305)
 													Float t = area;		HX_STACK_VAR(t,"t");
 													HX_STACK_LINE(305)
-													{
-													}
-													HX_STACK_LINE(305)
 													hx::MultEq(_this1->localCOMx,t);
 													HX_STACK_LINE(305)
 													hx::MultEq(_this1->localCOMy,t);
@@ -2070,9 +2031,6 @@ Void ZPP_SweepPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 											HX_STACK_LINE(305)
 											_this1->axisy = ::Math_obj::cos(_this1->rot);
 											HX_STACK_LINE(305)
-											{
-											}
-											HX_STACK_LINE(305)
 											Dynamic();
 										}
 									}
@@ -2090,12 +2048,6 @@ Void ZPP_SweepPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 						Float rx = _this->radius;		HX_STACK_VAR(rx,"rx");
 						HX_STACK_LINE(305)
 						Float ry = _this->radius;		HX_STACK_VAR(ry,"ry");
-						HX_STACK_LINE(305)
-						{
-						}
-						HX_STACK_LINE(305)
-						{
-						}
 						HX_STACK_LINE(305)
 						{
 							HX_STACK_LINE(305)
@@ -2136,9 +2088,6 @@ Void ZPP_SweepPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 											_this1->axisx = ::Math_obj::sin(_this1->rot);
 											HX_STACK_LINE(305)
 											_this1->axisy = ::Math_obj::cos(_this1->rot);
-											HX_STACK_LINE(305)
-											{
-											}
 											HX_STACK_LINE(305)
 											Dynamic();
 										}
@@ -2190,9 +2139,6 @@ Void ZPP_SweepPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 							HX_STACK_LINE(305)
 							{
 							}
-							HX_STACK_LINE(305)
-							{
-							}
 						}
 						HX_STACK_LINE(305)
 						{
@@ -2200,9 +2146,6 @@ Void ZPP_SweepPhase_obj::__sync( ::zpp_nape::shape::ZPP_Shape shape){
 							_this->aabb->maxx = p0->x;
 							HX_STACK_LINE(305)
 							_this->aabb->maxy = p0->y;
-							HX_STACK_LINE(305)
-							{
-							}
 							HX_STACK_LINE(305)
 							{
 							}
@@ -2258,9 +2201,6 @@ Void ZPP_SweepPhase_obj::__remove( ::zpp_nape::shape::ZPP_Shape shape){
 		HX_STACK_PUSH("ZPP_SweepPhase::__remove","zpp_nape/space/SweepPhase.hx",262);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(shape,"shape");
-		HX_STACK_LINE(263)
-		{
-		}
 		HX_STACK_LINE(271)
 		::zpp_nape::space::ZPP_SweepData dat = shape->sweep;		HX_STACK_VAR(dat,"dat");
 		HX_STACK_LINE(272)
@@ -2283,9 +2223,6 @@ Void ZPP_SweepPhase_obj::__remove( ::zpp_nape::shape::ZPP_Shape shape){
 		{
 			HX_STACK_LINE(277)
 			::zpp_nape::space::ZPP_SweepData o = dat;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(278)
-			{
-			}
 			HX_STACK_LINE(286)
 			{
 				HX_STACK_LINE(286)
@@ -2312,9 +2249,6 @@ Void ZPP_SweepPhase_obj::__insert( ::zpp_nape::shape::ZPP_Shape shape){
 		HX_STACK_PUSH("ZPP_SweepPhase::__insert","zpp_nape/space/SweepPhase.hx",228);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(shape,"shape");
-		HX_STACK_LINE(229)
-		{
-		}
 		HX_STACK_LINE(237)
 		::zpp_nape::space::ZPP_SweepData dat;		HX_STACK_VAR(dat,"dat");
 		HX_STACK_LINE(238)
@@ -2483,7 +2417,7 @@ Class ZPP_SweepPhase_obj::__mClass;
 
 void ZPP_SweepPhase_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_SweepPhase"), hx::TCanCast< ZPP_SweepPhase_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_SweepPhase"), hx::TCanCast< ZPP_SweepPhase_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

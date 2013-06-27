@@ -67,6 +67,7 @@ Float ratio = __o_ratio.Default(1.0);
 	}
 	catch(Dynamic __e){
 		{
+			HX_STACK_BEGIN_CATCH
 			Dynamic e = __e;{
 			}
 		}
@@ -675,11 +676,6 @@ AngleJoint_obj::AngleJoint_obj()
 void AngleJoint_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(AngleJoint);
-	HX_MARK_MEMBER_NAME(ratio,"ratio");
-	HX_MARK_MEMBER_NAME(jointMax,"jointMax");
-	HX_MARK_MEMBER_NAME(jointMin,"jointMin");
-	HX_MARK_MEMBER_NAME(body2,"body2");
-	HX_MARK_MEMBER_NAME(body1,"body1");
 	HX_MARK_MEMBER_NAME(zpp_inner_zn,"zpp_inner_zn");
 	super::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
@@ -687,11 +683,6 @@ void AngleJoint_obj::__Mark(HX_MARK_PARAMS)
 
 void AngleJoint_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(ratio,"ratio");
-	HX_VISIT_MEMBER_NAME(jointMax,"jointMax");
-	HX_VISIT_MEMBER_NAME(jointMin,"jointMin");
-	HX_VISIT_MEMBER_NAME(body2,"body2");
-	HX_VISIT_MEMBER_NAME(body1,"body1");
 	HX_VISIT_MEMBER_NAME(zpp_inner_zn,"zpp_inner_zn");
 	super::__Visit(HX_VISIT_ARG);
 }
@@ -700,17 +691,17 @@ Dynamic AngleJoint_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"ratio") ) { return inCallProp ? get_ratio() : ratio; }
-		if (HX_FIELD_EQ(inName,"body2") ) { return inCallProp ? get_body2() : body2; }
-		if (HX_FIELD_EQ(inName,"body1") ) { return inCallProp ? get_body1() : body1; }
+		if (HX_FIELD_EQ(inName,"ratio") ) { return get_ratio(); }
+		if (HX_FIELD_EQ(inName,"body2") ) { return get_body2(); }
+		if (HX_FIELD_EQ(inName,"body1") ) { return get_body1(); }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"impulse") ) { return impulse_dyn(); }
 		if (HX_FIELD_EQ(inName,"isSlack") ) { return isSlack_dyn(); }
 		break;
 	case 8:
-		if (HX_FIELD_EQ(inName,"jointMax") ) { return inCallProp ? get_jointMax() : jointMax; }
-		if (HX_FIELD_EQ(inName,"jointMin") ) { return inCallProp ? get_jointMin() : jointMin; }
+		if (HX_FIELD_EQ(inName,"jointMax") ) { return get_jointMax(); }
+		if (HX_FIELD_EQ(inName,"jointMin") ) { return get_jointMin(); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"set_ratio") ) { return set_ratio_dyn(); }
@@ -738,13 +729,13 @@ Dynamic AngleJoint_obj::__SetField(const ::String &inName,const Dynamic &inValue
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"ratio") ) { if (inCallProp) return set_ratio(inValue);ratio=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"body2") ) { if (inCallProp) return set_body2(inValue);body2=inValue.Cast< ::nape::phys::Body >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"body1") ) { if (inCallProp) return set_body1(inValue);body1=inValue.Cast< ::nape::phys::Body >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"ratio") ) { return set_ratio(inValue); }
+		if (HX_FIELD_EQ(inName,"body2") ) { return set_body2(inValue); }
+		if (HX_FIELD_EQ(inName,"body1") ) { return set_body1(inValue); }
 		break;
 	case 8:
-		if (HX_FIELD_EQ(inName,"jointMax") ) { if (inCallProp) return set_jointMax(inValue);jointMax=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"jointMin") ) { if (inCallProp) return set_jointMin(inValue);jointMin=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"jointMax") ) { return set_jointMax(inValue); }
+		if (HX_FIELD_EQ(inName,"jointMin") ) { return set_jointMin(inValue); }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"zpp_inner_zn") ) { zpp_inner_zn=inValue.Cast< ::zpp_nape::constraint::ZPP_AngleJoint >(); return inValue; }
@@ -773,19 +764,14 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("isSlack"),
 	HX_CSTRING("set_ratio"),
 	HX_CSTRING("get_ratio"),
-	HX_CSTRING("ratio"),
 	HX_CSTRING("set_jointMax"),
 	HX_CSTRING("get_jointMax"),
-	HX_CSTRING("jointMax"),
 	HX_CSTRING("set_jointMin"),
 	HX_CSTRING("get_jointMin"),
-	HX_CSTRING("jointMin"),
 	HX_CSTRING("set_body2"),
 	HX_CSTRING("get_body2"),
-	HX_CSTRING("body2"),
 	HX_CSTRING("set_body1"),
 	HX_CSTRING("get_body1"),
-	HX_CSTRING("body1"),
 	HX_CSTRING("zpp_inner_zn"),
 	String(null()) };
 
@@ -801,7 +787,7 @@ Class AngleJoint_obj::__mClass;
 
 void AngleJoint_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.constraint.AngleJoint"), hx::TCanCast< AngleJoint_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.constraint.AngleJoint"), hx::TCanCast< AngleJoint_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

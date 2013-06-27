@@ -6,12 +6,14 @@
 #endif
 
 HX_DECLARE_CLASS0(Camera)
+HX_DECLARE_CLASS2(flash,events,Event)
+HX_DECLARE_CLASS2(flash,events,KeyboardEvent)
+HX_DECLARE_CLASS2(flash,geom,Point)
 HX_DECLARE_CLASS2(nape,phys,Body)
 HX_DECLARE_CLASS2(nape,phys,Interactor)
-HX_DECLARE_CLASS2(native,geom,Point)
 
 
-class Camera_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Camera_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Camera_obj OBJ_;
@@ -31,12 +33,12 @@ class Camera_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("Camera"); }
 
-		static Float cameraSpeed; /* REM */ 
-		static Float smoothing; /* REM */ 
-		static Float targetX; /* REM */ 
-		static Float targetY; /* REM */ 
-		static Float currentX; /* REM */ 
-		static Float currentY; /* REM */ 
+		static Float cameraSpeed;
+		static Float smoothing;
+		static Float targetX;
+		static Float targetY;
+		static Float currentX;
+		static Float currentY;
 		static Void reload( );
 		static Dynamic reload_dyn();
 
@@ -46,7 +48,7 @@ class Camera_obj : public hx::Object{
 		static Void follow( ::nape::phys::Body body);
 		static Dynamic follow_dyn();
 
-		static ::native::geom::Point getPosition( );
+		static ::flash::geom::Point getPosition( );
 		static Dynamic getPosition_dyn();
 
 		static Void setSpeed( Float speed);
@@ -54,6 +56,9 @@ class Camera_obj : public hx::Object{
 
 		static Void render( );
 		static Dynamic render_dyn();
+
+		static Void keyboard( ::flash::events::KeyboardEvent e);
+		static Dynamic keyboard_dyn();
 
 		static Float smooth( Float data,Float previous);
 		static Dynamic smooth_dyn();

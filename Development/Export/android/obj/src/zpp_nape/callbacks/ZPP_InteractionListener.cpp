@@ -205,9 +205,6 @@ Void ZPP_InteractionListener_obj::cbtype_change( ::zpp_nape::callbacks::ZPP_Opti
 				{
 					HX_STACK_LINE(706)
 					::zpp_nape::util::ZNPList_ZPP_CbType _this = options->includes;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(706)
-					{
-					}
 					struct _Function_4_1{
 						inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &cb){
 							HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",706);
@@ -299,9 +296,6 @@ Void ZPP_InteractionListener_obj::cbtype_change( ::zpp_nape::callbacks::ZPP_Opti
 				{
 					HX_STACK_LINE(706)
 					::zpp_nape::util::ZNPList_ZPP_CbType _this = options->excludes;		HX_STACK_VAR(_this,"_this");
-					HX_STACK_LINE(706)
-					{
-					}
 					struct _Function_4_1{
 						inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &cb){
 							HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",706);
@@ -459,9 +453,6 @@ Void ZPP_InteractionListener_obj::invalidate_precedence( ){
 							{
 								HX_STACK_LINE(681)
 								{
-								}
-								HX_STACK_LINE(681)
-								{
 									HX_STACK_LINE(681)
 									::zpp_nape::util::ZNPNode_ZPP_InteractionListener pre1 = null();		HX_STACK_VAR(pre1,"pre1");
 									HX_STACK_LINE(681)
@@ -490,9 +481,6 @@ Void ZPP_InteractionListener_obj::invalidate_precedence( ){
 									{
 										HX_STACK_LINE(681)
 										::zpp_nape::util::ZNPList_ZPP_InteractionListener _this = cb1->listeners;		HX_STACK_VAR(_this,"_this");
-										HX_STACK_LINE(681)
-										{
-										}
 										struct _Function_9_1{
 											inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &_g){
 												HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",681);
@@ -621,9 +609,6 @@ Void ZPP_InteractionListener_obj::invalidate_precedence( ){
 								{
 									HX_STACK_LINE(681)
 									{
-									}
-									HX_STACK_LINE(681)
-									{
 										HX_STACK_LINE(681)
 										::zpp_nape::util::ZNPNode_ZPP_InteractionListener pre1 = null();		HX_STACK_VAR(pre1,"pre1");
 										HX_STACK_LINE(681)
@@ -652,9 +637,6 @@ Void ZPP_InteractionListener_obj::invalidate_precedence( ){
 										{
 											HX_STACK_LINE(681)
 											::zpp_nape::util::ZNPList_ZPP_InteractionListener _this = cb1->listeners;		HX_STACK_VAR(_this,"_this");
-											HX_STACK_LINE(681)
-											{
-											}
 											struct _Function_10_1{
 												inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &_g){
 													HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",681);
@@ -779,9 +761,6 @@ Void ZPP_InteractionListener_obj::invalidate_precedence( ){
 								{
 									HX_STACK_LINE(681)
 									{
-									}
-									HX_STACK_LINE(681)
-									{
 										HX_STACK_LINE(681)
 										::zpp_nape::util::ZNPNode_ZPP_InteractionListener pre1 = null();		HX_STACK_VAR(pre1,"pre1");
 										HX_STACK_LINE(681)
@@ -810,9 +789,6 @@ Void ZPP_InteractionListener_obj::invalidate_precedence( ){
 										{
 											HX_STACK_LINE(681)
 											::zpp_nape::util::ZNPList_ZPP_InteractionListener _this = cb2->listeners;		HX_STACK_VAR(_this,"_this");
-											HX_STACK_LINE(681)
-											{
-											}
 											struct _Function_10_1{
 												inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &_g){
 													HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",681);
@@ -942,9 +918,6 @@ Void ZPP_InteractionListener_obj::invalidate_precedence( ){
 						{
 							HX_STACK_LINE(681)
 							{
-							}
-							HX_STACK_LINE(681)
-							{
 								HX_STACK_LINE(681)
 								::zpp_nape::util::ZNPNode_ZPP_InteractionListener pre1 = null();		HX_STACK_VAR(pre1,"pre1");
 								HX_STACK_LINE(681)
@@ -973,9 +946,6 @@ Void ZPP_InteractionListener_obj::invalidate_precedence( ){
 								{
 									HX_STACK_LINE(681)
 									::zpp_nape::util::ZNPList_ZPP_InteractionListener _this = cb->listeners;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(681)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &_g){
 											HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",681);
@@ -1103,9 +1073,6 @@ Void ZPP_InteractionListener_obj::invalidate_precedence( ){
 						{
 							HX_STACK_LINE(681)
 							{
-							}
-							HX_STACK_LINE(681)
-							{
 								HX_STACK_LINE(681)
 								::zpp_nape::util::ZNPNode_ZPP_InteractionListener pre1 = null();		HX_STACK_VAR(pre1,"pre1");
 								HX_STACK_LINE(681)
@@ -1134,9 +1101,6 @@ Void ZPP_InteractionListener_obj::invalidate_precedence( ){
 								{
 									HX_STACK_LINE(681)
 									::zpp_nape::util::ZNPList_ZPP_InteractionListener _this = cb->listeners;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(681)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &_g){
 											HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",681);
@@ -1535,9 +1499,6 @@ Void ZPP_InteractionListener_obj::addedToSpace( ){
 						{
 							HX_STACK_LINE(642)
 							{
-							}
-							HX_STACK_LINE(642)
-							{
 								HX_STACK_LINE(642)
 								::zpp_nape::util::ZNPNode_ZPP_InteractionListener pre1 = null();		HX_STACK_VAR(pre1,"pre1");
 								HX_STACK_LINE(642)
@@ -1566,9 +1527,6 @@ Void ZPP_InteractionListener_obj::addedToSpace( ){
 								{
 									HX_STACK_LINE(642)
 									::zpp_nape::util::ZNPList_ZPP_InteractionListener _this = cb1->listeners;		HX_STACK_VAR(_this,"_this");
-									HX_STACK_LINE(642)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &_g){
 											HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",642);
@@ -1673,9 +1631,6 @@ Void ZPP_InteractionListener_obj::addedToSpace( ){
 							{
 								HX_STACK_LINE(642)
 								{
-								}
-								HX_STACK_LINE(642)
-								{
 									HX_STACK_LINE(642)
 									::zpp_nape::util::ZNPNode_ZPP_InteractionListener pre1 = null();		HX_STACK_VAR(pre1,"pre1");
 									HX_STACK_LINE(642)
@@ -1704,9 +1659,6 @@ Void ZPP_InteractionListener_obj::addedToSpace( ){
 									{
 										HX_STACK_LINE(642)
 										::zpp_nape::util::ZNPList_ZPP_InteractionListener _this = cb1->listeners;		HX_STACK_VAR(_this,"_this");
-										HX_STACK_LINE(642)
-										{
-										}
 										struct _Function_9_1{
 											inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &_g){
 												HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",642);
@@ -1807,9 +1759,6 @@ Void ZPP_InteractionListener_obj::addedToSpace( ){
 							{
 								HX_STACK_LINE(642)
 								{
-								}
-								HX_STACK_LINE(642)
-								{
 									HX_STACK_LINE(642)
 									::zpp_nape::util::ZNPNode_ZPP_InteractionListener pre1 = null();		HX_STACK_VAR(pre1,"pre1");
 									HX_STACK_LINE(642)
@@ -1838,9 +1787,6 @@ Void ZPP_InteractionListener_obj::addedToSpace( ){
 									{
 										HX_STACK_LINE(642)
 										::zpp_nape::util::ZNPList_ZPP_InteractionListener _this = cb2->listeners;		HX_STACK_VAR(_this,"_this");
-										HX_STACK_LINE(642)
-										{
-										}
 										struct _Function_9_1{
 											inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &_g){
 												HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",642);
@@ -1946,9 +1892,6 @@ Void ZPP_InteractionListener_obj::addedToSpace( ){
 					{
 						HX_STACK_LINE(642)
 						{
-						}
-						HX_STACK_LINE(642)
-						{
 							HX_STACK_LINE(642)
 							::zpp_nape::util::ZNPNode_ZPP_InteractionListener pre1 = null();		HX_STACK_VAR(pre1,"pre1");
 							HX_STACK_LINE(642)
@@ -1977,9 +1920,6 @@ Void ZPP_InteractionListener_obj::addedToSpace( ){
 							{
 								HX_STACK_LINE(642)
 								::zpp_nape::util::ZNPList_ZPP_InteractionListener _this = cb->listeners;		HX_STACK_VAR(_this,"_this");
-								HX_STACK_LINE(642)
-								{
-								}
 								struct _Function_7_1{
 									inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &_g){
 										HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",642);
@@ -2083,9 +2023,6 @@ Void ZPP_InteractionListener_obj::addedToSpace( ){
 					{
 						HX_STACK_LINE(642)
 						{
-						}
-						HX_STACK_LINE(642)
-						{
 							HX_STACK_LINE(642)
 							::zpp_nape::util::ZNPNode_ZPP_InteractionListener pre1 = null();		HX_STACK_VAR(pre1,"pre1");
 							HX_STACK_LINE(642)
@@ -2114,9 +2051,6 @@ Void ZPP_InteractionListener_obj::addedToSpace( ){
 							{
 								HX_STACK_LINE(642)
 								::zpp_nape::util::ZNPList_ZPP_InteractionListener _this = cb->listeners;		HX_STACK_VAR(_this,"_this");
-								HX_STACK_LINE(642)
-								{
-								}
 								struct _Function_7_1{
 									inline static ::zpp_nape::util::ZNPNode_ZPP_InteractionListener Block( ::zpp_nape::callbacks::ZPP_InteractionListener &_g){
 										HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",642);
@@ -2336,9 +2270,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 				if (((a == b))){
 					HX_STACK_LINE(561)
 					{
-						HX_STACK_LINE(561)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &a){
 								HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -2394,9 +2325,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 					if (((a->id < b->id))){
 						HX_STACK_LINE(561)
 						{
-							HX_STACK_LINE(561)
-							{
-							}
 							struct _Function_6_1{
 								inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &a){
 									HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -2448,9 +2376,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 					else{
 						HX_STACK_LINE(561)
 						{
-							HX_STACK_LINE(561)
-							{
-							}
 							struct _Function_6_1{
 								inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &b){
 									HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -2507,9 +2432,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 				{
 					HX_STACK_LINE(561)
 					::zpp_nape::callbacks::ZPP_CbType o = aite->elt;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(561)
-					{
-					}
 					struct _Function_4_1{
 						inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &o){
 							HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -2564,9 +2486,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 				{
 					HX_STACK_LINE(561)
 					::zpp_nape::callbacks::ZPP_CbType o = bite->elt;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(561)
-					{
-					}
 					struct _Function_4_1{
 						inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &o){
 							HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -2651,9 +2570,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 								if (((a == b))){
 									HX_STACK_LINE(561)
 									{
-										HX_STACK_LINE(561)
-										{
-										}
 										struct _Function_9_1{
 											inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &a){
 												HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -2709,9 +2625,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 									if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(a,b))){
 										HX_STACK_LINE(561)
 										{
-											HX_STACK_LINE(561)
-											{
-											}
 											struct _Function_10_1{
 												inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &a){
 													HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -2763,9 +2676,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 									else{
 										HX_STACK_LINE(561)
 										{
-											HX_STACK_LINE(561)
-											{
-											}
 											struct _Function_10_1{
 												inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &b){
 													HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -2822,9 +2732,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 								{
 									HX_STACK_LINE(561)
 									::zpp_nape::callbacks::ZPP_CbSet o = aite1->elt;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(561)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &o){
 											HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -2879,9 +2786,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 								{
 									HX_STACK_LINE(561)
 									::zpp_nape::callbacks::ZPP_CbSet o = bite1->elt;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(561)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &o){
 											HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -3246,9 +3150,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 								if (((a == b))){
 									HX_STACK_LINE(561)
 									{
-										HX_STACK_LINE(561)
-										{
-										}
 										struct _Function_9_1{
 											inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &a){
 												HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -3304,9 +3205,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 									if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(a,b))){
 										HX_STACK_LINE(561)
 										{
-											HX_STACK_LINE(561)
-											{
-											}
 											struct _Function_10_1{
 												inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &a){
 													HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -3358,9 +3256,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 									else{
 										HX_STACK_LINE(561)
 										{
-											HX_STACK_LINE(561)
-											{
-											}
 											struct _Function_10_1{
 												inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &b){
 													HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -3417,9 +3312,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 								{
 									HX_STACK_LINE(561)
 									::zpp_nape::callbacks::ZPP_CbSet o = aite1->elt;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(561)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &o){
 											HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -3474,9 +3366,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 								{
 									HX_STACK_LINE(561)
 									::zpp_nape::callbacks::ZPP_CbSet o = bite1->elt;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(561)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &o){
 											HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -3835,9 +3724,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 							if (((a == b))){
 								HX_STACK_LINE(561)
 								{
-									HX_STACK_LINE(561)
-									{
-									}
 									struct _Function_8_1{
 										inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &a){
 											HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -3893,9 +3779,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 								if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(a,b))){
 									HX_STACK_LINE(561)
 									{
-										HX_STACK_LINE(561)
-										{
-										}
 										struct _Function_9_1{
 											inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &a){
 												HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -3947,9 +3830,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 								else{
 									HX_STACK_LINE(561)
 									{
-										HX_STACK_LINE(561)
-										{
-										}
 										struct _Function_9_1{
 											inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &b){
 												HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -4006,9 +3886,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 							{
 								HX_STACK_LINE(561)
 								::zpp_nape::callbacks::ZPP_CbSet o = aite1->elt;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(561)
-								{
-								}
 								struct _Function_7_1{
 									inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &o){
 										HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -4063,9 +3940,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 							{
 								HX_STACK_LINE(561)
 								::zpp_nape::callbacks::ZPP_CbSet o = bite1->elt;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(561)
-								{
-								}
 								struct _Function_7_1{
 									inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &o){
 										HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -4421,9 +4295,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 									if (((a == b))){
 										HX_STACK_LINE(561)
 										{
-											HX_STACK_LINE(561)
-											{
-											}
 											struct _Function_10_1{
 												inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &a){
 													HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -4479,9 +4350,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 										if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(a,b))){
 											HX_STACK_LINE(561)
 											{
-												HX_STACK_LINE(561)
-												{
-												}
 												struct _Function_11_1{
 													inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &a){
 														HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -4533,9 +4401,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 										else{
 											HX_STACK_LINE(561)
 											{
-												HX_STACK_LINE(561)
-												{
-												}
 												struct _Function_11_1{
 													inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &b){
 														HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -4592,9 +4457,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 									{
 										HX_STACK_LINE(561)
 										::zpp_nape::callbacks::ZPP_CbSet o = aite1->elt;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(561)
-										{
-										}
 										struct _Function_9_1{
 											inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &o){
 												HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -4649,9 +4511,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 									{
 										HX_STACK_LINE(561)
 										::zpp_nape::callbacks::ZPP_CbSet o = bite1->elt;		HX_STACK_VAR(o,"o");
-										HX_STACK_LINE(561)
-										{
-										}
 										struct _Function_9_1{
 											inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &o){
 												HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",561);
@@ -4998,9 +4857,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 						{
 							HX_STACK_LINE(570)
 							{
-							}
-							HX_STACK_LINE(570)
-							{
 								HX_STACK_LINE(570)
 								::zpp_nape::callbacks::ZPP_CbSetPair pair = cur->data;		HX_STACK_VAR(pair,"pair");
 								HX_STACK_LINE(570)
@@ -5016,9 +4872,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 								{
 									HX_STACK_LINE(570)
 									::zpp_nape::callbacks::ZPP_CbSetPair o = pair;		HX_STACK_VAR(o,"o");
-									HX_STACK_LINE(570)
-									{
-									}
 									HX_STACK_LINE(570)
 									{
 										HX_STACK_LINE(570)
@@ -5054,9 +4907,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 								::zpp_nape::util::ZPP_Set_ZPP_CbSetPair o = cur;		HX_STACK_VAR(o,"o");
 								HX_STACK_LINE(570)
 								{
-								}
-								HX_STACK_LINE(570)
-								{
 									HX_STACK_LINE(570)
 									o->data = null();
 									HX_STACK_LINE(570)
@@ -5085,9 +4935,6 @@ Void ZPP_InteractionListener_obj::with_uniquesets( bool fresh){
 		{
 			HX_STACK_LINE(592)
 			::zpp_nape::util::ZPP_Set_ZPP_CbSetPair o = set;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(593)
-			{
-			}
 			HX_STACK_LINE(601)
 			{
 				HX_STACK_LINE(601)
@@ -5136,9 +4983,6 @@ Void ZPP_InteractionListener_obj::CbTypeset( ::zpp_nape::util::ZNPList_ZPP_CbTyp
 			if (((a == b))){
 				HX_STACK_LINE(477)
 				{
-					HX_STACK_LINE(477)
-					{
-					}
 					struct _Function_4_1{
 						inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &a){
 							HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",477);
@@ -5194,9 +5038,6 @@ Void ZPP_InteractionListener_obj::CbTypeset( ::zpp_nape::util::ZNPList_ZPP_CbTyp
 				if (((a->id < b->id))){
 					HX_STACK_LINE(482)
 					{
-						HX_STACK_LINE(482)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &a){
 								HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",482);
@@ -5248,9 +5089,6 @@ Void ZPP_InteractionListener_obj::CbTypeset( ::zpp_nape::util::ZNPList_ZPP_CbTyp
 				else{
 					HX_STACK_LINE(486)
 					{
-						HX_STACK_LINE(486)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &b){
 								HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",486);
@@ -5307,9 +5145,6 @@ Void ZPP_InteractionListener_obj::CbTypeset( ::zpp_nape::util::ZNPList_ZPP_CbTyp
 			{
 				HX_STACK_LINE(491)
 				::zpp_nape::callbacks::ZPP_CbType o = aite->elt;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(491)
-				{
-				}
 				struct _Function_3_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",491);
@@ -5364,9 +5199,6 @@ Void ZPP_InteractionListener_obj::CbTypeset( ::zpp_nape::util::ZNPList_ZPP_CbTyp
 			{
 				HX_STACK_LINE(495)
 				::zpp_nape::callbacks::ZPP_CbType o = bite->elt;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(495)
-				{
-				}
 				struct _Function_3_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_CbType Block( ::zpp_nape::callbacks::ZPP_CbType &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",495);
@@ -5511,9 +5343,6 @@ Void ZPP_InteractionListener_obj::CbSetset( ::zpp_nape::util::ZNPList_ZPP_CbSet 
 			if (((a == b))){
 				HX_STACK_LINE(398)
 				{
-					HX_STACK_LINE(398)
-					{
-					}
 					struct _Function_4_1{
 						inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &a){
 							HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",398);
@@ -5569,9 +5398,6 @@ Void ZPP_InteractionListener_obj::CbSetset( ::zpp_nape::util::ZNPList_ZPP_CbSet 
 				if ((::zpp_nape::callbacks::ZPP_CbSet_obj::setlt(a,b))){
 					HX_STACK_LINE(403)
 					{
-						HX_STACK_LINE(403)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &a){
 								HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",403);
@@ -5623,9 +5449,6 @@ Void ZPP_InteractionListener_obj::CbSetset( ::zpp_nape::util::ZNPList_ZPP_CbSet 
 				else{
 					HX_STACK_LINE(407)
 					{
-						HX_STACK_LINE(407)
-						{
-						}
 						struct _Function_5_1{
 							inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &b){
 								HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",407);
@@ -5682,9 +5505,6 @@ Void ZPP_InteractionListener_obj::CbSetset( ::zpp_nape::util::ZNPList_ZPP_CbSet 
 			{
 				HX_STACK_LINE(412)
 				::zpp_nape::callbacks::ZPP_CbSet o = aite->elt;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(412)
-				{
-				}
 				struct _Function_3_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",412);
@@ -5739,9 +5559,6 @@ Void ZPP_InteractionListener_obj::CbSetset( ::zpp_nape::util::ZNPList_ZPP_CbSet 
 			{
 				HX_STACK_LINE(416)
 				::zpp_nape::callbacks::ZPP_CbSet o = bite->elt;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(416)
-				{
-				}
 				struct _Function_3_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_CbSet Block( ::zpp_nape::callbacks::ZPP_CbSet &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/callbacks/Listener.hx",416);
@@ -5863,23 +5680,40 @@ Void ZPP_InteractionListener_obj::wake( ){
 {
 		HX_STACK_PUSH("ZPP_InteractionListener::wake","zpp_nape/callbacks/Listener.hx",360);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(361)
-		{
-		}
 		HX_STACK_LINE(369)
-		{
+		::zpp_nape::util::ZNPNode_ZPP_CbType ite1 = this->options1->includes->head;		HX_STACK_VAR(ite1,"ite1");
+		HX_STACK_LINE(369)
+		::zpp_nape::util::ZNPNode_ZPP_CbType ite2 = this->options2->includes->head;		HX_STACK_VAR(ite2,"ite2");
+		HX_STACK_LINE(369)
+		while(((bool((ite1 != null())) && bool((ite2 != null()))))){
 			HX_STACK_LINE(369)
-			::zpp_nape::util::ZNPNode_ZPP_CbType ite1 = this->options1->includes->head;		HX_STACK_VAR(ite1,"ite1");
+			::zpp_nape::callbacks::ZPP_CbType cb1 = ite1->elt;		HX_STACK_VAR(cb1,"cb1");
 			HX_STACK_LINE(369)
-			::zpp_nape::util::ZNPNode_ZPP_CbType ite2 = this->options2->includes->head;		HX_STACK_VAR(ite2,"ite2");
+			::zpp_nape::callbacks::ZPP_CbType cb2 = ite2->elt;		HX_STACK_VAR(cb2,"cb2");
 			HX_STACK_LINE(369)
-			while(((bool((ite1 != null())) && bool((ite2 != null()))))){
+			if (((cb1 == cb2))){
 				HX_STACK_LINE(369)
-				::zpp_nape::callbacks::ZPP_CbType cb1 = ite1->elt;		HX_STACK_VAR(cb1,"cb1");
+				{
+					HX_STACK_LINE(369)
+					::zpp_nape::util::ZNPNode_ZPP_Interactor cx_ite = cb1->interactors->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+					HX_STACK_LINE(369)
+					while(((cx_ite != null()))){
+						HX_STACK_LINE(369)
+						::zpp_nape::phys::ZPP_Interactor i = cx_ite->elt;		HX_STACK_VAR(i,"i");
+						HX_STACK_LINE(369)
+						i->wake();
+						HX_STACK_LINE(369)
+						cx_ite = cx_ite->next;
+					}
+				}
 				HX_STACK_LINE(369)
-				::zpp_nape::callbacks::ZPP_CbType cb2 = ite2->elt;		HX_STACK_VAR(cb2,"cb2");
+				ite1 = ite1->next;
 				HX_STACK_LINE(369)
-				if (((cb1 == cb2))){
+				ite2 = ite2->next;
+			}
+			else{
+				HX_STACK_LINE(369)
+				if (((cb1->id < cb2->id))){
 					HX_STACK_LINE(369)
 					{
 						HX_STACK_LINE(369)
@@ -5896,87 +5730,64 @@ Void ZPP_InteractionListener_obj::wake( ){
 					}
 					HX_STACK_LINE(369)
 					ite1 = ite1->next;
-					HX_STACK_LINE(369)
-					ite2 = ite2->next;
 				}
 				else{
 					HX_STACK_LINE(369)
-					if (((cb1->id < cb2->id))){
+					{
 						HX_STACK_LINE(369)
-						{
+						::zpp_nape::util::ZNPNode_ZPP_Interactor cx_ite = cb2->interactors->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+						HX_STACK_LINE(369)
+						while(((cx_ite != null()))){
 							HX_STACK_LINE(369)
-							::zpp_nape::util::ZNPNode_ZPP_Interactor cx_ite = cb1->interactors->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+							::zpp_nape::phys::ZPP_Interactor i = cx_ite->elt;		HX_STACK_VAR(i,"i");
 							HX_STACK_LINE(369)
-							while(((cx_ite != null()))){
-								HX_STACK_LINE(369)
-								::zpp_nape::phys::ZPP_Interactor i = cx_ite->elt;		HX_STACK_VAR(i,"i");
-								HX_STACK_LINE(369)
-								i->wake();
-								HX_STACK_LINE(369)
-								cx_ite = cx_ite->next;
-							}
+							i->wake();
+							HX_STACK_LINE(369)
+							cx_ite = cx_ite->next;
 						}
-						HX_STACK_LINE(369)
-						ite1 = ite1->next;
 					}
-					else{
-						HX_STACK_LINE(369)
-						{
-							HX_STACK_LINE(369)
-							::zpp_nape::util::ZNPNode_ZPP_Interactor cx_ite = cb2->interactors->head;		HX_STACK_VAR(cx_ite,"cx_ite");
-							HX_STACK_LINE(369)
-							while(((cx_ite != null()))){
-								HX_STACK_LINE(369)
-								::zpp_nape::phys::ZPP_Interactor i = cx_ite->elt;		HX_STACK_VAR(i,"i");
-								HX_STACK_LINE(369)
-								i->wake();
-								HX_STACK_LINE(369)
-								cx_ite = cx_ite->next;
-							}
-						}
-						HX_STACK_LINE(369)
-						ite2 = ite2->next;
-					}
+					HX_STACK_LINE(369)
+					ite2 = ite2->next;
+				}
+			}
+		}
+		HX_STACK_LINE(369)
+		while(((ite1 != null()))){
+			HX_STACK_LINE(369)
+			{
+				HX_STACK_LINE(369)
+				::zpp_nape::util::ZNPNode_ZPP_Interactor cx_ite = ite1->elt->interactors->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+				HX_STACK_LINE(369)
+				while(((cx_ite != null()))){
+					HX_STACK_LINE(369)
+					::zpp_nape::phys::ZPP_Interactor i = cx_ite->elt;		HX_STACK_VAR(i,"i");
+					HX_STACK_LINE(369)
+					i->wake();
+					HX_STACK_LINE(369)
+					cx_ite = cx_ite->next;
 				}
 			}
 			HX_STACK_LINE(369)
-			while(((ite1 != null()))){
+			ite1 = ite1->next;
+		}
+		HX_STACK_LINE(369)
+		while(((ite2 != null()))){
+			HX_STACK_LINE(369)
+			{
 				HX_STACK_LINE(369)
-				{
+				::zpp_nape::util::ZNPNode_ZPP_Interactor cx_ite = ite2->elt->interactors->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+				HX_STACK_LINE(369)
+				while(((cx_ite != null()))){
 					HX_STACK_LINE(369)
-					::zpp_nape::util::ZNPNode_ZPP_Interactor cx_ite = ite1->elt->interactors->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+					::zpp_nape::phys::ZPP_Interactor i = cx_ite->elt;		HX_STACK_VAR(i,"i");
 					HX_STACK_LINE(369)
-					while(((cx_ite != null()))){
-						HX_STACK_LINE(369)
-						::zpp_nape::phys::ZPP_Interactor i = cx_ite->elt;		HX_STACK_VAR(i,"i");
-						HX_STACK_LINE(369)
-						i->wake();
-						HX_STACK_LINE(369)
-						cx_ite = cx_ite->next;
-					}
+					i->wake();
+					HX_STACK_LINE(369)
+					cx_ite = cx_ite->next;
 				}
-				HX_STACK_LINE(369)
-				ite1 = ite1->next;
 			}
 			HX_STACK_LINE(369)
-			while(((ite2 != null()))){
-				HX_STACK_LINE(369)
-				{
-					HX_STACK_LINE(369)
-					::zpp_nape::util::ZNPNode_ZPP_Interactor cx_ite = ite2->elt->interactors->head;		HX_STACK_VAR(cx_ite,"cx_ite");
-					HX_STACK_LINE(369)
-					while(((cx_ite != null()))){
-						HX_STACK_LINE(369)
-						::zpp_nape::phys::ZPP_Interactor i = cx_ite->elt;		HX_STACK_VAR(i,"i");
-						HX_STACK_LINE(369)
-						i->wake();
-						HX_STACK_LINE(369)
-						cx_ite = cx_ite->next;
-					}
-				}
-				HX_STACK_LINE(369)
-				ite2 = ite2->next;
-			}
+			ite2 = ite2->next;
 		}
 	}
 return null();
@@ -6215,7 +6026,7 @@ Class ZPP_InteractionListener_obj::__mClass;
 
 void ZPP_InteractionListener_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.callbacks.ZPP_InteractionListener"), hx::TCanCast< ZPP_InteractionListener_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.callbacks.ZPP_InteractionListener"), hx::TCanCast< ZPP_InteractionListener_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -13,7 +13,7 @@ namespace nape{
 namespace dynamics{
 
 
-class InteractionGroup_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  InteractionGroup_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef InteractionGroup_obj OBJ_;
@@ -39,26 +39,22 @@ class InteractionGroup_obj : public hx::Object{
 		virtual ::nape::dynamics::InteractionGroupList get_groups( );
 		Dynamic get_groups_dyn();
 
-		::nape::dynamics::InteractionGroupList groups; /* REM */ 
 		virtual ::nape::phys::InteractorList get_interactors( );
 		Dynamic get_interactors_dyn();
 
-		::nape::phys::InteractorList interactors; /* REM */ 
 		virtual bool set_ignore( bool ignore);
 		Dynamic set_ignore_dyn();
 
 		virtual bool get_ignore( );
 		Dynamic get_ignore_dyn();
 
-		bool ignore; /* REM */ 
 		virtual ::nape::dynamics::InteractionGroup set_group( ::nape::dynamics::InteractionGroup group);
 		Dynamic set_group_dyn();
 
 		virtual ::nape::dynamics::InteractionGroup get_group( );
 		Dynamic get_group_dyn();
 
-		::nape::dynamics::InteractionGroup group; /* REM */ 
-		::zpp_nape::dynamics::ZPP_InteractionGroup zpp_inner; /* REM */ 
+		::zpp_nape::dynamics::ZPP_InteractionGroup zpp_inner;
 };
 
 } // end namespace nape

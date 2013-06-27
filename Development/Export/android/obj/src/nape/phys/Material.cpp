@@ -62,12 +62,6 @@ Float rollingFriction = __o_rollingFriction.Default(0.001);
 				hx::Throw (((HX_CSTRING("Error: Material::") + HX_CSTRING("elasticity")) + HX_CSTRING(" cannot be NaN")));
 			}
 			HX_STACK_LINE(248)
-			{
-			}
-			HX_STACK_LINE(248)
-			{
-			}
-			HX_STACK_LINE(248)
 			this->zpp_inner->elasticity = (Float(elasticity) / Float((int)1));
 			HX_STACK_LINE(248)
 			this->zpp_inner->invalidate((int(::zpp_nape::phys::ZPP_Material_obj::WAKE) | int(::zpp_nape::phys::ZPP_Material_obj::ARBITERS)));
@@ -83,9 +77,6 @@ Float rollingFriction = __o_rollingFriction.Default(0.001);
 			if (((dynamicFriction != dynamicFriction))){
 				HX_STACK_LINE(249)
 				hx::Throw (((HX_CSTRING("Error: Material::") + HX_CSTRING("dynamicFriction")) + HX_CSTRING(" cannot be NaN")));
-			}
-			HX_STACK_LINE(249)
-			{
 			}
 			HX_STACK_LINE(249)
 			if (((dynamicFriction < (int)0))){
@@ -108,9 +99,6 @@ Float rollingFriction = __o_rollingFriction.Default(0.001);
 			if (((staticFriction != staticFriction))){
 				HX_STACK_LINE(250)
 				hx::Throw (((HX_CSTRING("Error: Material::") + HX_CSTRING("staticFriction")) + HX_CSTRING(" cannot be NaN")));
-			}
-			HX_STACK_LINE(250)
-			{
 			}
 			HX_STACK_LINE(250)
 			if (((staticFriction < (int)0))){
@@ -160,9 +148,6 @@ Float rollingFriction = __o_rollingFriction.Default(0.001);
 			if (((rollingFriction != rollingFriction))){
 				HX_STACK_LINE(252)
 				hx::Throw (((HX_CSTRING("Error: Material::") + HX_CSTRING("rollingFriction")) + HX_CSTRING(" cannot be NaN")));
-			}
-			HX_STACK_LINE(252)
-			{
 			}
 			HX_STACK_LINE(252)
 			if (((rollingFriction < (int)0))){
@@ -215,9 +200,6 @@ Float Material_obj::set_rollingFriction( Float rollingFriction){
 		if (((rollingFriction != rollingFriction))){
 			HX_STACK_LINE(412)
 			hx::Throw (((HX_CSTRING("Error: Material::") + HX_CSTRING("rollingFriction")) + HX_CSTRING(" cannot be NaN")));
-		}
-		HX_STACK_LINE(413)
-		{
 		}
 		HX_STACK_LINE(414)
 		if (((rollingFriction < (int)0))){
@@ -300,9 +282,6 @@ Float Material_obj::set_staticFriction( Float staticFriction){
 			HX_STACK_LINE(353)
 			hx::Throw (((HX_CSTRING("Error: Material::") + HX_CSTRING("staticFriction")) + HX_CSTRING(" cannot be NaN")));
 		}
-		HX_STACK_LINE(354)
-		{
-		}
 		HX_STACK_LINE(355)
 		if (((staticFriction < (int)0))){
 			HX_STACK_LINE(355)
@@ -341,9 +320,6 @@ Float Material_obj::set_dynamicFriction( Float dynamicFriction){
 			HX_STACK_LINE(323)
 			hx::Throw (((HX_CSTRING("Error: Material::") + HX_CSTRING("dynamicFriction")) + HX_CSTRING(" cannot be NaN")));
 		}
-		HX_STACK_LINE(324)
-		{
-		}
 		HX_STACK_LINE(325)
 		if (((dynamicFriction < (int)0))){
 			HX_STACK_LINE(325)
@@ -381,12 +357,6 @@ Float Material_obj::set_elasticity( Float elasticity){
 		if (((elasticity != elasticity))){
 			HX_STACK_LINE(293)
 			hx::Throw (((HX_CSTRING("Error: Material::") + HX_CSTRING("elasticity")) + HX_CSTRING(" cannot be NaN")));
-		}
-		HX_STACK_LINE(294)
-		{
-		}
-		HX_STACK_LINE(295)
-		{
 		}
 		HX_STACK_LINE(297)
 		this->zpp_inner->elasticity = (Float(elasticity) / Float((int)1));
@@ -529,26 +499,12 @@ Material_obj::Material_obj()
 void Material_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(Material);
-	HX_MARK_MEMBER_NAME(rollingFriction,"rollingFriction");
-	HX_MARK_MEMBER_NAME(density,"density");
-	HX_MARK_MEMBER_NAME(staticFriction,"staticFriction");
-	HX_MARK_MEMBER_NAME(dynamicFriction,"dynamicFriction");
-	HX_MARK_MEMBER_NAME(elasticity,"elasticity");
-	HX_MARK_MEMBER_NAME(shapes,"shapes");
-	HX_MARK_MEMBER_NAME(userData,"userData");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	HX_MARK_END_CLASS();
 }
 
 void Material_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(rollingFriction,"rollingFriction");
-	HX_VISIT_MEMBER_NAME(density,"density");
-	HX_VISIT_MEMBER_NAME(staticFriction,"staticFriction");
-	HX_VISIT_MEMBER_NAME(dynamicFriction,"dynamicFriction");
-	HX_VISIT_MEMBER_NAME(elasticity,"elasticity");
-	HX_VISIT_MEMBER_NAME(shapes,"shapes");
-	HX_VISIT_MEMBER_NAME(userData,"userData");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 }
 
@@ -569,20 +525,20 @@ Dynamic Material_obj::__Field(const ::String &inName,bool inCallProp)
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"rubber") ) { return rubber_dyn(); }
-		if (HX_FIELD_EQ(inName,"shapes") ) { return inCallProp ? get_shapes() : shapes; }
+		if (HX_FIELD_EQ(inName,"shapes") ) { return get_shapes(); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"density") ) { return inCallProp ? get_density() : density; }
+		if (HX_FIELD_EQ(inName,"density") ) { return get_density(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
-		if (HX_FIELD_EQ(inName,"userData") ) { return inCallProp ? get_userData() : userData; }
+		if (HX_FIELD_EQ(inName,"userData") ) { return get_userData(); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { return zpp_inner; }
 		break;
 	case 10:
-		if (HX_FIELD_EQ(inName,"elasticity") ) { return inCallProp ? get_elasticity() : elasticity; }
+		if (HX_FIELD_EQ(inName,"elasticity") ) { return get_elasticity(); }
 		if (HX_FIELD_EQ(inName,"get_shapes") ) { return get_shapes_dyn(); }
 		break;
 	case 11:
@@ -593,13 +549,13 @@ Dynamic Material_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"get_userData") ) { return get_userData_dyn(); }
 		break;
 	case 14:
-		if (HX_FIELD_EQ(inName,"staticFriction") ) { return inCallProp ? get_staticFriction() : staticFriction; }
+		if (HX_FIELD_EQ(inName,"staticFriction") ) { return get_staticFriction(); }
 		if (HX_FIELD_EQ(inName,"set_elasticity") ) { return set_elasticity_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_elasticity") ) { return get_elasticity_dyn(); }
 		break;
 	case 15:
-		if (HX_FIELD_EQ(inName,"rollingFriction") ) { return inCallProp ? get_rollingFriction() : rollingFriction; }
-		if (HX_FIELD_EQ(inName,"dynamicFriction") ) { return inCallProp ? get_dynamicFriction() : dynamicFriction; }
+		if (HX_FIELD_EQ(inName,"rollingFriction") ) { return get_rollingFriction(); }
+		if (HX_FIELD_EQ(inName,"dynamicFriction") ) { return get_dynamicFriction(); }
 		break;
 	case 18:
 		if (HX_FIELD_EQ(inName,"set_staticFriction") ) { return set_staticFriction_dyn(); }
@@ -617,27 +573,21 @@ Dynamic Material_obj::__Field(const ::String &inName,bool inCallProp)
 Dynamic Material_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
 	switch(inName.length) {
-	case 6:
-		if (HX_FIELD_EQ(inName,"shapes") ) { shapes=inValue.Cast< ::nape::shape::ShapeList >(); return inValue; }
-		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"density") ) { if (inCallProp) return set_density(inValue);density=inValue.Cast< Float >(); return inValue; }
-		break;
-	case 8:
-		if (HX_FIELD_EQ(inName,"userData") ) { userData=inValue.Cast< Dynamic >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"density") ) { return set_density(inValue); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::phys::ZPP_Material >(); return inValue; }
 		break;
 	case 10:
-		if (HX_FIELD_EQ(inName,"elasticity") ) { if (inCallProp) return set_elasticity(inValue);elasticity=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"elasticity") ) { return set_elasticity(inValue); }
 		break;
 	case 14:
-		if (HX_FIELD_EQ(inName,"staticFriction") ) { if (inCallProp) return set_staticFriction(inValue);staticFriction=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"staticFriction") ) { return set_staticFriction(inValue); }
 		break;
 	case 15:
-		if (HX_FIELD_EQ(inName,"rollingFriction") ) { if (inCallProp) return set_rollingFriction(inValue);rollingFriction=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"dynamicFriction") ) { if (inCallProp) return set_dynamicFriction(inValue);dynamicFriction=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"rollingFriction") ) { return set_rollingFriction(inValue); }
+		if (HX_FIELD_EQ(inName,"dynamicFriction") ) { return set_dynamicFriction(inValue); }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -668,24 +618,17 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("toString"),
 	HX_CSTRING("set_rollingFriction"),
 	HX_CSTRING("get_rollingFriction"),
-	HX_CSTRING("rollingFriction"),
 	HX_CSTRING("set_density"),
 	HX_CSTRING("get_density"),
-	HX_CSTRING("density"),
 	HX_CSTRING("set_staticFriction"),
 	HX_CSTRING("get_staticFriction"),
-	HX_CSTRING("staticFriction"),
 	HX_CSTRING("set_dynamicFriction"),
 	HX_CSTRING("get_dynamicFriction"),
-	HX_CSTRING("dynamicFriction"),
 	HX_CSTRING("set_elasticity"),
 	HX_CSTRING("get_elasticity"),
-	HX_CSTRING("elasticity"),
 	HX_CSTRING("copy"),
 	HX_CSTRING("get_shapes"),
-	HX_CSTRING("shapes"),
 	HX_CSTRING("get_userData"),
-	HX_CSTRING("userData"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
@@ -701,7 +644,7 @@ Class Material_obj::__mClass;
 
 void Material_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.phys.Material"), hx::TCanCast< Material_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.phys.Material"), hx::TCanCast< Material_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

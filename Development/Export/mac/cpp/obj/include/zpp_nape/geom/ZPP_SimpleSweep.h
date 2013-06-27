@@ -13,7 +13,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_SimpleSweep_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_SimpleSweep_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_SimpleSweep_obj OBJ_;
@@ -54,8 +54,8 @@ class ZPP_SimpleSweep_obj : public hx::Object{
 		virtual Void swap_nodes( ::zpp_nape::geom::ZPP_SimpleSeg p,::zpp_nape::geom::ZPP_SimpleSeg q);
 		Dynamic swap_nodes_dyn();
 
-		::zpp_nape::util::ZPP_Set_ZPP_SimpleSeg tree; /* REM */ 
-		Float sweepx; /* REM */ 
+		::zpp_nape::util::ZPP_Set_ZPP_SimpleSeg tree;
+		Float sweepx;
 };
 
 } // end namespace zpp_nape

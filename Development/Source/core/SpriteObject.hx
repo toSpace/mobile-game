@@ -4,9 +4,9 @@ import aze.display.TileClip;
 import aze.display.SparrowTilesheet;
 
 //nme
-import nme.Lib;
-import nme.Assets;
-import nme.display.DisplayObject;
+import flash.Lib;
+import openfl.Assets;
+import flash.display.DisplayObject;
 
 //nape
 import nape.phys.Body;
@@ -20,14 +20,14 @@ class SpriteObject{
 
 	var tLast:Float;
 	public var layer:TileLayer;
-	public var xml:Hash<Dynamic>;
+	public var xml:Map<String,Dynamic>;
 	public var body:Body;
 	public var clip:TileClip;
 	
 	public function new(xmlUrl:String, sparrowXml:String){
 
 		//read xml
-		xml = readXml(xmlUrl);
+		readXml(xmlUrl);
 
 		//make spritesheet
 		makeSpritesheet(sparrowXml, xml.get('img'));
@@ -41,20 +41,20 @@ class SpriteObject{
 		makePhysics( xml.get('x') , xml.get('y') );
 	}
 
-	private function readXml(url:String){
-		var p = new Hash<Dynamic>();
+	private function readXml(url:String):Void{
+
 		var xmlFile = Assets.getText(Mobile.xml + url);
 		var read = new haxe.xml.Fast( Xml.parse(xmlFile) );
 
 		var asset = read.node.asset;
-		p.set('img', Mobile.asset + asset.node.img.innerData);
-		p.set('x', asset.node.pos.att.x);
-		p.set('y', asset.node.pos.att.y);
-		p.set('rotation', asset.node.pos.att.rotation);
-		p.set('physics', asset.node.physics.innerData);
-		p.set('clip', asset.node.clip.innerData);
+		xml.set('img', Mobile.asset + asset.node.img.innerData);
+		xml.set('x', asset.node.pos.att.x);
+		xml.set('y', asset.node.pos.att.y);
+		xml.set('rotation', asset.node.pos.att.rotation);
+		xml.set('physics', asset.node.physics.innerData);
+		xml.set('clip', asset.node.clip.innerData);
 		//todo material
-		return p;
+
 	}
 
 	public function makeSpritesheet(xmlUrl:String, imgUrl:String){
@@ -66,7 +66,7 @@ class SpriteObject{
 
 	public function makeClip(name:String, ?loop:Bool=true, ?play:Bool=true){
 		
-		clip = new TileClip(name, 24);
+		clip = new TileClip(layer, name, 24);
 		layer.addChild(clip);
 		layer.useSmoothing = true;
 

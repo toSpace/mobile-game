@@ -1,8 +1,5 @@
 #include <hxcpp.h>
 
-#ifndef INCLUDED_hxMath
-#include <hxMath.h>
-#endif
 #ifndef INCLUDED_aze_display_TileBase
 #include <aze/display/TileBase.h>
 #endif
@@ -21,33 +18,29 @@
 #ifndef INCLUDED_aze_display_TilesheetEx
 #include <aze/display/TilesheetEx.h>
 #endif
-#ifndef INCLUDED_haxe_Public
-#include <haxe/Public.h>
+#ifndef INCLUDED_flash_geom_Rectangle
+#include <flash/geom/Rectangle.h>
 #endif
-#ifndef INCLUDED_native_display_Tilesheet
-#include <native/display/Tilesheet.h>
+#ifndef INCLUDED_hxMath
+#include <hxMath.h>
 #endif
-#ifndef INCLUDED_native_geom_Rectangle
-#include <native/geom/Rectangle.h>
+#ifndef INCLUDED_openfl_display_Tilesheet
+#include <openfl/display/Tilesheet.h>
 #endif
 namespace aze{
 namespace display{
 
-Void TileClip_obj::__construct(::String tile,hx::Null< int >  __o_fps)
+Void TileClip_obj::__construct(::aze::display::TileLayer layer,::String tile,hx::Null< int >  __o_fps)
 {
 HX_STACK_PUSH("TileClip::new","aze/display/TileClip.hx",21);
 int fps = __o_fps.Default(18);
 {
 	HX_STACK_LINE(22)
-	super::__construct(tile);
+	super::__construct(layer,tile);
 	HX_STACK_LINE(23)
 	this->fps = fps;
 	HX_STACK_LINE(24)
 	this->animated = this->loop = true;
-	HX_STACK_LINE(25)
-	this->time = (int)0;
-	HX_STACK_LINE(26)
-	this->prevFrame = (int)-1;
 }
 ;
 	return null();
@@ -56,14 +49,14 @@ int fps = __o_fps.Default(18);
 TileClip_obj::~TileClip_obj() { }
 
 Dynamic TileClip_obj::__CreateEmpty() { return  new TileClip_obj; }
-hx::ObjectPtr< TileClip_obj > TileClip_obj::__new(::String tile,hx::Null< int >  __o_fps)
+hx::ObjectPtr< TileClip_obj > TileClip_obj::__new(::aze::display::TileLayer layer,::String tile,hx::Null< int >  __o_fps)
 {  hx::ObjectPtr< TileClip_obj > result = new TileClip_obj();
-	result->__construct(tile,__o_fps);
+	result->__construct(layer,tile,__o_fps);
 	return result;}
 
 Dynamic TileClip_obj::__Create(hx::DynamicArray inArgs)
 {  hx::ObjectPtr< TileClip_obj > result = new TileClip_obj();
-	result->__construct(inArgs[0],inArgs[1]);
+	result->__construct(inArgs[0],inArgs[1],inArgs[2]);
 	return result;}
 
 int TileClip_obj::get_totalFrames( ){
@@ -192,30 +185,34 @@ return null();
 
 Void TileClip_obj::init( ::aze::display::TileLayer layer){
 {
-		HX_STACK_PUSH("TileClip::init","aze/display/TileClip.hx",30);
+		HX_STACK_PUSH("TileClip::init","aze/display/TileClip.hx",28);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(layer,"layer");
-		HX_STACK_LINE(31)
+		HX_STACK_LINE(29)
 		this->layer = layer;
-		HX_STACK_LINE(32)
+		HX_STACK_LINE(30)
 		this->frames = layer->tilesheet->getAnim(this->_tile);
-		HX_STACK_LINE(33)
+		HX_STACK_LINE(31)
 		this->set_indice(this->frames->__get((int)0));
 		struct _Function_1_1{
-			inline static ::native::geom::Rectangle Block( ::aze::display::TileLayer &layer,::aze::display::TileClip_obj *__this){
-				HX_STACK_PUSH("*::closure","aze/display/TileClip.hx",34);
+			inline static ::flash::geom::Rectangle Block( ::aze::display::TileClip_obj *__this,::aze::display::TileLayer &layer){
+				HX_STACK_PUSH("*::closure","aze/display/TileClip.hx",32);
 				{
-					HX_STACK_LINE(34)
+					HX_STACK_LINE(32)
 					::aze::display::TilesheetEx _this = layer->tilesheet;		HX_STACK_VAR(_this,"_this");
 					int indice = __this->_indice;		HX_STACK_VAR(indice,"indice");
-					HX_STACK_LINE(34)
-					return (  (((indice < _this->sizes->length))) ? ::native::geom::Rectangle(_this->sizes->__get(indice)) : ::native::geom::Rectangle(::native::geom::Rectangle_obj::__new(null(),null(),null(),null())) );
+					HX_STACK_LINE(32)
+					return (  (((indice < _this->sizes->length))) ? ::flash::geom::Rectangle(_this->sizes->__get(indice).StaticCast< ::flash::geom::Rectangle >()) : ::flash::geom::Rectangle(::flash::geom::Rectangle_obj::__new(null(),null(),null(),null())) );
 				}
 				return null();
 			}
 		};
+		HX_STACK_LINE(32)
+		this->size = _Function_1_1::Block(this,layer);
+		HX_STACK_LINE(33)
+		this->time = (int)0;
 		HX_STACK_LINE(34)
-		this->size = _Function_1_1::Block(layer,this);
+		this->prevFrame = (int)-1;
 	}
 return null();
 }
@@ -230,7 +227,6 @@ void TileClip_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(TileClip);
 	HX_MARK_MEMBER_NAME(totalFrames,"totalFrames");
-	HX_MARK_MEMBER_NAME(currentFrame,"currentFrame");
 	HX_MARK_MEMBER_NAME(prevFrame,"prevFrame");
 	HX_MARK_MEMBER_NAME(time,"time");
 	HX_MARK_MEMBER_NAME(loop,"loop");
@@ -244,7 +240,6 @@ void TileClip_obj::__Mark(HX_MARK_PARAMS)
 void TileClip_obj::__Visit(HX_VISIT_PARAMS)
 {
 	HX_VISIT_MEMBER_NAME(totalFrames,"totalFrames");
-	HX_VISIT_MEMBER_NAME(currentFrame,"currentFrame");
 	HX_VISIT_MEMBER_NAME(prevFrame,"prevFrame");
 	HX_VISIT_MEMBER_NAME(time,"time");
 	HX_VISIT_MEMBER_NAME(loop,"loop");
@@ -281,7 +276,7 @@ Dynamic TileClip_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"totalFrames") ) { return inCallProp ? get_totalFrames() : totalFrames; }
 		break;
 	case 12:
-		if (HX_FIELD_EQ(inName,"currentFrame") ) { return inCallProp ? get_currentFrame() : currentFrame; }
+		if (HX_FIELD_EQ(inName,"currentFrame") ) { return get_currentFrame(); }
 		break;
 	case 15:
 		if (HX_FIELD_EQ(inName,"get_totalFrames") ) { return get_totalFrames_dyn(); }
@@ -316,7 +311,7 @@ Dynamic TileClip_obj::__SetField(const ::String &inName,const Dynamic &inValue,b
 		if (HX_FIELD_EQ(inName,"totalFrames") ) { totalFrames=inValue.Cast< int >(); return inValue; }
 		break;
 	case 12:
-		if (HX_FIELD_EQ(inName,"currentFrame") ) { if (inCallProp) return set_currentFrame(inValue);currentFrame=inValue.Cast< int >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"currentFrame") ) { return set_currentFrame(inValue); }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -341,7 +336,6 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("totalFrames"),
 	HX_CSTRING("set_currentFrame"),
 	HX_CSTRING("get_currentFrame"),
-	HX_CSTRING("currentFrame"),
 	HX_CSTRING("stop"),
 	HX_CSTRING("play"),
 	HX_CSTRING("step"),
@@ -366,7 +360,7 @@ Class TileClip_obj::__mClass;
 
 void TileClip_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("aze.display.TileClip"), hx::TCanCast< TileClip_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("aze.display.TileClip"), hx::TCanCast< TileClip_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -106,6 +106,7 @@ Dynamic ShapeList_obj::__Create(hx::DynamicArray inArgs)
 		}
 		catch(Dynamic __e){
 			{
+				HX_STACK_BEGIN_CATCH
 				Dynamic e = __e;{
 					HX_STACK_LINE(790)
 					break;
@@ -220,6 +221,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ShapeList_obj,filter,return )
 		}
 		catch(Dynamic __e){
 			{
+				HX_STACK_BEGIN_CATCH
 				Dynamic e = __e;{
 					HX_STACK_LINE(742)
 					{
@@ -470,7 +472,7 @@ bool ShapeList_obj::remove( ::nape::shape::Shape obj){
 	HX_STACK_LINE(601)
 	if ((ret)){
 		HX_STACK_LINE(602)
-		if (((this->zpp_inner->subber_dyn() != null()))){
+		if (((this->zpp_inner->subber != null()))){
 			HX_STACK_LINE(602)
 			this->zpp_inner->subber(obj);
 		}
@@ -571,7 +573,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ShapeList_obj,add,return )
 		HX_STACK_LINE(535)
 		::nape::shape::Shape retx = ret->outer;		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(536)
-		if (((this->zpp_inner->subber_dyn() != null()))){
+		if (((this->zpp_inner->subber != null()))){
 			HX_STACK_LINE(536)
 			this->zpp_inner->subber(retx);
 		}
@@ -587,7 +589,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ShapeList_obj,add,return )
 		HX_STACK_LINE(541)
 		::nape::shape::Shape retx = ret->outer;		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(542)
-		if (((this->zpp_inner->subber_dyn() != null()))){
+		if (((this->zpp_inner->subber != null()))){
 			HX_STACK_LINE(542)
 			this->zpp_inner->subber(retx);
 		}
@@ -634,7 +636,7 @@ HX_DEFINE_DYNAMIC_FUNC0(ShapeList_obj,shift,return )
 		HX_STACK_LINE(492)
 		::nape::shape::Shape retx = ret->outer;		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(493)
-		if (((this->zpp_inner->subber_dyn() != null()))){
+		if (((this->zpp_inner->subber != null()))){
 			HX_STACK_LINE(493)
 			this->zpp_inner->subber(retx);
 		}
@@ -695,7 +697,7 @@ HX_DEFINE_DYNAMIC_FUNC0(ShapeList_obj,shift,return )
 		HX_STACK_LINE(500)
 		::nape::shape::Shape retx = ret->outer;		HX_STACK_VAR(retx,"retx");
 		HX_STACK_LINE(501)
-		if (((this->zpp_inner->subber_dyn() != null()))){
+		if (((this->zpp_inner->subber != null()))){
 			HX_STACK_LINE(501)
 			this->zpp_inner->subber(retx);
 		}
@@ -730,7 +732,7 @@ bool ShapeList_obj::unshift( ::nape::shape::Shape obj){
 	HX_STACK_LINE(452)
 	this->zpp_inner->valmod();
 	HX_STACK_LINE(455)
-	bool cont = (  (((this->zpp_inner->adder_dyn() != null()))) ? bool(this->zpp_inner->adder(obj)) : bool(true) );		HX_STACK_VAR(cont,"cont");
+	bool cont = (  (((this->zpp_inner->adder != null()))) ? bool(this->zpp_inner->adder(obj)) : bool(true) );		HX_STACK_VAR(cont,"cont");
 	HX_STACK_LINE(456)
 	if ((cont)){
 		HX_STACK_LINE(457)
@@ -769,7 +771,7 @@ bool ShapeList_obj::unshift( ::nape::shape::Shape obj){
 		HX_STACK_LINE(462)
 		this->zpp_inner->invalidate();
 		HX_STACK_LINE(463)
-		if (((this->zpp_inner->post_adder_dyn() != null()))){
+		if (((this->zpp_inner->post_adder != null()))){
 			HX_STACK_LINE(463)
 			this->zpp_inner->post_adder(obj);
 		}
@@ -795,7 +797,7 @@ bool ShapeList_obj::push( ::nape::shape::Shape obj){
 	HX_STACK_LINE(421)
 	this->zpp_inner->valmod();
 	HX_STACK_LINE(424)
-	bool cont = (  (((this->zpp_inner->adder_dyn() != null()))) ? bool(this->zpp_inner->adder(obj)) : bool(true) );		HX_STACK_VAR(cont,"cont");
+	bool cont = (  (((this->zpp_inner->adder != null()))) ? bool(this->zpp_inner->adder(obj)) : bool(true) );		HX_STACK_VAR(cont,"cont");
 	HX_STACK_LINE(425)
 	if ((cont)){
 		HX_STACK_LINE(426)
@@ -834,7 +836,7 @@ bool ShapeList_obj::push( ::nape::shape::Shape obj){
 		HX_STACK_LINE(431)
 		this->zpp_inner->invalidate();
 		HX_STACK_LINE(432)
-		if (((this->zpp_inner->post_adder_dyn() != null()))){
+		if (((this->zpp_inner->post_adder != null()))){
 			HX_STACK_LINE(432)
 			this->zpp_inner->post_adder(obj);
 		}
@@ -955,7 +957,7 @@ int ShapeList_obj::get_length( ){
 
 HX_DEFINE_DYNAMIC_FUNC0(ShapeList_obj,get_length,return )
 
-::nape::shape::ShapeList ShapeList_obj::fromArray( Array< ::nape::shape::Shape > array){
+::nape::shape::ShapeList ShapeList_obj::fromArray( Array< ::Dynamic > array){
 	HX_STACK_PUSH("ShapeList::fromArray","nape/shape/ShapeList.hx",304);
 	HX_STACK_ARG(array,"array");
 	HX_STACK_LINE(306)
@@ -972,7 +974,7 @@ HX_DEFINE_DYNAMIC_FUNC0(ShapeList_obj,get_length,return )
 		HX_STACK_LINE(311)
 		while(((_g < array->length))){
 			HX_STACK_LINE(311)
-			::nape::shape::Shape i = array->__get(_g);		HX_STACK_VAR(i,"i");
+			::nape::shape::Shape i = array->__get(_g).StaticCast< ::nape::shape::Shape >();		HX_STACK_VAR(i,"i");
 			HX_STACK_LINE(311)
 			++(_g);
 			HX_STACK_LINE(316)
@@ -994,14 +996,12 @@ ShapeList_obj::ShapeList_obj()
 void ShapeList_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(ShapeList);
-	HX_MARK_MEMBER_NAME(length,"length");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	HX_MARK_END_CLASS();
 }
 
 void ShapeList_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(length,"length");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 }
 
@@ -1029,7 +1029,7 @@ Dynamic ShapeList_obj::__Field(const ::String &inName,bool inCallProp)
 	case 6:
 		if (HX_FIELD_EQ(inName,"filter") ) { return filter_dyn(); }
 		if (HX_FIELD_EQ(inName,"remove") ) { return remove_dyn(); }
-		if (HX_FIELD_EQ(inName,"length") ) { return inCallProp ? get_length() : length; }
+		if (HX_FIELD_EQ(inName,"length") ) { return get_length(); }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"foreach") ) { return foreach_dyn(); }
@@ -1052,9 +1052,6 @@ Dynamic ShapeList_obj::__Field(const ::String &inName,bool inCallProp)
 Dynamic ShapeList_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
 	switch(inName.length) {
-	case 6:
-		if (HX_FIELD_EQ(inName,"length") ) { length=inValue.Cast< int >(); return inValue; }
-		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::util::ZPP_ShapeList >(); return inValue; }
 	}
@@ -1090,7 +1087,6 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("at"),
 	HX_CSTRING("has"),
 	HX_CSTRING("get_length"),
-	HX_CSTRING("length"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
@@ -1106,7 +1102,7 @@ Class ShapeList_obj::__mClass;
 
 void ShapeList_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.shape.ShapeList"), hx::TCanCast< ShapeList_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.shape.ShapeList"), hx::TCanCast< ShapeList_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

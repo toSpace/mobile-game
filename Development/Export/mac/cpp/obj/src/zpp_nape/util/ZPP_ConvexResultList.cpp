@@ -399,7 +399,7 @@ Class ZPP_ConvexResultList_obj::__mClass;
 
 void ZPP_ConvexResultList_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_ConvexResultList"), hx::TCanCast< ZPP_ConvexResultList_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_ConvexResultList"), hx::TCanCast< ZPP_ConvexResultList_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

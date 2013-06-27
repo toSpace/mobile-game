@@ -396,7 +396,7 @@ Class ZPP_ContactList_obj::__mClass;
 
 void ZPP_ContactList_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_ContactList"), hx::TCanCast< ZPP_ContactList_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_ContactList"), hx::TCanCast< ZPP_ContactList_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

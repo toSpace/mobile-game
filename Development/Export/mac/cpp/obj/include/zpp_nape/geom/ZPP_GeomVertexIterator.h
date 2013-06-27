@@ -12,7 +12,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_GeomVertexIterator_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_GeomVertexIterator_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_GeomVertexIterator_obj OBJ_;
@@ -38,14 +38,14 @@ class ZPP_GeomVertexIterator_obj : public hx::Object{
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		::zpp_nape::geom::ZPP_GeomVertexIterator next; /* REM */ 
-		::nape::geom::GeomVertexIterator outer; /* REM */ 
-		bool forward; /* REM */ 
-		bool first; /* REM */ 
-		::zpp_nape::geom::ZPP_GeomVert start; /* REM */ 
-		::zpp_nape::geom::ZPP_GeomVert ptr; /* REM */ 
-		static ::zpp_nape::geom::ZPP_GeomVertexIterator zpp_pool; /* REM */ 
-		static bool internal; /* REM */ 
+		::zpp_nape::geom::ZPP_GeomVertexIterator next;
+		::nape::geom::GeomVertexIterator outer;
+		bool forward;
+		bool first;
+		::zpp_nape::geom::ZPP_GeomVert start;
+		::zpp_nape::geom::ZPP_GeomVert ptr;
+		static ::zpp_nape::geom::ZPP_GeomVertexIterator zpp_pool;
+		static bool internal;
 		static ::nape::geom::GeomVertexIterator get( ::zpp_nape::geom::ZPP_GeomVert poly,bool forward);
 		static Dynamic get_dyn();
 

@@ -83,7 +83,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(339)
-					if (((_this1->_isimmutable_dyn() != null()))){
+					if (((_this1->_isimmutable != null()))){
 						HX_STACK_LINE(339)
 						_this1->_isimmutable();
 					}
@@ -94,7 +94,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 					hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 				}
 				struct _Function_4_1{
-					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &origin,::nape::geom::Vec2 &_this){
+					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &origin,::nape::geom::Vec2 _this){
 						HX_STACK_PUSH("*::closure","nape/geom/Ray.hx",339);
 						{
 							struct _Function_5_1{
@@ -111,7 +111,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 											HX_STACK_LINE(339)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = origin->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(339)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(339)
 												_this1->_validate();
 											}
@@ -136,7 +136,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 											HX_STACK_LINE(339)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = origin->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(339)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(339)
 												_this1->_validate();
 											}
@@ -165,7 +165,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(339)
-								if (((_this1->_isimmutable_dyn() != null()))){
+								if (((_this1->_isimmutable != null()))){
 									HX_STACK_LINE(339)
 									_this1->_isimmutable();
 								}
@@ -176,7 +176,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 								hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 							}
 							struct _Function_5_3{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/geom/Ray.hx",339);
 									{
 										HX_STACK_LINE(339)
@@ -189,7 +189,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 											HX_STACK_LINE(339)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(339)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(339)
 												_this1->_validate();
 											}
@@ -201,7 +201,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 								}
 							};
 							struct _Function_5_4{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/geom/Ray.hx",339);
 									{
 										HX_STACK_LINE(339)
@@ -214,7 +214,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 											HX_STACK_LINE(339)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(339)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(339)
 												_this1->_validate();
 											}
@@ -236,16 +236,13 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 									HX_STACK_LINE(339)
 									{
 									}
-									HX_STACK_LINE(339)
-									{
-									}
 								}
 								HX_STACK_LINE(339)
 								{
 									HX_STACK_LINE(339)
 									::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 									HX_STACK_LINE(339)
-									if (((_this1->_invalidate_dyn() != null()))){
+									if (((_this1->_invalidate != null()))){
 										HX_STACK_LINE(339)
 										_this1->_invalidate(_this1);
 									}
@@ -278,7 +275,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(339)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(339)
 								_this1->_isimmutable();
 							}
@@ -299,9 +296,6 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 							HX_STACK_LINE(339)
 							::nape::geom::Vec2 o = origin;		HX_STACK_VAR(o,"o");
 							HX_STACK_LINE(339)
-							{
-							}
-							HX_STACK_LINE(339)
 							o->zpp_pool = null();
 							HX_STACK_LINE(339)
 							if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -321,9 +315,6 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 						{
 							HX_STACK_LINE(339)
 							::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(339)
-							{
-							}
 							HX_STACK_LINE(339)
 							{
 								HX_STACK_LINE(339)
@@ -398,7 +389,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(340)
-					if (((_this1->_isimmutable_dyn() != null()))){
+					if (((_this1->_isimmutable != null()))){
 						HX_STACK_LINE(340)
 						_this1->_isimmutable();
 					}
@@ -409,7 +400,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 					hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 				}
 				struct _Function_4_1{
-					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &direction,::nape::geom::Vec2 &_this){
+					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &direction,::nape::geom::Vec2 _this){
 						HX_STACK_PUSH("*::closure","nape/geom/Ray.hx",340);
 						{
 							struct _Function_5_1{
@@ -426,7 +417,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 											HX_STACK_LINE(340)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = direction->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(340)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(340)
 												_this1->_validate();
 											}
@@ -451,7 +442,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 											HX_STACK_LINE(340)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = direction->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(340)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(340)
 												_this1->_validate();
 											}
@@ -480,7 +471,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(340)
-								if (((_this1->_isimmutable_dyn() != null()))){
+								if (((_this1->_isimmutable != null()))){
 									HX_STACK_LINE(340)
 									_this1->_isimmutable();
 								}
@@ -491,7 +482,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 								hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 							}
 							struct _Function_5_3{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/geom/Ray.hx",340);
 									{
 										HX_STACK_LINE(340)
@@ -504,7 +495,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 											HX_STACK_LINE(340)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(340)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(340)
 												_this1->_validate();
 											}
@@ -516,7 +507,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 								}
 							};
 							struct _Function_5_4{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/geom/Ray.hx",340);
 									{
 										HX_STACK_LINE(340)
@@ -529,7 +520,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 											HX_STACK_LINE(340)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(340)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(340)
 												_this1->_validate();
 											}
@@ -551,16 +542,13 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 									HX_STACK_LINE(340)
 									{
 									}
-									HX_STACK_LINE(340)
-									{
-									}
 								}
 								HX_STACK_LINE(340)
 								{
 									HX_STACK_LINE(340)
 									::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 									HX_STACK_LINE(340)
-									if (((_this1->_invalidate_dyn() != null()))){
+									if (((_this1->_invalidate != null()))){
 										HX_STACK_LINE(340)
 										_this1->_invalidate(_this1);
 									}
@@ -593,7 +581,7 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(340)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(340)
 								_this1->_isimmutable();
 							}
@@ -614,9 +602,6 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 							HX_STACK_LINE(340)
 							::nape::geom::Vec2 o = direction;		HX_STACK_VAR(o,"o");
 							HX_STACK_LINE(340)
-							{
-							}
-							HX_STACK_LINE(340)
 							o->zpp_pool = null();
 							HX_STACK_LINE(340)
 							if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -636,9 +621,6 @@ HX_STACK_PUSH("Ray::new","nape/geom/Ray.hx",177);
 						{
 							HX_STACK_LINE(340)
 							::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(340)
-							{
-							}
 							HX_STACK_LINE(340)
 							{
 								HX_STACK_LINE(340)
@@ -755,7 +737,7 @@ bool weak = __o_weak.Default(false);
 									HX_STACK_LINE(315)
 									::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 									HX_STACK_LINE(315)
-									if (((_this1->_validate_dyn() != null()))){
+									if (((_this1->_validate != null()))){
 										HX_STACK_LINE(315)
 										_this1->_validate();
 									}
@@ -782,7 +764,7 @@ bool weak = __o_weak.Default(false);
 									HX_STACK_LINE(315)
 									::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 									HX_STACK_LINE(315)
-									if (((_this1->_validate_dyn() != null()))){
+									if (((_this1->_validate != null()))){
 										HX_STACK_LINE(315)
 										_this1->_validate();
 									}
@@ -862,9 +844,6 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(315)
 										{
 										}
-										HX_STACK_LINE(315)
-										{
-										}
 									}
 									HX_STACK_LINE(315)
 									return ret1;
@@ -893,7 +872,7 @@ bool weak = __o_weak.Default(false);
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(315)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(315)
 								_this->_isimmutable();
 							}
@@ -917,7 +896,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(315)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(315)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(315)
 											_this->_validate();
 										}
@@ -942,7 +921,7 @@ bool weak = __o_weak.Default(false);
 										HX_STACK_LINE(315)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(315)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(315)
 											_this->_validate();
 										}
@@ -964,16 +943,13 @@ bool weak = __o_weak.Default(false);
 								HX_STACK_LINE(315)
 								{
 								}
-								HX_STACK_LINE(315)
-								{
-								}
 							}
 							HX_STACK_LINE(315)
 							{
 								HX_STACK_LINE(315)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(315)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(315)
 									_this->_invalidate(_this);
 								}
@@ -1079,7 +1055,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_maxDistance,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(254)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(254)
 					_this1->_isimmutable();
 				}
@@ -1090,7 +1066,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_maxDistance,return )
 				hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 			}
 			struct _Function_3_1{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &direction,::nape::geom::Vec2 &_this){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &direction,::nape::geom::Vec2 _this){
 					HX_STACK_PUSH("*::closure","nape/geom/Ray.hx",254);
 					{
 						struct _Function_4_1{
@@ -1107,7 +1083,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_maxDistance,return )
 										HX_STACK_LINE(254)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = direction->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(254)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(254)
 											_this1->_validate();
 										}
@@ -1132,7 +1108,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_maxDistance,return )
 										HX_STACK_LINE(254)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = direction->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(254)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(254)
 											_this1->_validate();
 										}
@@ -1161,7 +1137,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_maxDistance,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(254)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(254)
 								_this1->_isimmutable();
 							}
@@ -1172,7 +1148,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_maxDistance,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 						}
 						struct _Function_4_3{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/geom/Ray.hx",254);
 								{
 									HX_STACK_LINE(254)
@@ -1185,7 +1161,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_maxDistance,return )
 										HX_STACK_LINE(254)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(254)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(254)
 											_this1->_validate();
 										}
@@ -1197,7 +1173,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_maxDistance,return )
 							}
 						};
 						struct _Function_4_4{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/geom/Ray.hx",254);
 								{
 									HX_STACK_LINE(254)
@@ -1210,7 +1186,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_maxDistance,return )
 										HX_STACK_LINE(254)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(254)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(254)
 											_this1->_validate();
 										}
@@ -1232,16 +1208,13 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_maxDistance,return )
 								HX_STACK_LINE(254)
 								{
 								}
-								HX_STACK_LINE(254)
-								{
-								}
 							}
 							HX_STACK_LINE(254)
 							{
 								HX_STACK_LINE(254)
 								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(254)
-								if (((_this1->_invalidate_dyn() != null()))){
+								if (((_this1->_invalidate != null()))){
 									HX_STACK_LINE(254)
 									_this1->_invalidate(_this1);
 								}
@@ -1274,7 +1247,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_maxDistance,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(254)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(254)
 							_this1->_isimmutable();
 						}
@@ -1295,9 +1268,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_maxDistance,return )
 						HX_STACK_LINE(254)
 						::nape::geom::Vec2 o = direction;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(254)
-						{
-						}
-						HX_STACK_LINE(254)
 						o->zpp_pool = null();
 						HX_STACK_LINE(254)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -1317,9 +1287,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_maxDistance,return )
 					{
 						HX_STACK_LINE(254)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(254)
-						{
-						}
 						HX_STACK_LINE(254)
 						{
 							HX_STACK_LINE(254)
@@ -1412,7 +1379,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_direction,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(224)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(224)
 					_this1->_isimmutable();
 				}
@@ -1423,7 +1390,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_direction,return )
 				hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 			}
 			struct _Function_3_1{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &origin,::nape::geom::Vec2 &_this){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &origin,::nape::geom::Vec2 _this){
 					HX_STACK_PUSH("*::closure","nape/geom/Ray.hx",224);
 					{
 						struct _Function_4_1{
@@ -1440,7 +1407,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_direction,return )
 										HX_STACK_LINE(224)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = origin->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(224)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(224)
 											_this1->_validate();
 										}
@@ -1465,7 +1432,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_direction,return )
 										HX_STACK_LINE(224)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = origin->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(224)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(224)
 											_this1->_validate();
 										}
@@ -1494,7 +1461,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_direction,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(224)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(224)
 								_this1->_isimmutable();
 							}
@@ -1505,7 +1472,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_direction,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 						}
 						struct _Function_4_3{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/geom/Ray.hx",224);
 								{
 									HX_STACK_LINE(224)
@@ -1518,7 +1485,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_direction,return )
 										HX_STACK_LINE(224)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(224)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(224)
 											_this1->_validate();
 										}
@@ -1530,7 +1497,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_direction,return )
 							}
 						};
 						struct _Function_4_4{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/geom/Ray.hx",224);
 								{
 									HX_STACK_LINE(224)
@@ -1543,7 +1510,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_direction,return )
 										HX_STACK_LINE(224)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(224)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(224)
 											_this1->_validate();
 										}
@@ -1565,16 +1532,13 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_direction,return )
 								HX_STACK_LINE(224)
 								{
 								}
-								HX_STACK_LINE(224)
-								{
-								}
 							}
 							HX_STACK_LINE(224)
 							{
 								HX_STACK_LINE(224)
 								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(224)
-								if (((_this1->_invalidate_dyn() != null()))){
+								if (((_this1->_invalidate != null()))){
 									HX_STACK_LINE(224)
 									_this1->_invalidate(_this1);
 								}
@@ -1607,7 +1571,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_direction,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(224)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(224)
 							_this1->_isimmutable();
 						}
@@ -1628,9 +1592,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_direction,return )
 						HX_STACK_LINE(224)
 						::nape::geom::Vec2 o = origin;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(224)
-						{
-						}
-						HX_STACK_LINE(224)
 						o->zpp_pool = null();
 						HX_STACK_LINE(224)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -1650,9 +1611,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_direction,return )
 					{
 						HX_STACK_LINE(224)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(224)
-						{
-						}
 						HX_STACK_LINE(224)
 						{
 							HX_STACK_LINE(224)
@@ -1759,7 +1717,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_userData,return )
 	HX_STACK_LINE(391)
 	{
 		struct _Function_2_1{
-			inline static Float Block( ::nape::geom::Vec2 &start,::nape::geom::Vec2 &end){
+			inline static Float Block( ::nape::geom::Vec2 &end,::nape::geom::Vec2 &start){
 				HX_STACK_PUSH("*::closure","nape/geom/Ray.hx",391);
 				{
 					HX_STACK_LINE(391)
@@ -1782,7 +1740,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_userData,return )
 										HX_STACK_LINE(391)
 										::zpp_nape::geom::ZPP_Vec2 _this = start->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(391)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(391)
 											_this->_validate();
 										}
@@ -1807,7 +1765,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_userData,return )
 										HX_STACK_LINE(391)
 										::zpp_nape::geom::ZPP_Vec2 _this = end->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(391)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(391)
 											_this->_validate();
 										}
@@ -1834,7 +1792,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_userData,return )
 										HX_STACK_LINE(391)
 										::zpp_nape::geom::ZPP_Vec2 _this = start->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(391)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(391)
 											_this->_validate();
 										}
@@ -1859,7 +1817,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_userData,return )
 										HX_STACK_LINE(391)
 										::zpp_nape::geom::ZPP_Vec2 _this = end->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(391)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(391)
 											_this->_validate();
 										}
@@ -1880,7 +1838,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_userData,return )
 			}
 		};
 		HX_STACK_LINE(391)
-		Float maxDistance = ::Math_obj::sqrt(_Function_2_1::Block(start,end));		HX_STACK_VAR(maxDistance,"maxDistance");
+		Float maxDistance = ::Math_obj::sqrt(_Function_2_1::Block(end,start));		HX_STACK_VAR(maxDistance,"maxDistance");
 		HX_STACK_LINE(391)
 		{
 			HX_STACK_LINE(391)
@@ -1913,7 +1871,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_userData,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(396)
-				if (((_this->_isimmutable_dyn() != null()))){
+				if (((_this->_isimmutable != null()))){
 					HX_STACK_LINE(396)
 					_this->_isimmutable();
 				}
@@ -1934,9 +1892,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_userData,return )
 				HX_STACK_LINE(396)
 				::nape::geom::Vec2 o = start;		HX_STACK_VAR(o,"o");
 				HX_STACK_LINE(396)
-				{
-				}
-				HX_STACK_LINE(396)
 				o->zpp_pool = null();
 				HX_STACK_LINE(396)
 				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -1956,9 +1911,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_userData,return )
 			{
 				HX_STACK_LINE(396)
 				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(396)
-				{
-				}
 				HX_STACK_LINE(396)
 				{
 					HX_STACK_LINE(396)
@@ -2007,7 +1959,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_userData,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(407)
-				if (((_this->_isimmutable_dyn() != null()))){
+				if (((_this->_isimmutable != null()))){
 					HX_STACK_LINE(407)
 					_this->_isimmutable();
 				}
@@ -2028,9 +1980,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_userData,return )
 				HX_STACK_LINE(407)
 				::nape::geom::Vec2 o = end;		HX_STACK_VAR(o,"o");
 				HX_STACK_LINE(407)
-				{
-				}
-				HX_STACK_LINE(407)
 				o->zpp_pool = null();
 				HX_STACK_LINE(407)
 				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -2050,9 +1999,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Ray_obj,get_userData,return )
 			{
 				HX_STACK_LINE(407)
 				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(407)
-				{
-				}
 				HX_STACK_LINE(407)
 				{
 					HX_STACK_LINE(407)
@@ -2097,20 +2043,12 @@ Ray_obj::Ray_obj()
 void Ray_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(Ray);
-	HX_MARK_MEMBER_NAME(maxDistance,"maxDistance");
-	HX_MARK_MEMBER_NAME(direction,"direction");
-	HX_MARK_MEMBER_NAME(origin,"origin");
-	HX_MARK_MEMBER_NAME(userData,"userData");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	HX_MARK_END_CLASS();
 }
 
 void Ray_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(maxDistance,"maxDistance");
-	HX_VISIT_MEMBER_NAME(direction,"direction");
-	HX_VISIT_MEMBER_NAME(origin,"origin");
-	HX_VISIT_MEMBER_NAME(userData,"userData");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 }
 
@@ -2125,13 +2063,13 @@ Dynamic Ray_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"aabb") ) { return aabb_dyn(); }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"origin") ) { return inCallProp ? get_origin() : origin; }
+		if (HX_FIELD_EQ(inName,"origin") ) { return get_origin(); }
 		break;
 	case 8:
-		if (HX_FIELD_EQ(inName,"userData") ) { return inCallProp ? get_userData() : userData; }
+		if (HX_FIELD_EQ(inName,"userData") ) { return get_userData(); }
 		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"direction") ) { return inCallProp ? get_direction() : direction; }
+		if (HX_FIELD_EQ(inName,"direction") ) { return get_direction(); }
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { return zpp_inner; }
 		break;
 	case 10:
@@ -2140,7 +2078,7 @@ Dynamic Ray_obj::__Field(const ::String &inName,bool inCallProp)
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"fromSegment") ) { return fromSegment_dyn(); }
-		if (HX_FIELD_EQ(inName,"maxDistance") ) { return inCallProp ? get_maxDistance() : maxDistance; }
+		if (HX_FIELD_EQ(inName,"maxDistance") ) { return get_maxDistance(); }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"get_userData") ) { return get_userData_dyn(); }
@@ -2160,17 +2098,14 @@ Dynamic Ray_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool i
 {
 	switch(inName.length) {
 	case 6:
-		if (HX_FIELD_EQ(inName,"origin") ) { if (inCallProp) return set_origin(inValue);origin=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		break;
-	case 8:
-		if (HX_FIELD_EQ(inName,"userData") ) { userData=inValue.Cast< Dynamic >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"origin") ) { return set_origin(inValue); }
 		break;
 	case 9:
-		if (HX_FIELD_EQ(inName,"direction") ) { if (inCallProp) return set_direction(inValue);direction=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"direction") ) { return set_direction(inValue); }
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::geom::ZPP_Ray >(); return inValue; }
 		break;
 	case 11:
-		if (HX_FIELD_EQ(inName,"maxDistance") ) { if (inCallProp) return set_maxDistance(inValue);maxDistance=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"maxDistance") ) { return set_maxDistance(inValue); }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -2195,15 +2130,11 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("aabb"),
 	HX_CSTRING("set_maxDistance"),
 	HX_CSTRING("get_maxDistance"),
-	HX_CSTRING("maxDistance"),
 	HX_CSTRING("set_direction"),
 	HX_CSTRING("get_direction"),
-	HX_CSTRING("direction"),
 	HX_CSTRING("set_origin"),
 	HX_CSTRING("get_origin"),
-	HX_CSTRING("origin"),
 	HX_CSTRING("get_userData"),
-	HX_CSTRING("userData"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
@@ -2219,7 +2150,7 @@ Class Ray_obj::__mClass;
 
 void Ray_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.Ray"), hx::TCanCast< Ray_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.Ray"), hx::TCanCast< Ray_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -20,7 +20,7 @@ namespace nape{
 namespace constraint{
 
 
-class UserConstraint_obj : public ::nape::constraint::Constraint_obj{
+class HXCPP_CLASS_ATTRIBUTES  UserConstraint_obj : public ::nape::constraint::Constraint_obj{
 	public:
 		typedef ::nape::constraint::Constraint_obj super;
 		typedef UserConstraint_obj OBJ_;
@@ -85,7 +85,7 @@ class UserConstraint_obj : public ::nape::constraint::Constraint_obj{
 		virtual ::nape::geom::Vec2 __bindVec2( );
 		Dynamic __bindVec2_dyn();
 
-		::zpp_nape::constraint::ZPP_UserConstraint zpp_inner_zn; /* REM */ 
+		::zpp_nape::constraint::ZPP_UserConstraint zpp_inner_zn;
 };
 
 } // end namespace nape

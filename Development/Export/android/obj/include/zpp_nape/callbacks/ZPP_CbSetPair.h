@@ -14,7 +14,7 @@ namespace zpp_nape{
 namespace callbacks{
 
 
-class ZPP_CbSetPair_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_CbSetPair_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_CbSetPair_obj OBJ_;
@@ -52,8 +52,8 @@ class ZPP_CbSetPair_obj : public hx::Object{
 		virtual Void invalidate( );
 		Dynamic invalidate_dyn();
 
-		::zpp_nape::util::ZNPList_ZPP_InteractionListener listeners; /* REM */ 
-		bool zip_listeners; /* REM */ 
+		::zpp_nape::util::ZNPList_ZPP_InteractionListener listeners;
+		bool zip_listeners;
 		virtual bool compatible( ::zpp_nape::callbacks::ZPP_InteractionListener i);
 		Dynamic compatible_dyn();
 
@@ -63,10 +63,10 @@ class ZPP_CbSetPair_obj : public hx::Object{
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		::zpp_nape::callbacks::ZPP_CbSetPair next; /* REM */ 
-		::zpp_nape::callbacks::ZPP_CbSet b; /* REM */ 
-		::zpp_nape::callbacks::ZPP_CbSet a; /* REM */ 
-		static ::zpp_nape::callbacks::ZPP_CbSetPair zpp_pool; /* REM */ 
+		::zpp_nape::callbacks::ZPP_CbSetPair next;
+		::zpp_nape::callbacks::ZPP_CbSet b;
+		::zpp_nape::callbacks::ZPP_CbSet a;
+		static ::zpp_nape::callbacks::ZPP_CbSetPair zpp_pool;
 		static ::zpp_nape::callbacks::ZPP_CbSetPair get( ::zpp_nape::callbacks::ZPP_CbSet a,::zpp_nape::callbacks::ZPP_CbSet b);
 		static Dynamic get_dyn();
 

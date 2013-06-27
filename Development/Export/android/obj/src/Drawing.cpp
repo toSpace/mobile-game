@@ -9,6 +9,33 @@
 #ifndef INCLUDED_Main
 #include <Main.h>
 #endif
+#ifndef INCLUDED_flash_display_DisplayObject
+#include <flash/display/DisplayObject.h>
+#endif
+#ifndef INCLUDED_flash_display_DisplayObjectContainer
+#include <flash/display/DisplayObjectContainer.h>
+#endif
+#ifndef INCLUDED_flash_display_IBitmapDrawable
+#include <flash/display/IBitmapDrawable.h>
+#endif
+#ifndef INCLUDED_flash_display_InteractiveObject
+#include <flash/display/InteractiveObject.h>
+#endif
+#ifndef INCLUDED_flash_display_Sprite
+#include <flash/display/Sprite.h>
+#endif
+#ifndef INCLUDED_flash_events_Event
+#include <flash/events/Event.h>
+#endif
+#ifndef INCLUDED_flash_events_EventDispatcher
+#include <flash/events/EventDispatcher.h>
+#endif
+#ifndef INCLUDED_flash_events_IEventDispatcher
+#include <flash/events/IEventDispatcher.h>
+#endif
+#ifndef INCLUDED_flash_events_MouseEvent
+#include <flash/events/MouseEvent.h>
+#endif
 #ifndef INCLUDED_nape_dynamics_InteractionFilter
 #include <nape/dynamics/InteractionFilter.h>
 #endif
@@ -26,33 +53,6 @@
 #endif
 #ifndef INCLUDED_nape_space_Space
 #include <nape/space/Space.h>
-#endif
-#ifndef INCLUDED_native_display_DisplayObject
-#include <native/display/DisplayObject.h>
-#endif
-#ifndef INCLUDED_native_display_DisplayObjectContainer
-#include <native/display/DisplayObjectContainer.h>
-#endif
-#ifndef INCLUDED_native_display_IBitmapDrawable
-#include <native/display/IBitmapDrawable.h>
-#endif
-#ifndef INCLUDED_native_display_InteractiveObject
-#include <native/display/InteractiveObject.h>
-#endif
-#ifndef INCLUDED_native_display_Sprite
-#include <native/display/Sprite.h>
-#endif
-#ifndef INCLUDED_native_events_Event
-#include <native/events/Event.h>
-#endif
-#ifndef INCLUDED_native_events_EventDispatcher
-#include <native/events/EventDispatcher.h>
-#endif
-#ifndef INCLUDED_native_events_IEventDispatcher
-#include <native/events/IEventDispatcher.h>
-#endif
-#ifndef INCLUDED_native_events_MouseEvent
-#include <native/events/MouseEvent.h>
 #endif
 #ifndef INCLUDED_zpp_nape_util_ZNPList_ZPP_Body
 #include <zpp_nape/util/ZNPList_ZPP_Body.h>
@@ -95,11 +95,11 @@ Void Drawing_obj::init( ){
 {
 		HX_STACK_PUSH("Drawing::init","Drawing.hx",23);
 		HX_STACK_LINE(24)
-		::Main_obj::canvas->addEventListener(::native::events::MouseEvent_obj::MOUSE_DOWN,::Drawing_obj::startDraw_dyn(),null(),null(),null());
+		::Main_obj::canvas->addEventListener(::flash::events::MouseEvent_obj::MOUSE_DOWN,::Drawing_obj::startDraw_dyn(),null(),null(),null());
 		HX_STACK_LINE(25)
-		::Main_obj::canvas->addEventListener(::native::events::MouseEvent_obj::MOUSE_MOVE,::Drawing_obj::checkDraw_dyn(),null(),null(),null());
+		::Main_obj::canvas->addEventListener(::flash::events::MouseEvent_obj::MOUSE_MOVE,::Drawing_obj::checkDraw_dyn(),null(),null(),null());
 		HX_STACK_LINE(26)
-		::Main_obj::canvas->addEventListener(::native::events::MouseEvent_obj::MOUSE_UP,::Drawing_obj::stopDraw_dyn(),null(),null(),null());
+		::Main_obj::canvas->addEventListener(::flash::events::MouseEvent_obj::MOUSE_UP,::Drawing_obj::stopDraw_dyn(),null(),null(),null());
 	}
 return null();
 }
@@ -107,7 +107,7 @@ return null();
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Drawing_obj,init,(void))
 
-Void Drawing_obj::startDraw( ::native::events::MouseEvent e){
+Void Drawing_obj::startDraw( ::flash::events::MouseEvent e){
 {
 		HX_STACK_PUSH("Drawing::startDraw","Drawing.hx",29);
 		HX_STACK_ARG(e,"e");
@@ -129,7 +129,7 @@ return null();
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Drawing_obj,startDraw,(void))
 
-Void Drawing_obj::stopDraw( ::native::events::MouseEvent e){
+Void Drawing_obj::stopDraw( ::flash::events::MouseEvent e){
 {
 		HX_STACK_PUSH("Drawing::stopDraw","Drawing.hx",41);
 		HX_STACK_ARG(e,"e");
@@ -142,7 +142,7 @@ return null();
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Drawing_obj,stopDraw,(void))
 
-Void Drawing_obj::checkDraw( ::native::events::MouseEvent e){
+Void Drawing_obj::checkDraw( ::flash::events::MouseEvent e){
 {
 		HX_STACK_PUSH("Drawing::checkDraw","Drawing.hx",45);
 		HX_STACK_ARG(e,"e");
@@ -370,7 +370,7 @@ Class Drawing_obj::__mClass;
 
 void Drawing_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("Drawing"), hx::TCanCast< Drawing_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("Drawing"), hx::TCanCast< Drawing_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

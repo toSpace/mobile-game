@@ -13,7 +13,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_AABB_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_AABB_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_AABB_obj OBJ_;
@@ -72,9 +72,9 @@ class ZPP_AABB_obj : public hx::Object{
 		virtual ::nape::geom::Vec2 getmax( );
 		Dynamic getmax_dyn();
 
-		::nape::geom::Vec2 wrap_max; /* REM */ 
-		Float maxy; /* REM */ 
-		Float maxx; /* REM */ 
+		::nape::geom::Vec2 wrap_max;
+		Float maxy;
+		Float maxx;
 		virtual Void mod_min( ::zpp_nape::geom::ZPP_Vec2 min);
 		Dynamic mod_min_dyn();
 
@@ -84,9 +84,9 @@ class ZPP_AABB_obj : public hx::Object{
 		virtual ::nape::geom::Vec2 getmin( );
 		Dynamic getmin_dyn();
 
-		::nape::geom::Vec2 wrap_min; /* REM */ 
-		Float miny; /* REM */ 
-		Float minx; /* REM */ 
+		::nape::geom::Vec2 wrap_min;
+		Float miny;
+		Float minx;
 		virtual Float perimeter( );
 		Dynamic perimeter_dyn();
 
@@ -105,23 +105,23 @@ class ZPP_AABB_obj : public hx::Object{
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
-		::zpp_nape::geom::ZPP_AABB next; /* REM */ 
+		::zpp_nape::geom::ZPP_AABB next;
 		virtual ::nape::geom::AABB wrapper( );
 		Dynamic wrapper_dyn();
 
-		::nape::geom::AABB outer; /* REM */ 
+		::nape::geom::AABB outer;
 		virtual Void invalidate( );
 		Dynamic invalidate_dyn();
 
 		virtual Void validate( );
 		Dynamic validate_dyn();
 
-		bool _immutable; /* REM */ 
-		Dynamic _validate; /* REM */ 
+		bool _immutable;
+		Dynamic _validate;
 		Dynamic &_validate_dyn() { return _validate;}
-		Dynamic _invalidate; /* REM */ 
+		Dynamic _invalidate;
 		Dynamic &_invalidate_dyn() { return _invalidate;}
-		static ::zpp_nape::geom::ZPP_AABB zpp_pool; /* REM */ 
+		static ::zpp_nape::geom::ZPP_AABB zpp_pool;
 		static ::zpp_nape::geom::ZPP_AABB get( Float minx,Float miny,Float maxx,Float maxy);
 		static Dynamic get_dyn();
 

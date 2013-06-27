@@ -6,13 +6,13 @@
 #endif
 
 HX_DECLARE_CLASS0(Drawing)
+HX_DECLARE_CLASS2(flash,events,Event)
+HX_DECLARE_CLASS2(flash,events,MouseEvent)
 HX_DECLARE_CLASS2(nape,phys,Body)
 HX_DECLARE_CLASS2(nape,phys,Interactor)
-HX_DECLARE_CLASS2(native,events,Event)
-HX_DECLARE_CLASS2(native,events,MouseEvent)
 
 
-class Drawing_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Drawing_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Drawing_obj OBJ_;
@@ -32,22 +32,22 @@ class Drawing_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("Drawing"); }
 
-		static bool drawing; /* REM */ 
-		static bool erasing; /* REM */ 
-		static bool locked; /* REM */ 
-		static Float x; /* REM */ 
-		static Float y; /* REM */ 
-		static Dynamic drawList; /* REM */ 
+		static bool drawing;
+		static bool erasing;
+		static bool locked;
+		static Float x;
+		static Float y;
+		static Dynamic drawList;
 		static Void init( );
 		static Dynamic init_dyn();
 
-		static Void startDraw( ::native::events::MouseEvent e);
+		static Void startDraw( ::flash::events::MouseEvent e);
 		static Dynamic startDraw_dyn();
 
-		static Void stopDraw( ::native::events::MouseEvent e);
+		static Void stopDraw( ::flash::events::MouseEvent e);
 		static Dynamic stopDraw_dyn();
 
-		static Void checkDraw( ::native::events::MouseEvent e);
+		static Void checkDraw( ::flash::events::MouseEvent e);
 		static Dynamic checkDraw_dyn();
 
 		static bool checkActive( ::nape::phys::Body b);

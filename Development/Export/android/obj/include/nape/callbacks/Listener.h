@@ -14,7 +14,7 @@ namespace nape{
 namespace callbacks{
 
 
-class Listener_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Listener_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Listener_obj OBJ_;
@@ -43,26 +43,22 @@ class Listener_obj : public hx::Object{
 		virtual ::nape::space::Space get_space( );
 		Dynamic get_space_dyn();
 
-		::nape::space::Space space; /* REM */ 
 		virtual int set_precedence( int precedence);
 		Dynamic set_precedence_dyn();
 
 		virtual int get_precedence( );
 		Dynamic get_precedence_dyn();
 
-		int precedence; /* REM */ 
 		virtual ::nape::callbacks::CbEvent set_event( ::nape::callbacks::CbEvent event);
 		Dynamic set_event_dyn();
 
 		virtual ::nape::callbacks::CbEvent get_event( );
 		Dynamic get_event_dyn();
 
-		::nape::callbacks::CbEvent event; /* REM */ 
 		virtual ::nape::callbacks::ListenerType get_type( );
 		Dynamic get_type_dyn();
 
-		::nape::callbacks::ListenerType type; /* REM */ 
-		::zpp_nape::callbacks::ZPP_Listener zpp_inner; /* REM */ 
+		::zpp_nape::callbacks::ZPP_Listener zpp_inner;
 };
 
 } // end namespace nape

@@ -10,7 +10,7 @@ namespace cpp{
 namespace rtti{
 
 
-class FieldNumericIntegerLookup_obj : public hx::Interface{
+class HXCPP_CLASS_ATTRIBUTES  FieldNumericIntegerLookup_obj : public hx::Interface{
 	public:
 		typedef hx::Interface super;
 		typedef FieldNumericIntegerLookup_obj OBJ_;

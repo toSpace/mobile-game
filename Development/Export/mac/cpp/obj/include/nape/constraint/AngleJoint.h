@@ -18,7 +18,7 @@ namespace nape{
 namespace constraint{
 
 
-class AngleJoint_obj : public ::nape::constraint::Constraint_obj{
+class HXCPP_CLASS_ATTRIBUTES  AngleJoint_obj : public ::nape::constraint::Constraint_obj{
 	public:
 		typedef ::nape::constraint::Constraint_obj super;
 		typedef AngleJoint_obj OBJ_;
@@ -53,36 +53,31 @@ class AngleJoint_obj : public ::nape::constraint::Constraint_obj{
 		virtual Float get_ratio( );
 		Dynamic get_ratio_dyn();
 
-		Float ratio; /* REM */ 
 		virtual Float set_jointMax( Float jointMax);
 		Dynamic set_jointMax_dyn();
 
 		virtual Float get_jointMax( );
 		Dynamic get_jointMax_dyn();
 
-		Float jointMax; /* REM */ 
 		virtual Float set_jointMin( Float jointMin);
 		Dynamic set_jointMin_dyn();
 
 		virtual Float get_jointMin( );
 		Dynamic get_jointMin_dyn();
 
-		Float jointMin; /* REM */ 
 		virtual ::nape::phys::Body set_body2( ::nape::phys::Body body2);
 		Dynamic set_body2_dyn();
 
 		virtual ::nape::phys::Body get_body2( );
 		Dynamic get_body2_dyn();
 
-		::nape::phys::Body body2; /* REM */ 
 		virtual ::nape::phys::Body set_body1( ::nape::phys::Body body1);
 		Dynamic set_body1_dyn();
 
 		virtual ::nape::phys::Body get_body1( );
 		Dynamic get_body1_dyn();
 
-		::nape::phys::Body body1; /* REM */ 
-		::zpp_nape::constraint::ZPP_AngleJoint zpp_inner_zn; /* REM */ 
+		::zpp_nape::constraint::ZPP_AngleJoint zpp_inner_zn;
 };
 
 } // end namespace nape

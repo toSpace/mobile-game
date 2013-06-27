@@ -13,7 +13,7 @@ namespace nape{
 namespace geom{
 
 
-class MarchingSquares_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  MarchingSquares_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef MarchingSquares_obj OBJ_;

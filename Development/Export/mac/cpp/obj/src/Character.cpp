@@ -91,7 +91,7 @@ Void Character_obj::walk( ::nape::phys::Body body,Float speed,Float velocity){
 						HX_STACK_LINE(17)
 						::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 						HX_STACK_LINE(17)
-						if (((_this1->_validate_dyn() != null()))){
+						if (((_this1->_validate != null()))){
 							HX_STACK_LINE(17)
 							_this1->_validate();
 						}
@@ -138,13 +138,13 @@ Void Character_obj::walk( ::nape::phys::Body body,Float speed,Float velocity){
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(18)
-					if (((_this1->_isimmutable_dyn() != null()))){
+					if (((_this1->_isimmutable != null()))){
 						HX_STACK_LINE(18)
 						_this1->_isimmutable();
 					}
 				}
 				struct _Function_3_1{
-					inline static Float Block( ::nape::geom::Vec2 &_this){
+					inline static Float Block( ::nape::geom::Vec2 _this){
 						HX_STACK_PUSH("*::closure","Character.hx",18);
 						{
 							HX_STACK_LINE(18)
@@ -157,7 +157,7 @@ Void Character_obj::walk( ::nape::phys::Body body,Float speed,Float velocity){
 								HX_STACK_LINE(18)
 								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(18)
-								if (((_this1->_validate_dyn() != null()))){
+								if (((_this1->_validate != null()))){
 									HX_STACK_LINE(18)
 									_this1->_validate();
 								}
@@ -182,7 +182,7 @@ Void Character_obj::walk( ::nape::phys::Body body,Float speed,Float velocity){
 						HX_STACK_LINE(18)
 						::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 						HX_STACK_LINE(18)
-						if (((_this1->_invalidate_dyn() != null()))){
+						if (((_this1->_invalidate != null()))){
 							HX_STACK_LINE(18)
 							_this1->_invalidate(_this1);
 						}
@@ -201,7 +201,7 @@ Void Character_obj::walk( ::nape::phys::Body body,Float speed,Float velocity){
 					HX_STACK_LINE(18)
 					::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 					HX_STACK_LINE(18)
-					if (((_this1->_validate_dyn() != null()))){
+					if (((_this1->_validate != null()))){
 						HX_STACK_LINE(18)
 						_this1->_validate();
 					}
@@ -285,7 +285,7 @@ Class Character_obj::__mClass;
 
 void Character_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("Character"), hx::TCanCast< Character_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("Character"), hx::TCanCast< Character_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

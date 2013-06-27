@@ -196,20 +196,12 @@ RayResult_obj::RayResult_obj()
 void RayResult_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(RayResult);
-	HX_MARK_MEMBER_NAME(shape,"shape");
-	HX_MARK_MEMBER_NAME(inner,"inner");
-	HX_MARK_MEMBER_NAME(distance,"distance");
-	HX_MARK_MEMBER_NAME(normal,"normal");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	HX_MARK_END_CLASS();
 }
 
 void RayResult_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(shape,"shape");
-	HX_VISIT_MEMBER_NAME(inner,"inner");
-	HX_VISIT_MEMBER_NAME(distance,"distance");
-	HX_VISIT_MEMBER_NAME(normal,"normal");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 }
 
@@ -217,18 +209,18 @@ Dynamic RayResult_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"shape") ) { return inCallProp ? get_shape() : shape; }
-		if (HX_FIELD_EQ(inName,"inner") ) { return inCallProp ? get_inner() : inner; }
+		if (HX_FIELD_EQ(inName,"shape") ) { return get_shape(); }
+		if (HX_FIELD_EQ(inName,"inner") ) { return get_inner(); }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"normal") ) { return inCallProp ? get_normal() : normal; }
+		if (HX_FIELD_EQ(inName,"normal") ) { return get_normal(); }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"dispose") ) { return dispose_dyn(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
-		if (HX_FIELD_EQ(inName,"distance") ) { return inCallProp ? get_distance() : distance; }
+		if (HX_FIELD_EQ(inName,"distance") ) { return get_distance(); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"get_shape") ) { return get_shape_dyn(); }
@@ -247,16 +239,6 @@ Dynamic RayResult_obj::__Field(const ::String &inName,bool inCallProp)
 Dynamic RayResult_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
 	switch(inName.length) {
-	case 5:
-		if (HX_FIELD_EQ(inName,"shape") ) { shape=inValue.Cast< ::nape::shape::Shape >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"inner") ) { inner=inValue.Cast< bool >(); return inValue; }
-		break;
-	case 6:
-		if (HX_FIELD_EQ(inName,"normal") ) { normal=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		break;
-	case 8:
-		if (HX_FIELD_EQ(inName,"distance") ) { distance=inValue.Cast< Float >(); return inValue; }
-		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::geom::ZPP_ConvexRayResult >(); return inValue; }
 	}
@@ -280,13 +262,9 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("toString"),
 	HX_CSTRING("dispose"),
 	HX_CSTRING("get_shape"),
-	HX_CSTRING("shape"),
 	HX_CSTRING("get_inner"),
-	HX_CSTRING("inner"),
 	HX_CSTRING("get_distance"),
-	HX_CSTRING("distance"),
 	HX_CSTRING("get_normal"),
-	HX_CSTRING("normal"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
@@ -302,7 +280,7 @@ Class RayResult_obj::__mClass;
 
 void RayResult_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.RayResult"), hx::TCanCast< RayResult_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.RayResult"), hx::TCanCast< RayResult_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

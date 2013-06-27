@@ -5,7 +5,6 @@
 #include <hxcpp.h>
 #endif
 
-HX_DECLARE_CLASS0(List)
 HX_DECLARE_CLASS0(Xml)
 HX_DECLARE_CLASS3(haxe,xml,_Fast,NodeListAccess)
 namespace haxe{
@@ -13,7 +12,7 @@ namespace xml{
 namespace _Fast{
 
 
-class NodeListAccess_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  NodeListAccess_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef NodeListAccess_obj OBJ_;
@@ -34,10 +33,7 @@ class NodeListAccess_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("NodeListAccess"); }
 
-		virtual ::List resolve( ::String name);
-		Dynamic resolve_dyn();
-
-		::Xml __x; /* REM */ 
+		::Xml __x;
 };
 
 } // end namespace haxe

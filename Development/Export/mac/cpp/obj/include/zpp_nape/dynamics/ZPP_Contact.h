@@ -14,7 +14,7 @@ namespace zpp_nape{
 namespace dynamics{
 
 
-class ZPP_Contact_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Contact_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Contact_obj OBJ_;
@@ -118,50 +118,50 @@ class ZPP_Contact_obj : public hx::Object{
 		virtual Void setbegin( ::zpp_nape::dynamics::ZPP_Contact i);
 		Dynamic setbegin_dyn();
 
-		int length; /* REM */ 
-		bool pushmod; /* REM */ 
-		bool modified; /* REM */ 
-		bool _inuse; /* REM */ 
+		int length;
+		bool pushmod;
+		bool modified;
+		bool _inuse;
 		virtual ::zpp_nape::dynamics::ZPP_Contact begin( );
 		Dynamic begin_dyn();
 
 		virtual ::zpp_nape::dynamics::ZPP_Contact elem( );
 		Dynamic elem_dyn();
 
-		::zpp_nape::dynamics::ZPP_Contact next; /* REM */ 
+		::zpp_nape::dynamics::ZPP_Contact next;
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		Float elasticity; /* REM */ 
-		Float dist; /* REM */ 
-		bool fresh; /* REM */ 
-		int hash; /* REM */ 
-		int stamp; /* REM */ 
-		bool posOnly; /* REM */ 
-		bool active; /* REM */ 
-		::zpp_nape::dynamics::ZPP_IContact inner; /* REM */ 
-		::zpp_nape::dynamics::ZPP_Arbiter arbiter; /* REM */ 
+		Float elasticity;
+		Float dist;
+		bool fresh;
+		int hash;
+		int stamp;
+		bool posOnly;
+		bool active;
+		::zpp_nape::dynamics::ZPP_IContact inner;
+		::zpp_nape::dynamics::ZPP_Arbiter arbiter;
 		virtual bool inactiveme( );
 		Dynamic inactiveme_dyn();
 
 		virtual Void getposition( );
 		Dynamic getposition_dyn();
 
-		::nape::geom::Vec2 wrap_position; /* REM */ 
+		::nape::geom::Vec2 wrap_position;
 		virtual Void position_validate( );
 		Dynamic position_validate_dyn();
 
-		Float py; /* REM */ 
-		Float px; /* REM */ 
+		Float py;
+		Float px;
 		virtual ::nape::dynamics::Contact wrapper( );
 		Dynamic wrapper_dyn();
 
-		::nape::dynamics::Contact outer; /* REM */ 
-		static bool internal; /* REM */ 
-		static ::zpp_nape::dynamics::ZPP_Contact zpp_pool; /* REM */ 
+		::nape::dynamics::Contact outer;
+		static bool internal;
+		static ::zpp_nape::dynamics::ZPP_Contact zpp_pool;
 };
 
 } // end namespace zpp_nape

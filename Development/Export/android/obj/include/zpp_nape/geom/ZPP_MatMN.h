@@ -11,7 +11,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_MatMN_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_MatMN_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_MatMN_obj OBJ_;
@@ -31,10 +31,10 @@ class ZPP_MatMN_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("ZPP_MatMN"); }
 
-		Array< Float > x; /* REM */ 
-		int n; /* REM */ 
-		int m; /* REM */ 
-		::nape::geom::MatMN outer; /* REM */ 
+		Array< Float > x;
+		int n;
+		int m;
+		::nape::geom::MatMN outer;
 };
 
 } // end namespace zpp_nape

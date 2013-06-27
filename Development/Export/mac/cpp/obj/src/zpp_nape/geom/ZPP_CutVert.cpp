@@ -254,7 +254,7 @@ Class ZPP_CutVert_obj::__mClass;
 
 void ZPP_CutVert_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_CutVert"), hx::TCanCast< ZPP_CutVert_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_CutVert"), hx::TCanCast< ZPP_CutVert_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

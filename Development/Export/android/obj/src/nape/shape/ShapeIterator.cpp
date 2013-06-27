@@ -280,7 +280,7 @@ Class ShapeIterator_obj::__mClass;
 
 void ShapeIterator_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.shape.ShapeIterator"), hx::TCanCast< ShapeIterator_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.shape.ShapeIterator"), hx::TCanCast< ShapeIterator_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

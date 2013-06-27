@@ -11,11 +11,11 @@ namespace util{
 
 Void ZNPNode_ZPP_SimplifyP_obj::__construct()
 {
-HX_STACK_PUSH("ZNPNode_ZPP_SimplifyP::new","zpp_nape/util/Lists.hx",15545);
+HX_STACK_PUSH("ZNPNode_ZPP_SimplifyP::new","zpp_nape/util/Lists.hx",15502);
 {
-	HX_STACK_LINE(15579)
+	HX_STACK_LINE(15536)
 	this->elt = null();
-	HX_STACK_LINE(15570)
+	HX_STACK_LINE(15527)
 	this->next = null();
 }
 ;
@@ -36,9 +36,9 @@ Dynamic ZNPNode_ZPP_SimplifyP_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 ::zpp_nape::geom::ZPP_SimplifyP ZNPNode_ZPP_SimplifyP_obj::elem( ){
-	HX_STACK_PUSH("ZNPNode_ZPP_SimplifyP::elem","zpp_nape/util/Lists.hx",15583);
+	HX_STACK_PUSH("ZNPNode_ZPP_SimplifyP::elem","zpp_nape/util/Lists.hx",15540);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(15583)
+	HX_STACK_LINE(15540)
 	return this->elt;
 }
 
@@ -47,9 +47,9 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPNode_ZPP_SimplifyP_obj,elem,return )
 
 Void ZNPNode_ZPP_SimplifyP_obj::free( ){
 {
-		HX_STACK_PUSH("ZNPNode_ZPP_SimplifyP::free","zpp_nape/util/Lists.hx",15576);
+		HX_STACK_PUSH("ZNPNode_ZPP_SimplifyP::free","zpp_nape/util/Lists.hx",15533);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(15576)
+		HX_STACK_LINE(15533)
 		this->elt = null();
 	}
 return null();
@@ -60,7 +60,7 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPNode_ZPP_SimplifyP_obj,free,(void))
 
 Void ZNPNode_ZPP_SimplifyP_obj::alloc( ){
 {
-		HX_STACK_PUSH("ZNPNode_ZPP_SimplifyP::alloc","zpp_nape/util/Lists.hx",15573);
+		HX_STACK_PUSH("ZNPNode_ZPP_SimplifyP::alloc","zpp_nape/util/Lists.hx",15530);
 		HX_STACK_THIS(this);
 	}
 return null();
@@ -158,7 +158,7 @@ Class ZNPNode_ZPP_SimplifyP_obj::__mClass;
 
 void ZNPNode_ZPP_SimplifyP_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPNode_ZPP_SimplifyP"), hx::TCanCast< ZNPNode_ZPP_SimplifyP_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPNode_ZPP_SimplifyP"), hx::TCanCast< ZNPNode_ZPP_SimplifyP_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

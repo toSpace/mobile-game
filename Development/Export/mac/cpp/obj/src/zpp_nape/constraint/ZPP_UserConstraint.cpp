@@ -1,10 +1,10 @@
 #include <hxcpp.h>
 
-#ifndef INCLUDED_hxMath
-#include <hxMath.h>
-#endif
 #ifndef INCLUDED_Std
 #include <Std.h>
+#endif
+#ifndef INCLUDED_hxMath
+#include <hxMath.h>
 #endif
 #ifndef INCLUDED_nape_Config
 #include <nape/Config.h>
@@ -105,7 +105,7 @@ HX_STACK_PUSH("ZPP_UserConstraint::new","zpp_nape/constraint/UserConstraint.hx",
 	HX_STACK_LINE(261)
 	super::__construct();
 	HX_STACK_LINE(262)
-	this->bodies = Array_obj< ::zpp_nape::constraint::ZPP_UserBody >::__new();
+	this->bodies = Array_obj< ::Dynamic >::__new();
 	HX_STACK_LINE(265)
 	this->dim = dim;
 	HX_STACK_LINE(266)
@@ -231,11 +231,11 @@ bool ZPP_UserConstraint_obj::applyImpulsePos( ){
 	{
 		HX_STACK_LINE(544)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		Array< ::zpp_nape::constraint::ZPP_UserBody > _g1 = this->bodies;		HX_STACK_VAR(_g1,"_g1");
+		Array< ::Dynamic > _g1 = this->bodies;		HX_STACK_VAR(_g1,"_g1");
 		HX_STACK_LINE(544)
 		while(((_g < _g1->length))){
 			HX_STACK_LINE(544)
-			::zpp_nape::constraint::ZPP_UserBody bs = _g1->__get(_g);		HX_STACK_VAR(bs,"bs");
+			::zpp_nape::constraint::ZPP_UserBody bs = _g1->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_UserBody >();		HX_STACK_VAR(bs,"bs");
 			HX_STACK_LINE(544)
 			++(_g);
 			HX_STACK_LINE(545)
@@ -246,9 +246,6 @@ bool ZPP_UserConstraint_obj::applyImpulsePos( ){
 			{
 				HX_STACK_LINE(548)
 				Float t = b->imass;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(549)
-				{
-				}
 				struct _Function_4_1{
 					inline static Float Block( ::zpp_nape::constraint::ZPP_UserConstraint_obj *__this){
 						HX_STACK_PUSH("*::closure","zpp_nape/constraint/UserConstraint.hx",557);
@@ -265,7 +262,7 @@ bool ZPP_UserConstraint_obj::applyImpulsePos( ){
 								HX_STACK_LINE(557)
 								::zpp_nape::geom::ZPP_Vec3 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(557)
-								if (((_this1->_validate_dyn() != null()))){
+								if (((_this1->_validate != null()))){
 									HX_STACK_LINE(557)
 									_this1->_validate();
 								}
@@ -294,7 +291,7 @@ bool ZPP_UserConstraint_obj::applyImpulsePos( ){
 								HX_STACK_LINE(558)
 								::zpp_nape::geom::ZPP_Vec3 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(558)
-								if (((_this1->_validate_dyn() != null()))){
+								if (((_this1->_validate != null()))){
 									HX_STACK_LINE(558)
 									_this1->_validate();
 								}
@@ -326,7 +323,7 @@ bool ZPP_UserConstraint_obj::applyImpulsePos( ){
 								HX_STACK_LINE(560)
 								::zpp_nape::geom::ZPP_Vec3 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(560)
-								if (((_this1->_validate_dyn() != null()))){
+								if (((_this1->_validate != null()))){
 									HX_STACK_LINE(560)
 									_this1->_validate();
 								}
@@ -347,9 +344,6 @@ bool ZPP_UserConstraint_obj::applyImpulsePos( ){
 					b->axisx = ::Math_obj::sin(b->rot);
 					HX_STACK_LINE(560)
 					b->axisy = ::Math_obj::cos(b->rot);
-					HX_STACK_LINE(560)
-					{
-					}
 					HX_STACK_LINE(560)
 					Dynamic();
 				}
@@ -444,11 +438,11 @@ bool ZPP_UserConstraint_obj::applyImpulseVel( ){
 	{
 		HX_STACK_LINE(513)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		Array< ::zpp_nape::constraint::ZPP_UserBody > _g1 = this->bodies;		HX_STACK_VAR(_g1,"_g1");
+		Array< ::Dynamic > _g1 = this->bodies;		HX_STACK_VAR(_g1,"_g1");
 		HX_STACK_LINE(513)
 		while(((_g < _g1->length))){
 			HX_STACK_LINE(513)
-			::zpp_nape::constraint::ZPP_UserBody bs = _g1->__get(_g);		HX_STACK_VAR(bs,"bs");
+			::zpp_nape::constraint::ZPP_UserBody bs = _g1->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_UserBody >();		HX_STACK_VAR(bs,"bs");
 			HX_STACK_LINE(513)
 			++(_g);
 			HX_STACK_LINE(514)
@@ -459,9 +453,6 @@ bool ZPP_UserConstraint_obj::applyImpulseVel( ){
 			{
 				HX_STACK_LINE(517)
 				Float t = b->imass;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(518)
-				{
-				}
 				struct _Function_4_1{
 					inline static Float Block( ::zpp_nape::constraint::ZPP_UserConstraint_obj *__this){
 						HX_STACK_PUSH("*::closure","zpp_nape/constraint/UserConstraint.hx",526);
@@ -478,7 +469,7 @@ bool ZPP_UserConstraint_obj::applyImpulseVel( ){
 								HX_STACK_LINE(526)
 								::zpp_nape::geom::ZPP_Vec3 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(526)
-								if (((_this1->_validate_dyn() != null()))){
+								if (((_this1->_validate != null()))){
 									HX_STACK_LINE(526)
 									_this1->_validate();
 								}
@@ -507,7 +498,7 @@ bool ZPP_UserConstraint_obj::applyImpulseVel( ){
 								HX_STACK_LINE(527)
 								::zpp_nape::geom::ZPP_Vec3 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(527)
-								if (((_this1->_validate_dyn() != null()))){
+								if (((_this1->_validate != null()))){
 									HX_STACK_LINE(527)
 									_this1->_validate();
 								}
@@ -537,7 +528,7 @@ bool ZPP_UserConstraint_obj::applyImpulseVel( ){
 							HX_STACK_LINE(529)
 							::zpp_nape::geom::ZPP_Vec3 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 							HX_STACK_LINE(529)
-							if (((_this1->_validate_dyn() != null()))){
+							if (((_this1->_validate != null()))){
 								HX_STACK_LINE(529)
 								_this1->_validate();
 							}
@@ -563,11 +554,11 @@ Void ZPP_UserConstraint_obj::warmStart( ){
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(478)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		Array< ::zpp_nape::constraint::ZPP_UserBody > _g1 = this->bodies;		HX_STACK_VAR(_g1,"_g1");
+		Array< ::Dynamic > _g1 = this->bodies;		HX_STACK_VAR(_g1,"_g1");
 		HX_STACK_LINE(478)
 		while(((_g < _g1->length))){
 			HX_STACK_LINE(478)
-			::zpp_nape::constraint::ZPP_UserBody bs = _g1->__get(_g);		HX_STACK_VAR(bs,"bs");
+			::zpp_nape::constraint::ZPP_UserBody bs = _g1->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_UserBody >();		HX_STACK_VAR(bs,"bs");
 			HX_STACK_LINE(478)
 			++(_g);
 			HX_STACK_LINE(479)
@@ -578,9 +569,6 @@ Void ZPP_UserConstraint_obj::warmStart( ){
 			{
 				HX_STACK_LINE(482)
 				Float t = b->imass;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(483)
-				{
-				}
 				struct _Function_3_1{
 					inline static Float Block( ::zpp_nape::constraint::ZPP_UserConstraint_obj *__this){
 						HX_STACK_PUSH("*::closure","zpp_nape/constraint/UserConstraint.hx",491);
@@ -597,7 +585,7 @@ Void ZPP_UserConstraint_obj::warmStart( ){
 								HX_STACK_LINE(491)
 								::zpp_nape::geom::ZPP_Vec3 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(491)
-								if (((_this1->_validate_dyn() != null()))){
+								if (((_this1->_validate != null()))){
 									HX_STACK_LINE(491)
 									_this1->_validate();
 								}
@@ -626,7 +614,7 @@ Void ZPP_UserConstraint_obj::warmStart( ){
 								HX_STACK_LINE(492)
 								::zpp_nape::geom::ZPP_Vec3 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(492)
-								if (((_this1->_validate_dyn() != null()))){
+								if (((_this1->_validate != null()))){
 									HX_STACK_LINE(492)
 									_this1->_validate();
 								}
@@ -656,7 +644,7 @@ Void ZPP_UserConstraint_obj::warmStart( ){
 							HX_STACK_LINE(494)
 							::zpp_nape::geom::ZPP_Vec3 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 							HX_STACK_LINE(494)
-							if (((_this1->_validate_dyn() != null()))){
+							if (((_this1->_validate != null()))){
 								HX_STACK_LINE(494)
 								_this1->_validate();
 							}
@@ -701,7 +689,7 @@ bool ZPP_UserConstraint_obj::preStep( Float dt){
 		HX_STACK_LINE(453)
 		Float biasCoef;		HX_STACK_VAR(biasCoef,"biasCoef");
 		struct _Function_2_1{
-			inline static Float Block( ::zpp_nape::constraint::ZPP_UserConstraint_obj *__this,Float &biasCoef,Float &dt){
+			inline static Float Block( ::zpp_nape::constraint::ZPP_UserConstraint_obj *__this,Float &dt,Float &biasCoef){
 				HX_STACK_PUSH("*::closure","zpp_nape/constraint/UserConstraint.hx",454);
 				{
 					HX_STACK_LINE(455)
@@ -721,7 +709,7 @@ bool ZPP_UserConstraint_obj::preStep( Float dt){
 			}
 		};
 		HX_STACK_LINE(454)
-		this->soft = _Function_2_1::Block(this,biasCoef,dt);
+		this->soft = _Function_2_1::Block(this,dt,biasCoef);
 		HX_STACK_LINE(462)
 		this->outer_zn->__position(this->bias);
 		HX_STACK_LINE(463)
@@ -1077,7 +1065,7 @@ bool ZPP_UserConstraint_obj::pair_exists( int id,int di){
 			HX_STACK_LINE(359)
 			int bi = (_g)++;		HX_STACK_VAR(bi,"bi");
 			HX_STACK_LINE(360)
-			::zpp_nape::phys::ZPP_Body b = this->bodies->__get(bi)->body;		HX_STACK_VAR(b,"b");
+			::zpp_nape::phys::ZPP_Body b = this->bodies->__get(bi).StaticCast< ::zpp_nape::constraint::ZPP_UserBody >()->body;		HX_STACK_VAR(b,"b");
 			HX_STACK_LINE(361)
 			{
 				HX_STACK_LINE(361)
@@ -1087,7 +1075,7 @@ bool ZPP_UserConstraint_obj::pair_exists( int id,int di){
 					HX_STACK_LINE(361)
 					int ci = (_g1)++;		HX_STACK_VAR(ci,"ci");
 					HX_STACK_LINE(362)
-					::zpp_nape::phys::ZPP_Body c = this->bodies->__get(ci)->body;		HX_STACK_VAR(c,"c");
+					::zpp_nape::phys::ZPP_Body c = this->bodies->__get(ci).StaticCast< ::zpp_nape::constraint::ZPP_UserBody >()->body;		HX_STACK_VAR(c,"c");
 					HX_STACK_LINE(363)
 					if (((bool((bool((b->id == id)) && bool((c->id == di)))) || bool((bool((b->id == di)) && bool((c->id == id))))))){
 						HX_STACK_LINE(364)
@@ -1115,11 +1103,11 @@ Void ZPP_UserConstraint_obj::forest( ){
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(305)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		Array< ::zpp_nape::constraint::ZPP_UserBody > _g1 = this->bodies;		HX_STACK_VAR(_g1,"_g1");
+		Array< ::Dynamic > _g1 = this->bodies;		HX_STACK_VAR(_g1,"_g1");
 		HX_STACK_LINE(305)
 		while(((_g < _g1->length))){
 			HX_STACK_LINE(305)
-			::zpp_nape::constraint::ZPP_UserBody b = _g1->__get(_g);		HX_STACK_VAR(b,"b");
+			::zpp_nape::constraint::ZPP_UserBody b = _g1->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_UserBody >();		HX_STACK_VAR(b,"b");
 			HX_STACK_LINE(305)
 			++(_g);
 			HX_STACK_LINE(306)
@@ -1230,11 +1218,11 @@ Void ZPP_UserConstraint_obj::wake_connected( ){
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(300)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		Array< ::zpp_nape::constraint::ZPP_UserBody > _g1 = this->bodies;		HX_STACK_VAR(_g1,"_g1");
+		Array< ::Dynamic > _g1 = this->bodies;		HX_STACK_VAR(_g1,"_g1");
 		HX_STACK_LINE(300)
 		while(((_g < _g1->length))){
 			HX_STACK_LINE(300)
-			::zpp_nape::constraint::ZPP_UserBody b = _g1->__get(_g);		HX_STACK_VAR(b,"b");
+			::zpp_nape::constraint::ZPP_UserBody b = _g1->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_UserBody >();		HX_STACK_VAR(b,"b");
 			HX_STACK_LINE(300)
 			++(_g);
 			HX_STACK_LINE(301)
@@ -1256,11 +1244,11 @@ Void ZPP_UserConstraint_obj::validate( ){
 		{
 			HX_STACK_LINE(296)
 			int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-			Array< ::zpp_nape::constraint::ZPP_UserBody > _g1 = this->bodies;		HX_STACK_VAR(_g1,"_g1");
+			Array< ::Dynamic > _g1 = this->bodies;		HX_STACK_VAR(_g1,"_g1");
 			HX_STACK_LINE(296)
 			while(((_g < _g1->length))){
 				HX_STACK_LINE(296)
-				::zpp_nape::constraint::ZPP_UserBody b = _g1->__get(_g);		HX_STACK_VAR(b,"b");
+				::zpp_nape::constraint::ZPP_UserBody b = _g1->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_UserBody >();		HX_STACK_VAR(b,"b");
 				HX_STACK_LINE(296)
 				++(_g);
 				HX_STACK_LINE(296)
@@ -1277,7 +1265,7 @@ return null();
 }
 
 
-::nape::constraint::Constraint ZPP_UserConstraint_obj::copy( Array< ::zpp_nape::constraint::ZPP_CopyHelper > dict,Array< ::zpp_nape::constraint::ZPP_CopyHelper > todo){
+::nape::constraint::Constraint ZPP_UserConstraint_obj::copy( Array< ::Dynamic > dict,Array< ::Dynamic > todo){
 	HX_STACK_PUSH("ZPP_UserConstraint::copy","zpp_nape/constraint/UserConstraint.hx",254);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(dict,"dict");
@@ -1299,11 +1287,11 @@ Void ZPP_UserConstraint_obj::inactiveBodies( ){
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(249)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		Array< ::zpp_nape::constraint::ZPP_UserBody > _g1 = this->bodies;		HX_STACK_VAR(_g1,"_g1");
+		Array< ::Dynamic > _g1 = this->bodies;		HX_STACK_VAR(_g1,"_g1");
 		HX_STACK_LINE(249)
 		while(((_g < _g1->length))){
 			HX_STACK_LINE(249)
-			::zpp_nape::constraint::ZPP_UserBody b = _g1->__get(_g);		HX_STACK_VAR(b,"b");
+			::zpp_nape::constraint::ZPP_UserBody b = _g1->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_UserBody >();		HX_STACK_VAR(b,"b");
 			HX_STACK_LINE(249)
 			++(_g);
 			HX_STACK_LINE(250)
@@ -1323,11 +1311,11 @@ Void ZPP_UserConstraint_obj::activeBodies( ){
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(244)
 		int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-		Array< ::zpp_nape::constraint::ZPP_UserBody > _g1 = this->bodies;		HX_STACK_VAR(_g1,"_g1");
+		Array< ::Dynamic > _g1 = this->bodies;		HX_STACK_VAR(_g1,"_g1");
 		HX_STACK_LINE(244)
 		while(((_g < _g1->length))){
 			HX_STACK_LINE(244)
-			::zpp_nape::constraint::ZPP_UserBody b = _g1->__get(_g);		HX_STACK_VAR(b,"b");
+			::zpp_nape::constraint::ZPP_UserBody b = _g1->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_UserBody >();		HX_STACK_VAR(b,"b");
 			HX_STACK_LINE(244)
 			++(_g);
 			HX_STACK_LINE(245)
@@ -1376,9 +1364,6 @@ bool ZPP_UserConstraint_obj::remBody( ::zpp_nape::phys::ZPP_Body b){
 	HX_STACK_PUSH("ZPP_UserConstraint::remBody","zpp_nape/constraint/UserConstraint.hx",207);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(b,"b");
-	HX_STACK_LINE(208)
-	{
-	}
 	HX_STACK_LINE(216)
 	::zpp_nape::constraint::ZPP_UserBody match = null();		HX_STACK_VAR(match,"match");
 	HX_STACK_LINE(217)
@@ -1388,7 +1373,7 @@ bool ZPP_UserConstraint_obj::remBody( ::zpp_nape::phys::ZPP_Body b){
 	HX_STACK_LINE(219)
 	while(((i < bl))){
 		HX_STACK_LINE(220)
-		::zpp_nape::constraint::ZPP_UserBody x = this->bodies->__get(i);		HX_STACK_VAR(x,"x");
+		::zpp_nape::constraint::ZPP_UserBody x = this->bodies->__get(i).StaticCast< ::zpp_nape::constraint::ZPP_UserBody >();		HX_STACK_VAR(x,"x");
 		HX_STACK_LINE(221)
 		if (((x->body == b))){
 			HX_STACK_LINE(222)
@@ -1398,10 +1383,10 @@ bool ZPP_UserConstraint_obj::remBody( ::zpp_nape::phys::ZPP_Body b){
 				HX_STACK_LINE(224)
 				if (((bl > (int)0))){
 					HX_STACK_LINE(224)
-					this->bodies[i] = this->bodies->__get((bl - (int)1));
+					this->bodies[i] = this->bodies->__get((bl - (int)1)).StaticCast< ::zpp_nape::constraint::ZPP_UserBody >();
 				}
 				HX_STACK_LINE(225)
-				this->bodies->pop();
+				this->bodies->pop().StaticCast< ::zpp_nape::constraint::ZPP_UserBody >();
 				HX_STACK_LINE(226)
 				if (((bool(this->active) && bool((this->space != null()))))){
 					HX_STACK_LINE(226)
@@ -1431,20 +1416,17 @@ Void ZPP_UserConstraint_obj::addBody( ::zpp_nape::phys::ZPP_Body b){
 		HX_STACK_PUSH("ZPP_UserConstraint::addBody","zpp_nape/constraint/UserConstraint.hx",183);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(b,"b");
-		HX_STACK_LINE(184)
-		{
-		}
 		HX_STACK_LINE(192)
 		::zpp_nape::constraint::ZPP_UserBody match = null();		HX_STACK_VAR(match,"match");
 		HX_STACK_LINE(193)
 		{
 			HX_STACK_LINE(193)
 			int _g = (int)0;		HX_STACK_VAR(_g,"_g");
-			Array< ::zpp_nape::constraint::ZPP_UserBody > _g1 = this->bodies;		HX_STACK_VAR(_g1,"_g1");
+			Array< ::Dynamic > _g1 = this->bodies;		HX_STACK_VAR(_g1,"_g1");
 			HX_STACK_LINE(193)
 			while(((_g < _g1->length))){
 				HX_STACK_LINE(193)
-				::zpp_nape::constraint::ZPP_UserBody x = _g1->__get(_g);		HX_STACK_VAR(x,"x");
+				::zpp_nape::constraint::ZPP_UserBody x = _g1->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_UserBody >();		HX_STACK_VAR(x,"x");
 				HX_STACK_LINE(193)
 				++(_g);
 				HX_STACK_LINE(194)
@@ -1639,7 +1621,7 @@ Dynamic ZPP_UserConstraint_obj::__SetField(const ::String &inName,const Dynamic 
 		if (HX_FIELD_EQ(inName,"gamma") ) { gamma=inValue.Cast< Float >(); return inValue; }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"bodies") ) { bodies=inValue.Cast< Array< ::zpp_nape::constraint::ZPP_UserBody > >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"bodies") ) { bodies=inValue.Cast< Array< ::Dynamic > >(); return inValue; }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"velonly") ) { velonly=inValue.Cast< bool >(); return inValue; }
@@ -1728,7 +1710,7 @@ Class ZPP_UserConstraint_obj::__mClass;
 
 void ZPP_UserConstraint_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.constraint.ZPP_UserConstraint"), hx::TCanCast< ZPP_UserConstraint_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.constraint.ZPP_UserConstraint"), hx::TCanCast< ZPP_UserConstraint_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

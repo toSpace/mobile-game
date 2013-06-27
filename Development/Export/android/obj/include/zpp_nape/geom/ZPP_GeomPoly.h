@@ -12,7 +12,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_GeomPoly_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_GeomPoly_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_GeomPoly_obj OBJ_;
@@ -32,8 +32,8 @@ class ZPP_GeomPoly_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("ZPP_GeomPoly"); }
 
-		::zpp_nape::geom::ZPP_GeomVert vertices; /* REM */ 
-		::nape::geom::GeomPoly outer; /* REM */ 
+		::zpp_nape::geom::ZPP_GeomVert vertices;
+		::nape::geom::GeomPoly outer;
 };
 
 } // end namespace zpp_nape

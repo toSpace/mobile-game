@@ -237,9 +237,6 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 								HX_STACK_LINE(261)
 								_this1->axisy = ::Math_obj::cos(_this1->rot);
 								HX_STACK_LINE(261)
-								{
-								}
-								HX_STACK_LINE(261)
 								Dynamic();
 							}
 						}
@@ -266,9 +263,6 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 										_this1->axisx = ::Math_obj::sin(_this1->rot);
 										HX_STACK_LINE(261)
 										_this1->axisy = ::Math_obj::cos(_this1->rot);
-										HX_STACK_LINE(261)
-										{
-										}
 										HX_STACK_LINE(261)
 										Dynamic();
 									}
@@ -346,9 +340,6 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 									HX_STACK_LINE(261)
 									{
 									}
-									HX_STACK_LINE(261)
-									{
-									}
 								}
 								HX_STACK_LINE(261)
 								e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -387,9 +378,6 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 								e->wrap_gnorm->zpp_inner->x = e->gnormx;
 								HX_STACK_LINE(261)
 								e->wrap_gnorm->zpp_inner->y = e->gnormy;
-								HX_STACK_LINE(261)
-								{
-								}
 								HX_STACK_LINE(261)
 								{
 								}
@@ -439,9 +427,6 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 										HX_STACK_LINE(262)
 										_this1->localCOMy = _this1->lverts->next->y;
 										HX_STACK_LINE(262)
-										{
-										}
-										HX_STACK_LINE(262)
 										Dynamic();
 									}
 									else{
@@ -456,17 +441,11 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 												HX_STACK_LINE(262)
 												{
 												}
-												HX_STACK_LINE(262)
-												{
-												}
 											}
 											HX_STACK_LINE(262)
 											{
 												HX_STACK_LINE(262)
 												Float t = 1.0;		HX_STACK_VAR(t,"t");
-												HX_STACK_LINE(262)
-												{
-												}
 												HX_STACK_LINE(262)
 												hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 												HX_STACK_LINE(262)
@@ -476,9 +455,6 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 											{
 												HX_STACK_LINE(262)
 												Float t = 0.5;		HX_STACK_VAR(t,"t");
-												HX_STACK_LINE(262)
-												{
-												}
 												HX_STACK_LINE(262)
 												hx::MultEq(_this1->localCOMx,t);
 												HX_STACK_LINE(262)
@@ -492,9 +468,6 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 												_this1->localCOMx = (int)0;
 												HX_STACK_LINE(262)
 												_this1->localCOMy = (int)0;
-												HX_STACK_LINE(262)
-												{
-												}
 												HX_STACK_LINE(262)
 												{
 												}
@@ -577,9 +550,6 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 												HX_STACK_LINE(262)
 												Float t = area;		HX_STACK_VAR(t,"t");
 												HX_STACK_LINE(262)
-												{
-												}
-												HX_STACK_LINE(262)
 												hx::MultEq(_this1->localCOMx,t);
 												HX_STACK_LINE(262)
 												hx::MultEq(_this1->localCOMy,t);
@@ -603,9 +573,6 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 										HX_STACK_LINE(262)
 										_this1->axisy = ::Math_obj::cos(_this1->rot);
 										HX_STACK_LINE(262)
-										{
-										}
-										HX_STACK_LINE(262)
 										Dynamic();
 									}
 								}
@@ -623,12 +590,6 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 					Float rx = _this->radius;		HX_STACK_VAR(rx,"rx");
 					HX_STACK_LINE(262)
 					Float ry = _this->radius;		HX_STACK_VAR(ry,"ry");
-					HX_STACK_LINE(262)
-					{
-					}
-					HX_STACK_LINE(262)
-					{
-					}
 					HX_STACK_LINE(262)
 					{
 						HX_STACK_LINE(262)
@@ -669,9 +630,6 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 										_this1->axisx = ::Math_obj::sin(_this1->rot);
 										HX_STACK_LINE(262)
 										_this1->axisy = ::Math_obj::cos(_this1->rot);
-										HX_STACK_LINE(262)
-										{
-										}
 										HX_STACK_LINE(262)
 										Dynamic();
 									}
@@ -723,9 +681,6 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 						HX_STACK_LINE(262)
 						{
 						}
-						HX_STACK_LINE(262)
-						{
-						}
 					}
 					HX_STACK_LINE(262)
 					{
@@ -733,9 +688,6 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 						_this->aabb->maxx = p0->x;
 						HX_STACK_LINE(262)
 						_this->aabb->maxy = p0->y;
-						HX_STACK_LINE(262)
-						{
-						}
 						HX_STACK_LINE(262)
 						{
 						}
@@ -804,9 +756,6 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 							HX_STACK_LINE(263)
 							_this->localCOMy = _this->lverts->next->y;
 							HX_STACK_LINE(263)
-							{
-							}
-							HX_STACK_LINE(263)
 							Dynamic();
 						}
 						else{
@@ -821,17 +770,11 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 									HX_STACK_LINE(263)
 									{
 									}
-									HX_STACK_LINE(263)
-									{
-									}
 								}
 								HX_STACK_LINE(263)
 								{
 									HX_STACK_LINE(263)
 									Float t = 1.0;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(263)
-									{
-									}
 									HX_STACK_LINE(263)
 									hx::AddEq(_this->localCOMx,(_this->lverts->next->next->x * t));
 									HX_STACK_LINE(263)
@@ -841,9 +784,6 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 								{
 									HX_STACK_LINE(263)
 									Float t = 0.5;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(263)
-									{
-									}
 									HX_STACK_LINE(263)
 									hx::MultEq(_this->localCOMx,t);
 									HX_STACK_LINE(263)
@@ -857,9 +797,6 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 									_this->localCOMx = (int)0;
 									HX_STACK_LINE(263)
 									_this->localCOMy = (int)0;
-									HX_STACK_LINE(263)
-									{
-									}
 									HX_STACK_LINE(263)
 									{
 									}
@@ -942,9 +879,6 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 									HX_STACK_LINE(263)
 									Float t = area;		HX_STACK_VAR(t,"t");
 									HX_STACK_LINE(263)
-									{
-									}
-									HX_STACK_LINE(263)
 									hx::MultEq(_this->localCOMx,t);
 									HX_STACK_LINE(263)
 									hx::MultEq(_this->localCOMy,t);
@@ -967,9 +901,6 @@ Void ZPP_Broadphase_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 							_this->axisx = ::Math_obj::sin(_this->rot);
 							HX_STACK_LINE(263)
 							_this->axisy = ::Math_obj::cos(_this->rot);
-							HX_STACK_LINE(263)
-							{
-							}
 							HX_STACK_LINE(263)
 							Dynamic();
 						}
@@ -1127,9 +1058,6 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 												HX_STACK_LINE(240)
 												{
 												}
-												HX_STACK_LINE(240)
-												{
-												}
 											}
 											HX_STACK_LINE(240)
 											return ret1;
@@ -1158,7 +1086,7 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 										hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 									}
 									HX_STACK_LINE(240)
-									if (((_this1->_isimmutable_dyn() != null()))){
+									if (((_this1->_isimmutable != null()))){
 										HX_STACK_LINE(240)
 										_this1->_isimmutable();
 									}
@@ -1182,7 +1110,7 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 												HX_STACK_LINE(240)
 												::zpp_nape::geom::ZPP_Vec2 _this1 = ret->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 												HX_STACK_LINE(240)
-												if (((_this1->_validate_dyn() != null()))){
+												if (((_this1->_validate != null()))){
 													HX_STACK_LINE(240)
 													_this1->_validate();
 												}
@@ -1207,7 +1135,7 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 												HX_STACK_LINE(240)
 												::zpp_nape::geom::ZPP_Vec2 _this1 = ret->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 												HX_STACK_LINE(240)
-												if (((_this1->_validate_dyn() != null()))){
+												if (((_this1->_validate != null()))){
 													HX_STACK_LINE(240)
 													_this1->_validate();
 												}
@@ -1229,16 +1157,13 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 										HX_STACK_LINE(240)
 										{
 										}
-										HX_STACK_LINE(240)
-										{
-										}
 									}
 									HX_STACK_LINE(240)
 									{
 										HX_STACK_LINE(240)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = ret->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(240)
-										if (((_this1->_invalidate_dyn() != null()))){
+										if (((_this1->_invalidate != null()))){
 											HX_STACK_LINE(240)
 											_this1->_invalidate(_this1);
 										}
@@ -1301,7 +1226,7 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 									HX_STACK_LINE(246)
 									::zpp_nape::geom::ZPP_Mat23 _this2 = _this1->zpp_inner;		HX_STACK_VAR(_this2,"_this2");
 									HX_STACK_LINE(246)
-									if (((_this2->_invalidate_dyn() != null()))){
+									if (((_this2->_invalidate != null()))){
 										HX_STACK_LINE(246)
 										_this2->_invalidate();
 									}
@@ -1330,7 +1255,7 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 						HX_STACK_LINE(246)
 						::zpp_nape::geom::ZPP_Mat23 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 						HX_STACK_LINE(246)
-						if (((_this1->_invalidate_dyn() != null()))){
+						if (((_this1->_invalidate != null()))){
 							HX_STACK_LINE(246)
 							_this1->_invalidate();
 						}
@@ -1350,16 +1275,13 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 							HX_STACK_LINE(247)
 							{
 								HX_STACK_LINE(247)
-								{
-								}
-								HX_STACK_LINE(247)
 								_this1->zpp_inner->c = (int)0;
 								HX_STACK_LINE(247)
 								{
 									HX_STACK_LINE(247)
 									::zpp_nape::geom::ZPP_Mat23 _this2 = _this1->zpp_inner;		HX_STACK_VAR(_this2,"_this2");
 									HX_STACK_LINE(247)
-									if (((_this2->_invalidate_dyn() != null()))){
+									if (((_this2->_invalidate != null()))){
 										HX_STACK_LINE(247)
 										_this2->_invalidate();
 									}
@@ -1388,7 +1310,7 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 						HX_STACK_LINE(247)
 						::zpp_nape::geom::ZPP_Mat23 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 						HX_STACK_LINE(247)
-						if (((_this1->_invalidate_dyn() != null()))){
+						if (((_this1->_invalidate != null()))){
 							HX_STACK_LINE(247)
 							_this1->_invalidate();
 						}
@@ -1416,7 +1338,7 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 						HX_STACK_LINE(248)
 						::zpp_nape::geom::ZPP_Mat23 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 						HX_STACK_LINE(248)
-						if (((_this1->_invalidate_dyn() != null()))){
+						if (((_this1->_invalidate != null()))){
 							HX_STACK_LINE(248)
 							_this1->_invalidate();
 						}
@@ -1444,7 +1366,7 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 						HX_STACK_LINE(249)
 						::zpp_nape::geom::ZPP_Mat23 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 						HX_STACK_LINE(249)
-						if (((_this1->_invalidate_dyn() != null()))){
+						if (((_this1->_invalidate != null()))){
 							HX_STACK_LINE(249)
 							_this1->_invalidate();
 						}
@@ -1496,9 +1418,6 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 											HX_STACK_LINE(252)
 											_this2->localCOMy = _this2->lverts->next->y;
 											HX_STACK_LINE(252)
-											{
-											}
-											HX_STACK_LINE(252)
 											Dynamic();
 										}
 										else{
@@ -1513,17 +1432,11 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 													HX_STACK_LINE(252)
 													{
 													}
-													HX_STACK_LINE(252)
-													{
-													}
 												}
 												HX_STACK_LINE(252)
 												{
 													HX_STACK_LINE(252)
 													Float t = 1.0;		HX_STACK_VAR(t,"t");
-													HX_STACK_LINE(252)
-													{
-													}
 													HX_STACK_LINE(252)
 													hx::AddEq(_this2->localCOMx,(_this2->lverts->next->next->x * t));
 													HX_STACK_LINE(252)
@@ -1533,9 +1446,6 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 												{
 													HX_STACK_LINE(252)
 													Float t = 0.5;		HX_STACK_VAR(t,"t");
-													HX_STACK_LINE(252)
-													{
-													}
 													HX_STACK_LINE(252)
 													hx::MultEq(_this2->localCOMx,t);
 													HX_STACK_LINE(252)
@@ -1549,9 +1459,6 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 													_this2->localCOMx = (int)0;
 													HX_STACK_LINE(252)
 													_this2->localCOMy = (int)0;
-													HX_STACK_LINE(252)
-													{
-													}
 													HX_STACK_LINE(252)
 													{
 													}
@@ -1634,9 +1541,6 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 													HX_STACK_LINE(252)
 													Float t = area;		HX_STACK_VAR(t,"t");
 													HX_STACK_LINE(252)
-													{
-													}
-													HX_STACK_LINE(252)
 													hx::MultEq(_this2->localCOMx,t);
 													HX_STACK_LINE(252)
 													hx::MultEq(_this2->localCOMy,t);
@@ -1660,9 +1564,6 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 											HX_STACK_LINE(252)
 											_this2->axisy = ::Math_obj::cos(_this2->rot);
 											HX_STACK_LINE(252)
-											{
-											}
-											HX_STACK_LINE(252)
 											Dynamic();
 										}
 									}
@@ -1680,12 +1581,6 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 						Float rx = _this1->radius;		HX_STACK_VAR(rx,"rx");
 						HX_STACK_LINE(252)
 						Float ry = _this1->radius;		HX_STACK_VAR(ry,"ry");
-						HX_STACK_LINE(252)
-						{
-						}
-						HX_STACK_LINE(252)
-						{
-						}
 						HX_STACK_LINE(252)
 						{
 							HX_STACK_LINE(252)
@@ -1726,9 +1621,6 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 											_this2->axisx = ::Math_obj::sin(_this2->rot);
 											HX_STACK_LINE(252)
 											_this2->axisy = ::Math_obj::cos(_this2->rot);
-											HX_STACK_LINE(252)
-											{
-											}
 											HX_STACK_LINE(252)
 											Dynamic();
 										}
@@ -1780,9 +1672,6 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 							HX_STACK_LINE(252)
 							{
 							}
-							HX_STACK_LINE(252)
-							{
-							}
 						}
 						HX_STACK_LINE(252)
 						{
@@ -1790,9 +1679,6 @@ Void ZPP_Broadphase_obj::updateCircShape( Float x,Float y,Float r){
 							_this1->aabb->maxx = p0->x;
 							HX_STACK_LINE(252)
 							_this1->aabb->maxy = p0->y;
-							HX_STACK_LINE(252)
-							{
-							}
 							HX_STACK_LINE(252)
 							{
 							}
@@ -1947,7 +1833,7 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 						HX_STACK_LINE(220)
 						::zpp_nape::geom::ZPP_Mat23 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 						HX_STACK_LINE(220)
-						if (((_this1->_invalidate_dyn() != null()))){
+						if (((_this1->_invalidate != null()))){
 							HX_STACK_LINE(220)
 							_this1->_invalidate();
 						}
@@ -1967,16 +1853,13 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 							HX_STACK_LINE(221)
 							{
 								HX_STACK_LINE(221)
-								{
-								}
-								HX_STACK_LINE(221)
 								_this1->zpp_inner->c = (int)0;
 								HX_STACK_LINE(221)
 								{
 									HX_STACK_LINE(221)
 									::zpp_nape::geom::ZPP_Mat23 _this2 = _this1->zpp_inner;		HX_STACK_VAR(_this2,"_this2");
 									HX_STACK_LINE(221)
-									if (((_this2->_invalidate_dyn() != null()))){
+									if (((_this2->_invalidate != null()))){
 										HX_STACK_LINE(221)
 										_this2->_invalidate();
 									}
@@ -2005,7 +1888,7 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 						HX_STACK_LINE(221)
 						::zpp_nape::geom::ZPP_Mat23 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 						HX_STACK_LINE(221)
-						if (((_this1->_invalidate_dyn() != null()))){
+						if (((_this1->_invalidate != null()))){
 							HX_STACK_LINE(221)
 							_this1->_invalidate();
 						}
@@ -2032,7 +1915,7 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 						HX_STACK_LINE(222)
 						::zpp_nape::geom::ZPP_Mat23 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 						HX_STACK_LINE(222)
-						if (((_this1->_invalidate_dyn() != null()))){
+						if (((_this1->_invalidate != null()))){
 							HX_STACK_LINE(222)
 							_this1->_invalidate();
 						}
@@ -2060,7 +1943,7 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 						HX_STACK_LINE(223)
 						::zpp_nape::geom::ZPP_Mat23 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 						HX_STACK_LINE(223)
-						if (((_this1->_invalidate_dyn() != null()))){
+						if (((_this1->_invalidate != null()))){
 							HX_STACK_LINE(223)
 							_this1->_invalidate();
 						}
@@ -2088,7 +1971,7 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 						HX_STACK_LINE(224)
 						::zpp_nape::geom::ZPP_Mat23 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 						HX_STACK_LINE(224)
-						if (((_this1->_invalidate_dyn() != null()))){
+						if (((_this1->_invalidate != null()))){
 							HX_STACK_LINE(224)
 							_this1->_invalidate();
 						}
@@ -2140,9 +2023,6 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 											HX_STACK_LINE(227)
 											_this2->localCOMy = _this2->lverts->next->y;
 											HX_STACK_LINE(227)
-											{
-											}
-											HX_STACK_LINE(227)
 											Dynamic();
 										}
 										else{
@@ -2157,17 +2037,11 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 													HX_STACK_LINE(227)
 													{
 													}
-													HX_STACK_LINE(227)
-													{
-													}
 												}
 												HX_STACK_LINE(227)
 												{
 													HX_STACK_LINE(227)
 													Float t = 1.0;		HX_STACK_VAR(t,"t");
-													HX_STACK_LINE(227)
-													{
-													}
 													HX_STACK_LINE(227)
 													hx::AddEq(_this2->localCOMx,(_this2->lverts->next->next->x * t));
 													HX_STACK_LINE(227)
@@ -2177,9 +2051,6 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 												{
 													HX_STACK_LINE(227)
 													Float t = 0.5;		HX_STACK_VAR(t,"t");
-													HX_STACK_LINE(227)
-													{
-													}
 													HX_STACK_LINE(227)
 													hx::MultEq(_this2->localCOMx,t);
 													HX_STACK_LINE(227)
@@ -2193,9 +2064,6 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 													_this2->localCOMx = (int)0;
 													HX_STACK_LINE(227)
 													_this2->localCOMy = (int)0;
-													HX_STACK_LINE(227)
-													{
-													}
 													HX_STACK_LINE(227)
 													{
 													}
@@ -2278,9 +2146,6 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 													HX_STACK_LINE(227)
 													Float t = area;		HX_STACK_VAR(t,"t");
 													HX_STACK_LINE(227)
-													{
-													}
-													HX_STACK_LINE(227)
 													hx::MultEq(_this2->localCOMx,t);
 													HX_STACK_LINE(227)
 													hx::MultEq(_this2->localCOMy,t);
@@ -2304,9 +2169,6 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 											HX_STACK_LINE(227)
 											_this2->axisy = ::Math_obj::cos(_this2->rot);
 											HX_STACK_LINE(227)
-											{
-											}
-											HX_STACK_LINE(227)
 											Dynamic();
 										}
 									}
@@ -2324,12 +2186,6 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 						Float rx = _this1->radius;		HX_STACK_VAR(rx,"rx");
 						HX_STACK_LINE(227)
 						Float ry = _this1->radius;		HX_STACK_VAR(ry,"ry");
-						HX_STACK_LINE(227)
-						{
-						}
-						HX_STACK_LINE(227)
-						{
-						}
 						HX_STACK_LINE(227)
 						{
 							HX_STACK_LINE(227)
@@ -2370,9 +2226,6 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 											_this2->axisx = ::Math_obj::sin(_this2->rot);
 											HX_STACK_LINE(227)
 											_this2->axisy = ::Math_obj::cos(_this2->rot);
-											HX_STACK_LINE(227)
-											{
-											}
 											HX_STACK_LINE(227)
 											Dynamic();
 										}
@@ -2424,9 +2277,6 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 							HX_STACK_LINE(227)
 							{
 							}
-							HX_STACK_LINE(227)
-							{
-							}
 						}
 						HX_STACK_LINE(227)
 						{
@@ -2434,9 +2284,6 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 							_this1->aabb->maxx = p0->x;
 							HX_STACK_LINE(227)
 							_this1->aabb->maxy = p0->y;
-							HX_STACK_LINE(227)
-							{
-							}
 							HX_STACK_LINE(227)
 							{
 							}
@@ -2507,9 +2354,6 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 								HX_STACK_LINE(228)
 								_this1->axisy = ::Math_obj::cos(_this1->rot);
 								HX_STACK_LINE(228)
-								{
-								}
-								HX_STACK_LINE(228)
 								Dynamic();
 							}
 						}
@@ -2536,9 +2380,6 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 										_this1->axisx = ::Math_obj::sin(_this1->rot);
 										HX_STACK_LINE(228)
 										_this1->axisy = ::Math_obj::cos(_this1->rot);
-										HX_STACK_LINE(228)
-										{
-										}
 										HX_STACK_LINE(228)
 										Dynamic();
 									}
@@ -2616,9 +2457,6 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 									HX_STACK_LINE(228)
 									{
 									}
-									HX_STACK_LINE(228)
-									{
-									}
 								}
 								HX_STACK_LINE(228)
 								e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -2657,9 +2495,6 @@ Void ZPP_Broadphase_obj::updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb){
 								e->wrap_gnorm->zpp_inner->x = e->gnormx;
 								HX_STACK_LINE(228)
 								e->wrap_gnorm->zpp_inner->y = e->gnormy;
-								HX_STACK_LINE(228)
-								{
-								}
 								HX_STACK_LINE(228)
 								{
 								}
@@ -2740,9 +2575,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 		HX_STACK_LINE(187)
 		if ((this->is_sweep)){
 			HX_STACK_LINE(188)
-			{
-			}
-			HX_STACK_LINE(188)
 			if ((!(this->sweep->space->continuous))){
 				HX_STACK_LINE(188)
 				if ((shape->zip_aabb)){
@@ -2780,9 +2612,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 												HX_STACK_LINE(188)
 												_this1->localCOMy = _this1->lverts->next->y;
 												HX_STACK_LINE(188)
-												{
-												}
-												HX_STACK_LINE(188)
 												Dynamic();
 											}
 											else{
@@ -2797,17 +2626,11 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 														HX_STACK_LINE(188)
 														{
 														}
-														HX_STACK_LINE(188)
-														{
-														}
 													}
 													HX_STACK_LINE(188)
 													{
 														HX_STACK_LINE(188)
 														Float t = 1.0;		HX_STACK_VAR(t,"t");
-														HX_STACK_LINE(188)
-														{
-														}
 														HX_STACK_LINE(188)
 														hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 														HX_STACK_LINE(188)
@@ -2817,9 +2640,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 													{
 														HX_STACK_LINE(188)
 														Float t = 0.5;		HX_STACK_VAR(t,"t");
-														HX_STACK_LINE(188)
-														{
-														}
 														HX_STACK_LINE(188)
 														hx::MultEq(_this1->localCOMx,t);
 														HX_STACK_LINE(188)
@@ -2833,9 +2653,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 														_this1->localCOMx = (int)0;
 														HX_STACK_LINE(188)
 														_this1->localCOMy = (int)0;
-														HX_STACK_LINE(188)
-														{
-														}
 														HX_STACK_LINE(188)
 														{
 														}
@@ -2918,9 +2735,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 														HX_STACK_LINE(188)
 														Float t = area;		HX_STACK_VAR(t,"t");
 														HX_STACK_LINE(188)
-														{
-														}
-														HX_STACK_LINE(188)
 														hx::MultEq(_this1->localCOMx,t);
 														HX_STACK_LINE(188)
 														hx::MultEq(_this1->localCOMy,t);
@@ -2944,9 +2758,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 												HX_STACK_LINE(188)
 												_this1->axisy = ::Math_obj::cos(_this1->rot);
 												HX_STACK_LINE(188)
-												{
-												}
-												HX_STACK_LINE(188)
 												Dynamic();
 											}
 										}
@@ -2964,12 +2775,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 							Float rx = _this->radius;		HX_STACK_VAR(rx,"rx");
 							HX_STACK_LINE(188)
 							Float ry = _this->radius;		HX_STACK_VAR(ry,"ry");
-							HX_STACK_LINE(188)
-							{
-							}
-							HX_STACK_LINE(188)
-							{
-							}
 							HX_STACK_LINE(188)
 							{
 								HX_STACK_LINE(188)
@@ -3010,9 +2815,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 												_this1->axisx = ::Math_obj::sin(_this1->rot);
 												HX_STACK_LINE(188)
 												_this1->axisy = ::Math_obj::cos(_this1->rot);
-												HX_STACK_LINE(188)
-												{
-												}
 												HX_STACK_LINE(188)
 												Dynamic();
 											}
@@ -3064,9 +2866,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 								HX_STACK_LINE(188)
 								{
 								}
-								HX_STACK_LINE(188)
-								{
-								}
 							}
 							HX_STACK_LINE(188)
 							{
@@ -3074,9 +2873,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 								_this->aabb->maxx = p0->x;
 								HX_STACK_LINE(188)
 								_this->aabb->maxy = p0->y;
-								HX_STACK_LINE(188)
-								{
-								}
 								HX_STACK_LINE(188)
 								{
 								}
@@ -3125,13 +2921,7 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 			HX_STACK_LINE(189)
 			::zpp_nape::space::ZPP_DynAABBPhase _this = this->dynab;		HX_STACK_VAR(_this,"_this");
 			HX_STACK_LINE(189)
-			{
-			}
-			HX_STACK_LINE(189)
 			::zpp_nape::space::ZPP_AABBNode node = shape->node;		HX_STACK_VAR(node,"node");
-			HX_STACK_LINE(189)
-			{
-			}
 			HX_STACK_LINE(189)
 			if ((!(node->synced))){
 				HX_STACK_LINE(189)
@@ -3172,9 +2962,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 													HX_STACK_LINE(189)
 													_this2->localCOMy = _this2->lverts->next->y;
 													HX_STACK_LINE(189)
-													{
-													}
-													HX_STACK_LINE(189)
 													Dynamic();
 												}
 												else{
@@ -3189,17 +2976,11 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 															HX_STACK_LINE(189)
 															{
 															}
-															HX_STACK_LINE(189)
-															{
-															}
 														}
 														HX_STACK_LINE(189)
 														{
 															HX_STACK_LINE(189)
 															Float t = 1.0;		HX_STACK_VAR(t,"t");
-															HX_STACK_LINE(189)
-															{
-															}
 															HX_STACK_LINE(189)
 															hx::AddEq(_this2->localCOMx,(_this2->lverts->next->next->x * t));
 															HX_STACK_LINE(189)
@@ -3209,9 +2990,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 														{
 															HX_STACK_LINE(189)
 															Float t = 0.5;		HX_STACK_VAR(t,"t");
-															HX_STACK_LINE(189)
-															{
-															}
 															HX_STACK_LINE(189)
 															hx::MultEq(_this2->localCOMx,t);
 															HX_STACK_LINE(189)
@@ -3225,9 +3003,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 															_this2->localCOMx = (int)0;
 															HX_STACK_LINE(189)
 															_this2->localCOMy = (int)0;
-															HX_STACK_LINE(189)
-															{
-															}
 															HX_STACK_LINE(189)
 															{
 															}
@@ -3310,9 +3085,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 															HX_STACK_LINE(189)
 															Float t = area;		HX_STACK_VAR(t,"t");
 															HX_STACK_LINE(189)
-															{
-															}
-															HX_STACK_LINE(189)
 															hx::MultEq(_this2->localCOMx,t);
 															HX_STACK_LINE(189)
 															hx::MultEq(_this2->localCOMy,t);
@@ -3336,9 +3108,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 													HX_STACK_LINE(189)
 													_this2->axisy = ::Math_obj::cos(_this2->rot);
 													HX_STACK_LINE(189)
-													{
-													}
-													HX_STACK_LINE(189)
 													Dynamic();
 												}
 											}
@@ -3356,12 +3125,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 								Float rx = _this1->radius;		HX_STACK_VAR(rx,"rx");
 								HX_STACK_LINE(189)
 								Float ry = _this1->radius;		HX_STACK_VAR(ry,"ry");
-								HX_STACK_LINE(189)
-								{
-								}
-								HX_STACK_LINE(189)
-								{
-								}
 								HX_STACK_LINE(189)
 								{
 									HX_STACK_LINE(189)
@@ -3402,9 +3165,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 													_this2->axisx = ::Math_obj::sin(_this2->rot);
 													HX_STACK_LINE(189)
 													_this2->axisy = ::Math_obj::cos(_this2->rot);
-													HX_STACK_LINE(189)
-													{
-													}
 													HX_STACK_LINE(189)
 													Dynamic();
 												}
@@ -3456,9 +3216,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 									HX_STACK_LINE(189)
 									{
 									}
-									HX_STACK_LINE(189)
-									{
-									}
 								}
 								HX_STACK_LINE(189)
 								{
@@ -3466,9 +3223,6 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 									_this1->aabb->maxx = p0->x;
 									HX_STACK_LINE(189)
 									_this1->aabb->maxy = p0->y;
-									HX_STACK_LINE(189)
-									{
-									}
 									HX_STACK_LINE(189)
 									{
 									}
@@ -3513,7 +3267,7 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 					}
 				}
 				struct _Function_3_1{
-					inline static bool Block( ::zpp_nape::space::ZPP_AABBNode &node,::zpp_nape::shape::ZPP_Shape &shape){
+					inline static bool Block( ::zpp_nape::shape::ZPP_Shape &shape,::zpp_nape::space::ZPP_AABBNode &node){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/Broadphase.hx",189);
 						{
 							HX_STACK_LINE(189)
@@ -3526,16 +3280,13 @@ Void ZPP_Broadphase_obj::sync( ::zpp_nape::shape::ZPP_Shape shape){
 					}
 				};
 				HX_STACK_LINE(189)
-				bool sync = (bool((node->dyn != ((  (((shape->body->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_STATIC))) ? bool(false) : bool(!(shape->body->component->sleeping)) )))) || bool(!(_Function_3_1::Block(node,shape))));		HX_STACK_VAR(sync,"sync");
+				bool sync = (bool((node->dyn != ((  (((shape->body->type == ::zpp_nape::util::ZPP_Flags_obj::id_BodyType_STATIC))) ? bool(false) : bool(!(shape->body->component->sleeping)) )))) || bool(!(_Function_3_1::Block(shape,node))));		HX_STACK_VAR(sync,"sync");
 				HX_STACK_LINE(189)
 				if ((sync)){
 					HX_STACK_LINE(189)
 					node->synced = true;
 					HX_STACK_LINE(189)
 					{
-						HX_STACK_LINE(189)
-						{
-						}
 						HX_STACK_LINE(189)
 						node->snext = _this->syncs;
 						HX_STACK_LINE(189)
@@ -3753,7 +3504,7 @@ Class ZPP_Broadphase_obj::__mClass;
 
 void ZPP_Broadphase_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_Broadphase"), hx::TCanCast< ZPP_Broadphase_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_Broadphase"), hx::TCanCast< ZPP_Broadphase_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

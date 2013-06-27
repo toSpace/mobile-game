@@ -49,9 +49,6 @@ Dynamic ZNPList_ZPP_ColArbiter_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_PUSH("ZNPList_ZPP_ColArbiter::at","zpp_nape/util/Lists.hx",12671);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(12672)
-	{
-	}
 	HX_STACK_LINE(12680)
 	::zpp_nape::util::ZNPNode_ZPP_ColArbiter it = this->iterator_at(ind);		HX_STACK_VAR(it,"it");
 	HX_STACK_LINE(12681)
@@ -65,9 +62,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_ColArbiter_obj,at,return )
 	HX_STACK_PUSH("ZNPList_ZPP_ColArbiter::iterator_at","zpp_nape/util/Lists.hx",12658);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(12659)
-	{
-	}
 	HX_STACK_LINE(12667)
 	::zpp_nape::util::ZNPNode_ZPP_ColArbiter ret = this->head;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(12668)
@@ -117,9 +111,6 @@ bool ZNPList_ZPP_ColArbiter_obj::inlined_has( ::zpp_nape::dynamics::ZPP_ColArbit
 	HX_STACK_PUSH("ZNPList_ZPP_ColArbiter::inlined_has","zpp_nape/util/Lists.hx",12616);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(12617)
-	{
-	}
 	HX_STACK_LINE(12625)
 	bool ret;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(12626)
@@ -161,9 +152,6 @@ bool ZNPList_ZPP_ColArbiter_obj::has( ::zpp_nape::dynamics::ZPP_ColArbiter obj){
 		inline static bool Block( ::zpp_nape::util::ZNPList_ZPP_ColArbiter_obj *__this,::zpp_nape::dynamics::ZPP_ColArbiter &obj){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",12612);
 			{
-				HX_STACK_LINE(12612)
-				{
-				}
 				HX_STACK_LINE(12612)
 				bool ret;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(12612)
@@ -262,22 +250,13 @@ Void ZNPList_ZPP_ColArbiter_obj::inlined_clear( ){
 		HX_STACK_LINE(12584)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(12584)
-			{
-			}
-			HX_STACK_LINE(12584)
 			::zpp_nape::util::ZNPNode_ZPP_ColArbiter ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(12584)
 			this->head = ret->next;
 			HX_STACK_LINE(12584)
 			{
-			}
-			HX_STACK_LINE(12584)
-			{
 				HX_STACK_LINE(12584)
 				::zpp_nape::util::ZNPNode_ZPP_ColArbiter o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(12584)
-				{
-				}
 				HX_STACK_LINE(12584)
 				o->elt = null();
 				HX_STACK_LINE(12584)
@@ -311,22 +290,13 @@ Void ZNPList_ZPP_ColArbiter_obj::clear( ){
 		HX_STACK_LINE(12578)
 		while((!(((this->head == null()))))){
 			HX_STACK_LINE(12578)
-			{
-			}
-			HX_STACK_LINE(12578)
 			::zpp_nape::util::ZNPNode_ZPP_ColArbiter ret = this->head;		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(12578)
 			this->head = ret->next;
 			HX_STACK_LINE(12578)
 			{
-			}
-			HX_STACK_LINE(12578)
-			{
 				HX_STACK_LINE(12578)
 				::zpp_nape::util::ZNPNode_ZPP_ColArbiter o = ret;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(12578)
-				{
-				}
 				HX_STACK_LINE(12578)
 				o->elt = null();
 				HX_STACK_LINE(12578)
@@ -374,9 +344,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_ColArbiter_obj,splice,return )
 	HX_STACK_PUSH("ZNPList_ZPP_ColArbiter::inlined_erase","zpp_nape/util/Lists.hx",12527);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
-	HX_STACK_LINE(12528)
-	{
-	}
 	HX_STACK_LINE(12536)
 	::zpp_nape::util::ZNPNode_ZPP_ColArbiter old;		HX_STACK_VAR(old,"old");
 	HX_STACK_LINE(12537)
@@ -408,16 +375,10 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_ColArbiter_obj,splice,return )
 			this->pushmod = true;
 		}
 	}
-	HX_STACK_LINE(12550)
-	{
-	}
 	HX_STACK_LINE(12551)
 	{
 		HX_STACK_LINE(12552)
 		::zpp_nape::util::ZNPNode_ZPP_ColArbiter o = old;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(12553)
-		{
-		}
 		HX_STACK_LINE(12561)
 		o->elt = null();
 		HX_STACK_LINE(12562)
@@ -443,12 +404,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_ColArbiter_obj,inlined_erase,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
 	struct _Function_1_1{
-		inline static ::zpp_nape::util::ZNPNode_ZPP_ColArbiter Block( ::zpp_nape::util::ZNPNode_ZPP_ColArbiter &pre,::zpp_nape::util::ZNPList_ZPP_ColArbiter_obj *__this){
+		inline static ::zpp_nape::util::ZNPNode_ZPP_ColArbiter Block( ::zpp_nape::util::ZNPList_ZPP_ColArbiter_obj *__this,::zpp_nape::util::ZNPNode_ZPP_ColArbiter &pre){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",12523);
 			{
-				HX_STACK_LINE(12523)
-				{
-				}
 				HX_STACK_LINE(12523)
 				::zpp_nape::util::ZNPNode_ZPP_ColArbiter old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(12523)
@@ -482,14 +440,8 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_ColArbiter_obj,inlined_erase,return )
 				}
 				HX_STACK_LINE(12523)
 				{
-				}
-				HX_STACK_LINE(12523)
-				{
 					HX_STACK_LINE(12523)
 					::zpp_nape::util::ZNPNode_ZPP_ColArbiter o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(12523)
-					{
-					}
 					HX_STACK_LINE(12523)
 					o->elt = null();
 					HX_STACK_LINE(12523)
@@ -510,7 +462,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_ColArbiter_obj,inlined_erase,return )
 		}
 	};
 	HX_STACK_LINE(12522)
-	return _Function_1_1::Block(pre,this);
+	return _Function_1_1::Block(this,pre);
 }
 
 
@@ -520,9 +472,6 @@ bool ZNPList_ZPP_ColArbiter_obj::inlined_try_remove( ::zpp_nape::dynamics::ZPP_C
 	HX_STACK_PUSH("ZNPList_ZPP_ColArbiter::inlined_try_remove","zpp_nape/util/Lists.hx",12499);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(12500)
-	{
-	}
 	HX_STACK_LINE(12508)
 	::zpp_nape::util::ZNPNode_ZPP_ColArbiter pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(12509)
@@ -535,9 +484,6 @@ bool ZNPList_ZPP_ColArbiter_obj::inlined_try_remove( ::zpp_nape::dynamics::ZPP_C
 		if (((cur->elt == obj))){
 			HX_STACK_LINE(12513)
 			{
-				HX_STACK_LINE(12513)
-				{
-				}
 				HX_STACK_LINE(12513)
 				::zpp_nape::util::ZNPNode_ZPP_ColArbiter old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(12513)
@@ -571,14 +517,8 @@ bool ZNPList_ZPP_ColArbiter_obj::inlined_try_remove( ::zpp_nape::dynamics::ZPP_C
 				}
 				HX_STACK_LINE(12513)
 				{
-				}
-				HX_STACK_LINE(12513)
-				{
 					HX_STACK_LINE(12513)
 					::zpp_nape::util::ZNPNode_ZPP_ColArbiter o = old;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(12513)
-					{
-					}
 					HX_STACK_LINE(12513)
 					o->elt = null();
 					HX_STACK_LINE(12513)
@@ -617,99 +557,81 @@ Void ZNPList_ZPP_ColArbiter_obj::inlined_remove( ::zpp_nape::dynamics::ZPP_ColAr
 		HX_STACK_PUSH("ZNPList_ZPP_ColArbiter::inlined_remove","zpp_nape/util/Lists.hx",12486);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(12487)
-		{
-		}
 		HX_STACK_LINE(12495)
-		{
+		::zpp_nape::util::ZNPNode_ZPP_ColArbiter pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(12495)
+		::zpp_nape::util::ZNPNode_ZPP_ColArbiter cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(12495)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(12495)
+		while(((cur != null()))){
 			HX_STACK_LINE(12495)
-			{
-			}
-			HX_STACK_LINE(12495)
-			::zpp_nape::util::ZNPNode_ZPP_ColArbiter pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(12495)
-			::zpp_nape::util::ZNPNode_ZPP_ColArbiter cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(12495)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(12495)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(12495)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(12495)
+					::zpp_nape::util::ZNPNode_ZPP_ColArbiter old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(12495)
+					::zpp_nape::util::ZNPNode_ZPP_ColArbiter ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(12495)
+					if (((pre == null()))){
+						HX_STACK_LINE(12495)
+						old = this->head;
+						HX_STACK_LINE(12495)
+						ret1 = old->next;
+						HX_STACK_LINE(12495)
+						this->head = ret1;
+						HX_STACK_LINE(12495)
+						if (((this->head == null()))){
+							HX_STACK_LINE(12495)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(12495)
+						old = pre->next;
+						HX_STACK_LINE(12495)
+						ret1 = old->next;
+						HX_STACK_LINE(12495)
+						pre->next = ret1;
+						HX_STACK_LINE(12495)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(12495)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(12495)
 					{
 						HX_STACK_LINE(12495)
-						{
-						}
+						::zpp_nape::util::ZNPNode_ZPP_ColArbiter o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(12495)
-						::zpp_nape::util::ZNPNode_ZPP_ColArbiter old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(12495)
-						::zpp_nape::util::ZNPNode_ZPP_ColArbiter ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_ZPP_ColArbiter_obj::zpp_pool;
 						HX_STACK_LINE(12495)
-						if (((pre == null()))){
-							HX_STACK_LINE(12495)
-							old = this->head;
-							HX_STACK_LINE(12495)
-							ret1 = old->next;
-							HX_STACK_LINE(12495)
-							this->head = ret1;
-							HX_STACK_LINE(12495)
-							if (((this->head == null()))){
-								HX_STACK_LINE(12495)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(12495)
-							old = pre->next;
-							HX_STACK_LINE(12495)
-							ret1 = old->next;
-							HX_STACK_LINE(12495)
-							pre->next = ret1;
-							HX_STACK_LINE(12495)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(12495)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(12495)
-						{
-						}
-						HX_STACK_LINE(12495)
-						{
-							HX_STACK_LINE(12495)
-							::zpp_nape::util::ZNPNode_ZPP_ColArbiter o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(12495)
-							{
-							}
-							HX_STACK_LINE(12495)
-							o->elt = null();
-							HX_STACK_LINE(12495)
-							o->next = ::zpp_nape::util::ZNPNode_ZPP_ColArbiter_obj::zpp_pool;
-							HX_STACK_LINE(12495)
-							::zpp_nape::util::ZNPNode_ZPP_ColArbiter_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(12495)
-						this->modified = true;
-						HX_STACK_LINE(12495)
-						(this->length)--;
-						HX_STACK_LINE(12495)
-						this->pushmod = true;
-						HX_STACK_LINE(12495)
-						ret1;
+						::zpp_nape::util::ZNPNode_ZPP_ColArbiter_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(12495)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(12495)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(12495)
+					this->pushmod = true;
+					HX_STACK_LINE(12495)
+					ret1;
 				}
 				HX_STACK_LINE(12495)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(12495)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(12495)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(12495)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(12495)
+		ret;
 	}
 return null();
 }
@@ -721,9 +643,6 @@ bool ZNPList_ZPP_ColArbiter_obj::try_remove( ::zpp_nape::dynamics::ZPP_ColArbite
 	HX_STACK_PUSH("ZNPList_ZPP_ColArbiter::try_remove","zpp_nape/util/Lists.hx",12461);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(12462)
-	{
-	}
 	HX_STACK_LINE(12470)
 	::zpp_nape::util::ZNPNode_ZPP_ColArbiter pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(12471)
@@ -758,99 +677,81 @@ Void ZNPList_ZPP_ColArbiter_obj::remove( ::zpp_nape::dynamics::ZPP_ColArbiter ob
 		HX_STACK_PUSH("ZNPList_ZPP_ColArbiter::remove","zpp_nape/util/Lists.hx",12450);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(12451)
-		{
-		}
 		HX_STACK_LINE(12459)
-		{
+		::zpp_nape::util::ZNPNode_ZPP_ColArbiter pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(12459)
+		::zpp_nape::util::ZNPNode_ZPP_ColArbiter cur = this->head;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(12459)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(12459)
+		while(((cur != null()))){
 			HX_STACK_LINE(12459)
-			{
-			}
-			HX_STACK_LINE(12459)
-			::zpp_nape::util::ZNPNode_ZPP_ColArbiter pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(12459)
-			::zpp_nape::util::ZNPNode_ZPP_ColArbiter cur = this->head;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(12459)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(12459)
-			while(((cur != null()))){
+			if (((cur->elt == obj))){
 				HX_STACK_LINE(12459)
-				if (((cur->elt == obj))){
+				{
+					HX_STACK_LINE(12459)
+					::zpp_nape::util::ZNPNode_ZPP_ColArbiter old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(12459)
+					::zpp_nape::util::ZNPNode_ZPP_ColArbiter ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(12459)
+					if (((pre == null()))){
+						HX_STACK_LINE(12459)
+						old = this->head;
+						HX_STACK_LINE(12459)
+						ret1 = old->next;
+						HX_STACK_LINE(12459)
+						this->head = ret1;
+						HX_STACK_LINE(12459)
+						if (((this->head == null()))){
+							HX_STACK_LINE(12459)
+							this->pushmod = true;
+						}
+					}
+					else{
+						HX_STACK_LINE(12459)
+						old = pre->next;
+						HX_STACK_LINE(12459)
+						ret1 = old->next;
+						HX_STACK_LINE(12459)
+						pre->next = ret1;
+						HX_STACK_LINE(12459)
+						if (((ret1 == null()))){
+							HX_STACK_LINE(12459)
+							this->pushmod = true;
+						}
+					}
 					HX_STACK_LINE(12459)
 					{
 						HX_STACK_LINE(12459)
-						{
-						}
+						::zpp_nape::util::ZNPNode_ZPP_ColArbiter o = old;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(12459)
-						::zpp_nape::util::ZNPNode_ZPP_ColArbiter old;		HX_STACK_VAR(old,"old");
+						o->elt = null();
 						HX_STACK_LINE(12459)
-						::zpp_nape::util::ZNPNode_ZPP_ColArbiter ret1;		HX_STACK_VAR(ret1,"ret1");
+						o->next = ::zpp_nape::util::ZNPNode_ZPP_ColArbiter_obj::zpp_pool;
 						HX_STACK_LINE(12459)
-						if (((pre == null()))){
-							HX_STACK_LINE(12459)
-							old = this->head;
-							HX_STACK_LINE(12459)
-							ret1 = old->next;
-							HX_STACK_LINE(12459)
-							this->head = ret1;
-							HX_STACK_LINE(12459)
-							if (((this->head == null()))){
-								HX_STACK_LINE(12459)
-								this->pushmod = true;
-							}
-						}
-						else{
-							HX_STACK_LINE(12459)
-							old = pre->next;
-							HX_STACK_LINE(12459)
-							ret1 = old->next;
-							HX_STACK_LINE(12459)
-							pre->next = ret1;
-							HX_STACK_LINE(12459)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(12459)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(12459)
-						{
-						}
-						HX_STACK_LINE(12459)
-						{
-							HX_STACK_LINE(12459)
-							::zpp_nape::util::ZNPNode_ZPP_ColArbiter o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(12459)
-							{
-							}
-							HX_STACK_LINE(12459)
-							o->elt = null();
-							HX_STACK_LINE(12459)
-							o->next = ::zpp_nape::util::ZNPNode_ZPP_ColArbiter_obj::zpp_pool;
-							HX_STACK_LINE(12459)
-							::zpp_nape::util::ZNPNode_ZPP_ColArbiter_obj::zpp_pool = o;
-						}
-						HX_STACK_LINE(12459)
-						this->modified = true;
-						HX_STACK_LINE(12459)
-						(this->length)--;
-						HX_STACK_LINE(12459)
-						this->pushmod = true;
-						HX_STACK_LINE(12459)
-						ret1;
+						::zpp_nape::util::ZNPNode_ZPP_ColArbiter_obj::zpp_pool = o;
 					}
 					HX_STACK_LINE(12459)
-					ret = true;
+					this->modified = true;
 					HX_STACK_LINE(12459)
-					break;
+					(this->length)--;
+					HX_STACK_LINE(12459)
+					this->pushmod = true;
+					HX_STACK_LINE(12459)
+					ret1;
 				}
 				HX_STACK_LINE(12459)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(12459)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(12459)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(12459)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(12459)
+		ret;
 	}
 return null();
 }
@@ -861,9 +762,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_ColArbiter_obj,remove,(void))
 ::zpp_nape::dynamics::ZPP_ColArbiter ZNPList_ZPP_ColArbiter_obj::inlined_pop_unsafe( ){
 	HX_STACK_PUSH("ZNPList_ZPP_ColArbiter::inlined_pop_unsafe","zpp_nape/util/Lists.hx",12437);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(12438)
-	{
-	}
 	HX_STACK_LINE(12446)
 	::zpp_nape::dynamics::ZPP_ColArbiter ret = this->head->elt;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(12447)
@@ -882,9 +780,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_ColArbiter_obj,inlined_pop_unsafe,return )
 		inline static ::zpp_nape::dynamics::ZPP_ColArbiter Block( ::zpp_nape::util::ZNPList_ZPP_ColArbiter_obj *__this){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",12433);
 			{
-				HX_STACK_LINE(12433)
-				{
-				}
 				HX_STACK_LINE(12433)
 				::zpp_nape::dynamics::ZPP_ColArbiter ret = __this->head->elt;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(12433)
@@ -906,23 +801,14 @@ Void ZNPList_ZPP_ColArbiter_obj::inlined_pop( ){
 {
 		HX_STACK_PUSH("ZNPList_ZPP_ColArbiter::inlined_pop","zpp_nape/util/Lists.hx",12399);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(12400)
-		{
-		}
 		HX_STACK_LINE(12408)
 		::zpp_nape::util::ZNPNode_ZPP_ColArbiter ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(12409)
 		this->head = ret->next;
-		HX_STACK_LINE(12410)
-		{
-		}
 		HX_STACK_LINE(12411)
 		{
 			HX_STACK_LINE(12412)
 			::zpp_nape::util::ZNPNode_ZPP_ColArbiter o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(12413)
-			{
-			}
 			HX_STACK_LINE(12421)
 			o->elt = null();
 			HX_STACK_LINE(12422)
@@ -951,22 +837,13 @@ Void ZNPList_ZPP_ColArbiter_obj::pop( ){
 		HX_STACK_PUSH("ZNPList_ZPP_ColArbiter::pop","zpp_nape/util/Lists.hx",12394);
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(12395)
-		{
-		}
-		HX_STACK_LINE(12395)
 		::zpp_nape::util::ZNPNode_ZPP_ColArbiter ret = this->head;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(12395)
 		this->head = ret->next;
 		HX_STACK_LINE(12395)
 		{
-		}
-		HX_STACK_LINE(12395)
-		{
 			HX_STACK_LINE(12395)
 			::zpp_nape::util::ZNPNode_ZPP_ColArbiter o = ret;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(12395)
-			{
-			}
 			HX_STACK_LINE(12395)
 			o->elt = null();
 			HX_STACK_LINE(12395)
@@ -995,9 +872,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZNPList_ZPP_ColArbiter_obj,pop,(void))
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(12352)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_ColArbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",12360);
@@ -1065,9 +939,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZNPList_ZPP_ColArbiter_obj,inlined_insert,return )
 		inline static ::zpp_nape::util::ZNPNode_ZPP_ColArbiter Block( ::zpp_nape::util::ZNPList_ZPP_ColArbiter_obj *__this,::zpp_nape::dynamics::ZPP_ColArbiter &o,::zpp_nape::util::ZNPNode_ZPP_ColArbiter &cur){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",12347);
 			{
-				HX_STACK_LINE(12347)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_ColArbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",12347);
@@ -1137,22 +1008,16 @@ Void ZNPList_ZPP_ColArbiter_obj::addAll( ::zpp_nape::util::ZNPList_ZPP_ColArbite
 		HX_STACK_PUSH("ZNPList_ZPP_ColArbiter::addAll","zpp_nape/util/Lists.hx",12328);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(12329)
-		{
-		}
-		HX_STACK_LINE(12337)
-		{
-			HX_STACK_LINE(12338)
-			::zpp_nape::util::ZNPNode_ZPP_ColArbiter cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
-			HX_STACK_LINE(12339)
-			while(((cx_ite != null()))){
-				HX_STACK_LINE(12340)
-				::zpp_nape::dynamics::ZPP_ColArbiter i = cx_ite->elt;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(12341)
-				this->add(i);
-				HX_STACK_LINE(12342)
-				cx_ite = cx_ite->next;
-			}
+		HX_STACK_LINE(12338)
+		::zpp_nape::util::ZNPNode_ZPP_ColArbiter cx_ite = x->head;		HX_STACK_VAR(cx_ite,"cx_ite");
+		HX_STACK_LINE(12339)
+		while(((cx_ite != null()))){
+			HX_STACK_LINE(12340)
+			::zpp_nape::dynamics::ZPP_ColArbiter i = cx_ite->elt;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(12341)
+			this->add(i);
+			HX_STACK_LINE(12342)
+			cx_ite = cx_ite->next;
 		}
 	}
 return null();
@@ -1165,9 +1030,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_ColArbiter_obj,addAll,(void))
 	HX_STACK_PUSH("ZNPList_ZPP_ColArbiter::inlined_add","zpp_nape/util/Lists.hx",12291);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(12292)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::util::ZNPNode_ZPP_ColArbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",12300);
@@ -1222,12 +1084,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_ColArbiter_obj,inlined_add,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
 	struct _Function_1_1{
-		inline static ::zpp_nape::dynamics::ZPP_ColArbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter &o,::zpp_nape::util::ZNPList_ZPP_ColArbiter_obj *__this){
+		inline static ::zpp_nape::dynamics::ZPP_ColArbiter Block( ::zpp_nape::util::ZNPList_ZPP_ColArbiter_obj *__this,::zpp_nape::dynamics::ZPP_ColArbiter &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",12287);
 			{
-				HX_STACK_LINE(12287)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::util::ZNPNode_ZPP_ColArbiter Block( ::zpp_nape::dynamics::ZPP_ColArbiter &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/util/Lists.hx",12287);
@@ -1277,7 +1136,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZNPList_ZPP_ColArbiter_obj,inlined_add,return )
 		}
 	};
 	HX_STACK_LINE(12286)
-	return _Function_1_1::Block(o,this);
+	return _Function_1_1::Block(this,o);
 }
 
 
@@ -1475,7 +1334,7 @@ Class ZNPList_ZPP_ColArbiter_obj::__mClass;
 
 void ZNPList_ZPP_ColArbiter_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ZPP_ColArbiter"), hx::TCanCast< ZNPList_ZPP_ColArbiter_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZNPList_ZPP_ColArbiter"), hx::TCanCast< ZNPList_ZPP_ColArbiter_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

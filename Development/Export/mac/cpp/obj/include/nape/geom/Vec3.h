@@ -12,7 +12,7 @@ namespace nape{
 namespace geom{
 
 
-class Vec3_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Vec3_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Vec3_obj OBJ_;
@@ -53,7 +53,6 @@ class Vec3_obj : public hx::Object{
 		virtual Float get_length( );
 		Dynamic get_length_dyn();
 
-		Float length; /* REM */ 
 		virtual Void dispose( );
 		Dynamic dispose_dyn();
 
@@ -63,24 +62,21 @@ class Vec3_obj : public hx::Object{
 		virtual Float get_z( );
 		Dynamic get_z_dyn();
 
-		Float z; /* REM */ 
 		virtual Float set_y( Float y);
 		Dynamic set_y_dyn();
 
 		virtual Float get_y( );
 		Dynamic get_y_dyn();
 
-		Float y; /* REM */ 
 		virtual Float set_x( Float x);
 		Dynamic set_x_dyn();
 
 		virtual Float get_x( );
 		Dynamic get_x_dyn();
 
-		Float x; /* REM */ 
-		bool zpp_disp; /* REM */ 
-		::nape::geom::Vec3 zpp_pool; /* REM */ 
-		::zpp_nape::geom::ZPP_Vec3 zpp_inner; /* REM */ 
+		bool zpp_disp;
+		::nape::geom::Vec3 zpp_pool;
+		::zpp_nape::geom::ZPP_Vec3 zpp_inner;
 		static ::nape::geom::Vec3 get( hx::Null< Float >  x,hx::Null< Float >  y,hx::Null< Float >  z);
 		static Dynamic get_dyn();
 

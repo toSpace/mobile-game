@@ -13,7 +13,7 @@ namespace nape{
 namespace shape{
 
 
-class ShapeIterator_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ShapeIterator_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ShapeIterator_obj OBJ_;
@@ -39,11 +39,11 @@ class ShapeIterator_obj : public hx::Object{
 		virtual bool hasNext( );
 		Dynamic hasNext_dyn();
 
-		::nape::shape::ShapeIterator zpp_next; /* REM */ 
-		bool zpp_critical; /* REM */ 
-		int zpp_i; /* REM */ 
-		::nape::shape::ShapeList zpp_inner; /* REM */ 
-		static ::nape::shape::ShapeIterator zpp_pool; /* REM */ 
+		::nape::shape::ShapeIterator zpp_next;
+		bool zpp_critical;
+		int zpp_i;
+		::nape::shape::ShapeList zpp_inner;
+		static ::nape::shape::ShapeIterator zpp_pool;
 		static ::nape::shape::ShapeIterator get( ::nape::shape::ShapeList list);
 		static Dynamic get_dyn();
 

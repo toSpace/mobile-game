@@ -10,7 +10,7 @@ namespace zpp_nape{
 namespace util{
 
 
-class Hashable2_Boolfalse_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Hashable2_Boolfalse_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Hashable2_Boolfalse_obj OBJ_;
@@ -36,12 +36,12 @@ class Hashable2_Boolfalse_obj : public hx::Object{
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		int di; /* REM */ 
-		int id; /* REM */ 
-		::zpp_nape::util::Hashable2_Boolfalse hnext; /* REM */ 
-		::zpp_nape::util::Hashable2_Boolfalse next; /* REM */ 
-		bool value; /* REM */ 
-		static ::zpp_nape::util::Hashable2_Boolfalse zpp_pool; /* REM */ 
+		int di;
+		int id;
+		::zpp_nape::util::Hashable2_Boolfalse hnext;
+		::zpp_nape::util::Hashable2_Boolfalse next;
+		bool value;
+		static ::zpp_nape::util::Hashable2_Boolfalse zpp_pool;
 		static ::zpp_nape::util::Hashable2_Boolfalse get( int id,int di,bool val);
 		static Dynamic get_dyn();
 

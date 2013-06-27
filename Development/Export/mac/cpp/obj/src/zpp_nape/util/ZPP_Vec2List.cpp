@@ -399,7 +399,7 @@ Class ZPP_Vec2List_obj::__mClass;
 
 void ZPP_Vec2List_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_Vec2List"), hx::TCanCast< ZPP_Vec2List_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_Vec2List"), hx::TCanCast< ZPP_Vec2List_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

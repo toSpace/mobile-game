@@ -6,13 +6,12 @@
 #endif
 
 HX_DECLARE_CLASS2(nape,geom,Vec2)
-HX_DECLARE_CLASS2(native,geom,Point)
 HX_DECLARE_CLASS2(zpp_nape,geom,ZPP_Vec2)
 namespace nape{
 namespace geom{
 
 
-class Vec2_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Vec2_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Vec2_obj OBJ_;
@@ -83,7 +82,6 @@ class Vec2_obj : public hx::Object{
 		virtual Float get_angle( );
 		Dynamic get_angle_dyn();
 
-		Float angle; /* REM */ 
 		virtual ::nape::geom::Vec2 setxy( Float x,Float y);
 		Dynamic setxy_dyn();
 
@@ -99,23 +97,17 @@ class Vec2_obj : public hx::Object{
 		virtual Float get_length( );
 		Dynamic get_length_dyn();
 
-		Float length; /* REM */ 
 		virtual Float set_y( Float y);
 		Dynamic set_y_dyn();
 
 		virtual Float get_y( );
 		Dynamic get_y_dyn();
 
-		Float y; /* REM */ 
 		virtual Float set_x( Float x);
 		Dynamic set_x_dyn();
 
 		virtual Float get_x( );
 		Dynamic get_x_dyn();
-
-		Float x; /* REM */ 
-		virtual ::native::geom::Point toPoint( ::native::geom::Point output);
-		Dynamic toPoint_dyn();
 
 		virtual ::nape::geom::Vec2 copy( hx::Null< bool >  weak);
 		Dynamic copy_dyn();
@@ -123,17 +115,14 @@ class Vec2_obj : public hx::Object{
 		virtual Void dispose( );
 		Dynamic dispose_dyn();
 
-		bool zpp_disp; /* REM */ 
-		::nape::geom::Vec2 zpp_pool; /* REM */ 
-		::zpp_nape::geom::ZPP_Vec2 zpp_inner; /* REM */ 
+		bool zpp_disp;
+		::nape::geom::Vec2 zpp_pool;
+		::zpp_nape::geom::ZPP_Vec2 zpp_inner;
 		static ::nape::geom::Vec2 weak( hx::Null< Float >  x,hx::Null< Float >  y);
 		static Dynamic weak_dyn();
 
 		static ::nape::geom::Vec2 get( hx::Null< Float >  x,hx::Null< Float >  y,hx::Null< bool >  weak);
 		static Dynamic get_dyn();
-
-		static ::nape::geom::Vec2 fromPoint( ::native::geom::Point point,hx::Null< bool >  weak);
-		static Dynamic fromPoint_dyn();
 
 		static ::nape::geom::Vec2 fromPolar( Float length,Float angle,hx::Null< bool >  weak);
 		static Dynamic fromPolar_dyn();

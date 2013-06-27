@@ -81,7 +81,7 @@ Dynamic ZPP_Monotone_obj::__Create(hx::DynamicArray inArgs)
 		vy = (c->y - b->y);
 	}
 	struct _Function_1_1{
-		inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &vy,Float &uy,Float &vx,Float &ux){
+		inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &vx,Float &uy,Float &ux,Float &vy){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/Monotone.hx",190);
 			{
 				HX_STACK_LINE(190)
@@ -117,9 +117,6 @@ Dynamic ZPP_Monotone_obj::__Create(hx::DynamicArray inArgs)
 					HX_STACK_LINE(190)
 					{
 					}
-					HX_STACK_LINE(190)
-					{
-					}
 				}
 				HX_STACK_LINE(190)
 				return ret;
@@ -128,49 +125,17 @@ Dynamic ZPP_Monotone_obj::__Create(hx::DynamicArray inArgs)
 		}
 	};
 	HX_STACK_LINE(190)
-	::zpp_nape::geom::ZPP_Vec2 ret = _Function_1_1::Block(vy,uy,vx,ux);		HX_STACK_VAR(ret,"ret");
+	::zpp_nape::geom::ZPP_Vec2 ret = _Function_1_1::Block(vx,uy,ux,vy);		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(191)
 	{
 		HX_STACK_LINE(192)
 		Float d = ((ret->x * ret->x) + (ret->y * ret->y));		HX_STACK_VAR(d,"d");
-		HX_STACK_LINE(193)
-		{
-		}
-		struct _Function_2_1{
-			inline static Float Block( Float &d){
-				HX_STACK_PUSH("*::closure","zpp_nape/geom/Monotone.hx",201);
-				{
-					HX_STACK_LINE(201)
-					{
-					}
-					struct _Function_3_1{
-						inline static Float Block( Float &d){
-							HX_STACK_PUSH("*::closure","zpp_nape/geom/Monotone.hx",201);
-							{
-								HX_STACK_LINE(201)
-								{
-								}
-								HX_STACK_LINE(201)
-								return ::Math_obj::sqrt(d);
-							}
-							return null();
-						}
-					};
-					HX_STACK_LINE(201)
-					return (Float(1.0) / Float(_Function_3_1::Block(d)));
-				}
-				return null();
-			}
-		};
 		HX_STACK_LINE(201)
-		Float imag = _Function_2_1::Block(d);		HX_STACK_VAR(imag,"imag");
+		Float imag = (Float(1.0) / Float(::Math_obj::sqrt(d)));		HX_STACK_VAR(imag,"imag");
 		HX_STACK_LINE(202)
 		{
 			HX_STACK_LINE(203)
 			Float t = imag;		HX_STACK_VAR(t,"t");
-			HX_STACK_LINE(204)
-			{
-			}
 			HX_STACK_LINE(212)
 			hx::MultEq(ret->x,t);
 			HX_STACK_LINE(213)
@@ -227,9 +192,6 @@ bool ZPP_Monotone_obj::below( ::zpp_nape::geom::ZPP_PartitionVertex p,::zpp_nape
 					{
 						HX_STACK_LINE(232)
 						Float t = 1.0;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(233)
-						{
-						}
 						HX_STACK_LINE(241)
 						hx::AddEq(po->x,(p->x * t));
 						HX_STACK_LINE(242)
@@ -239,9 +201,6 @@ bool ZPP_Monotone_obj::below( ::zpp_nape::geom::ZPP_PartitionVertex p,::zpp_nape
 					{
 						HX_STACK_LINE(245)
 						Float t = 1.0;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(246)
-						{
-						}
 						HX_STACK_LINE(254)
 						hx::AddEq(qo->x,(q->x * t));
 						HX_STACK_LINE(255)
@@ -253,9 +212,6 @@ bool ZPP_Monotone_obj::below( ::zpp_nape::geom::ZPP_PartitionVertex p,::zpp_nape
 					{
 						HX_STACK_LINE(259)
 						::zpp_nape::geom::ZPP_Vec2 o = po;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(260)
-						{
-						}
 						HX_STACK_LINE(268)
 						{
 							HX_STACK_LINE(268)
@@ -281,9 +237,6 @@ bool ZPP_Monotone_obj::below( ::zpp_nape::geom::ZPP_PartitionVertex p,::zpp_nape
 					{
 						HX_STACK_LINE(276)
 						::zpp_nape::geom::ZPP_Vec2 o = qo;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(277)
-						{
-						}
 						HX_STACK_LINE(285)
 						{
 							HX_STACK_LINE(285)
@@ -549,7 +502,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(ZPP_Monotone_obj,getShared,return )
 					HX_STACK_LINE(415)
 					bool cx = (((vy * ux) - (vx * uy)) > 0.0);		HX_STACK_VAR(cx,"cx");
 					struct _Function_5_1{
-						inline static int Block( ::zpp_nape::geom::ZPP_PartitionVertex &p,bool &cx){
+						inline static int Block( bool &cx,::zpp_nape::geom::ZPP_PartitionVertex &p){
 							HX_STACK_PUSH("*::closure","zpp_nape/geom/Monotone.hx",416);
 							{
 								struct _Function_6_1{
@@ -579,7 +532,7 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(ZPP_Monotone_obj,getShared,return )
 						}
 					};
 					HX_STACK_LINE(416)
-					p->type = (  ((::zpp_nape::geom::ZPP_Monotone_obj::below(p->prev,p))) ? int(_Function_5_1::Block(p,cx)) : int((  ((::zpp_nape::geom::ZPP_Monotone_obj::below(p,p->next))) ? int(_Function_5_2::Block(cx)) : int((int)4) )) );
+					p->type = (  ((::zpp_nape::geom::ZPP_Monotone_obj::below(p->prev,p))) ? int(_Function_5_1::Block(cx,p)) : int((  ((::zpp_nape::geom::ZPP_Monotone_obj::below(p,p->next))) ? int(_Function_5_2::Block(cx)) : int((int)4) )) );
 				}
 				HX_STACK_LINE(424)
 				nite = nite->next;
@@ -772,49 +725,43 @@ while(((numMerges > (int)1)));
 							HX_STACK_LINE(524)
 							::zpp_nape::geom::ZPP_PartitionVertex ret = null();		HX_STACK_VAR(ret,"ret");
 							HX_STACK_LINE(525)
-							{
-								HX_STACK_LINE(526)
-								{
-								}
-								HX_STACK_LINE(534)
-								if ((!(::zpp_nape::geom::ZPP_Monotone_obj::edges->empty()))){
-									HX_STACK_LINE(535)
-									::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex set_ite = ::zpp_nape::geom::ZPP_Monotone_obj::edges->parent;		HX_STACK_VAR(set_ite,"set_ite");
+							if ((!(::zpp_nape::geom::ZPP_Monotone_obj::edges->empty()))){
+								HX_STACK_LINE(535)
+								::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex set_ite = ::zpp_nape::geom::ZPP_Monotone_obj::edges->parent;		HX_STACK_VAR(set_ite,"set_ite");
+								HX_STACK_LINE(536)
+								while(((set_ite->prev != null()))){
 									HX_STACK_LINE(536)
-									while(((set_ite->prev != null()))){
-										HX_STACK_LINE(536)
-										set_ite = set_ite->prev;
+									set_ite = set_ite->prev;
+								}
+								HX_STACK_LINE(537)
+								while(((set_ite != null()))){
+									HX_STACK_LINE(538)
+									::zpp_nape::geom::ZPP_PartitionVertex elt = set_ite->data;		HX_STACK_VAR(elt,"elt");
+									HX_STACK_LINE(539)
+									if ((!(::zpp_nape::geom::ZPP_PartitionVertex_obj::vert_lt(elt,v)))){
+										HX_STACK_LINE(541)
+										ret = elt;
+										HX_STACK_LINE(542)
+										break;
 									}
-									HX_STACK_LINE(537)
-									while(((set_ite != null()))){
-										HX_STACK_LINE(538)
-										::zpp_nape::geom::ZPP_PartitionVertex elt = set_ite->data;		HX_STACK_VAR(elt,"elt");
-										HX_STACK_LINE(539)
-										if ((!(::zpp_nape::geom::ZPP_PartitionVertex_obj::vert_lt(elt,v)))){
-											HX_STACK_LINE(541)
-											ret = elt;
-											HX_STACK_LINE(542)
-											break;
-										}
-										HX_STACK_LINE(545)
-										if (((set_ite->next != null()))){
-											HX_STACK_LINE(546)
-											set_ite = set_ite->next;
+									HX_STACK_LINE(545)
+									if (((set_ite->next != null()))){
+										HX_STACK_LINE(546)
+										set_ite = set_ite->next;
+										HX_STACK_LINE(547)
+										while(((set_ite->prev != null()))){
 											HX_STACK_LINE(547)
-											while(((set_ite->prev != null()))){
-												HX_STACK_LINE(547)
-												set_ite = set_ite->prev;
-											}
+											set_ite = set_ite->prev;
 										}
-										else{
+									}
+									else{
+										HX_STACK_LINE(550)
+										while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
 											HX_STACK_LINE(550)
-											while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
-												HX_STACK_LINE(550)
-												set_ite = set_ite->parent;
-											}
-											HX_STACK_LINE(551)
 											set_ite = set_ite->parent;
 										}
+										HX_STACK_LINE(551)
+										set_ite = set_ite->parent;
 									}
 								}
 							}
@@ -868,49 +815,43 @@ while(((numMerges > (int)1)));
 							HX_STACK_LINE(579)
 							::zpp_nape::geom::ZPP_PartitionVertex ret = null();		HX_STACK_VAR(ret,"ret");
 							HX_STACK_LINE(580)
-							{
-								HX_STACK_LINE(581)
-								{
-								}
-								HX_STACK_LINE(589)
-								if ((!(::zpp_nape::geom::ZPP_Monotone_obj::edges->empty()))){
-									HX_STACK_LINE(590)
-									::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex set_ite = ::zpp_nape::geom::ZPP_Monotone_obj::edges->parent;		HX_STACK_VAR(set_ite,"set_ite");
+							if ((!(::zpp_nape::geom::ZPP_Monotone_obj::edges->empty()))){
+								HX_STACK_LINE(590)
+								::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex set_ite = ::zpp_nape::geom::ZPP_Monotone_obj::edges->parent;		HX_STACK_VAR(set_ite,"set_ite");
+								HX_STACK_LINE(591)
+								while(((set_ite->prev != null()))){
 									HX_STACK_LINE(591)
-									while(((set_ite->prev != null()))){
-										HX_STACK_LINE(591)
-										set_ite = set_ite->prev;
+									set_ite = set_ite->prev;
+								}
+								HX_STACK_LINE(592)
+								while(((set_ite != null()))){
+									HX_STACK_LINE(593)
+									::zpp_nape::geom::ZPP_PartitionVertex elt = set_ite->data;		HX_STACK_VAR(elt,"elt");
+									HX_STACK_LINE(594)
+									if ((!(::zpp_nape::geom::ZPP_PartitionVertex_obj::vert_lt(elt,v)))){
+										HX_STACK_LINE(596)
+										ret = elt;
+										HX_STACK_LINE(597)
+										break;
 									}
-									HX_STACK_LINE(592)
-									while(((set_ite != null()))){
-										HX_STACK_LINE(593)
-										::zpp_nape::geom::ZPP_PartitionVertex elt = set_ite->data;		HX_STACK_VAR(elt,"elt");
-										HX_STACK_LINE(594)
-										if ((!(::zpp_nape::geom::ZPP_PartitionVertex_obj::vert_lt(elt,v)))){
-											HX_STACK_LINE(596)
-											ret = elt;
-											HX_STACK_LINE(597)
-											break;
-										}
-										HX_STACK_LINE(600)
-										if (((set_ite->next != null()))){
-											HX_STACK_LINE(601)
-											set_ite = set_ite->next;
+									HX_STACK_LINE(600)
+									if (((set_ite->next != null()))){
+										HX_STACK_LINE(601)
+										set_ite = set_ite->next;
+										HX_STACK_LINE(602)
+										while(((set_ite->prev != null()))){
 											HX_STACK_LINE(602)
-											while(((set_ite->prev != null()))){
-												HX_STACK_LINE(602)
-												set_ite = set_ite->prev;
-											}
+											set_ite = set_ite->prev;
 										}
-										else{
+									}
+									else{
+										HX_STACK_LINE(605)
+										while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
 											HX_STACK_LINE(605)
-											while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
-												HX_STACK_LINE(605)
-												set_ite = set_ite->parent;
-											}
-											HX_STACK_LINE(606)
 											set_ite = set_ite->parent;
 										}
+										HX_STACK_LINE(606)
+										set_ite = set_ite->parent;
 									}
 								}
 							}
@@ -971,49 +912,43 @@ while(((numMerges > (int)1)));
 								HX_STACK_LINE(637)
 								::zpp_nape::geom::ZPP_PartitionVertex ret = null();		HX_STACK_VAR(ret,"ret");
 								HX_STACK_LINE(638)
-								{
-									HX_STACK_LINE(639)
-									{
-									}
-									HX_STACK_LINE(647)
-									if ((!(::zpp_nape::geom::ZPP_Monotone_obj::edges->empty()))){
-										HX_STACK_LINE(648)
-										::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex set_ite = ::zpp_nape::geom::ZPP_Monotone_obj::edges->parent;		HX_STACK_VAR(set_ite,"set_ite");
+								if ((!(::zpp_nape::geom::ZPP_Monotone_obj::edges->empty()))){
+									HX_STACK_LINE(648)
+									::zpp_nape::util::ZPP_Set_ZPP_PartitionVertex set_ite = ::zpp_nape::geom::ZPP_Monotone_obj::edges->parent;		HX_STACK_VAR(set_ite,"set_ite");
+									HX_STACK_LINE(649)
+									while(((set_ite->prev != null()))){
 										HX_STACK_LINE(649)
-										while(((set_ite->prev != null()))){
-											HX_STACK_LINE(649)
-											set_ite = set_ite->prev;
+										set_ite = set_ite->prev;
+									}
+									HX_STACK_LINE(650)
+									while(((set_ite != null()))){
+										HX_STACK_LINE(651)
+										::zpp_nape::geom::ZPP_PartitionVertex elt = set_ite->data;		HX_STACK_VAR(elt,"elt");
+										HX_STACK_LINE(652)
+										if ((!(::zpp_nape::geom::ZPP_PartitionVertex_obj::vert_lt(elt,v)))){
+											HX_STACK_LINE(654)
+											ret = elt;
+											HX_STACK_LINE(655)
+											break;
 										}
-										HX_STACK_LINE(650)
-										while(((set_ite != null()))){
-											HX_STACK_LINE(651)
-											::zpp_nape::geom::ZPP_PartitionVertex elt = set_ite->data;		HX_STACK_VAR(elt,"elt");
-											HX_STACK_LINE(652)
-											if ((!(::zpp_nape::geom::ZPP_PartitionVertex_obj::vert_lt(elt,v)))){
-												HX_STACK_LINE(654)
-												ret = elt;
-												HX_STACK_LINE(655)
-												break;
-											}
-											HX_STACK_LINE(658)
-											if (((set_ite->next != null()))){
-												HX_STACK_LINE(659)
-												set_ite = set_ite->next;
+										HX_STACK_LINE(658)
+										if (((set_ite->next != null()))){
+											HX_STACK_LINE(659)
+											set_ite = set_ite->next;
+											HX_STACK_LINE(660)
+											while(((set_ite->prev != null()))){
 												HX_STACK_LINE(660)
-												while(((set_ite->prev != null()))){
-													HX_STACK_LINE(660)
-													set_ite = set_ite->prev;
-												}
+												set_ite = set_ite->prev;
 											}
-											else{
+										}
+										else{
+											HX_STACK_LINE(663)
+											while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
 												HX_STACK_LINE(663)
-												while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
-													HX_STACK_LINE(663)
-													set_ite = set_ite->parent;
-												}
-												HX_STACK_LINE(664)
 												set_ite = set_ite->parent;
 											}
+											HX_STACK_LINE(664)
+											set_ite = set_ite->parent;
 										}
 									}
 								}
@@ -1041,9 +976,6 @@ while(((numMerges > (int)1)));
 			}
 			;break;
 		}
-	}
-	HX_STACK_LINE(681)
-	{
 	}
 	HX_STACK_LINE(689)
 	return poly;
@@ -1145,7 +1077,7 @@ Class ZPP_Monotone_obj::__mClass;
 
 void ZPP_Monotone_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_Monotone"), hx::TCanCast< ZPP_Monotone_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_Monotone"), hx::TCanCast< ZPP_Monotone_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

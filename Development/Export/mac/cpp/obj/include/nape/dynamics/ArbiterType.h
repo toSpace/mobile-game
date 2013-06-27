@@ -10,7 +10,7 @@ namespace nape{
 namespace dynamics{
 
 
-class ArbiterType_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ArbiterType_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ArbiterType_obj OBJ_;
@@ -33,15 +33,12 @@ class ArbiterType_obj : public hx::Object{
 		virtual ::String toString( );
 		Dynamic toString_dyn();
 
-		static ::nape::dynamics::ArbiterType COLLISION; /* REM */ 
 		static ::nape::dynamics::ArbiterType get_COLLISION( );
 		static Dynamic get_COLLISION_dyn();
 
-		static ::nape::dynamics::ArbiterType SENSOR; /* REM */ 
 		static ::nape::dynamics::ArbiterType get_SENSOR( );
 		static Dynamic get_SENSOR_dyn();
 
-		static ::nape::dynamics::ArbiterType FLUID; /* REM */ 
 		static ::nape::dynamics::ArbiterType get_FLUID( );
 		static Dynamic get_FLUID_dyn();
 

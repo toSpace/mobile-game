@@ -11,7 +11,7 @@ namespace zpp_nape{
 namespace util{
 
 
-class ZNPNode_ZPP_InteractionGroup_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZNPNode_ZPP_InteractionGroup_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZNPNode_ZPP_InteractionGroup_obj OBJ_;
@@ -34,15 +34,15 @@ class ZNPNode_ZPP_InteractionGroup_obj : public hx::Object{
 		virtual ::zpp_nape::dynamics::ZPP_InteractionGroup elem( );
 		Dynamic elem_dyn();
 
-		::zpp_nape::dynamics::ZPP_InteractionGroup elt; /* REM */ 
+		::zpp_nape::dynamics::ZPP_InteractionGroup elt;
 		virtual Void free( );
 		Dynamic free_dyn();
 
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
-		::zpp_nape::util::ZNPNode_ZPP_InteractionGroup next; /* REM */ 
-		static ::zpp_nape::util::ZNPNode_ZPP_InteractionGroup zpp_pool; /* REM */ 
+		::zpp_nape::util::ZNPNode_ZPP_InteractionGroup next;
+		static ::zpp_nape::util::ZNPNode_ZPP_InteractionGroup zpp_pool;
 };
 
 } // end namespace zpp_nape

@@ -1,8 +1,8 @@
 //nme
-import nme.geom.Point;
-import nme.events.Event;
-import nme.events.EventDispatcher;
-import nme.events.KeyboardEvent;
+import flash.geom.Point;
+import flash.events.Event;
+import flash.events.EventDispatcher;
+import flash.events.KeyboardEvent;
 
 //nape
 import nape.phys.Body;

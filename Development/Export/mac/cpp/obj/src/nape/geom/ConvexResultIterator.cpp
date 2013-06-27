@@ -277,7 +277,7 @@ Class ConvexResultIterator_obj::__mClass;
 
 void ConvexResultIterator_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.ConvexResultIterator"), hx::TCanCast< ConvexResultIterator_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.ConvexResultIterator"), hx::TCanCast< ConvexResultIterator_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -169,7 +169,7 @@ Class ZPP_MarchSpan_obj::__mClass;
 
 void ZPP_MarchSpan_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_MarchSpan"), hx::TCanCast< ZPP_MarchSpan_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_MarchSpan"), hx::TCanCast< ZPP_MarchSpan_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

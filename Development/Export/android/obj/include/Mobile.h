@@ -8,7 +8,7 @@
 HX_DECLARE_CLASS0(Mobile)
 
 
-class Mobile_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Mobile_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Mobile_obj OBJ_;
@@ -28,11 +28,11 @@ class Mobile_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("Mobile"); }
 
-		static ::String asset; /* REM */ 
-		static ::String xml; /* REM */ 
-		static Float screenDensity; /* REM */ 
-		static Float screenWidth; /* REM */ 
-		static Float screenHeight; /* REM */ 
+		static ::String asset;
+		static ::String xml;
+		static Float screenDensity;
+		static Float screenWidth;
+		static Float screenHeight;
 		static Void setSizes( );
 		static Dynamic setSizes_dyn();
 

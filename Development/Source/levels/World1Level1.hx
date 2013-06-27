@@ -1,7 +1,8 @@
+
 class World1Level1 extends Level {
 	
 	public override function loadLevel(){
-
+		/*
 		//load background
 		#if !debug
 
@@ -86,9 +87,11 @@ class World1Level1 extends Level {
 		var lvl1_fg_l2_tree2 = new BackgroundObject('world1/lvl1/fg/l2/lvl1_fg_l2_tree2.xml');
 		var lvl1_fg_l2_tree3 = new BackgroundObject('world1/lvl1/fg/l2/lvl1_fg_l2_tree3.xml');
 		var lvl1_fg_l2_tree4 = new BackgroundObject('world1/lvl1/fg/l2/lvl1_fg_l2_tree4.xml');
+		*/
 
+		trace(Main.canvas);
 
-    	var lucy = new Lucy();
+    	//var lucy = new Lucy();
 
         //start again
         start();

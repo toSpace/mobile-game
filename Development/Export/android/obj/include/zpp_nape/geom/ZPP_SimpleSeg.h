@@ -13,7 +13,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_SimpleSeg_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_SimpleSeg_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_SimpleSeg_obj OBJ_;
@@ -36,20 +36,20 @@ class ZPP_SimpleSeg_obj : public hx::Object{
 		virtual bool less_xy( ::zpp_nape::geom::ZPP_SimpleVert a,::zpp_nape::geom::ZPP_SimpleVert b);
 		Dynamic less_xy_dyn();
 
-		::zpp_nape::util::ZPP_Set_ZPP_SimpleSeg node; /* REM */ 
-		::zpp_nape::geom::ZPP_SimpleSeg prev; /* REM */ 
+		::zpp_nape::util::ZPP_Set_ZPP_SimpleSeg node;
+		::zpp_nape::geom::ZPP_SimpleSeg prev;
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
 		virtual Void free( );
 		Dynamic free_dyn();
 
-		::zpp_nape::geom::ZPP_SimpleSeg next; /* REM */ 
-		int id; /* REM */ 
-		::zpp_nape::util::ZPP_Set_ZPP_SimpleVert vertices; /* REM */ 
-		::zpp_nape::geom::ZPP_SimpleVert right; /* REM */ 
-		::zpp_nape::geom::ZPP_SimpleVert left; /* REM */ 
-		static ::zpp_nape::geom::ZPP_SimpleSeg zpp_pool; /* REM */ 
+		::zpp_nape::geom::ZPP_SimpleSeg next;
+		int id;
+		::zpp_nape::util::ZPP_Set_ZPP_SimpleVert vertices;
+		::zpp_nape::geom::ZPP_SimpleVert right;
+		::zpp_nape::geom::ZPP_SimpleVert left;
+		static ::zpp_nape::geom::ZPP_SimpleSeg zpp_pool;
 		static ::zpp_nape::geom::ZPP_SimpleSeg get( ::zpp_nape::geom::ZPP_SimpleVert left,::zpp_nape::geom::ZPP_SimpleVert right);
 		static Dynamic get_dyn();
 

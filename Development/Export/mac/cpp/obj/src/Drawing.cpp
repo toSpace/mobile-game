@@ -9,6 +9,33 @@
 #ifndef INCLUDED_Main
 #include <Main.h>
 #endif
+#ifndef INCLUDED_flash_display_DisplayObject
+#include <flash/display/DisplayObject.h>
+#endif
+#ifndef INCLUDED_flash_display_DisplayObjectContainer
+#include <flash/display/DisplayObjectContainer.h>
+#endif
+#ifndef INCLUDED_flash_display_IBitmapDrawable
+#include <flash/display/IBitmapDrawable.h>
+#endif
+#ifndef INCLUDED_flash_display_InteractiveObject
+#include <flash/display/InteractiveObject.h>
+#endif
+#ifndef INCLUDED_flash_display_Sprite
+#include <flash/display/Sprite.h>
+#endif
+#ifndef INCLUDED_flash_events_Event
+#include <flash/events/Event.h>
+#endif
+#ifndef INCLUDED_flash_events_EventDispatcher
+#include <flash/events/EventDispatcher.h>
+#endif
+#ifndef INCLUDED_flash_events_IEventDispatcher
+#include <flash/events/IEventDispatcher.h>
+#endif
+#ifndef INCLUDED_flash_events_MouseEvent
+#include <flash/events/MouseEvent.h>
+#endif
 #ifndef INCLUDED_nape_dynamics_InteractionFilter
 #include <nape/dynamics/InteractionFilter.h>
 #endif
@@ -26,33 +53,6 @@
 #endif
 #ifndef INCLUDED_nape_space_Space
 #include <nape/space/Space.h>
-#endif
-#ifndef INCLUDED_native_display_DisplayObject
-#include <native/display/DisplayObject.h>
-#endif
-#ifndef INCLUDED_native_display_DisplayObjectContainer
-#include <native/display/DisplayObjectContainer.h>
-#endif
-#ifndef INCLUDED_native_display_IBitmapDrawable
-#include <native/display/IBitmapDrawable.h>
-#endif
-#ifndef INCLUDED_native_display_InteractiveObject
-#include <native/display/InteractiveObject.h>
-#endif
-#ifndef INCLUDED_native_display_Sprite
-#include <native/display/Sprite.h>
-#endif
-#ifndef INCLUDED_native_events_Event
-#include <native/events/Event.h>
-#endif
-#ifndef INCLUDED_native_events_EventDispatcher
-#include <native/events/EventDispatcher.h>
-#endif
-#ifndef INCLUDED_native_events_IEventDispatcher
-#include <native/events/IEventDispatcher.h>
-#endif
-#ifndef INCLUDED_native_events_MouseEvent
-#include <native/events/MouseEvent.h>
 #endif
 #ifndef INCLUDED_zpp_nape_util_ZNPList_ZPP_Body
 #include <zpp_nape/util/ZNPList_ZPP_Body.h>
@@ -95,11 +95,11 @@ Void Drawing_obj::init( ){
 {
 		HX_STACK_PUSH("Drawing::init","Drawing.hx",23);
 		HX_STACK_LINE(24)
-		::Main_obj::canvas->addEventListener(::native::events::MouseEvent_obj::MOUSE_DOWN,::Drawing_obj::startDraw_dyn(),null(),null(),null());
+		::Main_obj::canvas->addEventListener(::flash::events::MouseEvent_obj::MOUSE_DOWN,::Drawing_obj::startDraw_dyn(),null(),null(),null());
 		HX_STACK_LINE(25)
-		::Main_obj::canvas->addEventListener(::native::events::MouseEvent_obj::MOUSE_MOVE,::Drawing_obj::checkDraw_dyn(),null(),null(),null());
+		::Main_obj::canvas->addEventListener(::flash::events::MouseEvent_obj::MOUSE_MOVE,::Drawing_obj::checkDraw_dyn(),null(),null(),null());
 		HX_STACK_LINE(26)
-		::Main_obj::canvas->addEventListener(::native::events::MouseEvent_obj::MOUSE_UP,::Drawing_obj::stopDraw_dyn(),null(),null(),null());
+		::Main_obj::canvas->addEventListener(::flash::events::MouseEvent_obj::MOUSE_UP,::Drawing_obj::stopDraw_dyn(),null(),null(),null());
 	}
 return null();
 }
@@ -107,16 +107,20 @@ return null();
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(Drawing_obj,init,(void))
 
-Void Drawing_obj::startDraw( ::native::events::MouseEvent e){
+Void Drawing_obj::startDraw( ::flash::events::MouseEvent e){
 {
 		HX_STACK_PUSH("Drawing::startDraw","Drawing.hx",29);
 		HX_STACK_ARG(e,"e");
 		HX_STACK_LINE(30)
 		::Drawing_obj::drawing = true;
+		HX_STACK_LINE(32)
+		::Drawing_obj::x = e->localX;
 		HX_STACK_LINE(33)
+		::Drawing_obj::y = e->localY;
+		HX_STACK_LINE(36)
 		if ((!(::Drawing_obj::locked))){
-			HX_STACK_LINE(33)
-			::LineDrawing newDrawing = ::LineDrawing_obj::__new(e->localX,e->localY);		HX_STACK_VAR(newDrawing,"newDrawing");
+			HX_STACK_LINE(36)
+			::LineDrawing newDrawing = ::LineDrawing_obj::__new(::Drawing_obj::x,::Drawing_obj::y);		HX_STACK_VAR(newDrawing,"newDrawing");
 		}
 	}
 return null();
@@ -125,11 +129,11 @@ return null();
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Drawing_obj,startDraw,(void))
 
-Void Drawing_obj::stopDraw( ::native::events::MouseEvent e){
+Void Drawing_obj::stopDraw( ::flash::events::MouseEvent e){
 {
-		HX_STACK_PUSH("Drawing::stopDraw","Drawing.hx",38);
+		HX_STACK_PUSH("Drawing::stopDraw","Drawing.hx",41);
 		HX_STACK_ARG(e,"e");
-		HX_STACK_LINE(38)
+		HX_STACK_LINE(41)
 		::Drawing_obj::drawing = false;
 	}
 return null();
@@ -138,13 +142,13 @@ return null();
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Drawing_obj,stopDraw,(void))
 
-Void Drawing_obj::checkDraw( ::native::events::MouseEvent e){
+Void Drawing_obj::checkDraw( ::flash::events::MouseEvent e){
 {
-		HX_STACK_PUSH("Drawing::checkDraw","Drawing.hx",42);
+		HX_STACK_PUSH("Drawing::checkDraw","Drawing.hx",45);
 		HX_STACK_ARG(e,"e");
-		HX_STACK_LINE(48)
+		HX_STACK_LINE(51)
 		::Drawing_obj::x = e->localX;
-		HX_STACK_LINE(49)
+		HX_STACK_LINE(52)
 		::Drawing_obj::y = e->localY;
 	}
 return null();
@@ -154,71 +158,71 @@ return null();
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Drawing_obj,checkDraw,(void))
 
 bool Drawing_obj::checkActive( ::nape::phys::Body b){
-	HX_STACK_PUSH("Drawing::checkActive","Drawing.hx",52);
+	HX_STACK_PUSH("Drawing::checkActive","Drawing.hx",55);
 	HX_STACK_ARG(b,"b");
-	HX_STACK_LINE(53)
+	HX_STACK_LINE(56)
 	bool active = false;		HX_STACK_VAR(active,"active");
-	HX_STACK_LINE(54)
+	HX_STACK_LINE(57)
 	::nape::geom::Vec2 mp = ::nape::geom::Vec2_obj::__new(::Drawing_obj::x,::Drawing_obj::y);		HX_STACK_VAR(mp,"mp");
-	HX_STACK_LINE(55)
+	HX_STACK_LINE(58)
 	::nape::phys::BodyList bodies = ::Main_obj::space->bodiesUnderPoint(mp,null(),null());		HX_STACK_VAR(bodies,"bodies");
 	struct _Function_1_1{
 		inline static int Block( ::nape::phys::BodyList &bodies){
-			HX_STACK_PUSH("*::closure","Drawing.hx",57);
+			HX_STACK_PUSH("*::closure","Drawing.hx",60);
 			{
-				HX_STACK_LINE(57)
+				HX_STACK_LINE(60)
 				bodies->zpp_inner->valmod();
-				HX_STACK_LINE(57)
+				HX_STACK_LINE(60)
 				if ((bodies->zpp_inner->zip_length)){
-					HX_STACK_LINE(57)
+					HX_STACK_LINE(60)
 					bodies->zpp_inner->zip_length = false;
-					HX_STACK_LINE(57)
+					HX_STACK_LINE(60)
 					bodies->zpp_inner->user_length = bodies->zpp_inner->inner->length;
 				}
-				HX_STACK_LINE(57)
+				HX_STACK_LINE(60)
 				return bodies->zpp_inner->user_length;
 			}
 			return null();
 		}
 	};
-	HX_STACK_LINE(57)
+	HX_STACK_LINE(60)
 	if (((_Function_1_1::Block(bodies) > (int)0))){
 		struct _Function_2_1{
 			inline static int Block( ::nape::phys::BodyList &bodies){
-				HX_STACK_PUSH("*::closure","Drawing.hx",58);
+				HX_STACK_PUSH("*::closure","Drawing.hx",61);
 				{
-					HX_STACK_LINE(58)
+					HX_STACK_LINE(61)
 					bodies->zpp_inner->valmod();
-					HX_STACK_LINE(58)
+					HX_STACK_LINE(61)
 					if ((bodies->zpp_inner->zip_length)){
-						HX_STACK_LINE(58)
+						HX_STACK_LINE(61)
 						bodies->zpp_inner->zip_length = false;
-						HX_STACK_LINE(58)
+						HX_STACK_LINE(61)
 						bodies->zpp_inner->user_length = bodies->zpp_inner->inner->length;
 					}
-					HX_STACK_LINE(58)
+					HX_STACK_LINE(61)
 					return bodies->zpp_inner->user_length;
 				}
 				return null();
 			}
 		};
-		HX_STACK_LINE(58)
+		HX_STACK_LINE(61)
 		int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
 		int _g = _Function_2_1::Block(bodies);		HX_STACK_VAR(_g,"_g");
-		HX_STACK_LINE(58)
+		HX_STACK_LINE(61)
 		while(((_g1 < _g))){
-			HX_STACK_LINE(58)
-			int i = (_g1)++;		HX_STACK_VAR(i,"i");
-			HX_STACK_LINE(60)
-			::nape::phys::Body body = bodies->at(i);		HX_STACK_VAR(body,"body");
 			HX_STACK_LINE(61)
+			int i = (_g1)++;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(63)
+			::nape::phys::Body body = bodies->at(i);		HX_STACK_VAR(body,"body");
+			HX_STACK_LINE(64)
 			if (((body == b))){
-				HX_STACK_LINE(61)
+				HX_STACK_LINE(64)
 				active = true;
 			}
 		}
 	}
-	HX_STACK_LINE(67)
+	HX_STACK_LINE(70)
 	return active;
 }
 
@@ -226,9 +230,9 @@ bool Drawing_obj::checkActive( ::nape::phys::Body b){
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Drawing_obj,checkActive,return )
 
 bool Drawing_obj::mouseOver( Dynamic asset){
-	HX_STACK_PUSH("Drawing::mouseOver","Drawing.hx",70);
+	HX_STACK_PUSH("Drawing::mouseOver","Drawing.hx",73);
 	HX_STACK_ARG(asset,"asset");
-	HX_STACK_LINE(70)
+	HX_STACK_LINE(73)
 	return asset->__Field(HX_CSTRING("hitTestPoint"),true)(::Drawing_obj::x,::Drawing_obj::y);
 }
 
@@ -237,9 +241,9 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC1(Drawing_obj,mouseOver,return )
 
 Void Drawing_obj::addDrawObject( Dynamic asset){
 {
-		HX_STACK_PUSH("Drawing::addDrawObject","Drawing.hx",74);
+		HX_STACK_PUSH("Drawing::addDrawObject","Drawing.hx",77);
 		HX_STACK_ARG(asset,"asset");
-		HX_STACK_LINE(74)
+		HX_STACK_LINE(77)
 		::Drawing_obj::drawList->__Field(HX_CSTRING("push"),true)(asset);
 	}
 return null();
@@ -366,7 +370,7 @@ Class Drawing_obj::__mClass;
 
 void Drawing_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("Drawing"), hx::TCanCast< Drawing_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("Drawing"), hx::TCanCast< Drawing_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

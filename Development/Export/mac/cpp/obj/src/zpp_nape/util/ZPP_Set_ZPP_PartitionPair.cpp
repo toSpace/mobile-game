@@ -11,21 +11,21 @@ namespace util{
 
 Void ZPP_Set_ZPP_PartitionPair_obj::__construct()
 {
-HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::new","zpp_nape/util/RBTree.hx",2842);
+HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::new","zpp_nape/util/RBTree.hx",1953);
 {
-	HX_STACK_LINE(2883)
+	HX_STACK_LINE(1994)
 	this->colour = (int)0;
-	HX_STACK_LINE(2882)
+	HX_STACK_LINE(1993)
 	this->parent = null();
-	HX_STACK_LINE(2881)
+	HX_STACK_LINE(1992)
 	this->next = null();
-	HX_STACK_LINE(2880)
+	HX_STACK_LINE(1991)
 	this->prev = null();
-	HX_STACK_LINE(2879)
+	HX_STACK_LINE(1990)
 	this->data = null();
-	HX_STACK_LINE(2878)
+	HX_STACK_LINE(1989)
 	this->swapped = null();
-	HX_STACK_LINE(2877)
+	HX_STACK_LINE(1988)
 	this->lt = null();
 }
 ;
@@ -46,95 +46,89 @@ Dynamic ZPP_Set_ZPP_PartitionPair_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair ZPP_Set_ZPP_PartitionPair_obj::insert( ::zpp_nape::geom::ZPP_PartitionPair obj){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::insert","zpp_nape/util/RBTree.hx",3664);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::insert","zpp_nape/util/RBTree.hx",2775);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(3665)
-	{
-	}
-	HX_STACK_LINE(3673)
+	HX_STACK_LINE(2784)
 	::zpp_nape::util::ZPP_Set_ZPP_PartitionPair x;		HX_STACK_VAR(x,"x");
-	HX_STACK_LINE(3674)
+	HX_STACK_LINE(2785)
 	{
-		HX_STACK_LINE(3675)
+		HX_STACK_LINE(2786)
 		if (((::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool == null()))){
-			HX_STACK_LINE(3675)
+			HX_STACK_LINE(2786)
 			x = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::__new();
 		}
 		else{
-			HX_STACK_LINE(3682)
+			HX_STACK_LINE(2793)
 			x = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool;
-			HX_STACK_LINE(3683)
+			HX_STACK_LINE(2794)
 			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool = x->next;
-			HX_STACK_LINE(3684)
+			HX_STACK_LINE(2795)
 			x->next = null();
 		}
-		HX_STACK_LINE(3689)
+		HX_STACK_LINE(2800)
 		Dynamic();
 	}
-	HX_STACK_LINE(3691)
+	HX_STACK_LINE(2802)
 	x->data = obj;
-	HX_STACK_LINE(3692)
+	HX_STACK_LINE(2803)
 	if (((this->parent == null()))){
-		HX_STACK_LINE(3692)
+		HX_STACK_LINE(2803)
 		this->parent = x;
 	}
 	else{
-		HX_STACK_LINE(3694)
+		HX_STACK_LINE(2805)
 		::zpp_nape::util::ZPP_Set_ZPP_PartitionPair cur = this->parent;		HX_STACK_VAR(cur,"cur");
-		HX_STACK_LINE(3695)
+		HX_STACK_LINE(2806)
 		while((true)){
-			HX_STACK_LINE(3695)
+			HX_STACK_LINE(2806)
 			if ((this->lt(x->data,cur->data))){
-				HX_STACK_LINE(3696)
+				HX_STACK_LINE(2807)
 				if (((cur->prev == null()))){
-					HX_STACK_LINE(3698)
+					HX_STACK_LINE(2809)
 					cur->prev = x;
-					HX_STACK_LINE(3699)
+					HX_STACK_LINE(2810)
 					x->parent = cur;
-					HX_STACK_LINE(3700)
+					HX_STACK_LINE(2811)
 					break;
 				}
 				else{
-					HX_STACK_LINE(3702)
+					HX_STACK_LINE(2813)
 					cur = cur->prev;
 				}
 			}
 			else{
-				HX_STACK_LINE(3704)
+				HX_STACK_LINE(2815)
 				if (((cur->next == null()))){
-					HX_STACK_LINE(3706)
+					HX_STACK_LINE(2817)
 					cur->next = x;
-					HX_STACK_LINE(3707)
+					HX_STACK_LINE(2818)
 					x->parent = cur;
-					HX_STACK_LINE(3708)
+					HX_STACK_LINE(2819)
 					break;
 				}
 				else{
-					HX_STACK_LINE(3710)
+					HX_STACK_LINE(2821)
 					cur = cur->next;
 				}
 			}
 		}
 	}
-	HX_STACK_LINE(3714)
+	HX_STACK_LINE(2825)
 	if (((x->parent == null()))){
-		HX_STACK_LINE(3714)
+		HX_STACK_LINE(2825)
 		x->colour = (int)1;
 	}
 	else{
-		HX_STACK_LINE(3716)
+		HX_STACK_LINE(2827)
 		x->colour = (int)0;
-		HX_STACK_LINE(3717)
+		HX_STACK_LINE(2828)
 		if (((x->parent->colour == (int)0))){
-			HX_STACK_LINE(3717)
+			HX_STACK_LINE(2828)
 			this->__fix_dbl_red(x);
 		}
 	}
-	HX_STACK_LINE(3719)
-	{
-	}
-	HX_STACK_LINE(3727)
+	HX_STACK_LINE(2838)
 	return x;
 }
 
@@ -142,147 +136,147 @@ Dynamic ZPP_Set_ZPP_PartitionPair_obj::__Create(hx::DynamicArray inArgs)
 HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,insert,return )
 
 ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair ZPP_Set_ZPP_PartitionPair_obj::try_insert( ::zpp_nape::geom::ZPP_PartitionPair obj){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::try_insert","zpp_nape/util/RBTree.hx",3572);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::try_insert","zpp_nape/util/RBTree.hx",2683);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(3573)
+	HX_STACK_LINE(2684)
 	::zpp_nape::util::ZPP_Set_ZPP_PartitionPair x = null();		HX_STACK_VAR(x,"x");
-	HX_STACK_LINE(3574)
+	HX_STACK_LINE(2685)
 	::zpp_nape::util::ZPP_Set_ZPP_PartitionPair cur = null();		HX_STACK_VAR(cur,"cur");
-	HX_STACK_LINE(3575)
+	HX_STACK_LINE(2686)
 	if (((this->parent == null()))){
-		HX_STACK_LINE(3576)
+		HX_STACK_LINE(2687)
 		{
-			HX_STACK_LINE(3577)
+			HX_STACK_LINE(2688)
 			if (((::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool == null()))){
-				HX_STACK_LINE(3577)
+				HX_STACK_LINE(2688)
 				x = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::__new();
 			}
 			else{
-				HX_STACK_LINE(3584)
+				HX_STACK_LINE(2695)
 				x = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool;
-				HX_STACK_LINE(3585)
+				HX_STACK_LINE(2696)
 				::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool = x->next;
-				HX_STACK_LINE(3586)
+				HX_STACK_LINE(2697)
 				x->next = null();
 			}
-			HX_STACK_LINE(3591)
+			HX_STACK_LINE(2702)
 			Dynamic();
 		}
-		HX_STACK_LINE(3593)
+		HX_STACK_LINE(2704)
 		x->data = obj;
-		HX_STACK_LINE(3594)
+		HX_STACK_LINE(2705)
 		this->parent = x;
 	}
 	else{
-		HX_STACK_LINE(3597)
+		HX_STACK_LINE(2708)
 		cur = this->parent;
-		HX_STACK_LINE(3598)
+		HX_STACK_LINE(2709)
 		while((true)){
-			HX_STACK_LINE(3598)
+			HX_STACK_LINE(2709)
 			if ((this->lt(obj,cur->data))){
-				HX_STACK_LINE(3599)
+				HX_STACK_LINE(2710)
 				if (((cur->prev == null()))){
-					HX_STACK_LINE(3601)
+					HX_STACK_LINE(2712)
 					{
-						HX_STACK_LINE(3602)
+						HX_STACK_LINE(2713)
 						if (((::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool == null()))){
-							HX_STACK_LINE(3602)
+							HX_STACK_LINE(2713)
 							x = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::__new();
 						}
 						else{
-							HX_STACK_LINE(3609)
+							HX_STACK_LINE(2720)
 							x = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool;
-							HX_STACK_LINE(3610)
+							HX_STACK_LINE(2721)
 							::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool = x->next;
-							HX_STACK_LINE(3611)
+							HX_STACK_LINE(2722)
 							x->next = null();
 						}
-						HX_STACK_LINE(3616)
+						HX_STACK_LINE(2727)
 						Dynamic();
 					}
-					HX_STACK_LINE(3618)
+					HX_STACK_LINE(2729)
 					x->data = obj;
-					HX_STACK_LINE(3619)
+					HX_STACK_LINE(2730)
 					cur->prev = x;
-					HX_STACK_LINE(3620)
+					HX_STACK_LINE(2731)
 					x->parent = cur;
-					HX_STACK_LINE(3621)
+					HX_STACK_LINE(2732)
 					break;
 				}
 				else{
-					HX_STACK_LINE(3623)
+					HX_STACK_LINE(2734)
 					cur = cur->prev;
 				}
 			}
 			else{
-				HX_STACK_LINE(3625)
+				HX_STACK_LINE(2736)
 				if ((this->lt(cur->data,obj))){
-					HX_STACK_LINE(3625)
+					HX_STACK_LINE(2736)
 					if (((cur->next == null()))){
-						HX_STACK_LINE(3627)
+						HX_STACK_LINE(2738)
 						{
-							HX_STACK_LINE(3628)
+							HX_STACK_LINE(2739)
 							if (((::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool == null()))){
-								HX_STACK_LINE(3628)
+								HX_STACK_LINE(2739)
 								x = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::__new();
 							}
 							else{
-								HX_STACK_LINE(3635)
+								HX_STACK_LINE(2746)
 								x = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool;
-								HX_STACK_LINE(3636)
+								HX_STACK_LINE(2747)
 								::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool = x->next;
-								HX_STACK_LINE(3637)
+								HX_STACK_LINE(2748)
 								x->next = null();
 							}
-							HX_STACK_LINE(3642)
+							HX_STACK_LINE(2753)
 							Dynamic();
 						}
-						HX_STACK_LINE(3644)
+						HX_STACK_LINE(2755)
 						x->data = obj;
-						HX_STACK_LINE(3645)
+						HX_STACK_LINE(2756)
 						cur->next = x;
-						HX_STACK_LINE(3646)
+						HX_STACK_LINE(2757)
 						x->parent = cur;
-						HX_STACK_LINE(3647)
+						HX_STACK_LINE(2758)
 						break;
 					}
 					else{
-						HX_STACK_LINE(3649)
+						HX_STACK_LINE(2760)
 						cur = cur->next;
 					}
 				}
 				else{
-					HX_STACK_LINE(3651)
+					HX_STACK_LINE(2762)
 					break;
 				}
 			}
 		}
 	}
-	HX_STACK_LINE(3654)
+	HX_STACK_LINE(2765)
 	if (((x == null()))){
-		HX_STACK_LINE(3654)
+		HX_STACK_LINE(2765)
 		return cur;
 	}
 	else{
-		HX_STACK_LINE(3656)
+		HX_STACK_LINE(2767)
 		if (((x->parent == null()))){
-			HX_STACK_LINE(3656)
+			HX_STACK_LINE(2767)
 			x->colour = (int)1;
 		}
 		else{
-			HX_STACK_LINE(3658)
+			HX_STACK_LINE(2769)
 			x->colour = (int)0;
-			HX_STACK_LINE(3659)
+			HX_STACK_LINE(2770)
 			if (((x->parent->colour == (int)0))){
-				HX_STACK_LINE(3659)
+				HX_STACK_LINE(2770)
 				this->__fix_dbl_red(x);
 			}
 		}
-		HX_STACK_LINE(3661)
+		HX_STACK_LINE(2772)
 		return x;
 	}
-	HX_STACK_LINE(3654)
+	HX_STACK_LINE(2765)
 	return null();
 }
 
@@ -290,147 +284,147 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,insert,return )
 HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,try_insert,return )
 
 bool ZPP_Set_ZPP_PartitionPair_obj::try_insert_bool( ::zpp_nape::geom::ZPP_PartitionPair obj){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::try_insert_bool","zpp_nape/util/RBTree.hx",3480);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::try_insert_bool","zpp_nape/util/RBTree.hx",2591);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(3481)
+	HX_STACK_LINE(2592)
 	::zpp_nape::util::ZPP_Set_ZPP_PartitionPair x = null();		HX_STACK_VAR(x,"x");
-	HX_STACK_LINE(3482)
+	HX_STACK_LINE(2593)
 	::zpp_nape::util::ZPP_Set_ZPP_PartitionPair cur = null();		HX_STACK_VAR(cur,"cur");
-	HX_STACK_LINE(3483)
+	HX_STACK_LINE(2594)
 	if (((this->parent == null()))){
-		HX_STACK_LINE(3484)
+		HX_STACK_LINE(2595)
 		{
-			HX_STACK_LINE(3485)
+			HX_STACK_LINE(2596)
 			if (((::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool == null()))){
-				HX_STACK_LINE(3485)
+				HX_STACK_LINE(2596)
 				x = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::__new();
 			}
 			else{
-				HX_STACK_LINE(3492)
+				HX_STACK_LINE(2603)
 				x = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool;
-				HX_STACK_LINE(3493)
+				HX_STACK_LINE(2604)
 				::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool = x->next;
-				HX_STACK_LINE(3494)
+				HX_STACK_LINE(2605)
 				x->next = null();
 			}
-			HX_STACK_LINE(3499)
+			HX_STACK_LINE(2610)
 			Dynamic();
 		}
-		HX_STACK_LINE(3501)
+		HX_STACK_LINE(2612)
 		x->data = obj;
-		HX_STACK_LINE(3502)
+		HX_STACK_LINE(2613)
 		this->parent = x;
 	}
 	else{
-		HX_STACK_LINE(3505)
+		HX_STACK_LINE(2616)
 		cur = this->parent;
-		HX_STACK_LINE(3506)
+		HX_STACK_LINE(2617)
 		while((true)){
-			HX_STACK_LINE(3506)
+			HX_STACK_LINE(2617)
 			if ((this->lt(obj,cur->data))){
-				HX_STACK_LINE(3507)
+				HX_STACK_LINE(2618)
 				if (((cur->prev == null()))){
-					HX_STACK_LINE(3509)
+					HX_STACK_LINE(2620)
 					{
-						HX_STACK_LINE(3510)
+						HX_STACK_LINE(2621)
 						if (((::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool == null()))){
-							HX_STACK_LINE(3510)
+							HX_STACK_LINE(2621)
 							x = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::__new();
 						}
 						else{
-							HX_STACK_LINE(3517)
+							HX_STACK_LINE(2628)
 							x = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool;
-							HX_STACK_LINE(3518)
+							HX_STACK_LINE(2629)
 							::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool = x->next;
-							HX_STACK_LINE(3519)
+							HX_STACK_LINE(2630)
 							x->next = null();
 						}
-						HX_STACK_LINE(3524)
+						HX_STACK_LINE(2635)
 						Dynamic();
 					}
-					HX_STACK_LINE(3526)
+					HX_STACK_LINE(2637)
 					x->data = obj;
-					HX_STACK_LINE(3527)
+					HX_STACK_LINE(2638)
 					cur->prev = x;
-					HX_STACK_LINE(3528)
+					HX_STACK_LINE(2639)
 					x->parent = cur;
-					HX_STACK_LINE(3529)
+					HX_STACK_LINE(2640)
 					break;
 				}
 				else{
-					HX_STACK_LINE(3531)
+					HX_STACK_LINE(2642)
 					cur = cur->prev;
 				}
 			}
 			else{
-				HX_STACK_LINE(3533)
+				HX_STACK_LINE(2644)
 				if ((this->lt(cur->data,obj))){
-					HX_STACK_LINE(3533)
+					HX_STACK_LINE(2644)
 					if (((cur->next == null()))){
-						HX_STACK_LINE(3535)
+						HX_STACK_LINE(2646)
 						{
-							HX_STACK_LINE(3536)
+							HX_STACK_LINE(2647)
 							if (((::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool == null()))){
-								HX_STACK_LINE(3536)
+								HX_STACK_LINE(2647)
 								x = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::__new();
 							}
 							else{
-								HX_STACK_LINE(3543)
+								HX_STACK_LINE(2654)
 								x = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool;
-								HX_STACK_LINE(3544)
+								HX_STACK_LINE(2655)
 								::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool = x->next;
-								HX_STACK_LINE(3545)
+								HX_STACK_LINE(2656)
 								x->next = null();
 							}
-							HX_STACK_LINE(3550)
+							HX_STACK_LINE(2661)
 							Dynamic();
 						}
-						HX_STACK_LINE(3552)
+						HX_STACK_LINE(2663)
 						x->data = obj;
-						HX_STACK_LINE(3553)
+						HX_STACK_LINE(2664)
 						cur->next = x;
-						HX_STACK_LINE(3554)
+						HX_STACK_LINE(2665)
 						x->parent = cur;
-						HX_STACK_LINE(3555)
+						HX_STACK_LINE(2666)
 						break;
 					}
 					else{
-						HX_STACK_LINE(3557)
+						HX_STACK_LINE(2668)
 						cur = cur->next;
 					}
 				}
 				else{
-					HX_STACK_LINE(3559)
+					HX_STACK_LINE(2670)
 					break;
 				}
 			}
 		}
 	}
-	HX_STACK_LINE(3562)
+	HX_STACK_LINE(2673)
 	if (((x == null()))){
-		HX_STACK_LINE(3562)
+		HX_STACK_LINE(2673)
 		return false;
 	}
 	else{
-		HX_STACK_LINE(3564)
+		HX_STACK_LINE(2675)
 		if (((x->parent == null()))){
-			HX_STACK_LINE(3564)
+			HX_STACK_LINE(2675)
 			x->colour = (int)1;
 		}
 		else{
-			HX_STACK_LINE(3566)
+			HX_STACK_LINE(2677)
 			x->colour = (int)0;
-			HX_STACK_LINE(3567)
+			HX_STACK_LINE(2678)
 			if (((x->parent->colour == (int)0))){
-				HX_STACK_LINE(3567)
+				HX_STACK_LINE(2678)
 				this->__fix_dbl_red(x);
 			}
 		}
-		HX_STACK_LINE(3569)
+		HX_STACK_LINE(2680)
 		return true;
 	}
-	HX_STACK_LINE(3562)
+	HX_STACK_LINE(2673)
 	return false;
 }
 
@@ -439,23 +433,23 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,try_insert_bool,return )
 
 Void ZPP_Set_ZPP_PartitionPair_obj::__fix_dbl_red( ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair x){
 {
-		HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::__fix_dbl_red","zpp_nape/util/RBTree.hx",3391);
+		HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::__fix_dbl_red","zpp_nape/util/RBTree.hx",2502);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(3391)
+		HX_STACK_LINE(2502)
 		while((true)){
-			HX_STACK_LINE(3393)
+			HX_STACK_LINE(2504)
 			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair par = x->parent;		HX_STACK_VAR(par,"par");
-			HX_STACK_LINE(3394)
+			HX_STACK_LINE(2505)
 			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair g = par->parent;		HX_STACK_VAR(g,"g");
-			HX_STACK_LINE(3395)
+			HX_STACK_LINE(2506)
 			if (((g == null()))){
-				HX_STACK_LINE(3396)
+				HX_STACK_LINE(2507)
 				par->colour = (int)1;
-				HX_STACK_LINE(3397)
+				HX_STACK_LINE(2508)
 				break;
 			}
-			HX_STACK_LINE(3399)
+			HX_STACK_LINE(2510)
 			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair n1;		HX_STACK_VAR(n1,"n1");
 			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair n2;		HX_STACK_VAR(n2,"n2");
 			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair n3;		HX_STACK_VAR(n3,"n3");
@@ -463,176 +457,176 @@ Void ZPP_Set_ZPP_PartitionPair_obj::__fix_dbl_red( ::zpp_nape::util::ZPP_Set_ZPP
 			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair t2;		HX_STACK_VAR(t2,"t2");
 			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair t3;		HX_STACK_VAR(t3,"t3");
 			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair t4;		HX_STACK_VAR(t4,"t4");
-			HX_STACK_LINE(3400)
+			HX_STACK_LINE(2511)
 			if (((par == g->prev))){
-				HX_STACK_LINE(3401)
+				HX_STACK_LINE(2512)
 				n3 = g;
-				HX_STACK_LINE(3402)
+				HX_STACK_LINE(2513)
 				t4 = g->next;
-				HX_STACK_LINE(3403)
+				HX_STACK_LINE(2514)
 				if (((x == par->prev))){
-					HX_STACK_LINE(3404)
+					HX_STACK_LINE(2515)
 					n1 = x;
-					HX_STACK_LINE(3405)
+					HX_STACK_LINE(2516)
 					n2 = par;
-					HX_STACK_LINE(3406)
+					HX_STACK_LINE(2517)
 					t1 = x->prev;
-					HX_STACK_LINE(3407)
+					HX_STACK_LINE(2518)
 					t2 = x->next;
-					HX_STACK_LINE(3408)
+					HX_STACK_LINE(2519)
 					t3 = par->next;
 				}
 				else{
-					HX_STACK_LINE(3411)
+					HX_STACK_LINE(2522)
 					n1 = par;
-					HX_STACK_LINE(3412)
+					HX_STACK_LINE(2523)
 					n2 = x;
-					HX_STACK_LINE(3413)
+					HX_STACK_LINE(2524)
 					t1 = par->prev;
-					HX_STACK_LINE(3414)
+					HX_STACK_LINE(2525)
 					t2 = x->prev;
-					HX_STACK_LINE(3415)
+					HX_STACK_LINE(2526)
 					t3 = x->next;
 				}
 			}
 			else{
-				HX_STACK_LINE(3419)
+				HX_STACK_LINE(2530)
 				n1 = g;
-				HX_STACK_LINE(3420)
+				HX_STACK_LINE(2531)
 				t1 = g->prev;
-				HX_STACK_LINE(3421)
+				HX_STACK_LINE(2532)
 				if (((x == par->prev))){
-					HX_STACK_LINE(3422)
+					HX_STACK_LINE(2533)
 					n2 = x;
-					HX_STACK_LINE(3423)
+					HX_STACK_LINE(2534)
 					n3 = par;
-					HX_STACK_LINE(3424)
+					HX_STACK_LINE(2535)
 					t2 = x->prev;
-					HX_STACK_LINE(3425)
+					HX_STACK_LINE(2536)
 					t3 = x->next;
-					HX_STACK_LINE(3426)
+					HX_STACK_LINE(2537)
 					t4 = par->next;
 				}
 				else{
-					HX_STACK_LINE(3429)
+					HX_STACK_LINE(2540)
 					n2 = par;
-					HX_STACK_LINE(3430)
+					HX_STACK_LINE(2541)
 					n3 = x;
-					HX_STACK_LINE(3431)
+					HX_STACK_LINE(2542)
 					t2 = par->prev;
-					HX_STACK_LINE(3432)
+					HX_STACK_LINE(2543)
 					t3 = x->prev;
-					HX_STACK_LINE(3433)
+					HX_STACK_LINE(2544)
 					t4 = x->next;
 				}
 			}
-			HX_STACK_LINE(3436)
+			HX_STACK_LINE(2547)
 			{
-				HX_STACK_LINE(3437)
+				HX_STACK_LINE(2548)
 				::zpp_nape::util::ZPP_Set_ZPP_PartitionPair par1 = g->parent;		HX_STACK_VAR(par1,"par1");
-				HX_STACK_LINE(3438)
+				HX_STACK_LINE(2549)
 				if (((par1 == null()))){
-					HX_STACK_LINE(3438)
+					HX_STACK_LINE(2549)
 					this->parent = n2;
 				}
 				else{
-					HX_STACK_LINE(3441)
+					HX_STACK_LINE(2552)
 					if (((par1->prev == g))){
-						HX_STACK_LINE(3441)
+						HX_STACK_LINE(2552)
 						par1->prev = n2;
 					}
 					else{
-						HX_STACK_LINE(3442)
+						HX_STACK_LINE(2553)
 						par1->next = n2;
 					}
 				}
-				HX_STACK_LINE(3443)
+				HX_STACK_LINE(2554)
 				if (((n2 != null()))){
-					HX_STACK_LINE(3443)
+					HX_STACK_LINE(2554)
 					n2->parent = par1;
 				}
 			}
-			HX_STACK_LINE(3445)
+			HX_STACK_LINE(2556)
 			{
-				HX_STACK_LINE(3446)
+				HX_STACK_LINE(2557)
 				n1->prev = t1;
-				HX_STACK_LINE(3447)
+				HX_STACK_LINE(2558)
 				if (((t1 != null()))){
-					HX_STACK_LINE(3447)
+					HX_STACK_LINE(2558)
 					t1->parent = n1;
 				}
 			}
-			HX_STACK_LINE(3449)
+			HX_STACK_LINE(2560)
 			{
-				HX_STACK_LINE(3450)
+				HX_STACK_LINE(2561)
 				n1->next = t2;
-				HX_STACK_LINE(3451)
+				HX_STACK_LINE(2562)
 				if (((t2 != null()))){
-					HX_STACK_LINE(3451)
+					HX_STACK_LINE(2562)
 					t2->parent = n1;
 				}
 			}
-			HX_STACK_LINE(3453)
+			HX_STACK_LINE(2564)
 			{
-				HX_STACK_LINE(3454)
+				HX_STACK_LINE(2565)
 				n2->prev = n1;
-				HX_STACK_LINE(3455)
+				HX_STACK_LINE(2566)
 				if (((n1 != null()))){
-					HX_STACK_LINE(3455)
+					HX_STACK_LINE(2566)
 					n1->parent = n2;
 				}
 			}
-			HX_STACK_LINE(3457)
+			HX_STACK_LINE(2568)
 			{
-				HX_STACK_LINE(3458)
+				HX_STACK_LINE(2569)
 				n2->next = n3;
-				HX_STACK_LINE(3459)
+				HX_STACK_LINE(2570)
 				if (((n3 != null()))){
-					HX_STACK_LINE(3459)
+					HX_STACK_LINE(2570)
 					n3->parent = n2;
 				}
 			}
-			HX_STACK_LINE(3461)
+			HX_STACK_LINE(2572)
 			{
-				HX_STACK_LINE(3462)
+				HX_STACK_LINE(2573)
 				n3->prev = t3;
-				HX_STACK_LINE(3463)
+				HX_STACK_LINE(2574)
 				if (((t3 != null()))){
-					HX_STACK_LINE(3463)
+					HX_STACK_LINE(2574)
 					t3->parent = n3;
 				}
 			}
-			HX_STACK_LINE(3465)
+			HX_STACK_LINE(2576)
 			{
-				HX_STACK_LINE(3466)
+				HX_STACK_LINE(2577)
 				n3->next = t4;
-				HX_STACK_LINE(3467)
+				HX_STACK_LINE(2578)
 				if (((t4 != null()))){
-					HX_STACK_LINE(3467)
+					HX_STACK_LINE(2578)
 					t4->parent = n3;
 				}
 			}
-			HX_STACK_LINE(3469)
+			HX_STACK_LINE(2580)
 			n2->colour = (g->colour - (int)1);
-			HX_STACK_LINE(3470)
+			HX_STACK_LINE(2581)
 			n1->colour = (int)1;
-			HX_STACK_LINE(3471)
+			HX_STACK_LINE(2582)
 			n3->colour = (int)1;
-			HX_STACK_LINE(3472)
+			HX_STACK_LINE(2583)
 			if (((n2 == this->parent))){
-				HX_STACK_LINE(3472)
+				HX_STACK_LINE(2583)
 				this->parent->colour = (int)1;
 			}
 			else{
-				HX_STACK_LINE(3473)
+				HX_STACK_LINE(2584)
 				if (((bool((n2->colour == (int)0)) && bool((n2->parent->colour == (int)0))))){
-					HX_STACK_LINE(3474)
+					HX_STACK_LINE(2585)
 					x = n2;
-					HX_STACK_LINE(3475)
+					HX_STACK_LINE(2586)
 					continue;
 				}
 			}
-			HX_STACK_LINE(3477)
+			HX_STACK_LINE(2588)
 			break;
 		}
 	}
@@ -644,174 +638,174 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,__fix_dbl_red,(void))
 
 Void ZPP_Set_ZPP_PartitionPair_obj::__fix_neg_red( ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair negred){
 {
-		HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::__fix_neg_red","zpp_nape/util/RBTree.hx",3324);
+		HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::__fix_neg_red","zpp_nape/util/RBTree.hx",2435);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(negred,"negred");
-		HX_STACK_LINE(3325)
+		HX_STACK_LINE(2436)
 		::zpp_nape::util::ZPP_Set_ZPP_PartitionPair parent = negred->parent;		HX_STACK_VAR(parent,"parent");
 		struct _Function_1_1{
-			inline static ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair Block( ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair &negred,::zpp_nape::util::ZPP_Set_ZPP_PartitionPair &parent,::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj *__this){
-				HX_STACK_PUSH("*::closure","zpp_nape/util/RBTree.hx",3326);
+			inline static ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair Block( ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj *__this,::zpp_nape::util::ZPP_Set_ZPP_PartitionPair &negred,::zpp_nape::util::ZPP_Set_ZPP_PartitionPair &parent){
+				HX_STACK_PUSH("*::closure","zpp_nape/util/RBTree.hx",2437);
 				{
-					HX_STACK_LINE(3327)
+					HX_STACK_LINE(2438)
 					::zpp_nape::util::ZPP_Set_ZPP_PartitionPair nl = negred->prev;		HX_STACK_VAR(nl,"nl");
-					HX_STACK_LINE(3328)
+					HX_STACK_LINE(2439)
 					::zpp_nape::util::ZPP_Set_ZPP_PartitionPair nr = negred->next;		HX_STACK_VAR(nr,"nr");
-					HX_STACK_LINE(3329)
+					HX_STACK_LINE(2440)
 					::zpp_nape::util::ZPP_Set_ZPP_PartitionPair trl = nr->prev;		HX_STACK_VAR(trl,"trl");
-					HX_STACK_LINE(3330)
+					HX_STACK_LINE(2441)
 					::zpp_nape::util::ZPP_Set_ZPP_PartitionPair trr = nr->next;		HX_STACK_VAR(trr,"trr");
-					HX_STACK_LINE(3331)
+					HX_STACK_LINE(2442)
 					nl->colour = (int)0;
-					HX_STACK_LINE(3332)
+					HX_STACK_LINE(2443)
 					negred->colour = parent->colour = (int)1;
-					HX_STACK_LINE(3333)
+					HX_STACK_LINE(2444)
 					{
-						HX_STACK_LINE(3334)
+						HX_STACK_LINE(2445)
 						negred->next = trl;
-						HX_STACK_LINE(3335)
+						HX_STACK_LINE(2446)
 						if (((trl != null()))){
-							HX_STACK_LINE(3335)
+							HX_STACK_LINE(2446)
 							trl->parent = negred;
 						}
 					}
-					HX_STACK_LINE(3337)
+					HX_STACK_LINE(2448)
 					{
-						HX_STACK_LINE(3338)
+						HX_STACK_LINE(2449)
 						::zpp_nape::geom::ZPP_PartitionPair t = parent->data;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(3339)
+						HX_STACK_LINE(2450)
 						parent->data = nr->data;
-						HX_STACK_LINE(3340)
+						HX_STACK_LINE(2451)
 						nr->data = t;
 					}
-					HX_STACK_LINE(3342)
-					if (((__this->swapped_dyn() != null()))){
-						HX_STACK_LINE(3342)
+					HX_STACK_LINE(2453)
+					if (((__this->swapped != null()))){
+						HX_STACK_LINE(2453)
 						__this->swapped(parent->data,nr->data);
 					}
-					HX_STACK_LINE(3343)
+					HX_STACK_LINE(2454)
 					{
-						HX_STACK_LINE(3344)
+						HX_STACK_LINE(2455)
 						nr->prev = trr;
-						HX_STACK_LINE(3345)
+						HX_STACK_LINE(2456)
 						if (((trr != null()))){
-							HX_STACK_LINE(3345)
+							HX_STACK_LINE(2456)
 							trr->parent = nr;
 						}
 					}
-					HX_STACK_LINE(3347)
+					HX_STACK_LINE(2458)
 					{
-						HX_STACK_LINE(3348)
+						HX_STACK_LINE(2459)
 						nr->next = parent->next;
-						HX_STACK_LINE(3349)
+						HX_STACK_LINE(2460)
 						if (((parent->next != null()))){
-							HX_STACK_LINE(3349)
+							HX_STACK_LINE(2460)
 							parent->next->parent = nr;
 						}
 					}
-					HX_STACK_LINE(3351)
+					HX_STACK_LINE(2462)
 					{
-						HX_STACK_LINE(3352)
+						HX_STACK_LINE(2463)
 						parent->next = nr;
-						HX_STACK_LINE(3353)
+						HX_STACK_LINE(2464)
 						if (((nr != null()))){
-							HX_STACK_LINE(3353)
+							HX_STACK_LINE(2464)
 							nr->parent = parent;
 						}
 					}
-					HX_STACK_LINE(3355)
+					HX_STACK_LINE(2466)
 					return nl;
 				}
 				return null();
 			}
 		};
 		struct _Function_1_2{
-			inline static ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair Block( ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair &negred,::zpp_nape::util::ZPP_Set_ZPP_PartitionPair &parent,::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj *__this){
-				HX_STACK_PUSH("*::closure","zpp_nape/util/RBTree.hx",3357);
+			inline static ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair Block( ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj *__this,::zpp_nape::util::ZPP_Set_ZPP_PartitionPair &negred,::zpp_nape::util::ZPP_Set_ZPP_PartitionPair &parent){
+				HX_STACK_PUSH("*::closure","zpp_nape/util/RBTree.hx",2468);
 				{
-					HX_STACK_LINE(3358)
+					HX_STACK_LINE(2469)
 					::zpp_nape::util::ZPP_Set_ZPP_PartitionPair nl = negred->next;		HX_STACK_VAR(nl,"nl");
-					HX_STACK_LINE(3359)
+					HX_STACK_LINE(2470)
 					::zpp_nape::util::ZPP_Set_ZPP_PartitionPair nr = negred->prev;		HX_STACK_VAR(nr,"nr");
-					HX_STACK_LINE(3360)
+					HX_STACK_LINE(2471)
 					::zpp_nape::util::ZPP_Set_ZPP_PartitionPair trl = nr->next;		HX_STACK_VAR(trl,"trl");
-					HX_STACK_LINE(3361)
+					HX_STACK_LINE(2472)
 					::zpp_nape::util::ZPP_Set_ZPP_PartitionPair trr = nr->prev;		HX_STACK_VAR(trr,"trr");
-					HX_STACK_LINE(3362)
+					HX_STACK_LINE(2473)
 					nl->colour = (int)0;
-					HX_STACK_LINE(3363)
+					HX_STACK_LINE(2474)
 					negred->colour = parent->colour = (int)1;
-					HX_STACK_LINE(3364)
+					HX_STACK_LINE(2475)
 					{
-						HX_STACK_LINE(3365)
+						HX_STACK_LINE(2476)
 						negred->prev = trl;
-						HX_STACK_LINE(3366)
+						HX_STACK_LINE(2477)
 						if (((trl != null()))){
-							HX_STACK_LINE(3366)
+							HX_STACK_LINE(2477)
 							trl->parent = negred;
 						}
 					}
-					HX_STACK_LINE(3368)
+					HX_STACK_LINE(2479)
 					{
-						HX_STACK_LINE(3369)
+						HX_STACK_LINE(2480)
 						::zpp_nape::geom::ZPP_PartitionPair t = parent->data;		HX_STACK_VAR(t,"t");
-						HX_STACK_LINE(3370)
+						HX_STACK_LINE(2481)
 						parent->data = nr->data;
-						HX_STACK_LINE(3371)
+						HX_STACK_LINE(2482)
 						nr->data = t;
 					}
-					HX_STACK_LINE(3373)
-					if (((__this->swapped_dyn() != null()))){
-						HX_STACK_LINE(3373)
+					HX_STACK_LINE(2484)
+					if (((__this->swapped != null()))){
+						HX_STACK_LINE(2484)
 						__this->swapped(parent->data,nr->data);
 					}
-					HX_STACK_LINE(3374)
+					HX_STACK_LINE(2485)
 					{
-						HX_STACK_LINE(3375)
+						HX_STACK_LINE(2486)
 						nr->next = trr;
-						HX_STACK_LINE(3376)
+						HX_STACK_LINE(2487)
 						if (((trr != null()))){
-							HX_STACK_LINE(3376)
+							HX_STACK_LINE(2487)
 							trr->parent = nr;
 						}
 					}
-					HX_STACK_LINE(3378)
+					HX_STACK_LINE(2489)
 					{
-						HX_STACK_LINE(3379)
+						HX_STACK_LINE(2490)
 						nr->prev = parent->prev;
-						HX_STACK_LINE(3380)
+						HX_STACK_LINE(2491)
 						if (((parent->prev != null()))){
-							HX_STACK_LINE(3380)
+							HX_STACK_LINE(2491)
 							parent->prev->parent = nr;
 						}
 					}
-					HX_STACK_LINE(3382)
+					HX_STACK_LINE(2493)
 					{
-						HX_STACK_LINE(3383)
+						HX_STACK_LINE(2494)
 						parent->prev = nr;
-						HX_STACK_LINE(3384)
+						HX_STACK_LINE(2495)
 						if (((nr != null()))){
-							HX_STACK_LINE(3384)
+							HX_STACK_LINE(2495)
 							nr->parent = parent;
 						}
 					}
-					HX_STACK_LINE(3386)
+					HX_STACK_LINE(2497)
 					return nl;
 				}
 				return null();
 			}
 		};
-		HX_STACK_LINE(3326)
-		::zpp_nape::util::ZPP_Set_ZPP_PartitionPair child = (  (((parent->prev == negred))) ? ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair(_Function_1_1::Block(negred,parent,this)) : ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair(_Function_1_2::Block(negred,parent,this)) );		HX_STACK_VAR(child,"child");
-		HX_STACK_LINE(3388)
+		HX_STACK_LINE(2437)
+		::zpp_nape::util::ZPP_Set_ZPP_PartitionPair child = (  (((parent->prev == negred))) ? ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair(_Function_1_1::Block(this,negred,parent)) : ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair(_Function_1_2::Block(this,negred,parent)) );		HX_STACK_VAR(child,"child");
+		HX_STACK_LINE(2499)
 		if (((bool((child->prev != null())) && bool((child->prev->colour == (int)0))))){
-			HX_STACK_LINE(3388)
+			HX_STACK_LINE(2499)
 			this->__fix_dbl_red(child->prev);
 		}
 		else{
-			HX_STACK_LINE(3389)
+			HX_STACK_LINE(2500)
 			if (((bool((child->next != null())) && bool((child->next->colour == (int)0))))){
-				HX_STACK_LINE(3389)
+				HX_STACK_LINE(2500)
 				this->__fix_dbl_red(child->next);
 			}
 		}
@@ -823,53 +817,47 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,__fix_neg_red,(void))
 
 ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair ZPP_Set_ZPP_PartitionPair_obj::clear_node( ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair node,Dynamic lambda){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::clear_node","zpp_nape/util/RBTree.hx",3289);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::clear_node","zpp_nape/util/RBTree.hx",2400);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(node,"node");
 	HX_STACK_ARG(lambda,"lambda");
-	HX_STACK_LINE(3290)
-	{
-	}
-	HX_STACK_LINE(3298)
+	HX_STACK_LINE(2409)
 	lambda(node->data).Cast< Void >();
-	HX_STACK_LINE(3299)
+	HX_STACK_LINE(2410)
 	::zpp_nape::util::ZPP_Set_ZPP_PartitionPair ret = node->parent;		HX_STACK_VAR(ret,"ret");
-	HX_STACK_LINE(3300)
+	HX_STACK_LINE(2411)
 	if (((ret != null()))){
-		HX_STACK_LINE(3301)
+		HX_STACK_LINE(2412)
 		if (((node == ret->prev))){
-			HX_STACK_LINE(3301)
+			HX_STACK_LINE(2412)
 			ret->prev = null();
 		}
 		else{
-			HX_STACK_LINE(3302)
+			HX_STACK_LINE(2413)
 			ret->next = null();
 		}
-		HX_STACK_LINE(3303)
+		HX_STACK_LINE(2414)
 		node->parent = null();
 	}
-	HX_STACK_LINE(3305)
+	HX_STACK_LINE(2416)
 	{
-		HX_STACK_LINE(3306)
+		HX_STACK_LINE(2417)
 		::zpp_nape::util::ZPP_Set_ZPP_PartitionPair o = node;		HX_STACK_VAR(o,"o");
-		HX_STACK_LINE(3307)
+		HX_STACK_LINE(2426)
 		{
-		}
-		HX_STACK_LINE(3315)
-		{
-			HX_STACK_LINE(3315)
+			HX_STACK_LINE(2426)
 			o->data = null();
-			HX_STACK_LINE(3315)
+			HX_STACK_LINE(2426)
 			o->lt = null();
-			HX_STACK_LINE(3315)
+			HX_STACK_LINE(2426)
 			o->swapped = null();
 		}
-		HX_STACK_LINE(3316)
+		HX_STACK_LINE(2427)
 		o->next = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool;
-		HX_STACK_LINE(3317)
+		HX_STACK_LINE(2428)
 		::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool = o;
 	}
-	HX_STACK_LINE(3322)
+	HX_STACK_LINE(2433)
 	return ret;
 }
 
@@ -878,75 +866,69 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_Set_ZPP_PartitionPair_obj,clear_node,return )
 
 Void ZPP_Set_ZPP_PartitionPair_obj::clear_with( Dynamic lambda){
 {
-		HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::clear_with","zpp_nape/util/RBTree.hx",3280);
+		HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::clear_with","zpp_nape/util/RBTree.hx",2391);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(lambda,"lambda");
-		HX_STACK_LINE(3280)
+		HX_STACK_LINE(2391)
 		if (((this->parent == null()))){
-			HX_STACK_LINE(3281)
+			HX_STACK_LINE(2392)
 			return null();
 		}
 		else{
-			HX_STACK_LINE(3283)
+			HX_STACK_LINE(2394)
 			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair cur = this->parent;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(3284)
+			HX_STACK_LINE(2395)
 			while(((cur != null()))){
 				struct _Function_3_1{
-					inline static ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair Block( Dynamic &lambda,::zpp_nape::util::ZPP_Set_ZPP_PartitionPair &cur){
-						HX_STACK_PUSH("*::closure","zpp_nape/util/RBTree.hx",3284);
+					inline static ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair Block( ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair &cur,Dynamic &lambda){
+						HX_STACK_PUSH("*::closure","zpp_nape/util/RBTree.hx",2395);
 						{
-							HX_STACK_LINE(3284)
-							{
-							}
-							HX_STACK_LINE(3284)
+							HX_STACK_LINE(2395)
 							lambda(cur->data).Cast< Void >();
-							HX_STACK_LINE(3284)
+							HX_STACK_LINE(2395)
 							::zpp_nape::util::ZPP_Set_ZPP_PartitionPair ret = cur->parent;		HX_STACK_VAR(ret,"ret");
-							HX_STACK_LINE(3284)
+							HX_STACK_LINE(2395)
 							if (((ret != null()))){
-								HX_STACK_LINE(3284)
+								HX_STACK_LINE(2395)
 								if (((cur == ret->prev))){
-									HX_STACK_LINE(3284)
+									HX_STACK_LINE(2395)
 									ret->prev = null();
 								}
 								else{
-									HX_STACK_LINE(3284)
+									HX_STACK_LINE(2395)
 									ret->next = null();
 								}
-								HX_STACK_LINE(3284)
+								HX_STACK_LINE(2395)
 								cur->parent = null();
 							}
-							HX_STACK_LINE(3284)
+							HX_STACK_LINE(2395)
 							{
-								HX_STACK_LINE(3284)
+								HX_STACK_LINE(2395)
 								::zpp_nape::util::ZPP_Set_ZPP_PartitionPair o = cur;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(3284)
+								HX_STACK_LINE(2395)
 								{
-								}
-								HX_STACK_LINE(3284)
-								{
-									HX_STACK_LINE(3284)
+									HX_STACK_LINE(2395)
 									o->data = null();
-									HX_STACK_LINE(3284)
+									HX_STACK_LINE(2395)
 									o->lt = null();
-									HX_STACK_LINE(3284)
+									HX_STACK_LINE(2395)
 									o->swapped = null();
 								}
-								HX_STACK_LINE(3284)
+								HX_STACK_LINE(2395)
 								o->next = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool;
-								HX_STACK_LINE(3284)
+								HX_STACK_LINE(2395)
 								::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool = o;
 							}
-							HX_STACK_LINE(3284)
+							HX_STACK_LINE(2395)
 							return ret;
 						}
 						return null();
 					}
 				};
-				HX_STACK_LINE(3284)
-				cur = (  (((cur->prev != null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair(cur->prev) : ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair((  (((cur->next != null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair(cur->next) : ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair(_Function_3_1::Block(lambda,cur)) )) );
+				HX_STACK_LINE(2395)
+				cur = (  (((cur->prev != null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair(cur->prev) : ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair((  (((cur->next != null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair(cur->next) : ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair(_Function_3_1::Block(cur,lambda)) )) );
 			}
-			HX_STACK_LINE(3285)
+			HX_STACK_LINE(2396)
 			this->parent = null();
 		}
 	}
@@ -958,72 +940,66 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,clear_with,(void))
 
 Void ZPP_Set_ZPP_PartitionPair_obj::clear( ){
 {
-		HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::clear","zpp_nape/util/RBTree.hx",3276);
+		HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::clear","zpp_nape/util/RBTree.hx",2387);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(3276)
+		HX_STACK_LINE(2387)
 		if (((this->parent == null()))){
-			HX_STACK_LINE(3277)
+			HX_STACK_LINE(2388)
 			Dynamic();
 		}
 		else{
-			HX_STACK_LINE(3277)
+			HX_STACK_LINE(2388)
 			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair cur = this->parent;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(3277)
+			HX_STACK_LINE(2388)
 			while(((cur != null()))){
 				struct _Function_3_1{
 					inline static ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair Block( ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair &cur){
-						HX_STACK_PUSH("*::closure","zpp_nape/util/RBTree.hx",3277);
+						HX_STACK_PUSH("*::closure","zpp_nape/util/RBTree.hx",2388);
 						{
-							HX_STACK_LINE(3277)
-							{
-							}
-							HX_STACK_LINE(3277)
+							HX_STACK_LINE(2388)
 							::zpp_nape::util::ZPP_Set_ZPP_PartitionPair ret = cur->parent;		HX_STACK_VAR(ret,"ret");
-							HX_STACK_LINE(3277)
+							HX_STACK_LINE(2388)
 							if (((ret != null()))){
-								HX_STACK_LINE(3277)
+								HX_STACK_LINE(2388)
 								if (((cur == ret->prev))){
-									HX_STACK_LINE(3277)
+									HX_STACK_LINE(2388)
 									ret->prev = null();
 								}
 								else{
-									HX_STACK_LINE(3277)
+									HX_STACK_LINE(2388)
 									ret->next = null();
 								}
-								HX_STACK_LINE(3277)
+								HX_STACK_LINE(2388)
 								cur->parent = null();
 							}
-							HX_STACK_LINE(3277)
+							HX_STACK_LINE(2388)
 							{
-								HX_STACK_LINE(3277)
+								HX_STACK_LINE(2388)
 								::zpp_nape::util::ZPP_Set_ZPP_PartitionPair o = cur;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(3277)
+								HX_STACK_LINE(2388)
 								{
-								}
-								HX_STACK_LINE(3277)
-								{
-									HX_STACK_LINE(3277)
+									HX_STACK_LINE(2388)
 									o->data = null();
-									HX_STACK_LINE(3277)
+									HX_STACK_LINE(2388)
 									o->lt = null();
-									HX_STACK_LINE(3277)
+									HX_STACK_LINE(2388)
 									o->swapped = null();
 								}
-								HX_STACK_LINE(3277)
+								HX_STACK_LINE(2388)
 								o->next = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool;
-								HX_STACK_LINE(3277)
+								HX_STACK_LINE(2388)
 								::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool = o;
 							}
-							HX_STACK_LINE(3277)
+							HX_STACK_LINE(2388)
 							return ret;
 						}
 						return null();
 					}
 				};
-				HX_STACK_LINE(3277)
+				HX_STACK_LINE(2388)
 				cur = (  (((cur->prev != null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair(cur->prev) : ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair((  (((cur->next != null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair(cur->next) : ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair(_Function_3_1::Block(cur)) )) );
 			}
-			HX_STACK_LINE(3277)
+			HX_STACK_LINE(2388)
 			this->parent = null();
 		}
 	}
@@ -1035,192 +1011,183 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Set_ZPP_PartitionPair_obj,clear,(void))
 
 Void ZPP_Set_ZPP_PartitionPair_obj::remove_node( ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair cur){
 {
-		HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::remove_node","zpp_nape/util/RBTree.hx",3156);
+		HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::remove_node","zpp_nape/util/RBTree.hx",2267);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(cur,"cur");
-		HX_STACK_LINE(3157)
-		{
-		}
-		HX_STACK_LINE(3165)
+		HX_STACK_LINE(2276)
 		if (((bool((cur->next != null())) && bool((cur->prev != null()))))){
-			HX_STACK_LINE(3166)
+			HX_STACK_LINE(2277)
 			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair sm = cur->next;		HX_STACK_VAR(sm,"sm");
-			HX_STACK_LINE(3167)
+			HX_STACK_LINE(2278)
 			while(((sm->prev != null()))){
-				HX_STACK_LINE(3167)
+				HX_STACK_LINE(2278)
 				sm = sm->prev;
 			}
-			HX_STACK_LINE(3168)
+			HX_STACK_LINE(2279)
 			{
-				HX_STACK_LINE(3169)
+				HX_STACK_LINE(2280)
 				::zpp_nape::geom::ZPP_PartitionPair t = cur->data;		HX_STACK_VAR(t,"t");
-				HX_STACK_LINE(3170)
+				HX_STACK_LINE(2281)
 				cur->data = sm->data;
-				HX_STACK_LINE(3171)
+				HX_STACK_LINE(2282)
 				sm->data = t;
 			}
-			HX_STACK_LINE(3173)
+			HX_STACK_LINE(2284)
 			if (((this->swapped_dyn() != null()))){
-				HX_STACK_LINE(3173)
+				HX_STACK_LINE(2284)
 				this->swapped(cur->data,sm->data);
 			}
-			HX_STACK_LINE(3174)
+			HX_STACK_LINE(2285)
 			cur = sm;
 		}
-		HX_STACK_LINE(3176)
-		{
-		}
-		HX_STACK_LINE(3184)
+		HX_STACK_LINE(2295)
 		::zpp_nape::util::ZPP_Set_ZPP_PartitionPair child = (  (((cur->prev == null()))) ? ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair(cur->next) : ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair(cur->prev) );		HX_STACK_VAR(child,"child");
-		HX_STACK_LINE(3185)
+		HX_STACK_LINE(2296)
 		if (((cur->colour == (int)1))){
-			HX_STACK_LINE(3185)
+			HX_STACK_LINE(2296)
 			if (((bool((cur->prev != null())) || bool((cur->next != null()))))){
-				HX_STACK_LINE(3186)
+				HX_STACK_LINE(2297)
 				child->colour = (int)1;
 			}
 			else{
-				HX_STACK_LINE(3187)
+				HX_STACK_LINE(2298)
 				if (((cur->parent != null()))){
-					HX_STACK_LINE(3188)
+					HX_STACK_LINE(2299)
 					::zpp_nape::util::ZPP_Set_ZPP_PartitionPair parent = cur->parent;		HX_STACK_VAR(parent,"parent");
-					HX_STACK_LINE(3189)
+					HX_STACK_LINE(2300)
 					while((true)){
-						HX_STACK_LINE(3190)
+						HX_STACK_LINE(2301)
 						(parent->colour)++;
-						HX_STACK_LINE(3191)
+						HX_STACK_LINE(2302)
 						(parent->prev->colour)--;
-						HX_STACK_LINE(3192)
+						HX_STACK_LINE(2303)
 						(parent->next->colour)--;
-						HX_STACK_LINE(3193)
+						HX_STACK_LINE(2304)
 						{
-							HX_STACK_LINE(3194)
+							HX_STACK_LINE(2305)
 							::zpp_nape::util::ZPP_Set_ZPP_PartitionPair child1 = parent->prev;		HX_STACK_VAR(child1,"child1");
-							HX_STACK_LINE(3195)
+							HX_STACK_LINE(2306)
 							if (((child1->colour == (int)-1))){
-								HX_STACK_LINE(3196)
+								HX_STACK_LINE(2307)
 								this->__fix_neg_red(child1);
-								HX_STACK_LINE(3197)
+								HX_STACK_LINE(2308)
 								break;
 							}
 							else{
-								HX_STACK_LINE(3199)
+								HX_STACK_LINE(2310)
 								if (((child1->colour == (int)0))){
-									HX_STACK_LINE(3200)
+									HX_STACK_LINE(2311)
 									if (((bool((child1->prev != null())) && bool((child1->prev->colour == (int)0))))){
-										HX_STACK_LINE(3202)
+										HX_STACK_LINE(2313)
 										this->__fix_dbl_red(child1->prev);
-										HX_STACK_LINE(3203)
+										HX_STACK_LINE(2314)
 										break;
 									}
-									HX_STACK_LINE(3206)
+									HX_STACK_LINE(2317)
 									if (((bool((child1->next != null())) && bool((child1->next->colour == (int)0))))){
-										HX_STACK_LINE(3208)
+										HX_STACK_LINE(2319)
 										this->__fix_dbl_red(child1->next);
-										HX_STACK_LINE(3209)
+										HX_STACK_LINE(2320)
 										break;
 									}
 								}
 							}
 						}
-						HX_STACK_LINE(3214)
+						HX_STACK_LINE(2325)
 						{
-							HX_STACK_LINE(3215)
+							HX_STACK_LINE(2326)
 							::zpp_nape::util::ZPP_Set_ZPP_PartitionPair child1 = parent->next;		HX_STACK_VAR(child1,"child1");
-							HX_STACK_LINE(3216)
+							HX_STACK_LINE(2327)
 							if (((child1->colour == (int)-1))){
-								HX_STACK_LINE(3217)
+								HX_STACK_LINE(2328)
 								this->__fix_neg_red(child1);
-								HX_STACK_LINE(3218)
+								HX_STACK_LINE(2329)
 								break;
 							}
 							else{
-								HX_STACK_LINE(3220)
+								HX_STACK_LINE(2331)
 								if (((child1->colour == (int)0))){
-									HX_STACK_LINE(3221)
+									HX_STACK_LINE(2332)
 									if (((bool((child1->prev != null())) && bool((child1->prev->colour == (int)0))))){
-										HX_STACK_LINE(3223)
+										HX_STACK_LINE(2334)
 										this->__fix_dbl_red(child1->prev);
-										HX_STACK_LINE(3224)
+										HX_STACK_LINE(2335)
 										break;
 									}
-									HX_STACK_LINE(3227)
+									HX_STACK_LINE(2338)
 									if (((bool((child1->next != null())) && bool((child1->next->colour == (int)0))))){
-										HX_STACK_LINE(3229)
+										HX_STACK_LINE(2340)
 										this->__fix_dbl_red(child1->next);
-										HX_STACK_LINE(3230)
+										HX_STACK_LINE(2341)
 										break;
 									}
 								}
 							}
 						}
-						HX_STACK_LINE(3235)
+						HX_STACK_LINE(2346)
 						if (((parent->colour == (int)2))){
-							HX_STACK_LINE(3235)
+							HX_STACK_LINE(2346)
 							if (((parent->parent == null()))){
-								HX_STACK_LINE(3236)
+								HX_STACK_LINE(2347)
 								parent->colour = (int)1;
 							}
 							else{
-								HX_STACK_LINE(3240)
+								HX_STACK_LINE(2351)
 								parent = parent->parent;
-								HX_STACK_LINE(3241)
+								HX_STACK_LINE(2352)
 								continue;
 							}
 						}
-						HX_STACK_LINE(3244)
+						HX_STACK_LINE(2355)
 						break;
 					}
 				}
 			}
 		}
-		HX_STACK_LINE(3248)
+		HX_STACK_LINE(2359)
 		{
-			HX_STACK_LINE(3249)
+			HX_STACK_LINE(2360)
 			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair par = cur->parent;		HX_STACK_VAR(par,"par");
-			HX_STACK_LINE(3250)
+			HX_STACK_LINE(2361)
 			if (((par == null()))){
-				HX_STACK_LINE(3250)
+				HX_STACK_LINE(2361)
 				this->parent = child;
 			}
 			else{
-				HX_STACK_LINE(3253)
+				HX_STACK_LINE(2364)
 				if (((par->prev == cur))){
-					HX_STACK_LINE(3253)
+					HX_STACK_LINE(2364)
 					par->prev = child;
 				}
 				else{
-					HX_STACK_LINE(3254)
+					HX_STACK_LINE(2365)
 					par->next = child;
 				}
 			}
-			HX_STACK_LINE(3255)
+			HX_STACK_LINE(2366)
 			if (((child != null()))){
-				HX_STACK_LINE(3255)
+				HX_STACK_LINE(2366)
 				child->parent = par;
 			}
 		}
-		HX_STACK_LINE(3257)
+		HX_STACK_LINE(2368)
 		cur->parent = cur->prev = cur->next = null();
-		HX_STACK_LINE(3258)
+		HX_STACK_LINE(2369)
 		{
-			HX_STACK_LINE(3259)
+			HX_STACK_LINE(2370)
 			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair o = cur;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(3260)
+			HX_STACK_LINE(2379)
 			{
-			}
-			HX_STACK_LINE(3268)
-			{
-				HX_STACK_LINE(3268)
+				HX_STACK_LINE(2379)
 				o->data = null();
-				HX_STACK_LINE(3268)
+				HX_STACK_LINE(2379)
 				o->lt = null();
-				HX_STACK_LINE(3268)
+				HX_STACK_LINE(2379)
 				o->swapped = null();
 			}
-			HX_STACK_LINE(3269)
+			HX_STACK_LINE(2380)
 			o->next = ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool;
-			HX_STACK_LINE(3270)
+			HX_STACK_LINE(2381)
 			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj::zpp_pool = o;
 		}
 	}
@@ -1231,15 +1198,12 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,remove_node,(void))
 
 ::zpp_nape::geom::ZPP_PartitionPair ZPP_Set_ZPP_PartitionPair_obj::predecessor( ::zpp_nape::geom::ZPP_PartitionPair obj){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::predecessor","zpp_nape/util/RBTree.hx",3144);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::predecessor","zpp_nape/util/RBTree.hx",2255);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(3145)
-	{
-	}
-	HX_STACK_LINE(3153)
+	HX_STACK_LINE(2264)
 	::zpp_nape::util::ZPP_Set_ZPP_PartitionPair node = this->predecessor_node(this->find(obj));		HX_STACK_VAR(node,"node");
-	HX_STACK_LINE(3154)
+	HX_STACK_LINE(2265)
 	return (  (((node == null()))) ? ::zpp_nape::geom::ZPP_PartitionPair(null()) : ::zpp_nape::geom::ZPP_PartitionPair(node->data) );
 }
 
@@ -1247,15 +1211,12 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,remove_node,(void))
 HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,predecessor,return )
 
 ::zpp_nape::geom::ZPP_PartitionPair ZPP_Set_ZPP_PartitionPair_obj::successor( ::zpp_nape::geom::ZPP_PartitionPair obj){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::successor","zpp_nape/util/RBTree.hx",3132);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::successor","zpp_nape/util/RBTree.hx",2243);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(3133)
-	{
-	}
-	HX_STACK_LINE(3141)
+	HX_STACK_LINE(2252)
 	::zpp_nape::util::ZPP_Set_ZPP_PartitionPair node = this->successor_node(this->find(obj));		HX_STACK_VAR(node,"node");
-	HX_STACK_LINE(3142)
+	HX_STACK_LINE(2253)
 	return (  (((node == null()))) ? ::zpp_nape::geom::ZPP_PartitionPair(null()) : ::zpp_nape::geom::ZPP_PartitionPair(node->data) );
 }
 
@@ -1263,36 +1224,33 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,predecessor,return )
 HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,successor,return )
 
 ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair ZPP_Set_ZPP_PartitionPair_obj::predecessor_node( ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair cur){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::predecessor_node","zpp_nape/util/RBTree.hx",3109);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::predecessor_node","zpp_nape/util/RBTree.hx",2220);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
-	HX_STACK_LINE(3110)
-	{
-	}
-	HX_STACK_LINE(3118)
+	HX_STACK_LINE(2229)
 	if (((cur->prev != null()))){
-		HX_STACK_LINE(3119)
+		HX_STACK_LINE(2230)
 		cur = cur->prev;
-		HX_STACK_LINE(3120)
+		HX_STACK_LINE(2231)
 		while(((cur->next != null()))){
-			HX_STACK_LINE(3120)
+			HX_STACK_LINE(2231)
 			cur = cur->next;
 		}
 	}
 	else{
-		HX_STACK_LINE(3123)
+		HX_STACK_LINE(2234)
 		::zpp_nape::util::ZPP_Set_ZPP_PartitionPair pre = cur;		HX_STACK_VAR(pre,"pre");
-		HX_STACK_LINE(3124)
+		HX_STACK_LINE(2235)
 		cur = cur->parent;
-		HX_STACK_LINE(3125)
+		HX_STACK_LINE(2236)
 		while(((bool((cur != null())) && bool((cur->next != pre))))){
-			HX_STACK_LINE(3126)
+			HX_STACK_LINE(2237)
 			pre = cur;
-			HX_STACK_LINE(3127)
+			HX_STACK_LINE(2238)
 			cur = cur->parent;
 		}
 	}
-	HX_STACK_LINE(3130)
+	HX_STACK_LINE(2241)
 	return cur;
 }
 
@@ -1300,36 +1258,33 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,successor,return )
 HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,predecessor_node,return )
 
 ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair ZPP_Set_ZPP_PartitionPair_obj::successor_node( ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair cur){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::successor_node","zpp_nape/util/RBTree.hx",3086);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::successor_node","zpp_nape/util/RBTree.hx",2197);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
-	HX_STACK_LINE(3087)
-	{
-	}
-	HX_STACK_LINE(3095)
+	HX_STACK_LINE(2206)
 	if (((cur->next != null()))){
-		HX_STACK_LINE(3096)
+		HX_STACK_LINE(2207)
 		cur = cur->next;
-		HX_STACK_LINE(3097)
+		HX_STACK_LINE(2208)
 		while(((cur->prev != null()))){
-			HX_STACK_LINE(3097)
+			HX_STACK_LINE(2208)
 			cur = cur->prev;
 		}
 	}
 	else{
-		HX_STACK_LINE(3100)
+		HX_STACK_LINE(2211)
 		::zpp_nape::util::ZPP_Set_ZPP_PartitionPair pre = cur;		HX_STACK_VAR(pre,"pre");
-		HX_STACK_LINE(3101)
+		HX_STACK_LINE(2212)
 		cur = cur->parent;
-		HX_STACK_LINE(3102)
+		HX_STACK_LINE(2213)
 		while(((bool((cur != null())) && bool((cur->prev != pre))))){
-			HX_STACK_LINE(3103)
+			HX_STACK_LINE(2214)
 			pre = cur;
-			HX_STACK_LINE(3104)
+			HX_STACK_LINE(2215)
 			cur = cur->parent;
 		}
 	}
-	HX_STACK_LINE(3107)
+	HX_STACK_LINE(2218)
 	return cur;
 }
 
@@ -1338,15 +1293,12 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,successor_node,return )
 
 Void ZPP_Set_ZPP_PartitionPair_obj::remove( ::zpp_nape::geom::ZPP_PartitionPair obj){
 {
-		HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::remove","zpp_nape/util/RBTree.hx",3074);
+		HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::remove","zpp_nape/util/RBTree.hx",2185);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(3075)
+		HX_STACK_LINE(2186)
 		::zpp_nape::util::ZPP_Set_ZPP_PartitionPair node = this->find(obj);		HX_STACK_VAR(node,"node");
-		HX_STACK_LINE(3076)
-		{
-		}
-		HX_STACK_LINE(3084)
+		HX_STACK_LINE(2195)
 		this->remove_node(node);
 	}
 return null();
@@ -1356,23 +1308,20 @@ return null();
 HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,remove,(void))
 
 ::zpp_nape::geom::ZPP_PartitionPair ZPP_Set_ZPP_PartitionPair_obj::pop_front( ){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::pop_front","zpp_nape/util/RBTree.hx",3059);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::pop_front","zpp_nape/util/RBTree.hx",2170);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(3060)
-	{
-	}
-	HX_STACK_LINE(3068)
+	HX_STACK_LINE(2179)
 	::zpp_nape::util::ZPP_Set_ZPP_PartitionPair cur = this->parent;		HX_STACK_VAR(cur,"cur");
-	HX_STACK_LINE(3069)
+	HX_STACK_LINE(2180)
 	while(((cur->prev != null()))){
-		HX_STACK_LINE(3069)
+		HX_STACK_LINE(2180)
 		cur = cur->prev;
 	}
-	HX_STACK_LINE(3070)
+	HX_STACK_LINE(2181)
 	::zpp_nape::geom::ZPP_PartitionPair ret = cur->data;		HX_STACK_VAR(ret,"ret");
-	HX_STACK_LINE(3071)
+	HX_STACK_LINE(2182)
 	this->remove_node(cur);
-	HX_STACK_LINE(3072)
+	HX_STACK_LINE(2183)
 	return ret;
 }
 
@@ -1380,19 +1329,16 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,remove,(void))
 HX_DEFINE_DYNAMIC_FUNC0(ZPP_Set_ZPP_PartitionPair_obj,pop_front,return )
 
 ::zpp_nape::geom::ZPP_PartitionPair ZPP_Set_ZPP_PartitionPair_obj::first( ){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::first","zpp_nape/util/RBTree.hx",3046);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::first","zpp_nape/util/RBTree.hx",2157);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(3047)
-	{
-	}
-	HX_STACK_LINE(3055)
+	HX_STACK_LINE(2166)
 	::zpp_nape::util::ZPP_Set_ZPP_PartitionPair cur = this->parent;		HX_STACK_VAR(cur,"cur");
-	HX_STACK_LINE(3056)
+	HX_STACK_LINE(2167)
 	while(((cur->prev != null()))){
-		HX_STACK_LINE(3056)
+		HX_STACK_LINE(2167)
 		cur = cur->prev;
 	}
-	HX_STACK_LINE(3057)
+	HX_STACK_LINE(2168)
 	return cur->data;
 }
 
@@ -1400,69 +1346,63 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Set_ZPP_PartitionPair_obj,pop_front,return )
 HX_DEFINE_DYNAMIC_FUNC0(ZPP_Set_ZPP_PartitionPair_obj,first,return )
 
 ::zpp_nape::geom::ZPP_PartitionPair ZPP_Set_ZPP_PartitionPair_obj::lower_bound( ::zpp_nape::geom::ZPP_PartitionPair obj){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::lower_bound","zpp_nape/util/RBTree.hx",3009);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::lower_bound","zpp_nape/util/RBTree.hx",2120);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
 	struct _Function_1_1{
 		inline static ::zpp_nape::geom::ZPP_PartitionPair Block( ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair_obj *__this,::zpp_nape::geom::ZPP_PartitionPair &obj){
-			HX_STACK_PUSH("*::closure","zpp_nape/util/RBTree.hx",3010);
+			HX_STACK_PUSH("*::closure","zpp_nape/util/RBTree.hx",2121);
 			{
-				HX_STACK_LINE(3011)
+				HX_STACK_LINE(2122)
 				::zpp_nape::geom::ZPP_PartitionPair ret = null();		HX_STACK_VAR(ret,"ret");
-				HX_STACK_LINE(3012)
-				{
-					HX_STACK_LINE(3013)
-					{
+				HX_STACK_LINE(2123)
+				if ((!(__this->empty()))){
+					HX_STACK_LINE(2133)
+					::zpp_nape::util::ZPP_Set_ZPP_PartitionPair set_ite = __this->parent;		HX_STACK_VAR(set_ite,"set_ite");
+					HX_STACK_LINE(2134)
+					while(((set_ite->prev != null()))){
+						HX_STACK_LINE(2134)
+						set_ite = set_ite->prev;
 					}
-					HX_STACK_LINE(3021)
-					if ((!(__this->empty()))){
-						HX_STACK_LINE(3022)
-						::zpp_nape::util::ZPP_Set_ZPP_PartitionPair set_ite = __this->parent;		HX_STACK_VAR(set_ite,"set_ite");
-						HX_STACK_LINE(3023)
-						while(((set_ite->prev != null()))){
-							HX_STACK_LINE(3023)
-							set_ite = set_ite->prev;
+					HX_STACK_LINE(2135)
+					while(((set_ite != null()))){
+						HX_STACK_LINE(2136)
+						::zpp_nape::geom::ZPP_PartitionPair elt = set_ite->data;		HX_STACK_VAR(elt,"elt");
+						HX_STACK_LINE(2137)
+						if ((!(__this->lt(elt,obj)))){
+							HX_STACK_LINE(2139)
+							ret = elt;
+							HX_STACK_LINE(2140)
+							break;
 						}
-						HX_STACK_LINE(3024)
-						while(((set_ite != null()))){
-							HX_STACK_LINE(3025)
-							::zpp_nape::geom::ZPP_PartitionPair elt = set_ite->data;		HX_STACK_VAR(elt,"elt");
-							HX_STACK_LINE(3026)
-							if ((!(__this->lt(elt,obj)))){
-								HX_STACK_LINE(3028)
-								ret = elt;
-								HX_STACK_LINE(3029)
-								break;
+						HX_STACK_LINE(2143)
+						if (((set_ite->next != null()))){
+							HX_STACK_LINE(2144)
+							set_ite = set_ite->next;
+							HX_STACK_LINE(2145)
+							while(((set_ite->prev != null()))){
+								HX_STACK_LINE(2145)
+								set_ite = set_ite->prev;
 							}
-							HX_STACK_LINE(3032)
-							if (((set_ite->next != null()))){
-								HX_STACK_LINE(3033)
-								set_ite = set_ite->next;
-								HX_STACK_LINE(3034)
-								while(((set_ite->prev != null()))){
-									HX_STACK_LINE(3034)
-									set_ite = set_ite->prev;
-								}
-							}
-							else{
-								HX_STACK_LINE(3037)
-								while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
-									HX_STACK_LINE(3037)
-									set_ite = set_ite->parent;
-								}
-								HX_STACK_LINE(3038)
+						}
+						else{
+							HX_STACK_LINE(2148)
+							while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
+								HX_STACK_LINE(2148)
 								set_ite = set_ite->parent;
 							}
+							HX_STACK_LINE(2149)
+							set_ite = set_ite->parent;
 						}
 					}
 				}
-				HX_STACK_LINE(3043)
+				HX_STACK_LINE(2154)
 				return ret;
 			}
 			return null();
 		}
 	};
-	HX_STACK_LINE(3009)
+	HX_STACK_LINE(2120)
 	return _Function_1_1::Block(this,obj);
 }
 
@@ -1470,31 +1410,31 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Set_ZPP_PartitionPair_obj,first,return )
 HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,lower_bound,return )
 
 ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair ZPP_Set_ZPP_PartitionPair_obj::find_weak( ::zpp_nape::geom::ZPP_PartitionPair obj){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::find_weak","zpp_nape/util/RBTree.hx",3000);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::find_weak","zpp_nape/util/RBTree.hx",2111);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(3001)
+	HX_STACK_LINE(2112)
 	::zpp_nape::util::ZPP_Set_ZPP_PartitionPair cur = this->parent;		HX_STACK_VAR(cur,"cur");
-	HX_STACK_LINE(3002)
+	HX_STACK_LINE(2113)
 	while(((cur != null()))){
-		HX_STACK_LINE(3002)
+		HX_STACK_LINE(2113)
 		if ((this->lt(obj,cur->data))){
-			HX_STACK_LINE(3003)
+			HX_STACK_LINE(2114)
 			cur = cur->prev;
 		}
 		else{
-			HX_STACK_LINE(3004)
+			HX_STACK_LINE(2115)
 			if ((this->lt(cur->data,obj))){
-				HX_STACK_LINE(3004)
+				HX_STACK_LINE(2115)
 				cur = cur->next;
 			}
 			else{
-				HX_STACK_LINE(3005)
+				HX_STACK_LINE(2116)
 				break;
 			}
 		}
 	}
-	HX_STACK_LINE(3007)
+	HX_STACK_LINE(2118)
 	return cur;
 }
 
@@ -1502,10 +1442,10 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,lower_bound,return )
 HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,find_weak,return )
 
 bool ZPP_Set_ZPP_PartitionPair_obj::has_weak( ::zpp_nape::geom::ZPP_PartitionPair obj){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::has_weak","zpp_nape/util/RBTree.hx",2997);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::has_weak","zpp_nape/util/RBTree.hx",2108);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(2997)
+	HX_STACK_LINE(2108)
 	return (this->find_weak(obj) != null());
 }
 
@@ -1513,24 +1453,24 @@ bool ZPP_Set_ZPP_PartitionPair_obj::has_weak( ::zpp_nape::geom::ZPP_PartitionPai
 HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,has_weak,return )
 
 ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair ZPP_Set_ZPP_PartitionPair_obj::find( ::zpp_nape::geom::ZPP_PartitionPair obj){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::find","zpp_nape/util/RBTree.hx",2989);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::find","zpp_nape/util/RBTree.hx",2100);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(2990)
+	HX_STACK_LINE(2101)
 	::zpp_nape::util::ZPP_Set_ZPP_PartitionPair cur = this->parent;		HX_STACK_VAR(cur,"cur");
-	HX_STACK_LINE(2991)
+	HX_STACK_LINE(2102)
 	while(((bool((cur != null())) && bool((cur->data != obj))))){
-		HX_STACK_LINE(2991)
+		HX_STACK_LINE(2102)
 		if ((this->lt(obj,cur->data))){
-			HX_STACK_LINE(2992)
+			HX_STACK_LINE(2103)
 			cur = cur->prev;
 		}
 		else{
-			HX_STACK_LINE(2993)
+			HX_STACK_LINE(2104)
 			cur = cur->next;
 		}
 	}
-	HX_STACK_LINE(2995)
+	HX_STACK_LINE(2106)
 	return cur;
 }
 
@@ -1538,10 +1478,10 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,has_weak,return )
 HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,find,return )
 
 bool ZPP_Set_ZPP_PartitionPair_obj::has( ::zpp_nape::geom::ZPP_PartitionPair obj){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::has","zpp_nape/util/RBTree.hx",2986);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::has","zpp_nape/util/RBTree.hx",2097);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(2986)
+	HX_STACK_LINE(2097)
 	return (this->find(obj) != null());
 }
 
@@ -1549,53 +1489,47 @@ bool ZPP_Set_ZPP_PartitionPair_obj::has( ::zpp_nape::geom::ZPP_PartitionPair obj
 HX_DEFINE_DYNAMIC_FUNC1(ZPP_Set_ZPP_PartitionPair_obj,has,return )
 
 int ZPP_Set_ZPP_PartitionPair_obj::size( ){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::size","zpp_nape/util/RBTree.hx",2956);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::size","zpp_nape/util/RBTree.hx",2067);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(2957)
+	HX_STACK_LINE(2068)
 	int ret = (int)0;		HX_STACK_VAR(ret,"ret");
-	HX_STACK_LINE(2958)
-	{
-		HX_STACK_LINE(2959)
-		{
+	HX_STACK_LINE(2069)
+	if ((!(this->empty()))){
+		HX_STACK_LINE(2079)
+		::zpp_nape::util::ZPP_Set_ZPP_PartitionPair set_ite = this->parent;		HX_STACK_VAR(set_ite,"set_ite");
+		HX_STACK_LINE(2080)
+		while(((set_ite->prev != null()))){
+			HX_STACK_LINE(2080)
+			set_ite = set_ite->prev;
 		}
-		HX_STACK_LINE(2967)
-		if ((!(this->empty()))){
-			HX_STACK_LINE(2968)
-			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair set_ite = this->parent;		HX_STACK_VAR(set_ite,"set_ite");
-			HX_STACK_LINE(2969)
-			while(((set_ite->prev != null()))){
-				HX_STACK_LINE(2969)
-				set_ite = set_ite->prev;
-			}
-			HX_STACK_LINE(2970)
-			while(((set_ite != null()))){
-				HX_STACK_LINE(2971)
-				::zpp_nape::geom::ZPP_PartitionPair i = set_ite->data;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(2972)
-				(ret)++;
-				HX_STACK_LINE(2973)
-				if (((set_ite->next != null()))){
-					HX_STACK_LINE(2974)
-					set_ite = set_ite->next;
-					HX_STACK_LINE(2975)
-					while(((set_ite->prev != null()))){
-						HX_STACK_LINE(2975)
-						set_ite = set_ite->prev;
-					}
+		HX_STACK_LINE(2081)
+		while(((set_ite != null()))){
+			HX_STACK_LINE(2082)
+			::zpp_nape::geom::ZPP_PartitionPair i = set_ite->data;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(2083)
+			(ret)++;
+			HX_STACK_LINE(2084)
+			if (((set_ite->next != null()))){
+				HX_STACK_LINE(2085)
+				set_ite = set_ite->next;
+				HX_STACK_LINE(2086)
+				while(((set_ite->prev != null()))){
+					HX_STACK_LINE(2086)
+					set_ite = set_ite->prev;
 				}
-				else{
-					HX_STACK_LINE(2978)
-					while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
-						HX_STACK_LINE(2978)
-						set_ite = set_ite->parent;
-					}
-					HX_STACK_LINE(2979)
+			}
+			else{
+				HX_STACK_LINE(2089)
+				while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
+					HX_STACK_LINE(2089)
 					set_ite = set_ite->parent;
 				}
+				HX_STACK_LINE(2090)
+				set_ite = set_ite->parent;
 			}
 		}
 	}
-	HX_STACK_LINE(2984)
+	HX_STACK_LINE(2095)
 	return ret;
 }
 
@@ -1603,9 +1537,9 @@ int ZPP_Set_ZPP_PartitionPair_obj::size( ){
 HX_DEFINE_DYNAMIC_FUNC0(ZPP_Set_ZPP_PartitionPair_obj,size,return )
 
 bool ZPP_Set_ZPP_PartitionPair_obj::singular( ){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::singular","zpp_nape/util/RBTree.hx",2953);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::singular","zpp_nape/util/RBTree.hx",2064);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(2953)
+	HX_STACK_LINE(2064)
 	return (bool((bool((this->parent != null())) && bool((this->parent->prev == null())))) && bool((this->parent->next == null())));
 }
 
@@ -1613,9 +1547,9 @@ bool ZPP_Set_ZPP_PartitionPair_obj::singular( ){
 HX_DEFINE_DYNAMIC_FUNC0(ZPP_Set_ZPP_PartitionPair_obj,singular,return )
 
 bool ZPP_Set_ZPP_PartitionPair_obj::empty( ){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::empty","zpp_nape/util/RBTree.hx",2950);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::empty","zpp_nape/util/RBTree.hx",2061);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(2950)
+	HX_STACK_LINE(2061)
 	return (this->parent == null());
 }
 
@@ -1623,116 +1557,104 @@ bool ZPP_Set_ZPP_PartitionPair_obj::empty( ){
 HX_DEFINE_DYNAMIC_FUNC0(ZPP_Set_ZPP_PartitionPair_obj,empty,return )
 
 bool ZPP_Set_ZPP_PartitionPair_obj::verify( ){
-	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::verify","zpp_nape/util/RBTree.hx",2885);
+	HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::verify","zpp_nape/util/RBTree.hx",1996);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(2886)
-	{
-		HX_STACK_LINE(2887)
-		{
+	HX_STACK_LINE(1997)
+	if ((!(this->empty()))){
+		HX_STACK_LINE(2007)
+		::zpp_nape::util::ZPP_Set_ZPP_PartitionPair set_ite = this->parent;		HX_STACK_VAR(set_ite,"set_ite");
+		HX_STACK_LINE(2008)
+		while(((set_ite->prev != null()))){
+			HX_STACK_LINE(2008)
+			set_ite = set_ite->prev;
 		}
-		HX_STACK_LINE(2895)
-		if ((!(this->empty()))){
-			HX_STACK_LINE(2896)
-			::zpp_nape::util::ZPP_Set_ZPP_PartitionPair set_ite = this->parent;		HX_STACK_VAR(set_ite,"set_ite");
-			HX_STACK_LINE(2897)
-			while(((set_ite->prev != null()))){
-				HX_STACK_LINE(2897)
-				set_ite = set_ite->prev;
-			}
-			HX_STACK_LINE(2898)
-			while(((set_ite != null()))){
-				HX_STACK_LINE(2899)
-				::zpp_nape::geom::ZPP_PartitionPair i = set_ite->data;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(2900)
-				{
-					HX_STACK_LINE(2901)
-					bool prei = true;		HX_STACK_VAR(prei,"prei");
-					HX_STACK_LINE(2902)
-					{
-						HX_STACK_LINE(2903)
-						{
+		HX_STACK_LINE(2009)
+		while(((set_ite != null()))){
+			HX_STACK_LINE(2010)
+			::zpp_nape::geom::ZPP_PartitionPair i = set_ite->data;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(2011)
+			{
+				HX_STACK_LINE(2012)
+				bool prei = true;		HX_STACK_VAR(prei,"prei");
+				HX_STACK_LINE(2013)
+				if ((!(this->empty()))){
+					HX_STACK_LINE(2023)
+					::zpp_nape::util::ZPP_Set_ZPP_PartitionPair set_ite1 = this->parent;		HX_STACK_VAR(set_ite1,"set_ite1");
+					HX_STACK_LINE(2024)
+					while(((set_ite1->prev != null()))){
+						HX_STACK_LINE(2024)
+						set_ite1 = set_ite1->prev;
+					}
+					HX_STACK_LINE(2025)
+					while(((set_ite1 != null()))){
+						HX_STACK_LINE(2026)
+						::zpp_nape::geom::ZPP_PartitionPair j = set_ite1->data;		HX_STACK_VAR(j,"j");
+						HX_STACK_LINE(2027)
+						if ((!(prei))){
+							HX_STACK_LINE(2028)
+							if (((bool(!(this->lt(i,j))) && bool(this->lt(j,i))))){
+								HX_STACK_LINE(2029)
+								return false;
+							}
 						}
-						HX_STACK_LINE(2911)
-						if ((!(this->empty()))){
-							HX_STACK_LINE(2912)
-							::zpp_nape::util::ZPP_Set_ZPP_PartitionPair set_ite1 = this->parent;		HX_STACK_VAR(set_ite1,"set_ite1");
-							HX_STACK_LINE(2913)
+						else{
+							HX_STACK_LINE(2031)
+							if (((i == j))){
+								HX_STACK_LINE(2031)
+								prei = false;
+							}
+							else{
+								HX_STACK_LINE(2032)
+								if (((bool(!(this->lt(j,i))) && bool(this->lt(i,j))))){
+									HX_STACK_LINE(2033)
+									return false;
+								}
+							}
+						}
+						HX_STACK_LINE(2036)
+						if (((set_ite1->next != null()))){
+							HX_STACK_LINE(2037)
+							set_ite1 = set_ite1->next;
+							HX_STACK_LINE(2038)
 							while(((set_ite1->prev != null()))){
-								HX_STACK_LINE(2913)
+								HX_STACK_LINE(2038)
 								set_ite1 = set_ite1->prev;
 							}
-							HX_STACK_LINE(2914)
-							while(((set_ite1 != null()))){
-								HX_STACK_LINE(2915)
-								::zpp_nape::geom::ZPP_PartitionPair j = set_ite1->data;		HX_STACK_VAR(j,"j");
-								HX_STACK_LINE(2916)
-								if ((!(prei))){
-									HX_STACK_LINE(2917)
-									if (((bool(!(this->lt(i,j))) && bool(this->lt(j,i))))){
-										HX_STACK_LINE(2918)
-										return false;
-									}
-								}
-								else{
-									HX_STACK_LINE(2920)
-									if (((i == j))){
-										HX_STACK_LINE(2920)
-										prei = false;
-									}
-									else{
-										HX_STACK_LINE(2921)
-										if (((bool(!(this->lt(j,i))) && bool(this->lt(i,j))))){
-											HX_STACK_LINE(2922)
-											return false;
-										}
-									}
-								}
-								HX_STACK_LINE(2925)
-								if (((set_ite1->next != null()))){
-									HX_STACK_LINE(2926)
-									set_ite1 = set_ite1->next;
-									HX_STACK_LINE(2927)
-									while(((set_ite1->prev != null()))){
-										HX_STACK_LINE(2927)
-										set_ite1 = set_ite1->prev;
-									}
-								}
-								else{
-									HX_STACK_LINE(2930)
-									while(((bool((set_ite1->parent != null())) && bool((set_ite1 == set_ite1->parent->next))))){
-										HX_STACK_LINE(2930)
-										set_ite1 = set_ite1->parent;
-									}
-									HX_STACK_LINE(2931)
-									set_ite1 = set_ite1->parent;
-								}
+						}
+						else{
+							HX_STACK_LINE(2041)
+							while(((bool((set_ite1->parent != null())) && bool((set_ite1 == set_ite1->parent->next))))){
+								HX_STACK_LINE(2041)
+								set_ite1 = set_ite1->parent;
 							}
+							HX_STACK_LINE(2042)
+							set_ite1 = set_ite1->parent;
 						}
 					}
 				}
-				HX_STACK_LINE(2937)
-				if (((set_ite->next != null()))){
-					HX_STACK_LINE(2938)
-					set_ite = set_ite->next;
-					HX_STACK_LINE(2939)
-					while(((set_ite->prev != null()))){
-						HX_STACK_LINE(2939)
-						set_ite = set_ite->prev;
-					}
+			}
+			HX_STACK_LINE(2048)
+			if (((set_ite->next != null()))){
+				HX_STACK_LINE(2049)
+				set_ite = set_ite->next;
+				HX_STACK_LINE(2050)
+				while(((set_ite->prev != null()))){
+					HX_STACK_LINE(2050)
+					set_ite = set_ite->prev;
 				}
-				else{
-					HX_STACK_LINE(2942)
-					while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
-						HX_STACK_LINE(2942)
-						set_ite = set_ite->parent;
-					}
-					HX_STACK_LINE(2943)
+			}
+			else{
+				HX_STACK_LINE(2053)
+				while(((bool((set_ite->parent != null())) && bool((set_ite == set_ite->parent->next))))){
+					HX_STACK_LINE(2053)
 					set_ite = set_ite->parent;
 				}
+				HX_STACK_LINE(2054)
+				set_ite = set_ite->parent;
 			}
 		}
 	}
-	HX_STACK_LINE(2948)
+	HX_STACK_LINE(2059)
 	return true;
 }
 
@@ -1741,7 +1663,7 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Set_ZPP_PartitionPair_obj,verify,return )
 
 Void ZPP_Set_ZPP_PartitionPair_obj::alloc( ){
 {
-		HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::alloc","zpp_nape/util/RBTree.hx",2876);
+		HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::alloc","zpp_nape/util/RBTree.hx",1987);
 		HX_STACK_THIS(this);
 	}
 return null();
@@ -1752,13 +1674,13 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_Set_ZPP_PartitionPair_obj,alloc,(void))
 
 Void ZPP_Set_ZPP_PartitionPair_obj::free( ){
 {
-		HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::free","zpp_nape/util/RBTree.hx",2869);
+		HX_STACK_PUSH("ZPP_Set_ZPP_PartitionPair::free","zpp_nape/util/RBTree.hx",1980);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(2870)
+		HX_STACK_LINE(1981)
 		this->data = null();
-		HX_STACK_LINE(2871)
+		HX_STACK_LINE(1982)
 		this->lt = null();
-		HX_STACK_LINE(2872)
+		HX_STACK_LINE(1983)
 		this->swapped = null();
 	}
 return null();
@@ -1956,7 +1878,7 @@ Class ZPP_Set_ZPP_PartitionPair_obj::__mClass;
 
 void ZPP_Set_ZPP_PartitionPair_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_Set_ZPP_PartitionPair"), hx::TCanCast< ZPP_Set_ZPP_PartitionPair_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_Set_ZPP_PartitionPair"), hx::TCanCast< ZPP_Set_ZPP_PartitionPair_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

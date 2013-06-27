@@ -14,7 +14,7 @@ namespace nape{
 namespace phys{
 
 
-class CompoundList_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  CompoundList_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef CompoundList_obj OBJ_;
@@ -85,9 +85,8 @@ class CompoundList_obj : public hx::Object{
 		virtual int get_length( );
 		Dynamic get_length_dyn();
 
-		int length; /* REM */ 
-		::zpp_nape::util::ZPP_CompoundList zpp_inner; /* REM */ 
-		static ::nape::phys::CompoundList fromArray( Array< ::nape::phys::Compound > array);
+		::zpp_nape::util::ZPP_CompoundList zpp_inner;
+		static ::nape::phys::CompoundList fromArray( Array< ::Dynamic > array);
 		static Dynamic fromArray_dyn();
 
 };

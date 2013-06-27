@@ -230,8 +230,6 @@ Dynamic CbEvent_obj::__Create(hx::DynamicArray inArgs)
 
 HX_DEFINE_DYNAMIC_FUNC0(CbEvent_obj,toString,return )
 
-::nape::callbacks::CbEvent CbEvent_obj::BEGIN;
-
 ::nape::callbacks::CbEvent CbEvent_obj::get_BEGIN( ){
 	HX_STACK_PUSH("CbEvent::get_BEGIN","nape/callbacks/CbEvent.hx",206);
 	HX_STACK_LINE(207)
@@ -249,8 +247,6 @@ HX_DEFINE_DYNAMIC_FUNC0(CbEvent_obj,toString,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(CbEvent_obj,get_BEGIN,return )
-
-::nape::callbacks::CbEvent CbEvent_obj::ONGOING;
 
 ::nape::callbacks::CbEvent CbEvent_obj::get_ONGOING( ){
 	HX_STACK_PUSH("CbEvent::get_ONGOING","nape/callbacks/CbEvent.hx",220);
@@ -270,8 +266,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(CbEvent_obj,get_BEGIN,return )
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(CbEvent_obj,get_ONGOING,return )
 
-::nape::callbacks::CbEvent CbEvent_obj::END;
-
 ::nape::callbacks::CbEvent CbEvent_obj::get_END( ){
 	HX_STACK_PUSH("CbEvent::get_END","nape/callbacks/CbEvent.hx",233);
 	HX_STACK_LINE(234)
@@ -289,8 +283,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(CbEvent_obj,get_ONGOING,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(CbEvent_obj,get_END,return )
-
-::nape::callbacks::CbEvent CbEvent_obj::WAKE;
 
 ::nape::callbacks::CbEvent CbEvent_obj::get_WAKE( ){
 	HX_STACK_PUSH("CbEvent::get_WAKE","nape/callbacks/CbEvent.hx",246);
@@ -310,8 +302,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(CbEvent_obj,get_END,return )
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(CbEvent_obj,get_WAKE,return )
 
-::nape::callbacks::CbEvent CbEvent_obj::SLEEP;
-
 ::nape::callbacks::CbEvent CbEvent_obj::get_SLEEP( ){
 	HX_STACK_PUSH("CbEvent::get_SLEEP","nape/callbacks/CbEvent.hx",259);
 	HX_STACK_LINE(260)
@@ -330,8 +320,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(CbEvent_obj,get_WAKE,return )
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(CbEvent_obj,get_SLEEP,return )
 
-::nape::callbacks::CbEvent CbEvent_obj::BREAK;
-
 ::nape::callbacks::CbEvent CbEvent_obj::get_BREAK( ){
 	HX_STACK_PUSH("CbEvent::get_BREAK","nape/callbacks/CbEvent.hx",272);
 	HX_STACK_LINE(273)
@@ -349,8 +337,6 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC0(CbEvent_obj,get_SLEEP,return )
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC0(CbEvent_obj,get_BREAK,return )
-
-::nape::callbacks::CbEvent CbEvent_obj::PRE;
 
 ::nape::callbacks::CbEvent CbEvent_obj::get_PRE( ){
 	HX_STACK_PUSH("CbEvent::get_PRE","nape/callbacks/CbEvent.hx",286);
@@ -389,19 +375,19 @@ Dynamic CbEvent_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 3:
-		if (HX_FIELD_EQ(inName,"END") ) { return inCallProp ? get_END() : END; }
-		if (HX_FIELD_EQ(inName,"PRE") ) { return inCallProp ? get_PRE() : PRE; }
+		if (HX_FIELD_EQ(inName,"END") ) { return get_END(); }
+		if (HX_FIELD_EQ(inName,"PRE") ) { return get_PRE(); }
 		break;
 	case 4:
-		if (HX_FIELD_EQ(inName,"WAKE") ) { return inCallProp ? get_WAKE() : WAKE; }
+		if (HX_FIELD_EQ(inName,"WAKE") ) { return get_WAKE(); }
 		break;
 	case 5:
-		if (HX_FIELD_EQ(inName,"BEGIN") ) { return inCallProp ? get_BEGIN() : BEGIN; }
-		if (HX_FIELD_EQ(inName,"SLEEP") ) { return inCallProp ? get_SLEEP() : SLEEP; }
-		if (HX_FIELD_EQ(inName,"BREAK") ) { return inCallProp ? get_BREAK() : BREAK; }
+		if (HX_FIELD_EQ(inName,"BEGIN") ) { return get_BEGIN(); }
+		if (HX_FIELD_EQ(inName,"SLEEP") ) { return get_SLEEP(); }
+		if (HX_FIELD_EQ(inName,"BREAK") ) { return get_BREAK(); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"ONGOING") ) { return inCallProp ? get_ONGOING() : ONGOING; }
+		if (HX_FIELD_EQ(inName,"ONGOING") ) { return get_ONGOING(); }
 		if (HX_FIELD_EQ(inName,"get_END") ) { return get_END_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_PRE") ) { return get_PRE_dyn(); }
 		break;
@@ -422,22 +408,6 @@ Dynamic CbEvent_obj::__Field(const ::String &inName,bool inCallProp)
 
 Dynamic CbEvent_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 3:
-		if (HX_FIELD_EQ(inName,"END") ) { END=inValue.Cast< ::nape::callbacks::CbEvent >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"PRE") ) { PRE=inValue.Cast< ::nape::callbacks::CbEvent >(); return inValue; }
-		break;
-	case 4:
-		if (HX_FIELD_EQ(inName,"WAKE") ) { WAKE=inValue.Cast< ::nape::callbacks::CbEvent >(); return inValue; }
-		break;
-	case 5:
-		if (HX_FIELD_EQ(inName,"BEGIN") ) { BEGIN=inValue.Cast< ::nape::callbacks::CbEvent >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"SLEEP") ) { SLEEP=inValue.Cast< ::nape::callbacks::CbEvent >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"BREAK") ) { BREAK=inValue.Cast< ::nape::callbacks::CbEvent >(); return inValue; }
-		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"ONGOING") ) { ONGOING=inValue.Cast< ::nape::callbacks::CbEvent >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
@@ -447,19 +417,12 @@ void CbEvent_obj::__GetFields(Array< ::String> &outFields)
 };
 
 static ::String sStaticFields[] = {
-	HX_CSTRING("BEGIN"),
 	HX_CSTRING("get_BEGIN"),
-	HX_CSTRING("ONGOING"),
 	HX_CSTRING("get_ONGOING"),
-	HX_CSTRING("END"),
 	HX_CSTRING("get_END"),
-	HX_CSTRING("WAKE"),
 	HX_CSTRING("get_WAKE"),
-	HX_CSTRING("SLEEP"),
 	HX_CSTRING("get_SLEEP"),
-	HX_CSTRING("BREAK"),
 	HX_CSTRING("get_BREAK"),
-	HX_CSTRING("PRE"),
 	HX_CSTRING("get_PRE"),
 	String(null()) };
 
@@ -469,31 +432,17 @@ static ::String sMemberFields[] = {
 
 static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(CbEvent_obj::__mClass,"__mClass");
-	HX_MARK_MEMBER_NAME(CbEvent_obj::BEGIN,"BEGIN");
-	HX_MARK_MEMBER_NAME(CbEvent_obj::ONGOING,"ONGOING");
-	HX_MARK_MEMBER_NAME(CbEvent_obj::END,"END");
-	HX_MARK_MEMBER_NAME(CbEvent_obj::WAKE,"WAKE");
-	HX_MARK_MEMBER_NAME(CbEvent_obj::SLEEP,"SLEEP");
-	HX_MARK_MEMBER_NAME(CbEvent_obj::BREAK,"BREAK");
-	HX_MARK_MEMBER_NAME(CbEvent_obj::PRE,"PRE");
 };
 
 static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(CbEvent_obj::__mClass,"__mClass");
-	HX_VISIT_MEMBER_NAME(CbEvent_obj::BEGIN,"BEGIN");
-	HX_VISIT_MEMBER_NAME(CbEvent_obj::ONGOING,"ONGOING");
-	HX_VISIT_MEMBER_NAME(CbEvent_obj::END,"END");
-	HX_VISIT_MEMBER_NAME(CbEvent_obj::WAKE,"WAKE");
-	HX_VISIT_MEMBER_NAME(CbEvent_obj::SLEEP,"SLEEP");
-	HX_VISIT_MEMBER_NAME(CbEvent_obj::BREAK,"BREAK");
-	HX_VISIT_MEMBER_NAME(CbEvent_obj::PRE,"PRE");
 };
 
 Class CbEvent_obj::__mClass;
 
 void CbEvent_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.CbEvent"), hx::TCanCast< CbEvent_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.CbEvent"), hx::TCanCast< CbEvent_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

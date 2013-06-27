@@ -9,47 +9,47 @@
 #ifndef INCLUDED_UIobject
 #include <UIobject.h>
 #endif
-#ifndef INCLUDED_native_display_Bitmap
-#include <native/display/Bitmap.h>
+#ifndef INCLUDED_flash_display_Bitmap
+#include <flash/display/Bitmap.h>
 #endif
-#ifndef INCLUDED_native_display_BitmapData
-#include <native/display/BitmapData.h>
+#ifndef INCLUDED_flash_display_BitmapData
+#include <flash/display/BitmapData.h>
 #endif
-#ifndef INCLUDED_native_display_DisplayObject
-#include <native/display/DisplayObject.h>
+#ifndef INCLUDED_flash_display_DisplayObject
+#include <flash/display/DisplayObject.h>
 #endif
-#ifndef INCLUDED_native_display_DisplayObjectContainer
-#include <native/display/DisplayObjectContainer.h>
+#ifndef INCLUDED_flash_display_DisplayObjectContainer
+#include <flash/display/DisplayObjectContainer.h>
 #endif
-#ifndef INCLUDED_native_display_IBitmapDrawable
-#include <native/display/IBitmapDrawable.h>
+#ifndef INCLUDED_flash_display_IBitmapDrawable
+#include <flash/display/IBitmapDrawable.h>
 #endif
-#ifndef INCLUDED_native_display_InteractiveObject
-#include <native/display/InteractiveObject.h>
+#ifndef INCLUDED_flash_display_InteractiveObject
+#include <flash/display/InteractiveObject.h>
 #endif
-#ifndef INCLUDED_native_display_PixelSnapping
-#include <native/display/PixelSnapping.h>
+#ifndef INCLUDED_flash_display_PixelSnapping
+#include <flash/display/PixelSnapping.h>
 #endif
-#ifndef INCLUDED_native_display_Sprite
-#include <native/display/Sprite.h>
+#ifndef INCLUDED_flash_display_Sprite
+#include <flash/display/Sprite.h>
 #endif
-#ifndef INCLUDED_native_display_Stage
-#include <native/display/Stage.h>
+#ifndef INCLUDED_flash_display_Stage
+#include <flash/display/Stage.h>
 #endif
-#ifndef INCLUDED_native_events_Event
-#include <native/events/Event.h>
+#ifndef INCLUDED_flash_events_Event
+#include <flash/events/Event.h>
 #endif
-#ifndef INCLUDED_native_events_EventDispatcher
-#include <native/events/EventDispatcher.h>
+#ifndef INCLUDED_flash_events_EventDispatcher
+#include <flash/events/EventDispatcher.h>
 #endif
-#ifndef INCLUDED_native_events_IEventDispatcher
-#include <native/events/IEventDispatcher.h>
+#ifndef INCLUDED_flash_events_IEventDispatcher
+#include <flash/events/IEventDispatcher.h>
 #endif
-#ifndef INCLUDED_native_events_MouseEvent
-#include <native/events/MouseEvent.h>
+#ifndef INCLUDED_flash_events_MouseEvent
+#include <flash/events/MouseEvent.h>
 #endif
-#ifndef INCLUDED_nme_installer_Assets
-#include <nme/installer/Assets.h>
+#ifndef INCLUDED_openfl_Assets
+#include <openfl/Assets.h>
 #endif
 
 Void UIobject_obj::__construct(::String url,Float x,Float y,Dynamic __o_fixed)
@@ -67,21 +67,21 @@ Dynamic fixed = __o_fixed.Default(false);
 		this->canvas = ::Main_obj::canvas;
 	}
 	HX_STACK_LINE(24)
-	this->asset = ::native::display::Bitmap_obj::__new(::nme::installer::Assets_obj::getBitmapData((::Mobile_obj::asset + url),null()),null(),null());
+	this->asset = ::flash::display::Bitmap_obj::__new(::openfl::Assets_obj::getBitmapData((::Mobile_obj::asset + url),null()),null(),null());
 	HX_STACK_LINE(25)
-	this->parent = ::native::display::Sprite_obj::__new();
+	this->parent = ::flash::display::Sprite_obj::__new();
 	HX_STACK_LINE(27)
 	this->parent->addChild(this->asset);
 	HX_STACK_LINE(28)
 	this->canvas->__Field(HX_CSTRING("addChild"),true)(this->parent);
 	HX_STACK_LINE(31)
-	this->parent->addEventListener(::native::events::Event_obj::ADDED_TO_STAGE,this->onAdded_dyn(),null(),null(),null());
+	this->parent->addEventListener(::flash::events::Event_obj::ADDED_TO_STAGE,this->onAdded_dyn(),null(),null(),null());
 	HX_STACK_LINE(32)
-	this->parent->addEventListener(::native::events::MouseEvent_obj::CLICK,this->mouseClick_dyn(),null(),null(),null());
+	this->parent->addEventListener(::flash::events::MouseEvent_obj::CLICK,this->mouseClick_dyn(),null(),null(),null());
 	HX_STACK_LINE(33)
-	this->parent->addEventListener(::native::events::MouseEvent_obj::MOUSE_OVER,this->mouseOver_dyn(),null(),null(),null());
+	this->parent->addEventListener(::flash::events::MouseEvent_obj::MOUSE_OVER,this->mouseOver_dyn(),null(),null(),null());
 	HX_STACK_LINE(34)
-	this->parent->addEventListener(::native::events::MouseEvent_obj::MOUSE_OUT,this->mouseOut_dyn(),null(),null(),null());
+	this->parent->addEventListener(::flash::events::MouseEvent_obj::MOUSE_OUT,this->mouseOut_dyn(),null(),null(),null());
 	HX_STACK_LINE(37)
 	this->parent->set_x(x);
 	HX_STACK_LINE(38)
@@ -115,7 +115,7 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC0(UIobject_obj,render,(void))
 
-Void UIobject_obj::mouseOut( ::native::events::MouseEvent ev){
+Void UIobject_obj::mouseOut( ::flash::events::MouseEvent ev){
 {
 		HX_STACK_PUSH("UIobject::mouseOut","UIobject.hx",45);
 		HX_STACK_THIS(this);
@@ -127,7 +127,7 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC1(UIobject_obj,mouseOut,(void))
 
-Void UIobject_obj::mouseOver( ::native::events::MouseEvent ev){
+Void UIobject_obj::mouseOver( ::flash::events::MouseEvent ev){
 {
 		HX_STACK_PUSH("UIobject::mouseOver","UIobject.hx",44);
 		HX_STACK_THIS(this);
@@ -139,7 +139,7 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC1(UIobject_obj,mouseOver,(void))
 
-Void UIobject_obj::mouseClick( ::native::events::MouseEvent ev){
+Void UIobject_obj::mouseClick( ::flash::events::MouseEvent ev){
 {
 		HX_STACK_PUSH("UIobject::mouseClick","UIobject.hx",43);
 		HX_STACK_THIS(this);
@@ -151,7 +151,7 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC1(UIobject_obj,mouseClick,(void))
 
-Void UIobject_obj::onAdded( ::native::events::Event ev){
+Void UIobject_obj::onAdded( ::flash::events::Event ev){
 {
 		HX_STACK_PUSH("UIobject::onAdded","UIobject.hx",42);
 		HX_STACK_THIS(this);
@@ -214,10 +214,10 @@ Dynamic UIobject_obj::__SetField(const ::String &inName,const Dynamic &inValue,b
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"asset") ) { asset=inValue.Cast< ::native::display::Bitmap >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"asset") ) { asset=inValue.Cast< ::flash::display::Bitmap >(); return inValue; }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"parent") ) { parent=inValue.Cast< ::native::display::Sprite >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"parent") ) { parent=inValue.Cast< ::flash::display::Sprite >(); return inValue; }
 		if (HX_FIELD_EQ(inName,"canvas") ) { canvas=inValue.Cast< Dynamic >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
@@ -257,7 +257,7 @@ Class UIobject_obj::__mClass;
 
 void UIobject_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("UIobject"), hx::TCanCast< UIobject_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("UIobject"), hx::TCanCast< UIobject_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

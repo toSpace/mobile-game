@@ -171,12 +171,6 @@ Void ZPP_CallbackSet_obj::remove_arb( ::zpp_nape::dynamics::ZPP_Arbiter x){
 		::zpp_nape::util::ZNPList_ZPP_Arbiter _this = this->arbiters;		HX_STACK_VAR(_this,"_this");
 		HX_STACK_LINE(1128)
 		{
-		}
-		HX_STACK_LINE(1128)
-		{
-			HX_STACK_LINE(1128)
-			{
-			}
 			HX_STACK_LINE(1128)
 			::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 			HX_STACK_LINE(1128)
@@ -189,9 +183,6 @@ Void ZPP_CallbackSet_obj::remove_arb( ::zpp_nape::dynamics::ZPP_Arbiter x){
 				if (((cur->elt == x))){
 					HX_STACK_LINE(1128)
 					{
-						HX_STACK_LINE(1128)
-						{
-						}
 						HX_STACK_LINE(1128)
 						::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 						HX_STACK_LINE(1128)
@@ -225,14 +216,8 @@ Void ZPP_CallbackSet_obj::remove_arb( ::zpp_nape::dynamics::ZPP_Arbiter x){
 						}
 						HX_STACK_LINE(1128)
 						{
-						}
-						HX_STACK_LINE(1128)
-						{
 							HX_STACK_LINE(1128)
 							::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(1128)
-							{
-							}
 							HX_STACK_LINE(1128)
 							o->elt = null();
 							HX_STACK_LINE(1128)
@@ -280,9 +265,6 @@ bool ZPP_CallbackSet_obj::try_remove_arb( ::zpp_nape::dynamics::ZPP_Arbiter x){
 				HX_STACK_LINE(1125)
 				::zpp_nape::util::ZNPList_ZPP_Arbiter _this = __this->arbiters;		HX_STACK_VAR(_this,"_this");
 				HX_STACK_LINE(1125)
-				{
-				}
-				HX_STACK_LINE(1125)
 				::zpp_nape::util::ZNPNode_ZPP_Arbiter pre = null();		HX_STACK_VAR(pre,"pre");
 				HX_STACK_LINE(1125)
 				::zpp_nape::util::ZNPNode_ZPP_Arbiter cur = _this->head;		HX_STACK_VAR(cur,"cur");
@@ -294,9 +276,6 @@ bool ZPP_CallbackSet_obj::try_remove_arb( ::zpp_nape::dynamics::ZPP_Arbiter x){
 					if (((cur->elt == x))){
 						HX_STACK_LINE(1125)
 						{
-							HX_STACK_LINE(1125)
-							{
-							}
 							HX_STACK_LINE(1125)
 							::zpp_nape::util::ZNPNode_ZPP_Arbiter old;		HX_STACK_VAR(old,"old");
 							HX_STACK_LINE(1125)
@@ -330,14 +309,8 @@ bool ZPP_CallbackSet_obj::try_remove_arb( ::zpp_nape::dynamics::ZPP_Arbiter x){
 							}
 							HX_STACK_LINE(1125)
 							{
-							}
-							HX_STACK_LINE(1125)
-							{
 								HX_STACK_LINE(1125)
 								::zpp_nape::util::ZNPNode_ZPP_Arbiter o = old;		HX_STACK_VAR(o,"o");
-								HX_STACK_LINE(1125)
-								{
-								}
 								HX_STACK_LINE(1125)
 								o->elt = null();
 								HX_STACK_LINE(1125)
@@ -386,9 +359,6 @@ bool ZPP_CallbackSet_obj::add_arb( ::zpp_nape::dynamics::ZPP_Arbiter x){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",1118);
 			{
 				HX_STACK_LINE(1118)
-				{
-				}
-				HX_STACK_LINE(1118)
 				bool ret;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(1118)
 				{
@@ -426,9 +396,6 @@ bool ZPP_CallbackSet_obj::add_arb( ::zpp_nape::dynamics::ZPP_Arbiter x){
 		{
 			HX_STACK_LINE(1119)
 			::zpp_nape::util::ZNPList_ZPP_Arbiter _this = this->arbiters;		HX_STACK_VAR(_this,"_this");
-			HX_STACK_LINE(1119)
-			{
-			}
 			struct _Function_3_1{
 				inline static ::zpp_nape::util::ZNPNode_ZPP_Arbiter Block( ::zpp_nape::dynamics::ZPP_Arbiter &x){
 					HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",1119);
@@ -539,9 +506,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_CallbackSet_obj,free,(void))
 	HX_STACK_PUSH("ZPP_CallbackSet::at","zpp_nape/space/Space.hx",1047);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(1048)
-	{
-	}
 	HX_STACK_LINE(1056)
 	::zpp_nape::space::ZPP_CallbackSet it = this->iterator_at(ind);		HX_STACK_VAR(it,"it");
 	HX_STACK_LINE(1057)
@@ -555,9 +519,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_CallbackSet_obj,at,return )
 	HX_STACK_PUSH("ZPP_CallbackSet::iterator_at","zpp_nape/space/Space.hx",1034);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(ind,"ind");
-	HX_STACK_LINE(1035)
-	{
-	}
 	HX_STACK_LINE(1043)
 	::zpp_nape::space::ZPP_CallbackSet ret = this->next;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(1044)
@@ -607,9 +568,6 @@ bool ZPP_CallbackSet_obj::inlined_has( ::zpp_nape::space::ZPP_CallbackSet obj){
 	HX_STACK_PUSH("ZPP_CallbackSet::inlined_has","zpp_nape/space/Space.hx",992);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(993)
-	{
-	}
 	HX_STACK_LINE(1001)
 	bool ret;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(1002)
@@ -651,9 +609,6 @@ bool ZPP_CallbackSet_obj::has( ::zpp_nape::space::ZPP_CallbackSet obj){
 		inline static bool Block( ::zpp_nape::space::ZPP_CallbackSet_obj *__this,::zpp_nape::space::ZPP_CallbackSet &obj){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",988);
 			{
-				HX_STACK_LINE(988)
-				{
-				}
 				HX_STACK_LINE(988)
 				bool ret;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(988)
@@ -788,9 +743,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_CallbackSet_obj,splice,return )
 	HX_STACK_PUSH("ZPP_CallbackSet::inlined_erase","zpp_nape/space/Space.hx",917);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
-	HX_STACK_LINE(918)
-	{
-	}
 	HX_STACK_LINE(926)
 	::zpp_nape::space::ZPP_CallbackSet old;		HX_STACK_VAR(old,"old");
 	HX_STACK_LINE(927)
@@ -824,9 +776,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_CallbackSet_obj,splice,return )
 	}
 	HX_STACK_LINE(940)
 	old->_inuse = false;
-	HX_STACK_LINE(943)
-	{
-	}
 	HX_STACK_LINE(944)
 	this->modified = true;
 	HX_STACK_LINE(945)
@@ -845,12 +794,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_CallbackSet_obj,inlined_erase,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(pre,"pre");
 	struct _Function_1_1{
-		inline static ::zpp_nape::space::ZPP_CallbackSet Block( ::zpp_nape::space::ZPP_CallbackSet &pre,::zpp_nape::space::ZPP_CallbackSet_obj *__this){
+		inline static ::zpp_nape::space::ZPP_CallbackSet Block( ::zpp_nape::space::ZPP_CallbackSet_obj *__this,::zpp_nape::space::ZPP_CallbackSet &pre){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",913);
 			{
-				HX_STACK_LINE(913)
-				{
-				}
 				HX_STACK_LINE(913)
 				::zpp_nape::space::ZPP_CallbackSet old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(913)
@@ -885,9 +831,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_CallbackSet_obj,inlined_erase,return )
 				HX_STACK_LINE(913)
 				old->_inuse = false;
 				HX_STACK_LINE(913)
-				{
-				}
-				HX_STACK_LINE(913)
 				__this->modified = true;
 				HX_STACK_LINE(913)
 				(__this->length)--;
@@ -900,7 +843,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_CallbackSet_obj,inlined_erase,return )
 		}
 	};
 	HX_STACK_LINE(912)
-	return _Function_1_1::Block(pre,this);
+	return _Function_1_1::Block(this,pre);
 }
 
 
@@ -910,9 +853,6 @@ bool ZPP_CallbackSet_obj::inlined_try_remove( ::zpp_nape::space::ZPP_CallbackSet
 	HX_STACK_PUSH("ZPP_CallbackSet::inlined_try_remove","zpp_nape/space/Space.hx",889);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(890)
-	{
-	}
 	HX_STACK_LINE(898)
 	::zpp_nape::space::ZPP_CallbackSet pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(899)
@@ -925,9 +865,6 @@ bool ZPP_CallbackSet_obj::inlined_try_remove( ::zpp_nape::space::ZPP_CallbackSet
 		if (((cur == obj))){
 			HX_STACK_LINE(903)
 			{
-				HX_STACK_LINE(903)
-				{
-				}
 				HX_STACK_LINE(903)
 				::zpp_nape::space::ZPP_CallbackSet old;		HX_STACK_VAR(old,"old");
 				HX_STACK_LINE(903)
@@ -962,9 +899,6 @@ bool ZPP_CallbackSet_obj::inlined_try_remove( ::zpp_nape::space::ZPP_CallbackSet
 				HX_STACK_LINE(903)
 				old->_inuse = false;
 				HX_STACK_LINE(903)
-				{
-				}
-				HX_STACK_LINE(903)
 				this->modified = true;
 				HX_STACK_LINE(903)
 				(this->length)--;
@@ -995,87 +929,72 @@ Void ZPP_CallbackSet_obj::inlined_remove( ::zpp_nape::space::ZPP_CallbackSet obj
 		HX_STACK_PUSH("ZPP_CallbackSet::inlined_remove","zpp_nape/space/Space.hx",876);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(877)
-		{
-		}
 		HX_STACK_LINE(885)
-		{
+		::zpp_nape::space::ZPP_CallbackSet pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(885)
+		::zpp_nape::space::ZPP_CallbackSet cur = this->next;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(885)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(885)
+		while(((cur != null()))){
 			HX_STACK_LINE(885)
-			{
-			}
-			HX_STACK_LINE(885)
-			::zpp_nape::space::ZPP_CallbackSet pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(885)
-			::zpp_nape::space::ZPP_CallbackSet cur = this->next;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(885)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(885)
-			while(((cur != null()))){
+			if (((cur == obj))){
 				HX_STACK_LINE(885)
-				if (((cur == obj))){
+				{
 					HX_STACK_LINE(885)
-					{
+					::zpp_nape::space::ZPP_CallbackSet old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(885)
+					::zpp_nape::space::ZPP_CallbackSet ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(885)
+					if (((pre == null()))){
 						HX_STACK_LINE(885)
-						{
+						old = this->next;
+						HX_STACK_LINE(885)
+						ret1 = old->next;
+						HX_STACK_LINE(885)
+						this->next = ret1;
+						HX_STACK_LINE(885)
+						if (((this->next == null()))){
+							HX_STACK_LINE(885)
+							this->pushmod = true;
 						}
+					}
+					else{
 						HX_STACK_LINE(885)
-						::zpp_nape::space::ZPP_CallbackSet old;		HX_STACK_VAR(old,"old");
+						old = pre->next;
 						HX_STACK_LINE(885)
-						::zpp_nape::space::ZPP_CallbackSet ret1;		HX_STACK_VAR(ret1,"ret1");
+						ret1 = old->next;
 						HX_STACK_LINE(885)
-						if (((pre == null()))){
+						pre->next = ret1;
+						HX_STACK_LINE(885)
+						if (((ret1 == null()))){
 							HX_STACK_LINE(885)
-							old = this->next;
-							HX_STACK_LINE(885)
-							ret1 = old->next;
-							HX_STACK_LINE(885)
-							this->next = ret1;
-							HX_STACK_LINE(885)
-							if (((this->next == null()))){
-								HX_STACK_LINE(885)
-								this->pushmod = true;
-							}
+							this->pushmod = true;
 						}
-						else{
-							HX_STACK_LINE(885)
-							old = pre->next;
-							HX_STACK_LINE(885)
-							ret1 = old->next;
-							HX_STACK_LINE(885)
-							pre->next = ret1;
-							HX_STACK_LINE(885)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(885)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(885)
-						old->_inuse = false;
-						HX_STACK_LINE(885)
-						{
-						}
-						HX_STACK_LINE(885)
-						this->modified = true;
-						HX_STACK_LINE(885)
-						(this->length)--;
-						HX_STACK_LINE(885)
-						this->pushmod = true;
-						HX_STACK_LINE(885)
-						ret1;
 					}
 					HX_STACK_LINE(885)
-					ret = true;
+					old->_inuse = false;
 					HX_STACK_LINE(885)
-					break;
+					this->modified = true;
+					HX_STACK_LINE(885)
+					(this->length)--;
+					HX_STACK_LINE(885)
+					this->pushmod = true;
+					HX_STACK_LINE(885)
+					ret1;
 				}
 				HX_STACK_LINE(885)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(885)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(885)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(885)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(885)
+		ret;
 	}
 return null();
 }
@@ -1087,9 +1006,6 @@ bool ZPP_CallbackSet_obj::try_remove( ::zpp_nape::space::ZPP_CallbackSet obj){
 	HX_STACK_PUSH("ZPP_CallbackSet::try_remove","zpp_nape/space/Space.hx",851);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(obj,"obj");
-	HX_STACK_LINE(852)
-	{
-	}
 	HX_STACK_LINE(860)
 	::zpp_nape::space::ZPP_CallbackSet pre = null();		HX_STACK_VAR(pre,"pre");
 	HX_STACK_LINE(861)
@@ -1124,87 +1040,72 @@ Void ZPP_CallbackSet_obj::remove( ::zpp_nape::space::ZPP_CallbackSet obj){
 		HX_STACK_PUSH("ZPP_CallbackSet::remove","zpp_nape/space/Space.hx",840);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(obj,"obj");
-		HX_STACK_LINE(841)
-		{
-		}
 		HX_STACK_LINE(849)
-		{
+		::zpp_nape::space::ZPP_CallbackSet pre = null();		HX_STACK_VAR(pre,"pre");
+		HX_STACK_LINE(849)
+		::zpp_nape::space::ZPP_CallbackSet cur = this->next;		HX_STACK_VAR(cur,"cur");
+		HX_STACK_LINE(849)
+		bool ret = false;		HX_STACK_VAR(ret,"ret");
+		HX_STACK_LINE(849)
+		while(((cur != null()))){
 			HX_STACK_LINE(849)
-			{
-			}
-			HX_STACK_LINE(849)
-			::zpp_nape::space::ZPP_CallbackSet pre = null();		HX_STACK_VAR(pre,"pre");
-			HX_STACK_LINE(849)
-			::zpp_nape::space::ZPP_CallbackSet cur = this->next;		HX_STACK_VAR(cur,"cur");
-			HX_STACK_LINE(849)
-			bool ret = false;		HX_STACK_VAR(ret,"ret");
-			HX_STACK_LINE(849)
-			while(((cur != null()))){
+			if (((cur == obj))){
 				HX_STACK_LINE(849)
-				if (((cur == obj))){
+				{
 					HX_STACK_LINE(849)
-					{
+					::zpp_nape::space::ZPP_CallbackSet old;		HX_STACK_VAR(old,"old");
+					HX_STACK_LINE(849)
+					::zpp_nape::space::ZPP_CallbackSet ret1;		HX_STACK_VAR(ret1,"ret1");
+					HX_STACK_LINE(849)
+					if (((pre == null()))){
 						HX_STACK_LINE(849)
-						{
+						old = this->next;
+						HX_STACK_LINE(849)
+						ret1 = old->next;
+						HX_STACK_LINE(849)
+						this->next = ret1;
+						HX_STACK_LINE(849)
+						if (((this->next == null()))){
+							HX_STACK_LINE(849)
+							this->pushmod = true;
 						}
+					}
+					else{
 						HX_STACK_LINE(849)
-						::zpp_nape::space::ZPP_CallbackSet old;		HX_STACK_VAR(old,"old");
+						old = pre->next;
 						HX_STACK_LINE(849)
-						::zpp_nape::space::ZPP_CallbackSet ret1;		HX_STACK_VAR(ret1,"ret1");
+						ret1 = old->next;
 						HX_STACK_LINE(849)
-						if (((pre == null()))){
+						pre->next = ret1;
+						HX_STACK_LINE(849)
+						if (((ret1 == null()))){
 							HX_STACK_LINE(849)
-							old = this->next;
-							HX_STACK_LINE(849)
-							ret1 = old->next;
-							HX_STACK_LINE(849)
-							this->next = ret1;
-							HX_STACK_LINE(849)
-							if (((this->next == null()))){
-								HX_STACK_LINE(849)
-								this->pushmod = true;
-							}
+							this->pushmod = true;
 						}
-						else{
-							HX_STACK_LINE(849)
-							old = pre->next;
-							HX_STACK_LINE(849)
-							ret1 = old->next;
-							HX_STACK_LINE(849)
-							pre->next = ret1;
-							HX_STACK_LINE(849)
-							if (((ret1 == null()))){
-								HX_STACK_LINE(849)
-								this->pushmod = true;
-							}
-						}
-						HX_STACK_LINE(849)
-						old->_inuse = false;
-						HX_STACK_LINE(849)
-						{
-						}
-						HX_STACK_LINE(849)
-						this->modified = true;
-						HX_STACK_LINE(849)
-						(this->length)--;
-						HX_STACK_LINE(849)
-						this->pushmod = true;
-						HX_STACK_LINE(849)
-						ret1;
 					}
 					HX_STACK_LINE(849)
-					ret = true;
+					old->_inuse = false;
 					HX_STACK_LINE(849)
-					break;
+					this->modified = true;
+					HX_STACK_LINE(849)
+					(this->length)--;
+					HX_STACK_LINE(849)
+					this->pushmod = true;
+					HX_STACK_LINE(849)
+					ret1;
 				}
 				HX_STACK_LINE(849)
-				pre = cur;
+				ret = true;
 				HX_STACK_LINE(849)
-				cur = cur->next;
+				break;
 			}
 			HX_STACK_LINE(849)
-			ret;
+			pre = cur;
+			HX_STACK_LINE(849)
+			cur = cur->next;
 		}
+		HX_STACK_LINE(849)
+		ret;
 	}
 return null();
 }
@@ -1215,9 +1116,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_CallbackSet_obj,remove,(void))
 ::zpp_nape::space::ZPP_CallbackSet ZPP_CallbackSet_obj::inlined_pop_unsafe( ){
 	HX_STACK_PUSH("ZPP_CallbackSet::inlined_pop_unsafe","zpp_nape/space/Space.hx",827);
 	HX_STACK_THIS(this);
-	HX_STACK_LINE(828)
-	{
-	}
 	HX_STACK_LINE(836)
 	::zpp_nape::space::ZPP_CallbackSet ret = this->next;		HX_STACK_VAR(ret,"ret");
 	HX_STACK_LINE(837)
@@ -1236,9 +1134,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_CallbackSet_obj,inlined_pop_unsafe,return )
 		inline static ::zpp_nape::space::ZPP_CallbackSet Block( ::zpp_nape::space::ZPP_CallbackSet_obj *__this){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",823);
 			{
-				HX_STACK_LINE(823)
-				{
-				}
 				HX_STACK_LINE(823)
 				::zpp_nape::space::ZPP_CallbackSet ret = __this->next;		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(823)
@@ -1260,18 +1155,12 @@ Void ZPP_CallbackSet_obj::inlined_pop( ){
 {
 		HX_STACK_PUSH("ZPP_CallbackSet::inlined_pop","zpp_nape/space/Space.hx",803);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(804)
-		{
-		}
 		HX_STACK_LINE(812)
 		::zpp_nape::space::ZPP_CallbackSet ret = this->next;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(813)
 		this->next = ret->next;
 		HX_STACK_LINE(814)
 		ret->_inuse = false;
-		HX_STACK_LINE(817)
-		{
-		}
 		HX_STACK_LINE(818)
 		if (((this->next == null()))){
 			HX_STACK_LINE(818)
@@ -1293,17 +1182,11 @@ Void ZPP_CallbackSet_obj::pop( ){
 		HX_STACK_PUSH("ZPP_CallbackSet::pop","zpp_nape/space/Space.hx",798);
 		HX_STACK_THIS(this);
 		HX_STACK_LINE(799)
-		{
-		}
-		HX_STACK_LINE(799)
 		::zpp_nape::space::ZPP_CallbackSet ret = this->next;		HX_STACK_VAR(ret,"ret");
 		HX_STACK_LINE(799)
 		this->next = ret->next;
 		HX_STACK_LINE(799)
 		ret->_inuse = false;
-		HX_STACK_LINE(799)
-		{
-		}
 		HX_STACK_LINE(799)
 		if (((this->next == null()))){
 			HX_STACK_LINE(799)
@@ -1325,9 +1208,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_CallbackSet_obj,pop,(void))
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(cur,"cur");
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(774)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::space::ZPP_CallbackSet Block( ::zpp_nape::space::ZPP_CallbackSet &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",782);
@@ -1375,9 +1255,6 @@ HX_DEFINE_DYNAMIC_FUNC2(ZPP_CallbackSet_obj,inlined_insert,return )
 		inline static ::zpp_nape::space::ZPP_CallbackSet Block( ::zpp_nape::space::ZPP_CallbackSet_obj *__this,::zpp_nape::space::ZPP_CallbackSet &o,::zpp_nape::space::ZPP_CallbackSet &cur){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",769);
 			{
-				HX_STACK_LINE(769)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::space::ZPP_CallbackSet Block( ::zpp_nape::space::ZPP_CallbackSet &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",769);
@@ -1427,22 +1304,16 @@ Void ZPP_CallbackSet_obj::addAll( ::zpp_nape::space::ZPP_CallbackSet x){
 		HX_STACK_PUSH("ZPP_CallbackSet::addAll","zpp_nape/space/Space.hx",750);
 		HX_STACK_THIS(this);
 		HX_STACK_ARG(x,"x");
-		HX_STACK_LINE(751)
-		{
-		}
-		HX_STACK_LINE(759)
-		{
-			HX_STACK_LINE(760)
-			::zpp_nape::space::ZPP_CallbackSet cx_ite = x->next;		HX_STACK_VAR(cx_ite,"cx_ite");
-			HX_STACK_LINE(761)
-			while(((cx_ite != null()))){
-				HX_STACK_LINE(762)
-				::zpp_nape::space::ZPP_CallbackSet i = cx_ite;		HX_STACK_VAR(i,"i");
-				HX_STACK_LINE(763)
-				this->add(i);
-				HX_STACK_LINE(764)
-				cx_ite = cx_ite->next;
-			}
+		HX_STACK_LINE(760)
+		::zpp_nape::space::ZPP_CallbackSet cx_ite = x->next;		HX_STACK_VAR(cx_ite,"cx_ite");
+		HX_STACK_LINE(761)
+		while(((cx_ite != null()))){
+			HX_STACK_LINE(762)
+			::zpp_nape::space::ZPP_CallbackSet i = cx_ite;		HX_STACK_VAR(i,"i");
+			HX_STACK_LINE(763)
+			this->add(i);
+			HX_STACK_LINE(764)
+			cx_ite = cx_ite->next;
 		}
 	}
 return null();
@@ -1455,9 +1326,6 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_CallbackSet_obj,addAll,(void))
 	HX_STACK_PUSH("ZPP_CallbackSet::inlined_add","zpp_nape/space/Space.hx",731);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
-	HX_STACK_LINE(732)
-	{
-	}
 	struct _Function_1_1{
 		inline static ::zpp_nape::space::ZPP_CallbackSet Block( ::zpp_nape::space::ZPP_CallbackSet &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",740);
@@ -1492,12 +1360,9 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_CallbackSet_obj,inlined_add,return )
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(o,"o");
 	struct _Function_1_1{
-		inline static ::zpp_nape::space::ZPP_CallbackSet Block( ::zpp_nape::space::ZPP_CallbackSet &o,::zpp_nape::space::ZPP_CallbackSet_obj *__this){
+		inline static ::zpp_nape::space::ZPP_CallbackSet Block( ::zpp_nape::space::ZPP_CallbackSet_obj *__this,::zpp_nape::space::ZPP_CallbackSet &o){
 			HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",727);
 			{
-				HX_STACK_LINE(727)
-				{
-				}
 				struct _Function_2_1{
 					inline static ::zpp_nape::space::ZPP_CallbackSet Block( ::zpp_nape::space::ZPP_CallbackSet &o){
 						HX_STACK_PUSH("*::closure","zpp_nape/space/Space.hx",727);
@@ -1527,7 +1392,7 @@ HX_DEFINE_DYNAMIC_FUNC1(ZPP_CallbackSet_obj,inlined_add,return )
 		}
 	};
 	HX_STACK_LINE(726)
-	return _Function_1_1::Block(o,this);
+	return _Function_1_1::Block(this,o);
 }
 
 
@@ -1612,9 +1477,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_CallbackSet_obj,elem,return )
 			ret->FLUIDstamp = (int)0;
 		}
 	}
-	HX_STACK_LINE(669)
-	{
-	}
 	HX_STACK_LINE(677)
 	if (((i1->id < i2->id))){
 		HX_STACK_LINE(678)
@@ -1632,9 +1494,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_CallbackSet_obj,elem,return )
 	ret->id = ret->int1->id;
 	HX_STACK_LINE(686)
 	ret->di = ret->int2->id;
-	HX_STACK_LINE(687)
-	{
-	}
 	HX_STACK_LINE(695)
 	return ret;
 }
@@ -1931,7 +1790,7 @@ Class ZPP_CallbackSet_obj::__mClass;
 
 void ZPP_CallbackSet_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_CallbackSet"), hx::TCanCast< ZPP_CallbackSet_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.space.ZPP_CallbackSet"), hx::TCanCast< ZPP_CallbackSet_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

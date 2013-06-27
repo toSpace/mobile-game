@@ -13,7 +13,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_Simplify_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Simplify_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Simplify_obj OBJ_;
@@ -42,7 +42,7 @@ class ZPP_Simplify_obj : public hx::Object{
 		static Float distance( ::zpp_nape::geom::ZPP_SimplifyV v,::zpp_nape::geom::ZPP_SimplifyV a,::zpp_nape::geom::ZPP_SimplifyV b);
 		static Dynamic distance_dyn();
 
-		static ::zpp_nape::util::ZNPList_ZPP_SimplifyP stack; /* REM */ 
+		static ::zpp_nape::util::ZNPList_ZPP_SimplifyP stack;
 		static ::zpp_nape::geom::ZPP_GeomVert simplify( ::zpp_nape::geom::ZPP_GeomVert P,Float epsilon);
 		static Dynamic simplify_dyn();
 

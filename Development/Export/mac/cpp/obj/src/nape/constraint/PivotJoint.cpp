@@ -75,6 +75,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 	}
 	catch(Dynamic __e){
 		{
+			HX_STACK_BEGIN_CATCH
 			Dynamic e = __e;{
 			}
 		}
@@ -248,7 +249,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(344)
-					if (((_this1->_isimmutable_dyn() != null()))){
+					if (((_this1->_isimmutable != null()))){
 						HX_STACK_LINE(344)
 						_this1->_isimmutable();
 					}
@@ -259,7 +260,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 					hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 				}
 				struct _Function_4_2{
-					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor1,::nape::geom::Vec2 &_this){
+					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor1,::nape::geom::Vec2 _this){
 						HX_STACK_PUSH("*::closure","nape/constraint/PivotJoint.hx",344);
 						{
 							struct _Function_5_1{
@@ -276,7 +277,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 											HX_STACK_LINE(344)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = anchor1->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(344)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(344)
 												_this1->_validate();
 											}
@@ -301,7 +302,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 											HX_STACK_LINE(344)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = anchor1->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(344)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(344)
 												_this1->_validate();
 											}
@@ -330,7 +331,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(344)
-								if (((_this1->_isimmutable_dyn() != null()))){
+								if (((_this1->_isimmutable != null()))){
 									HX_STACK_LINE(344)
 									_this1->_isimmutable();
 								}
@@ -341,7 +342,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 								hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 							}
 							struct _Function_5_3{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/constraint/PivotJoint.hx",344);
 									{
 										HX_STACK_LINE(344)
@@ -354,7 +355,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 											HX_STACK_LINE(344)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(344)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(344)
 												_this1->_validate();
 											}
@@ -366,7 +367,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 								}
 							};
 							struct _Function_5_4{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/constraint/PivotJoint.hx",344);
 									{
 										HX_STACK_LINE(344)
@@ -379,7 +380,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 											HX_STACK_LINE(344)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(344)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(344)
 												_this1->_validate();
 											}
@@ -401,16 +402,13 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 									HX_STACK_LINE(344)
 									{
 									}
-									HX_STACK_LINE(344)
-									{
-									}
 								}
 								HX_STACK_LINE(344)
 								{
 									HX_STACK_LINE(344)
 									::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 									HX_STACK_LINE(344)
-									if (((_this1->_invalidate_dyn() != null()))){
+									if (((_this1->_invalidate != null()))){
 										HX_STACK_LINE(344)
 										_this1->_invalidate(_this1);
 									}
@@ -443,7 +441,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(344)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(344)
 								_this1->_isimmutable();
 							}
@@ -464,9 +462,6 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 							HX_STACK_LINE(344)
 							::nape::geom::Vec2 o = anchor1;		HX_STACK_VAR(o,"o");
 							HX_STACK_LINE(344)
-							{
-							}
-							HX_STACK_LINE(344)
 							o->zpp_pool = null();
 							HX_STACK_LINE(344)
 							if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -486,9 +481,6 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 						{
 							HX_STACK_LINE(344)
 							::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(344)
-							{
-							}
 							HX_STACK_LINE(344)
 							{
 								HX_STACK_LINE(344)
@@ -586,7 +578,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(345)
-					if (((_this1->_isimmutable_dyn() != null()))){
+					if (((_this1->_isimmutable != null()))){
 						HX_STACK_LINE(345)
 						_this1->_isimmutable();
 					}
@@ -597,7 +589,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 					hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 				}
 				struct _Function_4_2{
-					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor2,::nape::geom::Vec2 &_this){
+					inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 _this,::nape::geom::Vec2 &anchor2){
 						HX_STACK_PUSH("*::closure","nape/constraint/PivotJoint.hx",345);
 						{
 							struct _Function_5_1{
@@ -614,7 +606,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 											HX_STACK_LINE(345)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = anchor2->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(345)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(345)
 												_this1->_validate();
 											}
@@ -639,7 +631,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 											HX_STACK_LINE(345)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = anchor2->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(345)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(345)
 												_this1->_validate();
 											}
@@ -668,7 +660,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 									hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 								}
 								HX_STACK_LINE(345)
-								if (((_this1->_isimmutable_dyn() != null()))){
+								if (((_this1->_isimmutable != null()))){
 									HX_STACK_LINE(345)
 									_this1->_isimmutable();
 								}
@@ -679,7 +671,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 								hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 							}
 							struct _Function_5_3{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/constraint/PivotJoint.hx",345);
 									{
 										HX_STACK_LINE(345)
@@ -692,7 +684,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 											HX_STACK_LINE(345)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(345)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(345)
 												_this1->_validate();
 											}
@@ -704,7 +696,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 								}
 							};
 							struct _Function_5_4{
-								inline static Float Block( ::nape::geom::Vec2 &_this){
+								inline static Float Block( ::nape::geom::Vec2 _this){
 									HX_STACK_PUSH("*::closure","nape/constraint/PivotJoint.hx",345);
 									{
 										HX_STACK_LINE(345)
@@ -717,7 +709,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 											HX_STACK_LINE(345)
 											::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 											HX_STACK_LINE(345)
-											if (((_this1->_validate_dyn() != null()))){
+											if (((_this1->_validate != null()))){
 												HX_STACK_LINE(345)
 												_this1->_validate();
 											}
@@ -739,16 +731,13 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 									HX_STACK_LINE(345)
 									{
 									}
-									HX_STACK_LINE(345)
-									{
-									}
 								}
 								HX_STACK_LINE(345)
 								{
 									HX_STACK_LINE(345)
 									::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 									HX_STACK_LINE(345)
-									if (((_this1->_invalidate_dyn() != null()))){
+									if (((_this1->_invalidate != null()))){
 										HX_STACK_LINE(345)
 										_this1->_invalidate(_this1);
 									}
@@ -761,7 +750,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 					}
 				};
 				HX_STACK_LINE(345)
-				::nape::geom::Vec2 ret = _Function_4_2::Block(anchor2,_this);		HX_STACK_VAR(ret,"ret");
+				::nape::geom::Vec2 ret = _Function_4_2::Block(_this,anchor2);		HX_STACK_VAR(ret,"ret");
 				HX_STACK_LINE(345)
 				if ((anchor2->zpp_inner->weak)){
 					HX_STACK_LINE(345)
@@ -781,7 +770,7 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(345)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(345)
 								_this1->_isimmutable();
 							}
@@ -802,9 +791,6 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 							HX_STACK_LINE(345)
 							::nape::geom::Vec2 o = anchor2;		HX_STACK_VAR(o,"o");
 							HX_STACK_LINE(345)
-							{
-							}
-							HX_STACK_LINE(345)
 							o->zpp_pool = null();
 							HX_STACK_LINE(345)
 							if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -824,9 +810,6 @@ HX_STACK_PUSH("PivotJoint::new","nape/constraint/PivotJoint.hx",186);
 						{
 							HX_STACK_LINE(345)
 							::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-							HX_STACK_LINE(345)
-							{
-							}
 							HX_STACK_LINE(345)
 							{
 								HX_STACK_LINE(345)
@@ -1022,7 +1005,7 @@ return null();
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(313)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(313)
 					_this1->_isimmutable();
 				}
@@ -1033,7 +1016,7 @@ return null();
 				hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 			}
 			struct _Function_3_2{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor2,::nape::geom::Vec2 &_this){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 _this,::nape::geom::Vec2 &anchor2){
 					HX_STACK_PUSH("*::closure","nape/constraint/PivotJoint.hx",313);
 					{
 						struct _Function_4_1{
@@ -1050,7 +1033,7 @@ return null();
 										HX_STACK_LINE(313)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = anchor2->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(313)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(313)
 											_this1->_validate();
 										}
@@ -1075,7 +1058,7 @@ return null();
 										HX_STACK_LINE(313)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = anchor2->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(313)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(313)
 											_this1->_validate();
 										}
@@ -1104,7 +1087,7 @@ return null();
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(313)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(313)
 								_this1->_isimmutable();
 							}
@@ -1115,7 +1098,7 @@ return null();
 							hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 						}
 						struct _Function_4_3{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/constraint/PivotJoint.hx",313);
 								{
 									HX_STACK_LINE(313)
@@ -1128,7 +1111,7 @@ return null();
 										HX_STACK_LINE(313)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(313)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(313)
 											_this1->_validate();
 										}
@@ -1140,7 +1123,7 @@ return null();
 							}
 						};
 						struct _Function_4_4{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/constraint/PivotJoint.hx",313);
 								{
 									HX_STACK_LINE(313)
@@ -1153,7 +1136,7 @@ return null();
 										HX_STACK_LINE(313)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(313)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(313)
 											_this1->_validate();
 										}
@@ -1175,16 +1158,13 @@ return null();
 								HX_STACK_LINE(313)
 								{
 								}
-								HX_STACK_LINE(313)
-								{
-								}
 							}
 							HX_STACK_LINE(313)
 							{
 								HX_STACK_LINE(313)
 								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(313)
-								if (((_this1->_invalidate_dyn() != null()))){
+								if (((_this1->_invalidate != null()))){
 									HX_STACK_LINE(313)
 									_this1->_invalidate(_this1);
 								}
@@ -1197,7 +1177,7 @@ return null();
 				}
 			};
 			HX_STACK_LINE(313)
-			::nape::geom::Vec2 ret = _Function_3_2::Block(anchor2,_this);		HX_STACK_VAR(ret,"ret");
+			::nape::geom::Vec2 ret = _Function_3_2::Block(_this,anchor2);		HX_STACK_VAR(ret,"ret");
 			HX_STACK_LINE(313)
 			if ((anchor2->zpp_inner->weak)){
 				HX_STACK_LINE(313)
@@ -1217,7 +1197,7 @@ return null();
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(313)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(313)
 							_this1->_isimmutable();
 						}
@@ -1238,9 +1218,6 @@ return null();
 						HX_STACK_LINE(313)
 						::nape::geom::Vec2 o = anchor2;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(313)
-						{
-						}
-						HX_STACK_LINE(313)
 						o->zpp_pool = null();
 						HX_STACK_LINE(313)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -1260,9 +1237,6 @@ return null();
 					{
 						HX_STACK_LINE(313)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(313)
-						{
-						}
 						HX_STACK_LINE(313)
 						{
 							HX_STACK_LINE(313)
@@ -1388,7 +1362,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PivotJoint_obj,get_anchor2,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(288)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(288)
 					_this1->_isimmutable();
 				}
@@ -1399,7 +1373,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PivotJoint_obj,get_anchor2,return )
 				hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 			}
 			struct _Function_3_2{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor1,::nape::geom::Vec2 &_this){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &anchor1,::nape::geom::Vec2 _this){
 					HX_STACK_PUSH("*::closure","nape/constraint/PivotJoint.hx",288);
 					{
 						struct _Function_4_1{
@@ -1416,7 +1390,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PivotJoint_obj,get_anchor2,return )
 										HX_STACK_LINE(288)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = anchor1->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(288)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(288)
 											_this1->_validate();
 										}
@@ -1441,7 +1415,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PivotJoint_obj,get_anchor2,return )
 										HX_STACK_LINE(288)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = anchor1->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(288)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(288)
 											_this1->_validate();
 										}
@@ -1470,7 +1444,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PivotJoint_obj,get_anchor2,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(288)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(288)
 								_this1->_isimmutable();
 							}
@@ -1481,7 +1455,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PivotJoint_obj,get_anchor2,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 						}
 						struct _Function_4_3{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/constraint/PivotJoint.hx",288);
 								{
 									HX_STACK_LINE(288)
@@ -1494,7 +1468,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PivotJoint_obj,get_anchor2,return )
 										HX_STACK_LINE(288)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(288)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(288)
 											_this1->_validate();
 										}
@@ -1506,7 +1480,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PivotJoint_obj,get_anchor2,return )
 							}
 						};
 						struct _Function_4_4{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/constraint/PivotJoint.hx",288);
 								{
 									HX_STACK_LINE(288)
@@ -1519,7 +1493,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PivotJoint_obj,get_anchor2,return )
 										HX_STACK_LINE(288)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(288)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(288)
 											_this1->_validate();
 										}
@@ -1541,16 +1515,13 @@ HX_DEFINE_DYNAMIC_FUNC0(PivotJoint_obj,get_anchor2,return )
 								HX_STACK_LINE(288)
 								{
 								}
-								HX_STACK_LINE(288)
-								{
-								}
 							}
 							HX_STACK_LINE(288)
 							{
 								HX_STACK_LINE(288)
 								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(288)
-								if (((_this1->_invalidate_dyn() != null()))){
+								if (((_this1->_invalidate != null()))){
 									HX_STACK_LINE(288)
 									_this1->_invalidate(_this1);
 								}
@@ -1583,7 +1554,7 @@ HX_DEFINE_DYNAMIC_FUNC0(PivotJoint_obj,get_anchor2,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(288)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(288)
 							_this1->_isimmutable();
 						}
@@ -1604,9 +1575,6 @@ HX_DEFINE_DYNAMIC_FUNC0(PivotJoint_obj,get_anchor2,return )
 						HX_STACK_LINE(288)
 						::nape::geom::Vec2 o = anchor1;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(288)
-						{
-						}
-						HX_STACK_LINE(288)
 						o->zpp_pool = null();
 						HX_STACK_LINE(288)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -1626,9 +1594,6 @@ HX_DEFINE_DYNAMIC_FUNC0(PivotJoint_obj,get_anchor2,return )
 					{
 						HX_STACK_LINE(288)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(288)
-						{
-						}
 						HX_STACK_LINE(288)
 						{
 							HX_STACK_LINE(288)
@@ -1841,10 +1806,6 @@ PivotJoint_obj::PivotJoint_obj()
 void PivotJoint_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(PivotJoint);
-	HX_MARK_MEMBER_NAME(anchor2,"anchor2");
-	HX_MARK_MEMBER_NAME(anchor1,"anchor1");
-	HX_MARK_MEMBER_NAME(body2,"body2");
-	HX_MARK_MEMBER_NAME(body1,"body1");
 	HX_MARK_MEMBER_NAME(zpp_inner_zn,"zpp_inner_zn");
 	super::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
@@ -1852,10 +1813,6 @@ void PivotJoint_obj::__Mark(HX_MARK_PARAMS)
 
 void PivotJoint_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(anchor2,"anchor2");
-	HX_VISIT_MEMBER_NAME(anchor1,"anchor1");
-	HX_VISIT_MEMBER_NAME(body2,"body2");
-	HX_VISIT_MEMBER_NAME(body1,"body1");
 	HX_VISIT_MEMBER_NAME(zpp_inner_zn,"zpp_inner_zn");
 	super::__Visit(HX_VISIT_ARG);
 }
@@ -1864,13 +1821,13 @@ Dynamic PivotJoint_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"body2") ) { return inCallProp ? get_body2() : body2; }
-		if (HX_FIELD_EQ(inName,"body1") ) { return inCallProp ? get_body1() : body1; }
+		if (HX_FIELD_EQ(inName,"body2") ) { return get_body2(); }
+		if (HX_FIELD_EQ(inName,"body1") ) { return get_body1(); }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"impulse") ) { return impulse_dyn(); }
-		if (HX_FIELD_EQ(inName,"anchor2") ) { return inCallProp ? get_anchor2() : anchor2; }
-		if (HX_FIELD_EQ(inName,"anchor1") ) { return inCallProp ? get_anchor1() : anchor1; }
+		if (HX_FIELD_EQ(inName,"anchor2") ) { return get_anchor2(); }
+		if (HX_FIELD_EQ(inName,"anchor1") ) { return get_anchor1(); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"set_body2") ) { return set_body2_dyn(); }
@@ -1896,12 +1853,12 @@ Dynamic PivotJoint_obj::__SetField(const ::String &inName,const Dynamic &inValue
 {
 	switch(inName.length) {
 	case 5:
-		if (HX_FIELD_EQ(inName,"body2") ) { if (inCallProp) return set_body2(inValue);body2=inValue.Cast< ::nape::phys::Body >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"body1") ) { if (inCallProp) return set_body1(inValue);body1=inValue.Cast< ::nape::phys::Body >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"body2") ) { return set_body2(inValue); }
+		if (HX_FIELD_EQ(inName,"body1") ) { return set_body1(inValue); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"anchor2") ) { if (inCallProp) return set_anchor2(inValue);anchor2=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"anchor1") ) { if (inCallProp) return set_anchor1(inValue);anchor1=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"anchor2") ) { return set_anchor2(inValue); }
+		if (HX_FIELD_EQ(inName,"anchor1") ) { return set_anchor1(inValue); }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"zpp_inner_zn") ) { zpp_inner_zn=inValue.Cast< ::zpp_nape::constraint::ZPP_PivotJoint >(); return inValue; }
@@ -1928,16 +1885,12 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("impulse"),
 	HX_CSTRING("set_anchor2"),
 	HX_CSTRING("get_anchor2"),
-	HX_CSTRING("anchor2"),
 	HX_CSTRING("set_anchor1"),
 	HX_CSTRING("get_anchor1"),
-	HX_CSTRING("anchor1"),
 	HX_CSTRING("set_body2"),
 	HX_CSTRING("get_body2"),
-	HX_CSTRING("body2"),
 	HX_CSTRING("set_body1"),
 	HX_CSTRING("get_body1"),
-	HX_CSTRING("body1"),
 	HX_CSTRING("zpp_inner_zn"),
 	String(null()) };
 
@@ -1953,7 +1906,7 @@ Class PivotJoint_obj::__mClass;
 
 void PivotJoint_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.constraint.PivotJoint"), hx::TCanCast< PivotJoint_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.constraint.PivotJoint"), hx::TCanCast< PivotJoint_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

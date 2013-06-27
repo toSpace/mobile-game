@@ -109,6 +109,7 @@ HX_STACK_PUSH("Shape::new","nape/shape/Shape.hx",177);
 	}
 	catch(Dynamic __e){
 		{
+			HX_STACK_BEGIN_CATCH
 			Dynamic e = __e;{
 			}
 		}
@@ -179,7 +180,7 @@ bool Shape_obj::contains( ::nape::geom::Vec2 point){
 		HX_STACK_LINE(629)
 		::zpp_nape::geom::ZPP_Vec2 _this = point->zpp_inner;		HX_STACK_VAR(_this,"_this");
 		HX_STACK_LINE(629)
-		if (((_this->_validate_dyn() != null()))){
+		if (((_this->_validate != null()))){
 			HX_STACK_LINE(629)
 			_this->_validate();
 		}
@@ -205,7 +206,7 @@ bool Shape_obj::contains( ::nape::geom::Vec2 point){
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(635)
-				if (((_this->_isimmutable_dyn() != null()))){
+				if (((_this->_isimmutable != null()))){
 					HX_STACK_LINE(635)
 					_this->_isimmutable();
 				}
@@ -226,9 +227,6 @@ bool Shape_obj::contains( ::nape::geom::Vec2 point){
 				HX_STACK_LINE(635)
 				::nape::geom::Vec2 o = point;		HX_STACK_VAR(o,"o");
 				HX_STACK_LINE(635)
-				{
-				}
-				HX_STACK_LINE(635)
 				o->zpp_pool = null();
 				HX_STACK_LINE(635)
 				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -248,9 +246,6 @@ bool Shape_obj::contains( ::nape::geom::Vec2 point){
 			{
 				HX_STACK_LINE(635)
 				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(635)
-				{
-				}
 				HX_STACK_LINE(635)
 				{
 					HX_STACK_LINE(635)
@@ -458,7 +453,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Shape_obj,scale,return )
 							HX_STACK_LINE(499)
 							::zpp_nape::geom::ZPP_Vec2 _this = translation->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(499)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(499)
 								_this->_validate();
 							}
@@ -483,7 +478,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Shape_obj,scale,return )
 							HX_STACK_LINE(499)
 							::zpp_nape::geom::ZPP_Vec2 _this = translation->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(499)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(499)
 								_this->_validate();
 							}
@@ -512,7 +507,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Shape_obj,scale,return )
 							HX_STACK_LINE(500)
 							::zpp_nape::geom::ZPP_Vec2 _this = translation->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(500)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(500)
 								_this->_validate();
 							}
@@ -537,7 +532,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Shape_obj,scale,return )
 							HX_STACK_LINE(500)
 							::zpp_nape::geom::ZPP_Vec2 _this = translation->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(500)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(500)
 								_this->_validate();
 							}
@@ -571,7 +566,7 @@ HX_DEFINE_DYNAMIC_FUNC2(Shape_obj,scale,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(506)
-				if (((_this->_isimmutable_dyn() != null()))){
+				if (((_this->_isimmutable != null()))){
 					HX_STACK_LINE(506)
 					_this->_isimmutable();
 				}
@@ -592,9 +587,6 @@ HX_DEFINE_DYNAMIC_FUNC2(Shape_obj,scale,return )
 				HX_STACK_LINE(506)
 				::nape::geom::Vec2 o = translation;		HX_STACK_VAR(o,"o");
 				HX_STACK_LINE(506)
-				{
-				}
-				HX_STACK_LINE(506)
 				o->zpp_pool = null();
 				HX_STACK_LINE(506)
 				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -614,9 +606,6 @@ HX_DEFINE_DYNAMIC_FUNC2(Shape_obj,scale,return )
 			{
 				HX_STACK_LINE(506)
 				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(506)
-				{
-				}
 				HX_STACK_LINE(506)
 				{
 					HX_STACK_LINE(506)
@@ -976,7 +965,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,get_area,return )
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(317)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(317)
 					_this1->_isimmutable();
 				}
@@ -987,7 +976,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,get_area,return )
 				hx::Throw (HX_CSTRING("Error: Cannot assign null Vec2"));
 			}
 			struct _Function_3_2{
-				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &localCOM,::nape::geom::Vec2 &_this){
+				inline static ::nape::geom::Vec2 Block( ::nape::geom::Vec2 &localCOM,::nape::geom::Vec2 _this){
 					HX_STACK_PUSH("*::closure","nape/shape/Shape.hx",317);
 					{
 						struct _Function_4_1{
@@ -1004,7 +993,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,get_area,return )
 										HX_STACK_LINE(317)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = localCOM->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(317)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(317)
 											_this1->_validate();
 										}
@@ -1029,7 +1018,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,get_area,return )
 										HX_STACK_LINE(317)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = localCOM->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(317)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(317)
 											_this1->_validate();
 										}
@@ -1058,7 +1047,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,get_area,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(317)
-							if (((_this1->_isimmutable_dyn() != null()))){
+							if (((_this1->_isimmutable != null()))){
 								HX_STACK_LINE(317)
 								_this1->_isimmutable();
 							}
@@ -1069,7 +1058,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,get_area,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 components cannot be NaN"));
 						}
 						struct _Function_4_3{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/shape/Shape.hx",317);
 								{
 									HX_STACK_LINE(317)
@@ -1082,7 +1071,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,get_area,return )
 										HX_STACK_LINE(317)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(317)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(317)
 											_this1->_validate();
 										}
@@ -1094,7 +1083,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,get_area,return )
 							}
 						};
 						struct _Function_4_4{
-							inline static Float Block( ::nape::geom::Vec2 &_this){
+							inline static Float Block( ::nape::geom::Vec2 _this){
 								HX_STACK_PUSH("*::closure","nape/shape/Shape.hx",317);
 								{
 									HX_STACK_LINE(317)
@@ -1107,7 +1096,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,get_area,return )
 										HX_STACK_LINE(317)
 										::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 										HX_STACK_LINE(317)
-										if (((_this1->_validate_dyn() != null()))){
+										if (((_this1->_validate != null()))){
 											HX_STACK_LINE(317)
 											_this1->_validate();
 										}
@@ -1129,16 +1118,13 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,get_area,return )
 								HX_STACK_LINE(317)
 								{
 								}
-								HX_STACK_LINE(317)
-								{
-								}
 							}
 							HX_STACK_LINE(317)
 							{
 								HX_STACK_LINE(317)
 								::zpp_nape::geom::ZPP_Vec2 _this1 = _this->zpp_inner;		HX_STACK_VAR(_this1,"_this1");
 								HX_STACK_LINE(317)
-								if (((_this1->_invalidate_dyn() != null()))){
+								if (((_this1->_invalidate != null()))){
 									HX_STACK_LINE(317)
 									_this1->_invalidate(_this1);
 								}
@@ -1171,7 +1157,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,get_area,return )
 							hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 						}
 						HX_STACK_LINE(317)
-						if (((_this1->_isimmutable_dyn() != null()))){
+						if (((_this1->_isimmutable != null()))){
 							HX_STACK_LINE(317)
 							_this1->_isimmutable();
 						}
@@ -1192,9 +1178,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,get_area,return )
 						HX_STACK_LINE(317)
 						::nape::geom::Vec2 o = localCOM;		HX_STACK_VAR(o,"o");
 						HX_STACK_LINE(317)
-						{
-						}
-						HX_STACK_LINE(317)
 						o->zpp_pool = null();
 						HX_STACK_LINE(317)
 						if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -1214,9 +1197,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,get_area,return )
 					{
 						HX_STACK_LINE(317)
 						::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-						HX_STACK_LINE(317)
-						{
-						}
 						HX_STACK_LINE(317)
 						{
 							HX_STACK_LINE(317)
@@ -1380,9 +1360,6 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,get_localCOM,return )
 										HX_STACK_LINE(279)
 										{
 										}
-										HX_STACK_LINE(279)
-										{
-										}
 									}
 									HX_STACK_LINE(279)
 									return ret1;
@@ -1411,7 +1388,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,get_localCOM,return )
 								hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 							}
 							HX_STACK_LINE(279)
-							if (((_this->_isimmutable_dyn() != null()))){
+							if (((_this->_isimmutable != null()))){
 								HX_STACK_LINE(279)
 								_this->_isimmutable();
 							}
@@ -1435,7 +1412,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,get_localCOM,return )
 										HX_STACK_LINE(279)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(279)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(279)
 											_this->_validate();
 										}
@@ -1460,7 +1437,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,get_localCOM,return )
 										HX_STACK_LINE(279)
 										::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 										HX_STACK_LINE(279)
-										if (((_this->_validate_dyn() != null()))){
+										if (((_this->_validate != null()))){
 											HX_STACK_LINE(279)
 											_this->_validate();
 										}
@@ -1482,16 +1459,13 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,get_localCOM,return )
 								HX_STACK_LINE(279)
 								{
 								}
-								HX_STACK_LINE(279)
-								{
-								}
 							}
 							HX_STACK_LINE(279)
 							{
 								HX_STACK_LINE(279)
 								::zpp_nape::geom::ZPP_Vec2 _this = ret->zpp_inner;		HX_STACK_VAR(_this,"_this");
 								HX_STACK_LINE(279)
-								if (((_this->_invalidate_dyn() != null()))){
+								if (((_this->_invalidate != null()))){
 									HX_STACK_LINE(279)
 									_this->_invalidate(_this);
 								}
@@ -1654,7 +1628,7 @@ HX_DEFINE_DYNAMIC_FUNC0(Shape_obj,isCircle,return )
 		}
 	};
 	HX_STACK_LINE(187)
-	return Array_obj< ::nape::shape::ShapeType >::__new().Add(_Function_1_1::Block()).Add(_Function_1_2::Block())->__get(this->zpp_inner->type);
+	return Array_obj< ::Dynamic >::__new().Add(_Function_1_1::Block()).Add(_Function_1_2::Block())->__get(this->zpp_inner->type).StaticCast< ::nape::shape::ShapeType >();
 }
 
 
@@ -1668,21 +1642,6 @@ Shape_obj::Shape_obj()
 void Shape_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(Shape);
-	HX_MARK_MEMBER_NAME(bounds,"bounds");
-	HX_MARK_MEMBER_NAME(sensorEnabled,"sensorEnabled");
-	HX_MARK_MEMBER_NAME(fluidEnabled,"fluidEnabled");
-	HX_MARK_MEMBER_NAME(fluidProperties,"fluidProperties");
-	HX_MARK_MEMBER_NAME(filter,"filter");
-	HX_MARK_MEMBER_NAME(material,"material");
-	HX_MARK_MEMBER_NAME(angDrag,"angDrag");
-	HX_MARK_MEMBER_NAME(inertia,"inertia");
-	HX_MARK_MEMBER_NAME(area,"area");
-	HX_MARK_MEMBER_NAME(localCOM,"localCOM");
-	HX_MARK_MEMBER_NAME(worldCOM,"worldCOM");
-	HX_MARK_MEMBER_NAME(castPolygon,"castPolygon");
-	HX_MARK_MEMBER_NAME(castCircle,"castCircle");
-	HX_MARK_MEMBER_NAME(body,"body");
-	HX_MARK_MEMBER_NAME(type,"type");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	super::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
@@ -1690,21 +1649,6 @@ void Shape_obj::__Mark(HX_MARK_PARAMS)
 
 void Shape_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(bounds,"bounds");
-	HX_VISIT_MEMBER_NAME(sensorEnabled,"sensorEnabled");
-	HX_VISIT_MEMBER_NAME(fluidEnabled,"fluidEnabled");
-	HX_VISIT_MEMBER_NAME(fluidProperties,"fluidProperties");
-	HX_VISIT_MEMBER_NAME(filter,"filter");
-	HX_VISIT_MEMBER_NAME(material,"material");
-	HX_VISIT_MEMBER_NAME(angDrag,"angDrag");
-	HX_VISIT_MEMBER_NAME(inertia,"inertia");
-	HX_VISIT_MEMBER_NAME(area,"area");
-	HX_VISIT_MEMBER_NAME(localCOM,"localCOM");
-	HX_VISIT_MEMBER_NAME(worldCOM,"worldCOM");
-	HX_VISIT_MEMBER_NAME(castPolygon,"castPolygon");
-	HX_VISIT_MEMBER_NAME(castCircle,"castCircle");
-	HX_VISIT_MEMBER_NAME(body,"body");
-	HX_VISIT_MEMBER_NAME(type,"type");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 	super::__Visit(HX_VISIT_ARG);
 }
@@ -1714,29 +1658,29 @@ Dynamic Shape_obj::__Field(const ::String &inName,bool inCallProp)
 	switch(inName.length) {
 	case 4:
 		if (HX_FIELD_EQ(inName,"copy") ) { return copy_dyn(); }
-		if (HX_FIELD_EQ(inName,"area") ) { return inCallProp ? get_area() : area; }
-		if (HX_FIELD_EQ(inName,"body") ) { return inCallProp ? get_body() : body; }
-		if (HX_FIELD_EQ(inName,"type") ) { return inCallProp ? get_type() : type; }
+		if (HX_FIELD_EQ(inName,"area") ) { return get_area(); }
+		if (HX_FIELD_EQ(inName,"body") ) { return get_body(); }
+		if (HX_FIELD_EQ(inName,"type") ) { return get_type(); }
 		break;
 	case 5:
 		if (HX_FIELD_EQ(inName,"scale") ) { return scale_dyn(); }
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"rotate") ) { return rotate_dyn(); }
-		if (HX_FIELD_EQ(inName,"bounds") ) { return inCallProp ? get_bounds() : bounds; }
-		if (HX_FIELD_EQ(inName,"filter") ) { return inCallProp ? get_filter() : filter; }
+		if (HX_FIELD_EQ(inName,"bounds") ) { return get_bounds(); }
+		if (HX_FIELD_EQ(inName,"filter") ) { return get_filter(); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"angDrag") ) { return inCallProp ? get_angDrag() : angDrag; }
-		if (HX_FIELD_EQ(inName,"inertia") ) { return inCallProp ? get_inertia() : inertia; }
+		if (HX_FIELD_EQ(inName,"angDrag") ) { return get_angDrag(); }
+		if (HX_FIELD_EQ(inName,"inertia") ) { return get_inertia(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
 		if (HX_FIELD_EQ(inName,"contains") ) { return contains_dyn(); }
-		if (HX_FIELD_EQ(inName,"material") ) { return inCallProp ? get_material() : material; }
+		if (HX_FIELD_EQ(inName,"material") ) { return get_material(); }
 		if (HX_FIELD_EQ(inName,"get_area") ) { return get_area_dyn(); }
-		if (HX_FIELD_EQ(inName,"localCOM") ) { return inCallProp ? get_localCOM() : localCOM; }
-		if (HX_FIELD_EQ(inName,"worldCOM") ) { return inCallProp ? get_worldCOM() : worldCOM; }
+		if (HX_FIELD_EQ(inName,"localCOM") ) { return get_localCOM(); }
+		if (HX_FIELD_EQ(inName,"worldCOM") ) { return get_worldCOM(); }
 		if (HX_FIELD_EQ(inName,"set_body") ) { return set_body_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_body") ) { return get_body_dyn(); }
 		if (HX_FIELD_EQ(inName,"isCircle") ) { return isCircle_dyn(); }
@@ -1752,15 +1696,15 @@ Dynamic Shape_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"get_bounds") ) { return get_bounds_dyn(); }
 		if (HX_FIELD_EQ(inName,"set_filter") ) { return set_filter_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_filter") ) { return get_filter_dyn(); }
-		if (HX_FIELD_EQ(inName,"castCircle") ) { return inCallProp ? get_castCircle() : castCircle; }
+		if (HX_FIELD_EQ(inName,"castCircle") ) { return get_castCircle(); }
 		break;
 	case 11:
 		if (HX_FIELD_EQ(inName,"get_angDrag") ) { return get_angDrag_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_inertia") ) { return get_inertia_dyn(); }
-		if (HX_FIELD_EQ(inName,"castPolygon") ) { return inCallProp ? get_castPolygon() : castPolygon; }
+		if (HX_FIELD_EQ(inName,"castPolygon") ) { return get_castPolygon(); }
 		break;
 	case 12:
-		if (HX_FIELD_EQ(inName,"fluidEnabled") ) { return inCallProp ? get_fluidEnabled() : fluidEnabled; }
+		if (HX_FIELD_EQ(inName,"fluidEnabled") ) { return get_fluidEnabled(); }
 		if (HX_FIELD_EQ(inName,"set_material") ) { return set_material_dyn(); }
 		if (HX_FIELD_EQ(inName,"get_material") ) { return get_material_dyn(); }
 		if (HX_FIELD_EQ(inName,"set_localCOM") ) { return set_localCOM_dyn(); }
@@ -1768,13 +1712,13 @@ Dynamic Shape_obj::__Field(const ::String &inName,bool inCallProp)
 		if (HX_FIELD_EQ(inName,"get_worldCOM") ) { return get_worldCOM_dyn(); }
 		break;
 	case 13:
-		if (HX_FIELD_EQ(inName,"sensorEnabled") ) { return inCallProp ? get_sensorEnabled() : sensorEnabled; }
+		if (HX_FIELD_EQ(inName,"sensorEnabled") ) { return get_sensorEnabled(); }
 		break;
 	case 14:
 		if (HX_FIELD_EQ(inName,"get_castCircle") ) { return get_castCircle_dyn(); }
 		break;
 	case 15:
-		if (HX_FIELD_EQ(inName,"fluidProperties") ) { return inCallProp ? get_fluidProperties() : fluidProperties; }
+		if (HX_FIELD_EQ(inName,"fluidProperties") ) { return get_fluidProperties(); }
 		if (HX_FIELD_EQ(inName,"get_castPolygon") ) { return get_castPolygon_dyn(); }
 		break;
 	case 16:
@@ -1796,40 +1740,26 @@ Dynamic Shape_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool
 {
 	switch(inName.length) {
 	case 4:
-		if (HX_FIELD_EQ(inName,"area") ) { area=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"body") ) { if (inCallProp) return set_body(inValue);body=inValue.Cast< ::nape::phys::Body >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"type") ) { type=inValue.Cast< ::nape::shape::ShapeType >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"body") ) { return set_body(inValue); }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"bounds") ) { bounds=inValue.Cast< ::nape::geom::AABB >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"filter") ) { if (inCallProp) return set_filter(inValue);filter=inValue.Cast< ::nape::dynamics::InteractionFilter >(); return inValue; }
-		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"angDrag") ) { angDrag=inValue.Cast< Float >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"inertia") ) { inertia=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"filter") ) { return set_filter(inValue); }
 		break;
 	case 8:
-		if (HX_FIELD_EQ(inName,"material") ) { if (inCallProp) return set_material(inValue);material=inValue.Cast< ::nape::phys::Material >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"localCOM") ) { if (inCallProp) return set_localCOM(inValue);localCOM=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"worldCOM") ) { worldCOM=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"material") ) { return set_material(inValue); }
+		if (HX_FIELD_EQ(inName,"localCOM") ) { return set_localCOM(inValue); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::shape::ZPP_Shape >(); return inValue; }
 		break;
-	case 10:
-		if (HX_FIELD_EQ(inName,"castCircle") ) { castCircle=inValue.Cast< ::nape::shape::Circle >(); return inValue; }
-		break;
-	case 11:
-		if (HX_FIELD_EQ(inName,"castPolygon") ) { castPolygon=inValue.Cast< ::nape::shape::Polygon >(); return inValue; }
-		break;
 	case 12:
-		if (HX_FIELD_EQ(inName,"fluidEnabled") ) { if (inCallProp) return set_fluidEnabled(inValue);fluidEnabled=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"fluidEnabled") ) { return set_fluidEnabled(inValue); }
 		break;
 	case 13:
-		if (HX_FIELD_EQ(inName,"sensorEnabled") ) { if (inCallProp) return set_sensorEnabled(inValue);sensorEnabled=inValue.Cast< bool >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"sensorEnabled") ) { return set_sensorEnabled(inValue); }
 		break;
 	case 15:
-		if (HX_FIELD_EQ(inName,"fluidProperties") ) { if (inCallProp) return set_fluidProperties(inValue);fluidProperties=inValue.Cast< ::nape::phys::FluidProperties >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"fluidProperties") ) { return set_fluidProperties(inValue); }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -1867,44 +1797,29 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("scale"),
 	HX_CSTRING("translate"),
 	HX_CSTRING("get_bounds"),
-	HX_CSTRING("bounds"),
 	HX_CSTRING("set_sensorEnabled"),
 	HX_CSTRING("get_sensorEnabled"),
-	HX_CSTRING("sensorEnabled"),
 	HX_CSTRING("set_fluidEnabled"),
 	HX_CSTRING("get_fluidEnabled"),
-	HX_CSTRING("fluidEnabled"),
 	HX_CSTRING("set_fluidProperties"),
 	HX_CSTRING("get_fluidProperties"),
-	HX_CSTRING("fluidProperties"),
 	HX_CSTRING("set_filter"),
 	HX_CSTRING("get_filter"),
-	HX_CSTRING("filter"),
 	HX_CSTRING("set_material"),
 	HX_CSTRING("get_material"),
-	HX_CSTRING("material"),
 	HX_CSTRING("get_angDrag"),
-	HX_CSTRING("angDrag"),
 	HX_CSTRING("get_inertia"),
-	HX_CSTRING("inertia"),
 	HX_CSTRING("get_area"),
-	HX_CSTRING("area"),
 	HX_CSTRING("set_localCOM"),
 	HX_CSTRING("get_localCOM"),
-	HX_CSTRING("localCOM"),
 	HX_CSTRING("get_worldCOM"),
-	HX_CSTRING("worldCOM"),
 	HX_CSTRING("get_castPolygon"),
-	HX_CSTRING("castPolygon"),
 	HX_CSTRING("get_castCircle"),
-	HX_CSTRING("castCircle"),
 	HX_CSTRING("set_body"),
 	HX_CSTRING("get_body"),
-	HX_CSTRING("body"),
 	HX_CSTRING("isPolygon"),
 	HX_CSTRING("isCircle"),
 	HX_CSTRING("get_type"),
-	HX_CSTRING("type"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
@@ -1920,7 +1835,7 @@ Class Shape_obj::__mClass;
 
 void Shape_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.shape.Shape"), hx::TCanCast< Shape_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.shape.Shape"), hx::TCanCast< Shape_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -149,7 +149,7 @@ Dynamic ZPP_Compound_obj::__Create(hx::DynamicArray inArgs)
 	result->__construct();
 	return result;}
 
-::nape::phys::Compound ZPP_Compound_obj::copy( Array< ::zpp_nape::constraint::ZPP_CopyHelper > dict,Array< ::zpp_nape::constraint::ZPP_CopyHelper > todo){
+::nape::phys::Compound ZPP_Compound_obj::copy( Array< ::Dynamic > dict,Array< ::Dynamic > todo){
 	HX_STACK_PUSH("ZPP_Compound::copy","zpp_nape/phys/Compound.hx",336);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(dict,"dict");
@@ -159,12 +159,12 @@ Dynamic ZPP_Compound_obj::__Create(hx::DynamicArray inArgs)
 	HX_STACK_LINE(338)
 	if (((dict == null()))){
 		HX_STACK_LINE(338)
-		dict = Array_obj< ::zpp_nape::constraint::ZPP_CopyHelper >::__new();
+		dict = Array_obj< ::Dynamic >::__new();
 	}
 	HX_STACK_LINE(339)
 	if (((todo == null()))){
 		HX_STACK_LINE(339)
-		todo = Array_obj< ::zpp_nape::constraint::ZPP_CopyHelper >::__new();
+		todo = Array_obj< ::Dynamic >::__new();
 	}
 	HX_STACK_LINE(340)
 	::nape::phys::Compound ret = ::nape::phys::Compound_obj::__new();		HX_STACK_VAR(ret,"ret");
@@ -333,7 +333,7 @@ Dynamic ZPP_Compound_obj::__Create(hx::DynamicArray inArgs)
 		HX_STACK_LINE(375)
 		while(((todo->length > (int)0))){
 			HX_STACK_LINE(377)
-			::zpp_nape::constraint::ZPP_CopyHelper xcb = todo->pop();		HX_STACK_VAR(xcb,"xcb");
+			::zpp_nape::constraint::ZPP_CopyHelper xcb = todo->pop().StaticCast< ::zpp_nape::constraint::ZPP_CopyHelper >();		HX_STACK_VAR(xcb,"xcb");
 			HX_STACK_LINE(378)
 			{
 				HX_STACK_LINE(378)
@@ -341,7 +341,7 @@ Dynamic ZPP_Compound_obj::__Create(hx::DynamicArray inArgs)
 				HX_STACK_LINE(378)
 				while(((_g < dict->length))){
 					HX_STACK_LINE(378)
-					::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g);		HX_STACK_VAR(idc,"idc");
+					::zpp_nape::constraint::ZPP_CopyHelper idc = dict->__get(_g).StaticCast< ::zpp_nape::constraint::ZPP_CopyHelper >();		HX_STACK_VAR(idc,"idc");
 					HX_STACK_LINE(378)
 					++(_g);
 					HX_STACK_LINE(379)
@@ -473,9 +473,6 @@ Void ZPP_Compound_obj::constraints_subber( ::nape::constraint::Constraint x){
 		HX_STACK_ARG(x,"x");
 		HX_STACK_LINE(271)
 		x->zpp_inner->compound = null();
-		HX_STACK_LINE(272)
-		{
-		}
 		HX_STACK_LINE(273)
 		if (((this->space != null()))){
 			HX_STACK_LINE(273)
@@ -492,10 +489,7 @@ bool ZPP_Compound_obj::constraints_adder( ::nape::constraint::Constraint x){
 	HX_STACK_PUSH("ZPP_Compound::constraints_adder","zpp_nape/phys/Compound.hx",258);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(x,"x");
-	HX_STACK_LINE(259)
-	{
-	}
-	HX_STACK_LINE(260)
+	HX_STACK_LINE(258)
 	if (((x->zpp_inner->compound != hx::ObjectPtr<OBJ_>(this)))){
 		HX_STACK_LINE(261)
 		if (((x->zpp_inner->compound != null()))){
@@ -511,9 +505,6 @@ bool ZPP_Compound_obj::constraints_adder( ::nape::constraint::Constraint x){
 		}
 		HX_STACK_LINE(263)
 		x->zpp_inner->compound = hx::ObjectPtr<OBJ_>(this);
-		HX_STACK_LINE(264)
-		{
-		}
 		HX_STACK_LINE(265)
 		if (((this->space != null()))){
 			HX_STACK_LINE(265)
@@ -526,7 +517,7 @@ bool ZPP_Compound_obj::constraints_adder( ::nape::constraint::Constraint x){
 		HX_STACK_LINE(268)
 		return false;
 	}
-	HX_STACK_LINE(260)
+	HX_STACK_LINE(258)
 	return false;
 }
 
@@ -553,9 +544,6 @@ Void ZPP_Compound_obj::bodies_subber( ::nape::phys::Body x){
 		HX_STACK_ARG(x,"x");
 		HX_STACK_LINE(249)
 		x->zpp_inner->compound = null();
-		HX_STACK_LINE(250)
-		{
-		}
 		HX_STACK_LINE(251)
 		if (((this->space != null()))){
 			HX_STACK_LINE(251)
@@ -572,10 +560,7 @@ bool ZPP_Compound_obj::bodies_adder( ::nape::phys::Body x){
 	HX_STACK_PUSH("ZPP_Compound::bodies_adder","zpp_nape/phys/Compound.hx",236);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(x,"x");
-	HX_STACK_LINE(237)
-	{
-	}
-	HX_STACK_LINE(238)
+	HX_STACK_LINE(236)
 	if (((x->zpp_inner->compound != hx::ObjectPtr<OBJ_>(this)))){
 		HX_STACK_LINE(239)
 		if (((x->zpp_inner->compound != null()))){
@@ -591,9 +576,6 @@ bool ZPP_Compound_obj::bodies_adder( ::nape::phys::Body x){
 		}
 		HX_STACK_LINE(241)
 		x->zpp_inner->compound = hx::ObjectPtr<OBJ_>(this);
-		HX_STACK_LINE(242)
-		{
-		}
 		HX_STACK_LINE(243)
 		if (((this->space != null()))){
 			HX_STACK_LINE(243)
@@ -606,7 +588,7 @@ bool ZPP_Compound_obj::bodies_adder( ::nape::phys::Body x){
 		HX_STACK_LINE(246)
 		return false;
 	}
-	HX_STACK_LINE(238)
+	HX_STACK_LINE(236)
 	return false;
 }
 
@@ -943,7 +925,7 @@ Class ZPP_Compound_obj::__mClass;
 
 void ZPP_Compound_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.phys.ZPP_Compound"), hx::TCanCast< ZPP_Compound_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.phys.ZPP_Compound"), hx::TCanCast< ZPP_Compound_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

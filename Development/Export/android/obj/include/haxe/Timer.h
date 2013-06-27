@@ -9,7 +9,7 @@ HX_DECLARE_CLASS1(haxe,Timer)
 namespace haxe{
 
 
-class Timer_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Timer_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Timer_obj OBJ_;
@@ -29,8 +29,8 @@ class Timer_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_CSTRING("Timer"); }
 
-		virtual Void nmeCheck( Float inTime);
-		Dynamic nmeCheck_dyn();
+		virtual Void __check( Float inTime);
+		Dynamic __check_dyn();
 
 		virtual Void stop( );
 		Dynamic stop_dyn();
@@ -38,18 +38,18 @@ class Timer_obj : public hx::Object{
 		Dynamic run;
 		inline Dynamic &run_dyn() {return run; }
 
-		bool mRunning; /* REM */ 
-		Float mFireAt; /* REM */ 
-		Float mTime; /* REM */ 
-		static Array< ::haxe::Timer > sRunningTimers; /* REM */ 
+		bool mRunning;
+		Float mFireAt;
+		Float mTime;
+		static Array< ::Dynamic > sRunningTimers;
 		static Dynamic measure( Dynamic f,Dynamic pos);
 		static Dynamic measure_dyn();
 
-		static Float nmeNextWake( Float limit);
-		static Dynamic nmeNextWake_dyn();
+		static Float __nextWake( Float limit);
+		static Dynamic __nextWake_dyn();
 
-		static Void nmeCheckTimers( );
-		static Dynamic nmeCheckTimers_dyn();
+		static Void __checkTimers( );
+		static Dynamic __checkTimers_dyn();
 
 		static Float GetMS( );
 		static Dynamic GetMS_dyn();
@@ -60,7 +60,7 @@ class Timer_obj : public hx::Object{
 		static Float stamp( );
 		static Dynamic stamp_dyn();
 
-		static Dynamic nme_time_stamp; /* REM */ 
+		static Dynamic nme_time_stamp;
 		static Dynamic &nme_time_stamp_dyn() { return nme_time_stamp;}
 };
 

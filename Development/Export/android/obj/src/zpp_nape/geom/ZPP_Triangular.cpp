@@ -106,7 +106,7 @@ bool ZPP_Triangular_obj::delaunay( ::zpp_nape::geom::ZPP_PartitionVertex A,::zpp
 	HX_STACK_LINE(640)
 	Float vy = 0.0;		HX_STACK_VAR(vy,"vy");
 	struct _Function_1_1{
-		inline static bool Block( Float &uy,Float &ux,::zpp_nape::geom::ZPP_PartitionVertex &C,Float &vy,::zpp_nape::geom::ZPP_PartitionVertex &B,Float &vx,::zpp_nape::geom::ZPP_PartitionVertex &A){
+		inline static bool Block( Float &vx,::zpp_nape::geom::ZPP_PartitionVertex &B,Float &uy,Float &ux,::zpp_nape::geom::ZPP_PartitionVertex &A,Float &vy,::zpp_nape::geom::ZPP_PartitionVertex &C){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/Triangular.hx",641);
 			{
 				HX_STACK_LINE(642)
@@ -130,7 +130,7 @@ bool ZPP_Triangular_obj::delaunay( ::zpp_nape::geom::ZPP_PartitionVertex A,::zpp
 		}
 	};
 	struct _Function_1_2{
-		inline static bool Block( Float &uy,Float &ux,::zpp_nape::geom::ZPP_PartitionVertex &D,::zpp_nape::geom::ZPP_PartitionVertex &C,Float &vy,::zpp_nape::geom::ZPP_PartitionVertex &B,Float &vx){
+		inline static bool Block( Float &vx,::zpp_nape::geom::ZPP_PartitionVertex &B,Float &uy,::zpp_nape::geom::ZPP_PartitionVertex &D,Float &ux,Float &vy,::zpp_nape::geom::ZPP_PartitionVertex &C){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/Triangular.hx",651);
 			{
 				HX_STACK_LINE(652)
@@ -154,7 +154,7 @@ bool ZPP_Triangular_obj::delaunay( ::zpp_nape::geom::ZPP_PartitionVertex A,::zpp
 		}
 	};
 	struct _Function_1_3{
-		inline static bool Block( Float &uy,Float &ux,::zpp_nape::geom::ZPP_PartitionVertex &D,::zpp_nape::geom::ZPP_PartitionVertex &C,Float &vy,Float &vx,::zpp_nape::geom::ZPP_PartitionVertex &A){
+		inline static bool Block( Float &vx,Float &uy,::zpp_nape::geom::ZPP_PartitionVertex &D,Float &ux,::zpp_nape::geom::ZPP_PartitionVertex &A,Float &vy,::zpp_nape::geom::ZPP_PartitionVertex &C){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/Triangular.hx",661);
 			{
 				HX_STACK_LINE(662)
@@ -178,7 +178,7 @@ bool ZPP_Triangular_obj::delaunay( ::zpp_nape::geom::ZPP_PartitionVertex A,::zpp
 		}
 	};
 	struct _Function_1_4{
-		inline static bool Block( Float &uy,Float &ux,::zpp_nape::geom::ZPP_PartitionVertex &D,Float &vy,::zpp_nape::geom::ZPP_PartitionVertex &B,Float &vx,::zpp_nape::geom::ZPP_PartitionVertex &A){
+		inline static bool Block( Float &vx,::zpp_nape::geom::ZPP_PartitionVertex &B,Float &uy,::zpp_nape::geom::ZPP_PartitionVertex &D,Float &ux,::zpp_nape::geom::ZPP_PartitionVertex &A,Float &vy){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/Triangular.hx",671);
 			{
 				HX_STACK_LINE(672)
@@ -202,7 +202,7 @@ bool ZPP_Triangular_obj::delaunay( ::zpp_nape::geom::ZPP_PartitionVertex A,::zpp
 		}
 	};
 	HX_STACK_LINE(641)
-	if (((bool((bool((bool(_Function_1_1::Block(uy,ux,C,vy,B,vx,A)) || bool(_Function_1_2::Block(uy,ux,D,C,vy,B,vx)))) || bool(_Function_1_3::Block(uy,ux,D,C,vy,vx,A)))) || bool(_Function_1_4::Block(uy,ux,D,vy,B,vx,A))))){
+	if (((bool((bool((bool(_Function_1_1::Block(vx,B,uy,ux,A,vy,C)) || bool(_Function_1_2::Block(vx,B,uy,D,ux,vy,C)))) || bool(_Function_1_3::Block(vx,uy,D,ux,A,vy,C)))) || bool(_Function_1_4::Block(vx,B,uy,D,ux,A,vy))))){
 		HX_STACK_LINE(681)
 		return true;
 	}
@@ -501,9 +501,6 @@ while(((nite != L)));
 			{
 				HX_STACK_LINE(852)
 				::zpp_nape::geom::ZPP_PartitionPair o = edge;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(853)
-				{
-				}
 				HX_STACK_LINE(861)
 				{
 					HX_STACK_LINE(861)
@@ -521,9 +518,6 @@ while(((nite != L)));
 		{
 			HX_STACK_LINE(870)
 			::zpp_nape::geom::ZPP_PartitionPair o = edgeStack;		HX_STACK_VAR(o,"o");
-			HX_STACK_LINE(871)
-			{
-			}
 			HX_STACK_LINE(879)
 			{
 				HX_STACK_LINE(879)
@@ -661,7 +655,7 @@ while(((nite != L)));
 				HX_STACK_LINE(943)
 				::zpp_nape::geom::ZPP_PartitionVertex s = ::zpp_nape::geom::ZPP_Triangular_obj::stack->head->elt;		HX_STACK_VAR(s,"s");
 				struct _Function_4_1{
-					inline static Float Block( ::zpp_nape::geom::ZPP_PartitionVertex &q,::zpp_nape::geom::ZPP_PartitionVertex &p,::zpp_nape::geom::ZPP_PartitionVertex &s){
+					inline static Float Block( ::zpp_nape::geom::ZPP_PartitionVertex &s,::zpp_nape::geom::ZPP_PartitionVertex &p,::zpp_nape::geom::ZPP_PartitionVertex &q){
 						HX_STACK_PUSH("*::closure","zpp_nape/geom/Triangular.hx",944);
 						{
 							HX_STACK_LINE(944)
@@ -693,7 +687,7 @@ while(((nite != L)));
 					}
 				};
 				HX_STACK_LINE(944)
-				Float right = _Function_4_1::Block(q,p,s);		HX_STACK_VAR(right,"right");
+				Float right = _Function_4_1::Block(s,p,q);		HX_STACK_VAR(right,"right");
 				HX_STACK_LINE(945)
 				if (((bool((bool(p->rightchain) && bool((right >= (int)0)))) || bool((bool(!(p->rightchain)) && bool((right <= (int)0))))))){
 					HX_STACK_LINE(945)
@@ -829,7 +823,7 @@ Class ZPP_Triangular_obj::__mClass;
 
 void ZPP_Triangular_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_Triangular"), hx::TCanCast< ZPP_Triangular_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_Triangular"), hx::TCanCast< ZPP_Triangular_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

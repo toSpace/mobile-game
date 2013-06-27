@@ -94,9 +94,6 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 								HX_STACK_LINE(176)
 								_this1->axisy = ::Math_obj::cos(_this1->rot);
 								HX_STACK_LINE(176)
-								{
-								}
-								HX_STACK_LINE(176)
 								Dynamic();
 							}
 						}
@@ -123,9 +120,6 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 										_this1->axisx = ::Math_obj::sin(_this1->rot);
 										HX_STACK_LINE(176)
 										_this1->axisy = ::Math_obj::cos(_this1->rot);
-										HX_STACK_LINE(176)
-										{
-										}
 										HX_STACK_LINE(176)
 										Dynamic();
 									}
@@ -203,9 +197,6 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 									HX_STACK_LINE(176)
 									{
 									}
-									HX_STACK_LINE(176)
-									{
-									}
 								}
 								HX_STACK_LINE(176)
 								e->tp0 = ((e->gp0->y * e->gnormx) - (e->gp0->x * e->gnormy));
@@ -244,9 +235,6 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 								e->wrap_gnorm->zpp_inner->x = e->gnormx;
 								HX_STACK_LINE(176)
 								e->wrap_gnorm->zpp_inner->y = e->gnormy;
-								HX_STACK_LINE(176)
-								{
-								}
 								HX_STACK_LINE(176)
 								{
 								}
@@ -296,9 +284,6 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 										HX_STACK_LINE(177)
 										_this1->localCOMy = _this1->lverts->next->y;
 										HX_STACK_LINE(177)
-										{
-										}
-										HX_STACK_LINE(177)
 										Dynamic();
 									}
 									else{
@@ -313,17 +298,11 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 												HX_STACK_LINE(177)
 												{
 												}
-												HX_STACK_LINE(177)
-												{
-												}
 											}
 											HX_STACK_LINE(177)
 											{
 												HX_STACK_LINE(177)
 												Float t = 1.0;		HX_STACK_VAR(t,"t");
-												HX_STACK_LINE(177)
-												{
-												}
 												HX_STACK_LINE(177)
 												hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 												HX_STACK_LINE(177)
@@ -333,9 +312,6 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 											{
 												HX_STACK_LINE(177)
 												Float t = 0.5;		HX_STACK_VAR(t,"t");
-												HX_STACK_LINE(177)
-												{
-												}
 												HX_STACK_LINE(177)
 												hx::MultEq(_this1->localCOMx,t);
 												HX_STACK_LINE(177)
@@ -349,9 +325,6 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 												_this1->localCOMx = (int)0;
 												HX_STACK_LINE(177)
 												_this1->localCOMy = (int)0;
-												HX_STACK_LINE(177)
-												{
-												}
 												HX_STACK_LINE(177)
 												{
 												}
@@ -434,9 +407,6 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 												HX_STACK_LINE(177)
 												Float t = area;		HX_STACK_VAR(t,"t");
 												HX_STACK_LINE(177)
-												{
-												}
-												HX_STACK_LINE(177)
 												hx::MultEq(_this1->localCOMx,t);
 												HX_STACK_LINE(177)
 												hx::MultEq(_this1->localCOMy,t);
@@ -460,9 +430,6 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 										HX_STACK_LINE(177)
 										_this1->axisy = ::Math_obj::cos(_this1->rot);
 										HX_STACK_LINE(177)
-										{
-										}
-										HX_STACK_LINE(177)
 										Dynamic();
 									}
 								}
@@ -480,12 +447,6 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 					Float rx = _this->radius;		HX_STACK_VAR(rx,"rx");
 					HX_STACK_LINE(177)
 					Float ry = _this->radius;		HX_STACK_VAR(ry,"ry");
-					HX_STACK_LINE(177)
-					{
-					}
-					HX_STACK_LINE(177)
-					{
-					}
 					HX_STACK_LINE(177)
 					{
 						HX_STACK_LINE(177)
@@ -526,9 +487,6 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 										_this1->axisx = ::Math_obj::sin(_this1->rot);
 										HX_STACK_LINE(177)
 										_this1->axisy = ::Math_obj::cos(_this1->rot);
-										HX_STACK_LINE(177)
-										{
-										}
 										HX_STACK_LINE(177)
 										Dynamic();
 									}
@@ -580,9 +538,6 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 						HX_STACK_LINE(177)
 						{
 						}
-						HX_STACK_LINE(177)
-						{
-						}
 					}
 					HX_STACK_LINE(177)
 					{
@@ -590,9 +545,6 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 						_this->aabb->maxx = p0->x;
 						HX_STACK_LINE(177)
 						_this->aabb->maxy = p0->y;
-						HX_STACK_LINE(177)
-						{
-						}
 						HX_STACK_LINE(177)
 						{
 						}
@@ -661,9 +613,6 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 							HX_STACK_LINE(178)
 							_this->localCOMy = _this->lverts->next->y;
 							HX_STACK_LINE(178)
-							{
-							}
-							HX_STACK_LINE(178)
 							Dynamic();
 						}
 						else{
@@ -678,17 +627,11 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 									HX_STACK_LINE(178)
 									{
 									}
-									HX_STACK_LINE(178)
-									{
-									}
 								}
 								HX_STACK_LINE(178)
 								{
 									HX_STACK_LINE(178)
 									Float t = 1.0;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(178)
-									{
-									}
 									HX_STACK_LINE(178)
 									hx::AddEq(_this->localCOMx,(_this->lverts->next->next->x * t));
 									HX_STACK_LINE(178)
@@ -698,9 +641,6 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 								{
 									HX_STACK_LINE(178)
 									Float t = 0.5;		HX_STACK_VAR(t,"t");
-									HX_STACK_LINE(178)
-									{
-									}
 									HX_STACK_LINE(178)
 									hx::MultEq(_this->localCOMx,t);
 									HX_STACK_LINE(178)
@@ -714,9 +654,6 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 									_this->localCOMx = (int)0;
 									HX_STACK_LINE(178)
 									_this->localCOMy = (int)0;
-									HX_STACK_LINE(178)
-									{
-									}
 									HX_STACK_LINE(178)
 									{
 									}
@@ -799,9 +736,6 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 									HX_STACK_LINE(178)
 									Float t = area;		HX_STACK_VAR(t,"t");
 									HX_STACK_LINE(178)
-									{
-									}
-									HX_STACK_LINE(178)
 									hx::MultEq(_this->localCOMx,t);
 									HX_STACK_LINE(178)
 									hx::MultEq(_this->localCOMy,t);
@@ -824,9 +758,6 @@ Void ZPP_Geom_obj::validateShape( ::zpp_nape::shape::ZPP_Shape s){
 							_this->axisx = ::Math_obj::sin(_this->rot);
 							HX_STACK_LINE(178)
 							_this->axisy = ::Math_obj::cos(_this->rot);
-							HX_STACK_LINE(178)
-							{
-							}
 							HX_STACK_LINE(178)
 							Dynamic();
 						}
@@ -901,7 +832,7 @@ Class ZPP_Geom_obj::__mClass;
 
 void ZPP_Geom_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_Geom"), hx::TCanCast< ZPP_Geom_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_Geom"), hx::TCanCast< ZPP_Geom_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

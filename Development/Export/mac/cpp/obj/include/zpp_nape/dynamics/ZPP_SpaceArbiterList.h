@@ -17,7 +17,7 @@ namespace zpp_nape{
 namespace dynamics{
 
 
-class ZPP_SpaceArbiterList_obj : public ::nape::dynamics::ArbiterList_obj{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_SpaceArbiterList_obj : public ::nape::dynamics::ArbiterList_obj{
 	public:
 		typedef ::nape::dynamics::ArbiterList_obj super;
 		typedef ZPP_SpaceArbiterList_obj OBJ_;
@@ -53,20 +53,20 @@ class ZPP_SpaceArbiterList_obj : public ::nape::dynamics::ArbiterList_obj{
 
 		virtual Void zpp_vm( );
 
-		int at_index_3; /* REM */ 
-		int at_index_2; /* REM */ 
-		int at_index_1; /* REM */ 
-		int at_index_0; /* REM */ 
-		::zpp_nape::util::ZNPNode_ZPP_SensorArbiter ite_3; /* REM */ 
-		::zpp_nape::util::ZNPNode_ZPP_FluidArbiter ite_2; /* REM */ 
-		::zpp_nape::util::ZNPNode_ZPP_ColArbiter ite_1; /* REM */ 
-		::zpp_nape::util::ZNPNode_ZPP_ColArbiter ite_0; /* REM */ 
-		Array< int > lengths; /* REM */ 
+		int at_index_3;
+		int at_index_2;
+		int at_index_1;
+		int at_index_0;
+		::zpp_nape::util::ZNPNode_ZPP_SensorArbiter ite_3;
+		::zpp_nape::util::ZNPNode_ZPP_FluidArbiter ite_2;
+		::zpp_nape::util::ZNPNode_ZPP_ColArbiter ite_1;
+		::zpp_nape::util::ZNPNode_ZPP_ColArbiter ite_0;
+		Array< int > lengths;
 		virtual int zpp_gl( );
 
-		bool zip_length; /* REM */ 
-		int _length; /* REM */ 
-		::zpp_nape::space::ZPP_Space space; /* REM */ 
+		bool zip_length;
+		int _length;
+		::zpp_nape::space::ZPP_Space space;
 };
 
 } // end namespace zpp_nape

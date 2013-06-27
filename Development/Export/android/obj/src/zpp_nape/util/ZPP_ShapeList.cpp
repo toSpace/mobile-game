@@ -23,45 +23,45 @@ namespace util{
 
 Void ZPP_ShapeList_obj::__construct()
 {
-HX_STACK_PUSH("ZPP_ShapeList::new","zpp_nape/util/Lists.hx",17115);
+HX_STACK_PUSH("ZPP_ShapeList::new","zpp_nape/util/Lists.hx",17177);
 {
-	HX_STACK_LINE(17170)
+	HX_STACK_LINE(17232)
 	this->user_length = (int)0;
-	HX_STACK_LINE(17169)
+	HX_STACK_LINE(17231)
 	this->zip_length = false;
-	HX_STACK_LINE(17168)
+	HX_STACK_LINE(17230)
 	this->push_ite = null();
-	HX_STACK_LINE(17167)
+	HX_STACK_LINE(17229)
 	this->at_ite = null();
-	HX_STACK_LINE(17166)
+	HX_STACK_LINE(17228)
 	this->at_index = (int)0;
-	HX_STACK_LINE(17128)
+	HX_STACK_LINE(17190)
 	this->reverse_flag = false;
-	HX_STACK_LINE(17127)
+	HX_STACK_LINE(17189)
 	this->dontremove = false;
-	HX_STACK_LINE(17126)
+	HX_STACK_LINE(17188)
 	this->subber = null();
-	HX_STACK_LINE(17125)
+	HX_STACK_LINE(17187)
 	this->post_adder = null();
-	HX_STACK_LINE(17124)
+	HX_STACK_LINE(17186)
 	this->adder = null();
-	HX_STACK_LINE(17122)
+	HX_STACK_LINE(17184)
 	this->_modifiable = null();
-	HX_STACK_LINE(17121)
+	HX_STACK_LINE(17183)
 	this->_validate = null();
-	HX_STACK_LINE(17120)
+	HX_STACK_LINE(17182)
 	this->_invalidate = null();
-	HX_STACK_LINE(17119)
+	HX_STACK_LINE(17181)
 	this->_invalidated = false;
-	HX_STACK_LINE(17118)
+	HX_STACK_LINE(17180)
 	this->immutable = false;
-	HX_STACK_LINE(17117)
+	HX_STACK_LINE(17179)
 	this->inner = null();
-	HX_STACK_LINE(17116)
+	HX_STACK_LINE(17178)
 	this->outer = null();
-	HX_STACK_LINE(17172)
+	HX_STACK_LINE(17234)
 	this->inner = ::zpp_nape::util::ZNPList_ZPP_Shape_obj::__new();
-	HX_STACK_LINE(17173)
+	HX_STACK_LINE(17235)
 	this->_invalidated = true;
 }
 ;
@@ -83,13 +83,13 @@ Dynamic ZPP_ShapeList_obj::__Create(hx::DynamicArray inArgs)
 
 Void ZPP_ShapeList_obj::invalidate( ){
 {
-		HX_STACK_PUSH("ZPP_ShapeList::invalidate","zpp_nape/util/Lists.hx",17162);
+		HX_STACK_PUSH("ZPP_ShapeList::invalidate","zpp_nape/util/Lists.hx",17224);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(17163)
+		HX_STACK_LINE(17225)
 		this->_invalidated = true;
-		HX_STACK_LINE(17164)
+		HX_STACK_LINE(17226)
 		if (((this->_invalidate_dyn() != null()))){
-			HX_STACK_LINE(17164)
+			HX_STACK_LINE(17226)
 			this->_invalidate(hx::ObjectPtr<OBJ_>(this));
 		}
 	}
@@ -101,15 +101,15 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_ShapeList_obj,invalidate,(void))
 
 Void ZPP_ShapeList_obj::validate( ){
 {
-		HX_STACK_PUSH("ZPP_ShapeList::validate","zpp_nape/util/Lists.hx",17156);
+		HX_STACK_PUSH("ZPP_ShapeList::validate","zpp_nape/util/Lists.hx",17218);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(17156)
+		HX_STACK_LINE(17218)
 		if ((this->_invalidated)){
-			HX_STACK_LINE(17158)
+			HX_STACK_LINE(17220)
 			this->_invalidated = false;
-			HX_STACK_LINE(17159)
+			HX_STACK_LINE(17221)
 			if (((this->_validate_dyn() != null()))){
-				HX_STACK_LINE(17159)
+				HX_STACK_LINE(17221)
 				this->_validate();
 			}
 		}
@@ -122,11 +122,11 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_ShapeList_obj,validate,(void))
 
 Void ZPP_ShapeList_obj::modify_test( ){
 {
-		HX_STACK_PUSH("ZPP_ShapeList::modify_test","zpp_nape/util/Lists.hx",17151);
+		HX_STACK_PUSH("ZPP_ShapeList::modify_test","zpp_nape/util/Lists.hx",17213);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(17151)
+		HX_STACK_LINE(17213)
 		if (((this->_modifiable_dyn() != null()))){
-			HX_STACK_LINE(17153)
+			HX_STACK_LINE(17215)
 			this->_modifiable();
 		}
 	}
@@ -138,13 +138,13 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_ShapeList_obj,modify_test,(void))
 
 Void ZPP_ShapeList_obj::modified( ){
 {
-		HX_STACK_PUSH("ZPP_ShapeList::modified","zpp_nape/util/Lists.hx",17146);
+		HX_STACK_PUSH("ZPP_ShapeList::modified","zpp_nape/util/Lists.hx",17208);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(17147)
+		HX_STACK_LINE(17209)
 		this->zip_length = true;
-		HX_STACK_LINE(17148)
+		HX_STACK_LINE(17210)
 		this->at_ite = null();
-		HX_STACK_LINE(17149)
+		HX_STACK_LINE(17211)
 		this->push_ite = null();
 	}
 return null();
@@ -155,24 +155,24 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_ShapeList_obj,modified,(void))
 
 Void ZPP_ShapeList_obj::valmod( ){
 {
-		HX_STACK_PUSH("ZPP_ShapeList::valmod","zpp_nape/util/Lists.hx",17136);
+		HX_STACK_PUSH("ZPP_ShapeList::valmod","zpp_nape/util/Lists.hx",17198);
 		HX_STACK_THIS(this);
-		HX_STACK_LINE(17137)
+		HX_STACK_LINE(17199)
 		this->validate();
-		HX_STACK_LINE(17138)
+		HX_STACK_LINE(17200)
 		if ((this->inner->modified)){
-			HX_STACK_LINE(17139)
+			HX_STACK_LINE(17201)
 			if ((this->inner->pushmod)){
-				HX_STACK_LINE(17139)
+				HX_STACK_LINE(17201)
 				this->push_ite = null();
 			}
-			HX_STACK_LINE(17140)
+			HX_STACK_LINE(17202)
 			this->at_ite = null();
-			HX_STACK_LINE(17141)
+			HX_STACK_LINE(17203)
 			this->inner->modified = false;
-			HX_STACK_LINE(17142)
+			HX_STACK_LINE(17204)
 			this->inner->pushmod = false;
-			HX_STACK_LINE(17143)
+			HX_STACK_LINE(17205)
 			this->zip_length = true;
 		}
 	}
@@ -186,22 +186,22 @@ bool ZPP_ShapeList_obj::internal;
 
 ::nape::shape::ShapeList ZPP_ShapeList_obj::get( ::zpp_nape::util::ZNPList_ZPP_Shape list,hx::Null< bool >  __o_imm){
 bool imm = __o_imm.Default(false);
-	HX_STACK_PUSH("ZPP_ShapeList::get","zpp_nape/util/Lists.hx",17129);
+	HX_STACK_PUSH("ZPP_ShapeList::get","zpp_nape/util/Lists.hx",17191);
 	HX_STACK_ARG(list,"list");
 	HX_STACK_ARG(imm,"imm");
 {
-		HX_STACK_LINE(17130)
+		HX_STACK_LINE(17192)
 		::nape::shape::ShapeList ret = ::nape::shape::ShapeList_obj::__new();		HX_STACK_VAR(ret,"ret");
-		HX_STACK_LINE(17131)
+		HX_STACK_LINE(17193)
 		ret->zpp_inner->inner = list;
-		HX_STACK_LINE(17132)
+		HX_STACK_LINE(17194)
 		if ((imm)){
-			HX_STACK_LINE(17132)
+			HX_STACK_LINE(17194)
 			ret->zpp_inner->immutable = true;
 		}
-		HX_STACK_LINE(17133)
+		HX_STACK_LINE(17195)
 		ret->zpp_inner->zip_length = true;
-		HX_STACK_LINE(17134)
+		HX_STACK_LINE(17196)
 		return ret;
 	}
 }
@@ -402,7 +402,7 @@ Class ZPP_ShapeList_obj::__mClass;
 
 void ZPP_ShapeList_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_ShapeList"), hx::TCanCast< ZPP_ShapeList_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.util.ZPP_ShapeList"), hx::TCanCast< ZPP_ShapeList_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

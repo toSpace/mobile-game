@@ -73,6 +73,7 @@ HX_STACK_PUSH("Circle::new","nape/shape/Circle.hx",177);
 	}
 	catch(Dynamic __e){
 		{
+			HX_STACK_BEGIN_CATCH
 			Dynamic e = __e;{
 			}
 		}
@@ -132,9 +133,6 @@ HX_STACK_PUSH("Circle::new","nape/shape/Circle.hx",177);
 		this->zpp_inner->localCOMx = (int)0;
 		HX_STACK_LINE(215)
 		this->zpp_inner->localCOMy = (int)0;
-		HX_STACK_LINE(216)
-		{
-		}
 		HX_STACK_LINE(224)
 		{
 		}
@@ -161,7 +159,7 @@ HX_STACK_PUSH("Circle::new","nape/shape/Circle.hx",177);
 							HX_STACK_LINE(240)
 							::zpp_nape::geom::ZPP_Vec2 _this = localCOM->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(240)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(240)
 								_this->_validate();
 							}
@@ -188,7 +186,7 @@ HX_STACK_PUSH("Circle::new","nape/shape/Circle.hx",177);
 							HX_STACK_LINE(241)
 							::zpp_nape::geom::ZPP_Vec2 _this = localCOM->zpp_inner;		HX_STACK_VAR(_this,"_this");
 							HX_STACK_LINE(241)
-							if (((_this->_validate_dyn() != null()))){
+							if (((_this->_validate != null()))){
 								HX_STACK_LINE(241)
 								_this->_validate();
 							}
@@ -201,9 +199,6 @@ HX_STACK_PUSH("Circle::new","nape/shape/Circle.hx",177);
 			};
 			HX_STACK_LINE(241)
 			this->zpp_inner->localCOMy = _Function_3_2::Block(localCOM);
-			HX_STACK_LINE(242)
-			{
-			}
 			HX_STACK_LINE(250)
 			{
 			}
@@ -227,7 +222,7 @@ HX_STACK_PUSH("Circle::new","nape/shape/Circle.hx",177);
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(263)
-					if (((_this->_isimmutable_dyn() != null()))){
+					if (((_this->_isimmutable != null()))){
 						HX_STACK_LINE(263)
 						_this->_isimmutable();
 					}
@@ -248,9 +243,6 @@ HX_STACK_PUSH("Circle::new","nape/shape/Circle.hx",177);
 					HX_STACK_LINE(263)
 					::nape::geom::Vec2 o = localCOM;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(263)
-					{
-					}
-					HX_STACK_LINE(263)
 					o->zpp_pool = null();
 					HX_STACK_LINE(263)
 					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -270,9 +262,6 @@ HX_STACK_PUSH("Circle::new","nape/shape/Circle.hx",177);
 				{
 					HX_STACK_LINE(263)
 					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(263)
-					{
-					}
 					HX_STACK_LINE(263)
 					{
 						HX_STACK_LINE(263)
@@ -452,7 +441,6 @@ Circle_obj::Circle_obj()
 void Circle_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(Circle);
-	HX_MARK_MEMBER_NAME(radius,"radius");
 	HX_MARK_MEMBER_NAME(zpp_inner_zn,"zpp_inner_zn");
 	super::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
@@ -460,7 +448,6 @@ void Circle_obj::__Mark(HX_MARK_PARAMS)
 
 void Circle_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(radius,"radius");
 	HX_VISIT_MEMBER_NAME(zpp_inner_zn,"zpp_inner_zn");
 	super::__Visit(HX_VISIT_ARG);
 }
@@ -469,7 +456,7 @@ Dynamic Circle_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 6:
-		if (HX_FIELD_EQ(inName,"radius") ) { return inCallProp ? get_radius() : radius; }
+		if (HX_FIELD_EQ(inName,"radius") ) { return get_radius(); }
 		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"set_radius") ) { return set_radius_dyn(); }
@@ -485,7 +472,7 @@ Dynamic Circle_obj::__SetField(const ::String &inName,const Dynamic &inValue,boo
 {
 	switch(inName.length) {
 	case 6:
-		if (HX_FIELD_EQ(inName,"radius") ) { if (inCallProp) return set_radius(inValue);radius=inValue.Cast< Float >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"radius") ) { return set_radius(inValue); }
 		break;
 	case 12:
 		if (HX_FIELD_EQ(inName,"zpp_inner_zn") ) { zpp_inner_zn=inValue.Cast< ::zpp_nape::shape::ZPP_Circle >(); return inValue; }
@@ -506,7 +493,6 @@ static ::String sStaticFields[] = {
 static ::String sMemberFields[] = {
 	HX_CSTRING("set_radius"),
 	HX_CSTRING("get_radius"),
-	HX_CSTRING("radius"),
 	HX_CSTRING("zpp_inner_zn"),
 	String(null()) };
 
@@ -522,7 +508,7 @@ Class Circle_obj::__mClass;
 
 void Circle_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.shape.Circle"), hx::TCanCast< Circle_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.shape.Circle"), hx::TCanCast< Circle_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

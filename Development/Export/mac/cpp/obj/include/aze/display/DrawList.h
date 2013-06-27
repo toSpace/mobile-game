@@ -5,14 +5,12 @@
 #include <hxcpp.h>
 #endif
 
-#include <haxe/Public.h>
 HX_DECLARE_CLASS2(aze,display,DrawList)
-HX_DECLARE_CLASS1(haxe,Public)
 namespace aze{
 namespace display{
 
 
-class DrawList_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  DrawList_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef DrawList_obj OBJ_;
@@ -30,9 +28,6 @@ class DrawList_obj : public hx::Object{
 		static void __register();
 		void __Mark(HX_MARK_PARAMS);
 		void __Visit(HX_VISIT_PARAMS);
-		inline operator ::haxe::Public_obj *()
-			{ return new ::haxe::Public_delegate_< DrawList_obj >(this); }
-		hx::Object *__ToInterface(const type_info &inType);
 		::String __ToString() const { return HX_CSTRING("DrawList"); }
 
 		virtual Void end( );
@@ -41,16 +36,16 @@ class DrawList_obj : public hx::Object{
 		virtual Void begin( int elapsed,bool useTransforms,bool useAlpha,bool useTint,bool useAdditive);
 		Dynamic begin_dyn();
 
-		int runs; /* REM */ 
-		int elapsed; /* REM */ 
-		int time; /* REM */ 
-		int flags; /* REM */ 
-		int offsetAlpha; /* REM */ 
-		int offsetRGB; /* REM */ 
-		int offsetTransform; /* REM */ 
-		int fields; /* REM */ 
-		int index; /* REM */ 
-		Array< Float > list; /* REM */ 
+		int runs;
+		int elapsed;
+		int time;
+		int flags;
+		int offsetAlpha;
+		int offsetRGB;
+		int offsetTransform;
+		int fields;
+		int index;
+		Array< Float > list;
 };
 
 } // end namespace aze

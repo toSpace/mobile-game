@@ -90,7 +90,7 @@ Void ZPP_ConvexRayResult_obj::free( ){
 					hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 				}
 				HX_STACK_LINE(241)
-				if (((_this1->_isimmutable_dyn() != null()))){
+				if (((_this1->_isimmutable != null()))){
 					HX_STACK_LINE(241)
 					_this1->_isimmutable();
 				}
@@ -111,9 +111,6 @@ Void ZPP_ConvexRayResult_obj::free( ){
 				HX_STACK_LINE(241)
 				::nape::geom::Vec2 o = _this;		HX_STACK_VAR(o,"o");
 				HX_STACK_LINE(241)
-				{
-				}
-				HX_STACK_LINE(241)
 				o->zpp_pool = null();
 				HX_STACK_LINE(241)
 				if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -133,9 +130,6 @@ Void ZPP_ConvexRayResult_obj::free( ){
 			{
 				HX_STACK_LINE(241)
 				::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-				HX_STACK_LINE(241)
-				{
-				}
 				HX_STACK_LINE(241)
 				{
 					HX_STACK_LINE(241)
@@ -181,7 +175,7 @@ Void ZPP_ConvexRayResult_obj::free( ){
 						hx::Throw (HX_CSTRING("Error: Vec2 is immutable"));
 					}
 					HX_STACK_LINE(244)
-					if (((_this1->_isimmutable_dyn() != null()))){
+					if (((_this1->_isimmutable != null()))){
 						HX_STACK_LINE(244)
 						_this1->_isimmutable();
 					}
@@ -202,9 +196,6 @@ Void ZPP_ConvexRayResult_obj::free( ){
 					HX_STACK_LINE(244)
 					::nape::geom::Vec2 o = _this;		HX_STACK_VAR(o,"o");
 					HX_STACK_LINE(244)
-					{
-					}
-					HX_STACK_LINE(244)
 					o->zpp_pool = null();
 					HX_STACK_LINE(244)
 					if (((::zpp_nape::util::ZPP_PubPool_obj::nextVec2 != null()))){
@@ -224,9 +215,6 @@ Void ZPP_ConvexRayResult_obj::free( ){
 				{
 					HX_STACK_LINE(244)
 					::zpp_nape::geom::ZPP_Vec2 o = inner;		HX_STACK_VAR(o,"o");
-					HX_STACK_LINE(244)
-					{
-					}
 					HX_STACK_LINE(244)
 					{
 						HX_STACK_LINE(244)
@@ -549,7 +537,7 @@ Class ZPP_ConvexRayResult_obj::__mClass;
 
 void ZPP_ConvexRayResult_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_ConvexRayResult"), hx::TCanCast< ZPP_ConvexRayResult_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_ConvexRayResult"), hx::TCanCast< ZPP_ConvexRayResult_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

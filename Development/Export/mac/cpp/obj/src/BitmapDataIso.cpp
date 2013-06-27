@@ -6,32 +6,32 @@
 #ifndef INCLUDED_Std
 #include <Std.h>
 #endif
+#ifndef INCLUDED_flash_display_Bitmap
+#include <flash/display/Bitmap.h>
+#endif
+#ifndef INCLUDED_flash_display_BitmapData
+#include <flash/display/BitmapData.h>
+#endif
+#ifndef INCLUDED_flash_display_DisplayObject
+#include <flash/display/DisplayObject.h>
+#endif
+#ifndef INCLUDED_flash_display_IBitmapDrawable
+#include <flash/display/IBitmapDrawable.h>
+#endif
+#ifndef INCLUDED_flash_display_PixelSnapping
+#include <flash/display/PixelSnapping.h>
+#endif
+#ifndef INCLUDED_flash_events_EventDispatcher
+#include <flash/events/EventDispatcher.h>
+#endif
+#ifndef INCLUDED_flash_events_IEventDispatcher
+#include <flash/events/IEventDispatcher.h>
+#endif
 #ifndef INCLUDED_nape_geom_AABB
 #include <nape/geom/AABB.h>
 #endif
-#ifndef INCLUDED_native_display_Bitmap
-#include <native/display/Bitmap.h>
-#endif
-#ifndef INCLUDED_native_display_BitmapData
-#include <native/display/BitmapData.h>
-#endif
-#ifndef INCLUDED_native_display_DisplayObject
-#include <native/display/DisplayObject.h>
-#endif
-#ifndef INCLUDED_native_display_IBitmapDrawable
-#include <native/display/IBitmapDrawable.h>
-#endif
-#ifndef INCLUDED_native_display_PixelSnapping
-#include <native/display/PixelSnapping.h>
-#endif
-#ifndef INCLUDED_native_events_EventDispatcher
-#include <native/events/EventDispatcher.h>
-#endif
-#ifndef INCLUDED_native_events_IEventDispatcher
-#include <native/events/IEventDispatcher.h>
-#endif
 
-Void BitmapDataIso_obj::__construct(::native::display::BitmapData bitmap,hx::Null< Float >  __o_alphaThreshold)
+Void BitmapDataIso_obj::__construct(::flash::display::BitmapData bitmap,hx::Null< Float >  __o_alphaThreshold)
 {
 HX_STACK_PUSH("BitmapDataIso::new","BitmapDataIso.hx",33);
 Float alphaThreshold = __o_alphaThreshold.Default(128);
@@ -50,7 +50,7 @@ Float alphaThreshold = __o_alphaThreshold.Default(128);
 BitmapDataIso_obj::~BitmapDataIso_obj() { }
 
 Dynamic BitmapDataIso_obj::__CreateEmpty() { return  new BitmapDataIso_obj; }
-hx::ObjectPtr< BitmapDataIso_obj > BitmapDataIso_obj::__new(::native::display::BitmapData bitmap,hx::Null< Float >  __o_alphaThreshold)
+hx::ObjectPtr< BitmapDataIso_obj > BitmapDataIso_obj::__new(::flash::display::BitmapData bitmap,hx::Null< Float >  __o_alphaThreshold)
 {  hx::ObjectPtr< BitmapDataIso_obj > result = new BitmapDataIso_obj();
 	result->__construct(bitmap,__o_alphaThreshold);
 	return result;}
@@ -108,11 +108,11 @@ Float BitmapDataIso_obj::iso( Float x,Float y){
 
 HX_DEFINE_DYNAMIC_FUNC2(BitmapDataIso_obj,iso,return )
 
-::native::display::Bitmap BitmapDataIso_obj::graphic( ){
+::flash::display::Bitmap BitmapDataIso_obj::graphic( ){
 	HX_STACK_PUSH("BitmapDataIso::graphic","BitmapDataIso.hx",39);
 	HX_STACK_THIS(this);
 	HX_STACK_LINE(39)
-	return ::native::display::Bitmap_obj::__new(this->bitmap,null(),null());
+	return ::flash::display::Bitmap_obj::__new(this->bitmap,null(),null());
 }
 
 
@@ -163,7 +163,7 @@ Dynamic BitmapDataIso_obj::__SetField(const ::String &inName,const Dynamic &inVa
 	switch(inName.length) {
 	case 6:
 		if (HX_FIELD_EQ(inName,"bounds") ) { bounds=inValue.Cast< ::nape::geom::AABB >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"bitmap") ) { bitmap=inValue.Cast< ::native::display::BitmapData >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"bitmap") ) { bitmap=inValue.Cast< ::flash::display::BitmapData >(); return inValue; }
 		break;
 	case 14:
 		if (HX_FIELD_EQ(inName,"alphaThreshold") ) { alphaThreshold=inValue.Cast< Float >(); return inValue; }
@@ -202,7 +202,7 @@ Class BitmapDataIso_obj::__mClass;
 
 void BitmapDataIso_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("BitmapDataIso"), hx::TCanCast< BitmapDataIso_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("BitmapDataIso"), hx::TCanCast< BitmapDataIso_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

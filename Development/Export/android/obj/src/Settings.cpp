@@ -18,8 +18,8 @@
 #ifndef INCLUDED_haxe_xml__Fast_NodeAccess
 #include <haxe/xml/_Fast/NodeAccess.h>
 #endif
-#ifndef INCLUDED_nme_installer_Assets
-#include <nme/installer/Assets.h>
+#ifndef INCLUDED_openfl_Assets
+#include <openfl/Assets.h>
 #endif
 
 Void Settings_obj::__construct()
@@ -54,21 +54,21 @@ Void Settings_obj::load( ){
 {
 		HX_STACK_PUSH("Settings::load","Settings.hx",12);
 		HX_STACK_LINE(14)
-		::String xmlFile = ::nme::installer::Assets_obj::getText((::Mobile_obj::xml + HX_CSTRING("settings.xml")));		HX_STACK_VAR(xmlFile,"xmlFile");
+		::String xmlFile = ::openfl::Assets_obj::getText((::Mobile_obj::xml + HX_CSTRING("settings.xml")));		HX_STACK_VAR(xmlFile,"xmlFile");
 		HX_STACK_LINE(15)
 		::haxe::xml::Fast read = ::haxe::xml::Fast_obj::__new(::Xml_obj::parse(xmlFile));		HX_STACK_VAR(read,"read");
 		HX_STACK_LINE(17)
 		::haxe::xml::Fast settings = read->node->resolve(HX_CSTRING("settings"));		HX_STACK_VAR(settings,"settings");
 		HX_STACK_LINE(19)
-		::Settings_obj::brushSize = ::Std_obj::parseFloat(settings->node->resolve(HX_CSTRING("brushsize"))->getInnerData());
+		::Settings_obj::brushSize = ::Std_obj::parseFloat(settings->node->resolve(HX_CSTRING("brushsize"))->get_innerData());
 		HX_STACK_LINE(20)
-		::Settings_obj::cameraOverflow = ::Std_obj::parseFloat(settings->node->resolve(HX_CSTRING("cameraoverflow"))->getInnerData());
+		::Settings_obj::cameraOverflow = ::Std_obj::parseFloat(settings->node->resolve(HX_CSTRING("cameraoverflow"))->get_innerData());
 		HX_STACK_LINE(21)
-		::Settings_obj::flockSpeed = ::Std_obj::parseFloat(settings->node->resolve(HX_CSTRING("flockspeed"))->getInnerData());
+		::Settings_obj::flockSpeed = ::Std_obj::parseFloat(settings->node->resolve(HX_CSTRING("flockspeed"))->get_innerData());
 		HX_STACK_LINE(22)
-		::Settings_obj::flockVelocity = ::Std_obj::parseFloat(settings->node->resolve(HX_CSTRING("flockvelocity"))->getInnerData());
+		::Settings_obj::flockVelocity = ::Std_obj::parseFloat(settings->node->resolve(HX_CSTRING("flockvelocity"))->get_innerData());
 		HX_STACK_LINE(23)
-		::Settings_obj::paralaxDepth = ::Std_obj::parseFloat(settings->node->resolve(HX_CSTRING("paralaxDepth"))->getInnerData());
+		::Settings_obj::paralaxDepth = ::Std_obj::parseFloat(settings->node->resolve(HX_CSTRING("paralaxDepth"))->get_innerData());
 	}
 return null();
 }
@@ -175,7 +175,7 @@ Class Settings_obj::__mClass;
 
 void Settings_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("Settings"), hx::TCanCast< Settings_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("Settings"), hx::TCanCast< Settings_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -96,9 +96,6 @@ HX_DEFINE_DYNAMIC_FUNC0(ZPP_SimplifyV_obj,free,(void))
 		ret->x = v->x;
 		HX_STACK_LINE(234)
 		ret->y = v->y;
-		HX_STACK_LINE(235)
-		{
-		}
 		HX_STACK_LINE(243)
 		{
 		}
@@ -229,7 +226,7 @@ Class ZPP_SimplifyV_obj::__mClass;
 
 void ZPP_SimplifyV_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_SimplifyV"), hx::TCanCast< ZPP_SimplifyV_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_SimplifyV"), hx::TCanCast< ZPP_SimplifyV_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

@@ -121,20 +121,12 @@ PreCallback_obj::PreCallback_obj()
 void PreCallback_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(PreCallback);
-	HX_MARK_MEMBER_NAME(swapped,"swapped");
-	HX_MARK_MEMBER_NAME(int2,"int2");
-	HX_MARK_MEMBER_NAME(int1,"int1");
-	HX_MARK_MEMBER_NAME(arbiter,"arbiter");
 	super::__Mark(HX_MARK_ARG);
 	HX_MARK_END_CLASS();
 }
 
 void PreCallback_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(swapped,"swapped");
-	HX_VISIT_MEMBER_NAME(int2,"int2");
-	HX_VISIT_MEMBER_NAME(int1,"int1");
-	HX_VISIT_MEMBER_NAME(arbiter,"arbiter");
 	super::__Visit(HX_VISIT_ARG);
 }
 
@@ -142,12 +134,12 @@ Dynamic PreCallback_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 4:
-		if (HX_FIELD_EQ(inName,"int2") ) { return inCallProp ? get_int2() : int2; }
-		if (HX_FIELD_EQ(inName,"int1") ) { return inCallProp ? get_int1() : int1; }
+		if (HX_FIELD_EQ(inName,"int2") ) { return get_int2(); }
+		if (HX_FIELD_EQ(inName,"int1") ) { return get_int1(); }
 		break;
 	case 7:
-		if (HX_FIELD_EQ(inName,"swapped") ) { return inCallProp ? get_swapped() : swapped; }
-		if (HX_FIELD_EQ(inName,"arbiter") ) { return inCallProp ? get_arbiter() : arbiter; }
+		if (HX_FIELD_EQ(inName,"swapped") ) { return get_swapped(); }
+		if (HX_FIELD_EQ(inName,"arbiter") ) { return get_arbiter(); }
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
@@ -163,15 +155,6 @@ Dynamic PreCallback_obj::__Field(const ::String &inName,bool inCallProp)
 
 Dynamic PreCallback_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
-	switch(inName.length) {
-	case 4:
-		if (HX_FIELD_EQ(inName,"int2") ) { int2=inValue.Cast< ::nape::phys::Interactor >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"int1") ) { int1=inValue.Cast< ::nape::phys::Interactor >(); return inValue; }
-		break;
-	case 7:
-		if (HX_FIELD_EQ(inName,"swapped") ) { swapped=inValue.Cast< bool >(); return inValue; }
-		if (HX_FIELD_EQ(inName,"arbiter") ) { arbiter=inValue.Cast< ::nape::dynamics::Arbiter >(); return inValue; }
-	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
 
@@ -190,13 +173,9 @@ static ::String sStaticFields[] = {
 static ::String sMemberFields[] = {
 	HX_CSTRING("toString"),
 	HX_CSTRING("get_swapped"),
-	HX_CSTRING("swapped"),
 	HX_CSTRING("get_int2"),
-	HX_CSTRING("int2"),
 	HX_CSTRING("get_int1"),
-	HX_CSTRING("int1"),
 	HX_CSTRING("get_arbiter"),
-	HX_CSTRING("arbiter"),
 	String(null()) };
 
 static void sMarkStatics(HX_MARK_PARAMS) {
@@ -211,7 +190,7 @@ Class PreCallback_obj::__mClass;
 
 void PreCallback_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.PreCallback"), hx::TCanCast< PreCallback_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.PreCallback"), hx::TCanCast< PreCallback_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

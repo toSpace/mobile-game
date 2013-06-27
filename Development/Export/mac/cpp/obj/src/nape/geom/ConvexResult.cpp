@@ -181,20 +181,12 @@ ConvexResult_obj::ConvexResult_obj()
 void ConvexResult_obj::__Mark(HX_MARK_PARAMS)
 {
 	HX_MARK_BEGIN_CLASS(ConvexResult);
-	HX_MARK_MEMBER_NAME(shape,"shape");
-	HX_MARK_MEMBER_NAME(toi,"toi");
-	HX_MARK_MEMBER_NAME(position,"position");
-	HX_MARK_MEMBER_NAME(normal,"normal");
 	HX_MARK_MEMBER_NAME(zpp_inner,"zpp_inner");
 	HX_MARK_END_CLASS();
 }
 
 void ConvexResult_obj::__Visit(HX_VISIT_PARAMS)
 {
-	HX_VISIT_MEMBER_NAME(shape,"shape");
-	HX_VISIT_MEMBER_NAME(toi,"toi");
-	HX_VISIT_MEMBER_NAME(position,"position");
-	HX_VISIT_MEMBER_NAME(normal,"normal");
 	HX_VISIT_MEMBER_NAME(zpp_inner,"zpp_inner");
 }
 
@@ -202,13 +194,13 @@ Dynamic ConvexResult_obj::__Field(const ::String &inName,bool inCallProp)
 {
 	switch(inName.length) {
 	case 3:
-		if (HX_FIELD_EQ(inName,"toi") ) { return inCallProp ? get_toi() : toi; }
+		if (HX_FIELD_EQ(inName,"toi") ) { return get_toi(); }
 		break;
 	case 5:
-		if (HX_FIELD_EQ(inName,"shape") ) { return inCallProp ? get_shape() : shape; }
+		if (HX_FIELD_EQ(inName,"shape") ) { return get_shape(); }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"normal") ) { return inCallProp ? get_normal() : normal; }
+		if (HX_FIELD_EQ(inName,"normal") ) { return get_normal(); }
 		break;
 	case 7:
 		if (HX_FIELD_EQ(inName,"dispose") ) { return dispose_dyn(); }
@@ -216,7 +208,7 @@ Dynamic ConvexResult_obj::__Field(const ::String &inName,bool inCallProp)
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"toString") ) { return toString_dyn(); }
-		if (HX_FIELD_EQ(inName,"position") ) { return inCallProp ? get_position() : position; }
+		if (HX_FIELD_EQ(inName,"position") ) { return get_position(); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"get_shape") ) { return get_shape_dyn(); }
@@ -234,18 +226,6 @@ Dynamic ConvexResult_obj::__Field(const ::String &inName,bool inCallProp)
 Dynamic ConvexResult_obj::__SetField(const ::String &inName,const Dynamic &inValue,bool inCallProp)
 {
 	switch(inName.length) {
-	case 3:
-		if (HX_FIELD_EQ(inName,"toi") ) { toi=inValue.Cast< Float >(); return inValue; }
-		break;
-	case 5:
-		if (HX_FIELD_EQ(inName,"shape") ) { shape=inValue.Cast< ::nape::shape::Shape >(); return inValue; }
-		break;
-	case 6:
-		if (HX_FIELD_EQ(inName,"normal") ) { normal=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		break;
-	case 8:
-		if (HX_FIELD_EQ(inName,"position") ) { position=inValue.Cast< ::nape::geom::Vec2 >(); return inValue; }
-		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"zpp_inner") ) { zpp_inner=inValue.Cast< ::zpp_nape::geom::ZPP_ConvexRayResult >(); return inValue; }
 	}
@@ -269,13 +249,9 @@ static ::String sMemberFields[] = {
 	HX_CSTRING("toString"),
 	HX_CSTRING("dispose"),
 	HX_CSTRING("get_shape"),
-	HX_CSTRING("shape"),
 	HX_CSTRING("get_toi"),
-	HX_CSTRING("toi"),
 	HX_CSTRING("get_position"),
-	HX_CSTRING("position"),
 	HX_CSTRING("get_normal"),
-	HX_CSTRING("normal"),
 	HX_CSTRING("zpp_inner"),
 	String(null()) };
 
@@ -291,7 +267,7 @@ Class ConvexResult_obj::__mClass;
 
 void ConvexResult_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.ConvexResult"), hx::TCanCast< ConvexResult_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.geom.ConvexResult"), hx::TCanCast< ConvexResult_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

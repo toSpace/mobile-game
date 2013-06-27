@@ -15,9 +15,9 @@ namespace _Fast{
 
 Void HasAttribAccess_obj::__construct(::Xml x)
 {
-HX_STACK_PUSH("HasAttribAccess::new","/usr/lib/haxe/std/haxe/xml/Fast.hx",69);
+HX_STACK_PUSH("HasAttribAccess::new","/usr/lib/haxe/std/haxe/xml/Fast.hx",66);
 {
-	HX_STACK_LINE(69)
+	HX_STACK_LINE(66)
 	this->__x = x;
 }
 ;
@@ -38,15 +38,15 @@ Dynamic HasAttribAccess_obj::__Create(hx::DynamicArray inArgs)
 	return result;}
 
 bool HasAttribAccess_obj::resolve( ::String name){
-	HX_STACK_PUSH("HasAttribAccess::resolve","/usr/lib/haxe/std/haxe/xml/Fast.hx",73);
+	HX_STACK_PUSH("HasAttribAccess::resolve","/usr/lib/haxe/std/haxe/xml/Fast.hx",70);
 	HX_STACK_THIS(this);
 	HX_STACK_ARG(name,"name");
-	HX_STACK_LINE(74)
+	HX_STACK_LINE(71)
 	if (((this->__x->nodeType == ::Xml_obj::Document))){
-		HX_STACK_LINE(75)
+		HX_STACK_LINE(72)
 		hx::Throw ((HX_CSTRING("Cannot access document attribute ") + name));
 	}
-	HX_STACK_LINE(76)
+	HX_STACK_LINE(73)
 	return this->__x->exists(name);
 }
 
@@ -124,7 +124,7 @@ Class HasAttribAccess_obj::__mClass;
 
 void HasAttribAccess_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("haxe.xml._Fast.HasAttribAccess"), hx::TCanCast< HasAttribAccess_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("haxe.xml._Fast.HasAttribAccess"), hx::TCanCast< HasAttribAccess_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

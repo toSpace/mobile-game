@@ -25,7 +25,7 @@ namespace zpp_nape{
 namespace space{
 
 
-class ZPP_Broadphase_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Broadphase_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Broadphase_obj OBJ_;
@@ -69,7 +69,7 @@ class ZPP_Broadphase_obj : public hx::Object{
 		virtual Void updateCircShape( Float x,Float y,Float r);
 		Dynamic updateCircShape_dyn();
 
-		::nape::shape::Shape circShape; /* REM */ 
+		::nape::shape::Shape circShape;
 		virtual ::nape::phys::BodyList bodiesInAABB( ::zpp_nape::geom::ZPP_AABB aabb,bool strict,bool containment,::zpp_nape::dynamics::ZPP_InteractionFilter filter,::nape::phys::BodyList output);
 		Dynamic bodiesInAABB_dyn();
 
@@ -79,8 +79,8 @@ class ZPP_Broadphase_obj : public hx::Object{
 		virtual Void updateAABBShape( ::zpp_nape::geom::ZPP_AABB aabb);
 		Dynamic updateAABBShape_dyn();
 
-		::nape::geom::Mat23 matrix; /* REM */ 
-		::nape::shape::Shape aabbShape; /* REM */ 
+		::nape::geom::Mat23 matrix;
+		::nape::shape::Shape aabbShape;
 		virtual ::nape::phys::BodyList bodiesUnderPoint( Float x,Float y,::zpp_nape::dynamics::ZPP_InteractionFilter filter,::nape::phys::BodyList output);
 		Dynamic bodiesUnderPoint_dyn();
 
@@ -102,10 +102,10 @@ class ZPP_Broadphase_obj : public hx::Object{
 		virtual Void insert( ::zpp_nape::shape::ZPP_Shape shape);
 		Dynamic insert_dyn();
 
-		::zpp_nape::space::ZPP_DynAABBPhase dynab; /* REM */ 
-		::zpp_nape::space::ZPP_SweepPhase sweep; /* REM */ 
-		bool is_sweep; /* REM */ 
-		::zpp_nape::space::ZPP_Space space; /* REM */ 
+		::zpp_nape::space::ZPP_DynAABBPhase dynab;
+		::zpp_nape::space::ZPP_SweepPhase sweep;
+		bool is_sweep;
+		::zpp_nape::space::ZPP_Space space;
 };
 
 } // end namespace zpp_nape

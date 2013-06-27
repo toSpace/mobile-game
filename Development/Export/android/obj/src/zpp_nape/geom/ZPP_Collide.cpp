@@ -211,7 +211,7 @@ bool ZPP_Collide_obj::containTest( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 	HX_STACK_ARG(s1,"s1");
 	HX_STACK_ARG(s2,"s2");
 	struct _Function_1_1{
-		inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+		inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 			HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",235);
 			{
 				HX_STACK_LINE(235)
@@ -224,13 +224,13 @@ bool ZPP_Collide_obj::containTest( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 		}
 	};
 	HX_STACK_LINE(234)
-	if ((_Function_1_1::Block(s1,s2))){
+	if ((_Function_1_1::Block(s2,s1))){
 		struct _Function_2_1{
 			inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 				HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",236);
 				{
 					struct _Function_3_1{
-						inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+						inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 							HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",237);
 							{
 								HX_STACK_LINE(238)
@@ -273,7 +273,7 @@ bool ZPP_Collide_obj::containTest( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 											HX_STACK_LINE(255)
 											::zpp_nape::geom::ZPP_Vec2 p = cx_ite;		HX_STACK_VAR(p,"p");
 											struct _Function_7_1{
-												inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::geom::ZPP_Vec2 &p){
+												inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &p,::zpp_nape::shape::ZPP_Shape &s1){
 													HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",257);
 													{
 														HX_STACK_LINE(258)
@@ -298,7 +298,7 @@ bool ZPP_Collide_obj::containTest( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 												}
 											};
 											HX_STACK_LINE(256)
-											if ((_Function_7_1::Block(s1,p))){
+											if ((_Function_7_1::Block(p,s1))){
 												HX_STACK_LINE(269)
 												cx_ite = cx_ite->next;
 												HX_STACK_LINE(270)
@@ -322,13 +322,13 @@ bool ZPP_Collide_obj::containTest( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 						}
 					};
 					HX_STACK_LINE(236)
-					return (  (((s2->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))) ? bool(_Function_3_1::Block(s1,s2)) : bool(_Function_3_2::Block(s2,s1)) );
+					return (  (((s2->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))) ? bool(_Function_3_1::Block(s2,s1)) : bool(_Function_3_2::Block(s2,s1)) );
 				}
 				return null();
 			}
 		};
 		struct _Function_2_2{
-			inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+			inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 				HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",286);
 				{
 					HX_STACK_LINE(287)
@@ -370,7 +370,7 @@ bool ZPP_Collide_obj::containTest( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 			}
 		};
 		struct _Function_2_3{
-			inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+			inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 				HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",312);
 				{
 					HX_STACK_LINE(313)
@@ -446,7 +446,7 @@ bool ZPP_Collide_obj::containTest( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 			}
 		};
 		HX_STACK_LINE(235)
-		return (  (((s1->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))) ? bool(_Function_2_1::Block(s2,s1)) : bool((  (((s2->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))) ? bool(_Function_2_2::Block(s1,s2)) : bool(_Function_2_3::Block(s1,s2)) )) );
+		return (  (((s1->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))) ? bool(_Function_2_1::Block(s2,s1)) : bool((  (((s2->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_CIRCLE))) ? bool(_Function_2_2::Block(s2,s1)) : bool(_Function_2_3::Block(s2,s1)) )) );
 	}
 	else{
 		HX_STACK_LINE(354)
@@ -677,9 +677,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 						c0x = ay->gp0->x;
 						HX_STACK_LINE(465)
 						c0y = ay->gp0->y;
-						HX_STACK_LINE(466)
-						{
-						}
 						HX_STACK_LINE(474)
 						{
 						}
@@ -694,9 +691,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 						c1x = ay->gp1->x;
 						HX_STACK_LINE(487)
 						c1y = ay->gp1->y;
-						HX_STACK_LINE(488)
-						{
-						}
 						HX_STACK_LINE(496)
 						{
 						}
@@ -724,9 +718,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 					if (((t > ::nape::Config_obj::epsilon))){
 						HX_STACK_LINE(516)
 						Float t1 = t;		HX_STACK_VAR(t1,"t1");
-						HX_STACK_LINE(517)
-						{
-						}
 						HX_STACK_LINE(525)
 						hx::AddEq(c0x,(dvx * t1));
 						HX_STACK_LINE(526)
@@ -738,9 +729,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 					if (((t1 < -(::nape::Config_obj::epsilon)))){
 						HX_STACK_LINE(530)
 						Float t2 = t1;		HX_STACK_VAR(t2,"t2");
-						HX_STACK_LINE(531)
-						{
-						}
 						HX_STACK_LINE(539)
 						hx::AddEq(c1x,(dvx * t2));
 						HX_STACK_LINE(540)
@@ -754,9 +742,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 					{
 						HX_STACK_LINE(545)
 						Float t2 = scale;		HX_STACK_VAR(t2,"t2");
-						HX_STACK_LINE(546)
-						{
-						}
 						HX_STACK_LINE(554)
 						nx = (ax->gnormx * t2);
 						HX_STACK_LINE(555)
@@ -768,9 +753,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 						arb->lnormx = ax->lnormx;
 						HX_STACK_LINE(559)
 						arb->lnormy = ax->lnormy;
-						HX_STACK_LINE(560)
-						{
-						}
 						HX_STACK_LINE(568)
 						{
 						}
@@ -801,7 +783,7 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 							ny = -(ny);
 						}
 						struct _Function_6_1{
-							inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &ny,Float &nx,::zpp_nape::shape::ZPP_Edge &ax,Float &c0d,Float &c0y,Float &c0x){
+							inline static ::zpp_nape::dynamics::ZPP_Contact Block( Float &c0y,Float &c0x,::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &c0d,::zpp_nape::shape::ZPP_Edge &ax,Float &ny,Float &nx){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",591);
 								{
 									HX_STACK_LINE(591)
@@ -863,9 +845,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 										{
 											HX_STACK_LINE(591)
 											::zpp_nape::dynamics::ZPP_Contact _this = arb->contacts;		HX_STACK_VAR(_this,"_this");
-											HX_STACK_LINE(591)
-											{
-											}
 											struct _Function_9_1{
 												inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &c){
 													HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",591);
@@ -907,9 +886,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 										HX_STACK_LINE(591)
 										{
 										}
-										HX_STACK_LINE(591)
-										{
-										}
 									}
 									HX_STACK_LINE(591)
 									{
@@ -917,9 +893,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 										arb->nx = nx;
 										HX_STACK_LINE(591)
 										arb->ny = ny;
-										HX_STACK_LINE(591)
-										{
-										}
 										HX_STACK_LINE(591)
 										{
 										}
@@ -937,14 +910,11 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 							}
 						};
 						HX_STACK_LINE(591)
-						::zpp_nape::dynamics::ZPP_Contact con = _Function_6_1::Block(arb,ny,nx,ax,c0d,c0y,c0x);		HX_STACK_VAR(con,"con");
+						::zpp_nape::dynamics::ZPP_Contact con = _Function_6_1::Block(c0y,c0x,arb,c0d,ax,ny,nx);		HX_STACK_VAR(con,"con");
 						HX_STACK_LINE(592)
 						{
 							HX_STACK_LINE(593)
 							Float t2 = 1.0;		HX_STACK_VAR(t2,"t2");
-							HX_STACK_LINE(594)
-							{
-							}
 							HX_STACK_LINE(602)
 							hx::SubEq(c0x,(q2->body->posx * t2));
 							HX_STACK_LINE(603)
@@ -958,7 +928,7 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 							con->inner->lr1y = ((c0y * q2->body->axisy) - (c0x * q2->body->axisx));
 						}
 						struct _Function_6_2{
-							inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &ny,Float &c1d,Float &c1y,Float &c1x,Float &nx,::zpp_nape::shape::ZPP_Edge &ax){
+							inline static ::zpp_nape::dynamics::ZPP_Contact Block( Float &c1x,Float &c1d,::zpp_nape::dynamics::ZPP_ColArbiter &arb,::zpp_nape::shape::ZPP_Edge &ax,Float &ny,Float &nx,Float &c1y){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",609);
 								{
 									HX_STACK_LINE(609)
@@ -1020,9 +990,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 										{
 											HX_STACK_LINE(609)
 											::zpp_nape::dynamics::ZPP_Contact _this = arb->contacts;		HX_STACK_VAR(_this,"_this");
-											HX_STACK_LINE(609)
-											{
-											}
 											struct _Function_9_1{
 												inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &c){
 													HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",609);
@@ -1064,9 +1031,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 										HX_STACK_LINE(609)
 										{
 										}
-										HX_STACK_LINE(609)
-										{
-										}
 									}
 									HX_STACK_LINE(609)
 									{
@@ -1074,9 +1038,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 										arb->nx = nx;
 										HX_STACK_LINE(609)
 										arb->ny = ny;
-										HX_STACK_LINE(609)
-										{
-										}
 										HX_STACK_LINE(609)
 										{
 										}
@@ -1094,14 +1055,11 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 							}
 						};
 						HX_STACK_LINE(609)
-						con = _Function_6_2::Block(arb,ny,c1d,c1y,c1x,nx,ax);
+						con = _Function_6_2::Block(c1x,c1d,arb,ax,ny,nx,c1y);
 						HX_STACK_LINE(610)
 						{
 							HX_STACK_LINE(611)
 							Float t2 = 1.0;		HX_STACK_VAR(t2,"t2");
-							HX_STACK_LINE(612)
-							{
-							}
 							HX_STACK_LINE(620)
 							hx::SubEq(c1x,(q2->body->posx * t2));
 							HX_STACK_LINE(621)
@@ -1195,7 +1153,7 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 				HX_STACK_LINE(671)
 				if (((dt <= ((v0->y * a0->gnormx) - (v0->x * a0->gnormy))))){
 					struct _Function_5_1{
-						inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::geom::ZPP_Vec2 &v0,::zpp_nape::dynamics::ZPP_ColArbiter &arb,bool &rev){
+						inline static ::zpp_nape::dynamics::ZPP_Contact Block( bool &rev,::zpp_nape::dynamics::ZPP_ColArbiter &arb,::zpp_nape::geom::ZPP_Vec2 &v0,::zpp_nape::shape::ZPP_Shape &s1){
 							HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",672);
 							{
 								HX_STACK_LINE(673)
@@ -1214,7 +1172,7 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 								HX_STACK_LINE(680)
 								Float distSqr = ((px * px) + (py * py));		HX_STACK_VAR(distSqr,"distSqr");
 								struct _Function_6_1{
-									inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &minDist){
+									inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,::zpp_nape::shape::ZPP_Shape &s1,Float &minDist){
 										HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",682);
 										{
 											HX_STACK_LINE(682)
@@ -1276,9 +1234,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 												{
 													HX_STACK_LINE(682)
 													::zpp_nape::dynamics::ZPP_Contact _this = arb->contacts;		HX_STACK_VAR(_this,"_this");
-													HX_STACK_LINE(682)
-													{
-													}
 													struct _Function_9_1{
 														inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &c){
 															HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",682);
@@ -1320,9 +1275,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 												HX_STACK_LINE(682)
 												{
 												}
-												HX_STACK_LINE(682)
-												{
-												}
 											}
 											HX_STACK_LINE(682)
 											{
@@ -1330,9 +1282,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 												arb->nx = (int)1;
 												HX_STACK_LINE(682)
 												arb->ny = (int)0;
-												HX_STACK_LINE(682)
-												{
-												}
 												HX_STACK_LINE(682)
 												{
 												}
@@ -1350,43 +1299,17 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 									}
 								};
 								struct _Function_6_2{
-									inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &distSqr,Float &minDist,Float &py,bool &rev,Float &px,::zpp_nape::shape::ZPP_Shape &s1){
+									inline static ::zpp_nape::dynamics::ZPP_Contact Block( bool &rev,::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &distSqr,Float &px,::zpp_nape::shape::ZPP_Shape &s1,Float &py,Float &minDist){
 										HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",683);
 										{
-											struct _Function_7_1{
-												inline static Float Block( Float &distSqr){
-													HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",684);
-													{
-														HX_STACK_LINE(684)
-														{
-														}
-														struct _Function_8_1{
-															inline static Float Block( Float &distSqr){
-																HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",684);
-																{
-																	HX_STACK_LINE(684)
-																	{
-																	}
-																	HX_STACK_LINE(684)
-																	return ::Math_obj::sqrt(distSqr);
-																}
-																return null();
-															}
-														};
-														HX_STACK_LINE(684)
-														return (Float(1.0) / Float(_Function_8_1::Block(distSqr)));
-													}
-													return null();
-												}
-											};
 											HX_STACK_LINE(684)
-											Float invDist = _Function_7_1::Block(distSqr);		HX_STACK_VAR(invDist,"invDist");
+											Float invDist = (Float(1.0) / Float(::Math_obj::sqrt(distSqr)));		HX_STACK_VAR(invDist,"invDist");
 											HX_STACK_LINE(685)
 											Float dist = (  (((invDist < ::nape::Config_obj::epsilon))) ? Float(1e100) : Float((Float(1.0) / Float(invDist))) );		HX_STACK_VAR(dist,"dist");
 											HX_STACK_LINE(686)
 											Float df = (0.5 + (((s1->circle->radius - (0.5 * minDist))) * invDist));		HX_STACK_VAR(df,"df");
-											struct _Function_7_2{
-												inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &dist,Float &invDist,Float &py,Float &minDist,Float &px,::zpp_nape::shape::ZPP_Shape &s1,Float &df){
+											struct _Function_7_1{
+												inline static ::zpp_nape::dynamics::ZPP_Contact Block( Float &df,Float &dist,Float &invDist,::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &px,::zpp_nape::shape::ZPP_Shape &s1,Float &py,Float &minDist){
 													HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",687);
 													{
 														HX_STACK_LINE(687)
@@ -1448,9 +1371,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 															{
 																HX_STACK_LINE(687)
 																::zpp_nape::dynamics::ZPP_Contact _this = arb->contacts;		HX_STACK_VAR(_this,"_this");
-																HX_STACK_LINE(687)
-																{
-																}
 																struct _Function_10_1{
 																	inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &c){
 																		HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",687);
@@ -1492,9 +1412,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 															HX_STACK_LINE(687)
 															{
 															}
-															HX_STACK_LINE(687)
-															{
-															}
 														}
 														HX_STACK_LINE(687)
 														{
@@ -1502,9 +1419,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 															arb->nx = (-(px) * invDist);
 															HX_STACK_LINE(687)
 															arb->ny = (-(py) * invDist);
-															HX_STACK_LINE(687)
-															{
-															}
 															HX_STACK_LINE(687)
 															{
 															}
@@ -1521,8 +1435,8 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 													return null();
 												}
 											};
-											struct _Function_7_3{
-												inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &dist,Float &invDist,Float &py,Float &minDist,Float &px,::zpp_nape::shape::ZPP_Shape &s1,Float &df){
+											struct _Function_7_2{
+												inline static ::zpp_nape::dynamics::ZPP_Contact Block( Float &df,Float &dist,Float &invDist,::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &px,::zpp_nape::shape::ZPP_Shape &s1,Float &py,Float &minDist){
 													HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",688);
 													{
 														HX_STACK_LINE(688)
@@ -1584,9 +1498,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 															{
 																HX_STACK_LINE(688)
 																::zpp_nape::dynamics::ZPP_Contact _this = arb->contacts;		HX_STACK_VAR(_this,"_this");
-																HX_STACK_LINE(688)
-																{
-																}
 																struct _Function_10_1{
 																	inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &c){
 																		HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",688);
@@ -1628,9 +1539,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 															HX_STACK_LINE(688)
 															{
 															}
-															HX_STACK_LINE(688)
-															{
-															}
 														}
 														HX_STACK_LINE(688)
 														{
@@ -1638,9 +1546,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 															arb->nx = (px * invDist);
 															HX_STACK_LINE(688)
 															arb->ny = (py * invDist);
-															HX_STACK_LINE(688)
-															{
-															}
 															HX_STACK_LINE(688)
 															{
 															}
@@ -1658,19 +1563,19 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 												}
 											};
 											HX_STACK_LINE(687)
-											return (  ((rev)) ? ::zpp_nape::dynamics::ZPP_Contact(_Function_7_2::Block(arb,dist,invDist,py,minDist,px,s1,df)) : ::zpp_nape::dynamics::ZPP_Contact(_Function_7_3::Block(arb,dist,invDist,py,minDist,px,s1,df)) );
+											return (  ((rev)) ? ::zpp_nape::dynamics::ZPP_Contact(_Function_7_1::Block(df,dist,invDist,arb,px,s1,py,minDist)) : ::zpp_nape::dynamics::ZPP_Contact(_Function_7_2::Block(df,dist,invDist,arb,px,s1,py,minDist)) );
 										}
 										return null();
 									}
 								};
 								HX_STACK_LINE(681)
-								return (  (((distSqr > (minDist * minDist)))) ? ::zpp_nape::dynamics::ZPP_Contact(null()) : ::zpp_nape::dynamics::ZPP_Contact((  (((distSqr < (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? ::zpp_nape::dynamics::ZPP_Contact(_Function_6_1::Block(s1,arb,minDist)) : ::zpp_nape::dynamics::ZPP_Contact(_Function_6_2::Block(arb,distSqr,minDist,py,rev,px,s1)) )) );
+								return (  (((distSqr > (minDist * minDist)))) ? ::zpp_nape::dynamics::ZPP_Contact(null()) : ::zpp_nape::dynamics::ZPP_Contact((  (((distSqr < (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? ::zpp_nape::dynamics::ZPP_Contact(_Function_6_1::Block(arb,s1,minDist)) : ::zpp_nape::dynamics::ZPP_Contact(_Function_6_2::Block(rev,arb,distSqr,px,s1,py,minDist)) )) );
 							}
 							return null();
 						}
 					};
 					HX_STACK_LINE(672)
-					::zpp_nape::dynamics::ZPP_Contact co = _Function_5_1::Block(s1,v0,arb,rev);		HX_STACK_VAR(co,"co");
+					::zpp_nape::dynamics::ZPP_Contact co = _Function_5_1::Block(rev,arb,v0,s1);		HX_STACK_VAR(co,"co");
 					HX_STACK_LINE(691)
 					if (((co != null()))){
 						HX_STACK_LINE(692)
@@ -1707,9 +1612,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 								con->lr2x = s1->circle->localCOMx;
 								HX_STACK_LINE(709)
 								con->lr2y = s1->circle->localCOMy;
-								HX_STACK_LINE(710)
-								{
-								}
 								HX_STACK_LINE(718)
 								{
 								}
@@ -1729,9 +1631,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 								con->lr1x = s1->circle->localCOMx;
 								HX_STACK_LINE(735)
 								con->lr1y = s1->circle->localCOMy;
-								HX_STACK_LINE(736)
-								{
-								}
 								HX_STACK_LINE(744)
 								{
 								}
@@ -1747,7 +1646,7 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 					HX_STACK_LINE(758)
 					if (((dt >= ((v1->y * a0->gnormx) - (v1->x * a0->gnormy))))){
 						struct _Function_6_1{
-							inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::geom::ZPP_Vec2 &v1,::zpp_nape::dynamics::ZPP_ColArbiter &arb,bool &rev){
+							inline static ::zpp_nape::dynamics::ZPP_Contact Block( bool &rev,::zpp_nape::dynamics::ZPP_ColArbiter &arb,::zpp_nape::geom::ZPP_Vec2 &v1,::zpp_nape::shape::ZPP_Shape &s1){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",759);
 								{
 									HX_STACK_LINE(760)
@@ -1766,7 +1665,7 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 									HX_STACK_LINE(767)
 									Float distSqr = ((px * px) + (py * py));		HX_STACK_VAR(distSqr,"distSqr");
 									struct _Function_7_1{
-										inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &minDist){
+										inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,::zpp_nape::shape::ZPP_Shape &s1,Float &minDist){
 											HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",769);
 											{
 												HX_STACK_LINE(769)
@@ -1828,9 +1727,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 													{
 														HX_STACK_LINE(769)
 														::zpp_nape::dynamics::ZPP_Contact _this = arb->contacts;		HX_STACK_VAR(_this,"_this");
-														HX_STACK_LINE(769)
-														{
-														}
 														struct _Function_10_1{
 															inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &c){
 																HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",769);
@@ -1872,9 +1768,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 													HX_STACK_LINE(769)
 													{
 													}
-													HX_STACK_LINE(769)
-													{
-													}
 												}
 												HX_STACK_LINE(769)
 												{
@@ -1882,9 +1775,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 													arb->nx = (int)1;
 													HX_STACK_LINE(769)
 													arb->ny = (int)0;
-													HX_STACK_LINE(769)
-													{
-													}
 													HX_STACK_LINE(769)
 													{
 													}
@@ -1902,43 +1792,17 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 										}
 									};
 									struct _Function_7_2{
-										inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &distSqr,Float &minDist,Float &py,bool &rev,Float &px,::zpp_nape::shape::ZPP_Shape &s1){
+										inline static ::zpp_nape::dynamics::ZPP_Contact Block( bool &rev,::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &distSqr,Float &px,::zpp_nape::shape::ZPP_Shape &s1,Float &py,Float &minDist){
 											HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",770);
 											{
-												struct _Function_8_1{
-													inline static Float Block( Float &distSqr){
-														HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",771);
-														{
-															HX_STACK_LINE(771)
-															{
-															}
-															struct _Function_9_1{
-																inline static Float Block( Float &distSqr){
-																	HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",771);
-																	{
-																		HX_STACK_LINE(771)
-																		{
-																		}
-																		HX_STACK_LINE(771)
-																		return ::Math_obj::sqrt(distSqr);
-																	}
-																	return null();
-																}
-															};
-															HX_STACK_LINE(771)
-															return (Float(1.0) / Float(_Function_9_1::Block(distSqr)));
-														}
-														return null();
-													}
-												};
 												HX_STACK_LINE(771)
-												Float invDist = _Function_8_1::Block(distSqr);		HX_STACK_VAR(invDist,"invDist");
+												Float invDist = (Float(1.0) / Float(::Math_obj::sqrt(distSqr)));		HX_STACK_VAR(invDist,"invDist");
 												HX_STACK_LINE(772)
 												Float dist = (  (((invDist < ::nape::Config_obj::epsilon))) ? Float(1e100) : Float((Float(1.0) / Float(invDist))) );		HX_STACK_VAR(dist,"dist");
 												HX_STACK_LINE(773)
 												Float df = (0.5 + (((s1->circle->radius - (0.5 * minDist))) * invDist));		HX_STACK_VAR(df,"df");
-												struct _Function_8_2{
-													inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &dist,Float &invDist,Float &py,Float &minDist,Float &px,::zpp_nape::shape::ZPP_Shape &s1,Float &df){
+												struct _Function_8_1{
+													inline static ::zpp_nape::dynamics::ZPP_Contact Block( Float &df,Float &dist,Float &invDist,::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &px,::zpp_nape::shape::ZPP_Shape &s1,Float &py,Float &minDist){
 														HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",774);
 														{
 															HX_STACK_LINE(774)
@@ -2000,9 +1864,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 																{
 																	HX_STACK_LINE(774)
 																	::zpp_nape::dynamics::ZPP_Contact _this = arb->contacts;		HX_STACK_VAR(_this,"_this");
-																	HX_STACK_LINE(774)
-																	{
-																	}
 																	struct _Function_11_1{
 																		inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &c){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",774);
@@ -2044,9 +1905,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 																HX_STACK_LINE(774)
 																{
 																}
-																HX_STACK_LINE(774)
-																{
-																}
 															}
 															HX_STACK_LINE(774)
 															{
@@ -2054,9 +1912,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 																arb->nx = (-(px) * invDist);
 																HX_STACK_LINE(774)
 																arb->ny = (-(py) * invDist);
-																HX_STACK_LINE(774)
-																{
-																}
 																HX_STACK_LINE(774)
 																{
 																}
@@ -2073,8 +1928,8 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 														return null();
 													}
 												};
-												struct _Function_8_3{
-													inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &dist,Float &invDist,Float &py,Float &minDist,Float &px,::zpp_nape::shape::ZPP_Shape &s1,Float &df){
+												struct _Function_8_2{
+													inline static ::zpp_nape::dynamics::ZPP_Contact Block( Float &df,Float &dist,Float &invDist,::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &px,::zpp_nape::shape::ZPP_Shape &s1,Float &py,Float &minDist){
 														HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",775);
 														{
 															HX_STACK_LINE(775)
@@ -2136,9 +1991,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 																{
 																	HX_STACK_LINE(775)
 																	::zpp_nape::dynamics::ZPP_Contact _this = arb->contacts;		HX_STACK_VAR(_this,"_this");
-																	HX_STACK_LINE(775)
-																	{
-																	}
 																	struct _Function_11_1{
 																		inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &c){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",775);
@@ -2180,9 +2032,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 																HX_STACK_LINE(775)
 																{
 																}
-																HX_STACK_LINE(775)
-																{
-																}
 															}
 															HX_STACK_LINE(775)
 															{
@@ -2190,9 +2039,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 																arb->nx = (px * invDist);
 																HX_STACK_LINE(775)
 																arb->ny = (py * invDist);
-																HX_STACK_LINE(775)
-																{
-																}
 																HX_STACK_LINE(775)
 																{
 																}
@@ -2210,19 +2056,19 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 													}
 												};
 												HX_STACK_LINE(774)
-												return (  ((rev)) ? ::zpp_nape::dynamics::ZPP_Contact(_Function_8_2::Block(arb,dist,invDist,py,minDist,px,s1,df)) : ::zpp_nape::dynamics::ZPP_Contact(_Function_8_3::Block(arb,dist,invDist,py,minDist,px,s1,df)) );
+												return (  ((rev)) ? ::zpp_nape::dynamics::ZPP_Contact(_Function_8_1::Block(df,dist,invDist,arb,px,s1,py,minDist)) : ::zpp_nape::dynamics::ZPP_Contact(_Function_8_2::Block(df,dist,invDist,arb,px,s1,py,minDist)) );
 											}
 											return null();
 										}
 									};
 									HX_STACK_LINE(768)
-									return (  (((distSqr > (minDist * minDist)))) ? ::zpp_nape::dynamics::ZPP_Contact(null()) : ::zpp_nape::dynamics::ZPP_Contact((  (((distSqr < (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? ::zpp_nape::dynamics::ZPP_Contact(_Function_7_1::Block(s1,arb,minDist)) : ::zpp_nape::dynamics::ZPP_Contact(_Function_7_2::Block(arb,distSqr,minDist,py,rev,px,s1)) )) );
+									return (  (((distSqr > (minDist * minDist)))) ? ::zpp_nape::dynamics::ZPP_Contact(null()) : ::zpp_nape::dynamics::ZPP_Contact((  (((distSqr < (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? ::zpp_nape::dynamics::ZPP_Contact(_Function_7_1::Block(arb,s1,minDist)) : ::zpp_nape::dynamics::ZPP_Contact(_Function_7_2::Block(rev,arb,distSqr,px,s1,py,minDist)) )) );
 								}
 								return null();
 							}
 						};
 						HX_STACK_LINE(759)
-						::zpp_nape::dynamics::ZPP_Contact co = _Function_6_1::Block(s1,v1,arb,rev);		HX_STACK_VAR(co,"co");
+						::zpp_nape::dynamics::ZPP_Contact co = _Function_6_1::Block(rev,arb,v1,s1);		HX_STACK_VAR(co,"co");
 						HX_STACK_LINE(778)
 						if (((co != null()))){
 							HX_STACK_LINE(779)
@@ -2259,9 +2105,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 									con->lr2x = s1->circle->localCOMx;
 									HX_STACK_LINE(796)
 									con->lr2y = s1->circle->localCOMy;
-									HX_STACK_LINE(797)
-									{
-									}
 									HX_STACK_LINE(805)
 									{
 									}
@@ -2281,9 +2124,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 									con->lr1x = s1->circle->localCOMx;
 									HX_STACK_LINE(822)
 									con->lr1y = s1->circle->localCOMy;
-									HX_STACK_LINE(823)
-									{
-									}
 									HX_STACK_LINE(831)
 									{
 									}
@@ -2304,9 +2144,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 						{
 							HX_STACK_LINE(849)
 							Float t = (s1->circle->radius + (max * 0.5));		HX_STACK_VAR(t,"t");
-							HX_STACK_LINE(850)
-							{
-							}
 							HX_STACK_LINE(858)
 							nx = (a0->gnormx * t);
 							HX_STACK_LINE(859)
@@ -2324,7 +2161,7 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 							py = (s1->circle->worldCOMy - ny);
 						}
 						struct _Function_6_1{
-							inline static ::zpp_nape::dynamics::ZPP_Contact Block( Float &py,Float &max,Float &px,::zpp_nape::shape::ZPP_Edge &a0,::zpp_nape::dynamics::ZPP_ColArbiter &arb){
+							inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,::zpp_nape::shape::ZPP_Edge &a0,Float &px,Float &max,Float &py){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",867);
 								{
 									HX_STACK_LINE(867)
@@ -2386,9 +2223,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 										{
 											HX_STACK_LINE(867)
 											::zpp_nape::dynamics::ZPP_Contact _this = arb->contacts;		HX_STACK_VAR(_this,"_this");
-											HX_STACK_LINE(867)
-											{
-											}
 											struct _Function_9_1{
 												inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &c){
 													HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",867);
@@ -2430,9 +2264,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 										HX_STACK_LINE(867)
 										{
 										}
-										HX_STACK_LINE(867)
-										{
-										}
 									}
 									HX_STACK_LINE(867)
 									{
@@ -2440,9 +2271,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 										arb->nx = a0->gnormx;
 										HX_STACK_LINE(867)
 										arb->ny = a0->gnormy;
-										HX_STACK_LINE(867)
-										{
-										}
 										HX_STACK_LINE(867)
 										{
 										}
@@ -2460,7 +2288,7 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 							}
 						};
 						struct _Function_6_2{
-							inline static ::zpp_nape::dynamics::ZPP_Contact Block( Float &py,Float &max,Float &px,::zpp_nape::shape::ZPP_Edge &a0,::zpp_nape::dynamics::ZPP_ColArbiter &arb){
+							inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,::zpp_nape::shape::ZPP_Edge &a0,Float &px,Float &max,Float &py){
 								HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",868);
 								{
 									HX_STACK_LINE(868)
@@ -2522,9 +2350,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 										{
 											HX_STACK_LINE(868)
 											::zpp_nape::dynamics::ZPP_Contact _this = arb->contacts;		HX_STACK_VAR(_this,"_this");
-											HX_STACK_LINE(868)
-											{
-											}
 											struct _Function_9_1{
 												inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &c){
 													HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",868);
@@ -2566,9 +2391,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 										HX_STACK_LINE(868)
 										{
 										}
-										HX_STACK_LINE(868)
-										{
-										}
 									}
 									HX_STACK_LINE(868)
 									{
@@ -2576,9 +2398,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 										arb->nx = -(a0->gnormx);
 										HX_STACK_LINE(868)
 										arb->ny = -(a0->gnormy);
-										HX_STACK_LINE(868)
-										{
-										}
 										HX_STACK_LINE(868)
 										{
 										}
@@ -2596,7 +2415,7 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 							}
 						};
 						HX_STACK_LINE(867)
-						::zpp_nape::dynamics::ZPP_Contact con = (  ((rev)) ? ::zpp_nape::dynamics::ZPP_Contact(_Function_6_1::Block(py,max,px,a0,arb)) : ::zpp_nape::dynamics::ZPP_Contact(_Function_6_2::Block(py,max,px,a0,arb)) );		HX_STACK_VAR(con,"con");
+						::zpp_nape::dynamics::ZPP_Contact con = (  ((rev)) ? ::zpp_nape::dynamics::ZPP_Contact(_Function_6_1::Block(arb,a0,px,max,py)) : ::zpp_nape::dynamics::ZPP_Contact(_Function_6_2::Block(arb,a0,px,max,py)) );		HX_STACK_VAR(con,"con");
 						HX_STACK_LINE(869)
 						arb->ptype = (  ((rev)) ? int((int)0) : int((int)1) );
 						HX_STACK_LINE(870)
@@ -2605,9 +2424,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 							arb->lnormx = a0->lnormx;
 							HX_STACK_LINE(872)
 							arb->lnormy = a0->lnormy;
-							HX_STACK_LINE(873)
-							{
-							}
 							HX_STACK_LINE(881)
 							{
 							}
@@ -2624,9 +2440,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 							con->inner->lr1x = s1->circle->localCOMx;
 							HX_STACK_LINE(895)
 							con->inner->lr1y = s1->circle->localCOMy;
-							HX_STACK_LINE(896)
-							{
-							}
 							HX_STACK_LINE(904)
 							{
 							}
@@ -2648,7 +2461,7 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 	}
 	else{
 		struct _Function_2_1{
-			inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::dynamics::ZPP_ColArbiter &arb,bool &rev){
+			inline static ::zpp_nape::dynamics::ZPP_Contact Block( bool &rev,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::dynamics::ZPP_ColArbiter &arb,::zpp_nape::shape::ZPP_Shape &s1){
 				HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",922);
 				{
 					HX_STACK_LINE(923)
@@ -2667,7 +2480,7 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 					HX_STACK_LINE(930)
 					Float distSqr = ((px * px) + (py * py));		HX_STACK_VAR(distSqr,"distSqr");
 					struct _Function_3_1{
-						inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &minDist){
+						inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,::zpp_nape::shape::ZPP_Shape &s1,Float &minDist){
 							HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",932);
 							{
 								HX_STACK_LINE(932)
@@ -2729,9 +2542,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 									{
 										HX_STACK_LINE(932)
 										::zpp_nape::dynamics::ZPP_Contact _this = arb->contacts;		HX_STACK_VAR(_this,"_this");
-										HX_STACK_LINE(932)
-										{
-										}
 										struct _Function_6_1{
 											inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &c){
 												HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",932);
@@ -2773,9 +2583,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 									HX_STACK_LINE(932)
 									{
 									}
-									HX_STACK_LINE(932)
-									{
-									}
 								}
 								HX_STACK_LINE(932)
 								{
@@ -2783,9 +2590,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 									arb->nx = (int)1;
 									HX_STACK_LINE(932)
 									arb->ny = (int)0;
-									HX_STACK_LINE(932)
-									{
-									}
 									HX_STACK_LINE(932)
 									{
 									}
@@ -2803,43 +2607,17 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 						}
 					};
 					struct _Function_3_2{
-						inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &distSqr,Float &minDist,Float &py,bool &rev,Float &px,::zpp_nape::shape::ZPP_Shape &s1){
+						inline static ::zpp_nape::dynamics::ZPP_Contact Block( bool &rev,::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &distSqr,Float &px,::zpp_nape::shape::ZPP_Shape &s1,Float &py,Float &minDist){
 							HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",933);
 							{
-								struct _Function_4_1{
-									inline static Float Block( Float &distSqr){
-										HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",934);
-										{
-											HX_STACK_LINE(934)
-											{
-											}
-											struct _Function_5_1{
-												inline static Float Block( Float &distSqr){
-													HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",934);
-													{
-														HX_STACK_LINE(934)
-														{
-														}
-														HX_STACK_LINE(934)
-														return ::Math_obj::sqrt(distSqr);
-													}
-													return null();
-												}
-											};
-											HX_STACK_LINE(934)
-											return (Float(1.0) / Float(_Function_5_1::Block(distSqr)));
-										}
-										return null();
-									}
-								};
 								HX_STACK_LINE(934)
-								Float invDist = _Function_4_1::Block(distSqr);		HX_STACK_VAR(invDist,"invDist");
+								Float invDist = (Float(1.0) / Float(::Math_obj::sqrt(distSqr)));		HX_STACK_VAR(invDist,"invDist");
 								HX_STACK_LINE(935)
 								Float dist = (  (((invDist < ::nape::Config_obj::epsilon))) ? Float(1e100) : Float((Float(1.0) / Float(invDist))) );		HX_STACK_VAR(dist,"dist");
 								HX_STACK_LINE(936)
 								Float df = (0.5 + (((s1->circle->radius - (0.5 * minDist))) * invDist));		HX_STACK_VAR(df,"df");
-								struct _Function_4_2{
-									inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &dist,Float &invDist,Float &py,Float &minDist,Float &px,::zpp_nape::shape::ZPP_Shape &s1,Float &df){
+								struct _Function_4_1{
+									inline static ::zpp_nape::dynamics::ZPP_Contact Block( Float &df,Float &dist,Float &invDist,::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &px,::zpp_nape::shape::ZPP_Shape &s1,Float &py,Float &minDist){
 										HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",937);
 										{
 											HX_STACK_LINE(937)
@@ -2901,9 +2679,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 												{
 													HX_STACK_LINE(937)
 													::zpp_nape::dynamics::ZPP_Contact _this = arb->contacts;		HX_STACK_VAR(_this,"_this");
-													HX_STACK_LINE(937)
-													{
-													}
 													struct _Function_7_1{
 														inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &c){
 															HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",937);
@@ -2945,9 +2720,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 												HX_STACK_LINE(937)
 												{
 												}
-												HX_STACK_LINE(937)
-												{
-												}
 											}
 											HX_STACK_LINE(937)
 											{
@@ -2955,9 +2727,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 												arb->nx = (-(px) * invDist);
 												HX_STACK_LINE(937)
 												arb->ny = (-(py) * invDist);
-												HX_STACK_LINE(937)
-												{
-												}
 												HX_STACK_LINE(937)
 												{
 												}
@@ -2974,8 +2743,8 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 										return null();
 									}
 								};
-								struct _Function_4_3{
-									inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &dist,Float &invDist,Float &py,Float &minDist,Float &px,::zpp_nape::shape::ZPP_Shape &s1,Float &df){
+								struct _Function_4_2{
+									inline static ::zpp_nape::dynamics::ZPP_Contact Block( Float &df,Float &dist,Float &invDist,::zpp_nape::dynamics::ZPP_ColArbiter &arb,Float &px,::zpp_nape::shape::ZPP_Shape &s1,Float &py,Float &minDist){
 										HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",938);
 										{
 											HX_STACK_LINE(938)
@@ -3037,9 +2806,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 												{
 													HX_STACK_LINE(938)
 													::zpp_nape::dynamics::ZPP_Contact _this = arb->contacts;		HX_STACK_VAR(_this,"_this");
-													HX_STACK_LINE(938)
-													{
-													}
 													struct _Function_7_1{
 														inline static ::zpp_nape::dynamics::ZPP_Contact Block( ::zpp_nape::dynamics::ZPP_Contact &c){
 															HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",938);
@@ -3081,9 +2847,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 												HX_STACK_LINE(938)
 												{
 												}
-												HX_STACK_LINE(938)
-												{
-												}
 											}
 											HX_STACK_LINE(938)
 											{
@@ -3091,9 +2854,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 												arb->nx = (px * invDist);
 												HX_STACK_LINE(938)
 												arb->ny = (py * invDist);
-												HX_STACK_LINE(938)
-												{
-												}
 												HX_STACK_LINE(938)
 												{
 												}
@@ -3111,19 +2871,19 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 									}
 								};
 								HX_STACK_LINE(937)
-								return (  ((rev)) ? ::zpp_nape::dynamics::ZPP_Contact(_Function_4_2::Block(arb,dist,invDist,py,minDist,px,s1,df)) : ::zpp_nape::dynamics::ZPP_Contact(_Function_4_3::Block(arb,dist,invDist,py,minDist,px,s1,df)) );
+								return (  ((rev)) ? ::zpp_nape::dynamics::ZPP_Contact(_Function_4_1::Block(df,dist,invDist,arb,px,s1,py,minDist)) : ::zpp_nape::dynamics::ZPP_Contact(_Function_4_2::Block(df,dist,invDist,arb,px,s1,py,minDist)) );
 							}
 							return null();
 						}
 					};
 					HX_STACK_LINE(931)
-					return (  (((distSqr > (minDist * minDist)))) ? ::zpp_nape::dynamics::ZPP_Contact(null()) : ::zpp_nape::dynamics::ZPP_Contact((  (((distSqr < (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? ::zpp_nape::dynamics::ZPP_Contact(_Function_3_1::Block(s1,arb,minDist)) : ::zpp_nape::dynamics::ZPP_Contact(_Function_3_2::Block(arb,distSqr,minDist,py,rev,px,s1)) )) );
+					return (  (((distSqr > (minDist * minDist)))) ? ::zpp_nape::dynamics::ZPP_Contact(null()) : ::zpp_nape::dynamics::ZPP_Contact((  (((distSqr < (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? ::zpp_nape::dynamics::ZPP_Contact(_Function_3_1::Block(arb,s1,minDist)) : ::zpp_nape::dynamics::ZPP_Contact(_Function_3_2::Block(rev,arb,distSqr,px,s1,py,minDist)) )) );
 				}
 				return null();
 			}
 		};
 		HX_STACK_LINE(922)
-		::zpp_nape::dynamics::ZPP_Contact co = _Function_2_1::Block(s1,s2,arb,rev);		HX_STACK_VAR(co,"co");
+		::zpp_nape::dynamics::ZPP_Contact co = _Function_2_1::Block(rev,s2,arb,s1);		HX_STACK_VAR(co,"co");
 		HX_STACK_LINE(941)
 		if (((co != null()))){
 			HX_STACK_LINE(942)
@@ -3136,9 +2896,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 					con->lr1x = s2->circle->localCOMx;
 					HX_STACK_LINE(946)
 					con->lr1y = s2->circle->localCOMy;
-					HX_STACK_LINE(947)
-					{
-					}
 					HX_STACK_LINE(955)
 					{
 					}
@@ -3149,9 +2906,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 					con->lr2x = s1->circle->localCOMx;
 					HX_STACK_LINE(966)
 					con->lr2y = s1->circle->localCOMy;
-					HX_STACK_LINE(967)
-					{
-					}
 					HX_STACK_LINE(975)
 					{
 					}
@@ -3164,9 +2918,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 					con->lr1x = s1->circle->localCOMx;
 					HX_STACK_LINE(988)
 					con->lr1y = s1->circle->localCOMy;
-					HX_STACK_LINE(989)
-					{
-					}
 					HX_STACK_LINE(997)
 					{
 					}
@@ -3177,9 +2928,6 @@ bool ZPP_Collide_obj::contactCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape
 					con->lr2x = s2->circle->localCOMx;
 					HX_STACK_LINE(1008)
 					con->lr2y = s2->circle->localCOMy;
-					HX_STACK_LINE(1009)
-					{
-					}
 					HX_STACK_LINE(1017)
 					{
 					}
@@ -3231,7 +2979,7 @@ bool ZPP_Collide_obj::testCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 	HX_STACK_LINE(1042)
 	if (((s2->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_POLYGON))){
 		struct _Function_2_1{
-			inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+			inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 				HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1044);
 				{
 					HX_STACK_LINE(1045)
@@ -3285,7 +3033,7 @@ bool ZPP_Collide_obj::testCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 						}
 					}
 					struct _Function_3_1{
-						inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,bool &cont,::zpp_nape::shape::ZPP_Shape &s2){
+						inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,bool &cont,::zpp_nape::shape::ZPP_Shape &s1){
 							HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1072);
 							{
 								HX_STACK_LINE(1073)
@@ -3343,7 +3091,7 @@ bool ZPP_Collide_obj::testCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 						}
 					};
 					HX_STACK_LINE(1072)
-					return (  ((cont)) ? bool(_Function_3_1::Block(s1,cont,s2)) : bool(false) );
+					return (  ((cont)) ? bool(_Function_3_1::Block(s2,cont,s1)) : bool(false) );
 				}
 				return null();
 			}
@@ -3397,7 +3145,7 @@ bool ZPP_Collide_obj::testCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 						}
 					}
 					struct _Function_3_1{
-						inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::geom::ZPP_Vec2 &vi,::zpp_nape::shape::ZPP_Edge &a0,::zpp_nape::shape::ZPP_Shape &s2){
+						inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &vi,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Edge &a0,::zpp_nape::shape::ZPP_Shape &s1){
 							HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1128);
 							{
 								HX_STACK_LINE(1129)
@@ -3407,7 +3155,7 @@ bool ZPP_Collide_obj::testCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 								HX_STACK_LINE(1131)
 								Float dt = ((s1->circle->worldCOMy * a0->gnormx) - (s1->circle->worldCOMx * a0->gnormy));		HX_STACK_VAR(dt,"dt");
 								struct _Function_4_1{
-									inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::geom::ZPP_Vec2 &v0){
+									inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &v0,::zpp_nape::shape::ZPP_Shape &s1){
 										HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1132);
 										{
 											HX_STACK_LINE(1133)
@@ -3432,7 +3180,7 @@ bool ZPP_Collide_obj::testCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 									}
 								};
 								struct _Function_4_2{
-									inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::geom::ZPP_Vec2 &v1){
+									inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &v1,::zpp_nape::shape::ZPP_Shape &s1){
 										HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1143);
 										{
 											HX_STACK_LINE(1144)
@@ -3457,23 +3205,23 @@ bool ZPP_Collide_obj::testCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 									}
 								};
 								HX_STACK_LINE(1132)
-								return (  (((dt <= ((v0->y * a0->gnormx) - (v0->x * a0->gnormy))))) ? bool(_Function_4_1::Block(s1,v0)) : bool((  (((dt >= ((v1->y * a0->gnormx) - (v1->x * a0->gnormy))))) ? bool(_Function_4_2::Block(s1,v1)) : bool(true) )) );
+								return (  (((dt <= ((v0->y * a0->gnormx) - (v0->x * a0->gnormy))))) ? bool(_Function_4_1::Block(v0,s1)) : bool((  (((dt >= ((v1->y * a0->gnormx) - (v1->x * a0->gnormy))))) ? bool(_Function_4_2::Block(v1,s1)) : bool(true) )) );
 							}
 							return null();
 						}
 					};
 					HX_STACK_LINE(1128)
-					return (  ((cont)) ? bool(_Function_3_1::Block(s1,vi,a0,s2)) : bool(false) );
+					return (  ((cont)) ? bool(_Function_3_1::Block(vi,s2,a0,s1)) : bool(false) );
 				}
 				return null();
 			}
 		};
 		HX_STACK_LINE(1043)
-		return (  (((s1->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_POLYGON))) ? bool(_Function_2_1::Block(s1,s2)) : bool(_Function_2_2::Block(s2,s1)) );
+		return (  (((s1->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_POLYGON))) ? bool(_Function_2_1::Block(s2,s1)) : bool(_Function_2_2::Block(s2,s1)) );
 	}
 	else{
 		struct _Function_2_1{
-			inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2){
+			inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Shape &s1){
 				HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1159);
 				{
 					HX_STACK_LINE(1160)
@@ -3498,7 +3246,7 @@ bool ZPP_Collide_obj::testCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 			}
 		};
 		HX_STACK_LINE(1159)
-		return _Function_2_1::Block(s1,s2);
+		return _Function_2_1::Block(s2,s1);
 	}
 	HX_STACK_LINE(1042)
 	return false;
@@ -3515,7 +3263,7 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 	HX_STACK_LINE(1171)
 	if (((s2->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_POLYGON))){
 		struct _Function_2_1{
-			inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::dynamics::ZPP_FluidArbiter &arb){
+			inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::dynamics::ZPP_FluidArbiter &arb,::zpp_nape::shape::ZPP_Shape &s1){
 				HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1173);
 				{
 					HX_STACK_LINE(1174)
@@ -3619,9 +3367,6 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 														HX_STACK_LINE(1211)
 														_this1->localCOMy = _this1->lverts->next->y;
 														HX_STACK_LINE(1211)
-														{
-														}
-														HX_STACK_LINE(1211)
 														Dynamic();
 													}
 													else{
@@ -3636,17 +3381,11 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 																HX_STACK_LINE(1211)
 																{
 																}
-																HX_STACK_LINE(1211)
-																{
-																}
 															}
 															HX_STACK_LINE(1211)
 															{
 																HX_STACK_LINE(1211)
 																Float t = 1.0;		HX_STACK_VAR(t,"t");
-																HX_STACK_LINE(1211)
-																{
-																}
 																HX_STACK_LINE(1211)
 																hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 																HX_STACK_LINE(1211)
@@ -3656,9 +3395,6 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 															{
 																HX_STACK_LINE(1211)
 																Float t = 0.5;		HX_STACK_VAR(t,"t");
-																HX_STACK_LINE(1211)
-																{
-																}
 																HX_STACK_LINE(1211)
 																hx::MultEq(_this1->localCOMx,t);
 																HX_STACK_LINE(1211)
@@ -3672,9 +3408,6 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 																_this1->localCOMx = (int)0;
 																HX_STACK_LINE(1211)
 																_this1->localCOMy = (int)0;
-																HX_STACK_LINE(1211)
-																{
-																}
 																HX_STACK_LINE(1211)
 																{
 																}
@@ -3757,9 +3490,6 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 																HX_STACK_LINE(1211)
 																Float t = area;		HX_STACK_VAR(t,"t");
 																HX_STACK_LINE(1211)
-																{
-																}
-																HX_STACK_LINE(1211)
 																hx::MultEq(_this1->localCOMx,t);
 																HX_STACK_LINE(1211)
 																hx::MultEq(_this1->localCOMy,t);
@@ -3782,9 +3512,6 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 														_this1->axisx = ::Math_obj::sin(_this1->rot);
 														HX_STACK_LINE(1211)
 														_this1->axisy = ::Math_obj::cos(_this1->rot);
-														HX_STACK_LINE(1211)
-														{
-														}
 														HX_STACK_LINE(1211)
 														Dynamic();
 													}
@@ -3811,9 +3538,6 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 										HX_STACK_LINE(1212)
 										arb->centroidy = s2->polygon->worldCOMy;
 										HX_STACK_LINE(1212)
-										{
-										}
-										HX_STACK_LINE(1212)
 										Dynamic();
 									}
 								}
@@ -3824,7 +3548,7 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 						}
 					};
 					struct _Function_3_2{
-						inline static bool Block( Array< bool > &out1,::zpp_nape::dynamics::ZPP_FluidArbiter &arb,bool &cont,::zpp_nape::shape::ZPP_Shape &s2,bool &total,::zpp_nape::shape::ZPP_Shape &s1,Array< bool > &out2){
+						inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::dynamics::ZPP_FluidArbiter &arb,Array< bool > &out1,bool &cont,bool &total,Array< bool > &out2,::zpp_nape::shape::ZPP_Shape &s1){
 							HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1215);
 							{
 								HX_STACK_LINE(1216)
@@ -3889,7 +3613,7 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 									}
 								}
 								struct _Function_4_1{
-									inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::dynamics::ZPP_FluidArbiter &arb){
+									inline static bool Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &arb,::zpp_nape::shape::ZPP_Shape &s1){
 										HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1249);
 										{
 											HX_STACK_LINE(1250)
@@ -3922,9 +3646,6 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 																	HX_STACK_LINE(1250)
 																	_this1->localCOMy = _this1->lverts->next->y;
 																	HX_STACK_LINE(1250)
-																	{
-																	}
-																	HX_STACK_LINE(1250)
 																	Dynamic();
 																}
 																else{
@@ -3939,17 +3660,11 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 																			HX_STACK_LINE(1250)
 																			{
 																			}
-																			HX_STACK_LINE(1250)
-																			{
-																			}
 																		}
 																		HX_STACK_LINE(1250)
 																		{
 																			HX_STACK_LINE(1250)
 																			Float t = 1.0;		HX_STACK_VAR(t,"t");
-																			HX_STACK_LINE(1250)
-																			{
-																			}
 																			HX_STACK_LINE(1250)
 																			hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 																			HX_STACK_LINE(1250)
@@ -3959,9 +3674,6 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 																		{
 																			HX_STACK_LINE(1250)
 																			Float t = 0.5;		HX_STACK_VAR(t,"t");
-																			HX_STACK_LINE(1250)
-																			{
-																			}
 																			HX_STACK_LINE(1250)
 																			hx::MultEq(_this1->localCOMx,t);
 																			HX_STACK_LINE(1250)
@@ -3975,9 +3687,6 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 																			_this1->localCOMx = (int)0;
 																			HX_STACK_LINE(1250)
 																			_this1->localCOMy = (int)0;
-																			HX_STACK_LINE(1250)
-																			{
-																			}
 																			HX_STACK_LINE(1250)
 																			{
 																			}
@@ -4060,9 +3769,6 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 																			HX_STACK_LINE(1250)
 																			Float t = area;		HX_STACK_VAR(t,"t");
 																			HX_STACK_LINE(1250)
-																			{
-																			}
-																			HX_STACK_LINE(1250)
 																			hx::MultEq(_this1->localCOMx,t);
 																			HX_STACK_LINE(1250)
 																			hx::MultEq(_this1->localCOMy,t);
@@ -4085,9 +3791,6 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 																	_this1->axisx = ::Math_obj::sin(_this1->rot);
 																	HX_STACK_LINE(1250)
 																	_this1->axisy = ::Math_obj::cos(_this1->rot);
-																	HX_STACK_LINE(1250)
-																	{
-																	}
 																	HX_STACK_LINE(1250)
 																	Dynamic();
 																}
@@ -4114,9 +3817,6 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 													HX_STACK_LINE(1251)
 													arb->centroidy = s1->polygon->worldCOMy;
 													HX_STACK_LINE(1251)
-													{
-													}
-													HX_STACK_LINE(1251)
 													Dynamic();
 												}
 											}
@@ -4127,7 +3827,7 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 									}
 								};
 								struct _Function_4_2{
-									inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,Array< bool > &out2,::zpp_nape::shape::ZPP_Shape &s2,Array< bool > &out1,::zpp_nape::dynamics::ZPP_FluidArbiter &arb){
+									inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::dynamics::ZPP_FluidArbiter &arb,Array< bool > &out1,Array< bool > &out2,::zpp_nape::shape::ZPP_Shape &s1){
 										HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1254);
 										{
 											HX_STACK_LINE(1255)
@@ -4138,9 +3838,6 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 												if ((!(p->_inuse))){
 													HX_STACK_LINE(1258)
 													::zpp_nape::geom::ZPP_Vec2 o = p;		HX_STACK_VAR(o,"o");
-													HX_STACK_LINE(1259)
-													{
-													}
 													HX_STACK_LINE(1267)
 													{
 														HX_STACK_LINE(1267)
@@ -4284,7 +3981,7 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 																		HX_STACK_LINE(1323)
 																		Float t = 0.0;		HX_STACK_VAR(t,"t");
 																		struct _Function_12_1{
-																			inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &b,Float &t,::zpp_nape::geom::ZPP_Vec2 &a,::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &u){
+																			inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &b,Float &t,::zpp_nape::geom::ZPP_Vec2 &u,::zpp_nape::geom::ZPP_Vec2 &a){
 																				HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1324);
 																				{
 																					HX_STACK_LINE(1325)
@@ -4323,7 +4020,7 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 																					HX_STACK_LINE(1343)
 																					Float den = ((_vy * _qx) - (_vx * _qy));		HX_STACK_VAR(den,"den");
 																					struct _Function_13_1{
-																						inline static bool Block( Float &_vy,Float &_vx,Float &_sy,Float &_sx,Float &t,Float &_qy,Float &_qx,Float &den){
+																						inline static bool Block( Float &_sx,Float &_sy,Float &_qy,Float &_vy,Float &_vx,Float &den,Float &t,Float &_qx){
 																							HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1344);
 																							{
 																								HX_STACK_LINE(1345)
@@ -4331,13 +4028,13 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 																								HX_STACK_LINE(1346)
 																								Float txx = ((((_qy * _sx) - (_qx * _sy))) * den);		HX_STACK_VAR(txx,"txx");
 																								struct _Function_14_1{
-																									inline static bool Block( Float &_vy,Float &_vx,Float &_sy,Float &_sx,Float &t,Float &txx,Float &den){
+																									inline static bool Block( Float &_sx,Float &_sy,Float &_vy,Float &_vx,Float &txx,Float &den,Float &t){
 																										HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1347);
 																										{
 																											HX_STACK_LINE(1348)
 																											Float sxx = ((((_vy * _sx) - (_vx * _sy))) * den);		HX_STACK_VAR(sxx,"sxx");
 																											struct _Function_15_1{
-																												inline static bool Block( Float &t,Float &txx){
+																												inline static bool Block( Float &txx,Float &t){
 																													HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1349);
 																													{
 																														HX_STACK_LINE(1350)
@@ -4349,25 +4046,25 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 																												}
 																											};
 																											HX_STACK_LINE(1349)
-																											return (  (((bool((sxx > ::nape::Config_obj::epsilon)) && bool((sxx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_15_1::Block(t,txx)) : bool(false) );
+																											return (  (((bool((sxx > ::nape::Config_obj::epsilon)) && bool((sxx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_15_1::Block(txx,t)) : bool(false) );
 																										}
 																										return null();
 																									}
 																								};
 																								HX_STACK_LINE(1347)
-																								return (  (((bool((txx > ::nape::Config_obj::epsilon)) && bool((txx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_14_1::Block(_vy,_vx,_sy,_sx,t,txx,den)) : bool(false) );
+																								return (  (((bool((txx > ::nape::Config_obj::epsilon)) && bool((txx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_14_1::Block(_sx,_sy,_vy,_vx,txx,den,t)) : bool(false) );
 																							}
 																							return null();
 																						}
 																					};
 																					HX_STACK_LINE(1344)
-																					return (  ((((den * den) > (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? bool(_Function_13_1::Block(_vy,_vx,_sy,_sx,t,_qy,_qx,den)) : bool(false) );
+																					return (  ((((den * den) > (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? bool(_Function_13_1::Block(_sx,_sy,_qy,_vy,_vx,den,t,_qx)) : bool(false) );
 																				}
 																				return null();
 																			}
 																		};
 																		HX_STACK_LINE(1324)
-																		if ((_Function_12_1::Block(b,t,a,v,u))){
+																		if ((_Function_12_1::Block(v,b,t,u,a))){
 																			HX_STACK_LINE(1358)
 																			if (((t < min))){
 																				HX_STACK_LINE(1360)
@@ -4400,7 +4097,7 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 																			HX_STACK_LINE(1376)
 																			Float t = 0.0;		HX_STACK_VAR(t,"t");
 																			struct _Function_13_1{
-																				inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &b,Float &t,::zpp_nape::geom::ZPP_Vec2 &a,::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &u){
+																				inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &b,Float &t,::zpp_nape::geom::ZPP_Vec2 &u,::zpp_nape::geom::ZPP_Vec2 &a){
 																					HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1377);
 																					{
 																						HX_STACK_LINE(1378)
@@ -4439,7 +4136,7 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 																						HX_STACK_LINE(1396)
 																						Float den = ((_vy * _qx) - (_vx * _qy));		HX_STACK_VAR(den,"den");
 																						struct _Function_14_1{
-																							inline static bool Block( Float &_vy,Float &_vx,Float &_sy,Float &_sx,Float &t,Float &_qy,Float &_qx,Float &den){
+																							inline static bool Block( Float &_sx,Float &_sy,Float &_qy,Float &_vy,Float &_vx,Float &den,Float &t,Float &_qx){
 																								HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1397);
 																								{
 																									HX_STACK_LINE(1398)
@@ -4447,13 +4144,13 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 																									HX_STACK_LINE(1399)
 																									Float txx = ((((_qy * _sx) - (_qx * _sy))) * den);		HX_STACK_VAR(txx,"txx");
 																									struct _Function_15_1{
-																										inline static bool Block( Float &_vy,Float &_vx,Float &_sy,Float &_sx,Float &t,Float &txx,Float &den){
+																										inline static bool Block( Float &_sx,Float &_sy,Float &_vy,Float &_vx,Float &txx,Float &den,Float &t){
 																											HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1400);
 																											{
 																												HX_STACK_LINE(1401)
 																												Float sxx = ((((_vy * _sx) - (_vx * _sy))) * den);		HX_STACK_VAR(sxx,"sxx");
 																												struct _Function_16_1{
-																													inline static bool Block( Float &t,Float &txx){
+																													inline static bool Block( Float &txx,Float &t){
 																														HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1402);
 																														{
 																															HX_STACK_LINE(1403)
@@ -4465,25 +4162,25 @@ bool ZPP_Collide_obj::flowCollide( ::zpp_nape::shape::ZPP_Shape s1,::zpp_nape::s
 																													}
 																												};
 																												HX_STACK_LINE(1402)
-																												return (  (((bool((sxx > ::nape::Config_obj::epsilon)) && bool((sxx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_16_1::Block(t,txx)) : bool(false) );
+																												return (  (((bool((sxx > ::nape::Config_obj::epsilon)) && bool((sxx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_16_1::Block(txx,t)) : bool(false) );
 																											}
 																											return null();
 																										}
 																									};
 																									HX_STACK_LINE(1400)
-																									return (  (((bool((txx > ::nape::Config_obj::epsilon)) && bool((txx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_15_1::Block(_vy,_vx,_sy,_sx,t,txx,den)) : bool(false) );
+																									return (  (((bool((txx > ::nape::Config_obj::epsilon)) && bool((txx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_15_1::Block(_sx,_sy,_vy,_vx,txx,den,t)) : bool(false) );
 																								}
 																								return null();
 																							}
 																						};
 																						HX_STACK_LINE(1397)
-																						return (  ((((den * den) > (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? bool(_Function_14_1::Block(_vy,_vx,_sy,_sx,t,_qy,_qx,den)) : bool(false) );
+																						return (  ((((den * den) > (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? bool(_Function_14_1::Block(_sx,_sy,_qy,_vy,_vx,den,t,_qx)) : bool(false) );
 																					}
 																					return null();
 																				}
 																			};
 																			HX_STACK_LINE(1377)
-																			if ((_Function_13_1::Block(b,t,a,v,u))){
+																			if ((_Function_13_1::Block(v,b,t,u,a))){
 																				HX_STACK_LINE(1411)
 																				if (((t < min))){
 																					HX_STACK_LINE(1413)
@@ -4507,9 +4204,6 @@ while((false));
 																{
 																	HX_STACK_LINE(1426)
 																	Float T = min;		HX_STACK_VAR(T,"T");
-																	HX_STACK_LINE(1427)
-																	{
-																	}
 																	HX_STACK_LINE(1435)
 																	cx = (u->x + (((v->x - u->x)) * T));
 																	HX_STACK_LINE(1436)
@@ -4549,9 +4243,6 @@ while((false));
 																				ret->x = cx;
 																				HX_STACK_LINE(1438)
 																				ret->y = cy;
-																				HX_STACK_LINE(1438)
-																				{
-																				}
 																				HX_STACK_LINE(1438)
 																				{
 																				}
@@ -4620,7 +4311,7 @@ while((false));
 																			HX_STACK_LINE(1468)
 																			Float t = 0.0;		HX_STACK_VAR(t,"t");
 																			struct _Function_13_1{
-																				inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &b,Float &t,::zpp_nape::geom::ZPP_Vec2 &a,::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &u){
+																				inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &b,Float &t,::zpp_nape::geom::ZPP_Vec2 &u,::zpp_nape::geom::ZPP_Vec2 &a){
 																					HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1469);
 																					{
 																						HX_STACK_LINE(1470)
@@ -4659,7 +4350,7 @@ while((false));
 																						HX_STACK_LINE(1488)
 																						Float den = ((_vy * _qx) - (_vx * _qy));		HX_STACK_VAR(den,"den");
 																						struct _Function_14_1{
-																							inline static bool Block( Float &_vy,Float &_vx,Float &_sy,Float &_sx,Float &t,Float &_qy,Float &_qx,Float &den){
+																							inline static bool Block( Float &_sx,Float &_sy,Float &_qy,Float &_vy,Float &_vx,Float &den,Float &t,Float &_qx){
 																								HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1489);
 																								{
 																									HX_STACK_LINE(1490)
@@ -4667,13 +4358,13 @@ while((false));
 																									HX_STACK_LINE(1491)
 																									Float txx = ((((_qy * _sx) - (_qx * _sy))) * den);		HX_STACK_VAR(txx,"txx");
 																									struct _Function_15_1{
-																										inline static bool Block( Float &_vy,Float &_vx,Float &_sy,Float &_sx,Float &t,Float &txx,Float &den){
+																										inline static bool Block( Float &_sx,Float &_sy,Float &_vy,Float &_vx,Float &txx,Float &den,Float &t){
 																											HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1492);
 																											{
 																												HX_STACK_LINE(1493)
 																												Float sxx = ((((_vy * _sx) - (_vx * _sy))) * den);		HX_STACK_VAR(sxx,"sxx");
 																												struct _Function_16_1{
-																													inline static bool Block( Float &t,Float &txx){
+																													inline static bool Block( Float &txx,Float &t){
 																														HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1494);
 																														{
 																															HX_STACK_LINE(1495)
@@ -4685,25 +4376,25 @@ while((false));
 																													}
 																												};
 																												HX_STACK_LINE(1494)
-																												return (  (((bool((sxx > ::nape::Config_obj::epsilon)) && bool((sxx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_16_1::Block(t,txx)) : bool(false) );
+																												return (  (((bool((sxx > ::nape::Config_obj::epsilon)) && bool((sxx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_16_1::Block(txx,t)) : bool(false) );
 																											}
 																											return null();
 																										}
 																									};
 																									HX_STACK_LINE(1492)
-																									return (  (((bool((txx > ::nape::Config_obj::epsilon)) && bool((txx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_15_1::Block(_vy,_vx,_sy,_sx,t,txx,den)) : bool(false) );
+																									return (  (((bool((txx > ::nape::Config_obj::epsilon)) && bool((txx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_15_1::Block(_sx,_sy,_vy,_vx,txx,den,t)) : bool(false) );
 																								}
 																								return null();
 																							}
 																						};
 																						HX_STACK_LINE(1489)
-																						return (  ((((den * den) > (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? bool(_Function_14_1::Block(_vy,_vx,_sy,_sx,t,_qy,_qx,den)) : bool(false) );
+																						return (  ((((den * den) > (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? bool(_Function_14_1::Block(_sx,_sy,_qy,_vy,_vx,den,t,_qx)) : bool(false) );
 																					}
 																					return null();
 																				}
 																			};
 																			HX_STACK_LINE(1469)
-																			if ((_Function_13_1::Block(b,t,a,v,u))){
+																			if ((_Function_13_1::Block(v,b,t,u,a))){
 																				HX_STACK_LINE(1503)
 																				if (((t < min))){
 																					HX_STACK_LINE(1505)
@@ -4736,7 +4427,7 @@ while((false));
 																				HX_STACK_LINE(1521)
 																				Float t = 0.0;		HX_STACK_VAR(t,"t");
 																				struct _Function_14_1{
-																					inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &b,Float &t,::zpp_nape::geom::ZPP_Vec2 &a,::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &u){
+																					inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &b,Float &t,::zpp_nape::geom::ZPP_Vec2 &u,::zpp_nape::geom::ZPP_Vec2 &a){
 																						HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1522);
 																						{
 																							HX_STACK_LINE(1523)
@@ -4775,7 +4466,7 @@ while((false));
 																							HX_STACK_LINE(1541)
 																							Float den = ((_vy * _qx) - (_vx * _qy));		HX_STACK_VAR(den,"den");
 																							struct _Function_15_1{
-																								inline static bool Block( Float &_vy,Float &_vx,Float &_sy,Float &_sx,Float &t,Float &_qy,Float &_qx,Float &den){
+																								inline static bool Block( Float &_sx,Float &_sy,Float &_qy,Float &_vy,Float &_vx,Float &den,Float &t,Float &_qx){
 																									HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1542);
 																									{
 																										HX_STACK_LINE(1543)
@@ -4783,13 +4474,13 @@ while((false));
 																										HX_STACK_LINE(1544)
 																										Float txx = ((((_qy * _sx) - (_qx * _sy))) * den);		HX_STACK_VAR(txx,"txx");
 																										struct _Function_16_1{
-																											inline static bool Block( Float &_vy,Float &_vx,Float &_sy,Float &_sx,Float &t,Float &txx,Float &den){
+																											inline static bool Block( Float &_sx,Float &_sy,Float &_vy,Float &_vx,Float &txx,Float &den,Float &t){
 																												HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1545);
 																												{
 																													HX_STACK_LINE(1546)
 																													Float sxx = ((((_vy * _sx) - (_vx * _sy))) * den);		HX_STACK_VAR(sxx,"sxx");
 																													struct _Function_17_1{
-																														inline static bool Block( Float &t,Float &txx){
+																														inline static bool Block( Float &txx,Float &t){
 																															HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1547);
 																															{
 																																HX_STACK_LINE(1548)
@@ -4801,25 +4492,25 @@ while((false));
 																														}
 																													};
 																													HX_STACK_LINE(1547)
-																													return (  (((bool((sxx > ::nape::Config_obj::epsilon)) && bool((sxx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_17_1::Block(t,txx)) : bool(false) );
+																													return (  (((bool((sxx > ::nape::Config_obj::epsilon)) && bool((sxx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_17_1::Block(txx,t)) : bool(false) );
 																												}
 																												return null();
 																											}
 																										};
 																										HX_STACK_LINE(1545)
-																										return (  (((bool((txx > ::nape::Config_obj::epsilon)) && bool((txx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_16_1::Block(_vy,_vx,_sy,_sx,t,txx,den)) : bool(false) );
+																										return (  (((bool((txx > ::nape::Config_obj::epsilon)) && bool((txx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_16_1::Block(_sx,_sy,_vy,_vx,txx,den,t)) : bool(false) );
 																									}
 																									return null();
 																								}
 																							};
 																							HX_STACK_LINE(1542)
-																							return (  ((((den * den) > (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? bool(_Function_15_1::Block(_vy,_vx,_sy,_sx,t,_qy,_qx,den)) : bool(false) );
+																							return (  ((((den * den) > (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? bool(_Function_15_1::Block(_sx,_sy,_qy,_vy,_vx,den,t,_qx)) : bool(false) );
 																						}
 																						return null();
 																					}
 																				};
 																				HX_STACK_LINE(1522)
-																				if ((_Function_14_1::Block(b,t,a,v,u))){
+																				if ((_Function_14_1::Block(v,b,t,u,a))){
 																					HX_STACK_LINE(1556)
 																					if (((t < min))){
 																						HX_STACK_LINE(1558)
@@ -4843,9 +4534,6 @@ while((false));
 																	{
 																		HX_STACK_LINE(1571)
 																		Float T = min;		HX_STACK_VAR(T,"T");
-																		HX_STACK_LINE(1572)
-																		{
-																		}
 																		HX_STACK_LINE(1580)
 																		cx = (u->x + (((v->x - u->x)) * T));
 																		HX_STACK_LINE(1581)
@@ -4885,9 +4573,6 @@ while((false));
 																					ret->x = cx;
 																					HX_STACK_LINE(1583)
 																					ret->y = cy;
-																					HX_STACK_LINE(1583)
-																					{
-																					}
 																					HX_STACK_LINE(1583)
 																					{
 																					}
@@ -5009,7 +4694,7 @@ while((false));
 																	HX_STACK_LINE(1627)
 																	Float t = 0.0;		HX_STACK_VAR(t,"t");
 																	struct _Function_11_1{
-																		inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &b,Float &t,::zpp_nape::geom::ZPP_Vec2 &a,::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &u){
+																		inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &b,Float &t,::zpp_nape::geom::ZPP_Vec2 &u,::zpp_nape::geom::ZPP_Vec2 &a){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1628);
 																			{
 																				HX_STACK_LINE(1629)
@@ -5048,7 +4733,7 @@ while((false));
 																				HX_STACK_LINE(1647)
 																				Float den = ((_vy * _qx) - (_vx * _qy));		HX_STACK_VAR(den,"den");
 																				struct _Function_12_1{
-																					inline static bool Block( Float &_vy,Float &_vx,Float &_sy,Float &_sx,Float &t,Float &_qy,Float &_qx,Float &den){
+																					inline static bool Block( Float &_sx,Float &_sy,Float &_qy,Float &_vy,Float &_vx,Float &den,Float &t,Float &_qx){
 																						HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1648);
 																						{
 																							HX_STACK_LINE(1649)
@@ -5056,13 +4741,13 @@ while((false));
 																							HX_STACK_LINE(1650)
 																							Float txx = ((((_qy * _sx) - (_qx * _sy))) * den);		HX_STACK_VAR(txx,"txx");
 																							struct _Function_13_1{
-																								inline static bool Block( Float &_vy,Float &_vx,Float &_sy,Float &_sx,Float &t,Float &txx,Float &den){
+																								inline static bool Block( Float &_sx,Float &_sy,Float &_vy,Float &_vx,Float &txx,Float &den,Float &t){
 																									HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1651);
 																									{
 																										HX_STACK_LINE(1652)
 																										Float sxx = ((((_vy * _sx) - (_vx * _sy))) * den);		HX_STACK_VAR(sxx,"sxx");
 																										struct _Function_14_1{
-																											inline static bool Block( Float &t,Float &txx){
+																											inline static bool Block( Float &txx,Float &t){
 																												HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1653);
 																												{
 																													HX_STACK_LINE(1654)
@@ -5074,25 +4759,25 @@ while((false));
 																											}
 																										};
 																										HX_STACK_LINE(1653)
-																										return (  (((bool((sxx > ::nape::Config_obj::epsilon)) && bool((sxx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_14_1::Block(t,txx)) : bool(false) );
+																										return (  (((bool((sxx > ::nape::Config_obj::epsilon)) && bool((sxx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_14_1::Block(txx,t)) : bool(false) );
 																									}
 																									return null();
 																								}
 																							};
 																							HX_STACK_LINE(1651)
-																							return (  (((bool((txx > ::nape::Config_obj::epsilon)) && bool((txx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_13_1::Block(_vy,_vx,_sy,_sx,t,txx,den)) : bool(false) );
+																							return (  (((bool((txx > ::nape::Config_obj::epsilon)) && bool((txx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_13_1::Block(_sx,_sy,_vy,_vx,txx,den,t)) : bool(false) );
 																						}
 																						return null();
 																					}
 																				};
 																				HX_STACK_LINE(1648)
-																				return (  ((((den * den) > (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? bool(_Function_12_1::Block(_vy,_vx,_sy,_sx,t,_qy,_qx,den)) : bool(false) );
+																				return (  ((((den * den) > (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? bool(_Function_12_1::Block(_sx,_sy,_qy,_vy,_vx,den,t,_qx)) : bool(false) );
 																			}
 																			return null();
 																		}
 																	};
 																	HX_STACK_LINE(1628)
-																	if ((_Function_11_1::Block(b,t,a,v,u))){
+																	if ((_Function_11_1::Block(v,b,t,u,a))){
 																		HX_STACK_LINE(1662)
 																		if (((t >= max))){
 																			HX_STACK_LINE(1664)
@@ -5147,7 +4832,7 @@ while((false));
 																	HX_STACK_LINE(1688)
 																	Float t = 0.0;		HX_STACK_VAR(t,"t");
 																	struct _Function_11_1{
-																		inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &b,Float &t,::zpp_nape::geom::ZPP_Vec2 &a,::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &u){
+																		inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &b,Float &t,::zpp_nape::geom::ZPP_Vec2 &u,::zpp_nape::geom::ZPP_Vec2 &a){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1689);
 																			{
 																				HX_STACK_LINE(1690)
@@ -5186,7 +4871,7 @@ while((false));
 																				HX_STACK_LINE(1708)
 																				Float den = ((_vy * _qx) - (_vx * _qy));		HX_STACK_VAR(den,"den");
 																				struct _Function_12_1{
-																					inline static bool Block( Float &_vy,Float &_vx,Float &_sy,Float &_sx,Float &t,Float &_qy,Float &_qx,Float &den){
+																					inline static bool Block( Float &_sx,Float &_sy,Float &_qy,Float &_vy,Float &_vx,Float &den,Float &t,Float &_qx){
 																						HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1709);
 																						{
 																							HX_STACK_LINE(1710)
@@ -5194,13 +4879,13 @@ while((false));
 																							HX_STACK_LINE(1711)
 																							Float txx = ((((_qy * _sx) - (_qx * _sy))) * den);		HX_STACK_VAR(txx,"txx");
 																							struct _Function_13_1{
-																								inline static bool Block( Float &_vy,Float &_vx,Float &_sy,Float &_sx,Float &t,Float &txx,Float &den){
+																								inline static bool Block( Float &_sx,Float &_sy,Float &_vy,Float &_vx,Float &txx,Float &den,Float &t){
 																									HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1712);
 																									{
 																										HX_STACK_LINE(1713)
 																										Float sxx = ((((_vy * _sx) - (_vx * _sy))) * den);		HX_STACK_VAR(sxx,"sxx");
 																										struct _Function_14_1{
-																											inline static bool Block( Float &t,Float &txx){
+																											inline static bool Block( Float &txx,Float &t){
 																												HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1714);
 																												{
 																													HX_STACK_LINE(1715)
@@ -5212,25 +4897,25 @@ while((false));
 																											}
 																										};
 																										HX_STACK_LINE(1714)
-																										return (  (((bool((sxx > ::nape::Config_obj::epsilon)) && bool((sxx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_14_1::Block(t,txx)) : bool(false) );
+																										return (  (((bool((sxx > ::nape::Config_obj::epsilon)) && bool((sxx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_14_1::Block(txx,t)) : bool(false) );
 																									}
 																									return null();
 																								}
 																							};
 																							HX_STACK_LINE(1712)
-																							return (  (((bool((txx > ::nape::Config_obj::epsilon)) && bool((txx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_13_1::Block(_vy,_vx,_sy,_sx,t,txx,den)) : bool(false) );
+																							return (  (((bool((txx > ::nape::Config_obj::epsilon)) && bool((txx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_13_1::Block(_sx,_sy,_vy,_vx,txx,den,t)) : bool(false) );
 																						}
 																						return null();
 																					}
 																				};
 																				HX_STACK_LINE(1709)
-																				return (  ((((den * den) > (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? bool(_Function_12_1::Block(_vy,_vx,_sy,_sx,t,_qy,_qx,den)) : bool(false) );
+																				return (  ((((den * den) > (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? bool(_Function_12_1::Block(_sx,_sy,_qy,_vy,_vx,den,t,_qx)) : bool(false) );
 																			}
 																			return null();
 																		}
 																	};
 																	HX_STACK_LINE(1689)
-																	if ((_Function_11_1::Block(b,t,a,v,u))){
+																	if ((_Function_11_1::Block(v,b,t,u,a))){
 																		HX_STACK_LINE(1723)
 																		if (((t >= max))){
 																			HX_STACK_LINE(1725)
@@ -5300,16 +4985,13 @@ while((false));
 														{
 															HX_STACK_LINE(1754)
 															Float T = max;		HX_STACK_VAR(T,"T");
-															HX_STACK_LINE(1755)
-															{
-															}
 															HX_STACK_LINE(1763)
 															cx = (u1->x + (((v->x - u1->x)) * T));
 															HX_STACK_LINE(1764)
 															cy = (u1->y + (((v->y - u1->y)) * T));
 														}
 														struct _Function_8_1{
-															inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &fst_vert,Float &cy,Float &cx){
+															inline static Float Block( Float &cx,Float &cy,::zpp_nape::geom::ZPP_Vec2 &fst_vert){
 																HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1766);
 																{
 																	HX_STACK_LINE(1766)
@@ -5330,7 +5012,7 @@ while((false));
 															}
 														};
 														HX_STACK_LINE(1766)
-														if (((bool((fst_vert != null())) && bool((_Function_8_1::Block(fst_vert,cy,cx) < ::nape::Config_obj::epsilon))))){
+														if (((bool((fst_vert != null())) && bool((_Function_8_1::Block(cx,cy,fst_vert) < ::nape::Config_obj::epsilon))))){
 															HX_STACK_LINE(1766)
 															break;
 														}
@@ -5368,9 +5050,6 @@ while((false));
 																		ret->x = cx;
 																		HX_STACK_LINE(1767)
 																		ret->y = cy;
-																		HX_STACK_LINE(1767)
-																		{
-																		}
 																		HX_STACK_LINE(1767)
 																		{
 																		}
@@ -5487,7 +5166,7 @@ while((false));
 																	HX_STACK_LINE(1805)
 																	Float t = 0.0;		HX_STACK_VAR(t,"t");
 																	struct _Function_11_1{
-																		inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &b,Float &t,::zpp_nape::geom::ZPP_Vec2 &a,::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &u){
+																		inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &b,Float &t,::zpp_nape::geom::ZPP_Vec2 &u,::zpp_nape::geom::ZPP_Vec2 &a){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1806);
 																			{
 																				HX_STACK_LINE(1807)
@@ -5526,7 +5205,7 @@ while((false));
 																				HX_STACK_LINE(1825)
 																				Float den = ((_vy * _qx) - (_vx * _qy));		HX_STACK_VAR(den,"den");
 																				struct _Function_12_1{
-																					inline static bool Block( Float &_vy,Float &_vx,Float &_sy,Float &_sx,Float &t,Float &_qy,Float &_qx,Float &den){
+																					inline static bool Block( Float &_sx,Float &_sy,Float &_qy,Float &_vy,Float &_vx,Float &den,Float &t,Float &_qx){
 																						HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1826);
 																						{
 																							HX_STACK_LINE(1827)
@@ -5534,13 +5213,13 @@ while((false));
 																							HX_STACK_LINE(1828)
 																							Float txx = ((((_qy * _sx) - (_qx * _sy))) * den);		HX_STACK_VAR(txx,"txx");
 																							struct _Function_13_1{
-																								inline static bool Block( Float &_vy,Float &_vx,Float &_sy,Float &_sx,Float &t,Float &txx,Float &den){
+																								inline static bool Block( Float &_sx,Float &_sy,Float &_vy,Float &_vx,Float &txx,Float &den,Float &t){
 																									HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1829);
 																									{
 																										HX_STACK_LINE(1830)
 																										Float sxx = ((((_vy * _sx) - (_vx * _sy))) * den);		HX_STACK_VAR(sxx,"sxx");
 																										struct _Function_14_1{
-																											inline static bool Block( Float &t,Float &txx){
+																											inline static bool Block( Float &txx,Float &t){
 																												HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1831);
 																												{
 																													HX_STACK_LINE(1832)
@@ -5552,25 +5231,25 @@ while((false));
 																											}
 																										};
 																										HX_STACK_LINE(1831)
-																										return (  (((bool((sxx > ::nape::Config_obj::epsilon)) && bool((sxx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_14_1::Block(t,txx)) : bool(false) );
+																										return (  (((bool((sxx > ::nape::Config_obj::epsilon)) && bool((sxx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_14_1::Block(txx,t)) : bool(false) );
 																									}
 																									return null();
 																								}
 																							};
 																							HX_STACK_LINE(1829)
-																							return (  (((bool((txx > ::nape::Config_obj::epsilon)) && bool((txx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_13_1::Block(_vy,_vx,_sy,_sx,t,txx,den)) : bool(false) );
+																							return (  (((bool((txx > ::nape::Config_obj::epsilon)) && bool((txx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_13_1::Block(_sx,_sy,_vy,_vx,txx,den,t)) : bool(false) );
 																						}
 																						return null();
 																					}
 																				};
 																				HX_STACK_LINE(1826)
-																				return (  ((((den * den) > (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? bool(_Function_12_1::Block(_vy,_vx,_sy,_sx,t,_qy,_qx,den)) : bool(false) );
+																				return (  ((((den * den) > (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? bool(_Function_12_1::Block(_sx,_sy,_qy,_vy,_vx,den,t,_qx)) : bool(false) );
 																			}
 																			return null();
 																		}
 																	};
 																	HX_STACK_LINE(1806)
-																	if ((_Function_11_1::Block(b,t,a,v,u))){
+																	if ((_Function_11_1::Block(v,b,t,u,a))){
 																		HX_STACK_LINE(1840)
 																		if (((t >= max))){
 																			HX_STACK_LINE(1842)
@@ -5625,7 +5304,7 @@ while((false));
 																	HX_STACK_LINE(1866)
 																	Float t = 0.0;		HX_STACK_VAR(t,"t");
 																	struct _Function_11_1{
-																		inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &b,Float &t,::zpp_nape::geom::ZPP_Vec2 &a,::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &u){
+																		inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &b,Float &t,::zpp_nape::geom::ZPP_Vec2 &u,::zpp_nape::geom::ZPP_Vec2 &a){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1867);
 																			{
 																				HX_STACK_LINE(1868)
@@ -5664,7 +5343,7 @@ while((false));
 																				HX_STACK_LINE(1886)
 																				Float den = ((_vy * _qx) - (_vx * _qy));		HX_STACK_VAR(den,"den");
 																				struct _Function_12_1{
-																					inline static bool Block( Float &_vy,Float &_vx,Float &_sy,Float &_sx,Float &t,Float &_qy,Float &_qx,Float &den){
+																					inline static bool Block( Float &_sx,Float &_sy,Float &_qy,Float &_vy,Float &_vx,Float &den,Float &t,Float &_qx){
 																						HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1887);
 																						{
 																							HX_STACK_LINE(1888)
@@ -5672,13 +5351,13 @@ while((false));
 																							HX_STACK_LINE(1889)
 																							Float txx = ((((_qy * _sx) - (_qx * _sy))) * den);		HX_STACK_VAR(txx,"txx");
 																							struct _Function_13_1{
-																								inline static bool Block( Float &_vy,Float &_vx,Float &_sy,Float &_sx,Float &t,Float &txx,Float &den){
+																								inline static bool Block( Float &_sx,Float &_sy,Float &_vy,Float &_vx,Float &txx,Float &den,Float &t){
 																									HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1890);
 																									{
 																										HX_STACK_LINE(1891)
 																										Float sxx = ((((_vy * _sx) - (_vx * _sy))) * den);		HX_STACK_VAR(sxx,"sxx");
 																										struct _Function_14_1{
-																											inline static bool Block( Float &t,Float &txx){
+																											inline static bool Block( Float &txx,Float &t){
 																												HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1892);
 																												{
 																													HX_STACK_LINE(1893)
@@ -5690,25 +5369,25 @@ while((false));
 																											}
 																										};
 																										HX_STACK_LINE(1892)
-																										return (  (((bool((sxx > ::nape::Config_obj::epsilon)) && bool((sxx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_14_1::Block(t,txx)) : bool(false) );
+																										return (  (((bool((sxx > ::nape::Config_obj::epsilon)) && bool((sxx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_14_1::Block(txx,t)) : bool(false) );
 																									}
 																									return null();
 																								}
 																							};
 																							HX_STACK_LINE(1890)
-																							return (  (((bool((txx > ::nape::Config_obj::epsilon)) && bool((txx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_13_1::Block(_vy,_vx,_sy,_sx,t,txx,den)) : bool(false) );
+																							return (  (((bool((txx > ::nape::Config_obj::epsilon)) && bool((txx < ((int)1 - ::nape::Config_obj::epsilon)))))) ? bool(_Function_13_1::Block(_sx,_sy,_vy,_vx,txx,den,t)) : bool(false) );
 																						}
 																						return null();
 																					}
 																				};
 																				HX_STACK_LINE(1887)
-																				return (  ((((den * den) > (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? bool(_Function_12_1::Block(_vy,_vx,_sy,_sx,t,_qy,_qx,den)) : bool(false) );
+																				return (  ((((den * den) > (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? bool(_Function_12_1::Block(_sx,_sy,_qy,_vy,_vx,den,t,_qx)) : bool(false) );
 																			}
 																			return null();
 																		}
 																	};
 																	HX_STACK_LINE(1867)
-																	if ((_Function_11_1::Block(b,t,a,v,u))){
+																	if ((_Function_11_1::Block(v,b,t,u,a))){
 																		HX_STACK_LINE(1901)
 																		if (((t >= max))){
 																			HX_STACK_LINE(1903)
@@ -5778,16 +5457,13 @@ while((false));
 														{
 															HX_STACK_LINE(1932)
 															Float T = max;		HX_STACK_VAR(T,"T");
-															HX_STACK_LINE(1933)
-															{
-															}
 															HX_STACK_LINE(1941)
 															cx = (u1->x + (((v->x - u1->x)) * T));
 															HX_STACK_LINE(1942)
 															cy = (u1->y + (((v->y - u1->y)) * T));
 														}
 														struct _Function_8_1{
-															inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &fst_vert,Float &cy,Float &cx){
+															inline static Float Block( Float &cx,Float &cy,::zpp_nape::geom::ZPP_Vec2 &fst_vert){
 																HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",1944);
 																{
 																	HX_STACK_LINE(1944)
@@ -5808,7 +5484,7 @@ while((false));
 															}
 														};
 														HX_STACK_LINE(1944)
-														if (((bool((fst_vert != null())) && bool((_Function_8_1::Block(fst_vert,cy,cx) < ::nape::Config_obj::epsilon))))){
+														if (((bool((fst_vert != null())) && bool((_Function_8_1::Block(cx,cy,fst_vert) < ::nape::Config_obj::epsilon))))){
 															HX_STACK_LINE(1944)
 															break;
 														}
@@ -5846,9 +5522,6 @@ while((false));
 																		ret->x = cx;
 																		HX_STACK_LINE(1945)
 																		ret->y = cy;
-																		HX_STACK_LINE(1945)
-																		{
-																		}
 																		HX_STACK_LINE(1945)
 																		{
 																		}
@@ -5895,9 +5568,6 @@ while((false));
 																COMx = (int)0;
 																HX_STACK_LINE(1961)
 																COMy = (int)0;
-																HX_STACK_LINE(1962)
-																{
-																}
 																HX_STACK_LINE(1970)
 																{
 																}
@@ -5981,9 +5651,6 @@ while((false));
 															{
 																HX_STACK_LINE(2020)
 																Float t = ia;		HX_STACK_VAR(t,"t");
-																HX_STACK_LINE(2021)
-																{
-																}
 																HX_STACK_LINE(2029)
 																hx::MultEq(COMx,t);
 																HX_STACK_LINE(2030)
@@ -6001,9 +5668,6 @@ while((false));
 																HX_STACK_LINE(2033)
 																arb->centroidy = COMy;
 																HX_STACK_LINE(2033)
-																{
-																}
-																HX_STACK_LINE(2033)
 																Dynamic();
 															}
 														}
@@ -6020,19 +5684,19 @@ while((false));
 									}
 								};
 								HX_STACK_LINE(1249)
-								return (  ((total)) ? bool(_Function_4_1::Block(s1,arb)) : bool((  ((cont)) ? bool(_Function_4_2::Block(s1,out2,s2,out1,arb)) : bool(false) )) );
+								return (  ((total)) ? bool(_Function_4_1::Block(arb,s1)) : bool((  ((cont)) ? bool(_Function_4_2::Block(s2,arb,out1,out2,s1)) : bool(false) )) );
 							}
 							return null();
 						}
 					};
 					HX_STACK_LINE(1210)
-					return (  ((total)) ? bool(_Function_3_1::Block(s2,arb)) : bool((  ((cont)) ? bool(_Function_3_2::Block(out1,arb,cont,s2,total,s1,out2)) : bool(false) )) );
+					return (  ((total)) ? bool(_Function_3_1::Block(s2,arb)) : bool((  ((cont)) ? bool(_Function_3_2::Block(s2,arb,out1,cont,total,out2,s1)) : bool(false) )) );
 				}
 				return null();
 			}
 		};
 		struct _Function_2_2{
-			inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::dynamics::ZPP_FluidArbiter &arb){
+			inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::dynamics::ZPP_FluidArbiter &arb,::zpp_nape::shape::ZPP_Shape &s1){
 				HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2042);
 				{
 					HX_STACK_LINE(2043)
@@ -6099,7 +5763,7 @@ while((false));
 						}
 					}
 					struct _Function_3_1{
-						inline static bool Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &arb,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::geom::ZPP_Vec2 &vi,bool &total,Array< bool > &inte,::zpp_nape::shape::ZPP_Edge &a0,::zpp_nape::shape::ZPP_Shape &s1){
+						inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &vi,::zpp_nape::dynamics::ZPP_FluidArbiter &arb,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::shape::ZPP_Edge &a0,Array< bool > &inte,bool &total,::zpp_nape::shape::ZPP_Shape &s1){
 							HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2076);
 							{
 								struct _Function_4_1{
@@ -6117,9 +5781,6 @@ while((false));
 													HX_STACK_LINE(2078)
 													arb->centroidy = s1->circle->worldCOMy;
 													HX_STACK_LINE(2078)
-													{
-													}
-													HX_STACK_LINE(2078)
 													Dynamic();
 												}
 											}
@@ -6130,7 +5791,7 @@ while((false));
 									}
 								};
 								struct _Function_4_2{
-									inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::geom::ZPP_Vec2 &vi,::zpp_nape::shape::ZPP_Edge &a0,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::dynamics::ZPP_FluidArbiter &arb,Array< bool > &inte){
+									inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &vi,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::dynamics::ZPP_FluidArbiter &arb,::zpp_nape::shape::ZPP_Edge &a0,Array< bool > &inte,::zpp_nape::shape::ZPP_Shape &s1){
 										HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2081);
 										{
 											HX_STACK_LINE(2082)
@@ -6140,7 +5801,7 @@ while((false));
 											HX_STACK_LINE(2084)
 											Float dt = ((s1->circle->worldCOMy * a0->gnormx) - (s1->circle->worldCOMx * a0->gnormy));		HX_STACK_VAR(dt,"dt");
 											struct _Function_5_1{
-												inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::geom::ZPP_Vec2 &v0){
+												inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &v0,::zpp_nape::shape::ZPP_Shape &s1){
 													HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2085);
 													{
 														HX_STACK_LINE(2086)
@@ -6165,7 +5826,7 @@ while((false));
 												}
 											};
 											struct _Function_5_2{
-												inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::geom::ZPP_Vec2 &v1){
+												inline static bool Block( ::zpp_nape::geom::ZPP_Vec2 &v1,::zpp_nape::shape::ZPP_Shape &s1){
 													HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2096);
 													{
 														HX_STACK_LINE(2097)
@@ -6190,7 +5851,7 @@ while((false));
 												}
 											};
 											struct _Function_5_3{
-												inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::dynamics::ZPP_FluidArbiter &arb,Array< bool > &inte){
+												inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::dynamics::ZPP_FluidArbiter &arb,Array< bool > &inte,::zpp_nape::shape::ZPP_Shape &s1){
 													HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2107);
 													{
 														HX_STACK_LINE(2108)
@@ -6288,9 +5949,6 @@ while((false));
 																							HX_STACK_LINE(2130)
 																							_this1->localCOMy = _this1->lverts->next->y;
 																							HX_STACK_LINE(2130)
-																							{
-																							}
-																							HX_STACK_LINE(2130)
 																							Dynamic();
 																						}
 																						else{
@@ -6305,17 +5963,11 @@ while((false));
 																									HX_STACK_LINE(2130)
 																									{
 																									}
-																									HX_STACK_LINE(2130)
-																									{
-																									}
 																								}
 																								HX_STACK_LINE(2130)
 																								{
 																									HX_STACK_LINE(2130)
 																									Float t = 1.0;		HX_STACK_VAR(t,"t");
-																									HX_STACK_LINE(2130)
-																									{
-																									}
 																									HX_STACK_LINE(2130)
 																									hx::AddEq(_this1->localCOMx,(_this1->lverts->next->next->x * t));
 																									HX_STACK_LINE(2130)
@@ -6325,9 +5977,6 @@ while((false));
 																								{
 																									HX_STACK_LINE(2130)
 																									Float t = 0.5;		HX_STACK_VAR(t,"t");
-																									HX_STACK_LINE(2130)
-																									{
-																									}
 																									HX_STACK_LINE(2130)
 																									hx::MultEq(_this1->localCOMx,t);
 																									HX_STACK_LINE(2130)
@@ -6341,9 +5990,6 @@ while((false));
 																									_this1->localCOMx = (int)0;
 																									HX_STACK_LINE(2130)
 																									_this1->localCOMy = (int)0;
-																									HX_STACK_LINE(2130)
-																									{
-																									}
 																									HX_STACK_LINE(2130)
 																									{
 																									}
@@ -6426,9 +6072,6 @@ while((false));
 																									HX_STACK_LINE(2130)
 																									Float t = area;		HX_STACK_VAR(t,"t");
 																									HX_STACK_LINE(2130)
-																									{
-																									}
-																									HX_STACK_LINE(2130)
 																									hx::MultEq(_this1->localCOMx,t);
 																									HX_STACK_LINE(2130)
 																									hx::MultEq(_this1->localCOMy,t);
@@ -6451,9 +6094,6 @@ while((false));
 																							_this1->axisx = ::Math_obj::sin(_this1->rot);
 																							HX_STACK_LINE(2130)
 																							_this1->axisy = ::Math_obj::cos(_this1->rot);
-																							HX_STACK_LINE(2130)
-																							{
-																							}
 																							HX_STACK_LINE(2130)
 																							Dynamic();
 																						}
@@ -6480,9 +6120,6 @@ while((false));
 																			HX_STACK_LINE(2131)
 																			arb->centroidy = s2->polygon->worldCOMy;
 																			HX_STACK_LINE(2131)
-																			{
-																			}
-																			HX_STACK_LINE(2131)
 																			Dynamic();
 																		}
 																	}
@@ -6493,7 +6130,7 @@ while((false));
 															}
 														};
 														struct _Function_6_2{
-															inline static bool Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &arb,::zpp_nape::geom::ZPP_Vec2 &vi1,::zpp_nape::shape::ZPP_Shape &s2,Array< bool > &inte,::zpp_nape::shape::ZPP_Shape &s1,Array< bool > &ins,int &vind){
+															inline static bool Block( int &vind,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::dynamics::ZPP_FluidArbiter &arb,::zpp_nape::geom::ZPP_Vec2 &vi1,Array< bool > &inte,Array< bool > &ins,::zpp_nape::shape::ZPP_Shape &s1){
 																HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2134);
 																{
 																	HX_STACK_LINE(2135)
@@ -6504,9 +6141,6 @@ while((false));
 																		if ((!(p->_inuse))){
 																			HX_STACK_LINE(2138)
 																			::zpp_nape::geom::ZPP_Vec2 o = p;		HX_STACK_VAR(o,"o");
-																			HX_STACK_LINE(2139)
-																			{
-																			}
 																			HX_STACK_LINE(2147)
 																			{
 																				HX_STACK_LINE(2147)
@@ -6567,7 +6201,7 @@ while((false));
 																			HX_STACK_LINE(2169)
 																			if ((ins->__get(vind))){
 																				struct _Function_10_1{
-																					inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &fst_vert,::zpp_nape::geom::ZPP_Vec2 &vi1){
+																					inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &vi1,::zpp_nape::geom::ZPP_Vec2 &fst_vert){
 																						HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2170);
 																						{
 																							HX_STACK_LINE(2170)
@@ -6588,7 +6222,7 @@ while((false));
 																					}
 																				};
 																				HX_STACK_LINE(2170)
-																				if (((_Function_10_1::Block(fst_vert,vi1) < ::nape::Config_obj::epsilon))){
+																				if (((_Function_10_1::Block(vi1,fst_vert) < ::nape::Config_obj::epsilon))){
 																					HX_STACK_LINE(2170)
 																					break;
 																				}
@@ -6601,7 +6235,7 @@ while((false));
 																				HX_STACK_LINE(2175)
 																				::zpp_nape::geom::ZPP_Vec2 v = vi1;		HX_STACK_VAR(v,"v");
 																				struct _Function_10_1{
-																					inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &u){
+																					inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &u,::zpp_nape::shape::ZPP_Shape &s1){
 																						HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2176);
 																						{
 																							HX_STACK_LINE(2177)
@@ -6645,7 +6279,7 @@ while((false));
 																					}
 																				};
 																				HX_STACK_LINE(2176)
-																				Float tval = _Function_10_1::Block(s1,v,u);		HX_STACK_VAR(tval,"tval");
+																				Float tval = _Function_10_1::Block(v,u,s1);		HX_STACK_VAR(tval,"tval");
 																				HX_STACK_LINE(2198)
 																				Float cx = 0.0;		HX_STACK_VAR(cx,"cx");
 																				HX_STACK_LINE(2199)
@@ -6654,16 +6288,13 @@ while((false));
 																				{
 																					HX_STACK_LINE(2201)
 																					Float T = tval;		HX_STACK_VAR(T,"T");
-																					HX_STACK_LINE(2202)
-																					{
-																					}
 																					HX_STACK_LINE(2210)
 																					cx = (u->x + (((v->x - u->x)) * T));
 																					HX_STACK_LINE(2211)
 																					cy = (u->y + (((v->y - u->y)) * T));
 																				}
 																				struct _Function_10_2{
-																					inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &fst_vert,Float &cy,Float &cx){
+																					inline static Float Block( Float &cx,Float &cy,::zpp_nape::geom::ZPP_Vec2 &fst_vert){
 																						HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2213);
 																						{
 																							HX_STACK_LINE(2213)
@@ -6684,7 +6315,7 @@ while((false));
 																					}
 																				};
 																				HX_STACK_LINE(2213)
-																				if (((_Function_10_2::Block(fst_vert,cy,cx) < ::nape::Config_obj::epsilon))){
+																				if (((_Function_10_2::Block(cx,cy,fst_vert) < ::nape::Config_obj::epsilon))){
 																					HX_STACK_LINE(2213)
 																					break;
 																				}
@@ -6722,9 +6353,6 @@ while((false));
 																								ret->x = cx;
 																								HX_STACK_LINE(2214)
 																								ret->y = cy;
-																								HX_STACK_LINE(2214)
-																								{
-																								}
 																								HX_STACK_LINE(2214)
 																								{
 																								}
@@ -6779,7 +6407,7 @@ while((false));
 																								HX_STACK_LINE(2231)
 																								if ((ins->__get(vind2))){
 																									struct _Function_15_1{
-																										inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &u){
+																										inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &u,::zpp_nape::shape::ZPP_Shape &s1){
 																											HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2233);
 																											{
 																												HX_STACK_LINE(2234)
@@ -6823,7 +6451,7 @@ while((false));
 																										}
 																									};
 																									HX_STACK_LINE(2233)
-																									Float tval = _Function_15_1::Block(s1,v,u);		HX_STACK_VAR(tval,"tval");
+																									Float tval = _Function_15_1::Block(v,u,s1);		HX_STACK_VAR(tval,"tval");
 																									HX_STACK_LINE(2255)
 																									Float cx = 0.0;		HX_STACK_VAR(cx,"cx");
 																									HX_STACK_LINE(2256)
@@ -6832,16 +6460,13 @@ while((false));
 																									{
 																										HX_STACK_LINE(2258)
 																										Float T = tval;		HX_STACK_VAR(T,"T");
-																										HX_STACK_LINE(2259)
-																										{
-																										}
 																										HX_STACK_LINE(2267)
 																										cx = (u->x + (((v->x - u->x)) * T));
 																										HX_STACK_LINE(2268)
 																										cy = (u->y + (((v->y - u->y)) * T));
 																									}
 																									struct _Function_15_2{
-																										inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &fst_vert,Float &cy,Float &cx){
+																										inline static Float Block( Float &cx,Float &cy,::zpp_nape::geom::ZPP_Vec2 &fst_vert){
 																											HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2270);
 																											{
 																												HX_STACK_LINE(2270)
@@ -6862,7 +6487,7 @@ while((false));
 																										}
 																									};
 																									HX_STACK_LINE(2270)
-																									if (((_Function_15_2::Block(fst_vert,cy,cx) < ::nape::Config_obj::epsilon))){
+																									if (((_Function_15_2::Block(cx,cy,fst_vert) < ::nape::Config_obj::epsilon))){
 																										HX_STACK_LINE(2271)
 																										state = (int)0;
 																										HX_STACK_LINE(2272)
@@ -6910,9 +6535,6 @@ while((false));
 																													HX_STACK_LINE(2277)
 																													{
 																													}
-																													HX_STACK_LINE(2277)
-																													{
-																													}
 																												}
 																												HX_STACK_LINE(2277)
 																												return ret;
@@ -6944,7 +6566,7 @@ while((false));
 																									HX_STACK_LINE(2289)
 																									Float t1 = 0.0;		HX_STACK_VAR(t1,"t1");
 																									struct _Function_15_1{
-																										inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,Float &t0,::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &u,Float &t1){
+																										inline static bool Block( Float &t1,::zpp_nape::geom::ZPP_Vec2 &v,Float &t0,::zpp_nape::geom::ZPP_Vec2 &u,::zpp_nape::shape::ZPP_Shape &s1){
 																											HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2290);
 																											{
 																												HX_STACK_LINE(2291)
@@ -6978,7 +6600,7 @@ while((false));
 																												HX_STACK_LINE(2306)
 																												Float D = ((B * B) - (((int)4 * A) * C));		HX_STACK_VAR(D,"D");
 																												struct _Function_16_1{
-																													inline static bool Block( Float &D,Float &t0,Float &A,Float &t1,Float &B){
+																													inline static bool Block( Float &t1,Float &B,Float &D,Float &A,Float &t0){
 																														HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2307);
 																														{
 																															HX_STACK_LINE(2308)
@@ -6997,7 +6619,7 @@ while((false));
 																													}
 																												};
 																												struct _Function_16_2{
-																													inline static bool Block( Float &D,Float &A,Float &t0,Float &B,Float &t1){
+																													inline static bool Block( Float &t1,Float &B,Float &D,Float &A,Float &t0){
 																														HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2312);
 																														{
 																															HX_STACK_LINE(2313)
@@ -7015,13 +6637,13 @@ while((false));
 																													}
 																												};
 																												HX_STACK_LINE(2307)
-																												return (  ((((D * D) < ::nape::Config_obj::epsilon))) ? bool(_Function_16_1::Block(D,t0,A,t1,B)) : bool(_Function_16_2::Block(D,A,t0,B,t1)) );
+																												return (  ((((D * D) < ::nape::Config_obj::epsilon))) ? bool(_Function_16_1::Block(t1,B,D,A,t0)) : bool(_Function_16_2::Block(t1,B,D,A,t0)) );
 																											}
 																											return null();
 																										}
 																									};
 																									HX_STACK_LINE(2290)
-																									bool two = _Function_15_1::Block(s1,t0,v,u,t1);		HX_STACK_VAR(two,"two");
+																									bool two = _Function_15_1::Block(t1,v,t0,u,s1);		HX_STACK_VAR(two,"two");
 																									HX_STACK_LINE(2320)
 																									if (((bool((t0 < ((int)1 - ::nape::Config_obj::epsilon))) && bool((t1 > ::nape::Config_obj::epsilon))))){
 																										HX_STACK_LINE(2321)
@@ -7032,16 +6654,13 @@ while((false));
 																										{
 																											HX_STACK_LINE(2324)
 																											Float T = t0;		HX_STACK_VAR(T,"T");
-																											HX_STACK_LINE(2325)
-																											{
-																											}
 																											HX_STACK_LINE(2333)
 																											cx = (u->x + (((v->x - u->x)) * T));
 																											HX_STACK_LINE(2334)
 																											cy = (u->y + (((v->y - u->y)) * T));
 																										}
 																										struct _Function_16_1{
-																											inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &fst_vert,Float &cy,Float &cx){
+																											inline static Float Block( Float &cx,Float &cy,::zpp_nape::geom::ZPP_Vec2 &fst_vert){
 																												HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2336);
 																												{
 																													HX_STACK_LINE(2336)
@@ -7062,7 +6681,7 @@ while((false));
 																											}
 																										};
 																										HX_STACK_LINE(2336)
-																										if (((bool((fst_vert != null())) && bool((_Function_16_1::Block(fst_vert,cy,cx) < ::nape::Config_obj::epsilon))))){
+																										if (((bool((fst_vert != null())) && bool((_Function_16_1::Block(cx,cy,fst_vert) < ::nape::Config_obj::epsilon))))){
 																											HX_STACK_LINE(2337)
 																											state = (int)0;
 																											HX_STACK_LINE(2338)
@@ -7110,9 +6729,6 @@ while((false));
 																														HX_STACK_LINE(2343)
 																														{
 																														}
-																														HX_STACK_LINE(2343)
-																														{
-																														}
 																													}
 																													HX_STACK_LINE(2343)
 																													return ret;
@@ -7146,16 +6762,13 @@ while((false));
 																											{
 																												HX_STACK_LINE(2354)
 																												Float T = t1;		HX_STACK_VAR(T,"T");
-																												HX_STACK_LINE(2355)
-																												{
-																												}
 																												HX_STACK_LINE(2363)
 																												cx1 = (u->x + (((v->x - u->x)) * T));
 																												HX_STACK_LINE(2364)
 																												cy1 = (u->y + (((v->y - u->y)) * T));
 																											}
 																											struct _Function_17_1{
-																												inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &cx1,Float &cy1){
+																												inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &cy1,Float &cx1){
 																													HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2366);
 																													{
 																														HX_STACK_LINE(2366)
@@ -7191,9 +6804,6 @@ while((false));
 																															HX_STACK_LINE(2366)
 																															{
 																															}
-																															HX_STACK_LINE(2366)
-																															{
-																															}
 																														}
 																														HX_STACK_LINE(2366)
 																														return ret;
@@ -7202,7 +6812,7 @@ while((false));
 																												}
 																											};
 																											HX_STACK_LINE(2366)
-																											::zpp_nape::geom::ZPP_Collide_obj::flowpoly->add(_Function_17_1::Block(cx1,cy1));
+																											::zpp_nape::geom::ZPP_Collide_obj::flowpoly->add(_Function_17_1::Block(cy1,cx1));
 																										}
 																									}
 																								}
@@ -7241,7 +6851,7 @@ while((false));
 																								HX_STACK_LINE(2384)
 																								if ((ins->__get(vind2))){
 																									struct _Function_15_1{
-																										inline static Float Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &u){
+																										inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &u,::zpp_nape::shape::ZPP_Shape &s1){
 																											HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2386);
 																											{
 																												HX_STACK_LINE(2387)
@@ -7285,7 +6895,7 @@ while((false));
 																										}
 																									};
 																									HX_STACK_LINE(2386)
-																									Float tval = _Function_15_1::Block(s1,v,u);		HX_STACK_VAR(tval,"tval");
+																									Float tval = _Function_15_1::Block(v,u,s1);		HX_STACK_VAR(tval,"tval");
 																									HX_STACK_LINE(2408)
 																									Float cx = 0.0;		HX_STACK_VAR(cx,"cx");
 																									HX_STACK_LINE(2409)
@@ -7294,16 +6904,13 @@ while((false));
 																									{
 																										HX_STACK_LINE(2411)
 																										Float T = tval;		HX_STACK_VAR(T,"T");
-																										HX_STACK_LINE(2412)
-																										{
-																										}
 																										HX_STACK_LINE(2420)
 																										cx = (u->x + (((v->x - u->x)) * T));
 																										HX_STACK_LINE(2421)
 																										cy = (u->y + (((v->y - u->y)) * T));
 																									}
 																									struct _Function_15_2{
-																										inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &fst_vert,Float &cy,Float &cx){
+																										inline static Float Block( Float &cx,Float &cy,::zpp_nape::geom::ZPP_Vec2 &fst_vert){
 																											HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2423);
 																											{
 																												HX_STACK_LINE(2423)
@@ -7324,7 +6931,7 @@ while((false));
 																										}
 																									};
 																									HX_STACK_LINE(2423)
-																									if (((_Function_15_2::Block(fst_vert,cy,cx) < ::nape::Config_obj::epsilon))){
+																									if (((_Function_15_2::Block(cx,cy,fst_vert) < ::nape::Config_obj::epsilon))){
 																										HX_STACK_LINE(2424)
 																										state = (int)0;
 																										HX_STACK_LINE(2425)
@@ -7372,9 +6979,6 @@ while((false));
 																													HX_STACK_LINE(2430)
 																													{
 																													}
-																													HX_STACK_LINE(2430)
-																													{
-																													}
 																												}
 																												HX_STACK_LINE(2430)
 																												return ret;
@@ -7406,7 +7010,7 @@ while((false));
 																									HX_STACK_LINE(2442)
 																									Float t1 = 0.0;		HX_STACK_VAR(t1,"t1");
 																									struct _Function_15_1{
-																										inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,Float &t0,::zpp_nape::geom::ZPP_Vec2 &v,::zpp_nape::geom::ZPP_Vec2 &u,Float &t1){
+																										inline static bool Block( Float &t1,::zpp_nape::geom::ZPP_Vec2 &v,Float &t0,::zpp_nape::geom::ZPP_Vec2 &u,::zpp_nape::shape::ZPP_Shape &s1){
 																											HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2443);
 																											{
 																												HX_STACK_LINE(2444)
@@ -7440,7 +7044,7 @@ while((false));
 																												HX_STACK_LINE(2459)
 																												Float D = ((B * B) - (((int)4 * A) * C));		HX_STACK_VAR(D,"D");
 																												struct _Function_16_1{
-																													inline static bool Block( Float &D,Float &t0,Float &A,Float &t1,Float &B){
+																													inline static bool Block( Float &t1,Float &B,Float &D,Float &A,Float &t0){
 																														HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2460);
 																														{
 																															HX_STACK_LINE(2461)
@@ -7459,7 +7063,7 @@ while((false));
 																													}
 																												};
 																												struct _Function_16_2{
-																													inline static bool Block( Float &D,Float &A,Float &t0,Float &B,Float &t1){
+																													inline static bool Block( Float &t1,Float &B,Float &D,Float &A,Float &t0){
 																														HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2465);
 																														{
 																															HX_STACK_LINE(2466)
@@ -7477,13 +7081,13 @@ while((false));
 																													}
 																												};
 																												HX_STACK_LINE(2460)
-																												return (  ((((D * D) < ::nape::Config_obj::epsilon))) ? bool(_Function_16_1::Block(D,t0,A,t1,B)) : bool(_Function_16_2::Block(D,A,t0,B,t1)) );
+																												return (  ((((D * D) < ::nape::Config_obj::epsilon))) ? bool(_Function_16_1::Block(t1,B,D,A,t0)) : bool(_Function_16_2::Block(t1,B,D,A,t0)) );
 																											}
 																											return null();
 																										}
 																									};
 																									HX_STACK_LINE(2443)
-																									bool two = _Function_15_1::Block(s1,t0,v,u,t1);		HX_STACK_VAR(two,"two");
+																									bool two = _Function_15_1::Block(t1,v,t0,u,s1);		HX_STACK_VAR(two,"two");
 																									HX_STACK_LINE(2473)
 																									if (((bool((t0 < ((int)1 - ::nape::Config_obj::epsilon))) && bool((t1 > ::nape::Config_obj::epsilon))))){
 																										HX_STACK_LINE(2474)
@@ -7494,16 +7098,13 @@ while((false));
 																										{
 																											HX_STACK_LINE(2477)
 																											Float T = t0;		HX_STACK_VAR(T,"T");
-																											HX_STACK_LINE(2478)
-																											{
-																											}
 																											HX_STACK_LINE(2486)
 																											cx = (u->x + (((v->x - u->x)) * T));
 																											HX_STACK_LINE(2487)
 																											cy = (u->y + (((v->y - u->y)) * T));
 																										}
 																										struct _Function_16_1{
-																											inline static Float Block( ::zpp_nape::geom::ZPP_Vec2 &fst_vert,Float &cy,Float &cx){
+																											inline static Float Block( Float &cx,Float &cy,::zpp_nape::geom::ZPP_Vec2 &fst_vert){
 																												HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2489);
 																												{
 																													HX_STACK_LINE(2489)
@@ -7524,7 +7125,7 @@ while((false));
 																											}
 																										};
 																										HX_STACK_LINE(2489)
-																										if (((bool((fst_vert != null())) && bool((_Function_16_1::Block(fst_vert,cy,cx) < ::nape::Config_obj::epsilon))))){
+																										if (((bool((fst_vert != null())) && bool((_Function_16_1::Block(cx,cy,fst_vert) < ::nape::Config_obj::epsilon))))){
 																											HX_STACK_LINE(2490)
 																											state = (int)0;
 																											HX_STACK_LINE(2491)
@@ -7572,9 +7173,6 @@ while((false));
 																														HX_STACK_LINE(2496)
 																														{
 																														}
-																														HX_STACK_LINE(2496)
-																														{
-																														}
 																													}
 																													HX_STACK_LINE(2496)
 																													return ret;
@@ -7608,16 +7206,13 @@ while((false));
 																											{
 																												HX_STACK_LINE(2507)
 																												Float T = t1;		HX_STACK_VAR(T,"T");
-																												HX_STACK_LINE(2508)
-																												{
-																												}
 																												HX_STACK_LINE(2516)
 																												cx1 = (u->x + (((v->x - u->x)) * T));
 																												HX_STACK_LINE(2517)
 																												cy1 = (u->y + (((v->y - u->y)) * T));
 																											}
 																											struct _Function_17_1{
-																												inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &cx1,Float &cy1){
+																												inline static ::zpp_nape::geom::ZPP_Vec2 Block( Float &cy1,Float &cx1){
 																													HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2519);
 																													{
 																														HX_STACK_LINE(2519)
@@ -7653,9 +7248,6 @@ while((false));
 																															HX_STACK_LINE(2519)
 																															{
 																															}
-																															HX_STACK_LINE(2519)
-																															{
-																															}
 																														}
 																														HX_STACK_LINE(2519)
 																														return ret;
@@ -7664,7 +7256,7 @@ while((false));
 																												}
 																											};
 																											HX_STACK_LINE(2519)
-																											::zpp_nape::geom::ZPP_Collide_obj::flowpoly->add(_Function_17_1::Block(cx1,cy1));
+																											::zpp_nape::geom::ZPP_Collide_obj::flowpoly->add(_Function_17_1::Block(cy1,cx1));
 																										}
 																									}
 																								}
@@ -7689,7 +7281,7 @@ while((false));
 																		}
 																	}
 																	struct _Function_7_1{
-																		inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::dynamics::ZPP_FluidArbiter &arb){
+																		inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::dynamics::ZPP_FluidArbiter &arb,::zpp_nape::shape::ZPP_Shape &s1){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2537);
 																			{
 																				HX_STACK_LINE(2538)
@@ -7733,9 +7325,6 @@ while((false));
 																									HX_STACK_LINE(2554)
 																									arb->centroidy = s1->circle->worldCOMy;
 																									HX_STACK_LINE(2554)
-																									{
-																									}
-																									HX_STACK_LINE(2554)
 																									Dynamic();
 																								}
 																							}
@@ -7752,19 +7341,13 @@ while((false));
 																		}
 																	};
 																	struct _Function_7_2{
-																		inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::dynamics::ZPP_FluidArbiter &arb){
+																		inline static bool Block( ::zpp_nape::dynamics::ZPP_FluidArbiter &arb,::zpp_nape::shape::ZPP_Shape &s1){
 																			HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2559);
 																			{
 																				HX_STACK_LINE(2560)
 																				Float COMx = (int)0;		HX_STACK_VAR(COMx,"COMx");
 																				HX_STACK_LINE(2561)
 																				Float COMy = (int)0;		HX_STACK_VAR(COMy,"COMy");
-																				HX_STACK_LINE(2562)
-																				{
-																				}
-																				HX_STACK_LINE(2570)
-																				{
-																				}
 																				HX_STACK_LINE(2578)
 																				Float area = 0.0;		HX_STACK_VAR(area,"area");
 																				HX_STACK_LINE(2579)
@@ -7783,9 +7366,6 @@ while((false));
 																							pCOMx = (int)0;
 																							HX_STACK_LINE(2586)
 																							pCOMy = (int)0;
-																							HX_STACK_LINE(2587)
-																							{
-																							}
 																							HX_STACK_LINE(2595)
 																							{
 																							}
@@ -7869,9 +7449,6 @@ while((false));
 																						{
 																							HX_STACK_LINE(2645)
 																							Float t = ia;		HX_STACK_VAR(t,"t");
-																							HX_STACK_LINE(2646)
-																							{
-																							}
 																							HX_STACK_LINE(2654)
 																							hx::MultEq(pCOMx,t);
 																							HX_STACK_LINE(2655)
@@ -7882,9 +7459,6 @@ while((false));
 																					{
 																						HX_STACK_LINE(2659)
 																						Float t = -(parea);		HX_STACK_VAR(t,"t");
-																						HX_STACK_LINE(2660)
-																						{
-																						}
 																						HX_STACK_LINE(2668)
 																						hx::AddEq(COMx,(pCOMx * t));
 																						HX_STACK_LINE(2669)
@@ -7926,9 +7500,6 @@ while((false));
 																						nx = dx;
 																						HX_STACK_LINE(2690)
 																						ny = dy;
-																						HX_STACK_LINE(2691)
-																						{
-																						}
 																						HX_STACK_LINE(2699)
 																						{
 																						}
@@ -7939,44 +7510,12 @@ while((false));
 																						{
 																							HX_STACK_LINE(2710)
 																							Float d = ((nx * nx) + (ny * ny));		HX_STACK_VAR(d,"d");
-																							HX_STACK_LINE(2711)
-																							{
-																							}
-																							struct _Function_11_1{
-																								inline static Float Block( Float &d){
-																									HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2719);
-																									{
-																										HX_STACK_LINE(2719)
-																										{
-																										}
-																										struct _Function_12_1{
-																											inline static Float Block( Float &d){
-																												HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2719);
-																												{
-																													HX_STACK_LINE(2719)
-																													{
-																													}
-																													HX_STACK_LINE(2719)
-																													return ::Math_obj::sqrt(d);
-																												}
-																												return null();
-																											}
-																										};
-																										HX_STACK_LINE(2719)
-																										return (Float(1.0) / Float(_Function_12_1::Block(d)));
-																									}
-																									return null();
-																								}
-																							};
 																							HX_STACK_LINE(2719)
-																							Float imag = _Function_11_1::Block(d);		HX_STACK_VAR(imag,"imag");
+																							Float imag = (Float(1.0) / Float(::Math_obj::sqrt(d)));		HX_STACK_VAR(imag,"imag");
 																							HX_STACK_LINE(2720)
 																							{
 																								HX_STACK_LINE(2721)
 																								Float t = imag;		HX_STACK_VAR(t,"t");
-																								HX_STACK_LINE(2722)
-																								{
-																								}
 																								HX_STACK_LINE(2730)
 																								hx::MultEq(nx,t);
 																								HX_STACK_LINE(2731)
@@ -8008,9 +7547,6 @@ while((false));
 																					{
 																						HX_STACK_LINE(2747)
 																						Float t = 0.5;		HX_STACK_VAR(t,"t");
-																						HX_STACK_LINE(2748)
-																						{
-																						}
 																						HX_STACK_LINE(2756)
 																						hx::MultEq(cx,t);
 																						HX_STACK_LINE(2757)
@@ -8020,9 +7556,6 @@ while((false));
 																					{
 																						HX_STACK_LINE(2760)
 																						Float t = 1.0;		HX_STACK_VAR(t,"t");
-																						HX_STACK_LINE(2761)
-																						{
-																						}
 																						HX_STACK_LINE(2769)
 																						hx::SubEq(cx,(s1->circle->worldCOMx * t));
 																						HX_STACK_LINE(2770)
@@ -8055,9 +7588,6 @@ while((false));
 																						cx = s1->circle->worldCOMx;
 																						HX_STACK_LINE(2785)
 																						cy = s1->circle->worldCOMy;
-																						HX_STACK_LINE(2786)
-																						{
-																						}
 																						HX_STACK_LINE(2794)
 																						{
 																						}
@@ -8066,9 +7596,6 @@ while((false));
 																					{
 																						HX_STACK_LINE(2804)
 																						Float t = ccom;		HX_STACK_VAR(t,"t");
-																						HX_STACK_LINE(2805)
-																						{
-																						}
 																						HX_STACK_LINE(2813)
 																						hx::AddEq(cx,(nx * t));
 																						HX_STACK_LINE(2814)
@@ -8078,9 +7605,6 @@ while((false));
 																					{
 																						HX_STACK_LINE(2817)
 																						Float t = carea;		HX_STACK_VAR(t,"t");
-																						HX_STACK_LINE(2818)
-																						{
-																						}
 																						HX_STACK_LINE(2826)
 																						hx::AddEq(COMx,(cx * t));
 																						HX_STACK_LINE(2827)
@@ -8093,9 +7617,6 @@ while((false));
 																				{
 																					HX_STACK_LINE(2832)
 																					Float t = (Float(1.0) / Float(area));		HX_STACK_VAR(t,"t");
-																					HX_STACK_LINE(2833)
-																					{
-																					}
 																					HX_STACK_LINE(2841)
 																					hx::MultEq(COMx,t);
 																					HX_STACK_LINE(2842)
@@ -8112,9 +7633,6 @@ while((false));
 																						HX_STACK_LINE(2844)
 																						arb->centroidy = COMy;
 																						HX_STACK_LINE(2844)
-																						{
-																						}
-																						HX_STACK_LINE(2844)
 																						Dynamic();
 																					}
 																				}
@@ -8125,41 +7643,41 @@ while((false));
 																		}
 																	};
 																	HX_STACK_LINE(2534)
-																	return (  (((::zpp_nape::geom::ZPP_Collide_obj::flowpoly->head == null()))) ? bool(false) : bool((  (((::zpp_nape::geom::ZPP_Collide_obj::flowpoly->head->next == null()))) ? bool(_Function_7_1::Block(s1,s2,arb)) : bool(_Function_7_2::Block(s1,arb)) )) );
+																	return (  (((::zpp_nape::geom::ZPP_Collide_obj::flowpoly->head == null()))) ? bool(false) : bool((  (((::zpp_nape::geom::ZPP_Collide_obj::flowpoly->head->next == null()))) ? bool(_Function_7_1::Block(s2,arb,s1)) : bool(_Function_7_2::Block(arb,s1)) )) );
 																}
 																return null();
 															}
 														};
 														HX_STACK_LINE(2129)
-														return (  ((total1)) ? bool(_Function_6_1::Block(s2,arb)) : bool(_Function_6_2::Block(arb,vi1,s2,inte,s1,ins,vind)) );
+														return (  ((total1)) ? bool(_Function_6_1::Block(s2,arb)) : bool(_Function_6_2::Block(vind,s2,arb,vi1,inte,ins,s1)) );
 													}
 													return null();
 												}
 											};
 											HX_STACK_LINE(2085)
-											return (  (((  (((dt <= ((v0->y * a0->gnormx) - (v0->x * a0->gnormy))))) ? bool(_Function_5_1::Block(s1,v0)) : bool((  (((dt >= ((v1->y * a0->gnormx) - (v1->x * a0->gnormy))))) ? bool(_Function_5_2::Block(s1,v1)) : bool(true) )) ))) ? bool(_Function_5_3::Block(s1,s2,arb,inte)) : bool(false) );
+											return (  (((  (((dt <= ((v0->y * a0->gnormx) - (v0->x * a0->gnormy))))) ? bool(_Function_5_1::Block(v0,s1)) : bool((  (((dt >= ((v1->y * a0->gnormx) - (v1->x * a0->gnormy))))) ? bool(_Function_5_2::Block(v1,s1)) : bool(true) )) ))) ? bool(_Function_5_3::Block(s2,arb,inte,s1)) : bool(false) );
 										}
 										return null();
 									}
 								};
 								HX_STACK_LINE(2076)
-								return (  ((total)) ? bool(_Function_4_1::Block(arb,s1)) : bool(_Function_4_2::Block(s1,vi,a0,s2,arb,inte)) );
+								return (  ((total)) ? bool(_Function_4_1::Block(arb,s1)) : bool(_Function_4_2::Block(vi,s2,arb,a0,inte,s1)) );
 							}
 							return null();
 						}
 					};
 					HX_STACK_LINE(2076)
-					return (  ((cont)) ? bool(_Function_3_1::Block(arb,s2,vi,total,inte,a0,s1)) : bool(false) );
+					return (  ((cont)) ? bool(_Function_3_1::Block(vi,arb,s2,a0,inte,total,s1)) : bool(false) );
 				}
 				return null();
 			}
 		};
 		HX_STACK_LINE(1172)
-		return (  (((s1->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_POLYGON))) ? bool(_Function_2_1::Block(s1,s2,arb)) : bool(_Function_2_2::Block(s1,s2,arb)) );
+		return (  (((s1->type == ::zpp_nape::util::ZPP_Flags_obj::id_ShapeType_POLYGON))) ? bool(_Function_2_1::Block(s2,arb,s1)) : bool(_Function_2_2::Block(s2,arb,s1)) );
 	}
 	else{
 		struct _Function_2_1{
-			inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s1,::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::dynamics::ZPP_FluidArbiter &arb){
+			inline static bool Block( ::zpp_nape::shape::ZPP_Shape &s2,::zpp_nape::dynamics::ZPP_FluidArbiter &arb,::zpp_nape::shape::ZPP_Shape &s1){
 				HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2855);
 				{
 					HX_STACK_LINE(2856)
@@ -8182,7 +7700,7 @@ while((false));
 					HX_STACK_LINE(2865)
 					Float ds = ((deltax * deltax) + (deltay * deltay));		HX_STACK_VAR(ds,"ds");
 					struct _Function_3_1{
-						inline static bool Block( ::zpp_nape::shape::ZPP_Circle &c2,::zpp_nape::shape::ZPP_Circle &c1,::zpp_nape::dynamics::ZPP_FluidArbiter &arb){
+						inline static bool Block( ::zpp_nape::shape::ZPP_Circle &c1,::zpp_nape::shape::ZPP_Circle &c2,::zpp_nape::dynamics::ZPP_FluidArbiter &arb){
 							HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2867);
 							{
 								HX_STACK_LINE(2868)
@@ -8195,9 +7713,6 @@ while((false));
 										arb->centroidx = c1->worldCOMx;
 										HX_STACK_LINE(2868)
 										arb->centroidy = c1->worldCOMy;
-										HX_STACK_LINE(2868)
-										{
-										}
 										HX_STACK_LINE(2868)
 										Dynamic();
 									}
@@ -8212,9 +7727,6 @@ while((false));
 										HX_STACK_LINE(2869)
 										arb->centroidy = c2->worldCOMy;
 										HX_STACK_LINE(2869)
-										{
-										}
-										HX_STACK_LINE(2869)
 										Dynamic();
 									}
 								}
@@ -8225,7 +7737,7 @@ while((false));
 						}
 					};
 					struct _Function_3_2{
-						inline static bool Block( Float &ds,::zpp_nape::shape::ZPP_Circle &c2,::zpp_nape::shape::ZPP_Circle &c1,Float &deltay,::zpp_nape::dynamics::ZPP_FluidArbiter &arb,Float &deltax){
+						inline static bool Block( ::zpp_nape::shape::ZPP_Circle &c1,::zpp_nape::shape::ZPP_Circle &c2,::zpp_nape::dynamics::ZPP_FluidArbiter &arb,Float &deltay,Float &ds,Float &deltax){
 							HX_STACK_PUSH("*::closure","zpp_nape/geom/Collide.hx",2872);
 							{
 								HX_STACK_LINE(2873)
@@ -8245,9 +7757,6 @@ while((false));
 										HX_STACK_LINE(2876)
 										arb->centroidy = c1->worldCOMy;
 										HX_STACK_LINE(2876)
-										{
-										}
-										HX_STACK_LINE(2876)
 										Dynamic();
 									}
 								}
@@ -8264,9 +7773,6 @@ while((false));
 											arb->centroidx = c2->worldCOMx;
 											HX_STACK_LINE(2879)
 											arb->centroidy = c2->worldCOMy;
-											HX_STACK_LINE(2879)
-											{
-											}
 											HX_STACK_LINE(2879)
 											Dynamic();
 										}
@@ -8325,9 +7831,6 @@ while((false));
 												HX_STACK_LINE(2903)
 												arb->centroidy = (c1->worldCOMy + (deltay * ya));
 												HX_STACK_LINE(2903)
-												{
-												}
-												HX_STACK_LINE(2903)
 												Dynamic();
 											}
 										}
@@ -8340,13 +7843,13 @@ while((false));
 						}
 					};
 					HX_STACK_LINE(2866)
-					return (  (((ds > (cr * cr)))) ? bool(false) : bool((  (((ds < (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? bool(_Function_3_1::Block(c2,c1,arb)) : bool(_Function_3_2::Block(ds,c2,c1,deltay,arb,deltax)) )) );
+					return (  (((ds > (cr * cr)))) ? bool(false) : bool((  (((ds < (::nape::Config_obj::epsilon * ::nape::Config_obj::epsilon)))) ? bool(_Function_3_1::Block(c1,c2,arb)) : bool(_Function_3_2::Block(c1,c2,arb,deltay,ds,deltax)) )) );
 				}
 				return null();
 			}
 		};
 		HX_STACK_LINE(2855)
-		return _Function_2_1::Block(s1,s2,arb);
+		return _Function_2_1::Block(s2,arb,s1);
 	}
 	HX_STACK_LINE(1171)
 	return false;
@@ -8451,7 +7954,7 @@ Class ZPP_Collide_obj::__mClass;
 
 void ZPP_Collide_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_Collide"), hx::TCanCast< ZPP_Collide_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("zpp_nape.geom.ZPP_Collide"), hx::TCanCast< ZPP_Collide_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

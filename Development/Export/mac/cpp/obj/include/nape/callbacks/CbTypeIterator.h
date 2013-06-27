@@ -12,7 +12,7 @@ namespace nape{
 namespace callbacks{
 
 
-class CbTypeIterator_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  CbTypeIterator_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef CbTypeIterator_obj OBJ_;
@@ -38,11 +38,11 @@ class CbTypeIterator_obj : public hx::Object{
 		virtual bool hasNext( );
 		Dynamic hasNext_dyn();
 
-		::nape::callbacks::CbTypeIterator zpp_next; /* REM */ 
-		bool zpp_critical; /* REM */ 
-		int zpp_i; /* REM */ 
-		::nape::callbacks::CbTypeList zpp_inner; /* REM */ 
-		static ::nape::callbacks::CbTypeIterator zpp_pool; /* REM */ 
+		::nape::callbacks::CbTypeIterator zpp_next;
+		bool zpp_critical;
+		int zpp_i;
+		::nape::callbacks::CbTypeList zpp_inner;
+		static ::nape::callbacks::CbTypeIterator zpp_pool;
 		static ::nape::callbacks::CbTypeIterator get( ::nape::callbacks::CbTypeList list);
 		static Dynamic get_dyn();
 

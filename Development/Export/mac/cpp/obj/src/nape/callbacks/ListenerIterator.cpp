@@ -277,7 +277,7 @@ Class ListenerIterator_obj::__mClass;
 
 void ListenerIterator_obj::__register()
 {
-	Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.ListenerIterator"), hx::TCanCast< ListenerIterator_obj> ,sStaticFields,sMemberFields,
+	hx::Static(__mClass) = hx::RegisterClass(HX_CSTRING("nape.callbacks.ListenerIterator"), hx::TCanCast< ListenerIterator_obj> ,sStaticFields,sMemberFields,
 	&__CreateEmpty, &__Create,
 	&super::__SGetClass(), 0, sMarkStatics, sVisitStatics);
 }

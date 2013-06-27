@@ -12,7 +12,7 @@ namespace nape{
 namespace phys{
 
 
-class InteractorIterator_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  InteractorIterator_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef InteractorIterator_obj OBJ_;
@@ -38,11 +38,11 @@ class InteractorIterator_obj : public hx::Object{
 		virtual bool hasNext( );
 		Dynamic hasNext_dyn();
 
-		::nape::phys::InteractorIterator zpp_next; /* REM */ 
-		bool zpp_critical; /* REM */ 
-		int zpp_i; /* REM */ 
-		::nape::phys::InteractorList zpp_inner; /* REM */ 
-		static ::nape::phys::InteractorIterator zpp_pool; /* REM */ 
+		::nape::phys::InteractorIterator zpp_next;
+		bool zpp_critical;
+		int zpp_i;
+		::nape::phys::InteractorList zpp_inner;
+		static ::nape::phys::InteractorIterator zpp_pool;
 		static ::nape::phys::InteractorIterator get( ::nape::phys::InteractorList list);
 		static Dynamic get_dyn();
 

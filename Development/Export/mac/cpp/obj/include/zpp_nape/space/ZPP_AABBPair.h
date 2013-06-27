@@ -12,7 +12,7 @@ namespace zpp_nape{
 namespace space{
 
 
-class ZPP_AABBPair_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_AABBPair_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_AABBPair_obj OBJ_;
@@ -38,15 +38,15 @@ class ZPP_AABBPair_obj : public hx::Object{
 		virtual Void alloc( );
 		Dynamic alloc_dyn();
 
-		::zpp_nape::space::ZPP_AABBPair next; /* REM */ 
-		::zpp_nape::dynamics::ZPP_Arbiter arb; /* REM */ 
-		int di; /* REM */ 
-		int id; /* REM */ 
-		bool sleeping; /* REM */ 
-		bool first; /* REM */ 
-		::zpp_nape::space::ZPP_AABBNode n2; /* REM */ 
-		::zpp_nape::space::ZPP_AABBNode n1; /* REM */ 
-		static ::zpp_nape::space::ZPP_AABBPair zpp_pool; /* REM */ 
+		::zpp_nape::space::ZPP_AABBPair next;
+		::zpp_nape::dynamics::ZPP_Arbiter arb;
+		int di;
+		int id;
+		bool sleeping;
+		bool first;
+		::zpp_nape::space::ZPP_AABBNode n2;
+		::zpp_nape::space::ZPP_AABBNode n1;
+		static ::zpp_nape::space::ZPP_AABBPair zpp_pool;
 };
 
 } // end namespace zpp_nape

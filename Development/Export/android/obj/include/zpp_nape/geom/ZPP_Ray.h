@@ -19,7 +19,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_Ray_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Ray_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Ray_obj OBJ_;
@@ -66,28 +66,28 @@ class ZPP_Ray_obj : public hx::Object{
 		virtual Void invalidate_dir( );
 		Dynamic invalidate_dir_dyn();
 
-		bool zip_dir; /* REM */ 
+		bool zip_dir;
 		virtual Void direction_invalidate( ::zpp_nape::geom::ZPP_Vec2 x);
 		Dynamic direction_invalidate_dyn();
 
 		virtual Void origin_invalidate( ::zpp_nape::geom::ZPP_Vec2 x);
 		Dynamic origin_invalidate_dyn();
 
-		Float absnormaly; /* REM */ 
-		Float absnormalx; /* REM */ 
-		Float normaly; /* REM */ 
-		Float normalx; /* REM */ 
-		Float idiry; /* REM */ 
-		Float idirx; /* REM */ 
-		Float diry; /* REM */ 
-		Float dirx; /* REM */ 
-		Float originy; /* REM */ 
-		Float originx; /* REM */ 
-		Dynamic userData; /* REM */ 
-		Float maxdist; /* REM */ 
-		::nape::geom::Vec2 direction; /* REM */ 
-		::nape::geom::Vec2 origin; /* REM */ 
-		static bool internal; /* REM */ 
+		Float absnormaly;
+		Float absnormalx;
+		Float normaly;
+		Float normalx;
+		Float idiry;
+		Float idirx;
+		Float diry;
+		Float dirx;
+		Float originy;
+		Float originx;
+		Dynamic userData;
+		Float maxdist;
+		::nape::geom::Vec2 direction;
+		::nape::geom::Vec2 origin;
+		static bool internal;
 };
 
 } // end namespace zpp_nape

@@ -9,7 +9,7 @@ HX_DECLARE_CLASS1(haxe,Log)
 namespace haxe{
 
 
-class Log_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  Log_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef Log_obj OBJ_;
@@ -31,9 +31,6 @@ class Log_obj : public hx::Object{
 
 		static Dynamic trace;
 		static inline Dynamic &trace_dyn() {return trace; }
-
-		static Dynamic clear;
-		static inline Dynamic &clear_dyn() {return clear; }
 
 };
 

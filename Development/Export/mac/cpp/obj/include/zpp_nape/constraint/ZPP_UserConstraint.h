@@ -21,7 +21,7 @@ namespace zpp_nape{
 namespace constraint{
 
 
-class ZPP_UserConstraint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_UserConstraint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj{
 	public:
 		typedef ::zpp_nape::constraint::ZPP_Constraint_obj super;
 		typedef ZPP_UserConstraint_obj OBJ_;
@@ -47,26 +47,26 @@ class ZPP_UserConstraint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj
 
 		virtual bool applyImpulseVel( );
 
-		Array< Float > jOld; /* REM */ 
-		Array< Float > J; /* REM */ 
+		Array< Float > jOld;
+		Array< Float > J;
 		virtual Void warmStart( );
 
-		::nape::geom::Vec3 vec3; /* REM */ 
+		::nape::geom::Vec3 vec3;
 		virtual bool preStep( Float dt);
 
-		Array< Float > Keff; /* REM */ 
-		Float jMax; /* REM */ 
-		bool velonly; /* REM */ 
-		Float gamma; /* REM */ 
-		Float soft; /* REM */ 
+		Array< Float > Keff;
+		Float jMax;
+		bool velonly;
+		Float gamma;
+		Float soft;
 		virtual Void transform( Array< Float > L,Array< Float > x);
 		Dynamic transform_dyn();
 
-		Array< Float > y; /* REM */ 
+		Array< Float > y;
 		virtual Array< Float > solve( Array< Float > m);
 		Dynamic solve_dyn();
 
-		Array< Float > L; /* REM */ 
+		Array< Float > L;
 		virtual Void _clamp( Array< Float > v,Float max);
 		Dynamic _clamp_dyn();
 
@@ -85,9 +85,9 @@ class ZPP_UserConstraint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj
 
 		virtual Void validate( );
 
-		virtual ::nape::constraint::Constraint copy( Array< ::zpp_nape::constraint::ZPP_CopyHelper > dict,Array< ::zpp_nape::constraint::ZPP_CopyHelper > todo);
+		virtual ::nape::constraint::Constraint copy( Array< ::Dynamic > dict,Array< ::Dynamic > todo);
 
-		bool stepped; /* REM */ 
+		bool stepped;
 		virtual Void inactiveBodies( );
 
 		virtual Void activeBodies( );
@@ -101,14 +101,14 @@ class ZPP_UserConstraint_obj : public ::zpp_nape::constraint::ZPP_Constraint_obj
 		virtual Void addBody( ::zpp_nape::phys::ZPP_Body b);
 		Dynamic addBody_dyn();
 
-		Array< Float > bias; /* REM */ 
-		Array< Float > jAcc; /* REM */ 
-		int dim; /* REM */ 
-		Array< ::zpp_nape::constraint::ZPP_UserBody > bodies; /* REM */ 
+		Array< Float > bias;
+		Array< Float > jAcc;
+		int dim;
+		Array< ::Dynamic > bodies;
 		virtual Void bindVec2_invalidate( ::zpp_nape::geom::ZPP_Vec2 _);
 		Dynamic bindVec2_invalidate_dyn();
 
-		::nape::constraint::UserConstraint outer_zn; /* REM */ 
+		::nape::constraint::UserConstraint outer_zn;
 };
 
 } // end namespace zpp_nape

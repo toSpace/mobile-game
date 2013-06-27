@@ -14,7 +14,7 @@ namespace zpp_nape{
 namespace geom{
 
 
-class ZPP_Triangular_obj : public hx::Object{
+class HXCPP_CLASS_ATTRIBUTES  ZPP_Triangular_obj : public hx::Object{
 	public:
 		typedef hx::Object super;
 		typedef ZPP_Triangular_obj OBJ_;
@@ -40,12 +40,12 @@ class ZPP_Triangular_obj : public hx::Object{
 		static Float right_turn( ::zpp_nape::geom::ZPP_PartitionVertex a,::zpp_nape::geom::ZPP_PartitionVertex b,::zpp_nape::geom::ZPP_PartitionVertex c);
 		static Dynamic right_turn_dyn();
 
-		static ::zpp_nape::util::ZNPList_ZPP_PartitionVertex queue; /* REM */ 
-		static ::zpp_nape::util::ZNPList_ZPP_PartitionVertex stack; /* REM */ 
+		static ::zpp_nape::util::ZNPList_ZPP_PartitionVertex queue;
+		static ::zpp_nape::util::ZNPList_ZPP_PartitionVertex stack;
 		static bool delaunay( ::zpp_nape::geom::ZPP_PartitionVertex A,::zpp_nape::geom::ZPP_PartitionVertex B,::zpp_nape::geom::ZPP_PartitionVertex C,::zpp_nape::geom::ZPP_PartitionVertex D);
 		static Dynamic delaunay_dyn();
 
-		static ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair edgeSet; /* REM */ 
+		static ::zpp_nape::util::ZPP_Set_ZPP_PartitionPair edgeSet;
 		static Void optimise( ::zpp_nape::geom::ZPP_PartitionedPoly P);
 		static Dynamic optimise_dyn();
 
